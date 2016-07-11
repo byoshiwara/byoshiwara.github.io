@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Interactive Lessons</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<h1>Interactive Lessons in Excel</h1>
+<h3><a name="example">Examples</a></h3>
+<p>My favorite interactive lesson was created by my colleague Bob Martinez. He 
+  wrote &quot;Terminate the Terminator&quot; in Mathcad, and I translated it to 
+  the Excel file terminator.xls.</p>
+<p>You can certainly create interactive lessons without any special bells and 
+  whistles, but you sometimes have to work to make life easy for the user.</p>
+<p>Several of the interactive lessons I've created use macros to determine the 
+  action of clicking on a button, etc. Excel automatically disables macros under 
+  High (the default) security level. To be given the option of accepting or rejecting 
+  macros, click on Tools-&gt;Macro-&gt;Security..., and chooose Medium.</p>
+<p>The polar.xls file can be considered a weakly interactive lesson, as it demonstrates 
+  the use of &quot;option buttons&quot; (a.k.a &quot;radio buttons&quot;). I first 
+  played with these controls (or widgets) in buttons.xls. I also briefly looked 
+  at a more sophisticated set of controls in compare.xls.</p>
+<p>You can see the other uses of controls in the files riemann.xls, grapher.xls, 
+  rowops.xls, and fractions.xls (the last file requires loading the Analysis TookPak 
+  from the Excel installation disk). </p>
+<p>Creating your own basic controls is fairly simple. First make sure that the 
+  necessary control icons are available in Excel. Press View-&gt;Toolbars and 
+  make sure that the &quot;Forms&quot; box is checked. (We are NOT using the &quot;Control 
+  Toolbox&quot; icons, which are more versatile but slightly more effort to set 
+  up.)</p>
+<p>The controls icons should look something like this.</p>
+<a name="controlicons"></a>
+<table border="0" cellpadding="0" cellspacing="0" width="260">
+  <!-- fwtable fwsrc="formicons.png" fwbase="formicons.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+  <tr> 
+    <td><img src="spacer.gif" width="26" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="25" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="25" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="28" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="25" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="26" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="26" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="26" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="26" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="27" height="1" border="0" alt=""></td>
+    <td><img src="spacer.gif" width="1" height="1" border="0" alt=""></td>
+  </tr>
+  <tr> 
+    <td><a href="#group"><img name="formicons_r1_c1" src="formicons_r1_c1.gif" width="26" height="26" border="0" alt="Group Box"></a></td>
+    <td><a href="#button"><img name="formicons_r1_c2" src="formicons_r1_c2.gif" width="25" height="26" border="0" alt="Button"></a></td>
+    <td><a href="#check"><img name="formicons_r1_c3" src="formicons_r1_c3.gif" width="25" height="26" border="0" alt="Check Box"></a></td>
+    <td><a href="#option"><img name="formicons_r1_c4" src="formicons_r1_c4.gif" width="28" height="26" border="0" alt="Option Button"></a></td>
+    <td><a href="#list"><img name="formicons_r1_c5" src="formicons_r1_c5.gif" width="25" height="26" border="0" alt="List Box"></a></td>
+    <td><a href="#combo"><img name="formicons_r1_c6" src="formicons_r1_c6.gif" width="26" height="26" border="0" alt="Combo Box"></a></td>
+    <td><img name="formicons_r1_c7" src="formicons_r1_c7.gif" width="26" height="26" border="0" alt="Combination List-Edit is not available."></td>
+    <td><img name="formicons_r1_c8" src="formicons_r1_c8.gif" width="26" height="26" border="0" alt="Combination Drop-Down Edit is unavailable."></td>
+    <td><a href="#scroll"><img name="formicons_r1_c9" src="formicons_r1_c9.gif" width="26" height="26" border="0" alt="Scroll Bar"></a></td>
+    <td><a href="#spinner"><img name="formicons_r1_c10" src="formicons_r1_c10.gif" width="27" height="26" border="0" alt="Spinner"></a></td>
+    <td><img src="spacer.gif" width="1" height="26" border="0" alt=""></td>
+  </tr>
+</table>
+<p>When you position the cursor above one of the control icons (while that window 
+  is active), the name of the control will be displayed.</p>
+<p>&nbsp;</p>
+<h3><a name="scroll" id="scroll"></a>Scroll Bars and Spinners</h3>
+<p>Scroll (or slider) bars and spinners give the user an easy way to vary a parameter. 
+  These two types of controls are used side-by-side in the file buttons.xls. The 
+  scroll bar can be oriented either vertically or horizontally, but the spinner 
+  is oriented only up and down. (Excel may eventually allow other orientations). 
+</p>
+<p>When oriented vertically, the scroll bar is increasing downwards, while the 
+  spinner is increasing upwards. In the riemann.xls file, a scroll bar is provided 
+  so that the user can use the mouse to vary the number of intervals by clicking 
+  or dragging.</p>
+<p>We will create both a slider bar and a spinner to compare and contrast the 
+  two similar control types.</p>
+<h3>Creating scroll bars</h3>
+<p>Open a new file. Click on the <a href="#controlicons">Scroll Bar icon</a>. 
+  (It consists of a stack of two squares, with an up arrow in the upper square, 
+  and a down arrow in the lower square.) Drag a short, wide rectangle to get a 
+  horizontal scroll bar. If you don't like the shape, you can drag a handle to 
+  re-shape the scroll bar. </p>
+<p>When the rectangle is wider than tall, the scroll bar is horizontal; if the 
+  rectangle is taller than wide, the scroll bar is vertical. You can also drag 
+  the scroll bar around. If you lose the handles, right-click on the slider, then 
+  press ESC.</p>
+<p>Right-click on the scroll bar, then select &quot;Format Control&quot;.Select 
+  the &quot;Control&quot; tab. Change the &quot;Current value&quot; to 50, check 
+  that the Minimum value is 0, the Maximum value is 100, the Incremental change 
+  is 1, and the Page change is 10.</p>
+<p>Click on the button at the right of the &quot;Cell link:&quot; box. Click on 
+  the box D1, then close the pop-up Format Control box. Next, click on OK to close 
+  the Format Object window.</p>
+<p>Select cell D3 and type</p>
+<p>=(d1-50)/10</p>
+<p>and Enter.</p>
+<p>Try clicking on the scroll bar or dragging the tab in its middle.</p>
+<h3>Creating a <a name="spinner"></a>Spinner</h3>
+<p>Click on the <a href="#controlicons">Spinner icon</a>. (It should be next to 
+  the scroll bar icon, and it consists of two up and down triangles separted by 
+  a horizontal line.) Drag a tall, thin rectangle to get a spinner. Re-shape as 
+  desired. </p>
+<p>Right-click on the spinner, then select &quot;Format Control&quot;. Set the 
+  &quot;Current value&quot; to 10, the Minimum value to 0, the Maximum value to 
+  20, the Incremental change to 1, and the Cell link to $F$1. Click on OK to close 
+  the Format Object window.</p>
+<p>Select cell F3 and type</p>
+<p>=(f1-10)/2</p>
+<p>and Enter.</p>
+<p>Enter -10 in A1 and -9.5 in A2. Select both cells, then drag the lower right 
+  corner of A2 down to A41. In cell B1 enter</p>
+<p>=d$3*a1+f$3</p>
+<p>then select B1 and double-click on the lower right corner of the cell to &quot;black-cross 
+  copy&quot; the contents of that cell into B2:B41.</p>
+<p>Select the data in A1:B41 and create an XY (Scatter) graph: Click on the chart 
+  icon, select the XY (Scatter) icon and the &quot;Scatter with data points connected 
+  by smoothed Lines without markers&quot; sub-type. </p>
+<p>After clicking Next, select the Series tab and check that the X Values are 
+  from column A and the Y Values are from column B. (The name of the current sheet, 
+  probably &quot;Sheet1,&quot; is also shown in the input boxes.) Click Next. 
+</p>
+<p>Make the Chart title</p>
+<p>y = ax + b</p>
+<p>check the Major Gridlines on both axes, un-check the Show Legend, and click 
+  Finish.</p>
+<p>Double-click on the x-axis and format the Scale so that the minimum is -10, 
+  the maximum is 10, the major unit is 5, and the minor unit is 1. The &quot;Auto&quot; 
+  boxes for those values should all be un-checked. Double-click on the y-axis 
+  and format it in the same way.</p>
+<p>Now the scroll bar controls the slope of the line and the spinner the y-intercept. 
+  Position the scroll bar (remember you can right-click and press Esc to select 
+  an control) just below D3, and position the spinner just below F3. Type the 
+  letters &quot;a&quot; in D2 and &quot;b&quot; in F2. Make the font in those 
+  cells large and colorful.</p>
+<p></p>
+<h3><a name="option"></a>Check Boxes, Option Buttons, List and Combo Boxes</h3>
+<p>There are several controls to allow the user to select an option. For example, 
+  the user might be specifying a family of functions, a method for manipulating 
+  an object, or parameters to be used. Use option buttons, list boxes, or combo 
+  boxes when choices are mutually exclusive. Use check boxes when various options 
+  can occur together, or if there is only a single option to be toggled on and 
+  off..</p>
+<p>We'll look at options buttons first.</p>
+<h3>Creating <a name="option"></a>option buttons</h3>
+<p>We will put two option buttons above the graph but below the scroll bar and 
+  spinner. (Move the graph if needed.)</p>
+<p>Click on the <a name="group"></a><a href="#controlicons">Group Box icon</a> 
+  (it has &quot;XYZ&quot; above 3 sides of a rectangle) , then drag a rectangle. 
+  Click on the text &quot;Group Box&quot; and make the title &quot;Curve type.&quot;</p>
+<p>Select the <a href="#controlicons">Option Button icon</a>, then drag a wide 
+  short rectangle completely within the top half of the group box. Change the 
+  text to read &quot;Straight line y = ax+b.&quot;</p>
+<p>Right-click on the option button and select Format Control. Click on the Control 
+  tab, make the Value &quot;Checked&quot; and type in the Cell link &quot;H1.&quot; 
+  Click OK.</p>
+<p>Now create a second option button just below the first. Label it &quot;Exponential 
+  y = a*e^(bx).&quot;</p>
+<p>In cell H2 enter</p>
+<p>=if(h1=1,1,0)</p>
+<p>(This says, &quot;If the value in H1 is 1, assign the value 1, otherwise assign 
+  the value 0.&quot;) See what happens in cells H1 and H2 when you toggle between 
+  choices of &quot;Curve type.&quot; </p>
+<p>We want to define the values in column B to correspond to a linear function 
+  when &quot;Straight line&quot; is chosen and to an exponential function when 
+  &quot;Exponential&quot; is chosen. Define B1 as</p>
+<p>=h$2*(d$3*a1+f$3)+(1-h$2)*d$3*exp(f$3*a1)</p>
+<p>and black-cross copy that cell into B2:B41. </p>
+<p>Try clicking on the second curve type and playing with the slider button and 
+  spinner. </p>
+<p>When offering more than just two options, you might consider giving &quot;names&quot; 
+  to the functions and parameters. (See the &quot;technical issues&quot; in the 
+  polar.xls file and the discussion &quot;E. Naming Functions and Variables&quot; 
+  in &quot;II. Creating Graphs for Handouts and Exams&quot;--start by following 
+  the second link on the left.)</p>
+<p>&nbsp;</p>
+<h3><a name="list"></a>List Boxes and <a name="combo"></a>Combo Boxes</h3>
+<p>Type &quot;Linear&quot; in H3 and &quot;Exponential&quot; in H4. Click on th 
+  <a href="#controlicons">List Box icon</a> and then drag a rectangle next to 
+  the &quot;Curve type&quot; group box. </p>
+<p>Right-click on your list box and select Format Control. Click on the button 
+  at the right of the Input range box, select cells H3 and H4, and close the Format 
+  Object window. Type H1 in the Cell link box, and click OK.</p>
+<p>Click off the list box, then click on either choice.</p>
+<p>Click on the <a href="#controlicons">Combo Box icon</a> and then drag another 
+  rectangle. Right-click on your combo box select Format Control, and use the 
+  same settings as for your list box.</p>
+<p>Click off your combo box, click on the down arrow to see the drop-down menu, 
+  and make you selection.</p>
+<h3>&nbsp;</h3>
+<h3><a name="check"></a>Check Boxes</h3>
+<p>Setting up a <a href="#controlicons">Check Box</a> is basically the same as 
+  setting up a option button. But you typically do not use check boxes in a group 
+  box.</p>
+<p>&nbsp;</p>
+<h3><a name="macros" id="macros"></a>Macros</h3>
+<p>A macro is a collection of actions you expect to do many times. Defining a 
+  macro mainly involves turning on a recorder, carrying out the actions, and turning 
+  off the recorder. Sometimes Excel is configured so that turning on and off the 
+  recorder is accompolished by clicking on buttons made to look like tape recorder 
+  buttons, but sometimes turning a recording off is accomplished by selecting 
+  Tools from the menubar, then Macro-&gt;Stop recording.</p>
+<p>We will define a macro to associate with the scroll bar that will assign the 
+  appropriate formula to cell D3. </p>
+<p>First notice that if you type a number in D3, say 10, the scroll bar no longer 
+  affects the cell.</p>
+<p>Right-click on the scroll bar and select Assign macro. Click on the Record 
+  button, click on OK. In cell D3 type </p>
+<p>=(d1-50)/10</p>
+<p>and press enter. Stop recording (either by pressing the appropriate button 
+  or by selecting Tools-&gt;Macro-&gt;Stop recording).</p>
+<h4><a name="warn"></a>Warning</h4>
+<p>The cell references in the macro can be corrupted by inserting or deleting 
+  cells in the worksheet. If a working macro goes awry after inserting or deleting 
+  cells, you may need to re-record (or edit) the macros. You can delete a macro: 
+  select Tools-&gt;Macro-&gt;Macros, select the appropriate name, then click on 
+  Delete.</p>
+<p>&nbsp;</p>
+<h3><a name="button"></a>Buttons</h3>
+<p>You create a button by clicking on the <a href="#controlicons">Button icon</a> 
+  and dragging a rectangle where you want the button to be. You must assign a 
+  macro to the button for it to serve any function.</p>
+<h3>&nbsp;</h3>
+<h3><a name="pretty"></a>Making it pretty</h3>
+<p>Select cells A1:B41. Change the font color to white (either using the Font 
+  Color icon from the toolbar, or Format-&gt;Cells-&gt;Font, changing the Color 
+  from Automatic to white).</p>
+<p>Do the same for cells D1, F1, H1:H4.</p>
+<p>Select D3 and make its background yellow (either using the Fill Color icon 
+  from the toolbar, or Format-&gt;Cells-&gt;Patterns and clicking on a yellow 
+  square). Do the same in cell F3.</p>
+<p>Remove the gridlines and the column and row headings: Click on Tools-&gt;Options, 
+  and on the View tab un-check &quot;Gridlines&quot; and &quot;Row &amp; column 
+  headers.&quot;</p>
+<p>If you decide to make a nice title for the page, be sure to notice the <a href="#warn">warning</a> 
+  above before you try to insert a new row at the top of the sheet. You can make 
+  a wide cell for your text by selecting two adjacent cells and clicking the merge 
+  and center icon (next to the right justify button). Or you can create a Text 
+  Box over several cells. (See the instructions for making Labels and arrows under 
+  &quot;Samples&quot; in <a href="index2.html" target="_top">II. Creating Graphs 
+  for Handouts and Exams</a> .)</p>
+<p><a href="index4.html" target="_top">(Continue)</a></p>
+<p>&nbsp;</p>
+</body>
+</html>
