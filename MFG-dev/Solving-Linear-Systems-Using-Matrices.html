@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-09-08T14:51:04-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Solving Linear Systems Using Matrices</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
+  var cx = '006592449927388994635:w0x-ox5bpme';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{skyblue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+
+\renewcommand{\CancelColor}{blue}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner">
+<div class="searchwrapper"><div class="gcse-search"></div></div>
+<div class="container">
+<a id="logo-link" href="https://byoshiwara.github.io/MFG-online/" target="_blank"><img src="images/cover.png" alt="Logo image for document"></a><div class="title-container">
+<h1 class="heading"><a href="MFG.html"><span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span></a></h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div>
+</div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Systems-of-Linear-Equations-in-Three-Variables.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap8.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Linear-Inequalities.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Systems-of-Linear-Equations-in-Three-Variables.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chap8.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="Linear-Inequalities.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="chap1.html" data-scroll="chap1"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html" data-scroll="LinMod">Linear Models</a></li>
+<li><a href="functions.html" data-scroll="functions">Functions</a></li>
+<li><a href="graphs-of-functions.html" data-scroll="graphs-of-functions">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html" data-scroll="slope-and-rate-of-change">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html" data-scroll="linear-functions">Linear Functions</a></li>
+<li><a href="linear-regression.html" data-scroll="linear-regression">Linear Regression</a></li>
+<li><a href="chap1-summary.html" data-scroll="chap1-summary">Chapter Summary and Review</a></li>
+<li><a href="chap1-rev-projects.html" data-scroll="chap1-rev-projects">Projects for Chapter 1</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html" data-scroll="chap2"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html" data-scroll="nonlinear-models">Nonlinear Models</a></li>
+<li><a href="basic-functions.html" data-scroll="basic-functions">Some Basic Functions</a></li>
+<li><a href="transformations.html" data-scroll="transformations">Transformations of Graphs</a></li>
+<li><a href="MathModels.html" data-scroll="MathModels">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html" data-scroll="AbsoluteValue">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html" data-scroll="Domain-Range">Domain and Range</a></li>
+<li><a href="chap2-summary.html" data-scroll="chap2-summary">Chapter Summary and Review</a></li>
+<li><a href="chap2-rev-projects.html" data-scroll="chap2-rev-projects">Projects for Chapter 2: Periodic Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap3.html" data-scroll="chap3"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="Variation.html" data-scroll="Variation">Variation</a></li>
+<li><a href="Integer-Exponents.html" data-scroll="Integer-Exponents">Integer Exponents</a></li>
+<li><a href="Roots-and-Radicals.html" data-scroll="Roots-and-Radicals">Roots and Radicals</a></li>
+<li><a href="Rational-Exponents.html" data-scroll="Rational-Exponents">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html" data-scroll="Joint-Variation">Joint Variation</a></li>
+<li><a href="chap3-summary.html" data-scroll="chap3-summary">Chapter Summary and Review</a></li>
+<li><a href="chap3-rev-projects.html" data-scroll="chap3-rev-projects">Projects for Chapter 3</a></li>
+</ul>
+<h2 class="link"><a href="chap4.html" data-scroll="chap4"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul>
+<li><a href="Exponential-Growth-and-Decay.html" data-scroll="Exponential-Growth-and-Decay">Exponential Growth and Decay</a></li>
+<li><a href="Exponential-Functions.html" data-scroll="Exponential-Functions">Exponential Functions</a></li>
+<li><a href="Logarithms.html" data-scroll="Logarithms">Logarithms</a></li>
+<li><a href="Properties-of-Logarithms.html" data-scroll="Properties-of-Logarithms">Properties of Logarithms</a></li>
+<li><a href="Exponential-Models.html" data-scroll="Exponential-Models">Exponential Models</a></li>
+<li><a href="chap4-summary.html" data-scroll="chap4-summary">Chapter Summary and Review</a></li>
+<li><a href="chap4-rev-projects.html" data-scroll="chap4-rev-projects">Projects for Chapter 4</a></li>
+</ul>
+<h2 class="link"><a href="chap5.html" data-scroll="chap5"><span class="codenumber">5</span><span class="title">Logarithmic Functions</span></a></h2>
+<ul>
+<li><a href="Inverse-Functions.html" data-scroll="Inverse-Functions">Inverse Functions</a></li>
+<li><a href="Logarithmic-Functions.html" data-scroll="Logarithmic-Functions">Logarithmic Functions</a></li>
+<li><a href="The-Natural-Base.html" data-scroll="The-Natural-Base">The Natural Base</a></li>
+<li><a href="Logarithm-Scales.html" data-scroll="Logarithm-Scales">Logarithmic Scales</a></li>
+<li><a href="chap5-summary.html" data-scroll="chap5-summary">Chapter Summary and Review</a></li>
+<li><a href="chap5-rev-projects.html" data-scroll="chap5-rev-projects">Projects for Chapter 5</a></li>
+</ul>
+<h2 class="link"><a href="chap6.html" data-scroll="chap6"><span class="codenumber">6</span><span class="title">Quadratic Functions</span></a></h2>
+<ul>
+<li><a href="Factors-and-x-Intercepts.html" data-scroll="Factors-and-x-Intercepts">Factors and \(x\)-Intercepts</a></li>
+<li><a href="Solving-Quadratic-Equations.html" data-scroll="Solving-Quadratic-Equations">Solving Quadratic Equations</a></li>
+<li><a href="Graphing-Parabolas.html" data-scroll="Graphing-Parabolas">Graphing Parabolas</a></li>
+<li><a href="Problem-Solving.html" data-scroll="Problem-Solving">Problem Solving</a></li>
+<li><a href="Quadratic-Inequalities.html" data-scroll="Quadratic-Inequalities">Quadratic Inequalities</a></li>
+<li><a href="Curve-Fitting.html" data-scroll="Curve-Fitting">Curve Fitting</a></li>
+<li><a href="chap6-summary.html" data-scroll="chap6-summary">Chapter Summary and Review</a></li>
+<li><a href="chap6-rev-projects.html" data-scroll="chap6-rev-projects">Projects for Chapter 6</a></li>
+</ul>
+<h2 class="link"><a href="chap7.html" data-scroll="chap7"><span class="codenumber">7</span><span class="title">Polynomial and Rational Functions</span></a></h2>
+<ul>
+<li><a href="Polynomial-Functions.html" data-scroll="Polynomial-Functions">Polynomial Functions</a></li>
+<li><a href="Graphing-Polynomial-Functions.html" data-scroll="Graphing-Polynomial-Functions">Graphing Polynomial Functions</a></li>
+<li><a href="Complex-Numbers.html" data-scroll="Complex-Numbers">Complex Numbers</a></li>
+<li><a href="Graphing-Rational-Functions.html" data-scroll="Graphing-Rational-Functions">Graphing Rational Functions</a></li>
+<li><a href="Equations-That-Include-Algebraic-Fractions.html" data-scroll="Equations-That-Include-Algebraic-Fractions">Equations That Include Algebraic Fractions</a></li>
+<li><a href="chap7-summary.html" data-scroll="chap7-summary">Chapter Summary and Review</a></li>
+<li><a href="chap7-rev-projects.html" data-scroll="chap7-rev-projects">Projects for Chapter 7</a></li>
+</ul>
+<h2 class="link active"><a href="chap8.html" data-scroll="chap8"><span class="codenumber">8</span><span class="title">Linear Systems</span></a></h2>
+<ul>
+<li><a href="Systems-of-Linear-Equations-in-Two-Variables.html" data-scroll="Systems-of-Linear-Equations-in-Two-Variables">Systems of Linear Equations in Two Variables</a></li>
+<li><a href="Systems-of-Linear-Equations-in-Three-Variables.html" data-scroll="Systems-of-Linear-Equations-in-Three-Variables">Systems of Linear Equations in Three Variables</a></li>
+<li><a href="Solving-Linear-Systems-Using-Matrices.html" data-scroll="Solving-Linear-Systems-Using-Matrices" class="active">Solving Linear Systems Using Matrices</a></li>
+<li><a href="Linear-Inequalities.html" data-scroll="Linear-Inequalities">Linear Inequalities</a></li>
+<li><a href="Linear-Programming.html" data-scroll="Linear-Programming">Linear Programming</a></li>
+<li><a href="chap8-summary.html" data-scroll="chap8-summary">Chapter Summary and Review</a></li>
+<li><a href="chap8-rev-projects.html" data-scroll="chap8-rev-projects">Projects for Chapter 8</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Appendices</span></a></h2>
+<ul>
+<li><a href="appendix-a.html" data-scroll="appendix-a">Algebra Skills Refresher</a></li>
+<li><a href="appendix-b.html" data-scroll="appendix-b">Using a Graphing Calculator</a></li>
+<li><a href="glossary.html" data-scroll="glossary">Glossary</a></li>
+<li><a href="geometry.html" data-scroll="geometry">Geometry formulas</a></li>
+<li><a href="appendix-5.html" data-scroll="appendix-5">Bibliography</a></li>
+<li><a href="appendix-6.html" data-scroll="appendix-6">Answers to selected exercises</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul>
+<h2 class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Solving-Linear-Systems-Using-Matrices"><header title="Section 8.3 Solving Linear Systems Using Matrices"><h1 class="heading hide-type" alt="Section 8.3 Solving Linear Systems Using Matrices">
+<span class="type">Section</span><span class="codenumber">8.3</span><span class="title">Solving Linear Systems Using Matrices</span><a href="Solving-Linear-Systems-Using-Matrices.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-458"><p id="p-14872">In this section, we consider a mathematical tool called a <em class="terminology">matrix</em> (plural: matrices) that has wide application in mathematics, business, science, and engineering. A matrix is a rectangular array of numbers or <em class="terminology">entries</em>. These entries are ordinarily displayed in rows and columns, and the entire matrix is enclosed in brackets or parentheses. Thus,</p>
+\begin{equation*}
+\begin{bmatrix}1\amp 2\amp 3 \\ 4 \amp5 \amp6 \\ 7 \amp8\amp 9
+\end{bmatrix},
+\begin{bmatrix}2\amp -1\amp 3 \\4\amp 0\amp 2
+\end{bmatrix}, \text{ and }
+\begin{bmatrix} 4\\5\\6
+\end{bmatrix}
+\end{equation*}
+<p>are matrices. A matrix of <em class="terminology">order</em>, or <em class="terminology">dimension</em>, \(n\times m\) (read "\(n\) by \(m\)") has \(n\) (horizontal) rows and \(m\) (vertical) columns.</p>
+<p id="p-14873">The matrices above are \(3\times 3\text{,}\) \(2\times 3\text{,}\) and \(3\times 1\text{,}\) respectively. The first matrix—in which the number of rows is equal to the number of columns—is an example of a <em class="terminology">square matrix</em>.</p></section><section class="subsection" id="subsection-236"><header title="Subsection  Coefficient Matrix and Augmented Matrix of a System"><h1 class="heading hide-type" alt="Subsection  Coefficient Matrix and Augmented Matrix of a System">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Coefficient Matrix and Augmented Matrix of a System</span>
+</h1></header><p id="p-14874">We will use matrices to solve systems of linear equations. For a system of linear equations of the form</p>
+\begin{align*}
+a_1 x + b_1 y + c_1 z \amp= d_1\\
+a_2 x + b_2 y + c_2 z \amp= d_2\\
+a_3 x + b_3 y + c_3 z \amp= d_3
+\end{align*}
+<p>the matrices</p>
+\begin{equation*}
+\begin{bmatrix}
+a_1\amp b_1\amp c_1 \\ a_2 \amp b_2 \amp c_2 \\ a_3 \amp b_3\amp c_3
+\end{bmatrix} \text{ and }
+\left[ \begin{array}{@{}ccc|c@{}}
+a_1\amp b_1\amp c_1 \amp d_1\\ a_2 \amp b_2 \amp c_2  \amp d_2\\ a_3 \amp b_3\amp c_3  \amp d_3
+\end{array}\right]
+\end{equation*}
+<p>are called the <em class="terminology">coefficient matrix</em> and the <em class="terminology">augmented matrix</em>, respectively. Each row of the augmented matrix represents one of the equations of the system. For example, the augmented matrix of the system <div class="sidebyside" style="" id="sidebyside-1562"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:45%;justify-content:center;">
+<p id="p-14875"></p>
+\begin{alignat*}{4}
+3x\amp {}-{}\amp 4y\amp {}+{}\amp z\amp =\amp 2\\
+-x\amp {}+{}\amp 2y\amp \amp  \amp =\amp -1\\
+2x\amp {}-{}\amp y\amp {}-{}\amp 3z\amp =\amp 4
+\end{alignat*}
+</div>
+<div class="sbspanel" style="width:10%;justify-content:center;"><p id="p-14876">is</p></div>
+<div class="sbspanel" style="width:45%;justify-content:center;">
+<p id="p-14877"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+3\amp -4\amp 1 \amp 2\\ -1 \amp 2 \amp  0 \amp -1\\ 2 \amp -1\amp 3  \amp 4
+\end{array}\right]
+\end{equation*}
+</div>
+</div></div> and the augmented matrix of the system <div class="sidebyside" style="" id="sidebyside-1563"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:45%;justify-content:center;">
+<p id="p-14878"></p>
+\begin{alignat*}{4}
+x\amp {}-{}\amp 3y\amp {}+{}\amp 2z\amp = {}\amp 5\\
+\amp {}{}\amp 2y\amp {}-{}\amp z \amp = \amp 4\\
+\amp {}{}\amp \amp {}{}\amp 4z\amp = \amp 8
+\end{alignat*}
+</div>
+<div class="sbspanel" style="width:10%;justify-content:center;"><p id="p-14879">is</p></div>
+<div class="sbspanel" style="width:45%;justify-content:center;">
+<p id="p-14880"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1\amp -3\amp 2 \amp 5\\ 0 \amp 2 \amp -1  \amp 4\\ 0 \amp 0\amp 4 \amp 8
+\end{array}\right]
+\end{equation*}
+</div>
+</div></div> The augmented matrix of this last system, which has all zero entries in the lower left corner (below the diagonal), is said to be in <em class="terminology">upper triangular form</em>. As we saw in <a href="Systems-of-Linear-Equations-in-Three-Variables.html" alt="Section 8.2 Systems of Linear Equations in Three Variables" title="Section 8.2 Systems of Linear Equations in Three Variables">Section 8.2</a>, it is easy to find the solution of such a system by back-substitution.</p></section><section class="subsection" id="subsection-237"><header title="Subsection  Elementary Row Operations"><h1 class="heading hide-type" alt="Subsection  Elementary Row Operations">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Elementary Row Operations</span>
+</h1></header><p id="p-14881">The method of elimination depends on two properties of linear systems that allow us to change one system into an equivalent one, that is, one that has the same solutions as the original system.</p>
+<article class="assemblage-like" id="assemblage-209"><h5 class="heading"><span class="title">Properties of Linear Systems</span></h5>
+<p id="p-14882"></p>
+<ol id="ol-2699" style="list-style-type: decimal;">
+<li id="li-8723">
+<p id="p-14883">Multiplying a linear equation by a (nonzero) constant does not change its solutions. That is, any solution of the equation</p>
+\begin{equation*}
+ax + by = c
+\end{equation*}
+<p>is also a solution of the equation</p>
+\begin{equation*}
+kax + kby = kc
+\end{equation*}
+</li>
+<li id="li-8724">
+<p id="p-14884">Adding (or subtracting) two linear equations does not change their common solutions. That is, any solution of the system</p>
+\begin{align*}
+a_1 x + b_1 y \amp = c_1\\
+a_2 x + b_2 y \amp = c_2
+\end{align*}
+<p>is also a solution of the equation</p>
+\begin{equation*}
+(a_1 + a_2)x + (b_1 + b_2)y = c_1 + c_2
+\end{equation*}
+</li>
+</ol></article><p id="p-14885">These properties apply to linear systems of any size. Thus, we can perform the following operations on the equations of a system: </p>
+<ol id="ol-2700" style="list-style-type: decimal;">
+<li id="li-8725"><p id="p-14886">Multiply both sides of an equation by a nonzero real number.</p></li>
+<li id="li-8726">
+<p id="p-14887">Add a constant multiple of one equation to another equation.</p>
+<p id="p-14888">We can also perform the following operation without changing the solution of the system:</p>
+</li>
+<li id="li-8727"><p id="p-14889">Interchange two equations.</p></li>
+</ol>
+<p> Because each equation of the system corresponds to a row in the augmented matrix, the three operations above correspond to three elementary row operations for the augmented matrix. We can perform one or more of these operations on a matrix without changing the solution of the system it represents.</p>
+<article class="assemblage-like" id="assemblage-210"><h5 class="heading"><span class="title">Elementary Row Operations</span></h5>
+<p id="p-14890"></p>
+<ol id="ol-2701" style="list-style-type: decimal;">
+<li id="li-8728"><p id="p-14891">Multiply the entries of any row by a nonzero real number.</p></li>
+<li id="li-8729"><p id="p-14892">Add a constant multiple of one row to another row.</p></li>
+<li id="li-8730"><p id="p-14893">Interchange two rows.</p></li>
+</ol></article><article class="example-like" id="example-263"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.42</span>
+</h5>
+<p id="p-14894"></p>
+<ol id="ol-2702" style="list-style-type: lower-alpha;">
+<li id="li-8731"><p id="p-14895">\(A=
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 3 \amp -1 \amp -1\\ 
+2 \amp 1 \amp 4  \amp 5 \\ 
+6 \amp 2 \amp -1 \amp -12
+\end{array}\right]				\) and \(B=
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 3 \amp -1 \amp -1\\ 
+6 \amp 3 \amp 12  \amp 15 \\ 
+6 \amp 2 \amp -1 \amp -12
+\end{array}\right]				\) represent equivalent systems because we can multiply each entry in the second row of \(A\) by \(3\) to obtain \(B\text{.}\)</p></li>
+<li id="li-8732"><p id="p-14896">\(A=
+\left[ \begin{array}{@{}ccc|c@{}}
+3 \amp -1 \amp 2 \amp 7 \\ 
+2 \amp 1  \amp 4 \amp -5 \\ 
+3 \amp 1  \amp 9 \amp -16
+\end{array}\right]				\) and \(B=
+\left[ \begin{array}{@{}ccc|c@{}}
+3 \amp 1  \amp 9 \amp -16 \\ 
+2 \amp 1  \amp 4 \amp -5 \\ 
+3 \amp -1 \amp 2 \amp 7
+\end{array}\right]				\) represent equivalent systems because we can interchange the first and third rows of \(A\) to obtain \(B\text{.}\)</p></li>
+<li id="li-8733"><p id="p-14897">\(A=
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 2  \amp 1 \amp -3 \\ 
+2 \amp 0  \amp -1\amp 7 \\ 
+3 \amp 1  \amp 2 \amp 10
+\end{array}\right]				\) and \(B=
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 2  \amp 1 \amp -3 \\ 
+0 \amp -4  \amp -3\amp 13 \\ 
+3 \amp 1  \amp 2 \amp 10
+\end{array}\right]				\) represent equivalent systems becausewe can add \(-2\) times each entry of the first row of \(A\) to the corresponding entry of the second row of \(A\) to obtain \(B\text{.}\)</p></li>
+</ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3129" id="exercise-3129"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.43</span>
+</h5></article></a></div>
+<div id="hk-exercise-3129" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-14898">Subtract \(4\) times row 2 from row 3.</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+3 \amp 2  \amp -5 \amp -3 \\ 
+2 \amp -3 \amp 2  \amp 6 \\ 
+8 \amp -4 \amp 2 \amp 12
+\end{array}\right]				
+\end{equation*}
+</article></div>
+<article class="example-like" id="example-264"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.44</span>
+</h5>
+<p id="p-14900">Use row operations to form an equivalent matrix with the given elements:</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -4  \amp -5  \\ 
+3 \amp 6 \amp 3\\ 
+\end{array}\right]				
+\longrightarrow
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -4  \amp -5  \\ 
+0 \amp \text{?} \amp \text{?} \\ 
+\end{array}\right]				
+\end{equation*}
+</article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-242" id="solution-242"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-242" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14901">To obtain \(0\) as the first entry in the second row, we can multiply the first row by \(-3\) and add the result to the second row. That is, we add \(-3(\text{row }1)\) to \(\text{row }2\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -4  \amp -5  \\ 
+3 \amp 6 \amp 3\\ 
+\end{array}\right]				
+\xrightarrow[-3(\text{row } 1) + \text{row }2]{}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -4  \amp -5  \\ 
+0 \amp 18 \amp 18 \\ 
+\end{array}\right]				
+\end{equation*}
+</span></span>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3130" id="exercise-3130"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.45</span>
+</h5></article></a></div>
+<div id="hk-exercise-3130" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-14902">Use row operations to form an equivalent matrix with the given elements:</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+-1 \amp -3  \amp 7  \\ 
+-2 \amp 4 \amp -6\\ 
+\end{array}\right]				
+\longrightarrow
+\left[ \begin{array}{@{}cc|c@{}}
+-1 \amp -3  \amp 7  \\ 
+0 \amp \text{?} \amp \text{?} \\ 
+\end{array}\right]	
+\end{equation*}
+( <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1676" id="answer-1676"><span class="solution"><span class="type">Answer</span></span></a></span><span id="hk-answer-1676" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14903">\(2(\text{row }1)+\text{row }2:
+\left[ \begin{array}{@{}cc|c@{}}
+-1 \amp -3  \amp 7  \\ 
+0 \amp -2 \amp 8 \\ 
+\end{array}\right]	\)</p></span></span></article></div>
+<article class="example-like" id="example-265"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.46</span>
+</h5>
+<p id="p-14904">Use row operations on the first matrix to form an equivalent matrix in upper triangular form.</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -3  \amp 1  \amp -4 \\ 
+3 \amp -1  \amp -1 \amp 8\\ 
+2 \amp -2  \amp 3  \amp -1\\ 
+\end{array}\right]				
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -3  \amp 1  \amp -4 \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} \\ 
+0 \amp 0 \amp \text{?} \amp \text{?} \\ 
+\end{array}\right]	
+\end{equation*}
+</article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-243" id="solution-243"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-243" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14905">We perform the transformation in two steps. First, we obtain zeros in the lower two entries of the first column. We get these zeros by adding suitable multiples of the first row to the second and third rows:</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -3  \amp 1  \amp -4 \\ 
+3 \amp -1  \amp -1 \amp 8\\ 
+2 \amp -2  \amp 3  \amp -1\\ 
+\end{array}\right]				
+\xrightarrow[-2(\text{row } 1) + \text{row }3]{-3(\text{row } 1) + \text{row }2}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -3  \amp 1  \amp -4 \\ 
+0 \amp 8   \amp -4 \amp 20 \\ 
+0 \amp 4   \amp 1  \amp 7 \\ 
+\end{array}\right]	
+\end{equation*}
+<p>Next we obtain a zero as the second entry of the third row by adding a suitable multiple of the second row. For this matrix, we add \(-12(\text{row }2)\) to \(\text{row }3\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -3  \amp 1  \amp -4 \\ 
+0 \amp 8   \amp -4 \amp 20 \\ 
+0 \amp 4   \amp 1  \amp 7 \\ 
+\end{array}\right]				
+\xrightarrow[\frac{-1}{2}(\text{row } 2) + \text{row }3]{}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -3  \amp 1  \amp -4 \\ 
+0 \amp 8   \amp -4 \amp 20 \\ 
+0 \amp 0   \amp 3  \amp -3 \\ 
+\end{array}\right]	
+\end{equation*}
+<p>The last matrix is in upper triangular form.</p></span></span>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3131" id="exercise-3131"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.47</span>
+</h5></article></a></div>
+<div id="hk-exercise-3131" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-14906">Use the suggested row operations to form an equivalent matrix in upper triangular form.</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2  \amp 4  \amp 3 \\ 
+5 \amp -7  \amp 8  \amp 6\\ 
+-2\amp 6   \amp -7 \amp 6\\ 
+\end{array}\right]				
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2  \amp 4  \amp 3 \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} \\ 
+0 \amp 0 \amp \text{?} \amp \text{?} \\ 
+\end{array}\right]	
+\end{equation*}
+<ol id="ol-2703" style="list-style-type: decimal;">
+<li id="li-8734"><p id="p-14907">Add \(-5 (\text{row }1)\) to \((\text{row }2)\text{.}\)</p></li>
+<li id="li-8735"><p id="p-14908">Add \(2 (\text{row }1)\) to \((\text{row }3)\text{.}\)</p></li>
+<li id="li-8736"><p id="p-14909">Multiply \((\text{row }2)\) by \(\dfrac{1}{3}\text{.}\)</p></li>
+<li id="li-8737"><p id="p-14910">Add \(-2 (\text{row }2)\) to \((\text{row }3)\text{.}\)</p></li>
+</ol></article></div></section><section class="subsection" id="subsection-238"><header title="Subsection  Matrix Reduction"><h1 class="heading hide-type" alt="Subsection  Matrix Reduction">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Matrix Reduction</span>
+</h1></header><p id="p-14912">We use elementary row operations to apply Gaussian reduction to the augmented matrix of a linear system. This matrix method can be used to solve linear systems of any size and is well suited for implementation by a computer program. The method has three steps.</p>
+<article class="assemblage-like" id="assemblage-211"><h5 class="heading"><span class="title">Solving a Linear System by Matrix Reduction</span></h5>
+<p id="p-14913"></p>
+<ol id="ol-2704" style="list-style-type: decimal;">
+<li id="li-8738"><p id="p-14914">Write the augmented matrix for the system.</p></li>
+<li id="li-8739"><p id="p-14915">Using elementary row operations, transform the matrix into an equivalent one in upper triangular form.</p></li>
+<li id="li-8740"><p id="p-14916">Use back-substitution to find the solution to the system.</p></li>
+</ol></article><article class="example-like" id="example-266"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.48</span>
+</h5>
+<p id="p-14917">Use matrix reduction to solve the system.</p>
+\begin{alignat*}{3}
+x\amp {}-{}\amp 2y\amp  = {}\amp -5\\
+2x\amp {}+{}\amp 3y\amp  = \amp 11
+\end{alignat*}
+</article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-244" id="solution-244"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-244" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14918">The augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -2  \amp -5  \\ 
+2 \amp 3 \amp 11\\ 
+\end{array}\right]			
+\end{equation*}
+<p>We use row operations to obtain \(0\) in the first entry of the second row.</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -2  \amp -5  \\ 
+2 \amp 3 \amp 11\\ 
+\end{array}\right]				
+\xrightarrow[-2(\text{row } 1) + \text{row }2]{}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -2  \amp -5  \\ 
+0 \amp 7   \amp 21 \\ 
+\end{array}\right]				
+\end{equation*}
+<p>The last matrix is upper triangular and corresponds to the system</p>
+\begin{alignat*}{3}
+x\amp {}-{}\amp 2y\amp  = {}\amp -5\hphantom{blankblank}\amp(1)\\
+\amp {}{}\amp 7y\amp  = \amp 21\hphantom{blankblank}\amp(2)
+\end{alignat*}
+<p>Now we use back-substitution to solve the system. From Equation (2), \(y=3\text{.}\) Substitute \(3\) for \(y\) in Equation (1) to find</p>
+\begin{align*}
+x - 2(\alert{3}) \amp = -5\\
+x \amp = 1
+\end{align*}
+<p>The solution is the ordered pair \((1, 3)\text{.}\)</p></span></span>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3132" id="exercise-3132"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.49</span>
+</h5></article></a></div>
+<div id="hk-exercise-3132" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-14919">Use matrix reduction to solve the system</p>
+\begin{alignat*}{3}
+4x\amp {}+{}\amp 4y\amp  = {}\amp 3\\
+3x\amp {}+{}\amp 8y\amp  = \amp 1
+\end{alignat*}
+<p>Follow the suggested steps: </p>
+<ol id="ol-2705" style="list-style-type: decimal;">
+<li id="li-8741"><p id="p-14920">Write the augmented matrix for the system.</p></li>
+<li id="li-8742"><p id="p-14921">Add \(-3(\text{row }1)\) to \((\text{row }2)\text{.}\)</p></li>
+<li id="li-8743"><p id="p-14922">Solve the resulting system by back-substitution.</p></li>
+</ol></article></div></section><section class="subsection" id="subsection-239"><header title="Subsection  Reducing a \(3\times 3\) Matrix"><h1 class="heading hide-type" alt="Subsection  Reducing a \(3\times 3\) Matrix">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Reducing a \(3\times 3\) Matrix</span>
+</h1></header><p id="p-14924">Although there are many ways to reduce an augmented \(3\times 3\) matrix to upper triangular form, the following two-step procedure may help you organize the row operations.</p>
+<article class="assemblage-like" id="assemblage-212"><h5 class="heading"><span class="title">Strategy for Matrix Reduction</span></h5>
+<p id="p-14925"></p>
+<ol id="ol-2706" style="list-style-type: decimal;">
+<li id="li-8744"><p id="p-14926">If the first entry in the first row is zero, interchange that row with another. Obtain zeros in the <!--Style me with CSS--><em>first</em> entries of the second and third rows by adding suitable multiples of the <!--Style me with CSS--><em>first</em> row to the second and third rows.</p></li>
+<li id="li-8745"><p id="p-14927">If the second entry of the second row is zero, interchange the second and third rows. Obtain a zero in the <!--Style me with CSS--><em>second</em> entry of the third row by adding a suitable multiple of the <!--Style me with CSS--><em>second</em> row to the third row.</p></li>
+</ol></article><p id="p-14928">If you cannot obtain nonzero entries on the diagonal, then the system does not have a unique solution; the system is either inconsistent or dependent. See Homework problems 45–48.</p>
+<article class="example-like" id="example-matrix-3x3-system"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.50</span>
+</h5>
+<p id="p-14929">Use matrix reduction to solve the system.</p>
+\begin{alignat*}{4}
+2x\amp {}-{}\amp 4y\amp {}{}\amp \amp =\amp 6\\
+3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8\\
+2x\amp {}{}\amp \amp {}-{}\amp 3z\amp =\amp -11
+\end{alignat*}
+</article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-245" id="solution-245"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-245" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14930">The augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+2 \amp -4\amp 0  \amp 6  \\ 
+3 \amp -4\amp 1  \amp 8  \\ 
+2 \amp  0\amp -3 \amp -11
+\end{array}\right]		
+\end{equation*}
+<p>We obtain \(1\) as the first entry of the first row by multiplying each entry in the first row by \(\dfrac{1}{2}\text{.}\) This will make it easier to obtain zeros in the first entries of the second and third rows. <div class="sidebyside" style="" id="sidebyside-1564"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14931"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+2 \amp -4\amp 0  \amp 6  \\ 
+3 \amp -4\amp 1  \amp 8  \\ 
+2 \amp  0\amp -3 \amp -11
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14932"></p>
+\begin{alignat*}{4}
+2x\amp {}-{}\amp 4y\amp {}+{}\amp0z \amp =\amp 6\\
+3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8\\
+2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
+\end{alignat*}
+</div>
+</div></div></p>
+\begin{equation*}
+\stackrel{\displaystyle{\frac{1}{2}}(\text{row }1)}{\big\downarrow}
+\end{equation*}
+<p><div class="sidebyside" style="" id="sidebyside-1565"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14933"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2\amp 0  \amp 3  \\ 
+3 \amp -4\amp 1  \amp 8  \\ 
+2 \amp  0\amp -3 \amp -11
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14934"></p>
+\begin{alignat*}{4}
+x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3\\
+3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8\\
+2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
+\end{alignat*}
+</div>
+</div></div> Next, we obtain zeros in the first entries of the second and third rows by adding suitable multiples of the first row:</p>
+\begin{equation*}
+-3(\text{row }1) + 2~~{\Bigg\downarrow}~~3(\text{row }1) + 3 
+\end{equation*}
+<p><div class="sidebyside" style="" id="sidebyside-1566"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14935"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2\amp 0  \amp 3  \\ 
+0 \amp 2 \amp 1  \amp -1  \\ 
+0 \amp  4\amp -3 \amp -17
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14936"></p>
+\begin{alignat*}{4}
+x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3\\
+0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1\\
+0x\amp {}+{}\amp 4y\amp {}-{}\amp 3z\amp =\amp -17
+\end{alignat*}
+</div>
+</div></div> Finally, we obtain a zero in the second entry of the third row by adding \(-2(\text{row }2)\) to \(\text{row }3\text{:}\)</p>
+\begin{equation*}
+-2(\text{row }2) + 3~~{\Bigg\downarrow}~~\hphantom{3(\text{row }1) + 3} 
+\end{equation*}
+<p><div class="sidebyside" style="" id="sidebyside-1567"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14937"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2\amp 0  \amp 3  \\ 
+0 \amp 2 \amp 1  \amp -1  \\ 
+0 \amp 0 \amp -5 \amp -15
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:50%;justify-content:center;">
+<p id="p-14938"></p>
+\begin{alignat*}{4}
+x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3\\
+0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1\\
+0x\amp {}+{}\amp 0y\amp {}-{}\amp 5z\amp =\amp -15
+\end{alignat*}
+</div>
+</div></div> The system is now in upper triangular form, and we use back-substitution to find the solution. We solve the last equation to get \(z=3\) and substitute \(3\) for \(z\) in the second equation to find \(y=-2\text{.}\) Finally, we substitute \(3\) for \(z\) and \(-2\) for \(y\) in the first equation to find \(x=-1\text{.}\) The solution is the ordered triple \((-1,-2, 3)\text{.}\)</p></span></span>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3133" id="exercise-3133"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.51</span>
+</h5></article></a></div>
+<div id="hk-exercise-3133" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-14939">Use matrix reduction to solve the system</p>
+\begin{align*}
+x + 3z \amp = -11\\
+2x + y + z \amp = 1\\
+-3x - 2y = 3
+\end{align*}
+<p>Follow the suggested steps: </p>
+<ol id="ol-2707" style="list-style-type: decimal;">
+<li id="li-8746"><p id="p-14940">Write the augmented matrix for the system.</p></li>
+<li id="li-8747"><p id="p-14941">Add \(-2\)(row 1) to (row 2).</p></li>
+<li id="li-8748"><p id="p-14942">Add \(3\)(row 1) to (row 3).</p></li>
+<li id="li-8749"><p id="p-14943">Add \(2\)(row 2) to (row 3).</p></li>
+<li id="li-8750"><p id="p-14944">Solve the resulting system by back-substitution.</p></li>
+</ol></article></div>
+<p id="p-14946">It is a good idea to make the first entry in the first row equal to \(1\text{,}\) as we did in <a knowl="./knowl/example-matrix-3x3-system.html" knowl-id="xref-example-matrix-3x3-system" alt="Example 8.50 " title="Example 8.50 ">Example 8.50</a>, to simplify the calculations that follow. However, if that entry is zero we can interchange two rows. For example, to reduce the matrix</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+0 \amp 1 \amp 2  \amp 3  \\ 
+1 \amp 2 \amp 3  \amp 4  \\ 
+2 \amp 5 \amp 1 \amp 4
+\end{array}\right]		
+\end{equation*}
+<p>we begin by interchanging the first and second rows to obtain</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 2 \amp 3  \amp 4  \\ 
+0 \amp 1 \amp 2  \amp 3  \\ 
+2 \amp 5 \amp 1 \amp 4
+\end{array}\right]		
+\end{equation*}
+<p>We then follow the two-step procedure described above to find</p>
+\begin{equation*}
+\xrightarrow[-2(\text{row } 1) + \text{row }3]{}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 2 \amp 3  \amp 4  \\ 
+0 \amp 1 \amp 2  \amp 3  \\ 
+0 \amp 1 \amp -5 \amp -4
+\end{array}\right]		
+\xrightarrow[-(\text{row } 2) + \text{row }3]{}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 2 \amp 3  \amp 4  \\ 
+0 \amp 1 \amp 2  \amp 3  \\ 
+0 \amp 0 \amp -7 \amp -7
+\end{array}\right]		
+\end{equation*}
+</section><section class="subsection" id="subsection-240"><header title="Subsection  Solving Larger Systems"><h1 class="heading hide-type" alt="Subsection  Solving Larger Systems">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Solving Larger Systems</span>
+</h1></header><p id="p-14947">Systems of linear equations in business and economics may involve hundreds of linear equations and hundreds of variables. The study of airflow for aircraft design can involve systems of millions of linear equations and variables. These large systems are solved using matrix methods.</p>
+<article class="example-like" id="example-matrix-4x4-system"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.52</span>
+</h5>
+<p id="p-14948">Write the augmented matrix for the system</p>
+\begin{alignat*}{5}
+-w\amp {}+{} \amp x \amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 7\\
+2w\amp {}-{}\amp 2x\amp {}-{}\amp 4y\amp {}-{}\amp 5z \amp =\amp -17\\
+-3w\amp {}+{}\amp 9x\amp {}+{}\amp 3y\amp {}+{}\amp 6z\amp =\amp 30\\
+4w\amp {}+{}\amp 8x\amp {}-{}\amp 2y\amp {}+{}\amp 5z\amp =\amp 17
+\end{alignat*}
+<p>Use matrix reduction and back-substitution to solve the system.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-246" id="solution-246"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-246" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14949">The augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+2  \amp -2 \amp -4 \amp -5 \amp -17  \\ 
+-3 \amp 9  \amp 3  \amp 6  \amp 30 \\
+4  \amp 8  \amp -2 \amp 5  \amp 17 
+\end{array}\right]			
+\end{equation*}
+<p>We use row operations to put the matrix in upper triangular form. First, we add multiples of the first row to the rows below it to get \(0\)s in the first column. <div class="sidebyside" style="" id="sidebyside-1568"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:40%;justify-content:center;"><table>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(2(\text{row }1) + \text{row }2\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(-3(\text{row }1) + \text{row }3\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(4(\text{row }1) + \text{row }4\)</td></tr>
+</table></div>
+<div class="sbspanel" style="width:40%;justify-content:center;">
+<p id="p-14950"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+0  \amp 12 \amp -6 \amp 9  \amp 45 
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:20%;justify-content:center;"><p id="p-14951"></p></div>
+</div></div> The second row has \(0\) as its second entry, so we interchange the second and third rows to put a nonzero entry in the second column.</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+0  \amp 12 \amp -6 \amp 9  \amp 45 
+\end{array}\right]		
+\end{equation*}
+<p>Now we want \(0\)s in the last two rows of the second column. The third row already has \(0\) in the second column, so we only need to add a multiple of the second row to the fourth row. <div class="sidebyside" style="" id="sidebyside-1569"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:40%;justify-content:center;"><table>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(-2(\text{row }2) + \text{row }4\)</td></tr>
+</table></div>
+<div class="sbspanel" style="width:40%;justify-content:center;">
+<p id="p-14952"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+0  \amp 0  \amp -18\amp 3  \amp 27 
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:20%;justify-content:center;"><p id="p-14953"></p></div>
+</div></div> Finally, we add a multiple of the third row to the fourth row to get 0 in the third column. -	<div class="sidebyside" style="" id="sidebyside-1570"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:40%;justify-content:center;"><table>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(~~\)</td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines">\(-3(\text{row }3) + \text{row }4\)</td></tr>
+</table></div>
+<div class="sbspanel" style="width:40%;justify-content:center;">
+<p id="p-14954"></p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+0  \amp 0  \amp 0  \amp 12  \amp 36 
+\end{array}\right]		
+\end{equation*}
+</div>
+<div class="sbspanel" style="width:20%;justify-content:center;"><p id="p-14955"></p></div>
+</div></div> This triangular matrix corresponds to the system</p>
+\begin{alignat*}{5}
+-w\amp {}+{} \amp x \amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 7\\
+\amp {} {}\amp 6x\amp {}+{}\amp 6y\amp {}+{}\amp 3z \amp =\amp 9\\
+\amp {}{}\amp  \amp {} {}\amp 6y\amp {}+{}\amp 3z\amp =\amp -3\\
+\amp {} {}\amp   \amp {} {}\amp  \amp {} {}\amp 12z\amp =\amp 36
+\end{alignat*}
+<p>which we solve by back-substitution. From the last equation, we find \(z=3\text{,}\) and by substituting \(3\) for \(z\) in the third equation, we find \(y=-1\text{.}\) Next, we substitute \(-1\) for \(y\) and \(3\) for \(z\) in the second equation to find \(x=1\text{,}\) and finally, we substitute \(x=1\text{,}\) \(y=-1\text{,}\) \(z=3\) into the first equation to find \(w=-2\text{.}\)</p>
+<p id="p-14956">The solution is the ordered four-tuple \((-2, 1, -1, 3)\text{.}\) We can verify that these values satisfy all four equations of the original system.</p></span></span>
+</div>
+<p id="p-14957">Our strategy for reducing \(3\times 4\) augmented matrices can be generalized for larger matrices, as demonstrated in <a knowl="./knowl/example-matrix-4x4-system.html" knowl-id="xref-example-matrix-4x4-system" alt="Example 8.52 " title="Example 8.52 ">Example 8.52</a>. Starting with the first row, we work our way along the diagonal, using row operations to obtain nonzero entries on the diagonal and zeros below the diagonal entry.</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3134" id="exercise-3134"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.53</span>
+</h5></article></a></div>
+<div id="hk-exercise-3134" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-14958">Use matrix reduction to solve the system</p>
+\begin{alignat*}{5}
+w\amp {}+{} \amp x \amp {}+{}\amp y\amp {}+{}\amp z \amp =\amp -1\\
+-w\amp {}+{}\amp x\amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 3\\
+-2w\amp {}+{}\amp 10x\amp {}+{}\amp 4y\amp {}+{}\amp 7z\amp =\amp 23\\
+3w\amp {}+{}\amp 9x\amp {}-{}\amp 3y\amp {}+{}\amp 6z\amp =\amp 0
+\end{alignat*}
+</article></div>
+<article class="remark-like" id="technology-18"><h5 class="heading">
+<span class="type">Technology</span><span class="codenumber">8.54</span><span class="title">Reduced Row Echelon Form</span>
+</h5>
+<p id="p-14960">The triangular matrix we obtain by row reduction is an example of <em class="terminology">row echelon form</em>. In a row echelon matrix, </p>
+<ol id="ol-2708" style="list-style-type: decimal;">
+<li id="li-8751">The first nonzero entry in any row is farther to the right than the first nonzero entry in the rows above it.</li>
+<li id="li-8752">The entries directly below the first nonzero entry in any row are all zeros.</li>
+<li id="li-8753">Any row consisting entirely of zeros is below all rows with any nonzero entry.</li>
+</ol>
+<p> If we divide each row by its leading nonzero entry, so that the leading entry is \(1\text{,}\) and if we use row reduction to obtain \(0\)s above the leading \(1\) as well as below it, the resulting matrix is said to be in <em class="terminology">reduced row echelon form</em>. This form is especially convenient because we do not have to use backsubstitution to finish solving the system; we can read off the solutions directly from the matrix.</p>
+<p id="p-14961">For example, you can check that the matrix</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 0  \amp 0 \amp 0 \amp -2  \\ 
+0 \amp 1  \amp 0 \amp 0 \amp 3 \\
+0 \amp 0  \amp 1 \amp 0 \amp -3  \\ 
+0 \amp 0  \amp 0 \amp 1 \amp 4 
+\end{array}\right]		
+\end{equation*}
+<p>corresponds to the system</p>
+\begin{alignat*}{5}
+a\amp {}+{} \amp 0b \amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp -2\\
+0a\amp {}+{}\amp b\amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp 3\\
+0a\amp {}+{}\amp 0b\amp {}+{}\amp c\amp {}+{}\amp 0d\amp =\amp -3\\
+0a\amp {}+{}\amp 0b\amp {}+{}\amp 0c\amp {}+{}\amp d\amp =\amp 4
+\end{alignat*}
+<p>From this system, it is easy to read the solutions \(a=-2\text{,}\) \(b=3\text{,}\) \(c=-3\text{,}\) and \(d=4\text{.}\)</p>
+<p id="p-14962">TI-84 and TI-83 calculators have a command for finding the reduced row echelon form of a matrix.</p>
+<article class="example-like" id="example-269"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.55</span>
+</h5>
+<p id="p-14963">Solve the system</p>
+\begin{alignat*}{5}
+a\amp {}+{} \amp 2b \amp {}+{}\amp 4c\amp {}+{}\amp 8d \amp =\amp 12\\
+-2a\amp {}+{}\amp 2b\amp {}-{}\amp 2c\amp {}+{}\amp 2d \amp =\amp 1\\
+6a\amp {}+{}\amp 6b\amp {}+{}\amp 6c\amp {}+{}\amp 6d\amp =\amp 19\\
+4a\amp {}+{}\amp 20b\amp {}-{}\amp 8c\amp {}+{}\amp 14d\amp =\amp 41
+\end{alignat*}
+<p>by finding the reduced row echelon form of the augmented matrix.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-247" id="solution-247"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-247" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-14964">The augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 2  \amp 4 \amp 8 \amp 12  \\ 
+-2\amp 2  \amp -2\amp 2 \amp 1 \\
+6 \amp 6  \amp 6 \amp 6 \amp 19  \\ 
+4 \amp 20 \amp -8\amp 14\amp 41
+\end{array}\right]		
+\end{equation*}
+<p>We enter this matrix into the calculator as follows: First access the <!--Style me with CSS--><em>MATRIX</em> menu by pressing <tt class="code-inline tex2jax_ignore">2nd</tt> \(\boxed{x^{-1}}\) on a TI-84 or<tt class="code-inline tex2jax_ignore">MATRX</tt>  on a TI-83. You will see the menu shown in <a knowl="./knowl/fig-GC-matrix-editing.html" knowl-id="xref-fig-GC-matrix-editing" alt="Figure 8.56 " title="Figure 8.56 ">Figure 8.56</a>a. We will use matrix [A], which is already selected, and we presss <tt class="code-inline tex2jax_ignore">→</tt><tt class="code-inline tex2jax_ignore">→</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> to <!--Style me with CSS--><em>EDIT</em> (or enter) the matrix, shown in <a knowl="./knowl/fig-GC-matrix-editing.html" knowl-id="xref-fig-GC-matrix-editing" alt="Figure 8.56 " title="Figure 8.56 ">Figure 8.56</a>b.</p>
+<figure class="figure-like" id="fig-GC-matrix-editing"><img width="60%" src="images/fig-GC-matrix-editing.jpg" alt="GC windows to edit or create a matrix"><figcaption><span class="heading">Figure</span><span class="codenumber">8.56</span></figcaption></figure><p id="p-14965">We want to enter a \(4\times 5\) matrix, so we press \(4\)<tt class="code-inline tex2jax_ignore">ENTER</tt>\(5\)<tt class="code-inline tex2jax_ignore">ENTER</tt>, and we see the display in <a knowl="./knowl/fig-GC-matrix-editing2.html" knowl-id="xref-fig-GC-matrix-editing2" alt="Figure 8.57 " title="Figure 8.57 ">Figure 8.57</a>a. Now type in the first row of the matrix, pressing <tt class="code-inline tex2jax_ignore">ENTER</tt> after each entry. The calculator automatically moves to the second row. Continue filling in the rest of the augmented matrix, as shown in <a knowl="./knowl/fig-GC-matrix-editing2.html" knowl-id="xref-fig-GC-matrix-editing2" alt="Figure 8.57 " title="Figure 8.57 ">Figure 8.57</a>b.</p>
+<figure class="figure-like" id="fig-GC-matrix-editing2"><img width="60%" src="images/fig-GC-matrix-editing2.jpg" alt="GC windows of matrices being edited"><figcaption><span class="heading">Figure</span><span class="codenumber">8.57</span></figcaption></figure><p id="p-14966">To make sure you have entered the values correctly, press <tt class="code-inline tex2jax_ignore">2nd</tt><tt class="code-inline tex2jax_ignore">MODE</tt> to quit to the home screen, then open the matrix menu again. Press \(1\)<tt class="code-inline tex2jax_ignore">ENTER</tt> to retrieve matrix [A]; the calculator display should look like <a knowl="./knowl/fig-GC-matrix-viewing.html" knowl-id="xref-fig-GC-matrix-viewing" alt="Figure 8.58 " title="Figure 8.58 ">Figure 8.58</a>a. To check the rest of the matrix, press the right arrow key until you see the last column, as in <a knowl="./knowl/fig-GC-matrix-viewing.html" knowl-id="xref-fig-GC-matrix-viewing" alt="Figure 8.58 " title="Figure 8.58 ">Figure 8.58</a>b.</p>
+<figure class="figure-like" id="fig-GC-matrix-viewing"><img width="60%" src="images/fig-GC-matrix-viewing.jpg" alt="GC windows scrolling to see a matrix"><figcaption><span class="heading">Figure</span><span class="codenumber">8.58</span></figcaption></figure><p id="p-14967">We are now ready to compute the reduced row echelon form of the matrix. Access the matrix menu again, but this time press the right arrow once to highlight <!--Style me with CSS--><em>MATH</em> (<a knowl="./knowl/fig-GC-matrix-transform.html" knowl-id="xref-fig-GC-matrix-transform" alt="Figure 8.59 " title="Figure 8.59 ">Figure 8.59</a>a). Scroll down until the rref( command is highlighted, as shown in <a knowl="./knowl/fig-GC-matrix-transform.html" knowl-id="xref-fig-GC-matrix-transform" alt="Figure 8.59 " title="Figure 8.59 ">Figure 8.59</a>b, and press <tt class="code-inline tex2jax_ignore">ENTER</tt>.</p>
+<figure class="figure-like" id="fig-GC-matrix-transform"><img width="60%" src="images/fig-GC-matrix-transform.jpg" alt="GC windows to manipulate a matrix"><figcaption><span class="heading">Figure</span><span class="codenumber">8.59</span></figcaption></figure><p id="p-14968">Finally, enter matrix [A] after the rref( command by pressing <tt class="code-inline tex2jax_ignore">2nd</tt> \(\boxed{x^{-1}}\) \(1\)<tt class="code-inline tex2jax_ignore">)</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> or \(MATRX\) \(1\)<tt class="code-inline tex2jax_ignore">)</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt>. The display should now look like <a knowl="./knowl/fig-GC-rref.html" knowl-id="xref-fig-GC-rref" alt="Figure 8.60 " title="Figure 8.60 ">Figure 8.60</a>a). The last column of the matrix gives decimal approximations for the solutions.</p>
+<figure class="figure-like" id="fig-GC-rref"><img width="60%" src="images/fig-GC-rref.jpg" alt="GC windows showing rref"><figcaption><span class="heading">Figure</span><span class="codenumber">8.60</span></figcaption></figure><p id="p-14969">The calculator can also display the rational form of the solutions: Press <tt class="code-inline tex2jax_ignore">MATH</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> to see <a knowl="./knowl/fig-GC-rref.html" knowl-id="xref-fig-GC-rref" alt="Figure 8.60 " title="Figure 8.60 ">Figure 8.60</a>b. The reduced row echelon form of the augmented matrix is thus</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 0  \amp 0 \amp 0 \amp 2  \\ 
+0 \amp 1  \amp 0 \amp 0 \amp 1/3 \\
+0 \amp 0  \amp 1 \amp 0 \amp -2/3  \\ 
+0 \amp 0  \amp 0 \amp 1 \amp 3/2 
+\end{array}\right]		
+\end{equation*}
+<p>and the solution is the ordered four-tuple \((2, \dfrac{1}{3}, \dfrac{-2}{3}, \dfrac{3}{2})\text{.}\) You can verify that these values satisfy each of the original four equations.</p></span></span>
+</div></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-3135" id="exercise-3135"><article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">8.61</span>
+</h5></article></a></div>
+<div id="hk-exercise-3135" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><ol id="ol-2709" style="list-style-type: lower-alpha;">
+<li id="li-8754">
+<p id="p-14970">Find the row reduced echelon form of the augmented matrix for the system</p>
+\begin{alignat*}{5}
+-a\amp {}+{} \amp b \amp {}-{}\amp c\amp {}+{}\amp d \amp =\amp 8\\
+a\amp {}+{}\amp b\amp {}+{}\amp c\amp {}+{}\amp d \amp =\amp 2\\
+8a\amp {}+{}\amp 4b\amp {}+{}\amp 2c\amp {}+{}\amp d\amp =\amp 5\\
+27a\amp {}+{}\amp 9b\amp {}+{}\amp 3c\amp {}+{}\amp d\amp =\amp 4
+\end{alignat*}
+</li>
+<li id="li-8755"><p id="p-14971">What third degree polynomial has a graph that passes through the points \((-1, 8)\text{,}\) \((1, 2)\text{,}\) \((2, 5)\text{,}\) and \((3, 4)\text{?}\)</p></li>
+</ol></article></div></section><section class="subsection" id="summary-8-3"><header title="Subsection  Section Summary"><h1 class="heading hide-type" alt="Subsection  Section Summary">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Section Summary</span><a href="Solving-Linear-Systems-Using-Matrices.html#summary-8-3" class="permalink">¶ permalink</a>
+</h1></header><section class="subsubsection" id="subsubsection-157"><header title="Subsubsection  Vocabulary"><h1 class="heading hide-type" alt="Subsubsection  Vocabulary">
+<span class="type">Subsubsection</span><span class="codenumber"></span><span class="title">Vocabulary</span>
+</h1></header><p id="p-14975">Look up the definitions of new terms in the Glossary. </p>
+<ul id="ul-72" class="cols3" style="list-style-type: disc;">
+<li id="li-8758" style="width:32.6666666666667%; float:left;"><p id="p-14976">Matrix</p></li>
+<li id="li-8759" style="width:32.6666666666667%; float:left;"><p id="p-14977">Row echelon form</p></li>
+<li id="li-8760" style="width:32.6666666666667%; float:left;"><p id="p-14978">Upper triangular form</p></li>
+<li id="li-8761" style="width:32.6666666666667%; float:left;"><p id="p-14979">Coefficient matrix</p></li>
+<li id="li-8762" style="width:32.6666666666667%; float:left;"><p id="p-14980">Dimension</p></li>
+<li id="li-8763" style="width:32.6666666666667%; float:left;"><p id="p-14981">Entry</p></li>
+<li id="li-8764" style="width:32.6666666666667%; float:left;"><p id="p-14982">Reduced row echelon form</p></li>
+<li id="li-8765" style="width:32.6666666666667%; float:left;"><p id="p-14983">Elementary row operation</p></li>
+<li id="li-8766" style="width:32.6666666666667%; float:left;"><p id="p-14984">Augmented matrix</p></li>
+<li id="li-8767" style="width:32.6666666666667%; float:left;"><p id="p-14985">Square matrix</p></li>
+<li id="li-8768" style="width:32.6666666666667%; float:left;"><p id="p-14986">Order</p></li>
+</ul></section><section class="subsubsection" id="subsubsection-158"><header title="Subsubsection  CONCEPTS"><h1 class="heading hide-type" alt="Subsubsection  CONCEPTS">
+<span class="type">Subsubsection</span><span class="codenumber"></span><span class="title">CONCEPTS</span>
+</h1></header><p id="p-14987"></p>
+<ol id="ol-2711" style="list-style-type: decimal;">
+<li id="li-8769"><p id="p-14988">We can use a <em class="terminology">matrix</em> to represent a system of linear equations. Each row of the matrix consists of the coefficients in one of the equations of the system.</p></li>
+<li id="li-8770">
+<p id="p-14989">We operate on a matrix by using the elementary row operations.</p>
+<article class="assemblage-like" id="assemblage-213"><h5 class="heading"><span class="title">Elementary Row Operations</span></h5>
+<p id="p-14990"></p>
+<ol id="ol-2712" style="list-style-type: decimal;">
+<li id="li-8771"><p id="p-14991">Multiply the entries of any row by a nonzero real number.</p></li>
+<li id="li-8772"><p id="p-14992">Add a constant multiple of one row to another row.</p></li>
+<li id="li-8773"><p id="p-14993">Interchange two rows.</p></li>
+</ol></article>
+</li>
+<li id="li-8774">
+<p id="p-14994">We can solve a linear system by matrix reduction.</p>
+<article class="assemblage-like" id="assemblage-214"><h5 class="heading"><span class="title">Solving a Linear System by Matrix Reduction</span></h5>
+<p id="p-14995"></p>
+<ol id="ol-2713" style="list-style-type: decimal;">
+<li id="li-8775"><p id="p-14996">Write the augmented matrix for the system.</p></li>
+<li id="li-8776"><p id="p-14997">Using elementary row operations, transform the matrix into an equivalent one in upper triangular form.</p></li>
+<li id="li-8777"><p id="p-14998">Use back-substitution to find the solution to the system.</p></li>
+</ol></article>
+</li>
+<li id="li-8778"><article class="assemblage-like" id="assemblage-215"><h5 class="heading"><span class="title">Strategy for Matrix Reduction</span></h5>
+<p id="p-14999"></p>
+<ol id="ol-2714" style="list-style-type: decimal;">
+<li id="li-8779"><p id="p-15000">If the first entry in the first row is zero, interchange that row with another. Obtain zeros in the <!--Style me with CSS--><em>first</em> entries of the second and third rows by adding suitable multiples of the <!--Style me with CSS--><em>first</em> row to the second and third rows.</p></li>
+<li id="li-8780"><p id="p-15001">If the second entry of the second row is zero, interchange the second and third rows. Obtain a zero in the <!--Style me with CSS--><em>second</em> entry of the third row by adding a suitable multiple of the <!--Style me with CSS--><em>second</em> row to the third row.</p></li>
+</ol></article></li>
+<li id="li-8781"><p id="p-15002">To reduce larger matrices, we start with the first row and work our way along the diagonal, using row operations to obtain nonzero entries on the diagonal and zeros below the diagonal entry.</p></li>
+</ol></section><section class="subsubsection" id="subsubsection-159"><header title="Subsubsection  STUDY QUESTIONS"><h1 class="heading hide-type" alt="Subsubsection  STUDY QUESTIONS">
+<span class="type">Subsubsection</span><span class="codenumber"></span><span class="title">STUDY QUESTIONS</span>
+</h1></header><p id="p-15003"></p>
+<ol id="ol-2715" style="list-style-type: decimal;">
+<li id="li-8782"><p id="p-15004">What are the coefficient matrix and the augmented matrix for a system of equations?</p></li>
+<li id="li-8783"><p id="p-15005">What does it mean for a matrix to be in upper triangular form?</p></li>
+<li id="li-8784"><p id="p-15006">State the three elementary row operations.</p></li>
+<li id="li-8785"><p id="p-15007">Describe a two-step procedure for reducing a \(3\times 3\) matrix to upper triangular form.</p></li>
+<li id="li-8786"><p id="p-15008">Once the matrix is in upper triangular form, how do we complete the solution of the system?</p></li>
+<li id="li-8787"><p id="p-15009">Why is the reduced row echelon form of an augmented matrix convenient for solving a system?</p></li>
+</ol></section><section class="subsubsection" id="subsubsection-160"><header title="Subsubsection  SKILLS"><h1 class="heading hide-type" alt="Subsubsection  SKILLS">
+<span class="type">Subsubsection</span><span class="codenumber"></span><span class="title">SKILLS</span>
+</h1></header><p id="p-15010">Practice each skill in the <a href="Solving-Linear-Systems-Using-Matrices.html#section-8-3-exercises" alt="Exercises  Homework 8.3" title="Exercises  Homework 8.3">Homework </a> problems listed. </p>
+<ol id="ol-2716" style="list-style-type: decimal;">
+<li id="li-8788"><p id="p-15011">Perform elementary row operations: #1–8</p></li>
+<li id="li-8789"><p id="p-15012">Choose an elementry row operation to convert a matrix: #9–18</p></li>
+<li id="li-8790"><p id="p-15013">Solve a system by matrix reduction: #19–34</p></li>
+<li id="li-8791"><p id="p-15014">Solve a system using the reduced row echelon form of the augmented matrix: #35–40</p></li>
+</ol></section></section><section class="exercises" id="section-8-3-exercises"><header title="Exercises  Homework 8.3"><h1 class="heading hide-type" alt="Exercises  Homework 8.3">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Homework 8.3</span><a href="Solving-Linear-Systems-Using-Matrices.html#section-8-3-exercises" class="permalink">¶ permalink</a>
+</h1></header><div class="exercisegroup" id="exercisegroup-424">
+<article class="introduction" id="introduction-459"><p id="p-15015">Perform the given elementary row operation on the matrices in Problems 1–8.</p></article><div class="exercisegroup-exercises cols2">
+<article class="exercise-like" id="exercise-3136"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-15016">Multiply \(\text{row }2\) by \(-3\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+-2 \amp 1  \amp 0  \\ 
+3 \amp -1 \amp 2 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3137"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-15018">Multiply \(\text{row }1\) by \(\dfrac{1}{4} \text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+2 \amp 0  \amp 3  \\ 
+-1 \amp 5 \amp 4 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3138"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-15019">Add \(2(\text{row }1)\) to \(\text{row } 2\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -3  \amp 6  \\ 
+-2 \amp 4 \amp -1 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3139"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-15021">Add \(-3(\text{row }1)\) to \(\text{row } 2\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -4  \amp 8  \\ 
+3 \amp -2 \amp 10 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3140"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-15022">Interchange \((\text{row }1)\) and \(\text{row } 3\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+0 \amp -3  \amp 2 \amp -3  \\ 
+2 \amp 6 \amp -1 \amp 3 \\ 
+1 \amp 0 \amp -2 \amp 5 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3141"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-15024">Interchange \((\text{row }2)\) and \(\text{row } 3\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 6  \amp 0 \amp -2  \\ 
+0 \amp 0 \amp 5 \amp -10 \\ 
+0 \amp 3 \amp -2 \amp 8 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3142"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-15025">Add \(-4(\text{row }1)\) to \(\text{row } 3\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp 2  \amp 1 \amp -5  \\ 
+0 \amp 4 \amp -2 \amp 3 \\ 
+4 \amp -1 \amp 6 \amp -8 
+\end{array}\right]              
+\end{equation*}
+</article><article class="exercise-like" id="exercise-3143"><h5 class="heading"><span class="codenumber">8</span></h5>
+<p id="p-15027">Add \(2(\text{row }2)\) to \(\text{row } 3\text{:}\)</p>
+\begin{equation*}
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -7  \amp 5 \amp 2  \\ 
+0 \amp 1 \amp -3 \amp -1 \\ 
+0 \amp -2 \amp -3 \amp 4 
+\end{array}\right]              
+\end{equation*}
+</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-425">
+<article class="introduction" id="introduction-460"><p id="p-15028">In Problems 9–18, use row operations on the first matrix to form an equivalent matrix with the given entries.</p></article><div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-3144"><h5 class="heading"><span class="codenumber">9</span></h5>
+<p id="p-15029">\(\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -3  \amp 2  \\ 
+2 \amp 1 \amp 4\\ 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}cc|c@{}}
+1 \amp -3  \amp 2  \\ 
+0 \amp \text{?} \amp \text{?} \\ 
+\end{array}\right]  \)</p></article><article class="exercise-like" id="exercise-3145"><h5 class="heading"><span class="codenumber">10</span></h5>
+<p id="p-15031">\(\left[ \begin{array}{@{}cc|c@{}}
+-2 \amp 3  \amp 0  \\ 
+4 \amp 1 \amp 6 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}cc|c@{}}
+-2 \amp 3  \amp 0  \\ 
+0 \amp \text{?} \amp \text{?}  
+\end{array}\right]  \)</p></article><article class="exercise-like" id="exercise-3146"><h5 class="heading"><span class="codenumber">11</span></h5>
+<p id="p-15032">\(\left[ \begin{array}{@{}cc|c@{}}
+2 \amp 6  \amp -4  \\ 
+5 \amp 3 \amp 1
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}cc|c@{}}
+2 \amp 6  \amp -4  \\ 
+\text{?} \amp 0 \amp \text{?}  
+\end{array}\right]  \)</p></article><article class="exercise-like" id="exercise-3147"><h5 class="heading"><span class="codenumber">12</span></h5>
+<p id="p-15034">\(\left[ \begin{array}{@{}cc|c@{}}
+6 \amp 4  \amp -2  \\ 
+-1 \amp -2 \amp -3\\ 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}cc|c@{}}
+6 \amp 4  \amp -2  \\ 
+\text{?} \amp 0 \amp \text{?}  
+\end{array}\right]  \)</p></article><article class="exercise-like" id="exercise-3148"><h5 class="heading"><span class="codenumber">13</span></h5>
+<p id="p-15035">\(\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2  \amp 2 \amp 1  \\ 
+2 \amp 3 \amp -1 \amp 6 \\ 
+4 \amp 1 \amp -3 \amp 3 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+1 \amp -2  \amp 2 \amp 1  \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} 
+\end{array}\right]              \)</p></article><article class="exercise-like" id="exercise-3149"><h5 class="heading"><span class="codenumber">14</span></h5>
+<p id="p-15037">\(\left[ \begin{array}{@{}ccc|c@{}}
+2 \amp -1  \amp 3 \amp -1  \\ 
+-4 \amp 0 \amp 4 \amp 5 \\ 
+6 \amp 2 \amp -1 \amp -2 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+2 \amp -1  \amp 3 \amp -1  \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} 
+\end{array}\right]              \)</p></article><article class="exercise-like" id="exercise-3150"><h5 class="heading"><span class="codenumber">15</span></h5>
+<p id="p-15038">\(\left[ \begin{array}{@{}ccc|c@{}}
+-1 \amp 4  \amp 3 \amp 2  \\ 
+2 \amp -2 \amp -4 \amp 6 \\ 
+1 \amp 2 \amp 3 \amp -3 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+-1 \amp 4  \amp 3 \amp 2  \\ 
+\text{?} \amp 0 \amp \text{?} \amp \text{?} \\ 
+\text{?} \amp 0 \amp \text{?} \amp \text{?} 
+\end{array}\right]              \)</p></article><article class="exercise-like" id="exercise-3151"><h5 class="heading"><span class="codenumber">16</span></h5>
+<p id="p-15040">\(\left[ \begin{array}{@{}ccc|c@{}}
+3 \amp -2  \amp 4 \amp -4  \\ 
+2 \amp 2 \amp 1 \amp 2 \\ 
+-1 \amp 1 \amp 5 \amp -1 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+3 \amp -2  \amp 4 \amp -4  \\ 
+\text{?} \amp \text{?} \amp 0 \amp \text{?} \\ 
+\text{?} \amp \text{?} \amp 0 \amp \text{?} 
+\end{array}\right]              \)</p></article><article class="exercise-like" id="exercise-3152"><h5 class="heading"><span class="codenumber">17</span></h5>
+<p id="p-15041">\(\left[ \begin{array}{@{}ccc|c@{}}
+-2 \amp 1 \amp -3 \amp -2  \\ 
+4 \amp 2 \amp 0 \amp 2 \\ 
+6 \amp -1 \amp 2 \amp 0 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+-2 \amp 1 \amp -3 \amp -2  \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} \\ 
+0 \amp  0 \amp \text{?} \amp \text{?} 
+\end{array}\right]              \)</p></article><article class="exercise-like" id="exercise-3153"><h5 class="heading"><span class="codenumber">18</span></h5>
+<p id="p-15043">\(\left[ \begin{array}{@{}ccc|c@{}}
+-1 \amp 2  \amp 3 \amp 3  \\ 
+4 \amp 0 \amp 1 \amp -6 \\ 
+2 \amp 2 \amp -3 \amp -2 
+\end{array}\right]              
+\longrightarrow
+\left[ \begin{array}{@{}ccc|c@{}}
+-1 \amp 2  \amp 3 \amp 3  \\ 
+0 \amp \text{?} \amp \text{?} \amp \text{?} \\ 
+0 \amp  0 \amp \text{?} \amp \text{?} 
+\end{array}\right]              \)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-426">
+<article class="introduction" id="introduction-461"><p id="p-15044">Use matrix reduction on the augmented matrix to solve each system in Problems 19–26.</p></article><div class="exercisegroup-exercises cols3">
+<article class="exercise-like" id="exercise-3154"><h5 class="heading"><span class="codenumber">19</span></h5>
+<p id="p-15045">\(\begin{aligned}
+x + 3y \amp = 11 \\
+2x - y \amp = 1
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3155"><h5 class="heading"><span class="codenumber">20</span></h5>
+<p id="p-15047">\(\begin{aligned}
+x - 5y \amp = 11 \\
+2x +3y \amp = -4
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3156"><h5 class="heading"><span class="codenumber">21</span></h5>
+<p id="p-15048">\(\begin{aligned}
+x - 4y \amp = -6 \\
+3x + y \amp = -5
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3157"><h5 class="heading"><span class="codenumber">22</span></h5>
+<p id="p-15050">\(\begin{aligned}
+x + 6y \amp = 14 \\
+5x + 3y \amp = -4
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3158"><h5 class="heading"><span class="codenumber">23</span></h5>
+<p id="p-15051">\(\begin{aligned}
+2x + y \amp = 5 \\
+3x - 5y \amp = 14
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3159"><h5 class="heading"><span class="codenumber">24</span></h5>
+<p id="p-15053">\(\begin{aligned}
+3x - 2y \amp = 16 \\
+4x + 2y \amp = 12
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3160"><h5 class="heading"><span class="codenumber">25</span></h5>
+<p id="p-15054">\(\begin{aligned}
+x - y \amp = -8 \\
+x + 2y \amp = 9
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3161"><h5 class="heading"><span class="codenumber">26</span></h5>
+<p id="p-15056">\(\begin{aligned}
+4x - 3y \amp = 16 \\
+2x + y \amp = 8
+\end{aligned}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-427">
+<article class="introduction" id="introduction-462"><p id="p-15057">Use matrix reduction on the augmented matrix to solve each system in Problems 27–34.</p></article><div class="exercisegroup-exercises cols2">
+<article class="exercise-like" id="exercise-3162"><h5 class="heading"><span class="codenumber">27</span></h5>
+<p id="p-15058">\(\begin{alignedat}{5}
+x\amp{}+{}\amp 3y\amp{}-{}\amp z\amp{}={}5\\
+3x\amp{}-{}\amp y\amp{}+{}\amp 2z\amp{}={}5\\
+x\amp{}+{}\amp y\amp {}+{}\amp 2z\amp{}={}7
+\end{alignedat}\)</p></article><article class="exercise-like" id="exercise-3163"><h5 class="heading"><span class="codenumber">28</span></h5>
+<p id="p-15060">\(\begin{alignedat}{5}
+x\amp{}-{}\amp 2y\amp{}+{}\amp 3z\amp{}={}-11\\
+2x\amp{}+{}\amp 3y\amp{}-{}\amp z\amp{}={}6\\
+3x\amp{}-{}\amp y\amp {}-{}\amp z\amp{}={}3
+\end{alignedat}\)</p></article><article class="exercise-like" id="exercise-3164"><h5 class="heading"><span class="codenumber">29</span></h5>
+<p id="p-15061">\(\begin{alignedat}{5}
+2x\amp{}-{}\amp y\amp{}+{}\amp z\amp{}={}5\\
+x\amp{}-{}\amp 2y\amp{}-{}\amp 2z\amp{}={}2\\
+3x\amp{}+{}\amp 3y\amp {}-{}\amp z\amp{}={}4
+\end{alignedat}\)</p></article><article class="exercise-like" id="exercise-3165"><h5 class="heading"><span class="codenumber">30</span></h5>
+<p id="p-15063">\(\begin{alignedat}{5}
+x\amp{}-{}\amp 2y\amp{}-{}\amp 2z\amp{}={}4\\
+2x\amp{}+{}\amp y\amp{}-{}\amp 3z\amp{}={}7\\
+x\amp{}-{}\amp y\amp {}-{}\amp z\amp{}={}3
+\end{alignedat}\)</p></article><article class="exercise-like" id="exercise-3166"><h5 class="heading"><span class="codenumber">31</span></h5>
+<p id="p-15064">\(\begin{alignedat}{5}
+2x\amp{}-{}\amp y\amp{}-{}\amp z\amp{}={}-4\\
+x\amp{}+{}\amp y\amp{}+{}\amp z\amp{}={}-5\\
+x\amp{}+{}\amp 3y\amp {}-{}\amp 4z\amp{}={}12
+\end{alignedat}\)</p></article><article class="exercise-like" id="exercise-3167"><h5 class="heading"><span class="codenumber">32</span></h5>
+<p id="p-15066">\(\begin{alignedat}{5}
+x\amp{}-{}\amp 2y\amp{}-{}\amp 5z\amp{}={}2\\
+2x\amp{}+{}\amp 3y\amp{}+{}\amp z\amp{}={}11\\
+3x\amp{}-{}\amp y\amp {}-{}\amp z\amp{}={}11
+\end{alignedat}\)</p></article><article class="exercise-like" id="exercise-3168"><h5 class="heading"><span class="codenumber">33</span></h5>
+<p id="p-15067">\(\begin{aligned}
+2x - y \amp = 0 \\
+3y + z \amp = 7 \\
+2x +3z \amp = 1
+\end{aligned}\)</p></article><article class="exercise-like" id="exercise-3169"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-15069">\(\begin{aligned}
+3x - z \amp = 7 \\
+2x + y \amp = 6 \\
+3y - z \amp = 7
+\end{aligned}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-428">
+<article class="introduction" id="introduction-463"><p id="p-15070">Solve the system by finding the reduced row echelon form of the augmented matrix.</p></article><div class="exercisegroup-exercises cols2">
+<article class="exercise-like" id="exercise-3170"><h5 class="heading"><span class="codenumber">35</span></h5>
+<p id="p-15071">\(\begin{alignedat}{7}
+a\amp{}+{}\amp 2b\amp{}-{}\amp c\amp{}+{}\amp 4d\amp{}={}20\\
+-a\amp{}+{}\amp b\amp{}+{}\amp 4c\amp{}+{}\amp 5d\amp{}={} 7\\
+2a\amp{}+{}\amp 2b\amp{}+{}\amp 6c\amp{}+{}\amp 7d\amp{}={}22\\
+3a\amp{}+{}\amp 2b\amp{}-{}\amp 3c\amp{}+{}\amp 4d\amp{}={} 28 
+\end{alignedat} \)</p></article><article class="exercise-like" id="exercise-3171"><h5 class="heading"><span class="codenumber">36</span></h5>
+<p id="p-15073">\(\begin{alignedat}{7}
+2a\amp{}-{}\amp b\amp{}+{}\amp 3c\amp{}-{}\amp d\amp{}={}-6\\
+3a\amp{}-{}\amp b\amp{}+{}\amp 2c\amp{}-{}\amp 2d\amp{}={}-37\\
+a\amp{}{}\amp \amp{}+{}\amp 4c\amp{}+{}\amp d\amp{}={}43\\
+4a\amp{}+{}\amp 8b\amp{}-{}\amp 9c\amp{}+{}\amp 6d\amp{}={} 14 
+\end{alignedat} \)</p></article><article class="exercise-like" id="exercise-3172"><h5 class="heading"><span class="codenumber">37</span></h5>
+<p id="p-15074">\(\begin{alignedat}{7}
+6a\amp{}+{}\amp 12b\amp{}+{}\amp 18c\amp{}+{}\amp 24d\amp{}={}1\\
+3a\amp{}{}\amp \amp{}+{}\amp 4c\amp{}{}\amp \amp{}={} 3\\
+-2a\amp{}+{}\amp b\amp{}{}\amp \amp{}+{}\amp 3d\amp{}={}-4\\
+18a\amp{}+{}\amp 6b\amp{}+{}\amp 30c\amp{}{}\amp \amp{}={} 23 
+\end{alignedat} \)</p></article><article class="exercise-like" id="exercise-3173"><h5 class="heading"><span class="codenumber">38</span></h5>
+<p id="p-15076">\(\begin{alignedat}{7}
+a\amp{}-{}\amp b\amp{}-{}\amp c\amp{}-{}\amp d\amp{}={}1\\
+12a\amp{}-{}\amp 18b\amp{}{}\amp \amp{}-{}\amp 6d\amp{}={}13\\
+3a\amp{}{}\amp \amp{}-{}\amp 8c\amp{}+{}\amp 6d\amp{}={}3\\
+24a\amp{}-{}\amp 36b\amp{}-{}\amp 18c\amp{}+{}\amp 66d\amp{}={} 17 
+\end{alignedat} \)</p></article><article class="exercise-like" id="exercise-3174"><h5 class="heading"><span class="codenumber">39</span></h5>
+<p id="p-15077">\(\begin{alignedat}{9}
+2a\amp{}+{}\amp 3b\amp{}+{}\amp 4c \amp {}+{} \amp d\amp {}+{} \amp 4e \amp{}={}8\\
+2a\amp{}-{}\amp 5b\amp{}-{}\amp 6c \amp {}+{} \amp 4d\amp {}+{} \amp 3e \amp{}={}4\\
+3a\amp{}+{}\amp 3b\amp{}+{}\amp 2c \amp {}-{} \amp 3d\amp {}+{} \amp 7e \amp{}={}-13\\
+-3a\amp{}+{}\amp 4b\amp{}-{}\amp c \amp {}+{} \amp d\amp {}-{} \amp e \amp{}={}6\\
+4a\amp{}-{}\amp 4b\amp{}+{}\amp 3c \amp {}+{} \amp 2d\amp {}-{} \amp 2e \amp{}={}1
+\end{alignedat} \)</p></article><article class="exercise-like" id="exercise-3175"><h5 class="heading"><span class="codenumber">40</span></h5>
+<p id="p-15079">\(\begin{alignedat}{9}
+3a\amp{}+{}\amp 2b\amp{}+{}\amp 5c \amp {}+{} \amp 2d\amp {}+{} \amp 4e \amp{}={}6\\
+4a\amp{}+{}\amp b\amp{}+{}\amp 5c \amp {}+{} \amp 2d\amp {}+{} \amp 8e \amp{}={}13\\
+6a\amp{}+{}\amp 3b\amp{}+{}\amp 9c \amp {}+{} \amp 3d\amp {}+{} \amp 4e \amp{}={}17\\
+7a\amp{}+{}\amp 8b\amp{}+{}\amp 4c \amp {}{} \amp \amp {}+{} \amp 7e \amp{}={}-2\\
+8a\amp{}{}\amp \amp{}+{}\amp 9c \amp {}+{} \amp d\amp {}+{} \amp 9e \amp{}={}26
+\end{alignedat} \)</p></article>
+</div>
+</div>
+<article class="exercise-like" id="exercise-3176"><h5 class="heading"><span class="codenumber">41</span></h5>
+<p id="p-15080"></p>
+<ol id="ol-2717" style="list-style-type: lower-alpha;">
+<li id="li-8792"><p id="p-15081">Find a third-degree polynomial \(p(x) \) that satisfies \(p(1) = 2, p(2) = 4, p(3) = 6,\) and \(p(4) = 1\text{.}\)</p></li>
+<li id="li-8793"><p id="p-15082">Find a third-degree polynomial \(p(x) \) that satisfies \(p(1) = 2, p(2) = 4, p(3) = 6,\) and \(p(4) = 5\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-3177"><h5 class="heading"><span class="codenumber">42</span></h5>
+<p id="p-15086"></p>
+<ol id="ol-2719" style="list-style-type: lower-alpha;">
+<li id="li-8796"><p id="p-15087">Find a third-degree polynomial \(p(x) \) that satisfies \(p(1) = 1, p(2) = 4, p(3) = 9,\) and \(p(4) = 5\text{.}\)</p></li>
+<li id="li-8797"><p id="p-15088">Find a third-degree polynomial \(p(x) \) that satisfies \(p(1) = 2, p(2) = 4, p(3) = 6,\) and \(p(4) = 10\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-3178"><h5 class="heading"><span class="codenumber">43</span></h5>
+<p id="p-15089">Find a fourth-degree polynomial \(p(x) \) that satisfies \(p(-2) = -45, p(-1) = -2, p(0) = 5, p(1)=6 \) and \(p(2) = -17\)</p></article><article class="exercise-like" id="exercise-3179"><h5 class="heading"><span class="codenumber">42</span></h5>
+<p id="p-15091">Find a fourth-degree polynomial \(p(x) \) that satisfies \(p(-2) = 81, p(-1) = 9, p(0) = 3, p(1)=15 \) and \(p(2) = 117\text{.}\)</p></article><div class="exercisegroup" id="exercisegroup-429">
+<article class="introduction" id="introduction-464"><p id="p-15092">Problems 45–48 consider inconsistent and dependent systems.</p></article><div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-3180"><h5 class="heading"><span class="codenumber">45</span></h5>
+<p id="p-15093">Suppose that the reduced row echelon form of an augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 0  \amp 0 \amp 0 \amp 0  \\ 
+0 \amp 1  \amp 0 \amp 0 \amp 0 \\
+0 \amp 0  \amp 1 \amp 0 \amp 0  \\ 
+0 \amp 0  \amp 0 \amp 0 \amp 1 
+\end{array}\right]      
+\end{equation*}
+<ol id="ol-2720" style="list-style-type: lower-alpha;">
+<li id="li-8798"><p id="p-15094">To what equation does the last row of the matrix correspond?</p></li>
+<li id="li-8799"><p id="p-15095">Is there a solution to the system?</p></li>
+</ol></article><article class="exercise-like" id="exercise-3181"><h5 class="heading"><span class="codenumber">46</span></h5>
+<p id="p-15099">Suppose that the reduced row echelon form of an augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 3  \amp 0 \amp 0 \amp 0  \\ 
+0 \amp 0  \amp 0  \amp 0 \amp 0 \\
+0 \amp 0  \amp 0 \amp 0 \amp 1  \\ 
+0 \amp 0  \amp 0 \amp 0 \amp 0 
+\end{array}\right]      
+\end{equation*}
+<ol id="ol-2722" style="list-style-type: lower-alpha;">
+<li id="li-8802"><p id="p-15100">To what equation does the third row of the matrix correspond?</p></li>
+<li id="li-8803"><p id="p-15101">Is there a solution to the system?</p></li>
+</ol></article><article class="exercise-like" id="exercise-3182"><h5 class="heading"><span class="codenumber">47</span></h5>
+<p id="p-15102">Suppose that the reduced row echelon form of an augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 0  \amp 0 \amp 0 \amp 9  \\ 
+0 \amp 1  \amp 0 \amp 0 \amp 4 \\
+0 \amp 0  \amp 1 \amp 0 \amp 2  \\ 
+0 \amp 0  \amp 0 \amp 0 \amp 0 
+\end{array}\right]      
+\end{equation*}
+<ol id="ol-2723" style="list-style-type: lower-alpha;">
+<li id="li-8804"><p id="p-15103">To what equation does the last row of the matrix correspond?</p></li>
+<li id="li-8805"><p id="p-15104">If the variables of the system are \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{,}\) what do you know about \(a\text{,}\) \(b\text{,}\) and \(c\text{?}\)</p></li>
+<li id="li-8806"><p id="p-15105">Is there more than one ordered four-tuple that makes all the equations true? (<!--Style me with CSS--><em>Hint</em>: Does the value of \(d\) affect any of the equations?)</p></li>
+</ol></article><article class="exercise-like" id="exercise-3183"><h5 class="heading"><span class="codenumber">48</span></h5>
+<p id="p-15110">Suppose that the reduced row echelon form of an augmented matrix is</p>
+\begin{equation*}
+\left[ \begin{array}{@{}cccc|c@{}}
+1 \amp 2  \amp 0 \amp 0 \amp 9  \\ 
+0 \amp 0  \amp 1 \amp 0 \amp 4 \\
+0 \amp 0  \amp 0 \amp 1 \amp 2  \\ 
+0 \amp 0  \amp 0 \amp 0 \amp 0 
+\end{array}\right]      
+\end{equation*}
+<ol id="ol-2725" style="list-style-type: lower-alpha;">
+<li id="li-8810"><p id="p-15111">To what equation does the last row of the matrix correspond?</p></li>
+<li id="li-8811"><p id="p-15112">If the variables of the system are \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{,}\) what do you know about \(c\) and \(d\text{?}\)</p></li>
+<li id="li-8812"><p id="p-15113">Is there more than one ordered four-tuple that makes all the equations true? (<!--Style me with CSS--><em>Hint</em>: If you specify any value of \(b\text{,}\) will you be able to find values of \(a\text{,}\) \(c\text{,}\) and \(d\) that make all the equations true?)</p></li>
+</ol></article>
+</div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
