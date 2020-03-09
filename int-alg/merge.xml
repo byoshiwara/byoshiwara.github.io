@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--********************************************************************
+
+
+
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2020/03/15)                     -->
+<!--                                               -->
+<!--   Intermediate Algebra   -->
+<!--                                               -->
+<!-- Copyright (C) Katherine Yoshiwara      -->
+<!-- Master file                           -->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <!--********************************************************************
+
+
+
+*********************************************************************-->
+  <!-- This file was originally part of the book     -->
+  <!-- (as copied on 2020/03/15)                     -->
+  <!--                                               -->
+  <!--   Intermediate Algebra   -->
+  <!--                                               -->
+  <!-- Copyright (C) Katherine Yoshiwara      -->
+  <docinfo>
+    <brandlogo url="https://yoshiwarabooks.org/" source="images/int-alg.jpg"/>
+    <!-- rename blocks -->
+    <rename element="warning">Caution</rename>
+    <rename element="inlineexercise">Notebook</rename>
+    <!--        <rename element="theorem" lang="en-US">Key Idea</rename> -->
+    <!-- Prefix to enhance Sage notebook contents -->
+    <initialism>Int-Alg</initialism>
+    <latex-preamble>
+        <package>cancel</package>
+<!--            \usepackage{gensymb}-->
+      </latex-preamble>
+    <macros>
+        \newcommand\degree[0]{^{\circ}}
+        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+        \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+        \newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+        \newcommand{\bluetext}[1]{\color{blue}{#1}} <!-- comments in aligned equations -->
+        \delimitershortfall-1sp
+        \newcommand\abs[1]{\left|#1\right|}
+    </macros>
+    <!-- tikz package and libraries for images -->
+    <latex-image-preamble>
+        \usepackage{tikz}
+        \usetikzlibrary{calc}
+        \usetikzlibrary{arrows}
+        \usetikzlibrary{decorations.pathreplacing}
+        \usetikzlibrary{patterns}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+    </latex-image-preamble>
+    <macros>
+        \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+    </macros>
+  </docinfo>
+  <!-- ISBN, website, other metadata -->
+  <book xml:id="int-alg">
+    <title>Intermediate Algebra</title>
+    <subtitle>Functions and Graphs</subtitle>
+    <!--********************************************************************
+Copyright 2020 Katherine Yoshiwara
+
+
+Intermediate Algebra
+
+
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Katherine Yoshiwara</personname>
+          <department>Department of Mathematics</department>
+          <institution>Los Angeles Pierce College</institution>
+          <!--            <email>kyoshiwara@hotmail.com</email>  -->
+        </author>
+        <date>
+          <today/>
+        </date>
+      </titlepage>
+      <colophon>
+        <copyright>
+            <year>2020</year>
+            <holder>Katherine Yoshiwara</holder>
+            <minilicense>GFDL License</minilicense>
+            <shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q>  All trademarks<trademark/> are the registered<registered/> marks of their respective owners.</shortlicense>
+        </copyright>
+      </colophon>
+      <preface>
+        <p><title>Intermediate Algebra: Functions and Graphs</title> was written to incorporate the benefits of technology and the philosophy of the reform movement into algebra for college students. It continues the emphasis on modeling, problem solving, and graphing established in <title>Introductory Algebra</title>.</p>
+        <paragraphs>
+          <title>Modeling</title>
+          <p>
+    The ability to model problems or phenomena by algebraic expressions and equations is the ultimate goal of any algebra course. We motivate the skills and techniques of algebra by placing them in the context of simple applications. Each chapter begins with an interactive Investigation that gives students an opportunity to explore open-ended modeling problems. These Investigations can be used in class as guided explorations or as projects for small groups. They are designed to show students how the mathematical techniques they are learning can be applied to study and understand new situations.
+</p>
+        </paragraphs>
+        <paragraphs>
+          <title>Functions</title>
+          <p>
+    The fundamental concept underlying calculus and related disciplines is the notion of function. While the formal study of functions is usually the content of precalculus, it is not too early to begin building an intuitive understanding of functional relationships in the preceding algebra courses. These ideas are useful not only in calculus but in practically any field students may pursue. We begin working with functions in Chapter 1, "Linear Models." Chapter 2 considers applications of linear models, and Chapters 3 and 4 study quadratic models. Formal function notation and terminology appear in Chapter 5, after students have had an opportunity to absorb the meaning behind the notation.
+</p>
+          <p>
+    In our work with functions and modeling we employ the "Rule of Four," that all problems should be considered using algebraic, numerical, graphical, and verbal methods. It is the connections between these approaches that we have endeavored to establish in this course. At this level it is crucial that students learn to write an algebraic expression from a verbal description, recognize trends in a  table of data, and extract and interpret information from the graph of a function.
+</p>
+        </paragraphs>
+        <paragraphs>
+          <title>Graphs</title>
+          <p>
+    No tool for conveying information about a system is more powerful than a graph. Yet many students have trouble progressing from a point-wise understanding of graphs to a more global view. We encourage students to become more involved with graphs by providing blank grids with appropriately scaled axes for most problems. These ready-made grids remove some of the drudgery of graphing and allow students to focus on the properties of the graphs, such as intercepts and slope, and on interpreting the information given by the graph. Later, we take advantage of graphing calculators to examine large numbers of examples and study them in more detail than is possible when every graph is plotted by hand. We consider more realistic models in which calculations by more traditional methods are difficult or impossible.
+</p>
+          <p>
+    We have incorporated the use of graphing technology into the text wherever they can be used to enhance understanding. Technology use is not simply an add-on, but in many ways shapes the organization of the material. The text includes instructions for the TI-83 graphing calculator, but these can easily be adapted to any other graphing utility. We have not attempted to use all the features of the calculator or to teach calculator use for its own sake, but in all cases have let the mathematics suggest how technology should be used.
+</p>
+        </paragraphs>
+        <paragraphs>
+          <title>Content</title>
+          <p>
+    <title>Intermediate Algebra</title> includes the material found in a typical algebra course, along with an introduction to curve-fitting. The order of topics and their presentation is organized around families of functions and their applications. Appendix A includes review material on polynomial products and factoring, laws of exponents, and facts from geometry. Appendix B provides a note on the structure of the real number system and an introduction to complex numbers.
+</p>
+        </paragraphs>
+        <attribution><line>Katherine Yoshiwara</line> <line>Atascadero, CA 2020</line></attribution>
+      </preface>
+    </frontmatter>
+    <chapter xml:id="chap1">
+      <title>Linear Models</title>
+      <introduction>
+        <sidebyside width="90%">
+          <image source="images/pyramids.png">
+            <description>pyramids</description>
+          </image>
+        </sidebyside>
+        <p>
+        In the debate over global warming, sea level is a reliable indicator of climate change, because it is affected by both melting glaciers and by the thermal expansion of sea water. During the 20th century, sea level rose by about 15 centimeters, compared to a fairly constant level for the previous 3,000 years.
+    </p>
+        <p>
+        The Intergovernmental Panel on Climate Change (IPCC) predicts that sea level could rise as much as 1 meter during the 21st century. If that happens, low-lying, densely populated areas in China, Southeast Asia, and the Nile Delta would become uninhabitable, as well as the Gulf Coast and Eastern Seaboard of the United States.
+    </p>
+        <p>
+        Not surprisingly, scientists would like to understand the causes of sea-level change as thoroughly as possible, and to measure the rate of sea-level rise as accurately as possible. Using data from satellites and floats (mechanical devices drifting in the ocean), oceanographers at NASA’s Jet Propulsion Laboratory have calculated that the sea level rose, on average, 3 millimeters (0.1 inches) per year between 1995 and 2005.
+    </p>
+        <p>
+        The graph below shows the change in mean sea level, measured in millimeters, over that time period.
+    </p>
+        <p>
+        In this lesson we’ll see how the rate of increase in sea level is related to the graph. We’ll also learn to create simple models to describe changes in a variable such as sea levels.
+    </p>
+        <sidebyside width="90%">
+          <image source="images/fig-sea-level">
+            <description>Rising sea level</description>
+          </image>
+        </sidebyside>
+      </introduction>
+      <!-- <mathbook><book> -->
+      <section xml:id="LinMod">
+        <title>Linear Models</title>
+        <subsection>
+          <title>Tables, Graphs, and Equations</title>
+          <definition>
+            <title>Mathematical Model</title>
+            <p>
+        A <term>mathematical model</term><idx>mathematical model</idx> is a simplified description of reality that helps us understand a system or process.
+    </p>
+          </definition>
+          <p>
+    We can use a model to analyze data, identify trends, and predict the effects of change. The first step in creating a model is to describe relationships between the variables involved.
+</p>
+          <exercise>
+            <title>QuickCheck 1</title>
+            <webwork-reps xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <authored>
+
+        <setup><pg-code>       
+                  $step1 = RadioButtons(
+                    ["Solve the equation.",
+                    "Analyze data, identify trends, and predict the effects of change.",
+                    "Describe the relationships between the variables involved.",
+                    "Make a table of values."],
+                    2, 
+                  );            
+              </pg-code></setup>
+        <statement><p>What is the first step in creating a mathematical model?</p><p>
+            <var name="$step1" form="buttons"/>
+          </p></statement>
+        <solution><p>Describe the relationships between the variables involved.</p></solution>
+
+    </authored>
+
+
+    <static seed="1">
+      <statement><p>What is the first step in creating a mathematical model?</p><p><var form="buttons">
+      <li>
+      <p>Solve the equation.</p>
+      </li>
+      <li>
+      <p>Analyze data, identify trends, and predict the effects of change.</p>
+      </li>
+      <li>
+      <p>Describe the relationships between the variables involved.</p>
+      </li>
+      <li>
+      <p>Make a table of values.</p>
+      </li>
+      </var></p></statement>
+      <answer><p><m>\text{Describe the ... involved.}</m></p></answer>
+
+      <solution><p>Describe the relationships between the variables involved.</p></solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHN0ZXAxID0gUmFkaW9CdXR0b25zKAogIFsiU29sdmUgdGhlIGVxdWF0aW9uLiIsCiAgIkFuYWx5emUgZGF0YSwgaWRlbnRpZnkgdHJlbmRzLCBhbmQgcHJlZGljdCB0aGUgZWZmZWN0cyBvZiBjaGFuZ2UuIiwKICAiRGVzY3JpYmUgdGhlIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB0aGUgdmFyaWFibGVzIGludm9sdmVkLiIsCiAgIk1ha2UgYSB0YWJsZSBvZiB2YWx1ZXMuIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoYXQgaXMgdGhlIGZpcnN0IHN0ZXAgaW4gY3JlYXRpbmcgYSBtYXRoZW1hdGljYWwgbW9kZWw%2FCgogICAgW19deyRzdGVwMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpEZXNjcmliZSB0aGUgcmVsYXRpb25zaGlwcyBiZXR3ZWVuIHRoZSB2YXJpYWJsZXMgaW52b2x2ZWQuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHN0ZXAxID0gUmFkaW9CdXR0b25zKAogIFsiU29sdmUgdGhlIGVxdWF0aW9uLiIsCiAgIkFuYWx5emUgZGF0YSwgaWRlbnRpZnkgdHJlbmRzLCBhbmQgcHJlZGljdCB0aGUgZWZmZWN0cyBvZiBjaGFuZ2UuIiwKICAiRGVzY3JpYmUgdGhlIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB0aGUgdmFyaWFibGVzIGludm9sdmVkLiIsCiAgIk1ha2UgYSB0YWJsZSBvZiB2YWx1ZXMuIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoYXQgaXMgdGhlIGZpcnN0IHN0ZXAgaW4gY3JlYXRpbmcgYSBtYXRoZW1hdGljYWwgbW9kZWw%2FCgogICAgW19deyRzdGVwMX17NX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHN0ZXAxID0gUmFkaW9CdXR0b25zKAogIFsiU29sdmUgdGhlIGVxdWF0aW9uLiIsCiAgIkFuYWx5emUgZGF0YSwgaWRlbnRpZnkgdHJlbmRzLCBhbmQgcHJlZGljdCB0aGUgZWZmZWN0cyBvZiBjaGFuZ2UuIiwKICAiRGVzY3JpYmUgdGhlIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB0aGUgdmFyaWFibGVzIGludm9sdmVkLiIsCiAgIk1ha2UgYSB0YWJsZSBvZiB2YWx1ZXMuIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoYXQgaXMgdGhlIGZpcnN0IHN0ZXAgaW4gY3JlYXRpbmcgYSBtYXRoZW1hdGljYWwgbW9kZWw%2FCgogICAgW19deyRzdGVwMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpEZXNjcmliZSB0aGUgcmVsYXRpb25zaGlwcyBiZXR3ZWVuIHRoZSB2YXJpYWJsZXMgaW52b2x2ZWQuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHN0ZXAxID0gUmFkaW9CdXR0b25zKAogIFsiU29sdmUgdGhlIGVxdWF0aW9uLiIsCiAgIkFuYWx5emUgZGF0YSwgaWRlbnRpZnkgdHJlbmRzLCBhbmQgcHJlZGljdCB0aGUgZWZmZWN0cyBvZiBjaGFuZ2UuIiwKICAiRGVzY3JpYmUgdGhlIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB0aGUgdmFyaWFibGVzIGludm9sdmVkLiIsCiAgIk1ha2UgYSB0YWJsZSBvZiB2YWx1ZXMuIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoYXQgaXMgdGhlIGZpcnN0IHN0ZXAgaW4gY3JlYXRpbmcgYSBtYXRoZW1hdGljYWwgbW9kZWw%2FCgogICAgW19deyRzdGVwMX17NX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-03-09T15:57:39-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.1.2)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+$step1 = RadioButtons(
+  ["Solve the equation.",
+  "Analyze data, identify trends, and predict the effects of change.",
+  "Describe the relationships between the variables involved.",
+  "Make a table of values."],
+  2, 
+);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+What is the first step in creating a mathematical model?
+
+    [_]{$step1}{5}
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+Describe the relationships between the variables involved.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+          </exercise>
+          <p>
+    Starting from a description in words, we can represent the relationship by:
+    <ul><li><p>a table of values</p></li><li><p>a graph, or by</p></li><li><p>an algebraic equation</p></li></ul>
+</p>
+          <p>
+    Each of these mathematical tools is useful in a different way.
+    <ol label="1"><li>A table of values lists specific data points with precise numerical values.</li><li>A graph is a visual display of the data. It is easier to spot trends and describe the overall behavior of the variables from a graph.</li><li>An algebraic equation is a compact summary of the model. It can be used to analyze the model and to make predictions.</li></ol>
+</p>
+          <exercise>
+            <title>QuickCheck 2</title>
+            <webwork-reps xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <authored>
+
+        <setup><pg-code>       
+                  $threeways = RadioButtons(
+                    ["By inputs, outputs, or evaluation",
+                    "By tables, equations, or graphs",
+                    "By the intercepts, the slope, or the vertex",
+                    "By numbers, letters, or diagrams"],
+                    1, 
+                  );            
+              </pg-code></setup>
+        <statement><p>Name three ways to represent a relationship between variables.</p><p>
+            <var name="$threeways" form="buttons"/>
+          </p></statement>
+        <solution><p>By tables, equations, or graphs</p></solution>
+
+    </authored>
+
+
+    <static seed="2">
+      <statement><p>Name three ways to represent a relationship between variables.</p><p><var form="buttons">
+      <li>
+      <p>By inputs, outputs, or evaluation</p>
+      </li>
+      <li>
+      <p>By tables, equations, or graphs</p>
+      </li>
+      <li>
+      <p>By the intercepts, the slope, or the vertex</p>
+      </li>
+      <li>
+      <p>By numbers, letters, or diagrams</p>
+      </li>
+      </var></p></statement>
+      <answer><p><m>\text{By tables ... or graphs}</m></p></answer>
+
+      <solution><p>By tables, equations, or graphs</p></solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRocmVld2F5cyA9IFJhZGlvQnV0dG9ucygKICBbIkJ5IGlucHV0cywgb3V0cHV0cywgb3IgZXZhbHVhdGlvbiIsCiAgIkJ5IHRhYmxlcywgZXF1YXRpb25zLCBvciBncmFwaHMiLAogICJCeSB0aGUgaW50ZXJjZXB0cywgdGhlIHNsb3BlLCBvciB0aGUgdmVydGV4IiwKICAiQnkgbnVtYmVycywgbGV0dGVycywgb3IgZGlhZ3JhbXMiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKTmFtZSB0aHJlZSB3YXlzIHRvIHJlcHJlc2VudCBhIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIHZhcmlhYmxlcy4KCiAgICBbX117JHRocmVld2F5c317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpCeSB0YWJsZXMsIGVxdWF0aW9ucywgb3IgZ3JhcGhzCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRocmVld2F5cyA9IFJhZGlvQnV0dG9ucygKICBbIkJ5IGlucHV0cywgb3V0cHV0cywgb3IgZXZhbHVhdGlvbiIsCiAgIkJ5IHRhYmxlcywgZXF1YXRpb25zLCBvciBncmFwaHMiLAogICJCeSB0aGUgaW50ZXJjZXB0cywgdGhlIHNsb3BlLCBvciB0aGUgdmVydGV4IiwKICAiQnkgbnVtYmVycywgbGV0dGVycywgb3IgZGlhZ3JhbXMiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKTmFtZSB0aHJlZSB3YXlzIHRvIHJlcHJlc2VudCBhIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIHZhcmlhYmxlcy4KCiAgICBbX117JHRocmVld2F5c317NX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRocmVld2F5cyA9IFJhZGlvQnV0dG9ucygKICBbIkJ5IGlucHV0cywgb3V0cHV0cywgb3IgZXZhbHVhdGlvbiIsCiAgIkJ5IHRhYmxlcywgZXF1YXRpb25zLCBvciBncmFwaHMiLAogICJCeSB0aGUgaW50ZXJjZXB0cywgdGhlIHNsb3BlLCBvciB0aGUgdmVydGV4IiwKICAiQnkgbnVtYmVycywgbGV0dGVycywgb3IgZGlhZ3JhbXMiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKTmFtZSB0aHJlZSB3YXlzIHRvIHJlcHJlc2VudCBhIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIHZhcmlhYmxlcy4KCiAgICBbX117JHRocmVld2F5c317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpCeSB0YWJsZXMsIGVxdWF0aW9ucywgb3IgZ3JhcGhzCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRocmVld2F5cyA9IFJhZGlvQnV0dG9ucygKICBbIkJ5IGlucHV0cywgb3V0cHV0cywgb3IgZXZhbHVhdGlvbiIsCiAgIkJ5IHRhYmxlcywgZXF1YXRpb25zLCBvciBncmFwaHMiLAogICJCeSB0aGUgaW50ZXJjZXB0cywgdGhlIHNsb3BlLCBvciB0aGUgdmVydGV4IiwKICAiQnkgbnVtYmVycywgbGV0dGVycywgb3IgZGlhZ3JhbXMiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKTmFtZSB0aHJlZSB3YXlzIHRvIHJlcHJlc2VudCBhIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIHZhcmlhYmxlcy4KCiAgICBbX117JHRocmVld2F5c317NX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-03-09T15:57:39-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.1.3)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+$threeways = RadioButtons(
+  ["By inputs, outputs, or evaluation",
+  "By tables, equations, or graphs",
+  "By the intercepts, the slope, or the vertex",
+  "By numbers, letters, or diagrams"],
+  1, 
+);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Name three ways to represent a relationship between variables.
+
+    [_]{$threeways}{5}
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+By tables, equations, or graphs
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+          </exercise>
+          <p>
+    In the examples that follow, observe the interplay among the three modeling tools and how each contributes to the model.
+</p>
+          <example xml:id="example-bicycle">
+            <statement>
+              <p>
+            In May 2005, the city of Lyons, France, started a bicycle rental program. Over 3,000 bicycles are available at 350 computerized stations around the city. Each of the 52,000 subscribers pays an annual 5 euro fee (about $ 6.85) and gets a PIN to access the bicycles. The bicycles rent for 1 euro per hour and can be returned to any station.
+        </p>
+              <p>Your community decides to set up a similar program, charging a $5 subscription fee and $3 an hour for rental. (A fraction of an hour is charged as the corresponding fraction of $3).</p>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p>Make a table of values showing the cost, <m>C</m>, of renting a bike for various lengths of time, <m>t</m>.</p>
+                  </li>
+                  <li>
+                    <p>Plot the points on a graph. Draw a curve through the data points.</p>
+                  </li>
+                  <li>
+                    <p>Write an equation for <m>C</m> in terms of <m>t</m>.</p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <ol label="a">
+                  <li><p>There is an initial fee of $5, and a rental fee of $3 per hour. To find the cost, we multiply the time by $3 per hour, and add the result to the $5 subscription fee.  For example, the cost of a one-hour bike ride is
+                <md><mrow>\text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times(\alert{\text{one hour}})</mrow><mrow>C\amp=5+3(\alert{1})=8</mrow></md>
+            A one-hour bike ride costs $8.</p>
+            <p>Calculate the cost for the other values of <m>t</m>. and record the results in a table as shown below.</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col/><col/><col bottom="none" top="none"/><col/><row><cell><line>Length of rental</line><line>(hours)</line></cell><cell><line>Cost of rental</line><line>(dollars)</line></cell><cell bottom="none" top="none"/><cell><m>(t,C)</m></cell></row><row><cell><m>0</m></cell><cell><m>5</m></cell><cell bottom="none" top="none"><m>\quad C=5+3(\alert{0})\quad</m></cell><cell><m>(0,5)</m></cell></row><row><cell><m>1</m></cell><cell><m>8</m></cell><cell bottom="none" top="none"><m>\quad C=5+3(\alert{1})\quad</m></cell><cell><m>(1,8)</m></cell></row><row><cell><m>2</m></cell><cell><m>11</m></cell><cell bottom="none" top="none"><m>C=5+3(\alert{2})</m></cell><cell><m>(2,11)</m></cell></row><row><cell><m>3</m></cell><cell><m>14</m></cell><cell bottom="none" top="none"><m>C=5+3(\alert{3})</m></cell><cell><m>(3,14)</m></cell></row></tabular></sidebyside></li>
+                  <li>        
+                <sidebyside widths="55% 28%"><p>Each pair of values represents a point on the graph.  The first value gives the horizontal coordinate of the point, and the second value gives the vertical coordinate. The points lie on a straight line, as shown in the figure.  The line extends  infinitely in only one direction, because negative values of <m>t</m> do not make sense here.</p><image source="images/fig-Annelise-1"><description>graph</description></image></sidebyside>
+            </li>
+                  <li>
+                <p>To write an equation, we let <m>C</m> represent the cost of the rental, and we use <m>t</m> for the number of hours:</p>
+                <p><md><mrow>\text{Cost}\amp=(\$5\text{ subscription})+\$3\cdot\text{(number of hours)}</mrow><mrow>C\amp=5+3\cdot t</mrow></md> </p></li>
+                </ol>
+              </p>
+            </solution>
+          </example>
+          <exercise>
+            <title>Practice 1</title>
+            <webwork-reps xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <authored>
+
+        <setup><pg-code>
+                  $subscription=Compute("7");
+                  $rate = Compute("2.50");
+              </pg-code></setup>
+        <statement><p>Write an equation for the cost <m>C</m> of renting a bicycle for <m>t</m> hours if the subscription fee is $7 and the rental fee is $2.50 per hour.</p><p>
+            <md><mrow>\text{Cost}\amp = (\text{subscription fee})+(\text{hourly rate})\cdot(\text{number of hours}) </mrow></md>
+          </p><p>
+                      <m>C=</m><var name="$subscription" width="2"/><m>+</m> <var name="$rate" width="3"/> <m>\cdot ~ t</m>
+                  </p></statement>
+        <hint><p>Fill in the correct numbers.</p></hint>
+        <solution><p>
+            <m>C=7+2.50t </m>
+          </p></solution>
+
+    </authored>
+
+
+    <static seed="3">
+      <statement><p>Write an equation for the cost <m>C</m> of renting a bicycle for <m>t</m> hours if the subscription fee is $7 and the rental fee is $2.50 per hour.</p><p><me>\begin{aligned}
+      \text{Cost}\amp = (\text{subscription fee})+(\text{hourly rate})\cdot(\text{number of hours}) 
+      \end{aligned}</me></p><p><m>C=</m><fillin name="AnSwEr0001" characters="2"/><m>+</m> <fillin name="AnSwEr0002" characters="3"/> <m>\cdot ~ t</m></p></statement>
+
+      <hint><p>Fill in the correct numbers.</p></hint>
+      <answer><p><m>7</m></p></answer>
+      <answer><p><m>2.5</m></p></answer>
+
+      <solution><p><m>C=7+2.50t</m></p></solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9PnFAPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHN1YnNjcmlwdGlvbj1Db21wdXRlKCI3Iik7CiRyYXRlID0gQ29tcHV0ZSgiMi41MCIpOwoKQkVHSU5fUEdNTApXcml0ZSBhbiBlcXVhdGlvbiBmb3IgdGhlIGNvc3QgW2BDYF0gb2YgcmVudGluZyBhIGJpY3ljbGUgZm9yIFtgdGBdIGhvdXJzIGlmIHRoZSBzdWJzY3JpcHRpb24gZmVlIGlzICQ3IGFuZCB0aGUgcmVudGFsIGZlZSBpcyAkMi41MCBwZXIgaG91ci4KCgoKW2BgYFxiZWdpbnthbGlnbmVkfQpcdGV4dHtDb3N0fVxhbXAgPSAoXHRleHR7c3Vic2NyaXB0aW9uIGZlZX0pKyhcdGV4dHtob3VybHkgcmF0ZX0pXGNkb3QoXHRleHR7bnVtYmVyIG9mIGhvdXJzfSkgClxlbmR7YWxpZ25lZH1gYGBdCgoKCltgQz1gXVtfXXskc3Vic2NyaXB0aW9ufXsyfVtgK2BdIFtfXXskcmF0ZX17M30gW2BcY2RvdCB%2BIHRgXQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKRmlsbCBpbiB0aGUgY29ycmVjdCBudW1iZXJzLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BDPTcrMi41MHQgYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9PnFAPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHN1YnNjcmlwdGlvbj1Db21wdXRlKCI3Iik7CiRyYXRlID0gQ29tcHV0ZSgiMi41MCIpOwoKQkVHSU5fUEdNTApXcml0ZSBhbiBlcXVhdGlvbiBmb3IgdGhlIGNvc3QgW2BDYF0gb2YgcmVudGluZyBhIGJpY3ljbGUgZm9yIFtgdGBdIGhvdXJzIGlmIHRoZSBzdWJzY3JpcHRpb24gZmVlIGlzICQ3IGFuZCB0aGUgcmVudGFsIGZlZSBpcyAkMi41MCBwZXIgaG91ci4KCgoKW2BgYFxiZWdpbnthbGlnbmVkfQpcdGV4dHtDb3N0fVxhbXAgPSAoXHRleHR7c3Vic2NyaXB0aW9uIGZlZX0pKyhcdGV4dHtob3VybHkgcmF0ZX0pXGNkb3QoXHRleHR7bnVtYmVyIG9mIGhvdXJzfSkgClxlbmR7YWxpZ25lZH1gYGBdCgoKCltgQz1gXVtfXXskc3Vic2NyaXB0aW9ufXsyfVtgK2BdIFtfXXskcmF0ZX17M30gW2BcY2RvdCB%2BIHRgXQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKRmlsbCBpbiB0aGUgY29ycmVjdCBudW1iZXJzLgoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9PnFAPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHN1YnNjcmlwdGlvbj1Db21wdXRlKCI3Iik7CiRyYXRlID0gQ29tcHV0ZSgiMi41MCIpOwoKQkVHSU5fUEdNTApXcml0ZSBhbiBlcXVhdGlvbiBmb3IgdGhlIGNvc3QgW2BDYF0gb2YgcmVudGluZyBhIGJpY3ljbGUgZm9yIFtgdGBdIGhvdXJzIGlmIHRoZSBzdWJzY3JpcHRpb24gZmVlIGlzICQ3IGFuZCB0aGUgcmVudGFsIGZlZSBpcyAkMi41MCBwZXIgaG91ci4KCgoKW2BgYFxiZWdpbnthbGlnbmVkfQpcdGV4dHtDb3N0fVxhbXAgPSAoXHRleHR7c3Vic2NyaXB0aW9uIGZlZX0pKyhcdGV4dHtob3VybHkgcmF0ZX0pXGNkb3QoXHRleHR7bnVtYmVyIG9mIGhvdXJzfSkgClxlbmR7YWxpZ25lZH1gYGBdCgoKCltgQz1gXVtfXXskc3Vic2NyaXB0aW9ufXsyfVtgK2BdIFtfXXskcmF0ZX17M30gW2BcY2RvdCB%2BIHRgXQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgQz03KzIuNTB0IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9PnFAPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHN1YnNjcmlwdGlvbj1Db21wdXRlKCI3Iik7CiRyYXRlID0gQ29tcHV0ZSgiMi41MCIpOwoKQkVHSU5fUEdNTApXcml0ZSBhbiBlcXVhdGlvbiBmb3IgdGhlIGNvc3QgW2BDYF0gb2YgcmVudGluZyBhIGJpY3ljbGUgZm9yIFtgdGBdIGhvdXJzIGlmIHRoZSBzdWJzY3JpcHRpb24gZmVlIGlzICQ3IGFuZCB0aGUgcmVudGFsIGZlZSBpcyAkMi41MCBwZXIgaG91ci4KCgoKW2BgYFxiZWdpbnthbGlnbmVkfQpcdGV4dHtDb3N0fVxhbXAgPSAoXHRleHR7c3Vic2NyaXB0aW9uIGZlZX0pKyhcdGV4dHtob3VybHkgcmF0ZX0pXGNkb3QoXHRleHR7bnVtYmVyIG9mIGhvdXJzfSkgClxlbmR7YWxpZ25lZH1gYGBdCgoKCltgQz1gXVtfXXskc3Vic2NyaXB0aW9ufXsyfVtgK2BdIFtfXXskcmF0ZX17M30gW2BcY2RvdCB%2BIHRgXQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-03-09T15:57:39-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.1.5)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+$subscription=Compute("7");
+$rate = Compute("2.50");
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Write an equation for the cost [`C`] of renting a bicycle for [`t`] hours if the subscription fee is $7 and the rental fee is $2.50 per hour.
+
+[```\newcommand{\amp}{&amp;}\begin{aligned}
+\text{Cost}\amp = (\text{subscription fee})+(\text{hourly rate})\cdot(\text{number of hours}) 
+\end{aligned}```]
+
+[`C=`][_]{$subscription}{2}[`+`] [_]{$rate}{3} [`\cdot ~ t`]
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+Fill in the correct numbers.
+
+END_PGML_HINT
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+[`C=7+2.50t `]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+          </exercise>
+        </subsection>
+        <subsection>
+          <title>Equations for Linear Models</title>
+          <p>
+    The equation we wrote in the first Example is an example of a <term>linear model</term>, which describes a variable that increases or decreases at a constant rate.
+</p>
+          <definition>
+            <title>Linear Model</title>
+            <p>
+        A <term>linearl model</term><idx>linear model</idx> describes a variable that increases or decreases at a constant rate. It has the form
+        <md><mrow>y=(\text{starting value})+(\text{rate})\times t </mrow></md>
+    </p>
+          </definition>
+          <exercise>
+            <title>QuickCheck 3</title>
+            <webwork-reps xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <authored>
+
+        <setup><pg-code>       
+                  $which = RadioButtons(
+                    ["Increasing variables",
+                    "Variables that change at a constant rate",
+                    "Variables that describe time",
+                    "Variables that can be graphed"],
+                    1, 
+                  );            
+              </pg-code></setup>
+        <statement><p>What sort of variables can be described by a linear model?</p><p>
+            <var name="$which" form="buttons"/>
+          </p></statement>
+        <solution><p>Variables that change at a constant rate</p></solution>
+
+    </authored>
+
+
+    <static seed="4">
+      <statement><p>What sort of variables can be described by a linear model?</p><p><var form="buttons">
+      <li>
+      <p>Increasing variables</p>
+      </li>
+      <li>
+      <p>Variables that change at a constant rate</p>
+      </li>
+      <li>
+      <p>Variables that describe time</p>
+      </li>
+      <li>
+      <p>Variables that can be graphed</p>
+      </li>
+      </var></p></statement>
+      <answer><p><m>\text{Variables  ...  rate}</m></p></answer>
+
+      <solution><p>Variables that change at a constant rate</p></solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHdoaWNoID0gUmFkaW9CdXR0b25zKAogIFsiSW5jcmVhc2luZyB2YXJpYWJsZXMiLAogICJWYXJpYWJsZXMgdGhhdCBjaGFuZ2UgYXQgYSBjb25zdGFudCByYXRlIiwKICAiVmFyaWFibGVzIHRoYXQgZGVzY3JpYmUgdGltZSIsCiAgIlZhcmlhYmxlcyB0aGF0IGNhbiBiZSBncmFwaGVkIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoYXQgc29ydCBvZiB2YXJpYWJsZXMgY2FuIGJlIGRlc2NyaWJlZCBieSBhIGxpbmVhciBtb2RlbD8KCiAgICBbX117JHdoaWNofXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClZhcmlhYmxlcyB0aGF0IGNoYW5nZSBhdCBhIGNvbnN0YW50IHJhdGUKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHdoaWNoID0gUmFkaW9CdXR0b25zKAogIFsiSW5jcmVhc2luZyB2YXJpYWJsZXMiLAogICJWYXJpYWJsZXMgdGhhdCBjaGFuZ2UgYXQgYSBjb25zdGFudCByYXRlIiwKICAiVmFyaWFibGVzIHRoYXQgZGVzY3JpYmUgdGltZSIsCiAgIlZhcmlhYmxlcyB0aGF0IGNhbiBiZSBncmFwaGVkIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoYXQgc29ydCBvZiB2YXJpYWJsZXMgY2FuIGJlIGRlc2NyaWJlZCBieSBhIGxpbmVhciBtb2RlbD8KCiAgICBbX117JHdoaWNofXs1fQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHdoaWNoID0gUmFkaW9CdXR0b25zKAogIFsiSW5jcmVhc2luZyB2YXJpYWJsZXMiLAogICJWYXJpYWJsZXMgdGhhdCBjaGFuZ2UgYXQgYSBjb25zdGFudCByYXRlIiwKICAiVmFyaWFibGVzIHRoYXQgZGVzY3JpYmUgdGltZSIsCiAgIlZhcmlhYmxlcyB0aGF0IGNhbiBiZSBncmFwaGVkIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoYXQgc29ydCBvZiB2YXJpYWJsZXMgY2FuIGJlIGRlc2NyaWJlZCBieSBhIGxpbmVhciBtb2RlbD8KCiAgICBbX117JHdoaWNofXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClZhcmlhYmxlcyB0aGF0IGNoYW5nZSBhdCBhIGNvbnN0YW50IHJhdGUKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHdoaWNoID0gUmFkaW9CdXR0b25zKAogIFsiSW5jcmVhc2luZyB2YXJpYWJsZXMiLAogICJWYXJpYWJsZXMgdGhhdCBjaGFuZ2UgYXQgYSBjb25zdGFudCByYXRlIiwKICAiVmFyaWFibGVzIHRoYXQgZGVzY3JpYmUgdGltZSIsCiAgIlZhcmlhYmxlcyB0aGF0IGNhbiBiZSBncmFwaGVkIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoYXQgc29ydCBvZiB2YXJpYWJsZXMgY2FuIGJlIGRlc2NyaWJlZCBieSBhIGxpbmVhciBtb2RlbD8KCiAgICBbX117JHdoaWNofXs1fQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-03-09T15:57:39-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.1.7)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+$which = RadioButtons(
+  ["Increasing variables",
+  "Variables that change at a constant rate",
+  "Variables that describe time",
+  "Variables that can be graphed"],
+  1, 
+);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+What sort of variables can be described by a linear model?
+
+    [_]{$which}{5}
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+Variables that change at a constant rate
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+          </exercise>
+          <p>In the next example we see how a graph and its equation are related.</p>
+          <example xml:id="example-6hrbike">
+            <statement>
+              <p>Use the equation <m>C=5+3\cdot t</m> you found in <xref ref="example-bicycle" text="type-global"/> to answer the following questions.  Then show how to find the answers by using the graph.</p>
+              <p>
+    <ol label="a"><li><p>How much will it cost to rent a bicycle for 6 hours?</p></li><li><p>How long can you bicycle for $18.50?</p></li></ol></p>
+            </statement>
+            <solution>
+              <p>
+                <ol label="a">
+                  <li>
+        <p>Substitute <m>t=\alert{6}</m> into the equation to find 
+        <me>C=5+3(\alert{6})=23</me>
+        A 6-hour bike ride will cost $23.  The point <m>P</m> on the graph in the figure represents the cost of a 6-hour bike ride.  The value on the <m>C</m>-axis at the same height as point <m>P</m> is 23, so a 6-hour bike ride costs $23.</p></li>
+                  <li>
+        <sidebyside widths="60% 35%"><p>Substitute <m>C=\alert{18.50}</m> into the equation and solve for <m>t</m>.
+        <md><mrow>\alert{18.50}\amp=5+3t</mrow><mrow>13.50\amp=3t</mrow><mrow>t\amp=4.5</mrow></md>
+        For $18.50 Annelise can bicycle for <m>4\frac{1}{2} </m> hours. The point <m>Q</m> on the graph represents an $18.50 bike ride. The value on the <m>t</m>-axis below point <m>Q</m> is 4.5, so $18.50 will buy a 4.5 hour bike ride.</p><image source="images/fig1-2"><description>line though points</description></image></sidebyside>
+        </li>
+                </ol>
+              </p>
+            </solution>
+          </example>
+          <exercise>
+            <title>Practice 2</title>
+            <webwork-reps xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <authored>
+
+        <setup><pg-code>
+                  $time = Compute("1.5");
+              </pg-code></setup>
+        <statement><p>In the preceding Example, how long can you bicycle for $9.50?</p><p> Answer: <var name="$time" width="2"/> hr.</p><p>Show this on the graph.</p></statement>
+        <hint><p>Start by finding $9.50 on the Cost (vertical axis). Then find the point on the graph with <m>C</m>-coordinate $9.50. Finally, find the <m>t</m>-coordinate of that point.</p></hint>
+        <solution><p>1.5 hours</p><p>A figure is below.</p></solution>
+
+    </authored>
+
+
+    <static seed="5">
+      <statement><p>In the preceding Example, how long can you bicycle for $9.50?</p><p>Answer: <fillin name="AnSwEr0001" characters="2"/> hr.</p><p>Show this on the graph.</p></statement>
+
+      <hint><p>Start by finding $9.50 on the Cost (vertical axis). Then find the point on the graph with <m>C</m>-coordinate $9.50. Finally, find the <m>t</m>-coordinate of that point.</p></hint>
+      <answer><p><m>1.5</m></p></answer>
+
+      <solution><p>1.5 hours</p><p>A figure is below.</p></solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRpbWUgPSBDb21wdXRlKCIxLjUiKTsKCkJFR0lOX1BHTUwKSW4gdGhlIHByZWNlZGluZyBFeGFtcGxlLCBob3cgbG9uZyBjYW4geW91IGJpY3ljbGUgZm9yICQ5LjUwPwoKQW5zd2VyOiBbX117JHRpbWV9ezJ9IGhyLgoKU2hvdyB0aGlzIG9uIHRoZSBncmFwaC4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClN0YXJ0IGJ5IGZpbmRpbmcgJDkuNTAgb24gdGhlIENvc3QgKHZlcnRpY2FsIGF4aXMpLiBUaGVuIGZpbmQgdGhlIHBvaW50IG9uIHRoZSBncmFwaCB3aXRoIFtgQ2BdLWNvb3JkaW5hdGUgJDkuNTAuIEZpbmFsbHksIGZpbmQgdGhlIFtgdGBdLWNvb3JkaW5hdGUgb2YgdGhhdCBwb2ludC4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCjEuNSBob3VycwoKQSBmaWd1cmUgaXMgYmVsb3cuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRpbWUgPSBDb21wdXRlKCIxLjUiKTsKCkJFR0lOX1BHTUwKSW4gdGhlIHByZWNlZGluZyBFeGFtcGxlLCBob3cgbG9uZyBjYW4geW91IGJpY3ljbGUgZm9yICQ5LjUwPwoKQW5zd2VyOiBbX117JHRpbWV9ezJ9IGhyLgoKU2hvdyB0aGlzIG9uIHRoZSBncmFwaC4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClN0YXJ0IGJ5IGZpbmRpbmcgJDkuNTAgb24gdGhlIENvc3QgKHZlcnRpY2FsIGF4aXMpLiBUaGVuIGZpbmQgdGhlIHBvaW50IG9uIHRoZSBncmFwaCB3aXRoIFtgQ2BdLWNvb3JkaW5hdGUgJDkuNTAuIEZpbmFsbHksIGZpbmQgdGhlIFtgdGBdLWNvb3JkaW5hdGUgb2YgdGhhdCBwb2ludC4KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRpbWUgPSBDb21wdXRlKCIxLjUiKTsKCkJFR0lOX1BHTUwKSW4gdGhlIHByZWNlZGluZyBFeGFtcGxlLCBob3cgbG9uZyBjYW4geW91IGJpY3ljbGUgZm9yICQ5LjUwPwoKQW5zd2VyOiBbX117JHRpbWV9ezJ9IGhyLgoKU2hvdyB0aGlzIG9uIHRoZSBncmFwaC4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgoxLjUgaG91cnMKCkEgZmlndXJlIGlzIGJlbG93LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHRpbWUgPSBDb21wdXRlKCIxLjUiKTsKCkJFR0lOX1BHTUwKSW4gdGhlIHByZWNlZGluZyBFeGFtcGxlLCBob3cgbG9uZyBjYW4geW91IGJpY3ljbGUgZm9yICQ5LjUwPwoKQW5zd2VyOiBbX117JHRpbWV9ezJ9IGhyLgoKU2hvdyB0aGlzIG9uIHRoZSBncmFwaC4KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-03-09T15:57:39-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.1.9)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+$time = Compute("1.5");
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+In the preceding Example, how long can you bicycle for $9.50?
+
+Answer: [_]{$time}{2} hr.
+
+Show this on the graph.
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+Start by finding $9.50 on the Cost (vertical axis). Then find the point on the graph with [`C`]-coordinate $9.50. Finally, find the [`t`]-coordinate of that point.
+
+END_PGML_HINT
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+1.5 hours
+
+A figure is below.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+            <conclusion>
+              <sidebyside width="30%" margins="0% 70%">
+                <image source="images/fig-ex-1-1-3">
+                  <description>cost of bike rental</description>
+                </image>
+              </sidebyside>
+            </conclusion>
+          </exercise>
+          <p>
+    In <xref ref="example-6hrbike" text="type-global"/>, note the different algebraic techniques we used in parts (a) and (b):</p>
+          <p>
+    In part (a) we were given a value of <m>t</m> and we <term>evaluated the expression</term> <m>5 + 3t</m> to find <m>C</m>.
+</p>
+          <p>
+    In part (b) we were given a value of <m>C</m> and we <term>solved the equation</term> <m>C = 5 + 3t</m> to find <m>t</m>.
+</p>
+          <exercise>
+            <title>QuickCheck 3</title>
+            <webwork-reps xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <authored>
+
+        <setup><pg-code>
+                   $which1 = PopUp(
+                    ["?","solving","evaluating"],
+                    2, 
+                  );
+                   $which2 = PopUp(
+                    ["?","solving","evaluating"],
+                    1, 
+                  );
+              </pg-code></setup>
+        <statement><p>
+              Consider the expression <m>C = 5 + 3t</m>. Finding a value of <m>C</m> when we know <m>t</m> is called <var name="$which1" form="popup"/> the expression. Finding a value of <m>t</m> when we know <m>C</m> is called <var name="$which2" form="popup"/> the equation.
+          </p></statement>
+        <solution><p>evaluating; solving</p></solution>
+
+    </authored>
+
+
+    <static seed="6">
+      <statement><p>Consider the expression <m>C = 5 + 3t\text{.}</m> Finding a value of <m>C</m> when we know <m>t</m> is called <var form="popup">
+      <li>
+      <p>?</p>
+      </li>
+      <li>
+      <p>solving</p>
+      </li>
+      <li>
+      <p>evaluating</p>
+      </li>
+      </var> the expression. Finding a value of <m>t</m> when we know <m>C</m> is called <var form="popup">
+      <li>
+      <p>?</p>
+      </li>
+      <li>
+      <p>solving</p>
+      </li>
+      <li>
+      <p>evaluating</p>
+      </li>
+      </var> the equation.</p></statement>
+      <answer><p><m>\text{evaluating}</m></p></answer>
+      <answer><p><m>\text{solving}</m></p></answer>
+
+      <solution><p>evaluating; solving</p></solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFBvcFVwKAogIFsiPyIsInNvbHZpbmciLCJldmFsdWF0aW5nIl0sCiAgMiwgCik7CiAkd2hpY2gyID0gUG9wVXAoCiAgWyI%2FIiwic29sdmluZyIsImV2YWx1YXRpbmciXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGV4cHJlc3Npb24gW2BDID0gNSArIDN0XHRleHR7Ln1gXSBGaW5kaW5nIGEgdmFsdWUgb2YgW2BDYF0gd2hlbiB3ZSBrbm93IFtgdGBdIGlzIGNhbGxlZCBbX117JHdoaWNoMX17NX0gdGhlIGV4cHJlc3Npb24uIEZpbmRpbmcgYSB2YWx1ZSBvZiBbYHRgXSB3aGVuIHdlIGtub3cgW2BDYF0gaXMgY2FsbGVkIFtfXXskd2hpY2gyfXs1fSB0aGUgZXF1YXRpb24uCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KZXZhbHVhdGluZzsgc29sdmluZwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFBvcFVwKAogIFsiPyIsInNvbHZpbmciLCJldmFsdWF0aW5nIl0sCiAgMiwgCik7CiAkd2hpY2gyID0gUG9wVXAoCiAgWyI%2FIiwic29sdmluZyIsImV2YWx1YXRpbmciXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGV4cHJlc3Npb24gW2BDID0gNSArIDN0XHRleHR7Ln1gXSBGaW5kaW5nIGEgdmFsdWUgb2YgW2BDYF0gd2hlbiB3ZSBrbm93IFtgdGBdIGlzIGNhbGxlZCBbX117JHdoaWNoMX17NX0gdGhlIGV4cHJlc3Npb24uIEZpbmRpbmcgYSB2YWx1ZSBvZiBbYHRgXSB3aGVuIHdlIGtub3cgW2BDYF0gaXMgY2FsbGVkIFtfXXskd2hpY2gyfXs1fSB0aGUgZXF1YXRpb24uCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFBvcFVwKAogIFsiPyIsInNvbHZpbmciLCJldmFsdWF0aW5nIl0sCiAgMiwgCik7CiAkd2hpY2gyID0gUG9wVXAoCiAgWyI%2FIiwic29sdmluZyIsImV2YWx1YXRpbmciXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGV4cHJlc3Npb24gW2BDID0gNSArIDN0XHRleHR7Ln1gXSBGaW5kaW5nIGEgdmFsdWUgb2YgW2BDYF0gd2hlbiB3ZSBrbm93IFtgdGBdIGlzIGNhbGxlZCBbX117JHdoaWNoMX17NX0gdGhlIGV4cHJlc3Npb24uIEZpbmRpbmcgYSB2YWx1ZSBvZiBbYHRgXSB3aGVuIHdlIGtub3cgW2BDYF0gaXMgY2FsbGVkIFtfXXskd2hpY2gyfXs1fSB0aGUgZXF1YXRpb24uCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KZXZhbHVhdGluZzsgc29sdmluZwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFBvcFVwKAogIFsiPyIsInNvbHZpbmciLCJldmFsdWF0aW5nIl0sCiAgMiwgCik7CiAkd2hpY2gyID0gUG9wVXAoCiAgWyI%2FIiwic29sdmluZyIsImV2YWx1YXRpbmciXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGV4cHJlc3Npb24gW2BDID0gNSArIDN0XHRleHR7Ln1gXSBGaW5kaW5nIGEgdmFsdWUgb2YgW2BDYF0gd2hlbiB3ZSBrbm93IFtgdGBdIGlzIGNhbGxlZCBbX117JHdoaWNoMX17NX0gdGhlIGV4cHJlc3Npb24uIEZpbmRpbmcgYSB2YWx1ZSBvZiBbYHRgXSB3aGVuIHdlIGtub3cgW2BDYF0gaXMgY2FsbGVkIFtfXXskd2hpY2gyfXs1fSB0aGUgZXF1YXRpb24uCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-03-09T15:57:39-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.1.10)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+ $which1 = PopUp(
+  ["?","solving","evaluating"],
+  2, 
+);
+ $which2 = PopUp(
+  ["?","solving","evaluating"],
+  1, 
+);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the expression [`C = 5 + 3t\text{.}`] Finding a value of [`C`] when we know [`t`] is called [_]{$which1}{5} the expression. Finding a value of [`t`] when we know [`C`] is called [_]{$which2}{5} the equation.
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+evaluating; solving
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+          </exercise>
+        </subsection>
+        <!--
+<xi:include href="./summary-1-1.xml" /> 
+<xi:include href="./section-1-1-exercises.xml" />   -->
+      </section>
+      <!-- </book>  </mathbook> -->
+      <!-- Linear Models  -->
+    </chapter>
+    <!-- </book>  </mathbook> -->
+    <!-- Functions and their graphs  -->
+    <backmatter xml:id="backmatter">
+      <title>Answers to Selected Exercises and Homework Problems</title>
+      <solutions divisional=" solution answer" project="answer"/>
+    </backmatter>
+  </book>
+</pretext>
