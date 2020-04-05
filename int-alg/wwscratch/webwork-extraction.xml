@@ -63,7 +63,7 @@
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -312,7 +312,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -597,7 +597,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -856,7 +856,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -1011,7 +1011,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -1158,7 +1158,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -1386,7 +1386,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -1568,7 +1568,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -1831,7 +1831,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -2101,7 +2101,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -2366,7 +2366,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -2550,7 +2550,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -2696,7 +2696,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -2831,7 +2831,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -2977,7 +2977,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -3062,6 +3062,382 @@ ENDDOCUMENT();
     <authored>
 
         <pg-code>
+                  Context("Complex")-&gt;functions-&gt;disable("sqrt");
+                  Context()-&gt;functions-&gt;enable("sqrt");
+                  Context()-&gt;{error}{msg}{"Can't take sqrt of -18"}
+                    = "Your should not leave a negative number under the radical.";
+                  Context()-&gt;{error}{msg}{"Can't take sqrt of -5"}
+                    = "Your should not leave a negative number under the radical.";
+
+                  $a = Compute("-1/2+3/2 i");
+                  $b = Compute("-1/2-3/2 i");
+                  $answer = List("$a,$b");
+                  $my_evaluator = $answer -&gt; cmp(
+                   showHints=&gt;1,
+                   showLengthHints =&gt; 1,
+                   partialCredit =&gt; 1,
+                  ); 
+                  
+              </pg-code>
+        <statement>
+          <p>
+                      Use extraction of roots to solve <m>(2x+1)^2+9=0 </m>.  Write your answers as complex numbers, separated with a comma.
+                  </p>
+          <p>
+                      <m>x=</m><var name="$answer" width="15"/> 
+                  </p>
+        </statement>
+        <solution>
+          <p>
+            <m>\dfrac{-1}{2} \pm \dfrac{3}{2}i</m>
+          </p>
+        </solution>
+
+    </authored>
+
+
+    <static seed="112">
+      <statement>
+      <p>Use extraction of roots to solve <m>(2x+1)^2+9=0 \text{.}</m>  Write your answers as complex numbers, separated with a comma.</p>
+      <p><m>x=</m><fillin name="AnSwEr0001" characters="15" /></p>
+      </statement>
+      <answer>
+        <p><m>-0.5+1.5i, -0.5-1.5i</m></p>
+      </answer>
+
+      <solution>
+      <p><m>\dfrac{-1}{2} \pm \dfrac{3}{2}i</m></p>
+      </solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJDb21wbGV4IiktPmZ1bmN0aW9ucy0%2BZGlzYWJsZSgic3FydCIpOwpDb250ZXh0KCktPmZ1bmN0aW9ucy0%2BZW5hYmxlKCJzcXJ0Iik7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTE4In0KICA9ICJZb3VyIHNob3VsZCBub3QgbGVhdmUgYSBuZWdhdGl2ZSBudW1iZXIgdW5kZXIgdGhlIHJhZGljYWwuIjsKQ29udGV4dCgpLT57ZXJyb3J9e21zZ317IkNhbid0IHRha2Ugc3FydCBvZiAtNSJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CgokYSA9IENvbXB1dGUoIi0xLzIrMy8yIGkiKTsKJGIgPSBDb21wdXRlKCItMS8yLTMvMiBpIik7CiRhbnN3ZXIgPSBMaXN0KCIkYSwkYiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKVXNlIGV4dHJhY3Rpb24gb2Ygcm9vdHMgdG8gc29sdmUgW2AoMngrMSleMis5PTAgXHRleHR7Ln1gXSAgV3JpdGUgeW91ciBhbnN3ZXJzIGFzIGNvbXBsZXggbnVtYmVycywgc2VwYXJhdGVkIHdpdGggYSBjb21tYS4KCltgeD1gXVtfXXskYW5zd2VyfXsxNX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFxkZnJhY3stMX17Mn0gXHBtIFxkZnJhY3szfXsyfWlgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJDb21wbGV4IiktPmZ1bmN0aW9ucy0%2BZGlzYWJsZSgic3FydCIpOwpDb250ZXh0KCktPmZ1bmN0aW9ucy0%2BZW5hYmxlKCJzcXJ0Iik7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTE4In0KICA9ICJZb3VyIHNob3VsZCBub3QgbGVhdmUgYSBuZWdhdGl2ZSBudW1iZXIgdW5kZXIgdGhlIHJhZGljYWwuIjsKQ29udGV4dCgpLT57ZXJyb3J9e21zZ317IkNhbid0IHRha2Ugc3FydCBvZiAtNSJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CgokYSA9IENvbXB1dGUoIi0xLzIrMy8yIGkiKTsKJGIgPSBDb21wdXRlKCItMS8yLTMvMiBpIik7CiRhbnN3ZXIgPSBMaXN0KCIkYSwkYiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKVXNlIGV4dHJhY3Rpb24gb2Ygcm9vdHMgdG8gc29sdmUgW2AoMngrMSleMis5PTAgXHRleHR7Ln1gXSAgV3JpdGUgeW91ciBhbnN3ZXJzIGFzIGNvbXBsZXggbnVtYmVycywgc2VwYXJhdGVkIHdpdGggYSBjb21tYS4KCltgeD1gXVtfXXskYW5zd2VyfXsxNX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJDb21wbGV4IiktPmZ1bmN0aW9ucy0%2BZGlzYWJsZSgic3FydCIpOwpDb250ZXh0KCktPmZ1bmN0aW9ucy0%2BZW5hYmxlKCJzcXJ0Iik7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTE4In0KICA9ICJZb3VyIHNob3VsZCBub3QgbGVhdmUgYSBuZWdhdGl2ZSBudW1iZXIgdW5kZXIgdGhlIHJhZGljYWwuIjsKQ29udGV4dCgpLT57ZXJyb3J9e21zZ317IkNhbid0IHRha2Ugc3FydCBvZiAtNSJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CgokYSA9IENvbXB1dGUoIi0xLzIrMy8yIGkiKTsKJGIgPSBDb21wdXRlKCItMS8yLTMvMiBpIik7CiRhbnN3ZXIgPSBMaXN0KCIkYSwkYiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKVXNlIGV4dHJhY3Rpb24gb2Ygcm9vdHMgdG8gc29sdmUgW2AoMngrMSleMis5PTAgXHRleHR7Ln1gXSAgV3JpdGUgeW91ciBhbnN3ZXJzIGFzIGNvbXBsZXggbnVtYmVycywgc2VwYXJhdGVkIHdpdGggYSBjb21tYS4KCltgeD1gXVtfXXskYW5zd2VyfXsxNX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFxkZnJhY3stMX17Mn0gXHBtIFxkZnJhY3szfXsyfWlgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJDb21wbGV4IiktPmZ1bmN0aW9ucy0%2BZGlzYWJsZSgic3FydCIpOwpDb250ZXh0KCktPmZ1bmN0aW9ucy0%2BZW5hYmxlKCJzcXJ0Iik7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTE4In0KICA9ICJZb3VyIHNob3VsZCBub3QgbGVhdmUgYSBuZWdhdGl2ZSBudW1iZXIgdW5kZXIgdGhlIHJhZGljYWwuIjsKQ29udGV4dCgpLT57ZXJyb3J9e21zZ317IkNhbid0IHRha2Ugc3FydCBvZiAtNSJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CgokYSA9IENvbXB1dGUoIi0xLzIrMy8yIGkiKTsKJGIgPSBDb21wdXRlKCItMS8yLTMvMiBpIik7CiRhbnN3ZXIgPSBMaXN0KCIkYSwkYiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKVXNlIGV4dHJhY3Rpb24gb2Ygcm9vdHMgdG8gc29sdmUgW2AoMngrMSleMis5PTAgXHRleHR7Ln1gXSAgV3JpdGUgeW91ciBhbnN3ZXJzIGFzIGNvbXBsZXggbnVtYmVycywgc2VwYXJhdGVkIHdpdGggYSBjb21tYS4KCltgeD1gXVtfXXskYW5zd2VyfXsxNX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-04-05T16:08:19-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(4.1.7)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context("Complex")-&gt;functions-&gt;disable("sqrt");
+Context()-&gt;functions-&gt;enable("sqrt");
+Context()-&gt;{error}{msg}{"Can't take sqrt of -18"}
+  = "Your should not leave a negative number under the radical.";
+Context()-&gt;{error}{msg}{"Can't take sqrt of -5"}
+  = "Your should not leave a negative number under the radical.";
+
+$a = Compute("-1/2+3/2 i");
+$b = Compute("-1/2-3/2 i");
+$answer = List("$a,$b");
+$my_evaluator = $answer -&gt; cmp(
+ showHints=&gt;1,
+ showLengthHints =&gt; 1,
+ partialCredit =&gt; 1,
+);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Use extraction of roots to solve [`(2x+1)^2+9=0 \text{.}`]  Write your answers as complex numbers, separated with a comma.
+
+[`x=`][_]{$answer}{15}
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+[`\dfrac{-1}{2} \pm \dfrac{3}{2}i`]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-webwork-113" ww-id="webwork-113">
+    <authored>
+
+        <pg-code>       
+              $True = PopUp(
+                ["?","True", "False"],
+                1, 
+              );
+              $TF = PopUp(
+                ["?","True", "False"],
+                2, 
+              );
+          </pg-code>
+        <statement>
+          <p>
+                  True or False. 
+                  <ol label="a"><li><p>
+                          The discriminant is part of the quadratic formula. <var name="$True" form="popup"/>
+                      </p></li><li><p>
+                          We use the discriminant to calculate the solutions of a quadratic equation. <var name="$TF" form="popup"/>
+                      </p></li><li><p>
+                          If the discriminant is negative, both <m>x</m>-intercepts of the graph are negative. <var name="$TF" form="popup"/>
+                      </p></li><li><p>
+                          If a quadratic equation won't factor, its graph has no <m>x</m>-intercepts. <var name="$TF" form="popup"/>
+                      </p></li></ol>
+              </p>
+        </statement>
+        <solution>
+          <p>
+              <ol label="a"><li>True</li><li>False</li><li>False</li><li>False</li></ol>
+              </p>
+        </solution>
+
+    </authored>
+
+
+    <static seed="113">
+      <statement>
+      <p>True or False.
+      <ol label="a.">
+      <li>
+      <p>The discriminant is part of the quadratic formula. <var form="popup">
+      <li>
+      <p>?</p>
+      </li>
+      <li>
+      <p>True</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      </var></p>
+      </li>
+      <li>
+      <p>We use the discriminant to calculate the solutions of a quadratic equation. <var form="popup">
+      <li>
+      <p>?</p>
+      </li>
+      <li>
+      <p>True</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      </var></p>
+      </li>
+      <li>
+      <p>If the discriminant is negative, both <m>x</m>-intercepts of the graph are negative. <var form="popup">
+      <li>
+      <p>?</p>
+      </li>
+      <li>
+      <p>True</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      </var></p>
+      </li>
+      <li>
+      <p>If a quadratic equation won<rsq/>t factor, its graph has no <m>x</m>-intercepts. <var form="popup">
+      <li>
+      <p>?</p>
+      </li>
+      <li>
+      <p>True</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      </var></p>
+      </li>
+      </ol></p>
+      </statement>
+      <answer>
+        <p><m>\text{True}</m></p>
+      </answer>
+      <answer>
+        <p><m>\text{False}</m></p>
+      </answer>
+      <answer>
+        <p><m>\text{False}</m></p>
+      </answer>
+      <answer>
+        <p><m>\text{False}</m></p>
+      </answer>
+
+      <solution>
+      <p><ol label="a.">
+      <li>
+      <p>True</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      <li>
+      <p>False</p>
+      </li>
+      </ol></p>
+      </solution>
+    </static>
+
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskVHJ1ZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAxLCAKKTsKJFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIGRpc2NyaW1pbmFudCBpcyBwYXJ0IG9mIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4gW19deyRUcnVlfXs1fQoKCmEuICBXZSB1c2UgdGhlIGRpc2NyaW1pbmFudCB0byBjYWxjdWxhdGUgdGhlIHNvbHV0aW9ucyBvZiBhIHF1YWRyYXRpYyBlcXVhdGlvbi4gW19deyRURn17NX0KCgphLiAgSWYgdGhlIGRpc2NyaW1pbmFudCBpcyBuZWdhdGl2ZSwgYm90aCBbYHhgXS1pbnRlcmNlcHRzIG9mIHRoZSBncmFwaCBhcmUgbmVnYXRpdmUuIFtfXXskVEZ9ezV9CgoKYS4gIElmIGEgcXVhZHJhdGljIGVxdWF0aW9uIHdvbid0IGZhY3RvciwgaXRzIGdyYXBoIGhhcyBubyBbYHhgXS1pbnRlcmNlcHRzLiBbX117JFRGfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIEZhbHNlCmEuICBGYWxzZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskVHJ1ZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAxLCAKKTsKJFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIGRpc2NyaW1pbmFudCBpcyBwYXJ0IG9mIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4gW19deyRUcnVlfXs1fQoKCmEuICBXZSB1c2UgdGhlIGRpc2NyaW1pbmFudCB0byBjYWxjdWxhdGUgdGhlIHNvbHV0aW9ucyBvZiBhIHF1YWRyYXRpYyBlcXVhdGlvbi4gW19deyRURn17NX0KCgphLiAgSWYgdGhlIGRpc2NyaW1pbmFudCBpcyBuZWdhdGl2ZSwgYm90aCBbYHhgXS1pbnRlcmNlcHRzIG9mIHRoZSBncmFwaCBhcmUgbmVnYXRpdmUuIFtfXXskVEZ9ezV9CgoKYS4gIElmIGEgcXVhZHJhdGljIGVxdWF0aW9uIHdvbid0IGZhY3RvciwgaXRzIGdyYXBoIGhhcyBubyBbYHhgXS1pbnRlcmNlcHRzLiBbX117JFRGfXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskVHJ1ZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAxLCAKKTsKJFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIGRpc2NyaW1pbmFudCBpcyBwYXJ0IG9mIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4gW19deyRUcnVlfXs1fQoKCmEuICBXZSB1c2UgdGhlIGRpc2NyaW1pbmFudCB0byBjYWxjdWxhdGUgdGhlIHNvbHV0aW9ucyBvZiBhIHF1YWRyYXRpYyBlcXVhdGlvbi4gW19deyRURn17NX0KCgphLiAgSWYgdGhlIGRpc2NyaW1pbmFudCBpcyBuZWdhdGl2ZSwgYm90aCBbYHhgXS1pbnRlcmNlcHRzIG9mIHRoZSBncmFwaCBhcmUgbmVnYXRpdmUuIFtfXXskVEZ9ezV9CgoKYS4gIElmIGEgcXVhZHJhdGljIGVxdWF0aW9uIHdvbid0IGZhY3RvciwgaXRzIGdyYXBoIGhhcyBubyBbYHhgXS1pbnRlcmNlcHRzLiBbX117JFRGfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIEZhbHNlCmEuICBGYWxzZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskVHJ1ZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAxLCAKKTsKJFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIGRpc2NyaW1pbmFudCBpcyBwYXJ0IG9mIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4gW19deyRUcnVlfXs1fQoKCmEuICBXZSB1c2UgdGhlIGRpc2NyaW1pbmFudCB0byBjYWxjdWxhdGUgdGhlIHNvbHV0aW9ucyBvZiBhIHF1YWRyYXRpYyBlcXVhdGlvbi4gW19deyRURn17NX0KCgphLiAgSWYgdGhlIGRpc2NyaW1pbmFudCBpcyBuZWdhdGl2ZSwgYm90aCBbYHhgXS1pbnRlcmNlcHRzIG9mIHRoZSBncmFwaCBhcmUgbmVnYXRpdmUuIFtfXXskVEZ9ezV9CgoKYS4gIElmIGEgcXVhZHJhdGljIGVxdWF0aW9uIHdvbid0IGZhY3RvciwgaXRzIGdyYXBoIGhhcyBubyBbYHhgXS1pbnRlcmNlcHRzLiBbX117JFRGfXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-04-05T16:08:19-07:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(4.1.13)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context('Numeric');
+$True = PopUp(
+  ["?","True", "False"],
+  1, 
+);
+$TF = PopUp(
+  ["?","True", "False"],
+  2, 
+);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+True or False.
+a.  The discriminant is part of the quadratic formula. [_]{$True}{5}
+
+a.  We use the discriminant to calculate the solutions of a quadratic equation. [_]{$TF}{5}
+
+a.  If the discriminant is negative, both [`x`]-intercepts of the graph are negative. [_]{$TF}{5}
+
+a.  If a quadratic equation won't factor, its graph has no [`x`]-intercepts. [_]{$TF}{5}
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  True
+a.  False
+a.  False
+a.  False   
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-webwork-114" ww-id="webwork-114">
+    <authored>
+
+        <pg-code>
                   $counta = PopUp(
                   ["?","None","1", "2", "Other"],
                   "None", );
@@ -3087,7 +3463,7 @@ ENDDOCUMENT();
     </authored>
 
 
-    <static seed="112">
+    <static seed="114">
       <statement>
       <p>Use the discriminant to discover how many <m>x</m>-intercepts the graph of each function has.</p>
       <p><ol label="a.">
@@ -3139,18 +3515,18 @@ ENDDOCUMENT();
       </answer>
     </static>
 
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=114&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=114&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=114&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=112&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=114&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskY291bnRhID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIk5vbmUiLCApOwokY291bnRiID0gUG9wVXAoClsiPyIsIk5vbmUiLCIxIiwgIjIiLCAiT3RoZXIiXSwKIjEiLCApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGRpc2NyaW1pbmFudCB0byBkaXNjb3ZlciBob3cgbWFueSBbYHhgXS1pbnRlcmNlcHRzIHRoZSBncmFwaCBvZiBlYWNoIGZ1bmN0aW9uIGhhcy4KCmEuICBbYHkgPSB4XjIgKyA1eCArIDdgXSBbX117JGNvdW50YX17NX0KCgphLiAgW2B5ID0gLVxkZnJhY3sxfXsyfXheMiArIDR4IC0gOGBdIFtfXXskY291bnRifXs1fQoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -3223,7 +3599,7 @@ ENDDOCUMENT();
 
   </webwork-reps>
 
-  <webwork-reps xml:id="extracted-webwork-113" ww-id="webwork-113">
+  <webwork-reps xml:id="extracted-webwork-115" ww-id="webwork-115">
     <authored>
 
         <pg-code>
@@ -3246,7 +3622,7 @@ ENDDOCUMENT();
     </authored>
 
 
-    <static seed="113">
+    <static seed="115">
       <statement>
       <p>Solve <m>2x^2 + kx + k^2 = 1</m> for <m>x</m> in terms of <m>k\text{.}</m></p>
       <p>Solutions: <m>x=</m><fillin name="AnSwEr0001" characters="35" /></p>
@@ -3261,18 +3637,18 @@ ENDDOCUMENT();
       </solution>
     </static>
 
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PVxkZnJhY3sta1xwbVxzcXJ0ezgtN2teMn19ezR9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=115&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PVxkZnJhY3sta1xwbVxzcXJ0ezgtN2teMn19ezR9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=115&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PVxkZnJhY3sta1xwbVxzcXJ0ezgtN2teMn19ezR9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=115&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PVxkZnJhY3sta1xwbVxzcXJ0ezgtN2teMn19ezR9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=113&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=115&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKGs9PiJSZWFsIik7CiRhbnN3ZXI9Rm9ybXVsYSgiKC1rK3NxcnQoOC03ayoqMikpLzQsICgtay1zcXJ0KDgtN2sqKjIpKS80Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgMnheMiArIGt4ICsga14yID0gMWBdIGZvciBbYHhgXSBpbiB0ZXJtcyBvZiBbYGtcdGV4dHsufWBdCgpTb2x1dGlvbnM6IFtgeD1gXVtfXXskYW5zd2VyfXszNX0KClVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
 
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -3404,7 +3780,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -3553,7 +3929,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -3697,7 +4073,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -3872,7 +4248,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4033,7 +4409,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4176,7 +4552,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4313,7 +4689,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4443,7 +4819,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4583,7 +4959,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4727,7 +5103,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -4998,7 +5374,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -5284,7 +5660,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -5442,7 +5818,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -5600,7 +5976,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -5765,7 +6141,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -5903,7 +6279,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -6083,7 +6459,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -6239,7 +6615,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -6392,7 +6768,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -6544,7 +6920,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -6696,7 +7072,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -6878,7 +7254,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -7040,7 +7416,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -7186,7 +7562,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -7361,7 +7737,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -7607,7 +7983,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -7774,7 +8150,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -7910,7 +8286,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -8060,7 +8436,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -8274,7 +8650,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -8481,7 +8857,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -8627,7 +9003,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -8858,7 +9234,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -9024,7 +9400,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -9300,7 +9676,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -9517,7 +9893,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -9648,7 +10024,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -9863,7 +10239,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -10027,7 +10403,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -10159,7 +10535,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -10354,7 +10730,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -10490,7 +10866,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -10711,7 +11087,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -10987,7 +11363,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -11181,7 +11557,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -11417,7 +11793,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -11581,7 +11957,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -11724,7 +12100,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -11970,7 +12346,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -12163,7 +12539,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -12365,7 +12741,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -12569,7 +12945,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -12752,7 +13128,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -12895,7 +13271,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -13084,7 +13460,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -13258,7 +13634,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -13448,7 +13824,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -13613,7 +13989,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -13752,7 +14128,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -13959,7 +14335,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -14141,7 +14517,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -14395,7 +14771,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -14548,7 +14924,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -14696,7 +15072,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -14981,7 +15357,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -15152,7 +15528,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -15322,7 +15698,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -15480,7 +15856,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -15714,7 +16090,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -15932,7 +16308,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -16136,7 +16512,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -16373,7 +16749,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -16524,7 +16900,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -16666,7 +17042,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -16808,7 +17184,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -16946,7 +17322,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -17222,7 +17598,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -17410,7 +17786,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -17643,7 +18019,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -17783,7 +18159,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -18055,7 +18431,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -18211,7 +18587,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -18359,7 +18735,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -18508,7 +18884,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -18710,7 +19086,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -18851,7 +19227,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:21-07:00    
+###    on 2020-04-05T16:08:18-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -19032,7 +19408,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -19331,7 +19707,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -19482,7 +19858,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -19704,7 +20080,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -19850,7 +20226,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -20079,7 +20455,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -20365,7 +20741,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -20658,7 +21034,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -20863,7 +21239,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
@@ -21034,7 +21410,7 @@ ENDDOCUMENT();
     <pg>
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2020-04-05T12:14:22-07:00    
+###    on 2020-04-05T16:08:19-07:00    
 ###                                    
 ###      https://pretextbook.org       
 ###                                    
