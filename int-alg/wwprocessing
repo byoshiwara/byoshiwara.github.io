@@ -1,7 +1,9 @@
-python3 ~/mathbook/pretext/pretext -c webwork -d wwscratch -s https://webwork-ptx.aimath.org ../../int-alg/ptx/int-alg.xml -a
-xsltproc --xinclude --stringparam webwork.extraction ~/byoshiwara.github.io/int-alg/wwscratch/webwork-extraction.xml ~/mathbook/xsl/pretext-merge.xsl ~/int-alg/ptx/int-alg.xml > merge.xml
-xsltproc --xinclude ../../int-alg/xsl/int-alg-html.xsl ./merge.xml
+python3 ~/mathbook/pretext/pretext -c webwork -s https://webwork-ptx.aimath.org -d ~/int-alg/wwscratch ~/int-alg/ptx/int-alg.xml 
+xsltproc --xinclude -stringparam publisher ~/int-alg/pub-html.xml ~/int-alg/xsl/int-alg-html.xsl ~/int-alg/ptx/int-alg.xml
 
 
+xsltproc --xinclude -stringparam publisher ~/int-alg/pub-html.xml ~/algebra-toolkit/xsl/algebra-toolkit-html.xsl ~/algebra-toolkit/ptx/toolkit.xml
 
-xsltproc -stringparam publication.html.calculator geogebra-graphing ../../int-alg/xsl/int-alg-html.xsl ./merge.xml
+
+xsltproc --xinclude -stringparam publisher ~/int-alg/pub-html.xml ~/algebra-toolkit/xsl/algebra-toolkit-html.xsl ~/MFG-toolkit/ptx/toolkit.xml
+
