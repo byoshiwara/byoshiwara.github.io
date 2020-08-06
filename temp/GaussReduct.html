@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-08-06T14:53:45-07:00       *-->
+<!--*   A recent stable commit (2020-07-07):   *-->
+<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Int-Alg Gaussian Reduction</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+
+       
+       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+       \newcommand{\blert}[1]{\color{blue}{#1}}
+       \newcommand{\glert}[1]{\color{green}{#1}} 
+       \delimitershortfall-1sp
+       \newcommand\abs[1]{\left|#1\right|}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="AlgebraicSolution.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Linear-Inequalities.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="AlgebraicSolution.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Linear-Inequalities.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap1.html" data-scroll="chap1"><span class="codenumber">1</span> <span class="title">Linear Models</span></a><ul>
+<li><a href="LinMod.html" data-scroll="LinMod">Linear Models</a></li>
+<li><a href="Graph-Equation.html" data-scroll="Graph-Equation">Graphs and Equations</a></li>
+<li><a href="Intercepts.html" data-scroll="Intercepts">Intercepts</a></li>
+<li><a href="Slope.html" data-scroll="Slope">Slope</a></li>
+<li><a href="EquationsOfLines.html" data-scroll="EquationsOfLines">Equations of Lines</a></li>
+<li><a href="chap1-summary.html" data-scroll="chap1-summary">Chapter Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap2.html" data-scroll="chap2"><span class="codenumber">2</span> <span class="title">Applications of Linear Models</span></a><ul>
+<li><a href="LinReg.html" data-scroll="LinReg">Linear Regression</a></li>
+<li><a href="LinSys.html" data-scroll="LinSys">Linear Systems</a></li>
+<li><a href="AlgebraicSolution.html" data-scroll="AlgebraicSolution">Algebraic Solution of Systems</a></li>
+<li><a href="GaussReduct.html" data-scroll="GaussReduct" class="active">Gaussian Reduction</a></li>
+<li><a href="Linear-Inequalities.html" data-scroll="Linear-Inequalities">Linear Inequalities in Two Variables</a></li>
+<li><a href="chap2-summary.html" data-scroll="chap2-summary">Chapter Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap3.html" data-scroll="chap3"><span class="codenumber">3</span> <span class="title">Quadratic Models</span></a><ul>
+<li><a href="ExtractRoots.html" data-scroll="ExtractRoots">Extraction of Roots</a></li>
+<li><a href="Intercepts-Factors.html" data-scroll="Intercepts-Factors">Intercepts, Solutions, and Factors</a></li>
+<li><a href="Graphing-Parabolas.html" data-scroll="Graphing-Parabolas">Graphing Parabolas</a></li>
+<li><a href="CompletingSquare.html" data-scroll="CompletingSquare">Completing the Square</a></li>
+<li><a href="chap3-summary.html" data-scroll="chap3-summary">Chapter 3 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap4.html" data-scroll="chap4"><span class="codenumber">4</span> <span class="title">Applications of Quadratic Models</span></a><ul>
+<li><a href="QuadraticFormula.html" data-scroll="QuadraticFormula">Quadratic Formula</a></li>
+<li><a href="TheVertex.html" data-scroll="TheVertex">The Vertex</a></li>
+<li><a href="CurveFitting.html" data-scroll="CurveFitting">Curve Fitting</a></li>
+<li><a href="QuadraticInequalities.html" data-scroll="QuadraticInequalities">Quadratic Inequalities</a></li>
+<li><a href="chap4-summary.html" data-scroll="chap4-summary">Chapter 4 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap5.html" data-scroll="chap5"><span class="codenumber">5</span> <span class="title">Functions and Their Graphs</span></a><ul>
+<li><a href="Functions.html" data-scroll="Functions">Functions</a></li>
+<li><a href="GraphsofFunctions.html" data-scroll="GraphsofFunctions">Graphs of Functions</a></li>
+<li><a href="SomeBasicGraphs.html" data-scroll="SomeBasicGraphs">Some Basic Graphs</a></li>
+<li><a href="DirectVariation.html" data-scroll="DirectVariation">Direct Variation</a></li>
+<li><a href="InverseVariation.html" data-scroll="InverseVariation">Inverse Variation</a></li>
+<li><a href="FunctionsasModels.html" data-scroll="FunctionsasModels">Functions as Models</a></li>
+<li><a href="chap5-summary.html" data-scroll="chap5-summary">Chapter 5 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap6.html" data-scroll="chap6"><span class="codenumber">6</span> <span class="title">Powers and Roots</span></a><ul>
+<li><a href="IntegerExponents.html" data-scroll="IntegerExponents">Integer Exponents</a></li>
+<li><a href="RootsandRadicals.html" data-scroll="RootsandRadicals">Roots and Radicals</a></li>
+<li><a href="RationalExponents.html" data-scroll="RationalExponents">Rational Exponents</a></li>
+<li><a href="WorkingwithRadicals.html" data-scroll="WorkingwithRadicals">Working with Radicals</a></li>
+<li><a href="RadicalEquations.html" data-scroll="RadicalEquations">Radical Equations</a></li>
+<li><a href="chap6-summary.html" data-scroll="chap6-summary">Chapter 6 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap7.html" data-scroll="chap7"><span class="codenumber">7</span> <span class="title">Exponential Functions</span></a><ul>
+<li><a href="ExponentialGrowthandDecay.html" data-scroll="ExponentialGrowthandDecay">Exponential Growth and Decay</a></li>
+<li><a href="ExponentialFunctions.html" data-scroll="ExponentialFunctions">Exponential Functions</a></li>
+<li><a href="Logarithms.html" data-scroll="Logarithms">Logarithms</a></li>
+<li><a href="PropertiesofLogarithms.html" data-scroll="PropertiesofLogarithms">Properties of Logarithms</a></li>
+<li><a href="ExponentialModels.html" data-scroll="ExponentialModels">Exponential Models</a></li>
+<li><a href="chap7-summary.html" data-scroll="chap7-summary">Chapter 7 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap8.html" data-scroll="chap8"><span class="codenumber">8</span> <span class="title">Polynomial and Rational Functions</span></a><ul>
+<li><a href="PolynomialFunctions.html" data-scroll="PolynomialFunctions">Polynomial Functions</a></li>
+<li><a href="AlgebraicFractions.html" data-scroll="AlgebraicFractions">Algebraic Fractions</a></li>
+<li><a href="OperationsAlgebraicFractions.html" data-scroll="OperationsAlgebraicFractions">Operations on Algebraic Fractions</a></li>
+<li><a href="MoreOperationsonFractions.html" data-scroll="MoreOperationsonFractions">More Operations on Fractions</a></li>
+<li><a href="EquationswithFractions.html" data-scroll="EquationswithFractions">Equations with Fractions</a></li>
+<li><a href="chap8-summary.html" data-scroll="chap8-summary">Chapter 8 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap9.html" data-scroll="chap9"><span class="codenumber">9</span> <span class="title">Equations and Graphs</span></a><ul>
+<li><a href="PropertiesOfLines.html" data-scroll="PropertiesOfLines">Properties of Lines</a></li>
+<li><a href="Distance-and-Midpoint.html" data-scroll="Distance-and-Midpoint">The Distance and Midpoint Formulas</a></li>
+<li><a href="Ellipses.html" data-scroll="Ellipses">Conic Sections: Ellipses</a></li>
+<li><a href="Hyperbolas.html" data-scroll="Hyperbolas">Conic Sections: Hyperbolas</a></li>
+<li><a href="NonlinearSystems.html" data-scroll="NonlinearSystems">Nonlinear Systems</a></li>
+<li><a href="chap9-summary.html" data-scroll="chap9-summary">Chapter 9 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap10.html" data-scroll="chap10"><span class="codenumber">10</span> <span class="title">Logarithmic Functions</span></a><ul>
+<li><a href="LogarithmicFunctions.html" data-scroll="LogarithmicFunctions">Logarithmic Functions</a></li>
+<li><a href="LogarithmicScales.html" data-scroll="LogarithmicScales">Logarithmic Scales</a></li>
+<li><a href="The-Natural-Base.html" data-scroll="The-Natural-Base">The Natural Base</a></li>
+<li><a href="chap10-summary.html" data-scroll="chap10-summary">Chapter 10 Summary and Review</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Appendices</span></a></li>
+<li class="link">
+<a href="appendix-c.html" data-scroll="appendix-c"><span class="codenumber">A</span> <span class="title">Using a GeoGebra Calculator App</span></a><ul>
+<li><a href="GGB-getting-started.html" data-scroll="GGB-getting-started">Getting Started</a></li>
+<li><a href="GGB-Entering-Expressions.html" data-scroll="GGB-Entering-Expressions">Entering Expressions</a></li>
+<li><a href="GGB-Graphing-an-Equation.html" data-scroll="GGB-Graphing-an-Equation">Graphing an Equation</a></li>
+<li><a href="GGB-more-graphing.html" data-scroll="GGB-more-graphing">More graphing</a></li>
+<li><a href="GGB-Regression.html" data-scroll="GGB-Regression">Regression</a></li>
+<li><a href="GGB-troubleshooting.html" data-scroll="GGB-troubleshooting">Troubleshooting the GeoGebra App</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Appendix</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="GaussReduct"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Gaussian Reduction</span>
+</h2>
+<section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">\(3\times 3\) Linear Systems</span>
+</h3>
+<p id="p-2152">A <dfn class="terminology">solution</dfn> to an equation in three variables, such as</p>
+<div class="displaymath">
+\begin{equation*}
+x + 2y - 3z = -4
+\end{equation*}
+</div>
+<p data-braille="continuation">is an <dfn class="terminology">ordered triple</dfn> of numbers that satisfies the equation. For example, \((0, -2, 0)\) and \((-1, 0, 1)\) are solutions to the equation above, but \((1, 1, 1)\) is not. You can verify this by substituting the coordinates into the equation to see if a true statement results.</p>
+<div class="displaymath">
+\begin{alignat*}{5}
+\amp\text{For }(0,-2, 0):{}\amp \alert{0}   {}+{}\amp 2(\alert{-2}) \amp{}-{}\amp 3(\alert{0}) \amp = -4{}\amp\hphantom{blank} \blert{\text{True}}\amp\\
+\amp\text{For }(-1, 0, 1):{}\amp \alert{-1} {}+{}\amp 2(\alert{0})  \amp{}-{}\amp 3(\alert{1}) \amp = -4{}\amp\hphantom{blank} \blert{\text{True}}\amp\\
+\amp\text{For }(1, 1, 1):{}\amp \alert{1}   {}+{}\amp 2(\alert{1})  \amp{}-{}\amp 3(\alert{1}) \amp = -4{}\amp\hphantom{blank} \blert{\text{Not true}}\amp 
+\end{alignat*}
+</div>
+<p data-braille="continuation">A linear equation in three variables has infinitely many solutions.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:55%;justify-content:center;"><p id="p-2153">An ordered triple \((x, y, z)\) can be represented geometrically as a point in space using a three-dimensional Cartesian coordinate system, as shown in the figure. The graph of a linear equation in three variables is a plane. A solution to a system of three linear equations in three variables is an ordered triple that satisfies each equation in the system. That triple represents a point where all three planes intersect.</p></div>
+<div class="sbspanel" style="width:45%;justify-content:center;"><img src="images/fig-3D-point.svg" style="width: 100%; height: auto;" alt="point in 3D space"></div>
+</div></div>
+<ul id="p-2154" class="disc">
+<li id="li-1218">If the planes intersect in a single point, the system has a unique solution.</li>
+<li id="li-1219">If there is no point that lies on all three planes (for instance, if at least two of the planes are parallel), the system is inconsistent.</li>
+<li id="li-1220">If all three planes are the same, or if they intersect in a line, the system is dependent.</li>
+</ul>
+<p id="p-2155">It is impractical to solve \(3\times 3\) systems by graphing. Even when technology for producing three-dimensional graphs is available, we cannot read coordinates on such graphs with any confidence. Thus, we will restrict our attention to algebraic methods of solving such systems.</p>
+<article class="exercise exercise-like" id="exercise-298"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-298"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.33</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-298"><article class="exercise exercise-like"><iframe name="webwork-68" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=68&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHNvbHV0aW9uID0gUmFkaW9CdXR0b25zKAogIFsiQSkgb3JkZXJlZCBwYWlyIHRoYXQgc2F0aXNmaWVzIHRoZSBlcXVhdGlvbi4iLAogICJCKSBvcmRlcmVkIHRyaXBsZSB0aGF0IHNhdGlzZmllcyB0aGUgZXF1YXRpb24iLAogICJDKSBhcmJpdHJhcnkgbnVtYmVyIHRoYXQgc2F0aXNmaWVzIHRoZSBlcXVhdGlvbiJdLAogIDEsIAopOyAgICAgICAgICAgICAgICAgICAgICAgCiAkZ3JhcGggPSBQb3BVcCgKICBbIj8iLCJwb2ludCIsICJsaW5lIiwgInBsYW5lIiwgInBhcmFib2xhIl0sCiAgMywgCik7CiAkdW5pcXVlID0gUG9wVXAoCiAgWyI%2FIiwiYSBzaW5nbGUgcG9pbnQiLCJhIGxpbmUiLCAiYSBwbGFuZSJdLAogIDEsIAopOwogJGxpbmUgPSBQb3BVcCgKICBbIj8iLCJpbiBleGFjdHkgMiBwb2ludHMiLCAiaW4gZXhhY3RseSAzIHBvaW50cyIsICJpbiBhIGxpbmUiXSwKICAzLCAKKTsKICRpbmNvbnNpc3RlbnQgPSBQb3BVcCgKICBbIj8iLCJiZSB0aGUgc2FtZSBwbGFuZSIsICJpbiBhIHBhcmFib2xhIiwgImluIGEgY2lyY2xlIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCmEuICBBIHNvbHV0aW9uIHRvIGFuIGVxdWF0aW9uIGluIHRocmVlIHZhcmlhYmxlcyBpcyBhbgoKICAgIFtfXXskc29sdXRpb259ezV9LgoKCmEuICBUaGUgZ3JhcGggb2YgYSBsaW5lYXIgZXF1YXRpb24gaW4gdGhyZWUgdmFyaWFibGVzIGlzIGEgW19deyRncmFwaH17NX0uCgoKYS4gIEEgbGluZWFyIFtgMyBcdGltZXMgM2BdIHN5c3RlbSBoYXMgYSB1bmlxdWUgc29sdXRpb24gaWYgdGhlIHRocmVlIHBsYW5lcyBpbnRlcnNlY3QgIFtfXXskdW5pcXVlfXs1fS4KCgphLiAgVGhyZWUgcGxhbmVzIG1heSBhbHNvIGludGVyc2VjdCBbX117JGxpbmV9ezV9IG9yIFtfXXskaW5jb25zaXN0ZW50fXs1fS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIG9yZGVyZWQgdHJpcGxlIHRoYXQgc2F0aXNmaWVzIHRoZSBlcXVhdGlvbgoKCmEuICBwbGFuZQoKCmEuICBhIHNpbmdsZSBwb2ludAoKCmEuICBpbiBhIGxpbmU7IGJlIHRoZSBzYW1lIHBsYW5lCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="68"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Back-Substitution</span>
+</h3>
+<p id="p-2192">The strategy for solving a \(3 \times 3\) system is the same as the strategy for \(2 \times 2\) systems: we would like to reduce the system to an equation in a single variable. Once we have found the value for that variable, we substitute its value into the other equations to find the remaining unknowns.</p>
+<p id="p-2193">A special case of this technique is called <dfn class="terminology">back-substitution</dfn>. It works when one of the equations involves exactly one variable, and a second equation involves that same variable and just one other variable. A \(3 \times 3\) system with these properties is said to be in <dfn class="terminology">triangular form</dfn>.</p>
+<article class="example example-like" id="example-39"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.34</span><span class="period">.</span>
+</h6>
+<p id="p-2194">Solve the system</p>
+<div class="displaymath">
+\begin{alignat*}{3}
+x +{}  2y \amp {}+{} \amp 3z \amp {}={} \amp 2\\
+-2y  \amp {}-{} \amp  4z \amp {}={} \amp -2\\
+\amp {}{} \amp 3z \amp {}={} \amp -3
+\end{alignat*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like">
+<p id="p-2195">We begin by solving the third equation to find \(z = -1\text{.}\) Then we substitute \(\alert{-1}\) for \(z\) in the second equation and solve for \(y\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+-2y - 4(\alert{-1}) \amp = -2\\
+-2y + 4 \amp= -2\\
+-2y \amp = -6\\
+y\amp=3
+\end{align*}
+</div>
+<p data-braille="continuation">Finally, we substitute \(\alert{-1}\) for \(z\) and \(\alert{3}\) for \(y\) into the first equation to find \(x\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+x + 2(\alert{3}) + 3(\alert{-1}) \amp= 2\\
+x + 6 - 3 \amp = 2\\
+x\amp=-1
+\end{align*}
+</div>
+<p data-braille="continuation">The solution is the ordered triple \((-1, 3, -1)\text{.}\) You should verify that this triple satisfies all three equations of the system.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-299"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-299"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.35</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-299"><article class="exercise exercise-like"><iframe name="webwork-69" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=69&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoIlBvaW50Iik7CiR0cmlwbGUgPSBQb2ludCg1LDEsLTIpOwoKQkVHSU5fUEdNTApVc2UgYmFjay1zdWJzdGl0dXRpb24gdG8gc29sdmUgdGhlIHN5c3RlbQoKW2BgYFxiZWdpbnthbGlnbmVkYXR9ezN9CjJ4ICsgMnkgXGFtcCB7fSt7fSBcYW1wIHogXGFtcCB7fT17fSBcYW1wIDEwXFwKeSBcYW1wIHt9LXt9IFxhbXAgIDR6IFxhbXAge309e30gXGFtcCA5XFwKXGFtcFxhbXAgICAzeiBcYW1wIHt9PXt9IFxhbXAgLTYKXGVuZHthbGlnbmVkYXR9CmBgYF0KCgoKICAgIFtfXXskdHJpcGxlfXs2fQoKR2l2ZSB0aGUgc29sdXRpb24gYXMgYW4gb3JkZXJlZCB0cmlwbGUuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJHRyaXBsZV0gYF0gc2F0aXNmaWVzIGFsbCB0aHJlZSBlcXVhdGlvbnMuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="69"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Gaussian Reduction</span>
+</h3>
+<p id="p-2202">The method for solving a general \(3 \times 3\) linear system is called <dfn class="terminology">Gaussian reduction</dfn>, after the German mathematician Carl Gauss. We use linear combinations to reduce the system to triangular form, and then use back-substitution to find the solutions.</p>
+<article class="exercise exercise-like" id="exercise-300"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-300"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.36</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-300"><article class="exercise exercise-like"><iframe name="webwork-70" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=70&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JG1ldGhvZCA9IFBvcFVwKAogIFsiPyIsCiAgImNvbXBsZXRpbmcgdGhlIHNxdWFyZS4iLAogICJHYXVzc2lhbiByZWR1Y3Rpb24uIiwKICAiaW5kdWN0aW9uIG1ldGhvZC4iXSwKICAyLCAKKTsgICAgICAgICAgICAgICAgICAgICAgIAogJGNhc2UgPSBQb3BVcCgKICBbIj8iLCJiYWNrLXN1YnN0aXR1dGlvbi4iLCAibmVnYXRpdmUgcmVjaXByb2NhbHMuIiwgImxpbmVhciByZWdyZXNzaW9uLiIsICJwb2ludC1zbG9wZS4iXSwKICAxLCAKKTsKICR3b3JrID0gUmFkaW9CdXR0b25zKAogIFsiQSkgd2hlbiBvbmUgZXF1YXRpb24gaW52b2x2ZXMgZXhhY3RseSBvbmUgdmFyaWFibGUsIGFuZCBhIHNlY29uZCBlcXVhdGlvbiBpbnZvbHZlcyB0aGF0IHNhbWUgdmFyaWFibGUgYW5kIGp1c3Qgb25lIG90aGVyIHZhcmlhYmxlLiIsCiAgIkIpIHdpdGggbW9yZSBlcXVhdGlvbnMgdGhhbiB1bmtub3ducy4iLCAKICAiQykgaGF2aW5nIG9ubHkgdHdvIHVua25vd25zLiJdLAogIDAsIAopOwogJHJlZHVjZSA9IFBvcFVwKAogIFsiPyIsImd1ZXNzLWFuZC1jaGVjay4iLCAiIGxpbmVhciBjb21iaW5hdGlvbnMuIiwgInRoZSBkaXNjcmltaW5hbnQuIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCmEuICBUaGUgbWV0aG9kIGZvciBzb2x2aW5nIGEgW2AzIFx0aW1lcyAzYF0gbGluZWFyIHN5c3RlbSBpcyBjYWxsZWQgW19deyRtZXRob2R9ezV9LgoKCmEuICBBIHNwZWNpYWwgY2FzZSBvZiB0aGlzIG1ldGhvZCBpcyBjYWxsZWQgW19deyRjYXNlfXs1fS4KCgphLiAgVGhlIHNwZWNpYWwgY2FzZSB3b3JrcyBvbiBzeXN0ZW1zCgogICAgW19deyR3b3JrfXs1fS4KCgphLiAgVG8gcmVkdWNlIGEgc3lzdGVtIHRvIHRoZSBzcGVjaWFsIGZvcm0sIHdlIHVzZSBbX117JHJlZHVjZX17NX0uCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBHYXVzc2lhbiByZWR1Y3Rpb24KCgphLiAgYmFjay1zdWJzdGl0dXRpb24KCgphLiAgd2hlbiBvbmUgZXF1YXRpb24gaW52b2x2ZXMgZXhhY3RseSBvbmUgdmFyaWFibGUsIGFuZCBhIHNlY29uZCBlcXVhdGlvbiBpbnZvbHZlcyB0aGF0IHNhbWUgdmFyaWFibGUgYW5kIGp1c3Qgb25lIG90aGVyIHZhcmlhYmxlCgoKYS4gIGxpbmVhciBjb21iaW5hdGlvbnMKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="70"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<p id="p-2234">To obtain the triangular form, we eliminate one of the variables from each of thethree equations by considering them in pairs.  This results in a \(2\times 2\) system that we can solve using elimination.</p>
+<article class="example example-like" id="example-40"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.37</span><span class="period">.</span>
+</h6>
+<p id="p-2235">Solve the system:</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+x \amp {}+{} \amp 2y \amp {}-{} \amp 3z \amp {}={} \amp -4\amp\hphantom{blankblank} (1)\\
+2x \amp {}-{} \amp  y \amp {}+{} \amp  z \amp {}={} \amp  3\amp\hphantom{blankblank} (2)\\
+3x \amp {}+{} \amp 2y \amp {}+{} \amp  z \amp {}={} \amp 10\amp\hphantom{blankblank} (3)
+\end{alignat*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like">
+<p id="p-2236">We can choose any one of the three variables to eliminate first. For this example, we will eliminate \(x\text{.}\) Next, we choose two of the equations, say (1) and (2), and use a linear combination: We multiply Equation (1) by \(-2\) and add the result to Equation (2) to produce Equation (4).</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+-2x \amp {}-{} \amp 4y \amp {}+{} \amp 6z \amp {}={} \amp 8\amp\hphantom{blankblank} (1\text{a})\\
+\underline{\hphantom{-}2x\vphantom{y}} \amp \underline{{}-{}\vphantom{y}} \amp   \underline{\hphantom{-5}y} \amp \underline{{}+{}\vphantom{y} }\amp  \underline{\hphantom{6}z\vphantom{y}} \amp {}={} \amp  \underline{\hphantom{1}\vphantom{y}                    3}\amp\hphantom{blankblank} (2)\\
+\amp \amp{-5y} \amp {}+{} \amp  7z \amp {}={} \amp 11\amp\hphantom{blankblank} (4)
+\end{alignat*}
+</div>
+<p id="p-2237">Now we have an equation involving only two variables. But we need <em class="emphasis">two</em> equations in two unknowns to find the solution. So we choose a different pair of equations, say (1) and (3), and eliminate \(x\) again. We multiply Equation (1) by \(-3\) and add the result to Equation (3) to obtain Equation (5).</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+-3x \amp {}-{} \amp 6y \amp {}+{} \amp 9z \amp {}={} \amp 12\amp\hphantom{blankblank} (1\text{b})\\
+\underline{\hphantom{-}3x\vphantom{y}} \amp \underline{{}+{}\vphantom{y}} \amp   \underline{\hphantom{-}2y} \amp \underline{{}+{}\vphantom{y} }\amp  \underline{\hphantom{10}z\vphantom{y}} \amp {}={} \amp  \underline{\vphantom{y}10}\amp\hphantom{blankblank} (3)\\
+\amp \amp{-4y} \amp {}+{} \amp  10z \amp {}={} \amp 22\amp\hphantom{blankblank} (5)
+\end{alignat*}
+</div>
+<p id="p-2238">We now form a \(2\times 2\) system with our new Equations (4) and (5).</p>
+<div class="displaymath">
+\begin{alignat*}{2}
+-5y\amp + \amp 7z \amp = 11 \hphantom{blankblank} (4)\\
+-4y\amp + \amp 10z \amp = 22 \hphantom{blankblank} (5)
+\end{alignat*}
+</div>
+<p id="p-2239">Finally,  we eliminate one of the remaining variables to obtain an equation in a single variable. We choose to eliminate \(y\text{,}\) so we add 4 times Equation (4) to \(-5\) times Equation (5) to obtain Equation (6).</p>
+<div class="displaymath">
+\begin{alignat*}{2}
+-20y~\amp {}+{} \amp 28z \amp =\hphantom{-1} 44 \hphantom{blankblank} (4\text{a})\\
+\underline{\hphantom{-}20y~}\amp\underline{{}-{}\vphantom{{}+ y~}} \amp \underline{\hphantom{-}50z\vphantom{ -20y~}} \amp = \underline{-110\vphantom{y}} \hphantom{blankblank} (5\text{a})\\
+\amp \amp -22z \amp = \hphantom{1}{-66} \hphantom{blankblankl} (6)
+\end{alignat*}
+</div>
+<p id="p-2240">Now we are ready to form a triangular system. We choose one of the original equations (in three variables), one of the equations from our \(2\times 2\) system, and our final equation in one variable. We choose Equations (1), (4), and (6).</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+x \amp {}+{} \amp 2y \amp {}-{} \amp 3z \amp {}={} \amp -4\amp\hphantom{blankblank} (1)\\
+\amp {}{} \amp -5 y \amp {}+{} \amp 7z \amp {}={} \amp  11\amp\hphantom{blankblank} (4)\\
+\amp \amp  \amp {}{} \amp  -22z \amp {}={} \amp -66\amp\hphantom{blankblank} (6)
+\end{alignat*}
+</div>
+<p id="p-2241">This new system has the same solutions as the original system, and we can solveit by back-substitution. We first solve Equation (6) to find \(z = 3\text{.}\) Substituting 3 for \(z\) in Equation (4), we find</p>
+<div class="displaymath">
+\begin{align*}
+-5y+7(\alert{3}) \amp=11 \\
+-5y+21 \amp=11 \\
+-5y \amp=-10 
+\end{align*}
+</div>
+<p id="p-2242">So \(y = 2\text{.}\) Finally, we substitute \(\alert{3}\) for \(z\) and \(\alert{2}\) for \(y\) into Equation (1) to find</p>
+<div class="displaymath">
+\begin{align*}
+x+2(\alert{2})-3(\alert{3}) \amp= -4 \\
+x+4-9 \amp= -4 \\
+x \amp= 1 
+\end{align*}
+</div>
+<p id="p-2243">The solution to the system is the ordered triple \((1, 2, 3)\text{.}\) You should verify that this triple satisfies all three of the original equations.</p>
+</div></div>
+</div></article><p id="p-2244">We summarize the method for solving a \(3\times 3\) linear system as follows.</p>
+<article class="assemblage assemblage-like" id="assemblage-17"><h6 class="heading"><span class="title">Steps for Solving a \(3\times 3\) Linear System.</span></h6>
+<ol id="p-2245" class="decimal">
+<li id="li-1273"><p id="p-2246">Clear each equation of fractions and put it in standard form.</p></li>
+<li id="li-1274"><p id="p-2247">Choose two of the equations and eliminate one of the variables by forming a linear combination.</p></li>
+<li id="li-1275"><p id="p-2248">Choose a different pair of equations and eliminate the <em class="emphasis">same</em> variable.</p></li>
+<li id="li-1276"><p id="p-2249">Form a \(2\times 2\) system with the equations found in steps (2) and (3). Eliminate one of the variables from this \(2\times 2\) system by using a linear combination.</p></li>
+<li id="li-1277"><p id="p-2250">Form a triangular system by choosing among the previous equations. Use back-substitution to solve the triangular system.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-301"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-301"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.38</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-301"><article class="exercise exercise-like"><iframe name="webwork-71" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=71&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRlbHNtID0gUmFkaW9CdXR0b25zKAogIFsiRm9ybSBhIHRyaWFuZ3VsYXIgc3lzdGVtLiIsCiAgIkVsaW1pbmF0ZSBlaXRoZXIgXCh4XCkgb3IgXCh6XCkuIiwKICAiRWxpbWluYXRlIFwoeVwpIGFnYWluIGZyb20gYSBkaWZmZXJlbnQgcGFpciBvZiBlcXVhdGlvbnMuIiwKICAiU3Vic3RpdHV0ZSB0aGUgdmFsdWUgZm9yIFwoeVwpIGludG8gdGhlIGVxdWF0aW9ucy4iXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKU3VwcG9zZSB5b3UgZWxpbWluYXRlIFtgeWBdIGZyb20gdHdvIGVxdWF0aW9ucyBhcyBTdGVwIDIgb2YgR2F1c3NpYW4gZWxpbWluYS10aW9uLiBXaGF0IHNob3VsZCB5b3UgZG8gZm9yIFN0ZXAgMz8KCiAgICBbX117JGVsc219ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRWxpbWluYXRlIFtgeWBdIGFnYWluIGZyb20gYSBkaWZmZXJlbnQgcGFpciBvZiBlcXVhdGlvbnMuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="71"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<article class="exercise exercise-like" id="exercise-302"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-302"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.39</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-302"><article class="exercise exercise-like"><iframe name="webwork-72" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=72&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoIlBvaW50Iik7CiR0cmlwbGUgPSBQb2ludCgyLDIsMSk7CgpCRUdJTl9QR01MClVzZSBHYXVzc2lhbiByZWR1Y3Rpb24gdG8gc29sdmUgdGhlIHN5c3RlbQoKW2BgYFxiZWdpbnthbGlnbmVkfQp4LTJ5K3ogXGFtcD0gLTFccXF1YWRccXF1YWQgXGFtcFxhbXAgKDEpXFwKXGZyYWN7Mn17M314ICtcZnJhY3sxfXszfXkgLSB6IFxhbXA9IC0xIFxhbXBcYW1wICgyKVxcCjMrM3ktMnogXGFtcD0gMTAgXGFtcFxhbXAgKDMpClxlbmR7YWxpZ25lZH0KYGBgXQoKRm9sbG93IHRoZSBzdGVwczoKKiBTdGVwIDE6IENsZWFyIHRoZSBmcmFjdGlvbnMgZnJvbSBFcXVhdGlvbiAoMikuCgoKKiBTdGVwIDI6IEVsaW1pbmF0ZSBbYHpgXSBmcm9tIEVxdWF0aW9ucyAoMSkgYW5kICgyKS4KCgoqIFN0ZXAgMzogRWxpbWluYXRlIFtgemBdIGZyb20gRXF1YXRpb25zICgxKSBhbmQgKDMpLgoKCiogU3RlcCA0OiBFbGltaW5hdGUgW2B4YF0gZnJvbSB5b3VyIG5ldyBbYDJcdGltZXMgMmBdIHN5c3RlbS4KCgoqIFN0ZXAgNTogRm9ybSBhIHRyaWFuZ3VsYXIgc3lzdGVtIGFuZCBzb2x2ZSBieSBiYWNrLXN1YnN0aXR1dGlvbi4KCgogICAgW19deyR0cmlwbGV9ezZ9IEdpdmUgdGhlIHNvbHV0aW9uIGFzIGFuIG9yZGVyZWQgdHJpcGxlLgoKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJHRyaXBsZV0gYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="72"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Inconsistent and Dependent Systems</span>
+</h3>
+<p id="p-2270">If, at any step in forming linear combinations, we obtain an equation of the form</p>
+<div class="displaymath">
+\begin{gather*}
+0x + 0y + 0z = k, \qquad (k \ne 0)
+\end{gather*}
+</div>
+<p data-braille="continuation">then the system is inconsistent and has no solution. If we don’t obtain such an equation, but we do obtain one of the form</p>
+<div class="displaymath">
+\begin{gather*}
+0x + 0y + 0z = 0
+\end{gather*}
+</div>
+<p data-braille="continuation">then the system is dependent and has infinitely many solutions.</p>
+<article class="example example-like" id="example-41"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.40</span><span class="period">.</span>
+</h6>
+<p id="p-2271">Solve the systems.</p>
+<ol class="lower-alpha cols2">
+<li id="li-1287"><p id="p-2272">\(\displaystyle \begin{alignedat}[t]{5}
+3x\amp{}+{}\amp y\amp{}-{}\amp 2z\amp{}={}1 \amp\qquad\amp (1)\\
+6x\amp{}+{}\amp 2y\amp{}-{}\amp 4z\amp{}={}5 \amp\qquad\amp (2)\\
+2x\amp{}-{}\amp y\amp {}+{}\amp 3z\amp{}={}-1 \amp\qquad\amp (3)
+\end{alignedat} \)</p></li>
+<li id="li-1288"><p id="p-2273">\(\displaystyle \begin{alignedat}[t]{5}
+-x\amp{}+{}\amp 3y\amp{}-{}\amp z\amp{}={}-2 \amp\qquad\amp (1)\\
+2x\amp{}+{}\amp y\amp{}-{}\amp 4z\amp{}={}-1 \amp\qquad\amp (2)\\
+2x\amp{}-{}\amp 6y\amp {}+{}\amp 2z\amp{}={}4 \amp\qquad\amp (3)
+\end{alignedat} \)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like"><ol id="p-2274" class="lower-alpha">
+<li id="li-1289">
+<p id="p-2275">To eliminate \(y\) from Equations (1) and (2), we multiply Equation (1) by \(-2\) and add the result to Equation (2).</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+-6x \amp {}-{} \amp 2y \amp {}+{} \amp 4z \amp {}={} \amp -2\\
+\underline{\hphantom{-}6x\vphantom{y}} \amp \underline{{}+{}\vphantom{y}} \amp   \underline{2y} \amp \underline{{}-{}\vphantom{y} }\amp  \underline{4z\vphantom{y}} \amp {}={} \amp  \underline{\hphantom{-}5}\\
+0x\amp {}+{}\amp{0y} \amp {}+{} \amp  0z \amp {}={} \amp 3~
+\end{alignat*}
+</div>
+<p data-braille="continuation">Because the resulting equation has no solution, the system is <em class="emphasis">inconsistent</em>.</p>
+</li>
+<li id="li-1290">
+<p id="p-2276">To eliminate \(x\) from Equations (1) and (3), we multiply Equation (1) by \(2\) and add Equation (3).</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+-2x \amp {}+{} \amp 6y \amp {}-{} \amp 2z \amp {}={} \amp -4\\
+\underline{\hphantom{-}2x\vphantom{y}} \amp \underline{{}-{}\vphantom{y}} \amp   \underline{6y} \amp \underline{{}+{}\vphantom{y} }\amp  \underline{2z\vphantom{y}} \amp {}={} \amp  \underline{\hphantom{-}4}\\
+0x\amp {}+{}\amp{0y} \amp {}+{} \amp  0z \amp {}={} \amp 0~
+\end{alignat*}
+</div>
+<p data-braille="continuation">Because the resulting equation vanishes, the system is dependent and has infinitely many solutions.</p>
+</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-303"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-303"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.41</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-303"><article class="exercise exercise-like"><iframe name="webwork-73" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=73&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZXhwbGFpbiA9IFJhZGlvQnV0dG9ucygKICBbIkluY29uc2lzdGVudCIsCiAgIkRlcGVuZGVudCIsCiAgIkNvbnNpc3RlbnQgYW5kIGluZGVwZW5kZW50Il0sCiAgMCwgCik7CgpCRUdJTl9QR01MCkRlY2lkZSB3aGV0aGVyIHRoZSBzeXN0ZW0gaXMgaW5jb25zaXN0ZW50LCBkZXBlbmRlbnQsIG9yIGNvbnNpc3RlbnQgYW5kaW5kZXBlbmRlbnQuCgpbYGBgXGJlZ2lue2FsaWduZWR9CngrM3ktelxhbXA9NFxcCi0yeC02eSsyelxhbXA9NFxcCngrMnktelxhbXA9MwpcZW5ke2FsaWduZWR9CmBgYF0KCgoKICAgIFtfXXskZXhwbGFpbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpJbmNvbnNpc3RlbnQKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="73"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<article class="exercise exercise-like" id="exercise-304"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-304"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.42</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-304"><article class="exercise exercise-like"><iframe name="webwork-74" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=74&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRURiA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCJGYWxzZSJdLAogIDIsIAopOwogJFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwiRmFsc2UiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIElmIGEgc3lzdGVtIGlzIGRlcGVuZGVudCwgaXQgaGFzIG5vIHNvbHV0aW9ucy4gW19deyRURn17NX0KCgphLiAgVGhlIGVxdWF0aW9uIFtgMHggKyAweSArIDB6ID0gMGBdIGhhcyBubyBzb2x1dGlvbiBbX117JFRGfXs1fQoKCmEuICBJZiBhIFtgMyBcdGltZXMgM2BdIHN5c3RlbSBpcyBkZXBlbmRlbnQsIGFsbCB0aHJlZSBlcXVhdGlvbnMgYXJlIHRoZSBzYW1lLi4gW19deyRURn17NX0KCgphLiAgR2F1c3NpYW4gZWxpbWluYXRpb24gd2lsbCByZXZlYWwgd2hldGhlciBhIHN5c3RlbSBpcyBkZXBlbmRlbnQgb3IgaW5jb25zaXN0ZW50LiBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQoKCmEuICBGYWxzZQoKCmEuICBGYWxzZQoKCmEuICBUcnVlCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="74"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Applications</span>
+</h3>
+<p id="p-2311">Here are some problems that can be modeled by a system of three linear equations.</p>
+<article class="example example-like" id="example-42"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.43</span><span class="period">.</span>
+</h6>
+<p id="p-2312">One angle of a triangle measures \(4\degree\) less than twice the second angle, and the third angle is \(20\degree\) greater than the sum of the first two. Find the measure of each angle.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like"><ul id="p-2313" class="disc">
+<li id="li-1314">
+<h6 class="heading"><span class="title">Step 1:.</span></h6>
+<p id="p-2314">We represent the measure of each angle by a separate variable.</p>
+<div class="displaymath">
+\begin{align*}
+\amp\text{First angle: }\amp\amp x\\
+\amp\text{Second angle: }\amp\amp y\\
+\amp\text{Third angle:}\amp\amp z
+\end{align*}
+</div>
+</li>
+<li id="li-1315">
+<h6 class="heading"><span class="title">Step 2:.</span></h6>
+<p id="p-2315">We write the conditions stated in the problem as three equations.</p>
+<div class="displaymath">
+\begin{align*}
+\amp x\text{ is } 4\degree \text{ less than }2 \text{ times } y: \amp\amp x = 2y - 4\\
+\amp z\text{ is } 20\degree \text{ more than } x+ y: \amp\amp z = x + y + 20\\
+\amp \text{the sum of the angles of a triangle is } 180\degree : \amp\amp x + y + z =180
+\end{align*}
+</div>
+</li>
+<li id="li-1316">
+<h6 class="heading"><span class="title">Step 3:.</span></h6>
+<p id="p-2316">We follow the steps for solving a \(3\times 3\) linear system.</p>
+<p id="p-2317">1.   We write the three equations in standard form.</p>
+<div class="displaymath">
+\begin{alignat*}{5}
+x\amp {}-{}\amp 2y\amp \amp \amp =\amp -4\amp\hphantom{blank} \amp(1)\\
+x\amp {}+{}\amp y\amp {}-{}\amp z\amp =\amp -20\amp\hphantom{blank} \amp(2)\\
+x\amp {}+{}\amp y\amp {}+{}\amp z\amp =\amp 180\amp\hphantom{blank} \amp(3)
+\end{alignat*}
+</div>
+<p id="p-2318">2–3. Because Equation (1) has no \(z\)-term, it will be most efficient to eliminate \(z\) from Equations (2) and (3). We add these two equations.</p>
+<div class="displaymath">
+\begin{alignat*}{5}
+x \amp {}+{} \amp y \amp {}-{} \amp z \amp {}={} \amp -20\qquad\amp\amp (2)\\
+\underline{x\vphantom{y}} \amp \underline{{}+{}\vphantom{y}} \amp   \underline{\hphantom{2}y} \amp \underline{{}+{}\vphantom{y} }\amp  \underline{\hphantom{~}\vphantom{y}z} \amp {}={} \amp  \underline{180\vphantom{y+y}}\qquad\amp\amp (3)\\
+2x\amp {}+{}\amp{2y} \amp  \amp   \amp {}={} \amp 160\qquad\amp\amp (4)
+\end{alignat*}
+</div>
+<p id="p-2319">4. We form a \(2\times 2\) system from Equations (1) and (4). We add the two equations to eliminate the variable \(y\text{,}\) yielding</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+x \amp {}-{} \amp 2y \amp {}={} \amp -4\qquad\amp\amp (1)\\
+\underline{2x\vphantom{y}} \amp \underline{{}+{}\vphantom{y}} \amp   \underline{2y} \amp {}={} \amp  \underline{160\vphantom{y+y}}\qquad\amp\amp (4)\\
+3x\amp\amp \amp   {}={} \amp 156\qquad\amp\amp (5)
+\end{alignat*}
+</div>
+<p id="p-2320">5. We form a triangular system using Equations (2), (1), and (5). We use back-substitution to complete the solution.</p>
+<div class="displaymath">
+\begin{alignat*}{4}
+x\amp {}+{}\amp y\amp {}+{}\amp z\amp =\amp 180\hphantom{blankblank} \amp(2)\\
+x\amp {}-{}\amp 2y\amp \amp\amp =\amp -4\hphantom{blankblank} \amp(1)\\
+3x\amp\amp\amp\amp\amp = \amp156\hphantom{blankblank} \amp(5)
+\end{alignat*}
+</div>
+<p data-braille="continuation">We divide both sides of Equation (5) by \(3\) to find \(x = 52\text{.}\) We substitute \(52\) for \(x\) in Equation (1) and solve for \(y\) to find</p>
+<div class="displaymath">
+\begin{align*}
+\alert{52} - 2y \amp = -4\\
+y \amp= 28
+\end{align*}
+</div>
+<p data-braille="continuation">We substitute \(\alert{52}\) for \(x\) and \(\alert{28}\) for \(y\) in Equation (3) to find</p>
+<div class="displaymath">
+\begin{align*}
+\alert{52} + \alert{28} + z \amp= 180\\
+z\amp=100
+\end{align*}
+</div>
+</li>
+<li id="li-1317">
+<h6 class="heading"><span class="title">Step 4:.</span></h6>
+<p id="p-2321">The angles measure 52°, 28°, and 100°.</p>
+</li>
+</ul></div></div>
+</div></article></section><section class="exercises" id="section-2-4-exercises"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 2.4</span>
+</h3>
+<article class="subexercises" id="subexercises-25"><h6 class="heading"><span class="title">Warm Up</span></h6>
+<div class="exercisegroup" id="exercisegroup-48">
+<div class="introduction" id="introduction-57"><p id="p-2322">For Problems 1 and 2, solve the system by elimination.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-305"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="displaymath" id="p-2323">
+\begin{align*}
+4x-3\amp=3y\\
+25+5x\amp =-2y
+\end{align*}
+</div></article><article class="exercise exercise-like" id="exercise-306"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="displaymath" id="p-2325">
+\begin{align*}
+\dfrac{2x}{3} + \dfrac{8y}{9} \amp=\dfrac{4}{3}\\
+\dfrac{x}{2} + 2 = \amp\dfrac{y}{3}
+\end{align*}
+</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-307"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2326">Karen has $2000, part of it invested in bonds paying 10%, and the rest in a certificate account at 8%. Her annual income from the two investments is $184. How much did Karen invest at each rate?</p>
+<ol class="lower-alpha">
+<li id="li-1318">
+<p id="p-2327">Choose variables for the unknown quantities, and fill in the table.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines"></td>
+<td class="c m b1 r1 l0 t1 lines">Principal</td>
+<td class="c m b1 r1 l0 t1 lines">Interest rate</td>
+<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">Interest</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Bonds</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Certificate</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Total</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines">——</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+</table></div></div></div>
+</li>
+<li id="li-1319"><p id="p-2328">Write one equation about the amount Karen invested.</p></li>
+<li id="li-1320"><p id="p-2329">Write a second equation about Kaaren's annual interest.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-308"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2333">The pharmacist at Glenoaks Hospital was asked to supply 10 liters of a 20% solution of iodine. She has on hand iodine solutions in 15% strength and 40% strength. How much of each should she mix to make the required solution?</p>
+<ol class="lower-alpha">
+<li id="li-1324">
+<p id="p-2334">Choose variables for the unknown quantities, and fill in the table.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines"></td>
+<td class="c m b1 r1 l0 t1 lines">Liters</td>
+<td class="c m b1 r1 l0 t1 lines">Strength</td>
+<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">Amount of iodine</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">15% Solution</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">40% solution</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">20% solution</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+</table></div></div></div>
+</li>
+<li id="li-1325"><p id="p-2335">Write one equation about the number of liters of solution.</p></li>
+<li id="li-1326"><p id="p-2336">Write a second equation about the amount of iodine.</p></li>
+</ol></article></article><article class="subexercises" id="subexercises-26"><h6 class="heading"><span class="title">Skills Practice</span></h6>
+<div class="exercisegroup" id="exercisegroup-49">
+<div class="introduction" id="introduction-58"><p id="p-2337">For Problems 5 and 6, use back-substitution to solve the system.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-309"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2338">\(\begin{alignedat}[t]{5}
+2x\amp{}+{}\amp 3y\amp{}-{}\amp z\amp{}={}-7\\
+\amp \amp y\amp{}-{}\amp 2z\amp{}={}-6\\
+\amp \amp \amp \amp 5z\amp{}={}15
+\end{alignedat}\)</p></article><article class="exercise exercise-like" id="exercise-310"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2340">\(\begin{aligned}[t]
+2x + z\amp = 5\\
+3y + 2z \amp =6\\
+5x \amp = 20
+\end{aligned}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-50">
+<div class="introduction" id="introduction-59"><p id="p-2341">For Problems 7–12, use Gaussian reduction to solve the system.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-311"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2342">\(\begin{alignedat}[t]{5}
+x\amp{}+{}\amp y\amp{}+{}\amp z\amp{}={}0\\
+2x \amp{}-{} \amp 2y\amp{}+{}\amp z\amp{}={}8\\
+3x \amp{}+{} \amp 2y\amp {}+{}\amp z\amp{}={}2
+\end{alignedat}\)</p></article><article class="exercise exercise-like" id="exercise-312"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-2344">\(\begin{alignedat}[t]{5}
+x\amp{}-{}\amp 2y\amp{}+{}\amp 4z\amp{}={}-3\\
+3x \amp{}+{} \amp y\amp{}-{}\amp 2z\amp{}={}12\\
+2x \amp{}+{} \amp y\amp {}-{}\amp z\amp{}={}11
+\end{alignedat}\)</p></article><article class="exercise exercise-like" id="exercise-313"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-2345">\(\begin{alignedat}[t]{5}
+3x\amp{}-{}\amp 4y\amp{}+{}\amp 2z\amp{}={}20\\
+4x \amp{}+{} \amp 3y\amp{}-{}\amp 3z\amp{}={}-4\\
+2x \amp{}-{} \amp 5y\amp {}+{}\amp 5z\amp{}={}24
+\end{alignedat}\)</p></article><article class="exercise exercise-like" id="exercise-314"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-2347">\(\begin{aligned}[t]
+4x + z\amp = 3\\
+2x - y \amp =2\\
+3y+2z \amp = 0
+\end{aligned}\)</p></article><article class="exercise exercise-like" id="exercise-315"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-2348">\(\begin{alignedat}[t]{5}
+4x\amp{}+{}\amp 6y\amp{}+{}\amp 3z\amp{}={-3} \\
+2x \amp{}-{} \amp 3y\amp{}-{}\amp 2z\amp{}=5 \\
+-6x \amp{}+{} \amp 6y\amp {}+{}\amp 2z\amp{}={-5} 
+\end{alignedat} \)</p></article><article class="exercise exercise-like" id="exercise-316"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-2350">\(\begin{alignedat}[t]{5}
+x\amp{}-{}\amp \dfrac{1}{2} y\amp{}-{}\amp \dfrac{1}{2}z\amp{}={}4 \\
+x \amp{}-{} \amp \dfrac{3}{2}y\amp{}-{}\amp 2z\amp{}={}3 \\
+\dfrac{1}{4}x \amp{}+{} \amp \dfrac{1}{4}y\amp {}-{}\amp \dfrac{1}{4}z\amp{}={}0 
+\end{alignedat} \)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-51">
+<div class="introduction" id="introduction-60"><p id="p-2351">For Problems 13 and 14, when you decide which variable to eliminate first, take advantage of the fact that one of the variables is already missing from each equation.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-317"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-2352">\(\begin{alignedat}[t]{5}
+x\amp {}={} {-y} \\
+x \amp{}+{} z=\dfrac{5}{6} \\
+y \amp{}-{} 2z = -\dfrac{7}{6} 
+\end{alignedat} \)</p></article><article class="exercise exercise-like" id="exercise-318"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-2354">\(\begin{aligned}[t]
+x\amp = y+\dfrac{1}{2} \\
+y \amp =z+\dfrac{5}{4} \\
+2z \amp = x-\dfrac{7}{4} 
+\end{aligned} \)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-52">
+<div class="introduction" id="introduction-61"><p id="p-2355">For Problems 15 and 16, decide whether the system is inconsistent or dependent.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-319"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-2356">\(\begin{alignedat}[t]{5}
+3x\amp{}-{}\amp 2y\amp{}+{}\amp z\amp{}={6} \\
+2x \amp{}+{} \amp y\amp{}-{}\amp z\amp{}=2 \\
+4x \amp{}+{} \amp 2y\amp {}-{}\amp 2z\amp{}={3} 
+\end{alignedat} \)</p></article><article class="exercise exercise-like" id="exercise-320"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-2358">\(\begin{aligned}[t]
+x\amp = 2y -7 \\
+y \amp =4z+3 \\
+x \amp - 8z = -1 
+\end{aligned} \)</p></article>
+</div>
+</div></article><article class="subexercises" id="subexercises-27"><h6 class="heading"><span class="title">Applications</span></h6>
+<div class="exercisegroup" id="exercisegroup-53">
+<div class="introduction" id="introduction-62"><p id="p-2359">Use a system of equations to solve Problems 17-22.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-321"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-2360">The perimeter of a triangle is 155 inches. Side \(x\) is 20 inches shorter than side \(y\text{,}\) and side \(y\) is 5 inches longer than side \(z\text{.}\) Find the lengths of the sides of the triangle.</p></article><article class="exercise exercise-like" id="exercise-322"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-2362">One angle of a triangle measures 10° more than a second angle, and the third angle is 10° more than six times the measure of the smallest angle. Find the measure of each angle.</p></article><article class="exercise exercise-like" id="exercise-323"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-2363">The Java Shoppe sells a house brand of coffee that is only 2.25% caffeine for $6.60 per pound. The house brand is a mixture of Colombian coffee that sells for $6 per pound and is 2% caffeine, French roast that sells for $7.60 per pound and is 4% caffeine, and Sumatran that sells for $6.80 per pound and is 1% caffeine. How much of each variety is in a pound of house brand?</p></article><article class="exercise exercise-like" id="exercise-324"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-2365">Vegetable Medley is made of carrots, green beans, and cauliflower. The package says that 1 cup of Vegetable Medley provides 29.4 milligrams of vitamin C and 47.4 milligrams of calcium. One cup of carrots contains 9 milligrams of vitamin C and 48 milligrams of calcium. One cup of green beans contains 15 milligrams of vitamin C and 63 milligrams of calcium. One cup of cauliflower contains 69 milligrams of vitamin C and 26 milligrams of calcium. How much of each vegetable is in 1 cup of Vegetable Medley?</p></article><article class="exercise exercise-like" id="exercise-325"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<p id="p-2366">Reliable Auto Company wants to ship 1700 Status Sedans to three major dealers in Los Angeles, Chicago, and Miami. From past experience Reliable figures that it will sell twice as many sedans in Los Angeles as in Chicago. It costs $230 to ship a sedan to Los Angeles, $70 to Chicago, and $160 to Miami. If Reliable Auto has $292,000 to pay for shipping costs, how many sedans should it ship to each city?</p></article><article class="exercise exercise-like" id="exercise-326"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="p-2367">A farmer has 1300 acres on which to plant wheat, corn, and soybeans. The seed costs $6 for an acre of wheat, $4 for an acre of corn, and $5 for an acre of soybeans. An acre of wheat requires 5 acre-feet of water during the growing season, an acre of corn requires 2 acre-feet, and an acre of soybeans requires 3 acre-feet. If the farmer has $6150 to spend on seed and can count on 3800 acre-feet of water, how many acres of each crop should she plant in order to use all her resources?</p></article>
+</div>
+</div></article></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><script>
+var sc_project=9664088;
+var sc_invisible=1;
+var sc_security="6e60c510";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<!--Start: Google Global Site Tag code-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-48811660-1');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>
