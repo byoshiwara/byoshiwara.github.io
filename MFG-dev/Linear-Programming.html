@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-02T16:51:35-08:00       *-->
+<!--*       on 2021-08-24T13:00:16-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>MFG Linear Programming</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -53,12 +59,12 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_oscarlevin.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
 \newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
@@ -70,7 +76,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/photos/cover.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="MFG.html"><span class="title">Modeling, Functions, and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -255,7 +261,7 @@ true);
 <li class="link"><a href="bibliography.html" data-scroll="bibliography"><span class="title">Bibliography</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Linear-Programming"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.5</span> <span class="title">Linear Programming</span>
@@ -270,7 +276,7 @@ true);
 P = 8x + 10y
 \end{equation*}
 </div>
-<p data-braille="continuation">This expression for \(P\) is called the <dfn class="terminology">objective function</dfn>. The goal of a linear programming problem is to maximize or minimize such an objective function, subject to one or more constraints.</p>
+<p class="continuation">This expression for \(P\) is called the <dfn class="terminology">objective function</dfn>. The goal of a linear programming problem is to maximize or minimize such an objective function, subject to one or more constraints.</p>
 <p id="p-18969">If TrailGear had infinite resources and an infinite market, there would be no limit to the profit it could earn by producing more and more hiking boots. However, every business has to consider many factors, including its supplies of labor and materials, overhead and shipping costs, and the size of the market for its product. To keep things simple, we will concentrate on just two of these factors.</p>
 <p id="p-18970">Each pair of Weekender boots requires \(3\) hours of labor to produce, and each pair of Sierra boots requires \(6\) hours. TrailGear has available \(2400\) hours of labor per week. Thus, \(x\) and \(y\) must satisfy the inequality</p>
 <div class="displaymath">
@@ -278,16 +284,17 @@ P = 8x + 10y
 3x + 6y \le 2400
 \end{equation*}
 </div>
-<p data-braille="continuation">In addition, suppose that TrailGear's suppliers can provide at most \(1000\) ounces of silicone gel each week, with each pair of Weekenders using \(2\) ounces and each Sierra model using \(1\) ounce. This means that</p>
+<p class="continuation">In addition, suppose that TrailGear's suppliers can provide at most \(1000\) ounces of silicone gel each week, with each pair of Weekenders using \(2\) ounces and each Sierra model using \(1\) ounce. This means that</p>
 <div class="displaymath">
 \begin{equation*}
 2x + y \le 1000
 \end{equation*}
 </div>
-<p data-braille="continuation">Of course, we will also require that \(x\ge 0\) and \(y\ge 0\text{.}\) These four inequalities are called the <dfn class="terminology">constraints</dfn> of the problem.</p>
-<article class="exercise exercise-like" id="exercise-3503"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3503"><h6 class="heading">
+<p class="continuation">Of course, we will also require that \(x\ge 0\) and \(y\ge 0\text{.}\) These four inequalities are called the <dfn class="terminology">constraints</dfn> of the problem.</p>
+<article class="exercise exercise-like" id="exercise-3503"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.82</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3503"><article class="exercise exercise-like"><iframe name="webwork-559" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=559&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRvYmZuID0gUmFkaW9CdXR0b25zKAogIFsiXCgyeCs1eSBcbGUgNTBcKSIsCiAgIlwoTT0yeCs1eVwpIiwKICAiXCh5IFxnZSAyeCs1MFwpIiwKICAiXCgyeCs1eT01MFwpIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoaWNoIG9mIHRoZXNlIGNvdWxkIGJlIGFuIG9iamVjdGl2ZSBmdW5jdGlvbj8KCiAgICBbX117JG9iZm59ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BNPTJ4KzV5YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="559"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-261"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-559" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=559&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRvYmZuID0gUmFkaW9CdXR0b25zKAogIFsiXCgyeCs1eSBcbGUgNTBcKSIsCiAgIlwoTT0yeCs1eVwpIiwKICAiXCh5IFxnZSAyeCs1MFwpIiwKICAiXCgyeCs1eT01MFwpIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoaWNoIG9mIHRoZXNlIGNvdWxkIGJlIGFuIG9iamVjdGl2ZSBmdW5jdGlvbj8KCiAgICBbX117JG9iZm59ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BNPTJ4KzV5YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="559"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-261"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Feasible Solutions</span>
 </h3>
 <p id="p-18979">We have formulated the original problem into an objective function</p>
@@ -296,7 +303,7 @@ P = 8x + 10y
 P = 8x + 10y
 \end{equation*}
 </div>
-<p data-braille="continuation">and a system of inequalities called the constraints.</p>
+<p class="continuation">and a system of inequalities called the constraints.</p>
 <div class="displaymath">
 \begin{align*}
 3x + 6y \amp\le 2400\\
@@ -305,8 +312,8 @@ x \ge 0, ~~\amp y \ge 0
 \end{align*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:57.8947368421053%;justify-content:center;"><p id="p-18980">Our goal is to find values for \(x\) and \(y\) that satisfy the constraints and produce the maximum value for \(P\text{.}\) We begin by graphing the solutions to the constraint inequalities. These solutions are shown in the shaded region in at right. The points in this region are called <dfn class="terminology">feasible solutions</dfn> because they are the only values we can consider while looking for the maximum value of the objective function \(P\text{.}\)</p></div>
-<div class="sbspanel" style="width:36.8421052631579%;justify-content:center;"><img src="images/fig-feasible-solutions.svg" role="img" style="width: 100%; height: auto;" alt="system of inequalities defining the feasible solutions"></div>
+<div class="sbspanel middle" style="width:57.8947368421053%;"><p id="p-18980">Our goal is to find values for \(x\) and \(y\) that satisfy the constraints and produce the maximum value for \(P\text{.}\) We begin by graphing the solutions to the constraint inequalities. These solutions are shown in the shaded region in at right. The points in this region are called <dfn class="terminology">feasible solutions</dfn> because they are the only values we can consider while looking for the maximum value of the objective function \(P\text{.}\)</p></div>
+<div class="sbspanel middle" style="width:36.8421052631579%;"><img src="external/photos/fig-feasible-solutions.svg" role="img" class="contained" alt="system of inequalities defining the feasible solutions"></div>
 </div></div>
 <article class="example example-like" id="example-TrailGear"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.83</span><span class="period">.</span>
@@ -316,7 +323,7 @@ x \ge 0, ~~\amp y \ge 0
 <li id="li-10213"><p id="p-18983">Find the values of the objective function \(P = 8x + 10y\) at the two feasible solutions in part (a).</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-705" id="solution-705"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-705"><div class="solution solution-like"><ol id="p-18984" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-705" id="solution-705"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-705"><div class="solution solution-like"><ol id="p-18984" class="lower-alpha">
 <li id="li-10214"><p id="p-18985">The two points \((300, 100)\) and \((200, 300)\) lie within the shaded region above, but \((300, 400)\) does not. We can also verify that the coordinates of \((300, 100)\) and \((200, 300)\) satisfy each of the constraint inequalities.</p></li>
 <li id="li-10215">
 <p id="p-18986">For \((300, 100)\text{,}\) we have</p>
@@ -325,7 +332,7 @@ x \ge 0, ~~\amp y \ge 0
 P = 8(\alert{300}) + 10(\blert{100}) = 3400
 \end{equation*}
 </div>
-<p data-braille="continuation">For \((200, 300)\text{,}\) we have</p>
+<p class="continuation">For \((200, 300)\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 P = 8(\alert{200}) + 10(\blert{300}) = 4600
@@ -333,15 +340,16 @@ P = 8(\alert{200}) + 10(\blert{300}) = 4600
 </div>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-3504"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3504"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-3504"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.84</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3504"><article class="exercise exercise-like"><iframe name="webwork-560" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=560&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmZWFzID0gUmFkaW9CdXR0b25zKAogIFsiQSkgVGhlIHZlcnRpY2VzIG9mIHRoZSBzb2x1dGlvbiBzZXQiLAogICJCKSBUaGUgdmFsdWVzIG9mIHRoZSBvYmplY3RpdmUgZnVuY3Rpb24iLAogICJDKSBUaGUgc2V0IG9mIHBvaW50cyB0aGF0IHNhdGlzZnkgdGhlIGNvbnN0cmFpbnRzIiwKICAiRCkgVGhlIGJvdW5kYXJ5IGxpbmVzIG9mIHRoZSBpbmVxdWFsaXRpZXMiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgc2V0IG9mIGZlYXNpYmxlIHNvbHV0aW9ucz8KCiAgICBbX117JGZlYXN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIHNldCBvZiBwb2ludHMgdGhhdCBzYXRpc2Z5IHRoZSBjb25zdHJhaW50cyBpcyB0aGUgc2V0IG9mIGZlYXNpYmxlIHNvbHV0aW9ucy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="560"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-3505"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3505"><h6 class="heading">
+</h6>
+<iframe name="webwork-560" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=560&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmZWFzID0gUmFkaW9CdXR0b25zKAogIFsiQSkgVGhlIHZlcnRpY2VzIG9mIHRoZSBzb2x1dGlvbiBzZXQiLAogICJCKSBUaGUgdmFsdWVzIG9mIHRoZSBvYmplY3RpdmUgZnVuY3Rpb24iLAogICJDKSBUaGUgc2V0IG9mIHBvaW50cyB0aGF0IHNhdGlzZnkgdGhlIGNvbnN0cmFpbnRzIiwKICAiRCkgVGhlIGJvdW5kYXJ5IGxpbmVzIG9mIHRoZSBpbmVxdWFsaXRpZXMiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgc2V0IG9mIGZlYXNpYmxlIHNvbHV0aW9ucz8KCiAgICBbX117JGZlYXN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIHNldCBvZiBwb2ludHMgdGhhdCBzYXRpc2Z5IHRoZSBjb25zdHJhaW50cyBpcyB0aGUgc2V0IG9mIGZlYXNpYmxlIHNvbHV0aW9ucy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="560"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-3505"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.85</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3505"><article class="exercise exercise-like"><iframe name="webwork-561" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=561&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKHk9PiJSZWFsIik7CiRQID0gRm9ybXVsYSgiOHgrMTB5Iik7CiRBID0gUG9pbnQoMCw0MDApOwokQiA9IFBvaW50KDQwMCwyMDApOwokQyA9IFBvaW50KDUwMCwwKTsKJGFuc3dlcj0gRm9ybXVsYSgiJEEsJEIsJEMiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7IAokUDEgPSAkUC0%2BZXZhbCh4PT4wLCB5PT40MDApOwokUDIgPSAkUC0%2BZXZhbCh4PT40MDAsIHk9PjIwMCk7CiRQMyA9ICRQLT5ldmFsKHg9PjUwMCwgeT0%2BMCk7CgpCRUdJTl9QR01MCmEuICBEZXRlcm1pbmUgd2hpY2ggb2YgdGhlIHBvaW50cyBbYCgwLCA0MDApXHRleHR7LH1gXSBbYCg0MDAsIDIwMClcdGV4dHssfWBdIFtgKDUwMCwgMClcdGV4dHssfWBdIGFuZCBbYCg1MDAsIDQwMClgXSByZXByZXNlbnQgZmVhc2libGUgc29sdXRpb25zIGZvciB0aGUgVHJhaWxHZWFyIHByb2JsZW0uCgogICAgW19deyRteV9ldmFsdWF0b3J9ezIwfSAgU2VwYXJhdGUgZGlmZmVyZW50IG9yZGVyZWQgcGFpcnMgd2l0aCBhIGNvbW1hLgoKCmEuICBGaW5kIHRoZSB2YWx1ZXMgb2YgdGhlIG9iamVjdGl2ZSBmdW5jdGlvbiBbYFAgPSA4eCArIDEweWBdIGF0IHRoZSBmZWFzaWJsZSBzb2x1dGlvbnMgaW4gcGFydCAoYSkuCgogICAgQXQgW2AoMCw0MDApLCBccXVhZCBQPWBdW19deyRQMX17M30KCiAgICBBdCBbYCg0MDAsMjAwKSwgXHF1YWQgUD1gXVtfXXskUDJ9ezN9CgogICAgQXQgW2AoNTAwLDApLCBccXVhZCBQPWBdW19deyRQM317M30KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgKDAsIDQwMClcdGV4dHssfWBdIFtgKDQwMCwgMjAwKVx0ZXh0eyx9YF0gYW5kIFtgKDUwMCwgMClgXQoKCmEuICBBdCBbYCgwLCA0MDApXHRleHR7LH1gXSBbYFAgPSA0MDAwXHRleHR7O31gXSBhdCBbYCg0MDAsIDIwMClcdGV4dHssfWBdIFtgUCA9IDUyMDBcdGV4dHs7fWBdIGF0IFtgKDUwMCwgMClcdGV4dHssfWBdIFtgUCA9IDQwMDBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="561"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-3506"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3506"><h6 class="heading">
+</h6>
+<iframe name="webwork-561" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=561&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKHk9PiJSZWFsIik7CiRQID0gRm9ybXVsYSgiOHgrMTB5Iik7CiRBID0gUG9pbnQoMCw0MDApOwokQiA9IFBvaW50KDQwMCwyMDApOwokQyA9IFBvaW50KDUwMCwwKTsKJGFuc3dlcj0gRm9ybXVsYSgiJEEsJEIsJEMiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7IAokUDEgPSAkUC0%2BZXZhbCh4PT4wLCB5PT40MDApOwokUDIgPSAkUC0%2BZXZhbCh4PT40MDAsIHk9PjIwMCk7CiRQMyA9ICRQLT5ldmFsKHg9PjUwMCwgeT0%2BMCk7CgpCRUdJTl9QR01MCmEuICBEZXRlcm1pbmUgd2hpY2ggb2YgdGhlIHBvaW50cyBbYCgwLCA0MDApXHRleHR7LH1gXSBbYCg0MDAsIDIwMClcdGV4dHssfWBdIFtgKDUwMCwgMClcdGV4dHssfWBdIGFuZCBbYCg1MDAsIDQwMClgXSByZXByZXNlbnQgZmVhc2libGUgc29sdXRpb25zIGZvciB0aGUgVHJhaWxHZWFyIHByb2JsZW0uCgogICAgW19deyRteV9ldmFsdWF0b3J9ezIwfSAgU2VwYXJhdGUgZGlmZmVyZW50IG9yZGVyZWQgcGFpcnMgd2l0aCBhIGNvbW1hLgoKCmEuICBGaW5kIHRoZSB2YWx1ZXMgb2YgdGhlIG9iamVjdGl2ZSBmdW5jdGlvbiBbYFAgPSA4eCArIDEweWBdIGF0IHRoZSBmZWFzaWJsZSBzb2x1dGlvbnMgaW4gcGFydCAoYSkuCgogICAgQXQgW2AoMCw0MDApLCBccXVhZCBQPWBdW19deyRQMX17M30KCiAgICBBdCBbYCg0MDAsMjAwKSwgXHF1YWQgUD1gXVtfXXskUDJ9ezN9CgogICAgQXQgW2AoNTAwLDApLCBccXVhZCBQPWBdW19deyRQM317M30KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgKDAsIDQwMClcdGV4dHssfWBdIFtgKDQwMCwgMjAwKVx0ZXh0eyx9YF0gYW5kIFtgKDUwMCwgMClgXQoKCmEuICBBdCBbYCgwLCA0MDApXHRleHR7LH1gXSBbYFAgPSA0MDAwXHRleHR7O31gXSBhdCBbYCg0MDAsIDIwMClcdGV4dHssfWBdIFtgUCA9IDUyMDBcdGV4dHs7fWBdIGF0IFtgKDUwMCwgMClcdGV4dHssfWBdIFtgUCA9IDQwMDBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="561"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-3506"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.86</span><span class="period">.</span><span class="space"> </span><span class="title">Pause and Reflect.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3506"><article class="exercise exercise-like"><p id="p-19009">Explain how to find the set of feasible solutions.</p></article></div></section><section class="subsection" id="subsection-262"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-562" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=562&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2Vzc2F5bWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsKCkJFR0lOX1BHTUwKRXhwbGFpbiBob3cgdG8gZmluZCB0aGUgc2V0IG9mIGZlYXNpYmxlIHNvbHV0aW9ucy4KCltAQU5TKGVzc2F5X2NtcCgpKTtlc3NheV9ib3goNiw3NilAXSogW0Blc3NheV9oZWxwKClAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="562"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-262"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Optimum Solutions</span>
 </h3>
 <p id="p-19010">We cannot check all of the feasible solutions to see which one results in the largest profit. Fortunately, there is a simple way to find the optimal solution.</p>
@@ -351,23 +359,23 @@ P = 8(\alert{200}) + 10(\blert{300}) = 4600
 P = 8x + 10y
 \end{equation*}
 </div>
-<p data-braille="continuation">If TrailGear would like to make $\(2000\) on hiking boots, it could produce \(200\) pairs of Sierra boots, or \(250\) pairs of Weekenders. Or it could produce some of each; for example, \(50\) pairs of Weekenders and \(160\) pairs of Sierra boots. In fact, every point on the line</p>
+<p class="continuation">If TrailGear would like to make $\(2000\) on hiking boots, it could produce \(200\) pairs of Sierra boots, or \(250\) pairs of Weekenders. Or it could produce some of each; for example, \(50\) pairs of Weekenders and \(160\) pairs of Sierra boots. In fact, every point on the line</p>
 <div class="displaymath">
 \begin{equation*}
 8x + 10y = 2000
 \end{equation*}
 </div>
-<p data-braille="continuation">represents a combination of Weekenders and Sierra boots that will yield a profit of $\(2000\text{.}\) This line is labeled \(P = 2000\) in the figure below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-objective-function-contours-over-feasibles.svg" role="img" style="width: 100%; height: auto;" alt="lines of constant objective function drawn over feasible solutions"></div></div></div>
+<p class="continuation">represents a combination of Weekenders and Sierra boots that will yield a profit of $\(2000\text{.}\) This line is labeled \(P = 2000\) in the figure below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-objective-function-contours-over-feasibles.svg" role="img" class="contained" alt="lines of constant objective function drawn over feasible solutions"></div></div></div>
 <p id="p-19012">If TrailGear would like to make $\(4000\) on boots, it should choose a point on the line labeled \(P = 4000\text{.}\) Similarly, all the points on the line labeled \(P = 6000\) will yield a profit of $\(6000\text{,}\) and so on. Different values of \(P\) correspond to parallel lines on the graph. Smaller values of \(P\) correspond to lines near the origin, and larger values of \(P\) have lines farther from the origin.</p>
-<article class="exercise exercise-like" id="exercise-3507"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3507"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-3507"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.87</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3507"><article class="exercise exercise-like"><iframe name="webwork-563" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=563&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRvcHNvID0gUmFkaW9CdXR0b25zKAogIFsiVGhlIGxhcmdlc3Qgb3Igc21hbGxlc3QgZmVhc2libGUgc29sdXRpb24iLAogICJUaGUgbGFyZ2VzdCBvciBzbWFsbGVzdCB2YWx1ZSBvZiB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uIGluIHRoZSBzZXQgb2YgZmVhc2libGUgc29sdXRpb25zIiwKICAiVGhlIHZlcnRleCBmYXJ0aGVzdCBmcm9tIHRoZSBvcmlnaW4iLAogICJUaGUgbGFyZ2VzdCBvciBzbWFsbGVzdCBjb25zdHJhaW5lZCBcKHlcKS12YWx1ZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApXaGF0IGlzIGFuIG9wdGltYWwgc29sdXRpb24%2FCgogICAgW19deyRvcHNvfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBsYXJnZXN0IG9yIHNtYWxsZXN0IHZhbHVlIG9mIHRoZSBvYmplY3RpdmUgZnVuY3Rpb24gaW4gdGhlIHNldCBvZiBmZWFzaWJsZSBzb2x1dGlvbnMKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="563"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-276"><h6 class="heading">
+</h6>
+<iframe name="webwork-563" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=563&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRvcHNvID0gUmFkaW9CdXR0b25zKAogIFsiVGhlIGxhcmdlc3Qgb3Igc21hbGxlc3QgZmVhc2libGUgc29sdXRpb24iLAogICJUaGUgbGFyZ2VzdCBvciBzbWFsbGVzdCB2YWx1ZSBvZiB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uIGluIHRoZSBzZXQgb2YgZmVhc2libGUgc29sdXRpb25zIiwKICAiVGhlIHZlcnRleCBmYXJ0aGVzdCBmcm9tIHRoZSBvcmlnaW4iLAogICJUaGUgbGFyZ2VzdCBvciBzbWFsbGVzdCBjb25zdHJhaW5lZCBcKHlcKS12YWx1ZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApXaGF0IGlzIGFuIG9wdGltYWwgc29sdXRpb24%2FCgogICAgW19deyRvcHNvfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBsYXJnZXN0IG9yIHNtYWxsZXN0IHZhbHVlIG9mIHRoZSBvYmplY3RpdmUgZnVuY3Rpb24gaW4gdGhlIHNldCBvZiBmZWFzaWJsZSBzb2x1dGlvbnMKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="563"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-276"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.88</span><span class="period">.</span>
 </h6>
 <p id="p-19021">The figure below shows the feasible solutions for another linear programming problem. The objective function is \(C = 3x + 5y\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-feasible-solutions2.svg" role="img" style="width: 100%; height: auto;" alt="system of inequalities defining the feasible solutions"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-feasible-solutions2.svg" role="img" class="contained" alt="system of inequalities defining the feasible solutions"></div></div></div>
 <ol id="p-19022" class="lower-alpha">
 <li id="li-10228"><p id="p-19023">Find the value of \(C\) at the point \((0, 3)\text{.}\) Are there other feasible solutions that give the same value of \(C\text{?}\)</p></li>
 <li id="li-10229"><p id="p-19024">Find all feasible solutions that result in an objective value of \(30\text{.}\)</p></li>
@@ -375,7 +383,7 @@ P = 8x + 10y
 <li id="li-10231"><p id="p-19026">Is it possible for a feasible solution to result in an objective value of 45?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-709" id="solution-709"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-709"><div class="solution solution-like"><ol id="p-19027" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-709" id="solution-709"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-709"><div class="solution solution-like"><ol id="p-19027" class="lower-alpha">
 <li id="li-10232">
 <p id="p-19028">The objective value at the point \((0, 3)\) is</p>
 <div class="displaymath">
@@ -383,17 +391,17 @@ P = 8x + 10y
 C = 3(\alert{0}) + 5(\blert{3}) = 15
 \end{equation*}
 </div>
-<p data-braille="continuation">Another point with the same objective value is \((5, 0)\text{.}\) In fact, all points on the line \(3x + 5y = 15\) have an objective value of \(15\text{.}\) This line intersects the set of feasible solutions in a line segment, as shown in below. Thus, there are infinitely many feasible solutions with objective value \(15\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-feasible-solutions3.svg" role="img" style="width: 100%; height: auto;" alt="system of inequalities defining the feasible solutions"></div></div></div>
+<p class="continuation">Another point with the same objective value is \((5, 0)\text{.}\) In fact, all points on the line \(3x + 5y = 15\) have an objective value of \(15\text{.}\) This line intersects the set of feasible solutions in a line segment, as shown in below. Thus, there are infinitely many feasible solutions with objective value \(15\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-feasible-solutions3.svg" role="img" class="contained" alt="system of inequalities defining the feasible solutions"></div></div></div>
 </li>
 <li id="li-10233"><p id="p-19029">Points that give an objective value of \(C = 30\) lie on the line \(3x + 5y = 30\text{,}\) as shown in the figure. There are infinitely many feasible solutions that lie on this line; for example, one such point is \((5, 3)\text{.}\)</p></li>
 <li id="li-10234"><p id="p-19030">The line \(3x + 5y = 39\) intersects the set of feasible solutions in only one point, the point \((3, 6)\text{.}\) This is the only feasible solution that yields an objective value of \(39\text{.}\)</p></li>
 <li id="li-10235"><p id="p-19031">The line \(3x + 5y = 45\) includes all points for which \(C=45\text{.}\) This line does not intersect the set of feasible solutions, as we see in the figure. Thus, there are no feasible solutions that result in an objective value of \(45\text{.}\)</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-3508"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3508"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-3508"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.89</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3508"><article class="exercise exercise-like"><iframe name="webwork-564" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=564&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJPbmVPZi5wbCIsInBhcnNlclBvcFVwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiRhID0gUG9pbnQoNDAwLDIwMCk7CkBjaG9pY2VzID0gKCI%2FIiwiRE5FIiwiTm9uZSIsICJVbmRlZmluZWQiKTsKJHBvcHVwID0gUG9wVXAoW0BjaG9pY2VzXSwgJGNob2ljZXNbMF0pOyAgIyBJdCBkb2Vzbid0IG1hdHRlciB3aGljaCBpcyB1c2VkIGFzIHRoZSAiY29ycmVjdCBhbnN3ZXIiLgpDb250ZXh0KCRwb3B1cC0%2BY29udGV4dCk7IAokYiA9IE9uZU9mKEBjaG9pY2VzWzEuLjNdKTsKCkJFR0lOX1BHTUwKYS4gIFJldHVybmluZyB0byB0aGlzIHNlY3Rpb24ncyBvcGVuaW5nIEV4YW1wbGUgcmVnYXJkaW5nIFRyYWlsR2VhciBwcm9maXRzIGZvciBzZWxsaW5nIGhpa2luZyBib290cywgZmluZCBhbGwgZmVhc2libGUgc29sdXRpb25zIGZvciB3aGljaCB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uIFtgUCA9IDh4ICsgMTB5YF0gaGFzIGEgdmFsdWUgb2YgW2A1MjAwXHRleHR7Ln1gXQoKICAgIFtfXXskYX17N30KCgphLiAgRmluZCBhbGwgZmVhc2libGUgc29sdXRpb25zIHRoYXQgcmVzdWx0IGluIGFuIG9iamVjdGl2ZSB2YWx1ZSBvZiBbYDYwMDBcdGV4dHsufWBdCgogICAgW19deyRifXs3fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2AoNDAwLCAyMDApYF0KCgphLiAgTm9uZQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="564"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-19042">We are only allowed to choose points from the set of feasible solutions. Imagine the parallel lines representing different values of the objective function sweeping across the graph of the feasible solutions. The objective values increase as the lines sweep up across the graph.</p>
+</h6>
+<iframe name="webwork-564" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=564&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJPbmVPZi5wbCIsInBhcnNlclBvcFVwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiRhID0gUG9pbnQoNDAwLDIwMCk7CkBjaG9pY2VzID0gKCI%2FIiwiRE5FIiwiTm9uZSIsICJVbmRlZmluZWQiKTsKJHBvcHVwID0gUG9wVXAoW0BjaG9pY2VzXSwgJGNob2ljZXNbMF0pOyAgIyBJdCBkb2Vzbid0IG1hdHRlciB3aGljaCBpcyB1c2VkIGFzIHRoZSAiY29ycmVjdCBhbnN3ZXIiLgpDb250ZXh0KCRwb3B1cC0%2BY29udGV4dCk7IAokYiA9IE9uZU9mKEBjaG9pY2VzWzEuLjNdKTsKCkJFR0lOX1BHTUwKYS4gIFJldHVybmluZyB0byB0aGlzIHNlY3Rpb24ncyBvcGVuaW5nIEV4YW1wbGUgcmVnYXJkaW5nIFRyYWlsR2VhciBwcm9maXRzIGZvciBzZWxsaW5nIGhpa2luZyBib290cywgZmluZCBhbGwgZmVhc2libGUgc29sdXRpb25zIGZvciB3aGljaCB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uIFtgUCA9IDh4ICsgMTB5YF0gaGFzIGEgdmFsdWUgb2YgW2A1MjAwXHRleHR7Ln1gXQoKICAgIFtfXXskYX17N30KCgphLiAgRmluZCBhbGwgZmVhc2libGUgc29sdXRpb25zIHRoYXQgcmVzdWx0IGluIGFuIG9iamVjdGl2ZSB2YWx1ZSBvZiBbYDYwMDBcdGV4dHsufWBdCgogICAgW19deyRifXs3fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2AoNDAwLCAyMDApYF0KCgphLiAgTm9uZQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="564"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-19042">We are only allowed to choose points from the set of feasible solutions. Imagine the parallel lines representing different values of the objective function sweeping across the graph of the feasible solutions. The objective values increase as the lines sweep up across the graph.</p>
 <p id="p-19043">What is the last feasible solution the lines intersect before leaving the shaded region? If you study the preceding examples, perhaps you can see that the largest (and smallest) values of the objective function will occur at corner points of the set of feasible solutions. We have not proved this fact, but it is true.</p>
 <article class="assemblage assemblage-like" id="assemblage-221"><h6 class="heading"><span class="title">Linear Programming.</span></h6>
 <p id="p-19044">The maximum and the minimum values of the objective function always occur at vertices of the graph of feasible solutions.</p></article><p id="p-19045">Depending on the exact formula for the objective function, the maximum and minimum values may occur at <em class="emphasis">any</em> of the vertices of the shaded region.</p>
@@ -402,25 +410,25 @@ C = 3(\alert{0}) + 5(\blert{3}) = 15
 </h6>
 <p id="p-19046">Find TrailGear's maximum weekly profit</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-711" id="solution-711"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-711"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-711" id="solution-711"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-711"><div class="solution solution-like">
 <p id="p-19047">The figure below shows the lines corresponding to the objective values \(P = 2000\text{,}\) \(P = 4000\text{,}\) and \(P = 5200\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-feasible-solutions4.svg" role="img" style="width: 100%; height: auto;" alt="system of inequalities defining the feasible solutions"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-feasible-solutions4.svg" role="img" class="contained" alt="system of inequalities defining the feasible solutions"></div></div></div>
 <p id="p-19048">The maximum value of the profit, \(P\text{,}\) corresponds to the topmost line that intersects the region of feasible solutions. This is the line that passes through the vertex where the lines \(~~3x + 6y = 2400~~\) and \(~~2x + y = 1000~~\) intersect, namely the vertex at \((400, 200)\text{.}\) The profit for that point is</p>
 <div class="displaymath">
 \begin{equation*}
 P = 8(400) + 10(200) = 5200
 \end{equation*}
 </div>
-<p data-braille="continuation">so the maximum weekly profit is $\(5200\text{.}\)</p>
+<p class="continuation">so the maximum weekly profit is $\(5200\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-3509"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3509"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-3509"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.91</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3509"><article class="exercise exercise-like"><div class="introduction" id="introduction-504"><div class="sidebyside"><div class="sbsrow" style="margin-left:36%;margin-right:36%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-feasible-solutions5.svg" role="img" style="width: 100%; height: auto;" alt="system of inequalities defining the feasible solutions"></div></div></div></div>
+</h6>
+<div class="introduction" id="introduction-504"><div class="sidebyside"><div class="sbsrow" style="margin-left:36%;margin-right:36%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-feasible-solutions5.svg" role="img" class="contained" alt="system of inequalities defining the feasible solutions"></div></div></div></div>
 <iframe name="webwork-565" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=565&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKHk9PiJSZWFsIik7CiRSID0gRm9ybXVsYSgieCs1eSIpOwoKJFIxID0gJFItPmV2YWwoeD0%2BMiwgeT0%2BMSk7CiRSMiA9ICRSLT5ldmFsKHg9PjAsIHk9PjUpOwokUjMgPSAkUi0%2BZXZhbCh4PT43LCB5PT4yKTsKCiRwb3AxPSAgUG9wVXAoClsiPyIsIigyLDEpIiwiKDAsNSkiLCAiKDcsMikiXSwKMiwgCik7CiRwb3AyPSAgUG9wVXAoClsiPyIsIigyLDEpIiwiKDAsNSkiLCAiKDcsMikiXSwKMSwgCik7CgpCRUdJTl9QR01MClRoZSBmaWd1cmUgYWJvdmUgc2hvd3MgdGhlIGZlYXNpYmxlIHNvbHV0aW9ucyBmb3IgYSBsaW5lYXIgcHJvZ3JhbW1pbmcgcHJvYmxlbS4gVGhlIG9iamVjdGl2ZSBmdW5jdGlvbiBpcyBbYFIgPSB4ICsgNXlcdGV4dHsufWBdCgphLiAgU2tldGNoIGxpbmVzIGZvciBvYmplY3RpdmUgdmFsdWVzIG9mIFtgUj01XHRleHR7LH1gXSBbYFI9MTVcdGV4dHssfWBdIFtgUiA9IDI1XHRleHR7LH1gXSBhbmQgW2BSPTM1XHRleHR7Ln1gXQoKCmEuICBFdmFsdWF0ZSB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uIGF0IGVhY2ggdmVydGV4IG9mIHRoZSBzaGFkZWQgcmVnaW9uLgoKICAgIEF0IFtgKDIsMSksIFxxdWFkIFA9YF1bX117JFIxfXszfQoKICAgIEF0IFtgKDAsNSksIFxxdWFkIFA9YF1bX117JFIyfXszfQoKICAgIEF0IFtgKDcsMiksIFxxdWFkIFA9YF1bX117JFIzfXszfQoKCmEuICBXaGljaCB2ZXJ0ZXggY29ycmVzcG9uZHMgdG8gdGhlIG1heGltdW0gdmFsdWUgb2YgdGhlIG9iamVjdGl2ZSBmdW5jdGlvbj8gW19deyRwb3AxfXs1fQoKICAgIFdoYXQgaXMgdGhlIG1heGltdW0gdmFsdWU%2FIFtfXXskUjJ9ezN9CgoKYS4gIFdoaWNoIHZlcnRleCBjb3JyZXNwb25kcyB0byB0aGUgbWluaW11bSB2YWx1ZSBvZiB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uPyAgW19deyRwb3AyfXs1fQoKICAgIFdoYXQgaXMgdGhlIG1pbmltdW0gdmFsdWU%2FIFtfXXskUjF9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKCmEuICBBdCBbYCgyLCAxKVx0ZXh0eyx9YF0gW2BSID0gN1x0ZXh0ezt9YF0gYXQgW2AoMCwgNSlcdGV4dHssfWBdIFtgUiA9IDI1XHRleHR7O31gXSBhdCBbYCg3LCAyKVx0ZXh0eyx9YF0gW2BSID0xN2BdCgoKYS4gIFRoZSBtYXhpbXVtIHZhbHVlIG9mIFtgUmBdIG9jY3VycyBhdCBbYCgwLCA1KVx0ZXh0ey59YF0gVGhlIG1heGltdW0gdmFsdWUgaXMgW2AyNVx0ZXh0ey59YF0KCgphLiAgVGhlIG1pbmltdW0gdmFsdWUgb2YgW2BSYF0gb2NjdXJzIGF0IFtgKDIsIDEpXHRleHR7Ln1gXSBUaGUgbWluaW11bSB2YWx1ZSBpcyBbYDdcdGV4dHsufWBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="565"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-66">
 <p id="p-19080">Graph for part (a):</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-in-ex-ans-8-5-3.svg" role="img" style="width: 100%; height: auto;" alt="feasible solutions and objective function lines"></div></div></div>
-</div></article></div>
-<p id="p-19081">We can now formulate a strategy for solving problems by linear programming.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-in-ex-ans-8-5-3.svg" role="img" class="contained" alt="feasible solutions and objective function lines"></div></div></div>
+</div></article><p id="p-19081">We can now formulate a strategy for solving problems by linear programming.</p>
 <article class="assemblage assemblage-like" id="assemblage-222"><h6 class="heading"><span class="title">To Solve a Linear Programming Problem:.</span></h6>
 <ol id="p-19082" class="decimal">
 <li id="li-10256"><p id="p-19083">Represent the unknown quantities by variables. Write the objective function and the constraints in terms of the variables.</p></li>
@@ -428,21 +436,21 @@ P = 8(400) + 10(200) = 5200
 <li id="li-10258"><p id="p-19085">Find the coordinates of each vertex of the solution set.</p></li>
 <li id="li-10259"><p id="p-19086">Evaluate the objective function at each vertex.</p></li>
 <li id="li-10260"><p id="p-19087">The maximum and minimum values of the objective function occur at vertices of the set of feasible solutions.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-3510"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3510"><h6 class="heading">
+</ol></article><article class="exercise exercise-like" id="exercise-3510"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.92</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3510"><article class="exercise exercise-like"><iframe name="webwork-566" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=566&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRsaW5wcm8gPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBmaW5kIHRoZSB2ZXJ0aWNlcyBvZiBhIHJlZ2lvbi4iLAogICJCKSBzb2x2ZSBhIHN5c3RlbSBvZiBpbmVxdWFsaXRpZXMuIiwKICAiQykgd3JpdGUgYSBzZXQgb2YgaW5lcXVhbGl0aWVzIGluIHR3byB2YXJpYWJsZXMuIiwKICAiRCkgZmluZCBhbiBvcHRpbWFsIHNvbHV0aW9uIHN1YmplY3QgdG8gYSBzZXQgb2YgY29uc3RyYWludHMuIl0sCiAgMywgCik7CgpCRUdJTl9QR01MCkxpbmVhciBwcm9ncmFtbWluZyBpcyB1c2VkIHRvCgogICAgW19deyRsaW5wcm99ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KZmluZCBhbiBvcHRpbWFsIHNvbHV0aW9uIHN1YmplY3QgdG8gYSBzZXQgb2YgY29uc3RyYWludHMuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="566"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-19096">In <a class="xref" data-knowl="./knowl/example-unbounded-feasible-set.html" title="Example 8.93">Example 8.93</a>, the set of feasible solutions is an unbounded region.</p>
+</h6>
+<iframe name="webwork-566" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=566&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRsaW5wcm8gPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBmaW5kIHRoZSB2ZXJ0aWNlcyBvZiBhIHJlZ2lvbi4iLAogICJCKSBzb2x2ZSBhIHN5c3RlbSBvZiBpbmVxdWFsaXRpZXMuIiwKICAiQykgd3JpdGUgYSBzZXQgb2YgaW5lcXVhbGl0aWVzIGluIHR3byB2YXJpYWJsZXMuIiwKICAiRCkgZmluZCBhbiBvcHRpbWFsIHNvbHV0aW9uIHN1YmplY3QgdG8gYSBzZXQgb2YgY29uc3RyYWludHMuIl0sCiAgMywgCik7CgpCRUdJTl9QR01MCkxpbmVhciBwcm9ncmFtbWluZyBpcyB1c2VkIHRvCgogICAgW19deyRsaW5wcm99ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KZmluZCBhbiBvcHRpbWFsIHNvbHV0aW9uIHN1YmplY3QgdG8gYSBzZXQgb2YgY29uc3RyYWludHMuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="566"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-19096">In <a class="xref" data-knowl="./knowl/example-unbounded-feasible-set.html" title="Example 8.93">Example 8.93</a>, the set of feasible solutions is an unbounded region.</p>
 <article class="example example-like" id="example-unbounded-feasible-set"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.93</span><span class="period">.</span>
 </h6>
 <p id="p-19097">Each week, the Healthy Food Store buys both granola and muesli in bulk from two cereal companies. The store requires at least \(12\) kilograms of granola and \(9\) kilograms of muesli.</p>
 <ul class="disc">
-<li id="li-10265">Company A charges $\(15\) for a package that contains \(2\) kilograms of granola and \(1\) kilogram of muesli.</li>
-<li id="li-10266">Company B charges $\(25\) for a package of \(3\) kilograms of granola and \(3\) kilograms of muesli.</li>
+<li id="li-10265"><p id="p-derived-li-10265">Company A charges $\(15\) for a package that contains \(2\) kilograms of granola and \(1\) kilogram of muesli.</p></li>
+<li id="li-10266"><p id="p-derived-li-10266">Company B charges $\(25\) for a package of \(3\) kilograms of granola and \(3\) kilograms of muesli.</p></li>
 </ul>
-<p data-braille="continuation">How much should the Healthy Food Store purchase from each company in order to minimize its costs and still meet its needs for granola and muesli? What is the minimum cost?</p>
+<p class="continuation">How much should the Healthy Food Store purchase from each company in order to minimize its costs and still meet its needs for granola and muesli? What is the minimum cost?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-714" id="solution-714"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-714"><div class="solution solution-like"><ol id="p-19098" class="decimal">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-714" id="solution-714"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-714"><div class="solution solution-like"><ol id="p-19098" class="decimal">
 <li id="li-10267">
 <div class="displaymath" id="p-19099">
 \begin{gather*}
@@ -450,31 +458,31 @@ P = 8(400) + 10(200) = 5200
 \text{Number of packages purchased from Company B: } ~~y
 \end{gather*}
 </div>
-<p data-braille="continuation">First, we write the objective function. The store would like to minimize its cost, so</p>
+<p class="continuation">First, we write the objective function. The store would like to minimize its cost, so</p>
 <div class="displaymath">
 \begin{equation*}
 C = 15x + 25y
 \end{equation*}
 </div>
-<p data-braille="continuation">Next, we write the constraints. These will be a system of inequalities. It may help to organize the information into a table.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p class="continuation">Next, we write the constraints. These will be a system of inequalities. It may help to organize the information into a table.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines"></td>
 <td class="c m b1 r1 l0 t1 lines">Company A</td>
 <td class="c m b1 r1 l0 t1 lines">Company B</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">Required</td>
+<td class="c m b1 r1 l0 t1 lines">Required</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Granola</td>
 <td class="c m b1 r1 l0 t0 lines">\(2x\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3y\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">12</td>
+<td class="c m b1 r1 l0 t0 lines">12</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Muesli</td>
 <td class="c m b1 r1 l0 t0 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3y\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">9</td>
+<td class="c m b1 r1 l0 t0 lines">9</td>
 </tr>
 </table></div></div></div>
 <p id="p-19100">The Healthy Food Store will have \(2x\) kilograms of granola and \(x\) kilograms of muesli from Company A, and \(3y\) kilograms of granola and \(3y\) kilograms of muesli from Company B. The store requires that</p>
@@ -484,7 +492,7 @@ C = 15x + 25y
 x + 3y \amp\ge 9
 \end{align*}
 </div>
-<p data-braille="continuation">Because the store cannot purchase negative quantities, we also have</p>
+<p class="continuation">Because the store cannot purchase negative quantities, we also have</p>
 <div class="displaymath">
 \begin{equation*}
 x \ge 0, ~~~~~y \ge 0
@@ -493,7 +501,7 @@ x \ge 0, ~~~~~y \ge 0
 </li>
 <li id="li-10268">
 <p id="p-19101">We graph the solutions to the constraint system. The feasible solutions form the shaded region shown below. Any ordered point on this graph corresponds to a way to purchase granola and muesli that meets the store’s needs, but some of these choices cost more than others.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-unbounded-feasible-set.svg" role="img" style="width: 100%; height: auto;" alt="unbunded set of feasible solutions"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-unbounded-feasible-set.svg" role="img" class="contained" alt="unbunded set of feasible solutions"></div></div></div>
 </li>
 <li id="li-10269">
 <p id="p-19102">We know that the minimum cost will occur at one of the vertex points, which are labeled in the figure. The coordinates of \(P\) and \(R\) are easy to see. To find the coordinates of \(Q\text{,}\) we notice that it is the intersection of the lines \(2x + 3y = 12\) and \(x + 3y = 9\text{.}\) Thus, we must solve the system</p>
@@ -503,7 +511,7 @@ x \ge 0, ~~~~~y \ge 0
 x + 3y \amp = 9
 \end{align*}
 </div>
-<p data-braille="continuation">Subtracting the second equation from the first, we find that \(x=3\text{.}\) Substituting this value into either of the original two equations, we find that \(y=2\text{.}\) Thus the point \(Q\) has coordinates \((3, 2)\text{.}\)</p>
+<p class="continuation">Subtracting the second equation from the first, we find that \(x=3\text{.}\) Substituting this value into either of the original two equations, we find that \(y=2\text{.}\) Thus the point \(Q\) has coordinates \((3, 2)\text{.}\)</p>
 </li>
 <li id="li-10270">
 <p id="p-19103">Now we evaluate the objective function at each of the three vertices.</p>
@@ -514,17 +522,17 @@ x + 3y \amp = 9
 \amp\text{At }P (9,0): \amp C \amp= 15(\alert{9})+ 25(\blert{0}) = 135{}\amp
 \end{align*}
 </div>
-<p data-braille="continuation">The minimum cost occurs at point \(Q\text{.}\)</p>
+<p class="continuation">The minimum cost occurs at point \(Q\text{.}\)</p>
 </li>
 <li id="li-10271"><p id="p-19104">The Healthy Food Store should buy three packages from Company A and two packages from Company B. It will pay $\(95\) for its stock of granola and muesli.</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-3511"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3511"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-3511"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.94</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3511"><article class="exercise exercise-like"><iframe name="webwork-567" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=567&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiMjUiKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgbWF4aW11bSB2YWx1ZSBvZiB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uLCBbYE8gPSA1eCArIDN5XHRleHR7LH1gXSBzdWJqZWN0IHRvIHRoZSBjb25zdHJhaW50cyBbYHhcZ2UgMFx0ZXh0eyx9YF0gW2B5XGdlIDBcdGV4dHssfWBdIFtgeCArIHkgXGdlIDdcdGV4dHssfWBdIGFuZCBbYDV4ICsgMnkgXGdlIDIwXHRleHR7Ln1gXQoKQW5zd2VyOiBbX117JGF9ezR9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIG1heGltdW0gdmFsdWUgaXMgW2AyNWBdICh3aGljaCBvY2N1cnMgYXQgdGhlIHZlcnRleCBbYCgyLDUpYF0pLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="567"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-3512"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3512"><h6 class="heading">
+</h6>
+<iframe name="webwork-567" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=567&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiMjUiKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgbWF4aW11bSB2YWx1ZSBvZiB0aGUgb2JqZWN0aXZlIGZ1bmN0aW9uLCBbYE8gPSA1eCArIDN5XHRleHR7LH1gXSBzdWJqZWN0IHRvIHRoZSBjb25zdHJhaW50cyBbYHhcZ2UgMFx0ZXh0eyx9YF0gW2B5XGdlIDBcdGV4dHssfWBdIFtgeCArIHkgXGdlIDdcdGV4dHssfWBdIGFuZCBbYDV4ICsgMnkgXGdlIDIwXHRleHR7Ln1gXQoKQW5zd2VyOiBbX117JGF9ezR9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIG1heGltdW0gdmFsdWUgaXMgW2AyNWBdICh3aGljaCBvY2N1cnMgYXQgdGhlIHZlcnRleCBbYCgyLDUpYF0pLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="567"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-3512"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.95</span><span class="period">.</span><span class="space"> </span><span class="title">Pause and Reflect.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3512"><article class="exercise exercise-like"><p id="p-19109">What fact helps us find the optimal solution?</p></article></div>
-<article class="technology computation-like" id="technology-18"><h6 class="heading">
+</h6>
+<iframe name="webwork-568" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=568&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2Vzc2F5bWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsKCkJFR0lOX1BHTUwKV2hhdCBmYWN0IGhlbHBzIHVzIGZpbmQgdGhlIG9wdGltYWwgc29sdXRpb24%2FCgpbQEFOUyhlc3NheV9jbXAoKSk7ZXNzYXlfYm94KDYsNzYpQF0qIFtAZXNzYXlfaGVscCgpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7" data-seed="568"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="technology computation-like" id="technology-18"><h6 class="heading">
 <span class="type">Technology</span><span class="space"> </span><span class="codenumber">8.96</span><span class="period">.</span><span class="space"> </span><span class="title">Using a Graphing Calculator.</span>
 </h6>
 <p id="p-19110">You can use your graphing calculator to solve the problem in <a class="xref" data-knowl="./knowl/example-unbounded-feasible-set.html" title="Example 8.93">Example 8.93</a>. Set the window values at</p>
@@ -534,22 +542,22 @@ x + 3y \amp = 9
 \text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 6.2
 \end{align*}
 </div>
-<p data-braille="continuation">Next, graph the set of feasible solutions. We have already taken care of the constraints \(x\ge 0\) and \(y\ge 0\) by setting Xmin and Ymin to zero. Solve each of the other constraints for \(y\) to get</p>
+<p class="continuation">Next, graph the set of feasible solutions. We have already taken care of the constraints \(x\ge 0\) and \(y\ge 0\) by setting Xmin and Ymin to zero. Solve each of the other constraints for \(y\) to get</p>
 <div class="displaymath">
 \begin{align*}
 y \amp\ge (12 - 2x)/3\\
 y \amp\ge(9 - x)/3
 \end{align*}
 </div>
-<p data-braille="continuation">For each constraint, the set of feasible solutions lies above the boundary line, because \(y\) is greater than the expression in \(x\text{.}\) To shade the regions above the graphs of \(Y_1\) and \(Y_2\text{,}\) move the cursor onto the backslash in front of the equations and press <kbd class="kbdkey">ENTER</kbd> twice, as shown in figure (a). Then press <kbd class="kbdkey">GRAPH</kbd>. Your display should look like figure (b).</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-feasible.jpg" style="width: 100%; height: auto;" alt="GCdisplays for graphing systems of inequalities"></div></div></div>
+<p class="continuation">For each constraint, the set of feasible solutions lies above the boundary line, because \(y\) is greater than the expression in \(x\text{.}\) To shade the regions above the graphs of \(Y_1\) and \(Y_2\text{,}\) move the cursor onto the backslash in front of the equations and press <kbd class="kbdkey">ENTER</kbd> twice, as shown in figure (a). Then press <kbd class="kbdkey">GRAPH</kbd>. Your display should look like figure (b).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-GC-feasible.jpg" class="contained" alt="GCdisplays for graphing systems of inequalities"></div></div></div>
 <p id="p-19111">The feasible solutions lie in the crosshatched region that is shaded with both the vertical and horizontal lines. We will use the calculator to evaluate the objective function at each vertex. First, use the <kbd class="kbdkey">TRACE</kbd> (or <em class="emphasis">value</em> or <em class="emphasis">intersect</em> feature) to find the coordinates of one of the vertices, say \((0, 4)\text{.}\) Then press <kbd class="kbdkey">2nd</kbd> <kbd class="kbdkey">QUIT</kbd> to get back to the <em class="emphasis">Home</em> screen; enter the formula for the objective function by keying in</p>
 <div class="displaymath">
 \begin{equation*}
 15X + 25Y
 \end{equation*}
 </div>
-<p data-braille="continuation">(Enter \(Y\) by pressing <kbd class="kbdkey">ALPHA</kbd> \(1\text{.}\)) Your calculator has stored the values \(x=0\) and \(y=4\) from the <kbd class="kbdkey">TRACE</kbd> key, so when you press <kbd class="kbdkey">ENTER</kbd>, the calculator returns \(100\) for the value of \(C\) at that point. Thus, when \(x=0\) and \(y=4\text{,}\) \(C=100\text{.}\)</p>
+<p class="continuation">(Enter \(Y\) by pressing <kbd class="kbdkey">ALPHA</kbd> \(1\text{.}\)) Your calculator has stored the values \(x=0\) and \(y=4\) from the <kbd class="kbdkey">TRACE</kbd> key, so when you press <kbd class="kbdkey">ENTER</kbd>, the calculator returns \(100\) for the value of \(C\) at that point. Thus, when \(x=0\) and \(y=4\text{,}\) \(C=100\text{.}\)</p>
 <p id="p-19112">Similarly, you can verify that \(C=135\) when \(x=9\) and \(y=0\text{,}\) and that when \(x=3\) and \(y=2\text{,}\) \(C-95\text{.}\) Thus, the minimum cost of \(\$95\) occurs when \(x=3\) and \(y=2\text{.}\)</p></article></section><section class="subsection" id="summary-8-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Section Summary</span>
 </h3>
@@ -567,14 +575,14 @@ y \amp\ge(9 - x)/3
 <ol id="p-19117" class="decimal">
 <li id="li-10275"><p id="p-19118"><dfn class="terminology">Linear programming</dfn> is a technique for finding the maximum or minimum value of an <dfn class="terminology">objective function</dfn>, subject to a system of <dfn class="terminology">constraints</dfn>.</p></li>
 <li id="li-10276"><p id="p-19119">The optimum solution occurs at one of the vertices of the set of <dfn class="terminology">feasible solutions</dfn>.</p></li>
-<li id="li-10277"><article class="assemblage assemblage-like" id="assemblage-223"><h6 class="heading"><span class="title">To Solve a Linear Programming Problem:.</span></h6>
+<li id="li-10277"><p id="p-derived-li-10277"><article class="assemblage assemblage-like" id="assemblage-223"><h6 class="heading"><span class="title">To Solve a Linear Programming Problem:.</span></h6>
 <ol id="p-19120" class="decimal">
 <li id="li-10278"><p id="p-19121">Represent the unknown quantities by variables. Write the objective function and the constraints in terms of the variables.</p></li>
 <li id="li-10279"><p id="p-19122">Graph the solutions to the constraint inequalities.</p></li>
 <li id="li-10280"><p id="p-19123">Find the coordinates of each vertex of the solution set.</p></li>
 <li id="li-10281"><p id="p-19124">Evaluate the objective function at each vertex.</p></li>
 <li id="li-10282"><p id="p-19125">The maximum and minimum values of the objective function occur at vertices of the set of feasible solutions.</p></li>
-</ol></article></li>
+</ol></article></p></li>
 </ol></section><section class="subsubsection" id="subsubsection-167"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">STUDY QUESTIONS</span>
 </h4>
@@ -595,6 +603,7 @@ y \amp\ge(9 - x)/3
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Homework 8.5</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-434">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-505">
 <p id="p-19135">For Problems 1–4, find the minimum value of the cost function \(C = 3x+ 4y\) subject to following constraints:</p>
 <div class="displaymath">
@@ -602,24 +611,29 @@ y \amp\ge(9 - x)/3
 x + y \ge 10, ~~x \le 8, ~~y \le 7, ~~x \ge 0, ~~y \ge 0
 \end{equation*}
 </div>
-<p data-braille="continuation">The graph of the feasible solutions is shown in in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-8-5-1.svg" role="img" style="width: 100%; height: auto;" alt="feasible set, C=3x+4y"></div></div></div>
+<p class="continuation">The graph of the feasible solutions is shown in in the figure.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-8-5-1.svg" role="img" class="contained" alt="feasible set, C=3x+4y"></div></div></div>
 </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-3513"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-19136">Use a graph to explain why it is impossible in this situation to have a cost as low as $\(12\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><p id="p-19137">Draw the graph of \(12 = 3x + 4y\) on the graph of the feasible solutions.)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><p id="p-19137">Draw the graph of \(12 = 3x + 4y\) on the graph of the feasible solutions.)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2406" id="answer-2406"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2406"><div class="answer solution-like"><p id="p-19138">The graph of \(12 = 3x + 4y\) does not intersect the set of feasible solutions.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-3514"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-19139">Use a graph to explain why the cost will not be as great as $\(60\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><p id="p-19140">Draw the graph of \(60 = 3x + 4y\) together with the graph of the feasible solutions.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><p id="p-19140">Draw the graph of \(60 = 3x + 4y\) together with the graph of the feasible solutions.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-3515"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-19141">Use a graph to determine which vertex of the shaded region will correspond to the minimum cost. What is the minimum cost?</p></article><article class="exercise exercise-like" id="exercise-3516"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-19141">Use a graph to determine which vertex of the shaded region will correspond to the minimum cost. What is the minimum cost?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2407" id="answer-2407"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2407"><div class="answer solution-like"><p id="p-19142">\((8, 2)\text{;}\) $\(32\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3516"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-19143">Use a graph to determine which vertex of the shaded region will correspond to the maximum cost. What is the maximum cost?</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-435">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-506">
 <p id="p-19144">For Problems 5–8, find the minimum value of the profit function \(P = 4x - 2y\) subject to the following constraints:</p>
 <div class="displaymath">
@@ -627,18 +641,28 @@ x + y \ge 10, ~~x \le 8, ~~y \le 7, ~~x \ge 0, ~~y \ge 0
 5x- y \ge 22, ~~x + y\le 8, ~~x \ge 0, ~~y \ge 0
 \end{equation*}
 </div>
-<p data-braille="continuation">The graph of the feasible solutions is shown in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-8-5-5.svg" role="img" style="width: 100%; height: auto;" alt="feasible set, P=4x-2y"></div></div></div>
+<p class="continuation">The graph of the feasible solutions is shown in the figure.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-8-5-5.svg" role="img" class="contained" alt="feasible set, P=4x-2y"></div></div></div>
 </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-3517"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-19145">Graph the line that corresponds to a profit of \(\$8\text{.}\) Find the coordinates of at least one feasible solution that gives a profit of $\(8\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-3518"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-19145">Graph the line that corresponds to a profit of \(\$8\text{.}\) Find the coordinates of at least one feasible solution that gives a profit of $\(8\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2408" id="answer-2408"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2408"><div class="answer solution-like"><p id="p-19146">\((2,0) \)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3518"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="p-19147">Graph the line that corresponds to a profit of $\(22\text{.}\) Find the coordinates of at least one feasible solution that gives a profit of \(\$22\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-3519"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <ol id="p-19148" class="lower-alpha">
 <li id="li-10290"><p id="p-19149">Which line is farther from the origin, the line for a profit of $\(8\) or the line for the profit of $\(22\text{?}\)</p></li>
 <li id="li-10291"><p id="p-19150">Use a graph to determine which vertex corresponds to a maximum profit.</p></li>
 <li id="li-10292"><p id="p-19151">Find the maximum profit.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-3520"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2409" id="answer-2409"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2409"><div class="answer solution-like"><ol id="p-19152" class="lower-alpha">
+<li id="li-10293"><p id="p-19153">$\(22\)</p></li>
+<li id="li-10294"><p id="p-19154">\(\displaystyle (8, 0)\)</p></li>
+<li id="li-10295"><p id="p-19155">$\(32\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3520"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <ol id="p-19156" class="lower-alpha">
 <li id="li-10296"><p id="p-19157">Use a graph to determine which vertex corresponds to a minimum profit.</p></li>
 <li id="li-10297"><p id="p-19158">Find the minimum profit.</p></li>
@@ -646,6 +670,7 @@ x + y \ge 10, ~~x \le 8, ~~y \le 7, ~~x \ge 0, ~~y \ge 0
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-436">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-507">
 <p id="p-19159">For Problems 9–12, objective functions and the graphs of the feasible solutions are given.</p>
 <ol class="lower-alpha">
@@ -656,16 +681,29 @@ x + y \ge 10, ~~x \le 8, ~~y \le 7, ~~x \ge 0, ~~y \ge 0
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-3521"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="p-19162">\(C = 3x + y\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-8-5-9.svg" role="img" style="width: 100%; height: auto;" alt="feasible points"></div></div></div></article><article class="exercise exercise-like" id="exercise-3522"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-8-5-9.svg" role="img" class="contained" alt="feasible points"></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2410" id="answer-2410"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2410"><div class="answer solution-like"><ol id="p-19163" class="lower-alpha">
+<li id="li-10300"><p id="p-19164">\((1,4) \text{;}\) \(7\)</p></li>
+<li id="li-10301"><p id="p-19165">\((4,5) \text{;}\) \(17\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3522"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="p-19166">\(C = x + 4y\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-8-5-10.svg" role="img" style="width: 100%; height: auto;" alt="feasible points"></div></div></div></article><article class="exercise exercise-like" id="exercise-3523"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-8-5-10.svg" role="img" class="contained" alt="feasible points"></div></div></div></article><article class="exercise exercise-like" id="exercise-3523"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="p-19167">\(C = 5x - 2y\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-8-5-11.svg" role="img" style="width: 100%; height: auto;" alt="feasible points"></div></div></div></article><article class="exercise exercise-like" id="exercise-3524"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-8-5-11.svg" role="img" class="contained" alt="feasible points"></div></div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2411" id="answer-2411"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2411"><div class="answer solution-like"><ol id="p-19168" class="lower-alpha">
+<li id="li-10302"><p id="p-19169">\((0,5) \text{;}\) \(-10\)</p></li>
+<li id="li-10303"><p id="p-19170">\((5,0) \text{;}\) \(25\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3524"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="p-19171">\(C = 2x - y\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-8-5-12.svg" role="img" style="width: 100%; height: auto;" alt="feasible points"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-8-5-12.svg" role="img" class="contained" alt="feasible points"></div></div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-437">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-508">
 <p id="p-19172">For Problems 13–18,</p>
 <ol class="lower-alpha">
@@ -676,15 +714,25 @@ x + y \ge 10, ~~x \le 8, ~~y \le 7, ~~x \ge 0, ~~y \ge 0
 </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-3525"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-19176">Objective function \(C = 3x + 2y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(2x + y\le 8\text{,}\) \(4x + 6y \le 24\)</p></article><article class="exercise exercise-like" id="exercise-3526"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-19176">Objective function \(C = 3x + 2y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(2x + y\le 8\text{,}\) \(4x + 6y \le 24\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2412" id="answer-2412"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2412"><div class="answer solution-like"><p id="p-19177">b. \((0,0) \text{;}\) \(0\hphantom{000}\)c. \((3,2) \text{;}\) \(13\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3526"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="p-19178">Objective function \(C = -2x + y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(x-2y \ge -10\text{,}\) \(2x+y\le 10\)</p></article><article class="exercise exercise-like" id="exercise-3527"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-19179">Objective function \(C = 3x - y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(x + y\le 14\text{,}\) \(5x + y \le 50\)</p></article><article class="exercise exercise-like" id="exercise-3528"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-19179">Objective function \(C = 3x - y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(x + y\le 14\text{,}\) \(5x + y \le 50\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2413" id="answer-2413"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2413"><div class="answer solution-like"><p id="p-19180">b. \((0,14) \text{;}\) \(-14\hphantom{000}\)c. \((0,0) \text{;}\) \(30\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3528"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <p id="p-19181">Objective function \(C = 5x + 4y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(2x+y \le 10\text{,}\) \(x-3y\ge -3\)</p></article><article class="exercise exercise-like" id="exercise-3529"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
-<p id="p-19182">Objective function \(C = 200x - 20y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(3x + 2y\le 24\text{,}\) \(x + y \le 9\text{,}\) \(x + 2y \le 16\)</p></article><article class="exercise exercise-like" id="exercise-3530"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-19182">Objective function \(C = 200x - 20y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(3x + 2y\le 24\text{,}\) \(x + y \le 9\text{,}\) \(x + 2y \le 16\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2414" id="answer-2414"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2414"><div class="answer solution-like"><p id="p-19183">b. \((0,8) \text{;}\) \(-160\hphantom{000}\)c. \((8,0) \text{;}\) \(1600\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3530"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="p-19184">Objective function \(C = 54x + 24y\) with constraints \(x\ge 0\text{,}\) \(y\ge 0\text{,}\) \(3x + 2y \le 24\text{,}\) \(3x-y\le 15\text{,}\) \(3x - 4y \ge -12\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-438">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-509">
 <p id="p-19185">For Problems 19–26, solve each linear programming problem by graphing.</p>
 <ol class="lower-alpha">
@@ -696,28 +744,62 @@ x + y \ge 10, ~~x \le 8, ~~y \le 7, ~~x \ge 0, ~~y \ge 0
 </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-3531"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<p id="p-19190">The math club is selling tickets for a show by a mathemagician. Student tickets will cost $\(1\) and faculty tickets will cost $\(2\text{.}\) The ticket receipts must be at least \(\$250\) to cover the fee for the performer. An alumna promises to donate one calculator for each student ticket sold and three calculators for each faculty ticket sold. What is the minimum number of calculators that the alumna will donate?</p></article><article class="exercise exercise-like" id="exercise-3532"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-19190">The math club is selling tickets for a show by a mathemagician. Student tickets will cost $\(1\) and faculty tickets will cost $\(2\text{.}\) The ticket receipts must be at least \(\$250\) to cover the fee for the performer. An alumna promises to donate one calculator for each student ticket sold and three calculators for each faculty ticket sold. What is the minimum number of calculators that the alumna will donate?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2415" id="answer-2415"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2415"><div class="answer solution-like"><ol id="p-19191" class="lower-alpha cols2">
+<li id="li-10311"><p id="p-19192">\(\displaystyle C = x + 3y\)</p></li>
+<li id="li-10312"><p id="p-19193">\(\displaystyle x \ge 0, ~y \ge 0, ~x + 2y \ge 250\)</p></li>
+<li id="li-10313"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-ans-8-4-37.svg" role="img" class="contained" alt="system of inequalities"></div></div></div></li>
+<li id="li-10314"><p id="p-19194">\(\displaystyle 250\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3532"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="p-19195">The math department is having a book sale of unwanted textbooks to raise funds for $\(300\) in scholarships. Paperback textbooks will be sold for $\(2\) and the hardcover textbooks will be sold for $\(5\text{.}\) If paperback texts weigh \(2\) pounds each and hardcover books weigh \(3\) pounds each, find the minimum weight of textbooks the department must sell in order to raise its required funds.</p></article><article class="exercise exercise-like" id="exercise-3533"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
-<p id="p-19196">Jeannette has \(180\) acres of farmland for growing wheat or soy. Each acre of wheat requires two hours of labor at harvest time, and each acre of soy needs one hour of labor. Jeannette will have \(240\) hours of labor available at harvest time. Find the maximum profit Jeannette can make from her two crops if she can get a profit of $\(36\) per acre for wheat and $\(24\) per acre for soy.</p></article><article class="exercise exercise-like" id="exercise-3534"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="p-19196">Jeannette has \(180\) acres of farmland for growing wheat or soy. Each acre of wheat requires two hours of labor at harvest time, and each acre of soy needs one hour of labor. Jeannette will have \(240\) hours of labor available at harvest time. Find the maximum profit Jeannette can make from her two crops if she can get a profit of $\(36\) per acre for wheat and $\(24\) per acre for soy.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2416" id="answer-2416"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2416"><div class="answer solution-like"><ol id="p-19197" class="lower-alpha cols2">
+<li id="li-10315"><p id="p-19198">\(\displaystyle P = 36x + 24y\)</p></li>
+<li id="li-10316"><p id="p-19199">\(x \ge 0\text{,}\) \(~y \ge 0\text{,}\) \(~x + y \le 180\text{,}\) \(~2x+y\le 240\)</p></li>
+<li id="li-10317"><p id="p-19200">vertices at \((0,0)\text{,}\) \((120,0)\text{,}\) \((60,120)\text{,}\) \((0,180) \)</p></li>
+<li id="li-10318"><p id="p-19201">$\(5040\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3534"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-19202">Vassilis has at most $\(10,000\) to invest in two banks. Alpha Bank will pay \(6\%\) annual interest and Bank Beta pays \(5\%\) annual interest. Alpha Bank will only insure up to $\(6000\text{,}\) so Vassilis will invest no more than that with Alpha. What is the maximum amount of interest Vassilis can earn in \(1\) year?</p></article><article class="exercise exercise-like" id="exercise-3535"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
-<p id="p-19203">Gary's pancake recipe includes corn meal and whole wheat flour. Corn meal has \(2.4\) grams of linoleic acid and \(2.5\) milligrams of niacin per cup. Whole wheat flour has \(0.8\) gram of linoleic acid and \(5.2\) milligrams of niacin per cup. These two dry ingredients do not exceed \(3\) cups total. They combine for at least \(3.2\) grams of linoleic acid and at least \(10\) milligrams of niacin. Minimize the number of calories possible in the recipe if corn meal has \(433\) calories per cup and whole wheat flour has \(400\) calories per cup.</p></article><article class="exercise exercise-like" id="exercise-3536"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
+<p id="p-19203">Gary's pancake recipe includes corn meal and whole wheat flour. Corn meal has \(2.4\) grams of linoleic acid and \(2.5\) milligrams of niacin per cup. Whole wheat flour has \(0.8\) gram of linoleic acid and \(5.2\) milligrams of niacin per cup. These two dry ingredients do not exceed \(3\) cups total. They combine for at least \(3.2\) grams of linoleic acid and at least \(10\) milligrams of niacin. Minimize the number of calories possible in the recipe if corn meal has \(433\) calories per cup and whole wheat flour has \(400\) calories per cup.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2417" id="answer-2417"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2417"><div class="answer solution-like"><ol id="p-19204" class="lower-alpha cols2">
+<li id="li-10319"><p id="p-19205">\(\displaystyle C = 433x + 400y\)</p></li>
+<li id="li-10320"><p id="p-19206">\(x \ge 0\text{,}\) \(~y \ge 0\text{,}\) \(~2.4x + 0.8y \ge 3.2\text{,}\) \(~2.5x + 5.2y \ge 10\)</p></li>
+<li id="li-10321"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/photos/fig-ans-8-4-41.svg" role="img" class="contained" alt="system of inequalities"></div></div></div></li>
+<li id="li-10322"><p id="p-19207">\(967.7\) cal</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3536"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="p-19208">Cho requires \(1\) hour of cutting and \(2\) hours of sewing to make a Batman costume. He requires \(2\) hours of cutting and \(1\) hour of sewing to make a Wonder Woman costume. At most \(10\) hours per day are available for cutting and at most \(8\) hours per day are available for sewing. At least one costume must be made each day to stay in business. Find Cho's maximum income from selling one day's costumes if a Batman costume costs $\(68\) and a Wonder Woman costume costs $\(76\text{.}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-439">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-510"><p id="p-19209">For Problems 25–30, use a graphing calculator to find approximate values for the maximum and minimum of the objective function.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-3537"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
-<p id="p-19210">Objective function \(C = 8.7x - 4.2y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(1.7x - 4.5y \ge -9\text{,}\) \(14.3x + 10.9y\le 28.6\)</p></article><article class="exercise exercise-like" id="exercise-3538"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
+<p id="p-19210">Objective function \(C = 8.7x - 4.2y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(1.7x - 4.5y \ge -9\text{,}\) \(14.3x + 10.9y\le 28.6\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2418" id="answer-2418"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2418"><div class="answer solution-like"><p id="p-19211">Maximum \(17.4\text{;}\) minimum \(-8.4\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3538"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="p-19212">Objective function \(C = -142x + 83y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(21x - 49y \ge -147\text{,}\) \(19x + 21y\le 171\)</p></article><article class="exercise exercise-like" id="exercise-3539"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
-<p id="p-19213">Objective function \(C = 312x + 92y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(18x + 17y \le 284\text{,}\) \(51x + 11y\le 656\)</p></article><article class="exercise exercise-like" id="exercise-3540"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
+<p id="p-19213">Objective function \(C = 312x + 92y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(18x + 17y \le 284\text{,}\) \(51x + 11y\le 656\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2419" id="answer-2419"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2419"><div class="answer solution-like"><p id="p-19214">Maximum \(4112\text{;}\) minimum \(0\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3540"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <p id="p-19215">Objective function \(C = 5.3x + 4.2y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(2.5x + 1.7y \le 20.1\text{,}\) \(0.09x - 0.31y \ge -0.39\)</p></article><article class="exercise exercise-like" id="exercise-3541"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
-<p id="p-19216">Objective function \(C = 202x + 220y\) with constraints \(x\ge 0\text{,}\) \(y \ge 0\text{,}\) \(38x + 24y \le 294\text{,}\) \(35x + 34y \le 310\text{,}\) \(13x + 29y \le 197\)</p></article><article class="exercise exercise-like" id="exercise-3542"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
+<p id="p-19216">Objective function \(C = 202x + 220y\) with constraints \(x\ge 0\text{,}\) \(y \ge 0\text{,}\) \(38x + 24y \le 294\text{,}\) \(35x + 34y \le 310\text{,}\) \(13x + 29y \le 197\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2420" id="answer-2420"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-2420"><div class="answer solution-like"><p id="p-19217">Maximum \(1908\text{;}\) minimum \(0\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3542"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
 <p id="p-19218">Objective function \(C = 54x + 24y\) with constraints \(x \ge 0\text{,}\) \(y \ge 0\text{,}\) \(43x + 32y \le 333\text{,}\) \(23x - 9y \le 152\text{,}\) \(73x - 94y\ge -296\)</p></article>
 </div>
 </div></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12421177;
 var sc_invisible=1;
 var sc_security="3189a41a";
@@ -725,7 +807,7 @@ var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
 </script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
