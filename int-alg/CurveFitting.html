@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:55:15-07:00       *-->
+<!--*       on 2021-08-27T15:51:13-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Curve Fitting</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="CurveFitting"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Curve Fitting</span>
@@ -234,19 +240,19 @@ true);
 y=mx+b
 \end{equation*}
 </div>
-<p data-braille="continuation">To find a specific line we must find values for the two <dfn class="terminology">parameters</dfn> (constants) \(m\) and \(b\text{.}\) We need two data points in order to find those two parameters.  A quadratic equation, however, has three parameters, \(a,~b,\) and \(c\text{:}\)</p>
+<p class="continuation">To find a specific line we must find values for the two <dfn class="terminology">parameters</dfn> (constants) \(m\) and \(b\text{.}\) We need two data points in order to find those two parameters.  A quadratic equation, however, has three parameters, \(a,~b,\) and \(c\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 y=ax^2+bx+c
 \end{equation*}
 </div>
-<p data-braille="continuation">To find these parameters we need three data points.</p>
+<p class="continuation">To find these parameters we need three data points.</p>
 <article class="example example-like" id="example-81"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.34</span><span class="period">.</span>
 </h6>
 <p id="p-4348">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the points \((1, 3)\text{,}\) \((3, 5)\text{,}\) and \((4, 9)\) lie on the graph of \(y = ax^2 + bx + c\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-213" id="solution-213"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-213"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-213" id="solution-213"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-213"><div class="solution solution-like">
 <p id="p-4349">We substitute the coordinates of each of the three points into the equation of the parabola to obtain three equations:</p>
 <div class="displaymath">
 \begin{align*}
@@ -255,7 +261,7 @@ y=ax^2+bx+c
 \alert{9} =\amp a(\alert{4})^2 + b(\alert{4}) + c \amp
 \end{align*}
 </div>
-<p data-braille="continuation">or, equivalently,</p>
+<p class="continuation">or, equivalently,</p>
 <div class="displaymath">
 \begin{align*}
 a + b  + c \amp =  3 \amp\amp(1)\\
@@ -263,27 +269,27 @@ a + b  + c \amp =  3 \amp\amp(1)\\
 16a +  4b + c \amp = 9 \amp\amp(3)
 \end{align*}
 </div>
-<p data-braille="continuation">This is a system of three equations in the three unknowns \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) To solve the system, we use Gaussian reduction. We first eliminate \(c\text{.}\) We subtract Equation (1) from Equation (2) to obtain</p>
+<p class="continuation">This is a system of three equations in the three unknowns \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) To solve the system, we use Gaussian reduction. We first eliminate \(c\text{.}\) We subtract Equation (1) from Equation (2) to obtain</p>
 <div class="displaymath">
 \begin{equation*}
 8a + 2b = 2 \hphantom{blankblank}(4)
 \end{equation*}
 </div>
-<p data-braille="continuation">and then subtract Equation (1) from Equation (3) to get</p>
+<p class="continuation">and then subtract Equation (1) from Equation (3) to get</p>
 <div class="displaymath">
 \begin{equation*}
 15a + 3b = 6 \hphantom{blankblank}(5)
 \end{equation*}
 </div>
-<p data-braille="continuation">We now have a system of two linear equations in two variables:</p>
+<p class="continuation">We now have a system of two linear equations in two variables:</p>
 <div class="displaymath">
 \begin{align*}
 8a + 2b  \amp = 2 \amp\amp(4)\\
 15a +3b  \amp = 6 \amp\amp(5)
 \end{align*}
 </div>
-<p data-braille="continuation">Next, we eliminate \(b\) from Equations (4) and (5): we add \(-3\) times Equation (4) to \(2\) times Equation (5) to get </p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p class="continuation">Next, we eliminate \(b\) from Equations (4) and (5): we add \(-3\) times Equation (4) to \(2\) times Equation (5) to get </p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(-24a\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(-\)</td>
@@ -291,7 +297,7 @@ a + b  + c \amp =  3 \amp\amp(1)\\
 <td class="r m b0 r0 l0 t0 lines">\(=\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(-6\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(\hphantom{blank}\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(-3\times(4)\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(-3\times(4)\)</td>
 </tr>
 <tr>
 <td class="r m b1 r0 l0 t0 lines">\(30a\)</td>
@@ -300,7 +306,7 @@ a + b  + c \amp =  3 \amp\amp(1)\\
 <td class="r m b1 r0 l0 t0 lines">\(=\)</td>
 <td class="r m b1 r0 l0 t0 lines">\(12\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(2\times(5)\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(2\times(5)\)</td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(6a\)</td>
@@ -309,7 +315,7 @@ a + b  + c \amp =  3 \amp\amp(1)\\
 <td class="r m b0 r0 l0 t0 lines">\(=\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(6\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-4350">or \(a = 1\text{.}\) We substitute \(1\) for \(a\) in Equation (4) to find</p>
@@ -319,28 +325,29 @@ a + b  + c \amp =  3 \amp\amp(1)\\
 b \amp= -3
 \end{align*}
 </div>
-<p data-braille="continuation">Finally, we substitute \(-3\) for \(b\) and \(1\) for \(a\) in Equation (1) to find</p>
+<p class="continuation">Finally, we substitute \(-3\) for \(b\) and \(1\) for \(a\) in Equation (1) to find</p>
 <div class="displaymath">
 \begin{align*}
 \alert{1} + (\alert{-3}) + c\amp = 3\amp\amp \blert{\text{Solve for }c.}\\
 c \amp = 5
 \end{align*}
 </div>
-<p data-braille="continuation">Thus, the equation of the parabola is</p>
+<p class="continuation">Thus, the equation of the parabola is</p>
 <div class="displaymath">
 \begin{equation*}
 y = x^2 - 3x + 5
 \end{equation*}
 </div>
-<p data-braille="continuation">The parabola and the three points are shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-parabola-through-3-specified-points.svg" role="img" style="width: 100%; height: auto;" alt="parabola through-3 specified points"></div></div></div>
+<p class="continuation">The parabola and the three points are shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-parabola-through-3-specified-points.svg" role="img" class="contained" alt="parabola through-3 specified points"></div></div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-669"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-669"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-669"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.35</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-669"><article class="exercise exercise-like"><iframe name="webwork-134" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=134&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICAzLCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICAyLCAKKTsKJGMgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICA0LCAKKTsKJGQgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKRmlsbCBpbiB0aGUgYmxhbmtzLiBUbyBmaW5kIHRoZSBlcXVhdGlvbiBmb3IgYSBwYXJhYm9sYToKYS4gIFdlIGNhbiB1c2UgdGhlIGZvcm11bGEgW2B%2BeT1hKHgteF92KV4yK3lfdn5gXSBpZiB3ZSBrbm93IHRoZSBbX117JGF9ezV9IGFuZCBvbmUgb3RoZXIgcG9pbnQuCmEuICBXZSBjYW4gdXNlIHRoZSBmb3JtdWxhIFtgfnk9YSh4LXJfMSkoeC1yXzIpfmBdIGlmIHdlIGtub3cgdGhlIFtfXXskYn17NX0gYW5kIG9uZSBvdGhlciBwb2ludC4KYS4gIE90aGVyd2lzZSwgd2UgbXVzdCBrbm93IGF0IGxlYXN0IFtfXXskY317NX0gcG9pbnRzIG9uIHRoZSBncmFwaC4KYS4gIEluIHRoYXQgY2FzZSwgd2UgdXNlIFtfXXskZH17NX0gdG8gc29sdmUgZm9yIHRoZSBwYXJhbWV0ZXJzIG9mIHRoZSBlcXVhdGlvbi4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIHZlcnRleAphLiAgW2B4YF0taW50ZXJjZXB0cwphLiAgdGhyZWUKYS4gIEdhdXNzaWFuIHJlZHVjdGlvbiAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="134"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-670"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-670"><h6 class="heading">
+</h6>
+<iframe name="webwork-134" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=134&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICAzLCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICAyLCAKKTsKJGMgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICA0LCAKKTsKJGQgPSBQb3BVcCgKICBbIj8iLCJHYXVzc2lhbiByZWR1Y3Rpb24iLCAieC1pbnRlcmNlcHRzIiwgInZlcnRleCIsICJ0aHJlZSIsICJvbmUiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKRmlsbCBpbiB0aGUgYmxhbmtzLiBUbyBmaW5kIHRoZSBlcXVhdGlvbiBmb3IgYSBwYXJhYm9sYToKYS4gIFdlIGNhbiB1c2UgdGhlIGZvcm11bGEgW2B%2BeT1hKHgteF92KV4yK3lfdn5gXSBpZiB3ZSBrbm93IHRoZSBbX117JGF9ezV9IGFuZCBvbmUgb3RoZXIgcG9pbnQuCmEuICBXZSBjYW4gdXNlIHRoZSBmb3JtdWxhIFtgfnk9YSh4LXJfMSkoeC1yXzIpfmBdIGlmIHdlIGtub3cgdGhlIFtfXXskYn17NX0gYW5kIG9uZSBvdGhlciBwb2ludC4KYS4gIE90aGVyd2lzZSwgd2UgbXVzdCBrbm93IGF0IGxlYXN0IFtfXXskY317NX0gcG9pbnRzIG9uIHRoZSBncmFwaC4KYS4gIEluIHRoYXQgY2FzZSwgd2UgdXNlIFtfXXskZH17NX0gdG8gc29sdmUgZm9yIHRoZSBwYXJhbWV0ZXJzIG9mIHRoZSBlcXVhdGlvbi4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIHZlcnRleAphLiAgW2B4YF0taW50ZXJjZXB0cwphLiAgdGhyZWUKYS4gIEdhdXNzaWFuIHJlZHVjdGlvbiAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="134"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-670"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.36</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-670"><article class="exercise exercise-like"><iframe name="webwork-135" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=135&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0TGltaXRlZFBvbHlub21pYWwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiTGltaXRlZFBvbHlub21pYWwiKS0%2BZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0%2BIDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0%2BIDAsICAgKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHNpbmdsZVBvd2Vycz0%2BMSk7CiAkYW5zd2VyPSBGb3JtdWxhKCIgLTEvNSp4XjIrNHgrODAiKTsKCkJFR0lOX1BHTUwKYS4gIEZpbmQgdGhlIGVxdWF0aW9uIG9mIGEgcGFyYWJvbGEKCiAgICBbYGBgeSA9IGF4XjIgKyBieCArIGNgYGBdCgogICAgdGhhdCBwYXNzZXMgdGhyb3VnaCB0aGUgcG9pbnRzIFtgKDAsIDgwKVx0ZXh0eyx9YF0gW2AoMTUsIDk1KVx0ZXh0eyx9YF0gYW5kIFtgKDI1LCA1NSlcdGV4dHsufWBdCgogICAgW2B5PWBdW19deyRhbnN3ZXJ9ezE1fQoKCmEuICBQbG90IHRoZSBkYXRhIHBvaW50cyBhbmQgc2tldGNoIHRoZSBwYXJhYm9sYS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgeSA9IFxmcmFjey0xfXs1fSB4XjIgKyA0eCArIDgwYF0KCgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="135"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-15"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:70%;"><div class="sbspanel" style="width:83.3333333333333%;justify-content:flex-start;"><img src="images/fig-parabola-through-3points.svg" role="img" style="width: 100%; height: auto;" alt="parabola"></div></div></div></div></article></div></section><section class="subsection" id="subsection-84"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-135" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=135&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0TGltaXRlZFBvbHlub21pYWwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiTGltaXRlZFBvbHlub21pYWwiKS0%2BZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0%2BIDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0%2BIDAsICAgKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHNpbmdsZVBvd2Vycz0%2BMSk7CiAkYW5zd2VyPSBGb3JtdWxhKCIgLTEvNSp4XjIrNHgrODAiKTsKCkJFR0lOX1BHTUwKYS4gIEZpbmQgdGhlIGVxdWF0aW9uIG9mIGEgcGFyYWJvbGEKCiAgICBbYGBgeSA9IGF4XjIgKyBieCArIGNgYGBdCgogICAgdGhhdCBwYXNzZXMgdGhyb3VnaCB0aGUgcG9pbnRzIFtgKDAsIDgwKVx0ZXh0eyx9YF0gW2AoMTUsIDk1KVx0ZXh0eyx9YF0gYW5kIFtgKDI1LCA1NSlcdGV4dHsufWBdCgogICAgW2B5PWBdW19deyRhbnN3ZXJ9ezE1fQoKCmEuICBQbG90IHRoZSBkYXRhIHBvaW50cyBhbmQgc2tldGNoIHRoZSBwYXJhYm9sYS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgeSA9IFxmcmFjey0xfXs1fSB4XjIgKyA0eCArIDgwYF0KCgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="135"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-15"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:70%;"><div class="sbspanel top" style="width:83.3333333333333%;"><img src="generated/latex-image/fig-parabola-through-3points.svg" role="img" class="contained" alt="parabola"></div></div></div></div></article></section><section class="subsection" id="subsection-84"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Applications</span>
 </h3>
 <p id="p-4399">The simplest way to fit a parabola to a set of data points is to pick three of the points and find the equation of the parabola that passes through those three points.</p>
@@ -348,14 +355,14 @@ y = x^2 - 3x + 5
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.37</span><span class="period">.</span>
 </h6>
 <p id="p-4400">Major Motors Corporation is testing a new car designed for in-town driving. The data below show the cost of driving the car at different speeds. The speeds, \(v\text{,}\) are given in miles per hour, and the cost, \(C\text{,}\) includes fuel and maintenance for driving the car \(100\) miles at that speed.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r3 l1 t1 lines">\(v\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(30\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(40\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(50\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(60\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(70\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(70\)</td>
 </tr>
 <tr>
 <td class="c m b1 r3 l1 t0 lines">\(C\)</td>
@@ -363,18 +370,18 @@ y = x^2 - 3x + 5
 <td class="c m b1 r1 l0 t0 lines">\(6.00\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(6.20\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(7.80\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(10.60\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(10.60\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-4401">Find a possible quadratic model, \(~C=av^2+bv+c,~\) that expresses \(C\) in terms of \(v\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-216" id="solution-216"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-216"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-216" id="solution-216"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-216"><div class="solution solution-like">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
-<div class="sbspanel" style="width:64.8648648648649%;justify-content:flex-start;">
+<div class="sbspanel top" style="width:64.8648648648649%;">
 <p id="p-4402">When we plot the data, it is clear that the relationship between \(v\) and \(C\) is not linear, but it may be quadratic, as shown at right.</p>
 <p id="p-4403">We will use the last three data points, \((50, 6.20)\text{,}\) \((60, 7.80)\text{,}\) and \((70, 10.60)\text{,}\) to fit a parabola to the data. We would like to find the coefficients \(a\text{,}\) \(b\text{,}\) and \(c\) of a parabola \(C = av^2 + bv + c\) that includes the three data points. This gives us a system of equations:</p>
 </div>
-<div class="sbspanel" style="width:27.027027027027%;justify-content:flex-start;"><img src="images/fig-nonlinear-scatterplot.svg" role="img" style="width: 100%; height: auto;" alt="scatterplot points following parabola shape"></div>
+<div class="sbspanel top" style="width:27.027027027027%;"><img src="external/images/fig-nonlinear-scatterplot.svg" role="img" class="contained" alt="scatterplot points following parabola shape"></div>
 </div></div>
 <div class="displaymath" id="p-4404">
 \begin{align*}
@@ -383,14 +390,14 @@ y = x^2 - 3x + 5
 4900a + 70b + c \amp = 10.6 \amp\amp(3)
 \end{align*}
 </div>
-<p data-braille="continuation">Eliminating \(c\) from Equations (1) and (2) yields Equation (4), and eliminating \(c\) from Equations (2) and (3) yields Equation (5).</p>
+<p class="continuation">Eliminating \(c\) from Equations (1) and (2) yields Equation (4), and eliminating \(c\) from Equations (2) and (3) yields Equation (5).</p>
 <div class="displaymath">
 \begin{align*}
 1100a + 10b  \amp = 1.60 \amp\amp(4)\\
 1300a + 10b  \amp = 2.8 \amp\amp(5)
 \end{align*}
 </div>
-<p data-braille="continuation">Eliminating \(b\) from Equations (4) and (5) gives us</p>
+<p class="continuation">Eliminating \(b\) from Equations (4) and (5) gives us</p>
 <div class="displaymath">
 \begin{align*}
 200a \amp= 1.20\\
@@ -398,7 +405,7 @@ a \amp= 0.006
 \end{align*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:68.4210526315789%;justify-content:flex-start;">
+<div class="sbspanel top" style="width:68.4210526315789%;">
 <p id="p-4405">We substitute this value into Equation (4) to find \(b = -0.5\text{,}\) then substitute both values into Equation (1) to find \(c = 16.2\text{.}\)</p>
 <p id="p-4406">Thus, our quadratic model is</p>
 <div class="displaymath">
@@ -406,18 +413,19 @@ a \amp= 0.006
 C = 0.006v^2 - 0.5v + 16.2
 \end{equation*}
 </div>
-<p data-braille="continuation">The graph of this equation, along with the data points, is shown at right.</p>
+<p class="continuation">The graph of this equation, along with the data points, is shown at right.</p>
 </div>
-<div class="sbspanel" style="width:26.3157894736842%;justify-content:flex-start;"><img src="images/fig-parabola-fitting-scatterplot.svg" role="img" style="width: 100%; height: auto;" alt="parabola fitting nonlinear scatterplot"></div>
+<div class="sbspanel top" style="width:26.3157894736842%;"><img src="external/images/fig-parabola-fitting-scatterplot.svg" role="img" class="contained" alt="parabola fitting nonlinear scatterplot"></div>
 </div></div>
 </div></div>
 </div></article><p id="p-4407">As was the case with linear regression, the graph of the regression equation may not pass through all of the data points, but it should be close to most of them.</p>
-<article class="exercise exercise-like" id="exercise-671"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-671"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-671"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.38</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-671"><article class="exercise exercise-like"><iframe name="webwork-136" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=136&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5hZGQodD0%2BIlJlYWwiKTsKJGEgPSBDb21wdXRlKCIwLjc1Iik7CiRiID0gQ29tcHV0ZSgiLTEuODUiKTsKJGMgPSBDb21wdXRlKCI1Ni4yIik7CiRwID0gRm9ybXVsYSgiJGEqdCoqMiArICRiICp0ICsgJGMiKTsKJHQgPSA1OwokYW5zd2VyID0gJHAtPmV2YWwodD0%2BJHQpOwoKQkVHSU5fUEdNTApUaGUgZGF0YSBiZWxvdyBzaG93IEFtZXJpY2FucycgYW5udWFsIHBlciBjYXBpdGEgY29uc3VtcHRpb24gb2YgY2hpY2tlbiBmb3Igc2V2ZXJhbCB5ZWFycyBzaW5jZSAxOTg1LgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnWWVhcicpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODYnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODcnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODgnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODknKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5OTAnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1BvdW5kcyBvZiBjaGlja2VuJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUxLjNgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A1NS41YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNTcuNGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDYwLjhgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2My42YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgphLiAgVXNlIHRoZSB2YWx1ZXMgZm9yIDE5ODcgdGhyb3VnaCAxOTg5IHRvIGZpdCBhIHF1YWRyYXRpYyBlcXVhdGlvbiB0byB0aGUgZGF0YSwgW2B%2BQz1hdF4yK2J0K2MsfmBdIHdoZXJlIFtgdGBdIGlzIG1lYXN1cmVkIGluIHllYXJzIHNpbmNlIDE5ODUuCgogICAgW2BDPWBdW19deyRwfXsxOH0KCgphLiAgV2hhdCBkb2VzIHlvdXIgZXF1YXRpb24gcHJlZGljdCBmb3IgcGVyIGNhcGl0YSBjaGlja2VuIGNvbnN1bXB0aW9uIGluIDE5OTA%2FCgogICAgQW5zd2VyOiBbX117JGFuc3dlcn17M30gbGJzCgoKYS4gIFNrZXRjaCB0aGUgZ3JhcGggb2YgeW91ciBlcXVhdGlvbiBhbmQgdGhlIGdpdmVuIGRhdGEuIERvZXMgeW91ciBtb2RlbCBwcm92aWRlIGEgZ29vZCBmaXQgZm9yIHRoZSBkYXRhPwoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2BDPTAuNzV0XjItMS44NXQrNTYuMmBdCgoKYS4gIDY1LjcgbGJzCgoKYS4gIEEgZ3JhcGggaXMgYmVsb3cuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="136"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-16"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:30%;"><div class="sbspanel" style="width:35.7142857142857%;justify-content:flex-start;"><img src="images/fig-chicken-consumption.svg" role="img" style="width: 100%; height: auto;" alt="scatterplot and parabola fit"></div></div></div></div></article></div>
-<article class="exercise exercise-like" id="exercise-672"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-672"><h6 class="heading">
+</h6>
+<iframe name="webwork-136" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=136&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5hZGQodD0%2BIlJlYWwiKTsKJGEgPSBDb21wdXRlKCIwLjc1Iik7CiRiID0gQ29tcHV0ZSgiLTEuODUiKTsKJGMgPSBDb21wdXRlKCI1Ni4yIik7CiRwID0gRm9ybXVsYSgiJGEqdCoqMiArICRiICp0ICsgJGMiKTsKJHQgPSA1OwokYW5zd2VyID0gJHAtPmV2YWwodD0%2BJHQpOwoKQkVHSU5fUEdNTApUaGUgZGF0YSBiZWxvdyBzaG93IEFtZXJpY2FucycgYW5udWFsIHBlciBjYXBpdGEgY29uc3VtcHRpb24gb2YgY2hpY2tlbiBmb3Igc2V2ZXJhbCB5ZWFycyBzaW5jZSAxOTg1LgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnWWVhcicpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODYnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODcnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODgnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5ODknKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE5OTAnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1BvdW5kcyBvZiBjaGlja2VuJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUxLjNgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A1NS41YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNTcuNGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDYwLjhgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2My42YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgphLiAgVXNlIHRoZSB2YWx1ZXMgZm9yIDE5ODcgdGhyb3VnaCAxOTg5IHRvIGZpdCBhIHF1YWRyYXRpYyBlcXVhdGlvbiB0byB0aGUgZGF0YSwgW2B%2BQz1hdF4yK2J0K2MsfmBdIHdoZXJlIFtgdGBdIGlzIG1lYXN1cmVkIGluIHllYXJzIHNpbmNlIDE5ODUuCgogICAgW2BDPWBdW19deyRwfXsxOH0KCgphLiAgV2hhdCBkb2VzIHlvdXIgZXF1YXRpb24gcHJlZGljdCBmb3IgcGVyIGNhcGl0YSBjaGlja2VuIGNvbnN1bXB0aW9uIGluIDE5OTA%2FCgogICAgQW5zd2VyOiBbX117JGFuc3dlcn17M30gbGJzCgoKYS4gIFNrZXRjaCB0aGUgZ3JhcGggb2YgeW91ciBlcXVhdGlvbiBhbmQgdGhlIGdpdmVuIGRhdGEuIERvZXMgeW91ciBtb2RlbCBwcm92aWRlIGEgZ29vZCBmaXQgZm9yIHRoZSBkYXRhPwoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2BDPTAuNzV0XjItMS44NXQrNTYuMmBdCgoKYS4gIDY1LjcgbGJzCgoKYS4gIEEgZ3JhcGggaXMgYmVsb3cuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="136"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-16"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:30%;"><div class="sbspanel top" style="width:35.7142857142857%;"><img src="external/images/fig-chicken-consumption.svg" role="img" class="contained" alt="scatterplot and parabola fit"></div></div></div></div></article><article class="exercise exercise-like" id="exercise-672"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.39</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-672"><article class="exercise exercise-like"><iframe name="webwork-137" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=137&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UKYS4gIFdlIGNhbiBwbG90IHRoZSBkYXRhIHBvaW50cyB0byBzZWUgd2hhdCB0eXBlIG9mIGN1cnZlIGlzIGFwcHJvcHJpYXRlIGFzIGEgbW9kZWwuICBbX117JFRGfXs1fQphLiAgV2Ugd3JpdGUgYSBzeXN0ZW0gb2YgZXF1YXRpb25zIGluIHdoaWNoIHRoZSBbYHlgXS1jb29yZGluYXRlcyBvZiB0aGUgZGF0YSBwb2ludHMgYXJlIHRoZSB1bmtub3duIHZhbHVlcy4gIFtfXXskRmFsc2V9ezV9CmEuICBBIGdvb2QgcmVncmVzc2lvbiBlcXVhdGlvbiB3aWxsIHBhc3MgdGhyb3VnaCBhbGwgb2YgdGhlIGRhdGEgcG9pbnRzLiAgW19deyRGYWxzZX17NX0KYS4gIEFjY29yZGluZyB0byB0aGUgbW9kZWwgaW4gdGhlIHByZXZpb3VzIEV4YW1wbGUsIGhpZ2hlciBzcGVlZHMgYWx3YXlzIHJlc3VsdCBpbiBoaWdoZXIgZHJpdmluZyBjb3N0cy4gIFtfXXskRmFsc2V9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUcnVlCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="137"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-85"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-137" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=137&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UKYS4gIFdlIGNhbiBwbG90IHRoZSBkYXRhIHBvaW50cyB0byBzZWUgd2hhdCB0eXBlIG9mIGN1cnZlIGlzIGFwcHJvcHJpYXRlIGFzIGEgbW9kZWwuICBbX117JFRGfXs1fQphLiAgV2Ugd3JpdGUgYSBzeXN0ZW0gb2YgZXF1YXRpb25zIGluIHdoaWNoIHRoZSBbYHlgXS1jb29yZGluYXRlcyBvZiB0aGUgZGF0YSBwb2ludHMgYXJlIHRoZSB1bmtub3duIHZhbHVlcy4gIFtfXXskRmFsc2V9ezV9CmEuICBBIGdvb2QgcmVncmVzc2lvbiBlcXVhdGlvbiB3aWxsIHBhc3MgdGhyb3VnaCBhbGwgb2YgdGhlIGRhdGEgcG9pbnRzLiAgW19deyRGYWxzZX17NX0KYS4gIEFjY29yZGluZyB0byB0aGUgbW9kZWwgaW4gdGhlIHByZXZpb3VzIEV4YW1wbGUsIGhpZ2hlciBzcGVlZHMgYWx3YXlzIHJlc3VsdCBpbiBoaWdoZXIgZHJpdmluZyBjb3N0cy4gIFtfXXskRmFsc2V9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUcnVlCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="137"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-85"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using a Calculator for Quadratic Regression</span>
 </h3>
 <p id="p-4447">We can use a graphing calculator to find an approximate quadratic fit for a set of data. The procedure is similar to the steps for linear regression.</p>
@@ -429,36 +437,37 @@ C = 0.006v^2 - 0.5v + 16.2
 <li id="li-2622"><p id="p-4450">How many of the given data points actually lie on the graph of the quadratic approximation?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-219" id="solution-219"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-219"><div class="solution solution-like"><ol id="p-4451" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-219" id="solution-219"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-219"><div class="solution solution-like"><ol id="p-4451" class="lower-alpha">
 <li id="li-2623">
 <p id="p-4452">We press <kbd class="kbdkey">STAT</kbd> <kbd class="kbdkey">ENTER</kbd> and enter the data under columns \(L_1\) and \(L_2\text{,}\) as shown below. Next, we calculate the quadratic regression equation and store it in \(Y_1\) by pressing <kbd class="kbdkey">STAT</kbd> <kbd class="kbdkey">→</kbd>  \(5\) <kbd class="kbdkey">VARS</kbd> <kbd class="kbdkey">→</kbd>  \(1\) \(1\) <kbd class="kbdkey">ENTER</kbd>.</p>
 <p id="p-4453">The regression equation has the form \(y = ax^2 + bx + c\text{,}\) where \(a = 0.0057\text{,}\) \(b = -0.47\text{,}\) and \(c = 15.56\text{.}\) Notice that \(a\text{,}\) \(b\text{,}\) and \(c\) are all close to the values we computed in <a class="xref" data-knowl="./knowl/example-quadratic-fit.html" title="Example 4.37">Example 4.37</a>.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-quadratic-regression.svg" role="img" style="width: 100%; height: auto;" alt="GC lists and GC quadratic regression output"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-quadratic-regression.svg" role="img" class="contained" alt="GC lists and GC quadratic regression output"></div></div></div>
 </li>
 <li id="li-2624">
 <p id="p-4454">Next, we will graph the data and the regression equation. We press <kbd class="kbdkey">Y=</kbd> and select <em class="emphasis">Plot1</em>, then press <kbd class="kbdkey">ZOOM</kbd> \(9\) to see the graph shown below. The parabola seems to pass close to all the data points.</p>
 <p id="p-4455">However, try using either the <em class="emphasis">value</em> feature or a table to find the \(y\)-coordinates of points on the regression curve. By comparing these \(y\)-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-quadratic-regression2.svg" role="img" style="width: 100%; height: auto;" alt="GC plot and GC table quadratic regression output"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-quadratic-regression2.svg" role="img" class="contained" alt="GC plot and GC table quadratic regression output"></div></div></div>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-673"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-673"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-673"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.41</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-673"><article class="exercise exercise-like"><iframe name="webwork-138" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=138&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRQb3AgPSBQb3BVcCgKWyI%2FIiwibGluZWFyIiwicXVhZHJhdGljIl0sCjIsIAopOwokZiA9IEZvcm11bGEoIjMuNjUwMTM3NzQxKjEwKiooLTcpeCoqMi0wLjAwMSp4KzEuMDIiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMSwKKTsKCkJFR0lOX1BHTUwKVG8gdGVzdCB0aGUgZWZmZWN0cyBvZiByYWRpYXRpb24sIGEgcmVzZWFyY2hlciBpcnJhZGlhdGVkIG1hbGUgbWljZSB3aXRoIHZhcmlvdXMgZG9zYWdlcyBhbmQgYnJlZCB0aGVtIHdpdGggdW5leHBvc2VkIGZlbWFsZSBtaWNlLiBUaGUgdGFibGUgYmVsb3cgc2hvd3MgdGhlIGZyYWN0aW9uIG9mIGZlcnRpbGl6ZWQgZWdncyB0aGF0IHN1cnZpdmVkLCBhcyBhIGZ1bmN0aW9uIG9mIHRoZSByYWRpYXRpb24gZG9zYWdlLiAoU291cmNlOiBTdHJpY2tiZXJnZXIsIE1vbnJvZSBXLiwgMTk3NikKCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1JhZGlhdGlvbiAocmVtcyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDEwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDMwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDcwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDkwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDExMDBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxNTAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1JlbGF0aXZlIHN1cnZpdmFsICAKb2YgZWdncyAgCicpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjk0YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMC43MDBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjU0NGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDAuNDI0YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMC4zNjZgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjI3N2BdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDAuMTk1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfGN8Y3wnLGNvbHVtbnNjc3M9PltdLGNlbnRlcj0%2BMCwpO0BdKiA8PAoKYS4gIEVudGVyIHRoZSBkYXRhIGludG8geW91ciBjYWxjdWxhdG9yIGFuZCBjcmVhdGUgYSBzY2F0dGVycGxvdC4gRG9lcyB0aGUgZ3JhcGggYXBwZWFyIHRvIGJlIGxpbmVhcj8gRG9lcyBpdCBhcHBlYXIgdG8gYmUgcXVhZHJhdGljPyBbX117JFBvcH17NX0KCgphLiAgRml0IGEgcXVhZHJhdGljIHJlZ3Jlc3Npb24gZXF1YXRpb24gdG8gdGhlIGRhdGEgYW5kIGdyYXBoIHRoZSBlcXVhdGlvbiBvbiB0aGUgc2NhdHRlcnBsb3QuCgogICAgW2B5PWBdW19deyRmfXsyNX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRoZSBncmFwaCBhcHBlYXJzIHRvIGJlIHF1YWRyYXRpYy4KCgphLiAgW2B5ID0gMy42NVx0aW1lcyAxMF57LTd9eF4yIC0gMC4wMDF4ICsgMS4wMmBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="138"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-17">
+</h6>
+<iframe name="webwork-138" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=138&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRQb3AgPSBQb3BVcCgKWyI%2FIiwibGluZWFyIiwicXVhZHJhdGljIl0sCjIsIAopOwokZiA9IEZvcm11bGEoIjMuNjUwMTM3NzQxKjEwKiooLTcpeCoqMi0wLjAwMSp4KzEuMDIiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMSwKKTsKCkJFR0lOX1BHTUwKVG8gdGVzdCB0aGUgZWZmZWN0cyBvZiByYWRpYXRpb24sIGEgcmVzZWFyY2hlciBpcnJhZGlhdGVkIG1hbGUgbWljZSB3aXRoIHZhcmlvdXMgZG9zYWdlcyBhbmQgYnJlZCB0aGVtIHdpdGggdW5leHBvc2VkIGZlbWFsZSBtaWNlLiBUaGUgdGFibGUgYmVsb3cgc2hvd3MgdGhlIGZyYWN0aW9uIG9mIGZlcnRpbGl6ZWQgZWdncyB0aGF0IHN1cnZpdmVkLCBhcyBhIGZ1bmN0aW9uIG9mIHRoZSByYWRpYXRpb24gZG9zYWdlLiAoU291cmNlOiBTdHJpY2tiZXJnZXIsIE1vbnJvZSBXLiwgMTk3NikKCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1JhZGlhdGlvbiAocmVtcyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDEwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDMwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDcwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDkwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDExMDBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxNTAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1JlbGF0aXZlIHN1cnZpdmFsICAKb2YgZWdncyAgCicpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjk0YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMC43MDBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjU0NGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDAuNDI0YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMC4zNjZgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjI3N2BdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDAuMTk1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfGN8Y3wnLGNvbHVtbnNjc3M9PltdLGNlbnRlcj0%2BMCwpO0BdKiA8PAoKYS4gIEVudGVyIHRoZSBkYXRhIGludG8geW91ciBjYWxjdWxhdG9yIGFuZCBjcmVhdGUgYSBzY2F0dGVycGxvdC4gRG9lcyB0aGUgZ3JhcGggYXBwZWFyIHRvIGJlIGxpbmVhcj8gRG9lcyBpdCBhcHBlYXIgdG8gYmUgcXVhZHJhdGljPyBbX117JFBvcH17NX0KCgphLiAgRml0IGEgcXVhZHJhdGljIHJlZ3Jlc3Npb24gZXF1YXRpb24gdG8gdGhlIGRhdGEgYW5kIGdyYXBoIHRoZSBlcXVhdGlvbiBvbiB0aGUgc2NhdHRlcnBsb3QuCgogICAgW2B5PWBdW19deyRmfXsyNX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRoZSBncmFwaCBhcHBlYXJzIHRvIGJlIHF1YWRyYXRpYy4KCgphLiAgW2B5ID0gMy42NVx0aW1lcyAxMF57LTd9eF4yIC0gMC4wMDF4ICsgMS4wMmBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="138"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-17">
 <p id="p-4469">Graph for part (a):</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-4-3-5.svg" role="img" style="width: 100%; height: auto;" alt="parabola fit to points"></div></div></div>
-</div></article></div></section><section class="subsection" id="subsection-86"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-4-3-5.svg" role="img" class="contained" alt="parabola fit to points"></div></div></div>
+</div></article></section><section class="subsection" id="subsection-86"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Choosing an Appropriate Model</span>
 </h3>
 <p id="p-4470">We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/fig-GC-bad-linear-fit.svg" role="img" style="width: 100%; height: auto;" alt="GC graph showing a poor linear fit for quadratic data"></div>
-<div class="sbspanel" style="width:55.5555555555556%;justify-content:center;"><p id="p-4471">In <a class="xref" data-knowl="./knowl/example-quadratic-fit.html" title="Example 4.37">Example 4.37</a>, suppose Major Motors had collected only the first three data points and fit a line through them, as shown at left. This regression line gives poor predictions for the cost of driving at 60 or 70 miles per hour.</p></div>
+<div class="sbspanel middle" style="width:33.3333333333333%;"><img src="external/images/fig-GC-bad-linear-fit.svg" role="img" class="contained" alt="GC graph showing a poor linear fit for quadratic data"></div>
+<div class="sbspanel middle" style="width:55.5555555555556%;"><p id="p-4471">In <a class="xref" data-knowl="./knowl/example-quadratic-fit.html" title="Example 4.37">Example 4.37</a>, suppose Major Motors had collected only the first three data points and fit a line through them, as shown at left. This regression line gives poor predictions for the cost of driving at 60 or 70 miles per hour.</p></div>
 </div></div>
 <article class="example example-like" id="example-84"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.42</span><span class="period">.</span>
 </h6>
 <p id="p-4472">Delbert records the height of the tip of the minute hand on the classroom’s clock at different times. The data are shown in the table, where time is measured in minutes since noon. (A negative time indicates a number of minutes before noon.) Find a quadratic regression equation for the data and use it to predict the height of the minute hand's tip at 40 minutes past noon. Do you believe this prediction is valid?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Time<br>(minutes)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-25\)</td>
@@ -471,7 +480,7 @@ C = 0.006v^2 - 0.5v + 16.2
 <td class="c m b1 r1 l0 t3 lines">\(10\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(15\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(20\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(25\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(25\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Height<br>(feet)</td>
@@ -485,19 +494,19 @@ C = 0.006v^2 - 0.5v + 16.2
 <td class="c m b1 r1 l0 t0 lines">\(8.50\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(8.80\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(7.50\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(7.13\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(7.13\)</td>
 </tr>
 </table></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-221" id="solution-221"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-221"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-221" id="solution-221"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-221"><div class="solution solution-like">
 <p id="p-4473">We enter the time data under \(L_1\) and the height data under \(L_2\text{.}\) Then we calculate and store the quadratic regression equation in \(Y_1\text{,}\) as we did in <a class="xref" data-knowl="./knowl/example-GC-quadratic-fit.html" title="Example 4.40">Example 4.40</a>. The regression equation is</p>
 <div class="displaymath">
 \begin{equation*}
 y = -0.00297x^2 + 0x + 8.834
 \end{equation*}
 </div>
-<p data-braille="continuation">From either the graph of the regression equation or from the table (see figure below), we can see that the fit is not perfect, although the curve certainly fits the data better than any straight line could.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-bad-quadratic-fit.svg" role="img" style="width: 100%; height: auto;" alt="GC screens of graph and tables for quadratic fit"></div></div></div>
+<p class="continuation">From either the graph of the regression equation or from the table (see figure below), we can see that the fit is not perfect, although the curve certainly fits the data better than any straight line could.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-bad-quadratic-fit.svg" role="img" class="contained" alt="GC screens of graph and tables for quadratic fit"></div></div></div>
 <p id="p-4474">If we scroll down the table, we find that this equation predicts a height of approximately 4.08 feet at time 40 minutes. (See figure (c).) This is a preposterous estimate! The position of the minute hand at 40 minutes after noon should be the same as it was exactly one hour earlier (at 20 minutes before noon), when it was 7.50 feet.</p>
 </div></div>
 </div></article><article class="warning remark-like" id="warning-9"><h6 class="heading">
@@ -505,22 +514,24 @@ y = -0.00297x^2 + 0x + 8.834
 </h6>
 <p id="p-4475">Using the wrong type of function to fit the data is a common error in making predictions. In the Example above, we know that the minute hand of a clock repeats its position every 60 minutes. The graph of the height of its tip oscillates up and down, repeating the same pattern over and over. We cannot describe such a graph using either a linear or a quadratic function.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.75%;margin-right:1.75%;">
-<div class="sbspanel" style="width:46.6321243523316%;justify-content:center;"><img src="images/fig-quadratic-fit-of-periodic.svg" role="img" style="width: 100%; height: auto;" alt="parabola fit on part of a periodic wave"></div>
-<div class="sbspanel" style="width:49.740932642487%;justify-content:center;"><p id="p-4476">The graph of the height is shown at left, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</p></div>
+<div class="sbspanel middle" style="width:46.6321243523316%;"><img src="external/images/fig-quadratic-fit-of-periodic.svg" role="img" class="contained" alt="parabola fit on part of a periodic wave"></div>
+<div class="sbspanel middle" style="width:49.740932642487%;"><p id="p-4476">The graph of the height is shown at left, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</p></div>
 </div></div>
-<p id="p-4477">Even though your calculator can always compute a regression equation,that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</p></article><article class="exercise exercise-like" id="exercise-674"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-674"><h6 class="heading">
+<p id="p-4477">Even though your calculator can always compute a regression equation,that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</p></article><article class="exercise exercise-like" id="exercise-674"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.44</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-674"><article class="exercise exercise-like"><iframe name="webwork-139" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=139&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UKYS4gIFlvdXIgY2FsY3VsYXRvciBjYW4gY2hvb3NlIHRoZSBjb3JyZWN0IHR5cGUgb2YgcmVncmVzc2lvbiBlcXVhdGlvbiBmb3IgYSBkYXRhIHNldC4gIFtfXXskRmFsc2V9ezV9CmEuICBJdCBpcyBvbmx5IG5lY2Vzc2FyeSB0byB1c2UgdGhlIGZpcnN0IGFuZCBsYXN0IGRhdGEgcG9pbnRzIHRvIGNvbXB1dGUgYSByZWdyZXNzaW9uIGVxdWF0aW9uLiAgW19deyRGYWxzZX17NX0KYS4gIEEgcmVncmVzc2lvbiBlcXVhdGlvbiBtYXkgZml0IHNvbWUgb2YgdGhlIGRhdGEgYnV0IHN0aWxsIGJlIGEgcG9vciBtb2RlbC4gIFtfXXskVEZ9ezV9CmEuICBBIGdvb2QgcmVncmVzc2lvbiBlcXVhdGlvbiBzaG91bGQgZml0IGFsbCB0aGUgZGF0YSBwb2ludHMgZXhhY3RseS4gIFtfXXskRmFsc2V9ezV9ICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="139"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-675"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-675"><h6 class="heading">
+</h6>
+<iframe name="webwork-139" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=139&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UKYS4gIFlvdXIgY2FsY3VsYXRvciBjYW4gY2hvb3NlIHRoZSBjb3JyZWN0IHR5cGUgb2YgcmVncmVzc2lvbiBlcXVhdGlvbiBmb3IgYSBkYXRhIHNldC4gIFtfXXskRmFsc2V9ezV9CmEuICBJdCBpcyBvbmx5IG5lY2Vzc2FyeSB0byB1c2UgdGhlIGZpcnN0IGFuZCBsYXN0IGRhdGEgcG9pbnRzIHRvIGNvbXB1dGUgYSByZWdyZXNzaW9uIGVxdWF0aW9uLiAgW19deyRGYWxzZX17NX0KYS4gIEEgcmVncmVzc2lvbiBlcXVhdGlvbiBtYXkgZml0IHNvbWUgb2YgdGhlIGRhdGEgYnV0IHN0aWxsIGJlIGEgcG9vciBtb2RlbC4gIFtfXXskVEZ9ezV9CmEuICBBIGdvb2QgcmVncmVzc2lvbiBlcXVhdGlvbiBzaG91bGQgZml0IGFsbCB0aGUgZGF0YSBwb2ludHMgZXhhY3RseS4gIFtfXXskRmFsc2V9ezV9ICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="139"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-675"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.45</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-675"><article class="exercise exercise-like"><iframe name="webwork-140" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=140&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50IiktPnZhcmlhYmxlcy0%2Bc2V0KHg9PntsaW1pdHM9PlsyLDNdfSk7CiRmID0gRm9ybXVsYSgiLTE1KngqKjIrMTA5Ljk1NzE0Mjg1NzE0KngtMC4wNzE0Mjg1NzE0MjkiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMiwKKTsKJHYgPSBQb2ludCgiKDMuNjY1MjM4MDk1LDIwMS40MzgxMjU4NSkiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMSwKKTsKCkJFR0lOX1BHTUwKQSBzcGVlZGluZyBtb3RvcmlzdCBzbGFtcyBvbiB0aGUgYnJha2VzIHdoZW4gc2hlIHNlZXMgYW4gYWNjaWRlbnQgZGlyZWN0bHkgYWhlYWQgb2YgaGVyLiBUaGUgZGlzdGFuY2Ugc2hlIGhhcyB0cmF2ZWxlZCBbYHRgXSBzZWNvbmRzIGFmdGVyIGJyYWtpbmcgaXMgc2hvd24gaW4gdGhlIHRhYmxlLgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnVGltZSAoc2Vjb25kcyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxLjBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxLjVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AyLjBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AyLjVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnRGlzdGFuY2UgKGZlZXQpJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A1MWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDk1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTMxYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTYwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTgxYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSogPDwKCmEuICBFbnRlciB0aGUgZGF0YSBpbnRvIHlvdXIgY2FsY3VsYXRvciBhbmQgY3JlYXRlIGEgc2NhdHRlcnBsb3QuIEZpdCBhIHF1YWRyYXRpYyByZWdyZXNzaW9uIGVxdWF0aW9uIHRvIHRoZSBkYXRhIGFuZCBncmFwaCB0aGUgZXF1YXRpb24gb24gdGhlIHNjYXR0ZXJwbG90LgoKICAgIFJlZ3Jlc3Npb24gZXF1YXRpb246IFtgeT1gXVtfXXskZn17MTV9ICBVc2UgW2B4YF0gZm9yIHRoZSB0aW1lIGluIHNlY29uZHMuCgoKYS4gIFVzZSB5b3VyIHJlZ3Jlc3Npb24gZXF1YXRpb24gdG8gZmluZCB0aGUgdmVydGV4IG9mIHRoZSBwYXJhYm9sYTogW19deyR2fXsxMn0KCiAgICBXaGF0IGRvIHRoZSBjb29yZGluYXRlcyByZXByZXNlbnQgaW4gdGVybXMgb2YgdGhlIHByb2JsZW0%2FCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKICAgIFtgeSA9IC0xNXheMiArIDExMHggLSAwLjA3YF0KCgphLiAgW2AoMy42NywgMjAxKVx0ZXh0ezp9YF0gVGhlIGNhciBjYW1lIHRvIGEgc3RvcCBpbiAzLjY3IHNlY29uZHMsIGFmdGVyIHNsaWRpbmcgMjAxIGZlZXQuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="140"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-18">
+</h6>
+<iframe name="webwork-140" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=140&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50IiktPnZhcmlhYmxlcy0%2Bc2V0KHg9PntsaW1pdHM9PlsyLDNdfSk7CiRmID0gRm9ybXVsYSgiLTE1KngqKjIrMTA5Ljk1NzE0Mjg1NzE0KngtMC4wNzE0Mjg1NzE0MjkiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMiwKKTsKJHYgPSBQb2ludCgiKDMuNjY1MjM4MDk1LDIwMS40MzgxMjU4NSkiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMSwKKTsKCkJFR0lOX1BHTUwKQSBzcGVlZGluZyBtb3RvcmlzdCBzbGFtcyBvbiB0aGUgYnJha2VzIHdoZW4gc2hlIHNlZXMgYW4gYWNjaWRlbnQgZGlyZWN0bHkgYWhlYWQgb2YgaGVyLiBUaGUgZGlzdGFuY2Ugc2hlIGhhcyB0cmF2ZWxlZCBbYHRgXSBzZWNvbmRzIGFmdGVyIGJyYWtpbmcgaXMgc2hvd24gaW4gdGhlIHRhYmxlLgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnVGltZSAoc2Vjb25kcyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxLjBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxLjVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AyLjBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AyLjVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnRGlzdGFuY2UgKGZlZXQpJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A1MWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDk1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTMxYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTYwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTgxYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSogPDwKCmEuICBFbnRlciB0aGUgZGF0YSBpbnRvIHlvdXIgY2FsY3VsYXRvciBhbmQgY3JlYXRlIGEgc2NhdHRlcnBsb3QuIEZpdCBhIHF1YWRyYXRpYyByZWdyZXNzaW9uIGVxdWF0aW9uIHRvIHRoZSBkYXRhIGFuZCBncmFwaCB0aGUgZXF1YXRpb24gb24gdGhlIHNjYXR0ZXJwbG90LgoKICAgIFJlZ3Jlc3Npb24gZXF1YXRpb246IFtgeT1gXVtfXXskZn17MTV9ICBVc2UgW2B4YF0gZm9yIHRoZSB0aW1lIGluIHNlY29uZHMuCgoKYS4gIFVzZSB5b3VyIHJlZ3Jlc3Npb24gZXF1YXRpb24gdG8gZmluZCB0aGUgdmVydGV4IG9mIHRoZSBwYXJhYm9sYTogW19deyR2fXsxMn0KCiAgICBXaGF0IGRvIHRoZSBjb29yZGluYXRlcyByZXByZXNlbnQgaW4gdGVybXMgb2YgdGhlIHByb2JsZW0%2FCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKICAgIFtgeSA9IC0xNXheMiArIDExMHggLSAwLjA3YF0KCgphLiAgW2AoMy42NywgMjAxKVx0ZXh0ezp9YF0gVGhlIGNhciBjYW1lIHRvIGEgc3RvcCBpbiAzLjY3IHNlY29uZHMsIGFmdGVyIHNsaWRpbmcgMjAxIGZlZXQuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="140"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-18">
 <p id="p-4516">Graph for part (a):</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel" style="width:80%;justify-content:flex-start;"><img src="images/fig-ex-4-3-4ans.svg" role="img" style="width: 100%; height: auto;" alt="parabola fit to points"></div></div></div>
-</div></article></div></section><section class="exercises" id="section-4-3-exercises"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel top" style="width:80%;"><img src="external/images/fig-ex-4-3-4ans.svg" role="img" class="contained" alt="parabola fit to points"></div></div></div>
+</div></article></section><section class="exercises" id="section-4-3-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 4.3</span>
 </h3>
 <article class="subexercises" id="subexercises-49"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-109">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-126"><p id="p-4517">For Problems 1 and 2, state the vertex, the \(y\)-intercept, and the \(x\)-intercepts of the parabola.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-676"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -531,20 +542,22 @@ y = -0.00297x^2 + 0x + 8.834
 <article class="exercise exercise-like" id="exercise-678"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-4521">You are in charge of selling tickets to a one-woman show at a local art gallery.  Tickets to the opening night were priced at $25, and you sold 30 tickets.</p>
 <ol class="lower-alpha">
-<li id="li-2656">Every night after the opening, you reduce the ticket price by $2. What is the ticket price after \(x\) nights?</li>
-<li id="li-2657">Every night after the opening, you sell 4 more tickets than the previous night. How many tickets did you sell \(x\) nights after the opening?</li>
+<li id="li-2656"><p id="p-derived-li-2656">Every night after the opening, you reduce the ticket price by $2. What is the ticket price after \(x\) nights?</p></li>
+<li id="li-2657"><p id="p-derived-li-2657">Every night after the opening, you sell 4 more tickets than the previous night. How many tickets did you sell \(x\) nights after the opening?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-679"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-4523">The point \((-3,8)\) lies on the graph of \(y=ax^2+bx+c\text{.}\) Write an equation involving \(a,~b,\) and \(c\text{.}\)</p></article><div class="exercisegroup" id="exercisegroup-110">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-127"><p id="p-4524">For Problems 5–8, find an equation for the parabola. Use the vertex form or the factored form of the equation, whichever is more appropriate.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-680"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:73.6842105263158%;justify-content:flex-start;"><img src="images/fig-hw-4-3-5.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></article><article class="exercise exercise-like" id="exercise-681"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:73.6842105263158%;justify-content:flex-start;"><img src="images/fig-hw-4-3-6.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></article><article class="exercise exercise-like" id="exercise-682"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:73.6842105263158%;justify-content:flex-start;"><img src="images/fig-hw-4-3-7.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></article><article class="exercise exercise-like" id="exercise-683"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:68.4210526315789%;justify-content:flex-start;"><img src="images/fig-hw-4-3-8.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:73.6842105263158%;"><img src="external/images/fig-hw-4-3-5.svg" role="img" class="contained" alt="graph"></div></div></div></article><article class="exercise exercise-like" id="exercise-681"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:73.6842105263158%;"><img src="external/images/fig-hw-4-3-6.svg" role="img" class="contained" alt="graph"></div></div></div></article><article class="exercise exercise-like" id="exercise-682"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:73.6842105263158%;"><img src="external/images/fig-hw-4-3-7.svg" role="img" class="contained" alt="graph"></div></div></div></article><article class="exercise exercise-like" id="exercise-683"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:68.4210526315789%;"><img src="external/images/fig-hw-4-3-8.svg" role="img" class="contained" alt="graph"></div></div></div></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-50"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-111">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-128"><p id="p-4527">For Problems 9–12, solve the system by elimination. Begin by eliminating \(c\text{.}\)</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-684"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
@@ -583,29 +596,29 @@ a-b+c \amp = 12\\
 <p id="p-4536">Find values for \(a,~b,\) and \(c\) so that the graph of \(y = ax^2+bx+c\) includes the points \((-1,2), ~(1,6),\) and \((2,11)\text{.}\)</p></article></article><article class="subexercises" id="subexercises-51"><h6 class="heading"><span class="title">Applications</span></h6>
 <article class="exercise exercise-like" id="exercise-690"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <p id="p-4537">The data show the number of people of certain ages who were the victims of homicide in a large city last year.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Age</td>
 <td class="c m b1 r1 l0 t3 lines">\(10\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(20\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(30\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(40\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(40\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Number of victims</td>
 <td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(62\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(72\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(40\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(40\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-4538" class="lower-alpha">
-<li id="li-2660">Use the first three data points to fit a quadratic equation to the data, \(~N=ax^2+bx+c\text{,}\) where \(x\) represents age.</li>
-<li id="li-2661">What does your equation predict for the number of 40-year-olds who were the victims of homicide?</li>
-<li id="li-2662">Sketch the graph of your quadratic equation and the given data on the same axes.</li>
+<li id="li-2660"><p id="p-derived-li-2660">Use the first three data points to fit a quadratic equation to the data, \(~N=ax^2+bx+c\text{,}\) where \(x\) represents age.</p></li>
+<li id="li-2661"><p id="p-derived-li-2661">What does your equation predict for the number of 40-year-olds who were the victims of homicide?</p></li>
+<li id="li-2662"><p id="p-derived-li-2662">Sketch the graph of your quadratic equation and the given data on the same axes.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-691"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <p id="p-4540">Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Number of hens, \(n\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(15\)</td>
@@ -613,7 +626,7 @@ a-b+c \amp = 12\\
 <td class="c m b1 r1 l0 t3 lines">\(25\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(30\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(36\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(39\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(39\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Number of eggs, \(E\)</td>
@@ -622,50 +635,50 @@ a-b+c \amp = 12\\
 <td class="c m b1 r1 l0 t0 lines">\(20\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(21\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(21\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(20\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(20\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-4541" class="lower-alpha">
-<li id="li-2665">Use the first three data points to find a quadratic model, \(~E=an^2+bn+c\text{.}\)</li>
-<li id="li-2666">Plot the data and sketch the model on the same axes.</li>
-<li id="li-2667">What does the model predict for the number of eggs produced when 39 hens are confined in the henhouse?</li>
+<li id="li-2665"><p id="p-derived-li-2665">Use the first three data points to find a quadratic model, \(~E=an^2+bn+c\text{.}\)</p></li>
+<li id="li-2666"><p id="p-derived-li-2666">Plot the data and sketch the model on the same axes.</p></li>
+<li id="li-2667"><p id="p-derived-li-2667">What does the model predict for the number of eggs produced when 39 hens are confined in the henhouse?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-692"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="p-4542">Find a quadratic model for the number of diagonals that can be drawn in a polygon of \(n\) sides. Some data are provided.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Sides</td>
 <td class="c m b1 r1 l0 t3 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(7\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(7\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Diagonals</td>
 <td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(9\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(14\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(14\)</td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="exercise-693"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="p-4544">You are driving at a speed of 60 miles per hour when you step on the brakes. Find a quadratic model for the distance in feet that your car travels in \(t\) seconds after braking. Some data are provided.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Seconds</td>
 <td class="c m b1 r1 l0 t3 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Feet</td>
 <td class="c m b1 r1 l0 t0 lines">\(81\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(148\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(210\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(267\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(267\)</td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="exercise-694"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="p-4545">In the 1990's, an outbreak of mad cow disease (Creutzfeldt-Jakob disease) alarmed health officials in England. The table shows the number of deaths each year from the disease.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Year</td>
 <td class="c m b1 r1 l0 t3 lines">\(94\)</td>
@@ -678,7 +691,7 @@ a-b+c \amp = 12\\
 <td class="c m b1 r1 l0 t3 lines">\(01\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(02\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(03\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(04\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(04\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Deaths</td>
@@ -692,16 +705,16 @@ a-b+c \amp = 12\\
 <td class="c m b1 r1 l0 t0 lines">\(20\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(17\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(19\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(9\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-4546">(Source:  www.cjd.ed.ac.uk/vcjdqsep05)</p>
 <ol id="p-4547" class="lower-alpha">
-<li id="li-2668">The Health Protection Agency determined that a quadratic model was the best-fitting model for the data. Find a quadratic regression equation for the data.</li>
-<li id="li-2669">Use your model to estimate when the peak of the epidemic occurred, and how many deaths from mad cow disease were expected in 2005.</li>
+<li id="li-2668"><p id="p-derived-li-2668">The Health Protection Agency determined that a quadratic model was the best-fitting model for the data. Find a quadratic regression equation for the data.</p></li>
+<li id="li-2669"><p id="p-derived-li-2669">Use your model to estimate when the peak of the epidemic occurred, and how many deaths from mad cow disease were expected in 2005.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-695"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="p-4549">The table shows the height in kilometers of a star-flare at various times after it exploded from the surface of a star.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Time (seconds)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.2\)</td>
@@ -709,7 +722,7 @@ a-b+c \amp = 12\\
 <td class="c m b1 r1 l0 t3 lines">\(0.6\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.8\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(1.0\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(1.2\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1.2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Height (kilometers)</td>
@@ -718,44 +731,44 @@ a-b+c \amp = 12\\
 <td class="c m b1 r1 l0 t0 lines">\(17.1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(20.5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(22.8\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(23.9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(23.9\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-4550" class="lower-alpha">
-<li id="li-2672">Find the equation of the least-squares regression line for the height of the flare in terms of time.</li>
-<li id="li-2673">Use the regression line to predict the height of the flare 1.4 seconds after it exploded.</li>
-<li id="li-2674">Make a scatterplot of the data and draw the regression line on the same axes.</li>
-<li id="li-2675">Find the quadratic regression equation for the height in terms of time.</li>
-<li id="li-2676">Use the quadratic regression equation to predict the height of the flare 1.4 seconds after it exploded.</li>
-<li id="li-2677">Draw the quadratic regression curve on the graph from part (c).</li>
-<li id="li-2678">Which model is more appropriate for the height of the star-flare, linear or quadratic? Why?</li>
+<li id="li-2672"><p id="p-derived-li-2672">Find the equation of the least-squares regression line for the height of the flare in terms of time.</p></li>
+<li id="li-2673"><p id="p-derived-li-2673">Use the regression line to predict the height of the flare 1.4 seconds after it exploded.</p></li>
+<li id="li-2674"><p id="p-derived-li-2674">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
+<li id="li-2675"><p id="p-derived-li-2675">Find the quadratic regression equation for the height in terms of time.</p></li>
+<li id="li-2676"><p id="p-derived-li-2676">Use the quadratic regression equation to predict the height of the flare 1.4 seconds after it exploded.</p></li>
+<li id="li-2677"><p id="p-derived-li-2677">Draw the quadratic regression curve on the graph from part (c).</p></li>
+<li id="li-2678"><p id="p-derived-li-2678">Which model is more appropriate for the height of the star-flare, linear or quadratic? Why?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-696"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="p-4551">Some comets move about the sun in parabolic orbits. In 1973 the comet Kohoutek passed within 0.14 AU (<dfn class="terminology">astronomical units</dfn>), or 21 million kilometers of the sun. Imagine a coordinate system superimposed on a diagram of the comet's orbit, with the sun at the origin, as shown below. The units on each axis are measured in AU.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-comet-parabola.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-comet-parabola.svg" role="img" class="contained" alt="graph"></div></div></div>
 <ol id="p-4552" class="lower-alpha">
-<li id="li-2679">The comet's closest approach to the sun (called perihelion) occurred at the vertex of the parabola. What were the comet's coordinates at perihelion?</li>
-<li id="li-2680">When the comet was first discovered, its coordinates were \((1.68,-4.9)\text{.}\) Find an equation for comet Kohoutek's orbit in vertex form.</li>
+<li id="li-2679"><p id="p-derived-li-2679">The comet's closest approach to the sun (called perihelion) occurred at the vertex of the parabola. What were the comet's coordinates at perihelion?</p></li>
+<li id="li-2680"><p id="p-derived-li-2680">When the comet was first discovered, its coordinates were \((1.68,-4.9)\text{.}\) Find an equation for comet Kohoutek's orbit in vertex form.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-697"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-4554">The Akashi Kaikyo bridge in Japan is the longest suspension bridge in the world, with a main span of 1991 meters. Its main towers are 297 meters tall. The roadbed of the bridge is 14 meters thick and clears the water below by 65 meters. The cables on a suspension bridge hang in the shape of parabolas. Imagine a coordinate system superimposed on the diagram of the bridge, as shown in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-suspension-bridge.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-suspension-bridge.svg" role="img" class="contained" alt="graph"></div></div></div>
 <ol id="p-4555" class="lower-alpha">
-<li id="li-2683">Find the coordinates of the vertex and one other point on the cable.</li>
-<li id="li-2684">Use the points from part (a) to find an equation for the shape of the cable in vertex form.</li>
+<li id="li-2683"><p id="p-derived-li-2683">Find the coordinates of the vertex and one other point on the cable.</p></li>
+<li id="li-2684"><p id="p-derived-li-2684">Use the points from part (a) to find an equation for the shape of the cable in vertex form.</p></li>
 </ol></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

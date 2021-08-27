@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T07:01:06-07:00       *-->
+<!--*       on 2021-08-27T15:55:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Equations and Graphs</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,42 +226,42 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="chap9"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">9</span> <span class="title">Equations and Graphs</span>
 </h2>
-<section class="introduction" id="introduction-339"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:52.6315789473684%;justify-content:flex-start;"><img src="images/cubdoub.png" style="width: 100%; height: auto;" alt="curves"></div></div></div>
+<section class="introduction" id="introduction-339"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:52.6315789473684%;"><img src="external/images/cubdoub.png" class="contained" alt="curves"></div></div></div>
 <p id="p-11993">In ancient Athens, around 430 BCE, one quarter of the city's residents perished in a plague. The people of Athens consulted the oracle at Delos, so the story goes, to find a cure for the plague. The oracle replied that they should construct a new cubical altar to the gods, and its volume should be double the volume  of the existing cubical altar. Now, if the original altar had a side of length \(x\text{,}\) you can work out that the new altar should have side length \(\sqrt[3]{2} x\text{,}\) so that the new volume is \(2x^3\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-doubling-cube.svg" role="img" style="width: 100%; height: auto;" alt="two cubes"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-doubling-cube.svg" role="img" class="contained" alt="two cubes"></div></div></div>
 <p id="p-11994">But the ancient Greeks could not use algebra to solve the problem -- it hadn't been invented yet. Instead, they used geometrical methods. The Delian problem of doubling the cube remained unsolved for many years. But sometime around 350 BCE, a mathematician named Menaechmus, who was the tutor to Alexander the Great, solved the problem, and in so doing invented the <dfn class="terminology">conic sections</dfn>.</p>
 <p id="p-11995">A "section" is a slice, and the conic sections are the curves formed by slicing a cone by a plane. Depending on the angle of the slice, we get four different curves, as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/conics.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/conics.svg" role="img" class="contained" alt="graph"></div></div></div>
 <p id="p-11996">We have already met the parabola, which is described by the quadratic equation \(y=ax^2+bx+c\text{.}\) It turns out that the other conic sections are also described by quadratic equations. These curves have many interesting properties as abstract objects, but as often happens with mathematical discoveries, they are also useful in applications. Conic sections appear in art and architecture, in medicine, science, and engineering.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/fireworks.png" style="width: 100%; height: auto;" alt="fireworks"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/operahouse.png" style="width: 100%; height: auto;" alt="operahouse"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/fountain.png" style="width: 100%; height: auto;" alt="fountain"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/fireworks.png" class="contained" alt="fireworks"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/operahouse.png" class="contained" alt="operahouse"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/fountain.png" class="contained" alt="fountain"></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/mollweide.png" style="width: 100%; height: auto;" alt="mollweide"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/Decca.png" style="width: 100%; height: auto;" alt="Decca"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/ellipsestadium.png" style="width: 100%; height: auto;" alt="ellipsestadium"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/mollweide.png" class="contained" alt="mollweide"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/Decca.png" class="contained" alt="Decca"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/ellipsestadium.png" class="contained" alt="ellipsestadium"></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/headlight.png" style="width: 100%; height: auto;" alt="headlight"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/sundial.png" style="width: 100%; height: auto;" alt="sundial"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/telescope.png" style="width: 100%; height: auto;" alt="telescope"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/headlight.png" class="contained" alt="headlight"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/sundial.png" class="contained" alt="sundial"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/telescope.png" class="contained" alt="telescope"></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/whispering.png" style="width: 100%; height: auto;" alt="whispering"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/sonicboom.png" style="width: 100%; height: auto;" alt="sonicboom"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/orbits.png" style="width: 100%; height: auto;" alt="orbits"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/whispering.png" class="contained" alt="whispering"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/sonicboom.png" class="contained" alt="sonicboom"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/orbits.png" class="contained" alt="orbits"></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/bridge.png" style="width: 100%; height: auto;" alt="bridge"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/navigation.png" style="width: 100%; height: auto;" alt="navigation"></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/lithotripsy.png" style="width: 100%; height: auto;" alt="lithotripsy"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/bridge.png" class="contained" alt="bridge"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/navigation.png" class="contained" alt="navigation"></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="external/images/lithotripsy.png" class="contained" alt="lithotripsy"></div>
 </div></div>
 <article class="investigation project-like" id="investigation-11"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Global Positioning.</span>
@@ -264,7 +270,7 @@ true);
 <p id="p-11998">A person with a GPS receiver on earth can calculate his or her distance from the satellite by comparing the time of transmission with the time when it receives the signal. Of course, there are many points at the same distance from the satellite—in fact, the set of all points at a certain distance \(r\) from the satellite lie on a sphere centered at the satellite. That is why there are several satellites: You calculate your position by finding the intersection point of several such spheres centered on different satellites.</p>
 <p id="p-11999">We will consider a simplified, two-dimensional model of a GPS system in which the satellites and the receiver all lie in the \(xy\)-plane instead of in three-dimensional space.</p>
 <p id="p-12000">In this model we’ll need data from two GPS satellites. The satellites are orbiting along a circle of radius 100 meters centered at the origin. You have a receiver inside that circle and would like to know the coordinates of your position within the circle.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-gps-grid.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-gps-grid.svg" role="img" class="contained" alt="grid"></div></div></div>
 <p id="p-12001">To make the computations simpler, we will also assume that the satellite transmissions travel at 5 meters per second.</p>
 <ol id="p-12002" class="decimal">
 <li id="li-7589"><p id="p-12003">A signal from Satellite A arrives 18 seconds after it was transmitted. How far are you from Satellite A?</p></li>
@@ -284,19 +290,19 @@ true);
 <li><a href="chap9-summary.html"><span class="codenumber">9.6</span> <span class="title">Chapter 9 Summary and Review</span></a></li>
 </ul></nav></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

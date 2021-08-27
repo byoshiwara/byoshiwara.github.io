@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:53:16-07:00       *-->
+<!--*       on 2021-08-27T15:49:36-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Slope</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Slope"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Slope</span>
@@ -231,20 +237,20 @@ true);
 <p id="p-727">Glaciers around the world are retreating at accelerating rates, and many lower-latitude mountain glaciers may disappear entirely within decades. The meltwater from these smaller glaciers contributed as much as 40% to the total rise in sea level over the 1990s.</p>
 <p id="p-728">By measuring the change in ice and snow height at fixed points and multiplying by the surface area  of the glacier, scientists calculate the total volume  of water lost from land-based glaciers. Dividing this volume by the surface area of the world's oceans gives the resulting change in sea level.</p>
 <p id="p-729">The graphs below show the change in thickness of the land-based glaciers overthe past 5 years, and the rise in sea level attributed to their melting.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/glacier-graphs.svg" role="img" style="width: 100%; height: auto;" alt="graphs of change in glacier thickness and resulting rise in sea level"></div></div></div></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/glacier-graphs.svg" role="img" class="contained" alt="graphs of change in glacier thickness and resulting rise in sea level"></div></div></div></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Rate of Change</span>
 </h3>
 <article class="assemblage assemblage-like" id="assemblage-6"><h6 class="heading"><span class="title">Rate.</span></h6>
-<p id="p-730">A <dfn class="terminology">rate</dfn> is a type of ratio that compares two quantities with different units.</p></article><article class="exercise exercise-like" id="exercise-103"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-103"><h6 class="heading">
+<p id="p-730">A <dfn class="terminology">rate</dfn> is a type of ratio that compares two quantities with different units.</p></article><article class="exercise exercise-like" id="exercise-103"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.54</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-103"><article class="exercise exercise-like"><iframe name="webwork-29" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=29&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7ICR3aGljaDEgPSBQb3BVcCgKICBbIj8iLCJyYXRlIiwiaW50ZWdlciIsICJwcmljZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApBIHJhdGlvIHRoYXQgY29tcGFyZXMgdHdvIHF1YW50aXRpZXMgd2l0aCBkaWZmZXJlbnQgdW5pdHMgaXMgY2FsbGVkIGEgW19deyR3aGljaDF9ezV9LgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCnJhdGUKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="29"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-738">In the example below, notice that each rate has units of the form  \(\dfrac{\text{something}}{\text{something else}} \text{,}\) which we read as "something per something else."</p>
+</h6>
+<iframe name="webwork-29" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=29&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7ICR3aGljaDEgPSBQb3BVcCgKICBbIj8iLCJyYXRlIiwiaW50ZWdlciIsICJwcmljZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApBIHJhdGlvIHRoYXQgY29tcGFyZXMgdHdvIHF1YW50aXRpZXMgd2l0aCBkaWZmZXJlbnQgdW5pdHMgaXMgY2FsbGVkIGEgW19deyR3aGljaDF9ezV9LgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCnJhdGUKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="29"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-738">In the example below, notice that each rate has units of the form  \(\dfrac{\text{something}}{\text{something else}} \text{,}\) which we read as "something per something else."</p>
 <article class="example example-like" id="example-18"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.55</span><span class="period">.</span>
 </h6>
 <p id="p-739">Caryn bought 7 used paperback novels for a total of $2.45. Use a ratio to calculate the price per book.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
 <div class="displaymath" id="p-740">
 \begin{gather*}
 \frac{\text{total cost in dollars}}{\text{number of books}} = \frac{2.45 \text{ dollars}}{7 \text{ books}} = 0.35 \text{ dollars/book} 
@@ -252,10 +258,10 @@ true);
 </div>
 <p id="p-741">The novels were priced at a rate of $0.35 per book.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-104"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-104"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-104"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.56</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-104"><article class="exercise exercise-like"><iframe name="webwork-30" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=30&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHJhdGUgPSAzNC81OwokYW5zd2VyID0gQ29tcHV0ZSgiJHJhdGUiKTsKJHVuaXRzID0gUG9wVXAoWyI%2FIiwKIm1pbGVzIiwgCiJob3VycyIsCiJtaWxlcyBwZXIgaG91ciIsCiJob3VycyBwZXIgbWlsZSJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApEZWxiZXJ0IGJpa2VkIDM0IG1pbGVzIGluIDUgaG91cnMuIFVzZSBhIHJhdGlvIHRvIGNhbGN1bGF0ZSBoaXMgYXZlcmFnZSBzcGVlZC4KCltgYGBcYmVnaW57Z2F0aGVyZWR9ClxmcmFje1x0ZXh0e2Rpc3RhbmNlIGluIG1pbGVzfX17XHRleHR7dGltZSBpbiBob3Vyc319PSBcaHBoYW50b217IkRlbGJlcnQgc3BlZWQifQpcZW5ke2dhdGhlcmVkfQpgYGBdCgoKCkRlbGJlcnQgYmlrZWQgYXQgYSByYXRlIG9mIFtfXXskYW5zd2VyfXszfSBbX117JHVuaXRzfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCjYuOCBtaWxlcyBwZXIgaG91cgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="30"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="definition definition-like" id="definition-6"><h6 class="heading">
+</h6>
+<iframe name="webwork-30" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=30&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHJhdGUgPSAzNC81OwokYW5zd2VyID0gQ29tcHV0ZSgiJHJhdGUiKTsKJHVuaXRzID0gUG9wVXAoWyI%2FIiwKIm1pbGVzIiwgCiJob3VycyIsCiJtaWxlcyBwZXIgaG91ciIsCiJob3VycyBwZXIgbWlsZSJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApEZWxiZXJ0IGJpa2VkIDM0IG1pbGVzIGluIDUgaG91cnMuIFVzZSBhIHJhdGlvIHRvIGNhbGN1bGF0ZSBoaXMgYXZlcmFnZSBzcGVlZC4KCltgYGBcYmVnaW57Z2F0aGVyZWR9ClxmcmFje1x0ZXh0e2Rpc3RhbmNlIGluIG1pbGVzfX17XHRleHR7dGltZSBpbiBob3Vyc319PSBcaHBoYW50b217IkRlbGJlcnQgc3BlZWQifQpcZW5ke2dhdGhlcmVkfQpgYGBdCgoKCkRlbGJlcnQgYmlrZWQgYXQgYSByYXRlIG9mIFtfXXskYW5zd2VyfXszfSBbX117JHVuaXRzfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCjYuOCBtaWxlcyBwZXIgaG91cgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="30"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="definition definition-like" id="definition-6"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.57</span><span class="period">.</span><span class="space"> </span><span class="title">Rate of Change.</span>
 </h6>
 <p id="p-753">A <dfn class="terminology">rate of change</dfn> is a special kind of ratio that compares the change in two quantities or variables.</p></article><article class="example example-like" id="example-19"><h6 class="heading">
@@ -263,20 +269,20 @@ true);
 </h6>
 <p id="p-754">Gregor is driving across Montana. At 1 pm his trip odometer reads 189 miles, and at 4 pm it reads 360 miles. Calculate Gregor's average speed as a rate of change.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like">
 <p id="p-755">We have two variables: time, \(t\text{,}\) and distance, \(d\text{,}\) and the following data points:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~ t ~ \)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(d\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(d\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(189\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(189\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(360\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(360\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-756">Gregor's speed is the ratio of the distance he traveled to the time it took. The distance he traveled is the change in his odometer reading (from 189 miles to 360 miles), and the time it took is the change in the clock reading (from 1 pm to 4 pm).The units of this ratio are miles per hour.</p>
@@ -287,35 +293,36 @@ true);
 \text{time elapsed}\amp= \Delta t=4-1=3 \text{ hours} 
 \end{align*}
 </div>
-<p data-braille="continuation">Gregor's average speed is the ratio \(\dfrac{\text{distance traveled}}{\text{time elapsed}} =\dfrac{\Delta d}{\Delta t}\text{,}\) so</p>
+<p class="continuation">Gregor's average speed is the ratio \(\dfrac{\text{distance traveled}}{\text{time elapsed}} =\dfrac{\Delta d}{\Delta t}\text{,}\) so</p>
 <div class="displaymath">
 \begin{gather*}
 \text{Speed}=\frac{\Delta d}{\Delta t} = \frac{171 \text{ miles}}{3 \text{ hours}}= 57 \text{ miles/hour} 
 \end{gather*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-105"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-105"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-105"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.59</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-105"><article class="exercise exercise-like"><iframe name="webwork-31" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=31&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzdGVwMSA9IFJhZGlvQnV0dG9ucygKICBbIkEgdHJpYW5nbGUiLAogICJTcGVlZCIsCiAgIkNoYW5nZSBpbiIsCiAgIkNvb3JkaW5hdGUiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBkb2VzIHRoZSBzeW1ib2wgW2BcRGVsdGFgXSBzdGFuZCBmb3I%2FCgogICAgW19deyRzdGVwMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpDaGFuZ2UgaW4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="31"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-106"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-106"><h6 class="heading">
+</h6>
+<iframe name="webwork-31" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=31&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzdGVwMSA9IFJhZGlvQnV0dG9ucygKICBbIkEgdHJpYW5nbGUiLAogICJTcGVlZCIsCiAgIkNoYW5nZSBpbiIsCiAgIkNvb3JkaW5hdGUiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBkb2VzIHRoZSBzeW1ib2wgW2BcRGVsdGFgXSBzdGFuZCBmb3I%2FCgogICAgW19deyRzdGVwMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpDaGFuZ2UgaW4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="31"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-106"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.60</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-106"><article class="exercise exercise-like"><iframe name="webwork-32" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=32&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyYXRlID0gKDQyMS0xMjcpLygxMC00KTsKJGFuc3dlciA9IENvbXB1dGUoIiRyYXRlIik7CiR1bml0cyA9IFBvcFVwKFsiPyIsCiJtaWxlcyIsIAoiaG91cnMiLAoibWlsZXMgcGVyIGhvdXIiLAoiaG91cnMgcGVyIG1pbGUiXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKTmVsc29uIGlzIGEgbG9uZy1kaXN0YW5jZSB0cnVjayBkcml2ZXIuIE9uIGEgcmVjZW50IHRyaXAgdGhyb3VnaCB0aGUgTWlkd2VzdCxoZSBub3RlZCB0aGVzZSBvZG9tZXRlciByZWFkaW5nczoKCj4%2BIFtARGF0YVRhYmxlKFtbUEdNTCgnNCBhbScpLFBHTUwoJzEyNyBtaWxlcycpLF0sW1BHTUwoJzEwIGFtJyksUEdNTCgnNDIxIG1pbGVzJyksXSxdLGFsaWduPT4ncnInLGNlbnRlcj0%2BMCwpO0BdKiA8PAoKV2hhdCB3YXMgTmVsc29uJ3MgYXZlcmFnZSBzcGVlZD8KCiAgICBbX117JGFuc3dlcn17M30gW19deyR1bml0c317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo0OSBtaWxlcyBwZXIgaG91cgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="32"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:58%;justify-content:center;"><p id="p-777">How do we see the rate of change on a graph? Let's consider the example above. The graph shows Gregor's distance, \(d\text{,}\) at time \(t\text{.}\) We plot the two data points, \((1, 189)\) and \((4, 360)\text{,}\) and draw a straight line joining them. We can illustrate \(\Delta d\) and \(\Delta t\) by vertical and horizontal line segments, as shown on the graph.</p></div>
-<div class="sbspanel" style="width:38%;justify-content:center;"><img src="images/fig-example-1-4-2.svg" role="img" style="width: 100%; height: auto;" alt="delta d and delta t on line"></div>
+</h6>
+<iframe name="webwork-32" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=32&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyYXRlID0gKDQyMS0xMjcpLygxMC00KTsKJGFuc3dlciA9IENvbXB1dGUoIiRyYXRlIik7CiR1bml0cyA9IFBvcFVwKFsiPyIsCiJtaWxlcyIsIAoiaG91cnMiLAoibWlsZXMgcGVyIGhvdXIiLAoiaG91cnMgcGVyIG1pbGUiXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKTmVsc29uIGlzIGEgbG9uZy1kaXN0YW5jZSB0cnVjayBkcml2ZXIuIE9uIGEgcmVjZW50IHRyaXAgdGhyb3VnaCB0aGUgTWlkd2VzdCxoZSBub3RlZCB0aGVzZSBvZG9tZXRlciByZWFkaW5nczoKCj4%2BIFtARGF0YVRhYmxlKFtbUEdNTCgnNCBhbScpLFBHTUwoJzEyNyBtaWxlcycpLF0sW1BHTUwoJzEwIGFtJyksUEdNTCgnNDIxIG1pbGVzJyksXSxdLGFsaWduPT4ncnInLGNlbnRlcj0%2BMCwpO0BdKiA8PAoKV2hhdCB3YXMgTmVsc29uJ3MgYXZlcmFnZSBzcGVlZD8KCiAgICBbX117JGFuc3dlcn17M30gW19deyR1bml0c317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo0OSBtaWxlcyBwZXIgaG91cgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="32"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:58%;"><p id="p-777">How do we see the rate of change on a graph? Let's consider the example above. The graph shows Gregor's distance, \(d\text{,}\) at time \(t\text{.}\) We plot the two data points, \((1, 189)\) and \((4, 360)\text{,}\) and draw a straight line joining them. We can illustrate \(\Delta d\) and \(\Delta t\) by vertical and horizontal line segments, as shown on the graph.</p></div>
+<div class="sbspanel middle" style="width:38%;"><img src="generated/latex-image/fig-example-1-4-2.svg" role="img" class="contained" alt="delta d and delta t on line"></div>
 </div></div>
 <p id="p-778">The rate of change of distance with respect to time, or speed, is the ratio of \(\Delta d\) to \(\Delta t\text{.}\) It measures how much \(d\) changes for each unit increase in \(t\text{,}\) or how far Gregor travels in each hour. This quantity, the ratio \(\dfrac{\Delta d}{\Delta t} \text{,}\) is the slope of the line.</p>
-<article class="exercise exercise-like" id="exercise-107"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-107"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-107"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.61</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-107"><article class="exercise exercise-like"><iframe name="webwork-33" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=33&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRidXR0b24gPSBSYWRpb0J1dHRvbnMoCiAgWyJUaGUgXCh5XCktYXhpcyIsCiAgIlNsb3BlIiwKICAiU2NhbGVzIG9uIHRoZSBheGVzIiwKICAiVGhlIGRvb3JkaW5hdGUgb2YgYSBwb2ludCJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApXaGF0IGZlYXR1cmUgb2YgYSBncmFwaCBpbGx1c3RyYXRlcyByYXRlIG9mIGNoYW5nZT8KCiAgICBbX117JGJ1dHRvbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpTbG9wZQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="33"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-33" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=33&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRidXR0b24gPSBSYWRpb0J1dHRvbnMoCiAgWyJUaGUgXCh5XCktYXhpcyIsCiAgIlNsb3BlIiwKICAiU2NhbGVzIG9uIHRoZSBheGVzIiwKICAiVGhlIGRvb3JkaW5hdGUgb2YgYSBwb2ludCJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApXaGF0IGZlYXR1cmUgb2YgYSBncmFwaCBpbGx1c3RyYXRlcyByYXRlIG9mIGNoYW5nZT8KCiAgICBbX117JGJ1dHRvbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpTbG9wZQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="33"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Review of Slope</span>
 </h3>
 <article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">Slope.</span></h6>
 <p id="p-787">The <dfn class="terminology">slope</dfn> of a line is a rate of change that measures the steepness of the line.</p></article><p id="p-788">The slope tells us how much the \(y\)-coordinate changes for each unit of increase in the \(x\)-coordinate, as we move from one point to another along the line.</p>
-<article class="exercise exercise-like" id="exercise-108"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-108"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-108"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.62</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-108"><article class="exercise exercise-like"><iframe name="webwork-34" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=34&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXIgPSBSYWRpb0J1dHRvbnMoCiAgICAgIFsiRnJvbSBvbmUgZW5kIG9mIHRoZSBncmFwaCB0byB0aGUgb3RoZXIuIiwKICAgICAgIkFzIHdlIG1vdmUgdXAgdGhlIFwoeVwpLWF4aXMuIiwKICAgICAgIkZyb20gb25lIHBvaW50IHRvIHRoZSBuZXh0IHBvaW50LiIsCiAgICAgICJGb3IgZWFjaCB1bml0IG9mIGluY3JlYXNlIGluIHRoZSBcKHhcKS1jb29yZGluYXRlLiJdLAogICAgICAzLCAKICAgICk7CgpCRUdJTl9QR01MClRoZSBzbG9wZSBvZiBhIGxpbmUgdGVsbHMgdXMgaG93IG11Y2ggdGhlIFtgeWBdLWNvb3JkaW5hdGUgY2hhbmdlcwoKICAgIFtfXXskYW5zd2VyfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkZvciBlYWNoIHVuaXQgb2YgaW5jcmVhc2UgaW4gdGhlIFtgeGBdLWNvb3JkaW5hdGUuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="34"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="definition definition-like" id="definition-7"><h6 class="heading">
+</h6>
+<iframe name="webwork-34" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=34&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXIgPSBSYWRpb0J1dHRvbnMoCiAgICAgIFsiRnJvbSBvbmUgZW5kIG9mIHRoZSBncmFwaCB0byB0aGUgb3RoZXIuIiwKICAgICAgIkFzIHdlIG1vdmUgdXAgdGhlIFwoeVwpLWF4aXMuIiwKICAgICAgIkZyb20gb25lIHBvaW50IHRvIHRoZSBuZXh0IHBvaW50LiIsCiAgICAgICJGb3IgZWFjaCB1bml0IG9mIGluY3JlYXNlIGluIHRoZSBcKHhcKS1jb29yZGluYXRlLiJdLAogICAgICAzLCAKICAgICk7CgpCRUdJTl9QR01MClRoZSBzbG9wZSBvZiBhIGxpbmUgdGVsbHMgdXMgaG93IG11Y2ggdGhlIFtgeWBdLWNvb3JkaW5hdGUgY2hhbmdlcwoKICAgIFtfXXskYW5zd2VyfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkZvciBlYWNoIHVuaXQgb2YgaW5jcmVhc2UgaW4gdGhlIFtgeGBdLWNvb3JkaW5hdGUuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="34"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="definition definition-like" id="definition-7"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.63</span><span class="period">.</span><span class="space"> </span><span class="title">Slope of a Line.</span>
 </h6>
 <div class="displaymath" id="p-797">
@@ -323,7 +330,7 @@ true);
 \text{slope}=\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}} 
 \end{gather*}
 </div>
-<p data-braille="continuation">or, in symbols</p>
+<p class="continuation">or, in symbols</p>
 <div class="displaymath">
 \begin{gather*}
 m=\frac{\Delta y}{\Delta x} 
@@ -349,24 +356,24 @@ m=\frac{\Delta y}{\Delta x}
 </div>
 <p id="p-799">How does slope measure the steepness of a line? Study the three examples below and notice that for each 1 unit increase in \(x\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:30%;justify-content:flex-start;">
-<img src="images/fig-measure-slope-A.svg" role="img" style="width: 100%; height: auto;" alt="line A"><p id="p-800">\(y\) increases by 2 units</p>
+<div class="sbspanel top" style="width:30%;">
+<img src="generated/latex-image/fig-measure-slope-A.svg" role="img" class="contained" alt="line A"><p id="p-800">\(y\) increases by 2 units</p>
 <div class="displaymath">
 \begin{gather*}
 m=\frac{\Delta y}{\Delta x}=\frac{2}{1}=2 
 \end{gather*}
 </div>
 </div>
-<div class="sbspanel" style="width:30%;justify-content:flex-start;">
-<img src="images/fig-measure-slope-B.svg" role="img" style="width: 100%; height: auto;" alt="line B"><p id="p-801">\(y\) increases by \(\frac{3}{2}\) units</p>
+<div class="sbspanel top" style="width:30%;">
+<img src="generated/latex-image/fig-measure-slope-B.svg" role="img" class="contained" alt="line B"><p id="p-801">\(y\) increases by \(\frac{3}{2}\) units</p>
 <div class="displaymath">
 \begin{gather*}
 m=\frac{\Delta y}{\Delta x}=\frac{3}{2} 
 \end{gather*}
 </div>
 </div>
-<div class="sbspanel" style="width:30%;justify-content:flex-start;">
-<img src="images/fig-measure-slope-C.svg" role="img" style="width: 100%; height: auto;" alt="line C"><p id="p-802">\(y\) decreases by 2 units</p>
+<div class="sbspanel top" style="width:30%;">
+<img src="generated/latex-image/fig-measure-slope-C.svg" role="img" class="contained" alt="line C"><p id="p-802">\(y\) decreases by 2 units</p>
 <div class="displaymath">
 \begin{gather*}
 m=\frac{\Delta y}{\Delta x}=\frac{-2}{1}=-2 
@@ -383,15 +390,15 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{1}=-2
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.64</span><span class="period">.</span>
 </h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:55%;justify-content:flex-start;"><ol id="p-807" class="lower-alpha">
+<div class="sbspanel top" style="width:55%;"><ol id="p-807" class="lower-alpha">
 <li id="li-433"><p id="p-808">Compute the slope of the line.</p></li>
 <li id="li-434"><p id="p-809">Illustrate the slope on the graph by drawing a vertical segment of length \(\Delta y\) and a horizontal segment of length \(\Delta x\text{.}\)</p></li>
 <li id="li-435"><p id="p-810">If \(\Delta x =1\text{,}\) what is the length of the vertical segment?</p></li>
 </ol></div>
-<div class="sbspanel" style="width:40%;justify-content:flex-start;"><img src="images/fig-example-1-4-3.svg" role="img" style="width: 100%; height: auto;" alt="line with different scales on axes"></div>
+<div class="sbspanel top" style="width:40%;"><img src="generated/latex-image/fig-example-1-4-3.svg" role="img" class="contained" alt="line with different scales on axes"></div>
 </div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><ol id="p-811" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><ol id="p-811" class="lower-alpha">
 <li id="li-436">
 <p id="p-812">The points \((20,500)\) and \((40,1000) \) lie on the graph. As we move from the first point to the second point, \(x\) increases by 20 units, so \(\Delta x=20\text{,}\) and \(y\) increases by 500 units, so \(\Delta y = 500\text{.}\) Thus</p>
 <div class="displaymath">
@@ -402,17 +409,18 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{1}=-2
 </li>
 <li id="li-437">
 <p id="p-813">The segments are shown in the graph below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-example-1-4-3-ans.svg" role="img" style="width: 100%; height: auto;" alt="line with different scales on axes"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-example-1-4-3-ans.svg" role="img" class="contained" alt="line with different scales on axes"></div></div></div>
 </li>
 <li id="li-438"><p id="p-814">The slope is 25, which means that \(y\) increases 25 units for each 1-unit increase in \(x\text{.}\) So, if \(\Delta x=1\text{,}\) then \(\Delta y=25\text{.}\)</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-109"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-109"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-109"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.65</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-109"><article class="exercise exercise-like"><div class="introduction" id="introduction-19"><div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-3.svg" role="img" style="width: 100%; height: auto;" alt="negative slope line with different scales on axes"></div></div></div></div>
+</h6>
+<div class="introduction" id="introduction-19"><div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-ex-1-4-3.svg" role="img" class="contained" alt="negative slope line with different scales on axes"></div></div></div></div>
 <iframe name="webwork-35" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=35&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtID0gLTIyNS82Owokc2xvcGUgPSBDb21wdXRlKCIkbSIpOwokZGVseSA9IC0kbTsKJGxlbmd0aCA9IENvbXB1dGUoIiRkZWx5Iik7CgpCRUdJTl9QR01MCmEuICBDb21wdXRlIHRoZSBzbG9wZSBvZiB0aGUgbGluZS4KCiAgICBbYG09YF1bX117JHNsb3BlfXszfQoKCmEuICBJbGx1c3RyYXRlIHRoZSBzbG9wZSBvbiB0aGUgZ3JhcGggYnkgZHJhd2luZyBhIHZlcnRpY2FsIHNlZ21lbnQgZm9yIFtgXERlbHRhIHlgXSBhbmQgYSBob3Jpem9udGFsIHNlZ21lbnQgZm9yIFtgXERlbHRhIHhcdGV4dHsufWBdCgoKYS4gIElmIFtgXERlbHRhIHg9MVx0ZXh0eyx9YF0gd2hhdCBpcyB0aGUgbGVuZ3RoIG9mIHRoZSB2ZXJ0aWNhbCBzZWdtZW50PwoKICAgIFRoIGxlbmd0aCBpcyBbX117JGxlbmd0aH17M30KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgLTM3LjVgXQoKCmEuICBBIGZpZ3VyZSBpcyBiZWxvdy4KCgphLiAgW2AzNy41YF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="35"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-8">
 <p id="p-827">Graph for part (b):</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:40%;justify-content:flex-start;"><img src="images/fig-ex-1-4-3-ans.svg" role="img" style="width: 100%; height: auto;" alt="negative slope line with different scales on axes"></div></div></div>
-</div></article></div></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:40%;"><img src="generated/latex-image/fig-ex-1-4-3-ans.svg" role="img" class="contained" alt="negative slope line with different scales on axes"></div></div></div>
+</div></article></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Interpreting Slope as a Rate</span>
 </h3>
 <p id="p-828">The slope of a line measures the rate of change of \(y\) with respect to \(x\text{.}\)</p>
@@ -421,15 +429,15 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{1}=-2
 </h6>
 <p id="p-829">The graph shows the altitude, \(a\) (in feet), of a skier \(t\) minutes after getting on a ski lift.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
-<div class="sbspanel" style="width:56.4102564102564%;justify-content:center;"><ol id="p-830" class="lower-alpha">
+<div class="sbspanel middle" style="width:56.4102564102564%;"><ol id="p-830" class="lower-alpha">
 <li id="li-445"><p id="p-831">Choose two points on the graph and compute the slope, including units.</p></li>
 <li id="li-446"><p id="p-832">Explain what the slope measures in this problem.</p></li>
 <li id="li-447"><p id="p-833">Write a linear model for \(a\) in terms of \(t\text{.}\)</p></li>
 </ol></div>
-<div class="sbspanel" style="width:41.025641025641%;justify-content:center;"><img src="images/fig-ski-lift.svg" role="img" style="width: 100%; height: auto;" alt="altitude vs time"></div>
+<div class="sbspanel middle" style="width:41.025641025641%;"><img src="generated/latex-image/fig-ski-lift.svg" role="img" class="contained" alt="altitude vs time"></div>
 </div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><ol id="p-834" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><ol id="p-834" class="lower-alpha">
 <li id="li-448">
 <p id="p-835">We choose the points \((2,400)\) and \((4, 700)\text{,}\) as shown on the graph. Then</p>
 <div class="displaymath">
@@ -446,7 +454,7 @@ m=\frac{\Delta a}{\Delta t} = \frac{300 \text{ feet}}{2 \text{ minutes}} = 150 \
 y = (\text{starting value}) + (\text{rate}) \times t 
 \end{gather*}
 </div>
-<p data-braille="continuation">From the graph, we see that at \(t = 0\) the skier's altitude was \(a = 100\text{,}\) and we calculated the rate of change of altitude as 150 feet per minute. Substituting these values into the formula, we find</p>
+<p class="continuation">From the graph, we see that at \(t = 0\) the skier's altitude was \(a = 100\text{,}\) and we calculated the rate of change of altitude as 150 feet per minute. Substituting these values into the formula, we find</p>
 <div class="displaymath">
 \begin{gather*}
 a = 100 + 150t
@@ -458,19 +466,20 @@ a = 100 + 150t
 <ol id="p-838" class="decimal">
 <li id="li-451"><p id="p-839">The slope of a line measures the <dfn class="terminology">rate of change</dfn> of \(y\) with respect to \(x\text{.}\)</p></li>
 <li id="li-452"><p id="p-840">The units of \(\Delta y\) and \(\Delta x\) can help us interpret the slope as a rate.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-110"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-110"><h6 class="heading">
+</ol></article><article class="exercise exercise-like" id="exercise-110"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.67</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-110"><article class="exercise exercise-like"><div class="introduction" id="introduction-20"><div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-garbage-deposited.svg" role="img" style="width: 100%; height: auto;" alt="linear graph of garbage deposited"></div></div></div></div>
-<iframe name="webwork-36" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=36&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHJhdGU9ICgxNTAtMjUpLzEwOwokbSA9IENvbXB1dGUoIiRyYXRlIik7CgokdW5pdHMgPSBQb3BVcCgKICBbIj8iLAogICJ0b25zIiwKICAieWVhcnMiLAogICJ0b25zIHBlciB5ZWFyIiwKICAieWVhcnMgcGVyIHRvbiJdLAogIDMsIAopOwokZXhwbGFpbiA9IFJhZGlvQnV0dG9ucygKICBbIkEpIFRoZSByYXRlIGF0IHdoaWNoIGdhcmJhZ2UgYWNjdW11bGF0ZXMiLAogICJCKSBUaGUgc3RlZXBuZXNzIG9mIHRoZSBnYXJiYWdlIHBpbGUiLAogICJDKSBUaGUgdm9sdW1lIG9mIHRoZSBnYXJiYWdlIiwKICAiRCkgVGhlIGNvc3QgdG8gdXNlIHRoZSBkdW1wIHNpdGUiXSwKICAwLCAKKTsKCkJFR0lOX1BHTUwKVGhlIGdyYXBoIHNob3dzIHRoZSBhbW91bnQgb2YgZ2FyYmFnZSBbYEdgXSAoaW4gdG9ucykgdGhhdCBoYXMgYmVlbiBkZXBvc2l0ZWQgYXQgYSBkdW1wc2l0ZSBbYHRgXSB5ZWFycyBhZnRlciBuZXcgcmVndWxhdGlvbnMgZ28gaW50byBlZmZlY3QuCmEuICBDaG9vc2UgdHdvIHBvaW50cyBvbiB0aGUgZ3JhcGggYW5kIGNvbXB1dGUgdGhlIHNsb3BlLCBpbmNsdWRpbmcgdW5pdHMuCgogICAgVGhlIHNsb3BlIGlzIFtfXXskbX17M31bX117JHVuaXRzfXs1fQoKCmEuICBFeHBsYWluIHdoYXQgdGhlIHNsb3BlIG1lYXN1cmVzIGluIHRoaXMgcHJvYmxlbS4gW19deyRleHBsYWlufXs1fQoKCmEuICBDaG9vc2UgdHdvIGRpZmZlcmVudCBwb2ludHMgYW5kIGNvbXB1dGUgdGhlIHNsb3BlIGFnYWluLiBEbyB5b3UgZ2V0IHRoZSBzYW1lIHZhbHVlIGFzIGJlZm9yZT8KCiAgICBUaGUgc2xvcGUgaXMgW19deyRtfXszfVtfXXskdW5pdHN9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAxMi41IHRvbnMgcGVyIHllYXIKCgphLiAgVGhlIHNsb3BlIGdpdmVzIHRoZSByYXRlIGF0IHdoaWNoIGdhcmJhZ2UgaXMgYWNjdW11bGF0aWcuCgoKYS4gIFRoZSBzbG9wZSBpcyB0aGUgc2FtZSB1c2luZyBhbnkgdHdvIHBvaW50cyBvbiB0aGUgbGluZS4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="36"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+</h6>
+<div class="introduction" id="introduction-20"><div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-garbage-deposited.svg" role="img" class="contained" alt="linear graph of garbage deposited"></div></div></div></div>
+<iframe name="webwork-36" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=36&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHJhdGU9ICgxNTAtMjUpLzEwOwokbSA9IENvbXB1dGUoIiRyYXRlIik7CgokdW5pdHMgPSBQb3BVcCgKICBbIj8iLAogICJ0b25zIiwKICAieWVhcnMiLAogICJ0b25zIHBlciB5ZWFyIiwKICAieWVhcnMgcGVyIHRvbiJdLAogIDMsIAopOwokZXhwbGFpbiA9IFJhZGlvQnV0dG9ucygKICBbIkEpIFRoZSByYXRlIGF0IHdoaWNoIGdhcmJhZ2UgYWNjdW11bGF0ZXMiLAogICJCKSBUaGUgc3RlZXBuZXNzIG9mIHRoZSBnYXJiYWdlIHBpbGUiLAogICJDKSBUaGUgdm9sdW1lIG9mIHRoZSBnYXJiYWdlIiwKICAiRCkgVGhlIGNvc3QgdG8gdXNlIHRoZSBkdW1wIHNpdGUiXSwKICAwLCAKKTsKCkJFR0lOX1BHTUwKVGhlIGdyYXBoIHNob3dzIHRoZSBhbW91bnQgb2YgZ2FyYmFnZSBbYEdgXSAoaW4gdG9ucykgdGhhdCBoYXMgYmVlbiBkZXBvc2l0ZWQgYXQgYSBkdW1wc2l0ZSBbYHRgXSB5ZWFycyBhZnRlciBuZXcgcmVndWxhdGlvbnMgZ28gaW50byBlZmZlY3QuCmEuICBDaG9vc2UgdHdvIHBvaW50cyBvbiB0aGUgZ3JhcGggYW5kIGNvbXB1dGUgdGhlIHNsb3BlLCBpbmNsdWRpbmcgdW5pdHMuCgogICAgVGhlIHNsb3BlIGlzIFtfXXskbX17M31bX117JHVuaXRzfXs1fQoKCmEuICBFeHBsYWluIHdoYXQgdGhlIHNsb3BlIG1lYXN1cmVzIGluIHRoaXMgcHJvYmxlbS4gW19deyRleHBsYWlufXs1fQoKCmEuICBDaG9vc2UgdHdvIGRpZmZlcmVudCBwb2ludHMgYW5kIGNvbXB1dGUgdGhlIHNsb3BlIGFnYWluLiBEbyB5b3UgZ2V0IHRoZSBzYW1lIHZhbHVlIGFzIGJlZm9yZT8KCiAgICBUaGUgc2xvcGUgaXMgW19deyRtfXszfVtfXXskdW5pdHN9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAxMi41IHRvbnMgcGVyIHllYXIKCgphLiAgVGhlIHNsb3BlIGdpdmVzIHRoZSByYXRlIGF0IHdoaWNoIGdhcmJhZ2UgaXMgYWNjdW11bGF0aWcuCgoKYS4gIFRoZSBzbG9wZSBpcyB0aGUgc2FtZSB1c2luZyBhbnkgdHdvIHBvaW50cyBvbiB0aGUgbGluZS4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="36"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Lines Have Constant Slope</span>
 </h3>
 <article class="assemblage assemblage-like" id="assemblage-10"><h6 class="heading"><span class="title">Lines Have Constant Slope.</span></h6>
 <p id="p-870">The slope of a line is constant: no matter which two points you pick to compute the slope, you will always get the same value.</p></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:center;">
+<div class="sbspanel middle" style="width:50%;">
 <p id="p-871">For the line shown in the figure, try computing the slope using the points \(P\) and \(Q\text{,}\) and then using the points \(G\) and \(H\text{.}\) In each case, you should find that the slope is \(\frac{3}{2} \text{.}\)</p>
 <p id="p-872">Here is another way to look at slopes. If we start at any point on the line shown and move 9 units to the right, what value of \(\Delta y\) will bring us back to the line? We can use the slope formula with \(\Delta x=9\text{.}\)</p>
 </div>
-<div class="sbspanel" style="width:45%;justify-content:center;"><img src="images/fig-constant-slope.svg" role="img" style="width: 100%; height: auto;" alt="line"></div>
+<div class="sbspanel middle" style="width:45%;"><img src="generated/latex-image/fig-constant-slope.svg" role="img" class="contained" alt="line"></div>
 </div></div>
 <div class="displaymath" id="p-873">
 \begin{align*}
@@ -481,18 +490,18 @@ m \amp=\frac{\Delta y}{\Delta x} \amp\amp\blert{\text{Substitute the known value
 </div>
 <p id="p-874">You can use the graph to check this result for yourself; try starting at the point \((-6,-3) \text{.}\)</p>
 <p id="p-875">The fact that lines have constant slope has two important consequences. First because \(m\) is constant for a given line, we can use the formula \(m=\dfrac{\Delta y}{\Delta x} \)to find \(\Delta y\) when we know \(\Delta x \text{,}\) or to find \(\Delta x \) when we know \(\Delta y \text{.}\)</p>
-<article class="exercise exercise-like" id="exercise-111"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-111"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-111"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.68</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-111"><article class="exercise exercise-like"><iframe name="webwork-37" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=37&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRCdXR0b24gPSBSYWRpb0J1dHRvbnMoCiAgWyJUaGUgZXF1YXRpb24gb2YgYSBsaW5lIiwKICAiVGhlIGdlbmVyYWwgbGluZWFyIGZvcm11bGEiLAogICJUaGUgc2xvcGUgZm9ybXVsYSIsCiAgIlwoRD1SVFwpIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoYXQgZm9ybXVsYSBjYW4gd2UgdXNlIHRvIGZpbmQgW2BcRGVsdGEgeWBdIHdoZW4gd2Uga25vdyBbYFxEZWx0YSB4XHRleHR7LH1gXSBvciBbYFxEZWx0YSB4YF0gd2hlbiB3ZSBrbm93IFtgXERlbHRhIHlcdGV4dHs%2FfWBdCgogICAgW19deyRCdXR0b259ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIHNsb3BlIGZvcm11bGEKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="37"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-22"><h6 class="heading">
+</h6>
+<iframe name="webwork-37" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=37&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRCdXR0b24gPSBSYWRpb0J1dHRvbnMoCiAgWyJUaGUgZXF1YXRpb24gb2YgYSBsaW5lIiwKICAiVGhlIGdlbmVyYWwgbGluZWFyIGZvcm11bGEiLAogICJUaGUgc2xvcGUgZm9ybXVsYSIsCiAgIlwoRD1SVFwpIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoYXQgZm9ybXVsYSBjYW4gd2UgdXNlIHRvIGZpbmQgW2BcRGVsdGEgeWBdIHdoZW4gd2Uga25vdyBbYFxEZWx0YSB4XHRleHR7LH1gXSBvciBbYFxEZWx0YSB4YF0gd2hlbiB3ZSBrbm93IFtgXERlbHRhIHlcdGV4dHs%2FfWBdCgogICAgW19deyRCdXR0b259ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIHNsb3BlIGZvcm11bGEKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="37"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-22"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.69</span><span class="period">.</span>
 </h6>
 <p id="p-884">A wheelchair ramp can have a slope of no more than 24%, or 0.24. What horizontal distance is needed if the ramp must climb an elevation of 4 feet?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:55%;justify-content:center;"><p id="p-885">We first draw a sketch of the wheelchair ramp and label \(\Delta x\) and \(\Delta y\text{.}\) We are given that \(\Delta y=4\) feet, and we are looking for \(\Delta x\text{.}\) We substitute the known values into the slope formula, and solve for \(\Delta x\text{.}\)</p></div>
-<div class="sbspanel" style="width:43%;justify-content:center;"><img src="images/fig-wheelchair-ramp.svg" role="img" style="width: 100%; height: auto;" alt="ramp"></div>
+<div class="sbspanel middle" style="width:55%;"><p id="p-885">We first draw a sketch of the wheelchair ramp and label \(\Delta x\) and \(\Delta y\text{.}\) We are given that \(\Delta y=4\) feet, and we are looking for \(\Delta x\text{.}\) We substitute the known values into the slope formula, and solve for \(\Delta x\text{.}\)</p></div>
+<div class="sbspanel middle" style="width:43%;"><img src="generated/latex-image/fig-wheelchair-ramp.svg" role="img" class="contained" alt="ramp"></div>
 </div></div>
 <div class="displaymath" id="p-886">
 \begin{align*}
@@ -501,27 +510,27 @@ m \amp=\frac{\Delta y}{\Delta x} \amp\amp\blert{\text{Substitute the known value
 \Delta x\amp = \frac{4}{0.24}=16.\overline{6}
 \end{align*}
 </div>
-<p data-braille="continuation">The wheelchair ramp must have a horizontal length of \(16\frac{2}{3} \) feet, or 16 feet 8 inches.</p>
+<p class="continuation">The wheelchair ramp must have a horizontal length of \(16\frac{2}{3} \) feet, or 16 feet 8 inches.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-112"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-112"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-112"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.70</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-112"><article class="exercise exercise-like"><iframe name="webwork-38" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=38&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJwYXJzZXJOdW1iZXJXaXRoVW5pdHMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXI9IE51bWJlcldpdGhVbml0cygiMi40IGZ0Iik7CgpCRUdJTl9QR01MCkEgd2hlZWxjaGFpciByYW1wIGNhbiBoYXZlIGEgc2xvcGUgb2Ygbm8gbW9yZSB0aGFuIDI0JSwgb3IgMC4yNC4gV2hhdCBoZWlnaHQgY2FuIHRoZSB3aGVlbGNoYWlyIHJhbXAgY2xpbWIgb3ZlciBhIGhvcml6b250YWwgZGlzdGFuY2Ugb2YgMTAgZmVldD8KCkFuc3dlcjogW19deyRhbnN3ZXJ9ezV9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImZ0IiBmb3IgZmVldC4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkRvIHdlIGtub3cgdGhlIHZhbHVlIG9mIFtgXERlbHRhIHlgXSBvciBvZiBbYFxEZWx0YSB4XHRleHR7P31gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KMi40IGZ0CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="38"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-892">Here is a second consequence of the fact that lines have constant slope: We can tell whether a collection of data points lies on a straight line by computing slopes. If the slopes between pairs of data points are all the same, the points lie on a straight line.</p>
-<article class="exercise exercise-like" id="exercise-113"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-113"><h6 class="heading">
+</h6>
+<iframe name="webwork-38" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=38&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJwYXJzZXJOdW1iZXJXaXRoVW5pdHMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXI9IE51bWJlcldpdGhVbml0cygiMi40IGZ0Iik7CgpCRUdJTl9QR01MCkEgd2hlZWxjaGFpciByYW1wIGNhbiBoYXZlIGEgc2xvcGUgb2Ygbm8gbW9yZSB0aGFuIDI0JSwgb3IgMC4yNC4gV2hhdCBoZWlnaHQgY2FuIHRoZSB3aGVlbGNoYWlyIHJhbXAgY2xpbWIgb3ZlciBhIGhvcml6b250YWwgZGlzdGFuY2Ugb2YgMTAgZmVldD8KCkFuc3dlcjogW19deyRhbnN3ZXJ9ezV9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImZ0IiBmb3IgZmVldC4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkRvIHdlIGtub3cgdGhlIHZhbHVlIG9mIFtgXERlbHRhIHlgXSBvciBvZiBbYFxEZWx0YSB4XHRleHR7P31gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KMi40IGZ0CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="38"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-892">Here is a second consequence of the fact that lines have constant slope: We can tell whether a collection of data points lies on a straight line by computing slopes. If the slopes between pairs of data points are all the same, the points lie on a straight line.</p>
+<article class="exercise exercise-like" id="exercise-113"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.71</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-113"><article class="exercise exercise-like"><iframe name="webwork-39" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=39&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRQaWNrID0gUmFkaW9CdXR0b25zKAogIFsiQSkgUGxvdCB0aGVtIGFuZCBsb29rIGF0IHRoZSBncmFwaC4iLAogICJCKSBDYWxjdWxhdGUgdGhlIHNsb3BlcyBiZXR3ZWVuIHBvaW50cy4iLAogICJDKSBGaW5kIGFuIGVxdWF0aW9uIGZvciB0aGUgbGluZS4iLAogICJEKSBJdCBkZXBlbmRzIG9uIHRoZSBzY2FsZXMgb24gdGhlIGF4ZXMuIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCkhvdyBjYW4gd2UgY2FuIHRlbGwgd2hldGhlciBhIGNvbGxlY3Rpb24gb2YgZGF0YSBwb2ludHMgbGllcyBvbiBhIHN0cmFpZ2h0IGxpbmU%2FCgogICAgW19deyRQaWNrfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkNhbGN1bGF0ZSB0aGUgc2xvcGVzIGJldHdlZW4gcG9pbnRzLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="39"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-23"><h6 class="heading">
+</h6>
+<iframe name="webwork-39" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=39&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRQaWNrID0gUmFkaW9CdXR0b25zKAogIFsiQSkgUGxvdCB0aGVtIGFuZCBsb29rIGF0IHRoZSBncmFwaC4iLAogICJCKSBDYWxjdWxhdGUgdGhlIHNsb3BlcyBiZXR3ZWVuIHBvaW50cy4iLAogICJDKSBGaW5kIGFuIGVxdWF0aW9uIGZvciB0aGUgbGluZS4iLAogICJEKSBJdCBkZXBlbmRzIG9uIHRoZSBzY2FsZXMgb24gdGhlIGF4ZXMuIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCkhvdyBjYW4gd2UgY2FuIHRlbGwgd2hldGhlciBhIGNvbGxlY3Rpb24gb2YgZGF0YSBwb2ludHMgbGllcyBvbiBhIHN0cmFpZ2h0IGxpbmU%2FCgogICAgW19deyRQaWNrfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkNhbGN1bGF0ZSB0aGUgc2xvcGVzIGJldHdlZW4gcG9pbnRzLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="39"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-23"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.72</span><span class="period">.</span>
 </h6>
 <p id="p-901">Could this table represent a linear equation? Explain why or why not.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-6\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-3\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(8\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(8\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -529,26 +538,28 @@ m \amp=\frac{\Delta y}{\Delta x} \amp\amp\blert{\text{Substitute the known value
 <td class="c m b1 r1 l0 t0 lines">\(18\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(16\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(14\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(12\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 </tr>
 </table></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like">
 <p id="p-902">We compute the slope between each consecutive pair of points. In each case</p>
 <div class="displaymath">
 \begin{gather*}
 m=\frac{\Delta y}{\Delta x}=\frac{-2}{3} 
 \end{gather*}
 </div>
-<p data-braille="continuation">Because the slope is the same for all pairs of points, the table could be linear.</p>
+<p class="continuation">Because the slope is the same for all pairs of points, the table could be linear.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-114"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-114"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-114"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.73</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-114"><article class="exercise exercise-like"><iframe name="webwork-40" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=40&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkWU4gPSBQb3BVcCgKICBbIj8iLCJZZXMiLCJObyJdLAogIDIsIAogKTsKJGV4cGxhaW4gPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBUaGUgc2xvcGUgaXMgdGhlIHNhbWUgYmVyd2VlbiBhbGwgcGFpcnMgb2YgcG9pbnRzLiIsCiAgIkIpIFRoZSBzbG9wZSBiZXR3ZWVuIHBvaW50cyBpcyBub3QgY29uc3RhbnQuIiwKICBdLAogIDEsIAopOwoKQkVHSU5fUEdNTApDb3VsZCB0aGlzIHRhYmxlIHJlcHJlc2VudCBhIGxpbmVhciBlcXVhdGlvbj8gW19deyRZTn17NX0KCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgdGBdJyksbWlkcnVsZT0%2BJzEnLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnNScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnMTAnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE1JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCcyMCcpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnMjUnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1tgUGBdJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCcwJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCczJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCc2JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCcxMicpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnMjQnKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgpFeHBsYWluIHdoeSBvciB3aHkgbm90LgoKICAgIFtfXXskZXhwbGFpbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkNhbGN1bGF0ZSB0aGUgc2xvcGVzIGJldHdlZW4gcG9pbnRzLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KTm8sIHRoZSBzbG9wZSBiZXR3ZWVuIHBvaW50cyBpcyBub3QgY29uc3RhbnQuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="40"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-1-4-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-40" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=40&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkWU4gPSBQb3BVcCgKICBbIj8iLCJZZXMiLCJObyJdLAogIDIsIAogKTsKJGV4cGxhaW4gPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBUaGUgc2xvcGUgaXMgdGhlIHNhbWUgYmVyd2VlbiBhbGwgcGFpcnMgb2YgcG9pbnRzLiIsCiAgIkIpIFRoZSBzbG9wZSBiZXR3ZWVuIHBvaW50cyBpcyBub3QgY29uc3RhbnQuIiwKICBdLAogIDEsIAopOwoKQkVHSU5fUEdNTApDb3VsZCB0aGlzIHRhYmxlIHJlcHJlc2VudCBhIGxpbmVhciBlcXVhdGlvbj8gW19deyRZTn17NX0KCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgdGBdJyksbWlkcnVsZT0%2BJzEnLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnNScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnMTAnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJzE1JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCcyMCcpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnMjUnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1tgUGBdJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCcwJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCczJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCc2JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCcxMicpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnMjQnKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3xjfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgpFeHBsYWluIHdoeSBvciB3aHkgbm90LgoKICAgIFtfXXskZXhwbGFpbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkNhbGN1bGF0ZSB0aGUgc2xvcGVzIGJldHdlZW4gcG9pbnRzLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KTm8sIHRoZSBzbG9wZSBiZXR3ZWVuIHBvaW50cyBpcyBub3QgY29uc3RhbnQuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="40"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-1-4-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 1.4</span>
 </h3>
 <article class="subexercises" id="subexercises-10"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-14">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-21"><p id="p-915">Compute ratios to answer the questions in Problems 1–4.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-115"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -559,20 +570,21 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-15">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-22"><p id="p-922">In Problems 5-8, compute the slope of the line through the indicated points. On both axes, one square represents one unit.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-119"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-5.svg" role="img" style="width: 100%; height: auto;" alt="line on grid"></div></div></div></article><article class="exercise exercise-like" id="exercise-120"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-6.svg" role="img" style="width: 100%; height: auto;" alt="line on grid"></div></div></div></article><article class="exercise exercise-like" id="exercise-121"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-7.svg" role="img" style="width: 100%; height: auto;" alt="line on grid"></div></div></div></article><article class="exercise exercise-like" id="exercise-122"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-8.svg" role="img" style="width: 100%; height: auto;" alt="line on grid"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-5.svg" role="img" class="contained" alt="line on grid"></div></div></div></article><article class="exercise exercise-like" id="exercise-120"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-6.svg" role="img" class="contained" alt="line on grid"></div></div></div></article><article class="exercise exercise-like" id="exercise-121"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-7.svg" role="img" class="contained" alt="line on grid"></div></div></div></article><article class="exercise exercise-like" id="exercise-122"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-8.svg" role="img" class="contained" alt="line on grid"></div></div></div></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-11"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <article class="exercise exercise-like" id="exercise-123"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <ol id="p-925" class="lower-alpha">
 <li id="li-486">
 <p id="p-926">Compute the slope of the line.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-line-slope-3halves.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-line-slope-3halves.svg" role="img" class="contained" alt="graph"></div></div></div>
 </li>
 <li id="li-487"><p id="p-927">Start at point \((0,2)\) and move 4 units in the positive \(x\)-direction. How many units must you move in the \(y\)-direction to get back to the line? What is the ratio of \(\Delta y\) to \(\Delta x\text{?}\)</p></li>
 <li id="li-488"><p id="p-928">Start at point \((0,2)\) and move \(-6\) units in the positive \(x\)-direction. How many units must you move in the \(y\)-direction to get back to the line? What is the ratio of \(\Delta y\) to \(\Delta x\text{?}\)</p></li>
@@ -581,27 +593,29 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <ol id="p-931" class="lower-alpha">
 <li id="li-494">
 <p id="p-932">Compute the slope of the line.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-line-slope-neg3fourths.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-line-slope-neg3fourths.svg" role="img" class="contained" alt="graph"></div></div></div>
 </li>
 <li id="li-495"><p id="p-933">Start at point \((0,-6)\) and move \(-6\) units in the \(y\)-direction (down). How many units must you move in the \(x\)-direction to get back to the line? What is the ratio of \(\Delta y\) to \(\Delta x\text{?}\)</p></li>
 <li id="li-496"><p id="p-934">Start at point \((0,-6)\) and move 9 units in the positive \(y\)-direction. How many units must you move in the \(x\)-direction to get back to the line? What is the ratio of \(\Delta y\) to \(\Delta x\text{?}\)</p></li>
 <li id="li-497"><p id="p-935">Suppose you start at any point on the line and move 20 units in the \(y\)-direction. How many units must you move in the \(y\)-direction to get back to the line? Use the equation \(m=\dfrac{\Delta y}{\Delta x}\) to calculate your answer.</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-16">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-23"><p id="p-936">For Problems 11-14, compute the slope of the line. Note the scales on the axes.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-125"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-23.svg" role="img" style="width: 100%; height: auto;" alt="four lines"></div></div></div></article><article class="exercise exercise-like" id="exercise-126"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-24.svg" role="img" style="width: 100%; height: auto;" alt="four lines"></div></div></div></article><article class="exercise exercise-like" id="exercise-127"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-25.svg" role="img" style="width: 100%; height: auto;" alt="four lines"></div></div></div></article><article class="exercise exercise-like" id="exercise-128"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-1-4-26.svg" role="img" style="width: 100%; height: auto;" alt="four lines"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-23.svg" role="img" class="contained" alt="four lines"></div></div></div></article><article class="exercise exercise-like" id="exercise-126"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-24.svg" role="img" class="contained" alt="four lines"></div></div></div></article><article class="exercise exercise-like" id="exercise-127"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-25.svg" role="img" class="contained" alt="four lines"></div></div></div></article><article class="exercise exercise-like" id="exercise-128"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-1-4-26.svg" role="img" class="contained" alt="four lines"></div></div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-17">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-24">
 <p id="p-939">For Problems 15 and 16,</p>
 <ol class="lower-alpha">
-<li id="li-498">Graph the line by the intercept method.</li>
-<li id="li-499">Use the intercepts to compute the slope.</li>
+<li id="li-498"><p id="p-derived-li-498">Graph the line by the intercept method.</p></li>
+<li id="li-499"><p id="p-derived-li-499">Use the intercepts to compute the slope.</p></li>
 <li id="li-500"><p id="p-940">Use the intercepts to illustrate the slope on each graph. Put arrows on \(\Delta x\) and \(\Delta y\) to indicate the direction of motion.</p></li>
 </ol>
 </div>
@@ -620,114 +634,115 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <li id="li-505"><p id="p-949">\(\displaystyle \Delta x = 12\)</p></li>
 <li id="li-506"><p id="p-950">\(\displaystyle \Delta y = -6\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-18">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-25"><p id="p-951">For Problems 19 and 20, which tables represent variables that are related by a linear equation? (Hint: which relationships have constant slope?)</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-133"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <ol id="p-952" class="lower-alpha cols2">
-<li id="li-507"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-507"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(y\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(y\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(12\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(17\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(17\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(22\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(22\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(27\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(27\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(32\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(32\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-508"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-508"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(P\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(P\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(12\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(9\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(16\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(16\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(25\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(25\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(36\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(36\)</td>
 </tr>
 </table></div></div></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-134"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <ol id="p-954" class="lower-alpha cols2">
-<li id="li-509"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-509"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(h\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(w\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(w\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(20\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(20\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(18\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(18\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(16\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(16\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(14\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(14\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(12\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-510"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-510"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(d\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(d\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(15\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(6\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(6\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(20\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(12\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(25\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(24\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(24\)</td>
 </tr>
 </table></div></div></div></li>
 </ol></article>
@@ -739,19 +754,19 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <li id="li-511">
 <p id="p-956">Use a rate of change to calculate the town's average rate of growth, in people per year. First, complete the table of values:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;">
-<table>
+<div class="sbspanel top" style="width:50%;">
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~t~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~P~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~P~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table>
 <div class="displaymath" id="p-957">
@@ -762,7 +777,7 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 \end{align*}
 </div>
 </div>
-<div class="sbspanel" style="width:40%;justify-content:flex-start;"><img src="images/fig-linear-growth.svg" role="img" style="width: 100%; height: auto;" alt="line"></div>
+<div class="sbspanel top" style="width:40%;"><img src="generated/latex-image/fig-linear-growth.svg" role="img" class="contained" alt="line"></div>
 </div></div>
 </li>
 <li id="li-512"><p id="p-958">Illustrate \(\Delta P\) and \(\Delta t\) by line segments on the graph. (Note that the \(P\)-axis is labeled in thousands.)</p></li>
@@ -770,27 +785,28 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <li id="li-514"><p id="p-960">Write a linear model for \(P\) in terms of \(t\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-136"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-962">A traditional first experiment for chemistry students is to make 90 observations about a burning candle. Delbert records the height, \(h\text{,}\) of the candle in inches at various times \(t\) minutes after he lit it.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(10\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(30\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(45\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(45\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(h\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(12\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(11.5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(10.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(9.75\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(9.75\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-963" class="lower-alpha">
-<li id="li-518">Choose appropriate scales for the axes and plot the data. Do the points lie on a straight line?</li>
-<li id="li-519">Compute the slope of the graph, including units, and explain what the slope tells us about the candle.</li>
-<li id="li-520">Write a linear model for \(h\) in terms of \(t\text{.}\)</li>
+<li id="li-518"><p id="p-derived-li-518">Choose appropriate scales for the axes and plot the data. Do the points lie on a straight line?</p></li>
+<li id="li-519"><p id="p-derived-li-519">Compute the slope of the graph, including units, and explain what the slope tells us about the candle.</p></li>
+<li id="li-520"><p id="p-derived-li-520">Write a linear model for \(h\) in terms of \(t\text{.}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-19">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-26">
 <p id="p-964">For Problems 23 and 24,</p>
 <ol class="lower-alpha">
@@ -803,14 +819,14 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-137"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <p id="p-969">The graph shows the number of liters of emergency water \(W\) remaining in a southern California household \(t\) days after an earthquake.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-water-remaining.svg" role="img" style="width: 100%; height: auto;" alt="line with positive intercepts"></div></div></div></article><article class="exercise exercise-like" id="exercise-138"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-water-remaining.svg" role="img" class="contained" alt="line with positive intercepts"></div></div></div></article><article class="exercise exercise-like" id="exercise-138"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="p-974">The graph shows the number of barrels of oil, \(B\text{,}\) that have been pumped at a drill site \(t\) days after a new drill is installed.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-barrels-oil.svg" role="img" style="width: 100%; height: auto;" alt="increasing graph"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-barrels-oil.svg" role="img" class="contained" alt="increasing graph"></div></div></div></article>
 </div>
 </div>
 <article class="exercise exercise-like" id="exercise-139"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <p id="p-975">A spring is suspended from the ceiling. The table shows the length of the spring, in centimeters, as it is stretched by hanging various weights from it.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t3 lines">Weight, kg</td>
 <td class="c m b1 r1 l0 t3 lines">\(3\)</td>
@@ -819,7 +835,7 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <td class="c m b1 r1 l0 t3 lines">\(10\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(12\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(15\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(22\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(22\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Length, cm</td>
@@ -829,7 +845,7 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <td class="c m b1 r1 l0 t0 lines">\(26.6\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(26.84\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(27.2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(28.04\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(28.04\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-976" class="lower-alpha">
@@ -837,26 +853,26 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <li id="li-530"><p id="p-978">Interpret the slope as a rate of change. Include units in your answer</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-140"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="p-982">The table gives the radius and circumference of various circles, rounded to three decimal places.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(r\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(C\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(C\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">4</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">25.133</td>
+<td class="c m b1 r1 l0 t0 lines">25.133</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">6</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">37.699</td>
+<td class="c m b1 r1 l0 t0 lines">37.699</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">10</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">62.832</td>
+<td class="c m b1 r1 l0 t0 lines">62.832</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">15</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">94.248</td>
+<td class="c m b1 r1 l0 t0 lines">94.248</td>
 </tr>
 </table></div></div></div>
 <ol id="p-983" class="lower-alpha">
@@ -864,10 +880,10 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <li id="li-534"><p id="p-985">What familiar number does the slope turn out to be? (Hint: Recall a formula from geometry.) What does the slope tell us about circles?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-141"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
 <p id="p-986">Geologists calculate the speed of seismic waves by plotting the travel times for waves to reach seismometers at known distances from the epicenter. The speed of the wave can help them determine the nature of the material it passes through. The graph shows a travel time graph for P-waves from a shallow earthquake.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-P-waves.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-P-waves.svg" role="img" class="contained" alt="graph"></div></div></div>
 <ol id="p-987" class="lower-alpha">
-<li id="li-535">Why do you think the graph is plotted with distance as the independent variable?</li>
-<li id="li-536">Use the graph to calculate the speed of the wave.</li>
+<li id="li-535"><p id="p-derived-li-535">Why do you think the graph is plotted with distance as the independent variable?</p></li>
+<li id="li-536"><p id="p-derived-li-536">Use the graph to calculate the speed of the wave.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-142"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <p id="p-989">Niagara Falls was discovered by Father Louis Hennepin in 1682. In 1952, much of the water of the Niagara River was diverted for hydroelectric power, but until that time erosion caused the Falls to recede upstream by 3 feet per year.</p>
 <ol class="lower-alpha">
@@ -876,27 +892,27 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 </ol></article><article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
 <p id="p-992">Naismith’s Rule is used by runners and walkers to estimate journey times in hilly terrain. In 1892 Naismith wrote in the Scottish Mountaineering Club Journal that a person “in fair condition should allow for easy expeditions an hour for every three miles on the map, with an additional hour for every 2000 feet of ascent.” (Source: Scarf, 1998.)</p>
 <ol class="lower-alpha">
-<li id="li-541">According to Naismith, 1 unit of ascent requires the same travel time as how many units of horizontall travel? (This is called Naismith’s number.) Round your answer to one decimal place.</li>
-<li id="li-542">A walk in the Brecon Beacons in Wales covers 3.75 kilometers horizontally and climbs 582 meters. What is the equivalent flat distance?</li>
-<li id="li-543">If you can walk at a pace of 15 minutes per kilometer over flat ground, how long will the walk in the Brecon Beacons take you?</li>
+<li id="li-541"><p id="p-derived-li-541">According to Naismith, 1 unit of ascent requires the same travel time as how many units of horizontall travel? (This is called Naismith’s number.) Round your answer to one decimal place.</p></li>
+<li id="li-542"><p id="p-derived-li-542">A walk in the Brecon Beacons in Wales covers 3.75 kilometers horizontally and climbs 582 meters. What is the equivalent flat distance?</p></li>
+<li id="li-543"><p id="p-derived-li-543">If you can walk at a pace of 15 minutes per kilometer over flat ground, how long will the walk in the Brecon Beacons take you?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-144"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
 <p id="p-994">The graph shows the rise in sea level attributed to the melting of land-based glaciers from 1960 to 2003.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-1-4-12.svg" role="img" style="width: 100%; height: auto;" alt="rise in sea level"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-1-4-12.svg" role="img" class="contained" alt="rise in sea level"></div></div></div>
 <ol id="p-995" class="lower-alpha">
 <li id="li-547">
 <p id="p-996">The graph appears to be almost linear from 1992 to 2002. Read the graph to complete the table, then compute the slope of the graph over that time interval, including units. What does the slope mean in this situation?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Year</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">Sea level</td>
+<td class="c m b1 r1 l0 t1 lines">Sea level</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">1992</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">2002</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table></div></div></div>
 </li>
@@ -906,19 +922,19 @@ m=\frac{\Delta y}{\Delta x}=\frac{-2}{3}
 <li id="li-551"><p id="p-1000">The surface area of the world’s oceans is 361.6 million square kilometers. When the meltwater from the land-based glaciers (that's the volume you calculated in part (d)) enters the oceans, how much will the sea level rise, in kilometers? Use the formula in part (d). Convert your answer to millimeters, and check your answer against your answer to part (b).</p></li>
 </ol></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

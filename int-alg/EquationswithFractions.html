@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T07:00:50-07:00       *-->
+<!--*       on 2021-08-27T15:55:43-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Equations with Fractions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,21 +226,21 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="EquationswithFractions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.5</span> <span class="title">Equations with Fractions</span>
 </h2>
 <section class="introduction" id="introduction-324"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:34%;justify-content:center;"><img src="images/fig-solve-rational-equation.svg" role="img" style="width: 100%; height: auto;" alt="graph of rational function for solving equation"></div>
-<div class="sbspanel" style="width:64%;justify-content:center;">
+<div class="sbspanel middle" style="width:34%;"><img src="external/images/fig-solve-rational-equation.svg" role="img" class="contained" alt="graph of rational function for solving equation"></div>
+<div class="sbspanel middle" style="width:64%;">
 <p id="p-11543">In <a class="xref" data-knowl="./knowl/example-pedal-aircraft.html" title="Example 8.36">Example 8.36</a>, of Section 8.2, Francine planned a 60-mile training run on her cycle-plane. The time required for the training run, in terms of the windspeed, \(x\text{,}\) is given by:</p>
 <div class="displaymath">
 \begin{equation*}
 t=f(x) = \dfrac{60}{15-x}
 \end{equation*}
 </div>
-<p data-braille="continuation">If it takes Francine 9 hours to cover 60 miles, what is the speed of the wind? We can answer this question by reading values from the graph of \(f\text{,}\) as shown at left. When \(t = 9\text{,}\) the value of \(x\) is between 8 and 9, so the windspeed is between 8 and 9 miles per hour.</p>
+<p class="continuation">If it takes Francine 9 hours to cover 60 miles, what is the speed of the wind? We can answer this question by reading values from the graph of \(f\text{,}\) as shown at left. When \(t = 9\text{,}\) the value of \(x\) is between 8 and 9, so the windspeed is between 8 and 9 miles per hour.</p>
 </div>
 </div></div></section><section class="subsection" id="subsection-199"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving Algebraically</span>
@@ -245,13 +251,13 @@ t=f(x) = \dfrac{60}{15-x}
 \dfrac{60}{15-x}=9
 \end{equation*}
 </div>
-<p data-braille="continuation">To start, we multiply each side of the equation by the denominator of the fraction. This will clear the fraction and give us an equivalent equation without fractions.</p>
+<p class="continuation">To start, we multiply each side of the equation by the denominator of the fraction. This will clear the fraction and give us an equivalent equation without fractions.</p>
 <article class="example example-like" id="example-217"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.80</span><span class="period">.</span>
 </h6>
 <p id="p-11545">Solve the equation  \(~~\dfrac{60}{15-x}=9\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-553" id="solution-553"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-553"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-553" id="solution-553"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-553"><div class="solution solution-like">
 <p id="p-11546">We multiply both sides of the equation by \(\alert{15 - x}\) to obtain</p>
 <div class="displaymath">
 \begin{align*}
@@ -259,7 +265,7 @@ t=f(x) = \dfrac{60}{15-x}
 60 \amp = 9(15 - x)\amp\amp \blert{\text{Apply the distributive law.}}
 \end{align*}
 </div>
-<p data-braille="continuation">From here we can proceed as usual.</p>
+<p class="continuation">From here we can proceed as usual.</p>
 <div class="displaymath">
 \begin{align*}
 60 \amp = 135 - 9x\amp\amp \blert{\text{Subtract 135 from both sides.}}\\
@@ -267,18 +273,18 @@ t=f(x) = \dfrac{60}{15-x}
 8.\overline{3} \amp = x
 \end{align*}
 </div>
-<p data-braille="continuation">The windspeed was \(8.\overline{3}\text{,}\) or \(8\frac{1}{3}\) miles per hour.</p>
+<p class="continuation">The windspeed was \(8.\overline{3}\text{,}\) or \(8\frac{1}{3}\) miles per hour.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1883"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1883"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1883"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.81</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1883"><article class="exercise exercise-like"><iframe name="webwork-360" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=360&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyMSA9IENvbXB1dGUoIi0yIik7CiRyMiA9IENvbXB1dGUoIjQiKTsKJGEgPSBMaXN0KCIkcjEsICRyMiIpOwokbXlfZXZhbHVhdG9yID0gJGEgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlIFtgXGRmcmFje3heMn17eCs0fT0yYF0KCltgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXsxMH0KCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ1NlcGFyYXRlIGRpZmZlcmVudCB2YWx1ZXMgd2l0aCBhIGNvbW1hLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeCA9IC0yLCB4ID0gNGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="360"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-11551">If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions. </p>
+</h6>
+<iframe name="webwork-360" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=360&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyMSA9IENvbXB1dGUoIi0yIik7CiRyMiA9IENvbXB1dGUoIjQiKTsKJGEgPSBMaXN0KCIkcjEsICRyMiIpOwokbXlfZXZhbHVhdG9yID0gJGEgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlIFtgXGRmcmFje3heMn17eCs0fT0yYF0KCltgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXsxMH0KCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ1NlcGFyYXRlIGRpZmZlcmVudCB2YWx1ZXMgd2l0aCBhIGNvbW1hLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeCA9IC0yLCB4ID0gNGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="360"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-11551">If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions. </p>
 <article class="example example-like" id="example-clear-fractions"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.82</span><span class="period">.</span>
 </h6>
 <p id="p-11552">Solve  \(~~\dfrac{3}{4} = 8- \dfrac{2x+11}{x-5}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-555" id="solution-555"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-555"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-555" id="solution-555"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-555"><div class="solution solution-like">
 <p id="p-11553">The LCD for the two fractions in the equation is \(\blert{4(x-5)}\text{.}\) We multiply both sides of the equation by the LCD.</p>
 <div class="displaymath">
 \begin{align*}
@@ -287,7 +293,7 @@ t=f(x) = \dfrac{60}{15-x}
 3(x-5) \amp = 32(x-5)-4(2x+11)
 \end{align*}
 </div>
-<p data-braille="continuation">We proceed as usual to complete the solution. First we use the distributive law to remove parentheses.</p>
+<p class="continuation">We proceed as usual to complete the solution. First we use the distributive law to remove parentheses.</p>
 <div class="displaymath">
 \begin{align*}
 3x-15 \amp = 32x-160-8x-44 \amp \amp \blert{\text{Combine like terms.}}\\
@@ -300,9 +306,10 @@ x \amp = 9
 </div></article><article class="warning remark-like" id="warning-43"><h6 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.83</span><span class="period">.</span>
 </h6>
-<p id="p-11554">We must multiply each term of an equation by the LCD, whether or not the term is a fraction. In the previous <a class="xref" data-knowl="./knowl/example-clear-fractions.html" title="Example 8.82">Example</a> we multiplied each term by the LCD, including the 8.</p></article><article class="exercise exercise-like" id="exercise-1884"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1884"><h6 class="heading">
+<p id="p-11554">We must multiply each term of an equation by the LCD, whether or not the term is a fraction. In the previous <a class="xref" data-knowl="./knowl/example-clear-fractions.html" title="Example 8.82">Example</a> we multiplied each term by the LCD, including the 8.</p></article><article class="exercise exercise-like" id="exercise-1884"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.84</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1884"><article class="exercise exercise-like"><iframe name="webwork-361" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=361&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyMSA9IENvbXB1dGUoIjQiKTsKJHIyID0gQ29tcHV0ZSgiMSIpOwokYW5zd2VyID0gTGlzdCgiJHIxLCAkcjIiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlICAgW2BccXVhZFxkZnJhY3sxfXt4LTJ9K1xkZnJhY3syfXt4fSA9IDFgXQoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezZ9IEVudGVyIHNvbHV0aW9ucyBzZXBhcmF0ZWQgYnkgYSBjb21tYS4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDFcdGV4dHssfWBdIFtgNGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="361"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-200"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-361" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=361&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyMSA9IENvbXB1dGUoIjQiKTsKJHIyID0gQ29tcHV0ZSgiMSIpOwokYW5zd2VyID0gTGlzdCgiJHIxLCAkcjIiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlICAgW2BccXVhZFxkZnJhY3sxfXt4LTJ9K1xkZnJhY3syfXt4fSA9IDFgXQoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezZ9IEVudGVyIHNvbHV0aW9ucyBzZXBhcmF0ZWQgYnkgYSBjb21tYS4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDFcdGV4dHssfWBdIFtgNGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="361"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-200"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proportions</span>
 </h3>
 <p id="p-11559">A proportion  is a statement that two ratios are equal.  For example,</p>
@@ -311,7 +318,7 @@ x \amp = 9
 \dfrac{7}{5} = \dfrac{x}{6} 
 \end{equation*}
 </div>
-<p data-braille="continuation">To solve this proportion, we multiply both sides by the LCD, 30, to get</p>
+<p class="continuation">To solve this proportion, we multiply both sides by the LCD, 30, to get</p>
 <div class="displaymath">
 \begin{align*}
 \alert{30}\left(\dfrac{7}{5}\right) \amp = \left(\dfrac{x}{6}\right)\alert{30}\\
@@ -320,7 +327,7 @@ x = \dfrac{42}{5} = 8.4
 \end{align*}
 </div>
 <p id="p-11560">There is a short-cut we can use that avoids calculating an LCD. Observe that we can arrive at the equation \(42=5x\) by <dfn class="terminology">cross-multiplying</dfn>:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:42.5%;margin-right:42.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-cross-multiply.svg" role="img" style="width: 100%; height: auto;" alt="cross-multiplying"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:42.5%;margin-right:42.5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-cross-multiply.svg" role="img" class="contained" alt="cross-multiplying"></div></div></div>
 <p id="p-11561">We then proceed as before to complete the solution.</p>
 <p id="p-11562">The cross-multiplying shortcut is a fundamental property of proportions.</p>
 <article class="assemblage assemblage-like" id="assemblage-138"><h6 class="heading"><span class="title">Property of Proportions.</span></h6>
@@ -333,7 +340,7 @@ x = \dfrac{42}{5} = 8.4
 </h6>
 <p id="p-11564">The scale on a map of Fairfield County says that \(\dfrac{3}{4}\) centimeter represents a distance of 10 kilometers.  If Eastlake and Kenwood are 6 centimeters apart on the map, what is the distance between the two towns?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-557" id="solution-557"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-557"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-557" id="solution-557"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-557"><div class="solution solution-like">
 <p id="p-11565">The ratio of the two actual distances is the same as the ratio of the corresponding distances on the map.  We let \(x\) stand for the distance between Eastlake and Kenwood, and write a proportion.</p>
 <p id="p-11566">We must be careful to keep the same order in both ratios. We choose to put the distance between towns in the numerators, and the distances on the scale in the denominator.</p>
 <div class="displaymath">
@@ -341,24 +348,25 @@ x = \dfrac{42}{5} = 8.4
 \dfrac{\text{distance between towns}}{\text{scale}}:~~~~\dfrac{x}{10} = \dfrac{6}{\dfrac{3}{4}}
 \end{equation*}
 </div>
-<p data-braille="continuation">To solve the propotion, we cross-multiply.</p>
+<p class="continuation">To solve the propotion, we cross-multiply.</p>
 <div class="displaymath">
 \begin{align*}
 \dfrac{3}{4}x \amp = 10 \cdot 6\\
 x \amp = \dfrac{60}{\dfrac{3}{4}} = 80
 \end{align*}
 </div>
-<p data-braille="continuation">The two towns are 80 kilometers apart.</p>
+<p class="continuation">The two towns are 80 kilometers apart.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1885"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1885"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1885"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.86</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1885"><article class="exercise exercise-like"><iframe name="webwork-362" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=362&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJGEgPSBDb21wdXRlKCI2NjYrIDIvMyIpOwoKQkVHSU5fUEdNTApPbiBhIHNjYWxlIG1vZGVsIG9mIEZhbnRhc3kgVmFsbGV5LCBbYDFcZGZyYWN7MX17Mn1gXSBpbmNoZXMgcmVwcmVzZW50cyA1MCB5YXJkcy4gSWYgdGhlIGRpc3RhbmNlIGZyb20gdGhlIHdhdGVyIHNsaWRlIHRvIHRoZSBidW5nZWUganVtcCBpcyAyMCBpbmNoZXMgb24gdGhlIG1vZGVsLCB3aGF0IGlzIHRoZSBkaXN0YW5jZSBiZXR3ZWVuIHRoZSB0d28gcmlkZXM%2FCgogICAgW19deyRhfXs3fSB5YXJkcwoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgNjY2XGRmcmFjezJ9ezN9YF0geWFyZHMKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="362"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="warning remark-like" id="warning-44"><h6 class="heading">
+</h6>
+<iframe name="webwork-362" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=362&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJGEgPSBDb21wdXRlKCI2NjYrIDIvMyIpOwoKQkVHSU5fUEdNTApPbiBhIHNjYWxlIG1vZGVsIG9mIEZhbnRhc3kgVmFsbGV5LCBbYDFcZGZyYWN7MX17Mn1gXSBpbmNoZXMgcmVwcmVzZW50cyA1MCB5YXJkcy4gSWYgdGhlIGRpc3RhbmNlIGZyb20gdGhlIHdhdGVyIHNsaWRlIHRvIHRoZSBidW5nZWUganVtcCBpcyAyMCBpbmNoZXMgb24gdGhlIG1vZGVsLCB3aGF0IGlzIHRoZSBkaXN0YW5jZSBiZXR3ZWVuIHRoZSB0d28gcmlkZXM%2FCgogICAgW19deyRhfXs3fSB5YXJkcwoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgNjY2XGRmcmFjezJ9ezN9YF0geWFyZHMKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="362"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="warning remark-like" id="warning-44"><h6 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.87</span><span class="period">.</span>
 </h6>
-<p id="p-11571">Do not try to use "cross-multiplying" on equations that are not proportions, or on any other operations involving fractions.  The shortcut works only on proportions.</p></article><article class="exercise exercise-like" id="exercise-1886"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1886"><h6 class="heading">
+<p id="p-11571">Do not try to use "cross-multiplying" on equations that are not proportions, or on any other operations involving fractions.  The shortcut works only on proportions.</p></article><article class="exercise exercise-like" id="exercise-1886"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.88</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1886"><article class="exercise exercise-like"><iframe name="webwork-363" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=363&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7ICAgICAgICAKJGxjZCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIkxDRCIsIAogICAgImF2ZXJhZ2UiLAogICAgInJlY2lwcm9jYWwiXSwKICAgIDEKKTsgICAgICAgIAokcmF0aW9zID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiZXF1YXRpb25zIiwgCiAgICAiZmFjdG9ycyIsCiAgICAicmF0aW9zIl0sCiAgICAzCik7ICAgICAgICAKJHByb3AgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJyZWR1Y2VkIGZyYWN0aW9ucyIsIAogICAgImltcHJvcGVyIGZyYWN0aW9ucyIsCiAgICAicHJvcG9ydGlvbnMiXSwKICAgIDMKKTsKCkJFR0lOX1BHTUwKYS4gIFRvIGNsZWFyIGZyYWN0aW9ucyBmcm9tIGFuIGVxdWF0aW9uLCB3ZSBtdWx0aXBseSBlYWNoIHRlcm0gYnkgdGhlIFtfXXskbGNkfXs1fSBvZiBhbGwgdGhlIGZyYWN0aW9ucy4KCgphLiAgVHJ1ZSBvciBGYWxzZTogIFdoZW4gY2xlYXJpbmcgZnJhY3Rpb24gZnJvbSBhbiBlcXVhdGlvbiwgd2UgZG8gbm90IG11bHRpcGx5IHRlcm1zIHRoYXQgYXJlIG5vdCBmcmFjdGlvbnMuIFtfXXskRmFsc2V9ezV9CgoKYS4gIEEgcHJvcG9ydGlvbiBpcyBhIHN0YXRlbWVudCB0aGF0IHR3byBbX117JHJhdGlvc317NX0gYXJlIGVxdWFsLgoKCmEuICBDcm9zcy1tdWx0aXBseWluZyB3b3JrcyBvbmx5IG9uICBbX117JHByb3B9ezV9LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgTENECmEuICBGYWxzZQphLiAgcmF0aW9zCmEuICBwcm9wb3J0aW9ucyAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="363"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-201"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-363" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=363&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7ICAgICAgICAKJGxjZCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIkxDRCIsIAogICAgImF2ZXJhZ2UiLAogICAgInJlY2lwcm9jYWwiXSwKICAgIDEKKTsgICAgICAgIAokcmF0aW9zID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiZXF1YXRpb25zIiwgCiAgICAiZmFjdG9ycyIsCiAgICAicmF0aW9zIl0sCiAgICAzCik7ICAgICAgICAKJHByb3AgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJyZWR1Y2VkIGZyYWN0aW9ucyIsIAogICAgImltcHJvcGVyIGZyYWN0aW9ucyIsCiAgICAicHJvcG9ydGlvbnMiXSwKICAgIDMKKTsKCkJFR0lOX1BHTUwKYS4gIFRvIGNsZWFyIGZyYWN0aW9ucyBmcm9tIGFuIGVxdWF0aW9uLCB3ZSBtdWx0aXBseSBlYWNoIHRlcm0gYnkgdGhlIFtfXXskbGNkfXs1fSBvZiBhbGwgdGhlIGZyYWN0aW9ucy4KCgphLiAgVHJ1ZSBvciBGYWxzZTogIFdoZW4gY2xlYXJpbmcgZnJhY3Rpb24gZnJvbSBhbiBlcXVhdGlvbiwgd2UgZG8gbm90IG11bHRpcGx5IHRlcm1zIHRoYXQgYXJlIG5vdCBmcmFjdGlvbnMuIFtfXXskRmFsc2V9ezV9CgoKYS4gIEEgcHJvcG9ydGlvbiBpcyBhIHN0YXRlbWVudCB0aGF0IHR3byBbX117JHJhdGlvc317NX0gYXJlIGVxdWFsLgoKCmEuICBDcm9zcy1tdWx0aXBseWluZyB3b3JrcyBvbmx5IG9uICBbX117JHByb3B9ezV9LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgTENECmEuICBGYWxzZQphLiAgcmF0aW9zCmEuICBwcm9wb3J0aW9ucyAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="363"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-201"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Extraneous Solutions</span>
 </h3>
 <p id="p-11601">An algebraic fractions is undefined for any values of \(x\) that make its denominator equal zero. These values cannot be solutions to equations involving the fraction. Consider the equation</p>
@@ -367,20 +375,20 @@ x \amp = \dfrac{60}{\dfrac{3}{4}} = 80
 \dfrac{x}{x-3}=\frac{3}{x-3}+2
 \end{equation*}
 </div>
-<p data-braille="continuation">When we multiply both sides by the LCD, \(x - 3\text{,}\) we obtain</p>
+<p class="continuation">When we multiply both sides by the LCD, \(x - 3\text{,}\) we obtain</p>
 <div class="displaymath">
 \begin{align*}
 \alert{(x - 3)}\frac{x}{x-3} \amp =\alert{(x - 3)}\frac{3}{x-3}+\alert{(x - 3)}\cdot 2\\
 x \amp = 3 + 2x - 6
 \end{align*}
 </div>
-<p data-braille="continuation">whose solution is \(x = 3\text{.}\) However, \(x = 3\) is <em class="emphasis">not</em> a solution of the original equation. Both sides of the equation are undefined at \(x = 3\text{.}\) If you graph the two functions</p>
+<p class="continuation">whose solution is \(x = 3\text{.}\) However, \(x = 3\) is <em class="emphasis">not</em> a solution of the original equation. Both sides of the equation are undefined at \(x = 3\text{.}\) If you graph the two functions</p>
 <div class="displaymath">
 \begin{equation*}
 Y_1=\frac{x}{x-3} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{3}{x-3}+2
 \end{equation*}
 </div>
-<p data-braille="continuation">you will find that the graphs never intersect, which means that there is no solution to the original equation.</p>
+<p class="continuation">you will find that the graphs never intersect, which means that there is no solution to the original equation.</p>
 <p id="p-11602">What went wrong with our method of solution? We multiplied both sides of the equation by \(x - 3\text{,}\) which is zero when \(x = 3\text{,}\) so we really multiplied both sides of the equation by zero. Multiplying by zero does not produce an equivalent equation, and false solutions may be introduced.</p>
 <p id="p-11603">An apparent solution that does not satisfy the original equation is called an <dfn class="terminology">extraneous solution</dfn>. Whenever we multiply an equation by an expression containing the variable, we should check that the solution obtained does not cause any of the fractions to be undefined.</p>
 <article class="example example-like" id="example-clear-fractions2"><h6 class="heading">
@@ -388,33 +396,33 @@ Y_1=\frac{x}{x-3} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{3}{x-3}+2
 </h6>
 <p id="p-11604">Solve the equation  \(~\dfrac{6}{x}+1=\dfrac{1}{x+2}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-560" id="solution-560"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-560"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-560" id="solution-560"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-560"><div class="solution solution-like">
 <p id="p-11605">We multiply both sides by the LCD, \(x(x + 2)\text{.}\) Notice that we multiply <em class="emphasis">each term</em> on the left side by the LCD, to get</p>
 <div class="displaymath">
 \begin{equation*}
 \alert{x(x + 2)}\left(\frac{6}{x}+1\right)=\alert{x(x + 2)}\frac{1}{x+2}
 \end{equation*}
 </div>
-<p data-braille="continuation">or</p>
+<p class="continuation">or</p>
 <div class="displaymath">
 \begin{equation*}
 6(x + 2) + x(x + 2) = x
 \end{equation*}
 </div>
-<p data-braille="continuation">We use the distributive law to remove the parentheses and write the result in standard form:</p>
+<p class="continuation">We use the distributive law to remove the parentheses and write the result in standard form:</p>
 <div class="displaymath">
 \begin{align*}
 6x + 12 + x^2 + 2x\amp = x\\
 x^2 + 7x + 12 \amp = 0
 \end{align*}
 </div>
-<p data-braille="continuation">This is a quadratic equation that we can solve by factoring.</p>
+<p class="continuation">This is a quadratic equation that we can solve by factoring.</p>
 <div class="displaymath">
 \begin{equation*}
 (x + 3)(x + 4) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">so the solutions are \(x = -3\) and \(x = -4\text{.}\) Neither of these values causes either denominator to equal zero, so they are not extraneous solutions.</p>
+<p class="continuation">so the solutions are \(x = -3\) and \(x = -4\text{.}\) Neither of these values causes either denominator to equal zero, so they are not extraneous solutions.</p>
 </div></div>
 </div></article><article class="warning remark-like" id="warning-45"><h6 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.90</span><span class="period">.</span>
@@ -427,12 +435,13 @@ x^2 + 7x + 12 \amp = 0
 5x \amp = -13\\
 x \amp = \dfrac{-13}{5}
 \end{align*}
-</div></article><article class="exercise exercise-like" id="exercise-1887"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1887"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1887"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.91</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1887"><article class="exercise exercise-like"><iframe name="webwork-364" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=364&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHVuZGVmID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAidGhlIG51bWVyYXRvciBlcXVhbHMgemVybyIsIAogICAgInRoZSBkZW5vbWluYXRvciBlcXVhbHMgemVybyIsCiAgICAiaXQgaW5jbHVkZXMgZGVjaW1hbHMiLAogICAgInRoZXJlIGlzIGEgdmFyaWFibGUgaW4gdGhlIGRlbm9taW5hdG9yIl0sCiAgICAyCik7ICAgICAgICAKJGV4dHJhID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiYW4gZXh0cmFuZW91cyIsIAogICAgImEgZG91YmxlIiwKICAgICJhIHByaW5jaXBhbCIsCiAgICAiYSBtdWx0aXBsZSJdLAogICAgMQopOyAgICAgICAgCiR6ZXJvID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiYSBub256ZXJvIGludGVnZXIiLAogICAgImFuIGV4cHJlc3Npb24gY29udGFpbmluZyB0aGUgdmFyaWFibGUiLCAKICAgICJhbnkgaXJyYXRpb25hbCBudW1iZXIiXSwKICAgIDIKKTsgICAgICAgIAokdGVybSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgInRlcm0iLCAKICAgICJkZW5vbWluYXRvciIsCiAgICAiZnJhY3Rpb24gb25seSJdLAogICAgMQopOwoKQkVHSU5fUEdNTAphLiAgQW4gYWxnZWJyYWljIGZyYWN0aW9uIGlzIHVuZGVmaW5lZCB3aGVuIFtfXXskdW5kZWZ9ezV9LgphLiAgQW4gYXBwYXJlbnQgc29sdXRpb24gdGhhdCBkb2VzIG5vdCBzYXRpc2Z5IHRoZSBvcmlnaW5hbCBlcXVhdGlvbiBpcyBjYWxsZWQgIFtfXXskZXh0cmF9ezV9IHNvbHV0aW9uLgphLiAgV2UgbWF5IGludHJvZHVjZSBleHRyYW5lb3VzIHNvbHV0aW9ucyBpZiB3ZSBtdWx0aXBseSBib3RoIHNpZGVzIG9mIGFuIGVxdWF0aW9uIGJ5IFtfXXskemVyb317NX0uCmEuICBXZSBtdXN0IG11bHRpcGx5IGVhY2ggW19deyR0ZXJtfXs1fSBvZiB0aGUgZXF1YXRpb24gYnkgdGhlIExDRC4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIHRoZSBkZW5vbWluYXRvciBlcXVhbHMgemVybwphLiAgYW4gZXh0cmFuZW91cwphLiAgYW4gZXhwcmVzc2lvbiBjb250YWluaW5nIHRoZSB2YXJpYWJsZQphLiAgdGVybSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="364"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1888"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1888"><h6 class="heading">
+</h6>
+<iframe name="webwork-364" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=364&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHVuZGVmID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAidGhlIG51bWVyYXRvciBlcXVhbHMgemVybyIsIAogICAgInRoZSBkZW5vbWluYXRvciBlcXVhbHMgemVybyIsCiAgICAiaXQgaW5jbHVkZXMgZGVjaW1hbHMiLAogICAgInRoZXJlIGlzIGEgdmFyaWFibGUgaW4gdGhlIGRlbm9taW5hdG9yIl0sCiAgICAyCik7ICAgICAgICAKJGV4dHJhID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiYW4gZXh0cmFuZW91cyIsIAogICAgImEgZG91YmxlIiwKICAgICJhIHByaW5jaXBhbCIsCiAgICAiYSBtdWx0aXBsZSJdLAogICAgMQopOyAgICAgICAgCiR6ZXJvID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiYSBub256ZXJvIGludGVnZXIiLAogICAgImFuIGV4cHJlc3Npb24gY29udGFpbmluZyB0aGUgdmFyaWFibGUiLCAKICAgICJhbnkgaXJyYXRpb25hbCBudW1iZXIiXSwKICAgIDIKKTsgICAgICAgIAokdGVybSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgInRlcm0iLCAKICAgICJkZW5vbWluYXRvciIsCiAgICAiZnJhY3Rpb24gb25seSJdLAogICAgMQopOwoKQkVHSU5fUEdNTAphLiAgQW4gYWxnZWJyYWljIGZyYWN0aW9uIGlzIHVuZGVmaW5lZCB3aGVuIFtfXXskdW5kZWZ9ezV9LgphLiAgQW4gYXBwYXJlbnQgc29sdXRpb24gdGhhdCBkb2VzIG5vdCBzYXRpc2Z5IHRoZSBvcmlnaW5hbCBlcXVhdGlvbiBpcyBjYWxsZWQgIFtfXXskZXh0cmF9ezV9IHNvbHV0aW9uLgphLiAgV2UgbWF5IGludHJvZHVjZSBleHRyYW5lb3VzIHNvbHV0aW9ucyBpZiB3ZSBtdWx0aXBseSBib3RoIHNpZGVzIG9mIGFuIGVxdWF0aW9uIGJ5IFtfXXskemVyb317NX0uCmEuICBXZSBtdXN0IG11bHRpcGx5IGVhY2ggW19deyR0ZXJtfXs1fSBvZiB0aGUgZXF1YXRpb24gYnkgdGhlIExDRC4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIHRoZSBkZW5vbWluYXRvciBlcXVhbHMgemVybwphLiAgYW4gZXh0cmFuZW91cwphLiAgYW4gZXhwcmVzc2lvbiBjb250YWluaW5nIHRoZSB2YXJpYWJsZQphLiAgdGVybSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="364"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1888"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.92</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1888"><article class="exercise exercise-like"><iframe name="webwork-365" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=365&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXIgPSBDb21wdXRlKCItMS8yIik7CgpCRUdJTl9QR01MClNvbHZlIFtgXHF1YWRcZGZyYWN7OX17eF4yK3gtMn0gKyBcZGZyYWN7MX17eF4yLXh9ID0gXGRmcmFjezR9e3gtMX1gXQoKW2B4PWBdW19deyRhbnN3ZXJ9ezd9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BcZGZyYWN7LTF9ezJ9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="365"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-202"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-365" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=365&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXIgPSBDb21wdXRlKCItMS8yIik7CgpCRUdJTl9QR01MClNvbHZlIFtgXHF1YWRcZGZyYWN7OX17eF4yK3gtMn0gKyBcZGZyYWN7MX17eF4yLXh9ID0gXGRmcmFjezR9e3gtMX1gXQoKW2B4PWBdW19deyRhbnN3ZXJ9ezd9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BcZGZyYWN7LTF9ezJ9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="365"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-202"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving Graphically</span>
 </h3>
 <p id="p-11643">We can use graphs to solve the equation in the following Example.</p>
@@ -441,22 +450,22 @@ x \amp = \dfrac{-13}{5}
 </h6>
 <p id="p-11644">Solve the equation graphically: \(~\dfrac{6}{x}+1=\dfrac{1}{x+2}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-563" id="solution-563"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-563"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-563" id="solution-563"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-563"><div class="solution solution-like">
 <p id="p-11645">We graph the two functions</p>
 <div class="displaymath">
 \begin{equation*}
 Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 \end{equation*}
 </div>
-<p data-braille="continuation">in the window</p>
+<p class="continuation">in the window</p>
 <div class="displaymath">
 \begin{align*}
 \text{Xmin} \amp = -4.7 \amp\amp \text{Xmax} = 4.7\\
 \text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
 \end{align*}
 </div>
-<p data-braille="continuation">as shown in figure (a).</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-intersection-of-rational-functions.svg" role="img" style="width: 100%; height: auto;" alt="GC images of intersecting rational functions"></div></div></div>
+<p class="continuation">as shown in figure (a).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-intersection-of-rational-functions.svg" role="img" class="contained" alt="GC images of intersecting rational functions"></div></div></div>
 <p id="p-11646">It appears that the two graphs may intersect in the third quadrant, around \(x = -3\text{.}\) To investigate further, we change the window settings to</p>
 <div class="displaymath">
 \begin{align*}
@@ -464,14 +473,15 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 \text{Ymin} \amp = -1.3 \amp\amp \text{Ymax} = -0.3
 \end{align*}
 </div>
-<p data-braille="continuation">and obtain the close-up view shown in figure (b). In this window, we can see that the graphs intersect in two distinct points, and by using the Trace we find that their \(x\)-coordinates are \(x = -3\) and \(x = -4\text{.}\)</p>
+<p class="continuation">and obtain the close-up view shown in figure (b). In this window, we can see that the graphs intersect in two distinct points, and by using the Trace we find that their \(x\)-coordinates are \(x = -3\) and \(x = -4\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1889"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1889"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1889"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.94</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1889"><article class="exercise exercise-like"><iframe name="webwork-366" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=366&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCIxIik7CiRyMiA9IENvbXB1dGUoIjQiKTsKJGFuc3dlciA9IExpc3QoIiRyMSwgJHIyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApUaGUgbWFuYWdlciBvZiBhIG5ldyBoZWFsdGggY2x1YiBrZXB0IHRyYWNrIG9mIHRoZSBudW1iZXIgb2YgYWN0aXZlIG1lbWJlcnMgb3ZlciB0aGUgY2x1YidzIGZpcnN0IGZldyBtb250aHMgb2Ygb3BlcmF0aW9uLiAgVGhlIG51bWJlciwgW2BOYF0gIG9mIGFjdGl2ZSBtZW1iZXJzLCBpbiBodW5kcmVkcywgW2B0YF0gbW9udGhzIGFmdGVyIHRoZSBjbHViIG9wZW5lZCBpcyBnaXZlbiBieSB0aGUgZXF1YXRpb24KCltgYGBcYmVnaW57Z2F0aGVyZWR9Ck49XGRmcmFjezEwdH17NCt0XjJ9ClxlbmR7Z2F0aGVyZWR9CmBgYF0KCgphLiAgR3JhcGggdGhlIGVxdWF0aW9uIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICBcdGV4dHtYbWlufSBcYW1wID0gMCBcYW1wXGFtcCBcdGV4dHtYbWF4fSA9IDkuNFxcCiAgICBcdGV4dHtZbWlufSBcYW1wID0gMCBcYW1wXGFtcCBcdGV4dHtZbWF4fSA9IDMKICAgIFxlbmR7YWxpZ25lZH0KICAgIGBgYF0KCgoKCmEuICBVc2UgdGhlIGdyYXBoIHRvIGZpbmQgb3V0IGluIHdoaWNoIG1vbnRocyB0aGUgY2x1YiBoYWQgMjAwIGFjdGl2ZSBtZW1iZXJzLgoKICAgIE1vbnRoczogW19deyRhbnN3ZXJ9ezV9IEVudGVyIG1vbnRoIG51bWJlcnMgc2VwYXJhdGVkIGJ5IGEgY29tbWEuCgoKYS4gIFZlcmlmeSB5b3VyIGFuc3dlciBhbGdlYnJhaWNhbGx5IGJ5IHNvbHZpbmcgYW4gZXF1YXRpb24uICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBBIGdyYXBoIGlzIGJlbG93LgphLiAgMSwgNCAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="366"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-37">
+</h6>
+<iframe name="webwork-366" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=366&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCIxIik7CiRyMiA9IENvbXB1dGUoIjQiKTsKJGFuc3dlciA9IExpc3QoIiRyMSwgJHIyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApUaGUgbWFuYWdlciBvZiBhIG5ldyBoZWFsdGggY2x1YiBrZXB0IHRyYWNrIG9mIHRoZSBudW1iZXIgb2YgYWN0aXZlIG1lbWJlcnMgb3ZlciB0aGUgY2x1YidzIGZpcnN0IGZldyBtb250aHMgb2Ygb3BlcmF0aW9uLiAgVGhlIG51bWJlciwgW2BOYF0gIG9mIGFjdGl2ZSBtZW1iZXJzLCBpbiBodW5kcmVkcywgW2B0YF0gbW9udGhzIGFmdGVyIHRoZSBjbHViIG9wZW5lZCBpcyBnaXZlbiBieSB0aGUgZXF1YXRpb24KCltgYGBcYmVnaW57Z2F0aGVyZWR9Ck49XGRmcmFjezEwdH17NCt0XjJ9ClxlbmR7Z2F0aGVyZWR9CmBgYF0KCgphLiAgR3JhcGggdGhlIGVxdWF0aW9uIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICBcdGV4dHtYbWlufSBcYW1wID0gMCBcYW1wXGFtcCBcdGV4dHtYbWF4fSA9IDkuNFxcCiAgICBcdGV4dHtZbWlufSBcYW1wID0gMCBcYW1wXGFtcCBcdGV4dHtZbWF4fSA9IDMKICAgIFxlbmR7YWxpZ25lZH0KICAgIGBgYF0KCgoKCmEuICBVc2UgdGhlIGdyYXBoIHRvIGZpbmQgb3V0IGluIHdoaWNoIG1vbnRocyB0aGUgY2x1YiBoYWQgMjAwIGFjdGl2ZSBtZW1iZXJzLgoKICAgIE1vbnRoczogW19deyRhbnN3ZXJ9ezV9IEVudGVyIG1vbnRoIG51bWJlcnMgc2VwYXJhdGVkIGJ5IGEgY29tbWEuCgoKYS4gIFZlcmlmeSB5b3VyIGFuc3dlciBhbGdlYnJhaWNhbGx5IGJ5IHNvbHZpbmcgYW4gZXF1YXRpb24uICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBBIGdyYXBoIGlzIGJlbG93LgphLiAgMSwgNCAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="366"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-37">
 <p id="p-11659">Graph for (a):</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:42.1052631578947%;justify-content:flex-start;"><img src="images/fig-GC-healt-club-membership.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
-</div></article></div></section><section class="subsection" id="subsection-203"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:42.1052631578947%;"><img src="external/images/fig-GC-healt-club-membership.svg" role="img" class="contained" alt="graph"></div></div></div>
+</div></article></section><section class="subsection" id="subsection-203"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Applications</span>
 </h3>
 <p id="p-11660">Application problems may lead to equations with algebraic fractions.</p>
@@ -480,32 +490,32 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 </h6>
 <p id="p-11661">Rani times herself as she kayaks 30 miles down the Derwent River with the help of the current. Returning upstream against the current, she manages only 18 miles in the same amount of time. Rani knows that she can kayak at a rate of 12 miles per hour in still water. What is the speed of the current?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-565" id="solution-565"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-565"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-565" id="solution-565"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-565"><div class="solution solution-like">
 <p id="p-11662">If we let \(x\) represent the speed of the current, we can use the formula</p>
 <div class="displaymath">
 \begin{equation*}
 \text{time} = \dfrac{\text{distance}}{\text{rate}}
 \end{equation*}
 </div>
-<p data-braille="continuation">to fill in the following table.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p class="continuation">to fill in the following table.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines"></td>
 <td class="c m b1 r1 l0 t3 lines">Distance</td>
 <td class="c m b1 r1 l0 t3 lines">Rate</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">Time</td>
+<td class="c m b1 r1 l0 t3 lines">Time</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Downstream</td>
 <td class="c m b1 r1 l0 t0 lines">\(30\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(12+x\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\dfrac{30}{12+x}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\dfrac{30}{12+x}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Upstream</td>
 <td class="c m b1 r1 l0 t0 lines">\(18\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(12-x\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\dfrac{18}{12-x}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\dfrac{18}{12-x}\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-11663">Because Rani paddled for equal amounts of time upstream and downstream, we have the equation</p>
@@ -514,14 +524,14 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 \frac{30}{12+x}=\frac{18}{12-x}
 \end{equation*}
 </div>
-<p data-braille="continuation">The LCD for the fractions in this equation is \(\alert{(12 + x)(12 - x)}\text{.}\) We multiply both sides of the equation by the LCD to obtain</p>
+<p class="continuation">The LCD for the fractions in this equation is \(\alert{(12 + x)(12 - x)}\text{.}\) We multiply both sides of the equation by the LCD to obtain</p>
 <div class="displaymath">
 \begin{align*}
 \alert{\cancel{(12 + x)}(12 - x)}\dfrac{30}{\cancel{12+x}} \amp =\dfrac{18}{\cancel{12-x}}\alert{(12 + x)\cancel{(12 - x)}}\\
 30 (12 - x) \amp = 18 (12 + x)
 \end{align*}
 </div>
-<p data-braille="continuation">Solving this equation, we find</p>
+<p class="continuation">Solving this equation, we find</p>
 <div class="displaymath">
 \begin{align*}
 360 - 30x \amp = 216 + 18x\\
@@ -529,7 +539,7 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 3 \amp = x
 \end{align*}
 </div>
-<p data-braille="continuation">The speed of the current is 3 miles per hour.</p>
+<p class="continuation">The speed of the current is 3 miles per hour.</p>
 </div></div>
 </div></article><p id="p-11664">We can solve the equation in <a class="xref" data-knowl="./knowl/example-kayak-current.html" title="Example 8.95">Example 8.95</a> graphically by considering two functions, one for each side of the equation. Graph the two functions</p>
 <div class="displaymath">
@@ -537,20 +547,21 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 Y_1=\frac{30}{12+x} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{30}{12-x}
 \end{equation*}
 </div>
-<p data-braille="continuation">in the window</p>
+<p class="continuation">in the window</p>
 <div class="displaymath">
 \begin{align*}
 \text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 9.4\\
 \text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 10
 \end{align*}
 </div>
-<p data-braille="continuation">to obtain the graph shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-intersecting-rational-functions.svg" role="img" style="width: 100%; height: auto;" alt="intersecting rational functions"></div></div></div>
+<p class="continuation">to obtain the graph shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-intersecting-rational-functions.svg" role="img" class="contained" alt="intersecting rational functions"></div></div></div>
 <p id="p-11665">The function \(Y_1\) gives the time it takes Rani to paddle 30 miles downstream, and \(Y_2\) gives the time it takes her to paddle 18 miles upstream. Both of these times depend on the speed of the current, \(x\text{.}\)</p>
 <p id="p-11666">We are looking for a value of \(x\) that makes \(Y_1\) and \(Y_2\) equal. This occurs at the intersection point of the two graphs, \((3, 2)\text{.}\) Thus, the speed of the current is 3 miles per hour, as we found in <a class="xref" data-knowl="./knowl/example-kayak-current.html" title="Example 8.95">Example 8.95</a>. The y-coordinate of the intersection point gives the time Rani paddled on each part of her trip: 2 hours each way.</p>
-<article class="exercise exercise-like" id="exercise-1890"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1890"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-1890"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.96</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1890"><article class="exercise exercise-like"><iframe name="webwork-367" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=367&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZCA9IENvbXB1dGUoIjE4Iik7CiRkb3ducmF0ZSA9IEZvcm11bGEoIngrMyIpOwokdXByYXRlID0gRm9ybXVsYSgieC0zIik7CiRkb3dudGltZSA9IEZvcm11bGEoIiRkLyh4KzMpIik7CiR1cHRpbWUgPSBGb3JtdWxhKCIkZC8oeC0zKSIpOwokdGltZXMgPSBGb3JtdWxhKCIkZG93bnRpbWUgKyAkdXB0aW1lIik7CiR0ID0gQ29tcHV0ZSgiOS8yIik7CiRhbnMgPSBDb21wdXRlKCI5Iik7CgpCRUdJTl9QR01MCkEgY3J1aXNlIGJvYXQgdHJhdmVscyAxOCBtaWxlcyBkb3duc3RyZWFtIGFuZCBiYWNrIGluIFtgNFxkZnJhY3sxfXsyfWBdIGhvdXJzLiBJZiB0aGUgc3BlZWQgb2YgdGhlIGN1cnJlbnQgaXMgMyBtaWxlcyBwZXIgaG91ciwgd2hhdCBpcyB0aGUgc3BlZWQgb2YgdGhlIGJvYXQgaW4gc3RpbGwgd2F0ZXI%2FCmEuICBMZXQgW2B4YF0gcmVwcmVzZW50IHRoZSBzcGVlZCBvZiB0aGUgYm9hdCBpbiBzdGlsbCB3YXRlciwgYW5kIGZpbGwgaW4gdGhlIHRhYmxlLgoKICAgIFtARGF0YVRhYmxlKFtbW1BHTUwoJycpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ0Rpc3RhbmNlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdSYXRlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdUaW1lJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdEb3duc3RyZWFtJyksbWlkcnVsZT0%2BJzEnLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkfXsyfScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkb3ducmF0ZX17M30nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZG93bnRpbWV9ezh9JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdVcHN0cmVhbScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkfXsyfScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR1cHJhdGV9ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JHVwdGltZX17OH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSoKCgphLiAgV3JpdGUgYW4gZXF1YXRpb24gdG8gbW9kZWwgdGhlIHByb2JsZW06CgogICAgW2BcdGV4dHtEb3duc3RyZWFtIHRpbWUgKyBVcHN0cmVhbSB0aW1lID0gVG90YWwgdHJpcCB0aW1lfWBdCgogICAgW19deyR0aW1lc317MjB9W2A9YF0gW19deyR0fXszfQoKCmEuICBTb2x2ZSB5b3VyIGVxdWF0aW9uLCBhbmQgYW5zd2VyIHRoZSBxdWVzdGlvbiBpbiB0aGUgcHJvYmxlbS4KCiAgICBbYHg9YF1bX117JGFuc317M306IFRoZSBzcGVlZCBvZiB0aGUgYm9hdCBpbiBzdGlsbCB3YXRlciBpcyBbX117JGFuc317Mn0gbXBoLgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnJyksbWlkcnVsZT0%2BJzEnLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnRGlzdGFuY2UnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1JhdGUnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1RpbWUnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ0Rvd25zdHJlYW0nKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE4YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgeCszYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgXGRmcmFjezE4fXt4KzN9YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1Vwc3RyZWFtJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE4YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgeC0zYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgXGRmcmFjezE4fXt4LTN9YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSoKCgphLiAgW2BcZGZyYWN7MTh9e3grM30gKyBcZGZyYWN7MTh9e3gtM30gPSBcZGZyYWN7OX17Mn1gXQphLiAgOSBtcGggICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="367"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-204"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-367" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=367&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZCA9IENvbXB1dGUoIjE4Iik7CiRkb3ducmF0ZSA9IEZvcm11bGEoIngrMyIpOwokdXByYXRlID0gRm9ybXVsYSgieC0zIik7CiRkb3dudGltZSA9IEZvcm11bGEoIiRkLyh4KzMpIik7CiR1cHRpbWUgPSBGb3JtdWxhKCIkZC8oeC0zKSIpOwokdGltZXMgPSBGb3JtdWxhKCIkZG93bnRpbWUgKyAkdXB0aW1lIik7CiR0ID0gQ29tcHV0ZSgiOS8yIik7CiRhbnMgPSBDb21wdXRlKCI5Iik7CgpCRUdJTl9QR01MCkEgY3J1aXNlIGJvYXQgdHJhdmVscyAxOCBtaWxlcyBkb3duc3RyZWFtIGFuZCBiYWNrIGluIFtgNFxkZnJhY3sxfXsyfWBdIGhvdXJzLiBJZiB0aGUgc3BlZWQgb2YgdGhlIGN1cnJlbnQgaXMgMyBtaWxlcyBwZXIgaG91ciwgd2hhdCBpcyB0aGUgc3BlZWQgb2YgdGhlIGJvYXQgaW4gc3RpbGwgd2F0ZXI%2FCmEuICBMZXQgW2B4YF0gcmVwcmVzZW50IHRoZSBzcGVlZCBvZiB0aGUgYm9hdCBpbiBzdGlsbCB3YXRlciwgYW5kIGZpbGwgaW4gdGhlIHRhYmxlLgoKICAgIFtARGF0YVRhYmxlKFtbW1BHTUwoJycpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ0Rpc3RhbmNlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdSYXRlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdUaW1lJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdEb3duc3RyZWFtJyksbWlkcnVsZT0%2BJzEnLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkfXsyfScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkb3ducmF0ZX17M30nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZG93bnRpbWV9ezh9JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdVcHN0cmVhbScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkfXsyfScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR1cHJhdGV9ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JHVwdGltZX17OH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSoKCgphLiAgV3JpdGUgYW4gZXF1YXRpb24gdG8gbW9kZWwgdGhlIHByb2JsZW06CgogICAgW2BcdGV4dHtEb3duc3RyZWFtIHRpbWUgKyBVcHN0cmVhbSB0aW1lID0gVG90YWwgdHJpcCB0aW1lfWBdCgogICAgW19deyR0aW1lc317MjB9W2A9YF0gW19deyR0fXszfQoKCmEuICBTb2x2ZSB5b3VyIGVxdWF0aW9uLCBhbmQgYW5zd2VyIHRoZSBxdWVzdGlvbiBpbiB0aGUgcHJvYmxlbS4KCiAgICBbYHg9YF1bX117JGFuc317M306IFRoZSBzcGVlZCBvZiB0aGUgYm9hdCBpbiBzdGlsbCB3YXRlciBpcyBbX117JGFuc317Mn0gbXBoLgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnJyksbWlkcnVsZT0%2BJzEnLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnRGlzdGFuY2UnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1JhdGUnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1RpbWUnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ0Rvd25zdHJlYW0nKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE4YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgeCszYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgXGRmcmFjezE4fXt4KzN9YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ1Vwc3RyZWFtJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE4YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgeC0zYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgXGRmcmFjezE4fXt4LTN9YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSoKCgphLiAgW2BcZGZyYWN7MTh9e3grM30gKyBcZGZyYWN7MTh9e3gtM30gPSBcZGZyYWN7OX17Mn1gXQphLiAgOSBtcGggICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="367"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-204"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Formulas</span>
 </h3>
 <p id="p-11687">Algebraic fractions may appear in formulas that relate several variables.  If we want to solve for one variable in terms of the others, we may need to clear the fractions.</p>
@@ -559,7 +570,7 @@ Y_1=\frac{30}{12+x} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{30}{12-x
 </h6>
 <p id="p-11688">Solve the formula \(~~p=\dfrac{v}{q+v}~~ \) for \(v\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-567" id="solution-567"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-567"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-567" id="solution-567"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-567"><div class="solution solution-like">
 <p id="p-11689">Because the variable we want appears in the denominator, we must first multiply both sides of the equation by that denominator, \(q+v\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
@@ -567,14 +578,14 @@ Y_1=\frac{30}{12+x} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{30}{12-x
 (q + v)p \amp = v
 \end{align*}
 </div>
-<p data-braille="continuation">We apply the distributive law on the left side, then collect all terms that involve \(v\) on one side of the equation.</p>
+<p class="continuation">We apply the distributive law on the left side, then collect all terms that involve \(v\) on one side of the equation.</p>
 <div class="displaymath">
 \begin{align*}
 qp + vp \amp = v \amp\amp \blert{\text{Subtract }vp \text{ from both sides.}}\\
 qp = v - vp
 \end{align*}
 </div>
-<p data-braille="continuation">We cannot combine the two terms containing \(v\) because they are not like terms. However, we can factor out \(v\text{,}\) so that the right side is written as a single term containing the variable \(v\text{.}\) We can then complete the solution.</p>
+<p class="continuation">We cannot combine the two terms containing \(v\) because they are not like terms. However, we can factor out \(v\text{,}\) so that the right side is written as a single term containing the variable \(v\text{.}\) We can then complete the solution.</p>
 <div class="displaymath">
 \begin{align*}
 qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
@@ -582,16 +593,18 @@ qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1891"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1891"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1891"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.98</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1891"><article class="exercise exercise-like"><iframe name="webwork-368" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=368&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChhPT4iUmVhbCIsIGI9PiJSZWFsIiwgSD0%2BIlJlYWwiKTsKJGYgPSBGb3JtdWxhKCIoYipIKS8oMmItSCkiKTsKCkJFR0lOX1BHTUwKU29sdmUgZm9yIFtgYVx0ZXh0ezp9YF0gW2B%2BXGRmcmFjezJhYn17YStifT1IIGBdCgpbYGE9YF1bX117JGZ9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgYT1cZGZyYWN7Ykh9ezJiLUh9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="368"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1892"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1892"><h6 class="heading">
+</h6>
+<iframe name="webwork-368" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=368&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChhPT4iUmVhbCIsIGI9PiJSZWFsIiwgSD0%2BIlJlYWwiKTsKJGYgPSBGb3JtdWxhKCIoYipIKS8oMmItSCkiKTsKCkJFR0lOX1BHTUwKU29sdmUgZm9yIFtgYVx0ZXh0ezp9YF0gW2B%2BXGRmcmFjezJhYn17YStifT1IIGBdCgpbYGE9YF1bX117JGZ9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgYT1cZGZyYWN7Ykh9ezJiLUh9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="368"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1892"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.99</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1892"><article class="exercise exercise-like"><iframe name="webwork-369" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=369&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBUbyBzb2x2ZSBhbiBlcXVhdGlvbiBncmFwaGljYWxseSwgd2UgZ3JhcGggdHdvIGZ1bmN0aW9ucywgW2B5PWBdIChlYWNoIHNpZGUgb2YgdGhlIGVxdWF0aW9uLikgW19deyRUcnVlfXs1fQoKCmEuICBUaGUgc29sdXRpb25zIGFyZSB0aGUgW2B5YF0tY29vcmRpbmF0ZXMgb2YgdGhlIGludGVyc2VjdGlvbiBwb2ludHMgb2YgdGhlIHR3byBncmFwaHMuICBbX117JEZhbHNlfXs1fQoKCmEuICBUbyBzb2x2ZSBhIGZvcm11bGEgdGhhdCBpcyBsaW5lYXIgaW4gdGhlIGRlc2lyZWQgdmFyaWFibGUsIHdlIG11c3QgZ2V0IGFsbCB0ZXJtcyBpbmNsdWRpbmcgdGhhdCB2YXJpYWJsZSBvbiBvbmUgc2lkZSBvZiB0aGUgZXF1YXRpb24uIFtfXXskVHJ1ZX17NX0KCgphLiAgSWYgdHdvIG9yIG1vcmUgdGVybXMgb24gb25lIHNpZGUgb2YgdGhlIGVxdWF0aW9uIGluY2x1ZGUgdGhlIGRlc2lyZWQgdmFyaWFibGUsIHdlIGZhY3RvciBpdCBvdXQuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="369"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-8-5-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-369" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=369&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBUbyBzb2x2ZSBhbiBlcXVhdGlvbiBncmFwaGljYWxseSwgd2UgZ3JhcGggdHdvIGZ1bmN0aW9ucywgW2B5PWBdIChlYWNoIHNpZGUgb2YgdGhlIGVxdWF0aW9uLikgW19deyRUcnVlfXs1fQoKCmEuICBUaGUgc29sdXRpb25zIGFyZSB0aGUgW2B5YF0tY29vcmRpbmF0ZXMgb2YgdGhlIGludGVyc2VjdGlvbiBwb2ludHMgb2YgdGhlIHR3byBncmFwaHMuICBbX117JEZhbHNlfXs1fQoKCmEuICBUbyBzb2x2ZSBhIGZvcm11bGEgdGhhdCBpcyBsaW5lYXIgaW4gdGhlIGRlc2lyZWQgdmFyaWFibGUsIHdlIG11c3QgZ2V0IGFsbCB0ZXJtcyBpbmNsdWRpbmcgdGhhdCB2YXJpYWJsZSBvbiBvbmUgc2lkZSBvZiB0aGUgZXF1YXRpb24uIFtfXXskVHJ1ZX17NX0KCgphLiAgSWYgdHdvIG9yIG1vcmUgdGVybXMgb24gb25lIHNpZGUgb2YgdGhlIGVxdWF0aW9uIGluY2x1ZGUgdGhlIGRlc2lyZWQgdmFyaWFibGUsIHdlIGZhY3RvciBpdCBvdXQuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="369"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-8-5-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 8.5</span>
 </h3>
 <article class="subexercises" id="subexercises-116"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-284">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-325"><p id="p-11720">For Problems 1–8, solve.</p></div>
 <div class="exercisegroup-exercises cols3">
 <article class="exercise exercise-like" id="exercise-1893"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -606,6 +619,7 @@ qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 </div>
 </div></article><article class="subexercises" id="subexercises-117"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-285">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-326"><p id="p-11733">For Problems 9–16, solve.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1901"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
@@ -626,7 +640,7 @@ qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 \text{Add} ~~~~\dfrac{3}{8}+\dfrac{1}{2}
 \end{equation*}
 </div>
-<p data-braille="continuation">Solution:</p>
+<p class="continuation">Solution:</p>
 <div class="displaymath">
 \begin{align*}
 \alert{8} \cdot \dfrac{3}{8} + \alert{8} \cdot \dfrac{1}{2} \amp = 3+4 \amp \amp \blert{\text{Multiply by the LCD, 8.}}\\
@@ -640,6 +654,7 @@ qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 <li id="li-7443"><p id="p-11751">Solve:  \(~\dfrac{3}{x} + \dfrac{1}{x+3} = 3\)</p></li>
 <li id="li-7444"><p id="p-11752">Simplify:  \(~\dfrac{1+\dfrac{3}{x}}{3+\dfrac{1}{x+3}}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-286">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-327"><p id="p-11753">For Problems 19–24, solve the formula for the specified variable.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1911"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
@@ -662,7 +677,7 @@ qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 C(p) = \frac{72p}{100-p}
 \end{equation*}
 </div>
-<p data-braille="continuation">Write and solve an equation to determine what percent of the population can be immunized for $168,000.</p></article><article class="exercise exercise-like" id="exercise-1922"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
+<p class="continuation">Write and solve an equation to determine what percent of the population can be immunized for $168,000.</p></article><article class="exercise exercise-like" id="exercise-1922"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
 <p id="p-11771">A school of bluefin tuna average 36 miles per hour on a 200-mile trip in still water, but this time they encounter a current.</p>
 <ol class="lower-alpha">
 <li id="li-7445">
@@ -678,14 +693,14 @@ C(p) = \frac{72p}{100-p}
 </ol></article><article class="exercise exercise-like" id="exercise-1923"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
 <p id="p-11774">During the baseball season so far this year, Pete got hits 44 times out of 164 times at bat.</p>
 <ol class="lower-alpha">
-<li id="li-7447">What is Pete's batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)</li>
-<li id="li-7448">If Pete gets hits on every one of his next \(x\) at-bats, write an expression for his new batting average.</li>
-<li id="li-7449">How many consecutive hits does Pete need to raise his batting average to 0.350 ?</li>
+<li id="li-7447"><p id="p-derived-li-7447">What is Pete's batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)</p></li>
+<li id="li-7448"><p id="p-derived-li-7448">If Pete gets hits on every one of his next \(x\) at-bats, write an expression for his new batting average.</p></li>
+<li id="li-7449"><p id="p-derived-li-7449">How many consecutive hits does Pete need to raise his batting average to 0.350 ?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1924"><h6 class="heading"><span class="codenumber">32<span class="period">.</span></span></h6>
 <p id="p-11776">The manager of Joe's Burgers discovers that he will sell \(\dfrac{160}{x}\) burgers per day if the price of a burger is \(x\) dollars.  On the other hand, he can afford to make \(6x+49\) burgers if he charges \(x\) dollars apiece for them.</p>
 <ol class="lower-alpha">
-<li id="li-7453">Graph the demand function, \(D(x) = \dfrac{160}{x}\) and the supply function, \(S(x) = 6x+49\text{,}\) in the same window.  At what price\(x\)does the demand for burgers equal the number that Joe can afford to supply?  This value for  is called the equilibrium price.</li>
-<li id="li-7454">Write and solve an equation to verify your equilibrium price.</li>
+<li id="li-7453"><p id="p-derived-li-7453">Graph the demand function, \(D(x) = \dfrac{160}{x}\) and the supply function, \(S(x) = 6x+49\text{,}\) in the same window.  At what price\(x\)does the demand for burgers equal the number that Joe can afford to supply?  This value for  is called the equilibrium price.</p></li>
+<li id="li-7454"><p id="p-derived-li-7454">Write and solve an equation to verify your equilibrium price.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1925"><h6 class="heading"><span class="codenumber">33<span class="period">.</span></span></h6>
 <p id="p-11777">A chartered sightseeing flight over the Grand Canyon is scheduled to return to its departure point in 3 hours. The pilot would like to cover a distance of 144 miles before turning around, and he hears on the Weather Service that there will be a headwind of 20 miles per hour on the outward journey.</p>
 <ol class="lower-alpha">
@@ -712,8 +727,8 @@ C(p) = \frac{72p}{100-p}
 </ol></article><article class="exercise exercise-like" id="exercise-1929"><h6 class="heading"><span class="codenumber">37<span class="period">.</span></span></h6>
 <p id="p-11796">The rectangle \(ABCD\) is divided into a square and a smaller rectangle, \(CDEF\text{.}\) The two rectangles \(ABCD\) and \(CDEF\) are similar (their corresponding sides are proportional.) A rectangle \(ABCD\) with this property is called a <dfn class="terminology">golden rectangle</dfn>, and the ratio of its length to its width is called the golden ratio.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:68.4210526315789%;justify-content:center;"><p id="p-11797">The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.</p></div>
-<div class="sbspanel" style="width:26.3157894736842%;justify-content:center;"><img src="images/fig-golden-rectangle.svg" role="img" style="width: 100%; height: auto;" alt="golden rectangle"></div>
+<div class="sbspanel middle" style="width:68.4210526315789%;"><p id="p-11797">The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.</p></div>
+<div class="sbspanel middle" style="width:26.3157894736842%;"><img src="external/images/fig-golden-rectangle.svg" role="img" class="contained" alt="golden rectangle"></div>
 </div></div>
 <ol id="p-11798" class="lower-alpha">
 <li id="li-7473"><p id="p-11799">Let \(AB = 1\) and \(AD = x\text{.}\) What are the lengths of \(AE\text{,}\) \(DE\text{,}\) and \(CD\text{?}\)</p></li>
@@ -721,7 +736,7 @@ C(p) = \frac{72p}{100-p}
 <li id="li-7475"><p id="p-11801">Solve your proportion for \(x\text{.}\) Find the golden ratio, \(\dfrac{AD}{AB}=\dfrac{x}{1} \text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1930"><h6 class="heading"><span class="codenumber">38<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:63.1578947368421%;justify-content:center;">
+<div class="sbspanel middle" style="width:63.1578947368421%;">
 <p id="p-11806">The figure shows the graphs of two equations,</p>
 <div class="displaymath">
 \begin{equation*}
@@ -729,7 +744,7 @@ y = x~~~~\text{and}~~~~y=\dfrac{1}{x}+1 \text{.}
 \end{equation*}
 </div>
 </div>
-<div class="sbspanel" style="width:31.5789473684211%;justify-content:center;"><img src="images/fig-reciprocal-and-identity.svg" role="img" style="width: 100%; height: auto;" alt="line and translated reciprocal"></div>
+<div class="sbspanel middle" style="width:31.5789473684211%;"><img src="external/images/fig-reciprocal-and-identity.svg" role="img" class="contained" alt="line and translated reciprocal"></div>
 </div></div>
 <ol id="p-11807" class="lower-alpha">
 <li id="li-7479"><p id="p-11808">Find the \(x\)-coordinate of the intersection point of the two graphs.</p></li>
@@ -746,7 +761,8 @@ x+1 \amp = 1 \amp \amp \blert{\text{Subtract 1 from both sides.}}\\
 x \amp = 0
 \end{align*}
 </div>
-<p data-braille="continuation">Because \(x=1\) and \(x=0\text{,}\) we have "proved" that \(1=0\text{.}\)</p></article><div class="exercisegroup" id="exercisegroup-287">
+<p class="continuation">Because \(x=1\) and \(x=0\text{,}\) we have "proved" that \(1=0\text{.}\)</p></article><div class="exercisegroup" id="exercisegroup-287">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-328">
 <p id="p-11812">For Problems 40–42,</p>
 <ol class="lower-alpha">
@@ -762,19 +778,19 @@ x \amp = 0
 </div>
 </div></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

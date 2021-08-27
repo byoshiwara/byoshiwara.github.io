@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:55:03-07:00       *-->
+<!--*       on 2021-08-27T15:51:03-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Quadratic Formula</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="QuadraticFormula"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Quadratic Formula</span>
@@ -234,7 +240,7 @@ true);
 ax^2+bx+c=0,~~~~     (a \not= 0)
 \end{equation*}
 </div>
-<p data-braille="continuation">and obtain a formula for the solutions of any quadratic equation.  Here is the resulting formula.</p>
+<p class="continuation">and obtain a formula for the solutions of any quadratic equation.  Here is the resulting formula.</p>
 <article class="assemblage assemblage-like" id="assemblage-35"><h6 class="heading"><span class="title">The Quadratic Formula.</span></h6>
 <p id="p-3944">The solutions of the equation \(~~ax^2+bx+c=0,~~(a \not= 0)~~\) are</p>
 <div class="displaymath">
@@ -250,55 +256,56 @@ ax^2+bx+c=0,~~~~     (a \not= 0)
 x=\dfrac{-b +\sqrt{b^2-4ac}}{2a}~~~\text{and}~~~x=\dfrac{-b - \sqrt{b^2-4ac}}{2a}
 \end{equation*}
 </div>
-<p data-braille="continuation">in a single formula.</p></article><article class="exercise exercise-like" id="exercise-598"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-598"><h6 class="heading">
+<p class="continuation">in a single formula.</p></article><article class="exercise exercise-like" id="exercise-598"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-598"><article class="exercise exercise-like"><iframe name="webwork-116" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=116&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRsaW50ID0gUmFkaW9CdXR0b25zKAogIFsiXCh4PS1iIFxwbSBcZGZyYWN7XHNxcnR7Yl4yLTRhY319ezJhfVwpIiwKICAiXCh4PVxkZnJhY3stYn17MmF9IFxwbSBcZGZyYWN7XHNxcnR7Yl4yLTRhY319ezJhfSBcKSIsCiAgIlwoeD0tYiBccG0gXGRmcmFje2ItXHNxcnR7NGFjfX17MmF9XCkiLAogICJcKHg9LWIgXHBtIFxkZnJhY3tcc3FydHtiXjItYWN9fXthfVwpIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoaWNoIG9mIHRoZSBmb2xsb3dpbmcgaXMgYSBjb3JyZWN0IHN0YXRlbWVudCBvZiB0aGUgcXVhZHJhdGljIGZvcm11bGE%2FCgogICAgW19deyRsaW50fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD1cZGZyYWN7LWJ9ezJhfSBccG0gXGRmcmFje1xzcXJ0e2JeMi00YWN9fXsyYX1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="116"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-3954">To solve a quadratic equation using the quadratic formula, all we have to do is substitute the coefficients \(a,~b,\) and \(c\) into the formula.</p>
+</h6>
+<iframe name="webwork-116" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=116&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRsaW50ID0gUmFkaW9CdXR0b25zKAogIFsiXCh4PS1iIFxwbSBcZGZyYWN7XHNxcnR7Yl4yLTRhY319ezJhfVwpIiwKICAiXCh4PVxkZnJhY3stYn17MmF9IFxwbSBcZGZyYWN7XHNxcnR7Yl4yLTRhY319ezJhfSBcKSIsCiAgIlwoeD0tYiBccG0gXGRmcmFje2ItXHNxcnR7NGFjfX17MmF9XCkiLAogICJcKHg9LWIgXHBtIFxkZnJhY3tcc3FydHtiXjItYWN9fXthfVwpIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoaWNoIG9mIHRoZSBmb2xsb3dpbmcgaXMgYSBjb3JyZWN0IHN0YXRlbWVudCBvZiB0aGUgcXVhZHJhdGljIGZvcm11bGE%2FCgogICAgW19deyRsaW50fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD1cZGZyYWN7LWJ9ezJhfSBccG0gXGRmcmFje1xzcXJ0e2JeMi00YWN9fXsyYX1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="116"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-3954">To solve a quadratic equation using the quadratic formula, all we have to do is substitute the coefficients \(a,~b,\) and \(c\) into the formula.</p>
 <article class="example example-like" id="example-quadratic-formula"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
 </h6>
 <p id="p-3955">Solve \(~~2x^2 + 1 = 4x\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like">
 <p id="p-3956">Write the equation in standard form as</p>
 <div class="displaymath">
 \begin{equation*}
 2x^2 - 4x + 1 = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">We substitute \(\alert{2}\) for \(a\text{,}\) \(\alert{-4}\) for \(b\text{,}\) and \(\alert{1}\) for \(c\) into the quadratic formula, then simplify.</p>
+<p class="continuation">We substitute \(\alert{2}\) for \(a\text{,}\) \(\alert{-4}\) for \(b\text{,}\) and \(\alert{1}\) for \(c\) into the quadratic formula, then simplify.</p>
 <div class="displaymath">
 \begin{align*}
 x \amp =\frac{-(\alert{-4})\pm \sqrt{(\alert{-4})^2 - 4(\alert{2})(\alert{1})}}{2(\alert{2})}\\
 \amp = \frac{4 \pm \sqrt{8}}{4}
 \end{align*}
 </div>
-<p data-braille="continuation">Using a calculator, we find that the solutions are approximately \(1.7\) and \(0.3\text{.}\) These values are the \(x\)-intercepts of the graph of \(~y = 2x^2 - 4x + 1,~\) as shown in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:31%;margin-right:31%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-parabola-intercepts.svg" role="img" style="width: 100%; height: auto;" alt="parabola with irrational x-intercepts"></div></div></div>
+<p class="continuation">Using a calculator, we find that the solutions are approximately \(1.7\) and \(0.3\text{.}\) These values are the \(x\)-intercepts of the graph of \(~y = 2x^2 - 4x + 1,~\) as shown in the figure.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:31%;margin-right:31%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-parabola-intercepts.svg" role="img" class="contained" alt="parabola with irrational x-intercepts"></div></div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-599"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-599"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-599"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-599"><article class="exercise exercise-like"><iframe name="webwork-117" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=117&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwokYW5zd2VyPUZvcm11bGEoIigzK3NxcnQoMTMpKS8yLCgzLXNxcnQoMTMpKS8yIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApVc2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHRvIHNvbHZlIFtgfnheMiAtIDN4ID0gMVx0ZXh0ey59YF0KClNvbHV0aW9uczogW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezI1fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnTGlzdCBhbGwgdGhlIHZhbHVlcyB0aGF0IGFyZSBzb2x1dGlvbnMuIEVudGVyICJzcXJ0KDIpIiB0byBnZXQgW2Bcc3FydHsyfVx0ZXh0eyx9YF0gYW5kIHVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXcml0ZSB0aGUgZXF1YXRpb24gaW4gc3RhbmRhcmQgZm9ybS4KClN1YnN0aXR1dGUgW2BhID0gMVx0ZXh0eyx9YF0gW2BiID0gLTNcdGV4dHssfWBdIFtgYyA9IC0xYF0gaW50byB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgpTaW1wbGlmeS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD1cZGZyYWN7M1xwbSBcc3FydHsxM319ezJ9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="117"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-117" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=117&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwokYW5zd2VyPUZvcm11bGEoIigzK3NxcnQoMTMpKS8yLCgzLXNxcnQoMTMpKS8yIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApVc2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHRvIHNvbHZlIFtgfnheMiAtIDN4ID0gMVx0ZXh0ey59YF0KClNvbHV0aW9uczogW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezI1fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnTGlzdCBhbGwgdGhlIHZhbHVlcyB0aGF0IGFyZSBzb2x1dGlvbnMuIEVudGVyICJzcXJ0KDIpIiB0byBnZXQgW2Bcc3FydHsyfVx0ZXh0eyx9YF0gYW5kIHVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXcml0ZSB0aGUgZXF1YXRpb24gaW4gc3RhbmRhcmQgZm9ybS4KClN1YnN0aXR1dGUgW2BhID0gMVx0ZXh0eyx9YF0gW2BiID0gLTNcdGV4dHssfWBdIFtgYyA9IC0xYF0gaW50byB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgpTaW1wbGlmeS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD1cZGZyYWN7M1xwbSBcc3FydHsxM319ezJ9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="117"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Applications</span>
 </h3>
 <p id="p-3964">We have now seen four different algebraic methods for solving quadratic equations:</p>
 <ol class="decimal">
-<li id="li-2278">Factoring</li>
-<li id="li-2279">Extraction of roots</li>
-<li id="li-2280">Completing the square</li>
-<li id="li-2281">Quadratic formula</li>
+<li id="li-2278"><p id="p-derived-li-2278">Factoring</p></li>
+<li id="li-2279"><p id="p-derived-li-2279">Extraction of roots</p></li>
+<li id="li-2280"><p id="p-derived-li-2280">Completing the square</p></li>
+<li id="li-2281"><p id="p-derived-li-2281">Quadratic formula</p></li>
 </ol>
-<p data-braille="continuation">Factoring and extraction of roots are relatively fast and simple, but they do not work on all quadratic equations. The quadratic formula will work on any quadratic equation.</p>
-<article class="exercise exercise-like" id="exercise-600"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-600"><h6 class="heading">
+<p class="continuation">Factoring and extraction of roots are relatively fast and simple, but they do not work on all quadratic equations. The quadratic formula will work on any quadratic equation.</p>
+<article class="exercise exercise-like" id="exercise-600"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-600"><article class="exercise exercise-like"><iframe name="webwork-118" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=118&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICAyLCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICAxLCAKKTsKJGMgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICA0LCAKKTsgICAgICAgICAgICAKJGQgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKTWF0Y2ggZWFjaCBlcXVhdGlvbiB3aXRoIHRoZSBtb3N0IGVmZmljaWVudCBtZXRob2Qgb2Ygc29sdXRpb24uCmEuICBbYDYoeC00KV4yPTEyMCBgXSBbX117JGF9ezV9CgoKYS4gIFtgeF4yLTl4KzIwPTBgXSBbX117JGJ9ezV9CgoKYS4gIFtgMS40eF4yLTYuMngrMi41PTBgXSBbX117JGN9ezV9CgoKYS4gIFtgeF4yLTIweD00NGBdIFtfXXskZH17NX0KCgpJLiAgRmFjdG9yaW5nCkkuICBFeHRyYWN0aW9uIG9mIHJvb3RzCkkuICBDb21wbGV0aW5nIHRoZSBzcXVhcmUKSS4gIFF1YWRyYXRpYyBmb3JtdWxhICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBJSQphLiAgSQphLiAgSVYKYS4gIElJSSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="118"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-fencing-areas"><h6 class="heading">
+</h6>
+<iframe name="webwork-118" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=118&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICAyLCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICAxLCAKKTsKJGMgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICA0LCAKKTsgICAgICAgICAgICAKJGQgPSBQb3BVcCgKICBbIj8iLCJJIiwgIklJIiwiSUlJIiwiSVYiXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKTWF0Y2ggZWFjaCBlcXVhdGlvbiB3aXRoIHRoZSBtb3N0IGVmZmljaWVudCBtZXRob2Qgb2Ygc29sdXRpb24uCmEuICBbYDYoeC00KV4yPTEyMCBgXSBbX117JGF9ezV9CgoKYS4gIFtgeF4yLTl4KzIwPTBgXSBbX117JGJ9ezV9CgoKYS4gIFtgMS40eF4yLTYuMngrMi41PTBgXSBbX117JGN9ezV9CgoKYS4gIFtgeF4yLTIweD00NGBdIFtfXXskZH17NX0KCgpJLiAgRmFjdG9yaW5nCkkuICBFeHRyYWN0aW9uIG9mIHJvb3RzCkkuICBDb21wbGV0aW5nIHRoZSBzcXVhcmUKSS4gIFF1YWRyYXRpYyBmb3JtdWxhICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBJSQphLiAgSQphLiAgSVYKYS4gIElJSSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="118"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-fencing-areas"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
 </h6>
 <p id="p-4004">The owners of a day-care center plan to enclose a divided play area against the back wall of their building, as shown below. They have \(300\) feet of picket fence and would like the total area of the playground to be \(6000\) square feet. Can they enclose the playground with the fence they have, and if so, what should the dimensions of the playground be?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-fencing-areas.svg" role="img" style="width: 100%; height: auto;" alt="two fenced rectangles against wall"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-fencing-areas.svg" role="img" class="contained" alt="two fenced rectangles against wall"></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-188"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-188"><div class="solution solution-like">
 <p id="p-4005">Suppose the width of the play area is \(x\) feet. Because there are three sections of fence along the width of the play area, that leaves \(300 - 3x\) feet of fence for its length.</p>
 <p id="p-4006">The area of the play area should be \(6000\) square feet, so we have the equation</p>
 <div class="displaymath">
@@ -306,30 +313,31 @@ x \amp =\frac{-(\alert{-4})\pm \sqrt{(\alert{-4})^2 - 4(\alert{2})(\alert{1})}}{
 x(300 - 3x) = 6000
 \end{equation*}
 </div>
-<p data-braille="continuation">This is a quadratic equation. In standard form,</p>
+<p class="continuation">This is a quadratic equation. In standard form,</p>
 <div class="displaymath">
 \begin{align*}
 3x^2 - 300x + 6000 \amp= 0\amp\amp \blert{\text{Divide each term by 3.}}\\
 x^2 - 100x + 2000 \amp= 0
 \end{align*}
 </div>
-<p data-braille="continuation">The left side cannot be factored, so we use the quadratic formula with \(a = \alert{1}\text{,}\) \(b = \alert{-100}\text{,}\) and \(c = \alert{2000}\text{.}\)</p>
+<p class="continuation">The left side cannot be factored, so we use the quadratic formula with \(a = \alert{1}\text{,}\) \(b = \alert{-100}\text{,}\) and \(c = \alert{2000}\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
 x \amp=\frac{-(\alert{-100}) \pm\sqrt{(\alert{-100})^2 - 4(\alert{1})(\alert{2000})}}{2(\alert{1})}\\
 \amp= \frac{100 \pm\sqrt{2000}}{2}\approx \frac{100 \pm 44.7}{2}
 \end{align*}
 </div>
-<p data-braille="continuation">When we evalute this last expression, we get two different positive values, \(x = 72.4\) or \(x=27.6\text{.}\) Both values give solutions to the problem. To find the length of the playground in each case, we substitute \(x\) into \(300-3x.\)</p>
+<p class="continuation">When we evalute this last expression, we get two different positive values, \(x = 72.4\) or \(x=27.6\text{.}\) Both values give solutions to the problem. To find the length of the playground in each case, we substitute \(x\) into \(300-3x.\)</p>
 <ul class="disc">
-<li id="li-2314">If the width of the play area is \(72.4\) feet, the length is \(300 - 3(72.4)\text{,}\) or \(82.8\) feet.</li>
-<li id="li-2315">If the width is \(27.6\) feet, the length is \(300 - 3(27.6)\text{,}\) or \(217.2\) feet.</li>
+<li id="li-2314"><p id="p-derived-li-2314">If the width of the play area is \(72.4\) feet, the length is \(300 - 3(72.4)\text{,}\) or \(82.8\) feet.</p></li>
+<li id="li-2315"><p id="p-derived-li-2315">If the width is \(27.6\) feet, the length is \(300 - 3(27.6)\text{,}\) or \(217.2\) feet.</p></li>
 </ul>
 <p id="p-4007">The dimensions of the play area can be 72.4 feet by 82.8 feet, or it can be 27.6 feet by 217.2 feet.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-601"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-601"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-601"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-601"><article class="exercise exercise-like"><iframe name="webwork-119" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=119&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiKDQrc3FydCgxMikpLzIiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMDUxLAopOwoKJGIgPSBDb21wdXRlKCIoNC1zcXJ0KDEyKSkvMiIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNTEsCik7CiRhbnN3ZXIgPSBMaXN0KCIkYSwkYiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMDUxLAopOwoKQkVHSU5fUEdNTApUaGUgaGVpZ2h0IG9mIGEgYmFzZWJhbGwgaXMgZ2l2ZW4gYnkgdGhlIGVxdWF0aW9uCgpbYGBgXGJlZ2lue2dhdGhlcmVkfQpoPS0xNnReMis2NHQrNApcZW5ke2dhdGhlcmVkfQpgYGBdCgp3aGVyZSBbYHRgXSBpcyB0aGUgdGltZSBpbiBzZWNvbmRzLiBGaW5kIHR3byB0aW1lcyB3aGVuIHRoZSBiYWxsIGlzIGF0IGEgaGVpZ2h0IG9mIDIwIGZlZXQuIFJvdW5kIHlvdXIgYW5zd2VycyB0byB0d28gZGVjaW1hbCBwbGFjZXMsIGFuZCBzZXBhcmF0ZSB0aGUgdmFsdWVzIHdpdGggYSBjb21tYS4KCltgdD1gXVtfXXskbXlfZXZhbHVhdG9yfXsxNX0gc2VjLgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKU2V0IFtgaD0yMFx0ZXh0eyx9YF0gdGhlbiB3cml0ZSB0aGUgZXF1YXRpb24gaW4gc3RhbmRhcmQgZm9ybS4KCkRpdmlkZSBlYWNoIHRlcm0gYnkgW2AtMTZcdGV4dHsufWBdCgpVc2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHRvIHNvbHZlLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KMC4yNyBzZWMsIDMuNzMgc2VjCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="119"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-119" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=119&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiKDQrc3FydCgxMikpLzIiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMDUxLAopOwoKJGIgPSBDb21wdXRlKCIoNC1zcXJ0KDEyKSkvMiIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNTEsCik7CiRhbnN3ZXIgPSBMaXN0KCIkYSwkYiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0%2BIC4wMDUxLAopOwoKQkVHSU5fUEdNTApUaGUgaGVpZ2h0IG9mIGEgYmFzZWJhbGwgaXMgZ2l2ZW4gYnkgdGhlIGVxdWF0aW9uCgpbYGBgXGJlZ2lue2dhdGhlcmVkfQpoPS0xNnReMis2NHQrNApcZW5ke2dhdGhlcmVkfQpgYGBdCgp3aGVyZSBbYHRgXSBpcyB0aGUgdGltZSBpbiBzZWNvbmRzLiBGaW5kIHR3byB0aW1lcyB3aGVuIHRoZSBiYWxsIGlzIGF0IGEgaGVpZ2h0IG9mIDIwIGZlZXQuIFJvdW5kIHlvdXIgYW5zd2VycyB0byB0d28gZGVjaW1hbCBwbGFjZXMsIGFuZCBzZXBhcmF0ZSB0aGUgdmFsdWVzIHdpdGggYSBjb21tYS4KCltgdD1gXVtfXXskbXlfZXZhbHVhdG9yfXsxNX0gc2VjLgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKU2V0IFtgaD0yMFx0ZXh0eyx9YF0gdGhlbiB3cml0ZSB0aGUgZXF1YXRpb24gaW4gc3RhbmRhcmQgZm9ybS4KCkRpdmlkZSBlYWNoIHRlcm0gYnkgW2AtMTZcdGV4dHsufWBdCgpVc2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHRvIHNvbHZlLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KMC4yNyBzZWMsIDMuNzMgc2VjCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="119"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Complex Numbers</span>
 </h3>
 <p id="p-4017">Not all quadratic equations have solutions that are real numbers.  For example, when we try to solve the equation \(~x^2+4=0,~\text{,}\) we find</p>
@@ -339,7 +347,7 @@ x^2 \amp =-4\\
 x \amp = \pm \sqrt{-4}
 \end{align*}
 </div>
-<p data-braille="continuation">Although square roots  of negative numbers such as \(\sqrt{-4}\)  are not real numbers, they occur frequently in mathematics and its applications.  Mathematicians in the sixteenth century gave them the name <dfn class="terminology">imaginary numbers</dfn>, which reflected the mistrust with which they were viewed at the time. Today, however, such numbers are well understood and are used routinely by scientists and engineers.</p>
+<p class="continuation">Although square roots  of negative numbers such as \(\sqrt{-4}\)  are not real numbers, they occur frequently in mathematics and its applications.  Mathematicians in the sixteenth century gave them the name <dfn class="terminology">imaginary numbers</dfn>, which reflected the mistrust with which they were viewed at the time. Today, however, such numbers are well understood and are used routinely by scientists and engineers.</p>
 <p id="p-4018">To help us work with imaginary numbers, we define a new number, \(i\), the <dfn class="terminology">imaginary unit</dfn>, whose square is \(-1\text{.}\)</p>
 <article class="definition definition-like" id="definition-10"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Imaginary Unit.</span>
@@ -377,54 +385,55 @@ x \amp = \pm \sqrt{-4}
 \amp = i \sqrt{3} 
 \end{align*}
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-602"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-602"><h6 class="heading">
+</ol></article><article class="exercise exercise-like" id="exercise-602"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-602"><article class="exercise exercise-like"><iframe name="webwork-120" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=120&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiQ29tcGxleCIpLT5mdW5jdGlvbnMtPmRpc2FibGUoInNxcnQiKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPmVuYWJsZSgic3FydCIpOwpDb250ZXh0KCktPntlcnJvcn17bXNnfXsiQ2FuJ3QgdGFrZSBzcXJ0IG9mIC0xOCJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTUifQogID0gIllvdXIgc2hvdWxkIG5vdCBsZWF2ZSBhIG5lZ2F0aXZlIG51bWJlciB1bmRlciB0aGUgcmFkaWNhbC4iOwoKJGEgPSBDb21wdXRlKCItNmkiKTsKJGIgPSBDb21wdXRlKCItMjUiKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkuCgphLiAgW2AtXHNxcnR7LTM2fT1gXVtfXXskYX17M30KCgphLiAgW2AoNWkpXjI9YF1bX117JGJ9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYC02aSBgXQoKCmEuICBbYC0yNSBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="120"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-4035">The solutions of many quadratic equations involve imaginary numbers.</p>
+</h6>
+<iframe name="webwork-120" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=120&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiQ29tcGxleCIpLT5mdW5jdGlvbnMtPmRpc2FibGUoInNxcnQiKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPmVuYWJsZSgic3FydCIpOwpDb250ZXh0KCktPntlcnJvcn17bXNnfXsiQ2FuJ3QgdGFrZSBzcXJ0IG9mIC0xOCJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTUifQogID0gIllvdXIgc2hvdWxkIG5vdCBsZWF2ZSBhIG5lZ2F0aXZlIG51bWJlciB1bmRlciB0aGUgcmFkaWNhbC4iOwoKJGEgPSBDb21wdXRlKCItNmkiKTsKJGIgPSBDb21wdXRlKCItMjUiKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkuCgphLiAgW2AtXHNxcnR7LTM2fT1gXVtfXXskYX17M30KCgphLiAgW2AoNWkpXjI9YF1bX117JGJ9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYC02aSBgXQoKCmEuICBbYC0yNSBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="120"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-4035">The solutions of many quadratic equations involve imaginary numbers.</p>
 <article class="example example-like" id="example-72"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span>
 </h6>
 <p id="p-4036">Solve \(~~2x^2-x+2 = 0\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like">
 <p id="p-4037">For this equation, \(a=\alert{2}\text{,}\) \(b=\alert{-1}\text{,}\) and \(c=\alert{2}\text{.}\) We substitute these values into the quadratic formula to obtain</p>
 <div class="displaymath">
 \begin{gather*}
 x=\frac{ -(\alert{-1}) \pm \sqrt{ (\alert{-1})^2 - 4(\alert{2}) (\alert{2})} } { 2(\alert{2}) } = \frac{1 \pm \sqrt{-15} } {4}
 \end{gather*}
 </div>
-<p data-braille="continuation">We write the solutions as</p>
+<p class="continuation">We write the solutions as</p>
 <div class="displaymath">
 \begin{gather*}
 \frac{1 \pm i\sqrt{15}}{4} \qquad \text{or} \qquad \frac{1}{4} \pm \frac{\sqrt{15}}{4}i
 \end{gather*}
 </div>
-<p data-braille="continuation">Because the solutions are not real numbers, the graph of</p>
+<p class="continuation">Because the solutions are not real numbers, the graph of</p>
 <div class="displaymath">
 \begin{gather*}
 y=2x^2-x+2
 \end{gather*}
 </div>
-<p data-braille="continuation">has no \(x\)-intercepts, as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-example-complex-roots.svg" role="img" style="width: 100%; height: auto;" alt="parabola no x-intercepts"></div></div></div>
+<p class="continuation">has no \(x\)-intercepts, as shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-example-complex-roots.svg" role="img" class="contained" alt="parabola no x-intercepts"></div></div></div>
 </div></div>
 </div></article><p id="p-4038">The sum of a real number and an imaginary number is called a <dfn class="terminology">complex number</dfn>.</p>
-<article class="exercise exercise-like" id="exercise-603"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-603"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-603"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-603"><article class="exercise exercise-like"><iframe name="webwork-121" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=121&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiQ29tcGxleCIpLT5mdW5jdGlvbnMtPmRpc2FibGUoInNxcnQiKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPmVuYWJsZSgic3FydCIpOwpDb250ZXh0KCktPntlcnJvcn17bXNnfXsiQ2FuJ3QgdGFrZSBzcXJ0IG9mIC0xOCJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTUifQogID0gIllvdXIgc2hvdWxkIG5vdCBsZWF2ZSBhIG5lZ2F0aXZlIG51bWJlciB1bmRlciB0aGUgcmFkaWNhbC4iOwoKJGEgPSBDb21wdXRlKCItMS8yKzMvMiBpIik7CiRiID0gQ29tcHV0ZSgiLTEvMi0zLzIgaSIpOwokYW5zd2VyID0gQ29tcHV0ZSgiLTEvMiszLzIgaSwtMS8yLTMvMiBpIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApVc2UgZXh0cmFjdGlvbiBvZiByb290cyB0byBzb2x2ZSBbYCgyeCsxKV4yKzk9MCBcdGV4dHsufWBdICBXcml0ZSB5b3VyIGFuc3dlcnMgYXMgY29tcGxleCBudW1iZXJzLCBzZXBhcmF0ZWQgd2l0aCBhIGNvbW1hLgoKW2B4PWBdW19deyRhbnN3ZXJ9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgXGRmcmFjey0xfXsyfSArIFxkZnJhY3szfXsyfWlcdGV4dHssfWBdIFtgXGRmcmFjey0xfXsyfSAtIFxkZnJhY3szfXsyfWlgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="121"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-121" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=121&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiQ29tcGxleCIpLT5mdW5jdGlvbnMtPmRpc2FibGUoInNxcnQiKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPmVuYWJsZSgic3FydCIpOwpDb250ZXh0KCktPntlcnJvcn17bXNnfXsiQ2FuJ3QgdGFrZSBzcXJ0IG9mIC0xOCJ9CiAgPSAiWW91ciBzaG91bGQgbm90IGxlYXZlIGEgbmVnYXRpdmUgbnVtYmVyIHVuZGVyIHRoZSByYWRpY2FsLiI7CkNvbnRleHQoKS0%2Be2Vycm9yfXttc2d9eyJDYW4ndCB0YWtlIHNxcnQgb2YgLTUifQogID0gIllvdXIgc2hvdWxkIG5vdCBsZWF2ZSBhIG5lZ2F0aXZlIG51bWJlciB1bmRlciB0aGUgcmFkaWNhbC4iOwoKJGEgPSBDb21wdXRlKCItMS8yKzMvMiBpIik7CiRiID0gQ29tcHV0ZSgiLTEvMi0zLzIgaSIpOwokYW5zd2VyID0gQ29tcHV0ZSgiLTEvMiszLzIgaSwtMS8yLTMvMiBpIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApVc2UgZXh0cmFjdGlvbiBvZiByb290cyB0byBzb2x2ZSBbYCgyeCsxKV4yKzk9MCBcdGV4dHsufWBdICBXcml0ZSB5b3VyIGFuc3dlcnMgYXMgY29tcGxleCBudW1iZXJzLCBzZXBhcmF0ZWQgd2l0aCBhIGNvbW1hLgoKW2B4PWBdW19deyRhbnN3ZXJ9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgXGRmcmFjey0xfXsyfSArIFxkZnJhY3szfXsyfWlcdGV4dHssfWBdIFtgXGRmcmFjey0xfXsyfSAtIFxkZnJhY3szfXsyfWlgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="121"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Number of \(x\)-Intercepts</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
-<div class="sbspanel" style="width:54.0540540540541%;justify-content:flex-start;">
+<div class="sbspanel top" style="width:54.0540540540541%;">
 <p id="p-4043">The graph of the quadratic equation</p>
 <div class="displaymath">
 \begin{equation*}
 y = ax^2 + bx + c
 \end{equation*}
 </div>
-<p data-braille="continuation">may have two, one, or no \(x\)-intercepts, according to the number of distinct real-valued solutions of the equation \(ax^2 + bx + c = 0\text{.}\) For example, consider the three graphs shown at right.</p>
+<p class="continuation">may have two, one, or no \(x\)-intercepts, according to the number of distinct real-valued solutions of the equation \(ax^2 + bx + c = 0\text{.}\) For example, consider the three graphs shown at right.</p>
 </div>
-<div class="sbspanel" style="width:37.8378378378378%;justify-content:flex-start;"><img src="images/fig-parabola-x-intercepts.svg" role="img" style="width: 100%; height: auto;" alt="parabolas with zero, one, or two x-intercepts"></div>
+<div class="sbspanel top" style="width:37.8378378378378%;"><img src="external/images/fig-parabola-x-intercepts.svg" role="img" class="contained" alt="parabolas with zero, one, or two x-intercepts"></div>
 </div></div>
 <ul id="p-4044" class="disc">
 <li id="li-2322">
@@ -434,13 +443,13 @@ y = ax^2 + bx + c
 y = x^2 - 4x + 3
 \end{equation*}
 </div>
-<p data-braille="continuation">has two \(x\)-intercepts, because the equation</p>
+<p class="continuation">has two \(x\)-intercepts, because the equation</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 4x + 3 = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">has two real-valued solutions, \(x = 1\) and \(x = 3\text{.}\)</p>
+<p class="continuation">has two real-valued solutions, \(x = 1\) and \(x = 3\text{.}\)</p>
 </li>
 <li id="li-2323">
 <p id="p-4046">The graph of</p>
@@ -449,13 +458,13 @@ x^2 - 4x + 3 = 0
 y = x^2 - 4x + 4
 \end{equation*}
 </div>
-<p data-braille="continuation">has only one \(x\)-intercept, because the equation</p>
+<p class="continuation">has only one \(x\)-intercept, because the equation</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 4x + 4 = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">has only one (repeated) real-valued solution, \(x = 2\text{.}\)</p>
+<p class="continuation">has only one (repeated) real-valued solution, \(x = 2\text{.}\)</p>
 </li>
 <li id="li-2324">
 <p id="p-4047">The graph of</p>
@@ -464,13 +473,13 @@ x^2 - 4x + 4 = 0
 y = x^2 - 4x + 6
 \end{equation*}
 </div>
-<p data-braille="continuation">has no \(x\)-intercepts, because the equation</p>
+<p class="continuation">has no \(x\)-intercepts, because the equation</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 4x + 6 = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">has no real-valued solutions.</p>
+<p class="continuation">has no real-valued solutions.</p>
 </li>
 </ul>
 <p id="p-4048">A closer look at the quadratic formula reveals useful information about the solutions of quadratic equations. The sign of the number under the radical determines how many solutions the equation has. For the three equations above, we calculate as follows:</p>
@@ -493,7 +502,7 @@ x^2 - 4x + 6 = 0
 \dfrac{-b}{2a}+\dfrac{\sqrt{b^2-4ac}}{2a}~~~~~~\text{and}~~~~~~\dfrac{-b}{2a}-\dfrac{\sqrt{b^2-4ac}}{2a}
 \end{equation*}
 </div>
-<p data-braille="continuation">For example, if we know that one solution of a particular quadratic equation is \(3+\sqrt{2}\text{,}\) the other solution must be \(3-\sqrt{2}\text{.}\) If one solution is \(5-3i\text{,}\) the other solution must be \(5+3i\text{.}\)</p>
+<p class="continuation">For example, if we know that one solution of a particular quadratic equation is \(3+\sqrt{2}\text{,}\) the other solution must be \(3-\sqrt{2}\text{.}\) If one solution is \(5-3i\text{,}\) the other solution must be \(5+3i\text{.}\)</p>
 <p id="p-4051">The expression \(~b^2-4ac~\text{,}\) which appears under the radical in the quadratic formula, is called the <dfn class="terminology">discriminant</dfn>, \(D\text{,}\) of the equation.  The value of the discriminant determines the nature of the solutions of the equation.  In particular, if the discriminant is negative, the equation has no real-valued solutions; the solutions are complex numbers.</p>
 <article class="assemblage assemblage-like" id="assemblage-37"><h6 class="heading"><span class="title">The Discriminant.</span></h6>
 <p id="p-4052">The <dfn class="terminology">discriminant</dfn> of a quadratic equation is</p>
@@ -503,20 +512,20 @@ x^2 - 4x + 6 = 0
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-2325">If \(D \gt 0\text{,}\)  there are two unequal real solutions.</li>
-<li id="li-2326">If  \(D = 0\text{,}\)  there is one solution of multiplicity two.</li>
-<li id="li-2327">If \(D \lt 0\text{,}\)  there are two complex conjugate solutions.</li>
+<li id="li-2325"><p id="p-derived-li-2325">If \(D \gt 0\text{,}\)  there are two unequal real solutions.</p></li>
+<li id="li-2326"><p id="p-derived-li-2326">If  \(D = 0\text{,}\)  there is one solution of multiplicity two.</p></li>
+<li id="li-2327"><p id="p-derived-li-2327">If \(D \lt 0\text{,}\)  there are two complex conjugate solutions.</p></li>
 </ol></article><article class="example example-like" id="example-discriminant"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span>
 </h6>
 <p id="p-4053">Use the discriminant to discover how many \(x\)-intercepts the graph has.</p>
 <ol class="lower-alpha cols3">
-<li id="li-2328">\(\displaystyle y = x^2 - x - 3 \)</li>
-<li id="li-2329">\(\displaystyle y = 2x^2 + x + 1\)</li>
-<li id="li-2330">\(\displaystyle y = x^2 - 6x + 9\)</li>
+<li id="li-2328"><p id="p-derived-li-2328">\(\displaystyle y = x^2 - x - 3 \)</p></li>
+<li id="li-2329"><p id="p-derived-li-2329">\(\displaystyle y = 2x^2 + x + 1\)</p></li>
+<li id="li-2330"><p id="p-derived-li-2330">\(\displaystyle y = x^2 - 6x + 9\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-193" id="solution-193"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-193"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-193" id="solution-193"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-193"><div class="solution solution-like">
 <p id="p-4054">We set \(y=0\) and compute the discriminant for the resulting equation.</p>
 <ol class="lower-alpha">
 <li id="li-2331"><p id="p-4055">\(D = b^2 - 4ac = (-1)^2 - 4(1)(-3) = 13 \gt 0\text{.}\) The equation has two real, unequal solutions, and the graph has two \(x\)-intercepts.</p></li>
@@ -530,12 +539,13 @@ x^2 - 4x + 6 = 0
 </li>
 </ol>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-604"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-604"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-604"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.14</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-604"><article class="exercise exercise-like"><iframe name="webwork-122" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=122&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRURiA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBGYWxzZS4KYS4gIFRoZSBkaXNjcmltaW5hbnQgaXMgcGFydCBvZiB0aGUgcXVhZHJhdGljIGZvcm11bGEuIFtfXXskVHJ1ZX17NX0KCgphLiAgV2UgdXNlIHRoZSBkaXNjcmltaW5hbnQgdG8gY2FsY3VsYXRlIHRoZSBzb2x1dGlvbnMgb2YgYSBxdWFkcmF0aWMgZXF1YXRpb24uIFtfXXskVEZ9ezV9CgoKYS4gIElmIHRoZSBkaXNjcmltaW5hbnQgaXMgbmVnYXRpdmUsIGJvdGggW2B4YF0taW50ZXJjZXB0cyBvZiB0aGUgZ3JhcGggYXJlIG5lZ2F0aXZlLiBbX117JFRGfXs1fQoKCmEuICBJZiBhIHF1YWRyYXRpYyBlcXVhdGlvbiB3b24ndCBmYWN0b3IsIGl0cyBncmFwaCBoYXMgbm8gW2B4YF0taW50ZXJjZXB0cy4gW19deyRURn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgRmFsc2UgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="122"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-discriminant"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-discriminant"><h6 class="heading">
+</h6>
+<iframe name="webwork-122" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=122&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRURiA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBGYWxzZS4KYS4gIFRoZSBkaXNjcmltaW5hbnQgaXMgcGFydCBvZiB0aGUgcXVhZHJhdGljIGZvcm11bGEuIFtfXXskVHJ1ZX17NX0KCgphLiAgV2UgdXNlIHRoZSBkaXNjcmltaW5hbnQgdG8gY2FsY3VsYXRlIHRoZSBzb2x1dGlvbnMgb2YgYSBxdWFkcmF0aWMgZXF1YXRpb24uIFtfXXskVEZ9ezV9CgoKYS4gIElmIHRoZSBkaXNjcmltaW5hbnQgaXMgbmVnYXRpdmUsIGJvdGggW2B4YF0taW50ZXJjZXB0cyBvZiB0aGUgZ3JhcGggYXJlIG5lZ2F0aXZlLiBbX117JFRGfXs1fQoKCmEuICBJZiBhIHF1YWRyYXRpYyBlcXVhdGlvbiB3b24ndCBmYWN0b3IsIGl0cyBncmFwaCBoYXMgbm8gW2B4YF0taW50ZXJjZXB0cy4gW19deyRURn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgRmFsc2UgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="122"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-discriminant"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-discriminant"><article class="exercise exercise-like"><iframe name="webwork-123" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=123&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGNvdW50YSA9IFBvcFVwKApbIj8iLCJOb25lIiwiMSIsICIyIiwgIk90aGVyIl0sCiJOb25lIiwgKTsKJGNvdW50YiA9IFBvcFVwKApbIj8iLCJOb25lIiwiMSIsICIyIiwgIk90aGVyIl0sCiIxIiwgKTsKCkJFR0lOX1BHTUwKVXNlIHRoZSBkaXNjcmltaW5hbnQgdG8gZGlzY292ZXIgaG93IG1hbnkgW2B4YF0taW50ZXJjZXB0cyB0aGUgZ3JhcGggb2YgZWFjaCBlcXVhdGlvbiBoYXMuCgphLiAgW2B5ID0geF4yICsgNXggKyA3YF0gW19deyRjb3VudGF9ezV9CgoKYS4gIFtgeSA9IC1cZGZyYWN7MX17Mn14XjIgKyA0eCAtIDhgXSBbX117JGNvdW50Yn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIE5vbmU6IHRoZSBkaXNjcmltaW5hbnQgaXMgbmVnYXRpdmUuCgoKYS4gIE9uZTogdGhlIGRpc2NyaW1pbmFudCBpcyAwLgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="123"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-123" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=123&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGNvdW50YSA9IFBvcFVwKApbIj8iLCJOb25lIiwiMSIsICIyIiwgIk90aGVyIl0sCiJOb25lIiwgKTsKJGNvdW50YiA9IFBvcFVwKApbIj8iLCJOb25lIiwiMSIsICIyIiwgIk90aGVyIl0sCiIxIiwgKTsKCkJFR0lOX1BHTUwKVXNlIHRoZSBkaXNjcmltaW5hbnQgdG8gZGlzY292ZXIgaG93IG1hbnkgW2B4YF0taW50ZXJjZXB0cyB0aGUgZ3JhcGggb2YgZWFjaCBlcXVhdGlvbiBoYXMuCgphLiAgW2B5ID0geF4yICsgNXggKyA3YF0gW19deyRjb3VudGF9ezV9CgoKYS4gIFtgeSA9IC1cZGZyYWN7MX17Mn14XjIgKyA0eCAtIDhgXSBbX117JGNvdW50Yn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIE5vbmU6IHRoZSBkaXNjcmltaW5hbnQgaXMgbmVnYXRpdmUuCgoKYS4gIE9uZTogdGhlIGRpc2NyaW1pbmFudCBpcyAwLgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="123"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving Formulas</span>
 </h3>
 <p id="p-4105">Sometimes it is useful to solve a quadratic equation for one variable in terms of the others.</p>
@@ -544,14 +554,14 @@ x^2 - 4x + 6 = 0
 </h6>
 <p id="p-4106">Solve \(~~x^2 - xy + y = 2~~\) for \(x\) in terms of \(y\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-196"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-196"><div class="solution solution-like">
 <p id="p-4107">We first write the equation in standard form as a quadratic equation in the variable \(x\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - yx + (y - 2) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">Expressions in \(y\) are treated as constants with respect to \(x\text{,}\) so that \(a = \alert{1}\text{,}\) \(b = \alert{-y}\text{,}\) and \(c = \alert{y - 2}\text{.}\) We substitute these expressions into the quadratic formula.</p>
+<p class="continuation">Expressions in \(y\) are treated as constants with respect to \(x\text{,}\) so that \(a = \alert{1}\text{,}\) \(b = \alert{-y}\text{,}\) and \(c = \alert{y - 2}\text{.}\) We substitute these expressions into the quadratic formula.</p>
 <div class="displaymath">
 \begin{align*}
 x \amp=\frac{-(\alert{-y}) \pm\sqrt{(\alert{-y})^2 - 4(\alert{1})(\alert{y - 2})}}{2(\alert{1})}\\
@@ -559,48 +569,51 @@ x \amp=\frac{-(\alert{-y}) \pm\sqrt{(\alert{-y})^2 - 4(\alert{1})(\alert{y - 2})
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-quadratic-in-two-variables"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-quadratic-in-two-variables"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-quadratic-in-two-variables"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-quadratic-in-two-variables"><article class="exercise exercise-like"><iframe name="webwork-124" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=124&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChrPT4iUmVhbCIpOwokYW5zd2VyPUZvcm11bGEoIigtaytzcXJ0KDgtN2sqKjIpKS80LCAoLWstc3FydCg4LTdrKioyKSkvNCIpOwoKQkVHSU5fUEdNTApTb2x2ZSBbYDJ4XjIgKyBreCArIGteMiA9IDFgXSBmb3IgW2B4YF0gaW4gdGVybXMgb2YgW2BrXHRleHR7Ln1gXQoKU29sdXRpb25zOiBbYHg9YF1bX117JGFuc3dlcn17MzV9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgYSBjb21tYSB0byBzZXBhcmF0ZSBkaWZmZXJlbnQgc29sdXRpb25zLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD1cZGZyYWN7LWtccG1cc3FydHs4LTdrXjJ9fXs0fSBgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="124"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-4-1-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-124" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=124&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChrPT4iUmVhbCIpOwokYW5zd2VyPUZvcm11bGEoIigtaytzcXJ0KDgtN2sqKjIpKS80LCAoLWstc3FydCg4LTdrKioyKSkvNCIpOwoKQkVHSU5fUEdNTApTb2x2ZSBbYDJ4XjIgKyBreCArIGteMiA9IDFgXSBmb3IgW2B4YF0gaW4gdGVybXMgb2YgW2BrXHRleHR7Ln1gXQoKU29sdXRpb25zOiBbYHg9YF1bX117JGFuc3dlcn17MzV9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgYSBjb21tYSB0byBzZXBhcmF0ZSBkaWZmZXJlbnQgc29sdXRpb25zLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD1cZGZyYWN7LWtccG1cc3FydHs4LTdrXjJ9fXs0fSBgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="124"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-4-1-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 4.1</span>
 </h3>
 <article class="subexercises" id="subexercises-43"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-101">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-117"><p id="p-4112">For Problems 1 and 2, simplify according to the order of operations.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-607"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <ol id="p-4113" class="lower-alpha cols2">
-<li id="li-2368">\(\displaystyle 8-2\sqrt{36-16}\)</li>
-<li id="li-2369">\(\displaystyle \dfrac{4+4\sqrt{4(16)}}{4}\)</li>
+<li id="li-2368"><p id="p-derived-li-2368">\(\displaystyle 8-2\sqrt{36-16}\)</p></li>
+<li id="li-2369"><p id="p-derived-li-2369">\(\displaystyle \dfrac{4+4\sqrt{4(16)}}{4}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-608"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <ol id="p-4115" class="lower-alpha cols2">
-<li id="li-2372">\(\displaystyle \dfrac{6+3\sqrt{36-4(3)}} {2(3)}\)</li>
-<li id="li-2373">\(\displaystyle \dfrac{\sqrt{10^2+4(11)}-\sqrt{9+3(6)}} {12-\sqrt{1+5(16)}}\)</li>
+<li id="li-2372"><p id="p-derived-li-2372">\(\displaystyle \dfrac{6+3\sqrt{36-4(3)}} {2(3)}\)</p></li>
+<li id="li-2373"><p id="p-derived-li-2373">\(\displaystyle \dfrac{\sqrt{10^2+4(11)}-\sqrt{9+3(6)}} {12-\sqrt{1+5(16)}}\)</p></li>
 </ol></article>
 </div>
 </div>
 <article class="exercise exercise-like" id="exercise-609"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <ol id="p-4116" class="lower-alpha">
-<li id="li-2374">Write the formulas for the area and perimeter of a rectangle.</li>
+<li id="li-2374"><p id="p-derived-li-2374">Write the formulas for the area and perimeter of a rectangle.</p></li>
 <li id="li-2375">
 <p id="p-4117">Find the area and perimeter of each rectangle:</p>
 <ol class="lower-roman cols2">
-<li id="li-2376">4 ft by 6 ft</li>
-<li id="li-2377">3 ft by 8 ft</li>
+<li id="li-2376"><p id="p-derived-li-2376">4 ft by 6 ft</p></li>
+<li id="li-2377"><p id="p-derived-li-2377">3 ft by 8 ft</p></li>
 </ol>
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-610"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <ol id="p-4120" class="lower-alpha">
-<li id="li-2382">Do all rectangles with the same area have the same perimeter?</li>
+<li id="li-2382"><p id="p-derived-li-2382">Do all rectangles with the same area have the same perimeter?</p></li>
 <li id="li-2383">
 <p id="p-4121">Write expressions for the area and perimeter of each rectangle:</p>
 <ol class="lower-roman cols2">
-<li id="li-2384">\(w~\) in by \(~w-3~\) in</li>
-<li id="li-2385">\(w~\) cm by \(~160-2w~\) cm</li>
+<li id="li-2384"><p id="p-derived-li-2384">\(w~\) in by \(~w-3~\) in</p></li>
+<li id="li-2385"><p id="p-derived-li-2385">\(w~\) cm by \(~160-2w~\) cm</p></li>
 </ol>
 </li>
 </ol></article></article><article class="subexercises" id="subexercises-44"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-102">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-118"><p id="p-4122">For Problems 5-10, use the quadratic formula to solve. Round your answers to three decimal places.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-611"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
@@ -614,19 +627,18 @@ x \amp=\frac{-(\alert{-y}) \pm\sqrt{(\alert{-y})^2 - 4(\alert{1})(\alert{y - 2})
 </div>
 <article class="exercise exercise-like" id="exercise-617"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <ol id="p-4132" class="lower-alpha">
-<li id="li-2386">Graph \(~y=6x^2-7x-3~\) in the window<div class="displaymath">
+<li id="li-2386"><p id="p-derived-li-2386">Graph \(~y=6x^2-7x-3~\) in the window<div class="displaymath">
 \begin{gather*}
 \text{Xmin}=-2~~~~\text{Ymin}=-6\\
 \text{Xmax}=3~~~~~\text{Ymax}=4
 \end{gather*}
-</div>
-</li>
-<li id="li-2387">Estimate the \(x\)-intercepts of the graph.</li>
-<li id="li-2388">Use the quadratic formula to solve the equation<div class="displaymath">
+</div></p></li>
+<li id="li-2387"><p id="p-derived-li-2387">Estimate the \(x\)-intercepts of the graph.</p></li>
+<li id="li-2388"><p id="p-derived-li-2388">Use the quadratic formula to solve the equation<div class="displaymath">
 \begin{equation*}
 6x^2-7x-3=0
 \end{equation*}
-</div>How do the solutions compare to your estimates in part (b)?</li>
+</div>How do the solutions compare to your estimates in part (b)?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-618"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <ol id="p-4134" class="lower-alpha">
 <li id="li-2392">
@@ -636,7 +648,7 @@ x \amp=\frac{-(\alert{-y}) \pm\sqrt{(\alert{-y})^2 - 4(\alert{1})(\alert{y - 2})
 2x^2-1=5x
 \end{equation*}
 </div>
-<p data-braille="continuation">Find decimal approximations for your answers. Round to hundredths.</p>
+<p class="continuation">Find decimal approximations for your answers. Round to hundredths.</p>
 </li>
 <li id="li-2393">
 <p id="p-4136">Graph \(~y=2x^2-5x-1~\) in the window</p>
@@ -646,10 +658,10 @@ x \amp=\frac{-(\alert{-y}) \pm\sqrt{(\alert{-y})^2 - 4(\alert{1})(\alert{y - 2})
 \text{Xmax}=5~~~~~\text{Ymax}=5
 \end{gather*}
 </div>
-<p data-braille="continuation">Sketch your graph on the grid.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-4-1-2.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div></div></div>
+<p class="continuation">Sketch your graph on the grid.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-hw-4-1-2.svg" role="img" class="contained" alt="grid"></div></div></div>
 </li>
-<li id="li-2394">How are your solutions from part (a) related to the graph?</li>
+<li id="li-2394"><p id="p-derived-li-2394">How are your solutions from part (a) related to the graph?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-619"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <ol id="p-4137" class="lower-alpha">
 <li id="li-2395">
@@ -661,14 +673,14 @@ y \amp = x^2-6x+9\\
 y \amp = x^2-6x+12
 \end{align*}
 </div>
-<p data-braille="continuation">in the window</p>
+<p class="continuation">in the window</p>
 <div class="displaymath">
 \begin{gather*}
 \text{Xmin}=-2~~~~\text{Ymin}=-5\\
 \text{Xmax}=7.4~~~~~\text{Ymax}=15
 \end{gather*}
 </div>
-<p data-braille="continuation">Use the Trace to locat the \(x\)-intercepts of each graph.</p>
+<p class="continuation">Use the Trace to locat the \(x\)-intercepts of each graph.</p>
 </li>
 <li id="li-2396">
 <p id="p-4139">Use the quadratic formula to find the solutions of each equation.</p>
@@ -679,25 +691,26 @@ x^2-6x+9 \amp = 0\\
 x^2-6x+12 \amp = 0
 \end{align*}
 </div>
-<p data-braille="continuation">How are your answers related to the graphs in part (a)?</p>
+<p class="continuation">How are your answers related to the graphs in part (a)?</p>
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-620"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="p-4141">Use the discriminant to determine the nature of the solutions of each equation.</p>
 <ol class="lower-alpha cols2">
-<li id="li-2399">\(\displaystyle 3x^2+26=17x\)</li>
-<li id="li-2400">\(\displaystyle 4x^2+23x=19\)</li>
-<li id="li-2401">\(\displaystyle 16x^2-712x+7921=0\)</li>
-<li id="li-2402">\(\displaystyle 0.03x^2=0.05x-0.12\)</li>
+<li id="li-2399"><p id="p-derived-li-2399">\(\displaystyle 3x^2+26=17x\)</p></li>
+<li id="li-2400"><p id="p-derived-li-2400">\(\displaystyle 4x^2+23x=19\)</p></li>
+<li id="li-2401"><p id="p-derived-li-2401">\(\displaystyle 16x^2-712x+7921=0\)</p></li>
+<li id="li-2402"><p id="p-derived-li-2402">\(\displaystyle 0.03x^2=0.05x-0.12\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-621"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <p id="p-4142">Here is one solution of a quadratic equation. Find the other solution, then write a quadratic equation in standard form that has those solutions.</p>
 <ol class="lower-alpha cols2">
-<li id="li-2403">\(\displaystyle 2+\sqrt{5}\)</li>
-<li id="li-2404">\(\displaystyle 4-3i\)</li>
+<li id="li-2403"><p id="p-derived-li-2403">\(\displaystyle 2+\sqrt{5}\)</p></li>
+<li id="li-2404"><p id="p-derived-li-2404">\(\displaystyle 4-3i\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-622"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <ol id="p-4144" class="lower-alpha">
-<li id="li-2407">What is the sum of the two solutions of the quadratic equation \(~ax^2 + bx + c = 0~\text{?}\) (Hint: The two solutions are given by the quadratic formula.)</li>
-<li id="li-2408">What is the product of the two solutions of the quadratic equation \(~ax^2 + bx + c = 0~\text{?}\) (Hint: Do not try to multiply the two solutions given by the quadratic formula! Think about the factored form of the equation.)</li>
+<li id="li-2407"><p id="p-derived-li-2407">What is the sum of the two solutions of the quadratic equation \(~ax^2 + bx + c = 0~\text{?}\) (Hint: The two solutions are given by the quadratic formula.)</p></li>
+<li id="li-2408"><p id="p-derived-li-2408">What is the product of the two solutions of the quadratic equation \(~ax^2 + bx + c = 0~\text{?}\) (Hint: Do not try to multiply the two solutions given by the quadratic formula! Think about the factored form of the equation.)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-103">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-119"><p id="p-4145">For Problems 17-22, use the quadratic formula to solve the equation for the indicated variable.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-623"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
@@ -728,19 +741,19 @@ h=-4.9t^2+8t+10
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-2412">Make a table of values showing the diver’s altitude at 0.25-second intervals after he jumps from the springboard. (Use the Table feature of your calculator.)</li>
-<li id="li-2413">Graph the equation. Use your table of values to choose appropriate window settings.</li>
-<li id="li-2414">How long is it before the diver passes the board on the way down?</li>
-<li id="li-2415">How long is it before the diver hits the water?</li>
-<li id="li-2416">Find points on your graph that correspond to your answers to parts (c) and (d).</li>
+<li id="li-2412"><p id="p-derived-li-2412">Make a table of values showing the diver’s altitude at 0.25-second intervals after he jumps from the springboard. (Use the Table feature of your calculator.)</p></li>
+<li id="li-2413"><p id="p-derived-li-2413">Graph the equation. Use your table of values to choose appropriate window settings.</p></li>
+<li id="li-2414"><p id="p-derived-li-2414">How long is it before the diver passes the board on the way down?</p></li>
+<li id="li-2415"><p id="p-derived-li-2415">How long is it before the diver hits the water?</p></li>
+<li id="li-2416"><p id="p-derived-li-2416">Find points on your graph that correspond to your answers to parts (c) and (d).</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-631"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
-<div class="sbspanel" style="width:70.2702702702703%;justify-content:center;"><p id="p-4161">When you look down from a height, say a tall building or a mountain peak, your line of sight is tangent to the Earth at the horizon, as shown in the figure.</p></div>
-<div class="sbspanel" style="width:21.6216216216216%;justify-content:center;"><img src="images/fig-hw-4-1-14.svg" role="img" style="width: 100%; height: auto;" alt="tangent to earth"></div>
+<div class="sbspanel middle" style="width:70.2702702702703%;"><p id="p-4161">When you look down from a height, say a tall building or a mountain peak, your line of sight is tangent to the Earth at the horizon, as shown in the figure.</p></div>
+<div class="sbspanel middle" style="width:21.6216216216216%;"><img src="external/images/fig-hw-4-1-14.svg" role="img" class="contained" alt="tangent to earth"></div>
 </div></div>
 <ol id="p-4162" class="lower-alpha">
-<li id="li-2417">The radius of the earth is 6370 kilometers. How far can you see from an airplane at an altitude of 10,000 meters? (You will need to use the Pythagorean theorem.)</li>
-<li id="li-2418">How high would the airplane have to be in order for you to see a distance of 300 kilometers?</li>
+<li id="li-2417"><p id="p-derived-li-2417">The radius of the earth is 6370 kilometers. How far can you see from an airplane at an altitude of 10,000 meters? (You will need to use the Pythagorean theorem.)</p></li>
+<li id="li-2418"><p id="p-derived-li-2418">How high would the airplane have to be in order for you to see a distance of 300 kilometers?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-632"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="p-4164">Refer to the figure in Problem 25.</p>
 <ol class="lower-alpha">
@@ -749,32 +762,32 @@ h=-4.9t^2+8t+10
 </ol></article><article class="exercise exercise-like" id="exercise-633"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
 <p id="p-4167">The volume of a large aquarium at the zoo is 2160 cubic feet. The tank is 10 feet wide, and its length is 6 feet less than twice its height.</p>
 <ol class="lower-alpha">
-<li id="li-2423">Sketch the aquarium, and label its dimensions in terms of a variable.</li>
-<li id="li-2424">Write an equation for the the variable.</li>
-<li id="li-2425">Find the dimensions of the aquarium.</li>
+<li id="li-2423"><p id="p-derived-li-2423">Sketch the aquarium, and label its dimensions in terms of a variable.</p></li>
+<li id="li-2424"><p id="p-derived-li-2424">Write an equation for the the variable.</p></li>
+<li id="li-2425"><p id="p-derived-li-2425">Find the dimensions of the aquarium.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-634"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <p id="p-4169">You have 72 feet of rope to enclose a rectangular display area against one wall of an exhibit hall. The area enclosed depends upon the dimensions of the rectangle you make. Because the wall makes one side of the rectangle, the length of the rope accounts for only three sides, as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-4-1-16.svg" role="img" style="width: 100%; height: auto;" alt="figure"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-4-1-16.svg" role="img" class="contained" alt="figure"></div></div></div>
 <ol id="p-4170" class="lower-alpha">
-<li id="li-2426">Let \(h\) stand for the height of a rectangle, and write an algebraic expression for the base of the rectangle.</li>
-<li id="li-2427">Write an expression for the area of the rectangle.</li>
-<li id="li-2428">If you would like to enclose 640 square feet of display space, what should the dimensions of the rectangle be? (There are two possible solutions.)</li>
-<li id="li-2429">What should the dimensions be if you would like to enclose exactly 600 square feet of space?</li>
+<li id="li-2426"><p id="p-derived-li-2426">Let \(h\) stand for the height of a rectangle, and write an algebraic expression for the base of the rectangle.</p></li>
+<li id="li-2427"><p id="p-derived-li-2427">Write an expression for the area of the rectangle.</p></li>
+<li id="li-2428"><p id="p-derived-li-2428">If you would like to enclose 640 square feet of display space, what should the dimensions of the rectangle be? (There are two possible solutions.)</p></li>
+<li id="li-2429"><p id="p-derived-li-2429">What should the dimensions be if you would like to enclose exactly 600 square feet of space?</p></li>
 </ol></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T07:02:16-07:00       *-->
+<!--*       on 2021-08-27T15:56:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Logarithmic Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,12 +226,12 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="chap10"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">10</span> <span class="title">Logarithmic Functions</span>
 </h2>
-<section class="introduction" id="introduction-375"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/neurons.png" style="width: 100%; height: auto;" alt="neurons, 3D4Medicalcom/Getty Images"></div></div></div>
+<section class="introduction" id="introduction-375"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/neurons.png" class="contained" alt="neurons, 3D4Medicalcom/Getty Images"></div></div></div>
 <p id="p-13329">We have used logarithms to solve exponential equations. In this chapter, we consider logarithmic functions as models in their own right. We also study another base for exponential and logarithmic functions, the natural base \(e\text{,}\) which is the most useful base for many scientific applications.</p>
 <p id="p-13330">In 1885, the German philosopher Hermann Ebbinghaus conducted one of the first experiments on memory, using himself as a subject. He memorized lists of nonsense syllables and then tested his memory of the syllables at intervals ranging from 20 minutes to 31 days. After one hour, he remembered less than 50% of the items, but he found that the rate of forgetting leveled off over time. He modeled his data by the function</p>
 <div class="displaymath">
@@ -234,41 +240,41 @@ y = \frac{184}{2.88 \log t + 1.84}
 \end{equation*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Time elapsed</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">Percent remembered</td>
+<td class="c m b1 r1 l0 t3 lines">Percent remembered</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(20\) minutes</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(58.2\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(58.2\%\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\) hour</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(44.2\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(44.2\%\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(9\) hours</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(35.8\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(35.8\%\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\) day</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(33.7\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(33.7\%\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\) days</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(27.8\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(27.8\%\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\) days</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(25.4\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(25.4\%\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(31\) days</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(21.1\%\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(21.1\%\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/fig-Ebbinghaus.svg" role="img" style="width: 100%; height: auto;" alt="forgettng curve"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/images/fig-Ebbinghaus.svg" role="img" class="contained" alt="forgettng curve"></div>
 </div></div>
 <p id="p-13331">Ebbinghaus's model uses a logarithmic function. The graph of the data, shown above with \(t\) in minutes and \(y\) in percents, is called the "forgetting curve." Ebbinghaus's work, including his application of the scientific method to his research, provides part of the foundation of modern psychology.</p>
 <article class="investigation project-like" id="investigation-12"><h6 class="heading">
@@ -280,7 +286,7 @@ y = \frac{184}{2.88 \log t + 1.84}
 A=P\left(1+\dfrac{r}{n} \right)^{nt} 
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(P\) is the principal invested, \(r\) is the interest rate, and \(t\) is the time period, in years.</p>
+<p class="continuation">where \(P\) is the principal invested, \(r\) is the interest rate, and \(t\) is the time period, in years.</p>
 <ol id="p-13333" class="decimal">
 <li id="li-8220">
 <p id="p-13334">Suppose you keep \(\$1000\) in an account that pays 8% interest. How much is the amount \(A\) after 1 year if the interest is compounded twice a year? Four times a year?</p>
@@ -294,45 +300,45 @@ n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}=
 <li id="li-8221">
 <p id="p-13335">What happens to \(A\) as we increase \(n\text{,}\) the number of compounding periods per year? Fill in the table showing the amount in the account for different values of \(n\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:7%;margin-right:7%;">
-<div class="sbspanel fixed-width" style="width:46.5116279069767%;justify-content:flex-start;"><table>
+<div class="sbspanel fixed-width top" style="width:46.5116279069767%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(n\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(A\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(A\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(1\) (annually)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1080\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1080\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(2\) (semiannually)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(4\) (quarterly)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(6\) (bimonthly)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(12\) (monthly)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(365\) (daily)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(1000\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(10,000\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:47.6744186046512%;justify-content:flex-start;"><img src="images/fig-investigation-9.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel top" style="width:47.6744186046512%;"><img src="external/images/fig-investigation-9.svg" role="img" class="contained" alt="grid"></div>
 </div></div>
 </li>
 <li id="li-8222"><p id="p-13336">Plot the values in the table from \(n = 1\) to \(n = 12\text{,}\) and connect them with a smooth curve. Describe the curve: What is happening to the value of \(A\text{?}\)</p></li>
@@ -350,107 +356,107 @@ n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}=
 <li id="li-8230">
 <p id="p-13344">Repeat your calculations for two other interest rates, 15% and (an extremely unrealistic) 100%, again for an investment of $1000 for 1 year. In each case, compare the limiting value of \(A\text{,}\) and compare to the value of \(1000e^r\text{.}\)</p>
 <ol class="lower-alpha cols2">
-<li id="li-8231"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr><td class="c m b1 r1 l1 t1 lines" data-braille="last-cell" colspan="2">\(r=0.15\)</td></tr>
+<li id="li-8231"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr><td class="c m b1 r1 l1 t1 lines" colspan="2">\(r=0.15\)</td></tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(n\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(A\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(A\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(115\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(115\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{00000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(12\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(3652\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(1000\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(10,000\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
-<tr><td class="l m b0 r0 l0 t0 lines" data-braille="last-cell" colspan="2"></td></tr>
-<tr><td class="l m b0 r0 l0 t0 lines" data-braille="last-cell" colspan="2">\(~~1000e^{0.15}= \)</td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines" colspan="2"></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines" colspan="2">\(~~1000e^{0.15}= \)</td></tr>
 </table></div></div></div></li>
-<li id="li-8232"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr><td class="c m b1 r1 l1 t1 lines" data-braille="last-cell" colspan="2">\(r=1\)</td></tr>
+<li id="li-8232"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr><td class="c m b1 r1 l1 t1 lines" colspan="2">\(r=1\)</td></tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(n\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(A\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(A\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(200\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(200\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{00000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(12\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(3652\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(1000\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="r m b1 r1 l1 t0 lines">\(10,000\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
-<tr><td class="l m b0 r0 l0 t0 lines" data-braille="last-cell" colspan="2"></td></tr>
-<tr><td class="l m b0 r0 l0 t0 lines" data-braille="last-cell" colspan="2">\(~~1000e^{1}= \)</td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines" colspan="2"></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines" colspan="2">\(~~1000e^{1}= \)</td></tr>
 </table></div></div></div></li>
 </ol>
 </li>
 <li id="li-8233"><p id="p-13345">In part (8b), you have computed an approximation for \(1000e\text{.}\) What is the value of \(e\text{,}\) rounded to 5 decimal places?</p></li>
 <li id="li-8234">
 <p id="p-13346">Complete the table of values. What does \(\left(1 + \dfrac{1}{n} \right)^n\) appear to approach as \(n\) increases?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t1 lines">\(n\)</td>
 <td class="l m b1 r1 l0 t1 lines">\(100\)</td>
 <td class="l m b1 r1 l0 t1 lines">\(1000\)</td>
 <td class="l m b1 r1 l0 t1 lines">\(10,000\)</td>
-<td class="l m b1 r1 l0 t1 lines" data-braille="last-cell">\(100,000\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(100,000\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">\(\left(1+\frac{1}{n} \right)^n \)</td>
 <td class="l m b1 r1 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines"></td>
-<td class="l m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="l m b1 r1 l0 t0 lines"></td>
 </tr>
 </table></div></div></div>
 </li>
@@ -461,19 +467,19 @@ n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}=
 <li><a href="chap10-summary.html"><span class="codenumber">10.4</span> <span class="title">Chapter 10 Summary and Review</span></a></li>
 </ul></nav></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

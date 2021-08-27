@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T07:02:34-07:00       *-->
+<!--*       on 2021-08-27T15:57:04-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Logarithmic Scales</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="LogarithmicScales"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Logarithmic Scales</span>
@@ -229,7 +235,7 @@ true);
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Making a Log Scale</span>
 </h3>
 <p id="p-13579">Because \(\log x\) grows very slowly as \(x\) increases, logarithms are useful for modeling phenomena that take on a very wide range of values. For example, biologists study how metabolic functions such as heart rate are related to an animal’s weight, or mass. The table shows the mass in kilograms of several mammals.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t3 lines">Animal</td>
 <td class="c m b1 r1 l0 t3 lines">Shrew</td>
@@ -237,7 +243,7 @@ true);
 <td class="c m b1 r1 l0 t3 lines">Wolf</td>
 <td class="c m b1 r1 l0 t3 lines">Horse</td>
 <td class="c m b1 r1 l0 t3 lines">Elephant</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">Whale</td>
+<td class="c m b1 r1 l0 t3 lines">Whale</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Mass, kg</td>
@@ -246,15 +252,15 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(80\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(300\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(5400\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(70,000\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(70,000\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-13580">Imagine trying to scale the \(x\)-axis to show all of these values. If we set tick marks at intervals of 10,000 kg, as shown below, we can plot the mass of the whale, and maybe the elephant, but the dots for the smaller animals will be indistinguishable.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-numline-mammal-mass.svg" role="img" style="width: 100%; height: auto;" alt="number line with masses of mammals"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-numline-mammal-mass.svg" role="img" class="contained" alt="number line with masses of mammals"></div></div></div>
 <p id="p-13581">On the other hand, we can plot the mass of the cat if we set tick marks at intervals of 1 kg, but the axis will have to be extremely long to include even the wolf. We cannot show the masses of all these animals on the same scale</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-numline-mammal-mass2.svg" role="img" style="width: 100%; height: auto;" alt="number line with masses of mammals"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-numline-mammal-mass2.svg" role="img" class="contained" alt="number line with masses of mammals"></div></div></div>
 <p id="p-13582">To get around this problem, we can plot the log of the mass, instead of the mass itself. The table below shows the base 10 log of each animal's mass, rounded to 2 decimal places.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t3 lines"><em class="emphasis">Animal</em></td>
 <td class="c m b1 r1 l0 t3 lines">Shrew</td>
@@ -262,7 +268,7 @@ true);
 <td class="c m b1 r1 l0 t3 lines">Wolf</td>
 <td class="c m b1 r1 l0 t3 lines">Horse</td>
 <td class="c m b1 r1 l0 t3 lines">Elephant</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">Whale</td>
+<td class="c m b1 r1 l0 t3 lines">Whale</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Mass, kg</td>
@@ -271,7 +277,7 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(80\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(300\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(5400\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(70,000\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(70,000\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Log (mass)</td>
@@ -280,35 +286,35 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(1.90\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2.48\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3.73\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(4.85\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(4.85\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-13583">The logs of the masses range from -2.40 to 4.85. We can easily plot these values on a single scale, as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-logscale-mammal-mass.svg" role="img" style="width: 100%; height: auto;" alt="mammal masses plotted on log scale"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-logscale-mammal-mass.svg" role="img" class="contained" alt="mammal masses plotted on log scale"></div></div></div>
 <p id="p-13584">The scale above is called a <dfn class="terminology">logarithmic scale</dfn>, or log scale. The tick marks are labeled with powers of 10, because, as you recall, a logarithm is actually an exponent.  For example, the mass of the horse is 300 kg, and</p>
 <div class="displaymath">
 \begin{equation*}
 \log 300 = 2.48 ~~ \text{ so } ~~ 10^{2.48} = 300
 \end{equation*}
 </div>
-<p data-braille="continuation">When we plot 2.48 for the horse, we are really plotting the power of 10 that gives its mass, because \(10^{2.48} = 300\) kg. The exponents on base 10 are evenly spaced on a log scale, so we plot \(10^{2.48}\) about halfway between \(10^2\) and \(10^3\text{.}\)</p>
+<p class="continuation">When we plot 2.48 for the horse, we are really plotting the power of 10 that gives its mass, because \(10^{2.48} = 300\) kg. The exponents on base 10 are evenly spaced on a log scale, so we plot \(10^{2.48}\) about halfway between \(10^2\) and \(10^3\text{.}\)</p>
 <article class="example example-like" id="example-plot-logscale"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.20</span><span class="period">.</span>
 </h6>
 <p id="p-13585">Plot the values on a log scale.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table><tr>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.0007\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.2\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(3.5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(1600\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(72,000\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(4 \times 10^8\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(4 \times 10^8\)</td>
 </tr></table></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-652" id="solution-652"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-652"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-652" id="solution-652"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-652"><div class="solution solution-like">
 <p id="p-13586">We actually plot the logs of the values, so we first compute the base 10 logarithm of each number.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.0007\)</td>
@@ -316,7 +322,7 @@ true);
 <td class="c m b1 r1 l0 t3 lines">\(3.5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(1600\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(72,000\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(4 \times 10^8\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(4 \times 10^8\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(\log x\)</td>
@@ -325,23 +331,24 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(0.54\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3.20\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(4.86\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(8.60\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(8.60\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-13587">Then we plot each logarithm, estimating its position between integer exponents. For example, we plot the first value, \(-3.15\text{,}\) closer to \(-3\) than to \(-4\text{.}\) The finished plot is shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-logscale.svg" role="img" style="width: 100%; height: auto;" alt="points plotted on log scale"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-logscale.svg" role="img" class="contained" alt="points plotted on log scale"></div></div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2268"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2268"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2268"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.21</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2268"><article class="exercise exercise-like"><div class="introduction" id="introduction-385"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-read-logscale.svg" role="img" style="width: 100%; height: auto;" alt="points on logscale"></div></div></div></div>
-<iframe name="webwork-419" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=419&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICRsWzBdID0gQ29tcHV0ZSgiLTQiKTsKICAgICAgICAgICAgJGxbMV0gPSBDb21wdXRlKCItMi41Iik7CiAgICAgICAgICAgICRsWzJdID0gQ29tcHV0ZSgiMS41Iik7CiAgICAgICAgICAgICRsWzNdID0gQ29tcHV0ZSgiNC4yNSIpOwogICAgICAgICAgICBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAgICAgICAgICAgICR4WyRpXSA9IEZvcm11bGEoIjEwKiokbFskaV0iKS0%2Bd2l0aCgKICAgICAgICAgICAgICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgICAgICAgICAgICAgdG9sZXJhbmNlID0%2BIC4wMDEsCiAgICAgICAgICAgICkKOwogICAgICAgICAgICB9CiAgICAgICAgICAgIENvbnRleHQoKS0%2Bb3BlcmF0b3JzLT51bmRlZmluZSgiXiIsIioqIik7CgpCRUdJTl9QR01MCkNvbXBsZXRlIHRoZSB0YWJsZSBieSBlc3RpbWF0aW5nIHRoZSBsb2dhcml0aG0gb2YgZWFjaCBwb2ludCBwbG90dGVkIG9uIHRoZSBsb2cgc2NhbGUgYWJvdmUuIFRoZW4gdXNlIGEgY2FsY3VsYXRvciB0byBnaXZlIGEgZGVjaW1hbCB2YWx1ZSBmb3IgZWFjaCBwb2ludC4KCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgXGxvZyB4YF0nKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbMF19ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbMV19ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbMl19ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbM119ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdbYHhgXScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzBdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzFdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzJdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzNdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLF0sYWxpZ249Pid8Y3xjfGN8Y3xjfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnW2BcbG9nIHhgXScpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgLTRgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AtMi41YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMS41YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNC4yNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdbYHhgXScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjAwMDFgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjAwMzE2YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMzEuNmBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE3LDc4Mi44YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3wnLGNvbHVtbnNjc3M9PltdLGNlbnRlcj0%2BMCwpO0BdKiA8PAoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="419"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-2269"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2269"><h6 class="heading">
+</h6>
+<div class="introduction" id="introduction-385"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-read-logscale.svg" role="img" class="contained" alt="points on logscale"></div></div></div></div>
+<iframe name="webwork-419" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=419&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICRsWzBdID0gQ29tcHV0ZSgiLTQiKTsKICAgICAgICAgICAgJGxbMV0gPSBDb21wdXRlKCItMi41Iik7CiAgICAgICAgICAgICRsWzJdID0gQ29tcHV0ZSgiMS41Iik7CiAgICAgICAgICAgICRsWzNdID0gQ29tcHV0ZSgiNC4yNSIpOwogICAgICAgICAgICBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAgICAgICAgICAgICR4WyRpXSA9IEZvcm11bGEoIjEwKiokbFskaV0iKS0%2Bd2l0aCgKICAgICAgICAgICAgICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgICAgICAgICAgICAgdG9sZXJhbmNlID0%2BIC4wMDEsCiAgICAgICAgICAgICkKOwogICAgICAgICAgICB9CiAgICAgICAgICAgIENvbnRleHQoKS0%2Bb3BlcmF0b3JzLT51bmRlZmluZSgiXiIsIioqIik7CgpCRUdJTl9QR01MCkNvbXBsZXRlIHRoZSB0YWJsZSBieSBlc3RpbWF0aW5nIHRoZSBsb2dhcml0aG0gb2YgZWFjaCBwb2ludCBwbG90dGVkIG9uIHRoZSBsb2cgc2NhbGUgYWJvdmUuIFRoZW4gdXNlIGEgY2FsY3VsYXRvciB0byBnaXZlIGEgZGVjaW1hbCB2YWx1ZSBmb3IgZWFjaCBwb2ludC4KCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgXGxvZyB4YF0nKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbMF19ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbMV19ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbMl19ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JGxbM119ezN9JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdbYHhgXScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzBdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzFdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzJdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyR4WzNdfXs1fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLF0sYWxpZ249Pid8Y3xjfGN8Y3xjfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnW2BcbG9nIHhgXScpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgLTRgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AtMi41YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMS41YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNC4yNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdbYHhgXScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjAwMDFgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwLjAwMzE2YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMzEuNmBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE3LDc4Mi44YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Y3wnLGNvbHVtbnNjc3M9PltdLGNlbnRlcj0%2BMCwpO0BdKiA8PAoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="419"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-2269"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.22</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2269"><article class="exercise exercise-like"><iframe name="webwork-420" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=420&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJsb2dhcml0aG1zIiwgCiAgICAiaW1hZ2luYXJ5IG51bWJlcnMiXSwKICAgIDEKKTsKJGIgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJ2YXJpYWJsZXMiLCAKICAgICJwb3dlcnMgb2YgMTAiXSwKICAgIDIKKTsKJGMgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJyZWNpcHJvY2FscyIsCiAgICAibG9nYXJpdGhtcyJdLAogICAgMgopOwokZCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIm5lZ2F0aXZlIiwgCiAgICAicG9zaXRpdmUiXSwKICAgIDEKKTsKCkJFR0lOX1BHTUwKRmlsbCBpbiB0aGUgYmxhbmtzLgphLiAgV2UgdXNlIFtfXXskYX17NX0gZm9yIGdyYXBoaW5nIHZhcmlhYmxlcyB0aGF0IHRha2Ugb24gYSB2ZXJ5IHdpZGUgcmFuZ2Ugb2YgdmFsdWVzLgoKCmEuICBUaGUgdGljayBtYXJrcyBvbiBhIGxvZyBzY2FsZSBhcmUgbGFiZWxlZCB3aXRoICBbX117JGJ9ezV9LgoKCmEuICBUbyBwbG90IHZhbHVlcyBvbiBhIGxvZyBzY2FsZSwgd2UgZmlyc3QgY29tcHV0ZSB0aGUgIFtfXXskY317NX0gb2YgdGhlIHZhbHVlcy4KCgphLiAgQSBmcmFjdGlvbiBsZXNzIHRoYW4gMSBpcyBwbG90dGVkICBvbiBhIGxvZyBzY2FsZSBhcyBhIHBvd2VyIHdpdGggYSAgW19deyRkfXs1fSBleHBvbmVudC4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGxvZ2FyaXRobXMKYS4gIHBvd2VycyBvZiAxMAphLiAgbG9ncwphLiAgbmVnYXRpdmUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="420"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-236"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-420" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=420&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJsb2dhcml0aG1zIiwgCiAgICAiaW1hZ2luYXJ5IG51bWJlcnMiXSwKICAgIDEKKTsKJGIgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJ2YXJpYWJsZXMiLCAKICAgICJwb3dlcnMgb2YgMTAiXSwKICAgIDIKKTsKJGMgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJyZWNpcHJvY2FscyIsCiAgICAibG9nYXJpdGhtcyJdLAogICAgMgopOwokZCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIm5lZ2F0aXZlIiwgCiAgICAicG9zaXRpdmUiXSwKICAgIDEKKTsKCkJFR0lOX1BHTUwKRmlsbCBpbiB0aGUgYmxhbmtzLgphLiAgV2UgdXNlIFtfXXskYX17NX0gZm9yIGdyYXBoaW5nIHZhcmlhYmxlcyB0aGF0IHRha2Ugb24gYSB2ZXJ5IHdpZGUgcmFuZ2Ugb2YgdmFsdWVzLgoKCmEuICBUaGUgdGljayBtYXJrcyBvbiBhIGxvZyBzY2FsZSBhcmUgbGFiZWxlZCB3aXRoICBbX117JGJ9ezV9LgoKCmEuICBUbyBwbG90IHZhbHVlcyBvbiBhIGxvZyBzY2FsZSwgd2UgZmlyc3QgY29tcHV0ZSB0aGUgIFtfXXskY317NX0gb2YgdGhlIHZhbHVlcy4KCgphLiAgQSBmcmFjdGlvbiBsZXNzIHRoYW4gMSBpcyBwbG90dGVkICBvbiBhIGxvZyBzY2FsZSBhcyBhIHBvd2VyIHdpdGggYSAgW19deyRkfXs1fSBleHBvbmVudC4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGxvZ2FyaXRobXMKYS4gIHBvd2VycyBvZiAxMAphLiAgbG9ncwphLiAgbmVnYXRpdmUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="420"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-236"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Labeling a Log Scale</span>
 </h3>
 <p id="p-13623">Log scales allow us to plot a wide range of values, but there is a trade-off. Equal increments on a log scale do not correspond to equal differences in value, as they do on a linear scale. You can see this more clearly if we label the tick marks with their values, as well as powers of 10. The difference between \(10^1\) and \(10^0\) is \(10 - 1 = 9\text{,}\) but the difference between \(10^2\) and \(10^1\) is \(100 - 10 = 90\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-logscale-increments.svg" role="img" style="width: 100%; height: auto;" alt="logscale with integer exponents"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-logscale-increments.svg" role="img" class="contained" alt="logscale with integer exponents"></div></div></div>
 <p id="p-13624">As we move from left to right on this scale, we <em class="emphasis">multiply</em> the value at the previous tick mark by 10.  Moving up by equal increments on a log scale does not add equal amounts to the values plotted; it <em class="emphasis">multiplies</em> the values by equal <em class="emphasis">factors</em>.</p>
 <p id="p-13625">If we would like to label the log scale with integers, we get a very different looking scale, one in which the tick marks are not evenly spaced.</p>
 <article class="example example-like" id="example-logscale-integer-labels"><h6 class="heading">
@@ -349,9 +356,9 @@ true);
 </h6>
 <p id="p-13626">Plot the integer values 2 through 9 and 20 through 90 on a log scale.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-655" id="solution-655"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-655"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-655" id="solution-655"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-655"><div class="solution solution-like">
 <p id="p-13627">We compute the logarithm of each integer value.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(2\)</td>
@@ -361,7 +368,7 @@ true);
 <td class="c m b1 r1 l0 t3 lines">\(6\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(7\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(8\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(9\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(9\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(\log x\)</td>
@@ -372,10 +379,10 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(0.778\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.845\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.903\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.954\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0.954\)</td>
 </tr>
 </table></div></div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(20\)</td>
@@ -385,7 +392,7 @@ true);
 <td class="c m b1 r1 l0 t3 lines">\(60\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(70\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(80\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(90\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(90\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(\log x\)</td>
@@ -396,22 +403,23 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(1.778\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(1.845\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(1.903\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1.954\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1.954\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-13628">We plot on a log scale, as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-logscale-integer-labels.svg" role="img" style="width: 100%; height: auto;" alt="log scale showing integer points"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-logscale-integer-labels.svg" role="img" class="contained" alt="log scale showing integer points"></div></div></div>
 </div></div>
 </div></article><p id="p-13629">On the log scale in <a class="xref" data-knowl="./knowl/example-logscale-integer-labels.html" title="Example 10.23">Example 10.23</a>, notice how the integer values are spaced: They get closer together as they approach the next power of \(10\text{.}\) You will often see log scales labeled not with powers of \(10\text{,}\) but with integer values, like this:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-logscale-integer-labels2.svg" role="img" style="width: 100%; height: auto;" alt="log scale showing tic marks at integer points"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-logscale-integer-labels2.svg" role="img" class="contained" alt="log scale showing tic marks at integer points"></div></div></div>
 <p id="p-13630">In fact, <dfn class="terminology">log-log graph paper</dfn> scales both axes with logarithmic scales.</p>
-<article class="exercise exercise-like" id="exercise-2270"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2270"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-2270"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.24</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2270"><article class="exercise exercise-like"><div class="introduction" id="introduction-386"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-log-log-graph.svg" role="img" style="width: 100%; height: auto;" alt="mouse-to-elephant curve on log-log graph"></div></div></div></div>
-<iframe name="webwork-421" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=421&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbW91c2VNYXNzID0gQ29tcHV0ZSgiMC4wMiIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokbW91c2VNUiA9IENvbXB1dGUoIjMuNSIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokZG9nTWFzcyA9IENvbXB1dGUoIjE1IiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRkb2dNUiA9IENvbXB1dGUoIjUwMCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokc2hlZXBNYXNzID0gQ29tcHV0ZSgiNTAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4xNSwgKTsKJHNoZWVwTVIgPSBDb21wdXRlKCIxNTAwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRjb3dNYXNzID0gQ29tcHV0ZSgiNTAwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRjb3dNUiA9IENvbXB1dGUoIjYwMDAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4xNSwgKTsKJGVsZXBoYW50TWFzcyA9IENvbXB1dGUoIjQwMDAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4xNSwgKTsKJGVsZXBoYW50TVIgPSBDb21wdXRlKCI1MDAwMCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwoKQkVHSU5fUEdNTApUaGUgb3BlbmluZyBwYWdlIG9mIENoYXB0ZXIgNiBzaG93cyB0aGUgIm1vdXNlLXRvLWVsZXBoYW50IiBjdXJ2ZSwgYSBncmFwaCBvZiB0aGUgbWV0YWJvbGljIHJhdGUgb2YgbWFtbWFscyBhcyBhIGZ1bmN0aW9uIG9mIHRoZWlyIG1hc3MuIChUaGUgZWxlcGhhbnQgZG9lcyBub3QgYXBwZWFyIG9uIHRoYXQgZ3JhcGgsIGJlY2F1c2UgaXRzIG1hc3MgaXMgdG9vIGJpZy4pIFRoZSBmaWd1cmUgYWJvdmUgc2hvd3MgdGhlIHNhbWUgZnVuY3Rpb24sIGdyYXBoZWQgb24gbG9nLWxvZyBwYXBlci4KClVzZSB0aGlzIGdyYXBoIHRvIGVzdGltYXRlIHRoZSBtYXNzIGFuZCBtZXRhYm9saWMgcmF0ZSBmb3IgdGhlIGZvbGxvd2luZyBhbmltYWxzLCBsYWJlbGVkIG9uIHRoZSBncmFwaC4KCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ0FuaW1hbCcpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ01vdXNlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdEb2cnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1NoZWVwJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdNYXNzIChrZyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JG1vdXNlTWFzc317NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZG9nTWFzc317NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskc2hlZXBNYXNzfXs0fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnTWV0YWJvbGljIHJhdGUgKGtjYWwvZGF5KScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRtb3VzZU1SfXs0fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkb2dNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskc2hlZXBNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGx8bHxsfGx8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSogPDwKCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ0FuaW1hbCcpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ0NvdycpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnRWxlcGhhbnQnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ01hc3MgKGtnKScpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskY293TWFzc317NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZWxlcGhhbnRNYXNzfXs0fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnTWV0YWJvbGljIHJhdGUgKGtjYWwvZGF5KScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRjb3dNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZWxlcGhhbnRNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGx8bHxsfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdEbyBub3QgdXNlIGNvbW1hcy4gRm9yIGV4YW1wbGUsIHVzZSAiMTAwMDAiIHJhdGhlciB0aGFuICIxMCwwMDAiLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ0FuaW1hbCcpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ01vdXNlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdEb2cnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1NoZWVwJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdDb3cnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ0VsZXBoYW50JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdNYXNzIChrZyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDAuMDJgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNTAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNDAwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdNZXRhYm9saWMgcmF0ZSAoa2NhbC9kYXkpJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDMuNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE1MDBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2MDAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNTAsMDAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGx8Jyxjb2x1bW5zY3NzPT5bJ2JvcmRlci1sZWZ0OjBweCBzb2xpZDsnLF0sY2VudGVyPT4wLCk7QF0qIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="421"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-2271"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2271"><h6 class="heading">
+</h6>
+<div class="introduction" id="introduction-386"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-log-log-graph.svg" role="img" class="contained" alt="mouse-to-elephant curve on log-log graph"></div></div></div></div>
+<iframe name="webwork-421" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=421&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbW91c2VNYXNzID0gQ29tcHV0ZSgiMC4wMiIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokbW91c2VNUiA9IENvbXB1dGUoIjMuNSIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokZG9nTWFzcyA9IENvbXB1dGUoIjE1IiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRkb2dNUiA9IENvbXB1dGUoIjUwMCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokc2hlZXBNYXNzID0gQ29tcHV0ZSgiNTAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4xNSwgKTsKJHNoZWVwTVIgPSBDb21wdXRlKCIxNTAwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRjb3dNYXNzID0gQ29tcHV0ZSgiNTAwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRjb3dNUiA9IENvbXB1dGUoIjYwMDAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4xNSwgKTsKJGVsZXBoYW50TWFzcyA9IENvbXB1dGUoIjQwMDAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0%2BIC4xNSwgKTsKJGVsZXBoYW50TVIgPSBDb21wdXRlKCI1MDAwMCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwoKQkVHSU5fUEdNTApUaGUgb3BlbmluZyBwYWdlIG9mIENoYXB0ZXIgNiBzaG93cyB0aGUgIm1vdXNlLXRvLWVsZXBoYW50IiBjdXJ2ZSwgYSBncmFwaCBvZiB0aGUgbWV0YWJvbGljIHJhdGUgb2YgbWFtbWFscyBhcyBhIGZ1bmN0aW9uIG9mIHRoZWlyIG1hc3MuIChUaGUgZWxlcGhhbnQgZG9lcyBub3QgYXBwZWFyIG9uIHRoYXQgZ3JhcGgsIGJlY2F1c2UgaXRzIG1hc3MgaXMgdG9vIGJpZy4pIFRoZSBmaWd1cmUgYWJvdmUgc2hvd3MgdGhlIHNhbWUgZnVuY3Rpb24sIGdyYXBoZWQgb24gbG9nLWxvZyBwYXBlci4KClVzZSB0aGlzIGdyYXBoIHRvIGVzdGltYXRlIHRoZSBtYXNzIGFuZCBtZXRhYm9saWMgcmF0ZSBmb3IgdGhlIGZvbGxvd2luZyBhbmltYWxzLCBsYWJlbGVkIG9uIHRoZSBncmFwaC4KCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ0FuaW1hbCcpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ01vdXNlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdEb2cnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1NoZWVwJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdNYXNzIChrZyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JG1vdXNlTWFzc317NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZG9nTWFzc317NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskc2hlZXBNYXNzfXs0fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnTWV0YWJvbGljIHJhdGUgKGtjYWwvZGF5KScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRtb3VzZU1SfXs0fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRkb2dNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskc2hlZXBNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGx8bHxsfGx8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSogPDwKCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ0FuaW1hbCcpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ0NvdycpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnRWxlcGhhbnQnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ01hc3MgKGtnKScpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskY293TWFzc317NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZWxlcGhhbnRNYXNzfXs0fScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnTWV0YWJvbGljIHJhdGUgKGtjYWwvZGF5KScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRjb3dNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tfXXskZWxlcGhhbnRNUn17NH0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGx8bHxsfCcsY29sdW1uc2Nzcz0%2BW10sY2VudGVyPT4wLCk7QF0qIDw8CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdEbyBub3QgdXNlIGNvbW1hcy4gRm9yIGV4YW1wbGUsIHVzZSAiMTAwMDAiIHJhdGhlciB0aGFuICIxMCwwMDAiLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtARGF0YVRhYmxlKFtbW1BHTUwoJ0FuaW1hbCcpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ01vdXNlJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdEb2cnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1NoZWVwJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdDb3cnKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ0VsZXBoYW50JyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdNYXNzIChrZyknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDAuMDJgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNTAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNDAwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdNZXRhYm9saWMgcmF0ZSAoa2NhbC9kYXkpJykscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDMuNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE1MDBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2MDAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNTAsMDAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGx8Jyxjb2x1bW5zY3NzPT5bJ2JvcmRlci1sZWZ0OjBweCBzb2xpZDsnLF0sY2VudGVyPT4wLCk7QF0qIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="421"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-2271"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.25</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2271"><article class="exercise exercise-like"><iframe name="webwork-422" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=422&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBFcXVhbCBpbmNyZW1lbnRzIG9uIGEgbG9nIHNjYWxlIGNvcnJlc3BvbmQgdG8gZXF1YWwgZGlmZmVyZW5jZXMgaW4gdmFsdWUuIFtfXXskRmFsc2V9ezV9CgoKYS4gIE1vdmluZyB1cCBieSBlcXVhbCBpbmNyZW1lbnRzIG9uIGEgbG9nIHNjYWxlIG11bHRpcGxpZXMgdGhlIHZhbHVlcyBieSBlcXVhbCBmYWN0b3JzLiAgW19deyRUcnVlfXs1fQoKCmEuICBJZiB3ZSBsYWJlbCBhIGxvZyBzY2FsZSB3aXRoIGludGVnZXJzLCB0aGUgdGljayBtYXJrcyBhcmUgZXZlbmx5IHNwYWNlZC4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIE9uIGxvZy1sb2cgZ3JhcGggcGFwZXIsIGJvdGggYXhlcyBhcmUgbGFiZWxlZCB3aXRoIGxvZ2FyaXRobWljIHNjYWxlcy4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="422"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-237"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-422" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=422&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBFcXVhbCBpbmNyZW1lbnRzIG9uIGEgbG9nIHNjYWxlIGNvcnJlc3BvbmQgdG8gZXF1YWwgZGlmZmVyZW5jZXMgaW4gdmFsdWUuIFtfXXskRmFsc2V9ezV9CgoKYS4gIE1vdmluZyB1cCBieSBlcXVhbCBpbmNyZW1lbnRzIG9uIGEgbG9nIHNjYWxlIG11bHRpcGxpZXMgdGhlIHZhbHVlcyBieSBlcXVhbCBmYWN0b3JzLiAgW19deyRUcnVlfXs1fQoKCmEuICBJZiB3ZSBsYWJlbCBhIGxvZyBzY2FsZSB3aXRoIGludGVnZXJzLCB0aGUgdGljayBtYXJrcyBhcmUgZXZlbmx5IHNwYWNlZC4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIE9uIGxvZy1sb2cgZ3JhcGggcGFwZXIsIGJvdGggYXhlcyBhcmUgbGFiZWxlZCB3aXRoIGxvZ2FyaXRobWljIHNjYWxlcy4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="422"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-237"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Acidity and the pH Scale</span>
 </h3>
 <p id="p-13669">You may have already encountered log scales in some everyday applications. A simple example is the <dfn class="terminology">pH scale</dfn>, used by chemists to measure the acidity of a substance or chemical compound. This scale is based on the concentration of hydrogen ions in the substance, denoted by \([H^+]\text{.}\) The pH value is defined by the formula</p>
@@ -420,47 +428,47 @@ true);
 \text{pH}=-\log_{10}[H^+]
 \end{equation*}
 </div>
-<p data-braille="continuation">Values for pH fall between 0 and 14, with 7 indicating a neutral solution. The lower the pH value, the more acidic the substance. Some common substances and their pH values are shown in the table.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p class="continuation">Values for pH fall between 0 and 14, with 7 indicating a neutral solution. The lower the pH value, the more acidic the substance. Some common substances and their pH values are shown in the table.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b3 r1 l1 t3 lines">Substance</td>
 <td class="c m b3 r1 l0 t3 lines">pH</td>
-<td class="c m b3 r1 l0 t3 lines" data-braille="last-cell">\([H^+]\)</td>
+<td class="c m b3 r1 l0 t3 lines">\([H^+]\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Battery acid</td>
 <td class="c m b1 r1 l0 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0.1\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Lemon juice</td>
 <td class="c m b1 r1 l0 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.01\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0.01\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Vinegar</td>
 <td class="c m b1 r1 l0 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.001\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0.001\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Milk</td>
 <td class="c m b1 r1 l0 t0 lines">\(6.4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(10^{-6.4}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(10^{-6.4}\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Baking soda</td>
 <td class="c m b1 r1 l0 t0 lines">\(8.4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(10^{-8.4}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(10^{-8.4}\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Milk of magnesia</td>
 <td class="c m b1 r1 l0 t0 lines">\(10.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(10^{-10.5}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(10^{-10.5}\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Lye</td>
 <td class="c m b1 r1 l0 t0 lines">\(13\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(10^{-13}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(10^{-13}\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-13670">A decrease of 1 on the pH scale corresponds to an increase in acidity by a factor of 10. Thus, lemon juice is 10 times more acidic than vinegar, and battery acid is 100 times more acidic than vinegar.</p>
@@ -468,17 +476,16 @@ true);
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.26</span><span class="period">.</span>
 </h6>
 <ol id="p-13671" class="lower-alpha">
-<li id="li-8416">Calculate the pH of a solution with a hydrogen ion concentration of \(3.98 \times 10^{-5}\text{.}\)</li>
-<li id="li-8417">The water in a swimming pool should be maintained at a pH of 7.5. What is the hydrogen ion concentration of the water?</li>
+<li id="li-8416"><p id="p-derived-li-8416">Calculate the pH of a solution with a hydrogen ion concentration of \(3.98 \times 10^{-5}\text{.}\)</p></li>
+<li id="li-8417"><p id="p-derived-li-8417">The water in a swimming pool should be maintained at a pH of 7.5. What is the hydrogen ion concentration of the water?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-658" id="solution-658"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-658"><div class="solution solution-like"><ol id="p-13672" class="lower-alpha">
-<li id="li-8418">We use a calculator to evaluate the pH formula with \([H^+] = 3.98\times10^{-5}\text{.}\)<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-658" id="solution-658"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-658"><div class="solution solution-like"><ol id="p-13672" class="lower-alpha">
+<li id="li-8418"><p id="p-derived-li-8418">We use a calculator to evaluate the pH formula with \([H^+] = 3.98\times10^{-5}\text{.}\)<div class="displaymath">
 \begin{equation*}
 \text{pH} = -\log_{10}{(\alert{3.98 \times 10^{-5}})} \approx 4.4
 \end{equation*}
-</div>
-</li>
+</div></p></li>
 <li id="li-8419">
 <p id="p-13673">We solve the equation</p>
 <div class="displaymath">
@@ -486,24 +493,25 @@ true);
 \alert{7.5} = -\log_{10}[H^+]
 \end{equation*}
 </div>
-<p data-braille="continuation">for \([H^+]\text{.}\) First, we write</p>
+<p class="continuation">for \([H^+]\text{.}\) First, we write</p>
 <div class="displaymath">
 \begin{equation*}
 -7.5 = \log_{10}[H^+]
 \end{equation*}
 </div>
-<p data-braille="continuation">Then we convert the equation to exponential form to get</p>
+<p class="continuation">Then we convert the equation to exponential form to get</p>
 <div class="displaymath">
 \begin{equation*}
 [H^+] = 10^{-7.5}\approx 3.2 \times 10^{-8}
 \end{equation*}
 </div>
-<p data-braille="continuation">The hydrogen ion concentration of the water is \(3.2 \times 10^{-8}\text{.}\)</p>
+<p class="continuation">The hydrogen ion concentration of the water is \(3.2 \times 10^{-8}\text{.}\)</p>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2272"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2272"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2272"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.27</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2272"><article class="exercise exercise-like"><iframe name="webwork-423" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=423&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiMTAqKigtOC4zKSIpOwoKQkVHSU5fUEdNTApUaGUgcEggb2YgdGhlIHdhdGVyIGluIGEgdGlkZSBwb29sIGlzIDguMy4gV2hhdCBpcyB0aGUgaHlkcm9nZW4gaW9uIGNvbmNlbnRyYXRpb24gb2YgdGhlIHdhdGVyPwoKQW5zd2VyOiBbX117JGF9ezEyfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgNS4wMVx0aW1lcyAxMF57LTl9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="423"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-238"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-423" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=423&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiMTAqKigtOC4zKSIpOwoKQkVHSU5fUEdNTApUaGUgcEggb2YgdGhlIHdhdGVyIGluIGEgdGlkZSBwb29sIGlzIDguMy4gV2hhdCBpcyB0aGUgaHlkcm9nZW4gaW9uIGNvbmNlbnRyYXRpb24gb2YgdGhlIHdhdGVyPwoKQW5zd2VyOiBbX117JGF9ezEyfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgNS4wMVx0aW1lcyAxMF57LTl9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="423"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-238"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Decibels</span>
 </h3>
 <p id="p-13678">The <dfn class="terminology">decibel scale</dfn>, used to measure the loudness or intensity of a sound, is another example of a logarithmic scale. The perceived loudness of a sound is measured in decibels, \(D\text{,}\) by</p>
@@ -512,42 +520,42 @@ true);
 D=10 \log_{10}\left(\frac{I}{10^{-12}}\right)
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(I\) is the intensity of its sound waves (in watts per square meter). The table below shows the intensity of some common sounds, measured in watts per square meter.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p class="continuation">where \(I\) is the intensity of its sound waves (in watts per square meter). The table below shows the intensity of some common sounds, measured in watts per square meter.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b3 r1 l1 t3 lines">Sound</td>
 <td class="c m b3 r1 l0 t3 lines">Intensity (watts/m\(^2\))</td>
-<td class="c m b3 r1 l0 t3 lines" data-braille="last-cell">Decibels</td>
+<td class="c m b3 r1 l0 t3 lines">Decibels</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Whisper</td>
 <td class="c m b1 r1 l0 t0 lines">\(10^{-10}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(20\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(20\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Background music</td>
 <td class="c m b1 r1 l0 t0 lines">\(10^{-8}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(40\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(40\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Loud conversation</td>
 <td class="c m b1 r1 l0 t0 lines">\(10^{-6}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(60\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(60\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Heavy traffic</td>
 <td class="c m b1 r1 l0 t0 lines">\(10^{-4}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(80\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(80\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Jet airplane</td>
 <td class="c m b1 r1 l0 t0 lines">\(10^{-2}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(100\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(100\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Thunder</td>
 <td class="c m b1 r1 l0 t0 lines">\(10^{-1}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(110\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(110\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-13679">Consider the ratio of the intensity of thunder to that of a whisper:</p>
@@ -557,24 +565,24 @@ D=10 \log_{10}\left(\frac{I}{10^{-12}}\right)
 = \frac{10^{-1}}{10^{-10}}= 10^9
 \end{equation*}
 </div>
-<p data-braille="continuation">Thunder is \(10^9\text{,}\) or one billion times more intense than a whisper. It would be impossible to show such a wide range of values on a graph. When we use a log scale, however, there is a difference of only 90 decibels between a whisper and thunder.</p>
+<p class="continuation">Thunder is \(10^9\text{,}\) or one billion times more intense than a whisper. It would be impossible to show such a wide range of values on a graph. When we use a log scale, however, there is a difference of only 90 decibels between a whisper and thunder.</p>
 <article class="example example-like" id="example-decibels"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.28</span><span class="period">.</span>
 </h6>
 <ol id="p-13680" class="lower-alpha">
-<li id="li-8420">Normal breathing generates about \(10^{-11}\) watts per square meter at a distance of 3 feet. Find the number of decibels for a breath 3 feet away.</li>
-<li id="li-8421">Normal conversation registers at about 40 decibels. How many times more intense than breathing is normal conversation?</li>
+<li id="li-8420"><p id="p-derived-li-8420">Normal breathing generates about \(10^{-11}\) watts per square meter at a distance of 3 feet. Find the number of decibels for a breath 3 feet away.</p></li>
+<li id="li-8421"><p id="p-derived-li-8421">Normal conversation registers at about 40 decibels. How many times more intense than breathing is normal conversation?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-660" id="solution-660"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-660"><div class="solution solution-like"><ol id="p-13681" class="lower-alpha">
-<li id="li-8422">We evaluate the decibel formula with \(I = \alert{10^{-11}}\) to find<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-660" id="solution-660"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-660"><div class="solution solution-like"><ol id="p-13681" class="lower-alpha">
+<li id="li-8422"><p id="p-derived-li-8422">We evaluate the decibel formula with \(I = \alert{10^{-11}}\) to find<div class="displaymath">
 \begin{align*}
 D \amp = 10 \log_{10}\left(\dfrac{\alert{10^{-11}}} {10^{-12}}\right) \amp\amp \blert{\text{Subtract exponents: }{-11}-(-12)=1}\\
 \amp = 10 \log_{10} {10^1} = 10(1)\\
 \amp = 10 \text{ decibels}
 \end{align*}
-</div>The sound of breathing registers at 10 decibels.</li>
-<li id="li-8423">We let \(I_b\) stand for the sound intensity of breathing, and \(I_c\) stand for the intensity of normal conversation. We are looking for the ratio \(I_c/I_b\text{.}\) From part (a), we know that<div class="displaymath">
+</div>The sound of breathing registers at 10 decibels.</p></li>
+<li id="li-8423"><p id="p-derived-li-8423">We let \(I_b\) stand for the sound intensity of breathing, and \(I_c\) stand for the intensity of normal conversation. We are looking for the ratio \(I_c/I_b\text{.}\) From part (a), we know that<div class="displaymath">
 \begin{equation*}
 I_w = 10^{-11}
 \end{equation*}
@@ -589,12 +597,12 @@ I_c \amp = 10^4(10^{-12}) = 10^{-8}
 \begin{equation*}
 \dfrac{I_c}{I_b}= \frac{10^{-8}}{10^{-11}}= 10^3
 \end{equation*}
-</div>Normal conversation is 1000 times more intense than breathing.</li>
+</div>Normal conversation is 1000 times more intense than breathing.</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2273"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2273"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2273"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.29</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2273"><article class="exercise exercise-like"><iframe name="webwork-424" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=424&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyREID0gNzA7CiRhID0gQ29tcHV0ZSgiMTAqKigkRC8xMC0xMikiKTsKJGNvbnZlcnNhdGlvbiA9IDQwOwokYiA9IENvbXB1dGUoIjEwKiooICgkRCAtICRjb252ZXJzYXRpb24pLzEwKSIpOwoKQkVHSU5fUEdNTApUaGUgbm9pc2Ugb2YgY2l0eSB0cmFmZmljIHJlZ2lzdGVycyBhdCBhYm91dCBbYDcwYF0gZGVjaWJlbHMuCgphLiAgV2hhdCBpcyB0aGUgaW50ZW5zaXR5IG9mIHRyYWZmaWMgbm9pc2UsIGluIHdhdHRzIHBlciBzcXVhcmUgbWV0ZXI%2FCgogICAgQW5zd2VyOiBbYEk9YF1bX117JGF9ezEyfSAgd2F0dHMvbVtgXjJgXQoKCmEuICBIb3cgbWFueSB0aW1lcyBtb3JlIGludGVuc2UgaXMgdHJhZmZpYyBub2lzZSB0aGFuIGNvbnZlcnNhdGlvbj8KCiAgICBBbnN3ZXI6IFtfXXskYn17M30gdGltZXMKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgSSA9IDEwXnstNX1gXSB3YXR0cy9tW2BeMmBdCgoKYS4gIFtgMTAwMGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="424"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="warning remark-like" id="warning-49"><h6 class="heading">
+</h6>
+<iframe name="webwork-424" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=424&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyREID0gNzA7CiRhID0gQ29tcHV0ZSgiMTAqKigkRC8xMC0xMikiKTsKJGNvbnZlcnNhdGlvbiA9IDQwOwokYiA9IENvbXB1dGUoIjEwKiooICgkRCAtICRjb252ZXJzYXRpb24pLzEwKSIpOwoKQkVHSU5fUEdNTApUaGUgbm9pc2Ugb2YgY2l0eSB0cmFmZmljIHJlZ2lzdGVycyBhdCBhYm91dCBbYDcwYF0gZGVjaWJlbHMuCgphLiAgV2hhdCBpcyB0aGUgaW50ZW5zaXR5IG9mIHRyYWZmaWMgbm9pc2UsIGluIHdhdHRzIHBlciBzcXVhcmUgbWV0ZXI%2FCgogICAgQW5zd2VyOiBbYEk9YF1bX117JGF9ezEyfSAgd2F0dHMvbVtgXjJgXQoKCmEuICBIb3cgbWFueSB0aW1lcyBtb3JlIGludGVuc2UgaXMgdHJhZmZpYyBub2lzZSB0aGFuIGNvbnZlcnNhdGlvbj8KCiAgICBBbnN3ZXI6IFtfXXskYn17M30gdGltZXMKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgSSA9IDEwXnstNX1gXSB3YXR0cy9tW2BeMmBdCgoKYS4gIFtgMTAwMGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="424"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="warning remark-like" id="warning-49"><h6 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">10.30</span><span class="period">.</span>
 </h6>
 <p id="p-13693">Both the decibel model and the Richter scale in the next example use expressions of the form \(\log\left(\dfrac{a}{b}\right)\text{.}\) Be careful to follow the order of operations when using these models. We must compute the quotient \(\dfrac{a}{b}\) before taking a logarithm. In particular, it is <em class="emphasis">not</em> true that \(\log\left(\dfrac{a}{b}\right)\) can be simplified to \(\dfrac{\log a}{\log b}\text{.}\)</p></article></section><section class="subsection" id="subsection-239"><h3 class="heading hide-type">
@@ -610,12 +618,12 @@ M=\log_{10}\left(\frac{A}{A_0} \right)
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.31</span><span class="period">.</span>
 </h6>
 <ol id="p-13695" class="lower-alpha">
-<li id="li-8428">The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?</li>
-<li id="li-8429">How many times more powerful than the Northridge quake was the San Francisco earthquake of 1989, which registered 7.1 on the Richter scale?</li>
+<li id="li-8428"><p id="p-derived-li-8428">The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?</p></li>
+<li id="li-8429"><p id="p-derived-li-8429">How many times more powerful than the Northridge quake was the San Francisco earthquake of 1989, which registered 7.1 on the Richter scale?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-662" id="solution-662"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-662"><div class="solution solution-like"><ol id="p-13696" class="lower-alpha">
-<li id="li-8430">We let \(A_N\) represent the amplitude of the Northridge quake and \(A_H\) represent the amplitude of a quake 100 times more powerful. From the Richter model, we have<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-662" id="solution-662"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-662"><div class="solution solution-like"><ol id="p-13696" class="lower-alpha">
+<li id="li-8430"><p id="p-derived-li-8430">We let \(A_N\) represent the amplitude of the Northridge quake and \(A_H\) represent the amplitude of a quake 100 times more powerful. From the Richter model, we have<div class="displaymath">
 \begin{equation*}
 6.9 = \log_{10}\left(\dfrac{A_N}{A_0}\right)
 \end{equation*}
@@ -633,9 +641,8 @@ A_H \amp = 100A_N\\
 \log_{10}\left(\dfrac{A_H}{A_0}\right) \amp = \log_{10} 10^{8.9}\\
 \amp = 8.9
 \end{align*}
-</div>
-</li>
-<li id="li-8431">We let \(A_S\) stand for the amplitude of the San Francisco earthquake. We are looking for the ratio \(A_S/A_N\text{.}\) First, we use the Richter formula to compute values for \(A_S\) and \(A_N\text{.}\)<div class="displaymath">
+</div></p></li>
+<li id="li-8431"><p id="p-derived-li-8431">We let \(A_S\) stand for the amplitude of the San Francisco earthquake. We are looking for the ratio \(A_S/A_N\text{.}\) First, we use the Richter formula to compute values for \(A_S\) and \(A_N\text{.}\)<div class="displaymath">
 \begin{equation*}
 6.9 = \log_{10}\left(\dfrac{A_N}{A_0}\right)
 ~~\text{ and }~~ 7.1 = \log_{10}\left(\dfrac{A_s}{A_0}\right)
@@ -653,12 +660,12 @@ A_N = 10^{6.9}A_0 ~~\text{ and }~~A_S = 10^{7.1}A_0
 \begin{equation*}
 \frac{A_S}{A_N}= \frac{10^{7.1}A_0}{10^{6.9}A_0}= 10^{0.2}
 \end{equation*}
-</div>The San Francisco earthquake was \(10^{0.2}\text{,}\) or approximately 1.58 times as powerful as the Northridge quake.</li>
+</div>The San Francisco earthquake was \(10^{0.2}\text{,}\) or approximately 1.58 times as powerful as the Northridge quake.</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2274"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2274"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2274"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.32</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2274"><article class="exercise exercise-like"><iframe name="webwork-425" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=425&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzZiA9IDcuMTsKJHAgPSA3LjY7CiRhID0gQ29tcHV0ZSgiMTAqKigkcC0kc2YpIiktPndpdGgoCiAgdG9sVHlwZSA9PiAnYWJzb2x1dGUnLAogIHRvbGVyYW5jZSA9PiAuMDA1MSwKKTsKCkJFR0lOX1BHTUwKSW4gT2N0b2JlciAyMDA1LCBhIG1hZ25pdHVkZSA3LjYgZWFydGhxdWFrZSBzdHJ1Y2sgUGFraXN0YW4uIEhvdyBtdWNoIG1vcmUgcG93ZXJmdWwgd2FzIHRoaXMgZWFydGhxdWFrZSB0aGFuIHRoZSAxOTg5IFNhbiBGcmFuY2lzY28gZWFydGhxdWFrZSBvZiBtYWduaXR1ZGUgNy4xPwoKQW5zd2VyOiBbX117JGF9ezN9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KMy4xNgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="425"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="note remark-like" id="note-24"><h6 class="heading">
+</h6>
+<iframe name="webwork-425" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=425&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzZiA9IDcuMTsKJHAgPSA3LjY7CiRhID0gQ29tcHV0ZSgiMTAqKigkcC0kc2YpIiktPndpdGgoCiAgdG9sVHlwZSA9PiAnYWJzb2x1dGUnLAogIHRvbGVyYW5jZSA9PiAuMDA1MSwKKTsKCkJFR0lOX1BHTUwKSW4gT2N0b2JlciAyMDA1LCBhIG1hZ25pdHVkZSA3LjYgZWFydGhxdWFrZSBzdHJ1Y2sgUGFraXN0YW4uIEhvdyBtdWNoIG1vcmUgcG93ZXJmdWwgd2FzIHRoaXMgZWFydGhxdWFrZSB0aGFuIHRoZSAxOTg5IFNhbiBGcmFuY2lzY28gZWFydGhxdWFrZSBvZiBtYWduaXR1ZGUgNy4xPwoKQW5zd2VyOiBbX117JGF9ezN9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KMy4xNgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="425"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="note remark-like" id="note-24"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">10.33</span><span class="period">.</span>
 </h6>
 <p id="p-13701">An earthquake 100, or \(10^2\text{,}\) times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of \(K\) units on the Richter scale (or any logarithmic scale) corresponds to a factor of \(10^K\) units in the intensity of the quake.</p></article><article class="example example-like" id="example-compare-logscale"><h6 class="heading">
@@ -666,49 +673,52 @@ A_N = 10^{6.9}A_0 ~~\text{ and }~~A_S = 10^{7.1}A_0
 </h6>
 <p id="p-13702">On a log scale, the weights of two animals differ by 1.6 units. What is the ratio of their actual weights?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-664" id="solution-664"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-664"><div class="solution solution-like"><p id="p-13703">A difference of 1.6 on a log scale corresponds to a factor of \(10^{1.6}\) in the actual weights. Thus, the heavier animal is \(10^{1.6}\text{,}\) or 39.8 times as heavy as the lighter animal.</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2275"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2275"><h6 class="heading">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-664" id="solution-664"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-664"><div class="solution solution-like"><p id="p-13703">A difference of 1.6 on a log scale corresponds to a factor of \(10^{1.6}\) in the actual weights. Thus, the heavier animal is \(10^{1.6}\text{,}\) or 39.8 times as heavy as the lighter animal.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2275"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.35</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2275"><article class="exercise exercise-like"><iframe name="webwork-426" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=426&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiIDEwKiooMi41KSAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0%2BIC4wNTEsCik7CgpCRUdJTl9QR01MClR3byBwb2ludHMsIGxhYmVsZWQgW2BBYF0gYW5kIFtgQlx0ZXh0eyx9YF0gZGlmZmVyIGJ5IFtgMi41YF0gdW5pdHMgb24gYSBsb2cgc2NhbGUuIFdoYXQgaXMgdGhlIHJhdGlvIG9mIHRoZWlyIGRlY2ltYWwgdmFsdWVzPwoKQW5zd2VyOiBbX117JGF9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KMzE2LjIKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="426"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-2276"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2276"><h6 class="heading">
+</h6>
+<iframe name="webwork-426" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=426&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gQ29tcHV0ZSgiIDEwKiooMi41KSAiKS0%2Bd2l0aCgKICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0%2BIC4wNTEsCik7CgpCRUdJTl9QR01MClR3byBwb2ludHMsIGxhYmVsZWQgW2BBYF0gYW5kIFtgQlx0ZXh0eyx9YF0gZGlmZmVyIGJ5IFtgMi41YF0gdW5pdHMgb24gYSBsb2cgc2NhbGUuIFdoYXQgaXMgdGhlIHJhdGlvIG9mIHRoZWlyIGRlY2ltYWwgdmFsdWVzPwoKQW5zd2VyOiBbX117JGF9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KMzE2LjIKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="426"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-2276"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.36</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2276"><article class="exercise exercise-like"><iframe name="webwork-427" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=427&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBBbiBpbmNyZWFzZSBvZiAxIG9uIHRoZSBwSCBzY2FsZSBjb3JyZXNwb25kcyB0byBhbiBpbmNyZWFzZSBpbiBhY2lkaXR5IGJ5IGEgZmFjdG9yIG9mIDEwLiBbX117JEZhbHNlfXs1fQoKCmEuICBBIHJhdGlvIG9mIHNvdW5kIGludGVuc2l0aWVzIG9mIG9uZSBiaWxsaW9uIGNvcnJlc3BvbmRzIHRvIGEgZGlmZmVyZW5jZSBvZiA5MCBkZWNpYmVscy4gIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIHNlY29uZCBwcm9wZXJ0eSBvZiBsb2dzIHNheXMgdGhhdCBbYFxsb2cgXGxlZnQoXGRmcmFje2F9e2J9IFxyaWdodCkgPSBcZGZyYWN7XGxvZyBhfXtcbG9nIGJ9XHRleHR7Ln1gXSAgW19deyRGYWxzZX17NX0KCgphLiAgQSBkaWZmZXJlbmNlIG9mIDMgb24gYSBsb2cgc2NhbGUgY29ycmVzcG9uZHMgdG8gYSByYXRpbyBvZiBbYDEwXjNcdGV4dHssfWBdIG9yIDEwMDAuICBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="427"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-10-2-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-427" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=427&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBBbiBpbmNyZWFzZSBvZiAxIG9uIHRoZSBwSCBzY2FsZSBjb3JyZXNwb25kcyB0byBhbiBpbmNyZWFzZSBpbiBhY2lkaXR5IGJ5IGEgZmFjdG9yIG9mIDEwLiBbX117JEZhbHNlfXs1fQoKCmEuICBBIHJhdGlvIG9mIHNvdW5kIGludGVuc2l0aWVzIG9mIG9uZSBiaWxsaW9uIGNvcnJlc3BvbmRzIHRvIGEgZGlmZmVyZW5jZSBvZiA5MCBkZWNpYmVscy4gIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIHNlY29uZCBwcm9wZXJ0eSBvZiBsb2dzIHNheXMgdGhhdCBbYFxsb2cgXGxlZnQoXGRmcmFje2F9e2J9IFxyaWdodCkgPSBcZGZyYWN7XGxvZyBhfXtcbG9nIGJ9XHRleHR7Ln1gXSAgW19deyRGYWxzZX17NX0KCgphLiAgQSBkaWZmZXJlbmNlIG9mIDMgb24gYSBsb2cgc2NhbGUgY29ycmVzcG9uZHMgdG8gYSByYXRpbyBvZiBbYDEwXjNcdGV4dHssfWBdIG9yIDEwMDAuICBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="427"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-10-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 10.2</span>
 </h3>
 <article class="subexercises" id="subexercises-137"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-338">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-387"><p id="p-13734">For Problems 1 and 2, bound the base 10 log of the number between two integers. Do not use a calculator!</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-2277"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <ol id="p-13735" class="lower-alpha cols4">
-<li id="li-8452">\(\displaystyle 8\)</li>
-<li id="li-8453">\(\displaystyle 137\)</li>
-<li id="li-8454">\(\displaystyle 0.2\)</li>
-<li id="li-8455">\(\displaystyle 1,234,567\)</li>
+<li id="li-8452"><p id="p-derived-li-8452">\(\displaystyle 8\)</p></li>
+<li id="li-8453"><p id="p-derived-li-8453">\(\displaystyle 137\)</p></li>
+<li id="li-8454"><p id="p-derived-li-8454">\(\displaystyle 0.2\)</p></li>
+<li id="li-8455"><p id="p-derived-li-8455">\(\displaystyle 1,234,567\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-2278"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <ol id="p-13737" class="lower-alpha cols4">
-<li id="li-8460">\(\displaystyle 97\)</li>
-<li id="li-8461">\(\displaystyle 0.05\)</li>
-<li id="li-8462">\(\displaystyle 1.83\)</li>
-<li id="li-8463">\(\displaystyle 26,125\)</li>
+<li id="li-8460"><p id="p-derived-li-8460">\(\displaystyle 97\)</p></li>
+<li id="li-8461"><p id="p-derived-li-8461">\(\displaystyle 0.05\)</p></li>
+<li id="li-8462"><p id="p-derived-li-8462">\(\displaystyle 1.83\)</p></li>
+<li id="li-8463"><p id="p-derived-li-8463">\(\displaystyle 26,125\)</p></li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-339">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-388"><p id="p-13738">For Problems 3 and 4, given \(\log_{10} n\text{,}\) find \(n\text{.}\)</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-2279"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <ol id="p-13739" class="lower-alpha cols4">
-<li id="li-8464">\(\displaystyle 3.6\)</li>
-<li id="li-8465">\(\displaystyle 0.7\)</li>
-<li id="li-8466">\(\displaystyle -3.1\)</li>
-<li id="li-8467">\(\displaystyle -0.4\)</li>
+<li id="li-8464"><p id="p-derived-li-8464">\(\displaystyle 3.6\)</p></li>
+<li id="li-8465"><p id="p-derived-li-8465">\(\displaystyle 0.7\)</p></li>
+<li id="li-8466"><p id="p-derived-li-8466">\(\displaystyle -3.1\)</p></li>
+<li id="li-8467"><p id="p-derived-li-8467">\(\displaystyle -0.4\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-2280"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <ol id="p-13741" class="lower-alpha cols4">
-<li id="li-8472">\(\displaystyle 1.5\)</li>
-<li id="li-8473">\(\displaystyle 5.2\)</li>
-<li id="li-8474">\(\displaystyle 0.18\)</li>
-<li id="li-8475">\(\displaystyle -2.5\)</li>
+<li id="li-8472"><p id="p-derived-li-8472">\(\displaystyle 1.5\)</p></li>
+<li id="li-8473"><p id="p-derived-li-8473">\(\displaystyle 5.2\)</p></li>
+<li id="li-8474"><p id="p-derived-li-8474">\(\displaystyle 0.18\)</p></li>
+<li id="li-8475"><p id="p-derived-li-8475">\(\displaystyle -2.5\)</p></li>
 </ol></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-138"><h6 class="heading"><span class="title">Skills Practice</span></h6>
@@ -716,45 +726,46 @@ A_N = 10^{6.9}A_0 ~~\text{ and }~~A_S = 10^{7.1}A_0
 <ol id="p-13742" class="lower-alpha">
 <li id="li-8476">
 <p id="p-13743">The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-log-scale.svg" role="img" style="width: 100%; height: auto;" alt="log scale with exponents shown"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-log-scale.svg" role="img" class="contained" alt="log scale with exponents shown"></div></div></div>
 </li>
 <li id="li-8477">
 <p id="p-13744">The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-log-scale2.svg" role="img" style="width: 100%; height: auto;" alt="log scale with exponents shown"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-log-scale2.svg" role="img" class="contained" alt="log scale with exponents shown"></div></div></div>
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-2282"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <ol id="p-13746" class="lower-alpha">
 <li id="li-8480">
 <p id="p-13747">The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-6.svg" role="img" style="width: 100%; height: auto;" alt="log scale with exponents shown"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-6.svg" role="img" class="contained" alt="log scale with exponents shown"></div></div></div>
 </li>
 <li id="li-8481">
 <p id="p-13748">The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-6b.svg" role="img" style="width: 100%; height: auto;" alt="log scale with exponents shown"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-6b.svg" role="img" class="contained" alt="log scale with exponents shown"></div></div></div>
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-2283"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="p-13749">Plot the values on a log scale.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table><tr>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.075\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1.3\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(4200\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(87,000\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(6.5\times 10^7 \)</td>
+<td class="c m b1 r1 l0 t1 lines">\(6.5\times 10^7 \)</td>
 </tr></table></div></div></div></article><article class="exercise exercise-like" id="exercise-2284"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="p-13750">Plot the values on a log scale.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table><tr>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(4\times 10^{-4} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.008\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.9\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(27\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(90 \)</td>
+<td class="c m b1 r1 l0 t1 lines">\(90 \)</td>
 </tr></table></div></div></div></article><article class="exercise exercise-like" id="exercise-2285"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="p-13751">Estimate the decimal value of each point on the log scale.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-9.svg" role="img" style="width: 100%; height: auto;" alt="logscale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2286"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-9.svg" role="img" class="contained" alt="logscale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2286"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="p-13753">Estimate the decimal value of each point on the log scale.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-10.svg" role="img" style="width: 100%; height: auto;" alt="logscale"></div></div></div></article><div class="exercisegroup" id="exercisegroup-340">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-10.svg" role="img" class="contained" alt="logscale"></div></div></div></article><div class="exercisegroup" id="exercisegroup-340">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-389"><p id="p-13754">In Problems 11–18, use the appropriate formulas for logarithmic models.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-2287"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
@@ -770,28 +781,28 @@ A_N = 10^{6.9}A_0 ~~\text{ and }~~A_S = 10^{7.1}A_0
 </div></article><article class="subexercises" id="subexercises-139"><h6 class="heading"><span class="title">Applications</span></h6>
 <article class="exercise exercise-like" id="exercise-2295"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="p-13767">The log scale shows various temperatures in Kelvins. Estimate the temperatures of the events indicated.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-17.svg" role="img" style="width: 100%; height: auto;" alt="logscale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2296"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-17.svg" role="img" class="contained" alt="logscale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2296"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="p-13769">The log scale shows the size of various objects, in meters. Estimate the sizes of the objects indicated.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-18.svg" role="img" style="width: 100%; height: auto;" alt="logscale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2297"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-18.svg" role="img" class="contained" alt="logscale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2297"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="p-13770">The magnitude of a star is a measure of its brightness. It is given by the formula</p>
 <div class="displaymath">
 \begin{equation*}
 m = 4.83 - 2.5 \log L
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(L\) is the luminosity of the star, measured in solar units. Calculate the magnitude of the stars whose luminosities are given in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-star-magnitude.svg" role="img" style="width: 100%; height: auto;" alt="star magnitudes on log scale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2298"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p class="continuation">where \(L\) is the luminosity of the star, measured in solar units. Calculate the magnitude of the stars whose luminosities are given in the figure.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-star-magnitude.svg" role="img" class="contained" alt="star magnitudes on log scale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2298"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-13772">Estimate the wavelength, in meters, of the types of electromagnetic radiation shown in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-radiation-wavelength.svg" role="img" style="width: 100%; height: auto;" alt="radiation wavelength on log scale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2299"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-radiation-wavelength.svg" role="img" class="contained" alt="radiation wavelength on log scale"></div></div></div></article><article class="exercise exercise-like" id="exercise-2299"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <p id="p-13773">Plot the values of \([H^+]\) in the section "Acidity and the pH Scale" on a log scale.</p></article><article class="exercise exercise-like" id="exercise-2300"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="p-13774">Plot the values of sound intensity in the section "Decibels" on a log scale.</p></article><article class="exercise exercise-like" id="exercise-2301"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <p id="p-13775">The distances to two stars are separated by 3.4 units on a log scale. What is the ratio of their distances?</p></article><article class="exercise exercise-like" id="exercise-2302"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="p-13777">The populations of two cities are separated by 2.8 units on a log scale. What is the ratio of their populations?</p></article><article class="exercise exercise-like" id="exercise-2303"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
 <p id="p-13778">The probability of discovering an oil field increases with its diameter, defined to be the square root of its area. Use the graph to estimate the diameter of the oil fields at the labeled points, and their probability of discovery. (Source: Deffeyes, 2001)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-6-23.svg" role="img" style="width: 100%; height: auto;" alt="probabilty of discovery vs diameter on log-log"></div></div></div></article><article class="exercise exercise-like" id="exercise-2304"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-6-23.svg" role="img" class="contained" alt="probabilty of discovery vs diameter on log-log"></div></div></div></article><article class="exercise exercise-like" id="exercise-2304"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:60%;justify-content:flex-start;"><p id="p-13780">The <dfn class="terminology">order</dfn> of a stream is a measure of its size. Use the graph to estimate the drainage area, in square miles, for streams of orders 1 through 4. (Source: Leopold, Wolman, and Miller)</p></div>
-<div class="sbspanel" style="width:30%;justify-content:flex-start;"><img src="images/fig-hw-7-6-24.svg" role="img" style="width: 100%; height: auto;" alt="stream drainage vs order on semi-log"></div>
+<div class="sbspanel top" style="width:60%;"><p id="p-13780">The <dfn class="terminology">order</dfn> of a stream is a measure of its size. Use the graph to estimate the drainage area, in square miles, for streams of orders 1 through 4. (Source: Leopold, Wolman, and Miller)</p></div>
+<div class="sbspanel top" style="width:30%;"><img src="external/images/fig-hw-7-6-24.svg" role="img" class="contained" alt="stream drainage vs order on semi-log"></div>
 </div></div></article><article class="exercise exercise-like" id="exercise-2305"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
 <p id="p-13781">The pH of normal rain is 5.6. Some areas of Ontario have experienced acid rain with a pH of 4.5. How many times more acidic is acid rain than normal rain?</p></article><article class="exercise exercise-like" id="exercise-2306"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
 <p id="p-13783">The pH of normal hair is about 5, the average pH of shampoo is 8, and 4 for conditioner. Compare the acidity of normal hair, shampoo, and conditioner.</p></article><article class="exercise exercise-like" id="exercise-2307"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
@@ -800,19 +811,19 @@ m = 4.83 - 2.5 \log L
 <p id="p-13787">In 1964, an earthquake in Alaska measured 8.4 on the Richter scale. An earthquake measuring 4.0 is consideredsmall and causes little damage. How many times stronger was the Alaska quake than one measuring 4.0?</p></article><article class="exercise exercise-like" id="exercise-2310"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
 <p id="p-13789">On April 30, 1986, an earthquake in Mexico City measured 7.0 on the Richter scale. On September 21, a second earthquake occurred, this one measuring 8.1, hit Mexico City. How many times stronger was the September quake than the one in April?</p></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

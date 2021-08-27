@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:59:49-07:00       *-->
+<!--*       on 2021-08-27T15:54:48-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Polynomial and Rational Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,17 +226,17 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="chap8"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">8</span> <span class="title">Polynomial and Rational Functions</span>
 </h2>
-<section class="introduction" id="introduction-297"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Durer-font.png" style="width: 100%; height: auto;" alt="font designed by Albrecht Durer"></div></div></div>
+<section class="introduction" id="introduction-297"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/Durer-font.png" class="contained" alt="font designed by Albrecht Durer"></div></div></div>
 <p id="p-10343">The graphs of linear functions, quadratic functions, power functions, and exponential all have a characteristic shape. On the other hand, the family of polynomial funcions has graphs that represent a huge variety of different shapes.</p>
 <p id="p-10344">Ever since Gutenberg's invention of movable type in 1455, artists and printers have been interested in the design of pleasing and practical fonts. In 1525, Albrecht Durer published <span class="booktitle">On the Just Shaping of Letters</span>, which set forth a system of rules for the geometric construction of Roman capitals. The letters shown above are examples of Durer's font. Until the twentieth century, a ruler and compass were the only practical design tools, so straight lines and circular arcs were the only geometric objects that could be accurately reproduced.</p>
 <p id="p-10345">With the advent of computers, complex curves and surfaces, such as the smooth contours of modern cars, can be defined precisely. In the 1960s the French automobile engineer Pierre Bézier developed a new design tool based on <dfn class="terminology">polynomials</dfn>. <dfn class="terminology">Bézier curves</dfn> are widely used today in all fields of design, from technical plans and blueprints to the most creative artistic projects.</p>
 <p id="p-10346">The study of Bézier curves falls under the general topic of curve fitting,  but these curves do not really have a scientific purpose. A scientist does not use Bézier curves to fit a function to data. Rather, Bézier curves have more of an artistic purpose. Computer programs like Illustrator, Freehand, and CorelDraw use cubic Bézier curves. The PostScript printer language and Type 1 fonts also use cubic Bézier curves, and TrueType fonts use quadratic Bézier curves.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Letter-a.svg" role="img" style="width: 100%; height: auto;" alt="design of the letter a"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/Letter-a.svg" role="img" class="contained" alt="design of the letter a"></div></div></div>
 <article class="investigation project-like" id="investigation-10"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span><span class="space"> </span><span class="title">Bézier Curves.</span>
 </h6>
@@ -243,20 +249,20 @@ x \amp= f(t) = x_1\cdot (1 - t) + x_2\cdot t \\
 y \amp = g(t) = y_1 \cdot (1 - t) + y_2 \cdot t
 \end{align*}
 </div>
-<p data-braille="continuation">for \(0\le t\le 1\text{.}\)</p>
+<p class="continuation">for \(0\le t\le 1\text{.}\)</p>
 <ol id="p-10350" class="decimal">
 <li id="li-6636"><p id="p-10351">Find the functions \(f\) and \(g\) defining the linear Bézier curve joining the two points \((-4,7)\) and \((20)\text{.}\) Simplify the formulas defining each function.</p></li>
 <li id="li-6637"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
-<div class="sbspanel" style="width:51.2820512820513%;justify-content:flex-start;">
+<div class="sbspanel top" style="width:51.2820512820513%;">
 <p id="p-10352">Fill in the table of values and plot the curve.</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(x\)</td>
@@ -264,7 +270,7 @@ y \amp = g(t) = y_1 \cdot (1 - t) + y_2 \cdot t
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -272,11 +278,11 @@ y \amp = g(t) = y_1 \cdot (1 - t) + y_2 \cdot t
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table>
 </div>
-<div class="sbspanel" style="width:46.1538461538462%;justify-content:flex-start;"><img src="images/fig-8x8-grid.svg" role="img" style="width: 100%; height: auto;" alt="8 by 8 grid"></div>
+<div class="sbspanel top" style="width:46.1538461538462%;"><img src="external/images/fig-8x8-grid.svg" role="img" class="contained" alt="8 by 8 grid"></div>
 </div></div></li>
 </ol>
 <p id="p-10353"><em class="emphasis">B. Quadratic Bézier Curves: Drawing a Simple Numeral 7</em></p>
@@ -287,20 +293,20 @@ x \amp= f(t)=x_1\cdot(1 - t)^2+2x_2\cdot t (1 - t) + x_3\cdot t^2\\
 y \amp = g(t)= y_1\cdot(1 - t)^2 +2y_2\cdot t (1 - t) + y_3 \cdot  t^2
 \end{align*}
 </div>
-<p data-braille="continuation">for \(0\le t\le 1\text{.}\)</p>
+<p class="continuation">for \(0\le t\le 1\text{.}\)</p>
 <ol id="p-10355" class="decimal">
 <li id="li-6638"><p id="p-10356">Find the functions \(f\) and \(g\) for the quadratic Bézier curve defined by the endpoints \((-4, 7)\) and \((2, 0)\text{,}\) and the control point \((0, 5)\text{.}\) Simplify the formulas defining each function.</p></li>
 <li id="li-6639"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:42.1052631578947%;justify-content:center;">
+<div class="sbspanel middle" style="width:42.1052631578947%;">
 <p id="p-10357">Fill in the table of values and plot the curve.</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(x\)</td>
@@ -308,7 +314,7 @@ y \amp = g(t)= y_1\cdot(1 - t)^2 +2y_2\cdot t (1 - t) + y_3 \cdot  t^2
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -316,25 +322,25 @@ y \amp = g(t)= y_1\cdot(1 - t)^2 +2y_2\cdot t (1 - t) + y_3 \cdot  t^2
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table>
 </div>
-<div class="sbspanel" style="width:52.6315789473684%;justify-content:center;"><img src="images/fig-8x8-grid.svg" role="img" style="width: 100%; height: auto;" alt="8 by 8 grid"></div>
+<div class="sbspanel middle" style="width:52.6315789473684%;"><img src="external/images/fig-8x8-grid.svg" role="img" class="contained" alt="8 by 8 grid"></div>
 </div></div></li>
 <li id="li-6640"><p id="p-10358">Draw a line segment from \((-4,7)\) to \((4,7)\) on the grid above to complete the numeral 7.</p></li>
 <li id="li-6641"><p id="p-10359">We can adjust the curvature of the diagonal stroke of the 7 by moving the control point. Find the functions \(f\) and \(g\) for the quadratic Bézier curve defined by the endpoints \((4,7)\) and \((0,-7)\text{,}\) and the control point \((0,-3)\text{.}\) Simplify the formulas defining each function.</p></li>
 <li id="li-6642"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:42.1052631578947%;justify-content:center;">
+<div class="sbspanel middle" style="width:42.1052631578947%;">
 <p id="p-10360">Fill in the table of values and plot the curve.</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(x\)</td>
@@ -342,7 +348,7 @@ y \amp = g(t)= y_1\cdot(1 - t)^2 +2y_2\cdot t (1 - t) + y_3 \cdot  t^2
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -350,11 +356,11 @@ y \amp = g(t)= y_1\cdot(1 - t)^2 +2y_2\cdot t (1 - t) + y_3 \cdot  t^2
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table>
 </div>
-<div class="sbspanel" style="width:52.6315789473684%;justify-content:center;"><img src="images/fig-8x8-grid.svg" role="img" style="width: 100%; height: auto;" alt="8 by 8 grid"></div>
+<div class="sbspanel middle" style="width:52.6315789473684%;"><img src="external/images/fig-8x8-grid.svg" role="img" class="contained" alt="8 by 8 grid"></div>
 </div></div></li>
 <li id="li-6643"><p id="p-10361">Draw a line segment from \((-4, 7)\) to \((4, 7)\) on the grid above to complete the numeral 7.</p></li>
 <li id="li-6644"><p id="p-10362">On your graphs in steps (5) and (8), plot the three points that defined the curved section of the numeral 7, then connect them in order with line segments. How does the position of the control point change the curve?</p></li>
@@ -367,20 +373,20 @@ x \amp= f(t) = x_1\cdot (1-t)^2 +3x_2\cdot t(1-t)^2 +3x_3\cdot t^2(1-t) + x_4\cd
 y \amp = g(t) = y_1\cdot (1-t)^2 +3y_2\cdot t(1-t)^2 +3y_3\cdot t^2(1-t) + y_4 \cdot t^3
 \end{align*}
 </div>
-<p data-braille="continuation">for \(0\le t \le 1\text{.}\)</p>
+<p class="continuation">for \(0\le t \le 1\text{.}\)</p>
 <ol id="p-10365" class="decimal">
 <li id="li-6645"><p id="p-10366">Find the functions \(f\) and \(g\) for the cubic Bézier curve defined by the endpoints \((4,7)\) and \((-4,-5)\text{,}\) and the control points \((3,3)\) and \((0,-8)\text{.}\) Simplify the formulas defining each function.</p></li>
 <li id="li-6646"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:42.1052631578947%;justify-content:center;">
+<div class="sbspanel middle" style="width:42.1052631578947%;">
 <p id="p-10367">Fill in the table of values and plot the curve.</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(x\)</td>
@@ -388,7 +394,7 @@ y \amp = g(t) = y_1\cdot (1-t)^2 +3y_2\cdot t(1-t)^2 +3y_3\cdot t^2(1-t) + y_4 \
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -396,11 +402,11 @@ y \amp = g(t) = y_1\cdot (1-t)^2 +3y_2\cdot t(1-t)^2 +3y_3\cdot t^2(1-t) + y_4 \
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table>
 </div>
-<div class="sbspanel" style="width:52.6315789473684%;justify-content:center;"><img src="images/fig-8x8-grid.svg" role="img" style="width: 100%; height: auto;" alt="8 by 8 grid"></div>
+<div class="sbspanel middle" style="width:52.6315789473684%;"><img src="external/images/fig-8x8-grid.svg" role="img" class="contained" alt="8 by 8 grid"></div>
 </div></div></li>
 <li id="li-6647"><p id="p-10368">Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for step (2).</p></li>
 </ol></article></section><nav class="summary-links"><ul>
@@ -412,19 +418,19 @@ y \amp = g(t) = y_1\cdot (1-t)^2 +3y_2\cdot t(1-t)^2 +3y_3\cdot t^2(1-t) + y_4 \
 <li><a href="chap8-summary.html"><span class="codenumber">8.6</span> <span class="title">Chapter 8 Summary and Review</span></a></li>
 </ul></nav></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

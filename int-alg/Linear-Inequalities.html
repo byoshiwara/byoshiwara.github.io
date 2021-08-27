@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:54:11-07:00       *-->
+<!--*       on 2021-08-27T15:50:21-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Linear Inequalities in Two Variables</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Linear-Inequalities"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Linear Inequalities in Two Variables</span>
@@ -236,34 +242,34 @@ true);
 </h6>
 <p id="p-2390">Find a solution to the inequality \(x + y \ge 10,000\) for \(x = 2000\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like">
 <p id="p-2391">For \(x = 2000\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 2000 + y \ge 10,000~~~~~~\text{or}~~~~~~&gt;y \ge 8000
 \end{equation*}
 </div>
-<p data-braille="continuation">You can check that any value of \(y\) greater than or equal to 8000 provides a solution when \(x=2000\text{.}\) For example, \((2000, 9000)\) is a solution because \(2000 + 9000 \gt 10,000\text{.}\)</p>
+<p class="continuation">You can check that any value of \(y\) greater than or equal to 8000 provides a solution when \(x=2000\text{.}\) For example, \((2000, 9000)\) is a solution because \(2000 + 9000 \gt 10,000\text{.}\)</p>
 </div></div>
 </div></article><p id="p-2392"></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:center;">
+<div class="sbspanel middle" style="width:50%;">
 <p id="p-2393">We can gain some insight into the nature of the solutions if we rewrite the inequality as</p>
 <div class="displaymath">
 \begin{gather*}
 y \ge − x + 10,000
 \end{gather*}
 </div>
-<p data-braille="continuation">This inequality says that for each \(x\)-value, we must choose points with \(y\)-values greater than or equal to \(-x + 10,000\text{.}\) As we saw in the Example above, when \(x = 2000\text{,}\) the solutions have \(y\)-values greater than or equal to 8000. Solutions for \(x = 2000\text{,}\) \(x = 6000\text{,}\) and \(x = 11,000\) are shown in the figure. Do you see a pattern emerging?</p>
+<p class="continuation">This inequality says that for each \(x\)-value, we must choose points with \(y\)-values greater than or equal to \(-x + 10,000\text{.}\) As we saw in the Example above, when \(x = 2000\text{,}\) the solutions have \(y\)-values greater than or equal to 8000. Solutions for \(x = 2000\text{,}\) \(x = 6000\text{,}\) and \(x = 11,000\) are shown in the figure. Do you see a pattern emerging?</p>
 </div>
-<div class="sbspanel" style="width:48%;justify-content:center;"><img src="images/fig-example-2-5-1.svg" role="img" style="width: 100%; height: auto;" alt="linear inequality"></div>
+<div class="sbspanel middle" style="width:48%;"><img src="generated/latex-image/fig-example-2-5-1.svg" role="img" class="contained" alt="linear inequality"></div>
 </div></div>
-<article class="exercise exercise-like" id="exercise-327"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-327"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-327"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.46</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-327"><article class="exercise exercise-like"><iframe name="webwork-75" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=75&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZFxkZWdyZWVbMF17XntcY2lyY319XG5ld2NvbW1hbmRcQ2NhbmNlbFsyXVtibGFja117XHJlbmV3Y29tbWFuZFxDYW5jZWxDb2xvcntcY29sb3J7IzF9fVxjYW5jZWx7IzJ9fVxuZXdjb21tYW5ke1xhbGVydH1bMV17XGJvbGRzeW1ib2x7XGNvbG9ye21hZ2VudGF9eyMxfX19XGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR4MSA9IENvbXB1dGUoIjEiKTsKJHkxID0gQ29tcHV0ZSgiNSIpOwoKc3ViIG15Y2hlY2tlciB7CiAgIG15ICR4ID0gc2hpZnQ7CiAgIHJldHVybiBzdWIgewogICBteSAoJGNvcnJlY3QsJHN0dWRlbnQsJGFuc0hhc2gpID0gQF87ICAKICAgcmV0dXJuICgkc3R1ZGVudCA8ICg2KzMqJHgpID8gMSA6IDApOyAgCiB9OwogfQoKJG15X2V2YWx1YXRvciA9ICR5MSAtPiBjbXAoY2hlY2tlcj0%2BCm15Y2hlY2tlcigkeDEpICk7CgokeDAgPSBDb21wdXRlKCIwIik7CiR5MCA9IENvbXB1dGUoIjAiKTsKJG15X2V2YWwyID0gJHkwIC0%2BIGNtcChjaGVja2VyPT4KbXljaGVja2VyKCR4MCkgKTsKCiR4bjIgPSBDb21wdXRlKCItMiIpOwokeW4yID0gQ29tcHV0ZSgiLTMiKTsKJG15X2V2YWwzID0gJHluMiAtPiBjbXAoY2hlY2tlcj0%2BCm15Y2hlY2tlcigkeG4yKSApOwoKQkVHSU5fUEdNTAphLiAgRmluZCBvbmUgW2B5YF0tdmFsdWUgdGhhdCBzYXRpc2ZpZXMgdGhlIGluZXF1YWxpdHkgW2B5IC0gM3ggXGx0IDZgXSBmb3IgZWFjaCBvZiB0aGUgW2B4YF0tdmFsdWVzIGluIHRoZSB0YWJsZS4KCiAgICBbQERhdGFUYWJsZShbW1tQR01MKCdbYHhgXScpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AtMmBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdbYHlgXScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRteV9ldmFsdWF0b3J9ezJ9JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JG15X2V2YWwyfXsyfScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRteV9ldmFsM317Mn0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSoKCgphLiAgR3JhcGggdGhlIGxpbmUgW2B5IC0gM3ggPSA2XHRleHR7Ln1gXSBUaGVuIHBsb3QgeW91ciBzb2x1dGlvbnMgZnJvbSBwYXJ0IChhKSBvbiB0aGUgc2FtZSBncmlkLgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnW2B4YF0nKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDFgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgLTJgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnW2B5YF0nKSxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgXGFsZXJ0ezV9IGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYFxhbGVydHswfWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYFxhbGVydHstM31gXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLF0sYWxpZ249Pid8Y3xjfGN8Y3wnLGNvbHVtbnNjc3M9PltdLGNlbnRlcj0%2BMCwpO0BdKgoKICAgIChNYW55IGFuc3dlcnMgYXJlIHBvc3NpYmxlLikKCgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="75"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-11"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel" style="width:60%;justify-content:flex-start;"><img src="images/fig-ex-2-5-1.svg" role="img" style="width: 100%; height: auto;" alt="linear inequality in two variables"></div></div></div></div></article></div>
-<p id="p-2403"></p>
+</h6>
+<iframe name="webwork-75" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=75&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZFxkZWdyZWVbMF17XntcY2lyY319XG5ld2NvbW1hbmRcQ2NhbmNlbFsyXVtibGFja117XHJlbmV3Y29tbWFuZFxDYW5jZWxDb2xvcntcY29sb3J7IzF9fVxjYW5jZWx7IzJ9fVxuZXdjb21tYW5ke1xhbGVydH1bMV17XGJvbGRzeW1ib2x7XGNvbG9ye21hZ2VudGF9eyMxfX19XGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR4MSA9IENvbXB1dGUoIjEiKTsKJHkxID0gQ29tcHV0ZSgiNSIpOwoKc3ViIG15Y2hlY2tlciB7CiAgIG15ICR4ID0gc2hpZnQ7CiAgIHJldHVybiBzdWIgewogICBteSAoJGNvcnJlY3QsJHN0dWRlbnQsJGFuc0hhc2gpID0gQF87ICAKICAgcmV0dXJuICgkc3R1ZGVudCA8ICg2KzMqJHgpID8gMSA6IDApOyAgCiB9OwogfQoKJG15X2V2YWx1YXRvciA9ICR5MSAtPiBjbXAoY2hlY2tlcj0%2BCm15Y2hlY2tlcigkeDEpICk7CgokeDAgPSBDb21wdXRlKCIwIik7CiR5MCA9IENvbXB1dGUoIjAiKTsKJG15X2V2YWwyID0gJHkwIC0%2BIGNtcChjaGVja2VyPT4KbXljaGVja2VyKCR4MCkgKTsKCiR4bjIgPSBDb21wdXRlKCItMiIpOwokeW4yID0gQ29tcHV0ZSgiLTMiKTsKJG15X2V2YWwzID0gJHluMiAtPiBjbXAoY2hlY2tlcj0%2BCm15Y2hlY2tlcigkeG4yKSApOwoKQkVHSU5fUEdNTAphLiAgRmluZCBvbmUgW2B5YF0tdmFsdWUgdGhhdCBzYXRpc2ZpZXMgdGhlIGluZXF1YWxpdHkgW2B5IC0gM3ggXGx0IDZgXSBmb3IgZWFjaCBvZiB0aGUgW2B4YF0tdmFsdWVzIGluIHRoZSB0YWJsZS4KCiAgICBbQERhdGFUYWJsZShbW1tQR01MKCdbYHhgXScpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDBgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AtMmBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLF0sW1tQR01MKCdbYHlgXScpLHJvd2Nzcz0%2BJ2JvcmRlci1ib3R0b206MXB4IHNvbGlkOycsY2VsbGNzcz0%2BJ2JvcmRlci1sZWZ0OjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRteV9ldmFsdWF0b3J9ezJ9JyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbX117JG15X2V2YWwyfXsyfScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW19deyRteV9ldmFsM317Mn0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxdLGFsaWduPT4nfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSoKCgphLiAgR3JhcGggdGhlIGxpbmUgW2B5IC0gM3ggPSA2XHRleHR7Ln1gXSBUaGVuIHBsb3QgeW91ciBzb2x1dGlvbnMgZnJvbSBwYXJ0IChhKSBvbiB0aGUgc2FtZSBncmlkLgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnW2B4YF0nKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDFgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgLTJgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjFweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnW2B5YF0nKSxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgXGFsZXJ0ezV9IGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYFxhbGVydHswfWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYFxhbGVydHstM31gXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLF0sYWxpZ249Pid8Y3xjfGN8Y3wnLGNvbHVtbnNjc3M9PltdLGNlbnRlcj0%2BMCwpO0BdKgoKICAgIChNYW55IGFuc3dlcnMgYXJlIHBvc3NpYmxlLikKCgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="75"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-11"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel top" style="width:60%;"><img src="external/images/fig-ex-2-5-1.svg" role="img" class="contained" alt="linear inequality in two variables"></div></div></div></div></article><p id="p-2403"></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:47%;justify-content:center;">
+<div class="sbspanel middle" style="width:47%;">
 <p id="p-2404">The graph of the inequality must show all the points whose coordinates are solutions. We found some solutions to the inequality \(x + y \ge 10,000\) in the Example above by choosing a value for \(x\)  and solving for \(y\text{.}\) A more efficient way to find all the solutions of the inequality is to start with the graph of the corresponding equation</p>
 <div class="displaymath">
 \begin{gather*}
@@ -271,7 +277,7 @@ y = -x + 10,000
 \end{gather*}
 </div>
 </div>
-<div class="sbspanel" style="width:45%;justify-content:center;"><img src="images/fig-example-2-5-1b.svg" role="img" style="width: 100%; height: auto;" alt="linear inequality, 2 variables"></div>
+<div class="sbspanel middle" style="width:45%;"><img src="generated/latex-image/fig-example-2-5-1b.svg" role="img" class="contained" alt="linear inequality, 2 variables"></div>
 </div></div>
 <p id="p-2405">The graph is a straight line with slope \(-1\text{.}\) Any point <em class="emphasis">above</em> this line has a \(y\)-coordinate greater than \(~-x + 10,000~\) and hence satisfies the inequality. Thus, the graph of the inequality includes all the points on or above the line \(~y = -x + 10,000~\text{,}\) as shown by the shaded region in the figure. Of course, the shaded points are also solutions to the original inequality, \(~x + y \ge 10,000~\text{.}\)</p>
 <p id="p-2406">For example, the point \((-1000, ~12,000)\) is a solution, because</p>
@@ -280,7 +286,7 @@ y = -x + 10,000
 -1000 + 12,000 \ge 10,000
 \end{gather*}
 </div>
-<p data-braille="continuation">On the other hand, the point \((5000, 4000)\) does not lie in the shaded region because its coordinates do not satisfy the inequality.</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<p class="continuation">On the other hand, the point \((5000, 4000)\) does not lie in the shaded region because its coordinates do not satisfy the inequality.</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Linear Inequalities</span>
 </h3>
 <p id="p-2407">A <dfn class="terminology">linear inequality</dfn> can be written in the form</p>
@@ -289,25 +295,25 @@ y = -x + 10,000
 ax + by + c \le 0 \qquad\text{ or }\qquad ax + by + c \ge 0
 \end{gather*}
 </div>
-<p data-braille="continuation">The solutions consist of the line \(ax + by + c = 0\) and a <dfn class="terminology">half-plane</dfn> on one side of that line. We shade the half-plane to show that all its points are included in the solution set. To decide which side of the line to shade, we can solve the inequality for \(y\) in terms of \(x\text{.}\) If we obtain</p>
+<p class="continuation">The solutions consist of the line \(ax + by + c = 0\) and a <dfn class="terminology">half-plane</dfn> on one side of that line. We shade the half-plane to show that all its points are included in the solution set. To decide which side of the line to shade, we can solve the inequality for \(y\) in terms of \(x\text{.}\) If we obtain</p>
 <div class="displaymath">
 \begin{gather*}
 y \ge mx + b \qquad(\text{ or } y \gt mx + b)
 \end{gather*}
 </div>
-<p data-braille="continuation">then we shade the half-plane <em class="emphasis">above</em> the line. If the inequality is equivalent to</p>
+<p class="continuation">then we shade the half-plane <em class="emphasis">above</em> the line. If the inequality is equivalent to</p>
 <div class="displaymath">
 \begin{gather*}
 y \le mx + b \qquad(\text{ or } y \lt mx + b)
 \end{gather*}
 </div>
-<p data-braille="continuation">then we shade the half-plane <em class="emphasis">below</em> the line.</p>
+<p class="continuation">then we shade the half-plane <em class="emphasis">below</em> the line.</p>
 <article class="example example-like" id="example-44"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.47</span><span class="period">.</span>
 </h6>
 <p id="p-2408">Graph \(4x - 3y \ge 12\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">
 <p id="p-2409">We solve the inequality for \(y\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
@@ -317,16 +323,16 @@ y\amp\le \frac{4}{3}x-4
 \end{align*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:70%;justify-content:center;">
+<div class="sbspanel middle" style="width:70%;">
 <p id="p-2410">We graph the corresponding line</p>
 <div class="displaymath">
 \begin{gather*}
 y = \frac{4}{3}x-4
 \end{gather*}
 </div>
-<p data-braille="continuation">with \(y\)-intercept is \(-4\) and slope \(m=\dfrac{4}{3}\text{.}\) Finally, we shade the half-plane below the line. The completed graph is shown below.</p>
+<p class="continuation">with \(y\)-intercept is \(-4\) and slope \(m=\dfrac{4}{3}\text{.}\) Finally, we shade the half-plane below the line. The completed graph is shown below.</p>
 </div>
-<div class="sbspanel" style="width:28%;justify-content:center;"><img src="images/fig-linear-inequality2.svg" role="img" style="width: 100%; height: auto;" alt="linear inequality in two variables"></div>
+<div class="sbspanel middle" style="width:28%;"><img src="external/images/fig-linear-inequality2.svg" role="img" class="contained" alt="linear inequality in two variables"></div>
 </div></div>
 </div></div>
 </div></article><article class="warning remark-like" id="warning-2"><h6 class="heading">
@@ -338,18 +344,19 @@ y = \frac{4}{3}x-4
 -2y  \alert{\gt} 6x-8
 \end{gather*}
 </div>
-<p data-braille="continuation">is equivalent to</p>
+<p class="continuation">is equivalent to</p>
 <div class="displaymath">
 \begin{gather*}
 y \alert{\lt} {-3x}+4
 \end{gather*}
 </div></article><p id="p-2412">An inequality that uses \(\gt\) or \(\lt\) instead of \(\ge\) or \(\le\) is called <dfn class="terminology">strict</dfn>. The graph of a strict inequality includes only the half-plane and not the line. In that case we use a dashed line for the graph of the equation \(ax + by + c = 0\) to show that it is not part of the solution.</p>
-<article class="exercise exercise-like" id="exercise-328"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-328"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-328"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.49</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-328"><article class="exercise exercise-like"><iframe name="webwork-76" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=76&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHJlZnJlc2hDYWNoZWRJbWFnZXMgPSAxOwogJGZbMF0gPSBGb3JtdWxhKCIyKngrNCIpOwogJGZbMV0gPSBGb3JtdWxhKCIyKngrNCIpOwogJGZbMl0gPSBGb3JtdWxhKCIoeC00KS8yIik7CiAkZlszXSA9IEZvcm11bGEoIih4LTQpLzIiKTsKICR4bWluPS0xMDsKICR4bWF4PTEwOwogJHltaW49LTEwOwogJHltYXg9MTA7CiBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAgICR5bGVmdFskaV0gPSAkZlskaV0tPmV2YWwoeD0%2BJHhtaW4pOwogICAkeXJpZ2h0WyRpXSA9ICRmWyRpXS0%2BZXZhbCh4PT4keG1heCk7CiAgICRnclskaV0gPSBpbml0X2dyYXBoKCR4bWluLCR5bWluLCR4bWF4LCR5bWF4LCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzIwLDIwXSwgc2l6ZT0%2BWzI0MCwyNDBdKTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRyZWQiLCAgMjQ1LDIzNCwyMjkpOyAKICRnclskaV0tPm5ld19jb2xvcigiZGFya3JlZCIsICAgMTU5LCA2NCwgMTYpOwogJGxpZ2h0ID0gImxpZ2h0cmVkIjsKICRkYXJrID0gImRhcmtyZWQiOwogJGdyWyRpXS0%2BbW92ZVRvKCR4bWluLCR5bGVmdFskaV0pOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWF4LCR5cmlnaHRbJGldLCdyZWQnLDMsJ2Rhc2hlZCcpOwogJHk9MC45KiR5bWF4KigtMSkqKiRpOwogYWRkX2Z1bmN0aW9ucygkZ3JbJGldLAogIiRmWyRpXSAgZm9yIHggaW4gPCR4bWluLCR4bWF4PiB1c2luZyBjb2xvcjokbGlnaHQgYW5kIHdlaWdodDoxIik7CiAkZ3JbJGldLT5maWxsUmVnaW9uKFswLCR5LCRsaWdodF0KICk7CiB9Cgpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiRnclskaV0gLT4gbGIoJ3Jlc2V0Jyk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTAuOCw1LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsLTUsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKDUsLTAuOCw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtNSwtMC44LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKIH0KICRnclswXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEEpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMV0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihCKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzJdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclszXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSIsCiAgICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgIDAKICAgICAgICAgKTsKCkJFR0lOX1BHTUwKR3JhcGggdGhlIHNvbHV0aW9ucyBvZiB0aGUgaW5lcXVhbGl0eSBbYDR4IC0gMnkgXGx0IC04XHRleHR7Ln1gXQoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qICA8PAoKU2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBncmFwaC4KCiAgICBbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjI0MClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="76"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-329"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-329"><h6 class="heading">
+</h6>
+<iframe name="webwork-76" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=76&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHJlZnJlc2hDYWNoZWRJbWFnZXMgPSAxOwogJGZbMF0gPSBGb3JtdWxhKCIyKngrNCIpOwogJGZbMV0gPSBGb3JtdWxhKCIyKngrNCIpOwogJGZbMl0gPSBGb3JtdWxhKCIoeC00KS8yIik7CiAkZlszXSA9IEZvcm11bGEoIih4LTQpLzIiKTsKICR4bWluPS0xMDsKICR4bWF4PTEwOwogJHltaW49LTEwOwogJHltYXg9MTA7CiBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAgICR5bGVmdFskaV0gPSAkZlskaV0tPmV2YWwoeD0%2BJHhtaW4pOwogICAkeXJpZ2h0WyRpXSA9ICRmWyRpXS0%2BZXZhbCh4PT4keG1heCk7CiAgICRnclskaV0gPSBpbml0X2dyYXBoKCR4bWluLCR5bWluLCR4bWF4LCR5bWF4LCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzIwLDIwXSwgc2l6ZT0%2BWzI0MCwyNDBdKTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRyZWQiLCAgMjQ1LDIzNCwyMjkpOyAKICRnclskaV0tPm5ld19jb2xvcigiZGFya3JlZCIsICAgMTU5LCA2NCwgMTYpOwogJGxpZ2h0ID0gImxpZ2h0cmVkIjsKICRkYXJrID0gImRhcmtyZWQiOwogJGdyWyRpXS0%2BbW92ZVRvKCR4bWluLCR5bGVmdFskaV0pOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWF4LCR5cmlnaHRbJGldLCdyZWQnLDMsJ2Rhc2hlZCcpOwogJHk9MC45KiR5bWF4KigtMSkqKiRpOwogYWRkX2Z1bmN0aW9ucygkZ3JbJGldLAogIiRmWyRpXSAgZm9yIHggaW4gPCR4bWluLCR4bWF4PiB1c2luZyBjb2xvcjokbGlnaHQgYW5kIHdlaWdodDoxIik7CiAkZ3JbJGldLT5maWxsUmVnaW9uKFswLCR5LCRsaWdodF0KICk7CiB9Cgpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiRnclskaV0gLT4gbGIoJ3Jlc2V0Jyk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTAuOCw1LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsLTUsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKDUsLTAuOCw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtNSwtMC44LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKIH0KICRnclswXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEEpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMV0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihCKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzJdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclszXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSIsCiAgICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgIDAKICAgICAgICAgKTsKCkJFR0lOX1BHTUwKR3JhcGggdGhlIHNvbHV0aW9ucyBvZiB0aGUgaW5lcXVhbGl0eSBbYDR4IC0gMnkgXGx0IC04XHRleHR7Ln1gXQoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qICA8PAoKU2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBncmFwaC4KCiAgICBbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjI0MClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="76"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-329"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.50</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-329"><article class="exercise exercise-like"><iframe name="webwork-77" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=77&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0%2BJycsSFRNTD0%2BJzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cbmV3Y29tbWFuZHtcZ3R9ez59XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IFBvcFVwKAogIFsiPyIsInNpbmdsZSBwb2ludCIsICJxdWFkcmFudCIsICJzZW1pY2lyY2xlIiwgImhhbGYtcGxhbmUiXSwKICA0LCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJzdHJpY3QiLCAibm9uLXN0cmljdCIsICJjb21wb3VuZCIsICJjb25kaXRpb25hbCJdLAogIDEsIAopOwokYyA9IFBvcFVwKAogIFsiPyIsInJldmVyc2UiLCAic2ltcGxpZnkiLCAiY29weSIsICJvYmV5Il0sCiAgMSwgCik7CiRkID0gUG9wVXAoCiAgWyI%2FIiwicGxhbmVzIiwgInNvbHV0aW9ucyIsICJjb25zdGFudHMiLCAic2xvcGVzIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCmEuICBUaGUgc29sdXRpb25zIG9mIGEgbGluZWFyIGluZXF1YWxpdHkgaW4gdHdvIHZhcmlhYmxlcyBjb25zaXN0IG9mIGEgYm91bmRhcnkgbGluZSBhbmQgYSBbX117JGF9ezV9LgoKCmEuICBBbiBpbmVxdWFsaXR5IHRoYXQgdXNlcyBbYFxndGBdIG9yIFtgXGx0YF0gaW5zdGVhZCBvZiBbYFxnZWBdIG9yIFtgXGxlYF0gaXMgY2FsbGVkIFtfXXskYn17NX0uCgoKYS4gIElmIHdlIG11bHRpcGx5IG9yIGRpdmlkZSBhbiBpbmVxdWFsaXR5IGJ5IGEgbmVnYXRpdmUgbnVtYmVyIHdlIG11c3QgW19deyRjfXs1fSB0aGUgZGlyZWN0aW9uIG9mIHRoZSBpbmVxdWFsaXR5IHN5bWJvbC4KCgphLiAgVGhlIHNoYWRlZCByZWdpb24gc2hvd3MgYWxsIHRoZSBbX117JGR9ezV9IG9mIHRoZSBpbmVxdWFsaXR5LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgaGFsZi1wbGFuZQoKCmEuICBzdHJpY3QKCgphLiAgcmV2ZXJzZQoKCmEuICBzb2x1dGlvbnMKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="77"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-77" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=77&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0%2BJycsSFRNTD0%2BJzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cbmV3Y29tbWFuZHtcZ3R9ez59XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IFBvcFVwKAogIFsiPyIsInNpbmdsZSBwb2ludCIsICJxdWFkcmFudCIsICJzZW1pY2lyY2xlIiwgImhhbGYtcGxhbmUiXSwKICA0LCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJzdHJpY3QiLCAibm9uLXN0cmljdCIsICJjb21wb3VuZCIsICJjb25kaXRpb25hbCJdLAogIDEsIAopOwokYyA9IFBvcFVwKAogIFsiPyIsInJldmVyc2UiLCAic2ltcGxpZnkiLCAiY29weSIsICJvYmV5Il0sCiAgMSwgCik7CiRkID0gUG9wVXAoCiAgWyI%2FIiwicGxhbmVzIiwgInNvbHV0aW9ucyIsICJjb25zdGFudHMiLCAic2xvcGVzIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCmEuICBUaGUgc29sdXRpb25zIG9mIGEgbGluZWFyIGluZXF1YWxpdHkgaW4gdHdvIHZhcmlhYmxlcyBjb25zaXN0IG9mIGEgYm91bmRhcnkgbGluZSBhbmQgYSBbX117JGF9ezV9LgoKCmEuICBBbiBpbmVxdWFsaXR5IHRoYXQgdXNlcyBbYFxndGBdIG9yIFtgXGx0YF0gaW5zdGVhZCBvZiBbYFxnZWBdIG9yIFtgXGxlYF0gaXMgY2FsbGVkIFtfXXskYn17NX0uCgoKYS4gIElmIHdlIG11bHRpcGx5IG9yIGRpdmlkZSBhbiBpbmVxdWFsaXR5IGJ5IGEgbmVnYXRpdmUgbnVtYmVyIHdlIG11c3QgW19deyRjfXs1fSB0aGUgZGlyZWN0aW9uIG9mIHRoZSBpbmVxdWFsaXR5IHN5bWJvbC4KCgphLiAgVGhlIHNoYWRlZCByZWdpb24gc2hvd3MgYWxsIHRoZSBbX117JGR9ezV9IG9mIHRoZSBpbmVxdWFsaXR5LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgaGFsZi1wbGFuZQoKCmEuICBzdHJpY3QKCgphLiAgcmV2ZXJzZQoKCmEuICBzb2x1dGlvbnMKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="77"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using a Test Point</span>
 </h3>
 <p id="p-2456">A second method for graphing inequalities does not require us to solve for \(y\text{.}\) Once we have graphed the boundary line, we can decide which half-plane to shade by using a <dfn class="terminology">test point</dfn>. The test point can be any point that is not on the boundary line itself.</p>
@@ -358,7 +365,7 @@ y \alert{\lt} {-3x}+4
 </h6>
 <p id="p-2457">Graph the solutions of the inequality \(~~3x - 2y\lt 6\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like">
 <p id="p-2458">First, we graph the line \(3x - 2y = 6\text{,}\) as shown below. We will use the intercept method. The intercepts are \((2, 0)\) and \((0, -3)\text{,}\) so we sketch the boundary line through those points.</p>
 <p id="p-2459">Next, we choose a test point. Because \((0, 0)\) does not lie on the line, we choose it as our test point. We substitute the coordinates of the test point into the inequality to obtain</p>
 <div class="displaymath">
@@ -367,8 +374,8 @@ y \alert{\lt} {-3x}+4
 \end{equation*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:65%;justify-content:center;"><p id="p-2460">Because this is a true statement, \((0, 0)\) is a solution of the inequality. Since all the solutions lie on the same side of the boundary line, we shade the half-plane that contains the test point. In this example, the boundary line is a dashed line because the original inequality was strict.</p></div>
-<div class="sbspanel" style="width:33%;justify-content:center;"><img src="images/fig-linear-inequality3.svg" role="img" style="width: 100%; height: auto;" alt="strict linear inequality in two variables"></div>
+<div class="sbspanel middle" style="width:65%;"><p id="p-2460">Because this is a true statement, \((0, 0)\) is a solution of the inequality. Since all the solutions lie on the same side of the boundary line, we shade the half-plane that contains the test point. In this example, the boundary line is a dashed line because the original inequality was strict.</p></div>
+<div class="sbspanel middle" style="width:33%;"><img src="external/images/fig-linear-inequality3.svg" role="img" class="contained" alt="strict linear inequality in two variables"></div>
 </div></div>
 </div></div>
 </div></article><p id="p-2461">Here is a summary of our test point method for graphing inequalities.</p>
@@ -382,7 +389,7 @@ y \alert{\lt} {-3x}+4
 <li id="li-1367"><p id="p-2466">If the resulting statement is true, shade the half-plane that includes the test point.</p></li>
 <li id="li-1368"><p id="p-2467">If the resulting statement is false, shade the half-plane that does not include the test point.</p></li>
 </ol>
-<p data-braille="continuation">If the inequality is strict, make the boundary line a dashed line.</p>
+<p class="continuation">If the inequality is strict, make the boundary line a dashed line.</p>
 </li>
 </ol></article><p id="p-2468">We can choose any point for the test point as long as it does not lie on the boundary line. We chose \((0, 0)\) in <a class="xref" data-knowl="./knowl/example-linear-inequality-test-point.html" title="Example 2.51">Example 2.51</a> because the coordinates are easy to substitute into the inequality. If the test point is a solution, we shade the half-plane including that point. If the test point is not a solution, we shade the other half-plane. For example, suppose we had chosen \((5, 0)\) as the test point in <a class="xref" data-knowl="./knowl/example-linear-inequality-test-point.html" title="Example 2.51">Example 2.51</a>. When we substitute its coordinates into the inequality, we find</p>
 <div class="displaymath">
@@ -390,11 +397,11 @@ y \alert{\lt} {-3x}+4
 3(\alert{5}) - 2(\blert{0}) \lt 6
 \end{gather*}
 </div>
-<p data-braille="continuation">which is a false statement. Thus, \((5, 0)\) is not a solution to the inequality, so the solutions must lie on the other side of the boundary line. Note that using \((5, 0)\) as the test point gives us the same solutions we found in <a class="xref" data-knowl="./knowl/example-linear-inequality-test-point.html" title="Example 2.51">Example 2.51</a>.</p>
-<article class="exercise exercise-like" id="exercise-330"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-330"><h6 class="heading">
+<p class="continuation">which is a false statement. Thus, \((5, 0)\) is not a solution to the inequality, so the solutions must lie on the other side of the boundary line. Note that using \((5, 0)\) as the test point gives us the same solutions we found in <a class="xref" data-knowl="./knowl/example-linear-inequality-test-point.html" title="Example 2.51">Example 2.51</a>.</p>
+<article class="exercise exercise-like" id="exercise-330"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.52</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-330"><article class="exercise exercise-like"><iframe name="webwork-78" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=78&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlcz0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0%2BJycsSFRNTD0%2BJzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXG5ld2NvbW1hbmR7XGd0fXs%2BfVwpPC9kaXY%2BJykpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKICRmWzBdID0gRm9ybXVsYSgiLTMvMip4Iik7CiAkZlsxXSA9IEZvcm11bGEoIi0zLzIqeCIpOwogJGZbMl0gPSBGb3JtdWxhKCItMi8zKngiKTsKICRmWzNdID0gRm9ybXVsYSgiLTIvMyp4Iik7CiAkeG1pbj0tMTA7CiAkeG1heD0xMDsKICR5bWluPS0xMDsKICR5bWF4PTEwOwogZm9yZWFjaCBteSAkaSAoMC4uMykgewogICAkeWxlZnRbJGldID0gJGZbJGldLT5ldmFsKHg9PiR4bWluKTsKICAgJHlyaWdodFskaV0gPSAkZlskaV0tPmV2YWwoeD0%2BJHhtYXgpOwogICAkZ3JbJGldID0gaW5pdF9ncmFwaCgkeG1pbiwkeW1pbiwkeG1heCwkeW1heCwgYXhlcz0%2BWzAsMF0sIGdyaWQ9PlsyMCwyMF0sIHNpemU9PlsyNDAsMjQwXSk7CiAkZ3JbJGldLT5uZXdfY29sb3IoImxpZ2h0cmVkIiwgIDI0NSwyMzQsMjI5KTsgCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtyZWQiLCAgIDE1OSwgNjQsIDE2KTsKICRsaWdodCA9ICJsaWdodHJlZCI7CiAkZGFyayA9ICJkYXJrcmVkIjsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeWxlZnRbJGldKTsKICRnclskaV0tPmxpbmVUbygkeG1heCwkeXJpZ2h0WyRpXSwncmVkJywzLCdkYXNoZWQnKTsKICR5PTAuOSokeW1heCooLTEpKiokaTsKIGFkZF9mdW5jdGlvbnMoJGdyWyRpXSwKICIkZlskaV0gIGZvciB4IGluIDwkeG1pbiwkeG1heD4gdXNpbmcgY29sb3I6JGxpZ2h0IGFuZCB3ZWlnaHQ6MSIpOwogJGdyWyRpXS0%2BZmlsbFJlZ2lvbihbMCwkeSwkbGlnaHRdCiApOwogfQoKZm9yZWFjaCBteSAkaSAoMC4uMykgewokZ3JbJGldIC0%2BIGxiKCdyZXNldCcpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsNSw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LC01LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICg1LC0wLjgsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTUsLTAuOCwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiB9CiAkZ3JbMF0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihEKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzFdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbM10gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihBKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJG1jID0gUmFkaW9CdXR0b25zKAogICAgICAgICAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiLAogICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgICAzCiAgICAgICAgICk7CgogJHdoZXJlID0gIFBvcFVwKAogWyI%2FIiwiQWJvdmUgdGhlIGxpbmUiLCJCZWxvdyB0aGUgbGluZSJdLAogMSwgCiApOwogJHdoaWNoID0gIFBvcFVwKAogWyI%2FIiwiRGFzaGVkIiwiU29saWQiXSwKIDEsIAogKTsKCkJFR0lOX1BHTUwKR3JhcGggdGhlIHNvbHV0aW9ucyBvZiB0aGUgaW5lcXVhbGl0eSBbYCB5IFxndCBcZGZyYWN7LTN9ezJ9eGBdCjEuICBHcmFwaCB0aGUgbGluZSBbYHkgPSBcZGZyYWN7LTN9ezJ9eFx0ZXh0ey59YF0gKFVzZSB0aGUgc2xvcGUtaW50ZXJjZXB0IG1ldGhvZC4pCgoKMS4gIENob29zZSBhIHRlc3QgcG9pbnQuIChEbyBub3QgY2hvb3NlIFtgKDAsIDApXHRleHR7IX1gXSkKCgoxLiAgRGVjaWRlIHdoaWNoIHNpZGUgb2YgdGhlIGxpbmUgdG8gc2hhZGUuIFtfXXskd2hlcmV9ezV9CgoKMS4gIFNob3VsZCB0aGUgYm91bmRhcnkgbGluZSBiZSBkYXNoZWQgb3Igc29saWQ%2FIFtfXXskd2hpY2h9ezV9CgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qICA8PAoKU2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBncmFwaC4KCiAgICBbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjI0MClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="78"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="warning remark-like" id="warning-3"><h6 class="heading">
+</h6>
+<iframe name="webwork-78" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=78&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlcz0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0%2BJycsSFRNTD0%2BJzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXG5ld2NvbW1hbmR7XGd0fXs%2BfVwpPC9kaXY%2BJykpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKICRmWzBdID0gRm9ybXVsYSgiLTMvMip4Iik7CiAkZlsxXSA9IEZvcm11bGEoIi0zLzIqeCIpOwogJGZbMl0gPSBGb3JtdWxhKCItMi8zKngiKTsKICRmWzNdID0gRm9ybXVsYSgiLTIvMyp4Iik7CiAkeG1pbj0tMTA7CiAkeG1heD0xMDsKICR5bWluPS0xMDsKICR5bWF4PTEwOwogZm9yZWFjaCBteSAkaSAoMC4uMykgewogICAkeWxlZnRbJGldID0gJGZbJGldLT5ldmFsKHg9PiR4bWluKTsKICAgJHlyaWdodFskaV0gPSAkZlskaV0tPmV2YWwoeD0%2BJHhtYXgpOwogICAkZ3JbJGldID0gaW5pdF9ncmFwaCgkeG1pbiwkeW1pbiwkeG1heCwkeW1heCwgYXhlcz0%2BWzAsMF0sIGdyaWQ9PlsyMCwyMF0sIHNpemU9PlsyNDAsMjQwXSk7CiAkZ3JbJGldLT5uZXdfY29sb3IoImxpZ2h0cmVkIiwgIDI0NSwyMzQsMjI5KTsgCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtyZWQiLCAgIDE1OSwgNjQsIDE2KTsKICRsaWdodCA9ICJsaWdodHJlZCI7CiAkZGFyayA9ICJkYXJrcmVkIjsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeWxlZnRbJGldKTsKICRnclskaV0tPmxpbmVUbygkeG1heCwkeXJpZ2h0WyRpXSwncmVkJywzLCdkYXNoZWQnKTsKICR5PTAuOSokeW1heCooLTEpKiokaTsKIGFkZF9mdW5jdGlvbnMoJGdyWyRpXSwKICIkZlskaV0gIGZvciB4IGluIDwkeG1pbiwkeG1heD4gdXNpbmcgY29sb3I6JGxpZ2h0IGFuZCB3ZWlnaHQ6MSIpOwogJGdyWyRpXS0%2BZmlsbFJlZ2lvbihbMCwkeSwkbGlnaHRdCiApOwogfQoKZm9yZWFjaCBteSAkaSAoMC4uMykgewokZ3JbJGldIC0%2BIGxiKCdyZXNldCcpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsNSw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LC01LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICg1LC0wLjgsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTUsLTAuOCwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiB9CiAkZ3JbMF0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihEKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzFdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbM10gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihBKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJG1jID0gUmFkaW9CdXR0b25zKAogICAgICAgICAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiLAogICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgICAzCiAgICAgICAgICk7CgogJHdoZXJlID0gIFBvcFVwKAogWyI%2FIiwiQWJvdmUgdGhlIGxpbmUiLCJCZWxvdyB0aGUgbGluZSJdLAogMSwgCiApOwogJHdoaWNoID0gIFBvcFVwKAogWyI%2FIiwiRGFzaGVkIiwiU29saWQiXSwKIDEsIAogKTsKCkJFR0lOX1BHTUwKR3JhcGggdGhlIHNvbHV0aW9ucyBvZiB0aGUgaW5lcXVhbGl0eSBbYCB5IFxndCBcZGZyYWN7LTN9ezJ9eGBdCjEuICBHcmFwaCB0aGUgbGluZSBbYHkgPSBcZGZyYWN7LTN9ezJ9eFx0ZXh0ey59YF0gKFVzZSB0aGUgc2xvcGUtaW50ZXJjZXB0IG1ldGhvZC4pCgoKMS4gIENob29zZSBhIHRlc3QgcG9pbnQuIChEbyBub3QgY2hvb3NlIFtgKDAsIDApXHRleHR7IX1gXSkKCgoxLiAgRGVjaWRlIHdoaWNoIHNpZGUgb2YgdGhlIGxpbmUgdG8gc2hhZGUuIFtfXXskd2hlcmV9ezV9CgoKMS4gIFNob3VsZCB0aGUgYm91bmRhcnkgbGluZSBiZSBkYXNoZWQgb3Igc29saWQ%2FIFtfXXskd2hpY2h9ezV9CgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qICA8PAoKU2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBncmFwaC4KCiAgICBbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjI0MClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="78"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="warning remark-like" id="warning-3"><h6 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">2.53</span><span class="period">.</span>
 </h6>
 <p id="p-2490">We cannot choose a test point that lies on the boundary line. In Practice 3 above, we cannot use \((0, 0)\) as a test point, because it lies on the line \(y =\dfrac{-3}{2}x\text{.}\) In this case, we should choose some other point, such as \((0, 1)\) or \((1, 2)\text{.}\)</p></article><p id="p-2491">Recall that the equation of a vertical line  has the form</p>
@@ -403,25 +410,25 @@ y \alert{\lt} {-3x}+4
 x=k
 \end{gather*}
 </div>
-<p data-braille="continuation">where \(k\) is a constant, and a horizontal line  has an equation of the form</p>
+<p class="continuation">where \(k\) is a constant, and a horizontal line  has an equation of the form</p>
 <div class="displaymath">
 \begin{gather*}
 y=k
 \end{gather*}
 </div>
-<p data-braille="continuation">Similarly, the inequality \(x\ge k\) may represent the inequality in two variables</p>
+<p class="continuation">Similarly, the inequality \(x\ge k\) may represent the inequality in two variables</p>
 <div class="displaymath">
 \begin{gather*}
 x+0y\ge k
 \end{gather*}
 </div>
-<p data-braille="continuation">Its graph is then a region in the plane.</p>
+<p class="continuation">Its graph is then a region in the plane.</p>
 <article class="example example-like" id="example-46"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.54</span><span class="period">.</span>
 </h6>
 <p id="p-2492">Graph \(~~x\ge 2~~\) in the plane.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">
 <p id="p-2493">First, we graph the equation \(x = 2\text{;}\) its graph is a vertical line. Because the origin does not lie on this line, we can use it as a test point. Substitute \(0\) for \(x\) (there is no \(y\)) into the inequality to obtain</p>
 <div class="displaymath">
 \begin{gather*}
@@ -429,17 +436,18 @@ x+0y\ge k
 \end{gather*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:70%;justify-content:center;"><p id="p-2494">Since this is a false statement, we shade the half-plane that does not contain the origin. We see in the figure below that the graph of the inequality contains all points whose \(x\)-coordinates are greater than or equal to \(2\text{.}\)</p></div>
-<div class="sbspanel" style="width:26%;justify-content:center;"><img src="images/fig-planar-graph-x-greater-or-equal-2.svg" role="img" style="width: 100%; height: auto;" alt="graph of x greater or equal to 2 in the plane"></div>
+<div class="sbspanel middle" style="width:70%;"><p id="p-2494">Since this is a false statement, we shade the half-plane that does not contain the origin. We see in the figure below that the graph of the inequality contains all points whose \(x\)-coordinates are greater than or equal to \(2\text{.}\)</p></div>
+<div class="sbspanel middle" style="width:26%;"><img src="external/images/fig-planar-graph-x-greater-or-equal-2.svg" role="img" class="contained" alt="graph of x greater or equal to 2 in the plane"></div>
 </div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-331"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-331"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-331"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.55</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-331"><article class="exercise exercise-like"><iframe name="webwork-79" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=79&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHJlZnJlc2hDYWNoZWRJbWFnZXMgPSAxOwogJHkxID0gNDsKICR5MiA9IC0xOwogJHhtaW49LTEwOwogJHhtYXg9MTA7CiAkeW1pbj0tMTA7CiAkeW1heD0xMDsKIGZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKICAgICRnclskaV0gPSBpbml0X2dyYXBoKCR4bWluLCR5bWluLCR4bWF4LCR5bWF4LCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzIwLDIwXSwgc2l6ZT0%2BWzI0MCwyNDBdKTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRyZWQiLCAgMjQ1LDIzNCwyMjkpOyAKICRnclskaV0tPm5ld19jb2xvcigiZGFya3JlZCIsICAgMTU5LCA2NCwgMTYpOwogJGxpZ2h0ID0gImxpZ2h0cmVkIjsKICRkYXJrID0gImRhcmtyZWQiOwogJGdyWyRpXS0%2BbW92ZVRvKCR4bWluLCR5MSk7CiAkZ3JbJGldLT5saW5lVG8oJHhtYXgsJHkxLHJlZCwuMSk7CiAkZ3JbJGldLT5tb3ZlVG8oJHhtaW4sJHkyKTsKICRnclskaV0tPmxpbmVUbygkeG1heCwkeTIscmVkLC4xKTsKIH0KIGZvcmVhY2ggbXkgJGkgKDAuLjEpIHsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeTEpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWF4LCR5MSwncmVkJywyKTsKICRnclskaV0tPm1vdmVUbygkeG1heCwkeTIpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWluLCR5MiwncmVkJywyLCdkYXNoZWQnKTsKIH0KIGZvcmVhY2ggbXkgJGkgKDIuLjMpIHsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeTIpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWF4LCR5MiwncmVkJywyKTsKICRnclskaV0tPm1vdmVUbygkeG1heCwkeTEpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWluLCR5MSwncmVkJywyLCdkYXNoZWQnKTsKIH0KCiBmb3JlYWNoIG15ICRpICgwLDIpIHsKICR5PTAuOSokeW1heDsKICAgICAgJGdyWyRpXS0%2BZmlsbFJlZ2lvbihbMCwkeSwkbGlnaHRdKTsKICAgICAgJGdyWyRpXS0%2BZmlsbFJlZ2lvbihbMCwuOSokeW1pbiwkbGlnaHRdKTsKICAgICAgfQogICAgICAKIGZvcmVhY2ggbXkgJGkgKDEsMykgewogICAgICAkZ3JbJGldLT5maWxsUmVnaW9uKFswLDAsJGxpZ2h0XSk7CiAgICAgIH0KCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogfQogJGdyWzBdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsxXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMl0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihDKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzNdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKCiAkbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSIsCiAgICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgIDEKICAgICAgICAgKTsKCkJFR0lOX1BHTUwKR3JhcGggIFtgLTFcbHQgeSBcbGUgNCBgXSBpbiB0aGUgcGxhbmUuCgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogIDw8CgpTZWxlY3QgdGhlIGFwcHJvcHJpYXRlIGdyYXBoLgoKICAgIFtfXXskbWN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjQwKUBdKiAgPDwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="79"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-79" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=79&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHJlZnJlc2hDYWNoZWRJbWFnZXMgPSAxOwogJHkxID0gNDsKICR5MiA9IC0xOwogJHhtaW49LTEwOwogJHhtYXg9MTA7CiAkeW1pbj0tMTA7CiAkeW1heD0xMDsKIGZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKICAgICRnclskaV0gPSBpbml0X2dyYXBoKCR4bWluLCR5bWluLCR4bWF4LCR5bWF4LCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzIwLDIwXSwgc2l6ZT0%2BWzI0MCwyNDBdKTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRyZWQiLCAgMjQ1LDIzNCwyMjkpOyAKICRnclskaV0tPm5ld19jb2xvcigiZGFya3JlZCIsICAgMTU5LCA2NCwgMTYpOwogJGxpZ2h0ID0gImxpZ2h0cmVkIjsKICRkYXJrID0gImRhcmtyZWQiOwogJGdyWyRpXS0%2BbW92ZVRvKCR4bWluLCR5MSk7CiAkZ3JbJGldLT5saW5lVG8oJHhtYXgsJHkxLHJlZCwuMSk7CiAkZ3JbJGldLT5tb3ZlVG8oJHhtaW4sJHkyKTsKICRnclskaV0tPmxpbmVUbygkeG1heCwkeTIscmVkLC4xKTsKIH0KIGZvcmVhY2ggbXkgJGkgKDAuLjEpIHsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeTEpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWF4LCR5MSwncmVkJywyKTsKICRnclskaV0tPm1vdmVUbygkeG1heCwkeTIpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWluLCR5MiwncmVkJywyLCdkYXNoZWQnKTsKIH0KIGZvcmVhY2ggbXkgJGkgKDIuLjMpIHsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeTIpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWF4LCR5MiwncmVkJywyKTsKICRnclskaV0tPm1vdmVUbygkeG1heCwkeTEpOwogJGdyWyRpXS0%2BbGluZVRvKCR4bWluLCR5MSwncmVkJywyLCdkYXNoZWQnKTsKIH0KCiBmb3JlYWNoIG15ICRpICgwLDIpIHsKICR5PTAuOSokeW1heDsKICAgICAgJGdyWyRpXS0%2BZmlsbFJlZ2lvbihbMCwkeSwkbGlnaHRdKTsKICAgICAgJGdyWyRpXS0%2BZmlsbFJlZ2lvbihbMCwuOSokeW1pbiwkbGlnaHRdKTsKICAgICAgfQogICAgICAKIGZvcmVhY2ggbXkgJGkgKDEsMykgewogICAgICAkZ3JbJGldLT5maWxsUmVnaW9uKFswLDAsJGxpZ2h0XSk7CiAgICAgIH0KCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogfQogJGdyWzBdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsxXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMl0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihDKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzNdIC0%2BIGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKCiAkbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSIsCiAgICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgIDEKICAgICAgICAgKTsKCkJFR0lOX1BHTUwKR3JhcGggIFtgLTFcbHQgeSBcbGUgNCBgXSBpbiB0aGUgcGxhbmUuCgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogIDw8CgpTZWxlY3QgdGhlIGFwcHJvcHJpYXRlIGdyYXBoLgoKICAgIFtfXXskbWN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjQwKUBdKiAgPDwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="79"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Systems of Inequalities</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:60%;justify-content:center;">
+<div class="sbspanel middle" style="width:60%;">
 <p id="p-2504">Some applications are best described by a system of two or more inequalities. The solutions to a system of inequalities include all points that are solutions to each inequality in the system. The graph of the system is the intersection of the shaded regions for each inequality in the system. For example, the figure at right shows the solutions of the system</p>
 <div class="displaymath">
 \begin{gather*}
@@ -447,28 +455,26 @@ y \gt x \qquad\text{ and }\qquad y \gt 2
 \end{gather*}
 </div>
 </div>
-<div class="sbspanel" style="width:30%;justify-content:center;"><img src="images/fig-system-of-2-inequalities.svg" role="img" style="width: 100%; height: auto;" alt="system of two inequalities"></div>
+<div class="sbspanel middle" style="width:30%;"><img src="generated/latex-image/fig-system-of-2-inequalities.svg" role="img" class="contained" alt="system of two inequalities"></div>
 </div></div>
 <article class="example example-like" id="example-47"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.56</span><span class="period">.</span>
 </h6>
 <p id="p-2505">Laura is a finicky eater, and she dislikes most foods that are high in calcium. Her morning cereal satisfies some of her calcium requirements, but she needs an additional 500 milligrams of calcium, which she will get from a combination of broccoli, at 160 milligrams per serving, and zucchini, at 30 milligrams per serving. Draw a graph representing the possible combinations of broccoli and zucchini that fulfill Laura’s calcium requirements.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like"><ul id="p-2506" class="disc">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like"><ul id="p-2506" class="disc">
 <li id="li-1389">
-<h6 class="heading"><span class="title">Step 1:.</span></h6>
-<p id="p-2507">Number of servings of broccoli: \(\quad x\)</p>
+<span class="heading"><span class="title">Step 1:.</span></span><p id="p-2507">Number of servings of broccoli: \(\quad x\)</p>
 <p id="p-2508">Number of servings of zucchini: \(\quad y\)</p>
 </li>
 <li id="li-1390">
-<h6 class="heading"><span class="title">Step 2:.</span></h6>
-<p id="p-2509">To get enough calcium, Laura must choose \(x\) and \(y\) so that</p>
+<span class="heading"><span class="title">Step 2:.</span></span><p id="p-2509">To get enough calcium, Laura must choose \(x\) and \(y\) so that</p>
 <div class="displaymath">
 \begin{equation*}
 160x + 30y \ge 500
 \end{equation*}
 </div>
-<p data-braille="continuation">It makes no sense to consider negative values of \(x\) or of \(y\text{,}\) since Laura cannot eat a negative number of servings. Thus, we have two more inequalities to satisfy:</p>
+<p class="continuation">It makes no sense to consider negative values of \(x\) or of \(y\text{,}\) since Laura cannot eat a negative number of servings. Thus, we have two more inequalities to satisfy:</p>
 <div class="displaymath">
 \begin{equation*}
 x \ge 0 ~~~\text{ and }~~~y \ge 0
@@ -476,20 +482,19 @@ x \ge 0 ~~~\text{ and }~~~y \ge 0
 </div>
 </li>
 <li id="li-1391">
-<h6 class="heading"><span class="title">Step 3:.</span></h6> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:62%;justify-content:center;"><p id="p-2510">We graph all three inequalities on the same axes. The inequalities \(x\ge 0\) and \(y \ge 0\) restrict the solutions to lie in the first quadrant. The solutions common to all three inequalities are shown at right.</p></div>
-<div class="sbspanel" style="width:30%;justify-content:center;"><img src="images/fig-system-of-inequalities2.svg" role="img" style="width: 100%; height: auto;" alt="system of three inequalities"></div>
+<span class="heading"><span class="title">Step 3:.</span></span> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:62%;"><p id="p-2510">We graph all three inequalities on the same axes. The inequalities \(x\ge 0\) and \(y \ge 0\) restrict the solutions to lie in the first quadrant. The solutions common to all three inequalities are shown at right.</p></div>
+<div class="sbspanel middle" style="width:30%;"><img src="external/images/fig-system-of-inequalities2.svg" role="img" class="contained" alt="system of three inequalities"></div>
 </div></div>
 </li>
 <li id="li-1392">
-<h6 class="heading"><span class="title">Step 4:.</span></h6>
-<p id="p-2511">Laura can choose any combination of broccoli and zucchini represented by points in the shaded region. For example, the point \((3, 1)\) is a solution to the system of inequalities, so Laura could choose to eat \(3\) servings of broccoli and \(1\) serving of zucchini.</p>
+<span class="heading"><span class="title">Step 4:.</span></span><p id="p-2511">Laura can choose any combination of broccoli and zucchini represented by points in the shaded region. For example, the point \((3, 1)\) is a solution to the system of inequalities, so Laura could choose to eat \(3\) servings of broccoli and \(1\) serving of zucchini.</p>
 </li>
 </ul></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-332"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-332"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-332"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.57</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-332"><article class="exercise exercise-like"><iframe name="webwork-80" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=80&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xndH17Pn1cbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BJykpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKZm9yZWFjaCBteSAkaSAoMC4uMykgewogJGdyWyRpXSA9IGluaXRfZ3JhcGgoLTQsLTQsOSw5LCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzEzLDEzXSwgc2l6ZT0%2BWzI0MCwyNDBdKTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRibHVlIiwgMjE0LDIzMCwyNDQpOyAjIFJHQgogJGdyWyRpXS0%2BbmV3X2NvbG9yKCJkYXJrYmx1ZSIsICAxMDAsMTAwLDI1NSk7CiAkZ3JbJGldLT5uZXdfY29sb3IoImxpZ2h0cmVkIiwgIDI0NSwyMzQsMjI5KTsgIyBsaWdodCByZWQtcHVycGxlCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtyZWQiLCAgIDE1OSwgNjQsIDE2KTsgIyByZWQtYnJvd24KICRnclskaV0tPm5ld19jb2xvcigibGlnaHRncmVlbiIsMTU2LDIxNSwxNTEpOyAKICRnclskaV0tPm5ld19jb2xvcigiZGFya2dyZWVuIiwgICAwLCA4NiwgMzQpOwogJGxpZ2h0ID0gImxpZ2h0Z3JlZW4iOwogJGRhcmsgPSAiZGFya2dyZWVuIjsKICRwaW5rID0gImxpZ2h0cmVkIjsKCiAkZ3JbJGldLT5tb3ZlVG8oLTQsLTIpOwogJGdyWyRpXS0%2BYXJyb3dUbyg5LDIwLzMsJ3JlZCcsMik7CiAkZ3JbJGldLT5hcnJvd1RvKC00LC0yLCdyZWQnLDIsKTsKCiAkZ3JbJGldLT5tb3ZlVG8oOSw4KTsKICRnclskaV0tPmFycm93VG8oLTMsLTQsJ3doaXRlJywxKTsKICRnclskaV0tPmFycm93VG8oOSw4LCdibHVlJywyLCdkYXNoZWQnKTsKICRnclskaV0tPmFycm93VG8oLTMsLTQsJ2JsdWUnLDIsJ2Rhc2hlZCcpOwogJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogfQoKICRnclswXSAtPiBsYihuZXcgTGFiZWwgKC0zLiw4LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclswXS0%2BZmlsbFJlZ2lvbihbLTEuMSw1LjEsJGxpZ2h0XSk7CiAkZ3JbMV0gLT4gbGIobmV3IExhYmVsICgtMy4sOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMV0tPmZpbGxSZWdpb24oWy0zLjEsLTMuMSwkbGlnaHRdKTsKICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC0zLiw4LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsyXS0%2BZmlsbFJlZ2lvbihbMy4xLC0zLjEsJGxpZ2h0XSk7CiAkZ3JbM10gLT4gbGIobmV3IExhYmVsICgtMy4sOCwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbM10tPmZpbGxSZWdpb24oWzguMSw2LjIsJGxpZ2h0XSk7CgogJG1jID0gUmFkaW9CdXR0b25zKAogICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIl0sCiAgICAgMQogKTsKCkJFR0lOX1BHTUwKVXNlIHRoZSBmb2xsb3dpbmcgc3RlcHMgdG8gZ3JhcGggdGhlIHNvbHV0aW9ucyBvZiB0aGUgc3lzdGVtCgpbYGBgXGJlZ2lue2FsaWduZWR9CjN5LTJ4IFxhbXBcbGUgMlxcCnkgXGFtcFxndCB4LTEKXGVuZHthbGlnbmVkfQpgYGBdCgoKMS4gIEdyYXBoIHRoZSBib3VuZGFyeSBsaW5lIFtgM3ktMnggPSAyXHRleHR7Ln1gXQoKCjEuICBMaWdodGx5IHNoYWRlIHRoZSBzb2x1dGlvbnMgb2YgdGhlIGluZXF1YWxpdHkgW2AzeS0yeCBcbGUgMlx0ZXh0ey59YF0KCgoxLiAgR3JhcGggdGhlIGJvdW5kYXJ5IGxpbmUgW2B5PXgtMVx0ZXh0ey59YF0KCgoxLiAgTGlnaHRseSBzaGFkZSB0aGUgc29sdXRpb25zIG9mIFtgeSBcZ3QgeC0xXHRleHR7Ln1gXQoKCjEuICBTaGFkZSB0aGUgaW50ZXJzZWN0aW9uIG9mIHRoZSB0d28gc29sdXRpb25zIHNldHMuCgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qICA8PAoKV2hpY2ggb2YgdGhlIGFib3ZlIGlzIHRoZSBiZXN0IG1hdGNoIGZvciB0aGUgc29sdXRpb24gdG8gdGhlIHN5c3RlbSBvZiBpbmVxdWFsaXRpZXM%2FCgogICAgW19deyRtY317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yNDApQF0qICA8PAoKQSBncmFwaCBpcyBhbHNvIHNob3duIGJlbG93LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="80"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-12"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel" style="width:37.8947368421053%;justify-content:flex-start;"><img src="images/fig-ex-2-5-5ans.svg" role="img" style="width: 100%; height: auto;" alt="system of inequalities"></div></div></div></div></article></div>
-<p id="p-2528">To describe the solutions of a system of inequalities, it is useful to locate the <dfn class="terminology">vertices</dfn>, or corner points, of the boundary.</p>
+</h6>
+<iframe name="webwork-80" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=80&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xndH17Pn1cbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BJykpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKZm9yZWFjaCBteSAkaSAoMC4uMykgewogJGdyWyRpXSA9IGluaXRfZ3JhcGgoLTQsLTQsOSw5LCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzEzLDEzXSwgc2l6ZT0%2BWzI0MCwyNDBdKTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRibHVlIiwgMjE0LDIzMCwyNDQpOyAjIFJHQgogJGdyWyRpXS0%2BbmV3X2NvbG9yKCJkYXJrYmx1ZSIsICAxMDAsMTAwLDI1NSk7CiAkZ3JbJGldLT5uZXdfY29sb3IoImxpZ2h0cmVkIiwgIDI0NSwyMzQsMjI5KTsgIyBsaWdodCByZWQtcHVycGxlCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtyZWQiLCAgIDE1OSwgNjQsIDE2KTsgIyByZWQtYnJvd24KICRnclskaV0tPm5ld19jb2xvcigibGlnaHRncmVlbiIsMTU2LDIxNSwxNTEpOyAKICRnclskaV0tPm5ld19jb2xvcigiZGFya2dyZWVuIiwgICAwLCA4NiwgMzQpOwogJGxpZ2h0ID0gImxpZ2h0Z3JlZW4iOwogJGRhcmsgPSAiZGFya2dyZWVuIjsKICRwaW5rID0gImxpZ2h0cmVkIjsKCiAkZ3JbJGldLT5tb3ZlVG8oLTQsLTIpOwogJGdyWyRpXS0%2BYXJyb3dUbyg5LDIwLzMsJ3JlZCcsMik7CiAkZ3JbJGldLT5hcnJvd1RvKC00LC0yLCdyZWQnLDIsKTsKCiAkZ3JbJGldLT5tb3ZlVG8oOSw4KTsKICRnclskaV0tPmFycm93VG8oLTMsLTQsJ3doaXRlJywxKTsKICRnclskaV0tPmFycm93VG8oOSw4LCdibHVlJywyLCdkYXNoZWQnKTsKICRnclskaV0tPmFycm93VG8oLTMsLTQsJ2JsdWUnLDIsJ2Rhc2hlZCcpOwogJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0%2BIGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogfQoKICRnclswXSAtPiBsYihuZXcgTGFiZWwgKC0zLiw4LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclswXS0%2BZmlsbFJlZ2lvbihbLTEuMSw1LjEsJGxpZ2h0XSk7CiAkZ3JbMV0gLT4gbGIobmV3IExhYmVsICgtMy4sOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMV0tPmZpbGxSZWdpb24oWy0zLjEsLTMuMSwkbGlnaHRdKTsKICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC0zLiw4LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsyXS0%2BZmlsbFJlZ2lvbihbMy4xLC0zLjEsJGxpZ2h0XSk7CiAkZ3JbM10gLT4gbGIobmV3IExhYmVsICgtMy4sOCwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbM10tPmZpbGxSZWdpb24oWzguMSw2LjIsJGxpZ2h0XSk7CgogJG1jID0gUmFkaW9CdXR0b25zKAogICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIl0sCiAgICAgMQogKTsKCkJFR0lOX1BHTUwKVXNlIHRoZSBmb2xsb3dpbmcgc3RlcHMgdG8gZ3JhcGggdGhlIHNvbHV0aW9ucyBvZiB0aGUgc3lzdGVtCgpbYGBgXGJlZ2lue2FsaWduZWR9CjN5LTJ4IFxhbXBcbGUgMlxcCnkgXGFtcFxndCB4LTEKXGVuZHthbGlnbmVkfQpgYGBdCgoKMS4gIEdyYXBoIHRoZSBib3VuZGFyeSBsaW5lIFtgM3ktMnggPSAyXHRleHR7Ln1gXQoKCjEuICBMaWdodGx5IHNoYWRlIHRoZSBzb2x1dGlvbnMgb2YgdGhlIGluZXF1YWxpdHkgW2AzeS0yeCBcbGUgMlx0ZXh0ey59YF0KCgoxLiAgR3JhcGggdGhlIGJvdW5kYXJ5IGxpbmUgW2B5PXgtMVx0ZXh0ey59YF0KCgoxLiAgTGlnaHRseSBzaGFkZSB0aGUgc29sdXRpb25zIG9mIFtgeSBcZ3QgeC0xXHRleHR7Ln1gXQoKCjEuICBTaGFkZSB0aGUgaW50ZXJzZWN0aW9uIG9mIHRoZSB0d28gc29sdXRpb25zIHNldHMuCgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0%2BMjEwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qICA8PAoKV2hpY2ggb2YgdGhlIGFib3ZlIGlzIHRoZSBiZXN0IG1hdGNoIGZvciB0aGUgc29sdXRpb24gdG8gdGhlIHN5c3RlbSBvZiBpbmVxdWFsaXRpZXM%2FCgogICAgW19deyRtY317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yNDApQF0qICA8PAoKQSBncmFwaCBpcyBhbHNvIHNob3duIGJlbG93LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="80"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-12"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:37.8947368421053%;"><img src="generated/latex-image/fig-ex-2-5-5ans.svg" role="img" class="contained" alt="system of inequalities"></div></div></div></div></article><p id="p-2528">To describe the solutions of a system of inequalities, it is useful to locate the <dfn class="terminology">vertices</dfn>, or corner points, of the boundary.</p>
 <article class="example example-like" id="example-48"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.58</span><span class="period">.</span>
 </h6>
@@ -502,51 +507,51 @@ x \ge 0, ~~~~~y \amp\le 0
 \end{align*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:57%;justify-content:center;"><p id="p-2530">The last two inequalities, \(x\ge 0\) and \(y\ge 0\text{,}\) restrict the solutions to the first quadrant. We graph the line \(x-y-2 = 0\text{,}\) and use the test point \((0, 0)\) to shade the half-plane including the origin. Finally we graph the line \(x - 2y - 6 = 0\) and again use the test point \((0, 0)\) to shade the half-plane below the line. The intersection of the shaded regions is shown at right.</p></div>
-<div class="sbspanel" style="width:42%;justify-content:center;"><img src="images/fig-system-of-inequalities3.svg" role="img" style="width: 100%; height: auto;" alt="system of four inequalities"></div>
+<div class="sbspanel middle" style="width:57%;"><p id="p-2530">The last two inequalities, \(x\ge 0\) and \(y\ge 0\text{,}\) restrict the solutions to the first quadrant. We graph the line \(x-y-2 = 0\text{,}\) and use the test point \((0, 0)\) to shade the half-plane including the origin. Finally we graph the line \(x - 2y - 6 = 0\) and again use the test point \((0, 0)\) to shade the half-plane below the line. The intersection of the shaded regions is shown at right.</p></div>
+<div class="sbspanel middle" style="width:42%;"><img src="external/images/fig-system-of-inequalities3.svg" role="img" class="contained" alt="system of four inequalities"></div>
 </div></div>
 <p id="p-2531">To find the coordinates of the vertices \(A\text{,}\) \(B\text{,}\) \(C\text{,}\) and \(D\text{,}\) we solve simultaneously the equations of the two lines that intersect at each vertex. Thus,</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:2%;">
-<div class="sbspanel" style="width:40.8602150537634%;justify-content:center;"><p id="p-2532">For \(A\text{,}\) we solve the system</p></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><div class="displaymath" id="p-2533">
+<div class="sbspanel middle" style="width:40.8602150537634%;"><p id="p-2532">For \(A\text{,}\) we solve the system</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><div class="displaymath" id="p-2533">
 \begin{align*}
 x \amp= 0\\
 y\amp =0
 \end{align*}
 </div></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><p id="p-2534">to find \((0, 0)\)</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><p id="p-2534">to find \((0, 0)\)</p></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:2%;">
-<div class="sbspanel" style="width:40.8602150537634%;justify-content:center;"><p id="p-2535">For \(B\text{,}\) we solve the system</p></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><div class="displaymath" id="p-2536">
+<div class="sbspanel middle" style="width:40.8602150537634%;"><p id="p-2535">For \(B\text{,}\) we solve the system</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><div class="displaymath" id="p-2536">
 \begin{align*}
 x \amp= 0\\
 x + 2y \amp= 6
 \end{align*}
 </div></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><p id="p-2537">to find \((0, 3)\)</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><p id="p-2537">to find \((0, 3)\)</p></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:2%;">
-<div class="sbspanel" style="width:40.8602150537634%;justify-content:center;"><p id="p-2538">For \(C\text{,}\) we solve the system</p></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><div class="displaymath" id="p-2539">
+<div class="sbspanel middle" style="width:40.8602150537634%;"><p id="p-2538">For \(C\text{,}\) we solve the system</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><div class="displaymath" id="p-2539">
 \begin{align*}
 x + 2y \amp= 6\\
 x -y \amp= 2
 \end{align*}
 </div></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><p id="p-2540">to find \(\left(\dfrac{10}{3},\dfrac{4}{3} \right)\)</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><p id="p-2540">to find \(\left(\dfrac{10}{3},\dfrac{4}{3} \right)\)</p></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:2%;">
-<div class="sbspanel" style="width:40.8602150537634%;justify-content:center;"><p id="p-2541">For \(D\text{,}\) we solve the system</p></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><div class="displaymath" id="p-2542">
+<div class="sbspanel middle" style="width:40.8602150537634%;"><p id="p-2541">For \(D\text{,}\) we solve the system</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><div class="displaymath" id="p-2542">
 \begin{align*}
 y \amp= 0\\
 x -y \amp= 2
 \end{align*}
 </div></div>
-<div class="sbspanel" style="width:26.8817204301075%;justify-content:center;"><p id="p-2543">to find \(\left(2,0 \right)\)</p></div>
+<div class="sbspanel middle" style="width:26.8817204301075%;"><p id="p-2543">to find \(\left(2,0 \right)\)</p></div>
 </div></div>
 <p id="p-2544">The vertices are the points \((0, 0)\text{,}\) \((0, 3)\text{,}\) \(\left(\dfrac{10}{3},\dfrac{4}{3} \right)\text{,}\) and \((2, 0)\text{.}\)</p>
 </div></div>
@@ -558,26 +563,26 @@ x -y \amp= 2
 <p id="p-2545">Ivana owns two hotels, that earn annual profits of \(x\) and \(y\) dollars, respectively. She would like her total annual profit from the two hotels to be (exactly) $10,000.</p>
 <ol class="lower-alpha">
 <li id="li-1402"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:center;">
+<div class="sbspanel middle" style="width:50%;">
 <p id="p-2546">Fill in the table with some possible values for \(x\) and \(y\text{,}\) in thousands of dollars. (Note that it is possible for one of the hotels to sustain a loss, or negative profit.)</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(\qquad\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\qquad\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 </tr>
 </table>
 </div>
-<div class="sbspanel" style="width:40%;justify-content:center;"><img src="images/fig-hw-2-5-1.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel middle" style="width:40%;"><img src="generated/latex-image/fig-hw-2-5-1.svg" role="img" class="contained" alt="grid"></div>
 </div></div></li>
 <li id="li-1403"><p id="p-2547">Plot the ordered pairs from your table on the grid.</p></li>
 <li id="li-1404"><p id="p-2548">Write an equation that describes this problem.</p></li>
@@ -587,20 +592,20 @@ x -y \amp= 2
 <ol class="lower-alpha">
 <li id="li-1410">
 <p id="p-2554">List four pairs of values for \(x\) and \(y\) that achieve this goal.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(\qquad\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(\qquad\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\qquad\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 </tr>
 </table></div></div></div>
 </li>
@@ -630,6 +635,7 @@ x -y \amp= 2
 <li id="li-1422"><p id="p-2571">Can you suggest an easier test point instead of \((1, -4)\text{?}\)</p></li>
 </ol></article></article><article class="subexercises" id="subexercises-29"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-54">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-63"><p id="p-2572">For Problems 5–14, graph the inequality.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-337"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
@@ -646,6 +652,7 @@ x -y \amp= 2
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-55">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-64"><p id="p-2583">For Problems 15 and 16, graph the system of inequalities.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-347"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
@@ -654,6 +661,7 @@ x -y \amp= 2
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-56">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-65">
 <p id="p-2586">For Problems 17 and 18:</p>
 <ol class="lower-alpha">
@@ -674,6 +682,7 @@ x\ge 0, ~ y\ge 0
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-57">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-66"><p id="p-2591">Graph each system of inequalities.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-351"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
@@ -688,6 +697,7 @@ x+2y\amp \gt 6
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-58">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-67"><p id="p-2594">Graph each system of inequalities and find the coordinates of the vertices.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-353"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
@@ -716,6 +726,7 @@ x\ge 0, ~ y\ge 0
 </div>
 </div></article><article class="subexercises" id="subexercises-30"><h6 class="heading"><span class="title">Applications</span></h6>
 <div class="exercisegroup" id="exercisegroup-59">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-68"><p id="p-2599">For Problems 25–28, graph the set of solutions to the problem. For each system, \(x\ge 0\) and \(y\ge 0\text{.}\)</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-357"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
@@ -726,19 +737,19 @@ x\ge 0, ~ y\ge 0
 </div>
 </div></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

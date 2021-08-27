@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:54:48-07:00       *-->
+<!--*       on 2021-08-27T15:50:51-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Completing the Square</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="CompletingSquare"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Completing the Square</span>
@@ -234,32 +240,32 @@ true);
 a(x + p)^2 + q = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">where the left side of the equation includes the square of a binomial, or a <dfn class="terminology">perfect square</dfn>. It turns out that we can write any quadratic equation in this form.</p>
+<p class="continuation">where the left side of the equation includes the square of a binomial, or a <dfn class="terminology">perfect square</dfn>. It turns out that we can write any quadratic equation in this form.</p>
 <p id="p-3577">Study the following squares of binomials. </p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b3 r1 l1 t3 lines">Square of binomial \((x+p)^2\)</td>
 <td class="c m b3 r1 l0 t3 lines">\(p\)</td>
 <td class="c m b3 r1 l0 t3 lines">\(2p\)</td>
-<td class="c m b3 r1 l0 t3 lines" data-braille="last-cell">\(p^2\)</td>
+<td class="c m b3 r1 l0 t3 lines">\(p^2\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">1.  \((x+\alert{5})^2=x^2+10x+25\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\alert{5}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2(\alert{5})=10\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\alert{5}^2=25\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\alert{5}^2=25\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">2.  \((x\alert{{}-{}3})^2=x^2-6x+9\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\alert{-3}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2(\alert{-3})=-6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\((\alert{-3})^2=9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((\alert{-3})^2=9\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">3.  \((x\alert{{}-{}12})^2=x^2-24x+144\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\alert{-12}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2(\alert{-12})=-24\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\((\alert{-12})^2=144\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((\alert{-12})^2=144\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-3578">In each case, the square of the binomial is a <dfn class="terminology">quadratic trinomial</dfn>,</p>
@@ -268,46 +274,46 @@ a(x + p)^2 + q = 0
 (x + p)^2= x^2 + 2px + p^2
 \end{equation*}
 </div>
-<p data-braille="continuation">The coefficient of the linear term, \(2p\text{,}\) is twice the constant in the binomial, and the constant term of the trinomial, \(p^2\text{,}\) is its square.</p>
-<article class="exercise exercise-like" id="exercise-520"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-520"><h6 class="heading">
+<p class="continuation">The coefficient of the linear term, \(2p\text{,}\) is twice the constant in the binomial, and the constant term of the trinomial, \(p^2\text{,}\) is its square.</p>
+<article class="exercise exercise-like" id="exercise-520"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.53</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-520"><article class="exercise exercise-like"><iframe name="webwork-110" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=110&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRsaW50ID0gUmFkaW9CdXR0b25zKAogIFsiXCh4XjJcKSIsCiAgIlwoNnhcKSIsCiAgIlwoMTJ4XCkiLAogICJcKDM2XCkiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgbGluZWFyIHRlcm0gb2YgW2AoeCs2KV4yYF0gPwoKICAgIFtfXXskbGludH17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDEyeGBdIGlzIHRoZSBsaW5lYXIgdGVybSBvZiBbYHheMisxMngrMzZcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="110"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-3587">We would like to reverse the process and write a quadratic expression as the square of a binomial. For example, what constant term can we add to</p>
+</h6>
+<iframe name="webwork-110" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=110&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRsaW50ID0gUmFkaW9CdXR0b25zKAogIFsiXCh4XjJcKSIsCiAgIlwoNnhcKSIsCiAgIlwoMTJ4XCkiLAogICJcKDM2XCkiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgbGluZWFyIHRlcm0gb2YgW2AoeCs2KV4yYF0gPwoKICAgIFtfXXskbGludH17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDEyeGBdIGlzIHRoZSBsaW5lYXIgdGVybSBvZiBbYHheMisxMngrMzZcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="110"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-3587">We would like to reverse the process and write a quadratic expression as the square of a binomial. For example, what constant term can we add to</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 16x
 \end{equation*}
 </div>
-<p data-braille="continuation">to produce a perfect square trinomial? Compare the expression to the formula above:</p>
+<p class="continuation">to produce a perfect square trinomial? Compare the expression to the formula above:</p>
 <div class="displaymath">
 \begin{align*}
 x^2 + \alert{2p}x + p^2 \amp = (x + p)^2 \\
 x^2 - \alert{16}x + ~\text{?}~ \amp = (x + ~\text{?}~)^2 
 \end{align*}
 </div>
-<p data-braille="continuation">We see that \(~2p = -16~\text{,}\) so</p>
+<p class="continuation">We see that \(~2p = -16~\text{,}\) so</p>
 <div class="displaymath">
 \begin{equation*}
 p = \frac{1}{2}(-16) = \alert{-8}~~~\text{and}~~~ p^2 = (-8)^2 = \alert{64}
 \end{equation*}
 </div>
-<p data-braille="continuation">We substitute these values for \(p^2\) and \(p\) into the equation to find</p>
+<p class="continuation">We substitute these values for \(p^2\) and \(p\) into the equation to find</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 16x + \alert{64} = (x \alert{-8})^2
 \end{equation*}
 </div>
-<p data-braille="continuation">You can check that in the resulting trinomial, the constant term is equal to <em class="emphasis">the square of one-half the coefficient of</em> \(x\text{.}\) In other words, we can find the constant term by taking one-half the coefficient of \(x\) and then squaring the result. Adding a constant term obtained in this way is called <dfn class="terminology">completing the square</dfn>.</p>
+<p class="continuation">You can check that in the resulting trinomial, the constant term is equal to <em class="emphasis">the square of one-half the coefficient of</em> \(x\text{.}\) In other words, we can find the constant term by taking one-half the coefficient of \(x\) and then squaring the result. Adding a constant term obtained in this way is called <dfn class="terminology">completing the square</dfn>.</p>
 <article class="example example-like" id="example-completing-the-square"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.54</span><span class="period">.</span>
 </h6>
 <p id="p-3588">Complete the square by adding an appropriate constant; write the result as the square of a binomial.</p>
 <ol class="lower-alpha cols2">
-<li id="li-2078">\(\displaystyle x^2 - 12x + {}\underline{\hspace{2.727272727272727em}}\)</li>
-<li id="li-2079">\(\displaystyle x^2 + 5x + {}\underline{\hspace{2.727272727272727em}}\)</li>
+<li id="li-2078"><p id="p-derived-li-2078">\(\displaystyle x^2 - 12x + {}\underline{\hspace{2.727272727272727em}}\)</p></li>
+<li id="li-2079"><p id="p-derived-li-2079">\(\displaystyle x^2 + 5x + {}\underline{\hspace{2.727272727272727em}}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-176" id="solution-176"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-176"><div class="solution solution-like"><ol id="p-3589" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-176" id="solution-176"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-176"><div class="solution solution-like"><ol id="p-3589" class="lower-alpha">
 <li id="li-2080">
 <p id="p-3590">One-half of \(-12\) is \(-6\text{,}\) so the constant term is \((-6)^2\text{,}\) or \(36\text{.}\) We add \(36\) to obtain</p>
 <div class="displaymath">
@@ -325,12 +331,13 @@ x^2 +5x \alert{{}+{}\frac{25}{4}}=\left(x +\frac{5}{2}\right)^2 \amp\amp\amp {\l
 </div>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-521"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-521"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-521"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.55</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-521"><article class="exercise exercise-like"><iframe name="webwork-111" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=111&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsIkZhbHNlIl0sCiAgMiwgCik7CiAkVHJ1ZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCJGYWxzZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgRXZlcnkgcXVhZHJhdGljIGVxdWF0aW9uIGNhbiBiZSBzb2x2ZWQgYnkgZmFjdG9yaW5nLiBbX117JFRGfXs1fQoKCmEuICBFdmVyeSBleHByZXNzaW9uIG9mIHRoZSBmb3JtIFtgeF4yK2J4YF0gY2FuIGJlIHR1cm5lZCBpbnRvIGEgcGVyZmVjdCBzcXVhcmUgYnkgYWRkaW5nIGFuIGFwcHJvcHJpYXRlIGNvbnN0YW50LiAgW19deyRUcnVlfXs1fQoKCmEuICBUaGUgY29lZmZpY2llbnQgb2YgdGhlIGxpbmVhciB0ZXJtIGluIHRoZSBleHBhbnNpb24gb2YgW2AoeCtwKV4yYF0gaXMgdHdpY2UgdGhlIGNvbnN0YW50IHRlcm0uICBbX117JFRGfXs1fQoKCmEuICBUbyBjb21wbGV0ZSB0aGUgc3F1YXJlIG1lYW5zIHRvIHNxdWFyZSB0aGUgZXhwcmVzc2lvbi4gIFtfXXskVEZ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="111"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-522"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-522"><h6 class="heading">
+</h6>
+<iframe name="webwork-111" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=111&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRGID0gUG9wVXAoCiAgWyI%2FIiwiVHJ1ZSIsIkZhbHNlIl0sCiAgMiwgCik7CiAkVHJ1ZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCJGYWxzZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgRXZlcnkgcXVhZHJhdGljIGVxdWF0aW9uIGNhbiBiZSBzb2x2ZWQgYnkgZmFjdG9yaW5nLiBbX117JFRGfXs1fQoKCmEuICBFdmVyeSBleHByZXNzaW9uIG9mIHRoZSBmb3JtIFtgeF4yK2J4YF0gY2FuIGJlIHR1cm5lZCBpbnRvIGEgcGVyZmVjdCBzcXVhcmUgYnkgYWRkaW5nIGFuIGFwcHJvcHJpYXRlIGNvbnN0YW50LiAgW19deyRUcnVlfXs1fQoKCmEuICBUaGUgY29lZmZpY2llbnQgb2YgdGhlIGxpbmVhciB0ZXJtIGluIHRoZSBleHBhbnNpb24gb2YgW2AoeCtwKV4yYF0gaXMgdHdpY2UgdGhlIGNvbnN0YW50IHRlcm0uICBbX117JFRGfXs1fQoKCmEuICBUbyBjb21wbGV0ZSB0aGUgc3F1YXJlIG1lYW5zIHRvIHNxdWFyZSB0aGUgZXhwcmVzc2lvbi4gIFtfXXskVEZ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="111"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-522"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.56</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-522"><article class="exercise exercise-like"><iframe name="webwork-112" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=112&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJHBhID0gQ29tcHV0ZSgiLTkiKTsKJHBhMj0gQ29tcHV0ZSgiODEiKTsKJHBiID0gQ29tcHV0ZSgiOS8yIik7CiRwYjI9IENvbXB1dGUoIjgxLzQiKTsKCkJFR0lOX1BHTUwKQ29tcGxldGUgdGhlIHNxdWFyZSBieSBhZGRpbmcgYW4gYXBwcm9wcmlhdGUgY29uc3RhbnQ7IHdyaXRlIHRoZSByZXN1bHQgYXMgdGhlIHNxdWFyZSBvZiBhIGJpbm9taWFsLgphLiAgW2B4XjItMTh4e30rYF1bX117JHBhMn17Mn1bYCA9ICh4K2BdW19deyRwYX17Mn1bYCleMmBdCgoKYS4gIFtgeF4yICs5eHt9K2BdW19deyRwYjJ9ezJ9W2AgPSAoeCtgXVtfXXskcGJ9ezJ9IFtgICleMmBdCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKRm9yIHBhcnQgKGEpOiBbYHA9XGZyYWN7MX17Mn0oLTE4KT17fWBdXF9cX1xfXF9cXyAsIFtgcF4yPXt9YF0gXF9cX1xfXF9cX1xfCgpGb3IgcGFydCAoYik6IFtgcD1cZnJhY3sxfXsyfSg5KT17fWBdXF9cX1xfXF9cXyAsIFtgcF4yPXt9YF0gXF9cX1xfXF9cX1xfCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2B4XjIgLSAxOHggKyA4MSA9ICh4IC0gOSleMmBdCgoKYS4gIFtgeF4yKzl4K1xkZnJhY3s4MX17NH09XGxlZnQoeCtcZGZyYWN7OX17Mn1ccmlnaHQpXjIgYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="112"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-112" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=112&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJHBhID0gQ29tcHV0ZSgiLTkiKTsKJHBhMj0gQ29tcHV0ZSgiODEiKTsKJHBiID0gQ29tcHV0ZSgiOS8yIik7CiRwYjI9IENvbXB1dGUoIjgxLzQiKTsKCkJFR0lOX1BHTUwKQ29tcGxldGUgdGhlIHNxdWFyZSBieSBhZGRpbmcgYW4gYXBwcm9wcmlhdGUgY29uc3RhbnQ7IHdyaXRlIHRoZSByZXN1bHQgYXMgdGhlIHNxdWFyZSBvZiBhIGJpbm9taWFsLgphLiAgW2B4XjItMTh4e30rYF1bX117JHBhMn17Mn1bYCA9ICh4K2BdW19deyRwYX17Mn1bYCleMmBdCgoKYS4gIFtgeF4yICs5eHt9K2BdW19deyRwYjJ9ezJ9W2AgPSAoeCtgXVtfXXskcGJ9ezJ9IFtgICleMmBdCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKRm9yIHBhcnQgKGEpOiBbYHA9XGZyYWN7MX17Mn0oLTE4KT17fWBdXF9cX1xfXF9cXyAsIFtgcF4yPXt9YF0gXF9cX1xfXF9cX1xfCgpGb3IgcGFydCAoYik6IFtgcD1cZnJhY3sxfXsyfSg5KT17fWBdXF9cX1xfXF9cXyAsIFtgcF4yPXt9YF0gXF9cX1xfXF9cX1xfCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2B4XjIgLSAxOHggKyA4MSA9ICh4IC0gOSleMmBdCgoKYS4gIFtgeF4yKzl4K1xkZnJhY3s4MX17NH09XGxlZnQoeCtcZGZyYWN7OX17Mn1ccmlnaHQpXjIgYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="112"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving Quadratic Equations by Completing the Square</span>
 </h3>
 <p id="p-3630">Now we will use completing the square to solve quadratic equations. First, we will solve equations in which the coefficient of the squared term is 1. Consider the equation</p>
@@ -351,7 +358,7 @@ x^2 - 6x{}\underline{\hspace{2.727272727272727em}} = 7
 p = \frac{1}{2}(-6) = -3 ~~~\text{ and } ~~~ p^2 = (-3)^2 = 9
 \end{equation*}
 </div>
-<p data-braille="continuation">we add \(9\) to <em class="emphasis">both</em> sides of our equation to get</p>
+<p class="continuation">we add \(9\) to <em class="emphasis">both</em> sides of our equation to get</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 6x \alert{{}+9}=7\alert{{}+9}
@@ -370,7 +377,7 @@ x - 3 \amp =4 \amp\text{or}\amp\amp x - 3 \amp= -4\amp \blert{\text{Solve each e
 x \amp =7 \amp\text{or}\amp\amp x \amp= -1
 \end{align*}
 </div>
-<p data-braille="continuation">The solutions are \(7\) and \(-1\text{.}\)</p>
+<p class="continuation">The solutions are \(7\) and \(-1\text{.}\)</p>
 <p id="p-3635">In Step 3, you can check that this equation is equivalent to the original one; if you expand the left side and collect like terms, you will return to the original equation:</p>
 <div class="displaymath">
 \begin{align*}
@@ -383,15 +390,15 @@ x^2-6c-7 \amp = 0
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">3.57</span><span class="period">.</span>
 </h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/fig-parabola-with-symmetry-line.svg" role="img" style="width: 100%; height: auto;" alt="parabola with line of symmetry"></div>
-<div class="sbspanel" style="width:55.5555555555556%;justify-content:center;"><p id="p-3636">The graph of \(y = x^2 - 6x - 7\) is shown at left. Notice that the \(x\)-intercepts of the graph are \(x = 7\) and \(x = -1\text{,}\) and the parabola is symmetric about the vertical line halfway between the intercepts, at \(x = 3\text{.}\)</p></div>
+<div class="sbspanel middle" style="width:33.3333333333333%;"><img src="generated/latex-image/fig-parabola-with-symmetry-line.svg" role="img" class="contained" alt="parabola with line of symmetry"></div>
+<div class="sbspanel middle" style="width:55.5555555555556%;"><p id="p-3636">The graph of \(y = x^2 - 6x - 7\) is shown at left. Notice that the \(x\)-intercepts of the graph are \(x = 7\) and \(x = -1\text{,}\) and the parabola is symmetric about the vertical line halfway between the intercepts, at \(x = 3\text{.}\)</p></div>
 </div></div></article><p id="p-3637">We can also solve \(x^2 - 6x - 7 = 0\) by factoring instead of completing the square. Of course, we get the same solutions by either method. In the next Example, we solve an equation that cannot be solved by factoring.</p>
 <article class="example example-like" id="example-completing-the-square2"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.58</span><span class="period">.</span>
 </h6>
 <p id="p-3638">Solve \(x^2 - 4x - 3 = 0\) by completing the square.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-179" id="solution-179"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-179"><div class="solution solution-like"><ol id="p-3639" class="decimal">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-179" id="solution-179"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-179"><div class="solution solution-like"><ol id="p-3639" class="decimal">
 <li id="li-2106">
 <p id="p-3640">We write the equation with the constant term on the right side.</p>
 <div class="displaymath">
@@ -400,7 +407,7 @@ x^2 - 4x{}~\underline{\hspace{2.727272727272727em}}{}=3
 \end{equation*}
 </div>
 </li>
-<li id="li-2107">We complete the square on the left side. The coefficient of \(x\) is \(-4\text{,}\) so<div class="displaymath">
+<li id="li-2107"><p id="p-derived-li-2107">We complete the square on the left side. The coefficient of \(x\) is \(-4\text{,}\) so<div class="displaymath">
 \begin{equation*}
 p = \frac{1}{2}(-4) = -2 ~~~\text{ and } ~~~ p^2 = (-2)^2 = 4
 \end{equation*}
@@ -408,8 +415,7 @@ p = \frac{1}{2}(-4) = -2 ~~~\text{ and } ~~~ p^2 = (-2)^2 = 4
 \begin{equation*}
 x^2 - 4x  \alert{{}+4}=3\alert{{}+4}
 \end{equation*}
-</div>
-</li>
+</div></p></li>
 <li id="li-2108">
 <p id="p-3641">We write the left side as the square of a binomial, and combine terms on the right side:</p>
 <div class="displaymath">
@@ -426,22 +432,23 @@ x - 2 \amp =\sqrt{7} \amp\text{or}\amp\amp x - 2 \amp= -\sqrt{7}\amp \blert{\tex
 x \amp =2+\sqrt{7} \amp\text{or}\amp\amp x \amp=2 -\sqrt{7}
 \end{align*}
 </div>
-<p data-braille="continuation">These are the exact values of the solutions. We use a calculator to find decimal approximations for each solution:</p>
+<p class="continuation">These are the exact values of the solutions. We use a calculator to find decimal approximations for each solution:</p>
 <div class="displaymath">
 \begin{equation*}
 2+\sqrt{7}\approx 4.646~~~\text{and}~~~ 2-\sqrt{7}\approx -0.646
 \end{equation*}
 </div>
-<p data-braille="continuation">These values are the \(x\)-intercepts of the graph of \(y=x^2-4x-3\text{,}\) as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-parabola-with-symmetry-line2.svg" role="img" style="width: 100%; height: auto;" alt="parabola showing x-intercepts and line of symmetry"></div></div></div>
+<p class="continuation">These values are the \(x\)-intercepts of the graph of \(y=x^2-4x-3\text{,}\) as shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-parabola-with-symmetry-line2.svg" role="img" class="contained" alt="parabola showing x-intercepts and line of symmetry"></div></div></div>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-523"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-523"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-523"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.59</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-523"><article class="exercise exercise-like"><iframe name="webwork-113" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=113&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRvbmUgPSBQb3BVcCgKICBbIj8iLCJhIiwiYiIsICJjIiwgImQiXSwKICA0LCAKKTsKICR0d28gPSBQb3BVcCgKICBbIj8iLCJhIiwiYiIsICJjIiwgImQiXSwKICAxLCAKKTsKICR0aHJlZSA9IFBvcFVwKAogIFsiPyIsImEiLCJiIiwgImMiLCAiZCJdLAogIDMsIAopOwogJGZvdXIgPSBQb3BVcCgKICBbIj8iLCJhIiwiYiIsICJjIiwgImQiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKUHV0IHRoZSBzdGVwcyBmb3IgY29tcGxldGluZyB0aGUgc3F1YXJlIGluIHRoZSBjb3JyZWN0IG9yZGVyOgphLiAgQWRkIHRvIGJvdGggc2lkZXMgb2YgdGhlIGVxdWF0aW9uLgphLiAgVXNlIGV4dHJhY3Rpb24gb2Ygcm9vdHMuCmEuICBXcml0ZSB0aGUgbGVmdCBzaWRlIGFzIGEgcGVyZmVjdCBzcXVhcmUuCmEuICBXcml0ZSB0aGUgZXF1YXRpb24gd2l0aCB0aGUgY29uc3RhbnQgdGVybSBvbiB0aGUgcmlnaHQgc2lkZS4gICAKCgoqIFN0ZXAgMTogW19deyRvbmV9ezV9CgoKKiBTdGVwIDI6IFtfXXskdHdvfXs1fQoKCiogU3RlcCAzOiBbX117JHRocmVlfXs1fQoKCiogU3RlcCA0OiBbX117JGZvdXJ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmQsIGEsIGMsIGIKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="113"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-completing-the-square2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-completing-the-square2"><h6 class="heading">
+</h6>
+<iframe name="webwork-113" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=113&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRvbmUgPSBQb3BVcCgKICBbIj8iLCJhIiwiYiIsICJjIiwgImQiXSwKICA0LCAKKTsKICR0d28gPSBQb3BVcCgKICBbIj8iLCJhIiwiYiIsICJjIiwgImQiXSwKICAxLCAKKTsKICR0aHJlZSA9IFBvcFVwKAogIFsiPyIsImEiLCJiIiwgImMiLCAiZCJdLAogIDMsIAopOwogJGZvdXIgPSBQb3BVcCgKICBbIj8iLCJhIiwiYiIsICJjIiwgImQiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKUHV0IHRoZSBzdGVwcyBmb3IgY29tcGxldGluZyB0aGUgc3F1YXJlIGluIHRoZSBjb3JyZWN0IG9yZGVyOgphLiAgQWRkIHRvIGJvdGggc2lkZXMgb2YgdGhlIGVxdWF0aW9uLgphLiAgVXNlIGV4dHJhY3Rpb24gb2Ygcm9vdHMuCmEuICBXcml0ZSB0aGUgbGVmdCBzaWRlIGFzIGEgcGVyZmVjdCBzcXVhcmUuCmEuICBXcml0ZSB0aGUgZXF1YXRpb24gd2l0aCB0aGUgY29uc3RhbnQgdGVybSBvbiB0aGUgcmlnaHQgc2lkZS4gICAKCgoqIFN0ZXAgMTogW19deyRvbmV9ezV9CgoKKiBTdGVwIDI6IFtfXXskdHdvfXs1fQoKCiogU3RlcCAzOiBbX117JHRocmVlfXs1fQoKCiogU3RlcCA0OiBbX117JGZvdXJ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmQsIGEsIGMsIGIKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="113"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-completing-the-square2"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.60</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-completing-the-square2"><article class="exercise exercise-like"><iframe name="webwork-114" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=114&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoIkZyYWN0aW9uIik7CiRwID0gQ29tcHV0ZSgiLTMvMiIpOwokcDIgPSBDb21wdXRlKCI5LzQiKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwokbGhzID0gRm9ybXVsYSgieCoqMi0zeCIpOwokcmhzID0gQ29tcHV0ZSgiMSIpOwokbGhzMiA9IEZvcm11bGEoIngqKjItM3grOS80Iik7CiRyaHMyID0gQ29tcHV0ZSgiMSskcDIiKTsKJGxpbiA9IEZvcm11bGEoIngrJHAiKS0%2BcmVkdWNlOwokcmhzMyA9IENvbXB1dGUoIjEzLzQiKTsKJHIxID0gQ29tcHV0ZSgiMy8yICsgc3FydCgxMy80KSIpOwokcjIgPSBDb21wdXRlKCIzLzIgLSBzcXJ0KDEzLzQpIik7CiRhbnN3ZXIgPSBGb3JtdWxhKCIzLzIgKyBzcXJ0KDEzLzQpLCAzLzIgLSBzcXJ0KDEzLzQpIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOyAKJGFuc3dlcjIgPSBMaXN0KCIkcjEsICRyMiIpOwokbXlfZXZhbHVhdG9yMiA9ICRhbnN3ZXIyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNTEsCik7CgpCRUdJTl9QR01MCmEuICBGb2xsb3cgdGhlIHN0ZXBzIHRvIHNvbHZlIGJ5IGNvbXBsZXRpbmcgdGhlIHNxdWFyZTogW2B4XjIgLSAxID0gM3hcdGV4dHsufWBdCgogICAgMS4gIFdyaXRlIHRoZSBlcXVhdGlvbiB3aXRoIHRoZSBjb25zdGFudCBvbiB0aGUgcmlnaHQuCgogICAgICAgIFtfXXskbGhzfXs1fVtgPWBdW19deyRyaHN9ezJ9CgoKICAgIDEuICBDb21wbGV0ZSB0aGUgc3F1YXJlIG9uIHRoZSBsZWZ0OgoKICAgICAgICBbYHA9XGRmcmFjezF9ezJ9KC0zKT17fWBdW19deyRwfXs0fSwgW2BwXjI9e31gXVtfXXskcDJ9ezR9CgogICAgICAgIEFkZCBbYHBeMmBdIHRvIGJvdGggc2lkZXMuCgogICAgICAgIFtfXXskbGhzMn17OX1bYD1gXVtfXXskcmhzMn17NX0KCgogICAgMS4gIFdyaXRlIHRoZSBsZWZ0IHNpZGUgYXMgYSBwZXJmZWN0IHNxdWFyZTsgc2ltcGxpZnkgdGhlIHJpZ2h0IHNpZGUuCgogICAgICAgIFtgXGxhcmdlKGBdW19deyRsaW59ezN9W2BcbGFyZ2UpXjI9YF1bX117JHJoczN9ezN9CgoKICAgIDEuICBTb2x2ZSBieSBleHRyYWN0aW5nIHJvb3RzLgoKICAgICAgICBTb2x1dGlvbnM6IFtgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXsyNX0KCiAgICAgICAgTGlzdCBhbGwgdGhlIHZhbHVlcyB0aGF0IGFyZSBzb2x1dGlvbnMuIFVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKCmEuICBGaW5kIGFwcHJveGltYXRpb25zIHRvIHR3byBkZWNpbWFsIHBsYWNlcyBmb3IgdGhlIHNvbHV0aW9ucy4KCiAgICBTb2x1dGlvbnM6IFtgeD1gXVtfXXskbXlfZXZhbHVhdG9yMn17OH0KCiAgICBMaXN0IGFsbCB0aGUgdmFsdWVzIHRoYXQgYXJlIHNvbHV0aW9ucy4gVXNlIGEgY29tbWEgdG8gc2VwYXJhdGUgZGlmZmVyZW50IHNvbHV0aW9ucy4KCgphLiAgR3JhcGggdGhlIHBhcmFib2xhIFtgeSA9IHheMiAtIDN4IC0gMWBdIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9W3RdCiAgICAgICAgICAgICAgICBcdGV4dHtYbWlufSBcYW1wID0gLTQuNyBcYW1wXGFtcCBcdGV4dHtYbWF4fSA9IDQuN1xcCiAgICAgICAgICAgICAgICBcdGV4dHtZbWlufSBcYW1wID0gLTUgXGFtcFxhbXAgXHRleHR7WW1heH0gPSA1CiAgICAgICAgICAgICAgICBcZW5ke2FsaWduZWR9YGBgXQoKCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYHg9XGRmcmFjezN9ezJ9XHBtXHNxcnR7XGZyYWN7MTN9ezR9fSBgXQoKCmEuICBbYHhcYXBwcm94IC0wLjMwYF0gb3IgW2B4XGFwcHJveCAzLjMwYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="114"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-114" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=114&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoIkZyYWN0aW9uIik7CiRwID0gQ29tcHV0ZSgiLTMvMiIpOwokcDIgPSBDb21wdXRlKCI5LzQiKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwokbGhzID0gRm9ybXVsYSgieCoqMi0zeCIpOwokcmhzID0gQ29tcHV0ZSgiMSIpOwokbGhzMiA9IEZvcm11bGEoIngqKjItM3grOS80Iik7CiRyaHMyID0gQ29tcHV0ZSgiMSskcDIiKTsKJGxpbiA9IEZvcm11bGEoIngrJHAiKS0%2BcmVkdWNlOwokcmhzMyA9IENvbXB1dGUoIjEzLzQiKTsKJHIxID0gQ29tcHV0ZSgiMy8yICsgc3FydCgxMy80KSIpOwokcjIgPSBDb21wdXRlKCIzLzIgLSBzcXJ0KDEzLzQpIik7CiRhbnN3ZXIgPSBGb3JtdWxhKCIzLzIgKyBzcXJ0KDEzLzQpLCAzLzIgLSBzcXJ0KDEzLzQpIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOyAKJGFuc3dlcjIgPSBMaXN0KCIkcjEsICRyMiIpOwokbXlfZXZhbHVhdG9yMiA9ICRhbnN3ZXIyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNTEsCik7CgpCRUdJTl9QR01MCmEuICBGb2xsb3cgdGhlIHN0ZXBzIHRvIHNvbHZlIGJ5IGNvbXBsZXRpbmcgdGhlIHNxdWFyZTogW2B4XjIgLSAxID0gM3hcdGV4dHsufWBdCgogICAgMS4gIFdyaXRlIHRoZSBlcXVhdGlvbiB3aXRoIHRoZSBjb25zdGFudCBvbiB0aGUgcmlnaHQuCgogICAgICAgIFtfXXskbGhzfXs1fVtgPWBdW19deyRyaHN9ezJ9CgoKICAgIDEuICBDb21wbGV0ZSB0aGUgc3F1YXJlIG9uIHRoZSBsZWZ0OgoKICAgICAgICBbYHA9XGRmcmFjezF9ezJ9KC0zKT17fWBdW19deyRwfXs0fSwgW2BwXjI9e31gXVtfXXskcDJ9ezR9CgogICAgICAgIEFkZCBbYHBeMmBdIHRvIGJvdGggc2lkZXMuCgogICAgICAgIFtfXXskbGhzMn17OX1bYD1gXVtfXXskcmhzMn17NX0KCgogICAgMS4gIFdyaXRlIHRoZSBsZWZ0IHNpZGUgYXMgYSBwZXJmZWN0IHNxdWFyZTsgc2ltcGxpZnkgdGhlIHJpZ2h0IHNpZGUuCgogICAgICAgIFtgXGxhcmdlKGBdW19deyRsaW59ezN9W2BcbGFyZ2UpXjI9YF1bX117JHJoczN9ezN9CgoKICAgIDEuICBTb2x2ZSBieSBleHRyYWN0aW5nIHJvb3RzLgoKICAgICAgICBTb2x1dGlvbnM6IFtgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXsyNX0KCiAgICAgICAgTGlzdCBhbGwgdGhlIHZhbHVlcyB0aGF0IGFyZSBzb2x1dGlvbnMuIFVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKCmEuICBGaW5kIGFwcHJveGltYXRpb25zIHRvIHR3byBkZWNpbWFsIHBsYWNlcyBmb3IgdGhlIHNvbHV0aW9ucy4KCiAgICBTb2x1dGlvbnM6IFtgeD1gXVtfXXskbXlfZXZhbHVhdG9yMn17OH0KCiAgICBMaXN0IGFsbCB0aGUgdmFsdWVzIHRoYXQgYXJlIHNvbHV0aW9ucy4gVXNlIGEgY29tbWEgdG8gc2VwYXJhdGUgZGlmZmVyZW50IHNvbHV0aW9ucy4KCgphLiAgR3JhcGggdGhlIHBhcmFib2xhIFtgeSA9IHheMiAtIDN4IC0gMWBdIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9W3RdCiAgICAgICAgICAgICAgICBcdGV4dHtYbWlufSBcYW1wID0gLTQuNyBcYW1wXGFtcCBcdGV4dHtYbWF4fSA9IDQuN1xcCiAgICAgICAgICAgICAgICBcdGV4dHtZbWlufSBcYW1wID0gLTUgXGFtcFxhbXAgXHRleHR7WW1heH0gPSA1CiAgICAgICAgICAgICAgICBcZW5ke2FsaWduZWR9YGBgXQoKCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYHg9XGRmcmFjezN9ezJ9XHBtXHNxcnR7XGZyYWN7MTN9ezR9fSBgXQoKCmEuICBbYHhcYXBwcm94IC0wLjMwYF0gb3IgW2B4XGFwcHJveCAzLjMwYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="114"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The General Case</span>
 </h3>
 <p id="p-3710">Our method for completing the square works only if the coefficient of \(x^2\) is 1.  If we want to solve a quadratic equation whose lead coefficient is not 1, we first divide each term of the equation by the lead coefficient.</p>
@@ -450,7 +457,7 @@ x \amp =2+\sqrt{7} \amp\text{or}\amp\amp x \amp=2 -\sqrt{7}
 </h6>
 <p id="p-3711">Solve \(~~2x^2 - 6x - 5 = 0\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like"><ol id="p-3712" class="decimal">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like"><ol id="p-3712" class="decimal">
 <li id="li-2147">
 <p id="p-3713">Because the coefficient of \(x^2\) is \(2\text{,}\) we must divide each term of the equation by \(2\text{.}\)</p>
 <div class="displaymath">
@@ -458,7 +465,7 @@ x \amp =2+\sqrt{7} \amp\text{or}\amp\amp x \amp=2 -\sqrt{7}
 x^2 - 3x - \frac{5}{2}= 0
 \end{equation*}
 </div>
-<p data-braille="continuation">Now we proceed as before. Rewrite the equation with the constant on the right side.</p>
+<p class="continuation">Now we proceed as before. Rewrite the equation with the constant on the right side.</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 3x ~\underline{\hspace{2.727272727272727em}} = \frac{5}{2}
@@ -472,7 +479,7 @@ x^2 - 3x ~\underline{\hspace{2.727272727272727em}} = \frac{5}{2}
 p = \frac{1}{2}(-3) = \frac{-3}{2} ~~~\text{ and } ~~~ p^2 = \left(\frac{-3}{2}\right)^2 = \frac{9}{4}
 \end{equation*}
 </div>
-<p data-braille="continuation">Add \(\frac{9}{4}\) to both sides of our equation:</p>
+<p class="continuation">Add \(\frac{9}{4}\) to both sides of our equation:</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 - 3x  \alert{{}+\frac{9}{4}}=\frac{5}{2}\alert{{}+\frac{9}{4}}
@@ -494,7 +501,7 @@ x^2 - 3x  \alert{{}+\frac{9}{4}}=\frac{5}{2}\alert{{}+\frac{9}{4}}
 x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt{\frac{19}{4}} 
 \end{equation*}
 </div>
-<p data-braille="continuation">The solutions are \(\dfrac{3}{2}+\sqrt{\dfrac{19}{4}}\) and \(\dfrac{3}{2}-\sqrt{\dfrac{19}{4}}\text{.}\)</p>
+<p class="continuation">The solutions are \(\dfrac{3}{2}+\sqrt{\dfrac{19}{4}}\) and \(\dfrac{3}{2}-\sqrt{\dfrac{19}{4}}\text{.}\)</p>
 <p id="p-3717">Using a calculator, we can find decimal approximations for the solutions: \(3.679\) and \(-0.679\text{.}\)</p>
 </li>
 </ol></div></div>
@@ -509,21 +516,21 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 (2x - 3)^2 \amp= 14 ~~~ \rightarrow ~~~ \blert{\text{ Incorrect!}}
 \end{align*}
 </div>
-<p data-braille="continuation">You can check that \((2x - 3)^2\) is not equal to \(2x^2 - 6x + 9\text{.}\) We have not written the left side of the equation as a perfect square, so the solutions we obtain by extracting roots will not be correct.</p></article><article class="exercise exercise-like" id="exercise-525"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-525"><h6 class="heading">
+<p class="continuation">You can check that \((2x - 3)^2\) is not equal to \(2x^2 - 6x + 9\text{.}\) We have not written the left side of the equation as a perfect square, so the solutions we obtain by extracting roots will not be correct.</p></article><article class="exercise exercise-like" id="exercise-525"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.63</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-525"><article class="exercise exercise-like"><iframe name="webwork-115" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=115&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoIkZyYWN0aW9uIik7CiRwID0gQ29tcHV0ZSgiOS8yIik7CiRwMiA9IENvbXB1dGUoIjgxLzQiKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwokbGhzID0gRm9ybXVsYSgieCoqMis5eCIpOwokcmhzID0gRm9ybXVsYSgiLTY1LzQiKTsKCiRsaHMyID0gRm9ybXVsYSgieCoqMis5eCs4MS80Iik7CiRyaHMyID0gRm9ybXVsYSgiJHJocyskcDIiKTsKJGxpbiA9IEZvcm11bGEoIngrJHAiKS0%2BcmVkdWNlOwokcmhzMyA9IEZvcm11bGEoIiRyaHMrJHAyIiktPnJlZHVjZTsKJGFuc3dlciA9IEZvcm11bGEoIi0kcCArIHNxcnQoJHJoczMpLCAtJHAgLSBzcXJ0KCRyaHMzKSIpLT5yZWR1Y2U7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTAphLiAgRm9sbG93IHRoZSBzdGVwcyB0byBzb2x2ZSBieSBjb21wbGV0aW5nIHRoZSBzcXVhcmU6CgogICAgW2BgYC00eF4yLSAzNngtNjUgPSAwXHRleHR7Ln1gYGBdCgogICAgCgogICAgMS4gIERpdmlkZSBlYWNoIHRlcm0gYnkgW2AtNFx0ZXh0ey59YF0gV3JpdGUgdGhlIGVxdWF0aW9uIHdpdGggdGhlIGNvbnN0YW50IG9uIHRoZSByaWdodC4KCiAgICAgICAgW19deyRsaHN9ezV9W2A9YF1bX117JHJoc317M30KCgogICAgMS4gIENvbXBsZXRlIHRoZSBzcXVhcmUgb24gdGhlIGxlZnQ6CgogICAgICAgIFtgcCA9IFxkZnJhY3sxfXsyfSg5KSA9e31gXVtfXXskcH17NH0sIFtgcF4yPXt9YF1bX117JHAyfXs0fQoKICAgICAgICBBZGQgW2BwXjJgXSB0byBib3RoIHNpZGVzLgoKICAgICAgICBbX117JGxoczJ9ezl9W2A9YF1bX117JHJoczJ9ezd9CgoKICAgIDEuICBXcml0ZSB0aGUgbGVmdCBzaWRlIGFzIGEgcGVyZmVjdCBzcXVhcmU7IHNpbXBsaWZ5IHRoZSByaWdodCBzaWRlLgoKICAgICAgICBbYFxsYXJnZShgXVtfXXskbGlufXs0fVtgXGxhcmdlKV4yPWBdW19deyRyaHMzfXszfQoKCiAgICAxLiAgU29sdmUgYnkgZXh0cmFjdGluZyByb290cy4KCiAgICAgICAgU29sdXRpb25zOiBbYHg9YF1bX117JG15X2V2YWx1YXRvcn17MjV9CgogICAgICAgIExpc3QgYWxsIHRoZSB2YWx1ZXMgdGhhdCBhcmUgc29sdXRpb25zLiBVc2UgYSBjb21tYSB0byBzZXBhcmF0ZSBkaWZmZXJlbnQgc29sdXRpb25zLgoKCgphLiAgR3JhcGggW2B5ID0gLTR4XjIgLSAzNnggLSA2NWBdIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICBcdGV4dHtYbWlufSBcYW1wID0gLTkuNCBcYW1wXGFtcCBcdGV4dHtYbWF4fSA9IDBcXAogICAgXHRleHR7WW1pbn0gXGFtcCA9IC0xMCBcYW1wXGFtcCBcdGV4dHtZbWF4fSA9IDIwCiAgICBcZW5ke2FsaWduZWR9CiAgICBgYGBdCgoKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PVxkZnJhY3stMTN9ezJ9IFx0ZXh0eyx9YF0gW2AgeD1cZGZyYWN7LTV9ezJ9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="115"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-3746">Here is a summary of the steps for solving quadratic equations by completing the square.</p>
+</h6>
+<iframe name="webwork-115" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=115&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoIkZyYWN0aW9uIik7CiRwID0gQ29tcHV0ZSgiOS8yIik7CiRwMiA9IENvbXB1dGUoIjgxLzQiKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICApOwokbGhzID0gRm9ybXVsYSgieCoqMis5eCIpOwokcmhzID0gRm9ybXVsYSgiLTY1LzQiKTsKCiRsaHMyID0gRm9ybXVsYSgieCoqMis5eCs4MS80Iik7CiRyaHMyID0gRm9ybXVsYSgiJHJocyskcDIiKTsKJGxpbiA9IEZvcm11bGEoIngrJHAiKS0%2BcmVkdWNlOwokcmhzMyA9IEZvcm11bGEoIiRyaHMrJHAyIiktPnJlZHVjZTsKJGFuc3dlciA9IEZvcm11bGEoIi0kcCArIHNxcnQoJHJoczMpLCAtJHAgLSBzcXJ0KCRyaHMzKSIpLT5yZWR1Y2U7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0%2BIGNtcCgKIHNob3dIaW50cz0%2BMSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTAphLiAgRm9sbG93IHRoZSBzdGVwcyB0byBzb2x2ZSBieSBjb21wbGV0aW5nIHRoZSBzcXVhcmU6CgogICAgW2BgYC00eF4yLSAzNngtNjUgPSAwXHRleHR7Ln1gYGBdCgogICAgCgogICAgMS4gIERpdmlkZSBlYWNoIHRlcm0gYnkgW2AtNFx0ZXh0ey59YF0gV3JpdGUgdGhlIGVxdWF0aW9uIHdpdGggdGhlIGNvbnN0YW50IG9uIHRoZSByaWdodC4KCiAgICAgICAgW19deyRsaHN9ezV9W2A9YF1bX117JHJoc317M30KCgogICAgMS4gIENvbXBsZXRlIHRoZSBzcXVhcmUgb24gdGhlIGxlZnQ6CgogICAgICAgIFtgcCA9IFxkZnJhY3sxfXsyfSg5KSA9e31gXVtfXXskcH17NH0sIFtgcF4yPXt9YF1bX117JHAyfXs0fQoKICAgICAgICBBZGQgW2BwXjJgXSB0byBib3RoIHNpZGVzLgoKICAgICAgICBbX117JGxoczJ9ezl9W2A9YF1bX117JHJoczJ9ezd9CgoKICAgIDEuICBXcml0ZSB0aGUgbGVmdCBzaWRlIGFzIGEgcGVyZmVjdCBzcXVhcmU7IHNpbXBsaWZ5IHRoZSByaWdodCBzaWRlLgoKICAgICAgICBbYFxsYXJnZShgXVtfXXskbGlufXs0fVtgXGxhcmdlKV4yPWBdW19deyRyaHMzfXszfQoKCiAgICAxLiAgU29sdmUgYnkgZXh0cmFjdGluZyByb290cy4KCiAgICAgICAgU29sdXRpb25zOiBbYHg9YF1bX117JG15X2V2YWx1YXRvcn17MjV9CgogICAgICAgIExpc3QgYWxsIHRoZSB2YWx1ZXMgdGhhdCBhcmUgc29sdXRpb25zLiBVc2UgYSBjb21tYSB0byBzZXBhcmF0ZSBkaWZmZXJlbnQgc29sdXRpb25zLgoKCgphLiAgR3JhcGggW2B5ID0gLTR4XjIgLSAzNnggLSA2NWBdIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICBcdGV4dHtYbWlufSBcYW1wID0gLTkuNCBcYW1wXGFtcCBcdGV4dHtYbWF4fSA9IDBcXAogICAgXHRleHR7WW1pbn0gXGFtcCA9IC0xMCBcYW1wXGFtcCBcdGV4dHtZbWF4fSA9IDIwCiAgICBcZW5ke2FsaWduZWR9CiAgICBgYGBdCgoKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PVxkZnJhY3stMTN9ezJ9IFx0ZXh0eyx9YF0gW2AgeD1cZGZyYWN7LTV9ezJ9IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="115"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-3746">Here is a summary of the steps for solving quadratic equations by completing the square.</p>
 <article class="assemblage assemblage-like" id="assemblage-28"><h6 class="heading"><span class="title">To Solve a Quadratic Equation by Completing the Square.</span></h6>
 <ol id="p-3747" class="decimal">
-<li id="li-2157"><ol class="lower-alpha">
+<li id="li-2157"><p id="p-derived-li-2157"><ol class="lower-alpha">
 <li id="li-2158"><p id="p-3748">Write the equation in standard form.</p></li>
 <li id="li-2159"><p id="p-3749">Divide both sides of the equation by the coefficient of the quadratic term, and subtract the constant term from both sides.</p></li>
-</ol></li>
+</ol></p></li>
 <li id="li-2160">
 <p id="p-3750">Complete the square on the left side:</p>
 <ol class="lower-alpha">
-<li id="li-2161">Multiply the coefficient of the first-degree term by one-half, then square the result.</li>
-<li id="li-2162">Add the value obtained in (a) to both sides of the equation.</li>
+<li id="li-2161"><p id="p-derived-li-2161">Multiply the coefficient of the first-degree term by one-half, then square the result.</p></li>
+<li id="li-2162"><p id="p-derived-li-2162">Add the value obtained in (a) to both sides of the equation.</p></li>
 </ol>
 </li>
 <li id="li-2163"><p id="p-3751">Write the left side of the equation as the square of a binomial. Simplify the right side.</p></li>
@@ -532,7 +539,9 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 3.4</span>
 </h3>
 <article class="subexercises" id="subexercises-40"><h6 class="heading"><span class="title">Warm Up</span></h6>
-<div class="exercisegroup" id="exercisegroup-86"><div class="exercisegroup-exercises cols2">
+<div class="exercisegroup" id="exercisegroup-86">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
+<div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-526"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-3753">Solve by factoring</p>
 <div class="displaymath">
@@ -546,39 +555,42 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 5(2x+3)^2=80
 \end{equation*}
 </div></article>
-</div></div>
+</div>
+</div>
 <article class="exercise exercise-like" id="exercise-528"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-3756">Expand each square.</p>
 <ol class="lower-alpha cols2">
-<li id="li-2165">\(\displaystyle (x+5)^2 = \)</li>
-<li id="li-2166">\(\displaystyle (x-6)^2 = \)</li>
-<li id="li-2167">\(\displaystyle (x-12)^2 = \)</li>
-<li id="li-2168">\(\displaystyle (x+15)^2 = \)</li>
+<li id="li-2165"><p id="p-derived-li-2165">\(\displaystyle (x+5)^2 = \)</p></li>
+<li id="li-2166"><p id="p-derived-li-2166">\(\displaystyle (x-6)^2 = \)</p></li>
+<li id="li-2167"><p id="p-derived-li-2167">\(\displaystyle (x-12)^2 = \)</p></li>
+<li id="li-2168"><p id="p-derived-li-2168">\(\displaystyle (x+15)^2 = \)</p></li>
 </ol></article></article><article class="subexercises" id="subexercises-41"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <article class="exercise exercise-like" id="exercise-529"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-3758">Add a term to make a square of a binomial.</p>
 <ol class="lower-alpha cols2">
-<li id="li-2173">\(\displaystyle x^2-14x+\underline{\hspace{2.727272727272727em}}\)</li>
-<li id="li-2174">\(\displaystyle x^2+16x+\underline{\hspace{2.727272727272727em}}\)</li>
-<li id="li-2175">\(\displaystyle x^2+\underline{\hspace{2.727272727272727em}}+36\)</li>
-<li id="li-2176">\(\displaystyle x^2-\underline{\hspace{2.727272727272727em}}+9\)</li>
+<li id="li-2173"><p id="p-derived-li-2173">\(\displaystyle x^2-14x+\underline{\hspace{2.727272727272727em}}\)</p></li>
+<li id="li-2174"><p id="p-derived-li-2174">\(\displaystyle x^2+16x+\underline{\hspace{2.727272727272727em}}\)</p></li>
+<li id="li-2175"><p id="p-derived-li-2175">\(\displaystyle x^2+\underline{\hspace{2.727272727272727em}}+36\)</p></li>
+<li id="li-2176"><p id="p-derived-li-2176">\(\displaystyle x^2-\underline{\hspace{2.727272727272727em}}+9\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-87">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-102"><p id="p-3759">For Problems 5 and 6, which of the expressions are squares of binomials?</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-530"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <ol id="p-3760" class="lower-alpha">
-<li id="li-2177">\(\displaystyle x^2+4x+16\)</li>
-<li id="li-2178">\(\displaystyle x^2-5x+\dfrac{25}{4}\)</li>
-<li id="li-2179">\(\displaystyle x^2+16x+169\)</li>
+<li id="li-2177"><p id="p-derived-li-2177">\(\displaystyle x^2+4x+16\)</p></li>
+<li id="li-2178"><p id="p-derived-li-2178">\(\displaystyle x^2-5x+\dfrac{25}{4}\)</p></li>
+<li id="li-2179"><p id="p-derived-li-2179">\(\displaystyle x^2+16x+169\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-531"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <ol id="p-3762" class="lower-alpha">
-<li id="li-2180">\(\displaystyle x^2-6x+12\)</li>
-<li id="li-2181">\(\displaystyle x^2+9x+81\)</li>
-<li id="li-2182">\(\displaystyle x^2-\dfrac{3}{2}x+\dfrac{9}{4}\)</li>
+<li id="li-2180"><p id="p-derived-li-2180">\(\displaystyle x^2-6x+12\)</p></li>
+<li id="li-2181"><p id="p-derived-li-2181">\(\displaystyle x^2+9x+81\)</p></li>
+<li id="li-2182"><p id="p-derived-li-2182">\(\displaystyle x^2-\dfrac{3}{2}x+\dfrac{9}{4}\)</p></li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-88">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-103"><p id="p-3763">For Problems 7-10, solve by completing the square.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-532"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
@@ -591,6 +603,7 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-89">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-104"><p id="p-3773">For Problems 13-16, choose the best method, then solve the equation</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-538"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
@@ -601,11 +614,12 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 </div>
 </div></article><article class="subexercises" id="subexercises-42"><h6 class="heading"><span class="title">Applications</span></h6>
 <div class="exercisegroup" id="exercisegroup-90">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-105">
 <p id="p-3780">For Problems 17–20,</p>
 <ol class="lower-alpha">
-<li id="li-2183">Use completing the square to find the \(x\)-intercepts of the graph.</li>
-<li id="li-2184">Find the vertex of the graph</li>
+<li id="li-2183"><p id="p-derived-li-2183">Use completing the square to find the \(x\)-intercepts of the graph.</p></li>
+<li id="li-2184"><p id="p-derived-li-2184">Find the vertex of the graph</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises cols2">
@@ -619,44 +633,45 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 <article class="exercise exercise-like" id="exercise-546"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="p-3787">The diagonal of a rectangle is 20 inches. The width of the rectangle is 4 inches shorter than its length.</p>
 <ol class="lower-alpha">
-<li id="li-2189">Write a quadratic equation about the length of the rectangle.</li>
-<li id="li-2190">Solve your equation to find the dimensions of the rectangle.</li>
+<li id="li-2189"><p id="p-derived-li-2189">Write a quadratic equation about the length of the rectangle.</p></li>
+<li id="li-2190"><p id="p-derived-li-2190">Solve your equation to find the dimensions of the rectangle.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-547"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-3789">The city park used 136 meters of fence to enclose its rectangular rock garden.  The diagonal path across the middle of the garden is 52 meters long.  What are the dimensions of the garden?</p></article><article class="exercise exercise-like" id="exercise-548"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
-<div class="sbspanel" style="width:63.1578947368421%;justify-content:flex-start;"><p id="p-3790">The sail pictured is a right triangle of base and height \(x\text{.}\) It has a colored stripe along the hypotenuse and a white triangle of base and height \(y\) in the lower corner.</p></div>
-<div class="sbspanel" style="width:26.3157894736842%;justify-content:flex-start;"><img src="images/fig-triangular-sail.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div>
+<div class="sbspanel top" style="width:63.1578947368421%;"><p id="p-3790">The sail pictured is a right triangle of base and height \(x\text{.}\) It has a colored stripe along the hypotenuse and a white triangle of base and height \(y\) in the lower corner.</p></div>
+<div class="sbspanel top" style="width:26.3157894736842%;"><img src="external/images/fig-triangular-sail.svg" role="img" class="contained" alt="graph"></div>
 </div></div>
 <ol id="p-3791" class="lower-alpha">
-<li id="li-2193">Write an expression for the area of the colored stripe.</li>
-<li id="li-2194">Express the area of the stripe in factored form.</li>
-<li id="li-2195">The sail is \(7 \dfrac{1}{2}\) feet high and the white triangle is \(4 \dfrac{1}{2}\) feet high. Use your answer to part (b) to calculate mentally the area of the stripe.</li>
+<li id="li-2193"><p id="p-derived-li-2193">Write an expression for the area of the colored stripe.</p></li>
+<li id="li-2194"><p id="p-derived-li-2194">Express the area of the stripe in factored form.</p></li>
+<li id="li-2195"><p id="p-derived-li-2195">The sail is \(7 \dfrac{1}{2}\) feet high and the white triangle is \(4 \dfrac{1}{2}\) feet high. Use your answer to part (b) to calculate mentally the area of the stripe.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-549"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:15%;">
-<div class="sbspanel" style="width:70.5882352941177%;justify-content:flex-start;"><p id="p-3793">An hors d’oeuvres tray has radius \(x\text{,}\) and the dip container has radius \(y\text{.}\)</p></div>
-<div class="sbspanel" style="width:23.5294117647059%;justify-content:flex-start;"><img src="images/fig-hors-doeuvres-tray.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div>
+<div class="sbspanel top" style="width:70.5882352941177%;"><p id="p-3793">An hors d’oeuvres tray has radius \(x\text{,}\) and the dip container has radius \(y\text{.}\)</p></div>
+<div class="sbspanel top" style="width:23.5294117647059%;"><img src="external/images/fig-hors-doeuvres-tray.svg" role="img" class="contained" alt="graph"></div>
 </div></div>
 <ol id="p-3794" class="lower-alpha">
-<li id="li-2199">Write an expression for the area for the chips (the shaded region).</li>
-<li id="li-2200">Express the area in factored form.</li>
-<li id="li-2201">The tray has radius \(8 \dfrac{1}{2}\) inches and the space for the dip has radius \(2 \dfrac{1}{2}\) inches. Use your answer to part (b) to calculate mentally the area for the chips. Express your answer as a multiple of \(\pi\text{.}\)</li>
+<li id="li-2199"><p id="p-derived-li-2199">Write an expression for the area for the chips (the shaded region).</p></li>
+<li id="li-2200"><p id="p-derived-li-2200">Express the area in factored form.</p></li>
+<li id="li-2201"><p id="p-derived-li-2201">The tray has radius \(8 \dfrac{1}{2}\) inches and the space for the dip has radius \(2 \dfrac{1}{2}\) inches. Use your answer to part (b) to calculate mentally the area for the chips. Express your answer as a multiple of \(\pi\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-550"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <ol id="p-3795" class="lower-alpha">
 <li id="li-2202"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:15%;">
-<div class="sbspanel" style="width:70.5882352941177%;justify-content:flex-start;"><p id="p-3796">Write an expression for the area of the square.</p></div>
-<div class="sbspanel" style="width:23.5294117647059%;justify-content:flex-start;"><img src="images/fig-square-side-x-plus-y.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div>
+<div class="sbspanel top" style="width:70.5882352941177%;"><p id="p-3796">Write an expression for the area of the square.</p></div>
+<div class="sbspanel top" style="width:23.5294117647059%;"><img src="external/images/fig-square-side-x-plus-y.svg" role="img" class="contained" alt="graph"></div>
 </div></div></li>
-<li id="li-2203">Express the area as a polynomial.</li>
-<li id="li-2204">Divide the square into four pieces whose areas are given by the terms of your answer to part (b).</li>
+<li id="li-2203"><p id="p-derived-li-2203">Express the area as a polynomial.</p></li>
+<li id="li-2204"><p id="p-derived-li-2204">Divide the square into four pieces whose areas are given by the terms of your answer to part (b).</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-551"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <ol id="p-3798" class="lower-alpha">
 <li id="li-2208"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:15%;">
-<div class="sbspanel" style="width:70.5882352941177%;justify-content:flex-start;"><p id="p-3799">Write an expression for the area of the shaded region.</p></div>
-<div class="sbspanel" style="width:23.5294117647059%;justify-content:flex-start;"><img src="images/fig-square-removed-from-square.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div>
+<div class="sbspanel top" style="width:70.5882352941177%;"><p id="p-3799">Write an expression for the area of the shaded region.</p></div>
+<div class="sbspanel top" style="width:23.5294117647059%;"><img src="external/images/fig-square-removed-from-square.svg" role="img" class="contained" alt="graph"></div>
 </div></div></li>
-<li id="li-2209">Express the area in factored form.</li>
-<li id="li-2210">By making one cut in the shaded region, rearrange the pieces into a rectangle whose area is given by your answer to part (b).</li>
+<li id="li-2209"><p id="p-derived-li-2209">Express the area in factored form.</p></li>
+<li id="li-2210"><p id="p-derived-li-2210">By making one cut in the shaded region, rearrange the pieces into a rectangle whose area is given by your answer to part (b).</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-91">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-106"><p id="p-3800">For Problems 27-30, solve by completing the square.  Your answers will involve \(a,~b,~\) or \(c~\) (or a combination of these).</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-552"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
@@ -667,6 +682,7 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-92">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-107"><p id="p-3807">For Problems 31–36, solve the formula for the indicated variable.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-556"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
@@ -679,19 +695,19 @@ x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt
 </div>
 </div></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:54:54-07:00       *-->
+<!--*       on 2021-08-27T15:50:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Chapter 3 Summary and Review</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="chap3-summary"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Chapter 3 Summary and Review</span>
@@ -243,9 +249,9 @@ true);
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Key Concepts</span>
 </h3>
 <ol id="p-3828" class="decimal">
-<li id="li-2221">A <dfn class="terminology">quadratic</dfn> equation has the standard form \(ax^2+bx=c=0\text{,}\) where \(a,~b,~\) and \(c\) are constants and \(a\) is not equal to zero.</li>
-<li id="li-2222">The graph of a quadratic equation \(y=ax^2+bx=c\) is called a <dfn class="terminology">parabola</dfn>. The <dfn class="terminology">basic parabola</dfn> is the graph of \(y=x^2\text{.}\)</li>
-<li id="li-2223"><article class="assemblage assemblage-like" id="assemblage-29"><h6 class="heading"><span class="title">Extraction of Roots.</span></h6>
+<li id="li-2221"><p id="p-derived-li-2221">A <dfn class="terminology">quadratic</dfn> equation has the standard form \(ax^2+bx=c=0\text{,}\) where \(a,~b,~\) and \(c\) are constants and \(a\) is not equal to zero.</p></li>
+<li id="li-2222"><p id="p-derived-li-2222">The graph of a quadratic equation \(y=ax^2+bx=c\) is called a <dfn class="terminology">parabola</dfn>. The <dfn class="terminology">basic parabola</dfn> is the graph of \(y=x^2\text{.}\)</p></li>
+<li id="li-2223"><p id="p-derived-li-2223"><article class="assemblage assemblage-like" id="assemblage-29"><h6 class="heading"><span class="title">Extraction of Roots.</span></h6>
 <p id="p-3829">To solve a quadratic equation of the form</p>
 <div class="displaymath">
 \begin{equation*}
@@ -253,17 +259,17 @@ ax^2+c=0
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-2224">Isolate \(x\) on one side of the equation.</li>
-<li id="li-2225">Take the square root of each side.</li>
-</ol></article></li>
-<li id="li-2226">Every quadratic equation has two solutions, which may be the same.</li>
-<li id="li-2227">Solutions of a quadratic equation can be given as exact values or as decimal approximations.</li>
+<li id="li-2224"><p id="p-derived-li-2224">Isolate \(x\) on one side of the equation.</p></li>
+<li id="li-2225"><p id="p-derived-li-2225">Take the square root of each side.</p></li>
+</ol></article></p></li>
+<li id="li-2226"><p id="p-derived-li-2226">Every quadratic equation has two solutions, which may be the same.</p></li>
+<li id="li-2227"><p id="p-derived-li-2227">Solutions of a quadratic equation can be given as exact values or as decimal approximations.</p></li>
 <li id="li-2228"><p id="p-3830"><article class="assemblage assemblage-like" id="assemblage-30"><h6 class="heading"><span class="title">Formulas for Volume and Surface Area.</span></h6>
 <ol id="p-3831" class="decimal">
-<li id="li-2229">Sphere \(~~~~~~V=\dfrac{4}{3}\pi r^3~~~~~~S=4\pi r^2\)</li>
-<li id="li-2230">Cylinder \(~~~~~~V=\pi r^2h~~~~~~S=2\pi r^2+2 \pi rh\)</li>
-<li id="li-2231">Cone  \(~~~~~~V=\dfrac{1}{3}\pi r^2h~~~~~~S=\pi r^2+\pi rs\)</li>
-<li id="li-2232">Square Pyramid  \(~~~~~~V=\dfrac{1}{3}s^2h\)</li>
+<li id="li-2229"><p id="p-derived-li-2229">Sphere \(~~~~~~V=\dfrac{4}{3}\pi r^3~~~~~~S=4\pi r^2\)</p></li>
+<li id="li-2230"><p id="p-derived-li-2230">Cylinder \(~~~~~~V=\pi r^2h~~~~~~S=2\pi r^2+2 \pi rh\)</p></li>
+<li id="li-2231"><p id="p-derived-li-2231">Cone  \(~~~~~~V=\dfrac{1}{3}\pi r^2h~~~~~~S=\pi r^2+\pi rs\)</p></li>
+<li id="li-2232"><p id="p-derived-li-2232">Square Pyramid  \(~~~~~~V=\dfrac{1}{3}s^2h\)</p></li>
 </ol></article></p></li>
 <li id="li-2233">
 <p id="p-3832">The formula for interest compounded annually is</p>
@@ -283,26 +289,26 @@ ab=0~~\text{if and only if}~~a=0~~|text{or}~~b=0~~\text{or both}
 </li>
 <li id="li-2235"><p id="p-3834"><article class="assemblage assemblage-like" id="assemblage-31"><h6 class="heading"><span class="title">To Solve a Quadratic Equation by Factoring.</span></h6>
 <ol id="p-3835" class="decimal">
-<li id="li-2236">Write the equation in standard form.</li>
-<li id="li-2237">Factor the left side of the equation.</li>
-<li id="li-2238">Apply the zero-factor principle:  Set each factor equal to zero.</li>
-<li id="li-2239">Solve each equation. There are two solutions (which may be equal).</li>
+<li id="li-2236"><p id="p-derived-li-2236">Write the equation in standard form.</p></li>
+<li id="li-2237"><p id="p-derived-li-2237">Factor the left side of the equation.</p></li>
+<li id="li-2238"><p id="p-derived-li-2238">Apply the zero-factor principle:  Set each factor equal to zero.</p></li>
+<li id="li-2239"><p id="p-derived-li-2239">Solve each equation. There are two solutions (which may be equal).</p></li>
 </ol></article></p></li>
-<li id="li-2240">Each solution of a quadratic equation corresponds to a non-constant factor in the factored form.</li>
-<li id="li-2241">The value of the constant \(a\) in the factored form of a quadratic equation does not affect the solutions.</li>
+<li id="li-2240"><p id="p-derived-li-2240">Each solution of a quadratic equation corresponds to a non-constant factor in the factored form.</p></li>
+<li id="li-2241"><p id="p-derived-li-2241">The value of the constant \(a\) in the factored form of a quadratic equation does not affect the solutions.</p></li>
 <li id="li-2242"><p id="p-3836">The \(x\)-intercepts of the graph of \(y=ax^2+bx+c\) are the solutions of the equation \(ax^2+bx+c=0\text{.}\)</p></li>
 <li id="li-2243"><p id="p-3837"><article class="assemblage assemblage-like" id="assemblage-32"><h6 class="heading"><span class="title">The Graph of \(y=ax^2\).</span></h6>
 <ul id="p-3838" class="disc">
-<li id="li-2244">The parabola opens upward if \(a \gt 0\)</li>
-<li id="li-2245">The parabola opens downward if \(a \lt 0\)</li>
-<li id="li-2246">The magnitude of \(a\) determines how wide or narrow the parabola is.</li>
-<li id="li-2247">The vertex, the \(x\)-intercepts, and the \(y\)-intercept all coincide at the origin.</li>
+<li id="li-2244"><p id="p-derived-li-2244">The parabola opens upward if \(a \gt 0\)</p></li>
+<li id="li-2245"><p id="p-derived-li-2245">The parabola opens downward if \(a \lt 0\)</p></li>
+<li id="li-2246"><p id="p-derived-li-2246">The magnitude of \(a\) determines how wide or narrow the parabola is.</p></li>
+<li id="li-2247"><p id="p-derived-li-2247">The vertex, the \(x\)-intercepts, and the \(y\)-intercept all coincide at the origin.</p></li>
 </ul></article></p></li>
 <li id="li-2248"><p id="p-3839"><article class="assemblage assemblage-like" id="assemblage-33"><h6 class="heading"><span class="title">The Graph of \(y=x^2+c\).</span></h6>
 <p id="p-3840">Compared to the graph of \(y=x^2\text{,}\) the graph of \(y=x^2+c\)</p>
 <ul class="disc">
-<li id="li-2249">is shifted upward by \(c\) units if \(c \gt 0\)</li>
-<li id="li-2250">is shifted downward by \(c\) units if \(c \lt 0\)</li>
+<li id="li-2249"><p id="p-derived-li-2249">is shifted upward by \(c\) units if \(c \gt 0\)</p></li>
+<li id="li-2250"><p id="p-derived-li-2250">is shifted downward by \(c\) units if \(c \lt 0\)</p></li>
 </ul></article></p></li>
 <li id="li-2251">
 <p id="p-3841">For the graph of \(y=ax^2+bx+c\text{,}\) the \(x\)-coordinate of the vertex is</p>
@@ -322,15 +328,15 @@ x_v=\dfrac{-b}{2a}
 </li>
 <li id="li-2253"><p id="p-3843"><article class="assemblage assemblage-like" id="assemblage-34"><h6 class="heading"><span class="title">To Solve a Quadratic Equation by Completing the Square.</span></h6>
 <ol id="p-3844" class="decimal">
-<li id="li-2254"><ol class="lower-alpha">
+<li id="li-2254"><p id="p-derived-li-2254"><ol class="lower-alpha">
 <li id="li-2255"><p id="p-3845">Write the equation in standard form.</p></li>
 <li id="li-2256"><p id="p-3846">Divide both sides of the equation by the coefficient of the quadratic term, and subtract the constant term from both sides.</p></li>
-</ol></li>
+</ol></p></li>
 <li id="li-2257">
 <p id="p-3847">Complete the square on the left side:</p>
 <ol class="lower-alpha">
-<li id="li-2258">Multiply the coefficient of the first-degree term by one-half, then square the result.</li>
-<li id="li-2259">Add the value obtained in (a) to both sides of the equation.</li>
+<li id="li-2258"><p id="p-derived-li-2258">Multiply the coefficient of the first-degree term by one-half, then square the result.</p></li>
+<li id="li-2259"><p id="p-derived-li-2259">Add the value obtained in (a) to both sides of the equation.</p></li>
 </ol>
 </li>
 <li id="li-2260"><p id="p-3848">Write the left side of the equation as the square of a binomial. Simplify the right side.</p></li>
@@ -340,6 +346,7 @@ x_v=\dfrac{-b}{2a}
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Chapter 3 Review Problems</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-93">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-108"><p id="p-3850">For Problems 1–6, solve by extraction of roots.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-562"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -352,6 +359,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-94">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-109"><p id="p-3863">For Problems 7–10, solve by factoring.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-568"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
@@ -362,6 +370,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-95">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-110"><p id="p-3872">For Problems 11 and 12, write a quadratic equation with integer coefficients and with the given solutions.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-572"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
@@ -370,6 +379,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-96">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-111"><p id="p-3877">For Problems 13 and 14, graph the equation using the ZDecimal setting. Locate the \(x\)-intercepts, and use them to write the quadratic expression in factored form.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-574"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
@@ -378,11 +388,12 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-97">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-112">
 <p id="p-3882">For Problems 15–18,</p>
 <ol class="lower-alpha">
-<li id="li-2262">Find the coordinates of the vertex and the intercepts.</li>
-<li id="li-2263">Sketch the graph.</li>
+<li id="li-2262"><p id="p-derived-li-2262">Find the coordinates of the vertex and the intercepts.</p></li>
+<li id="li-2263"><p id="p-derived-li-2263">Sketch the graph.</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises cols2">
@@ -394,6 +405,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-98">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-113"><p id="p-3891">For Problems 19–22, solve by completing the square.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-580"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
@@ -404,6 +416,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-99">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-114"><p id="p-3900">For Problems 23–26, solve the formula for the indicated variable.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-584"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
@@ -422,27 +435,28 @@ x_v=\dfrac{-b}{2a}
 <p id="p-3919">The base of an isosceles triangle is one inch shorter than the equal sides, and the altitude of the triangle is two inches shorter than the equal sides.  What is the length of the equal sides?</p></article><article class="exercise exercise-like" id="exercise-594"><h6 class="heading"><span class="codenumber">33<span class="period">.</span></span></h6>
 <p id="p-3921">A car traveling at 50 feet per second (about 34 miles per hour) can stop in 2.5 seconds after applying the brakes hard.  The distance the car travels, in feet, \(t\) seconds after applying the brakes is \(d=50t-10t^2\text{.}\)   How long does it take the car to travel 40 feet?</p></article><article class="exercise exercise-like" id="exercise-595"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
 <p id="p-3923">You have 300 feet of wire fence to mark off a rectangluar Christmas tree lot with a center-divider, using a brick wall as one side of the lot.  If you would like to enclose a total area of 7500 square feet, what should be the dimensions of the lot?</p></article><div class="exercisegroup" id="exercisegroup-100">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-115"><p id="p-3925">For Problems 35 and 36, show that the shaded areas are equal.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-596"><h6 class="heading"><span class="codenumber">35<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-chap3-rev-35.svg" role="img" style="width: 100%; height: auto;" alt="figures"></div></div></div></article><article class="exercise exercise-like" id="exercise-597"><h6 class="heading"><span class="codenumber">36<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-chap3-rev-36.svg" role="img" style="width: 100%; height: auto;" alt="figures"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-chap3-rev-35.svg" role="img" class="contained" alt="figures"></div></div></div></article><article class="exercise exercise-like" id="exercise-597"><h6 class="heading"><span class="codenumber">36<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-chap3-rev-36.svg" role="img" class="contained" alt="figures"></div></div></div></article>
 </div>
 </div></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

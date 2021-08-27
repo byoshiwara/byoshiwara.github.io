@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:55:29-07:00       *-->
+<!--*       on 2021-08-27T15:51:24-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Chapter 4 Summary and Review</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="chap4-summary"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Chapter 4 Summary and Review</span>
@@ -245,19 +251,19 @@ true);
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Key Concepts</span>
 </h3>
 <ol id="p-4785" class="decimal">
-<li id="li-2832"><article class="assemblage assemblage-like" id="assemblage-42"><h6 class="heading"><span class="title">The Quadratic Formula.</span></h6>
+<li id="li-2832"><p id="p-derived-li-2832"><article class="assemblage assemblage-like" id="assemblage-42"><h6 class="heading"><span class="title">The Quadratic Formula.</span></h6>
 <p id="p-4786">The solutions of the equation \(~~ax^2+bx+c=0,~~(a \not= 0)~~\) are</p>
 <div class="displaymath">
 \begin{equation*}
 \blert{x=\dfrac{-b \pm \sqrt{b^2-4ac}}{2a}}
 \end{equation*}
-</div></article></li>
-<li id="li-2833">We have four methods for solving quadratic equations:  extraction of roots, factoring, completing the square, and the quadratic formula.  The first two methods are faster, but they do not work on all equations.  The last two methods work on any quadratic equation.</li>
-<li id="li-2834">The <dfn class="terminology">imaginary unit</dfn>, \(i\text{,}\) is defined by \(i=\sqrt{-1}\text{.}\)</li>
-<li id="li-2835">The square root of any negative number can be written as the product of a real number (the square root of its absolute value) and \(i\text{.}\)</li>
-<li id="li-2836">The sum of a real number and an <dfn class="terminology">imaginary number</dfn> is called a <dfn class="terminology">complex number</dfn>.</li>
-<li id="li-2837">The graph of the quadratic equation \(~y=ax^2+bx+c\) may have two, one, or no \(x\)-intercepts, according to the number of distinct real-valued solutions of the equation \(~ax^2+bx+c=0\text{.}\)</li>
-<li id="li-2838"><article class="assemblage assemblage-like" id="assemblage-43"><h6 class="heading"><span class="title">The Discriminant.</span></h6>
+</div></article></p></li>
+<li id="li-2833"><p id="p-derived-li-2833">We have four methods for solving quadratic equations:  extraction of roots, factoring, completing the square, and the quadratic formula.  The first two methods are faster, but they do not work on all equations.  The last two methods work on any quadratic equation.</p></li>
+<li id="li-2834"><p id="p-derived-li-2834">The <dfn class="terminology">imaginary unit</dfn>, \(i\text{,}\) is defined by \(i=\sqrt{-1}\text{.}\)</p></li>
+<li id="li-2835"><p id="p-derived-li-2835">The square root of any negative number can be written as the product of a real number (the square root of its absolute value) and \(i\text{.}\)</p></li>
+<li id="li-2836"><p id="p-derived-li-2836">The sum of a real number and an <dfn class="terminology">imaginary number</dfn> is called a <dfn class="terminology">complex number</dfn>.</p></li>
+<li id="li-2837"><p id="p-derived-li-2837">The graph of the quadratic equation \(~y=ax^2+bx+c\) may have two, one, or no \(x\)-intercepts, according to the number of distinct real-valued solutions of the equation \(~ax^2+bx+c=0\text{.}\)</p></li>
+<li id="li-2838"><p id="p-derived-li-2838"><article class="assemblage assemblage-like" id="assemblage-43"><h6 class="heading"><span class="title">The Discriminant.</span></h6>
 <p id="p-4787">The <dfn class="terminology">discriminant</dfn> of a quadratic equation is</p>
 <div class="displaymath">
 \begin{equation*}
@@ -265,66 +271,67 @@ D=b^2-4ac
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-2839">If \(D \gt 0\text{,}\)  there are two unequal real solutions.</li>
-<li id="li-2840">If  \(D = 0\text{,}\)  there is one solution of multiplicity two.</li>
-<li id="li-2841">If\(D \lt 0\text{,}\)  there are two complex conjugate solutions.</li>
-</ol></article></li>
-<li id="li-2842">Every quadratic equation has two solutions, which may be the same.</li>
-<li id="li-2843">For the graph of  \(~y=ax^2+bx+c\text{,}\) the \(x\)-coordinate of the vertex is<div class="displaymath">
+<li id="li-2839"><p id="p-derived-li-2839">If \(D \gt 0\text{,}\)  there are two unequal real solutions.</p></li>
+<li id="li-2840"><p id="p-derived-li-2840">If  \(D = 0\text{,}\)  there is one solution of multiplicity two.</p></li>
+<li id="li-2841"><p id="p-derived-li-2841">If\(D \lt 0\text{,}\)  there are two complex conjugate solutions.</p></li>
+</ol></article></p></li>
+<li id="li-2842"><p id="p-derived-li-2842">Every quadratic equation has two solutions, which may be the same.</p></li>
+<li id="li-2843"><p id="p-derived-li-2843">For the graph of  \(~y=ax^2+bx+c\text{,}\) the \(x\)-coordinate of the vertex is<div class="displaymath">
 \begin{equation*}
 x_v=\dfrac{-b}{2a}
 \end{equation*}
-</div>To find the -coordinate of the vertex, we substitute \(x_v\) into the formula for the parabola.</li>
-<li id="li-2844">Quadratic models may arise as the product of two variables.</li>
-<li id="li-2845">The maximum or minimum of a quadratic equation occurs at the vertex of its graph.</li>
-<li id="li-2846"><article class="assemblage assemblage-like" id="assemblage-44"><h6 class="heading"><span class="title">Vertex Form for a Quadratic Equation.</span></h6>
+</div>To find the -coordinate of the vertex, we substitute \(x_v\) into the formula for the parabola.</p></li>
+<li id="li-2844"><p id="p-derived-li-2844">Quadratic models may arise as the product of two variables.</p></li>
+<li id="li-2845"><p id="p-derived-li-2845">The maximum or minimum of a quadratic equation occurs at the vertex of its graph.</p></li>
+<li id="li-2846"><p id="p-derived-li-2846"><article class="assemblage assemblage-like" id="assemblage-44"><h6 class="heading"><span class="title">Vertex Form for a Quadratic Equation.</span></h6>
 <p id="p-4788">A quadratic equation \(~y=ax^2+bx+c,~a \not=0,~\) can be written in the vertex form</p>
 <div class="displaymath">
 \begin{equation*}
 \blert{y=a(x-x_v)^2+y_v}
 \end{equation*}
 </div>
-<p data-braille="continuation">where the vertex of the graph is \(~(x_v,y_v)\text{.}\)</p></article></li>
-<li id="li-2847">We can convert a quadratic equation to vertex form by completing the square.</li>
-<li id="li-2848">We need three points to determine a parabola.</li>
-<li id="li-2849">We can use the method of elimination to find the equation of a parabola through three points.</li>
-<li id="li-2850">If we know the vertex of a parabola, we need only one other point to find its equation.</li>
-<li id="li-2851">We can use quadratic regression to fit a parabola to a collection of data points from a quadratic model.</li>
-<li id="li-2852">We can use a graphical technique to solve quadratic inequalities.</li>
-<li id="li-2853"><article class="assemblage assemblage-like" id="assemblage-45"><h6 class="heading"><span class="title">To solve a quadratic inequality algebraically.</span></h6>
+<p class="continuation">where the vertex of the graph is \(~(x_v,y_v)\text{.}\)</p></article></p></li>
+<li id="li-2847"><p id="p-derived-li-2847">We can convert a quadratic equation to vertex form by completing the square.</p></li>
+<li id="li-2848"><p id="p-derived-li-2848">We need three points to determine a parabola.</p></li>
+<li id="li-2849"><p id="p-derived-li-2849">We can use the method of elimination to find the equation of a parabola through three points.</p></li>
+<li id="li-2850"><p id="p-derived-li-2850">If we know the vertex of a parabola, we need only one other point to find its equation.</p></li>
+<li id="li-2851"><p id="p-derived-li-2851">We can use quadratic regression to fit a parabola to a collection of data points from a quadratic model.</p></li>
+<li id="li-2852"><p id="p-derived-li-2852">We can use a graphical technique to solve quadratic inequalities.</p></li>
+<li id="li-2853"><p id="p-derived-li-2853"><article class="assemblage assemblage-like" id="assemblage-45"><h6 class="heading"><span class="title">To solve a quadratic inequality algebraically.</span></h6>
 <ol id="p-4789" class="decimal">
-<li id="li-2854">Write the inequality in standard form: One side is zero, and the other has the form  \(ax^2+bx+c\text{.}\)</li>
-<li id="li-2855">Find the \(x\)-intercepts of the graph of \(~y=ax^2+bx+c\) by setting \(y=0\) and solving for \(x\text{.}\)</li>
-<li id="li-2856">Make a rough sketch of the graph, using the sign of \(a\) to determine whether the parabola opens upward or downward.</li>
-<li id="li-2857">Decide which intervals on the \(x\)-axis give the correct sign for \(y\text{.}\)</li>
-</ol></article></li>
-<li id="li-2858">We can write the solution set to a quadratic inequality in interval notation.</li>
-<li id="li-2859"><article class="assemblage assemblage-like" id="assemblage-46"><h6 class="heading"><span class="title">Interval Notation.</span></h6>
+<li id="li-2854"><p id="p-derived-li-2854">Write the inequality in standard form: One side is zero, and the other has the form  \(ax^2+bx+c\text{.}\)</p></li>
+<li id="li-2855"><p id="p-derived-li-2855">Find the \(x\)-intercepts of the graph of \(~y=ax^2+bx+c\) by setting \(y=0\) and solving for \(x\text{.}\)</p></li>
+<li id="li-2856"><p id="p-derived-li-2856">Make a rough sketch of the graph, using the sign of \(a\) to determine whether the parabola opens upward or downward.</p></li>
+<li id="li-2857"><p id="p-derived-li-2857">Decide which intervals on the \(x\)-axis give the correct sign for \(y\text{.}\)</p></li>
+</ol></article></p></li>
+<li id="li-2858"><p id="p-derived-li-2858">We can write the solution set to a quadratic inequality in interval notation.</p></li>
+<li id="li-2859"><p id="p-derived-li-2859"><article class="assemblage assemblage-like" id="assemblage-46"><h6 class="heading"><span class="title">Interval Notation.</span></h6>
 <ol id="p-4790" class="decimal">
-<li id="li-2860">The <dfn class="terminology">closed interval</dfn> \([a,b]\) is the set \(a \le x \le b\text{.}\)</li>
-<li id="li-2861">The <dfn class="terminology">open interval</dfn> \((a,b)\) is the set \(a \lt x \lt b\text{.}\)</li>
-<li id="li-2862">Intervals may also be <dfn class="terminology">half-open</dfn> or <dfn class="terminology">half-closed</dfn>.</li>
-<li id="li-2863">The <dfn class="terminology">infinite interval</dfn> \([a,\infty)\) is the set \(x \ge a\text{.}\)</li>
-<li id="li-2864">The <dfn class="terminology">infinite interval</dfn> \((\infty,a]\) is the set \(x \le a\text{.}\)</li>
-</ol></article></li>
-<li id="li-2865"><article class="assemblage assemblage-like" id="assemblage-47"><h6 class="heading"><span class="title">To graph a quadratic equation \(~y=ax^2+bx+c\).</span></h6>
+<li id="li-2860"><p id="p-derived-li-2860">The <dfn class="terminology">closed interval</dfn> \([a,b]\) is the set \(a \le x \le b\text{.}\)</p></li>
+<li id="li-2861"><p id="p-derived-li-2861">The <dfn class="terminology">open interval</dfn> \((a,b)\) is the set \(a \lt x \lt b\text{.}\)</p></li>
+<li id="li-2862"><p id="p-derived-li-2862">Intervals may also be <dfn class="terminology">half-open</dfn> or <dfn class="terminology">half-closed</dfn>.</p></li>
+<li id="li-2863"><p id="p-derived-li-2863">The <dfn class="terminology">infinite interval</dfn> \([a,\infty)\) is the set \(x \ge a\text{.}\)</p></li>
+<li id="li-2864"><p id="p-derived-li-2864">The <dfn class="terminology">infinite interval</dfn> \((\infty,a]\) is the set \(x \le a\text{.}\)</p></li>
+</ol></article></p></li>
+<li id="li-2865"><p id="p-derived-li-2865"><article class="assemblage assemblage-like" id="assemblage-47"><h6 class="heading"><span class="title">To graph a quadratic equation \(~y=ax^2+bx+c\).</span></h6>
 <ol id="p-4791" class="decimal">
-<li id="li-2866">Determine whether the parabola opens upward (if \(a \gt 0\)) or downward (if \(a \lt 0\)).</li>
+<li id="li-2866"><p id="p-derived-li-2866">Determine whether the parabola opens upward (if \(a \gt 0\)) or downward (if \(a \lt 0\)).</p></li>
 <li id="li-2867">
 <p id="p-4792">Locate the vertex of the parabola.</p>
 <ol class="lower-alpha">
-<li id="li-2868">The \(x\)-coordinate of the vertex is \(x_v=\dfrac{-b}{2a}\text{.}\)</li>
-<li id="li-2869">Find the \(y\)-coordinate of the vertex by substituting \(x_v\) into the equation of the  parabola.</li>
+<li id="li-2868"><p id="p-derived-li-2868">The \(x\)-coordinate of the vertex is \(x_v=\dfrac{-b}{2a}\text{.}\)</p></li>
+<li id="li-2869"><p id="p-derived-li-2869">Find the \(y\)-coordinate of the vertex by substituting \(x_v\) into the equation of the  parabola.</p></li>
 </ol>
 </li>
-<li id="li-2870">Locate the \(x\)-intercepts (if any) by setting \(y=0\) and solving for \(x\text{.}\)</li>
-<li id="li-2871">Locate the \(y\)-intercept by evaluating \(y\) for \(x=0\text{.}\)</li>
-<li id="li-2872">Locate the point symmetric to the \(y\)-intercept across the axis of symmetry.</li>
-</ol></article></li>
+<li id="li-2870"><p id="p-derived-li-2870">Locate the \(x\)-intercepts (if any) by setting \(y=0\) and solving for \(x\text{.}\)</p></li>
+<li id="li-2871"><p id="p-derived-li-2871">Locate the \(y\)-intercept by evaluating \(y\) for \(x=0\text{.}\)</p></li>
+<li id="li-2872"><p id="p-derived-li-2872">Locate the point symmetric to the \(y\)-intercept across the axis of symmetry.</p></li>
+</ol></article></p></li>
 </ol></section><section class="exercises" id="chap4-rev-problems"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Chapter 4 Review Problems</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-121">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-138"><p id="p-4793">For Problems 1–4, solve by using the quadratic formula.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-741"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -335,6 +342,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-122">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-139"><p id="p-4802">For Problems 5 and 6, solve the formula for the indicated variable.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-745"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
@@ -343,6 +351,7 @@ x_v=\dfrac{-b}{2a}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-123">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-140"><p id="p-4807">For Problems 7–10, use the discriminant to determine the nature of the solutions of the equation.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-747"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
@@ -359,18 +368,17 @@ x_v=\dfrac{-b}{2a}
 h=v_0 t-\dfrac{1}{2}gt^2
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(v_0\) is its starting velocity and \(g\) is a constant that depends on gravity. On the moon, the value of \(g\) is approximately 5.6.  Suppose you hit a golf ball on the moon with an upwards velocity 100 feet per second.</p>
+<p class="continuation">where \(v_0\) is its starting velocity and \(g\) is a constant that depends on gravity. On the moon, the value of \(g\) is approximately 5.6.  Suppose you hit a golf ball on the moon with an upwards velocity 100 feet per second.</p>
 <ol class="lower-alpha">
-<li id="li-2873">Write an equation for the height of the golf ball \(t\) seconds after you hit it.</li>
-<li id="li-2874">Graph your equation in the window<div class="displaymath">
+<li id="li-2873"><p id="p-derived-li-2873">Write an equation for the height of the golf ball \(t\) seconds after you hit it.</p></li>
+<li id="li-2874"><p id="p-derived-li-2874">Graph your equation in the window<div class="displaymath">
 \begin{align*}
 \text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 47\\
 \text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 1000
 \end{align*}
-</div>
-</li>
-<li id="li-2875">Use the TRACE key to estimate the maximum height the golf ball reaches.</li>
-<li id="li-2876">Use your equation to calculate when the golf ball will reach a height of 880 feet.</li>
+</div></p></li>
+<li id="li-2875"><p id="p-derived-li-2875">Use the TRACE key to estimate the maximum height the golf ball reaches.</p></li>
+<li id="li-2876"><p id="p-derived-li-2876">Use your equation to calculate when the golf ball will reach a height of 880 feet.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-752"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="p-4818">An acrobat is catapulted into the air from a springboard at ground level. His height \(h\) in meters is given by the formula</p>
 <div class="displaymath">
@@ -378,7 +386,7 @@ h=v_0 t-\dfrac{1}{2}gt^2
 h=-4.9t^2+14.7t
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(t\) is the time in seconds from launch. Use your calculator to graph the acrobat's height versus time.  Set the  WINDOW  values on your calculator to</p>
+<p class="continuation">where \(t\) is the time in seconds from launch. Use your calculator to graph the acrobat's height versus time.  Set the  WINDOW  values on your calculator to</p>
 <div class="displaymath">
 \begin{align*}
 \text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 4.7\\
@@ -386,17 +394,18 @@ h=-4.9t^2+14.7t
 \end{align*}
 </div>
 <ol class="lower-alpha">
-<li id="li-2881">Use the  TRACE  key to find the coordinates of the highest point on the graph.  When does the acrobat reach his maximum height, and what is that height?</li>
-<li id="li-2882">Use the formula to find the height of the acrobat after 2.4 seconds.</li>
-<li id="li-2883">Use the  TRACE key to verify your answer to part (b).  Find another time when the acrobat is at the same height.</li>
-<li id="li-2884">Use the  formula to find two times when the acrobat is at a height of 6.125 meters. Verify your answers on the graph.</li>
-<li id="li-2885">What are the coordinates of the horizontal intercepts of your graph? What do these points have to do with the acrobat?</li>
+<li id="li-2881"><p id="p-derived-li-2881">Use the  TRACE  key to find the coordinates of the highest point on the graph.  When does the acrobat reach his maximum height, and what is that height?</p></li>
+<li id="li-2882"><p id="p-derived-li-2882">Use the formula to find the height of the acrobat after 2.4 seconds.</p></li>
+<li id="li-2883"><p id="p-derived-li-2883">Use the  TRACE key to verify your answer to part (b).  Find another time when the acrobat is at the same height.</p></li>
+<li id="li-2884"><p id="p-derived-li-2884">Use the  formula to find two times when the acrobat is at a height of 6.125 meters. Verify your answers on the graph.</p></li>
+<li id="li-2885"><p id="p-derived-li-2885">What are the coordinates of the horizontal intercepts of your graph? What do these points have to do with the acrobat?</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-124">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-141">
 <p id="p-4820">For Problems 13-16,</p>
 <ol class="lower-alpha">
-<li id="li-2891">Find the coordinates of the vertex and the intercepts.</li>
-<li id="li-2892">Sketch the graph.</li>
+<li id="li-2891"><p id="p-derived-li-2891">Find the coordinates of the vertex and the intercepts.</p></li>
+<li id="li-2892"><p id="p-derived-li-2892">Sketch the graph.</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises cols2">
@@ -410,8 +419,8 @@ h=-4.9t^2+14.7t
 <article class="exercise exercise-like" id="exercise-757"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="p-4829">Find the equation for a parabola whose vertex is \((15,-6)\) and that passes through the point \((3,22.8)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-758"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <ol id="p-4831" class="lower-alpha">
-<li id="li-2901">Find the vertex of the graph of \(y=-2(x-1)^2+5\)</li>
-<li id="li-2902">Write the equation of the parabola in standard form.</li>
+<li id="li-2901"><p id="p-derived-li-2901">Find the vertex of the graph of \(y=-2(x-1)^2+5\)</p></li>
+<li id="li-2902"><p id="p-derived-li-2902">Write the equation of the parabola in standard form.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-759"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="p-4833">The total profit Kiyoshi makes from producing and selling \(x\) floral arrangements is</p>
 <div class="displaymath">
@@ -420,47 +429,47 @@ P=-0.4x^2+36x
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-2905">How many floral arrangements should Kiyoshi produce and sell to maximize his profit?</li>
-<li id="li-2906">What is his maximum profit?</li>
-<li id="li-2907">Verify your answers on a graph.</li>
+<li id="li-2905"><p id="p-derived-li-2905">How many floral arrangements should Kiyoshi produce and sell to maximize his profit?</p></li>
+<li id="li-2906"><p id="p-derived-li-2906">What is his maximum profit?</p></li>
+<li id="li-2907"><p id="p-derived-li-2907">Verify your answers on a graph.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-760"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="p-4835">The Metro Rail service sells \(1200-80x\) fares each day when it charges \(x\) dollars per fare.</p>
 <ol class="lower-alpha">
-<li id="li-2910">Write an equation for the revenue in terms of the price of a fare.</li>
-<li id="li-2911">What fare will return the maximum revenue?</li>
-<li id="li-2912">What is the maximum revenue?</li>
-<li id="li-2913">Verify your answers on a graph.</li>
+<li id="li-2910"><p id="p-derived-li-2910">Write an equation for the revenue in terms of the price of a fare.</p></li>
+<li id="li-2911"><p id="p-derived-li-2911">What fare will return the maximum revenue?</p></li>
+<li id="li-2912"><p id="p-derived-li-2912">What is the maximum revenue?</p></li>
+<li id="li-2913"><p id="p-derived-li-2913">Verify your answers on a graph.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-761"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="p-4837">A beekeeper has beehives distributed over 60 square miles of pastureland. When she places four hives per square mile, each hive produces about 32 pints of honey per year. For each additional hive per square mile, honey production drops by 4 pints per hive.</p>
 <ol class="lower-alpha">
-<li id="li-2917">Write an equation for the total production of honey, in pints, in terms of the number of additional hives per square mile.</li>
-<li id="li-2918">How many additional hives per square mile should the beekeeper install in order to maximize honey production?</li>
+<li id="li-2917"><p id="p-derived-li-2917">Write an equation for the total production of honey, in pints, in terms of the number of additional hives per square mile.</p></li>
+<li id="li-2918"><p id="p-derived-li-2918">How many additional hives per square mile should the beekeeper install in order to maximize honey production?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-762"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-4839">A small company manufactures radios. When it charges $20 for a radio, it sells 500 radios per month. For each dollar the price is increased, 10 fewer radios are sold per month.</p>
 <ol class="lower-alpha">
-<li id="li-2921">Write an equation for the monthly revenue in terms of the price increase over $20.</li>
-<li id="li-2922">What should the company charge for a radio in order to maximize its monthly revenue?</li>
+<li id="li-2921"><p id="p-derived-li-2921">Write an equation for the monthly revenue in terms of the price increase over $20.</p></li>
+<li id="li-2922"><p id="p-derived-li-2922">What should the company charge for a radio in order to maximize its monthly revenue?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-763"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <p id="p-4841">Find values of \(a~, b,\) and \(c\) so that the graph of the parabola \(~y=ax^2+bx+c\) contains the points \((-1,-4),~ (0,-6)~\) and \((4,6)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-764"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="p-4843">Find a parabola that fits the following data points.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-8\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-4\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(10\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(18\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(-14\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(-14\)</td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="exercise-765"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <p id="p-4845">The height of a cannonball was observed at \(0.2\)-second intervals after the cannon was fired, and the data recorded in the table below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Time (seconds)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.2\)</td>
@@ -472,7 +481,7 @@ P=-0.4x^2+36x
 <td class="c m b1 r1 l0 t3 lines">\(1.4\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(1.6\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(1.8\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(2.0\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(2.0\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Height(metes)</td>
@@ -485,20 +494,20 @@ P=-0.4x^2+36x
 <td class="c m b1 r1 l0 t0 lines">\(58.1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(64.7\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(71.0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(76.8\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(76.8\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-4846" class="lower-alpha">
-<li id="li-2925">Find the equation of the least-squares regression line for height in terms of time.</li>
-<li id="li-2926">Use the linear regression equation to predict the height of the cannonball at 3 seconds and at 4 seconds after it was fired.</li>
-<li id="li-2927">Make a scatterplot of the data and draw the regression line on the same axes.</li>
-<li id="li-2928">Find the quadratic regression equation for height in terms of time.</li>
-<li id="li-2929">Use quadratic regression equation to predict the height of the cannonball at 3 seconds and at 4 seconds after it was fired.</li>
-<li id="li-2930">Make a scatterplot of the data and draw the regression curve on the same axes.</li>
-<li id="li-2931">Which model is more appropriate for the height of the cannonball, linear or quadratic? Why?</li>
+<li id="li-2925"><p id="p-derived-li-2925">Find the equation of the least-squares regression line for height in terms of time.</p></li>
+<li id="li-2926"><p id="p-derived-li-2926">Use the linear regression equation to predict the height of the cannonball at 3 seconds and at 4 seconds after it was fired.</p></li>
+<li id="li-2927"><p id="p-derived-li-2927">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
+<li id="li-2928"><p id="p-derived-li-2928">Find the quadratic regression equation for height in terms of time.</p></li>
+<li id="li-2929"><p id="p-derived-li-2929">Use quadratic regression equation to predict the height of the cannonball at 3 seconds and at 4 seconds after it was fired.</p></li>
+<li id="li-2930"><p id="p-derived-li-2930">Make a scatterplot of the data and draw the regression curve on the same axes.</p></li>
+<li id="li-2931"><p id="p-derived-li-2931">Which model is more appropriate for the height of the cannonball, linear or quadratic? Why?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-766"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="p-4848">Max took a sequence of photographs of an explosion spaced at equal time intervals. From the photographs he was able to estimate the height and vertical velocity of some debris from the explosion, as shown in the table.  (Negative velocities indicate that the debris is falling back to earth.)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Velocity (meters/second)</td>
 <td class="c m b1 r1 l0 t3 lines">\(67\)</td>
@@ -506,7 +515,7 @@ P=-0.4x^2+36x
 <td class="c m b1 r1 l0 t3 lines">\(27\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(8\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-12\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(-31\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(-31\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Height (meters)</td>
@@ -515,13 +524,14 @@ P=-0.4x^2+36x
 <td class="c m b1 r1 l0 t0 lines">\(196\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(232\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(228\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(185\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(185\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-4849" class="lower-alpha">
-<li id="li-2939">Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data, and graph the equation on the scatterplot.</li>
-<li id="li-2940">Use your regression equation to find the vertex of the parabola. What do the coordinates represent, in terms of the problem? What should the velocity of the debris be at its maximum height?</li>
+<li id="li-2939"><p id="p-derived-li-2939">Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data, and graph the equation on the scatterplot.</p></li>
+<li id="li-2940"><p id="p-derived-li-2940">Use your regression equation to find the vertex of the parabola. What do the coordinates represent, in terms of the problem? What should the velocity of the debris be at its maximum height?</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-125">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-142"><p id="p-4851">For Problems 27–32, solve the inequality algebraically, and give your answers in interval notation. Verify your solutions by graphing.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-767"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
@@ -536,28 +546,28 @@ P=-0.4x^2+36x
 <article class="exercise exercise-like" id="exercise-773"><h6 class="heading"><span class="codenumber">33<span class="period">.</span></span></h6>
 <p id="p-4864">The Sub Station sells \(~220-\dfrac{1}{4}p~\) submarine sandwiches at lunchtime if it sells them at \(p\) cents each.</p>
 <ol class="lower-alpha">
-<li id="li-2943">Write a formula for the Sub Station's daily revenue in terms of \(p\text{.}\)</li>
-<li id="li-2944">What range of prices can the Sub Station charge if it wants to keep its daily revenue from subs over $480?</li>
+<li id="li-2943"><p id="p-derived-li-2943">Write a formula for the Sub Station's daily revenue in terms of \(p\text{.}\)</p></li>
+<li id="li-2944"><p id="p-derived-li-2944">What range of prices can the Sub Station charge if it wants to keep its daily revenue from subs over $480?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-774"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
 <p id="p-4866">When it charges \(p\) dollars for an electric screwdriver, Handy Hardware will sell \(~30-\dfrac{1}{2}p~\) screwdrivers per month.</p>
 <ol class="lower-alpha">
-<li id="li-2947">Write a formula in terms of \(p\) for Handy Hardware's monthly revenue from screwdrivers.</li>
-<li id="li-2948">How much should Handy charge per screwdriver if it wants the monthly revenue from the screwdrivers to be over $400?</li>
+<li id="li-2947"><p id="p-derived-li-2947">Write a formula in terms of \(p\) for Handy Hardware's monthly revenue from screwdrivers.</p></li>
+<li id="li-2948"><p id="p-derived-li-2948">How much should Handy charge per screwdriver if it wants the monthly revenue from the screwdrivers to be over $400?</p></li>
 </ol></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:59:02-07:00       *-->
+<!--*       on 2021-08-27T15:54:14-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Logarithms</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Logarithms"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">Logarithms</span>
@@ -234,19 +240,19 @@ true);
 P(t) = 50 \cdot 2^t
 \end{equation*}
 </div>
-<p data-braille="continuation">gives the number of bacteria present on day \(t\text{,}\) so we must solve the equation</p>
+<p class="continuation">gives the number of bacteria present on day \(t\text{,}\) so we must solve the equation</p>
 <div class="displaymath">
 \begin{equation*}
 800 = 50 \cdot 2^t
 \end{equation*}
 </div>
-<p data-braille="continuation">We are looking for an unknown exponent on base 2. Dividing both sides by 50 yields</p>
+<p class="continuation">We are looking for an unknown exponent on base 2. Dividing both sides by 50 yields</p>
 <div class="displaymath">
 \begin{equation*}
 16 = 2^t
 \end{equation*}
 </div>
-<p data-braille="continuation">This equation asks the question:</p>
+<p class="continuation">This equation asks the question:</p>
 <p id="p-9270">To what power must we raise \(2\) in order to get \(16\text{?}\)</p>
 <p id="p-9271">Because \(2^4 = 16\text{,}\) we see that the solution of the equation is 4. You can check that\(t=4\) solves the original problem:</p>
 <div class="displaymath">
@@ -254,13 +260,13 @@ P(t) = 50 \cdot 2^t
 P(\alert{4}) = 50 \cdot 2^{\alert{4}} = 800
 \end{equation*}
 </div>
-<p data-braille="continuation">The unknown exponent that solves the equation \(16=2^t\) is called the base \(2\) <dfn class="terminology">logarithm</dfn> of \(16\text{.}\) The exponent in this case is \(4\text{,}\) and we write this fact as</p>
+<p class="continuation">The unknown exponent that solves the equation \(16=2^t\) is called the base \(2\) <dfn class="terminology">logarithm</dfn> of \(16\text{.}\) The exponent in this case is \(4\text{,}\) and we write this fact as</p>
 <div class="displaymath">
 \begin{equation*}
 \log_{2}16 = 4
 \end{equation*}
 </div>
-<p data-braille="continuation">So, we solve an exponential equation by computing a logarithm. We make the following definition.</p>
+<p class="continuation">So, we solve an exponential equation by computing a logarithm. We make the following definition.</p>
 <article class="definition definition-like" id="definition-16"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.39</span><span class="period">.</span><span class="space"> </span><span class="title">Definition of Logarithm.</span>
 </h6>(logarithm)<p id="p-9272">For \(b\gt 0, b\ne 1\text{,}\) the <dfn class="terminology">base \(b\) logarithm of \(x\)</dfn>,  written \(\log_{b} x\text{,}\) is the exponent to which \(b\) must be raised in order to yield \(x\text{.}\)</p></article><article class="example example-like" id="example-easy-logarithm"><h6 class="heading">
@@ -273,10 +279,10 @@ P(\alert{4}) = 50 \cdot 2^{\alert{4}} = 800
 <li id="li-6056"><p id="p-9276">\(\log_4 \dfrac{1}{16} = -2\) because \(4^{-2}=\dfrac{1}{16}\)</p></li>
 <li id="li-6057"><p id="p-9277">\(\log_5 \sqrt{5} = \dfrac{1}{2}\) because \(5^{1/2} = \sqrt{5}\)</p></li>
 </ol></article><p id="p-9278">The positive constant \(b\) is called the <dfn class="terminology">base</dfn> of the exponential function.</p>
-<article class="exercise exercise-like" id="exercise-1463"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1463"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-1463"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.41</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1463"><article class="exercise exercise-like"><iframe name="webwork-288" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=288&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPmRpc2FibGUoIkFsbCIpOwokYSA9IENvbXB1dGUoIjQiKTsKJGIgPSBDb21wdXRlKCItMyIpOwoKQkVHSU5fUEdNTApGaW5kIGVhY2ggbG9nYXJpdGhtLgoKYS4gIFtgXGxvZ197M317ODF9PWBdW19deyRhfXsyfQoKCmEuICBbYFxsb2dfezEwfXtcZGZyYWN7MX17MTAwMH19PWBdW19deyRifXsyfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2A0YF0KCgphLiAgW2AtM2BdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="288"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-9288">From the definition of a logarithm and the examples above, we see that the following two statements are equivalent.</p>
+</h6>
+<iframe name="webwork-288" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=288&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPmRpc2FibGUoIkFsbCIpOwokYSA9IENvbXB1dGUoIjQiKTsKJGIgPSBDb21wdXRlKCItMyIpOwoKQkVHSU5fUEdNTApGaW5kIGVhY2ggbG9nYXJpdGhtLgoKYS4gIFtgXGxvZ197M317ODF9PWBdW19deyRhfXsyfQoKCmEuICBbYFxsb2dfezEwfXtcZGZyYWN7MX17MTAwMH19PWBdW19deyRifXsyfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2A0YF0KCgphLiAgW2AtM2BdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="288"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-9288">From the definition of a logarithm and the examples above, we see that the following two statements are equivalent.</p>
 <article class="assemblage assemblage-like" id="assemblage-99"><h6 class="heading"><span class="title">Logarithms and Exponents: Conversion Equations.</span></h6>
 <p id="p-9289">If \(b \gt 0\text{,}\) \(b\ne 1\text{,}\) and \(x \gt 0\text{,}\)</p>
 <div class="displaymath">
@@ -302,9 +308,10 @@ P(\alert{4}) = 50 \cdot 2^{\alert{4}} = 800
 <li id="li-6062"><p id="p-9296">\(\displaystyle \log_{2}{2} = 1\)</p></li>
 <li id="li-6063"><p id="p-9297">\(\displaystyle \log_{5}{1} = 0\)</p></li>
 <li id="li-6064"><p id="p-9298">\(\displaystyle \log_{3}{3^4} = 4\)</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-1464"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1464"><h6 class="heading">
+</ol></article><article class="exercise exercise-like" id="exercise-1464"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.43</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1464"><article class="exercise exercise-like"><iframe name="webwork-289" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=289&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPnVuZGVmaW5lKCJsbiIsImxvZzEwIiwibG9nIik7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5hZGQodz0%2BIlJlYWwiLHA9PiJSZWFsIik7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5zZXQoeD0%2Be2xpbWl0cz0%2BWzEsMl19KTsKJGEgPSBDb21wdXRlKCIzIik7CiRiID0gQ29tcHV0ZSgiMCIpOwokYyA9IENvbXB1dGUoIjUiKTsKJGQgPSBGb3JtdWxhKCJ3XnAiKTsKCkJFR0lOX1BHTUwKYS4gIFtgXGxvZ182ezIxNn09YF0gW19deyRhfXsyfSBiZWNhdXNlIDZeW19deyRhfXsyfSBbYD0gMjE2YF0KCgphLiAgW2BcbG9nXzh7MX0gPWBdIFtfXXskYn17Mn0gYmVjYXVzZSA4XltfXXskYn17Mn0gW2A9IDFgXQoKCmEuICBbYFxsb2dfOXs5XjV9ID1gXSBbX117JGN9ezJ9CgoKYS4gIElmIFtgXGxvZ193ezg3fSA9IHAsYF0gdGhlbiBbYDg3ID1gXSBbX117JGR9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAzCmEuICAwCmEuICA1CmEuICBbYHdecGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="289"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-165"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-289" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=289&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPnVuZGVmaW5lKCJsbiIsImxvZzEwIiwibG9nIik7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5hZGQodz0%2BIlJlYWwiLHA9PiJSZWFsIik7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5zZXQoeD0%2Be2xpbWl0cz0%2BWzEsMl19KTsKJGEgPSBDb21wdXRlKCIzIik7CiRiID0gQ29tcHV0ZSgiMCIpOwokYyA9IENvbXB1dGUoIjUiKTsKJGQgPSBGb3JtdWxhKCJ3XnAiKTsKCkJFR0lOX1BHTUwKYS4gIFtgXGxvZ182ezIxNn09YF0gW19deyRhfXsyfSBiZWNhdXNlIDZeW19deyRhfXsyfSBbYD0gMjE2YF0KCgphLiAgW2BcbG9nXzh7MX0gPWBdIFtfXXskYn17Mn0gYmVjYXVzZSA4XltfXXskYn17Mn0gW2A9IDFgXQoKCmEuICBbYFxsb2dfOXs5XjV9ID1gXSBbX117JGN9ezJ9CgoKYS4gIElmIFtgXGxvZ193ezg3fSA9IHAsYF0gdGhlbiBbYDg3ID1gXSBbX117JGR9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAzCmEuICAwCmEuICA1CmEuICBbYHdecGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="289"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-165"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Logs and Exponential Equations</span>
 </h3>
 <p id="p-9315">We use logarithms to solve exponential equations, just as we use square roots to solve quadratic equations. Consider the two equations</p>
@@ -313,26 +320,26 @@ P(\alert{4}) = 50 \cdot 2^{\alert{4}} = 800
 x^2 = 25 ~~~~ \text{ and } ~~~~ 2^x = 8
 \end{equation*}
 </div>
-<p data-braille="continuation">We solve the first equation by taking a square root, and we solve the second equation by computing a logarithm:</p>
+<p class="continuation">We solve the first equation by taking a square root, and we solve the second equation by computing a logarithm:</p>
 <div class="displaymath">
 \begin{equation*}
 x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 \end{equation*}
 </div>
-<p data-braille="continuation">The operation of taking a base \(b\) logarithm is the inverse operation for raising the base \(b\) to a power, just as extracting square roots is the inverse of squaring a number.</p>
+<p class="continuation">The operation of taking a base \(b\) logarithm is the inverse operation for raising the base \(b\) to a power, just as extracting square roots is the inverse of squaring a number.</p>
 <p id="p-9316">Every exponential equation can be rewritten in logarithmic form by using the conversion equations. Thus,</p>
 <div class="displaymath">
 \begin{equation*}
 3 = \log_{2}{8}~~~~ \text{ and }~~~~ 8 = 2^3
 \end{equation*}
 </div>
-<p data-braille="continuation">are equivalent statements, just as</p>
+<p class="continuation">are equivalent statements, just as</p>
 <div class="displaymath">
 \begin{equation*}
 5 = \sqrt{25}~~~~ \text{ and }~~~~ 25 = 5^2
 \end{equation*}
 </div>
-<p data-braille="continuation">are equivalent statements. Rewriting an equation in logarithmic form is a basic  strategy for finding its solution.</p>
+<p class="continuation">are equivalent statements. Rewriting an equation in logarithmic form is a basic  strategy for finding its solution.</p>
 <article class="example example-like" id="example-exponential-to-log-form"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.44</span><span class="period">.</span>
 </h6>
@@ -344,7 +351,7 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 <li id="li-6076"><p id="p-9321">\(\displaystyle M^v = 3K\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-439" id="solution-439"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-439"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-439" id="solution-439"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-439"><div class="solution solution-like">
 <p id="p-9322">First identify the base \(b\text{,}\) and then the exponent or logarithm \(y\text{.}\) Use the conversion equations to rewrite \(b^y = x\) in the form \(\log_{b}{x} = y\text{.}\)</p>
 <ol class="lower-alpha">
 <li id="li-6077"><p id="p-9323">The base is \(2\) and the exponent is \(-1\text{.}\) Thus, \(\log_{2}{\dfrac{1}{2}}= -1\text{.}\)</p></li>
@@ -353,12 +360,13 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 <li id="li-6080"><p id="p-9326">The base is \(M\) and the exponent is \(v\text{.}\) Thus, \(\log_{M}{3K} = v\text{.}\)</p></li>
 </ol>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1465"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1465"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1465"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.45</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1465"><article class="exercise exercise-like"><iframe name="webwork-290" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=290&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChGcmFjdGlvbik7CiR5YSA9IENvbXB1dGUoIi0xLzMiKTsKJGJhID0gQ29tcHV0ZSgiOCIpOwokeGEgPSBDb21wdXRlKCIxLzIiKTsKJHliID0gRm9ybXVsYSgieCIpOwokYmIgPSBDb21wdXRlKCI1Iik7CiR4YiA9IENvbXB1dGUoIjQ2Iik7CgpCRUdJTl9QR01MClJld3JpdGUgZWFjaCBlcXVhdGlvbiBpbiBsb2dhcml0aG1pYyBmb3JtLgoKYS4gIFtgOF57LTEvM30gPSBcZGZyYWN7MX17Mn1gXQoKICAgIFRoZSBnaXZlbiBlcXVhdGlvbiBpcyBlcXVpdmFsZW50IHRvIG9uZSBvZiB0aGUgZm9ybSBbYFxsb2dfe2J9bT1uXHRleHR7LH1gXSB3aGVyZQoKICAgIFtgYj1gXVtfXXskYmF9ezN9CgogICAgW2BtPWBdW19deyR4YX17M30sIGFuZAoKICAgIFtgbj1gXVtfXXskeWF9ezN9CgoKYS4gIFtgNV54ID0gNDZgXQoKICAgIFRoZSBnaXZlbiBlcXVhdGlvbiBpcyBlcXVpdmFsZW50IHRvIG9uZSBvZiB0aGUgZm9ybSBbYFxsb2dfe2J9bT1uXHRleHR7LH1gXSB3aGVyZQoKICAgIFtgYj1gXVtfXXskYmJ9ezN9CgogICAgW2BtPWBdW19deyR4Yn17M30sIGFuZAoKICAgIFtgbj1gXVtfXXskeWJ9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFxsb2dfOCBcbGVmdChcZGZyYWN7MX17Mn0gXHJpZ2h0KT1cZGZyYWN7LTF9ezN9IGBdCgoKYS4gIFtgXGxvZ197NX0gNDY9eCBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="290"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1466"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1466"><h6 class="heading">
+</h6>
+<iframe name="webwork-290" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=290&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChGcmFjdGlvbik7CiR5YSA9IENvbXB1dGUoIi0xLzMiKTsKJGJhID0gQ29tcHV0ZSgiOCIpOwokeGEgPSBDb21wdXRlKCIxLzIiKTsKJHliID0gRm9ybXVsYSgieCIpOwokYmIgPSBDb21wdXRlKCI1Iik7CiR4YiA9IENvbXB1dGUoIjQ2Iik7CgpCRUdJTl9QR01MClJld3JpdGUgZWFjaCBlcXVhdGlvbiBpbiBsb2dhcml0aG1pYyBmb3JtLgoKYS4gIFtgOF57LTEvM30gPSBcZGZyYWN7MX17Mn1gXQoKICAgIFRoZSBnaXZlbiBlcXVhdGlvbiBpcyBlcXVpdmFsZW50IHRvIG9uZSBvZiB0aGUgZm9ybSBbYFxsb2dfe2J9bT1uXHRleHR7LH1gXSB3aGVyZQoKICAgIFtgYj1gXVtfXXskYmF9ezN9CgogICAgW2BtPWBdW19deyR4YX17M30sIGFuZAoKICAgIFtgbj1gXVtfXXskeWF9ezN9CgoKYS4gIFtgNV54ID0gNDZgXQoKICAgIFRoZSBnaXZlbiBlcXVhdGlvbiBpcyBlcXVpdmFsZW50IHRvIG9uZSBvZiB0aGUgZm9ybSBbYFxsb2dfe2J9bT1uXHRleHR7LH1gXSB3aGVyZQoKICAgIFtgYj1gXVtfXXskYmJ9ezN9CgogICAgW2BtPWBdW19deyR4Yn17M30sIGFuZAoKICAgIFtgbj1gXVtfXXskeWJ9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFxsb2dfOCBcbGVmdChcZGZyYWN7MX17Mn0gXHJpZ2h0KT1cZGZyYWN7LTF9ezN9IGBdCgoKYS4gIFtgXGxvZ197NX0gNDY9eCBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="290"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1466"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.46</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1466"><article class="exercise exercise-like"><iframe name="webwork-291" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=291&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHNxcnQgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUYWtpbmcgYSBsb2dhcml0aG0uIiwgCiAgICAiVGFraW5nIGEgc3F1YXJlIHJvb3QuIiwKICAgICJEaXZpZGluZyBieSB0aGUgbnVtYmVyLiIsCiAgICAiU3VidHJhY3RpbmcgdGhlIG51bWJlci4iXSwKICAgIDIKKTsKJGxvZyA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRha2luZyBhIGxvZ2FyaXRobS4iLCAKICAgICJUYWtpbmcgYSBzcXVhcmUgcm9vdC4iLAogICAgIkRpdmlkaW5nIGJ5IHRoZSBudW1iZXIuIiwKICAgICJTdWJ0cmFjdGluZyB0aGUgbnVtYmVyLiJdLAogICAgMQopOwokY29uID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAicmVjaXByb2NhbHMiLCAKICAgICJzbG9wZSIsCiAgICAiY29udmVyc2lvbiBlcXVhdGlvbnMiXSwKICAgIDMKKTsKJGV4cCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgInF1b3RpZW50IiwgCiAgICAicHJvZHVjdCIsCiAgICAiZXhwb25lbnQiLAogICAgImJhc2UiXSwKICAgIDMKKTsKCkJFR0lOX1BHTUwKYS4gIFdoYXQgaXMgdGhlIGludmVyc2Ugb3BlcmF0aW9uIGZvciBzcXVhcmluZyBhIG51bWJlcj8gW19deyRzcXJ0fXs1fQoKCmEuICBXaGF0IGlzIHRoZSBpbnZlcnNlIG9wZXJhdGlvbiBmb3IgcmFpc2luZyB0byBhIHBvd2VyPyBbX117JGxvZ317NX0KCgphLiAgRXZlcnkgZXhwb25lbnRpYWwgZXF1YXRpb24gY2FuIGJlIHJld3JpdHRlbiBpbiBsb2dhcml0aG1pYyBmb3JtIGJ5IHVzaW5nIHRoZSBbX117JGNvbn17NX0uCgoKYS4gIEEgbG9nYXJpdGhtIGlzIGFuIHVua25vd24gW19deyRleHB9ezV9LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVGFraW5nIGEgc3F1YXJlIHJvb3QKYS4gIFRha2luZyBhIGxvZ2FyaXRobQphLiAgY29udmVyc2lvbiBlcXVhdGlvbnMKYS4gIGV4cG9uZW50ICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="291"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-166"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-291" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=291&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHNxcnQgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUYWtpbmcgYSBsb2dhcml0aG0uIiwgCiAgICAiVGFraW5nIGEgc3F1YXJlIHJvb3QuIiwKICAgICJEaXZpZGluZyBieSB0aGUgbnVtYmVyLiIsCiAgICAiU3VidHJhY3RpbmcgdGhlIG51bWJlci4iXSwKICAgIDIKKTsKJGxvZyA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRha2luZyBhIGxvZ2FyaXRobS4iLCAKICAgICJUYWtpbmcgYSBzcXVhcmUgcm9vdC4iLAogICAgIkRpdmlkaW5nIGJ5IHRoZSBudW1iZXIuIiwKICAgICJTdWJ0cmFjdGluZyB0aGUgbnVtYmVyLiJdLAogICAgMQopOwokY29uID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAicmVjaXByb2NhbHMiLCAKICAgICJzbG9wZSIsCiAgICAiY29udmVyc2lvbiBlcXVhdGlvbnMiXSwKICAgIDMKKTsKJGV4cCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgInF1b3RpZW50IiwgCiAgICAicHJvZHVjdCIsCiAgICAiZXhwb25lbnQiLAogICAgImJhc2UiXSwKICAgIDMKKTsKCkJFR0lOX1BHTUwKYS4gIFdoYXQgaXMgdGhlIGludmVyc2Ugb3BlcmF0aW9uIGZvciBzcXVhcmluZyBhIG51bWJlcj8gW19deyRzcXJ0fXs1fQoKCmEuICBXaGF0IGlzIHRoZSBpbnZlcnNlIG9wZXJhdGlvbiBmb3IgcmFpc2luZyB0byBhIHBvd2VyPyBbX117JGxvZ317NX0KCgphLiAgRXZlcnkgZXhwb25lbnRpYWwgZXF1YXRpb24gY2FuIGJlIHJld3JpdHRlbiBpbiBsb2dhcml0aG1pYyBmb3JtIGJ5IHVzaW5nIHRoZSBbX117JGNvbn17NX0uCgoKYS4gIEEgbG9nYXJpdGhtIGlzIGFuIHVua25vd24gW19deyRleHB9ezV9LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVGFraW5nIGEgc3F1YXJlIHJvb3QKYS4gIFRha2luZyBhIGxvZ2FyaXRobQphLiAgY29udmVyc2lvbiBlcXVhdGlvbnMKYS4gIGV4cG9uZW50ICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="291"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-166"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Approximating Logarithms</span>
 </h3>
 <p id="p-9381">Now let's consider computing logarithms that are not obvious by inspection. Suppose we would like to solve the equation</p>
@@ -367,55 +375,55 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 2^x = 26
 \end{equation*}
 </div>
-<p data-braille="continuation">The solution of this equation is \(x = \log_{2}{26}\text{,}\) but can we find a decimal approximation for this value? There is no integer power of 2 that equals 26, because</p>
+<p class="continuation">The solution of this equation is \(x = \log_{2}{26}\text{,}\) but can we find a decimal approximation for this value? There is no integer power of 2 that equals 26, because</p>
 <div class="displaymath">
 \begin{equation*}
 2^4  = 16~~~~~ \text{and }~~~~ 2^5  = 32
 \end{equation*}
 </div>
-<p data-braille="continuation">So \(\log_{2}{26}\) must be between 4 and 5. We can use trial and error to find the value of \(\log_{2}{26}\) to the nearest tenth. Use your calculator to make a table of values for \(y = 2^x\text{,}\) starting with \(x = 4\) and using increments of 0.1.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p class="continuation">So \(\log_{2}{26}\) must be between 4 and 5. We can use trial and error to find the value of \(\log_{2}{26}\) to the nearest tenth. Use your calculator to make a table of values for \(y = 2^x\text{,}\) starting with \(x = 4\) and using increments of 0.1.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b3 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b3 r1 l0 t1 lines">\(2^x\)</td>
 <td class="c m b0 r1 l0 t0 lines"></td>
 <td class="c m b3 r1 l0 t1 lines">\(x\)</td>
-<td class="c m b3 r1 l0 t1 lines" data-braille="last-cell">\(2^x\)</td>
+<td class="c m b3 r1 l0 t1 lines">\(2^x\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2^4=16\)</td>
 <td class="c m b0 r1 l0 t0 lines"></td>
 <td class="c m b1 r1 l0 t0 lines">\(4.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2^{4.5}=22.627\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2^{4.5}=22.627\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4.1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2^{4.1}=17.148\)</td>
 <td class="c m b0 r1 l0 t0 lines"></td>
 <td class="c m b1 r1 l0 t0 lines">\(4.6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2^{4.6}=24.251\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2^{4.6}=24.251\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4.2\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2^{4.2}=18.379\)</td>
 <td class="c m b0 r1 l0 t0 lines"></td>
 <td class="c m b1 r1 l0 t0 lines">\(\alert{4.7}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2^{\alert{4.7}}=25.992\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2^{\alert{4.7}}=25.992\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4.3\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2^{4.3}=19.698\)</td>
 <td class="c m b0 r1 l0 t0 lines"></td>
 <td class="c m b1 r1 l0 t0 lines">\(\alert{4.8}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2^{\alert{4.8}}=27.858\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2^{\alert{4.8}}=27.858\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4.4\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2^{4.4}=21.112\)</td>
 <td class="c m b0 r1 l0 t0 lines"></td>
 <td class="c m b1 r1 l0 t0 lines">\(4.9\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2^{4.9}=29.857\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2^{4.9}=29.857\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-9382">From the table we see that 26 is between \(2^{4.7}\) and \(2^{4.8}\text{,}\) and is closer to \(2^{4.7}\text{.}\) To the nearest tenth, \(\log_{2}{26} \approx 4.7\text{.}\)</p>
@@ -425,7 +433,7 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 </h6>
 <p id="p-9384">Approximate \(\log_{3}{7}\) to the nearest hundredth.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-442" id="solution-442"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-442"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-442" id="solution-442"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-442"><div class="solution solution-like">
 <p id="p-9385">If \(\log_{3}{7}=x\text{,}\) then \(3^x = 7\text{.}\) We will use the graph of \(y = 3^x\) to approximate a solution to \(3^x = 7\text{.}\)</p>
 <p id="p-9386">We graph \(Y_1 =3\)<kbd class="kbdkey">^</kbd> X and \(Y_2 = 7\) in the standard window (<kbd class="kbdkey">ZOOM</kbd> 6) to obtain the graph shown below. Next we activate the intersect feature to find that the two graphs intersect at the point \((1.7712437, 7)\text{.}\) Because this point lies on the graph of \(y = 3^x\) , we know that</p>
 <div class="displaymath">
@@ -433,12 +441,13 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 3^{1.7712437} \approx 7~~~\text{, or }~~~ \log_{3}{7} \approx 1.7712437
 \end{equation*}
 </div>
-<p data-braille="continuation">To the nearest hundredth, \(\log_{3}{7} \approx 1.77\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-approx-log.svg" role="img" style="width: 100%; height: auto;" alt="GC intersection of expnential curve and horizontal line"></div></div></div>
+<p class="continuation">To the nearest hundredth, \(\log_{3}{7} \approx 1.77\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-approx-log.svg" role="img" class="contained" alt="GC intersection of expnential curve and horizontal line"></div></div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1467"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1467"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1467"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.48</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1467"><article class="exercise exercise-like"><iframe name="webwork-292" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=292&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChGcmFjdGlvbik7CiR5ID0gRm9ybXVsYSgieCIpOwokYiA9IENvbXB1dGUoIjMiKTsKJHggPSBDb21wdXRlKCI5MCIpOwokZXhhY3QgPSBsb2coOTApL2xvZygzKTsKJGFuc3dlciA9IENvbXB1dGUoIiRleGFjdCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwMDUsCik7CgpCRUdJTl9QR01MCmEuICBSZXdyaXRlIHRoZSBlcXVhdGlvbiBbYDNeeCA9IDkwYF0gaW4gbG9nYXJpdGhtaWMgZm9ybS4KCiAgICBUaGUgZ2l2ZW4gZXF1YXRpb24gaXMgZXF1aXZhbGVudCB0byBvbmUgb2YgdGhlIGZvcm0gW2BcbG9nX3tifW09blx0ZXh0eyx9YF0gd2hlcmUKCiAgICBbYGI9YF1bX117JGJ9ezN9CgogICAgW2BtPWBdW19deyR4fXszfSwgYW5kCgogICAgW2BuPWBdW19deyR5fXszfQoKCmEuICBVc2UgYSBncmFwaCB0byBhcHByb3hpbWF0ZSB0aGUgc29sdXRpb24gdG8gdGhlIGVxdWF0aW9uIGluIHBhcnQgKGEpLiBSb3VuZCB5b3VyIGFuc3dlciB0byB0aHJlZSBkZWNpbWFsIHBsYWNlcy4KCiAgICBbYHhcYXBwcm94YF1bX117JGFuc3dlcn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGxvZ184KDkwKT14IGBdCgoKYS4gIFtgeFxhcHByb3ggNC4wOTYgYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="292"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-167"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-292" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=292&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChGcmFjdGlvbik7CiR5ID0gRm9ybXVsYSgieCIpOwokYiA9IENvbXB1dGUoIjMiKTsKJHggPSBDb21wdXRlKCI5MCIpOwokZXhhY3QgPSBsb2coOTApL2xvZygzKTsKJGFuc3dlciA9IENvbXB1dGUoIiRleGFjdCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwMDUsCik7CgpCRUdJTl9QR01MCmEuICBSZXdyaXRlIHRoZSBlcXVhdGlvbiBbYDNeeCA9IDkwYF0gaW4gbG9nYXJpdGhtaWMgZm9ybS4KCiAgICBUaGUgZ2l2ZW4gZXF1YXRpb24gaXMgZXF1aXZhbGVudCB0byBvbmUgb2YgdGhlIGZvcm0gW2BcbG9nX3tifW09blx0ZXh0eyx9YF0gd2hlcmUKCiAgICBbYGI9YF1bX117JGJ9ezN9CgogICAgW2BtPWBdW19deyR4fXszfSwgYW5kCgogICAgW2BuPWBdW19deyR5fXszfQoKCmEuICBVc2UgYSBncmFwaCB0byBhcHByb3hpbWF0ZSB0aGUgc29sdXRpb24gdG8gdGhlIGVxdWF0aW9uIGluIHBhcnQgKGEpLiBSb3VuZCB5b3VyIGFuc3dlciB0byB0aHJlZSBkZWNpbWFsIHBsYWNlcy4KCiAgICBbYHhcYXBwcm94YF1bX117JGFuc3dlcn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGxvZ184KDkwKT14IGBdCgoKYS4gIFtgeFxhcHByb3ggNC4wOTYgYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="292"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-167"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Base 10 Logarithms</span>
 </h3>
 <p id="p-9402">Some logarithms are used so frequently in applications that their values are programmed into scientific and graphing calculators. These are the base 10 logarithms, such as</p>
@@ -447,11 +456,11 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 \log_{10}{1000} = 3 ~~~\text{ and }~~~ \log_{10}{0.01} = -2
 \end{equation*}
 </div>
-<p data-braille="continuation">Base 10 logarithms are called <dfn class="terminology">common logarithms</dfn>, and the subscript 10 is often omitted, so that \(\log x\) is understood to mean \(\log_{10}{x}\text{.}\)</p>
-<article class="exercise exercise-like" id="exercise-1468"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1468"><h6 class="heading">
+<p class="continuation">Base 10 logarithms are called <dfn class="terminology">common logarithms</dfn>, and the subscript 10 is often omitted, so that \(\log x\) is understood to mean \(\log_{10}{x}\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-1468"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.49</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1468"><article class="exercise exercise-like"><iframe name="webwork-293" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=293&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmaW5kZXggPSBSYWRpb0J1dHRvbnMoCiAgWyJcKHg9MjVcKSIsCiAgIlwoeFwpIGlzIGJldHdlZW4gMjAgYW5kIDMwIiwKICAiXCh4XCkgaXMgYmV0d2VlbiAxMDAgYW5kIDEwMDAiLAogICJcKHg9XGRmcmFjezF9ezIuNX09MC40XCkiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKSWYgW2BcbG9nIHggPSAyLjVcdGV4dHssfWBdIHdoYXQgY2FuIHlvdSBzYXkgYWJvdXQgW2B4XHRleHR7P31gXQoKICAgIFtfXXskZmluZGV4fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeGBdIGlzIGJldHdlZW4gMTAwIGFuZCAxMDAwCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="293"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-9411">To evaluate a base 10 logarithm, we use the <kbd class="kbdkey">LOG</kbd> key on a calculator. Many logarithms are irrational numbers, and the calculator gives as many digits as its display allows. We can then round off to the desired accuracy.</p>
+</h6>
+<iframe name="webwork-293" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=293&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmaW5kZXggPSBSYWRpb0J1dHRvbnMoCiAgWyJcKHg9MjVcKSIsCiAgIlwoeFwpIGlzIGJldHdlZW4gMjAgYW5kIDMwIiwKICAiXCh4XCkgaXMgYmV0d2VlbiAxMDAgYW5kIDEwMDAiLAogICJcKHg9XGRmcmFjezF9ezIuNX09MC40XCkiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKSWYgW2BcbG9nIHggPSAyLjVcdGV4dHssfWBdIHdoYXQgY2FuIHlvdSBzYXkgYWJvdXQgW2B4XHRleHR7P31gXQoKICAgIFtfXXskZmluZGV4fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeGBdIGlzIGJldHdlZW4gMTAwIGFuZCAxMDAwCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="293"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-9411">To evaluate a base 10 logarithm, we use the <kbd class="kbdkey">LOG</kbd> key on a calculator. Many logarithms are irrational numbers, and the calculator gives as many digits as its display allows. We can then round off to the desired accuracy.</p>
 <article class="example example-like" id="example-calculator-log"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.50</span><span class="period">.</span>
 </h6>
@@ -461,19 +470,19 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 <li id="li-6121"><p id="p-9414">\(\displaystyle \log{256}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-445" id="solution-445"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-445"><div class="solution solution-like"><ol id="p-9415" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-445" id="solution-445"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-445"><div class="solution solution-like"><ol id="p-9415" class="lower-alpha">
 <li id="li-6122">
 <p id="p-9416">The keying sequence <kbd class="kbdkey">LOG</kbd> \(6.5\) <kbd class="kbdkey">)</kbd><kbd class="kbdkey">ENTER</kbd> produces the display</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(\log {(6.5)}\)</td>
 <td class="l m b0 r0 l0 t0 lines">\(\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(\)</td>
 <td class="l m b0 r0 l0 t0 lines">\(\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(.812913566\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(.812913566\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-9417">so \(\log {6.5}\approx 0.81\text{.}\)</p>
@@ -490,13 +499,14 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 \text{and} \amp\amp 10^{2.41} \amp\approx 257.0395783
 \end{align*}
 </div>
-<p data-braille="continuation">so our approximations are reasonable, although you can see that rounding a logarithm to 2 decimal places does lose some accuracy.</p>
-<p id="p-9420">For this reason, <em class="emphasis">rounding logarithms to 4 decimal places is customary.</em></p></article><article class="exercise exercise-like" id="exercise-1469"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1469"><h6 class="heading">
+<p class="continuation">so our approximations are reasonable, although you can see that rounding a logarithm to 2 decimal places does lose some accuracy.</p>
+<p id="p-9420">For this reason, <em class="emphasis">rounding logarithms to 4 decimal places is customary.</em></p></article><article class="exercise exercise-like" id="exercise-1469"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.52</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1469"><article class="exercise exercise-like"><iframe name="webwork-294" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=294&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPnVuZGVmaW5lKCJsbiIsImxvZzEwIiwibG9nIik7CiRhID0gQ29tcHV0ZSgiLTAuNjk5Iik7CiRiID0gQ29tcHV0ZSgiNS45Mjc0Iik7CgpCRUdJTl9QR01MCkFwcHJveGltYXRlIHRoZSBsb2dhcml0aG1zIHRvIGZvdXIgZGVjaW1hbCBwbGFjZXMuCmEuICBbYFxsb2cgezAuMn1cYXBwcm94YF1bX117JGF9ezV9CgoKYS4gIFtgXGxvZyB7ODQ2LDAwMH1cYXBwcm94YF1bX117JGJ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYCAtMC42OTkwYF0KYS4gIFtgNS45Mjc0YF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="294"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1470"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1470"><h6 class="heading">
+</h6>
+<iframe name="webwork-294" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=294&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPnVuZGVmaW5lKCJsbiIsImxvZzEwIiwibG9nIik7CiRhID0gQ29tcHV0ZSgiLTAuNjk5Iik7CiRiID0gQ29tcHV0ZSgiNS45Mjc0Iik7CgpCRUdJTl9QR01MCkFwcHJveGltYXRlIHRoZSBsb2dhcml0aG1zIHRvIGZvdXIgZGVjaW1hbCBwbGFjZXMuCmEuICBbYFxsb2cgezAuMn1cYXBwcm94YF1bX117JGF9ezV9CgoKYS4gIFtgXGxvZyB7ODQ2LDAwMH1cYXBwcm94YF1bX117JGJ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYCAtMC42OTkwYF0KYS4gIFtgNS45Mjc0YF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="294"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1470"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.53</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1470"><article class="exercise exercise-like"><iframe name="webwork-295" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=295&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBUaGUgTE9HIGtleSBvbiBhIGNhbGN1bGF0b3IgY29tcHV0ZXMgbG9nYXJpdGhtcyBiYXNlIDIuIFtfXXskRmFsc2V9ezV9CgoKYS4gIFtgXGxvZ181IHsxMDB9YF0gaXMgYSBudW1iZXIgYmV0d2VlbiAyIGFuZCAzLiAgW19deyRUcnVlfXs1fQoKCmEuICBSb3VuZGluZyBhIGxvZ2FyaXRobSB0byB0d28gZGVjaW1hbCBwbGFjZXMgZ2l2ZXMgdmVyeSBhY2N1cmF0ZSByZXN1bHRzLiBbX117JEZhbHNlfXs1fQoKCmEuICBUaGUgdmFsdWUgb2YgW2BcbG9nXzQgezM5Mn1gXSBpcyBhbHNvIHRoZSBzb2x1dGlvbiBvZiBbYDReeCA9IDM5Mlx0ZXh0ey59YF0gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="295"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-168"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-295" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=295&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBUaGUgTE9HIGtleSBvbiBhIGNhbGN1bGF0b3IgY29tcHV0ZXMgbG9nYXJpdGhtcyBiYXNlIDIuIFtfXXskRmFsc2V9ezV9CgoKYS4gIFtgXGxvZ181IHsxMDB9YF0gaXMgYSBudW1iZXIgYmV0d2VlbiAyIGFuZCAzLiAgW19deyRUcnVlfXs1fQoKCmEuICBSb3VuZGluZyBhIGxvZ2FyaXRobSB0byB0d28gZGVjaW1hbCBwbGFjZXMgZ2l2ZXMgdmVyeSBhY2N1cmF0ZSByZXN1bHRzLiBbX117JEZhbHNlfXs1fQoKCmEuICBUaGUgdmFsdWUgb2YgW2BcbG9nXzQgezM5Mn1gXSBpcyBhbHNvIHRoZSBzb2x1dGlvbiBvZiBbYDReeCA9IDM5Mlx0ZXh0ey59YF0gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="295"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-168"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving Exponential Equations</span>
 </h3>
 <p id="p-9455">We can now solve any exponential equation with base 10.</p>
@@ -505,7 +515,7 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 </h6>
 <p id="p-9456">Solve the equation \(~~38 = 95 - 15 \cdot 10^{0.4x}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-448" id="solution-448"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-448"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-448" id="solution-448"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-448"><div class="solution solution-like">
 <p id="p-9457">First, we isolate the power of 10: We subtract 95 from both sides of the equation and divide by \(-15\) to obtain</p>
 <div class="displaymath">
 \begin{align*}
@@ -513,19 +523,19 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 3.8 \amp = 10^{0.4x}
 \end{align*}
 </div>
-<p data-braille="continuation">Next, we convert the equation to logarithmic form as</p>
+<p class="continuation">Next, we convert the equation to logarithmic form as</p>
 <div class="displaymath">
 \begin{equation*}
 \log_{10}{3.8} = 0.4x
 \end{equation*}
 </div>
-<p data-braille="continuation">Solving for \(x\) yields</p>
+<p class="continuation">Solving for \(x\) yields</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\log_{10}{3.8}}{0.4}= x
 \end{equation*}
 </div>
-<p data-braille="continuation">We can evaluate this expression on the calculator by entering</p>
+<p class="continuation">We can evaluate this expression on the calculator by entering</p>
 <p id="p-9458"><kbd class="kbdkey">LOG</kbd> \(3.8\) <kbd class="kbdkey">)</kbd> <kbd class="kbdkey">÷</kbd> \(0.4\) <kbd class="kbdkey">ENTER</kbd></p>
 <p id="p-9459">which yields \(1.449458992\text{.}\) Thus, to four decimal places, \(x \approx 1.4495\text{.}\)</p>
 </div></div>
@@ -535,16 +545,17 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 <p id="p-9460">Do not omit the parenthesis when entering the expression in Example 5.  Without the parenthesis, you are calculating \(\log_{10}{\dfrac{3.8}{0.4}}\text{.}\)  You can check that this is not the same as  \(\dfrac{\log_{10}{3.8}}{0.4}\text{.}\)</p></article><p id="p-9461">To solve exponential equations involving powers of 10, we can use the following steps.</p>
 <article class="assemblage assemblage-like" id="assemblage-101"><h6 class="heading"><span class="title">Steps for Solving Exponential Equations.</span></h6>
 <ol id="p-9462" class="decimal">
-<li id="li-6148">Isolate the power on one side of the equation.</li>
-<li id="li-6149">Rewrite the equation in logarithmic form.</li>
-<li id="li-6150">Use a calculator, if necessary, to evaluate the logarithm.</li>
-<li id="li-6151">Solve for the variable.</li>
-</ol></article><article class="exercise exercise-like" id="exercise-1471"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1471"><h6 class="heading">
+<li id="li-6148"><p id="p-derived-li-6148">Isolate the power on one side of the equation.</p></li>
+<li id="li-6149"><p id="p-derived-li-6149">Rewrite the equation in logarithmic form.</p></li>
+<li id="li-6150"><p id="p-derived-li-6150">Use a calculator, if necessary, to evaluate the logarithm.</p></li>
+<li id="li-6151"><p id="p-derived-li-6151">Solve for the variable.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-1471"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.56</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1471"><article class="exercise exercise-like"><iframe name="webwork-296" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=296&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzdGVwb25lID0gUmFkaW9CdXR0b25zKAogIFsiTXVsdGlwbHkgNSB0aW1lcyAxMC4iLAogICJUYWtlIHRoZSBsb2cgb2YgYm90aCBzaWRlcy4iLAogICJHZXQgemVybyBvbiBvbmUgc2lkZSBvZiB0aGUgZXF1YXRpb24uIiwKICAiRGl2aWRlIGJvdGggc2lkZXMgYnkgNS4iXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgZmlyc3Qgc3RlcCBpbiBzb2x2aW5nIHRoZSBlcXVhdGlvbiBbYDUoMTApXng9MTJcdGV4dHs%2FfWBdCgogICAgW19deyRzdGVwb25lfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkRpdmlkZSBib3RoIHNpZGVzIGJ5IDUuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="296"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1472"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1472"><h6 class="heading">
+</h6>
+<iframe name="webwork-296" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=296&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzdGVwb25lID0gUmFkaW9CdXR0b25zKAogIFsiTXVsdGlwbHkgNSB0aW1lcyAxMC4iLAogICJUYWtlIHRoZSBsb2cgb2YgYm90aCBzaWRlcy4iLAogICJHZXQgemVybyBvbiBvbmUgc2lkZSBvZiB0aGUgZXF1YXRpb24uIiwKICAiRGl2aWRlIGJvdGggc2lkZXMgYnkgNS4iXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgZmlyc3Qgc3RlcCBpbiBzb2x2aW5nIHRoZSBlcXVhdGlvbiBbYDUoMTApXng9MTJcdGV4dHs%2FfWBdCgogICAgW19deyRzdGVwb25lfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkRpdmlkZSBib3RoIHNpZGVzIGJ5IDUuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="296"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1472"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.57</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1472"><article class="exercise exercise-like"><iframe name="webwork-297" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=297&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xibGVydH1bMV17XGNvbG9ye2JsdWV9eyMxfX1cKTwvZGl2PicpKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHVzZUJhc2VUZW5Mb2c9PjEpOyAKJGEgPSBDb21wdXRlKCJsb2coMjIwLTIwKSIpLT53aXRoKAogICAgICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgICAgIHRvbGVyYW5jZSA9PiAuMDAwMDUxLAogICAgKTsKCkJFR0lOX1BHTUwKU29sdmUgdGhlIGVxdWF0aW9uIFtgMjArMTBeeCA9IDIyMFx0ZXh0ey59YF0KCltgeD1gXVtfXXskYX17Nn0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCltgXGJsZXJ0e1x0ZXh0e0lzb2xhdGUgdGhlIHBvd2VyIG9mIDEwLn19YF0KCltgXGJsZXJ0e1x0ZXh0e1Jld3JpdGUgaW4gbG9nYXJpdGhtaWMgZm9ybS59fWBdCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDIuMzAxMGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="297"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-169"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-297" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=297&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xibGVydH1bMV17XGNvbG9ye2JsdWV9eyMxfX1cKTwvZGl2PicpKTsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHVzZUJhc2VUZW5Mb2c9PjEpOyAKJGEgPSBDb21wdXRlKCJsb2coMjIwLTIwKSIpLT53aXRoKAogICAgICB0b2xUeXBlID0%2BICdhYnNvbHV0ZScsCiAgICAgIHRvbGVyYW5jZSA9PiAuMDAwMDUxLAogICAgKTsKCkJFR0lOX1BHTUwKU29sdmUgdGhlIGVxdWF0aW9uIFtgMjArMTBeeCA9IDIyMFx0ZXh0ey59YF0KCltgeD1gXVtfXXskYX17Nn0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCltgXGJsZXJ0e1x0ZXh0e0lzb2xhdGUgdGhlIHBvd2VyIG9mIDEwLn19YF0KCltgXGJsZXJ0e1x0ZXh0e1Jld3JpdGUgaW4gbG9nYXJpdGhtaWMgZm9ybS59fWBdCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDIuMzAxMGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="297"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-169"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Application to Exponential Models</span>
 </h3>
 <p id="p-9477">We have seen that exponential functions are used to describe some applications of growth and decay, \(P(t) = P_0b^t\text{.}\) There are two common questions that arise in connection with exponential models:</p>
@@ -552,7 +563,7 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 <li id="li-6156"><p id="p-9478">Given a value of \(t\text{,}\) what is the corresponding value of \(P(t)\text{?}\)</p></li>
 <li id="li-6157"><p id="p-9479">Given a value of \(P(t)\text{,}\) what is find the corresponding value of \(t\text{?}\)</p></li>
 </ol>
-<p data-braille="continuation">To answer the first question, we evaluate the function \(P(t)\) at the appropriate value. To answer the second question, we must solve an exponential equation, and this usually involves logarithms.</p>
+<p class="continuation">To answer the first question, we evaluate the function \(P(t)\) at the appropriate value. To answer the second question, we must solve an exponential equation, and this usually involves logarithms.</p>
 <article class="example example-like" id="example-tractor-depreciates"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.58</span><span class="period">.</span>
 </h6>
@@ -562,9 +573,9 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{8} = 3
 V(t) = 30,000(10)^{-0.04t}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(t\) is in years. When will the tractor be worth half its original value?</p>
+<p class="continuation">where \(t\) is in years. When will the tractor be worth half its original value?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-451" id="solution-451"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-451"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-451" id="solution-451"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-451"><div class="solution solution-like">
 <p id="p-9481">We want to find the value of \(t\) for which \(V(t) = 15,000\text{.}\) That is, we want to solve the equation</p>
 <div class="displaymath">
 \begin{align*}
@@ -572,81 +583,81 @@ V(t) = 30,000(10)^{-0.04t}
 0.5  \amp = 10^{-0.04t}
 \end{align*}
 </div>
-<p data-braille="continuation">Once we have isolated the power, we convert the equation to logarithmic form.</p>
+<p class="continuation">Once we have isolated the power, we convert the equation to logarithmic form.</p>
 <div class="displaymath">
 \begin{align*}
 \log_{10}{0.5} \amp = -0.04t \amp \amp \blert{\text{Divide both sides by } -0.04.}\\
 \frac{\log_{10}{0.5}}{-0.04} \amp = t 
 \end{align*}
 </div>
-<p data-braille="continuation">To evaluate this expression, we key in</p>
+<p class="continuation">To evaluate this expression, we key in</p>
 <p id="p-9482"><kbd class="kbdkey">LOG</kbd> \(0.5\) <kbd class="kbdkey">)</kbd> <kbd class="kbdkey">÷</kbd> <kbd class="kbdkey">(-)</kbd> \(0.04\) <kbd class="kbdkey">ENTER</kbd></p>
 <p id="p-9483">to find \(t \approx 7.525749892\text{.}\) The tractor will be worth $15,000 in approximately \(7\frac{1}{2}\) years.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1473"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1473"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1473"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.59</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1473"><article class="exercise exercise-like"><iframe name="webwork-298" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=298&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBUaGUgZmlyc3Qgc3RlcCBpbiBzb2x2aW5nIGFuIGV4cG9uZW50aWFsIGVxdWF0aW9uIGlzIHRvIGNvbnZlcnQgdG8gbG9nYXJpdGhtaWMgZm9ybS4gW19deyRGYWxzZX17NX0KCgphLiAgVG8gc29sdmUgdGhlIGVxdWF0aW9uIFtgMTBeeCA9IDE5XHRleHR7LH1gXSB3ZSBkaXZpZGUgYm90aCBzaWRlcyBieSAxMC4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIFtgXGRmcmFje1xsb2d7MTV9fXs2fWBdIGlzIHRoZSBzYW1lIGFzIFtgXGxvZ3tcZGZyYWN7MTV9ezZ9fVx0ZXh0ey59YF0gW19deyRGYWxzZX17NX0KCgphLiAgTG9nYXJpdGhtcyBhcmUgdXNlZCBpbiB0aGUgc3R1ZHkgb2YgZXhwb25lbnRpYWwgZ3Jvd3RoIGFuZCBkZWNheS4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="298"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1474"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1474"><h6 class="heading">
+</h6>
+<iframe name="webwork-298" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=298&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBUaGUgZmlyc3Qgc3RlcCBpbiBzb2x2aW5nIGFuIGV4cG9uZW50aWFsIGVxdWF0aW9uIGlzIHRvIGNvbnZlcnQgdG8gbG9nYXJpdGhtaWMgZm9ybS4gW19deyRGYWxzZX17NX0KCgphLiAgVG8gc29sdmUgdGhlIGVxdWF0aW9uIFtgMTBeeCA9IDE5XHRleHR7LH1gXSB3ZSBkaXZpZGUgYm90aCBzaWRlcyBieSAxMC4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIFtgXGRmcmFje1xsb2d7MTV9fXs2fWBdIGlzIHRoZSBzYW1lIGFzIFtgXGxvZ3tcZGZyYWN7MTV9ezZ9fVx0ZXh0ey59YF0gW19deyRGYWxzZX17NX0KCgphLiAgTG9nYXJpdGhtcyBhcmUgdXNlZCBpbiB0aGUgc3R1ZHkgb2YgZXhwb25lbnRpYWwgZ3Jvd3RoIGFuZCBkZWNheS4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="298"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1474"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.60</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1474"><article class="exercise exercise-like"><iframe name="webwork-299" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=299&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKHQ9PiJSZWFsIik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCh1c2VCYXNlVGVuTG9nPT4xKTsgCiRwMCA9IENvbXB1dGUoIjI1Ljg1Iik7CiRmID0gRm9ybXVsYSgiJHAwKjEwKiooMC4wNTIqdCkiKTsKJHQgPSBDb21wdXRlKCJsb2coOTAvMjUuODUpLzAuMDUyIiktPndpdGgoCiAgdG9sVHlwZSA9PiAnYWJzb2x1dGUnLAogIHRvbGVyYW5jZSA9PiAuMDUsCik7CgokeWVhciA9IFBvcFVwKApbIj8iLCIyMDA0IiwiMjAwNSJdLAoxLCk7CiRZTiA9IFJhZGlvQnV0dG9ucygKWyJZZXM6IFRoZSBwZXJjZW50YWdlIHdpbGwgY29udGludWUgaW5jcmVhc2luZywgZmFzdGVyIGFuZCBmYXN0ZXIuIiwKIk5vOiB0aGUgcGVyY2VudCBvZiBob21lcyB3aXRoIGNvbXB1dGVycyBjYW5ub3QgZXhjZWVkIDEwMCUuIl0sCjEsKTsKCkJFR0lOX1BHTUwKVGhlIHBlcmNlbnRhZ2Ugb2YgQW1lcmljYW4gaG9tZXMgd2l0aCBjb21wdXRlcnMgZ3JldyBleHBvbmVudGlhbGx5IGZyb20gMTk5NCB0byAxOTk5LiBGb3IgW2B0ID0gMGBdIGluIDE5OTQsIHRoZSBncm93dGggbGF3IHdhcwoKW2BgYFAodCkgPSBbJGZdYGBgXQoKXFtTb3VyY2U6IExvcyBBbmdlbGVzIFRpbWVzLCBBdWd1c3QgMjAsIDE5OTlcXQphLiAgV2hhdCBwZXJjZW50IG9mIEFtZXJpY2FuIGhvbWVzIGhhZCBjb21wdXRlcnMgaW4gMTk5ND8KCiAgICBBbnN3ZXI6IFtfXXskcDB9ezR9JQoKCmEuICBJZiB0aGUgcGVyY2VudGFnZSBvZiBob21lcyB3aXRoIGNvbXB1dGVycyBjb250aW51ZWQgdG8gZ3JvdyBhdCB0aGUgc2FtZSByYXRlLCB3aGVuIGRpZCA5MCUgb2YgQW1lcmljYW4gaG9tZXMgaGF2ZSBhIGNvbXB1dGVyPwoKICAgIEFuc3dlcjogW2B0XGFwcHJveGBdW19deyR0fXszfSwgd2hpY2ggd2FzIHRoZSB5ZWFyIFtfXXskeWVhcn17NX0KCgphLiAgRG8geW91IHRoaW5rIHRoYXQgdGhlIGZ1bmN0aW9uIFtgUCh0KWBdIHdpbGwgY29udGludWUgdG8gbW9kZWwgdGhlIHBlcmNlbnRhZ2Ugb2YgQW1lcmljYW4gaG9tZXMgd2l0aCBjb21wdXRlcnM%2FIFdoeSBvciB3aHkgbm90PwoKICAgIFtfXXskWU59ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAyNS44NSUKCgphLiAgW2B0XGFwcHJveCAxMC40YF0gKHllYXIgMjAwNCkKCgphLiAgTm8sIHRoZSBwZXJjZW50IG9mIGhvbWVzIHdpdGggY29tcHV0ZXJzIGNhbm5vdCBleGNlZWQgMTAwJS4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="299"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-9532">At this stage, it seems we will only be able to solve exponential equations in which the base is 10. However, we will see in future sections how the properties of logarithms enable us to solve exponential equations with any base.</p></section><section class="exercises" id="section-7-3-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-299" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=299&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYWRkKHQ9PiJSZWFsIik7CkNvbnRleHQoKS0%2BZmxhZ3MtPnNldCh1c2VCYXNlVGVuTG9nPT4xKTsgCiRwMCA9IENvbXB1dGUoIjI1Ljg1Iik7CiRmID0gRm9ybXVsYSgiJHAwKjEwKiooMC4wNTIqdCkiKTsKJHQgPSBDb21wdXRlKCJsb2coOTAvMjUuODUpLzAuMDUyIiktPndpdGgoCiAgdG9sVHlwZSA9PiAnYWJzb2x1dGUnLAogIHRvbGVyYW5jZSA9PiAuMDUsCik7CgokeWVhciA9IFBvcFVwKApbIj8iLCIyMDA0IiwiMjAwNSJdLAoxLCk7CiRZTiA9IFJhZGlvQnV0dG9ucygKWyJZZXM6IFRoZSBwZXJjZW50YWdlIHdpbGwgY29udGludWUgaW5jcmVhc2luZywgZmFzdGVyIGFuZCBmYXN0ZXIuIiwKIk5vOiB0aGUgcGVyY2VudCBvZiBob21lcyB3aXRoIGNvbXB1dGVycyBjYW5ub3QgZXhjZWVkIDEwMCUuIl0sCjEsKTsKCkJFR0lOX1BHTUwKVGhlIHBlcmNlbnRhZ2Ugb2YgQW1lcmljYW4gaG9tZXMgd2l0aCBjb21wdXRlcnMgZ3JldyBleHBvbmVudGlhbGx5IGZyb20gMTk5NCB0byAxOTk5LiBGb3IgW2B0ID0gMGBdIGluIDE5OTQsIHRoZSBncm93dGggbGF3IHdhcwoKW2BgYFAodCkgPSBbJGZdYGBgXQoKXFtTb3VyY2U6IExvcyBBbmdlbGVzIFRpbWVzLCBBdWd1c3QgMjAsIDE5OTlcXQphLiAgV2hhdCBwZXJjZW50IG9mIEFtZXJpY2FuIGhvbWVzIGhhZCBjb21wdXRlcnMgaW4gMTk5ND8KCiAgICBBbnN3ZXI6IFtfXXskcDB9ezR9JQoKCmEuICBJZiB0aGUgcGVyY2VudGFnZSBvZiBob21lcyB3aXRoIGNvbXB1dGVycyBjb250aW51ZWQgdG8gZ3JvdyBhdCB0aGUgc2FtZSByYXRlLCB3aGVuIGRpZCA5MCUgb2YgQW1lcmljYW4gaG9tZXMgaGF2ZSBhIGNvbXB1dGVyPwoKICAgIEFuc3dlcjogW2B0XGFwcHJveGBdW19deyR0fXszfSwgd2hpY2ggd2FzIHRoZSB5ZWFyIFtfXXskeWVhcn17NX0KCgphLiAgRG8geW91IHRoaW5rIHRoYXQgdGhlIGZ1bmN0aW9uIFtgUCh0KWBdIHdpbGwgY29udGludWUgdG8gbW9kZWwgdGhlIHBlcmNlbnRhZ2Ugb2YgQW1lcmljYW4gaG9tZXMgd2l0aCBjb21wdXRlcnM%2FIFdoeSBvciB3aHkgbm90PwoKICAgIFtfXXskWU59ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAyNS44NSUKCgphLiAgW2B0XGFwcHJveCAxMC40YF0gKHllYXIgMjAwNCkKCgphLiAgTm8sIHRoZSBwZXJjZW50IG9mIGhvbWVzIHdpdGggY29tcHV0ZXJzIGNhbm5vdCBleGNlZWQgMTAwJS4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="299"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-9532">At this stage, it seems we will only be able to solve exponential equations in which the base is 10. However, we will see in future sections how the properties of logarithms enable us to solve exponential equations with any base.</p></section><section class="exercises" id="section-7-3-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 7.3</span>
 </h3>
 <article class="subexercises" id="subexercises-95"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <article class="exercise exercise-like" id="exercise-1475"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-9533">There were 300 lizards on a small island in 2000, and since then the population has been growing by 15% each year.</p>
 <ol class="lower-alpha">
-<li id="li-6189">Write a formula for the size of the lizard population \(t\) years after 2000.</li>
-<li id="li-6190">Write an equation to calculate how long it will take the lizard population to reach 500.</li>
-<li id="li-6191">Use trial and error to estimate the solution to the equation.</li>
+<li id="li-6189"><p id="p-derived-li-6189">Write a formula for the size of the lizard population \(t\) years after 2000.</p></li>
+<li id="li-6190"><p id="p-derived-li-6190">Write an equation to calculate how long it will take the lizard population to reach 500.</p></li>
+<li id="li-6191"><p id="p-derived-li-6191">Use trial and error to estimate the solution to the equation.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1476"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-9538">Complete each table. Then use the tables to approximate each logarithm between two integers.</p>
 <ol class="lower-alpha cols2">
 <li id="li-6195">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(2^{-5}\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^{-4}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^{-3}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^{-2}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^{-1}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2^5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div></div></div>
 <div class="displaymath" id="p-9539">
@@ -658,50 +669,50 @@ V(t) = 30,000(10)^{-0.04t}
 </div>
 </li>
 <li id="li-6196">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(10^{-5}\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^{-4}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^{-3}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^{-2}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^{-1}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10^5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div></div></div>
 <div class="displaymath" id="p-9540">
@@ -714,6 +725,7 @@ V(t) = 30,000(10)^{-0.04t}
 </li>
 </ol></article></article><article class="subexercises" id="subexercises-96"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-222">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-261"><p id="p-9541">For Problems 3-8, use the definition to find each logarithm without using a calculator.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1477"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
@@ -744,6 +756,7 @@ V(t) = 30,000(10)^{-0.04t}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-223">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-262"><p id="p-9568">For Problems 9 and 10, without using a calculator, estimate the log between two integers.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1483"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
@@ -758,6 +771,7 @@ V(t) = 30,000(10)^{-0.04t}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-224">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-263"><p id="p-9578">For Problems 11–16, solve. Round your answers to hundredths.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1485"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
@@ -770,6 +784,7 @@ V(t) = 30,000(10)^{-0.04t}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-225">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-264"><p id="p-9588">For Problems 17 and 18, rewrite each equation in logarithmic form.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1491"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
@@ -784,6 +799,7 @@ V(t) = 30,000(10)^{-0.04t}
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-226">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-265"><p id="p-9598">For Problems 19 and 20, rewrite each equation in exponential form.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1493"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
@@ -800,9 +816,10 @@ V(t) = 30,000(10)^{-0.04t}
 <article class="exercise exercise-like" id="exercise-1495"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="p-9606">Solve each equation, writing your answer as a logarithm. Then use trial and error to approximate the logarithm to tenths.</p>
 <ol class="lower-alpha cols2">
-<li id="li-6233">\(\displaystyle 4^x = 2.5\)</li>
-<li id="li-6234">\(\displaystyle 2^x = 0.2\)</li>
+<li id="li-6233"><p id="p-derived-li-6233">\(\displaystyle 4^x = 2.5\)</p></li>
+<li id="li-6234"><p id="p-derived-li-6234">\(\displaystyle 2^x = 0.2\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-227">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-266"><p id="p-9608">For Problems 22–24, use a graph to approximate each logarithm to the nearest hundredth.  (Hint: Graph an appropriate function \(y=b^x\text{.}\))</p></div>
 <div class="exercisegroup-exercises cols3">
 <article class="exercise exercise-like" id="exercise-1496"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
@@ -819,8 +836,8 @@ E(t) = 4.2(10^{0.0261t})
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-6237">When will Summit City need 10 million kilowatt-hours annually?</li>
-<li id="li-6238">What is the annual growth rate in the demand for electricity?</li>
+<li id="li-6237"><p id="p-derived-li-6237">When will Summit City need 10 million kilowatt-hours annually?</p></li>
+<li id="li-6238"><p id="p-derived-li-6238">What is the annual growth rate in the demand for electricity?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1500"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <p id="p-9615">Radium, a radioactive element, was used to paint watches and instrument dials until its serious health effects were discovered in the 1920's. Radium-226 is the most stable isotope of radium and decays according to the formula</p>
 <div class="displaymath">
@@ -828,11 +845,12 @@ E(t) = 4.2(10^{0.0261t})
 R(t)=R_0 (10^{-1.0177t})
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(t\) is in years.</p>
+<p class="continuation">where \(t\) is in years.</p>
 <ol class="lower-alpha">
-<li id="li-6241">How long will it take for one gram of radium-226 to decay to one-half gram?</li>
-<li id="li-6242">What is the annual decay rate for radium-226?</li>
+<li id="li-6241"><p id="p-derived-li-6241">How long will it take for one gram of radium-226 to decay to one-half gram?</p></li>
+<li id="li-6242"><p id="p-derived-li-6242">What is the annual decay rate for radium-226?</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-228">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-267">
 <p id="p-9616">The atmospheric pressure decreases with altitude above the surface of the Earth, according to the function</p>
 <div class="displaymath">
@@ -840,14 +858,14 @@ R(t)=R_0 (10^{-1.0177t})
 P(h) = 30 (10)^{-0.09h}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(h\) is altitude given in miles, and  \(P\) is atmospheric pressure in inches of mercury. Graph this function in the window</p>
+<p class="continuation">where \(h\) is altitude given in miles, and  \(P\) is atmospheric pressure in inches of mercury. Graph this function in the window</p>
 <div class="displaymath">
 \begin{align*}
 {\text{Xmin}} \amp = 0 \amp\amp {\text{Xmax}} = 9.4\\
 {\text{Ymin}} \amp = 0 \amp\amp {\text{Ymax}} = 30
 \end{align*}
 </div>
-<p data-braille="continuation">Solve Problems 27 and 28 algebraically, then verify with your graph.</p>
+<p class="continuation">Solve Problems 27 and 28 algebraically, then verify with your graph.</p>
 </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-1501"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
@@ -856,11 +874,11 @@ P(h) = 30 (10)^{-0.09h}
 <p id="p-9618">The elevation of Mount Everest, the highest mountain in the world, is 29,028 feet. What is the atmospheric pressure at the top?</p>
 <p id="p-9619"><em class="emphasis">Hint:</em> 1 mile = 5280 feet</p>
 </li>
-<li id="li-6244">The atmospheric pressure at the top of Mount McKinley, the highest peak in the United States, is 13.51 inches of mercury.  Estimate the elevation of Mount McKinley.</li>
+<li id="li-6244"><p id="p-derived-li-6244">The atmospheric pressure at the top of Mount McKinley, the highest peak in the United States, is 13.51 inches of mercury.  Estimate the elevation of Mount McKinley.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1502"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <ol id="p-9621" class="lower-alpha">
-<li id="li-6247">What is the atmospheric pressure at sea level (\(h=0\))?</li>
-<li id="li-6248">Find the height above sea level at which the atmospheric pressure is equal to one-half the pressure at sea level.</li>
+<li id="li-6247"><p id="p-derived-li-6247">What is the atmospheric pressure at sea level (\(h=0\))?</p></li>
+<li id="li-6248"><p id="p-derived-li-6248">Find the height above sea level at which the atmospheric pressure is equal to one-half the pressure at sea level.</p></li>
 </ol></article>
 </div>
 </div>
@@ -871,7 +889,7 @@ P(h) = 30 (10)^{-0.09h}
 P(t) = 162,000 (10)^{0.02191t}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(t\) is measured in years since 1950.</p>
+<p class="continuation">where \(t\) is measured in years since 1950.</p>
 <ol class="lower-alpha">
 <li id="li-6249"><p id="p-9623">What was the population in 2000?</p></li>
 <li id="li-6250"><p id="p-9624">What was the annual percent growth rate from 1950 to 2000?</p></li>
@@ -883,12 +901,13 @@ P(t) = 162,000 (10)^{0.02191t}
 P(t) = 19,971,000 (10)^{0.0088t}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(t\) is measured in years since 1970.</p>
+<p class="continuation">where \(t\) is measured in years since 1970.</p>
 <ol class="lower-alpha">
 <li id="li-6255"><p id="p-9631">What was the population in 1990?</p></li>
 <li id="li-6256"><p id="p-9632">What was the annual percent growth rate from 1970 to 1990?</p></li>
 <li id="li-6257"><p id="p-9633">According to this model, when would the population of California reach 40,000,000? (In fact the population of California was 39,747,267 in 2020.)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-229">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-268"><p id="p-9634">Equations Practice: For Problems 31 and 32, solve the equation and check your solutions.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-1505"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
@@ -910,117 +929,117 @@ P(t) = 19,971,000 (10)^{0.0088t}
 <ol id="p-9650" class="lower-alpha">
 <li id="li-6270">
 <p id="p-9651">Complete the table.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(x^2\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(\log_{10}{x}\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(\log_{10}{x^2}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(\log_{10}{x^2}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div></div></div>
 </li>
-<li id="li-6271">Do you notice a relationship between \(\log_{10}{x}\) and \(\log_{10}{x^2}\text{?}\) State the relationship as an equation.</li>
+<li id="li-6271"><p id="p-derived-li-6271">Do you notice a relationship between \(\log_{10}{x}\) and \(\log_{10}{x^2}\text{?}\) State the relationship as an equation.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1508"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
 <ol id="p-9652" class="lower-alpha">
 <li id="li-6272">
 <p id="p-9653">Complete the table.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(\dfrac{1}{x}\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(\log_{10}{x}\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(\log_{10}{\dfrac{1}{x}}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(\log_{10}{\dfrac{1}{x}}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div></div></div>
 </li>
-<li id="li-6273">Do you notice a relationship between \(\log_{10}{x}\) and \(\log_{10}{\dfrac{1}{x}}\text{?}\) State the relationship as an equation.</li>
+<li id="li-6273"><p id="p-derived-li-6273">Do you notice a relationship between \(\log_{10}{x}\) and \(\log_{10}{\dfrac{1}{x}}\text{?}\) State the relationship as an equation.</p></li>
 </ol></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

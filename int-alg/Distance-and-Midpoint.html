@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T07:01:25-07:00       *-->
+<!--*       on 2021-08-27T15:56:12-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg The Distance and Midpoint Formulas</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Distance-and-Midpoint"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">The Distance and Midpoint Formulas</span>
@@ -230,8 +236,8 @@ true);
 </h3>
 <p id="p-12240">Figure (a) shows a line segment joining the two points \((-2, 7)\) and \((6, 3)\text{.}\) What is the distance between the two points?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel" style="width:42.2222222222222%;justify-content:flex-start;"><img src="images/fig-line-segment-in-coordinate-plane.svg" role="img" style="width: 100%; height: auto;" alt="line segment in coordinate plane"></div>
-<div class="sbspanel" style="width:42.2222222222222%;justify-content:flex-start;"><img src="images/fig-line-segment-hypotenuse.svg" role="img" style="width: 100%; height: auto;" alt="line segment as hypotenuse"></div>
+<div class="sbspanel top" style="width:42.2222222222222%;"><img src="generated/latex-image/fig-line-segment-in-coordinate-plane.svg" role="img" class="contained" alt="line segment in coordinate plane"></div>
+<div class="sbspanel top" style="width:42.2222222222222%;"><img src="generated/latex-image/fig-line-segment-hypotenuse.svg" role="img" class="contained" alt="line segment as hypotenuse"></div>
 </div></div>
 <article class="assemblage assemblage-like" id="assemblage-157"><p id="p-12241">The distance between two points is the length of the segment joining them.</p></article><p id="p-12242">If we make a right triangle as shown in Figure (b), we can use the Pythagorean theorem to find its length. First, notice that the coordinates at the right angle are \((-2, 3)\text{.}\) We can find the lengths of the two legs of the triangle, because they are horizontal and vertical segments.</p>
 <div class="displaymath">
@@ -240,7 +246,7 @@ a\amp= \abs{3-7} = 4\\
 b\amp=\abs{6-(-2)}=8
 \end{align*}
 </div>
-<p data-braille="continuation">The segment we want is the hypotenuse of the right triangle, so we apply the Pythagorean theorem.</p>
+<p class="continuation">The segment we want is the hypotenuse of the right triangle, so we apply the Pythagorean theorem.</p>
 <div class="displaymath">
 \begin{align*}
 c^2 \amp= a^2+b^2\\
@@ -252,29 +258,29 @@ c\amp=\sqrt{80}\approx 8.9
 </h3>
 <p id="p-12243">We can also use the Pythagorean theorem to derive a formula for the distance between any two points, \(P_1\) and \(P_2\text{,}\) in terms of their coordinates. We first label a right triangle, as we did in the exmple above. Draw a horizontal line through \(P_1\) and a vertical line through \(P_2\text{.}\)</p>
 <p id="p-12244">These lines meet at a point \(P_3\text{,}\) as shown in the figure below. The \(x\)-coordinate of \(P_3\) is the same as the \(x\)-coordinate of \(P_2\text{,}\) and the \(y\)-coordinate of \(P_3\) is the same as the \(y\)-coordinate of \(P_1\text{.}\) Thus, the coordinates of \(P_3\) are \((x_2, y_1)\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-distance-formula.svg" role="img" style="width: 100%; height: auto;" alt="distance between two points in the plane"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-distance-formula.svg" role="img" class="contained" alt="distance between two points in the plane"></div></div></div>
 <p id="p-12245">The distance between \(P_1\) and \(P_3\) is \(\abs{x_2-x_1}\) , and the distance between \(P_2\) and \(P_3\) is \(\abs{y_2-y_1} \text{.}\) These two numbers are the lengths of the legs of the right triangle. The length of the hypotenuse is the distance between \(P_1\) and \(P_2\text{,}\) which we'll call \(d\text{.}\) By the Pythagorean theorem,</p>
 <div class="displaymath">
 \begin{gather*}
 d^2 = (x_2 - x_1)^2 + (y_2 - y_1)^2
 \end{gather*}
 </div>
-<p data-braille="continuation">Taking the (positive) square root of each side of this equation gives us the <dfn class="terminology">distance formula</dfn>.</p>
+<p class="continuation">Taking the (positive) square root of each side of this equation gives us the <dfn class="terminology">distance formula</dfn>.</p>
 <article class="assemblage assemblage-like" id="assemblage-158"><h6 class="heading"><span class="title">Distance Formula.</span></h6>
 <p id="p-12246">The <dfn class="terminology">distance</dfn> \(d\) between points \(P_1(x_1,y_1)\) and \(P_2(x_2,y_2)\) is</p>
 <div class="displaymath">
 \begin{gather*}
 \blert{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}
 \end{gather*}
-</div></article><article class="exercise exercise-like" id="exercise-2017"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2017"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2017"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2017"><article class="exercise exercise-like"><iframe name="webwork-376" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=376&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIFRoZSBkaXN0YW5jZSBmb3JtdWxhIGlzIGEgdmVyc2lvbiBvZiB0aGUgUHl0aGFnb3JlYW4gdGhlb3JlbS4gW19deyRUcnVlfXs1fQoKCmEuICBbYCh1LXYpXjIgPSAodi11KV4yID0gfHUtdnxeMj18di11fF4yIGBdIFtfXXskVHJ1ZX17NX0KCgphLiAgV2UgY2FuIGZpbmQgdGhlIGxlbmd0aCBvZiBhIGhvcml6b250YWwgc2VnbWVudCBieSBzdWJ0cmFjdGluZyB0aGUgW2B4YF0tY29vcmRpbmF0ZXMgb2YgaXRzIGVuZHBvaW50cy4gW19deyRUcnVlfXs1fQoKCmEuICBUaGUgZGlzdGFuY2UgYmV0d2VlbiB0d28gcG9pbnRzIGlzIGFsd2F5cyBhIHBvc2l0aXZlIG51bWJlciAob3IgemVybykuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIFRydWUKYS4gIFRydWUKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="376"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-distance-betw-points"><h6 class="heading">
+</h6>
+<iframe name="webwork-376" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=376&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIFRoZSBkaXN0YW5jZSBmb3JtdWxhIGlzIGEgdmVyc2lvbiBvZiB0aGUgUHl0aGFnb3JlYW4gdGhlb3JlbS4gW19deyRUcnVlfXs1fQoKCmEuICBbYCh1LXYpXjIgPSAodi11KV4yID0gfHUtdnxeMj18di11fF4yIGBdIFtfXXskVHJ1ZX17NX0KCgphLiAgV2UgY2FuIGZpbmQgdGhlIGxlbmd0aCBvZiBhIGhvcml6b250YWwgc2VnbWVudCBieSBzdWJ0cmFjdGluZyB0aGUgW2B4YF0tY29vcmRpbmF0ZXMgb2YgaXRzIGVuZHBvaW50cy4gW19deyRUcnVlfXs1fQoKCmEuICBUaGUgZGlzdGFuY2UgYmV0d2VlbiB0d28gcG9pbnRzIGlzIGFsd2F5cyBhIHBvc2l0aXZlIG51bWJlciAob3IgemVybykuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIFRydWUKYS4gIFRydWUKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="376"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-distance-betw-points"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.12</span><span class="period">.</span>
 </h6>
 <p id="p-12273">Find the distance between \((2,-1)\) and \((4,3)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-581" id="solution-581"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-581"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-581" id="solution-581"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-581"><div class="solution solution-like">
 <p id="p-12274">Substitute \((2,-1)\) for \((x_1,y_1)\) and \((4,3)\) for \((x_2,y_2)\) in the distance formula to obtain</p>
 <div class="displaymath">
 \begin{align*}
@@ -300,16 +306,17 @@ d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
 \sqrt{3^2+4^2}=\sqrt{9+16}=\sqrt{5}
 \end{gather*}
 </div>
-<p data-braille="continuation">so it cannot be true that \(\sqrt{3^2+4^2} \) equals \(3+4\text{,}\) or 7. For the same reason, we cannot simplify the distance formula to \((x_2-x_1)+(y_2-y_1)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-2018"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2018"><h6 class="heading">
+<p class="continuation">so it cannot be true that \(\sqrt{3^2+4^2} \) equals \(3+4\text{,}\) or 7. For the same reason, we cannot simplify the distance formula to \((x_2-x_1)+(y_2-y_1)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-2018"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2018"><article class="exercise exercise-like"><iframe name="webwork-377" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=377&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRkID0gQ29tcHV0ZSgic3FydCgyMDgpIik7CgpCRUdJTl9QR01MCmEuICBGaW5kIHRoZSBkaXN0YW5jZSBiZXR3ZWVuIHRoZSBwb2ludHMgW2AoLTUsMylgXSBhbmQgW2AoMywtOSlcdGV4dHs6fWBdIFtfXXskZH17MTB9CgoKYS4gIFBsb3QgdGhlIHBvaW50cywgYW5kIGlsbHVzdHJhdGUgaG93IHRoZSBQeXRoYWdvcmVhbiB0aGVvcmVtIGlzIHVzZWQgaW4gY2FsY3VsYXRpbmcgdGhlIGRpc3RhbmNlLgoKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyICJzcXJ0KDIpIiB0byBnZXQgW2Bcc3FydHsyfVx0ZXh0ey59YF0nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2Bcc3FydHsyMDh9YF0KYS4gIEEgZ3JhcGggaXMgYmVsb3cuICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="377"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-38">
+</h6>
+<iframe name="webwork-377" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=377&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRkID0gQ29tcHV0ZSgic3FydCgyMDgpIik7CgpCRUdJTl9QR01MCmEuICBGaW5kIHRoZSBkaXN0YW5jZSBiZXR3ZWVuIHRoZSBwb2ludHMgW2AoLTUsMylgXSBhbmQgW2AoMywtOSlcdGV4dHs6fWBdIFtfXXskZH17MTB9CgoKYS4gIFBsb3QgdGhlIHBvaW50cywgYW5kIGlsbHVzdHJhdGUgaG93IHRoZSBQeXRoYWdvcmVhbiB0aGVvcmVtIGlzIHVzZWQgaW4gY2FsY3VsYXRpbmcgdGhlIGRpc3RhbmNlLgoKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyICJzcXJ0KDIpIiB0byBnZXQgW2Bcc3FydHsyfVx0ZXh0ey59YF0nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2Bcc3FydHsyMDh9YF0KYS4gIEEgZ3JhcGggaXMgYmVsb3cuICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="377"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-38">
 <p id="p-12284">Graph for Practice 1:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel" style="width:80%;justify-content:flex-start;"><img src="images/fig-ex-9-2-1ans.svg" role="img" style="width: 100%; height: auto;" alt="distance formula"></div></div></div>
-</div></article></div></section><section class="subsection" id="subsection-212"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel top" style="width:80%;"><img src="generated/latex-image/fig-ex-9-2-1ans.svg" role="img" class="contained" alt="distance formula"></div></div></div>
+</div></article></section><section class="subsection" id="subsection-212"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Finding the Midpoint</span>
 </h3>
 <p id="p-12285">The <dfn class="terminology">midpoint</dfn> of a segment is the point halfway between its endpoints, so that the distance from the midpoint to either endpoint is the same. The \(x\)-coordinate of the midpoint is halfway between the \(x\)-coordinates of the endpoints, and likewise for the \(y\)-coordinate. For the points \((-2, 7)\) and \((6, 3)\) shown below, the \(x\)-coordinate of the midpoint is \(2\text{,}\) which is halfway between \(-2\) and \(6\text{.}\) The \(y\)-coordinate is halfway between \(7\) and \(3\text{,}\) or \(5\text{.}\) Thus, the midpoint is \((2, 5)\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-line-segment-midpoint.svg" role="img" style="width: 100%; height: auto;" alt="line segment"></div></div></div></section><section class="subsection" id="subsection-213"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-line-segment-midpoint.svg" role="img" class="contained" alt="line segment"></div></div></div></section><section class="subsection" id="subsection-213"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Midpoint Formula</span>
 </h3>
 <p id="p-12286">If we know the coordinates of two points, we can calculate the coordinates of the midpoint. Each coordinate of the midpoint is the average of the corresponding coordinates of the two points.</p>
@@ -324,7 +331,7 @@ d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
 </h6>
 <p id="p-12288">Find the midpoint of the line segment joining the points \((-2,1)\) and \((4,3)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-583" id="solution-583"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-583"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-583" id="solution-583"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-583"><div class="solution solution-like">
 <p id="p-12289">We substitute \((-2,1)\) for \((x_1,y_1)\) and \((4,3)\) for \((x_2,y_2)\) in the midpoint formula to obtain</p>
 <div class="displaymath">
 \begin{align*}
@@ -332,31 +339,32 @@ d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
 \overline{y}\amp=\dfrac{y_1+y_2}{2}=\dfrac{1+3}{2}=2
 \end{align*}
 </div>
-<p data-braille="continuation">The midpoint of the segment is the point \((\overline{x},\overline{y})=(1,2)\text{.}\)</p>
+<p class="continuation">The midpoint of the segment is the point \((\overline{x},\overline{y})=(1,2)\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2019"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2019"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2019"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.16</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2019"><article class="exercise exercise-like"><iframe name="webwork-378" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=378&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKTsKJGFuc3dlciA9IFBvaW50KCIoLTEsLTMpIik7CgpCRUdJTl9QR01MCmEuICBGaW5kIHRoZSBtaWRwb2ludCBvZiB0aGUgbGluZSBqb2luaW5nIHRoZSBwb2ludHMgW2AoLTUsMylgXSBhbmQgW2AoMywtOSlcdGV4dHs6fWBdIFtfXXskYW5zd2VyfXs2fQoKCmEuICBQbG90IHRoZSBwb2ludHMgYW5kIGRyYXcgYSByZWN0YW5nbGUgd2l0aCB0aGUgcG9pbnRzIGFzIG9wcG9zaXRlIHZlcnRpY2VzLiBJbGx1c3RyYXRlIHRoYXQgdGhlIG1pZHBvaW50IGlzIHRoZSBjZW50ZXIgb2YgdGhlIHJlY3RhbmdsZS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgKC0xLC0zKWBdCmEuICBBIGZpZ3VyZSBpcyBiZWxvdy4gICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="378"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-39"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:35%;justify-content:flex-start;"><p id="p-12297">Graph for Practice 2:</p></div>
-<div class="sbspanel" style="width:35%;justify-content:flex-start;"><img src="images/fig-ex-9-2-2ans.svg" role="img" style="width: 100%; height: auto;" alt="rectangle"></div>
-</div></div></div></article></div></section><section class="subsection" id="subsection-214"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-378" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=378&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKTsKJGFuc3dlciA9IFBvaW50KCIoLTEsLTMpIik7CgpCRUdJTl9QR01MCmEuICBGaW5kIHRoZSBtaWRwb2ludCBvZiB0aGUgbGluZSBqb2luaW5nIHRoZSBwb2ludHMgW2AoLTUsMylgXSBhbmQgW2AoMywtOSlcdGV4dHs6fWBdIFtfXXskYW5zd2VyfXs2fQoKCmEuICBQbG90IHRoZSBwb2ludHMgYW5kIGRyYXcgYSByZWN0YW5nbGUgd2l0aCB0aGUgcG9pbnRzIGFzIG9wcG9zaXRlIHZlcnRpY2VzLiBJbGx1c3RyYXRlIHRoYXQgdGhlIG1pZHBvaW50IGlzIHRoZSBjZW50ZXIgb2YgdGhlIHJlY3RhbmdsZS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgKC0xLC0zKWBdCmEuICBBIGZpZ3VyZSBpcyBiZWxvdy4gICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="378"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-39"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><p id="p-12297">Graph for Practice 2:</p></div>
+<div class="sbspanel top" style="width:35%;"><img src="generated/latex-image/fig-ex-9-2-2ans.svg" role="img" class="contained" alt="rectangle"></div>
+</div></div></div></article></section><section class="subsection" id="subsection-214"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Circles</span>
 </h3>
 <p id="p-12298">A <dfn class="terminology">circle</dfn> is the set of all points in a plane that lie at a given distance, called the <dfn class="terminology">radius</dfn>, from a fixed point called the <dfn class="terminology">center</dfn>. We can use the distance formula to find an equation for a circle. First consider the circle in Figure (a), whose center is the origin, \((0,0)\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-circles.svg" role="img" style="width: 100%; height: auto;" alt="circles"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-circles.svg" role="img" class="contained" alt="circles"></div></div></div>
 <p id="p-12299">The distance from the origin to any point \(P(x,y)\) on the circle is \(r\text{.}\) Therefore,</p>
 <div class="displaymath">
 \begin{gather*}
 \sqrt{(x-0)^2+(y-0)^2}=r
 \end{gather*}
 </div>
-<p data-braille="continuation">or, squaring both sides,</p>
+<p class="continuation">or, squaring both sides,</p>
 <div class="displaymath">
 \begin{gather*}
 (x-0)^2+(y-0)^2=r^2
 \end{gather*}
 </div>
-<p data-braille="continuation">Thus, the equation for a circle of radius \(r\) centered at the origin is</p>
+<p class="continuation">Thus, the equation for a circle of radius \(r\) centered at the origin is</p>
 <div class="displaymath">
 \begin{gather*}
 \blert{x^2+y^2=r^2}
@@ -369,33 +377,34 @@ d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
 \begin{gather*}
 \blert{(x-h)^2+(y-k)^2=r^2}
 \end{gather*}
-</div></article><article class="exercise exercise-like" id="exercise-2020"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2020"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2020"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.17</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2020"><article class="exercise exercise-like"><iframe name="webwork-379" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=379&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE5vID0gUG9wVXAoCiAgWyI%2FIiwiWWVzIiwgIk5vIl0sCiAgMiwgCik7CiRyYWRpdXMgPSBDb21wdXRlKCI5Iik7CiRkaWFtZXRlciA9IENvbXB1dGUoIjE4Iik7CgpCRUdJTl9QR01MCmEuICBEb2VzIHRoZSBjZW50ZXIgb2YgYSBjaXJjbGUgbGllIG9uIHRoZSBncmFwaCBvZiB0aGUgY2lyY2xlPyBbX117JE5vfXs1fQoKCmEuICBXaGF0IGlzIHRoZSByYWRpdXMgb2YgdGhlIGNpcmNsZSBbYHheMiArIHleMiA9IDgxXHRleHR7P31gXSBbX117JHJhZGl1c317Mn0KCgphLiAgV2hhdCBpcyB0aGUgZGlhbWV0ZXIgb2YgdGhlIGNpcmNsZSBpbiBwYXJ0IChiKT8gIFtfXXskZGlhbWV0ZXJ9ezJ9CgoKYS4gIENhbiB3ZSBzaW1wbGlmeSB0aGUgZXF1YXRpb24gaW4gcGFydCAoYikgdG8gW2B4ICsgeSA9IDlcdGV4dHs%2FfWBdIFtfXXskTm99ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBObwphLiAgOQphLiAgMTgKYS4gIE5vICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="379"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-12322">The equation \((x-h)^2+(y-k)^2=r^2 \) is the <dfn class="terminology">standard form</dfn> for a circle of radius \(r\) with center at \((h,k)\text{.}\) It is easy to graph a circle if its equation is given in standard form.</p>
+</h6>
+<iframe name="webwork-379" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=379&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE5vID0gUG9wVXAoCiAgWyI%2FIiwiWWVzIiwgIk5vIl0sCiAgMiwgCik7CiRyYWRpdXMgPSBDb21wdXRlKCI5Iik7CiRkaWFtZXRlciA9IENvbXB1dGUoIjE4Iik7CgpCRUdJTl9QR01MCmEuICBEb2VzIHRoZSBjZW50ZXIgb2YgYSBjaXJjbGUgbGllIG9uIHRoZSBncmFwaCBvZiB0aGUgY2lyY2xlPyBbX117JE5vfXs1fQoKCmEuICBXaGF0IGlzIHRoZSByYWRpdXMgb2YgdGhlIGNpcmNsZSBbYHheMiArIHleMiA9IDgxXHRleHR7P31gXSBbX117JHJhZGl1c317Mn0KCgphLiAgV2hhdCBpcyB0aGUgZGlhbWV0ZXIgb2YgdGhlIGNpcmNsZSBpbiBwYXJ0IChiKT8gIFtfXXskZGlhbWV0ZXJ9ezJ9CgoKYS4gIENhbiB3ZSBzaW1wbGlmeSB0aGUgZXF1YXRpb24gaW4gcGFydCAoYikgdG8gW2B4ICsgeSA9IDlcdGV4dHs%2FfWBdIFtfXXskTm99ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBObwphLiAgOQphLiAgMTgKYS4gIE5vICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="379"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-12322">The equation \((x-h)^2+(y-k)^2=r^2 \) is the <dfn class="terminology">standard form</dfn> for a circle of radius \(r\) with center at \((h,k)\text{.}\) It is easy to graph a circle if its equation is given in standard form.</p>
 <article class="example example-like" id="example-two-circles"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.18</span><span class="period">.</span>
 </h6>
 <p id="p-12323">Graph the circles.</p>
 <ol id="p-12324" class="lower-alpha cols2">
-<li id="li-7769">\(\displaystyle (x-2)^2+(y+3)^2=16\)</li>
-<li id="li-7770">\(\displaystyle x^2+(y-4)^2=7\)</li>
+<li id="li-7769"><p id="p-derived-li-7769">\(\displaystyle (x-2)^2+(y+3)^2=16\)</p></li>
+<li id="li-7770"><p id="p-derived-li-7770">\(\displaystyle x^2+(y-4)^2=7\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-586" id="solution-586"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-586"><div class="solution solution-like"><ol id="p-12325" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-586" id="solution-586"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-586"><div class="solution solution-like"><ol id="p-12325" class="lower-alpha">
 <li id="li-7771">
 <p id="p-12326">The graph of \((x-2)^2+(y+3)^2=16\) is a circle with radius 4 and center at \((2,-3)\text{.}\) To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.)</p>
 <p id="p-12327">From the center, we move a distance of 4 units (the radius of the circle) in each of four directions:  up, down, left, and right. This locates four points that lie on the circle: \((2,1)\text{,}\) \((2,-7)\text{,}\) \((-2,-3)\text{,}\) and \((6,-3)\text{.}\)  We sketch the circle through these four points.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-circles2.svg" role="img" style="width: 100%; height: auto;" alt="circles"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-circles2.svg" role="img" class="contained" alt="circles"></div></div></div>
 </li>
 <li id="li-7772"><p id="p-12328">The graph of \(x^2+(y-4)^2=7\) is a circle with radius \(\sqrt{7}\) and center at \((0,4)\text{.}\)  From the center, we move approximately \(\sqrt{7}\text{,}\) or 2.6 units in each of the four coordinate directions to obtain the points \((0,6.6)\text{,}\) \((0,1.4)\text{,}\) \((-2.6,4)\text{,}\) and \((2.6,4)\text{.}\) We sketch the circle through these four points.</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2021"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2021"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2021"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.19</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2021"><article class="exercise exercise-like"><iframe name="webwork-380" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=380&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKTsKJGNlbnRlciA9IFBvaW50KCIoLTMsLTIpIik7CiRyID0gQ29tcHV0ZSgiNCIpOwoKQkVHSU5fUEdNTAphLiAgU3RhdGUgdGhlIGNlbnRlciBhbmQgcmFkaXVzIG9mIHRoZSBjaXJjbGUKCiAgICBbYGBgKHgrMyleMisoeSsyKV4yPTE2YGBgXQoKCgogICAgY2VudGVyOiBbX117JGNlbnRlcn17Nn0sIHJhZGl1czogW19deyRyfXsyfQoKCmEuICBHcmFwaCB0aGUgY2lyY2xlLiAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgY2VudGVyIFtgKC0zLC0yKVx0ZXh0eyx9YF0gcmFkaXVzIDQKCgphLiAgQSBncmFwaCBpcyBiZWxvdy4gICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="380"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-40">
+</h6>
+<iframe name="webwork-380" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=380&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKTsKJGNlbnRlciA9IFBvaW50KCIoLTMsLTIpIik7CiRyID0gQ29tcHV0ZSgiNCIpOwoKQkVHSU5fUEdNTAphLiAgU3RhdGUgdGhlIGNlbnRlciBhbmQgcmFkaXVzIG9mIHRoZSBjaXJjbGUKCiAgICBbYGBgKHgrMyleMisoeSsyKV4yPTE2YGBgXQoKCgogICAgY2VudGVyOiBbX117JGNlbnRlcn17Nn0sIHJhZGl1czogW19deyRyfXsyfQoKCmEuICBHcmFwaCB0aGUgY2lyY2xlLiAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgY2VudGVyIFtgKC0zLC0yKVx0ZXh0eyx9YF0gcmFkaXVzIDQKCgphLiAgQSBncmFwaCBpcyBiZWxvdy4gICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="380"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-40">
 <p id="p-12339">\((x+3)^2+(y+2)^2=16\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:40%;justify-content:flex-start;"><img src="images/fig-ex-9-2-3ans.svg" role="img" style="width: 100%; height: auto;" alt="circle"></div></div></div>
-</div></article></div></section><section class="subsection" id="subsection-215"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:40%;"><img src="generated/latex-image/fig-ex-9-2-3ans.svg" role="img" class="contained" alt="circle"></div></div></div>
+</div></article></section><section class="subsection" id="subsection-215"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">General Form for Circles</span>
 </h3>
 <p id="p-12340">The equations of circles often appear in a <dfn class="terminology">general quadratic form</dfn>, rather than the standard form described above.  For example, we can expand the squares of binomials in part (a) of the previous <a class="xref" data-knowl="./knowl/example-two-circles.html" title="Example 9.18">Example</a>,</p>
@@ -404,13 +413,13 @@ d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
 (x-2)^2+(y+3)^2=16
 \end{gather*}
 </div>
-<p data-braille="continuation">to obtain</p>
+<p class="continuation">to obtain</p>
 <div class="displaymath">
 \begin{gather*}
 x^2-4x+4+y^2+6y+9=16
 \end{gather*}
 </div>
-<p data-braille="continuation">or</p>
+<p class="continuation">or</p>
 <div class="displaymath">
 \begin{gather*}
 x^2+y^2-4x+6y-3=0
@@ -427,49 +436,49 @@ x^2+y^2-4x+6y-3=0
 x^2+y^2+8x-2y+6=0
 \end{gather*}
 </div>
-<p data-braille="continuation">in standard form, and graph the equation.</p>
+<p class="continuation">in standard form, and graph the equation.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-588" id="solution-588"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-588"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-588" id="solution-588"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-588"><div class="solution solution-like">
 <p id="p-12344">We prepare to complete the square in both variables by writing the equation as</p>
 <div class="displaymath">
 \begin{gather*}
 (x^2+8x+\underline{\hspace{2.727272727272727em}})+(y^2-2y+\underline{\hspace{2.727272727272727em}})=-6
 \end{gather*}
 </div>
-<p data-braille="continuation">We complete the square in \(x\) by adding 16 to each side of the equation, and complete the square in \(y\) by adding 1 to each side, to get</p>
+<p class="continuation">We complete the square in \(x\) by adding 16 to each side of the equation, and complete the square in \(y\) by adding 1 to each side, to get</p>
 <div class="displaymath">
 \begin{gather*}
 (x^2+8x+\alert{16})+(y^2-2y+\alert{1})=-6+\alert{16}+\alert{1}
 \end{gather*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
-<div class="sbspanel" style="width:57.8947368421053%;justify-content:center;">
+<div class="sbspanel middle" style="width:57.8947368421053%;">
 <p id="p-12345">from which we obtain the standard form,</p>
 <div class="displaymath">
 \begin{gather*}
 (x+4)^2+(y-1)^2=11
 \end{gather*}
 </div>
-<p data-braille="continuation">Thus, the circle has its center at \((-4,1)\text{,}\) and its radius is \(\sqrt{11}\text{,}\) or approximately 3.3.  The graph is shown at right.</p>
+<p class="continuation">Thus, the circle has its center at \((-4,1)\text{,}\) and its radius is \(\sqrt{11}\text{,}\) or approximately 3.3.  The graph is shown at right.</p>
 </div>
-<div class="sbspanel" style="width:33.6842105263158%;justify-content:center;"><img src="images/fig-example-9-2-4.svg" role="img" style="width: 100%; height: auto;" alt="circle"></div>
+<div class="sbspanel middle" style="width:33.6842105263158%;"><img src="generated/latex-image/fig-example-9-2-4.svg" role="img" class="contained" alt="circle"></div>
 </div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2022"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2022"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2022"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.21</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2022"><article class="exercise exercise-like"><iframe name="webwork-381" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=381&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLAogICJhcmVhIGFuZCBjaXJjdW1mZXJlbmNlIiwgCiAgImNlbnRlciBhbmQgcmFkaXVzIiwKICAiZGlhbWV0ZXIgYW5kIGFyY2xlbmd0aCJdLAogIDIsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsCiAgInNxdWFyZWQiLCAKICAib3Bwb3NpdGVzIiwKICAiZXF1YWwiLAogICJ6ZXJvIl0sCiAgMywgCik7CiRjID0gUG9wVXAoCiAgWyI%2FIiwKICAiY29tcGxldGluZyB0aGUgc3F1YXJlIiwgCiAgImNyb3NzLW11bHRpcGx5aW5nIiwKICAiZmFjdG9yaW5nIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCkZpbGwgaW4gdGhlIGJsYW5rcy4KYS4gIFRoZSBzdGFuZGFyZCBmb3JtIGZvciBhIGNpcmNsZSBpcyB1c2VmdWwgYmVjYXVzZSB3ZSBjYW4gc2VlIHRoZSBbX117JGF9ezV9IG9mIHRoZSBjaXJjbGUgaW4gdGhlIGVxdWF0aW9uLgoKCmEuICBBIHF1YWRyYXRpYyBlcXVhdGlvbiBpbiB0d28gdmFyaWFibGVzIGRlc2NyaWJlcyBhIGNpcmNsZSBpZiB0aGUgY29lZmZpY2llbnRzIG9mIHRoZSBxdWFkcmF0aWMgdGVybXMgYXJlIFtfXXskYn17NX0uCgoKYS4gIFdlIGNvbnZlcnQgdGhlIGVxdWF0aW9uIGZvciBhIGNpcmNsZSBpbnRvIHN0YW5kYXJkIGZvcm0gYnkgW19deyRjfXs1fSBpbiBib3RoIHZhcmlhYmxlcy4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGNlbnRlciBhbmQgcmFkaXVzCmEuICBlcXVhbAphLiAgY29tcGxldGluZyB0aGUgc3F1YXJlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="381"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-2023"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2023"><h6 class="heading">
+</h6>
+<iframe name="webwork-381" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=381&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLAogICJhcmVhIGFuZCBjaXJjdW1mZXJlbmNlIiwgCiAgImNlbnRlciBhbmQgcmFkaXVzIiwKICAiZGlhbWV0ZXIgYW5kIGFyY2xlbmd0aCJdLAogIDIsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsCiAgInNxdWFyZWQiLCAKICAib3Bwb3NpdGVzIiwKICAiZXF1YWwiLAogICJ6ZXJvIl0sCiAgMywgCik7CiRjID0gUG9wVXAoCiAgWyI%2FIiwKICAiY29tcGxldGluZyB0aGUgc3F1YXJlIiwgCiAgImNyb3NzLW11bHRpcGx5aW5nIiwKICAiZmFjdG9yaW5nIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCkZpbGwgaW4gdGhlIGJsYW5rcy4KYS4gIFRoZSBzdGFuZGFyZCBmb3JtIGZvciBhIGNpcmNsZSBpcyB1c2VmdWwgYmVjYXVzZSB3ZSBjYW4gc2VlIHRoZSBbX117JGF9ezV9IG9mIHRoZSBjaXJjbGUgaW4gdGhlIGVxdWF0aW9uLgoKCmEuICBBIHF1YWRyYXRpYyBlcXVhdGlvbiBpbiB0d28gdmFyaWFibGVzIGRlc2NyaWJlcyBhIGNpcmNsZSBpZiB0aGUgY29lZmZpY2llbnRzIG9mIHRoZSBxdWFkcmF0aWMgdGVybXMgYXJlIFtfXXskYn17NX0uCgoKYS4gIFdlIGNvbnZlcnQgdGhlIGVxdWF0aW9uIGZvciBhIGNpcmNsZSBpbnRvIHN0YW5kYXJkIGZvcm0gYnkgW19deyRjfXs1fSBpbiBib3RoIHZhcmlhYmxlcy4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGNlbnRlciBhbmQgcmFkaXVzCmEuICBlcXVhbAphLiAgY29tcGxldGluZyB0aGUgc3F1YXJlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="381"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-2023"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.22</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2023"><article class="exercise exercise-like"><iframe name="webwork-382" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=382&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRoID0gQ29tcHV0ZSgiNyIpOwokayA9IENvbXB1dGUoIi0yIik7CiRyID0gQ29tcHV0ZSgic3FydCgyOCkiKTsKCkJFR0lOX1BHTUwKV3JpdGUgdGhlIGVxdWF0aW9uIG9mIHRoZSBjaXJjbGUgW2B4XjIreV4yLTE0eCs0eSsyNT0wYF0gaW4gc3RhbmRhcmQgZm9ybToKCltgYGBcYmVnaW57Z2F0aGVyZWR9Cih4LWgpXjIrKHktayleMj1yXjIKXGVuZHtnYXRoZXJlZH0KYGBgXQoKW2BoPWBdW19deyRofXsyfSwgW2BrPWBdW19deyRrfXsyfSwgW2ByPWBdW19deyRyfXs4fSwKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyICJzcXJ0KDIpIiBmb3IgW2Bcc3FydHsyfVx0ZXh0ey59YF0nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCh4LTcpXjIrKHkrMileMj0yOGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="382"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-12377">We can write an equation for any circle if we can find its center and radius.</p>
+</h6>
+<iframe name="webwork-382" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=382&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRoID0gQ29tcHV0ZSgiNyIpOwokayA9IENvbXB1dGUoIi0yIik7CiRyID0gQ29tcHV0ZSgic3FydCgyOCkiKTsKCkJFR0lOX1BHTUwKV3JpdGUgdGhlIGVxdWF0aW9uIG9mIHRoZSBjaXJjbGUgW2B4XjIreV4yLTE0eCs0eSsyNT0wYF0gaW4gc3RhbmRhcmQgZm9ybToKCltgYGBcYmVnaW57Z2F0aGVyZWR9Cih4LWgpXjIrKHktayleMj1yXjIKXGVuZHtnYXRoZXJlZH0KYGBgXQoKW2BoPWBdW19deyRofXsyfSwgW2BrPWBdW19deyRrfXsyfSwgW2ByPWBdW19deyRyfXs4fSwKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyICJzcXJ0KDIpIiBmb3IgW2Bcc3FydHsyfVx0ZXh0ey59YF0nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCh4LTcpXjIrKHkrMileMj0yOGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="382"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-12377">We can write an equation for any circle if we can find its center and radius.</p>
 <article class="example example-like" id="example-232"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.23</span><span class="period">.</span>
 </h6>
 <p id="p-12378">Find an equation for the circle whose diameter has endpoints \((7,5)\) and \((1,-1)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-591" id="solution-591"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-591"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-591" id="solution-591"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-591"><div class="solution solution-like">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2%;margin-right:2%;">
-<div class="sbspanel" style="width:62.5%;justify-content:center;">
+<div class="sbspanel middle" style="width:62.5%;">
 <p id="p-12379">The center of the circle is the midpoint of its diameter.  We use the midpoint formula to find the center:</p>
 <div class="displaymath">
 \begin{gather*}
@@ -477,9 +486,9 @@ h=\overline{x}=\dfrac{7+1}{2}=4\\
 k=\overline{y}=\dfrac{5-1}{2}=2
 \end{gather*}
 </div>
-<p data-braille="continuation">Thus, the center is the point \((h,k)=(4,2)\text{.}\)</p>
+<p class="continuation">Thus, the center is the point \((h,k)=(4,2)\text{.}\)</p>
 </div>
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/fig-example-9-2-5.svg" role="img" style="width: 100%; height: auto;" alt="circle with diameter (7,5) to (1,-1)"></div>
+<div class="sbspanel middle" style="width:33.3333333333333%;"><img src="generated/latex-image/fig-example-9-2-5.svg" role="img" class="contained" alt="circle with diameter (7,5) to (1,-1)"></div>
 </div></div>
 <p id="p-12380">The radius is the distance from the center to either of the endpoints of the diameter, say the point \((7,5)\text{.}\) We use the distance formula with the points \((7,5)\) and \((4,2)\) to find the radius.</p>
 <div class="displaymath">
@@ -488,42 +497,44 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 \amp = \sqrt{3^2+3^2}=\sqrt{18}
 \end{align*}
 </div>
-<p data-braille="continuation">Finally, we substitute 4 for\(h\) and 2 for \(k\) (the coordinates of the center) and \(\sqrt{18}\) for \(r\) (the radius) into the standard form</p>
+<p class="continuation">Finally, we substitute 4 for\(h\) and 2 for \(k\) (the coordinates of the center) and \(\sqrt{18}\) for \(r\) (the radius) into the standard form</p>
 <div class="displaymath">
 \begin{gather*}
 (x-h)^2+(y-k)^2=r^2
 \end{gather*}
 </div>
-<p data-braille="continuation">to obtain</p>
+<p class="continuation">to obtain</p>
 <div class="displaymath">
 \begin{gather*}
 (x-4)^2+(y-2)^2=18
 \end{gather*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2024"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2024"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-2024"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.24</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2024"><article class="exercise exercise-like"><iframe name="webwork-383" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=383&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJJbXBsaWNpdEVxdWF0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5zZXQoCiAgeD0%2Be2xpbWl0cz0%2BWy00LXNxcnQoMTMpLC00K3NxcnQoMTMpXX0sCiAgeT0%2Be2xpbWl0cz0%2BWy0zLXNxcnQoMTMpLC0zK3NxcnQoMTMpXX0sCik7CiRyc3EgPSAxMzsKJHIgPSBzcXJ0KCRyc3EpOwokaCA9IC00OwokayA9IC0zOwokYW5zd2VyID0gSW1wbGljaXRFcXVhdGlvbigKICAiKHgtJGgpXjIgICsgKHktJGspXjIgPSRyc3EiLAogIHNvbHV0aW9ucz0%2BWyAKICAgICBbJGgsJGsrJHJdLAogICAgIFskaCwkay0kcl0sCiAgICAgWyRoKyRyLCRrXSwKICAgICBbJGgtJHIsJGtdLAogIF0KKTsKCkJFR0lOX1BHTUwKRmluZCBhbiBlcXVhdGlvbiBmb3IgdGhlIGNpcmNsZSB3aG9zZSBkaWFtZXRlciBoYXMgZW5kcG9pbnQgW2AoLTcsLTUpIGBdIGFuZCBbYCgtMSwtMSkgXHRleHR7Ln1gXQoKICAgIFtfXXskYW5zd2VyfXszMH0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCh4KzQpXjIgKyAoeSszKV4yID0gMTNgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="383"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-9-2-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-383" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=383&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJJbXBsaWNpdEVxdWF0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5zZXQoCiAgeD0%2Be2xpbWl0cz0%2BWy00LXNxcnQoMTMpLC00K3NxcnQoMTMpXX0sCiAgeT0%2Be2xpbWl0cz0%2BWy0zLXNxcnQoMTMpLC0zK3NxcnQoMTMpXX0sCik7CiRyc3EgPSAxMzsKJHIgPSBzcXJ0KCRyc3EpOwokaCA9IC00OwokayA9IC0zOwokYW5zd2VyID0gSW1wbGljaXRFcXVhdGlvbigKICAiKHgtJGgpXjIgICsgKHktJGspXjIgPSRyc3EiLAogIHNvbHV0aW9ucz0%2BWyAKICAgICBbJGgsJGsrJHJdLAogICAgIFskaCwkay0kcl0sCiAgICAgWyRoKyRyLCRrXSwKICAgICBbJGgtJHIsJGtdLAogIF0KKTsKCkJFR0lOX1BHTUwKRmluZCBhbiBlcXVhdGlvbiBmb3IgdGhlIGNpcmNsZSB3aG9zZSBkaWFtZXRlciBoYXMgZW5kcG9pbnQgW2AoLTcsLTUpIGBdIGFuZCBbYCgtMSwtMSkgXHRleHR7Ln1gXQoKICAgIFtfXXskYW5zd2VyfXszMH0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCh4KzQpXjIgKyAoeSszKV4yID0gMTNgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="383"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-9-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 9.2</span>
 </h3>
 <article class="subexercises" id="subexercises-122"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <article class="exercise exercise-like" id="exercise-2025"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-12385">Choose values for \(x\) and \(y\) to decide whether the statements are true.</p>
 <ol class="lower-alpha cols2">
-<li id="li-7796">\(\displaystyle \sqrt{x^2+y^2}=x+y\)</li>
-<li id="li-7797">\(\displaystyle (x+y)^2 = x^2+y^2\)</li>
+<li id="li-7796"><p id="p-derived-li-7796">\(\displaystyle \sqrt{x^2+y^2}=x+y\)</p></li>
+<li id="li-7797"><p id="p-derived-li-7797">\(\displaystyle (x+y)^2 = x^2+y^2\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-2026"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-12388">Leanne is sailing 3 miles west and 5 miles south of the harbor.  She heads directly towards an island that is 8 miles west and 7 miles north of the harbor.</p>
 <ol class="lower-alpha">
-<li id="li-7800">How far is Leanne from the island?</li>
-<li id="li-7801">How far will Leanne be from the harbor when she is halfway to the island?</li>
+<li id="li-7800"><p id="p-derived-li-7800">How far is Leanne from the island?</p></li>
+<li id="li-7801"><p id="p-derived-li-7801">How far will Leanne be from the harbor when she is halfway to the island?</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-300">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-343"><p id="p-12389">For Problems 3 and 4, complete the table of values, then sketch the graph.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-2027"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:15%;justify-content:flex-start;"><p id="p-12390">\(x^2+y^2=16\)</p></div>
-<div class="sbspanel fixed-width" style="width:75%;justify-content:flex-start;"><table>
+<div class="sbspanel top" style="width:15%;"><p id="p-12390">\(x^2+y^2=16\)</p></div>
+<div class="sbspanel fixed-width top" style="width:75%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-4\)</td>
@@ -534,7 +545,7 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -546,13 +557,13 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\qquad\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 </tr>
 </table></div>
 </div></div></article><article class="exercise exercise-like" id="exercise-2028"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:28%;justify-content:flex-start;"><p id="p-12391">\((x-2)^2+(y+2)^2=9\)</p></div>
-<div class="sbspanel fixed-width" style="width:65%;justify-content:flex-start;"><table>
+<div class="sbspanel top" style="width:28%;"><p id="p-12391">\((x-2)^2+(y+2)^2=9\)</p></div>
+<div class="sbspanel fixed-width top" style="width:65%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-1\)</td>
@@ -561,7 +572,7 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(3\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(5\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(5\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -571,13 +582,14 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\qquad\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\qquad\)</td>
 </tr>
 </table></div>
 </div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-301">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-344"><p id="p-12392">For Problems 5 and 6, solve by completing the square.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-2029"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
@@ -586,6 +598,7 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 </div>
 </div></article><article class="subexercises" id="subexercises-123"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-302">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-345"><p id="p-12396">For Problems 7–10, find the distance between each of the given pairs of points, and find the midpoint of the segment joining them.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-2031"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
@@ -596,6 +609,7 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-303">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-346"><p id="p-12403">For Problems 11–14, state the center and radius of the circle.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-2035"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
@@ -611,8 +625,8 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <p id="p-12413">The points \((1,6)\text{,}\) \((5,2)\text{,}\) \((-2,3)\text{,}\) and \((2,-1)\) are the vertices of a quadrilateral. Show that its diagonals are of equal length.</p></article><article class="exercise exercise-like" id="exercise-2042"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="p-12415">Two opposite vertices of a square are \(A(-9,-5)\) and \(C(3,3)\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-7802">Find the length of a diagonal of the square.</li>
-<li id="li-7803">Find the length of the side of the square.</li>
+<li id="li-7802"><p id="p-derived-li-7802">Find the length of a diagonal of the square.</p></li>
+<li id="li-7803"><p id="p-derived-li-7803">Find the length of the side of the square.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-2043"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="p-12416">Find the equation of the perpendicular bisector of the line segment joining \(A(2,1)\) and \(B(1,3)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-2044"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="p-12418">Brie took off from Oldfield Airport in a small plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport. Which airport is closer to Brie’s present location?</p>
@@ -620,8 +634,8 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <li id="li-7804">
 <p id="p-12419">Use the diagram and the Pythagorean theorem to find the distance from Brie's position to Oldfield Airport.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:8%;margin-right:8%;">
-<div class="sbspanel" style="width:45.2380952380952%;justify-content:flex-start;"><img src="images/fig-hw-9-2-18a.svg" role="img" style="width: 100%; height: auto;" alt="Brie to Oldfield"></div>
-<div class="sbspanel" style="width:45.2380952380952%;justify-content:flex-start;"><img src="images/fig-hw-9-2-18b.svg" role="img" style="width: 100%; height: auto;" alt="Brie to Preston"></div>
+<div class="sbspanel top" style="width:45.2380952380952%;"><img src="generated/latex-image/fig-hw-9-2-18a.svg" role="img" class="contained" alt="Brie to Oldfield"></div>
+<div class="sbspanel top" style="width:45.2380952380952%;"><img src="generated/latex-image/fig-hw-9-2-18b.svg" role="img" class="contained" alt="Brie to Preston"></div>
 </div></div>
 </li>
 <li id="li-7805"><p id="p-12420">Use the diagram and the distance formula to find the distance from Brie's position to Preston Airport.</p></li>
@@ -631,10 +645,11 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <ol class="lower-alpha">
 <li id="li-7807">
 <p id="p-12423">What are her coordinates when she is halfway to Preston?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:31%;margin-right:31%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-9-2-19.svg" role="img" style="width: 100%; height: auto;" alt="Brie halfway to Preston"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:31%;margin-right:31%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-hw-9-2-19.svg" role="img" class="contained" alt="Brie halfway to Preston"></div></div></div>
 </li>
 <li id="li-7808"><p id="p-12424">Show that the distance from Brie's present position to the halfway point is the same as the distance from the halfway point to Preston Airport.</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-304">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-347"><p id="p-12427">For Problems 22-27, graph the equation.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-2046"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
@@ -647,6 +662,7 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-305">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-348"><p id="p-12434">For Problems 28–31, write the equation in standard form. State the center and radius of the circle</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-2052"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
@@ -657,6 +673,7 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-306">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-349"><p id="p-12441">For Problems 32–35, write an equation for the circle with the given properties.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-2056"><h6 class="heading"><span class="codenumber">32<span class="period">.</span></span></h6>
@@ -669,19 +686,19 @@ r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
 <article class="exercise exercise-like" id="exercise-2060"><h6 class="heading"><span class="codenumber">36<span class="period">.</span></span></h6>
 <p id="p-12448">Find an equation for the circle that passes through the points \((2,3),~(3,2)\text{,}\) and \((-4,-5)\text{.}\)  (Hint: Find values for \(a, ~b\text{,}\) and \(c\) so that the three points lie on the graph of \(x^2+y^2+ax+by+c=0\text{.}\))</p></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

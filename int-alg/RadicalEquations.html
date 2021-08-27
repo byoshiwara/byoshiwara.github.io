@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:58:04-07:00       *-->
+<!--*       on 2021-08-27T15:53:17-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Radical Equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="RadicalEquations"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Radical Equations</span>
@@ -234,27 +240,27 @@ true);
 \sqrt{x+3}=4
 \end{equation*}
 </div>
-<p data-braille="continuation">we square both sides to find</p>
+<p class="continuation">we square both sides to find</p>
 <div class="displaymath">
 \begin{align*}
 (\sqrt{x+3})^2 \amp = 4^2\\
 x+3 \amp = 16
 \end{align*}
 </div>
-<p data-braille="continuation">You can check that \(x=13\) is the solution for this equation.</p>
+<p class="continuation">You can check that \(x=13\) is the solution for this equation.</p>
 <article class="example example-like" id="example-156"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.98</span><span class="period">.</span>
 </h6>
 <p id="p-8193">Solve \(~4\sqrt[3]{x-9} = 12\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-395" id="solution-395"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-395"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-395" id="solution-395"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-395"><div class="solution solution-like">
 <p id="p-8194">We first divide both sides of the equation by 4 to isolate the radical.</p>
 <div class="displaymath">
 \begin{equation*}
 \sqrt[3]{x-9} = 3
 \end{equation*}
 </div>
-<p data-braille="continuation">Next, we cube both sides of the equation.</p>
+<p class="continuation">Next, we cube both sides of the equation.</p>
 <div class="displaymath">
 \begin{align*}
 (\sqrt[3]{x-9})^3 \amp = 3^3\\
@@ -263,13 +269,14 @@ x \amp = 36
 \end{align*}
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
-<div class="sbspanel" style="width:52.6315789473684%;justify-content:center;"><p id="p-8195">The solution is 36.  We can also solve the equation graphically by graphing \(y=4\sqrt[3]{x-9}\text{,}\) as shown in the figure.  The point \((36,12)\) lies on the graph, so \(x=36\) is the solution of the equation \(~4\sqrt[3]{x-9} = 12\)</p></div>
-<div class="sbspanel" style="width:42.1052631578947%;justify-content:center;"><img src="images/fig-example-6-5-1.svg" role="img" style="width: 100%; height: auto;" alt="transformed cube root function"></div>
+<div class="sbspanel middle" style="width:52.6315789473684%;"><p id="p-8195">The solution is 36.  We can also solve the equation graphically by graphing \(y=4\sqrt[3]{x-9}\text{,}\) as shown in the figure.  The point \((36,12)\) lies on the graph, so \(x=36\) is the solution of the equation \(~4\sqrt[3]{x-9} = 12\)</p></div>
+<div class="sbspanel middle" style="width:42.1052631578947%;"><img src="generated/latex-image/fig-example-6-5-1.svg" role="img" class="contained" alt="transformed cube root function"></div>
 </div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1281"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1281"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1281"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.99</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1281"><article class="exercise exercise-like"><iframe name="webwork-260" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=260&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnMgPSBDb21wdXRlKCItNCIpOwoKQkVHSU5fUEdNTApTb2x2ZSBbYH42KzJcc3FydFs0XXsxMi12fSA9IDEwYF0KCltgdj1gXVtfXXskYW5zfXsyfQoKSGludDoKKiBJc29sYXRlIHRoZSByYWRpY2FsLgoqIFJhaXNlIGVhY2ggc2lkZSB0byB0aGUgZm91cnRoIHBvd2VyLgoqIENvbXBsZXRlIHRoZSBzb2x1dGlvbi4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B2PS00YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="260"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-146"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-260" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=260&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnMgPSBDb21wdXRlKCItNCIpOwoKQkVHSU5fUEdNTApTb2x2ZSBbYH42KzJcc3FydFs0XXsxMi12fSA9IDEwYF0KCltgdj1gXVtfXXskYW5zfXsyfQoKSGludDoKKiBJc29sYXRlIHRoZSByYWRpY2FsLgoqIFJhaXNlIGVhY2ggc2lkZSB0byB0aGUgZm91cnRoIHBvd2VyLgoqIENvbXBsZXRlIHRoZSBzb2x1dGlvbi4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B2PS00YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="260"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-146"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Extraneous Solutions</span>
 </h3>
 <p id="p-8204">Whenever we raise both sides of an equation to an even power, it is possible to introduce false or <dfn class="terminology">extraneous solutions</dfn>.  For example, the equation</p>
@@ -278,24 +285,24 @@ x \amp = 36
 \sqrt{x}=-5
 \end{equation*}
 </div>
-<p data-braille="continuation">has no solution, because \(\sqrt{x}\) is never a negative number. However, if we try to solve the equation by squaring both sides, we find</p>
+<p class="continuation">has no solution, because \(\sqrt{x}\) is never a negative number. However, if we try to solve the equation by squaring both sides, we find</p>
 <div class="displaymath">
 \begin{align*}
 (\sqrt{x})^{\alert{2}}\amp = (-5)^{\alert{2}}\\
 x\amp = 25
 \end{align*}
 </div>
-<p data-braille="continuation">You can check that \(25\) is <em class="emphasis">not</em> a solution to the original equation, \(\sqrt{x}=-5 \text{,}\) because \(\sqrt{25} \) does not equal \(-5\text{.}\)</p>
+<p class="continuation">You can check that \(25\) is <em class="emphasis">not</em> a solution to the original equation, \(\sqrt{x}=-5 \text{,}\) because \(\sqrt{25} \) does not equal \(-5\text{.}\)</p>
 <p id="p-8205">Raising both sides of an equation to an odd power does not introduce extraneous solutions.  However, if we raise both sides to an even power, we should check each solution in the original equation.</p>
-<article class="exercise exercise-like" id="exercise-1282"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1282"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-1282"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.100</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1282"><article class="exercise exercise-like"><iframe name="webwork-261" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=261&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGV2ZW4gPSBQb3BVcCgKICBbIj8iLCJldmVuIiwgIm9kZCJdLAogIDEsIAopOwokZXh0cmFuZW91cyA9IFBvcFVwKAogIFsiPyIsImVzc2VudGlhbCIsICJleHRyYW5lb3VzIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoZW4gd2UgcmFpc2UgYm90aCBzaWRlcyBvZiBhbiBlcXVhdGlvbiB0byBhbiBbX117JGV2ZW59ezV9IHBvd2VyLCBpdCBpcyBwb3NzaWJsZSB0byBpbnRyb2R1Y2UgW19deyRleHRyYW5lb3VzfXs1fSBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KZXZlbjsgZXh0cmFuZW91cwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="261"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-radical-equations"><h6 class="heading">
+</h6>
+<iframe name="webwork-261" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=261&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGV2ZW4gPSBQb3BVcCgKICBbIj8iLCJldmVuIiwgIm9kZCJdLAogIDEsIAopOwokZXh0cmFuZW91cyA9IFBvcFVwKAogIFsiPyIsImVzc2VudGlhbCIsICJleHRyYW5lb3VzIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoZW4gd2UgcmFpc2UgYm90aCBzaWRlcyBvZiBhbiBlcXVhdGlvbiB0byBhbiBbX117JGV2ZW59ezV9IHBvd2VyLCBpdCBpcyBwb3NzaWJsZSB0byBpbnRyb2R1Y2UgW19deyRleHRyYW5lb3VzfXs1fSBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KZXZlbjsgZXh0cmFuZW91cwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="261"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-radical-equations"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.101</span><span class="period">.</span>
 </h6>
 <p id="p-8216">Solve the equation  \(~\sqrt{x+2}+4 = x\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-398" id="solution-398"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-398"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-398" id="solution-398"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-398"><div class="solution solution-like">
 <p id="p-8217">First, we isolate the radical expression on one side of the equation. (This will make it easier to square both sides.)</p>
 <div class="displaymath">
 \begin{align*}
@@ -308,24 +315,24 @@ x=2\hphantom{000}\amp\text{or}\hphantom{000}x=7
 </div>
 <p id="p-8218"><em class="emphasis">Check</em></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:10%;">
-<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><p id="p-8219">Does \(\sqrt{\alert{2}+2}+4=\alert{2} \text{?}\)</p></div>
-<div class="sbspanel" style="width:52.9411764705882%;justify-content:flex-start;"><p id="p-8220">\(\hphantom{blank}\blert{{\text{No; }2\text{ is not a solution.}}} \)</p></div>
+<div class="sbspanel top" style="width:47.0588235294118%;"><p id="p-8219">Does \(\sqrt{\alert{2}+2}+4=\alert{2} \text{?}\)</p></div>
+<div class="sbspanel top" style="width:52.9411764705882%;"><p id="p-8220">\(\hphantom{blank}\blert{{\text{No; }2\text{ is not a solution.}}} \)</p></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:10%;">
-<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><p id="p-8221">Does \(\sqrt{\alert{7}+2}+4=\alert{7} \text{?}\)</p></div>
-<div class="sbspanel" style="width:52.9411764705882%;justify-content:flex-start;"><p id="p-8222">\(\hphantom{blank}\blert{{\text{Yes; }7\text{ is  a solution.}}} \)</p></div>
+<div class="sbspanel top" style="width:47.0588235294118%;"><p id="p-8221">Does \(\sqrt{\alert{7}+2}+4=\alert{7} \text{?}\)</p></div>
+<div class="sbspanel top" style="width:52.9411764705882%;"><p id="p-8222">\(\hphantom{blank}\blert{{\text{Yes; }7\text{ is  a solution.}}} \)</p></div>
 </div></div>
 <p id="p-8223">The apparent solution \(2\) is extraneous. The only solution to the original equation is \(7\text{.}\) We can verify the solution by graphing the equations</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:55%;justify-content:center;">
+<div class="sbspanel middle" style="width:55%;">
 <div class="displaymath" id="p-8224">
 \begin{equation*}
 y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4
 \end{equation*}
 </div>
-<p data-braille="continuation">as shown at right. The graphs intersect in only one point, \((7, 3)\text{,}\) so there is only one solution, \(x=7\text{.}\)</p>
+<p class="continuation">as shown at right. The graphs intersect in only one point, \((7, 3)\text{,}\) so there is only one solution, \(x=7\text{.}\)</p>
 </div>
-<div class="sbspanel" style="width:40%;justify-content:center;"><img src="images/fig-radical-equation.svg" role="img" style="width: 100%; height: auto;" alt="graphs of both sides of radical equation"></div>
+<div class="sbspanel middle" style="width:40%;"><img src="external/images/fig-radical-equation.svg" role="img" class="contained" alt="graphs of both sides of radical equation"></div>
 </div></div>
 </div></div>
 </div></article><article class="warning remark-like" id="warning-26"><h6 class="heading">
@@ -337,18 +344,19 @@ y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4
 (\sqrt{x+2})^2+4^2=x^2 ~~~~~~~~\blert{\text{Incorrect!}}
 \end{equation*}
 </div>
-<p data-braille="continuation">This is because \((a + b)^2 \ne a^2 + b^2\text{.}\) Instead, we must square the <em class="emphasis">entire</em> left side of the equation as a binomial, like this,</p>
+<p class="continuation">This is because \((a + b)^2 \ne a^2 + b^2\text{.}\) Instead, we must square the <em class="emphasis">entire</em> left side of the equation as a binomial, like this,</p>
 <div class="displaymath">
 \begin{equation*}
 (\sqrt{x+2}+4)^2=x^2 
 \end{equation*}
 </div>
-<p data-braille="continuation">or we may proceed as shown in <a class="xref" data-knowl="./knowl/example-radical-equations.html" title="Example 6.101">Example 6.101</a>.</p></article><article class="exercise exercise-like" id="exercise-1283"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1283"><h6 class="heading">
+<p class="continuation">or we may proceed as shown in <a class="xref" data-knowl="./knowl/example-radical-equations.html" title="Example 6.101">Example 6.101</a>.</p></article><article class="exercise exercise-like" id="exercise-1283"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.103</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1283"><article class="exercise exercise-like"><iframe name="webwork-262" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=262&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnMgPSBDb21wdXRlKCI1Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgfjJ4LTUgPSBcc3FydHs0MC0zeH1gXQoKW2B4PWBdW19deyRhbnN9ezJ9CgpIaW50OgoqIFNxdWFyZSBib3RoIHNpZGVzLgoqIFNvbHZlIHRoZSBxdWFkcmF0aWMgZXF1YXRpb24uCiogQ2hlY2sgZm9yIGV4dHJhbmVvdXMgcm9vdHMuICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD01YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="262"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1284"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1284"><h6 class="heading">
+</h6>
+<iframe name="webwork-262" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=262&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnMgPSBDb21wdXRlKCI1Iik7CgpCRUdJTl9QR01MClNvbHZlIFtgfjJ4LTUgPSBcc3FydHs0MC0zeH1gXQoKW2B4PWBdW19deyRhbnN9ezJ9CgpIaW50OgoqIFNxdWFyZSBib3RoIHNpZGVzLgoqIFNvbHZlIHRoZSBxdWFkcmF0aWMgZXF1YXRpb24uCiogQ2hlY2sgZm9yIGV4dHJhbmVvdXMgcm9vdHMuICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD01YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="262"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1284"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.104</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1284"><article class="exercise exercise-like"><iframe name="webwork-263" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=263&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIEF0IG1vc3Qgb25lIG9mIHRoZSBzb2x1dGlvbnMgb2YgYSByYWRpY2FsIGVxdWF0aW9uIGNhbiBiZSBleHRyYW5lb3VzLiBbX117JEZhbHNlfXs1fQoKCmEuICBXZSBkb24ndCBoYXZlIHRvIGNoZWNrIGZvciBleHRyYW5lb3VzIHNvbHV0aW9ucyBpZiB3ZSBjdWJlIGJvdGggc2lkZXMgb2YgYW4gZXF1YXRpb24uIFtfXXskVHJ1ZX17NX0KCgphLiAgV2UgY2FuIHNxdWFyZSBlYWNoIHRlcm0gb2YgYW4gZXF1YXRpb24gc2VwYXJhdGVseSB3aXRob3V0IGNoYW5naW5nIGl0cyBzb2x1dGlvbnMuIFtfXXskRmFsc2V9ezV9CgoKYS4gIEl0IGlzIGhlbHBmdWwgdG8gaXNvbGF0ZSB0aGUgcmFkaWNhbCBiZWZvcmUgc3F1YXJpbmcgYm90aCBzaWRlcy4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="263"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-147"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-263" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=263&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIEF0IG1vc3Qgb25lIG9mIHRoZSBzb2x1dGlvbnMgb2YgYSByYWRpY2FsIGVxdWF0aW9uIGNhbiBiZSBleHRyYW5lb3VzLiBbX117JEZhbHNlfXs1fQoKCmEuICBXZSBkb24ndCBoYXZlIHRvIGNoZWNrIGZvciBleHRyYW5lb3VzIHNvbHV0aW9ucyBpZiB3ZSBjdWJlIGJvdGggc2lkZXMgb2YgYW4gZXF1YXRpb24uIFtfXXskVHJ1ZX17NX0KCgphLiAgV2UgY2FuIHNxdWFyZSBlYWNoIHRlcm0gb2YgYW4gZXF1YXRpb24gc2VwYXJhdGVseSB3aXRob3V0IGNoYW5naW5nIGl0cyBzb2x1dGlvbnMuIFtfXXskRmFsc2V9ezV9CgoKYS4gIEl0IGlzIGhlbHBmdWwgdG8gaXNvbGF0ZSB0aGUgcmFkaWNhbCBiZWZvcmUgc3F1YXJpbmcgYm90aCBzaWRlcy4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="263"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-147"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving Formulas</span>
 </h3>
 <p id="p-8260">We can also solve formulas involving radicals for one variable in terms of the others.</p>
@@ -357,7 +365,7 @@ y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4
 </h6>
 <p id="p-8261">Solve the formula  \(~t=\sqrt{1+s^2}~\) for \(s\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-401" id="solution-401"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-401"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-401" id="solution-401"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-401"><div class="solution solution-like">
 <p id="p-8262">Because the variable we want is under a square root, we square both sides of the equation, to get</p>
 <div class="displaymath">
 \begin{align*}
@@ -367,9 +375,10 @@ s \amp =\pm \sqrt{t^2-1}
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1285"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1285"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1285"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.106</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1285"><article class="exercise exercise-like"><iframe name="webwork-264" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=264&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChWPT4iUmVhbCIsIHI9PiJSZWFsIiwgQj0%2BIlJlYWwiKTsKJGEgPSBGb3JtdWxhKCIoVi0oci0yKV4zKS9CIik7CgpCRUdJTl9QR01MClNvbHZlIHRoZSBmb3JtdWxhIFtgfnItMiA9IFxzcXJ0WzNde1YtQmh9fmBdIGZvciBbYGhcdGV4dHsufWBdCgpbYGg9YF1bX117JGF9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgaD1cZGZyYWN7Vi0oci0yKV4zfXtCfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="264"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-148"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-264" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=264&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChWPT4iUmVhbCIsIHI9PiJSZWFsIiwgQj0%2BIlJlYWwiKTsKJGEgPSBGb3JtdWxhKCIoVi0oci0yKV4zKS9CIik7CgpCRUdJTl9QR01MClNvbHZlIHRoZSBmb3JtdWxhIFtgfnItMiA9IFxzcXJ0WzNde1YtQmh9fmBdIGZvciBbYGhcdGV4dHsufWBdCgpbYGg9YF1bX117JGF9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgaD1cZGZyYWN7Vi0oci0yKV4zfXtCfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="264"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-148"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Equations with More than One Radical</span>
 </h3>
 <p id="p-8267">Sometimes we need to square both sides of an equation more than once in order to eliminate all the radicals.</p>
@@ -378,28 +387,28 @@ s \amp =\pm \sqrt{t^2-1}
 </h6>
 <p id="p-8268">Solve \(~\sqrt{x-7}+\sqrt{x}=7 \text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-403" id="solution-403"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-403"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-403" id="solution-403"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-403"><div class="solution solution-like">
 <p id="p-8269">First, we isolate the more complicated radical on one side of the equation. (This will make it easier to square both sides.) We subtract \(\sqrt{x} \) from both sides to get</p>
 <div class="displaymath">
 \begin{equation*}
 \sqrt{x-7}=7-\sqrt{x} 
 \end{equation*}
 </div>
-<p data-braille="continuation">Now we square each side to remove one radical. Be careful when squaring the binomial \(7-\sqrt{x} \text{.}\)</p>
+<p class="continuation">Now we square each side to remove one radical. Be careful when squaring the binomial \(7-\sqrt{x} \text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
 (\sqrt{x-7})^{\alert{2}}\amp =(7-\sqrt{x})^{\alert{2}}\\
 x-7\amp = 49-14\sqrt{x}+x
 \end{align*}
 </div>
-<p data-braille="continuation">We collect like terms, and isolate the radical on one side of the equation.</p>
+<p class="continuation">We collect like terms, and isolate the radical on one side of the equation.</p>
 <div class="displaymath">
 \begin{align*}
 -56 \amp = -14\sqrt{x}\amp\amp\blert{\text{Divide both sides by }{-14}.}\\
 4 \amp = \sqrt{x}
 \end{align*}
 </div>
-<p data-braille="continuation">Finally, we square both sides again to obtain</p>
+<p class="continuation">Finally, we square both sides again to obtain</p>
 <div class="displaymath">
 \begin{align*}
 (4)^{\alert{2}} \amp = (\sqrt{x})^{\alert{2}}\\
@@ -408,8 +417,8 @@ x-7\amp = 49-14\sqrt{x}+x
 </div>
 <p id="p-8270"><em class="emphasis">Check</em></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:10%;">
-<div class="sbspanel" style="width:47.0588235294118%;justify-content:flex-start;"><p id="p-8271">Does \(\sqrt{\alert{16}-7}+\sqrt{\alert{16}}=7\text{?}\)</p></div>
-<div class="sbspanel" style="width:52.9411764705882%;justify-content:flex-start;"><p id="p-8272">\(\hphantom{blank}\blert{\text{Yes. The solution is } 16.}\)</p></div>
+<div class="sbspanel top" style="width:47.0588235294118%;"><p id="p-8271">Does \(\sqrt{\alert{16}-7}+\sqrt{\alert{16}}=7\text{?}\)</p></div>
+<div class="sbspanel top" style="width:52.9411764705882%;"><p id="p-8272">\(\hphantom{blank}\blert{\text{Yes. The solution is } 16.}\)</p></div>
 </div></div>
 </div></div>
 </div></article><article class="warning remark-like" id="warning-27"><h6 class="heading">
@@ -421,9 +430,10 @@ x-7\amp = 49-14\sqrt{x}+x
 (\sqrt{x-7})^2+(\sqrt{x})^2=7^2~~~~~~\blert{\text{Incorrect!}}
 \end{equation*}
 </div>
-<p data-braille="continuation">We must square the <em class="emphasis">entire expression</em> on each side of the equal sign as one piece.</p></article><article class="exercise exercise-like" id="exercise-1286"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1286"><h6 class="heading">
+<p class="continuation">We must square the <em class="emphasis">entire expression</em> on each side of the equal sign as one piece.</p></article><article class="exercise exercise-like" id="exercise-1286"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.109</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1286"><article class="exercise exercise-like"><iframe name="webwork-265" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=265&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyMSA9IENvbXB1dGUoIjUiKTsKJHIyID0gQ29tcHV0ZSgiOCIpOwokYW5zd2VyID0gTGlzdCgiJHIxLCAkcjIiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlIFtgflxzcXJ0ezN4KzF9ID0gNiAtIFxzcXJ0ezkteH1gXQoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezV9CgpIaW50OgoqIFNxdWFyZSBib3RoIHNpZGVzLgoqIElzb2xhdGUgdGhlIHJhZGljYWwgdGVybS4KKiBEaXZpZGUgYm90aCBzaWRlcyBieSA0LgoqIFNxdWFyZSBib3RoIHNpZGVzIGFnYWluLgoqIFNvbHZlIHRoZSBxdWFkcmF0aWMgZXF1YXRpb24uCiogQ2hlY2sgZm9yIGV4dHJhbmVvdXMgcm9vdHMuICAgCgoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnVXNlIGEgY29tbWEgdG8gc2VwYXJhdGUgZGlmZmVyZW50IHNvbHV0aW9ucy4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHg9NVx0ZXh0ezt9YF0gIFtgeD04YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="265"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-149"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-265" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=265&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyMSA9IENvbXB1dGUoIjUiKTsKJHIyID0gQ29tcHV0ZSgiOCIpOwokYW5zd2VyID0gTGlzdCgiJHIxLCAkcjIiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlIFtgflxzcXJ0ezN4KzF9ID0gNiAtIFxzcXJ0ezkteH1gXQoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezV9CgpIaW50OgoqIFNxdWFyZSBib3RoIHNpZGVzLgoqIElzb2xhdGUgdGhlIHJhZGljYWwgdGVybS4KKiBEaXZpZGUgYm90aCBzaWRlcyBieSA0LgoqIFNxdWFyZSBib3RoIHNpZGVzIGFnYWluLgoqIFNvbHZlIHRoZSBxdWFkcmF0aWMgZXF1YXRpb24uCiogQ2hlY2sgZm9yIGV4dHJhbmVvdXMgcm9vdHMuICAgCgoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnVXNlIGEgY29tbWEgdG8gc2VwYXJhdGUgZGlmZmVyZW50IHNvbHV0aW9ucy4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHg9NVx0ZXh0ezt9YF0gIFtgeD04YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="265"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-149"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Simplifying \(\sqrt[n]{a^n}\)</span>
 </h3>
 <p id="p-8285">We have seen that raising to a power is the inverse operation for extracting roots, so that</p>
@@ -432,32 +442,32 @@ x-7\amp = 49-14\sqrt{x}+x
 (\sqrt[n]{a})^n = a
 \end{equation*}
 </div>
-<p data-braille="continuation">For example,</p>
+<p class="continuation">For example,</p>
 <div class="displaymath">
 \begin{equation*}
 (\sqrt[4]{16})^4 = 16~~~~~~\text{and}~~~~~~(\sqrt[5]{x})^5 = x
 \end{equation*}
 </div>
-<p data-braille="continuation">What if the power and root operations occur in the opposite order?  Is it always true that \(~\sqrt[n]{a^n} = a~\text{?}\)</p>
+<p class="continuation">What if the power and root operations occur in the opposite order?  Is it always true that \(~\sqrt[n]{a^n} = a~\text{?}\)</p>
 <p id="p-8286">First, consider the case where the index  is an odd number.  For example,</p>
 <div class="displaymath">
 \begin{equation*}
 \sqrt[3]{2^3} = \sqrt[3]{8} = 2 ~~~~~~\text{and}~~~~~~\sqrt[3]{(-2)^3} = \sqrt[3]{-8} = -2
 \end{equation*}
 </div>
-<p data-braille="continuation">Because every real number has exactly one \(n\)th root if \(n\) is odd, we see that,</p>
+<p class="continuation">Because every real number has exactly one \(n\)th root if \(n\) is odd, we see that,</p>
 <div class="displaymath">
 \begin{equation*}
 \sqrt[n]{a^n} = a,~~~~\text{for}~n~\text{odd}
 \end{equation*}
 </div>
-<p data-braille="continuation">However, if \(n\) is even, then \(a^n\) is positive, regardless of whether \(a\) itself is positive or negative, and hence \(\sqrt[n]{a^n}\) is positive also.  For example, if \(a=-3\text{,}\) then</p>
+<p class="continuation">However, if \(n\) is even, then \(a^n\) is positive, regardless of whether \(a\) itself is positive or negative, and hence \(\sqrt[n]{a^n}\) is positive also.  For example, if \(a=-3\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \sqrt{(-3)^2} = \sqrt{9} = 3
 \end{equation*}
 </div>
-<p data-braille="continuation">In this case, \(\sqrt{a^2}\) does not equal \(a\text{,}\) because \(a\) is negative but \(\sqrt{a^2}\) is positive.  We must be careful when taking even roots of powers.  We have the following special relationship for even roots.</p>
+<p class="continuation">In this case, \(\sqrt{a^2}\) does not equal \(a\text{,}\) because \(a\) is negative but \(\sqrt{a^2}\) is positive.  We must be careful when taking even roots of powers.  We have the following special relationship for even roots.</p>
 <div class="displaymath">
 \begin{equation*}
 \blert{\sqrt[n]{a^n} = \abs{a},~~~~~\text{for}~n~\text{even}}
@@ -475,223 +485,225 @@ x-7\amp = 49-14\sqrt{x}+x
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.110</span><span class="period">.</span>
 </h6>
 <ol id="p-8290" class="lower-alpha cols2">
-<li id="li-5335">\(\displaystyle \sqrt{16x^2} = 4\abs{x}\)</li>
-<li id="li-5336">\(\displaystyle \sqrt{(x-1)^2} = \abs{x-1}\)</li>
-</ol></article><article class="exercise exercise-like" id="exercise-1287"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1287"><h6 class="heading">
+<li id="li-5335"><p id="p-derived-li-5335">\(\displaystyle \sqrt{16x^2} = 4\abs{x}\)</p></li>
+<li id="li-5336"><p id="p-derived-li-5336">\(\displaystyle \sqrt{(x-1)^2} = \abs{x-1}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-1287"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.111</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1287"><article class="exercise exercise-like"><iframe name="webwork-266" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=266&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gRm9ybXVsYSgiLTUqeF4yIik7CiRiID0gRm9ybXVsYSgiMiogYWJzKHheMykiKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkuCmEuICBbYFxzcXJ0WzNdey0xMjV4XjZ9PWBdW19deyRhfXs4fQoKCmEuICBbYFxzcXJ0WzRdezE2eF57MTJ9fT1gXVtfXXskYn17OH0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImFicyh4KSIgdG8gZ2V0IFtgfCB4IHxcdGV4dHsufWBdJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgLTV4XjJgXQphLiAgW2AyXGxlZnR8IHt4XjN9IFxyaWdodHxgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="266"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1288"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1288"><h6 class="heading">
+</h6>
+<iframe name="webwork-266" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=266&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gRm9ybXVsYSgiLTUqeF4yIik7CiRiID0gRm9ybXVsYSgiMiogYWJzKHheMykiKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkuCmEuICBbYFxzcXJ0WzNdey0xMjV4XjZ9PWBdW19deyRhfXs4fQoKCmEuICBbYFxzcXJ0WzRdezE2eF57MTJ9fT1gXVtfXXskYn17OH0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImFicyh4KSIgdG8gZ2V0IFtgfCB4IHxcdGV4dHsufWBdJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgLTV4XjJgXQphLiAgW2AyXGxlZnR8IHt4XjN9IFxyaWdodHxgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="266"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1288"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.112</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1288"><article class="exercise exercise-like"><iframe name="webwork-267" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=267&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIElmIGFuIGVxdWF0aW9uIGNvbnRhaW5zIG1vcmUgdGhhbiBvbmUgcmFkaWNhbCwgd2Ugc3F1YXJlIGVhY2ggdGVybSBvZiB0aGUgZXF1YXRpb24uIFtfXXskRmFsc2V9ezV9CgoKYS4gIFtgKDctXHNxcnR7eH0pXjIgPSA0OS14YF0gW19deyRGYWxzZX17NX0KCgphLiAgSWYgW2Bcc3FydHt4XjJ9IFxub3Q9IHhcdGV4dHssfWBdIHRoZW4gW2Bcc3FydHt4XjJ9ID0gLXhcdGV4dHsufWBdIFtfXXskVHJ1ZX17NX0KCgphLiAgSWYgW2BuYF0gaXMgZXZlbiBhbmQgW2BhIFxub3Q9IDBcdGV4dHssfWBdIHRoZW4gW2BhXm5gXSBpcyBhbHdheXMgcG9zaXRpdmUuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="267"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-6-5-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-267" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=267&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBmYWxzZS4KYS4gIElmIGFuIGVxdWF0aW9uIGNvbnRhaW5zIG1vcmUgdGhhbiBvbmUgcmFkaWNhbCwgd2Ugc3F1YXJlIGVhY2ggdGVybSBvZiB0aGUgZXF1YXRpb24uIFtfXXskRmFsc2V9ezV9CgoKYS4gIFtgKDctXHNxcnR7eH0pXjIgPSA0OS14YF0gW19deyRGYWxzZX17NX0KCgphLiAgSWYgW2Bcc3FydHt4XjJ9IFxub3Q9IHhcdGV4dHssfWBdIHRoZW4gW2Bcc3FydHt4XjJ9ID0gLXhcdGV4dHsufWBdIFtfXXskVHJ1ZX17NX0KCgphLiAgSWYgW2BuYF0gaXMgZXZlbiBhbmQgW2BhIFxub3Q9IDBcdGV4dHssfWBdIHRoZW4gW2BhXm5gXSBpcyBhbHdheXMgcG9zaXRpdmUuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="267"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-6-5-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 6.5</span>
 </h3>
 <article class="subexercises" id="subexercises-86"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <article class="exercise exercise-like" id="exercise-1289"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-8325">Solve the equation. Isolate the radical first, then square both sides of the equation.</p>
 <ol class="lower-alpha cols2">
-<li id="li-5361">\(\displaystyle -3\sqrt{z} + 14 = 8\)</li>
-<li id="li-5362">\(\displaystyle 8-3\sqrt{9+2w} = -7\)</li>
+<li id="li-5361"><p id="p-derived-li-5361">\(\displaystyle -3\sqrt{z} + 14 = 8\)</p></li>
+<li id="li-5362"><p id="p-derived-li-5362">\(\displaystyle 8-3\sqrt{9+2w} = -7\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1290"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-8327">Square the binomial.</p>
 <ol class="lower-alpha cols2">
-<li id="li-5365">\(\displaystyle (3x+4)^2\)</li>
-<li id="li-5366">\(\displaystyle (2\sqrt{x}-3)^2\)</li>
-<li id="li-5367">\(\displaystyle (4-\sqrt{x+3})^2\)</li>
-<li id="li-5368">\(\displaystyle (5-2\sqrt{2x-5})^2\)</li>
+<li id="li-5365"><p id="p-derived-li-5365">\(\displaystyle (3x+4)^2\)</p></li>
+<li id="li-5366"><p id="p-derived-li-5366">\(\displaystyle (2\sqrt{x}-3)^2\)</p></li>
+<li id="li-5367"><p id="p-derived-li-5367">\(\displaystyle (4-\sqrt{x+3})^2\)</p></li>
+<li id="li-5368"><p id="p-derived-li-5368">\(\displaystyle (5-2\sqrt{2x-5})^2\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1291"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <ol id="p-8328" class="lower-alpha">
 <li id="li-5369">
 <p id="p-8329">Complete the table of values and graph \(y=\sqrt{x-4}\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
-<div class="sbspanel fixed-width" style="width:46.1538461538462%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:46.1538461538462%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(y\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(y\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(16\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(19\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(24\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:51.2820512820513%;justify-content:center;"><img src="images/hp-9-5-21.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel middle" style="width:51.2820512820513%;"><img src="generated/latex-image/hp-9-5-21.svg" role="img" class="contained" alt="grid"></div>
 </div></div>
 </li>
-<li id="li-5370">Solve \(~\sqrt{x-4}=3~\) graphically and algebraically. Do your answers agree?</li>
+<li id="li-5370"><p id="p-derived-li-5370">Solve \(~\sqrt{x-4}=3~\) graphically and algebraically. Do your answers agree?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1292"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <ol id="p-8331" class="lower-alpha">
 <li id="li-5373">
 <p id="p-8332">Complete the table of values and graph \(y=4-\sqrt{x+3}\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel fixed-width" style="width:47.3684210526316%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:47.3684210526316%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(y\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(y\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(8\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(16\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:47.3684210526316%;justify-content:center;"><img src="images/hp-9-5-22.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel middle" style="width:47.3684210526316%;"><img src="generated/latex-image/hp-9-5-22.svg" role="img" class="contained" alt="grid"></div>
 </div></div>
 </li>
-<li id="li-5374">Solve \(~4-\sqrt{x+3}=1~\) graphically and algebraically. Do your answers agree?</li>
+<li id="li-5374"><p id="p-derived-li-5374">Solve \(~4-\sqrt{x+3}=1~\) graphically and algebraically. Do your answers agree?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1293"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <ol id="p-8333" class="lower-alpha">
 <li id="li-5375">
 <p id="p-8334">Complete the table of values and graph \(y=4-\sqrt[3]{x}\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel fixed-width" style="width:47.3684210526316%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:47.3684210526316%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(y\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(y\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-25\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-20\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-15\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-10\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(15\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(20\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:47.3684210526316%;justify-content:center;"><img src="images/fig-hw-6-5-19.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel middle" style="width:47.3684210526316%;"><img src="generated/latex-image/fig-hw-6-5-19.svg" role="img" class="contained" alt="grid"></div>
 </div></div>
 </li>
-<li id="li-5376">Solve \(~4-\sqrt[3]{x}=6~\) graphically and algebraically. Do your answers agree?</li>
+<li id="li-5376"><p id="p-derived-li-5376">Solve \(~4-\sqrt[3]{x}=6~\) graphically and algebraically. Do your answers agree?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1294"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <ol id="p-8336" class="lower-alpha">
 <li id="li-5379">
 <p id="p-8337">Complete the table of values and graph \(y=3+\sqrt[3]{x-3}\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel fixed-width" style="width:47.3684210526316%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:47.3684210526316%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(y\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(y\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-8\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(8\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:47.3684210526316%;justify-content:center;"><img src="images/fig-hw-6-5-20.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel middle" style="width:47.3684210526316%;"><img src="generated/latex-image/fig-hw-6-5-20.svg" role="img" class="contained" alt="grid"></div>
 </div></div>
 </li>
-<li id="li-5380">Solve \(~3+\sqrt[3]{x-3}=1~\) graphically and algebraically. Do your answers agree?</li>
+<li id="li-5380"><p id="p-derived-li-5380">Solve \(~3+\sqrt[3]{x-3}=1~\) graphically and algebraically. Do your answers agree?</p></li>
 </ol></article></article><article class="subexercises" id="subexercises-87"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-199">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-234"><p id="p-8338">For Problems 7–16, solve.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1295"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
@@ -708,18 +720,19 @@ x-7\amp = 49-14\sqrt{x}+x
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-200">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-235"><p id="p-8354">For Problems 17 and 18, use absolute value bars as necessary to simplify the radicals.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-1305"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <ol id="p-8355" class="lower-alpha cols3">
-<li id="li-5381">\(\displaystyle \sqrt{4x^2}\)</li>
-<li id="li-5382">\(\displaystyle \sqrt{(x-5)^2}\)</li>
-<li id="li-5383">\(\displaystyle \sqrt{x^2-6x+9}\)</li>
+<li id="li-5381"><p id="p-derived-li-5381">\(\displaystyle \sqrt{4x^2}\)</p></li>
+<li id="li-5382"><p id="p-derived-li-5382">\(\displaystyle \sqrt{(x-5)^2}\)</p></li>
+<li id="li-5383"><p id="p-derived-li-5383">\(\displaystyle \sqrt{x^2-6x+9}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1306"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <ol id="p-8357" class="lower-alpha cols3">
-<li id="li-5387">\(\displaystyle \sqrt{9x^2y^4}\)</li>
-<li id="li-5388">\(\displaystyle \sqrt{(2x-1)^2}\)</li>
-<li id="li-5389">\(\displaystyle \sqrt{9x^2-6x+1}\)</li>
+<li id="li-5387"><p id="p-derived-li-5387">\(\displaystyle \sqrt{9x^2y^4}\)</p></li>
+<li id="li-5388"><p id="p-derived-li-5388">\(\displaystyle \sqrt{(2x-1)^2}\)</p></li>
+<li id="li-5389"><p id="p-derived-li-5389">\(\displaystyle \sqrt{9x^2-6x+1}\)</p></li>
 </ol></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-88"><h6 class="heading"><span class="title">Applications</span></h6>
@@ -731,8 +744,8 @@ d=89.4\sqrt{h}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-5390">At what altitude will you be able to see for a distance of 100 miles?  How high is that in feet?</li>
-<li id="li-5391">Solve the formula for \(h\) in terms of \(d\text{.}\)</li>
+<li id="li-5390"><p id="p-derived-li-5390">At what altitude will you be able to see for a distance of 100 miles?  How high is that in feet?</p></li>
+<li id="li-5391"><p id="p-derived-li-5391">Solve the formula for \(h\) in terms of \(d\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1308"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="p-8360">If a gun is fired vertically into the air, the time it takes the bullet to return to the ground is given approximately by</p>
 <div class="displaymath">
@@ -740,10 +753,10 @@ d=89.4\sqrt{h}
 t=\dfrac{1}{2}\sqrt{\dfrac{2h}{g}}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(h\) is the greatest height the bullet reaches in meters, and \(g\) is the force of gravity, 9.8 meters per second squared.</p>
+<p class="continuation">where \(h\) is the greatest height the bullet reaches in meters, and \(g\) is the force of gravity, 9.8 meters per second squared.</p>
 <ol class="lower-alpha">
-<li id="li-5394">If the bullet returns to earth in 12 seconds, what was the greatest height it reached?</li>
-<li id="li-5395">Solve the formula for \(h\) in terms of \(g\) and \(t\text{.}\)</li>
+<li id="li-5394"><p id="p-derived-li-5394">If the bullet returns to earth in 12 seconds, what was the greatest height it reached?</p></li>
+<li id="li-5395"><p id="p-derived-li-5395">Solve the formula for \(h\) in terms of \(g\) and \(t\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1309"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="p-8361">The height of a cylindrical storage tank is four times its radius. If the tank holds \(V\) cubic inches of liquid, its radius in inches is</p>
 <div class="displaymath">
@@ -752,8 +765,8 @@ r=\sqrt[3]{\dfrac{V}{12.57}}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-5396">What is the volume of a tank whose radius is 3 inches?</li>
-<li id="li-5397">Solve the formula for \(V\) in terms of \(r\text{.}\)</li>
+<li id="li-5396"><p id="p-derived-li-5396">What is the volume of a tank whose radius is 3 inches?</p></li>
+<li id="li-5397"><p id="p-derived-li-5397">Solve the formula for \(V\) in terms of \(r\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1310"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="p-8363">In order for a windmill to generate \(P\) watts of power, the velocity of the wind, in miles per hour, must be</p>
 <div class="displaymath">
@@ -762,9 +775,10 @@ v=\sqrt[3]{\dfrac{P}{0.015}}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-5400">How much power will a wind speed of 30 mph generate?</li>
-<li id="li-5401">Solve the formula for \(P\) in terms of \(v\text{.}\)</li>
+<li id="li-5400"><p id="p-derived-li-5400">How much power will a wind speed of 30 mph generate?</p></li>
+<li id="li-5401"><p id="p-derived-li-5401">Solve the formula for \(P\) in terms of \(v\text{.}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-201">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-236"><p id="p-8364">For Problems 23–26, solve the formula for the indicated variable.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1311"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
@@ -775,19 +789,19 @@ v=\sqrt[3]{\dfrac{P}{0.015}}
 </div>
 </div></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

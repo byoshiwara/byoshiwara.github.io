@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:58:42-07:00       *-->
+<!--*       on 2021-08-27T15:54:00-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Exponential Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="ExponentialFunctions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Exponential Functions</span>
@@ -243,13 +249,13 @@ true);
 f (x) = 5^x,~~~~  P(t) = 250(1.7)^t,~~~~ \text{and } ~~~~g(n) = 2.4(0.3)^n
 \end{equation*}
 </div>
-<p data-braille="continuation">The constant \(a\) is the \(y\)-intercept of the graph because</p>
+<p class="continuation">The constant \(a\) is the \(y\)-intercept of the graph because</p>
 <div class="displaymath">
 \begin{equation*}
 f (0) = a \cdot b^0 = a \cdot 1 = a
 \end{equation*}
 </div>
-<p data-braille="continuation">For the examples above, we find that the \(y\)-intercepts are</p>
+<p class="continuation">For the examples above, we find that the \(y\)-intercepts are</p>
 <div class="displaymath">
 \begin{align*}
 f(0) \amp= 5^0 = 1 \\
@@ -258,89 +264,89 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 \end{align*}
 </div>
 <p id="p-8917">The positive constant \(b\) is called the <dfn class="terminology">base</dfn> of the exponential function.</p>
-<article class="exercise exercise-like" id="exercise-1418"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1418"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-1418"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.20</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1418"><article class="exercise exercise-like"><iframe name="webwork-277" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=277&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRleHBmbiA9IFJhZGlvQnV0dG9ucygKICBbIlwoZih4KT0zeF40XCkiLAogICJcKGYoeCk9Myg0KV54XCkiLAogICJcKGYoeCk9Mnhee1xmcmFjezN9ezR9fVwpIiwKICAiXChmKHgpPVxkZnJhY3s0fXt4XjN9XCkiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggb2YgdGhlIGZvbGxvd2luZyBpcyBhbiBleHBvbmVudGlhbCBmdW5jdGlvbj8KCiAgICBbX117JGV4cGZufXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgZih4KT0zKDQpXnhgXSBpcyBhbiBleHBvbmVudGlhbCBmdW5jdGlvbiwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="277"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="note remark-like" id="note-19"><h6 class="heading">
+</h6>
+<iframe name="webwork-277" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=277&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRleHBmbiA9IFJhZGlvQnV0dG9ucygKICBbIlwoZih4KT0zeF40XCkiLAogICJcKGYoeCk9Myg0KV54XCkiLAogICJcKGYoeCk9Mnhee1xmcmFjezN9ezR9fVwpIiwKICAiXChmKHgpPVxkZnJhY3s0fXt4XjN9XCkiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggb2YgdGhlIGZvbGxvd2luZyBpcyBhbiBleHBvbmVudGlhbCBmdW5jdGlvbj8KCiAgICBbX117JGV4cGZufXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgZih4KT0zKDQpXnhgXSBpcyBhbiBleHBvbmVudGlhbCBmdW5jdGlvbiwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="277"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="note remark-like" id="note-19"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">7.21</span><span class="period">.</span>
 </h6>
 <ul id="p-8926" class="disc">
-<li id="li-5841">We do not allow \(b\) to be negative, because if \(b \lt 0\text{,}\) then \(b^x\) is not a real number for some values of \(x\text{.}\) For example, if \(b = -4\) and \(f (x) = (-4)^x\text{,}\) then \(f (1/2) = (-4)^{1/2}\) is an imaginary number.</li>
-<li id="li-5842">We also exclude \(b = 1\) as a base because \(1^x = 1\) for all values of \(x\text{;}\) hence the function \(f (x) = 1^x\) is actually the constant function \(f (x) = 1\text{.}\)</li>
+<li id="li-5841"><p id="p-derived-li-5841">We do not allow \(b\) to be negative, because if \(b \lt 0\text{,}\) then \(b^x\) is not a real number for some values of \(x\text{.}\) For example, if \(b = -4\) and \(f (x) = (-4)^x\text{,}\) then \(f (1/2) = (-4)^{1/2}\) is an imaginary number.</p></li>
+<li id="li-5842"><p id="p-derived-li-5842">We also exclude \(b = 1\) as a base because \(1^x = 1\) for all values of \(x\text{;}\) hence the function \(f (x) = 1^x\) is actually the constant function \(f (x) = 1\text{.}\)</p></li>
 </ul></article></section><section class="subsection" id="subsection-159"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Graphs of Exponential Functions</span>
 </h3>
 <p id="p-8927">The graphs of exponential functions have two characteristic shapes, depending on whether the base, \(b\text{,}\) is greater than \(1\) or less than \(1\text{.}\) As typical examples, consider the graphs of \(f (x) = 2^x\) and \(g(x) =\left(\dfrac{1}{2}\right)^x\) shown below. Some values for \(f\) and \(g\) are recorded in the tables.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:15%;justify-content:flex-start;"><table>
+<div class="sbspanel fixed-width top" style="width:15%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(f(x)\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{8}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{8}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{4}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{4}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{2}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(8\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(8\)</td>
 </tr>
 </table></div>
-<div class="sbspanel fixed-width" style="width:15%;justify-content:flex-start;"><table>
+<div class="sbspanel fixed-width top" style="width:15%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(g(x)\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(8\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(8\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{2}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{4}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{4}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{8}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{8}\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:70%;justify-content:flex-start;"><img src="images/fig-exponential-growth-and-decay.svg" role="img" style="width: 100%; height: auto;" alt="graphs of exponential growth and decay"></div>
+<div class="sbspanel top" style="width:70%;"><img src="external/images/fig-exponential-growth-and-decay.svg" role="img" class="contained" alt="graphs of exponential growth and decay"></div>
 </div></div>
 <p id="p-8928">Notice that \(f (x) = 2^x\) is an increasing function and \(g(x) = \left(\dfrac{1}{2}\right)^x\) is a decreasing function. Both are concave up. In general, exponential functions have the following properties.</p>
 <article class="assemblage assemblage-like" id="assemblage-97"><h6 class="heading"><span class="title">Properties of Exponential Functions, \(f(x) = ab^x\text{,}\) \(a \gt 0\).</span></h6>
@@ -352,62 +358,63 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 <li id="li-5844"><p id="p-8932">The \(y\)-intercept  is \((0, a)\text{.}\) There is no \(x\)-intercept.</p></li>
 </ol></article><p id="p-8933">In the table for \(f(x)\text{,}\) you can see that as the \(x\)-values decrease toward negative infinity, the corresponding \(y\)-values decrease toward zero. As a result, the graph of \(f\) decreases toward the \(x\)-axis, but never touches it, as we move to the left. The negative \(x\)-axis is a <dfn class="terminology">horizontal asymptote</dfn> for exponential functions with \(b \gt 1\text{,}\) as shown in figure (a).</p>
 <p id="p-8934">For exponential functions with \(0 \lt b \lt 1\text{,}\) the positive \(x\)-axis is an asymptote, as illustrated in figure (b).</p>
-<article class="exercise exercise-like" id="exercise-1419"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1419"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-1419"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1419"><article class="exercise exercise-like"><iframe name="webwork-278" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=278&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJwYXJzZXJWZWN0b3JVdGlscy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHRydWV4cCA9IFJhZGlvQnV0dG9ucygKICBbIkFuIGV4cG9uZW50aWFsIGZ1bmN0aW9uIGlzIG5vdCBkZWZpbmVkIGZvciBuZWdhdGl2ZSBpbnB1dHMuIiwKICAiVGhlIG91dHB1dHMgb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gY2Fubm90IGJlIG5lZ2F0aXZlLiIsCiAgIlRoZSBcKHlcKS1pbnRlcmNlcHQgb2YgdGhlIGZ1bmN0aW9uIFwoZih4KT0yKDMpXnhcKSBpcyBcKCgwLDYpXCkuIiwKICAiVGhlIGZ1bmN0aW9uIFwoZih4KT0xNigwLjUpXnhcKSBkZWNyZWFzZXMgYnkgOCBlYWNoIHRpbWUgd2UgaW5jcmVhc2UgXCh4XCkgYnkgMS4iXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggc3RhdGVtZW50IGlzIHRydWU%2FCgogICAgW19deyR0cnVleHB9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIG91dHB1dHMgb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gY2Fubm90IGJlIG5lZ2F0aXZlLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="278"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-8943">How does the value of \(b\) affect the graph? For increasing functions, the larger the value of the base, \(b\text{,}\) the faster the function grows. In the <a class="xref" data-knowl="./knowl/example-two-exponential-growth.html" title="Example 7.23">Example</a> below, we compare two exponential functions with different bases.</p>
+</h6>
+<iframe name="webwork-278" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=278&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJwYXJzZXJWZWN0b3JVdGlscy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHRydWV4cCA9IFJhZGlvQnV0dG9ucygKICBbIkFuIGV4cG9uZW50aWFsIGZ1bmN0aW9uIGlzIG5vdCBkZWZpbmVkIGZvciBuZWdhdGl2ZSBpbnB1dHMuIiwKICAiVGhlIG91dHB1dHMgb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gY2Fubm90IGJlIG5lZ2F0aXZlLiIsCiAgIlRoZSBcKHlcKS1pbnRlcmNlcHQgb2YgdGhlIGZ1bmN0aW9uIFwoZih4KT0yKDMpXnhcKSBpcyBcKCgwLDYpXCkuIiwKICAiVGhlIGZ1bmN0aW9uIFwoZih4KT0xNigwLjUpXnhcKSBkZWNyZWFzZXMgYnkgOCBlYWNoIHRpbWUgd2UgaW5jcmVhc2UgXCh4XCkgYnkgMS4iXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggc3RhdGVtZW50IGlzIHRydWU%2FCgogICAgW19deyR0cnVleHB9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIG91dHB1dHMgb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gY2Fubm90IGJlIG5lZ2F0aXZlLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="278"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-8943">How does the value of \(b\) affect the graph? For increasing functions, the larger the value of the base, \(b\text{,}\) the faster the function grows. In the <a class="xref" data-knowl="./knowl/example-two-exponential-growth.html" title="Example 7.23">Example</a> below, we compare two exponential functions with different bases.</p>
 <article class="example example-like" id="example-two-exponential-growth"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.23</span><span class="period">.</span>
 </h6>
 <p id="p-8944">Compare the graphs of \(f (x) = 3^x\) and \(g(x) = 4^x\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-423" id="solution-423"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-423"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-423" id="solution-423"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-423"><div class="solution solution-like">
 <p id="p-8945">First, we evaluate each function for several convenient values, as shown in the table.</p>
 <p id="p-8946">Then we plot the points for each function and connect them with smooth curves. Note that \(a=1\) for both functions, so their graphs have the same \(y\)-intercept, \((0,1)\text{.}\)</p>
 <p id="p-8947">For positive \(x\)-values, \(g(x)\) is always larger than \(f(x)\text{,}\) and is increasing more rapidly. In the figure, we can see that \(g(x) = 4^x\) climbs more rapidly than \(f(x) = 3^x\text{.}\) However, for negative \(x\)-values, \(g(x)\) is smaller than \(f(x)\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:20%;">
-<div class="sbspanel fixed-width" style="width:50%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:50%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(f(x)\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(g(x)\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\dfrac{1}{9}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\dfrac{1}{16}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\dfrac{1}{16}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(\dfrac{1}{3}\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\dfrac{1}{4}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\dfrac{1}{4}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(9\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(16\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(16\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:33.75%;justify-content:center;"><img src="images/fig-two-exponential-growth.svg" role="img" style="width: 100%; height: auto;" alt="two exponential growth functions"></div>
+<div class="sbspanel middle" style="width:33.75%;"><img src="external/images/fig-two-exponential-growth.svg" role="img" class="contained" alt="two exponential growth functions"></div>
 </div></div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1420"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1420"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1420"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.24</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1420"><article class="exercise exercise-like"><div class="introduction" id="introduction-251"><div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-two-mystery-exponential-decay.svg" role="img" style="width: 100%; height: auto;" alt="two exponential decay functions"></div></div></div></div>
-<iframe name="webwork-279" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=279&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JEkgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJJIiwgCiAgICAiSUkiXSwKICAgIDEKKTsKJElJID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiSSIsIAogICAgIklJIl0sCiAgICAyCik7CgpCRUdJTl9QR01MCmEuICBXaGljaCBvZiB0aGUgZ3JhcGhzIGFib3ZlIGlzIFtgcCh4KT0wLjheeGBdIFtfXXskSUl9ezV9LCBhbmQgd2hpY2ggaXMgW2BxKHgpPTAuNV54fmBdW19deyRJfXs1fT8KCgphLiAgV2hpY2ggZ3JhcGggZGVjcmVhc2VzIG1vcmUgc3RlZXBseT9bX117JEl9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBHcmFwaCBJIGlzIFtgcVx0ZXh0eyx9YF0gYW5kIGdyYXBoIElJIGlzIFtgcFx0ZXh0ey59YF0KCgphLiAgW2BxYF0gZGVjcmVhc2VzIG1vcmUgc3JlZXBseQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="279"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1421"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1421"><h6 class="heading">
+</h6>
+<div class="introduction" id="introduction-251"><div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-two-mystery-exponential-decay.svg" role="img" class="contained" alt="two exponential decay functions"></div></div></div></div>
+<iframe name="webwork-279" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=279&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JEkgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJJIiwgCiAgICAiSUkiXSwKICAgIDEKKTsKJElJID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiSSIsIAogICAgIklJIl0sCiAgICAyCik7CgpCRUdJTl9QR01MCmEuICBXaGljaCBvZiB0aGUgZ3JhcGhzIGFib3ZlIGlzIFtgcCh4KT0wLjheeGBdIFtfXXskSUl9ezV9LCBhbmQgd2hpY2ggaXMgW2BxKHgpPTAuNV54fmBdW19deyRJfXs1fT8KCgphLiAgV2hpY2ggZ3JhcGggZGVjcmVhc2VzIG1vcmUgc3RlZXBseT9bX117JEl9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBHcmFwaCBJIGlzIFtgcVx0ZXh0eyx9YF0gYW5kIGdyYXBoIElJIGlzIFtgcFx0ZXh0ey59YF0KCgphLiAgW2BxYF0gZGVjcmVhc2VzIG1vcmUgc3JlZXBseQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="279"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1421"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.25</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1421"><article class="exercise exercise-like"><iframe name="webwork-280" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=280&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0%2BJycsSFRNTD0%2BJzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgQW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gW2BmKHgpPWJeeGBdIGlzIGFsd2F5cyBwb3NpdGl2ZS4gW19deyRUcnVlfXs1fQoKCmEuICBUaGUgZnVuY3Rpb24gW2BmKHgpPWFiXnhgXSBoYXMgYSBob3Jpem9udGFsIGFzeW1wdG90ZSBhdCBbYHk9MFx0ZXh0ey59YF0gIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIHZhbHVlIG9mIFtgYmBdIGRldGVybWluZXMgaG93IHJhcGlkbHkgdGhlIGdyYXBoIG9mIFtgZih4KT1hYl54YF0gaW5jcmVhc2VzIG9yIGRlY3JlYXNlcy4gIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIGdyYXBoIG9mIFtgZih4KT1hYl54YF0gaXMgZGVjcmVhc2luZyBpZiBbYGIgXGx0IDBcdGV4dHsufWBdICBbX117JEZhbHNlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVHJ1ZQphLiAgVHJ1ZQphLiAgVHJ1ZQphLiAgRmFsc2UgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="280"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-160"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-280" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=280&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0%2BJycsSFRNTD0%2BJzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgQW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gW2BmKHgpPWJeeGBdIGlzIGFsd2F5cyBwb3NpdGl2ZS4gW19deyRUcnVlfXs1fQoKCmEuICBUaGUgZnVuY3Rpb24gW2BmKHgpPWFiXnhgXSBoYXMgYSBob3Jpem9udGFsIGFzeW1wdG90ZSBhdCBbYHk9MFx0ZXh0ey59YF0gIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIHZhbHVlIG9mIFtgYmBdIGRldGVybWluZXMgaG93IHJhcGlkbHkgdGhlIGdyYXBoIG9mIFtgZih4KT1hYl54YF0gaW5jcmVhc2VzIG9yIGRlY3JlYXNlcy4gIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIGdyYXBoIG9mIFtgZih4KT1hYl54YF0gaXMgZGVjcmVhc2luZyBpZiBbYGIgXGx0IDBcdGV4dHsufWBdICBbX117JEZhbHNlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVHJ1ZQphLiAgVHJ1ZQphLiAgVHJ1ZQphLiAgRmFsc2UgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="280"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-160"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Comparing Exponential and Power Functions</span>
 </h3>
 <p id="p-8992">We have studied several families of functions, including linear, quadratic, and power functions. Exponential functions are useful because they model growth or decline by a constant factor.</p>
@@ -415,26 +422,26 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">7.26</span><span class="period">.</span>
 </h6>
 <p id="p-8993">Exponential functions are not the same as the power functions  we studied earlier. Although both involve expressions with exponents, it is the location of the variable that makes the difference. A power function, \(h(x)=hx^p\text{,}\) has a variable base and a constant exponent. An exponential function, \(f(x)=ab^x\text{,}\) has a constant base and a variable exponent.</p></article><article class="assemblage assemblage-like" id="assemblage-98"><h6 class="heading"><span class="title">Power Functions vs Exponential Functions.</span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0" style="max-width:300px;"><p id="p-8994">\(\hphantom{General formula and m}\)</p></td>
 <td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-8995"><dfn class="terminology">Power Functions</dfn></p></td>
-<td class="l m b0 r0 l0 t0" data-braille="last-cell" style="max-width:150px;"><p id="p-8996"><dfn class="terminology">Exponential Functions</dfn></p></td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-8996"><dfn class="terminology">Exponential Functions</dfn></p></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0" style="max-width:300px;"><p id="p-8997"><em class="emphasis">General formula</em></p></td>
 <td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-8998">\(h(x)=kx^p\)</p></td>
-<td class="l m b0 r0 l0 t0" data-braille="last-cell" style="max-width:150px;"><p id="p-8999">\(f(x)=ab^x\)</p></td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-8999">\(f(x)=ab^x\)</p></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0" style="max-width:300px;"><p id="p-9000"><em class="emphasis">Description</em></p></td>
 <td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-9001">variable base and constant exponent</p></td>
-<td class="l m b0 r0 l0 t0" data-braille="last-cell" style="max-width:150px;"><p id="p-9002">constant base and variable exponent</p></td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-9002">constant base and variable exponent</p></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0" style="max-width:300px;"><p id="p-9003"><em class="emphasis">Example</em></p></td>
 <td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-9004">\(h(x)=2x^3\)</p></td>
-<td class="l m b0 r0 l0 t0" data-braille="last-cell" style="max-width:150px;"><p id="p-9005">\(f(x)=2(3^x)\)</p></td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><p id="p-9005">\(f(x)=2(3^x)\)</p></td>
 </tr>
 </table></div></div></div></article><p id="p-9006">These two families of functions have very different properties, as well.</p>
 <article class="example example-like" id="example-power-vs-exponential"><h6 class="heading">
@@ -442,93 +449,94 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 </h6>
 <p id="p-9007">Which of the functions shown below is exponential, and which is a cubic power function? Find an equation for each.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:25%;justify-content:flex-start;"><table>
+<div class="sbspanel fixed-width top" style="width:25%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(h(x)\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(h(x)\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(-54\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(-54\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(-16\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(-16\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(-2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(-2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(16\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(16\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(54\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(54\)</td>
 </tr>
 </table></div>
-<div class="sbspanel fixed-width" style="width:25%;justify-content:flex-start;"><table>
+<div class="sbspanel fixed-width top" style="width:25%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(f(x)\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{2}{27}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{2}{27}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{4}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{4}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{2}{3}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{2}{3}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(6\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(6\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(18\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(18\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(54\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(54\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:30%;justify-content:flex-start;"><img src="images/fig-cubic-vs-exponential.svg" role="img" style="width: 100%; height: auto;" alt="cubic and exponential functions"></div>
+<div class="sbspanel top" style="width:30%;"><img src="generated/latex-image/fig-cubic-vs-exponential.svg" role="img" class="contained" alt="cubic and exponential functions"></div>
 </div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-426" id="solution-426"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-426"><div class="solution solution-like"><p id="p-9008">We can tell that \(f\) is the exponential function because its values increase by a factor of 3 for each unit increase in \(x\text{.}\) The base of the function is \(b=3\text{.}\) We also see from the table that \(a=f(0)=2\text{,}\) so \(f(x)=2(3^x)\text{.}\) Thus, \(h\) must be the power function, \(h(x)=kx^3\text{.}\) To find \(k\text{,}\) we notice that \(h(1)=k\text{,}\) so \(k=2\text{,}\) and \(h(x)=2x^3\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-426" id="solution-426"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-426"><div class="solution solution-like"><p id="p-9008">We can tell that \(f\) is the exponential function because its values increase by a factor of 3 for each unit increase in \(x\text{.}\) The base of the function is \(b=3\text{.}\) We also see from the table that \(a=f(0)=2\text{,}\) so \(f(x)=2(3^x)\text{.}\) Thus, \(h\) must be the power function, \(h(x)=kx^3\text{.}\) To find \(k\text{,}\) we notice that \(h(1)=k\text{,}\) so \(k=2\text{,}\) and \(h(x)=2x^3\text{.}\)</p></div></div>
 </div></article><article class="note remark-like" id="note-20"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">7.28</span><span class="period">.</span>
 </h6>
 <p id="p-9009">As you can see from the figure, the graphs of the two functions in the previous Example are also quite different. In particular, note that the power function passes through the origin, while the exponential function approaches the negative \(x\)-axis as a horizontal asymptote.</p>
 <p id="p-9010">From the table, we see that \(h(3) = f(3) = 54\text{,}\) so the two graphs intersect at \(x = 3\text{.}\) (They also intersect at approximately \(x = 2.48\text{.}\)) However, if you compare the values of \(h(x) = 2x^3\) and \(f(x) = 2(3^x)\) for larger values of \(x\text{,}\) you will see that eventually the exponential function overtakes the power function.</p></article><p id="p-9011"></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:62%;justify-content:flex-start;"><p id="p-9012">The relationship in <a class="xref" data-knowl="./knowl/example-power-vs-exponential.html" title="Example 7.27">Example 7.27</a> holds true for all increasing power and exponential functions: For large enough values of \(x\text{,}\) the exponential function will always be greater than the power function, regardless of the parameters in the functions. The figure at left shows the graphs of \(f(x) = x^6\) and \(g(x) = 1.8^x\text{.}\) At first, \(f(x) \gt g(x)\text{,}\) but at around \(x = 37\text{,}\) \(g(x)\) overtakes \(f(x)\text{,}\) and \(g(x) \gt f(x)\) for all \(x \gt 37\text{.}\)</p></div>
-<div class="sbspanel" style="width:37%;justify-content:flex-start;"><img src="images/fig-power-vs-exponential-3.svg" role="img" style="width: 100%; height: auto;" alt="power function vs exponential from 0 to 50"></div>
+<div class="sbspanel top" style="width:62%;"><p id="p-9012">The relationship in <a class="xref" data-knowl="./knowl/example-power-vs-exponential.html" title="Example 7.27">Example 7.27</a> holds true for all increasing power and exponential functions: For large enough values of \(x\text{,}\) the exponential function will always be greater than the power function, regardless of the parameters in the functions. The figure at left shows the graphs of \(f(x) = x^6\) and \(g(x) = 1.8^x\text{.}\) At first, \(f(x) \gt g(x)\text{,}\) but at around \(x = 37\text{,}\) \(g(x)\) overtakes \(f(x)\text{,}\) and \(g(x) \gt f(x)\) for all \(x \gt 37\text{.}\)</p></div>
+<div class="sbspanel top" style="width:37%;"><img src="external/images/fig-power-vs-exponential-3.svg" role="img" class="contained" alt="power function vs exponential from 0 to 50"></div>
 </div></div>
-<article class="exercise exercise-like" id="exercise-identify-power-and-exponential-functions"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-identify-power-and-exponential-functions"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-identify-power-and-exponential-functions"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.29</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-identify-power-and-exponential-functions"><article class="exercise exercise-like"><iframe name="webwork-281" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=281&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2Nob2ljZW1hY3Jvcy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JG1hdGNoID0gbmV3X2NoZWNrYm94X211bHRpcGxlX2Nob2ljZSgpOwokbWF0Y2ggLT4gcWEgKAoiQSBxdWVzdGlvbiBjYW4gZ28gaGVyZSwgYnV0IFBUWCBpZ25vcmVzIHRoaXMiLAoiXCggRih4KT0gMS41XnggXCkgJEJSIiwKIlwoIEgoeCk9IDNeezEuNXh9IFwpICRCUiIsCik7CiRtYXRjaCAtPiBleHRyYSgKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBLKHgpPSAoM3gpXnsxLjV9IFwpICRCUiIKKTsKJG1hdGNoIC0%2BIG1ha2VMYXN0KAoiXCggRih4KT0gMS41XnggXCkgJEJSIiwKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBIKHgpPSAzXnsxLjV4fSBcKSAkQlIiLAoiXCggSyh4KT0gKDN4KV57MS41fSBcKSAkQlIiLAogIk5vbmUgb2YgdGhlIGFib3ZlIik7CgokbWF0Y2gyID0gbmV3X2NoZWNrYm94X211bHRpcGxlX2Nob2ljZSgpOwokbWF0Y2gyIC0%2BIHFhICgKIkEgcXVlc3Rpb24gY2FuIGdvIGhlcmUsIGJ1dCBQVFggaWdub3JlcyB0aGlzIiwKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBLKHgpPSAoM3gpXnsxLjV9IFwpICRCUiIKKTsKJG1hdGNoMiAtPiBleHRyYSgKIlwoIEYoeCk9IDEuNV54IFwpICRCUiIsCiJcKCBIKHgpPSAzXnsxLjV4fSBcKSAkQlIiLAopOwokbWF0Y2gyIC0%2BIG1ha2VMYXN0KAoiXCggRih4KT0gMS41XnggXCkgJEJSIiwKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBIKHgpPSAzXnsxLjV4fSBcKSAkQlIiLAoiXCggSyh4KT0gKDN4KV57MS41fSBcKSAkQlIiLAoiTm9uZSBvZiB0aGUgYWJvdmUiKTsKCkJFR0lOX1BHTUwKV2hpY2ggb2YgdGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgYXJlIGV4cG9uZW50aWFsIGZ1bmN0aW9ucywgYW5kIHdoaWNoIGFyZSBwb3dlciBmdW5jdGlvbnM%2FCmEuICBbYEYoeCkgPSAxLjVeeGBdCmEuICBbYEcoeCkgPSAzeF57MS41fWBdCmEuICBbYEgoeCkgPSAzXnsxLjV4fWBdCmEuICBbYEsoeCkgPSAoM3gpXnsxLjV9YF0KCgpFeHBvbmVudGlhbDogICAgIFtAJG1hdGNoLT5wcmludF9hKCkgQF0qCgpFTkRfUEdNTApBTlMoY2hlY2tib3hfY21wKCRtYXRjaC0%2BY29ycmVjdF9hbnMoKSkpOwoKQkVHSU5fUEdNTAoKClBvd2VyOiAgICAgW0AkbWF0Y2gyLT5wcmludF9hKCkgQF0qCgpFTkRfUEdNTApBTlMoY2hlY2tib3hfY21wKCRtYXRjaDItPmNvcnJlY3RfYW5zKCkpKTsKCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRXhwb25lbnRpYWw6ICAoYSkgYW5kIChjKTsgcG93ZXI6IChiKSBhbmQgKGQpCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="281"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1423"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1423"><h6 class="heading">
+</h6>
+<iframe name="webwork-281" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=281&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2Nob2ljZW1hY3Jvcy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JG1hdGNoID0gbmV3X2NoZWNrYm94X211bHRpcGxlX2Nob2ljZSgpOwokbWF0Y2ggLT4gcWEgKAoiQSBxdWVzdGlvbiBjYW4gZ28gaGVyZSwgYnV0IFBUWCBpZ25vcmVzIHRoaXMiLAoiXCggRih4KT0gMS41XnggXCkgJEJSIiwKIlwoIEgoeCk9IDNeezEuNXh9IFwpICRCUiIsCik7CiRtYXRjaCAtPiBleHRyYSgKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBLKHgpPSAoM3gpXnsxLjV9IFwpICRCUiIKKTsKJG1hdGNoIC0%2BIG1ha2VMYXN0KAoiXCggRih4KT0gMS41XnggXCkgJEJSIiwKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBIKHgpPSAzXnsxLjV4fSBcKSAkQlIiLAoiXCggSyh4KT0gKDN4KV57MS41fSBcKSAkQlIiLAogIk5vbmUgb2YgdGhlIGFib3ZlIik7CgokbWF0Y2gyID0gbmV3X2NoZWNrYm94X211bHRpcGxlX2Nob2ljZSgpOwokbWF0Y2gyIC0%2BIHFhICgKIkEgcXVlc3Rpb24gY2FuIGdvIGhlcmUsIGJ1dCBQVFggaWdub3JlcyB0aGlzIiwKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBLKHgpPSAoM3gpXnsxLjV9IFwpICRCUiIKKTsKJG1hdGNoMiAtPiBleHRyYSgKIlwoIEYoeCk9IDEuNV54IFwpICRCUiIsCiJcKCBIKHgpPSAzXnsxLjV4fSBcKSAkQlIiLAopOwokbWF0Y2gyIC0%2BIG1ha2VMYXN0KAoiXCggRih4KT0gMS41XnggXCkgJEJSIiwKIlwoIEcoeCk9IDN4XnsxLjV9IFwpICRCUiIsCiJcKCBIKHgpPSAzXnsxLjV4fSBcKSAkQlIiLAoiXCggSyh4KT0gKDN4KV57MS41fSBcKSAkQlIiLAoiTm9uZSBvZiB0aGUgYWJvdmUiKTsKCkJFR0lOX1BHTUwKV2hpY2ggb2YgdGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgYXJlIGV4cG9uZW50aWFsIGZ1bmN0aW9ucywgYW5kIHdoaWNoIGFyZSBwb3dlciBmdW5jdGlvbnM%2FCmEuICBbYEYoeCkgPSAxLjVeeGBdCmEuICBbYEcoeCkgPSAzeF57MS41fWBdCmEuICBbYEgoeCkgPSAzXnsxLjV4fWBdCmEuICBbYEsoeCkgPSAoM3gpXnsxLjV9YF0KCgpFeHBvbmVudGlhbDogICAgIFtAJG1hdGNoLT5wcmludF9hKCkgQF0qCgpFTkRfUEdNTApBTlMoY2hlY2tib3hfY21wKCRtYXRjaC0%2BY29ycmVjdF9hbnMoKSkpOwoKQkVHSU5fUEdNTAoKClBvd2VyOiAgICAgW0AkbWF0Y2gyLT5wcmludF9hKCkgQF0qCgpFTkRfUEdNTApBTlMoY2hlY2tib3hfY21wKCRtYXRjaDItPmNvcnJlY3RfYW5zKCkpKTsKCkJFR0lOX1BHTUwKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRXhwb25lbnRpYWw6ICAoYSkgYW5kIChjKTsgcG93ZXI6IChiKSBhbmQgKGQpCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="281"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1423"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.30</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1423"><article class="exercise exercise-like"><iframe name="webwork-282" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=282&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBBIHBvd2VyIGZ1bmN0aW9uIGV2ZW50dWFsbHkgZ3Jvd3MgbW9yZSByYXBpZGx5IHRoZW4gYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24uIFtfXXskRmFsc2V9ezV9CgoKYS4gIFRvIGZpbmQgdGhlIGJhc2Ugb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24sIHdlIGNhbiBkaXZpZGUgYW55IGZ1bmN0aW9uIHZhbHVlIG9mIGFuIGludGVnZXIgYnkgdGhlIHByZXZpb3VzIG9uZS4gIFtfXXskVHJ1ZX17NX0KCgphLiAgUG93ZXIgZnVuY3Rpb25zIGFuZCBleHBvbmVudGlhbCBmdW5jdGlvbnMgYm90aCBwYXNzIHRocm91Z2ggdGhlIG9yaWdpbi4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIEV4cG9uZW50aWFsIGZ1bmN0aW9ucyBtb2RlbCBncm93dGggb3IgZGVjbGluZSBieSBhIGNvbnN0YW50IGZhY3Rvci4gIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBUcnVlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="282"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-161"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-282" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=282&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFRydWUgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDEKKTsKJEZhbHNlID0gUG9wVXAoCiAgICBbICI%2FIiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAyCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBBIHBvd2VyIGZ1bmN0aW9uIGV2ZW50dWFsbHkgZ3Jvd3MgbW9yZSByYXBpZGx5IHRoZW4gYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24uIFtfXXskRmFsc2V9ezV9CgoKYS4gIFRvIGZpbmQgdGhlIGJhc2Ugb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24sIHdlIGNhbiBkaXZpZGUgYW55IGZ1bmN0aW9uIHZhbHVlIG9mIGFuIGludGVnZXIgYnkgdGhlIHByZXZpb3VzIG9uZS4gIFtfXXskVHJ1ZX17NX0KCgphLiAgUG93ZXIgZnVuY3Rpb25zIGFuZCBleHBvbmVudGlhbCBmdW5jdGlvbnMgYm90aCBwYXNzIHRocm91Z2ggdGhlIG9yaWdpbi4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIEV4cG9uZW50aWFsIGZ1bmN0aW9ucyBtb2RlbCBncm93dGggb3IgZGVjbGluZSBieSBhIGNvbnN0YW50IGZhY3Rvci4gIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBUcnVlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="282"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-161"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exponential Equations</span>
 </h3>
 <p id="p-9057">An <dfn class="terminology">exponential equation</dfn> is one in which the variable is part of an exponent. For example, the equation</p>
@@ -537,14 +545,14 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 3^x = 81
 \end{equation*}
 </div>
-<p data-braille="continuation">is exponential.</p>
+<p class="continuation">is exponential.</p>
 <p id="p-9058">Many exponential equations can be solved by writing both sides of the equation as powers with the same base. To solve the equation above, we write</p>
 <div class="displaymath">
 \begin{equation*}
 3^x = 3^4
 \end{equation*}
 </div>
-<p data-braille="continuation">which is true if and only if \(x = 4\text{.}\)</p>
+<p class="continuation">which is true if and only if \(x = 4\text{.}\)</p>
 <p id="p-9059">In general, if two equivalent powers have the same base, then their exponents must be equal also, as long as the base is not \(0\) or \(\pm 1\text{.}\)</p>
 <p id="p-9060">In the next Example, we use the laws of exponents to express both sides of the equation as single powers of a common base.</p>
 <article class="example example-like" id="example-exponential-equations"><h6 class="heading">
@@ -552,12 +560,12 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 </h6>
 <p id="p-9061">Solve the following equations.</p>
 <ol class="lower-alpha cols2">
-<li id="li-5916">\(\displaystyle 3^{x-2} = 9^3\)</li>
-<li id="li-5917">\(\displaystyle 27 \cdot 3^{-2x} = 9^{x+1}\)</li>
+<li id="li-5916"><p id="p-derived-li-5916">\(\displaystyle 3^{x-2} = 9^3\)</p></li>
+<li id="li-5917"><p id="p-derived-li-5917">\(\displaystyle 27 \cdot 3^{-2x} = 9^{x+1}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-429" id="solution-429"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-429"><div class="solution solution-like"><ol id="p-9062" class="lower-alpha">
-<li id="li-5918">Using the fact that \(9 = 3^2\text{,}\) we write each side of the equation as a power of \(3\text{:}\)<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-429" id="solution-429"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-429"><div class="solution solution-like"><ol id="p-9062" class="lower-alpha">
+<li id="li-5918"><p id="p-derived-li-5918">Using the fact that \(9 = 3^2\text{,}\) we write each side of the equation as a power of \(3\text{:}\)<div class="displaymath">
 \begin{align*}
 3^{x-2} \amp = \left(3^2\right)^3 \amp \amp \blert{\text{Simplify the right side.}}\\
 3^{x-2} \amp = 3^6
@@ -566,8 +574,8 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 \begin{align*}
 x - 2 \amp = 6
 \end{align*}
-</div>The solution is \(x=8\text{.}\)</li>
-<li id="li-5919">We write each factor as a power of \(3\text{.}\)<div class="displaymath">
+</div>The solution is \(x=8\text{.}\)</p></li>
+<li id="li-5919"><p id="p-derived-li-5919">We write each factor as a power of \(3\text{.}\)<div class="displaymath">
 \begin{align*}
 3^3 \cdot 3^{-2x} \amp= \left(3^2\right)^{x+1}\amp\amp\blert{27=3^3~\text{and}~9=3^2.}
 \end{align*}
@@ -580,14 +588,15 @@ x - 2 \amp = 6
 3 - 2x \amp = 2x + 2\\
 -4x =\amp  -1
 \end{align*}
-</div>The solution is \(x = \dfrac{1}{4}\text{.}\)</li>
+</div>The solution is \(x = \dfrac{1}{4}\text{.}\)</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1424"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1424"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1424"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.32</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1424"><article class="exercise exercise-like"><iframe name="webwork-283" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=283&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzdHJhdCA9IFJhZGlvQnV0dG9ucygKICBbIkRpdmlkZSBib3RoIHNpZGVzIGJ5IDMuIiwKICAiQWRkIFwoM14yXCkgdG8gYm90aCBzaWRlcy4iLAogICJTaW1wbGlmeSB0aGUgbGVmdCBzaWRlLiIsCiAgIldyaXRlIHRoZSByaWdodCBzaWRlIGFzIGEgcG93ZXIgb2YgMy4iXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggaXMgYSBnb29kIHN0cmF0ZWd5IGZvciBzb2x2aW5nIFtgM157eC0yfT04MVx0ZXh0ez99YF0KCiAgICBbX117JHN0cmF0fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCldyaXRlIHRoZSByaWdodCBzaWRlIGFzIGEgcG93ZXIgb2YgMy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="283"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-1425"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1425"><h6 class="heading">
+</h6>
+<iframe name="webwork-283" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=283&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzdHJhdCA9IFJhZGlvQnV0dG9ucygKICBbIkRpdmlkZSBib3RoIHNpZGVzIGJ5IDMuIiwKICAiQWRkIFwoM14yXCkgdG8gYm90aCBzaWRlcy4iLAogICJTaW1wbGlmeSB0aGUgbGVmdCBzaWRlLiIsCiAgIldyaXRlIHRoZSByaWdodCBzaWRlIGFzIGEgcG93ZXIgb2YgMy4iXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggaXMgYSBnb29kIHN0cmF0ZWd5IGZvciBzb2x2aW5nIFtgM157eC0yfT04MVx0ZXh0ez99YF0KCiAgICBbX117JHN0cmF0fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCldyaXRlIHRoZSByaWdodCBzaWRlIGFzIGEgcG93ZXIgb2YgMy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="283"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-1425"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.33</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1425"><article class="exercise exercise-like"><iframe name="webwork-284" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=284&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xibGVydH1bMV17XGNvbG9ye2JsdWV9eyMxfX1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXI9Q29tcHV0ZSgiNSIpOwoKQkVHSU5fUEdNTApTb2x2ZSB0aGUgZXF1YXRpb24gW2AyXnt4KzJ9ID0gMTI4XHRleHR7Ln1gXQoKW2B4PWBdW19deyRhbnN3ZXJ9ezJ9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApbYFxibGVydHtcdGV4dHtXcml0ZSBlYWNoIHNpZGUgYXMgYSBwb3dlciBvZiAyLn19YF0KCltgXGJsZXJ0e1x0ZXh0e0VxdWF0ZSBleHBvbmVudHMufX1gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PTVgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="284"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-162"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-284" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=284&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xibGVydH1bMV17XGNvbG9ye2JsdWV9eyMxfX1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXI9Q29tcHV0ZSgiNSIpOwoKQkVHSU5fUEdNTApTb2x2ZSB0aGUgZXF1YXRpb24gW2AyXnt4KzJ9ID0gMTI4XHRleHR7Ln1gXQoKW2B4PWBdW19deyRhbnN3ZXJ9ezJ9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApbYFxibGVydHtcdGV4dHtXcml0ZSBlYWNoIHNpZGUgYXMgYSBwb3dlciBvZiAyLn19YF0KCltgXGJsZXJ0e1x0ZXh0e0VxdWF0ZSBleHBvbmVudHMufX1gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PTVgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="284"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-162"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Applications</span>
 </h3>
 <p id="p-9077">Exponential equations arise frequently in the study of exponential growth.</p>
@@ -596,43 +605,43 @@ x - 2 \amp = 6
 </h6>
 <p id="p-9078">During the summer a population of fleas doubles in number every 5 days.</p>
 <ol class="lower-alpha">
-<li id="li-5924">If a population starts with 10 fleas, write a formula for the number of fleas present after \(t\) days.</li>
-<li id="li-5925">How long will it be before there are 10,240 fleas?</li>
+<li id="li-5924"><p id="p-derived-li-5924">If a population starts with 10 fleas, write a formula for the number of fleas present after \(t\) days.</p></li>
+<li id="li-5925"><p id="p-derived-li-5925">How long will it be before there are 10,240 fleas?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-432" id="solution-432"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-432"><div class="solution solution-like"><ol id="p-9079" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-432" id="solution-432"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-432"><div class="solution solution-like"><ol id="p-9079" class="lower-alpha">
 <li id="li-5926">
 <p id="p-9080">We let \(P\) represent the number of fleas present after \(t\) days. The original population of 10 fleas doubles not every day, but every 5 days. A table of values for \(P\) would look like this.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(P(t)\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(20\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(P(\alert{5}) = 10 \cdot 2^{\alert{1}} = 20\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P(\alert{5}) = 10 \cdot 2^{\alert{1}} = 20\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(40\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(P(\alert{10}) = 10 \cdot 2^{\alert{2}} = 40\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P(\alert{10}) = 10 \cdot 2^{\alert{2}} = 40\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(15\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(80\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(P(\alert{15}) = 10 \cdot 2^{\alert{3}} = 80\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P(\alert{15}) = 10 \cdot 2^{\alert{3}} = 80\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(20\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(160\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(P(\alert{20}) = 10 \cdot 2^{\alert{4}} = 160\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(P(\alert{20}) = 10 \cdot 2^{\alert{4}} = 160\)</td>
 </tr>
 </table></div></div></div>
 <p id="p-9081">Notice that the original population is multiplied by another factor of 2 every 5 days. We must divide \(t\) by 5 to see how many times the population doubles. The formula for \(P\) is thus</p>
@@ -642,13 +651,13 @@ P(t) = 10 \cdot 2^{t/5}
 \end{equation*}
 </div>
 </li>
-<li id="li-5927">We set \(P = \alert{10,240}\) and solve for \(t\text{:}\)<div class="displaymath">
+<li id="li-5927"><p id="p-derived-li-5927">We set \(P = \alert{10,240}\) and solve for \(t\text{:}\)<div class="displaymath">
 \begin{align*}
 \alert{10,240} \amp = 10\cdot 2^{t/5}\amp\amp \blert{\text{Divide both sides by 10.}}\\
 1024 \amp = 2^{t/5} \amp\amp \blert{\text {Write 1024 as a power of 2.}}\\
 2^{10} \amp = 2^{t/5}
 \end{align*}
-</div>We equate the exponents to get \(10 = \dfrac{t}{5}\text{,}\) or \(t = 50\text{.}\) The population will grow to 10,240 fleas in 50 days.</li>
+</div>We equate the exponents to get \(10 = \dfrac{t}{5}\text{,}\) or \(t = 50\text{.}\) The population will grow to 10,240 fleas in 50 days.</p></li>
 </ol></div></div>
 </div></article><p id="p-9082">In Example 4a, we can also use the laws of exponents to write the formula as</p>
 <div class="displaymath">
@@ -656,16 +665,17 @@ P(t) = 10 \cdot 2^{t/5}
 P(t)=10 \cdot (2^{1/5})^t
 \end{equation*}
 </div>
-<p data-braille="continuation">From this form see that the growth factor for this function is \(2^{1/5}\text{,}\) or about 1.149. The flea population grows at about 14.9% per day.</p>
-<article class="exercise exercise-like" id="exercise-1426"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1426"><h6 class="heading">
+<p class="continuation">From this form see that the growth factor for this function is \(2^{1/5}\text{,}\) or about 1.149. The flea population grows at about 14.9% per day.</p>
+<article class="exercise exercise-like" id="exercise-1426"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.35</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1426"><article class="exercise exercise-like"><iframe name="webwork-285" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=285&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZCh0PT4iUmVhbCIpOwokTiA9IEZvcm11bGEoIjEwMCAqIDgqKih0LzQpIik7CiRhbnN3ZXIgPSBDb21wdXRlKCIxMiIpOwoKQkVHSU5fUEdNTApEdXJpbmcgYW4gYWR2ZXJ0aXNpbmcgY2FtcGFpZ24gaW4gYSBsYXJnZSBjaXR5LCB0aGUgbWFrZXJzIG9mIENoaXAtTydzIGNvcm4gY2hpcHMgZXN0aW1hdGUgdGhhdCB0aGUgbnVtYmVyIG9mIHBlb3BsZSB3aG8gaGF2ZSBoZWFyZCBvZiBDaGlwLU8ncyBpbmNyZWFzZXMgYnkgYSBmYWN0b3Igb2YgOCBldmVyeSA0IGRheXMuCgphLiAgSWYgMTAwIHBlb3BsZSBhcmUgZ2l2ZW4gdHJpYWwgYmFncyBvZiBDaGlwLU8ncyB0byBzdGFydCB0aGUgY2FtcGFpZ24sIHdyaXRlIGEgZnVuY3Rpb24sIFtgTih0KVx0ZXh0eyx9YF0gZm9yIHRoZSBudW1iZXIgb2YgcGVvcGxlIHdobyBoYXZlIGhlYXJkIG9mIENoaXAtTydzIGFmdGVyIFtgdGBdIGRheXMgb2YgYWR2ZXJ0aXNpbmcuCgogICAgW2BOKHQpPWBdW19deyROfXsxMH0KCgphLiAgVXNlIHlvdXIgY2FsY3VsYXRvciB0byBncmFwaCB0aGUgZnVuY3Rpb24gW2BOKHQpYF0gb24gdGhlIGRvbWFpbiBbYDAgXGxlIHQgXGxlIDE1XHRleHR7Ln1gXQoKCmEuICBIb3cgbWFueSBkYXlzIHNob3VsZCB0aGUgbWFrZXJzIHJ1biB0aGUgY2FtcGFpZ24gaW4gb3JkZXIgZm9yIENoaXAtTydzIHRvIGJlIGZhbWlsaWFyIHRvIDUxLDIwMCBwZW9wbGU%2FIFVzZSBhbGdlYnJhaWMgbWV0aG9kcyB0byBmaW5kIHlvdXIgYW5zd2VyIGFuZCB2ZXJpZnkgb24geW91ciBncmFwaC4KCiAgICBBbnN3ZXI6IFtfXXskYW5zd2VyfXsyfSBkYXlzCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYE4odCk9MTAwIFxjZG90IDhee3QvNH1gXQoKCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKCmEuICAxMiBkYXlzCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="285"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-34">
+</h6>
+<iframe name="webwork-285" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=285&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZCh0PT4iUmVhbCIpOwokTiA9IEZvcm11bGEoIjEwMCAqIDgqKih0LzQpIik7CiRhbnN3ZXIgPSBDb21wdXRlKCIxMiIpOwoKQkVHSU5fUEdNTApEdXJpbmcgYW4gYWR2ZXJ0aXNpbmcgY2FtcGFpZ24gaW4gYSBsYXJnZSBjaXR5LCB0aGUgbWFrZXJzIG9mIENoaXAtTydzIGNvcm4gY2hpcHMgZXN0aW1hdGUgdGhhdCB0aGUgbnVtYmVyIG9mIHBlb3BsZSB3aG8gaGF2ZSBoZWFyZCBvZiBDaGlwLU8ncyBpbmNyZWFzZXMgYnkgYSBmYWN0b3Igb2YgOCBldmVyeSA0IGRheXMuCgphLiAgSWYgMTAwIHBlb3BsZSBhcmUgZ2l2ZW4gdHJpYWwgYmFncyBvZiBDaGlwLU8ncyB0byBzdGFydCB0aGUgY2FtcGFpZ24sIHdyaXRlIGEgZnVuY3Rpb24sIFtgTih0KVx0ZXh0eyx9YF0gZm9yIHRoZSBudW1iZXIgb2YgcGVvcGxlIHdobyBoYXZlIGhlYXJkIG9mIENoaXAtTydzIGFmdGVyIFtgdGBdIGRheXMgb2YgYWR2ZXJ0aXNpbmcuCgogICAgW2BOKHQpPWBdW19deyROfXsxMH0KCgphLiAgVXNlIHlvdXIgY2FsY3VsYXRvciB0byBncmFwaCB0aGUgZnVuY3Rpb24gW2BOKHQpYF0gb24gdGhlIGRvbWFpbiBbYDAgXGxlIHQgXGxlIDE1XHRleHR7Ln1gXQoKCmEuICBIb3cgbWFueSBkYXlzIHNob3VsZCB0aGUgbWFrZXJzIHJ1biB0aGUgY2FtcGFpZ24gaW4gb3JkZXIgZm9yIENoaXAtTydzIHRvIGJlIGZhbWlsaWFyIHRvIDUxLDIwMCBwZW9wbGU%2FIFVzZSBhbGdlYnJhaWMgbWV0aG9kcyB0byBmaW5kIHlvdXIgYW5zd2VyIGFuZCB2ZXJpZnkgb24geW91ciBncmFwaC4KCiAgICBBbnN3ZXI6IFtfXXskYW5zd2VyfXsyfSBkYXlzCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYE4odCk9MTAwIFxjZG90IDhee3QvNH1gXQoKCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKCmEuICAxMiBkYXlzCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="285"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-34">
 <p id="p-9096">Graph for part (b):</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-7-2-4ans.svg" role="img" style="width: 100%; height: auto;" alt="GC graph"></div></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-1427"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1427"><h6 class="heading">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-7-2-4ans.svg" role="img" class="contained" alt="GC graph"></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-1427"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.36</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1427"><article class="exercise exercise-like"><iframe name="webwork-286" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=286&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJjb2VmZmljaWVudHMiLCAKICAgICJleHBvbmVudHMiXSwKICAgIDIKKTsKJGIgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJhbiBleHBvbmVudCIsIAogICAgImEgYmFzZSIsCiAgICAiYSByYWRpY2FsIl0sCiAgICAxCik7CiRjID0gRm9ybXVsYSgiMngrMiIpOwokZCA9IENvbXB1dGUoIjEvMyIpOwoKQkVHSU5fUEdNTAphLiAgSWYgdHdvIGVxdWl2YWxlbnQgcG93ZXJzIGhhdmUgdGhlIHNhbWUgbm9uemVybyBiYXNlLCBbYGIgXG5vdD0gMWBdIG9yIFtgLTFcdGV4dHssfWBdIHRoZW4gdGhlaXIgW19deyRhfXs1fSBtdXN0IGJlIGVxdWFsIGFsc28uCgoKYS4gIEFuIGV4cG9uZW50aWFsIGVxdWF0aW9uIGlzIG9uZSBpbiB3aGljaCB0aGUgdmFyaWFibGUgaXMgcGFydCBvZiAgW19deyRifXs1fS4KCgphLiAgW2AoM14yKV57eCsxfWBdIHNpbXBsaWZpZXMgdG8gMyByYWlzZWQgdG8gd2hhdCBwb3dlcj8gIFtfXXskY317NX0KCgphLiAgSWYgYSBwb3B1bGF0aW9uIGRvdWJsZXMgZXZlcnkgMyBkYXlzLCBpdHMgZ3Jvd3RoIGZhY3RvciBpcyAyIHJhaXNlZCB0byB3aGF0IHBvd2VyPyBbX117JGR9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBleHBvbmVudHMKYS4gIGFuIGV4cG9uZW50CmEuICBbYDJ4KzJgXQphLiAgW2BcZGZyYWN7MX17M31gXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="286"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-163"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-286" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=286&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJjb2VmZmljaWVudHMiLCAKICAgICJleHBvbmVudHMiXSwKICAgIDIKKTsKJGIgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJhbiBleHBvbmVudCIsIAogICAgImEgYmFzZSIsCiAgICAiYSByYWRpY2FsIl0sCiAgICAxCik7CiRjID0gRm9ybXVsYSgiMngrMiIpOwokZCA9IENvbXB1dGUoIjEvMyIpOwoKQkVHSU5fUEdNTAphLiAgSWYgdHdvIGVxdWl2YWxlbnQgcG93ZXJzIGhhdmUgdGhlIHNhbWUgbm9uemVybyBiYXNlLCBbYGIgXG5vdD0gMWBdIG9yIFtgLTFcdGV4dHssfWBdIHRoZW4gdGhlaXIgW19deyRhfXs1fSBtdXN0IGJlIGVxdWFsIGFsc28uCgoKYS4gIEFuIGV4cG9uZW50aWFsIGVxdWF0aW9uIGlzIG9uZSBpbiB3aGljaCB0aGUgdmFyaWFibGUgaXMgcGFydCBvZiAgW19deyRifXs1fS4KCgphLiAgW2AoM14yKV57eCsxfWBdIHNpbXBsaWZpZXMgdG8gMyByYWlzZWQgdG8gd2hhdCBwb3dlcj8gIFtfXXskY317NX0KCgphLiAgSWYgYSBwb3B1bGF0aW9uIGRvdWJsZXMgZXZlcnkgMyBkYXlzLCBpdHMgZ3Jvd3RoIGZhY3RvciBpcyAyIHJhaXNlZCB0byB3aGF0IHBvd2VyPyBbX117JGR9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBleHBvbmVudHMKYS4gIGFuIGV4cG9uZW50CmEuICBbYDJ4KzJgXQphLiAgW2BcZGZyYWN7MX17M31gXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="286"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-163"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Graphical Solution of Exponential Equations</span>
 </h3>
 <p id="p-9118">It is not always so easy to express both sides of the equation as powers of the same base. In the following sections, we will develop more general methods for finding exact solutions to exponential equations. But we can use a graphing utility to obtain approximate solutions.</p>
@@ -674,10 +684,10 @@ P(t)=10 \cdot (2^{1/5})^t
 </h6>
 <p id="p-9119">Use the graph of \(y = 2^x\) to find an approximate solution to the equation \(2^x = 5\) accurate to the nearest hundredth.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-435" id="solution-435"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-435"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-435" id="solution-435"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-435"><div class="solution solution-like">
 <p id="p-9120">We enter \(Y_1 = 2\) <kbd class="kbdkey">^</kbd> X and use the standard graphing window (<kbd class="kbdkey">ZOOM</kbd> 6) to obtain the graph shown in figure (a). We are looking for a point on this graph with \(y\)-coordinate \(5\text{.}\)</p>
 <p id="p-9121">Using the TRACE feature, we see that the \(y\)-coordinates are too small when \(x \lt 2.1\) and too large when \(x \gt 2.4\text{.}\) The solution we want lies somewhere between \(x = 2.1\) and \(x = 2.4\text{,}\) but this approximation is not accurate enough.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-GC-exponential-equation.svg" role="img" style="width: 100%; height: auto;" alt="two GC displays of exponential function"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-exponential-equation.svg" role="img" class="contained" alt="two GC displays of exponential function"></div></div></div>
 <p id="p-9122">To improve our approximation, we will use the <dfn class="terminology">intersect</dfn> feature. Set \(Y_2 = 5\) and press <kbd class="kbdkey">GRAPH</kbd>. The \(x\)-coordinate of the intersection point of the two graphs is the solution of the equation \(2^x = 5\) Activating the <dfn class="terminology">intersect</dfn> command results in figure (b), and we see that, to the nearest hundredth, the solution is \(2.32\text{.}\)</p>
 <p id="p-9123">We can verify that our estimate is reasonable by substituting into the equation:</p>
 <div class="displaymath">
@@ -685,15 +695,17 @@ P(t)=10 \cdot (2^{1/5})^t
 2^{2.32}  \stackrel{?}{=} 5
 \end{equation*}
 </div>
-<p data-braille="continuation">We enter 2 <kbd class="kbdkey">^</kbd> 2.32 <kbd class="kbdkey">ENTER</kbd> to get \(4.993322196\text{.}\) This number is not equal to \(5\text{,}\) but it is close, so we believe that \(x = 2.32\) is a reasonable approximation to the solution of the equation \(2^x = 5\text{.}\)</p>
+<p class="continuation">We enter 2 <kbd class="kbdkey">^</kbd> 2.32 <kbd class="kbdkey">ENTER</kbd> to get \(4.993322196\text{.}\) This number is not equal to \(5\text{,}\) but it is close, so we believe that \(x = 2.32\) is a reasonable approximation to the solution of the equation \(2^x = 5\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1428"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1428"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1428"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.38</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1428"><article class="exercise exercise-like"><iframe name="webwork-287" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=287&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRleGFjdCA9IGxvZygyODUpL2xvZyg1KTsKJGFuc3dlciA9IENvbXB1dGUoIiRleGFjdCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNSwKKTsKCkJFR0lOX1BHTUwKVXNlIHRoZSBncmFwaCBvZiBbYHkgPSA1XnhgXSB0byBmaW5kIGFuIGFwcHJveGltYXRlIHNvbHV0aW9uIHRvIFtgNV54ID0gMjg1XHRleHR7LH1gXSBhY2N1cmF0ZSB0byB0d28gZGVjaW1hbCBwbGFjZXMuCgpBbnN3ZXI6IFtgeFxhcHByb3hgXVtfXXskYW5zd2VyfXszfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBwb2ludCBvbiB0aGUgZ3JhcGggd2hlcmUgW2B5PTI4NWBdIGhhcyBbYHggXGFwcHJveCAzLjUxYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="287"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-7-2-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-287" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=287&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRleGFjdCA9IGxvZygyODUpL2xvZyg1KTsKJGFuc3dlciA9IENvbXB1dGUoIiRleGFjdCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNSwKKTsKCkJFR0lOX1BHTUwKVXNlIHRoZSBncmFwaCBvZiBbYHkgPSA1XnhgXSB0byBmaW5kIGFuIGFwcHJveGltYXRlIHNvbHV0aW9uIHRvIFtgNV54ID0gMjg1XHRleHR7LH1gXSBhY2N1cmF0ZSB0byB0d28gZGVjaW1hbCBwbGFjZXMuCgpBbnN3ZXI6IFtgeFxhcHByb3hgXVtfXXskYW5zd2VyfXszfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBwb2ludCBvbiB0aGUgZ3JhcGggd2hlcmUgW2B5PTI4NWBdIGhhcyBbYHggXGFwcHJveCAzLjUxYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="287"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-7-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 7.2</span>
 </h3>
 <article class="subexercises" id="subexercises-92"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-214">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-252"><p id="p-9128">In Problems 1–4, use the laws of exponents to simplify.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-1429"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -720,6 +732,7 @@ P(t)=10 \cdot (2^{1/5})^t
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-215">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-253"><p id="p-9153">For Problems 5 and 6, solve. Round your answers to two places if necessary.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1433"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
@@ -728,6 +741,7 @@ P(t)=10 \cdot (2^{1/5})^t
 </div>
 </div></article><article class="subexercises" id="subexercises-93"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <div class="exercisegroup" id="exercisegroup-216">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-254"><p id="p-9157">For Problems 7-14, solve.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1435"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
@@ -742,6 +756,7 @@ P(t)=10 \cdot (2^{1/5})^t
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-217">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-255">
 <p id="p-9171">For Problems 15 and 16,</p>
 <ol class="lower-alpha">
@@ -754,18 +769,18 @@ P(t)=10 \cdot (2^{1/5})^t
 \end{align*}
 </div>
 </li>
-<li id="li-5968">Use your graph to find an approximate solution accurate to the nearest hundredth.</li>
+<li id="li-5968"><p id="p-derived-li-5968">Use your graph to find an approximate solution accurate to the nearest hundredth.</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1443"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <ol id="p-9173" class="lower-alpha">
-<li id="li-5969">\(\displaystyle y=3^{x-1}\)</li>
-<li id="li-5970">\(\displaystyle 3^{x-1}=4\)</li>
+<li id="li-5969"><p id="p-derived-li-5969">\(\displaystyle y=3^{x-1}\)</p></li>
+<li id="li-5970"><p id="p-derived-li-5970">\(\displaystyle 3^{x-1}=4\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1444"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <ol id="p-9175" class="lower-alpha">
-<li id="li-5971">\(\displaystyle y=4^{-x}\)</li>
-<li id="li-5972">\(\displaystyle 4^{-x}=7\)</li>
+<li id="li-5971"><p id="p-derived-li-5971">\(\displaystyle y=4^{-x}\)</p></li>
+<li id="li-5972"><p id="p-derived-li-5972">\(\displaystyle 4^{-x}=7\)</p></li>
 </ol></article>
 </div>
 </div>
@@ -784,6 +799,7 @@ P(t)=10 \cdot (2^{1/5})^t
 <li id="li-5983"><p id="p-9189">\(\displaystyle D(x)=6x^{1/2} \)</p></li>
 <li id="li-5984"><p id="p-9190">\(\displaystyle E(x)=4x+x^4 \)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-218">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-256"><p id="p-9196">For Problems 19 and 20, graph each pair of functions on the same axes by making a table of values and plotting points by hand. Choose appropriate scales for the axes.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1447"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
@@ -805,11 +821,12 @@ P(t)=10 \cdot (2^{1/5})^t
 <li id="li-5995"><p id="p-9206">\(\displaystyle m(x)=6^{-x} \)</p></li>
 <li id="li-5996"><p id="p-9207">\(\displaystyle n(x)=\dfrac{1}{6^x} \)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-219">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-257">
 <p id="p-9209">For Problems 22 and 23:</p>
 <ol class="lower-alpha">
-<li id="li-5997">Use a graphing calculator to obtain the graphs for \(-5 \le x \le 5\text{.}\)</li>
-<li id="li-5998">Find the largest and smallest function values on the interval \(-5 \le x \le 5\text{.}\)</li>
+<li id="li-5997"><p id="p-derived-li-5997">Use a graphing calculator to obtain the graphs for \(-5 \le x \le 5\text{.}\)</p></li>
+<li id="li-5998"><p id="p-derived-li-5998">Find the largest and smallest function values on the interval \(-5 \le x \le 5\text{.}\)</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises cols2">
@@ -820,129 +837,130 @@ P(t)=10 \cdot (2^{1/5})^t
 </div>
 <article class="exercise exercise-like" id="exercise-1452"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="p-9213">The graph of \(f(x)=P_0 a^x\) is shown in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-mystery-exp-growth.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-mystery-exp-growth.svg" role="img" class="contained" alt="graph"></div></div></div>
 <ol class="lower-alpha">
-<li id="li-5999">Read the value of \(P_0\) from the graph.</li>
-<li id="li-6000">Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?</li>
-<li id="li-6001">Use your table to calculate the growth factor \(a\text{.}\)</li>
-<li id="li-6002">Using your answers to parts (a) and (c), write a formula for \(f(x)\text{.}\)</li>
+<li id="li-5999"><p id="p-derived-li-5999">Read the value of \(P_0\) from the graph.</p></li>
+<li id="li-6000"><p id="p-derived-li-6000">Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?</p></li>
+<li id="li-6001"><p id="p-derived-li-6001">Use your table to calculate the growth factor \(a\text{.}\)</p></li>
+<li id="li-6002"><p id="p-derived-li-6002">Using your answers to parts (a) and (c), write a formula for \(f(x)\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1453"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <p id="p-9214">The graph of \(g(x)=P_0 a^x\) is shown in the figure.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:39%;margin-right:39%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-mystery-exp-decay.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:39%;margin-right:39%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-mystery-exp-decay.svg" role="img" class="contained" alt="graph"></div></div></div>
 <ol class="lower-alpha">
-<li id="li-6003">Read the value of \(P_0\) from the graph.</li>
-<li id="li-6004">Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?</li>
-<li id="li-6005">Use your table to calculate the decay factor \(a\text{.}\)</li>
-<li id="li-6006">Using your answers to parts (a) and (c), write a formula for \(g(x)\text{.}\)</li>
+<li id="li-6003"><p id="p-derived-li-6003">Read the value of \(P_0\) from the graph.</p></li>
+<li id="li-6004"><p id="p-derived-li-6004">Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?</p></li>
+<li id="li-6005"><p id="p-derived-li-6005">Use your table to calculate the decay factor \(a\text{.}\)</p></li>
+<li id="li-6006"><p id="p-derived-li-6006">Using your answers to parts (a) and (c), write a formula for \(g(x)\text{.}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-220">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-258"><p id="p-9216">For Problems 26 and 27, which tables could describe exponential functions? Explain why or why not. If the function is exponential, find its growth or decay factor.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1454"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
 <ol id="p-9217" class="lower-alpha cols2">
-<li id="li-6011"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:30%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-6011"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:30%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(h\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(a\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(a\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="l m b1 r1 l0 t0 lines" data-braille="last-cell">\(70\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(70\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="l m b1 r1 l0 t0 lines" data-braille="last-cell">\(7\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(7\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="l m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.7\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(0.7\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="l m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.07\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(0.07\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="l m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.007\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(0.007\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-6012"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel fixed-width" style="width:150%;justify-content:flex-start;"><table>
+<li id="li-6012"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel fixed-width top" style="width:150%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(Q\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(Q\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(0\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{4} \)</td>
+<td class="r m b1 r1 l0 t0 lines">\(\frac{1}{4} \)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(1\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{9}{4} \)</td>
+<td class="r m b1 r1 l0 t0 lines">\(\frac{9}{4} \)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(4\)</td>
 </tr>
 </table></div></div></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1455"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
 <ol id="p-9218" class="lower-alpha cols2">
-<li id="li-6013"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:30%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-6013"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:30%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(y\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(y\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(100\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(100\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(50\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(50\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(33\frac{1}{3} \)</td>
+<td class="r m b1 r1 l0 t0 lines">\(33\frac{1}{3} \)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(25\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(25\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(20\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(20\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-6014"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-6014"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:50%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(P\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(P\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(\frac{1}{2} \)</td>
+<td class="r m b1 r1 l0 t0 lines">\(\frac{1}{2} \)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(1\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
-<td class="r m b1 r1 l0 t0 lines" data-braille="last-cell">\(8\)</td>
+<td class="r m b1 r1 l0 t0 lines">\(8\)</td>
 </tr>
 </table></div></div></div></li>
 </ol></article>
@@ -962,7 +980,7 @@ P(t)=10 \cdot (2^{1/5})^t
 <li id="li-6025"><p id="p-9232">When should hospitals expect to be treating 106,496 cases? Use algebraic methods to find your answer, and verify it on your graph.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1458"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
 <p id="p-9236">The frequency of a musical note depends on its pitch. The graph shows that the frequency increases exponentially. The function \(F(p) = F_0b^p\) gives the frequency as a function of the number of half-tones, \(p\text{,}\) above the starting point on the scale</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:34.5%;margin-right:34.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-2-27.svg" role="img" style="width: 100%; height: auto;" alt="growth"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:34.5%;margin-right:34.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-2-27.svg" role="img" class="contained" alt="growth"></div></div></div>
 <ol id="p-9237" class="lower-alpha">
 <li id="li-6029"><p id="p-9238">Read the value of \(F_0\) from the graph. (This is the frequency of the note A above middle C.)</p></li>
 <li id="li-6030"><p id="p-9239">Find an approximation for the growth factor, \(b\text{,}\) by comparing two points on the graph. (Some of the points on the graph of \(F(p)\) are approximately \((1, 466)\text{,}\) \((2, 494)\text{,}\) \((3, 523)\text{,}\) and \((4, 554)\text{.}\))</p></li>
@@ -970,12 +988,13 @@ P(t)=10 \cdot (2^{1/5})^t
 <li id="li-6032"><p id="p-9241">The frequency doubles when you raise a note by one octave, which is equivalent to 12 half-tones. Use this information to find an exact value for \(b\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-1459"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
 <p id="p-9246">For several days after the Northridge earthquake on January 17, 1994, the area received a number of significant aftershocks. The red graph shows that the number of aftershocks decreased exponentially over time. The graph of the function \(S(d) = S_0b^d\text{,}\) shown in black, approximates the data. (Source: <span class="booktitle">Los Angeles Times</span>, June 27, 1995)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-7-2-28.svg" role="img" style="width: 100%; height: auto;" alt="decay"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32%;margin-right:32%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-7-2-28.svg" role="img" class="contained" alt="decay"></div></div></div>
 <ol id="p-9247" class="lower-alpha">
 <li id="li-6036"><p id="p-9248">Read the value of \(S_0\) from the graph.</p></li>
 <li id="li-6037"><p id="p-9249">Find an approximation for the decay factor, \(b\text{,}\) by comparing two points on the graph. (Some of the points on the graph of \(S(d)\) are approximately \((1, 82)\text{,}\) \((2, 45)\text{,}\) \((3, 25)\text{,}\) and \((4, 14)\text{.}\))</p></li>
 <li id="li-6038"><p id="p-9250">Using your answers to (a) and (b), write a formula for \(S(d)\text{.}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-221">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-259">
 <p id="p-9255">For Problems 32 and 33, fill in the tables. Graph each pair of functions in the same window. Then answer the questions below.</p>
 <ol class="lower-alpha">
@@ -987,105 +1006,105 @@ P(t)=10 \cdot (2^{1/5})^t
 </div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-1460"><h6 class="heading"><span class="codenumber">32<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(f(x)=x^2\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(g(x)=2^x \)</td>
+<td class="c m b1 r1 l0 t1 lines">\(g(x)=2^x \)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="exercise-1461"><h6 class="heading"><span class="codenumber">33<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(f(x)=x^3\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(g(x)=3^x \)</td>
+<td class="c m b1 r1 l0 t1 lines">\(g(x)=3^x \)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(3\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 </table></div></div></div></article>
 </div>
 </div>
 <article class="exercise exercise-like" id="exercise-1462"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
 <p id="p-9265">Related species living in the same area often evolve in different sizes to minimize competition for food and habitat. Here are the masses of eight species of fruit pigeon found in New Guinea, ranked from smallest to largest. (Source: Burton, 1998)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Size rank</td>
 <td class="c m b1 r1 l0 t3 lines">\(1\)</td>
@@ -1095,7 +1114,7 @@ P(t)=10 \cdot (2^{1/5})^t
 <td class="c m b1 r1 l0 t3 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(6\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(7\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(8\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(8\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Mass (grams)</td>
@@ -1106,32 +1125,32 @@ P(t)=10 \cdot (2^{1/5})^t
 <td class="c m b1 r1 l0 t0 lines">\(245\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(414\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(592\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(802\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(802\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-9266" class="lower-alpha">
 <li id="li-6050">
 <p id="p-9267">Plot the masses of the pigeons against their order of increasing size. What kind of function might fit the data?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-pigeon-size-grid.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-pigeon-size-grid.svg" role="img" class="contained" alt="grid"></div></div></div>
 </li>
-<li id="li-6051">Compute the ratios of the masses of successive sizes of fruit pigeons. Are the ratios approximately constant? What does this information tell you about your answer to part (a)?</li>
-<li id="li-6052">Compute the average ratio to two decimal places. Using this ratio, estimate the mass of a hypothetical fruit pigeon of size rank zero.</li>
-<li id="li-6053">Using your answers to part (c), write an exponential function that approximates the data. Graph this function on top of the data and evaluate the fit.</li>
+<li id="li-6051"><p id="p-derived-li-6051">Compute the ratios of the masses of successive sizes of fruit pigeons. Are the ratios approximately constant? What does this information tell you about your answer to part (a)?</p></li>
+<li id="li-6052"><p id="p-derived-li-6052">Compute the average ratio to two decimal places. Using this ratio, estimate the mass of a hypothetical fruit pigeon of size rank zero.</p></li>
+<li id="li-6053"><p id="p-derived-li-6053">Using your answers to part (c), write an exponential function that approximates the data. Graph this function on top of the data and evaluate the fit.</p></li>
 </ol></article></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:56:44-07:00       *-->
+<!--*       on 2021-08-27T15:52:14-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Functions as Models</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,7 +226,7 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="FunctionsasModels"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.6</span> <span class="title">Functions as Models</span>
@@ -240,18 +246,18 @@ true);
 <li id="li-3784"><p id="p-6077">Forrest walks at a constant speed until he reaches the bus stop, waits there until the bus arrives, and then the bus drives him to school at a constant speed.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-305" id="solution-305"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-305"><div class="solution solution-like"><ol id="p-6078" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-305" id="solution-305"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-305"><div class="solution solution-like"><ol id="p-6078" class="lower-alpha">
 <li id="li-3785">
 <p id="p-6079">The graph is a straight-line segment, as shown in figure (a). It begins at the origin because at the instant Forrest leaves the house, his distance from home is 0. (In other words, when \(t = 0, y = 0\text{.}\)) The graph is a straight line because Forrest has a constant speed. The slope of the line is equal to Forrest’s walking speed.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-home-to-school.svg" role="img" style="width: 100%; height: auto;" alt="distance from home"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-home-to-school.svg" role="img" class="contained" alt="distance from home"></div></div></div>
 </li>
 <li id="li-3786"><p id="p-6080">The first part of the graph is the same as part (a). But while Forrest waits for the bus, his distance from home remains constant, so the graph at that time is a horizontal line, as shown in figure (b). The line has slope \(0\) because while Forrest is waiting for the bus, his speed is \(0\text{.}\)</p></li>
 <li id="li-3787"><p id="p-6081">The graph begins like the graph in part (b). The last section of the graph represents the bus ride. It has a constant slope because the bus is moving at a constant speed. Because the bus (probably) moves faster than Forrest walks, the slope of this segment is greater than the slope for the walking section. The graph is shown in figure (c).</p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-949"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-949"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-949"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.83</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-949"><article class="exercise exercise-like"><iframe name="webwork-197" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=197&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZ1bj1Gb3JtdWxhKCIxLjUtYWJzKHgtMTEuNSkiKTsKJGZha2U9Rm9ybXVsYSgiNip4Iik7CiRmYWtlMj1Gb3JtdWxhKCIxMjAtNip4Iik7CiRmYWtlMz1Gb3JtdWxhKCIxMjAteF4yLzQiKTsKCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSA9IGluaXRfZ3JhcGgoLS4xLC0uMSwzLjEsMy4xLCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzEsMV0sIHNpemU9PlsyNDAsMjQwXSk7CiRnclskaV0tPmxiKCdyZXNldCcpOwp9CgokZ3JbMF0tPm1vdmVUbygwLDApOwokZ3JbMF0tPmxpbmVUbygxLDEsJ3JlZCcsMik7CiRnclswXS0%2BbGluZVRvKDIsMSwncmVkJywyKTsKJGdyWzBdLT5saW5lVG8oMywwLCdyZWQnLDIpOwokZ3JbMF0tPmxiKCBuZXcgTGFiZWwoMS41LDEuNSwiKEIpIiwgJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7CgokZ3JbMV0tPm1vdmVUbygwLDApOwokZ3JbMV0tPmxpbmVUbygxLDEsJ3JlZCcsMik7CiRnclsxXS0%2BbGluZVRvKDEsMiwncmVkJywyKTsKJGdyWzFdLT5saW5lVG8oMCwzLCdyZWQnLDIpOwokZ3JbMV0tPmxiKCBuZXcgTGFiZWwoMS41LDEuNSwiKEEpIiwkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsgCgokZ3JbMl0tPm1vdmVUbygwLDApOwokZ3JbMl0tPmxpbmVUbygyLjUsMi41LCdyZWQnLDIpOwokZ3JbMl0tPmxpbmVUbygyLjUsMCwncmVkJywyKTsKJGdyWzJdLT5sYiggbmV3IExhYmVsKDEuMiwxLjgsIihEKSIsICRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOwoKJGdyWzNdLT5tb3ZlVG8oMCwwKTsKJGdyWzNdLT5saW5lVG8oMi41LDIuNSwncmVkJywyKTsKJGdyWzNdLT5saW5lVG8oMCwyLjUsJ3JlZCcsMik7CiRnclszXS0%2BbGIoIG5ldyBMYWJlbCgxLjgsMS41LCIoQykiLCAkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsKCiRtYyA9IFJhZGlvQnV0dG9ucygKICAgICAgICAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiLAogICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgMQogICAgICAgICk7CgpCRUdJTl9QR01MCkVyaW4gd2Fsa3MgZnJvbSBoZXIgaG9tZSB0byBhIGNvbnZlbmllbmNlIHN0b3JlLCB3aGVyZSBzaGUgYnV5cyBzb21lIGNhdCBmb29kLCBhbmQgdGhlbiB3YWxrcyBiYWNrIGhvbWUuIFNrZXRjaCBhIHBvc3NpYmxlIGdyYXBoIG9mIGhlciBkaXN0YW5jZSBmcm9tIGhvbWUgYXMgYSBmdW5jdGlvbiBvZiB0aW1lLgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0%2BMTIwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4xMjApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0%2BMTIwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4xMjApQF0qICA8PAoKVGhlIGdyYXBoIG9mIEVyaW4ncyBkaXN0YW5jZSBmcm9tIGhvbWUgaXMKCiAgICBbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjEyMClAXSogIDw8CgpBIGdyYXBoIGlzIGFsc28gc2hvd24gYmVsb3cuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="197"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-23"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:65%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-5-6-1ans.svg" role="img" style="width: 100%; height: auto;" alt="piecewise graph"></div></div></div></div></article></div>
-<p id="p-6092">The graphs in <a class="xref" data-knowl="./knowl/example-home-to-school.html" title="Example 5.82">Example 5.82</a> are portions of straight lines. We can also consider graphs that bend upward or downward. The bend is called the <dfn class="terminology">concavity</dfn> of the graph.</p>
+</h6>
+<iframe name="webwork-197" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=197&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZ1bj1Gb3JtdWxhKCIxLjUtYWJzKHgtMTEuNSkiKTsKJGZha2U9Rm9ybXVsYSgiNip4Iik7CiRmYWtlMj1Gb3JtdWxhKCIxMjAtNip4Iik7CiRmYWtlMz1Gb3JtdWxhKCIxMjAteF4yLzQiKTsKCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSA9IGluaXRfZ3JhcGgoLS4xLC0uMSwzLjEsMy4xLCBheGVzPT5bMCwwXSwgZ3JpZD0%2BWzEsMV0sIHNpemU9PlsyNDAsMjQwXSk7CiRnclskaV0tPmxiKCdyZXNldCcpOwp9CgokZ3JbMF0tPm1vdmVUbygwLDApOwokZ3JbMF0tPmxpbmVUbygxLDEsJ3JlZCcsMik7CiRnclswXS0%2BbGluZVRvKDIsMSwncmVkJywyKTsKJGdyWzBdLT5saW5lVG8oMywwLCdyZWQnLDIpOwokZ3JbMF0tPmxiKCBuZXcgTGFiZWwoMS41LDEuNSwiKEIpIiwgJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7CgokZ3JbMV0tPm1vdmVUbygwLDApOwokZ3JbMV0tPmxpbmVUbygxLDEsJ3JlZCcsMik7CiRnclsxXS0%2BbGluZVRvKDEsMiwncmVkJywyKTsKJGdyWzFdLT5saW5lVG8oMCwzLCdyZWQnLDIpOwokZ3JbMV0tPmxiKCBuZXcgTGFiZWwoMS41LDEuNSwiKEEpIiwkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsgCgokZ3JbMl0tPm1vdmVUbygwLDApOwokZ3JbMl0tPmxpbmVUbygyLjUsMi41LCdyZWQnLDIpOwokZ3JbMl0tPmxpbmVUbygyLjUsMCwncmVkJywyKTsKJGdyWzJdLT5sYiggbmV3IExhYmVsKDEuMiwxLjgsIihEKSIsICRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOwoKJGdyWzNdLT5tb3ZlVG8oMCwwKTsKJGdyWzNdLT5saW5lVG8oMi41LDIuNSwncmVkJywyKTsKJGdyWzNdLT5saW5lVG8oMCwyLjUsJ3JlZCcsMik7CiRnclszXS0%2BbGIoIG5ldyBMYWJlbCgxLjgsMS41LCIoQykiLCAkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsKCiRtYyA9IFJhZGlvQnV0dG9ucygKICAgICAgICAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiLAogICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgMQogICAgICAgICk7CgpCRUdJTl9QR01MCkVyaW4gd2Fsa3MgZnJvbSBoZXIgaG9tZSB0byBhIGNvbnZlbmllbmNlIHN0b3JlLCB3aGVyZSBzaGUgYnV5cyBzb21lIGNhdCBmb29kLCBhbmQgdGhlbiB3YWxrcyBiYWNrIGhvbWUuIFNrZXRjaCBhIHBvc3NpYmxlIGdyYXBoIG9mIGhlciBkaXN0YW5jZSBmcm9tIGhvbWUgYXMgYSBmdW5jdGlvbiBvZiB0aW1lLgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0%2BMTIwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4xMjApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0%2BMTIwKUBdKiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4xMjApQF0qICA8PAoKVGhlIGdyYXBoIG9mIEVyaW4ncyBkaXN0YW5jZSBmcm9tIGhvbWUgaXMKCiAgICBbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4%2BIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjEyMClAXSogIDw8CgpBIGdyYXBoIGlzIGFsc28gc2hvd24gYmVsb3cuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="197"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-23"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:65%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-5-6-1ans.svg" role="img" class="contained" alt="piecewise graph"></div></div></div></div></article><p id="p-6092">The graphs in <a class="xref" data-knowl="./knowl/example-home-to-school.html" title="Example 5.82">Example 5.82</a> are portions of straight lines. We can also consider graphs that bend upward or downward. The bend is called the <dfn class="terminology">concavity</dfn> of the graph.</p>
 <article class="example example-like" id="concavity"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.84</span><span class="period">.</span>
 </h6>
@@ -261,16 +267,16 @@ true);
 <li id="li-3794"><p id="p-6095">The temperature of a potato placed in a hot oven increases rapidly at first, then more slowly as it approaches the temperature of the oven.</p></li>
 </ol>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:7.5%;margin-right:7.5%;">
-<div class="sbspanel" style="width:41.1764705882353%;justify-content:flex-start;">
+<div class="sbspanel top" style="width:41.1764705882353%;">
 <p id="p-6096">\((1)\)</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(15\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(15\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -278,20 +284,20 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(89\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(123\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(217\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(383\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(383\)</td>
 </tr>
 </table>
 </div>
-<div class="sbspanel" style="width:41.1764705882353%;justify-content:flex-start;">
+<div class="sbspanel top" style="width:41.1764705882353%;">
 <p id="p-6097">\((2)\)</p>
-<table>
+<table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(5\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(15\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(15\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -299,14 +305,14 @@ true);
 <td class="c m b1 r1 l0 t0 lines">\(219\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(341\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(419\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(441\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(441\)</td>
 </tr>
 </table>
 </div>
 </div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-concavity.svg" role="img" style="width: 100%; height: auto;" alt="increasing graphs of opposite concavity"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-concavity.svg" role="img" class="contained" alt="increasing graphs of opposite concavity"></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-307" id="solution-307"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-307"><div class="solution solution-like"><ol id="p-6098" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-307" id="solution-307"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-307"><div class="solution solution-like"><ol id="p-6098" class="lower-alpha">
 <li id="li-3795">
 <p id="p-6099">The number of flu cases is described by  graph(A) and table (1). The function values in table (1) increase at an increasing rate. We can see this by computing the rate of change over successive time intervals.</p>
 <div class="displaymath">
@@ -319,8 +325,8 @@ x = 10 \text{ to } x = 15:~~~~~~~~m = \frac{\Delta y}{\Delta x}
 =\frac{383 - 217}{15 - 10} = 33.2
 \end{gather*}
 </div>
-<p data-braille="continuation">The increasing rates can be seen inthe figure below; the graph bends upward as the slopes increase.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-concave-up.svg" role="img" style="width: 100%; height: auto;" alt="cocave up graph"></div></div></div>
+<p class="continuation">The increasing rates can be seen inthe figure below; the graph bends upward as the slopes increase.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-concave-up.svg" role="img" class="contained" alt="cocave up graph"></div></div></div>
 </li>
 <li id="li-3796">
 <p id="p-6100">The temperature of the potato is described by  graph(B) and table (2). The function values in table (2) increase, but at a decreasing rate.</p>
@@ -333,18 +339,19 @@ x = 5 \text{ to } x = 10:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{419 - 341}{1
 x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{15 - 10}= 4.4
 \end{gather*}
 </div>
-<p data-braille="continuation">The decreasing slopes can be seen in the figure below. The graph is increasing but bends downward.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-concave-down.svg" role="img" style="width: 100%; height: auto;" alt="cocave down graph"></div></div></div>
+<p class="continuation">The decreasing slopes can be seen in the figure below. The graph is increasing but bends downward.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-concave-down.svg" role="img" class="contained" alt="cocave down graph"></div></div></div>
 </li>
 </ol></div></div>
 </div></article><p id="p-6101">A graph that bends upward is called <dfn class="terminology">concave up</dfn>, and one that bends down is <dfn class="terminology">concave down</dfn>.</p>
-<article class="exercise exercise-like" id="exercise-950"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-950"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-950"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.85</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-950"><article class="exercise exercise-like"><div class="introduction" id="introduction-179"><div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-concavity2.svg" role="img" style="width: 100%; height: auto;" alt="decreasing graphs of opposite concavity"></div></div></div></div>
-<iframe name="webwork-198" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=198&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2Nob2ljZW1hY3Jvcy5wbCIsInBhcnNlclBvcFVwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYWIgPSBQb3BVcCgKWyI%2FIiwiKGEpIiwiKGIpIl0sCjEsIAopOwokZXhwbGFpbiA9IG5ld19jaGVja2JveF9tdWx0aXBsZV9jaG9pY2UoKTsKJGV4cGxhaW4gLT4gcWEgKAoiQSBxdWVzdGlvbiBjYW4gZ28gaGVyZSwgYnV0IFBUWCBpZ25vcmVzIHRoaXMiLAoiVGhlIGdyYXBoIGhhcyBhIHN0ZWVwIG5lZ2F0aXZlIHNsb3BlIGF0IGZpcnN0LCBjb3JyZXNwb25kaW5nIHRvIGFuIGluaXRpYWwgcmFwaWQgZHJvcCBpbiB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hLiAkQlIiLAoiVGhlIGdyYXBoIGJlY29tZXMgY2xvc2VyIHRvIGEgaG9yaXpvbnRhbCBsaW5lLCBjb3JyZXNwb25kaW5nIHRvIHRoZSBjb2NvYSBhcHByb2FjaGluZyByb29tIHRlbXBlcmF0dXJlLiRCUiIsCik7CiRleHBsYWluIC0%2BIGV4dHJhKAoiVGhlIGdyYXBoIGhhcyBhIHNsaWdodCBuZWdhdGl2ZSBzbG9wZSBhdCBmaXJzdCwgY29ycmVzcG9uZGluZyB0byBhbiBpbml0aWFsIHJhcGlkIGRyb3AgaW4gdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYS4kQlIiLAoiVGhlIGdyYXBoIGJlY29tZXMgZ3Jvd3Mgc3RlZXBlciBhbmQgc3RlZXBlciwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS4kQlIiLAopOwokZXhwbGFpbiAtPiBtYWtlTGFzdCgKIlRoZSBncmFwaCBoYXMgYSBzdGVlcCBuZWdhdGl2ZSBzbG9wZSBhdCBmaXJzdCwgY29ycmVzcG9uZGluZyB0byBhbiBpbml0aWFsIHJhcGlkIGRyb3AgaW4gdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYS4gJEJSIiwKIlRoZSBncmFwaCBiZWNvbWVzIGNsb3NlciB0byBhIGhvcml6b250YWwgbGluZSwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS4kQlIiLAoiVGhlIGdyYXBoIGhhcyBhIHNsaWdodCBuZWdhdGl2ZSBzbG9wZSBhdCBmaXJzdCwgY29ycmVzcG9uZGluZyB0byBhbiBpbml0aWFsIHJhcGlkIGRyb3AgaW4gdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYS4kQlIiLAoiVGhlIGdyYXBoIGJlY29tZXMgZ3Jvd3Mgc3RlZXBlciBhbmQgc3RlZXBlciwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS4kQlIiLAogICAgICAgICAgICJOb25lIG9mIHRoZSBhYm92ZSIpOwokY29uY2F2aXR5ID0gUG9wVXAoClsiPyIsIkNvbmNhdmUgdXAiLCJDb25jYXZlIGRvd24iXSwKMSwgCik7CgpCRUdJTl9QR01MCkZyYW5jaW5lIGJvdWdodCBhIGN1cCBvZiBjb2NvYSBhdCB0aGUgY2FmZXRlcmlhLiBUaGUgY29jb2EgY29vbGVkIG9mZiByYXBpZGx5IGF0IGZpcnN0LCBhbmQgdGhlbiBncmFkdWFsbHkgYXBwcm9hY2hlZCByb29tIHRlbXBlcmF0dXJlLiBXaGljaCBncmFwaCBtb3JlIGFjY3VyYXRlbHkgcmVmbGVjdHMgdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYSBhcyBhIGZ1bmN0aW9uIG9mIHRpbWU%2FIFtfXXskYWJ9ezV9CgpFeHBsYWluIHdoeS4gKFNlbGVjdCBhbGwgdGhhdCBhcHBseS4pCgogICAgW0AkZXhwbGFpbi0%2BcHJpbnRfYSgpIEBdKgoKRU5EX1BHTUwKQU5TKGNoZWNrYm94X2NtcCgkZXhwbGFpbi0%2BY29ycmVjdF9hbnMoKSkpOwoKQkVHSU5fUEdNTAoKCklzIHRoZSBncmFwaCB5b3UgY2hvc2UgY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FIFtfXXskY29uY2F2aXR5fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkdyYXBoIChhKTogVGhlIGdyYXBoIGhhcyBhIHN0ZWVwIG5lZ2F0aXZlIHNsb3BlIGF0IGZpcnN0LCBjb3JyZXNwb25kaW5nIHRvIGFuIGluaXRpYWwgcmFwaWQgZHJvcCBpbiB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hLiBUaGUgZ3JhcGggYmVjb21lcyBjbG9zZXIgdG8gYSBob3Jpem9udGFsIGxpbmUsIGNvcnJlc3BvbmRpbmcgdG8gdGhlIGNvY29hIGFwcHJvYWNoaW5nIHJvb20gdGVtcGVyYXR1cmUuIFRoZSBncmFwaCBpcyBjb25jYXZlIHVwLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="198"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-951"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-951"><h6 class="heading">
+</h6>
+<div class="introduction" id="introduction-179"><div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-concavity2.svg" role="img" class="contained" alt="decreasing graphs of opposite concavity"></div></div></div></div>
+<iframe name="webwork-198" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=198&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2Nob2ljZW1hY3Jvcy5wbCIsInBhcnNlclBvcFVwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYWIgPSBQb3BVcCgKWyI%2FIiwiKGEpIiwiKGIpIl0sCjEsIAopOwokZXhwbGFpbiA9IG5ld19jaGVja2JveF9tdWx0aXBsZV9jaG9pY2UoKTsKJGV4cGxhaW4gLT4gcWEgKAoiQSBxdWVzdGlvbiBjYW4gZ28gaGVyZSwgYnV0IFBUWCBpZ25vcmVzIHRoaXMiLAoiVGhlIGdyYXBoIGhhcyBhIHN0ZWVwIG5lZ2F0aXZlIHNsb3BlIGF0IGZpcnN0LCBjb3JyZXNwb25kaW5nIHRvIGFuIGluaXRpYWwgcmFwaWQgZHJvcCBpbiB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hLiAkQlIiLAoiVGhlIGdyYXBoIGJlY29tZXMgY2xvc2VyIHRvIGEgaG9yaXpvbnRhbCBsaW5lLCBjb3JyZXNwb25kaW5nIHRvIHRoZSBjb2NvYSBhcHByb2FjaGluZyByb29tIHRlbXBlcmF0dXJlLiRCUiIsCik7CiRleHBsYWluIC0%2BIGV4dHJhKAoiVGhlIGdyYXBoIGhhcyBhIHNsaWdodCBuZWdhdGl2ZSBzbG9wZSBhdCBmaXJzdCwgY29ycmVzcG9uZGluZyB0byBhbiBpbml0aWFsIHJhcGlkIGRyb3AgaW4gdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYS4kQlIiLAoiVGhlIGdyYXBoIGJlY29tZXMgZ3Jvd3Mgc3RlZXBlciBhbmQgc3RlZXBlciwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS4kQlIiLAopOwokZXhwbGFpbiAtPiBtYWtlTGFzdCgKIlRoZSBncmFwaCBoYXMgYSBzdGVlcCBuZWdhdGl2ZSBzbG9wZSBhdCBmaXJzdCwgY29ycmVzcG9uZGluZyB0byBhbiBpbml0aWFsIHJhcGlkIGRyb3AgaW4gdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYS4gJEJSIiwKIlRoZSBncmFwaCBiZWNvbWVzIGNsb3NlciB0byBhIGhvcml6b250YWwgbGluZSwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS4kQlIiLAoiVGhlIGdyYXBoIGhhcyBhIHNsaWdodCBuZWdhdGl2ZSBzbG9wZSBhdCBmaXJzdCwgY29ycmVzcG9uZGluZyB0byBhbiBpbml0aWFsIHJhcGlkIGRyb3AgaW4gdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYS4kQlIiLAoiVGhlIGdyYXBoIGJlY29tZXMgZ3Jvd3Mgc3RlZXBlciBhbmQgc3RlZXBlciwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS4kQlIiLAogICAgICAgICAgICJOb25lIG9mIHRoZSBhYm92ZSIpOwokY29uY2F2aXR5ID0gUG9wVXAoClsiPyIsIkNvbmNhdmUgdXAiLCJDb25jYXZlIGRvd24iXSwKMSwgCik7CgpCRUdJTl9QR01MCkZyYW5jaW5lIGJvdWdodCBhIGN1cCBvZiBjb2NvYSBhdCB0aGUgY2FmZXRlcmlhLiBUaGUgY29jb2EgY29vbGVkIG9mZiByYXBpZGx5IGF0IGZpcnN0LCBhbmQgdGhlbiBncmFkdWFsbHkgYXBwcm9hY2hlZCByb29tIHRlbXBlcmF0dXJlLiBXaGljaCBncmFwaCBtb3JlIGFjY3VyYXRlbHkgcmVmbGVjdHMgdGhlIHRlbXBlcmF0dXJlIG9mIHRoZSBjb2NvYSBhcyBhIGZ1bmN0aW9uIG9mIHRpbWU%2FIFtfXXskYWJ9ezV9CgpFeHBsYWluIHdoeS4gKFNlbGVjdCBhbGwgdGhhdCBhcHBseS4pCgogICAgW0AkZXhwbGFpbi0%2BcHJpbnRfYSgpIEBdKgoKRU5EX1BHTUwKQU5TKGNoZWNrYm94X2NtcCgkZXhwbGFpbi0%2BY29ycmVjdF9hbnMoKSkpOwoKQkVHSU5fUEdNTAoKCklzIHRoZSBncmFwaCB5b3UgY2hvc2UgY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FIFtfXXskY29uY2F2aXR5fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkdyYXBoIChhKTogVGhlIGdyYXBoIGhhcyBhIHN0ZWVwIG5lZ2F0aXZlIHNsb3BlIGF0IGZpcnN0LCBjb3JyZXNwb25kaW5nIHRvIGFuIGluaXRpYWwgcmFwaWQgZHJvcCBpbiB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hLiBUaGUgZ3JhcGggYmVjb21lcyBjbG9zZXIgdG8gYSBob3Jpem9udGFsIGxpbmUsIGNvcnJlc3BvbmRpbmcgdG8gdGhlIGNvY29hIGFwcHJvYWNoaW5nIHJvb20gdGVtcGVyYXR1cmUuIFRoZSBncmFwaCBpcyBjb25jYXZlIHVwLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="198"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-951"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.86</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-951"><article class="exercise exercise-like"><iframe name="webwork-199" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=199&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJpIiwgImlpIiwgImlpaSIsICJpdiJdLAogIDQsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsImkiLCAiaWkiLCAiaWlpIiwgIml2Il0sCiAgMywgCik7CiRjID0gUG9wVXAoCiAgWyI%2FIiwiaSIsICJpaSIsICJpaWkiLCAiaXYiXSwKICAyLCAKKTsKJGQgPSBQb3BVcCgKICBbIj8iLCJpIiwgImlpIiwgImlpaSIsICJpdiJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApNYXRjaCBlYWNoIHR5cGUgb2YgZ3JhcGggd2l0aCBpdHMgcHJvcGVydGllcy4KYS4gIEluY3JlYXNpbmcsIGNvbmNhdmUgdXAgW19deyRhfXs1fQoKCmEuICBJbmNyZWFzaW5nLCBjb25jYXZlIGRvd24gW19deyRifXs1fQoKCmEuICBEZWNyZWFzaW5nLCBjb25jYXZlIHVwIFtfXXskY317NX0KCgphLiAgRGVjcmVhc2luZywgY29uY2F2ZSBkb3duIFtfXXskZH17NX0KCgppLiAgW2B5YF0tdmFsdWVzIGRlY3JlYXNlLCBzbG9wZXMgZGVjcmVhc2UKaS4gIFtgeWBdLXZhbHVlcyBkZWNyZWFzZSwgc2xvcGVzIGluY3JlYXNlCmkuICBbYHlgXS12YWx1ZXMgaW5jcmVhc2UsIHNsb3BlcyBkZWNyZWFzZQppLiAgW2B5YF0tdmFsdWVzIGluY3JlYXNlLCBzbG9wZXMgaW5jcmVhc2UgICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGl2CmEuICBpaWkKYS4gIGlpCmEuICBpICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="199"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-199" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=199&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJpIiwgImlpIiwgImlpaSIsICJpdiJdLAogIDQsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsImkiLCAiaWkiLCAiaWlpIiwgIml2Il0sCiAgMywgCik7CiRjID0gUG9wVXAoCiAgWyI%2FIiwiaSIsICJpaSIsICJpaWkiLCAiaXYiXSwKICAyLCAKKTsKJGQgPSBQb3BVcCgKICBbIj8iLCJpIiwgImlpIiwgImlpaSIsICJpdiJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApNYXRjaCBlYWNoIHR5cGUgb2YgZ3JhcGggd2l0aCBpdHMgcHJvcGVydGllcy4KYS4gIEluY3JlYXNpbmcsIGNvbmNhdmUgdXAgW19deyRhfXs1fQoKCmEuICBJbmNyZWFzaW5nLCBjb25jYXZlIGRvd24gW19deyRifXs1fQoKCmEuICBEZWNyZWFzaW5nLCBjb25jYXZlIHVwIFtfXXskY317NX0KCgphLiAgRGVjcmVhc2luZywgY29uY2F2ZSBkb3duIFtfXXskZH17NX0KCgppLiAgW2B5YF0tdmFsdWVzIGRlY3JlYXNlLCBzbG9wZXMgZGVjcmVhc2UKaS4gIFtgeWBdLXZhbHVlcyBkZWNyZWFzZSwgc2xvcGVzIGluY3JlYXNlCmkuICBbYHlgXS12YWx1ZXMgaW5jcmVhc2UsIHNsb3BlcyBkZWNyZWFzZQppLiAgW2B5YF0tdmFsdWVzIGluY3JlYXNlLCBzbG9wZXMgaW5jcmVhc2UgICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGl2CmEuICBpaWkKYS4gIGlpCmEuICBpICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="199"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using the Basic Functions as Models</span>
 </h3>
 <p id="p-6159">We have considered situations that can be modeled by linear or quadratic functions.  In this section we'll look at a few of the other basic functions.</p>
@@ -353,47 +360,47 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 </h6>
 <p id="p-6160">Choose one of the eight basic functions to model each situation, and sketch a possible graph.</p>
 <ol class="lower-alpha">
-<li id="li-3840">The number of board-feet, \(B\text{,}\) that can be cut from a Ponderosa pine is a function of the <em class="emphasis">cube</em> of the circumference, \(c\text{,}\) of the tree at a standard height.</li>
-<li id="li-3841">The manager of an appliance store must decide how many coffee-makers to order every quarter. The optimal order size, \(Q\text{,}\) is a function of the <em class="emphasis">square root</em> of the annual demand for coffee-makers, \(D\text{.}\)</li>
-<li id="li-3842">The loudness, or intensity, \(I\text{,}\) of the music at a concert is a function of the <em class="emphasis">reciprocal of the square</em> of your distance, \(d\text{,}\) from the speakers.</li>
+<li id="li-3840"><p id="p-derived-li-3840">The number of board-feet, \(B\text{,}\) that can be cut from a Ponderosa pine is a function of the <em class="emphasis">cube</em> of the circumference, \(c\text{,}\) of the tree at a standard height.</p></li>
+<li id="li-3841"><p id="p-derived-li-3841">The manager of an appliance store must decide how many coffee-makers to order every quarter. The optimal order size, \(Q\text{,}\) is a function of the <em class="emphasis">square root</em> of the annual demand for coffee-makers, \(D\text{.}\)</p></li>
+<li id="li-3842"><p id="p-derived-li-3842">The loudness, or intensity, \(I\text{,}\) of the music at a concert is a function of the <em class="emphasis">reciprocal of the square</em> of your distance, \(d\text{,}\) from the speakers.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-310" id="solution-310"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-310"><div class="solution solution-like"><ol id="p-6161" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-310" id="solution-310"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-310"><div class="solution solution-like"><ol id="p-6161" class="lower-alpha">
 <li id="li-3843">
 <p id="p-6162">\(\displaystyle B=kc^3\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-example-5-6-3a.svg" role="img" style="width: 100%; height: auto;" alt="cubic"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-example-5-6-3a.svg" role="img" class="contained" alt="cubic"></div></div></div>
 </li>
 <li id="li-3844">
 <p id="p-6163">\(\displaystyle Q=k\sqrt{D}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-example-5-6-3b.svg" role="img" style="width: 100%; height: auto;" alt="square root"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-example-5-6-3b.svg" role="img" class="contained" alt="square root"></div></div></div>
 </li>
 <li id="li-3845">
 <p id="p-6164">\(\displaystyle I=\dfrac{k}{d^2}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-example-5-6-3c.svg" role="img" style="width: 100%; height: auto;" alt="inverse square"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-example-5-6-3c.svg" role="img" class="contained" alt="inverse square"></div></div></div>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-952"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-952"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-952"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.88</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-952"><article class="exercise exercise-like"><iframe name="webwork-200" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=200&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRjb25kID0gUmFkaW9CdXR0b25zKAogIFsiXCh5PXheM1wpIiwKICAiXCh5PVxkZnJhY3sxfXt4fVwpIiwKICAiXCh5PVxzcXJ0ezN9e3h9XCkiLAogICJcKHk9XHNxcnR7eH1cKSJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApXaGljaCBncmFwaCBpcyBjb25jYXZlIGRvd24gd2hlcmV2ZXIgaXQgaXMgZGVmaW5lZD8KCiAgICBbX117JGNvbmR9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B5PVxzcXJ0e3h9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="200"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-953"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-953"><h6 class="heading">
+</h6>
+<iframe name="webwork-200" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=200&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRjb25kID0gUmFkaW9CdXR0b25zKAogIFsiXCh5PXheM1wpIiwKICAiXCh5PVxkZnJhY3sxfXt4fVwpIiwKICAiXCh5PVxzcXJ0ezN9e3h9XCkiLAogICJcKHk9XHNxcnR7eH1cKSJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApXaGljaCBncmFwaCBpcyBjb25jYXZlIGRvd24gd2hlcmV2ZXIgaXQgaXMgZGVmaW5lZD8KCiAgICBbX117JGNvbmR9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B5PVxzcXJ0e3h9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="200"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-953"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.89</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-953"><article class="exercise exercise-like"><div class="introduction" id="introduction-180">
+</h6>
+<div class="introduction" id="introduction-180">
 <p id="p-6173">Graphs of the eight basic functions: Eight basic graphs</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-basic-a-c.svg" role="img" style="width: 100%; height: auto;" alt="parabola, cubic, square root"></div></div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-basic-d-f.svg" role="img" style="width: 100%; height: auto;" alt="cube root, reciprocal, inverse square"></div></div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-basic-g-h.svg" role="img" style="width: 100%; height: auto;" alt="line, absolute value"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-basic-a-c.svg" role="img" class="contained" alt="parabola, cubic, square root"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-basic-d-f.svg" role="img" class="contained" alt="cube root, reciprocal, inverse square"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-basic-g-h.svg" role="img" class="contained" alt="line, absolute value"></div></div></div>
 </div>
 <iframe name="webwork-201" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=201&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJxdWFkcmF0aWMiLCAKICAiY3ViaWMiLAogICJzcXVhcmUgcm9vdCIsCiAgImN1YmUgcm9vdCIsCiAgInJlY2lwcm9jYWwiLAogICJpbnZlcnNlIHNxdWFyZSIsCiAgImxpbmVhciIsCiAgImFic29sdXRlIHZhbHVlIl0sCiAgMSwgCik7CiRiID0gUG9wVXAoCiAgWyI%2FIiwicXVhZHJhdGljIiwgCiAgImN1YmljIiwKICAic3F1YXJlIHJvb3QiLAogICJjdWJlIHJvb3QiLAogICJyZWNpcHJvY2FsIiwKICAiaW52ZXJzZSBzcXVhcmUiLAogICJsaW5lYXIiLAogICJhYnNvbHV0ZSB2YWx1ZSJdLAogIDQsIAopOwokYyA9IFBvcFVwKAogIFsiPyIsInF1YWRyYXRpYyIsIAogICJjdWJpYyIsCiAgInNxdWFyZSByb290IiwKICAiY3ViZSByb290IiwKICAicmVjaXByb2NhbCIsCiAgImludmVyc2Ugc3F1YXJlIiwKICAibGluZWFyIiwKICAiYWJzb2x1dGUgdmFsdWUiXSwKICA1LCAKKTsKCkJFR0lOX1BHTUwKQ2hvb3NlIG9uZSBvZiB0aGUgZWlnaHQgYmFzaWMgZnVuY3Rpb25zIHRvIG1vZGVsIGVhY2ggc2l0dWF0aW9uLCBhbmQgc2tldGNoIGEgcG9zc2libGUgZ3JhcGguCmEuICBUaGUgY29udHJhY3RvciBmb3IgYSBuZXcgaG90ZWwgaXMgZXN0aW1hdGluZyB0aGUgY29zdCBvZiB0aGUgbWFyYmxlIHRpbGUgZm9yIGEgY2lyY3VsYXIgbG9iYnkuIFRoZSBjb3N0LCBbYENcdGV4dHssfWBdIGlzIGEgZnVuY3Rpb24gb2YgdGhlIHNxdWFyZSBvZiB0aGUgZGlhbWV0ZXIsIFtgRFx0ZXh0eyx9YF0gb2YgdGhlIGxvYmJ5LgoKICAgIEJhc2ljIGZ1bmN0aW9uOiBbX117JGF9ezV9CgoKYS4gIEludmVzdG9ycyBhcmUgZGVjaWRpbmcgd2hldGhlciB0byBzdXBwb3J0IGEgd2luZG1pbGwgZmFybS4gVGhlIHdpbmQgc3BlZWQsIFtgdlx0ZXh0eyx9YF0gbmVlZGVkIHRvIGdlbmVyYXRlIGEgZ2l2ZW4gYW1vdW50IG9mIHBvd2VyIGlzIGEgZnVuY3Rpb24gb2YgdGhlIGN1YmUgcm9vdCBvZiB0aGUgcG93ZXIsIFtgUFx0ZXh0ey59YF0KCiAgICBCYXNpYyBmdW5jdGlvbjogW19deyRifXs1fQoKCmEuICBUaGUgZnJlcXVlbmN5LCBbYEZcdGV4dHssfWBdIG9mIHRoZSBub3RlIHByb2R1Y2VkIGJ5IGEgdmlvbGluIHN0cmluZyBpcyBhIGZ1bmN0aW9uIG9mIHRoZSByZWNpcHJvY2FsIG9mIHRoZSBsZW5ndGgsIFtgTFx0ZXh0eyx9YF0gb2YgdGhlIHN0cmluZy4KCiAgICBCYXNpYyBmdW5jdGlvbjogW19deyRjfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2BDPWtEXjJcdGV4dHs7fWBdIGEgZ3JhcGggaXMgYmVsb3cuCgoKYS4gIFtgdj1rXHNxcnRbM117UH1cdGV4dHs7fWBdIGEgZ3JhcGggaXMgYmVsb3cuCgoKYS4gIFtgRj1cZGZyYWN7a317TH1cdGV4dHs7fWBdIGEgZ3JhcGggaXMgYmVsb3cuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="201"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-24"><ol id="p-6215" class="lower-alpha">
-<li id="li-3883"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:27.7777777777778%;justify-content:flex-start;"><img src="images/fig-quadratic-model.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></li>
-<li id="li-3884"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:27.7777777777778%;justify-content:flex-start;"><img src="images/fig-cube-root-model.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></li>
-<li id="li-3885"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:27.7777777777778%;justify-content:flex-start;"><img src="images/fig-inverse-model.svg" role="img" style="width: 100%; height: auto;" alt="graph"></div></div></div></li>
-</ol></div></article></div>
-<p id="p-6216">The next Example illustrates an application of the function \(f(x)=\sqrt{x}\text{.}\)</p>
+<li id="li-3883"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:27.7777777777778%;"><img src="external/images/fig-quadratic-model.svg" role="img" class="contained" alt="graph"></div></div></div></li>
+<li id="li-3884"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:27.7777777777778%;"><img src="external/images/fig-cube-root-model.svg" role="img" class="contained" alt="graph"></div></div></div></li>
+<li id="li-3885"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:27.7777777777778%;"><img src="external/images/fig-inverse-model.svg" role="img" class="contained" alt="graph"></div></div></div></li>
+</ol></div></article><p id="p-6216">The next Example illustrates an application of the function \(f(x)=\sqrt{x}\text{.}\)</p>
 <article class="example example-like" id="example-sound"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.90</span><span class="period">.</span>
 </h6>
 <p id="p-6217">The speed of sound is a function of the temperature of the air in kelvins. (The temperature, \(T\text{,}\) in kelvins is given by \(T = C + 273\text{,}\) where \(C\) is the temperature in degrees Celsius.) The table shows the speed of sound, \(s\text{,}\) in meters per second, at various temperatures, \(T\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(T ~ (\degree K)\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
@@ -401,7 +408,7 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 <td class="c m b1 r1 l0 t3 lines">\(50\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(100\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(200\)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">\(400\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(400\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(T ~ (\text{m/sec})\)</td>
@@ -410,21 +417,21 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 <td class="c m b1 r1 l0 t0 lines">\(141.8\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(200.6\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(283.7\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(401.2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(401.2\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-6218" class="lower-alpha">
-<li id="li-3886">Plot the data to obtain a graph. Which of the basic functions does your graph most resemble?</li>
-<li id="li-3887">Find a value of \(k\) so that \(s = kf(T)\) fits the data.</li>
-<li id="li-3888">On a summer night when the temperature is \(20\degree\) Celsius, you see a flash of lightning, and 6 seconds later you hear the thunderclap. Use your function to estimate your distance from the thunderstorm.</li>
+<li id="li-3886"><p id="p-derived-li-3886">Plot the data to obtain a graph. Which of the basic functions does your graph most resemble?</p></li>
+<li id="li-3887"><p id="p-derived-li-3887">Find a value of \(k\) so that \(s = kf(T)\) fits the data.</p></li>
+<li id="li-3888"><p id="p-derived-li-3888">On a summer night when the temperature is \(20\degree\) Celsius, you see a flash of lightning, and 6 seconds later you hear the thunderclap. Use your function to estimate your distance from the thunderstorm.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-313" id="solution-313"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-313"><div class="solution solution-like"><ol id="p-6219" class="lower-alpha">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-313" id="solution-313"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-313"><div class="solution solution-like"><ol id="p-6219" class="lower-alpha">
 <li id="li-3889">
 <p id="p-6220">The graph of the data is shown below. The shape of the graph reminds us of the square root function, \(y = \sqrt{x}\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-speed-sound.svg" role="img" style="width: 100%; height: auto;" alt="speed of sound"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-speed-sound.svg" role="img" class="contained" alt="speed of sound"></div></div></div>
 </li>
-<li id="li-3890">We are looking for a value of \(k\) so that the function \(f(T) = k \sqrt{T}\) fits the data. We substitute one of the data points into the formula and solve for \(k\text{.}\) If we choose the point \((100, 200.6)\text{,}\) we obtain<div class="displaymath">
+<li id="li-3890"><p id="p-derived-li-3890">We are looking for a value of \(k\) so that the function \(f(T) = k \sqrt{T}\) fits the data. We substitute one of the data points into the formula and solve for \(k\text{.}\) If we choose the point \((100, 200.6)\text{,}\) we obtain<div class="displaymath">
 \begin{equation*}
 200.6 = k \sqrt{100}
 \end{equation*}
@@ -432,7 +439,7 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 \begin{equation*}
 f (T) = 20.06\sqrt{T}
 \end{equation*}
-</div>as a model for the speed of sound.</li>
+</div>as a model for the speed of sound.</p></li>
 <li id="li-3891">
 <p id="p-6221">First, we use the model to calculate the speed of sound at a temperature of \(20\degree\) Celsius. The Kelvin temperature is</p>
 <div class="displaymath">
@@ -440,13 +447,13 @@ f (T) = 20.06\sqrt{T}
 T = 20 + 273 = 293
 \end{equation*}
 </div>
-<p data-braille="continuation">so we evaluate \(s = f (T )\) for \(T = 293\text{.}\)</p>
+<p class="continuation">so we evaluate \(s = f (T )\) for \(T = 293\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 f (293) = 20.06\sqrt{293}\approx 343.4
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus, \(s\) is approximately 343.4 meters per second.</p>
+<p class="continuation">Thus, \(s\) is approximately 343.4 meters per second.</p>
 <p id="p-6222">The lightning and the thunderclap occur simultaneously, and the speed of light is so fast (about 30,000,000 meters per second) that we see the lightning flash as it occurs. So if the sound of the thunderclap takes \(6\) seconds after the flash to reach us, we can use our calculated speed of sound to find our distance from the storm.</p>
 <div class="displaymath">
 \begin{align*}
@@ -454,16 +461,16 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 \amp = (343.4\text{ m/sec}) (6 \text{ sec}) = 2060.4 \text{ meters}
 \end{align*}
 </div>
-<p data-braille="continuation">The thunderstorm is 2060 meters, or about 1.3 miles, away.</p>
+<p class="continuation">The thunderstorm is 2060 meters, or about 1.3 miles, away.</p>
 </li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-954"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-954"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-954"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.91</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-954"><article class="exercise exercise-like"><iframe name="webwork-202" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=202&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYmFzaWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgWyJcKHk9IHheMiBcKSIsCiAgICAgICAgIlwoeT0geF4zIFwpIiwKICAgICAgICAiXCh5PSBcc3FydHt4fSBcKSIsCiAgICAgICAgIlwoeT0gXHNxcnRbM117eH0gXCkiLAogICAgICAgICJcKHk9IFxmcmFjezF9e3h9IFwpIiwKICAgICAgICAiXCh5PSBcZnJhY3sxfXt4XjJ9IFwpIiwKICAgICAgICAiXCh5PSB4IFwpIiwKICAgICAgICAiXCh5PSBcbGVmdHwgeFxyaWdodHxcKSJdLAogICAgICAgIDQsCiAgICApOwokbW9yZSA9IENvbXB1dGUoIjYwIik7CiRsZXNzID0gQ29tcHV0ZSgiMzAwIik7CgpCRUdJTl9QR01MClRoZSB1bHRyYXZpb2xldCBpbmRleCAoVVZJKSBpcyBpc3N1ZWQgYnkgdGhlIE5hdGlvbmFsIFdlYXRoZXIgU2VydmljZSBhcyBhIGZvcmVjYXN0IG9mIHRoZSBhbW91bnQgb2YgdWx0cmF2aW9sZXQgcmFkaWF0aW9uIGV4cGVjdGVkIHRvIHJlYWNoIEVhcnRoIGFyb3VuZCBub29uIG9uIGEgZ2l2ZW4gZGF5LiBUaGUgZGF0YSBzaG93IGhvdyBtdWNoIGV4cG9zdXJlIHRvIHRoZSBzdW4gcGVvcGxlIGNhbiB0YWtlIGJlZm9yZSByaXNraW5nIHN1bmJ1cm4uCgo%2BPiBbQERhdGFUYWJsZShbW1tQR01MKCdVVkknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDJgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AzYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgOGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDEwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTJgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnTWludXRlcyB0byBidXJuICAKKG1vcmUgc2Vuc2l0aXZlKSAgCicpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMzBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AyMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTJgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDcuNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDZgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ01pbnV0ZXMgdG8gYnVybiAgCihtb3JlIHNlbnNpdGl2ZSkgIAonKSxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTUwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNzVgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2MGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMzcuNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDMwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMjVgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLF0sYWxpZ249Pid8Y3xjfGN8Y3xjfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSogPDwKCmEuICBQbG90IFtgbVx0ZXh0eyx9YF0gdGhlIG1pbnV0ZXMgdG8gYnVybiwgYWdhaW5zdCBbYHVcdGV4dHssfWBdIHRoZSBVVkksIHRvIG9idGFpbiB0d28gZ3JhcGhzLCBvbmUgZm9yIHBlb3BsZSB3aG8gYXJlIG1vcmUgc2Vuc2l0aXZlIHRvIHN1bmJ1cm4sIGFuZCBhbm90aGVyIGZvciBwZW9wbGUgbGVzcyBzZW5zaXRpdmUgdG8gc3VuYnVybi4gV2hpY2ggb2YgdGhlIGJhc2ljIGZ1bmN0aW9ucyBkbyB5b3VyIGdyYXBocyBtb3N0IHJlc2VtYmxlPwoKICAgIFtfXXskYmFzaWN9ezV9CgoKYS4gIEZvciBlYWNoIGdyYXBoLCBmaW5kIGEgdmFsdWUgb2YgW2BrYF0gc28gdGhhdCBbYG0gPSBrIGYodSlgXSBmaXRzIHRoZSBkYXRhLgoKICAgIE1vcmUgc2Vuc2l0aXZlOiBbYGs9YF1bX117JG1vcmV9ezR9CgogICAgTGVzcyBzZW5zaXRpdmU6IFtgaz1gXVtfXXskbGVzc317NH0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRoZSBncmFwaHMgYXJlIHNob3duIGJlbG93LiBUaGV5IHJlc2VtYmxlIFtgZiAoeCkgPSBcZGZyYWN7MX17eH1cdGV4dHsufWBdCgoKYS4gIE1vcmUgc2Vuc2l0aXZlOiBbYGsgPSA2MFx0ZXh0eyx9YF0gTGVzcyBzZW5zaXRpdmU6IFtgayA9IDMwMGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="202"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-25"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:75%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-ex-5-6-4ans.svg" role="img" style="width: 100%; height: auto;" alt="two concave up decreasing curves"></div></div></div></div></article></div>
-<article class="exercise exercise-like" id="exercise-955"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-955"><h6 class="heading">
+</h6>
+<iframe name="webwork-202" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=202&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIm5pY2VUYWJsZXMucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYmFzaWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgWyJcKHk9IHheMiBcKSIsCiAgICAgICAgIlwoeT0geF4zIFwpIiwKICAgICAgICAiXCh5PSBcc3FydHt4fSBcKSIsCiAgICAgICAgIlwoeT0gXHNxcnRbM117eH0gXCkiLAogICAgICAgICJcKHk9IFxmcmFjezF9e3h9IFwpIiwKICAgICAgICAiXCh5PSBcZnJhY3sxfXt4XjJ9IFwpIiwKICAgICAgICAiXCh5PSB4IFwpIiwKICAgICAgICAiXCh5PSBcbGVmdHwgeFxyaWdodHxcKSJdLAogICAgICAgIDQsCiAgICApOwokbW9yZSA9IENvbXB1dGUoIjYwIik7CiRsZXNzID0gQ29tcHV0ZSgiMzAwIik7CgpCRUdJTl9QR01MClRoZSB1bHRyYXZpb2xldCBpbmRleCAoVVZJKSBpcyBpc3N1ZWQgYnkgdGhlIE5hdGlvbmFsIFdlYXRoZXIgU2VydmljZSBhcyBhIGZvcmVjYXN0IG9mIHRoZSBhbW91bnQgb2YgdWx0cmF2aW9sZXQgcmFkaWF0aW9uIGV4cGVjdGVkIHRvIHJlYWNoIEVhcnRoIGFyb3VuZCBub29uIG9uIGEgZ2l2ZW4gZGF5LiBUaGUgZGF0YSBzaG93IGhvdyBtdWNoIGV4cG9zdXJlIHRvIHRoZSBzdW4gcGVvcGxlIGNhbiB0YWtlIGJlZm9yZSByaXNraW5nIHN1bmJ1cm4uCgo%2BPiBbQERhdGFUYWJsZShbW1tQR01MKCdVVkknKSxtaWRydWxlPT4nMScscm93Y3NzPT4nYm9yZGVyLWJvdHRvbToxcHggc29saWQ7JyxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLWxlZnQ6MXB4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDJgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AzYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDVgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgOGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci10b3A6M3B4IHNvbGlkO2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDEwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXRvcDozcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTJgXScpLGNlbGxjc3M9Pidib3JkZXItdG9wOjNweCBzb2xpZDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLFtbUEdNTCgnTWludXRlcyB0byBidXJuICAKKG1vcmUgc2Vuc2l0aXZlKSAgCicpLG1pZHJ1bGU9PicxJyxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMzBgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AyMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDE1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTJgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2AxMGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDcuNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDZgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A1YF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sXSxbW1BHTUwoJ01pbnV0ZXMgdG8gYnVybiAgCihtb3JlIHNlbnNpdGl2ZSkgIAonKSxyb3djc3M9Pidib3JkZXItYm90dG9tOjFweCBzb2xpZDsnLGNlbGxjc3M9Pidib3JkZXItbGVmdDoxcHggc29saWQ7Ym9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTUwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMTAwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgNzVgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxbUEdNTCgnW2A2MGBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDUwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMzcuNWBdJyksY2VsbGNzcz0%2BJ2JvcmRlci1yaWdodDoxcHggc29saWQ7JyxdLFtQR01MKCdbYDMwYF0nKSxjZWxsY3NzPT4nYm9yZGVyLXJpZ2h0OjFweCBzb2xpZDsnLF0sW1BHTUwoJ1tgMjVgXScpLGNlbGxjc3M9Pidib3JkZXItcmlnaHQ6MXB4IHNvbGlkOycsXSxdLF0sYWxpZ249Pid8Y3xjfGN8Y3xjfGN8Y3xjfGN8Jyxjb2x1bW5zY3NzPT5bXSxjZW50ZXI9PjAsKTtAXSogPDwKCmEuICBQbG90IFtgbVx0ZXh0eyx9YF0gdGhlIG1pbnV0ZXMgdG8gYnVybiwgYWdhaW5zdCBbYHVcdGV4dHssfWBdIHRoZSBVVkksIHRvIG9idGFpbiB0d28gZ3JhcGhzLCBvbmUgZm9yIHBlb3BsZSB3aG8gYXJlIG1vcmUgc2Vuc2l0aXZlIHRvIHN1bmJ1cm4sIGFuZCBhbm90aGVyIGZvciBwZW9wbGUgbGVzcyBzZW5zaXRpdmUgdG8gc3VuYnVybi4gV2hpY2ggb2YgdGhlIGJhc2ljIGZ1bmN0aW9ucyBkbyB5b3VyIGdyYXBocyBtb3N0IHJlc2VtYmxlPwoKICAgIFtfXXskYmFzaWN9ezV9CgoKYS4gIEZvciBlYWNoIGdyYXBoLCBmaW5kIGEgdmFsdWUgb2YgW2BrYF0gc28gdGhhdCBbYG0gPSBrIGYodSlgXSBmaXRzIHRoZSBkYXRhLgoKICAgIE1vcmUgc2Vuc2l0aXZlOiBbYGs9YF1bX117JG1vcmV9ezR9CgogICAgTGVzcyBzZW5zaXRpdmU6IFtgaz1gXVtfXXskbGVzc317NH0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRoZSBncmFwaHMgYXJlIHNob3duIGJlbG93LiBUaGV5IHJlc2VtYmxlIFtgZiAoeCkgPSBcZGZyYWN7MX17eH1cdGV4dHsufWBdCgoKYS4gIE1vcmUgc2Vuc2l0aXZlOiBbYGsgPSA2MFx0ZXh0eyx9YF0gTGVzcyBzZW5zaXRpdmU6IFtgayA9IDMwMGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="202"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-25"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:75%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-ex-5-6-4ans.svg" role="img" class="contained" alt="two concave up decreasing curves"></div></div></div></div></article><article class="exercise exercise-like" id="exercise-955"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.92</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-955"><article class="exercise exercise-like"><iframe name="webwork-203" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=203&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtb2RlbCA9IFJhZGlvQnV0dG9ucygKICBbInBsb3QgdGhlIGRhdGEuIiwKICAibG9vayBhdCB0aGUgdmFyaWFibGVzLiIsCiAgImNob29zZSBzY2FsZXMgZm9yIHRoZSBheGVzLiIsCiAgImNhbGN1bGF0ZSB0aGUgc2xvcGUuIl0sCiAgMCwgCik7CgpCRUdJTl9QR01MClRvIGRlY2lkZSB3aGljaCBiYXNpYyBmdW5jdGlvbiBtaWdodCBtb2RlbCBhIHNldCBvZiBkYXRhLCB3ZSBjYW4KCiAgICBbX117JG1vZGVsfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCnBsb3QgdGhlIGRhdGEuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="203"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-6252">At this point, a word of caution is in order. There is more to choosing a model than finding a curve that fits the data. A model based purely on the data is called an <dfn class="terminology">empirical model</dfn>. However, many functions have similar shapes over small intervals of their input variables, and there may be several candidates that model the data. Such a model simply describes the general shape of the data set; the parameters  of the model do not necessarily correspond to any actual process.</p>
+</h6>
+<iframe name="webwork-203" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=203&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtb2RlbCA9IFJhZGlvQnV0dG9ucygKICBbInBsb3QgdGhlIGRhdGEuIiwKICAibG9vayBhdCB0aGUgdmFyaWFibGVzLiIsCiAgImNob29zZSBzY2FsZXMgZm9yIHRoZSBheGVzLiIsCiAgImNhbGN1bGF0ZSB0aGUgc2xvcGUuIl0sCiAgMCwgCik7CgpCRUdJTl9QR01MClRvIGRlY2lkZSB3aGljaCBiYXNpYyBmdW5jdGlvbiBtaWdodCBtb2RlbCBhIHNldCBvZiBkYXRhLCB3ZSBjYW4KCiAgICBbX117JG1vZGVsfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCnBsb3QgdGhlIGRhdGEuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="203"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-6252">At this point, a word of caution is in order. There is more to choosing a model than finding a curve that fits the data. A model based purely on the data is called an <dfn class="terminology">empirical model</dfn>. However, many functions have similar shapes over small intervals of their input variables, and there may be several candidates that model the data. Such a model simply describes the general shape of the data set; the parameters  of the model do not necessarily correspond to any actual process.</p>
 <p id="p-6253">In contrast, <dfn class="terminology">mechanistic models</dfn> provide insight into the biological, chemical, or physical process that is thought to govern the phenomenon under study. Parameters derived from mechanistic models are quantitative estimates of real system properties. Here is what GraphPad Software has to say about modeling:</p>
 <p id="p-6254">"Choosing a model is a scientific decision. You should base your choice on your understanding of chemistry or physiology (or genetics, etc.). The choice should not be based solely on the shape of the graph.</p>
 <p id="p-6255">"Some programs . . . automatically fit data to hundreds or thousands of equations and then present you with the equation(s) that fit the data best. Using such a program is appealing because it frees you from the need to choose an equation. The problem is that the program has no understanding of the scientific context of your experiment. The equations that fit the data best are unlikely to correspond to scientifically meaningful models. You will not be able to interpret the best-fit values of the variables, and the results are unlikely to be useful for data analysis."</p>
@@ -471,10 +478,10 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Absolute Value and Distance</span>
 </h3>
 <p id="p-6257">The absolute value function is used to model problems involving distance. Recall that the absolute value of a number gives the distance from the origin to that number on the number line.</p>
-<article class="exercise exercise-like" id="exercise-956"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-956"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-956"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.93</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-956"><article class="exercise exercise-like"><iframe name="webwork-204" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=204&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhYnNkaXN0ID0gUmFkaW9CdXR0b25zKAogIFsiY2hhbmdlIGl0cyBzaWduLiIsCiAgInN1YnRyYWN0IGl0IGZyb20gMC4iLAogICJmaW5kIGl0cyBkaXN0YW5jZSBmcm9tIDAuIiwKICAic3F1YXJlIGl0LiJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApUbyBmaW5kIHRoZSBhYnNvbHV0ZSB2YWx1ZSBvZiBhIG51bWJlciwgd2UgY2FuCgogICAgW19deyRhYnNkaXN0fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmZpbmQgaXRzIGRpc3RhbmNlIGZyb20gMC4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="204"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<p id="p-6266">We can find the distance from a number \(x\) to some point other than the origin, say \(a\text{,}\) by computing \(\abs{x - a}\text{.}\) For instance, the distance on the number line from \(x=-2\) to \(a=5\) is</p>
+</h6>
+<iframe name="webwork-204" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=204&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhYnNkaXN0ID0gUmFkaW9CdXR0b25zKAogIFsiY2hhbmdlIGl0cyBzaWduLiIsCiAgInN1YnRyYWN0IGl0IGZyb20gMC4iLAogICJmaW5kIGl0cyBkaXN0YW5jZSBmcm9tIDAuIiwKICAic3F1YXJlIGl0LiJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApUbyBmaW5kIHRoZSBhYnNvbHV0ZSB2YWx1ZSBvZiBhIG51bWJlciwgd2UgY2FuCgogICAgW19deyRhYnNkaXN0fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmZpbmQgaXRzIGRpc3RhbmNlIGZyb20gMC4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="204"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><p id="p-6266">We can find the distance from a number \(x\) to some point other than the origin, say \(a\text{,}\) by computing \(\abs{x - a}\text{.}\) For instance, the distance on the number line from \(x=-2\) to \(a=5\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \abs{-2-5} = \abs{-7} = 7~ \text{units}
@@ -482,56 +489,57 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 </div>
 <article class="assemblage assemblage-like" id="assemblage-58"><h6 class="heading"><span class="title">Distance and Absolute Value.</span></h6>
 <p id="p-6267">The distance between two points \(x\) and \(a\) is given by \(\abs{x - a}\text{.}\)</p></article><p id="p-6268">For example, the equation \(\abs{x - 2} = 6\) means "the distance between \(x\) and \(2\) is \(6\) units." The number \(x\) could be to the left or the right of \(2\) on the number line. Thus, the equation has two solutions, \(8\) and \(-4\text{,}\) as shown below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-x-minus-2-is-6.svg" role="img" style="width: 100%; height: auto;" alt="6 units from 2"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-abs-x-minus-2-is-6.svg" role="img" class="contained" alt="6 units from 2"></div></div></div>
 <article class="example example-like" id="example-distances"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.94</span><span class="period">.</span>
 </h6>
 <p id="p-6269">Write each statement using absolute value notation. Illustrate the solutions on a number line.</p>
 <ol class="lower-alpha">
-<li id="li-3912">\(x\) is three units from the origin.</li>
-<li id="li-3913">\(p\) is two units from \(5\text{.}\)</li>
-<li id="li-3914">\(a\) is within four units of \(-2\text{.}\)</li>
+<li id="li-3912"><p id="p-derived-li-3912">\(x\) is three units from the origin.</p></li>
+<li id="li-3913"><p id="p-derived-li-3913">\(p\) is two units from \(5\text{.}\)</p></li>
+<li id="li-3914"><p id="p-derived-li-3914">\(a\) is within four units of \(-2\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-317" id="solution-317"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-317"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-317" id="solution-317"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-317"><div class="solution solution-like">
 <p id="p-6270">First, we restate each statement in terms of distance.</p>
 <ol class="lower-alpha">
 <li id="li-3915">
 <p id="p-6271">The distance between \(x\) and the origin is three units, or \(\abs{x} = 3\text{.}\) Thus, \(x\) can be \(3\) or \(-3\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-x-is-3.svg" role="img" style="width: 100%; height: auto;" alt="absolut value of x is 3"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-abs-x-is-3.svg" role="img" class="contained" alt="absolut value of x is 3"></div></div></div>
 </li>
 <li id="li-3916">
 <p id="p-6272">The distance between \(p\) and \(5\) is two units, or \(\abs{p - 5} = 2\text{.}\) If we count two units on either side of \(5\text{,}\) we see that \(p\) can be \(3\) or \(7\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-p-minus-5-is-2.svg" role="img" style="width: 100%; height: auto;" alt="absolut value of p-5 is 2"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-abs-p-minus-5-is-2.svg" role="img" class="contained" alt="absolut value of p-5 is 2"></div></div></div>
 </li>
 <li id="li-3917">
 <p id="p-6273">The distance between \(a\) and \(-2\) is less than four units, or \(\abs{a - (-2)} \lt 4\text{,}\) or \(\abs{a + 2} \lt 4\text{.}\) Count four units on either side of \(-2\text{,}\) to find \(-6\) and \(2\text{.}\) Then \(a\) is between \(-6\) and \(2\text{,}\) or \(-6 \lt a \lt 2\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-4-units-from-negative-2.svg" role="img" style="width: 100%; height: auto;" alt="4 units from -2"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-4-units-from-negative-2.svg" role="img" class="contained" alt="4 units from -2"></div></div></div>
 </li>
 </ol>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-957"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-957"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-957"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.95</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-957"><article class="exercise exercise-like"><iframe name="webwork-205" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=205&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRkaXN0NSA9IFJhZGlvQnV0dG9ucygKICBbIlwoeFwpIGlzIDMgdW5pdHMgYmlnZ2VyIHRoYW4gNS4iLAogICJ0aGUgZGlzdGFuY2UgYmV0d2VlbiBcKHhcKSBhbmQgNSBpcyAzIHVuaXRzLiIsCiAgIjUgYW5kIDMgYXJlIFwoeFwpIHVuaXRzIGFwYXJ0LiIsCiAgInRoZSBkaXN0YW5jZSBiZXR3ZWVuIFwoeFwpIGFuZCAzIGlzIDUgdW5pdHMuIl0sCiAgMywgCik7CgpCRUdJTl9QR01MClRoZSBub3RhdGlvbiBbYHx4LTN8PTVgXSBtZWFucwoKICAgIFtfXXskZGlzdDV9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KdGhlIGRpc3RhbmNlIGJldHdlZW4gW2B4YF0gYW5kIDMgaXMgNSB1bml0cy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="205"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="exercise exercise-like" id="exercise-write-abs"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-write-abs"><h6 class="heading">
+</h6>
+<iframe name="webwork-205" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=205&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRkaXN0NSA9IFJhZGlvQnV0dG9ucygKICBbIlwoeFwpIGlzIDMgdW5pdHMgYmlnZ2VyIHRoYW4gNS4iLAogICJ0aGUgZGlzdGFuY2UgYmV0d2VlbiBcKHhcKSBhbmQgNSBpcyAzIHVuaXRzLiIsCiAgIjUgYW5kIDMgYXJlIFwoeFwpIHVuaXRzIGFwYXJ0LiIsCiAgInRoZSBkaXN0YW5jZSBiZXR3ZWVuIFwoeFwpIGFuZCAzIGlzIDUgdW5pdHMuIl0sCiAgMywgCik7CgpCRUdJTl9QR01MClRoZSBub3RhdGlvbiBbYHx4LTN8PTVgXSBtZWFucwoKICAgIFtfXXskZGlzdDV9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KdGhlIGRpc3RhbmNlIGJldHdlZW4gW2B4YF0gYW5kIDMgaXMgNSB1bml0cy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="205"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise exercise-like" id="exercise-write-abs"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.96</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-write-abs"><article class="exercise exercise-like"><iframe name="webwork-206" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=206&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmID0gRm9ybXVsYSgiYWJzKHgrMykiKTsKJGEgPSA1OwokZyA9IEZvcm11bGEoImFicyh4LTQpIik7CiRiID0gNjsKCkJFR0lOX1BHTUwKV3JpdGUgZWFjaCBzdGF0ZW1lbnQgdXNpbmcgYWJzb2x1dGUgdmFsdWUgbm90YXRpb247IHRoZW4gaWxsdXN0cmF0ZSB0aGUgc29sdXRpb25zIG9uIGEgbnVtYmVyIGxpbmUuCmEuICBbYHhgXSBpcyBmaXZlIHVuaXRzIGF3YXkgZnJvbSBbYC0zXHRleHR7Ln1gXQoKICAgIFtfXXskZn17MTV9W2A9YF1bX117JGF9ezJ9CgoKYS4gIFtgeGBdIGlzIGF0IGxlYXN0IHNpeCB1bml0cyBhd2F5IGZyb20gW2A0XHRleHR7Ln1gXQoKICAgIFtfXXskZ317MTV9W2BcZ2VgXVtfXXskYn17Mn0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImFicyh4KSIgdG8gZ2V0IFtgfHh8XHRleHR7LH1gXSBldGMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGxlZnR8eCszXHJpZ2h0fD01YF0KCiAgICBBIG51bWJlciBsaW5lIGlzIHNob3duIGJlbG93LgoKCmEuICBbYFxsZWZ0fHgtNFxyaWdodHxcZ2UgNmBdCgogICAgQSBudW1iZXJsaW5lIGlzIHNob3duIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="206"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-26"><ol id="p-6296" class="lower-alpha">
-<li id="li-3926"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:45%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-x-minus-3-eq5.svg" role="img" style="width: 100%; height: auto;" alt="number line"></div></div></div></li>
-<li id="li-3927"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:45%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-x-minus-4-ge-6.svg" role="img" style="width: 100%; height: auto;" alt="number line"></div></div></div></li>
-</ol></div></article></div></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-206" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=206&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmID0gRm9ybXVsYSgiYWJzKHgrMykiKTsKJGEgPSA1OwokZyA9IEZvcm11bGEoImFicyh4LTQpIik7CiRiID0gNjsKCkJFR0lOX1BHTUwKV3JpdGUgZWFjaCBzdGF0ZW1lbnQgdXNpbmcgYWJzb2x1dGUgdmFsdWUgbm90YXRpb247IHRoZW4gaWxsdXN0cmF0ZSB0aGUgc29sdXRpb25zIG9uIGEgbnVtYmVyIGxpbmUuCmEuICBbYHhgXSBpcyBmaXZlIHVuaXRzIGF3YXkgZnJvbSBbYC0zXHRleHR7Ln1gXQoKICAgIFtfXXskZn17MTV9W2A9YF1bX117JGF9ezJ9CgoKYS4gIFtgeGBdIGlzIGF0IGxlYXN0IHNpeCB1bml0cyBhd2F5IGZyb20gW2A0XHRleHR7Ln1gXQoKICAgIFtfXXskZ317MTV9W2BcZ2VgXVtfXXskYn17Mn0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImFicyh4KSIgdG8gZ2V0IFtgfHh8XHRleHR7LH1gXSBldGMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGxlZnR8eCszXHJpZ2h0fD01YF0KCiAgICBBIG51bWJlciBsaW5lIGlzIHNob3duIGJlbG93LgoKCmEuICBbYFxsZWZ0fHgtNFxyaWdodHxcZ2UgNmBdCgogICAgQSBudW1iZXJsaW5lIGlzIHNob3duIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="206"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-26"><ol id="p-6296" class="lower-alpha">
+<li id="li-3926"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:45%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-abs-x-minus-3-eq5.svg" role="img" class="contained" alt="number line"></div></div></div></li>
+<li id="li-3927"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:45%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-abs-x-minus-4-ge-6.svg" role="img" class="contained" alt="number line"></div></div></div></li>
+</ol></div></article></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Absolute Value Equations</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
-<div class="sbspanel" style="width:57.8947368421053%;justify-content:center;">
+<div class="sbspanel middle" style="width:57.8947368421053%;">
 <p id="p-6297">A graph can help us analyze an absolute value equation. For example, we know that the simple equation \(\abs{x} = 5\) has two solutions, \(x = 5\) and \(x = -5\text{.}\)</p>
 <p id="p-6298">In fact, we can see from the graph at right that the equation \(\abs{x} = k\) has two solutions if \(k \gt 0\text{,}\) one solution if \(k = 0\text{,}\) and no solution if \(k \lt 0\text{.}\)</p>
 </div>
-<div class="sbspanel" style="width:36.8421052631579%;justify-content:center;"><img src="images/fig-abs-x-is-k.svg" role="img" style="width: 100%; height: auto;" alt="4 units from -2"></div>
+<div class="sbspanel middle" style="width:36.8421052631579%;"><img src="external/images/fig-abs-x-is-k.svg" role="img" class="contained" alt="4 units from -2"></div>
 </div></div>
-<article class="exercise exercise-like" id="exercise-959"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-959"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-959"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.97</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-959"><article class="exercise exercise-like"><iframe name="webwork-207" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=207&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhYnNxID0gUmFkaW9CdXR0b25zKAogIFsiVGhlIGdyYXBoIG9mIFwoeT18MngtOHxcKSBoYXMgbm8gbmVnYXRpdmUgaW5wdXRzLiIsCiAgIlRoZSBlcXVhdGlvbiBcKHwyeC04fD0tNFwpIGhhcyB0d28gc29sdXRpb25zLiIsCiAgIkRlcGVuZGluZyBvbiBcKHgsfn5%2BfDJ4LTh8XCkgY2FuIGVxdWFsIFwoMngtOFwpIG9yIFwoOC0yeFwpLiIsCiAgIlRoZSBncmFwaCBvZiBcKHk9fDJ4LTh8XCkgaXMgYSBzdHJhaWdodCBsaW5lLiJdLAogIDIsICAgICAgICAgICAKICApOwoKQkVHSU5fUEdNTApXaGljaCBzdGF0ZW1lbnQgaXMgdHJ1ZT8KCiAgICBbX117JGFic3F9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRGVwZW5kaW5nIG9uIFtgeFx0ZXh0eyx9YF0gW2B8MngtOHxgXSBjYW4gZXF1YWwgW2AyeC04YF0gb3IgW2A4LTJ4XHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="207"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-abs-equation"><h6 class="heading">
+</h6>
+<iframe name="webwork-207" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=207&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhYnNxID0gUmFkaW9CdXR0b25zKAogIFsiVGhlIGdyYXBoIG9mIFwoeT18MngtOHxcKSBoYXMgbm8gbmVnYXRpdmUgaW5wdXRzLiIsCiAgIlRoZSBlcXVhdGlvbiBcKHwyeC04fD0tNFwpIGhhcyB0d28gc29sdXRpb25zLiIsCiAgIkRlcGVuZGluZyBvbiBcKHgsfn5%2BfDJ4LTh8XCkgY2FuIGVxdWFsIFwoMngtOFwpIG9yIFwoOC0yeFwpLiIsCiAgIlRoZSBncmFwaCBvZiBcKHk9fDJ4LTh8XCkgaXMgYSBzdHJhaWdodCBsaW5lLiJdLAogIDIsICAgICAgICAgICAKICApOwoKQkVHSU5fUEdNTApXaGljaCBzdGF0ZW1lbnQgaXMgdHJ1ZT8KCiAgICBbX117JGFic3F9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRGVwZW5kaW5nIG9uIFtgeFx0ZXh0eyx9YF0gW2B8MngtOHxgXSBjYW4gZXF1YWwgW2AyeC04YF0gb3IgW2A4LTJ4XHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="207"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-abs-equation"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.98</span><span class="period">.</span>
 </h6>
 <ol id="p-6307" class="lower-alpha">
@@ -539,8 +547,8 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 <li id="li-3933"><p id="p-6309">Use a graph of \(y = \abs{3x - 6}\) to solve the equation \(\abs{3x - 6} = -2\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-321" id="solution-321"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-321"><div class="solution solution-like">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-3x-6.svg" role="img" style="width: 100%; height: auto;" alt="absolute value of 3x-6"></div></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-321" id="solution-321"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-321"><div class="solution solution-like">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-abs-3x-6.svg" role="img" class="contained" alt="absolute value of 3x-6"></div></div></div>
 <ol id="p-6310" class="lower-alpha">
 <li id="li-3934">
 <p id="p-6311">The graph shows the graphs of \(y = \abs{3x - 6}\) and \(y = 9\text{.}\) We see that there are two points on the graph of \(y = \abs{3x - 6}\) that have \(y = 9\text{,}\) and those points have \(x\)-coordinates \(x = -1\) and \(x = 5\text{.}\) We can verify algebraically that the solutions are \(-1\) and \(5\text{.}\)</p>
@@ -561,7 +569,7 @@ x \amp = \alert{5}\text{: }\\
 </h6>
 <p id="p-6313">We can use a graphing calculator to solve the equations in <a class="xref" data-knowl="./knowl/example-abs-equation.html" title="Example 5.98">Example 5.98</a>.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel" style="width:57.8947368421053%;justify-content:center;">
+<div class="sbspanel middle" style="width:57.8947368421053%;">
 <p id="p-6314">The graph shows the graphs of \(Y_1 = \text{abs}(3X - 6)\) and \(Y_2 = 9\) in the window</p>
 <div class="displaymath">
 \begin{align*}
@@ -569,19 +577,19 @@ x \amp = \alert{5}\text{: }\\
 \text{Ymin} \amp = -2 \amp\amp \text{Ymax} = 12
 \end{align*}
 </div>
-<p data-braille="continuation">We use the <kbd class="kbdkey">Trace</kbd> or the <em class="emphasis">intersect</em> feature to locate the intersection points at \((-1, 9)\) and \((5, 9)\text{.}\)</p>
+<p class="continuation">We use the <kbd class="kbdkey">Trace</kbd> or the <em class="emphasis">intersect</em> feature to locate the intersection points at \((-1, 9)\) and \((5, 9)\text{.}\)</p>
 </div>
-<div class="sbspanel" style="width:36.8421052631579%;justify-content:center;"><img src="images/fig-GC-abs-3x-6.svg" role="img" style="width: 100%; height: auto;" alt="absolute value of 3x-6"></div>
-</div></div></article><article class="exercise exercise-like" id="exercise-GC-solve-abs-equation"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-GC-solve-abs-equation"><h6 class="heading">
+<div class="sbspanel middle" style="width:36.8421052631579%;"><img src="external/images/fig-GC-abs-3x-6.svg" role="img" class="contained" alt="absolute value of 3x-6"></div>
+</div></div></article><article class="exercise exercise-like" id="exercise-GC-solve-abs-equation"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.100</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-GC-solve-abs-equation"><article class="exercise exercise-like"><iframe name="webwork-208" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=208&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUENDbWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZ1bj1Gb3JtdWxhKCJhYnMoMip4KzcpIik7CiRmYWtlPUZvcm11bGEoImFicygyKngtNykiKTsKJGZha2UyPUZvcm11bGEoImFicygyKngpKzciKTsKJGZha2UzPUZvcm11bGEoImFicygyKngpLTciKTsKZm9yZWFjaCBteSAkaSAoMC4uMikgewokZ3JbJGldID0gaW5pdF9ncmFwaCgtMTIsLTIsOCwxNixheGVzPT5bMCwwXSxncmlkPT5bMTAsOV0sc2l6ZT0%2BWzI0MCwyNDBdKTsKJGdyWyRpXS0%2BbGIoJ3Jlc2V0Jyk7CmZvciBteSAkaiAoLTEwKSB7CiAgJGdyWyRpXS0%2BbGIoIG5ldyBMYWJlbCgkaiwgMCwgJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7Cn0KZm9yIG15ICRqICgxMCkgewogICRnclskaV0tPmxiKCBuZXcgTGFiZWwoMCwgJGosICRqLCdibGFjaycsJ3JpZ2h0JywnbWlkZGxlJywnbGFyZ2UnKSk7Cn0KfQphZGRfZnVuY3Rpb25zKCRnclswXSwgIiRmdW4gZm9yIHggaW4gPC0xMiw4PiAgdXNpbmcgY29sb3I6cmVkIGFuZCB3ZWlnaHQ6MiIpOwokZ3JbMF0tPmxiKCBuZXcgTGFiZWwoLTEwLjUsNSwiKEEpIiwgJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgphZGRfZnVuY3Rpb25zKCRnclsxXSwgIiRmYWtlIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzFdLT5sYiggbmV3IExhYmVsKC0xMC41LDUsIihCKSIsIAonYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnLCdsYXJnZScpKTsKCmFkZF9mdW5jdGlvbnMoJGdyWzJdLCAiJGZha2UyIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzJdLT5sYiggbmV3IExhYmVsKC0xMC41LDUsIihDKSIsIAonYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnLCdsYXJnZScpKTsKCiRnclszXSA9IGluaXRfZ3JhcGgoLTEyLC0xMCw4LDgsYXhlcz0%2BWzAsMF0sZ3JpZD0%2BWzEwLDldLHNpemU9PlsyNDAsMjQwXSk7CiRnclszXS0%2BbGIoJ3Jlc2V0Jyk7CmZvciBteSAkaiAoLTEwKSB7CiAgJGdyWzNdLT5sYiggbmV3IExhYmVsKCRqLCAwLCAkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsKfQpmb3IgbXkgJGogKC01LDUpIHsKICAkZ3JbM10tPmxiKCBuZXcgTGFiZWwoMCwgJGosICRqLCdibGFjaycsJ3JpZ2h0JywnbWlkZGxlJywnbGFyZ2UnKSk7Cn0KCmFkZF9mdW5jdGlvbnMoJGdyWzNdLCAiJGZha2UzIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzNdLT5sYiggbmV3IExhYmVsKC0xMC41LC0zLCIoRCkiLCAKJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgokbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIiwKICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgIDAKICAgICAgICApOwoKJGFuc3dlcnMgPSBMaXN0KCItOSwyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VycyAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKYS4gIEdyYXBoIFtgeSA9IHwyeCArIDd8YF0gZm9yIFtgLTEyIFxsZSB4IFxsZSA4XHRleHR7Ln1gXQoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0%2BMjEwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogCgogICAgVGhlIGdyYXBoIG9mIFtgeT0gfDJ4Kzd8YF0gaXMgW19deyRtY317NX0KCgphLiAgVXNlIHlvdXIgZ3JhcGggdG8gc29sdmUgdGhlIGVxdWF0aW9uIFtgfDJ4ICsgN3wgPSAxMVx0ZXh0ey59YF0KCiAgICBbYHg9YF1bX117JG15X2V2YWx1YXRvcn17OH0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYS4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjQwKUBdKiAKCiAgICBBIGdyYXBoIGlzIGFsc28gc2hvd24gYmVsb3cgZm9yIHBhcnQgKGIpLgoKCmEuICBbYHg9LTlgXSBvciBbYHg9MmBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="208"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-27"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/y-eq-abs-2x-plus7.svg" role="img" style="width: 100%; height: auto;" alt="abs(2x+7)"></div></div></div></div></article></div>
-<p id="p-6330">To solve an absolute value equation algebraically, we use the definition of absolute value.</p>
+</h6>
+<iframe name="webwork-208" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=208&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUENDbWFjcm9zLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZ1bj1Gb3JtdWxhKCJhYnMoMip4KzcpIik7CiRmYWtlPUZvcm11bGEoImFicygyKngtNykiKTsKJGZha2UyPUZvcm11bGEoImFicygyKngpKzciKTsKJGZha2UzPUZvcm11bGEoImFicygyKngpLTciKTsKZm9yZWFjaCBteSAkaSAoMC4uMikgewokZ3JbJGldID0gaW5pdF9ncmFwaCgtMTIsLTIsOCwxNixheGVzPT5bMCwwXSxncmlkPT5bMTAsOV0sc2l6ZT0%2BWzI0MCwyNDBdKTsKJGdyWyRpXS0%2BbGIoJ3Jlc2V0Jyk7CmZvciBteSAkaiAoLTEwKSB7CiAgJGdyWyRpXS0%2BbGIoIG5ldyBMYWJlbCgkaiwgMCwgJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7Cn0KZm9yIG15ICRqICgxMCkgewogICRnclskaV0tPmxiKCBuZXcgTGFiZWwoMCwgJGosICRqLCdibGFjaycsJ3JpZ2h0JywnbWlkZGxlJywnbGFyZ2UnKSk7Cn0KfQphZGRfZnVuY3Rpb25zKCRnclswXSwgIiRmdW4gZm9yIHggaW4gPC0xMiw4PiAgdXNpbmcgY29sb3I6cmVkIGFuZCB3ZWlnaHQ6MiIpOwokZ3JbMF0tPmxiKCBuZXcgTGFiZWwoLTEwLjUsNSwiKEEpIiwgJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgphZGRfZnVuY3Rpb25zKCRnclsxXSwgIiRmYWtlIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzFdLT5sYiggbmV3IExhYmVsKC0xMC41LDUsIihCKSIsIAonYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnLCdsYXJnZScpKTsKCmFkZF9mdW5jdGlvbnMoJGdyWzJdLCAiJGZha2UyIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzJdLT5sYiggbmV3IExhYmVsKC0xMC41LDUsIihDKSIsIAonYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnLCdsYXJnZScpKTsKCiRnclszXSA9IGluaXRfZ3JhcGgoLTEyLC0xMCw4LDgsYXhlcz0%2BWzAsMF0sZ3JpZD0%2BWzEwLDldLHNpemU9PlsyNDAsMjQwXSk7CiRnclszXS0%2BbGIoJ3Jlc2V0Jyk7CmZvciBteSAkaiAoLTEwKSB7CiAgJGdyWzNdLT5sYiggbmV3IExhYmVsKCRqLCAwLCAkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsKfQpmb3IgbXkgJGogKC01LDUpIHsKICAkZ3JbM10tPmxiKCBuZXcgTGFiZWwoMCwgJGosICRqLCdibGFjaycsJ3JpZ2h0JywnbWlkZGxlJywnbGFyZ2UnKSk7Cn0KCmFkZF9mdW5jdGlvbnMoJGdyWzNdLCAiJGZha2UzIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzNdLT5sYiggbmV3IExhYmVsKC0xMC41LC0zLCIoRCkiLCAKJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgokbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIiwKICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgIDAKICAgICAgICApOwoKJGFuc3dlcnMgPSBMaXN0KCItOSwyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VycyAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKYS4gIEdyYXBoIFtgeSA9IHwyeCArIDd8YF0gZm9yIFtgLTEyIFxsZSB4IFxsZSA4XHRleHR7Ln1gXQoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0%2BMjEwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogCgogICAgVGhlIGdyYXBoIG9mIFtgeT0gfDJ4Kzd8YF0gaXMgW19deyRtY317NX0KCgphLiAgVXNlIHlvdXIgZ3JhcGggdG8gc29sdmUgdGhlIGVxdWF0aW9uIFtgfDJ4ICsgN3wgPSAxMVx0ZXh0ey59YF0KCiAgICBbYHg9YF1bX117JG15X2V2YWx1YXRvcn17OH0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYS4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0%2BMjQwKUBdKiAKCiAgICBBIGdyYXBoIGlzIGFsc28gc2hvd24gYmVsb3cgZm9yIHBhcnQgKGIpLgoKCmEuICBbYHg9LTlgXSBvciBbYHg9MmBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" data-seed="208"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script><div class="conclusion" id="conclusion-27"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/y-eq-abs-2x-plus7.svg" role="img" class="contained" alt="abs(2x+7)"></div></div></div></div></article><p id="p-6330">To solve an absolute value equation algebraically, we use the definition of absolute value.</p>
 <article class="example example-like" id="example-abs-algebraic"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.101</span><span class="period">.</span>
 </h6>
 <p id="p-6331">Solve the equation \(\abs{3x - 6} = 9\) algebraically.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-323" id="solution-323"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-323"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-323" id="solution-323"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-323"><div class="solution solution-like">
 <p id="p-6332">We write the piecewise definition of \(\abs{3x - 6}\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -592,19 +600,19 @@ x \amp = \alert{5}\text{: }\\
 \end{cases}
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus, the absolute value equation \(\abs{3x - 6} = 9\) is equivalent to two regular equations:</p>
+<p class="continuation">Thus, the absolute value equation \(\abs{3x - 6} = 9\) is equivalent to two regular equations:</p>
 <div class="displaymath">
 \begin{equation*}
 3x - 6 =9~~~  \text{ or }~~~ -(3x - 6) = 9
 \end{equation*}
 </div>
-<p data-braille="continuation">or, by simplifying the second equation,</p>
+<p class="continuation">or, by simplifying the second equation,</p>
 <div class="displaymath">
 \begin{equation*}
 3x - 6 =9~~~ \text{ or }~~~ 3x - 6 = -9
 \end{equation*}
 </div>
-<p data-braille="continuation">Solving these two equations gives us the same solutions we found in <a class="xref" data-knowl="./knowl/example-abs-equation.html" title="Example 5.98">Example 5.98</a>, namely \(x = 5\) and \(-1\text{.}\)</p>
+<p class="continuation">Solving these two equations gives us the same solutions we found in <a class="xref" data-knowl="./knowl/example-abs-equation.html" title="Example 5.98">Example 5.98</a>, namely \(x = 5\) and \(-1\text{.}\)</p>
 </div></div>
 </div></article><p id="p-6333">In general, we have the following strategy for solving absolute value equations.</p>
 <article class="assemblage assemblage-like" id="assemblage-59"><h6 class="heading"><span class="title">Absolute Value Equations.</span></h6>
@@ -615,45 +623,44 @@ x \amp = \alert{5}\text{: }\\
 \blert{\abs{ax + b} = c} \hphantom{break} (c \gt 0)
 \end{equation*}
 </div>
-<p data-braille="continuation">is equivalent to</p>
+<p class="continuation">is equivalent to</p>
 <div class="displaymath">
 \begin{equation*}
 \blert{ax + b = c} ~~~~\text{ or }~~~~ \blert{ax + b = -c}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-961"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-961"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-961"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.102</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-961"><article class="exercise exercise-like"><iframe name="webwork-209" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=209&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXJzID0gTGlzdCgiLTksMiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlcnMgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlICBbYHwyeCArIDd8ID0gMTFgXSBhbGdlYnJhaWNhbGx5LgoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezh9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYS4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHg9LTlgXSBvciBbYHg9MmBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="209"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-209" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=209&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnN3ZXJzID0gTGlzdCgiLTksMiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlcnMgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0%2BIDEsCiBwYXJ0aWFsQ3JlZGl0ID0%2BIDEsCik7CgpCRUdJTl9QR01MClNvbHZlICBbYHwyeCArIDd8ID0gMTFgXSBhbGdlYnJhaWNhbGx5LgoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezh9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYS4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHg9LTlgXSBvciBbYHg9MmBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="209"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Absolute Value Inequalities</span>
 </h3>
 <p id="p-6340">We can also use graphs to solve absolute value inequalities. Look again at the graph of \(y = \abs{3x - 6}\) in figure (a) below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-abs-inequality.svg" role="img" style="width: 100%; height: auto;" alt="abs-3x-6"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-abs-inequality.svg" role="img" class="contained" alt="abs-3x-6"></div></div></div>
 <p id="p-6341">Because of the V-shape of the graph, all points with \(y\)-values less than \(9\) lie between the two solutions of \(~\abs{3x - 6} = 9~\text{,}\) that is, between \(-1\) and \(5\text{.}\) Thus, the solutions of the inequality \(~\abs{3x - 6} \lt 9~\) are \(-1 \lt x \lt 5\text{.}\)</p>
 <p id="p-6342">On the other hand, to solve the inequality \(~\abs{3x - 6} \gt 9~\text{,}\) we look for points on the graph with \(y\)-values greater than \(9\text{.}\) In figure (b), we see that these points have \(x\)-values outside the interval between \(-1\) and \(5\text{.}\) In other words, the solutions of the inequality \(~\abs{3x - 6} \gt 9~\) are \(x \lt -1\) or \(x \gt 5\text{.}\)</p>
 <p id="p-6343">Thus, we can solve an absolute value inequality by first solving the related equation.</p>
 <article class="assemblage assemblage-like" id="assemblage-60"><h6 class="heading"><span class="title">Absolute Value Inequalities.</span></h6>
 <p id="p-6344">Suppose the solutions of the equation \(\abs{ax+b}=c\) are \(r\) and \(s\text{,}\) with \(r \lt s\text{.}\) Then</p>
 <ol class="decimal">
-<li id="li-3945">The solutions of \(~\abs{ax+b} \lt c~\) are<div class="displaymath">
+<li id="li-3945"><p id="p-derived-li-3945">The solutions of \(~\abs{ax+b} \lt c~\) are<div class="displaymath">
 \begin{equation*}
 r \lt  x \lt  s
 \end{equation*}
-</div>
-</li>
-<li id="li-3946">The solutions of \(~\abs{ax+b} \gt c~\) are<div class="displaymath">
+</div></p></li>
+<li id="li-3946"><p id="p-derived-li-3946">The solutions of \(~\abs{ax+b} \gt c~\) are<div class="displaymath">
 \begin{equation*}
 x \lt  r ~~\text{ or }~~ x \gt  s
 \end{equation*}
-</div>
-</li>
-</ol></article><article class="exercise exercise-like" id="exercise-962"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-962"><h6 class="heading">
+</div></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-962"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.103</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 8.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-962"><article class="exercise exercise-like"><iframe name="webwork-210" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=210&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpPC9kaXY%2BJykpOwpDb250ZXh0KCdOdW1lcmljJyk7JGFic2dyID0gUmFkaW9CdXR0b25zKAogIFsiZWl0aGVyIFwoeC0zIFxndCA1XCkgb3IgXCh4LTMgXGd0IC01XCkuIiwKICAiXCg1IFxndCB4LTMgXGd0IC01XCkuIiwgICAgICAgICAgIAogICJlaXRoZXIgXCh4LTMgXGd0IDVcKSBvciBcKHgtMyBcbHQgLTVcKS4iLAogICJcKC01IFxndCB4LTMgXGx0IDVcKS4iXSwKICAyLCAKICApOwoKQkVHSU5fUEdNTApJZiBbYHx4LTN8IFxndCA1XHRleHR7LH1gXSB0aGVuCgogICAgW19deyRhYnNncn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgplaXRoZXIgW2B4LTMgXGd0IDVgXSBvciBbYHgtMyBcbHQgLTVcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="210"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
-<article class="example example-like" id="example-abs-inequality"><h6 class="heading">
+</h6>
+<iframe name="webwork-210" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=210&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpPC9kaXY%2BJykpOwpDb250ZXh0KCdOdW1lcmljJyk7JGFic2dyID0gUmFkaW9CdXR0b25zKAogIFsiZWl0aGVyIFwoeC0zIFxndCA1XCkgb3IgXCh4LTMgXGd0IC01XCkuIiwKICAiXCg1IFxndCB4LTMgXGd0IC01XCkuIiwgICAgICAgICAgIAogICJlaXRoZXIgXCh4LTMgXGd0IDVcKSBvciBcKHgtMyBcbHQgLTVcKS4iLAogICJcKC01IFxndCB4LTMgXGx0IDVcKS4iXSwKICAyLCAKICApOwoKQkVHSU5fUEdNTApJZiBbYHx4LTN8IFxndCA1XHRleHR7LH1gXSB0aGVuCgogICAgW19deyRhYnNncn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgplaXRoZXIgW2B4LTMgXGd0IDVgXSBvciBbYHgtMyBcbHQgLTVcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-seed="210"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="example example-like" id="example-abs-inequality"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.104</span><span class="period">.</span>
 </h6>
 <p id="p-6353">Solve \(~\abs{4x - 15} \lt 0.01\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-326" id="solution-326"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-326"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-326" id="solution-326"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-326"><div class="solution solution-like">
 <p id="p-6354">First, we solve the equation \(~\abs{4x - 15} = 0.01\text{.}\) There are two cases:</p>
 <div class="displaymath">
 \begin{align*}
@@ -662,22 +669,24 @@ x \lt  r ~~\text{ or }~~ x \gt  s
 x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 \end{align*}
 </div>
-<p data-braille="continuation">Because the inequality symbol is \(\lt\text{,}\) the solutions of the inequality are between these two values: \(3.7475 \lt x \lt 3.7525\text{.}\) In interval notation, the solutions are \((3.7475, 3.7525)\text{.}\)</p>
+<p class="continuation">Because the inequality symbol is \(\lt\text{,}\) the solutions of the inequality are between these two values: \(3.7475 \lt x \lt 3.7525\text{.}\) In interval notation, the solutions are \((3.7475, 3.7525)\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-963"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-963"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-963"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.105</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 8.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-963"><article class="exercise exercise-like"><iframe name="webwork-211" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=211&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJjb250ZXh0SW5lcXVhbGl0aWVzLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcZGVsaW1pdGVyc2hvcnRmYWxsLTFzcFxuZXdjb21tYW5kXGFic1sxXXtcbGVmdHwjMVxyaWdodHx9XG5ld2NvbW1hbmR7XGx0fXs8fVxuZXdjb21tYW5ke1xndH17Pn1cKTwvZGl2PicpKTsKQ29udGV4dCgiSW5lcXVhbGl0aWVzIik7CgokYW5zd2VyPSBDb21wdXRlKCItOSA8IHggPCAyIik7CiRhbnN3ZXIyPSBDb21wdXRlKCJ4IDwgLTkgb3IgeCA%2BIDIiKTsKCkJFR0lOX1BHTUwKYS4gIFNvbHZlIHRoZSBpbmVxdWFsaXR5IFtgfDJ4ICsgN3wgXGx0IDExYF0KCiAgICBbX117JGFuc3dlcn17MTV9CgoKYS4gIFNvbHZlIHRoZSBpbmVxdWFsaXR5IFtgfDJ4ICsgN3wgXGd0IDExYF0KCiAgICBbX117JGFuc3dlcjJ9ezE1fQoKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ1lvdSBtYXkgdXNlIGluZXF1YWxpdHkgc3ltYm9scyBvciBlbnRlciB5b3VyIGFuc3dlcnMgdXNpbmcgaW50ZXJ2YWwgbm90YXRpb24uIFdoZW4gdXNpbmcgaW50ZXJ2YWwgbm90YXRpb24sIHVzZSAiaW5mIiBmb3IgW2BcaW5mdHlgXSBhbmQgdXNlICJVIiAoYW4gdXBwZXIgY2FzZSBsZXR0ZXIgdSkgZm9yIHRoZSB1bmlvbiBzeW1ib2wgW2BcY3VwXHRleHR7Ln1gXScpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYCgtOSwyKWBdCgoKYS4gIFtgKC1caW5mdHksLTkpIFxjdXAgKDIsIFxpbmZ0eSlgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="211"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div></section><section class="exercises" id="section-5-6-exercises"><h3 class="heading hide-type">
+</h6>
+<iframe name="webwork-211" width="600" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;amp;userID=anonymous&amp;amp;password=anonymous&amp;amp;course_password=anonymous&amp;amp;answersSubmitted=0&amp;amp;displayMode=MathJax&amp;amp;outputformat=simple&amp;amp;problemSeed=211&amp;amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQQ0NtYWNyb3MucGwiLCJjb250ZXh0SW5lcXVhbGl0aWVzLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcZGVsaW1pdGVyc2hvcnRmYWxsLTFzcFxuZXdjb21tYW5kXGFic1sxXXtcbGVmdHwjMVxyaWdodHx9XG5ld2NvbW1hbmR7XGx0fXs8fVxuZXdjb21tYW5ke1xndH17Pn1cKTwvZGl2PicpKTsKQ29udGV4dCgiSW5lcXVhbGl0aWVzIik7CgokYW5zd2VyPSBDb21wdXRlKCItOSA8IHggPCAyIik7CiRhbnN3ZXIyPSBDb21wdXRlKCJ4IDwgLTkgb3IgeCA%2BIDIiKTsKCkJFR0lOX1BHTUwKYS4gIFNvbHZlIHRoZSBpbmVxdWFsaXR5IFtgfDJ4ICsgN3wgXGx0IDExYF0KCiAgICBbX117JGFuc3dlcn17MTV9CgoKYS4gIFNvbHZlIHRoZSBpbmVxdWFsaXR5IFtgfDJ4ICsgN3wgXGd0IDExYF0KCiAgICBbX117JGFuc3dlcjJ9ezE1fQoKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ1lvdSBtYXkgdXNlIGluZXF1YWxpdHkgc3ltYm9scyBvciBlbnRlciB5b3VyIGFuc3dlcnMgdXNpbmcgaW50ZXJ2YWwgbm90YXRpb24uIFdoZW4gdXNpbmcgaW50ZXJ2YWwgbm90YXRpb24sIHVzZSAiaW5mIiBmb3IgW2BcaW5mdHlgXSBhbmQgdXNlICJVIiAoYW4gdXBwZXIgY2FzZSBsZXR0ZXIgdSkgZm9yIHRoZSB1bmlvbiBzeW1ib2wgW2BcY3VwXHRleHR7Ln1gXScpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYCgtOSwyKWBdCgoKYS4gIFtgKC1caW5mdHksLTkpIFxjdXAgKDIsIFxpbmZ0eSlgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" data-seed="211"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="exercises" id="section-5-6-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Problem Set 5.6</span>
 </h3>
 <article class="subexercises" id="subexercises-70"><h6 class="heading"><span class="title">Warm Up</span></h6>
 <div class="exercisegroup" id="exercisegroup-150">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-181">
 <p id="p-6365">In Problems 1–6, state the intervals (if any) on which the function is</p>
 <ol class="lower-alpha">
-<li id="li-3955">increasing and concave up</li>
-<li id="li-3956">increasing and concave down</li>
-<li id="li-3957">decreasing and concave up</li>
-<li id="li-3958">decreasing and concave down</li>
+<li id="li-3955"><p id="p-derived-li-3955">increasing and concave up</p></li>
+<li id="li-3956"><p id="p-derived-li-3956">increasing and concave down</p></li>
+<li id="li-3957"><p id="p-derived-li-3957">decreasing and concave up</p></li>
+<li id="li-3958"><p id="p-derived-li-3958">decreasing and concave down</p></li>
 </ol>
 <p id="p-6366">Give your answers in interval notation.</p>
 </div>
@@ -693,17 +702,18 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </div></article><article class="subexercises" id="subexercises-71"><h6 class="heading"><span class="title">Skills Practice</span></h6>
 <article class="exercise exercise-like" id="exercise-970"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="p-6376">The graph defines a function, \(h\text{,}\) that shows the height, \(s\text{,}\) in meters, of a duck \(t\) seconds after it is flushed out of the bushes.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-7.svg" role="img" style="width: 100%; height: auto;" alt="curve"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-hw-5-6-7.svg" role="img" class="contained" alt="curve"></div></div></div>
 <ol id="p-6377" class="lower-alpha">
-<li id="li-3971">Use function notation to state that \(s\) is a function of \(t\text{.}\)</li>
-<li id="li-3972">What does the statement \(h(3)=7\) mean in this context?</li>
+<li id="li-3971"><p id="p-derived-li-3971">Use function notation to state that \(s\) is a function of \(t\text{.}\)</p></li>
+<li id="li-3972"><p id="p-derived-li-3972">What does the statement \(h(3)=7\) mean in this context?</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-971"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="p-6379">The graph defines a function, \(f\text{,}\) that shows the atmospheric pressure, \(P\text{,}\) in inches of mercury, at an altitude of \(a\) feet.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-8.svg" role="img" style="width: 100%; height: auto;" alt="line"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-hw-5-6-8.svg" role="img" class="contained" alt="line"></div></div></div>
 <ol id="p-6380" class="lower-alpha">
-<li id="li-3975">Use function notation to state that \(P\) is a function of \(a\text{.}\)</li>
-<li id="li-3976">What does the statement \(f(1500)=28.3\) mean in this context?</li>
+<li id="li-3975"><p id="p-derived-li-3975">Use function notation to state that \(P\) is a function of \(a\text{.}\)</p></li>
+<li id="li-3976"><p id="p-derived-li-3976">What does the statement \(f(1500)=28.3\) mean in this context?</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-151">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-182">
 <p id="p-6381">In Problems 9 and 10, use the table of values to answer the questions.</p>
 <ol class="lower-alpha">
@@ -713,14 +723,14 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-972"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(f(x)\)</td>
@@ -728,17 +738,17 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(1.5\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2.25\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3.375\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(5.0625\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(5.0625\)</td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="exercise-973"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(g(x)\)</td>
@@ -746,23 +756,24 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(0.8\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.64\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.512\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0.4096\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0.4096\)</td>
 </tr>
 </table></div></div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-152">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-183"><p id="p-6387">For Problems 11 and 12, plot the data; then decide which of the basic functions could describe the data.</p></div>
 <div class="exercisegroup-exercises cols2">
 <article class="exercise exercise-like" id="exercise-974"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~2~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~3~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~4~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~4~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -770,17 +781,17 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(6\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1.5\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1.5\)</td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="exercise-975"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~0~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~2~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(3\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -788,36 +799,39 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(0.0125\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.1\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.8\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2.7\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(2.7\)</td>
 </tr>
 </table></div></div></div></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-72"><h6 class="heading"><span class="title">Applications</span></h6>
 <div class="exercisegroup" id="exercisegroup-153">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-184"><p id="p-6389">In Problems 13–16, which graph best illustrates each of the following situations?</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-976"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="p-6390">Your pulse rate during an aerobics class</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-9.svg" role="img" style="width: 100%; height: auto;" alt="two curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-977"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-9.svg" role="img" class="contained" alt="two curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-977"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="p-6392">The stopping distances for cars traveling at various speeds</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-10.svg" role="img" style="width: 100%; height: auto;" alt="two curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-978"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-10.svg" role="img" class="contained" alt="two curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-978"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <p id="p-6393">Your income in terms of the number of hours you worked</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-11.svg" role="img" style="width: 100%; height: auto;" alt="two curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-979"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-11.svg" role="img" class="contained" alt="two curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-979"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <p id="p-6395">Your temperature during an illness</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-12.svg" role="img" style="width: 100%; height: auto;" alt="two curves"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-12.svg" role="img" class="contained" alt="two curves"></div></div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-154">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-185"><p id="p-6396">Choose the graph that depicts the function described in Problems 17 and 18.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-980"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="p-6397">Inflation is still rising, but by less each month.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-13.svg" role="img" style="width: 100%; height: auto;" alt="four curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-981"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-13.svg" role="img" class="contained" alt="four curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-981"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="p-6399">The price of wheat was rising more rapidly in 1996 than at any time during the previous decade.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-14.svg" role="img" style="width: 100%; height: auto;" alt="four curves"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-14.svg" role="img" class="contained" alt="four curves"></div></div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-155">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-186"><p id="p-6400">In Problems 19 and 20, match each graph with the function it illustrates.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-982"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
@@ -827,17 +841,18 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <li id="li-3983"><p id="p-6404">The simple interest earned at a given interest rate as a function of the investment</p></li>
 <li id="li-3984"><p id="p-6405">The number of Senators present versus the number absent in the U.S. Senate</p></li>
 </ol>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-15.svg" role="img" style="width: 100%; height: auto;" alt="four curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-983"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-15.svg" role="img" class="contained" alt="four curves"></div></div></div></article><article class="exercise exercise-like" id="exercise-983"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <ol id="p-6411" class="lower-alpha">
 <li id="li-3989"><p id="p-6412">Unemployment was falling but is now steady.</p></li>
 <li id="li-3990"><p id="p-6413">Inflation, which rose slowly until last month, is now rising rapidly.</p></li>
 <li id="li-3991"><p id="p-6414">The birthrate rose steadily until 1990 but is now beginning to fall.</p></li>
 <li id="li-3992"><p id="p-6415">The price of gasoline has fallen steadily over the past few months.</p></li>
 </ol>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-16.svg" role="img" style="width: 100%; height: auto;" alt="four curves"></div></div></div></article>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-16.svg" role="img" class="contained" alt="four curves"></div></div></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-156">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-187"><p id="p-6416">Each situation in Problems 21–26 can be modeled by a transformation of a basic function. Name the basic function and sketch a possible graph.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-984"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
@@ -858,7 +873,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <li id="li-3996"><p id="p-6430">The level of production at a manufacturing plant is a function of capital outlay, that is, the amount of money invested in the plant. At first, small increases in capital outlay result in large increases in production, but eventually the investors begin to experience diminishing returns on their money, so that although production continues to increase, it is at a disappointingly slow rate.</p></li>
 </ol>
 <ol class="decimal">
-<li id="li-3997"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-3997"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
@@ -868,7 +883,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t1 lines">\(~5~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~6~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~7~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~8~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~8~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -879,10 +894,10 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(124\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(149\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(179\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(215\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(215\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-3998"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-3998"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
@@ -892,7 +907,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t1 lines">\(~5~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~6~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~7~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~8~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~8~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -903,10 +918,10 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(134\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(147\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(159\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(169\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(169\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-3999"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-3999"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
@@ -916,7 +931,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t1 lines">\(~5~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~6~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~7~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~8~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~8~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -927,10 +942,10 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(300\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(360\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(420\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(480\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(480\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-4000"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-4000"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
@@ -940,7 +955,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t1 lines">\(~5~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~6~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~7~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~8~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~8~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -951,11 +966,11 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(138\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(143\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(146\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(147\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(147\)</td>
 </tr>
 </table></div></div></div></li>
 </ol>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-27.svg" role="img" style="width: 100%; height: auto;" alt="four increasing graphs"></div></div></div></article><article class="exercise exercise-like" id="exercise-991"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-27.svg" role="img" class="contained" alt="four increasing graphs"></div></div></div></article><article class="exercise exercise-like" id="exercise-991"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <p id="p-6436">Four different functions are described below. Match each description with the appropriate table of values and with its graph.</p>
 <ol class="lower-alpha">
 <li id="li-4005"><p id="p-6437">Fresh water flowing through Crystal Lake has gradually reduced the phosphate concentration to its natural level, and it is now stable.</p></li>
@@ -964,14 +979,14 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <li id="li-4008"><p id="p-6440">Enrollment in Ginny's Weight Reduction program is a function of time. It began declining last fall. After the holidays, enrollment stabilized for a while but soon began to fall off again.</p></li>
 </ol>
 <ol class="decimal">
-<li id="li-4009"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-4009"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~0~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~2~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~3~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~4~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~4~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -979,17 +994,17 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(144\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(96\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(16\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-4010"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-4010"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~0~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~2~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~3~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~4~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~4~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -997,17 +1012,17 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(560\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(230\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(90\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(30\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(30\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-4011"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-4011"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~0~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~2~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~3~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~4~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~4~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -1015,17 +1030,17 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(340\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(240\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(160\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(120\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(120\)</td>
 </tr>
 </table></div></div></div></li>
-<li id="li-4012"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<li id="li-4012"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(~x~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~0~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~1~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~2~\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(~3~\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(~4~\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(~4~\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(y\)</td>
@@ -1033,20 +1048,20 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(180\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(170\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(150\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(80\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(80\)</td>
 </tr>
 </table></div></div></div></li>
 </ol>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-28.svg" role="img" style="width: 100%; height: auto;" alt="four decreasing graphs"></div></div></div></article><article class="exercise exercise-like" id="exercise-992"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-28.svg" role="img" class="contained" alt="four decreasing graphs"></div></div></div></article><article class="exercise exercise-like" id="exercise-992"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
 <p id="p-6441">The table shows the radii, \(r\text{,}\) of several gold coins, in centimeters, and their value, \(v\text{,}\) in dollars.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Radius</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.5\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1.5\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(2.5\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(2.5\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Value</td>
@@ -1054,13 +1069,13 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <td class="c m b1 r1 l0 t0 lines">\(800\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(1800\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(3200\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(5000\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(5000\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-6442" class="lower-alpha">
 <li id="li-4013">
 <p id="p-6443">Which graph represents the data?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-2-4-43.svg" role="img" style="width: 100%; height: auto;" alt="four curves"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-2-4-43.svg" role="img" class="contained" alt="four curves"></div></div></div>
 </li>
 <li id="li-4014">
 <p id="p-6444">Which equation describes the function?</p>
@@ -1073,26 +1088,26 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-993"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
 <p id="p-6452">The table shows how the amount of water, \(A\text{,}\) flowing past a point on a river is related to the width, \(W\text{,}\) of the river at that point.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Width (feet)</td>
 <td class="c m b1 r1 l0 t1 lines">\(11\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(23\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(34\)</td>
-<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">\(46\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(46\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Amount of water<br>\(\text{(ft}^3/\text{sec)} \)</td>
 <td class="c m b1 r1 l0 t0 lines">\(23\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(34\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(41\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(47\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(47\)</td>
 </tr>
 </table></div></div></div>
 <ol id="p-6453" class="lower-alpha">
 <li id="li-4021">
 <p id="p-6454">Which graph represents the data?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-hw-5-6-30.svg" role="img" style="width: 100%; height: auto;" alt="four curves"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-hw-5-6-30.svg" role="img" class="contained" alt="four curves"></div></div></div>
 </li>
 <li id="li-4022">
 <p id="p-6455">Which equation describes the function?</p>
@@ -1105,15 +1120,16 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-994"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
 <p id="p-6460">As the global population increases, many scientists believe it is approaching, or has already exceeded, the maximum number the Earth can sustain.  This maximum number, or carrying capacity, depends on the finite natural resources of the planet -- water, land, air, and materials -- but also on how people use and preserve the resources.  The graphs show four different ways that a growing population can approach its carrying capacity over time. (Source:  Meadows, Randers, and Meadows, 2004)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/world-population-limits.svg" role="img" style="width: 100%; height: auto;" alt="models of world population limits"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/world-population-limits.svg" role="img" class="contained" alt="models of world population limits"></div></div></div>
 <p id="p-6461">Match each graph to one of the scenarios described in (a)-(d), and explain your choice.</p>
 <ol class="lower-alpha">
-<li id="li-4027">Sigmoid growth:  the population levels off smoothly below the carrying capacity.</li>
-<li id="li-4028">Overshoot and collapse:  the population exceeds the carrying capacity with severe damage to the resource base, and is forced to decline rapidly to achieve a new balance with a reduced carrying capacity.</li>
-<li id="li-4029">Continued growth:  the carrying capacity is far away, or growing faster than the population.</li>
-<li id="li-4030">Overshoot and oscillation:  the population exceeds the carrying capacity without inflicting permanent damage, then oscillates around the limit before leveling off.</li>
+<li id="li-4027"><p id="p-derived-li-4027">Sigmoid growth:  the population levels off smoothly below the carrying capacity.</p></li>
+<li id="li-4028"><p id="p-derived-li-4028">Overshoot and collapse:  the population exceeds the carrying capacity with severe damage to the resource base, and is forced to decline rapidly to achieve a new balance with a reduced carrying capacity.</p></li>
+<li id="li-4029"><p id="p-derived-li-4029">Continued growth:  the carrying capacity is far away, or growing faster than the population.</p></li>
+<li id="li-4030"><p id="p-derived-li-4030">Overshoot and oscillation:  the population exceeds the carrying capacity without inflicting permanent damage, then oscillates around the limit before leveling off.</p></li>
 </ol></article></article><article class="subexercises" id="subexercises-73"><h6 class="heading"><span class="title">Absolute Value</span></h6>
 <div class="exercisegroup" id="exercisegroup-157">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-188">
 <p id="p-6462">In Problems 1–8,</p>
 <ol class="lower-alpha">
@@ -1158,6 +1174,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 <li id="li-4057"><p id="p-6503">\(\displaystyle \abs{4x+8}\lt 0 \)</p></li>
 <li id="li-4058"><p id="p-6504">\(\displaystyle \abs{4x+8}\gt -3 \)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-158">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-189"><p id="p-6505">For Problems 13-24, solve.</p></div>
 <div class="exercisegroup-exercises cols3">
 <article class="exercise exercise-like" id="exercise-1007"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
@@ -1176,6 +1193,7 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-159">
+<h6 class="heading"><span class="title">Exercise Group.</span></h6>
 <div class="introduction" id="introduction-190"><p id="p-6524">For Problems 25-36, solve.</p></div>
 <div class="exercisegroup-exercises cols3">
 <article class="exercise exercise-like" id="exercise-1019"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
@@ -1194,19 +1212,19 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </div>
 </div></article></section></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>

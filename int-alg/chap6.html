@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-17T06:57:04-07:00       *-->
+<!--*       on 2021-08-27T15:52:22-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>Int-Alg Powers and Roots</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
 <script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -57,8 +63,8 @@ MathJax.Hub.Config({
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{cancel}       \newcommand\degree[0]{^{\circ}}
        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
        
@@ -72,7 +78,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="https://yoshiwarabooks.org/" target="_blank"><img src="external/images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="int-alg.html"><span class="title">Intermediate Algebra:</span> <span class="subtitle">Functions and Graphs</span></a></h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -220,88 +226,88 @@ true);
 <li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers to Selected Exercises</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 <li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="chap6"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">6</span> <span class="title">Powers and Roots</span>
 </h2>
-<section class="introduction" id="introduction-202"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fig-mouse-to-elephant.png" style="width: 100%; height: auto;" alt="mouse to elephant: Bob Elsdale/Getty Images"></div></div></div>
+<section class="introduction" id="introduction-202"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-mouse-to-elephant.png" class="contained" alt="mouse to elephant: Bob Elsdale/Getty Images"></div></div></div>
 <p id="p-6722">We next turn our attention to a large and useful family of functions, called power functions. Here is an example of a <dfn class="terminology">power function</dfn> with fractional exponents. </p>
 <p id="p-6723">In 1932, Max Kleiber published a remarkable equation for the metabolic rate of an animal as a function of its mass. The table at right shows the mass of various animals in kilograms and their metabolic rates, in kilocalories per day. A plot of the data, resulting in the famous “mouse-to-elephant” curve, is shown in the figure.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
-<div class="sbspanel fixed-width" style="width:47.3684210526316%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:47.3684210526316%;"><table class="tabular">
 <tr>
 <td class="l m b1 r1 l1 t3 lines">Animal</td>
 <td class="c m b1 r1 l0 t3 lines">Mass (kg)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">Metabolic rate<br>(kcal/day)</td>
+<td class="c m b1 r1 l0 t3 lines">Metabolic rate<br>(kcal/day)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Mouse</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.02\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(3.4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(3.4\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Rat</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(28\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(28\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Guinea pig</td>
 <td class="c m b1 r1 l0 t0 lines">\(0.8\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(48\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(48\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Cat</td>
 <td class="c m b1 r1 l0 t0 lines">\(3.0\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(150\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(150\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Rabbit</td>
 <td class="c m b1 r1 l0 t0 lines">\(3.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(165\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(165\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Dog</td>
 <td class="c m b1 r1 l0 t0 lines">\(15.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(520\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(520\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Chimpanzee</td>
 <td class="c m b1 r1 l0 t0 lines">\(38\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1110\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1110\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Sheep</td>
 <td class="c m b1 r1 l0 t0 lines">\(50\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1300\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1300\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Human</td>
 <td class="c m b1 r1 l0 t0 lines">\(65\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(1660\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1660\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Pig</td>
 <td class="c m b1 r1 l0 t0 lines">\(250\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(4350\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(4350\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Cow</td>
 <td class="c m b1 r1 l0 t0 lines">\(400\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(6080\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(6080\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Polar bear</td>
 <td class="c m b1 r1 l0 t0 lines">\(600\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(8340\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(8340\)</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l1 t0 lines">Elephant</td>
 <td class="c m b1 r1 l0 t0 lines">\(3670\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(48,800\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(48,800\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:47.3684210526316%;justify-content:center;"><img src="images/fig-mouse-to-elephant-curve.svg" role="img" style="width: 100%; height: auto;" alt="Kleiber mouse-to-elephant-curve"></div>
+<div class="sbspanel middle" style="width:47.3684210526316%;"><img src="external/images/fig-mouse-to-elephant-curve.svg" role="img" class="contained" alt="Kleiber mouse-to-elephant-curve"></div>
 </div></div>
 <p id="p-6724">Kleiber modeled his data by the power function</p>
 <div class="displaymath">
@@ -309,7 +315,7 @@ true);
 P(m) = 73.3m^{0.74}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(P\) is the metabolic rate and \(m\) is the mass of the animal.  Kleiber's rule  initiated the use of <dfn class="terminology">allometric equations</dfn>, or power functions of mass, in physiology.</p>
+<p class="continuation">where \(P\) is the metabolic rate and \(m\) is the mass of the animal.  Kleiber's rule  initiated the use of <dfn class="terminology">allometric equations</dfn>, or power functions of mass, in physiology.</p>
 <article class="investigation project-like" id="investigation-7"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inflating a Balloon.</span>
 </h6>
@@ -321,93 +327,93 @@ P(m) = 73.3m^{0.74}
 <li id="li-4188">
 <p id="p-6730">Two high school students, April Leonardo and Tolu Noah, decided to see for themselves how the pressure inside a balloon changes as the balloon expands. Using a column of water to measure pressure, they collected the following data while blowing up a balloon. Graph their data on the grid below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:30%;justify-content:center;"><table>
+<div class="sbspanel fixed-width middle" style="width:30%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Diameter<br>(cm)</td>
-<td class="c m b1 r1 l0 t3 lines" data-braille="last-cell">Pressure<br>(cm \(\text{H}_2\)O)</td>
+<td class="c m b1 r1 l0 t3 lines">Pressure<br>(cm \(\text{H}_2\)O)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(5.7\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(60.6\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(60.6\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(7.3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(57.2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(57.2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(8.2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(47.9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(47.9\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(10.7\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(38.1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(38.1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(12\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(37.1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(37.1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(14.6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(31.9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(31.9\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(17.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(28.1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(28.1\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(20.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(26.4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(26.4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(23.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(28\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(28\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(25.2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(31.4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(31.4\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(26.1\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(34\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(34\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(27.5\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(37.2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(37.2\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(28.4\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(37.9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(37.9\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(29\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(40.7\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(40.7\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(30\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(43.3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(43.3\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(30.6\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(46.6\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(46.6\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(31.3\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(50\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(50\)</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(32.2\)</td>
-<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(61.9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(61.9\)</td>
 </tr>
 </table></div>
-<div class="sbspanel" style="width:65%;justify-content:center;"><img src="images/fig-balloon-pressure-vs-diameter-grid.svg" role="img" style="width: 100%; height: auto;" alt="grid"></div>
+<div class="sbspanel middle" style="width:65%;"><img src="generated/latex-image/fig-balloon-pressure-vs-diameter-grid.svg" role="img" class="contained" alt="grid"></div>
 </div></div>
 </li>
 <li id="li-4189"><p id="p-6731">Describe the graph of April and Tolu’s data. Does the graph confirm the predictions of the physics books?</p></li>
 <li id="li-4190">
 <p id="p-6732">As the diameter of the balloon increases from 5 cm to 20 cm, the pressure inside decreases. Can we find a function that describes this portion of the graph? Here is some information:</p>
 <ul class="disc">
-<li id="li-4191">Pressure is the force per unit area exerted by the balloon on the air inside, or \(P=\dfrac{F}{A}\text{.}\)</li>
-<li id="li-4192">The balloon is spherical, so its surface area, \(A\text{,}\) is given by \(A=\pi d^2\).</li>
+<li id="li-4191"><p id="p-derived-li-4191">Pressure is the force per unit area exerted by the balloon on the air inside, or \(P=\dfrac{F}{A}\text{.}\)</p></li>
+<li id="li-4192"><p id="p-derived-li-4192">The balloon is spherical, so its surface area, \(A\text{,}\) is given by \(A=\pi d^2\).</p></li>
 </ul>
 <p id="p-6733">Because the force increases as the balloon expands, we will try a power function of the form \(F=kd^p\text{,}\) where \(k\) and \(p\) are constants, to see if it fits the data. Combine the three equations, \(P=\dfrac{F}{A},~A=\pi d^2~\text{,}\) and \(~F=kd^p\text{,}\) to express \(P\) as a power function of \(d\text{.}\)</p>
 </li>
@@ -422,19 +428,19 @@ P(m) = 73.3m^{0.74}
 <li><a href="chap6-summary.html"><span class="codenumber">6.6</span> <span class="title">Chapter 6 Summary and Review</span></a></li>
 </ul></nav></section></div></main>
 </div>
-<!--Start: StatCounter code--><script>
-var sc_project=9664088;
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12421177;
 var sc_invisible=1;
-var sc_security="6e60c510";
+var sc_security="3189a41a";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
 document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12421177/0/3189a41a/1/" alt="web analytics"></a></div></noscript>
 <!--End: StatCounter code-->
-<!--Start: Google Global Site Tag code-->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MLHBE6655J"></script><script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-48811660-1');
+  gtag('config', 'G-MLHBE6655J');
 </script><!--End: Google Global Site Tag code-->
 </body>
 </html>
