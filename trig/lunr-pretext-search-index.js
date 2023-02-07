@@ -14740,7 +14740,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Arclength and Radians",
-  "body": " Arclength and Radians  arclength  radian   Imagine that you are riding on a Ferris wheel of radius 100 feet, and each rotation takes eight minutes. We can use angles in standard position to describe your location as you travel around the wheel. The figure at right shows the locations indicated by and . But degrees are not the only way to specify location on a circle.  triangle  We could use percent of one complete rotation and label the same locations by . Or we could use the time elapsed, so that for this example we would have minutes.  Another useful method uses distance traveled, or arclength, along the circle. How far have you traveled around the Ferris wheel at each of the locations shown?  Arclength  arclength  Recall that the circumference of a circle is proportional to its radius, If we walk around the entire circumference of a circle, the distance we travel is times the length of the radius, or about 6.28 times the radius. If we walk only part of the way around the circle, then the distance we travel depends also on the angle of displacement.  For example, an angle of is of a complete revolution, so the arclength, , from point to point in the figure at right is of the circumference. Thus  arc on circle   Similarly, the angle of displacement from point to point is of a complete revolution, so the arclength along the circle from to , shown at right, is  arc on circle   In general, for a given circle the length of the arc spanned by an angle is proportional to the size of the angle.  Arclength on a Circle  arclength   The Ferris wheel in the introduction has circumference so in half a revolution you travel 314 feet around the edge, and in one-quarter revolution you travel 157 feet.  To indicate the same four locations on the wheel by distance traveled, we would use , as shown at right.  circle  What length of arc is spanned by an angle of on a circle of radius 12 centimeters?  Because , an angle of is of a complete revolution, as shown at right.  Using the formula above with , we find that or about 25.1 cm.  arc on circle  How far have you traveled around the edge of a Ferris wheel of radius 100 feet when you have turned through an angle of ? ft   Measuring Angles in Radians  radian  angle in radians  angle in radians radian  If you think about measuring arclength, you will see that the degree measure of the spanning angle is not as important as the fraction of one revolution it covers. This observation suggests a new unit of measurement for angles, one that is better suited to calculations involving arclength. We'll make one change in our formula for arclength, from to We'll call the quantity in parentheses, (fraction of one revolution ), the radian measure of the angle that spans the arc.  Radians  radian  The radian measure of an angle is given by  For example, one complete revolution, or , is equal to radians, and one-quarter revolution, or , is equal to or radians. The figure below shows the radian measure of the quadrantal angles.   arcs on circles  What is the radian measure of an angle of ?  An angle of is of a complete revolution, as we saw in the previous example. Thus, an angle of has a radian measure of , or .  What fraction of a revolution is radians? How many degrees is that? Half a revolution,  Radian measure does not have to be expressed in multiples of . Remember that , so one complete revolution is about 6.28 radians, and one-quarter revolution is , or about 1.57 radians. The figure below shows decimal approximations for the quadrantal angles.     Degrees  Radians: Exact Values  Radians: Decimal Approximations                       circle  You should memorize both the exact values of these angles in radians and their approximations!  In which quadrant would you find an angle of 2 radians? An angle of 5 radians?  Look at the figure above. The second quadrant includes angles between and , or 1.57 and 3.14 radians, so 2 radians lies in the second quadrant. An angle of 5 radians is between 4.71 and 6.28, or between and radians, so it lies in the fourth quadrant.  Draw a circle centered at the origin and sketch (in standard position) angles of approximately 3 radians, 4 radians, and 6 radians.  circle   Converting Between Degrees and Radians  It is not difficult to convert the measure of an angle in degrees to its measure in radians, or vice versa. One complete revolution is equal to radians or to , so Dividing both sides of this equation by gives us a conversion factor :  Unit Conversion for Angles  angle converting measurement units     To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .    Convert 3 radians to degrees.  Convert 3 degrees to radians.        Convert to radians. Give both an exact answer and an approximation to three decimal places.  Convert radians to degrees.   From our conversion factor we also learn that So while is a relatively small angle, 1 radian is much larger — nearly , in fact.  circle But this is reasonable, because there are only a little more than 6 radians in an entire revolution. An angle of 1 radian is shown above.  We'll soon see that, for many applications, it is easier to work entirely in radians. For reference, the figure below shows a radian protractor.  triangle   Arclength Formula  arclength formula  Measuring angles in radians has the following advantage: To calculate an arclength we need only multiply the radius of the circle by the radian measure of the spanning angle, . Look again at our formula for arclength:  The quantity in parentheses, fraction of one revolution , is just the measure of the spanning angle in radians. Thus, if is measured in radians, we have the following formula for arclength, .  Arclength Formula  arclength formula  On a circle of radius , the length of an arc spanned by an angle in radians is  In particular, if we have . We see that an angle of one radian spans an arc whose length is the radius of the circle. This is true for a circle of any size, as illustrated at right: an arclength equal to one radius determines a central angle of one radian, or about .  arcs on circles  In the next example, we use the arclength formula to compute a change in latitude on the Earth's surface. Latitude is measured in degrees north or south of the equator.  The radius of the Earth is about 3960 miles. If you travel 500 miles due north, how many degrees of latitude will you traverse?  We think of the distance 500 miles as an arclength on the surface of the Earth, as shown at right. Substituting and into the arclength formula gives   circle     To convert the angle measure to degrees, we multiply by to get Your latitude has changed by about .  The distance around the face of a large clock from 2 to 3 is five feet. What is the radius of the clock? ft   Unit Circle  unit circle arclength and radians  On a unit circle, , so the arclength formula becomes . Thus, on a unit circle, the measure of a (positive) angle in radians is equal to the length of the arc it spans.  You have walked 4 miles around a circular pond of radius one mile. What is your position relative to your starting point?  The pond is a unit circle, so you have traversed an angle in radians equal to the arc length traveled, 4 miles. An angle of 4 radians is in the middle of the third quadrant relative to your starting point, more than halfway but less than three-quarters around the pond.  An ant walks around the rim of a circular birdbath of radius 1 foot. How far has the ant walked when it has turned through an angle of ? ft  Review the following skills you will need for this section.   Use the appropriate conversion factor to convert units.     10 miles = km  50 km = miles     40 acres = hectares  5 hectares = acres     250 horsepower = watts  1000 watts = horsepower     0.5 troy oz = grains  100 grains = troy oz      Algebra Refresher Answers   a. km b. mi  a. hectares b. acres  a. watts b. horsepower  a. grains b. troy oz      Section 6.1 Summary  Vocabulary   Arclength  Radian  Conversion factor  Latitude  Unit circle    Concepts   The distance we travel around a circle of radius is proportional to the angle of displacement.  We measure angles in radians when we work with arclength.  Radians  The radian measure of an angle is given by  An arclength equal to one radius determines a central angle of one radian.  Radian measure can be expressed as multiples of or as decimals.     Degrees                        circle  We multiply by the appropriate conversion factor to convert between degrees and radians.  Unit Conversion for Angles   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .   Arclength Formula  On a circle of radius , the length of an arc spanned by an angle in radians is  On a unit circle , the measure of a (positive) angle in radians is equal to the length of the arc it spans.   Study Questions   The length of a circular arc depends on what two variables?  Define the radian measure of an angle.  What is the conversion factor from radians to degrees?  On a unit circle, the length of an arc is equal to what other quantity?    Skills   Express angles in degrees and radians #1 8, 25 32  Sketch angles given in radians #1 and 2, 11 and 12  Estimate angles in radians #9 10, 13 24  Use the arclength formula #33 46  Find coordinates of a point on a unit circle #47 52  Calculate angular velocity and area of a sector #55 60     Homework 6.1    Radians            Degrees              Convert each angle to degrees.  Sketch each angle on a circle like this one, and label in radians.    circle     Radians            Degrees             circle       Radians                Degrees                 Convert each angle to degrees.  Sketch each angle on a circle like this one, and label in radians.  circle  For Problems 3 6, express each fraction of one complete rotation in degrees and in radians.          circle                  circle             circle                  circle      For Problems 7 8, label each angle in standard position with radian measure.  Rotate counter-clockwise from 0.   circle      circle     Rotate clockwise from 0. circle   For Problems 9 10, give a decimal approximation to hundredths for each angle in radians.                     Locate and label each angle from Problem 9 on the unit circle below. (The circle is marked off in tenths of a radian.)   circle     circle     Locate and label each angle from Problem 10 on the unit circle below. (The circle is marked off in tenths of a radian.)  circle  From the list below, choose the best decimal approximation for each angle in radians in Problems 13 20. Do not use a calculator; use the fact that is a little greater than 3.            For Problems 21 24, say in which quadrant each angle lies.        II  IV  IV  I               III  II  I  IV          For Problems 25 28, complete the table.    Radians      Degrees       Radians      Degrees        Radians      Degrees        Radians      Degrees       Radians      Degrees        Radians      Degrees       For Problems 29 30, convert to radians. Round to hundredths.                 For Problems 31 32, convert to degrees. Round to tenths.                 For Problems 33 37, use the arclength formula to answer the questions. Round answers to hundredths.  Find the arclength spanned by an angle of on a circle of radius 4 inches.  Find the arclength spanned by an angle of on a circle of radius 18 feet.  Find the radius of a cricle if an angle of spans an arclength of 18 meters.  Find the radius of a cricle if an angle of spans an arclength of 0.5 kilometers.  Find the angle subtended by an arclength of 28 centimeters on a circle of diameter 20 centimeters.  Find the angle subtended by an arclength of 1.6 yards on a circle of diameter 2 yards.   For Problems 39 46, use the arclength formula to answer the questions.   Through how many radians does the minute hand of a clock sweep between 9:05 pm and 9:30 pm?  The dial of Big Ben's clock in London is 23 feet in diameter. How long is the arc traced by the minute hand between 9:05 pm and 9:30 pm?      The largest clock ever constructed was the Floral Clock in the garden of the 1904 World's Fair in St. Louis. The hour hand was 50 feet long, the minute hand was 75 feet long, and the radius of the clockface was 112 feet.   If you started at the 12 and walked 500 feet clockwise around the clockface, through how many radians would you walk?  If you started your walk at noon, how long would it take the minute hand to reach your position? How far did the tip of the minute hand move in its arc?   In 1851 Jean-Bernard Foucault demonstrated the rotation of the earth with a pendulum installed in the Pantheon in Paris. Foucault's pendulum consisted of a cannonball suspended on a 67 meter wire, and it swept out an arc of 8 meters on each swing. Through what angle did the pendulum swing? Give your answer in radians and then in degrees, rounded to the nearest hundredth.  A wheel with radius 40 centimeters is rolled a distance of 1000 centimeters on a flat surface. Through what angle has the wheel rotated? Give your answer in radians and then in degrees, rounded to one decimal place.  Clothes dryers draw 3.5 times as much power as washing machines, so newer machines have been engineered for greater efficiency. A vigorous spin cycle reduces the time needed for drying, and some front-loading models spin at a rate of 1500 rotations per minute.   If the radius of the drum is 11 inches, how far do your socks travel in one minute?  How fast are your socks traveling during the spin cycle?      The Hubble telescope is in orbit around the earth at an altitude of 600 kilometers, and completes one orbit in 97 minutes.  How far does the telescope travel in one hour? (The radius of the earth is 6400 kilometers.)  What is the speed of the Hubble telescope?   The first large windmill used to generate electricity was built in Cleveland, Ohio in 1888. Its sails were 17 meters in diameter, and moved at 10 rotations per minute. How fast did the ends of the sails travel?  The largest windmill operating today has wings 54 meters in length. To be most efficient, the tips of the wings must travel at 50 meters per second. How fast must the wings rotate?   For Problems 47 52, find two points on the unit circle with the given coordinate.Sketch the approximate location of the points on the circle. (Hint: what is the equation for the unit circle?)    unit circle        unit circle        unit circle    ,     Sketch a circle of radius 4 units, and mark the positions of 1, 2, 3, 4, 5, and 6 radians on the circle.  On a circle of radius 4 feet, find the arclength determined by each angle in radians.                   Graph against . What is the slope of the graph?  If you double the angle , what happens to the arclength? What happens if you triple ?    grid       circle                         linear graph of arclength vs angle     Arclength doubles; arclength triples    Sketch several concentric circles with increasing radius, and draw an angle of 2 radians through all of them.  Find the arclength determined by an angle of 2 radians on circles of given radius.                   Graph against . What is the slope of the graph?  If you double the radus , what happens to the arclength? What happens if you triple ?    grid     The angular velocity, , of a rotating object is given in radians per unit time. Thus, an object that rotates through radians in time has angular velocity given by . Find the angular velocity of the following objects.   The London Eye ferris wheel, which makes one revolution every 20 minutes.  An old-fashioned long-playing record, which revolved times in 60 seconds.      Use the arclength formula to derive a formula relating linear velocity, , and angular velocity, . (See Problem 55 for the definition of angular velocity.) Start with the formula for linear velocity: and substitute the arclength formula for .  Recall that to calculate a fraction of a revolution in degrees we divide the angle by . For example, is of a revolution because .   Write an expression that gives the fraction of a revolution for an angle in radians.  Use your expression to calculate what fraction of a revolution is represented by each of the following angles: .      Use your result from Problem 57a to write each statement as a mathematical formula.    circle     circle      The length of the arc, , is equal to:  The area of the sector, , is equal to:   For Problems 59 60, Use the formula for the area of a sector from Problem 58.    circle       circle       "
+  "body": " Arclength and Radians  arclength  radian   Imagine that you are riding on a Ferris wheel of radius 100 feet, and each rotation takes eight minutes. We can use angles in standard position to describe your location as you travel around the wheel. The figure at right shows the locations indicated by and . But degrees are not the only way to specify location on a circle.   triangle  We could use percent of one complete rotation and label the same locations by . Or we could use the time elapsed, so that for this example we would have minutes.  Another useful method to describe your location uses the distance traveled, or arclength , along the circle. How far have you traveled around the Ferris wheel at each of the locations shown?  Before we consider that question, let's agree on some vocabulary. An arc is a portion of a circle, and its length, quite naturally, is called arclength . An angle with vertex at the center of the circle is called a central angle , and a central angle whose sides meet the endpoints of an arc is said to subtend the arc. Or we may say that the angle spans the arc. If the arc represents a distance traveled, we sometimes refer to such an angle as the angle of displacement .   Arclength  arclength  Recall that the circumference of a circle is proportional to its radius, If we walk around the entire circumference of a circle, the distance we travel is times the length of the radius, or about 6.28 times the radius. If we walk only part of the way around the circle, then the distance we travel depends also on the angle of displacement.  For example, an angle of is of a complete revolution, so the the length of the arc from point to point , called in the figure at right, is of the circumference. Thus  arc on circle   Similarly, the angle of displacement from point to point is of a complete revolution, so the arclength along the circle from to , shown at right, is  arc on circle   In general, for a given circle the length of the arc spanned by an angle is proportional to the size of the angle.  Arclength on a Circle  arclength   The Ferris wheel in the introduction has circumference so in half a revolution you travel 314 feet around the edge, and in one-quarter revolution you travel 157 feet.   To indicate the same four locations on the wheel by distance traveled, we would use , as shown at right.  circle  What length of arc is spanned by an angle of on a circle of radius 12 centimeters?  Because , an angle of is of a complete revolution, as shown at right.   Using the formula above with , we find that or about 25.1 cm.  arc on circle  How far have you traveled around the edge of a Ferris wheel of radius 100 feet when you have turned through an angle of ? ft    Measuring Angles in Radians  radian  angle in radians  angle in radians radian  If you think about measuring arclength, you will see that the degree measure of the spanning angle is not as important as the fraction of one revolution it covers. This observation suggests a new unit of measurement for angles, one that is better suited to calculations involving arclength. We'll make one change in our formula for arclength, from to We'll call the quantity in parentheses, (fraction of one revolution ), the radian measure of the angle that spans the arc.  Radians  radian  The radian measure of an angle is given by  For example, one complete revolution, or , is equal to radians, and one-quarter revolution, or , is equal to or radians. The figure below shows the radian measure of the quadrantal angles.   angle on unit circle from positive x-axis to positive y-axis  angle on unit circle from positive x-axis to negative x-axis  angle on unit circle from positive x-axis to negative y-axis  angle on unit circle from positive x-axis counterclockwise back to positive x-axis  What is the radian measure of an angle of ?  An angle of is of a complete revolution, as we saw in the previous example. Thus, an angle of has a radian measure of , or .   What fraction of a revolution is radians? How many degrees is that? Half a revolution,  Radian measure does not have to be expressed in multiples of . Remember that , so one complete revolution is about 6.28 radians, and one-quarter revolution is , or about 1.57 radians. The figure below shows decimal approximations for the quadrantal angles.     Degrees  Radians: Exact Values  Radians: Decimal Approximations                       circle  Because they are \"benchmarks\" for comparing angles, you should be very familiar with both the exact values of these angles in radians and their approximations!  In which quadrant would you find an angle of 2 radians? An angle of 5 radians?  Look at the figure above. The second quadrant includes angles between and , or 1.57 and 3.14 radians, so 2 radians lies in the second quadrant. An angle of 5 radians is between 4.71 and 6.28, or between and radians, so it lies in the fourth quadrant.  Draw circles centered at the origin and sketch (in standard position) angles of approximately 3 radians, 4 radians, and 6 radians.  circle  circle  circle   It turns out that measuring angles in radians is useful for many applications besides calculating arclengths, so we need to start thinking in radians. To help that process, we'll first learn to convert between degrees and radians.   Converting Between Degrees and Radians  It is not difficult to convert the measure of an angle in degrees to its measure in radians, or vice versa. One complete revolution is equal to radians or to , so If we divide both sides of this equation by , we get a fraction that is equal to 1: And of course it is also true that  Because multiplying by 1 does not change the value of a number, we can use these fractions to convert between degrees and radians.  Converting bewteen degrees and radians   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .     Convert 3 radians to degrees.  Convert 3 degrees to radians.        Convert to radians. Give both an exact answer and an approximation to three decimal places.  Convert radians to degrees.  radians  Thus, the fraction (or its reciprocal ) gives us a conversion factor between degrees and radians:  Unit Conversion for Angles  angle converting measurement units    You can review the use of conversion factors in the Algebra Refresher at the end of this Section.   From our conversion factor we also learn that So while is a relatively small angle, 1 radian is much larger — nearly , in fact.  circle  But this is reasonable, because there are only a little more than 6 radians in an entire revolution. An angle of 1 radian is shown above.  We'll soon see that, for many applications, it is easier to work entirely in radians. For reference, the figure below shows a radian protractor.  triangle   Arclength Formula  arclength formula  Now let us return to our calculation of arclength, and we'll see the first instance in which measuring angles in radians is useful: To calculate an arclength we need only multiply the radius of the circle by the radian measure of the spanning angle, . Look again at our formula for arclength:  The quantity in parentheses, fraction of one revolution , is just the measure of the spanning angle in radians. Thus, if is measured in radians, we have the following simple formula for arclength, .  Arclength Formula  arclength formula  On a circle of radius , the length of an arc spanned by an angle in radians is   Thus, there is a special relationship between arclength and radians. An angle of 1 radian spans an arc on a circle equal to the radius of the circle, as shown at right. And the length of any arc is just the measure of its spanning angle in radians times the radius of the circle.  arcs on circles   So for instance, we can use the formula to find the arclength spanned by an angle of 2.5 radians on a circle of radius six inches:  arcs on circles  We can also use the formula in the form to find an angle that spans a given arc. For example, an arclength equal to one radius determines a central angle of one radian, or about . In the next example, we compute a change in latitude on the Earth's surface.  The radius of the Earth is about 3960 miles. If you travel 500 miles due north, how many degrees of latitude will you traverse? (Latitude is measured in degrees north or south of the equator.)  We think of the distance 500 miles as an arclength on the surface of the Earth, as shown at right. Substituting and into the arclength formula gives   circle     To convert the angle measure to degrees, we multiply by to get Your latitude has changed by about .  The distance around the face of a large clock from 2 to 3 is five feet. What is the radius of the clock? ft   Unit Circle  unit circle arclength and radians  In the rest of this chapter we will see how to use the trigonometric functions sine, cosine, and tangent when the input variable is measured in radians instead of degrees, and why making that change greatly increases the utility of those functions. In Section 4.1 we connected the sine and cosine to the coordinates of points on a unit circle , a circle of radius 1. Here is an important observation that will inform our study:  On a unit circle, , so the arclength formula becomes . Thus, on a unit circle, an arc of length 1 determines a central angle of 1 radian, or about . And the measure of a (positive) angle in radians is equal to the length of the arc it spans. In other words, if we walk around the circle, each time we travel over an arclength of one radius, we turn through an angle of one radian.  You are walking on a trail around a circular pond of radius one mile. You have have walked 4 miles from the trailhead. Sketch your location now.  The pond is a unit circle, so you have traversed an angle in radians equal to the arc length traveled, 4 miles. An angle of 4 radians is in the middle of the third quadrant relative to your starting point, more than halfway but less than three-quarters around the pond. walk along circle pond    An ant walks around the rim of a circular birdbath of diameter 2 feet. How far has the ant walked when it has turned through an angle of ?  walk along circular birdbath  ft  Review the following skills you will need for this section.   Use the appropriate conversion factor to convert units.     10 miles = km  50 km = miles     40 acres = hectares  5 hectares = acres     250 horsepower = watts  1000 watts = horsepower     0.5 troy oz = grains  100 grains = troy oz      Algebra Refresher Answers   a. km b. mi  a. hectares b. acres  a. watts b. horsepower  a. grains b. troy oz      Section 6.1 Summary  Vocabulary   Arclength  Radian  Conversion factor  Latitude  Unit circle    Concepts   The distance we travel around a circle of radius is proportional to the angle of displacement.  We measure angles in radians when we work with arclength.  Radians  The radian measure of an angle is given by  An arclength equal to one radius determines a central angle of one radian.  Radian measure can be expressed as multiples of or as decimals.     Degrees                        circle  We multiply by the appropriate conversion factor to convert between degrees and radians.  Unit Conversion for Angles   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .   Arclength Formula  On a circle of radius , the length of an arc spanned by an angle in radians is  On a unit circle , the measure of a (positive) angle in radians is equal to the length of the arc it spans.   Study Questions   The length of a circular arc depends on what two variables?  Define the radian measure of an angle.  What is the conversion factor from radians to degrees?  On a unit circle, the length of an arc is equal to what other quantity?    Skills   Express angles in degrees and radians #1 8, 25 32  Sketch angles given in radians #1 and 2, 11 and 12  Estimate angles in radians #9 10, 13 24  Use the arclength formula #33 46  Find coordinates of a point on a unit circle #47 52  Calculate angular velocity and area of a sector #55 60     Homework 6.1    Radians            Degrees              Convert each angle to degrees.  Sketch each angle on a circle like this one, and label in radians.    circle     Radians            Degrees             circle       Radians                Degrees                 Convert each angle to degrees.  Sketch each angle on a circle like this one, and label in radians.  circle  For Problems 3 6, express each fraction of one complete rotation in degrees and in radians.          circle                  circle             circle                  circle      For Problems 7 8, label each angle in standard position with radian measure.  Rotate counter-clockwise from 0.   circle      circle     Rotate clockwise from 0. circle   For Problems 9 10, give a decimal approximation to hundredths for each angle in radians.                     Locate and label each angle from Problem 9 on the unit circle below. (The circle is marked off in tenths of a radian.)   circle     circle     Locate and label each angle from Problem 10 on the unit circle below. (The circle is marked off in tenths of a radian.)  circle  From the list below, choose the best decimal approximation for each angle in radians in Problems 13 20. Do not use a calculator; use the fact that is a little greater than 3.            For Problems 21 24, say in which quadrant each angle lies.        II  IV  IV  I               III  II  I  IV          For Problems 25 28, complete the table.    Radians      Degrees       Radians      Degrees        Radians      Degrees        Radians      Degrees       Radians      Degrees        Radians      Degrees       For Problems 29 30, convert to radians. Round to hundredths.                 For Problems 31 32, convert to degrees. Round to tenths.                 For Problems 33 37, use the arclength formula to answer the questions. Round answers to hundredths.  Find the arclength spanned by an angle of on a circle of radius 4 inches.  Find the arclength spanned by an angle of on a circle of radius 18 feet.  Find the radius of a cricle if an angle of spans an arclength of 18 meters.  Find the radius of a cricle if an angle of spans an arclength of 0.5 kilometers.  Find the angle subtended by an arclength of 28 centimeters on a circle of diameter 20 centimeters.  Find the angle subtended by an arclength of 1.6 yards on a circle of diameter 2 yards.   For Problems 39 46, use the arclength formula to answer the questions.   Through how many radians does the minute hand of a clock sweep between 9:05 pm and 9:30 pm?  The dial of Big Ben's clock in London is 23 feet in diameter. How long is the arc traced by the minute hand between 9:05 pm and 9:30 pm?      The largest clock ever constructed was the Floral Clock in the garden of the 1904 World's Fair in St. Louis. The hour hand was 50 feet long, the minute hand was 75 feet long, and the radius of the clockface was 112 feet.   If you started at the 12 and walked 500 feet clockwise around the clockface, through how many radians would you walk?  If you started your walk at noon, how long would it take the minute hand to reach your position? How far did the tip of the minute hand move in its arc?   In 1851 Jean-Bernard Foucault demonstrated the rotation of the earth with a pendulum installed in the Pantheon in Paris. Foucault's pendulum consisted of a cannonball suspended on a 67 meter wire, and it swept out an arc of 8 meters on each swing. Through what angle did the pendulum swing? Give your answer in radians and then in degrees, rounded to the nearest hundredth.  A wheel with radius 40 centimeters is rolled a distance of 1000 centimeters on a flat surface. Through what angle has the wheel rotated? Give your answer in radians and then in degrees, rounded to one decimal place.  Clothes dryers draw 3.5 times as much power as washing machines, so newer machines have been engineered for greater efficiency. A vigorous spin cycle reduces the time needed for drying, and some front-loading models spin at a rate of 1500 rotations per minute.   If the radius of the drum is 11 inches, how far do your socks travel in one minute?  How fast are your socks traveling during the spin cycle?      The Hubble telescope is in orbit around the earth at an altitude of 600 kilometers, and completes one orbit in 97 minutes.  How far does the telescope travel in one hour? (The radius of the earth is 6400 kilometers.)  What is the speed of the Hubble telescope?   The first large windmill used to generate electricity was built in Cleveland, Ohio in 1888. Its sails were 17 meters in diameter, and moved at 10 rotations per minute. How fast did the ends of the sails travel?  The largest windmill operating today has wings 54 meters in length. To be most efficient, the tips of the wings must travel at 50 meters per second. How fast must the wings rotate?   For Problems 47 52, find two points on the unit circle with the given coordinate.Sketch the approximate location of the points on the circle. (Hint: what is the equation for the unit circle?)    unit circle        unit circle        unit circle    ,     Sketch a circle of radius 4 units, and mark the positions of 1, 2, 3, 4, 5, and 6 radians on the circle.  On a circle of radius 4 feet, find the arclength determined by each angle in radians.                   Graph against . What is the slope of the graph?  If you double the angle , what happens to the arclength? What happens if you triple ?    grid       circle                         linear graph of arclength vs angle     Arclength doubles; arclength triples    Sketch several concentric circles with increasing radius, and draw an angle of 2 radians through all of them.  Find the arclength determined by an angle of 2 radians on circles of given radius.                   Graph against . What is the slope of the graph?  If you double the radus , what happens to the arclength? What happens if you triple ?    grid     The angular velocity, , of a rotating object is given in radians per unit time. Thus, an object that rotates through radians in time has angular velocity given by . Find the angular velocity of the following objects.   The London Eye ferris wheel, which makes one revolution every 20 minutes.  An old-fashioned long-playing record, which revolved times in 60 seconds.      Use the arclength formula to derive a formula relating linear velocity, , and angular velocity, . (See Problem 55 for the definition of angular velocity.) Start with the formula for linear velocity: and substitute the arclength formula for .  Recall that to calculate a fraction of a revolution in degrees we divide the angle by . For example, is of a revolution because .   Write an expression that gives the fraction of a revolution for an angle in radians.  Use your expression to calculate what fraction of a revolution is represented by each of the following angles: .      Use your result from Problem 57a to write each statement as a mathematical formula.    circle     circle      The length of the arc, , is equal to:  The area of the sector, , is equal to:   For Problems 59 60, Use the formula for the area of a sector from Problem 58.    circle       circle       "
+},
+{
+  "id": "p-3505",
+  "level": "2",
+  "url": "Arclength-and-Radians.html#p-3505",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "arclength "
+},
+{
+  "id": "p-3506",
+  "level": "2",
+  "url": "Arclength-and-Radians.html#p-3506",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "arc arclength central angle subtend spans angle of displacement "
 },
 {
   "id": "example-104",
@@ -14749,7 +14767,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.1",
   "title": "",
-  "body": "What length of arc is spanned by an angle of on a circle of radius 12 centimeters?  Because , an angle of is of a complete revolution, as shown at right.  Using the formula above with , we find that or about 25.1 cm.  arc on circle "
+  "body": "What length of arc is spanned by an angle of on a circle of radius 12 centimeters?  Because , an angle of is of a complete revolution, as shown at right.   Using the formula above with , we find that or about 25.1 cm.  arc on circle "
 },
 {
   "id": "exercise-1367",
@@ -14758,21 +14776,21 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.2",
   "title": "",
-  "body": "How far have you traveled around the edge of a Ferris wheel of radius 100 feet when you have turned through an angle of ? ft "
+  "body": "How far have you traveled around the edge of a Ferris wheel of radius 100 feet when you have turned through an angle of ? ft  "
 },
 {
-  "id": "p-3520",
+  "id": "p-3521",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3520",
+  "url": "Arclength-and-Radians.html#p-3521",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "radian measure "
 },
 {
-  "id": "p-3521",
+  "id": "p-3522",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3521",
+  "url": "Arclength-and-Radians.html#p-3522",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -14785,7 +14803,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.3",
   "title": "",
-  "body": "What is the radian measure of an angle of ?  An angle of is of a complete revolution, as we saw in the previous example. Thus, an angle of has a radian measure of , or . "
+  "body": "What is the radian measure of an angle of ?  An angle of is of a complete revolution, as we saw in the previous example. Thus, an angle of has a radian measure of , or .  "
 },
 {
   "id": "exercise-1368",
@@ -14803,7 +14821,7 @@ var ptx_lunr_docs = [
   "type": "Note",
   "number": "6.5",
   "title": "",
-  "body": "You should memorize both the exact values of these angles in radians and their approximations! "
+  "body": "Because they are \"benchmarks\" for comparing angles, you should be very familiar with both the exact values of these angles in radians and their approximations! "
 },
 {
   "id": "example-106",
@@ -14821,23 +14839,14 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.7",
   "title": "",
-  "body": "Draw a circle centered at the origin and sketch (in standard position) angles of approximately 3 radians, 4 radians, and 6 radians.  circle "
-},
-{
-  "id": "note-24",
-  "level": "2",
-  "url": "Arclength-and-Radians.html#note-24",
-  "type": "Note",
-  "number": "6.8",
-  "title": "",
-  "body": " To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .  "
+  "body": "Draw circles centered at the origin and sketch (in standard position) angles of approximately 3 radians, 4 radians, and 6 radians.  circle  circle  circle  "
 },
 {
   "id": "example-107",
   "level": "2",
   "url": "Arclength-and-Radians.html#example-107",
   "type": "Example",
-  "number": "6.9",
+  "number": "6.8",
   "title": "",
   "body": " Convert 3 radians to degrees.  Convert 3 degrees to radians.      "
 },
@@ -14846,14 +14855,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Arclength-and-Radians.html#exercise-1370",
   "type": "Checkpoint",
-  "number": "6.10",
+  "number": "6.9",
   "title": "",
-  "body": " Convert to radians. Give both an exact answer and an approximation to three decimal places.  Convert radians to degrees.  "
+  "body": " Convert to radians. Give both an exact answer and an approximation to three decimal places.  Convert radians to degrees.  radians "
 },
 {
-  "id": "p-3546",
+  "id": "note-24",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3546",
+  "url": "Arclength-and-Radians.html#note-24",
+  "type": "Note",
+  "number": "6.10",
+  "title": "",
+  "body": "You can review the use of conversion factors in the Algebra Refresher at the end of this Section. "
+},
+{
+  "id": "p-3553",
+  "level": "2",
+  "url": "Arclength-and-Radians.html#p-3553",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -14866,7 +14884,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.11",
   "title": "",
-  "body": "The radius of the Earth is about 3960 miles. If you travel 500 miles due north, how many degrees of latitude will you traverse?  We think of the distance 500 miles as an arclength on the surface of the Earth, as shown at right. Substituting and into the arclength formula gives   circle     To convert the angle measure to degrees, we multiply by to get Your latitude has changed by about . "
+  "body": "The radius of the Earth is about 3960 miles. If you travel 500 miles due north, how many degrees of latitude will you traverse? (Latitude is measured in degrees north or south of the equator.)  We think of the distance 500 miles as an arclength on the surface of the Earth, as shown at right. Substituting and into the arclength formula gives   circle     To convert the angle measure to degrees, we multiply by to get Your latitude has changed by about . "
 },
 {
   "id": "exercise-1371",
@@ -14878,13 +14896,22 @@ var ptx_lunr_docs = [
   "body": "The distance around the face of a large clock from 2 to 3 is five feet. What is the radius of the clock? ft "
 },
 {
+  "id": "p-3562",
+  "level": "2",
+  "url": "Arclength-and-Radians.html#p-3562",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "unit circle "
+},
+{
   "id": "example-109",
   "level": "2",
   "url": "Arclength-and-Radians.html#example-109",
   "type": "Example",
   "number": "6.13",
   "title": "",
-  "body": "You have walked 4 miles around a circular pond of radius one mile. What is your position relative to your starting point?  The pond is a unit circle, so you have traversed an angle in radians equal to the arc length traveled, 4 miles. An angle of 4 radians is in the middle of the third quadrant relative to your starting point, more than halfway but less than three-quarters around the pond. "
+  "body": "You are walking on a trail around a circular pond of radius one mile. You have have walked 4 miles from the trailhead. Sketch your location now.  The pond is a unit circle, so you have traversed an angle in radians equal to the arc length traveled, 4 miles. An angle of 4 radians is in the middle of the third quadrant relative to your starting point, more than halfway but less than three-quarters around the pond. walk along circle pond  "
 },
 {
   "id": "exercise-1372",
@@ -14893,7 +14920,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.14",
   "title": "",
-  "body": "An ant walks around the rim of a circular birdbath of radius 1 foot. How far has the ant walked when it has turned through an angle of ? ft "
+  "body": " An ant walks around the rim of a circular birdbath of diameter 2 feet. How far has the ant walked when it has turned through an angle of ?  walk along circular birdbath  ft "
 },
 {
   "id": "project-16",
@@ -14905,9 +14932,9 @@ var ptx_lunr_docs = [
   "body": " Use the appropriate conversion factor to convert units.     10 miles = km  50 km = miles     40 acres = hectares  5 hectares = acres     250 horsepower = watts  1000 watts = horsepower     0.5 troy oz = grains  100 grains = troy oz      Algebra Refresher Answers   a. km b. mi  a. hectares b. acres  a. watts b. horsepower  a. grains b. troy oz    "
 },
 {
-  "id": "p-3570",
+  "id": "p-3579",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3570",
+  "url": "Arclength-and-Radians.html#p-3579",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -15460,7 +15487,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.2",
   "title": "The Circular Functions",
-  "body": " The Circular Functions  Trigonometric Functions of Angles in Radians  Measuring angles in radians has other applications besides calculating arclength, and we will need to evaluate trigonometric functions of angles in radians. The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  For example, radians is the same as , because , so However, we don't have to convert radians to degrees in order to evaluate trig ratios; your calculator can give you the trigonometric function values for angles expressed in radians. First, change the calculator setting from Degree mode to Radian mode. Then enter  SIN   3  and the calculator will return . You can check that this number is a decimal approximation for .  Use your calculator to find the sine and cosine of the following angles in radians. Round your answers to four decimal places.      With your calculator in radian mode, enter COS    and SIN    to find Rounding to four decimal places gives and .  Your calculator will give you the values Rounding to four places, we have and . Note that 3.5 radians is a third-quadrant angle, so the signs of the trig values make sense.   Recall the formula for arclength when the angle is measured in radians: . If we solve for , we see that , a ratio of two lengths. The units of length cancel out, so that radian measure has no units; it is a \"dimensionless\" quantity.  We shall see that this property makes radians especially useful in applications. From now on we shall omit the tag \"radians,\" and you may assume that any angle given without units is in radians.  Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.       The Special Values  special angles radians  Many applications of trigonometric functions, including most of the periodic functions we encountered in Chapter 5, use radians for input values, rather than degrees. For this reason, it is important to know the trig values for the special angles, which you learned in degrees in Chapter 2, when the angles are given in radians.     Degrees  Radians  Sine  Cosine  Tangent                               undefined    circle   You should memorize these function values, and be able to use them to find trig values for the special angles in all four quadrants.  Recall that we use reference angles to define the trigonometric ratios for angles greater than . (See Section 4.1 to review reference angles.) The figure below shows how to calculate reference angles in radians.  angles  Radians  radian   grid   Use the unit circle to estimate the sine, cosine, and tangent of each arc of given length.      Use the unit circle to estimate two solutions to each equation.    Sketch the angle on the unit circle. Find the reference angle in radians, rounded to two decimal places, and sketch the reference triangle.     Give a decimal approximation to two places for each angle, then the degree measure of each.    Radians                Decimal Approx.                Degrees                  Radians                Decimal Approx.                Degrees                On the unit circle above, plot the endpoint of each arc in standard position.      Give exact values for the following.       The reference angle for is , and the tangent is negative in the second quadrant. (See the figure at right.) Thus,   angles     The reference angle for is , and the cosine is negative in the third quadrant, so   angles      At this point, you may feel that expressions such as look like hieroglyphics. Keep in mind that and are just numbers, so the equation above says that \"the cosine of an angle of 3.9 radians is about -0.7.\"  Give exact values for the following.          Sine and Cosine of Real Numbers  sine of a real number  cosine of a real number  In Section 6.1 we derived the arclength formula, , where is measured in radians, and observed that, on a unit circle where , the measure of a positive angle in radians is equal to the length of the arc it spans. This is an important observation, because it allows us to define the sine and cosine as functions of real numbers, instead of as functions of angles.  Consider the unit circle shown at right, and the angle determined by the arc of length . The radian measure of is the same as the length of the arc. (For example, in this figure .)   circle   Sine and Cosine of Real Numbers  sine of a real number  cosine of a real number  We define the trigonometric functions of the number by where is the length of the arc subtended by an angle , measured in radians, on a unit circle.  We can think of the definition this way: to find the sine or cosine of a real number , we draw an arc of length on a unit circle, and then find the sine or cosine of the angle determined by the arc.  In practice, there is no difference between finding the sine or cosine of the number 2 and the sine or cosine of an angle of 2 radians: in each case we set the calculator in Radian mode and evaluate   COS  and  SIN   The sunset time in Stockholm, Sweden, on the th day of the year can be modeled by where is given in hours after noon. Find the sunset time on January 1 (day ) and on July 1 (day ).  Evaluate the function for to find On January 1, sunset in Stockholm occurs about 2.99 hours after noon, or at 2:59 pm.  Evaluate the function at to find On July 1, sunset occurs about 9.11 hours after noon, or at 9:07 pm. (Actually, 10:07 pm, because of daylight savings time.)  Variable stars are important in astronomy because they are used to estimate distances. Their magnitude, or brightness, varies periodically and can be modeled by trigonometric functions. The star T Herculis reached its maximum magnitude on December 27, 2004, and days later its magnitude is approximately   What was the magnitude of T Herculis on December 27, 2004?  What was the magnitude of T Herculis be on December 27, 2006 (730 days later)?       Coordinates on a Unit Circle  There is another useful connection between the unit circle and the trigonometric functions. Consider an arc of length in standard position on a unit circle, and the angle spanned by the arc. Because on a unit circle, But because and , we have We have established the following result for the sine and cosine of a real number .  Coordinates on a Unit Circle  coordinates of point on unit circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are  circle  We sometimes call the trigonometric functions of arclength, and , the circular functions circular function circular function sine circular function cosine , because they are defined by the coordinates of points on a unit circle.  Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.       On a unit circle, the coordinates of are , so   The coordinates of are , as shown at right.  circle  (We could also observe that an arc of length is one quarter of a unit circle, so the point sits at the twelve o'clock position on the circle.)  The coordinates of are , so    circle  Thus, the coordinates of are , as shown at right.   Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.         The Tangent Function  tangent function  We can also define the tangent function for real numbers. Let be the terminal point of an arc of length in standard position on a unit circle. Then   Of course, this definition agrees with our earlier definition of the tangent function for angles, because the point lies on the terminal side of the angle radians.  circle  For example, we saw earlier that, rounded to four decimal places, so the coordinates of point on the unit circle in the figure above are . Therefore, You can set your calculator in radian mode to verify that, to three decimal places,   TAN   We now have the following definitions for the circular functions of real numbers.  The Circular Functions  circular function  sine of a real number  cosine of a real number  tangent of a real number  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle  Use the graph of the unit circle shown below to estimate , and .  circle  The circle is scaled in units of 0.1 radians, and an arc of 2.5 radians in standard position has its terminal point, , in the second quadrant. The coordinates of are approximately , so we have To find , we calculate .  Use the graph of the unit circle in the previous example to estimate , and . , ,  Review the following skills you will need for this section.   Simplify.                                          Algebra Refresher Answers                               Section 6.2 Summary  Vocabulary   Circular functions    Concepts   The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  You should memorize the trig values of the special angles in radians.    Degrees  Radians  Sine  Cosine  Tangent                               undefined   To find the sine or cosine of a real number , we draw an arc of length on a unit circle, and then find the sine or cosine of the angle determined by the arc.  Coordinates on a Unit Circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are circle  The Circular Functions  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle   Study Questions   Write each statement using decimal approximations to four places.      Sketch a figure on a unit circle to illustrate each equation.      Write down the multiples of from to . Reduce each fraction.  On a unit circle, sketch arcs in standard position with the following lengths.    Skills   Know the trigonometric function values for the special angles in radians #1 4, 46 48  Use a unit circle to find trig values #5 30, 45 58  Find reference angles in radians #33 45  Evaluate trigonometric expressions #31 32, 49 54  Find coordinates on a unit circle #55 60, 67 68  Find an angle with a given terminal point on a unit circle #61 66  Use the tangent ratio to find slope #69 74  Find coordinates on a circle of radius #77 80     Homework 6.2  For Problems 1 4, each point on the unit circle is the terminal point of an angle in standard position. Give exact values for the radian measure, , of the angle, and the coordinates of the point.   circle     a  b  c  d                       a  b  c  d                      circle     a  b  c  d                      circle     a  b  c  d                       a  b  c  d                      circle     a  b  c  d                      For Problems 5 8, use the unit circle to estimate the sine, cosine, and tangent of each arc of given length.  circle                                   For Problems 9 14, use the unit circle to estimate two numbers with the given trig value. circle  or   or   or    Each of Problems 13 20 describes an arc in standard position on the unit circle. In which quadrant does the terminal point of the arc lie?  II   II   III    For Problems 21 26, without using a calculator, decide whether the quantity is positive or negative.  Negative   Positive   Positive    For Problems 27 30, place the trig values in order from smallest to largest. Use the figure to help you, but try not to use a calculator! circle       The sunrise time in Wellington, New Zealand, on the th day of the year can be modeled by where is given in hours after midnight. Find the sunrise time on January 1 (day ), April 1 (day ), July 1 (day ), and on October 1 (day ). January 1: 4:24, April 1: 6:45, July 1: 8:02, October 1: 5:55  The variable star RT Cygni reached its maximum magnitude on May 22, 2004, and days later its magnitude is given by Find the magnitude of RT Cygni on days and . (Note that smaller values of denote brighter magnitudes.)  For Problems 33 38, find the reference angle in radians, rounded to two decimal places.         For Problems 39 44, find the reference angle in radians, expressed as a multiple of .         Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle      Complete the table.                        Complete the table.                                             Complete the table.                        For Problems 49 54, evaluate the expression exactly.         Starting at , you walk units around a unit circle. For Problems 55 58, sketch a unit circle showing your position. What are your coordinates?       City Park features a circular jogging track of radius 1 mile, centered on the open-air bandstand. You start jogging on the track 1 mile due east of the bandstand and proceed counterclockwise. What are your coordinates, relative to the bandstand, when you have jogged five miles? mi east, mi north, or about 0.96 mi south  Silver Reservoir is a circular man-made lake of radius 1 kilometer. If you start at the easternmost point on the reservoir and walk counterclockwise for 4 kilometers, how far south of your intial position are you?  For Problems 61 66, find the angle in radians between and determined by the terminal point on the unit circle. Round your answer to hundredths.          Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.     circle    Intersections: and  and    Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.    Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?    grid       graph        Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?  grid  For Problems 71 74, find an equation for the line with the given angle of inclination, passing through the given point. (See Section 4.3 to review angle of inclination.)    or    Use similar triangles to show that the coordinates of point on the unit circle shown at right are .   circle    Any point on the terminal side of satisfies . For the point where . The arc of length is spanned by an angle in standard position. Because arclength is and so .  Use similar triangles to show that .   circle     Use the results of Problem 77 for for Problems 78 80.  Use similar triangles to show that the coordinates of a point determined by angle on a circle of radius are . (See the figure at right.)   circles    The two right triangles shown are similar, so their sides are proportional. The hypotenuse of the large triangle is times the hypotenuse of the small triangle, so the two legs of the large triangle must be times the legs of the small triangle. Thus, because the coordinates of the vertex on the unit circle are , the coordinates of must be .  The Astrodome in Houston has a diameter of 710 feet. If you start at the easternmost point and walk counterclockwise around its perimeter for a distance of 250 feet, how far north of your starting point are you?  The Barringer meteor crater near Winslow, Arizona is 1182 meters in diameter. You start at the easternmost point on the rim of the crater and walk counterclockwise around the edge. After walking for 1 kilometer, what is your position relative to your starting point 71 m west, 587 m north  One of the most intriguing features of Stonehenge is the position of the four Station Stones. Stonehenge  They form the corners of a rectangle inscribed in the Aubrey Circle on the perimeter of the henge, which has diameter 288 feet. A line from the center of the circle and perpendicular to the long edge of the rectangle points through the Slaughter Stones at the entrance of the henge and out to the Heel Stone. If you stood in the center of the circle on the summer solstice, you would see the sun rise directly over the Heel Stone.  Stonehenge   The sun rises east of north on the summer solstice at Stonehenge. If the positive -axis points north, find the coordinates of the henge entrance relative to its center.  The northernmost station stone is located of arc counterclockwise from the entrance. Find its coordinates relative to the center of the henge.     "
+  "body": " The Circular Functions  Trigonometric Functions of Angles in Radians  Measuring angles in radians has other applications besides calculating arclength, and we will need to evaluate trigonometric functions of angles in radians. The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  For example, radians is the same as , because , so However, we don't have to convert radians to degrees in order to evaluate trig ratios; your calculator can give you the trigonometric function values for angles expressed in radians. First, change the calculator setting from Degree mode to Radian mode. Then enter  SIN   3  and the calculator will return . You can check that this number is a decimal approximation for .  Use your calculator to find the sine and cosine of the following angles in radians. Round your answers to four decimal places.      With your calculator in radian mode, enter COS    and SIN    to find Rounding to four decimal places gives and .  Your calculator will give you the values Rounding to four places, we have and . Note that 3.5 radians is a third-quadrant angle, so the signs of the trig values make sense.   Recall the formula for arclength when the angle is measured in radians: . If we solve for , we see that , a ratio of two lengths. The units of length cancel out, so that radian measure has no units; it is a \"dimensionless\" quantity.  We shall see that this property makes radians especially useful in applications. From now on we shall omit the tag \"radians,\" and you may assume that any angle given without units is in radians.  Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.      Coterminal angles measured in radians have the same trig values, just as they do when measured in degrees. So adding or subtracting a multiple of to any angle results in a new angle in the same standard position.  Find the sine and cosine of the following angles in radians. Round your answers to four decimal places.      Because  is coterminal with and it has the same sine and cosine as . And radians is equal to , so  Rounded to four places, your calculator will give you the values By adding 6.2832 (that's approximately ) to we see that radians is coterminal with 2.2832 radians, a second-quadrant angle. You can check that 2.2832 radians has (approximately) the same trig values as radians.   Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.       The Special Values  special angles radians  Many applications of trigonometric functions, including most of the periodic functions we encountered in Chapter 4, use radians for input values, rather than degrees. For this reason, it is important to know the trig values for the special angles, which you learned in degrees in Chapter 2, when the angles are given in radians.     Degrees  Radians  Sine  Cosine  Tangent                               undefined   circle  You should learn these function values, so that ou can find trig values for the special angles in all four quadrants.  Recall that we use reference angles to define the trigonometric ratios for angles greater than . (See Section 4.1 to review reference angles.) The figure below shows how to calculate reference angles in radians. Note that the formulas are the same as those for degrees if we replace by !  Reference Angles in Radians  angles  Give exact values for the following.       The reference angle for is , and the tangent is negative in the second quadrant. (See the figure at right.) Thus,   angles   The reference angle for is , and the cosine is negative in the third quadrant, so  angles   At this point, you may feel that expressions such as look like hieroglyphics. Keep in mind that and are just numbers, so the equation above says that \"the cosine of an angle of 3.9 radians is about -0.7.\"  Give exact values for the following.         In Section 6.1 we learned that the measure of a (positive) angle in radians is equal to the length of the arc it spans. We'll use that fact in the next Activity.  Radians  radian  Here is a unit circle with arclengths labeled, measured counterclockwise from . (Note that the distance around the whole circle is 6.28 units!)   grid   Use the unit circle to estimate the sine, cosine, and tangent of each angle in radians.      Use the unit circle to estimate two solutions to each equation.    Sketch the angle on the unit circle. Find the reference angle in radians, rounded to two decimal places, and sketch the reference triangle.     Give a decimal approximation to two places for each angle, then the degree measure of each.    Radians                Decimal Approx.                Degrees                  Radians                Decimal Approx.                Degrees                On the unit circle above, plot the endpoint of each arc in standard position.       Sine and Cosine of Real Numbers  sine of a real number  cosine of a real number  In Section 6.1 we derived the arclength formula, , where is measured in radians, and observed that, on a unit circle, where , the measure of a positive angle in radians is equal to the length of the arc it spans. This is an important observation, because it allows us to define the sine and cosine as functions of real numbers, instead of as functions of angles.  Consider the unit circle shown at right, and the angle determined by the arc of length . The radian measure of is the same as the length of the arc. (For example, in this figure .)  circle  Sine and Cosine of Real Numbers  sine of a real number  cosine of a real number  We define the trigonometric functions of the number by where is the length of the arc subtended by an angle measured in radians, on a unit circle.   We can think of the definition this way: to find the sine or cosine of a real number , we draw an arc of length on a unit circle, and then find the sine or cosine of the angle determined by the arc.  In practice, there is no difference between finding the sine or cosine of the number 2 and the sine or cosine of an angle of 2 radians: in each case we set the calculator in Radian mode and evaluate   COS  and  SIN   So, in some sense then, a trig function of a radian is the same as a trig function of a real number. This result is so important that it bears repeating: to find the sine or cosine of a real number , we find the sine or cosine of the angle radians. We can now use the trigonometric functions to model periodic behavior as functions of time, or indeed, of any variable.  The sunset time in Stockholm, Sweden, on the th day of the year can be modeled by where is given in hours after noon. Find the sunset time on January 1 (day ) and on July 1 (day ).  Evaluate the function for to find On January 1, sunset in Stockholm occurs about 2.99 hours after noon, or at 2:59 pm.  Evaluate the function at to find On July 1, sunset occurs about 9.11 hours after noon, or at 9:07 pm. (Actually, 10:07 pm, because of daylight savings time.)  Variable stars are important in astronomy because they are used to estimate distances. Their magnitude, or brightness, varies periodically and can be modeled by trigonometric functions. The star T Herculis reached its maximum magnitude on December 27, 2004, and days later its magnitude is approximately   What was the magnitude of T Herculis on December 27, 2004?  What was the magnitude of T Herculis be on December 27, 2006 (730 days later)?       Coordinates on a Unit Circle  There is another useful connection between the unit circle and the trigonometric functions. Consider an arc of length in standard position on a unit circle, and the angle spanned by the arc. Because on a unit circle, But because and , we have We have established the following result for the sine and cosine of a real number .  Coordinates on a Unit Circle  coordinates of point on unit circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are  circle  We sometimes call the trigonometric functions of real numbers, and , the circular functions circular function circular function sine circular function cosine , because they are defined by the coordinates of points on a unit circle.  Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.       On a unit circle, the coordinates of are , so   The coordinates of are , as shown at right.  circle  (We could also observe that an arc of length is one quarter of a unit circle, so the point sits at the twelve o'clock position on the circle.)  The coordinates of are , so    circle  Thus, the coordinates of are , as shown at right.   Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.         The Tangent Function  tangent function  We can also define the tangent function for real numbers. Let be the terminal point of an arc of length in standard position on a unit circle. Then   Of course, this definition agrees with our earlier definition of the tangent function for angles, because the point lies on the terminal side of the angle radians.  circle  For example, we saw earlier that, rounded to four decimal places, so the coordinates of point on the unit circle in the figure above are . Therefore, You can set your calculator in radian mode to verify that, to three decimal places,   TAN   We now have the following definitions for the circular functions of real numbers.  The Circular Functions  circular function  sine of a real number  cosine of a real number  tangent of a real number  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle  Use the graph of the unit circle shown below to estimate , and .  circle  The circle is scaled in units of 0.1 radians, and an arc of 2.5 radians in standard position has its terminal point, , in the second quadrant. The coordinates of are approximately , so we have To find , we calculate .  Use the graph of the unit circle in the previous example to estimate , and . , ,  Review the following skills you will need for this section.   Simplify.                                          Algebra Refresher Answers                               Section 6.2 Summary  Vocabulary   Circular functions    Concepts   The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  You should memorize the trig values of the special angles in radians.    Degrees  Radians  Sine  Cosine  Tangent                               undefined   To find the sine or cosine of a real number , we draw an arc of length on a unit circle, and then find the sine or cosine of the angle determined by the arc.  Coordinates on a Unit Circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are circle  The Circular Functions  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle   Study Questions   Write each statement using decimal approximations to four places.      Sketch a figure on a unit circle to illustrate each equation.      Write down the multiples of from to . Reduce each fraction.  On a unit circle, sketch arcs in standard position with the following lengths.    Skills   Know the trigonometric function values for the special angles in radians #1 4, 46 48  Use a unit circle to find trig values #5 30, 45 58  Find reference angles in radians #33 45  Evaluate trigonometric expressions #31 32, 49 54  Find coordinates on a unit circle #55 60, 67 68  Find an angle with a given terminal point on a unit circle #61 66  Use the tangent ratio to find slope #69 74  Find coordinates on a circle of radius #77 80     Homework 6.2  For Problems 1 4, each point on the unit circle is the terminal point of an angle in standard position. Give exact values for the radian measure, , of the angle, and the coordinates of the point.   circle     a  b  c  d                       a  b  c  d                      circle     a  b  c  d                      circle     a  b  c  d                       a  b  c  d                      circle     a  b  c  d                      For Problems 5 8, use the unit circle to estimate the sine, cosine, and tangent of each arc of given length.  circle                                   For Problems 9 14, use the unit circle to estimate two numbers with the given trig value. circle  or   or   or    Each of Problems 13 20 describes an arc in standard position on the unit circle. In which quadrant does the terminal point of the arc lie?  II   II   III    For Problems 21 26, without using a calculator, decide whether the quantity is positive or negative.  Negative   Positive   Positive    For Problems 27 30, place the trig values in order from smallest to largest. Use the figure to help you, but try not to use a calculator! circle       The sunrise time in Wellington, New Zealand, on the th day of the year can be modeled by where is given in hours after midnight. Find the sunrise time on January 1 (day ), April 1 (day ), July 1 (day ), and on October 1 (day ). January 1: 4:24, April 1: 6:45, July 1: 8:02, October 1: 5:55  The variable star RT Cygni reached its maximum magnitude on May 22, 2004, and days later its magnitude is given by Find the magnitude of RT Cygni on days and . (Note that smaller values of denote brighter magnitudes.)  For Problems 33 38, find the reference angle in radians, rounded to two decimal places.         For Problems 39 44, find the reference angle in radians, expressed as a multiple of .         Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle      Complete the table.                        Complete the table.                                             Complete the table.                        For Problems 49 54, evaluate the expression exactly.         Starting at , you walk units around a unit circle. For Problems 55 58, sketch a unit circle showing your position. What are your coordinates?       City Park features a circular jogging track of radius 1 mile, centered on the open-air bandstand. You start jogging on the track 1 mile due east of the bandstand and proceed counterclockwise. What are your coordinates, relative to the bandstand, when you have jogged five miles? mi east, mi north, or about 0.96 mi south  Silver Reservoir is a circular man-made lake of radius 1 kilometer. If you start at the easternmost point on the reservoir and walk counterclockwise for 4 kilometers, how far south of your intial position are you?  For Problems 61 66, find the angle in radians between and determined by the terminal point on the unit circle. Round your answer to hundredths.          Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.     circle    Intersections: and  and    Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.    Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?    grid       graph        Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?  grid  For Problems 71 74, find an equation for the line with the given angle of inclination, passing through the given point. (See Section 4.3 to review angle of inclination.)    or    Use similar triangles to show that the coordinates of point on the unit circle shown at right are .   circle    Any point on the terminal side of satisfies . For the point where . The arc of length is spanned by an angle in standard position. Because arclength is and so .  Use similar triangles to show that .   circle     Use the results of Problem 77 for for Problems 78 80.  Use similar triangles to show that the coordinates of a point determined by angle on a circle of radius are . (See the figure at right.)   circles    The two right triangles shown are similar, so their sides are proportional. The hypotenuse of the large triangle is times the hypotenuse of the small triangle, so the two legs of the large triangle must be times the legs of the small triangle. Thus, because the coordinates of the vertex on the unit circle are , the coordinates of must be .  The Astrodome in Houston has a diameter of 710 feet. If you start at the easternmost point and walk counterclockwise around its perimeter for a distance of 250 feet, how far north of your starting point are you?  The Barringer meteor crater near Winslow, Arizona is 1182 meters in diameter. You start at the easternmost point on the rim of the crater and walk counterclockwise around the edge. After walking for 1 kilometer, what is your position relative to your starting point 71 m west, 587 m north  One of the most intriguing features of Stonehenge is the position of the four Station Stones. Stonehenge  They form the corners of a rectangle inscribed in the Aubrey Circle on the perimeter of the henge, which has diameter 288 feet. A line from the center of the circle and perpendicular to the long edge of the rectangle points through the Slaughter Stones at the entrance of the henge and out to the Heel Stone. If you stood in the center of the circle on the summer solstice, you would see the sun rise directly over the Heel Stone.  Stonehenge   The sun rises east of north on the summer solstice at Stonehenge. If the positive -axis points north, find the coordinates of the henge entrance relative to its center.  The northernmost station stone is located of arc counterclockwise from the entrance. Find its coordinates relative to the center of the henge.     "
 },
 {
   "id": "example-110",
@@ -15490,85 +15517,67 @@ var ptx_lunr_docs = [
   "body": "Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.     "
 },
 {
-  "id": "activity-7",
-  "level": "2",
-  "url": "The-Circular-Functions.html#activity-7",
-  "type": "Activity",
-  "number": "6.2",
-  "title": "Radians.",
-  "body": "Radians  radian   grid   Use the unit circle to estimate the sine, cosine, and tangent of each arc of given length.      Use the unit circle to estimate two solutions to each equation.    Sketch the angle on the unit circle. Find the reference angle in radians, rounded to two decimal places, and sketch the reference triangle.     Give a decimal approximation to two places for each angle, then the degree measure of each.    Radians                Decimal Approx.                Degrees                  Radians                Decimal Approx.                Degrees                On the unit circle above, plot the endpoint of each arc in standard position.     "
-},
-{
   "id": "example-111",
   "level": "2",
   "url": "The-Circular-Functions.html#example-111",
   "type": "Example",
   "number": "6.18",
   "title": "",
-  "body": "Give exact values for the following.       The reference angle for is , and the tangent is negative in the second quadrant. (See the figure at right.) Thus,   angles     The reference angle for is , and the cosine is negative in the third quadrant, so   angles     "
-},
-{
-  "id": "note-26",
-  "level": "2",
-  "url": "The-Circular-Functions.html#note-26",
-  "type": "Note",
-  "number": "6.19",
-  "title": "",
-  "body": "At this point, you may feel that expressions such as look like hieroglyphics. Keep in mind that and are just numbers, so the equation above says that \"the cosine of an angle of 3.9 radians is about -0.7.\" "
+  "body": "Find the sine and cosine of the following angles in radians. Round your answers to four decimal places.      Because  is coterminal with and it has the same sine and cosine as . And radians is equal to , so  Rounded to four places, your calculator will give you the values By adding 6.2832 (that's approximately ) to we see that radians is coterminal with 2.2832 radians, a second-quadrant angle. You can check that 2.2832 radians has (approximately) the same trig values as radians.  "
 },
 {
   "id": "exercise-1434",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1434",
   "type": "Checkpoint",
-  "number": "6.20",
+  "number": "6.19",
   "title": "",
-  "body": "Give exact values for the following.        "
-},
-{
-  "id": "note-27",
-  "level": "2",
-  "url": "The-Circular-Functions.html#note-27",
-  "type": "Note",
-  "number": "6.21",
-  "title": "",
-  "body": "In practice, there is no difference between finding the sine or cosine of the number 2 and the sine or cosine of an angle of 2 radians: in each case we set the calculator in Radian mode and evaluate   COS  and  SIN  "
+  "body": "Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.     "
 },
 {
   "id": "example-112",
   "level": "2",
   "url": "The-Circular-Functions.html#example-112",
   "type": "Example",
-  "number": "6.22",
+  "number": "6.20",
   "title": "",
-  "body": "The sunset time in Stockholm, Sweden, on the th day of the year can be modeled by where is given in hours after noon. Find the sunset time on January 1 (day ) and on July 1 (day ).  Evaluate the function for to find On January 1, sunset in Stockholm occurs about 2.99 hours after noon, or at 2:59 pm.  Evaluate the function at to find On July 1, sunset occurs about 9.11 hours after noon, or at 9:07 pm. (Actually, 10:07 pm, because of daylight savings time.) "
+  "body": "Give exact values for the following.       The reference angle for is , and the tangent is negative in the second quadrant. (See the figure at right.) Thus,   angles   The reference angle for is , and the cosine is negative in the third quadrant, so  angles  "
+},
+{
+  "id": "note-26",
+  "level": "2",
+  "url": "The-Circular-Functions.html#note-26",
+  "type": "Note",
+  "number": "6.21",
+  "title": "",
+  "body": "At this point, you may feel that expressions such as look like hieroglyphics. Keep in mind that and are just numbers, so the equation above says that \"the cosine of an angle of 3.9 radians is about -0.7.\" "
 },
 {
   "id": "exercise-1435",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1435",
   "type": "Checkpoint",
+  "number": "6.22",
+  "title": "",
+  "body": "Give exact values for the following.        "
+},
+{
+  "id": "activity-7",
+  "level": "2",
+  "url": "The-Circular-Functions.html#activity-7",
+  "type": "Activity",
+  "number": "6.2",
+  "title": "Radians.",
+  "body": "Radians  radian  Here is a unit circle with arclengths labeled, measured counterclockwise from . (Note that the distance around the whole circle is 6.28 units!)   grid   Use the unit circle to estimate the sine, cosine, and tangent of each angle in radians.      Use the unit circle to estimate two solutions to each equation.    Sketch the angle on the unit circle. Find the reference angle in radians, rounded to two decimal places, and sketch the reference triangle.     Give a decimal approximation to two places for each angle, then the degree measure of each.    Radians                Decimal Approx.                Degrees                  Radians                Decimal Approx.                Degrees                On the unit circle above, plot the endpoint of each arc in standard position.     "
+},
+{
+  "id": "note-27",
+  "level": "2",
+  "url": "The-Circular-Functions.html#note-27",
+  "type": "Note",
   "number": "6.23",
   "title": "",
-  "body": "Variable stars are important in astronomy because they are used to estimate distances. Their magnitude, or brightness, varies periodically and can be modeled by trigonometric functions. The star T Herculis reached its maximum magnitude on December 27, 2004, and days later its magnitude is approximately   What was the magnitude of T Herculis on December 27, 2004?  What was the magnitude of T Herculis be on December 27, 2006 (730 days later)?     "
-},
-{
-  "id": "p-3726",
-  "level": "2",
-  "url": "The-Circular-Functions.html#p-3726",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "coordinates "
-},
-{
-  "id": "p-3727",
-  "level": "2",
-  "url": "The-Circular-Functions.html#p-3727",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "circular functions "
+  "body": "In practice, there is no difference between finding the sine or cosine of the number 2 and the sine or cosine of an angle of 2 radians: in each case we set the calculator in Radian mode and evaluate   COS  and  SIN  "
 },
 {
   "id": "example-113",
@@ -15577,7 +15586,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.24",
   "title": "",
-  "body": "Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.       On a unit circle, the coordinates of are , so   The coordinates of are , as shown at right.  circle  (We could also observe that an arc of length is one quarter of a unit circle, so the point sits at the twelve o'clock position on the circle.)  The coordinates of are , so    circle  Thus, the coordinates of are , as shown at right.  "
+  "body": "The sunset time in Stockholm, Sweden, on the th day of the year can be modeled by where is given in hours after noon. Find the sunset time on January 1 (day ) and on July 1 (day ).  Evaluate the function for to find On January 1, sunset in Stockholm occurs about 2.99 hours after noon, or at 2:59 pm.  Evaluate the function at to find On July 1, sunset occurs about 9.11 hours after noon, or at 9:07 pm. (Actually, 10:07 pm, because of daylight savings time.) "
 },
 {
   "id": "exercise-1436",
@@ -15586,12 +15595,21 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.25",
   "title": "",
-  "body": "Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.       "
+  "body": "Variable stars are important in astronomy because they are used to estimate distances. Their magnitude, or brightness, varies periodically and can be modeled by trigonometric functions. The star T Herculis reached its maximum magnitude on December 27, 2004, and days later its magnitude is approximately   What was the magnitude of T Herculis on December 27, 2004?  What was the magnitude of T Herculis be on December 27, 2006 (730 days later)?     "
 },
 {
-  "id": "p-3745",
+  "id": "p-3749",
   "level": "2",
-  "url": "The-Circular-Functions.html#p-3745",
+  "url": "The-Circular-Functions.html#p-3749",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "coordinates "
+},
+{
+  "id": "p-3750",
+  "level": "2",
+  "url": "The-Circular-Functions.html#p-3750",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -15604,7 +15622,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.26",
   "title": "",
-  "body": "Use the graph of the unit circle shown below to estimate , and .  circle  The circle is scaled in units of 0.1 radians, and an arc of 2.5 radians in standard position has its terminal point, , in the second quadrant. The coordinates of are approximately , so we have To find , we calculate . "
+  "body": "Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.       On a unit circle, the coordinates of are , so   The coordinates of are , as shown at right.  circle  (We could also observe that an arc of length is one quarter of a unit circle, so the point sits at the twelve o'clock position on the circle.)  The coordinates of are , so    circle  Thus, the coordinates of are , as shown at right.  "
 },
 {
   "id": "exercise-1437",
@@ -15612,6 +15630,33 @@ var ptx_lunr_docs = [
   "url": "The-Circular-Functions.html#exercise-1437",
   "type": "Checkpoint",
   "number": "6.27",
+  "title": "",
+  "body": "Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.       "
+},
+{
+  "id": "p-3768",
+  "level": "2",
+  "url": "The-Circular-Functions.html#p-3768",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "circular functions "
+},
+{
+  "id": "example-115",
+  "level": "2",
+  "url": "The-Circular-Functions.html#example-115",
+  "type": "Example",
+  "number": "6.28",
+  "title": "",
+  "body": "Use the graph of the unit circle shown below to estimate , and .  circle  The circle is scaled in units of 0.1 radians, and an arc of 2.5 radians in standard position has its terminal point, , in the second quadrant. The coordinates of are approximately , so we have To find , we calculate . "
+},
+{
+  "id": "exercise-1438",
+  "level": "2",
+  "url": "The-Circular-Functions.html#exercise-1438",
+  "type": "Checkpoint",
+  "number": "6.29",
   "title": "",
   "body": "Use the graph of the unit circle in the previous example to estimate , and . , , "
 },
@@ -15625,254 +15670,245 @@ var ptx_lunr_docs = [
   "body": " Simplify.                                          Algebra Refresher Answers                             "
 },
 {
-  "id": "p-3770",
+  "id": "p-3793",
   "level": "2",
-  "url": "The-Circular-Functions.html#p-3770",
+  "url": "The-Circular-Functions.html#p-3793",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "coordinates circular functions "
 },
 {
-  "id": "exercise-1438",
+  "id": "exercise-1439",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1438",
+  "url": "The-Circular-Functions.html#exercise-1439",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": " circle     a  b  c  d                       a  b  c  d                    "
 },
 {
-  "id": "exercise-1439",
+  "id": "exercise-1440",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1439",
+  "url": "The-Circular-Functions.html#exercise-1440",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": " circle     a  b  c  d                    "
 },
 {
-  "id": "exercise-1440",
+  "id": "exercise-1441",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1440",
+  "url": "The-Circular-Functions.html#exercise-1441",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": " circle     a  b  c  d                       a  b  c  d                    "
 },
 {
-  "id": "exercise-1441",
+  "id": "exercise-1442",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1441",
+  "url": "The-Circular-Functions.html#exercise-1442",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": " circle     a  b  c  d                    "
 },
 {
-  "id": "exercise-1442",
+  "id": "exercise-1443",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1442",
+  "url": "The-Circular-Functions.html#exercise-1443",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "         "
 },
 {
-  "id": "exercise-1443",
+  "id": "exercise-1444",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1443",
+  "url": "The-Circular-Functions.html#exercise-1444",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "     "
 },
 {
-  "id": "exercise-1444",
+  "id": "exercise-1445",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1444",
+  "url": "The-Circular-Functions.html#exercise-1445",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "         "
 },
 {
-  "id": "exercise-1445",
+  "id": "exercise-1446",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1445",
+  "url": "The-Circular-Functions.html#exercise-1446",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": "     "
 },
 {
-  "id": "exercise-1446",
+  "id": "exercise-1447",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1446",
+  "url": "The-Circular-Functions.html#exercise-1447",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1447",
+  "id": "exercise-1448",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1447",
+  "url": "The-Circular-Functions.html#exercise-1448",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1448",
+  "id": "exercise-1449",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1448",
+  "url": "The-Circular-Functions.html#exercise-1449",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1449",
+  "id": "exercise-1450",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1449",
+  "url": "The-Circular-Functions.html#exercise-1450",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1450",
+  "id": "exercise-1451",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1450",
+  "url": "The-Circular-Functions.html#exercise-1451",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1451",
+  "id": "exercise-1452",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1451",
+  "url": "The-Circular-Functions.html#exercise-1452",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1452",
+  "id": "exercise-1453",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1452",
+  "url": "The-Circular-Functions.html#exercise-1453",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": "II "
 },
 {
-  "id": "exercise-1453",
+  "id": "exercise-1454",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1453",
+  "url": "The-Circular-Functions.html#exercise-1454",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1454",
+  "id": "exercise-1455",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1454",
+  "url": "The-Circular-Functions.html#exercise-1455",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": "II "
 },
 {
-  "id": "exercise-1455",
+  "id": "exercise-1456",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1455",
+  "url": "The-Circular-Functions.html#exercise-1456",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1456",
+  "id": "exercise-1457",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1456",
+  "url": "The-Circular-Functions.html#exercise-1457",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "III "
 },
 {
-  "id": "exercise-1457",
+  "id": "exercise-1458",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1457",
+  "url": "The-Circular-Functions.html#exercise-1458",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1458",
+  "id": "exercise-1459",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1458",
+  "url": "The-Circular-Functions.html#exercise-1459",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": "Negative "
 },
 {
-  "id": "exercise-1459",
+  "id": "exercise-1460",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1459",
+  "url": "The-Circular-Functions.html#exercise-1460",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1460",
+  "id": "exercise-1461",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1460",
+  "url": "The-Circular-Functions.html#exercise-1461",
   "type": "Exercise",
   "number": "23",
   "title": "",
   "body": "Positive "
 },
 {
-  "id": "exercise-1461",
+  "id": "exercise-1462",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1461",
+  "url": "The-Circular-Functions.html#exercise-1462",
   "type": "Exercise",
   "number": "24",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1462",
+  "id": "exercise-1463",
   "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1462",
+  "url": "The-Circular-Functions.html#exercise-1463",
   "type": "Exercise",
   "number": "25",
   "title": "",
   "body": "Positive "
 },
 {
-  "id": "exercise-1463",
-  "level": "2",
-  "url": "The-Circular-Functions.html#exercise-1463",
-  "type": "Exercise",
-  "number": "26",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-1464",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1464",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
   "body": ""
 },
@@ -15881,7 +15917,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1465",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -15890,7 +15926,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1466",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ""
 },
@@ -15899,7 +15935,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1467",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ""
 },
@@ -15908,34 +15944,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1468",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "The sunrise time in Wellington, New Zealand, on the th day of the year can be modeled by where is given in hours after midnight. Find the sunrise time on January 1 (day ), April 1 (day ), July 1 (day ), and on October 1 (day ). January 1: 4:24, April 1: 6:45, July 1: 8:02, October 1: 5:55 "
+  "body": ""
 },
 {
   "id": "exercise-1469",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1469",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": "The variable star RT Cygni reached its maximum magnitude on May 22, 2004, and days later its magnitude is given by Find the magnitude of RT Cygni on days and . (Note that smaller values of denote brighter magnitudes.) "
+  "body": "The sunrise time in Wellington, New Zealand, on the th day of the year can be modeled by where is given in hours after midnight. Find the sunrise time on January 1 (day ), April 1 (day ), July 1 (day ), and on October 1 (day ). January 1: 4:24, April 1: 6:45, July 1: 8:02, October 1: 5:55 "
 },
 {
   "id": "exercise-1470",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1470",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ""
+  "body": "The variable star RT Cygni reached its maximum magnitude on May 22, 2004, and days later its magnitude is given by Find the magnitude of RT Cygni on days and . (Note that smaller values of denote brighter magnitudes.) "
 },
 {
   "id": "exercise-1471",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1471",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -15944,7 +15980,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1472",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
   "body": ""
 },
@@ -15953,7 +15989,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1473",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -15962,7 +15998,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1474",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -15971,7 +16007,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1475",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -15980,7 +16016,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1476",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
   "body": ""
 },
@@ -15989,7 +16025,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1477",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -15998,7 +16034,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1478",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
   "body": ""
 },
@@ -16007,7 +16043,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1479",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
   "body": ""
 },
@@ -16016,7 +16052,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1480",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
   "body": ""
 },
@@ -16025,7 +16061,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1481",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
   "body": ""
 },
@@ -16034,52 +16070,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1482",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle     "
+  "body": ""
 },
 {
   "id": "exercise-1483",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1483",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "Complete the table.                       "
+  "body": "Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle     "
 },
 {
   "id": "exercise-1484",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1484",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "Complete the table.                                            "
+  "body": "Complete the table.                       "
 },
 {
   "id": "exercise-1485",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1485",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "Complete the table.                       "
+  "body": "Complete the table.                                            "
 },
 {
   "id": "exercise-1486",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1486",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": ""
+  "body": "Complete the table.                       "
 },
 {
   "id": "exercise-1487",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1487",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
   "body": ""
 },
@@ -16088,7 +16124,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1488",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
   "body": ""
 },
@@ -16097,7 +16133,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1489",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
   "body": ""
 },
@@ -16106,7 +16142,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1490",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
   "body": ""
 },
@@ -16115,7 +16151,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1491",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
   "body": ""
 },
@@ -16124,7 +16160,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1492",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
   "body": ""
 },
@@ -16133,7 +16169,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1493",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
   "body": ""
 },
@@ -16142,7 +16178,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1494",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
   "body": ""
 },
@@ -16151,7 +16187,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1495",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
   "body": ""
 },
@@ -16160,34 +16196,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1496",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "City Park features a circular jogging track of radius 1 mile, centered on the open-air bandstand. You start jogging on the track 1 mile due east of the bandstand and proceed counterclockwise. What are your coordinates, relative to the bandstand, when you have jogged five miles? mi east, mi north, or about 0.96 mi south "
+  "body": ""
 },
 {
   "id": "exercise-1497",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1497",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "Silver Reservoir is a circular man-made lake of radius 1 kilometer. If you start at the easternmost point on the reservoir and walk counterclockwise for 4 kilometers, how far south of your intial position are you? "
+  "body": "City Park features a circular jogging track of radius 1 mile, centered on the open-air bandstand. You start jogging on the track 1 mile due east of the bandstand and proceed counterclockwise. What are your coordinates, relative to the bandstand, when you have jogged five miles? mi east, mi north, or about 0.96 mi south "
 },
 {
   "id": "exercise-1498",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1498",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": ""
+  "body": "Silver Reservoir is a circular man-made lake of radius 1 kilometer. If you start at the easternmost point on the reservoir and walk counterclockwise for 4 kilometers, how far south of your intial position are you? "
 },
 {
   "id": "exercise-1499",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1499",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
   "body": ""
 },
@@ -16196,7 +16232,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1500",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
   "body": ""
 },
@@ -16205,7 +16241,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1501",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
   "body": ""
 },
@@ -16214,7 +16250,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1502",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
   "body": ""
 },
@@ -16223,7 +16259,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1503",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
   "body": ""
 },
@@ -16232,52 +16268,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1504",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": " Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.     circle    Intersections: and  and  "
+  "body": ""
 },
 {
   "id": "exercise-1505",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1505",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": " Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.  "
+  "body": " Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.     circle    Intersections: and  and  "
 },
 {
   "id": "exercise-1506",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1506",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": " Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?    grid       graph      "
+  "body": " Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.  "
 },
 {
   "id": "exercise-1507",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1507",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": " Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?  grid "
+  "body": " Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?    grid       graph      "
 },
 {
   "id": "exercise-1508",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1508",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": ""
+  "body": " Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?  grid "
 },
 {
   "id": "exercise-1509",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1509",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
   "body": ""
 },
@@ -16286,68 +16322,77 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1510",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
-  "body": "or "
+  "body": ""
 },
 {
   "id": "exercise-1511",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1511",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
-  "body": ""
+  "body": "or "
 },
 {
   "id": "exercise-1512",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1512",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
-  "body": "Use similar triangles to show that the coordinates of point on the unit circle shown at right are .   circle    Any point on the terminal side of satisfies . For the point where . The arc of length is spanned by an angle in standard position. Because arclength is and so . "
+  "body": ""
 },
 {
   "id": "exercise-1513",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1513",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
-  "body": "Use similar triangles to show that .   circle    "
+  "body": "Use similar triangles to show that the coordinates of point on the unit circle shown at right are .   circle    Any point on the terminal side of satisfies . For the point where . The arc of length is spanned by an angle in standard position. Because arclength is and so . "
 },
 {
   "id": "exercise-1514",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1514",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
-  "body": "Use similar triangles to show that the coordinates of a point determined by angle on a circle of radius are . (See the figure at right.)   circles    The two right triangles shown are similar, so their sides are proportional. The hypotenuse of the large triangle is times the hypotenuse of the small triangle, so the two legs of the large triangle must be times the legs of the small triangle. Thus, because the coordinates of the vertex on the unit circle are , the coordinates of must be . "
+  "body": "Use similar triangles to show that .   circle    "
 },
 {
   "id": "exercise-1515",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1515",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
-  "body": "The Astrodome in Houston has a diameter of 710 feet. If you start at the easternmost point and walk counterclockwise around its perimeter for a distance of 250 feet, how far north of your starting point are you? "
+  "body": "Use similar triangles to show that the coordinates of a point determined by angle on a circle of radius are . (See the figure at right.)   circles    The two right triangles shown are similar, so their sides are proportional. The hypotenuse of the large triangle is times the hypotenuse of the small triangle, so the two legs of the large triangle must be times the legs of the small triangle. Thus, because the coordinates of the vertex on the unit circle are , the coordinates of must be . "
 },
 {
   "id": "exercise-1516",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1516",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
-  "body": "The Barringer meteor crater near Winslow, Arizona is 1182 meters in diameter. You start at the easternmost point on the rim of the crater and walk counterclockwise around the edge. After walking for 1 kilometer, what is your position relative to your starting point 71 m west, 587 m north "
+  "body": "The Astrodome in Houston has a diameter of 710 feet. If you start at the easternmost point and walk counterclockwise around its perimeter for a distance of 250 feet, how far north of your starting point are you? "
 },
 {
   "id": "exercise-1517",
   "level": "2",
   "url": "The-Circular-Functions.html#exercise-1517",
+  "type": "Exercise",
+  "number": "79",
+  "title": "",
+  "body": "The Barringer meteor crater near Winslow, Arizona is 1182 meters in diameter. You start at the easternmost point on the rim of the crater and walk counterclockwise around the edge. After walking for 1 kilometer, what is your position relative to your starting point 71 m west, 587 m north "
+},
+{
+  "id": "exercise-1518",
+  "level": "2",
+  "url": "The-Circular-Functions.html#exercise-1518",
   "type": "Exercise",
   "number": "80",
   "title": "",
@@ -16360,34 +16405,34 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Graphs of the Circular Functions",
-  "body": " Graphs of the Circular Functions  We can graph the circular functions and just as we graphed trigonometric functions of angles in degrees. The only difference is that we scale the horizontal axis in radians.  The Sine and Cosine Functions  Consider the graph shown below.    sine     You should be able to recognize this graph as . For example, you can see that the graph completes one cycle at radians, or approximately 6.28. It reaches its maximum value, , at , or approximately 1.57. You should also notice that at , approximately 3.14.  Instead of scaling the horizontal axis with integers, we often use multiples of . Using such a scale, we can show the exact location of the intercepts of the graph, and of its high and low points.  Graph one cycle of , and scale the horizontal axis in multiples of .  We start by making a table of values for , where is in radians. We'll use the special values of , because we know the sines of those values.                          In order to plot the points in the table, we scale the horizontal axis in multiples of . (Note that the special values are all multiples of . Thus, , , and so on.) The table lists values of in the first two quadrants; in quadrants three and four the sine values are negative.                          The completed graph is shown below.    sine      Complete the table of values for .                                                  Graph one cycle of , and scale the horizontal axis in multiples of . Use the grid below.    grid                                                         sinusoidal graph       Because we know the basic shapes of the sine and cosine graphs, to make an adequate graph it is usually sufficient to plot the guide points at the quadrantal angles, and then draw a smooth curve through the points. Try it for yourself. Use the axes below.                   axes     Graphs of Sine and Cosine   We are going to graph and from their definitions. The unit circle at the left of each grid is marked off in radians. (Each tick mark is radian.) The -axis of each grid is also marked in radians.   Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the vertical (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .    circle and grid      Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the horizontal (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .    unit circle and grid       The Tangent Function  Finally, we consider the graph of the tangent function. Once again, the only difference between this new graph and our old version of the tangent graph in degrees is that the horizontal axis is scaled in radians.  Graph the tangent function, , where is measured in radians.  We begin by making a table of values for the tangent function. We choose the special values for between and .                          Plot the points and connect them with smooth curves, remembering that is undefined. The graph repeats for values of between and . So, while the old graph had vertical asymptotes at and , this graph has vertical asymptotes at and . The figure at right shows the graph of for .   tangent     Sketch a graph of the tangent function and scale the horizontal axis in integers, as shown below. Label the -intercepts and the vertical asymptotes with their coordinates.    grid      tangent graph     Solving Equations    unit circle and sine graph       Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.    unit circle and grid      Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.    Solving Equations  We can also find solutions in radians to trigonometric equations.  Use a graph to find all solutions of between and .  The figure shows a graph of , with in radians, and the horizontal line . The solutions of the equation are the -coordinates of the intersection points, and these appear to be about and slightly over , perhaps . You can check that these values roughly satisfy the equation; it is difficult to read the graph with any greater accuracy.    cosine graph     Use a graph to find the two angles between and that satisfy . Approximately 4.14 and 5.25  We can also solve equations algebraically, using a calculator or computer to obtain more accurate values for the solutions.  Solve the equation algebraically, for .  The cosine is negative in the second and third quadrants, so we expect to find our answers between and . We use a calculator to find one of the angles: Rounded to hundredths, the second quadrant angle is radans. To find the other angle, we first find the reference angle for :   The third quadrant angle with the same reference angle is   unit circle     Thus, the two solutions are and radians, as shown in the figure.  Solve the equation algebraically, for .  We can find exact values for the solutions of equations involving the special values without using a calculator.  Find exact values for all the solutions of .  Because , one of the solutions is . Remember that there are two solutions between and ; and the tangent function is positive in the third quadrant.  The third quadrant angle with reference angle is so the second solution is .  All other solutions of the equation can be found by adding (or subtracting) multiples of to these two solutions. We write the solutions as  Find exact values for all the solutions of . ,   Modeling with Circular Functions  Now that we have used radians to define the trigonometric functions, we can describe periodic phenomena as functions of time (or other variables besides angles).  For example, we began this chapter with a Ferris wheel of radius 100 feet that rotates once every 8 minutes. If you board the Ferris wheel at the bottom, your height is given as a function of time by where is measured in minutes after boarding.  Thus, after minutes your height is and after minutes your height is   sinusoidal graph     The graph of is shown above. From the graph, we see that the midline of the function is , its amplitude is 100, and its period is 8 (which is reasonable because the Ferris wheel rotates every 8 minutes).  The formula gives the number of hours of daylight in Glasgow, Scotland, as a function of time, in months after January 1.   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  How many hours of daylight does Glasgow enjoy on the longest day of the year?  In which months does Glasgow experience less than 8 hours of light per day?    The graph is shown below.    sinusoidal graph     The midline of the graph is hours, the amplitude is 5.25 hours, and the period is 12 months.  On the longest day of the year, there are hours of daylight in Glasgow.  From the graph, we see that for between 0 and 2, or in January and February. is also less than 8 for a short time between and , at the end of December.   The pistons in an automobile engine move up and down in the cylinders. If is in milliseconds, the distance from the top of the piston to the top of the cylinder is given in centimeters by   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  Find the largest and the smallest clearance between the piston and the top of the cylinder.     sinusoidal graph    Midline: , amplitude: , period: millisec  Largest: 13 cm, smallest: 1 cm     Domain and Range  The domain domain of a function is the set of all possible input values. For many familiar functions, the domain is the set of all real numbers. In particular, the domain of any linear or quadratic function is the set of all real numbers.  Consider the functions and shown below. We can use any real number as an input for either of these functions, and their graphs extend across the entire -axis.    three graphs     However, for other types of functions we must sometimes exclude certain values from the domain. For example, the domain of the function is restricted because we cannot take the square root of a negative number. We must have , so the domain of the function consists of all .  You can see the domain of a function in its graph; notice that there are no points on the graph of with -coordinates less than .  The range range of a function is the set of all output values for the function. We can also see the range of a function in its graph; it is the set of all -values for points on the graph.   Because the graph of extends infinitely in both directions, its range consists of all real numbers. There is an input value that will produce any output we want.  However, the range of consists of all , because there are no points on the graph with -coordinate less than .  The range of consists of all .   Find the domain and range of each function.       There are no restrictions on the input values for this function, so its domain is all real numbers. The graph is a parabola with high point at , so the range of the function is all . See the figure below.    parabola     graph of hyperbola     Because we cannot divide by zero, we cannot allow for this function. Thus, the domain of is all real numbers except . The graph has a horizontal asymptote at , and you can see that there is no input that will produce an output of zero. So the range of is all real numbers except .   Use the formula and a graph to find the domain and range.       Dom ( ): all real numbers except , Rge ( ): all real numbers except  Dom ( ): , Rge ( ):    What about the domain and range of the trigonometric functions? The sine and cosine both include all real numbers in their domains; we can find the sine or cosine of any number. Because the output values of the sine and cosine are both defined by the coordinates of points on a unit circle, their values cannot be greater than or less than .  The tangent function is undefined at odd multiples of (that is, at ), so those values must be excluded from its domain. However, the output values of the tangent function increase without bound as the input approaches from the left, and decrease from the right. The range of the tangent is all real numbers.  These facts about the three trigonometric functions appear in the Section 6.3 Summary.  Review the following skills you will need for this section.   Evaluate the function in part (a), and solve the equation in part (b).                      Algebra Refresher Answers                       Section 6.3 Summary  Vocabulary   Domain  Range    Concepts   We can use circular functions of real numbers to describe periodic phenomena.  The domain of a function is the set of all possible input values. The range of a function is the set of all output values for the function.  We can use a graph to solve trigonometric equations, or the inverse trig keys on a calculator or computer. We can find exact values for the solutions of equations involving the special values without using a calculator.    Domain: all real numbers  Range:  Period:   sine graph       Domain: all real numbers  Range:  Period:   cosine graph       Domain: all real numbers except  Range: all real numbers  Period:   tangent graph      Study Questions   How do the graphs of the circular functions differ from the graphs of the trigonometric functions of angles in degrees?  Use guidepoints to sketch graphs of and .  For each equation below, suppose that is one of the solutions between and . Use the diagram to find the other solution.   circle          Skills   Graph the trig functions of real numbers #1 8  Solve trigonometric equations graphically #9 20  Work with reference angles #21 26  Solve trigonometric equations algebraically #27 52  Evaluate trigonometric functions of real numbers #45 58  Use trigonometric models #59 62  Locate points on the graphs of the trigonometric functions #63 70  Find the domain and range of a function #71 80     Homework 6.3   Use your calculator to complete the table of values. Round values to hundredths.                                 Sketch a graph of on the grid.  grid                                    cosine graph    Use your calculator to complete the table of values. Round values to hundredths.                               Sketch a graph of on the grid. grid   Sketch a graph of on each grid.  grid   grid      sine graph     sine graph   Sketch a graph of on each grid.  grid grid    Sketch a graph of where is a real number.  State the domain and range of .     grid       sine graph     Domain: , range:    Sketch a graph of where is a real number.  State the domain and range of .   grid    Sketch a graph of where is a real number.  State the domain and range of .     grid       tangent graph     Domain: an odd integer, range:   Sketch and on the same grid.    grid     For Problems 9 10, use the figures below. Show your solutions on the graphs.   sine graph       unit circle      Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .    For Problems 11 12, use the figures below. Show your solutions on the graphs.    cosine graph     circle   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .    For Problems 13 20, use the graph of to estimate two solutions to the equation.   tangent graph     or   or   or   or    For Problems 21 26, find an angle in each quadrant, rounded to tenths, with the same reference angle as the angle given in radians.  I: 0.5, II: 2.7, III: 3.6, IV: 5.8   I: 0.6, II: 2.6, III: 3.7, IV: 5.7   I: 1.3, II: 1.8, III: 4.5, IV: 4.9    For Problems 27 32, find all solutions between and . Round to two decimal places. Sketch your solutions on a unit circle. circle  or   or   or    For Problems 33 44, solve the equation. Give exact values between and .    or   or   or   or   or    For Problems 45 52, use your calculator in radian mode. In part (a),evaluate the trigonometric function, and in part (b), find all solutions between and . Round your answers to two decimal places.                             No solution     \\sin x = 1.2               For Problems 53 58, evaluate the function.             When observed from earth, the moon looks like a disk that is partially visible and partially in shadow. The percentage of the disk that is visible can be approximated by where is the number of days since the last full moon.   Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to full moon, half moon, and new moon. ( New moon occurs when the part of the moon receiving sunlight is facing directly away from the earth.)  At what times during the lunar month is 25% of the moon visible? Mark those points on your graph.  During which days is less than 50% of the moon visible? Mark the corresponding points on your graph.  b-c.   sinusoidal graph     d. and e. to  The tide in Malibu is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to high tide and low tide.  How high is high tide, and at what times does it occur?  At what times during the 25-hour period is the tide 4 feet above low tide? Mark those points on your graph.  Kathie walks along the beach only when the tide is below 1 foot. Find the intervals on your graph when the tide is below 1 foot.  The average daily high temperature in the town of Beardsley, Arizona is approximated by the function where the temperature is measured in degrees Fahrenheit, and is the number of days since January 1.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest average temperature.  What is the hottest day and what is its average temperature? What is the day with the lowest average temperature, and what is that temperature?  At what times during the year are average high temperatures above ? Mark those points on your graph.  b-c.   sinusoidal graph     d. High: day 204, ; low: day 25, e. to  A weight is suspended from the ceiling on a spring. The weight is pushed straight up, compressing the spring, then released. The height of the weight above the ground is given by the function where the height is measured in meters, and is the number of seconds since the mass was released.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest positions of the mass.  How high is highest point, and when is that height attained during the first 3 seconds?  How high is lowest point, and when is that height attained during the first 3 seconds?  Find the intervals during the first 3 seconds when the mass is less than 2 meters above the ground.   For Problems 63 66, the figure shows an arc of length , and the coordinates of its terminal point. Find the terminal point of each related arc given below, and give its sine, cosine, and tangent.         unit circle            unit circle       unit circle            unit circle      Locate the four values and from Problem 63 on the graph of , on the graph of , and on the graph of shown below.  grid  grid  grid    three trig graphs     Repeat Problem 67 for the values in Problem 64.  Repeat Problem 67 for the values in Problem 65.   three trig graphs     Repeat Problem 67 for the values in Problem 66.  For Problems 71 78,   Sketch a graph of the function.  State the domain and range of the function.      parabola     Domain: , range:       graph of 2 - 1\/(x^2)     Domain: , range:       graph of translated square root     Domain: , range:       semicircle     Domain: , range:      Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .                     cosine graph      Domain: , Range:     Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .    "
+  "body": " Graphs of the Circular Functions  We can graph the circular functions and just as we graphed trigonometric functions of angles in degrees. The only difference is that we scale the horizontal axis in radians.  The Sine and Cosine Functions  Consider the graph shown below.   sine   You can probably recognize this graph as one cycle of . For example, you can see that the graph completes one cycle at radians, or approximately 6.28. It reaches its maximum value, , at , or approximately 1.57. You should also notice that at , approximately 3.14.  Instead of scaling the horizontal axis with integers, we often use multiples of . Using such a scale, we can show the exact location of the intercepts of the graph, and of its high and low points.  Graph one cycle of , and scale the horizontal axis in multiples of .  We start by making a table of values for , where is in radians. We'll use the special values of , because we know the sines of those values.                          In order to plot the points in the table, we scale the horizontal axis in multiples of . (Note that the special values are all multiples of . Thus, , , and so on.) The table lists values of in the first two quadrants; in quadrants three and four the sine values are negative.                          The completed graph is shown below.   sine   If we continued to plot points for values of greater than or less than 0, we would see the periodic behavior of the graph, as it repeats the same shape over each interval of length , just as it does for periods of when the angles are measured in degrees.   Complete the table of values for .                                                  Graph one cycle of , and scale the horizontal axis in multiples of . Use the grid below.  grid                                                     sinusoidal graph     Because we know the basic shapes of the sine and cosine graphs, to make an adequate graph it is usually sufficient to plot the guide points at the quadrantal angles, and then draw a smooth curve through the points. Try it for yourself. Use the axes below.                  axes   Graphs of Sine and Cosine   We are going to graph and from their definitions. The unit circle at the left of each grid is marked off in radians. (Each tick mark is radian.) The horizontal -axis of each grid is also marked in radians.   Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the vertical (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   circle and grid    Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the horizontal (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   unit circle and grid     The Tangent Function  Finally, we consider the graph of the tangent function. Once again, the only difference between this new graph and our old version of the tangent graph in degrees is that the horizontal axis is scaled in radians.  Graph the tangent function, , where is measured in radians.  We begin by making a table of values for the tangent function. We choose the special values for between and .                          Plot the points and connect them with smooth curves, remembering that is undefined. The graph repeats for values of between and . So, while the graph in degrees had vertical asymptotes at and , this graph has vertical asymptotes at and . The figure at right shows the graph of for .  tangent   Sketch a graph of the tangent function and scale the horizontal axis in integers, as shown below. Label the -intercepts and the vertical asymptotes with their coordinates.  grid   tangent graph    Solving Equations  We can use the graphs of the circular functions find solutions to trigonometric equations.  Use a graph to find all solutions of between and .  The figure shows a graph of , with in radians, and the horizontal line . The solutions of the equation are the -coordinates of the intersection points, and these appear to be about and slightly over , perhaps . You can check that these values roughly satisfy the equation; it is difficult to read the graph with any greater accuracy.   cosine graph   Use a graph to find the two angles between and that satisfy . Approximately 4.14 and 5.25  Solving Equations   unit circle and sine graph     Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   unit circle and grid    Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   We can also solve equations algebraically, using a calculator or computer to obtain more accurate values for the solutions.   Solve the equation algebraically, for .  Find all solutions of the equation.    The cosine is negative in the second and third quadrants, so we expect to find our answers between and . We use a calculator to find one of the angles: Rounded to hundredths, the second quadrant angle is radans. To find the other angle, we first find the reference angle for :   The third quadrant angle with the same reference angle is  unit circle  Thus, the two solutions are and radians, as shown in the figure.  All angles coterminal with and are also solutions of the equation . So adding or subtracting multiples of to and produces all the solutions. For example, and are solutions. We write the solutions as and , where is an integer.    Solve the equation algebraically, for .  Find all solutions of the equation.   and  and   We can find exact values for the solutions of equations involving the special values without using a calculator.  Find exact values for all the solutions of .  Because , one of the solutions is . Remember that there are two solutions between and ; and the tangent function is positive in the third quadrant.  The third quadrant angle with reference angle is so the second solution is .  All other solutions of the equation can be found by adding (or subtracting) multiples of to these two solutions. We write the solutions as   Find exact values for all the solutions of . ,   Modeling with Circular Functions  Now that we have defined trigonometric functions of real numbers, we can describe periodic phenomena as functions of time (or other variables besides angles).  For example, we began this chapter with a Ferris wheel of radius 100 feet that rotates once every 8 minutes. If you board the Ferris wheel at the bottom, your height is given as a function of time by where is measured in minutes after boarding.   Thus, after minutes your height is and after minutes your height is  sinusoidal graph   The graph of is shown above. From the graph, we see that the midline of the function is , its amplitude is 100, and its period is 8 (which is reasonable because the Ferris wheel rotates every 8 minutes). You can review period, midline, and amplitude of periodic functions in Section 4.3.  The formula gives the number of hours of daylight in Glasgow, Scotland, as a function of time, in months after January 1.   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  How many hours of daylight does Glasgow enjoy on the longest day of the year?  In which months does Glasgow experience less than 8 hours of light per day?    The graph is shown below.  sinusoidal graph  The midline of the graph is hours, the amplitude is 5.25 hours, and the period is 12 months.  On the longest day of the year, there are hours of daylight in Glasgow.  From the graph, we see that for between 0 and 2, or in January and February. is also less than 8 for a short time between and , at the end of December.   The pistons in an automobile engine move up and down in the cylinders. If is in milliseconds, the distance from the top of the piston to the top of the cylinder is given in centimeters by   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  Find the largest and the smallest clearance between the piston and the top of the cylinder.    sinusoidal graph   Midline: , amplitude: , period: millisec  Largest: 13 cm, smallest: 1 cm     Domain and Range  The domain domain of a function is the set of all possible input values. For many familiar functions, the domain is the set of all real numbers. In particular, the domain of any linear or quadratic function is the set of all real numbers.  Consider the functions and shown below. We can use any real number as an input for either of these functions, and their graphs extend across the entire -axis.   three graphs   However, for other types of functions we must sometimes exclude certain values from the domain. For example, the domain of the function is restricted because we cannot take the square root of a negative number. We must have , so the domain of the function consists of all .  You can see the domain of a function in its graph; notice that there are no points on the graph of with -coordinates less than .  The range range of a function is the set of all output values for the function. We can also see the range of a function in its graph; it is the set of all -values for points on the graph.   Because the graph of extends infinitely in both directions, its range consists of all real numbers. There is an input value that will produce any output we want.  However, the range of consists of all , because there are no points on the graph with -coordinate less than .  The range of consists of all .   Domain and Range  The domain domain of a function is the set of all possible input values.  The range range of a function is the set of all output values for the function.   Find the domain and range of each function.       There are no restrictions on the input values for this function, so its domain is all real numbers. The graph is a parabola with high point at , so the range of the function is all . See the figure below.   parabola  graph of hyperbola   Because we cannot divide by zero, we cannot allow for this function. Thus, the domain of is all real numbers except . The graph has a horizontal asymptote at , and you can see that there is no input that will produce an output of zero. So the range of is all real numbers except .    Use the formula and a graph to find the domain and range.       Dom ( ): all real numbers except , Rge ( ): all real numbers except  Dom ( ): , Rge ( ):    What about the domain and range of the trigonometric functions? The sine and cosine both include all real numbers in their domains; we can find the sine or cosine of any number. Because the output values of the sine and cosine are both defined by the coordinates of points on a unit circle, their values cannot be greater than or less than . The range of both sine and cosine is the interval .  The tangent function is undefined at odd multiples of (that is, at ), so those values must be excluded from its domain. However, the output values of the tangent function increase without bound as the input approaches from the left, and decrease from the right. The range of the tangent is all real numbers.  These facts about the three trigonometric functions appear in the Section 6.3 Summary.  Review the following skills you will need for this section.   Evaluate the function in part (a), and solve the equation in part (b).                      Algebra Refresher Answers                       Section 6.3 Summary  Vocabulary   Domain  Range    Concepts   We can use circular functions of real numbers to describe periodic phenomena.  The domain of a function is the set of all possible input values. The range of a function is the set of all output values for the function.  We can use a graph to solve trigonometric equations, or the inverse trig keys on a calculator or computer. We can find exact values for the solutions of equations involving the special values without using a calculator.    Domain: all real numbers  Range:  Period:   sine graph       Domain: all real numbers  Range:  Period:   cosine graph       Domain: all real numbers except  Range: all real numbers  Period:   tangent graph      Study Questions   How do the graphs of the circular functions differ from the graphs of the trigonometric functions of angles in degrees?  Use guidepoints to sketch graphs of and .  For each equation below, suppose that is one of the solutions between and . Use the diagram to find the other solution.   circle          Skills   Graph the trig functions of real numbers #1 8  Solve trigonometric equations graphically #9 20  Work with reference angles #21 26  Solve trigonometric equations algebraically #27 52  Evaluate trigonometric functions of real numbers #45 58  Use trigonometric models #59 62  Locate points on the graphs of the trigonometric functions #63 70  Find the domain and range of a function #71 80     Homework 6.3   Use your calculator to complete the table of values. Round values to hundredths.                                 Sketch a graph of on the grid.  grid                                    cosine graph    Use your calculator to complete the table of values. Round values to hundredths.                               Sketch a graph of on the grid. grid   Sketch a graph of on each grid.  grid   grid      sine graph     sine graph   Sketch a graph of on each grid.  grid grid    Sketch a graph of where is a real number.  State the domain and range of .     grid       sine graph     Domain: , range:    Sketch a graph of where is a real number.  State the domain and range of .   grid    Sketch a graph of where is a real number.  State the domain and range of .     grid       tangent graph     Domain: an odd integer, range:   Sketch and on the same grid.    grid     For Problems 9 10, use the figures below. Show your solutions on the graphs.   sine graph       unit circle      Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .    For Problems 11 12, use the figures below. Show your solutions on the graphs.    cosine graph     circle   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .    For Problems 13 20, use the graph of to estimate two solutions to the equation.   tangent graph     or   or   or   or    For Problems 21 26, find an angle in each quadrant, rounded to tenths, with the same reference angle as the angle given in radians.  I: 0.5, II: 2.7, III: 3.6, IV: 5.8   I: 0.6, II: 2.6, III: 3.7, IV: 5.7   I: 1.3, II: 1.8, III: 4.5, IV: 4.9    For Problems 27 32, find all solutions between and . Round to two decimal places. Sketch your solutions on a unit circle. circle  or   or   or    For Problems 33 44, solve the equation. Give exact values between and .    or   or   or   or   or    For Problems 45 52, use your calculator in radian mode. In part (a),evaluate the trigonometric function, and in part (b), find all solutions between and . Round your answers to two decimal places.                             No solution     \\sin x = 1.2               For Problems 53 58, evaluate the function.             When observed from earth, the moon looks like a disk that is partially visible and partially in shadow. The percentage of the disk that is visible can be approximated by where is the number of days since the last full moon.   Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to full moon, half moon, and new moon. ( New moon occurs when the part of the moon receiving sunlight is facing directly away from the earth.)  At what times during the lunar month is 25% of the moon visible? Mark those points on your graph.  During which days is less than 50% of the moon visible? Mark the corresponding points on your graph.  b-c.   sinusoidal graph     d. and e. to  The tide in Malibu is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to high tide and low tide.  How high is high tide, and at what times does it occur?  At what times during the 25-hour period is the tide 4 feet above low tide? Mark those points on your graph.  Kathie walks along the beach only when the tide is below 1 foot. Find the intervals on your graph when the tide is below 1 foot.  The average daily high temperature in the town of Beardsley, Arizona is approximated by the function where the temperature is measured in degrees Fahrenheit, and is the number of days since January 1.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest average temperature.  What is the hottest day and what is its average temperature? What is the day with the lowest average temperature, and what is that temperature?  At what times during the year are average high temperatures above ? Mark those points on your graph.  b-c.   sinusoidal graph     d. High: day 204, ; low: day 25, e. to  A weight is suspended from the ceiling on a spring. The weight is pushed straight up, compressing the spring, then released. The height of the weight above the ground is given by the function where the height is measured in meters, and is the number of seconds since the mass was released.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest positions of the mass.  How high is highest point, and when is that height attained during the first 3 seconds?  How high is lowest point, and when is that height attained during the first 3 seconds?  Find the intervals during the first 3 seconds when the mass is less than 2 meters above the ground.   For Problems 63 66, the figure shows an arc of length , and the coordinates of its terminal point. Find the terminal point of each related arc given below, and give its sine, cosine, and tangent.         unit circle            unit circle       unit circle            unit circle      Locate the four values and from Problem 63 on the graph of , on the graph of , and on the graph of shown below.  grid  grid  grid    three trig graphs     Repeat Problem 67 for the values in Problem 64.  Repeat Problem 67 for the values in Problem 65.   three trig graphs     Repeat Problem 67 for the values in Problem 66.  For Problems 71 78,   Sketch a graph of the function.  State the domain and range of the function.      parabola     Domain: , range:       graph of 2 - 1\/(x^2)     Domain: , range:       graph of translated square root     Domain: , range:       semicircle     Domain: , range:      Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .                     cosine graph      Domain: , Range:     Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .    "
 },
 {
-  "id": "example-115",
+  "id": "example-116",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-115",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-116",
   "type": "Example",
-  "number": "6.28",
+  "number": "6.30",
   "title": "",
-  "body": "Graph one cycle of , and scale the horizontal axis in multiples of .  We start by making a table of values for , where is in radians. We'll use the special values of , because we know the sines of those values.                          In order to plot the points in the table, we scale the horizontal axis in multiples of . (Note that the special values are all multiples of . Thus, , , and so on.) The table lists values of in the first two quadrants; in quadrants three and four the sine values are negative.                          The completed graph is shown below.    sine    "
+  "body": "Graph one cycle of , and scale the horizontal axis in multiples of .  We start by making a table of values for , where is in radians. We'll use the special values of , because we know the sines of those values.                          In order to plot the points in the table, we scale the horizontal axis in multiples of . (Note that the special values are all multiples of . Thus, , , and so on.) The table lists values of in the first two quadrants; in quadrants three and four the sine values are negative.                          The completed graph is shown below.   sine  "
 },
 {
-  "id": "exercise-1518",
+  "id": "exercise-1519",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1518",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1519",
   "type": "Checkpoint",
-  "number": "6.29",
+  "number": "6.31",
   "title": "",
-  "body": " Complete the table of values for .                                                  Graph one cycle of , and scale the horizontal axis in multiples of . Use the grid below.    grid                                                         sinusoidal graph      "
+  "body": " Complete the table of values for .                                                  Graph one cycle of , and scale the horizontal axis in multiples of . Use the grid below.  grid                                                     sinusoidal graph    "
 },
 {
   "id": "note-28",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#note-28",
   "type": "Note",
-  "number": "6.30",
+  "number": "6.32",
   "title": "",
-  "body": "Because we know the basic shapes of the sine and cosine graphs, to make an adequate graph it is usually sufficient to plot the guide points at the quadrantal angles, and then draw a smooth curve through the points. Try it for yourself. Use the axes below.                   axes    "
+  "body": "Because we know the basic shapes of the sine and cosine graphs, to make an adequate graph it is usually sufficient to plot the guide points at the quadrantal angles, and then draw a smooth curve through the points. Try it for yourself. Use the axes below.                  axes  "
 },
 {
   "id": "activity-8",
@@ -16396,34 +16441,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "6.4",
   "title": "Graphs of Sine and Cosine.",
-  "body": "Graphs of Sine and Cosine   We are going to graph and from their definitions. The unit circle at the left of each grid is marked off in radians. (Each tick mark is radian.) The -axis of each grid is also marked in radians.   Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the vertical (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .    circle and grid      Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the horizontal (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .    unit circle and grid     "
-},
-{
-  "id": "example-116",
-  "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-116",
-  "type": "Example",
-  "number": "6.31",
-  "title": "",
-  "body": "Graph the tangent function, , where is measured in radians.  We begin by making a table of values for the tangent function. We choose the special values for between and .                          Plot the points and connect them with smooth curves, remembering that is undefined. The graph repeats for values of between and . So, while the old graph had vertical asymptotes at and , this graph has vertical asymptotes at and . The figure at right shows the graph of for .   tangent    "
-},
-{
-  "id": "exercise-1519",
-  "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1519",
-  "type": "Checkpoint",
-  "number": "6.32",
-  "title": "",
-  "body": "Sketch a graph of the tangent function and scale the horizontal axis in integers, as shown below. Label the -intercepts and the vertical asymptotes with their coordinates.    grid      tangent graph    "
-},
-{
-  "id": "activity-9",
-  "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#activity-9",
-  "type": "Activity",
-  "number": "6.5",
-  "title": "Solving Equations.",
-  "body": "Solving Equations    unit circle and sine graph       Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.    unit circle and grid      Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.  "
+  "body": "Graphs of Sine and Cosine   We are going to graph and from their definitions. The unit circle at the left of each grid is marked off in radians. (Each tick mark is radian.) The horizontal -axis of each grid is also marked in radians.   Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the vertical (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   circle and grid    Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the horizontal (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   unit circle and grid   "
 },
 {
   "id": "example-117",
@@ -16432,7 +16450,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.33",
   "title": "",
-  "body": "Use a graph to find all solutions of between and .  The figure shows a graph of , with in radians, and the horizontal line . The solutions of the equation are the -coordinates of the intersection points, and these appear to be about and slightly over , perhaps . You can check that these values roughly satisfy the equation; it is difficult to read the graph with any greater accuracy.    cosine graph    "
+  "body": "Graph the tangent function, , where is measured in radians.  We begin by making a table of values for the tangent function. We choose the special values for between and .                          Plot the points and connect them with smooth curves, remembering that is undefined. The graph repeats for values of between and . So, while the graph in degrees had vertical asymptotes at and , this graph has vertical asymptotes at and . The figure at right shows the graph of for .  tangent  "
 },
 {
   "id": "exercise-1520",
@@ -16441,7 +16459,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.34",
   "title": "",
-  "body": "Use a graph to find the two angles between and that satisfy . Approximately 4.14 and 5.25 "
+  "body": "Sketch a graph of the tangent function and scale the horizontal axis in integers, as shown below. Label the -intercepts and the vertical asymptotes with their coordinates.  grid   tangent graph  "
 },
 {
   "id": "example-118",
@@ -16450,7 +16468,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.35",
   "title": "",
-  "body": "Solve the equation algebraically, for .  The cosine is negative in the second and third quadrants, so we expect to find our answers between and . We use a calculator to find one of the angles: Rounded to hundredths, the second quadrant angle is radans. To find the other angle, we first find the reference angle for :   The third quadrant angle with the same reference angle is   unit circle     Thus, the two solutions are and radians, as shown in the figure. "
+  "body": "Use a graph to find all solutions of between and .  The figure shows a graph of , with in radians, and the horizontal line . The solutions of the equation are the -coordinates of the intersection points, and these appear to be about and slightly over , perhaps . You can check that these values roughly satisfy the equation; it is difficult to read the graph with any greater accuracy.   cosine graph  "
 },
 {
   "id": "exercise-1521",
@@ -16459,7 +16477,16 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.36",
   "title": "",
-  "body": "Solve the equation algebraically, for . "
+  "body": "Use a graph to find the two angles between and that satisfy . Approximately 4.14 and 5.25 "
+},
+{
+  "id": "activity-9",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#activity-9",
+  "type": "Activity",
+  "number": "6.5",
+  "title": "Solving Equations.",
+  "body": "Solving Equations   unit circle and sine graph     Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   unit circle and grid    Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.  "
 },
 {
   "id": "example-119",
@@ -16468,7 +16495,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.37",
   "title": "",
-  "body": "Find exact values for all the solutions of .  Because , one of the solutions is . Remember that there are two solutions between and ; and the tangent function is positive in the third quadrant.  The third quadrant angle with reference angle is so the second solution is .  All other solutions of the equation can be found by adding (or subtracting) multiples of to these two solutions. We write the solutions as "
+  "body": " Solve the equation algebraically, for .  Find all solutions of the equation.    The cosine is negative in the second and third quadrants, so we expect to find our answers between and . We use a calculator to find one of the angles: Rounded to hundredths, the second quadrant angle is radans. To find the other angle, we first find the reference angle for :   The third quadrant angle with the same reference angle is  unit circle  Thus, the two solutions are and radians, as shown in the figure.  All angles coterminal with and are also solutions of the equation . So adding or subtracting multiples of to and produces all the solutions. For example, and are solutions. We write the solutions as and , where is an integer.  "
 },
 {
   "id": "exercise-1522",
@@ -16477,7 +16504,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.38",
   "title": "",
-  "body": "Find exact values for all the solutions of . , "
+  "body": " Solve the equation algebraically, for .  Find all solutions of the equation.   and  and  "
 },
 {
   "id": "example-120",
@@ -16486,7 +16513,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.39",
   "title": "",
-  "body": "The formula gives the number of hours of daylight in Glasgow, Scotland, as a function of time, in months after January 1.   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  How many hours of daylight does Glasgow enjoy on the longest day of the year?  In which months does Glasgow experience less than 8 hours of light per day?    The graph is shown below.    sinusoidal graph     The midline of the graph is hours, the amplitude is 5.25 hours, and the period is 12 months.  On the longest day of the year, there are hours of daylight in Glasgow.  From the graph, we see that for between 0 and 2, or in January and February. is also less than 8 for a short time between and , at the end of December.  "
+  "body": "Find exact values for all the solutions of .  Because , one of the solutions is . Remember that there are two solutions between and ; and the tangent function is positive in the third quadrant.  The third quadrant angle with reference angle is so the second solution is .  All other solutions of the equation can be found by adding (or subtracting) multiples of to these two solutions. We write the solutions as  "
 },
 {
   "id": "exercise-1523",
@@ -16495,25 +16522,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.40",
   "title": "",
-  "body": "The pistons in an automobile engine move up and down in the cylinders. If is in milliseconds, the distance from the top of the piston to the top of the cylinder is given in centimeters by   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  Find the largest and the smallest clearance between the piston and the top of the cylinder.     sinusoidal graph    Midline: , amplitude: , period: millisec  Largest: 13 cm, smallest: 1 cm   "
-},
-{
-  "id": "p-3972",
-  "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-3972",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "domain "
-},
-{
-  "id": "p-3976",
-  "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-3976",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "range "
+  "body": "Find exact values for all the solutions of . , "
 },
 {
   "id": "example-121",
@@ -16522,7 +16531,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.41",
   "title": "",
-  "body": "Find the domain and range of each function.       There are no restrictions on the input values for this function, so its domain is all real numbers. The graph is a parabola with high point at , so the range of the function is all . See the figure below.    parabola     graph of hyperbola     Because we cannot divide by zero, we cannot allow for this function. Thus, the domain of is all real numbers except . The graph has a horizontal asymptote at , and you can see that there is no input that will produce an output of zero. So the range of is all real numbers except .  "
+  "body": "The formula gives the number of hours of daylight in Glasgow, Scotland, as a function of time, in months after January 1.   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  How many hours of daylight does Glasgow enjoy on the longest day of the year?  In which months does Glasgow experience less than 8 hours of light per day?    The graph is shown below.  sinusoidal graph  The midline of the graph is hours, the amplitude is 5.25 hours, and the period is 12 months.  On the longest day of the year, there are hours of daylight in Glasgow.  From the graph, we see that for between 0 and 2, or in January and February. is also less than 8 for a short time between and , at the end of December.  "
 },
 {
   "id": "exercise-1524",
@@ -16530,6 +16539,60 @@ var ptx_lunr_docs = [
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1524",
   "type": "Checkpoint",
   "number": "6.42",
+  "title": "",
+  "body": "The pistons in an automobile engine move up and down in the cylinders. If is in milliseconds, the distance from the top of the piston to the top of the cylinder is given in centimeters by   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  Find the largest and the smallest clearance between the piston and the top of the cylinder.    sinusoidal graph   Midline: , amplitude: , period: millisec  Largest: 13 cm, smallest: 1 cm   "
+},
+{
+  "id": "p-4004",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4004",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "domain "
+},
+{
+  "id": "p-4008",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4008",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "range "
+},
+{
+  "id": "p-4010",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4010",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "domain "
+},
+{
+  "id": "p-4011",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4011",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "range "
+},
+{
+  "id": "example-122",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-122",
+  "type": "Example",
+  "number": "6.43",
+  "title": "",
+  "body": "Find the domain and range of each function.       There are no restrictions on the input values for this function, so its domain is all real numbers. The graph is a parabola with high point at , so the range of the function is all . See the figure below.   parabola  graph of hyperbola   Because we cannot divide by zero, we cannot allow for this function. Thus, the domain of is all real numbers except . The graph has a horizontal asymptote at , and you can see that there is no input that will produce an output of zero. So the range of is all real numbers except .   "
+},
+{
+  "id": "exercise-1525",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1525",
+  "type": "Checkpoint",
+  "number": "6.44",
   "title": "",
   "body": "Use the formula and a graph to find the domain and range.       Dom ( ): all real numbers except , Rge ( ): all real numbers except  Dom ( ): , Rge ( ):   "
 },
@@ -16543,308 +16606,299 @@ var ptx_lunr_docs = [
   "body": " Evaluate the function in part (a), and solve the equation in part (b).                      Algebra Refresher Answers                     "
 },
 {
-  "id": "p-4003",
+  "id": "p-4037",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-4003",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4037",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "domain range "
 },
 {
-  "id": "exercise-1525",
+  "id": "exercise-1526",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1525",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1526",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": " Use your calculator to complete the table of values. Round values to hundredths.                                 Sketch a graph of on the grid.  grid                                    cosine graph  "
 },
 {
-  "id": "exercise-1526",
+  "id": "exercise-1527",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1526",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1527",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": " Use your calculator to complete the table of values. Round values to hundredths.                               Sketch a graph of on the grid. grid  "
 },
 {
-  "id": "exercise-1527",
+  "id": "exercise-1528",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1527",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1528",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "Sketch a graph of on each grid.  grid   grid      sine graph     sine graph  "
 },
 {
-  "id": "exercise-1528",
+  "id": "exercise-1529",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1528",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1529",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "Sketch a graph of on each grid.  grid grid "
 },
 {
-  "id": "exercise-1529",
+  "id": "exercise-1530",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1529",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1530",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "  Sketch a graph of where is a real number.  State the domain and range of .     grid       sine graph     Domain: , range: "
 },
 {
-  "id": "exercise-1530",
+  "id": "exercise-1531",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1530",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1531",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "  Sketch a graph of where is a real number.  State the domain and range of .   grid "
 },
 {
-  "id": "exercise-1531",
+  "id": "exercise-1532",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1531",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1532",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "  Sketch a graph of where is a real number.  State the domain and range of .     grid       tangent graph     Domain: an odd integer, range: "
 },
 {
-  "id": "exercise-1532",
+  "id": "exercise-1533",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1532",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1533",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": " Sketch and on the same grid.    grid    "
 },
 {
-  "id": "exercise-1533",
+  "id": "exercise-1534",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1533",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1534",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": " Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or "
 },
 {
-  "id": "exercise-1534",
+  "id": "exercise-1535",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1534",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1535",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": " Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  "
 },
 {
-  "id": "exercise-1535",
+  "id": "exercise-1536",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1535",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1536",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": " Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or "
 },
 {
-  "id": "exercise-1536",
+  "id": "exercise-1537",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1536",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1537",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": " Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  "
 },
 {
-  "id": "exercise-1537",
+  "id": "exercise-1538",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1537",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1538",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1538",
+  "id": "exercise-1539",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1538",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1539",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1539",
+  "id": "exercise-1540",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1539",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1540",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1540",
+  "id": "exercise-1541",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1540",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1541",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1541",
+  "id": "exercise-1542",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1541",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1542",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1542",
+  "id": "exercise-1543",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1542",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1543",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1543",
+  "id": "exercise-1544",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1543",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1544",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1544",
+  "id": "exercise-1545",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1544",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1545",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1545",
+  "id": "exercise-1546",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1545",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1546",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": "I: 0.5, II: 2.7, III: 3.6, IV: 5.8 "
 },
 {
-  "id": "exercise-1546",
+  "id": "exercise-1547",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1546",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1547",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1547",
+  "id": "exercise-1548",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1547",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1548",
   "type": "Exercise",
   "number": "23",
   "title": "",
   "body": "I: 0.6, II: 2.6, III: 3.7, IV: 5.7 "
 },
 {
-  "id": "exercise-1548",
+  "id": "exercise-1549",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1548",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1549",
   "type": "Exercise",
   "number": "24",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1549",
+  "id": "exercise-1550",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1549",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1550",
   "type": "Exercise",
   "number": "25",
   "title": "",
   "body": "I: 1.3, II: 1.8, III: 4.5, IV: 4.9 "
 },
 {
-  "id": "exercise-1550",
+  "id": "exercise-1551",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1550",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1551",
   "type": "Exercise",
   "number": "26",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1551",
+  "id": "exercise-1552",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1551",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1552",
   "type": "Exercise",
   "number": "27",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1552",
+  "id": "exercise-1553",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1552",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1553",
   "type": "Exercise",
   "number": "28",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1553",
+  "id": "exercise-1554",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1553",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1554",
   "type": "Exercise",
   "number": "29",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1554",
+  "id": "exercise-1555",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1554",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1555",
   "type": "Exercise",
   "number": "30",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1555",
+  "id": "exercise-1556",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1555",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1556",
   "type": "Exercise",
   "number": "31",
   "title": "",
   "body": "or "
 },
 {
-  "id": "exercise-1556",
-  "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1556",
-  "type": "Exercise",
-  "number": "32",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-1557",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1557",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
   "body": ""
 },
@@ -16853,7 +16907,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1558",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -16862,178 +16916,178 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1559",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "or "
+  "body": ""
 },
 {
   "id": "exercise-1560",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1560",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": ""
+  "body": "or "
 },
 {
   "id": "exercise-1561",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1561",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "or "
+  "body": ""
 },
 {
   "id": "exercise-1562",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1562",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": ""
+  "body": "or "
 },
 {
   "id": "exercise-1563",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1563",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "or "
+  "body": ""
 },
 {
   "id": "exercise-1564",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1564",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": ""
+  "body": "or "
 },
 {
   "id": "exercise-1565",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1565",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "or "
+  "body": ""
 },
 {
   "id": "exercise-1566",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1566",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": ""
+  "body": "or "
 },
 {
   "id": "exercise-1567",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1567",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "or "
+  "body": ""
 },
 {
   "id": "exercise-1568",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1568",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": ""
+  "body": "or "
 },
 {
   "id": "exercise-1569",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1569",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "      "
+  "body": ""
 },
 {
   "id": "exercise-1570",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1570",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "   "
+  "body": "      "
 },
 {
   "id": "exercise-1571",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1571",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "      "
+  "body": "   "
 },
 {
   "id": "exercise-1572",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1572",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "   "
+  "body": "      "
 },
 {
   "id": "exercise-1573",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1573",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "     No solution  "
+  "body": "   "
 },
 {
   "id": "exercise-1574",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1574",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "  \\sin x = 1.2  "
+  "body": "     No solution  "
 },
 {
   "id": "exercise-1575",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1575",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "      "
+  "body": "  \\sin x = 1.2  "
 },
 {
   "id": "exercise-1576",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1576",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": "   "
+  "body": "      "
 },
 {
   "id": "exercise-1577",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1577",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": ""
+  "body": "   "
 },
 {
   "id": "exercise-1578",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1578",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
   "body": ""
 },
@@ -17042,16 +17096,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1579",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-1580",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1580",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
   "body": " "
 },
@@ -17060,7 +17114,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1581",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
   "body": " "
 },
@@ -17069,7 +17123,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1582",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
   "body": " "
 },
@@ -17078,194 +17132,203 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1583",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "When observed from earth, the moon looks like a disk that is partially visible and partially in shadow. The percentage of the disk that is visible can be approximated by where is the number of days since the last full moon.   Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to full moon, half moon, and new moon. ( New moon occurs when the part of the moon receiving sunlight is facing directly away from the earth.)  At what times during the lunar month is 25% of the moon visible? Mark those points on your graph.  During which days is less than 50% of the moon visible? Mark the corresponding points on your graph.  b-c.   sinusoidal graph     d. and e. to "
+  "body": " "
 },
 {
   "id": "exercise-1584",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1584",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "The tide in Malibu is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to high tide and low tide.  How high is high tide, and at what times does it occur?  At what times during the 25-hour period is the tide 4 feet above low tide? Mark those points on your graph.  Kathie walks along the beach only when the tide is below 1 foot. Find the intervals on your graph when the tide is below 1 foot. "
+  "body": "When observed from earth, the moon looks like a disk that is partially visible and partially in shadow. The percentage of the disk that is visible can be approximated by where is the number of days since the last full moon.   Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to full moon, half moon, and new moon. ( New moon occurs when the part of the moon receiving sunlight is facing directly away from the earth.)  At what times during the lunar month is 25% of the moon visible? Mark those points on your graph.  During which days is less than 50% of the moon visible? Mark the corresponding points on your graph.  b-c.   sinusoidal graph     d. and e. to "
 },
 {
   "id": "exercise-1585",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1585",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "The average daily high temperature in the town of Beardsley, Arizona is approximated by the function where the temperature is measured in degrees Fahrenheit, and is the number of days since January 1.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest average temperature.  What is the hottest day and what is its average temperature? What is the day with the lowest average temperature, and what is that temperature?  At what times during the year are average high temperatures above ? Mark those points on your graph.  b-c.   sinusoidal graph     d. High: day 204, ; low: day 25, e. to "
+  "body": "The tide in Malibu is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to high tide and low tide.  How high is high tide, and at what times does it occur?  At what times during the 25-hour period is the tide 4 feet above low tide? Mark those points on your graph.  Kathie walks along the beach only when the tide is below 1 foot. Find the intervals on your graph when the tide is below 1 foot. "
 },
 {
   "id": "exercise-1586",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1586",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": "A weight is suspended from the ceiling on a spring. The weight is pushed straight up, compressing the spring, then released. The height of the weight above the ground is given by the function where the height is measured in meters, and is the number of seconds since the mass was released.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest positions of the mass.  How high is highest point, and when is that height attained during the first 3 seconds?  How high is lowest point, and when is that height attained during the first 3 seconds?  Find the intervals during the first 3 seconds when the mass is less than 2 meters above the ground.  "
+  "body": "The average daily high temperature in the town of Beardsley, Arizona is approximated by the function where the temperature is measured in degrees Fahrenheit, and is the number of days since January 1.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest average temperature.  What is the hottest day and what is its average temperature? What is the day with the lowest average temperature, and what is that temperature?  At what times during the year are average high temperatures above ? Mark those points on your graph.  b-c.   sinusoidal graph     d. High: day 204, ; low: day 25, e. to "
 },
 {
   "id": "exercise-1587",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1587",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "  unit circle         "
+  "body": "A weight is suspended from the ceiling on a spring. The weight is pushed straight up, compressing the spring, then released. The height of the weight above the ground is given by the function where the height is measured in meters, and is the number of seconds since the mass was released.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest positions of the mass.  How high is highest point, and when is that height attained during the first 3 seconds?  How high is lowest point, and when is that height attained during the first 3 seconds?  Find the intervals during the first 3 seconds when the mass is less than 2 meters above the ground.  "
 },
 {
   "id": "exercise-1588",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1588",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": "  unit circle    "
+  "body": "  unit circle         "
 },
 {
   "id": "exercise-1589",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1589",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "  unit circle         "
+  "body": "  unit circle    "
 },
 {
   "id": "exercise-1590",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1590",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
-  "body": "  unit circle    "
+  "body": "  unit circle         "
 },
 {
   "id": "exercise-1591",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1591",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": "Locate the four values and from Problem 63 on the graph of , on the graph of , and on the graph of shown below.  grid  grid  grid    three trig graphs    "
+  "body": "  unit circle    "
 },
 {
   "id": "exercise-1592",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1592",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": "Repeat Problem 67 for the values in Problem 64. "
+  "body": "Locate the four values and from Problem 63 on the graph of , on the graph of , and on the graph of shown below.  grid  grid  grid    three trig graphs    "
 },
 {
   "id": "exercise-1593",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1593",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": "Repeat Problem 67 for the values in Problem 65.   three trig graphs    "
+  "body": "Repeat Problem 67 for the values in Problem 64. "
 },
 {
   "id": "exercise-1594",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1594",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": "Repeat Problem 67 for the values in Problem 66. "
+  "body": "Repeat Problem 67 for the values in Problem 65.   three trig graphs    "
 },
 {
   "id": "exercise-1595",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1595",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": "   parabola     Domain: , range:  "
+  "body": "Repeat Problem 67 for the values in Problem 66. "
 },
 {
   "id": "exercise-1596",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1596",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
-  "body": ""
+  "body": "   parabola     Domain: , range:  "
 },
 {
   "id": "exercise-1597",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1597",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
-  "body": "   graph of 2 - 1\/(x^2)     Domain: , range:  "
+  "body": ""
 },
 {
   "id": "exercise-1598",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1598",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
-  "body": ""
+  "body": "   graph of 2 - 1\/(x^2)     Domain: , range:  "
 },
 {
   "id": "exercise-1599",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1599",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
-  "body": "   graph of translated square root     Domain: , range:  "
+  "body": ""
 },
 {
   "id": "exercise-1600",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1600",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
-  "body": ""
+  "body": "   graph of translated square root     Domain: , range:  "
 },
 {
   "id": "exercise-1601",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1601",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
-  "body": "   semicircle     Domain: , range:  "
+  "body": ""
 },
 {
   "id": "exercise-1602",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1602",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
-  "body": ""
+  "body": "   semicircle     Domain: , range:  "
 },
 {
   "id": "exercise-1603",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1603",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
-  "body": " Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .                     cosine graph      Domain: , Range:   "
+  "body": ""
 },
 {
   "id": "exercise-1604",
   "level": "2",
   "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1604",
+  "type": "Exercise",
+  "number": "79",
+  "title": "",
+  "body": " Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .                     cosine graph      Domain: , Range:   "
+},
+{
+  "id": "exercise-1605",
+  "level": "2",
+  "url": "Graphs-of-the-The-Circular-Functions.html#exercise-1605",
   "type": "Exercise",
   "number": "80",
   "title": "",
@@ -17281,263 +17344,254 @@ var ptx_lunr_docs = [
   "body": " Chapter 6 Summary and Review  Key Concepts   The distance we travel around a circle of radius is proportional to the angle of displacement.  We measure angles in radians when we work with arclength.  Radians  The radian measure of an angle is given by  An arclength equal to one radius determines a central angle of one radian.  Radian measure can be expressed as multiples of or as decimals.     Degrees                        circle  We multiply by the appropriate conversion factor to convert between degrees and radians.  Unit Conversion for Angles   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .   Arclength Formula  On a circle of radius , the length of an arc spanned by an angle in radians is  On a unit circle , the measure of a (positive) angle in radians is equal to the length of the arc it spans.  The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  You should memorize the trig values of the special angles in radians.    Degrees  Radians  Sine  Cosine  Tangent                               undefined   To find the sine or cosine of a real number , we draw an arc of length on a unit circle, and then find the sine or cosine of the angle determined by the arc.  Coordinates on a Unit Circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are circle  The Circular Functions  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle  The domain of a function is the set of all possible input values. The range of a function is the set of all output values for the function.    Domain: all real numbers  Range:  Period:   sine graph      Domain: all real numbers  Range:  Period:   cosine graph      Domain: all real numbers except  Range: all real numbers  Period:   tangent graph        Chapter 6 Review Problems  For Problems 1 2, convert from degrees to radians. Give exact answers.                 For Problems 3 4, convert from degrees to radians. Round to two decimal places.                 For Problems 5 8, convert from radians to degrees. Round to hundredths if necessary.                               For Problems 9 10, express each fraction of one revolution as an angle in radians.                 For Problems 11 12, express each angle in radians as a fraction of one revolution.                 For Problems 13 14, in which quadrant on a unit circle does an arc with given length lie?       II  I  IV          The Earth's radius at the equator is 3960 miles. If you travel 150 miles along the equator, what fraction of its circumference have you covered? How many degrees of longitude have you crossed? Convert your answer to radians.  Use the arclength formula to calculate the answer to part (a). Do your answers agree?      A lawn sprinkler has a range of 15 feet, and waters a porion of a circle whose curved edge is 39.27 feet long. Through what angle does the sprinkler turn?  Many telecommunications satellites are put into geostationary orbits, so that they have the same period as the rotation of the earth, and hence stay in the same relative position seen from earth. Hundreds of these satellites orbit 22,300 miles above the equator in what is called the Clarke belt, named after Arthur C. Clarke. What is the speed of the satellites? (The radius of the earth is about 4000 miles.) mph  The planet Neptune is 4504 million kilometers from the Sun. In one Earth year (365 days), it travels a distance of 171.58 million kilometers around its orbit.  What fraction of its orbit does Neptune travel in one Earth year? What angle in radians does it traverse in that time?  How many days does it take Neptune to complete one orbit around the Sun? What is its speed, in kilometers per day?  Earth is 150 million kilometers from the Sun. What is Earth's orbital speed?   For Problems 19 20, evaluate exactly.                 For Problems 21 22, factor the expressionsketch an arc with the given length in standard position on a unit circle. Find the coordinates of the terminal point. Round to tenths.                 In Problems 23 24, the circle has radius , and its center is the point .  Find the coordinates of each point in terms of .        circle         Find the length of each arc in terms of .       circle    For Problems 25 26, find an exact value for the area of the sector.  With a central angle of in a circle of radius 4 inches.  With a central angle of in a circle of radius 12 centimeters.   If , then  If , then  If , then  If , then  For Problems 31 34, evaluate the function  for  for  for  for   For Problems 35 38, find the reference angle in radians.                                     For Problems 39 40, find the angle of inclination of the line.      Prepare a Cartesian coordinate system with the -axis scaled from 0 to 10 and the -axis scaled from to . Label multiples of on the -axis.  Sketch an accurate graph of on the grid. Sketch an accurate graph of on the same grid.   graph of cosine and sine      Use your calculator to make a table of values for and , for and .  Plot the points from the table. Identify the graph.  For Problems 43 46,  Graph the function for . State the amplitude, period, and midline of the graph.  Use the graph to solve the equation for .         sinusoidal graph    mid: , amp: , period:    sinusoidal curve and horizontal line                sinusoidal graph    mid: , amp: , period:    sinusoidal graph and horizontal line           For Problems 47 48, solve the equation graphically for .     For Problems 49 52, solve the equation exactly for .       For Problems 53 58, find all solutions between and . Round to two decimal places.         For Problems 59 62, solve for .                   For Problems 63 66, sketch the graph. State its domain and range.    parabola    Dom: all real numbers, Rge:     semicircle    Dom: , Rge:    Prove the Pythagorean identity by carrying out the following steps. Sketch a unit circle, and an arc in standard position.  Write the equation of the unit circle.  Use trig ratios to write the coordinates of the terminal point of the arc.  Substitute the coordinates of point into your equation from part (a).  Does the identity hold for all values of ?      Yes   Prove the tangent identity by carrying out the following steps. Sketch an arc in standard position on a unit circle, and label its terminal point .   Write and in terms of and .  Write the definition of .  Substitute your results from part (a) into your expression for (b).  Does the identity hold for all values of ?      "
 },
 {
-  "id": "p-4162",
+  "id": "p-4196",
   "level": "2",
-  "url": "chap6-summary.html#p-4162",
+  "url": "chap6-summary.html#p-4196",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "radian measure length of an arc unit circle coordinates circular functions domain range "
 },
 {
-  "id": "exercise-1605",
+  "id": "exercise-1606",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1605",
+  "url": "chap6-summary.html#exercise-1606",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1606",
+  "id": "exercise-1607",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1606",
+  "url": "chap6-summary.html#exercise-1607",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1607",
+  "id": "exercise-1608",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1607",
+  "url": "chap6-summary.html#exercise-1608",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1608",
+  "id": "exercise-1609",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1608",
+  "url": "chap6-summary.html#exercise-1609",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1609",
+  "id": "exercise-1610",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1609",
+  "url": "chap6-summary.html#exercise-1610",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1610",
+  "id": "exercise-1611",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1610",
+  "url": "chap6-summary.html#exercise-1611",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1611",
+  "id": "exercise-1612",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1611",
+  "url": "chap6-summary.html#exercise-1612",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1612",
+  "id": "exercise-1613",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1612",
+  "url": "chap6-summary.html#exercise-1613",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1613",
+  "id": "exercise-1614",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1613",
+  "url": "chap6-summary.html#exercise-1614",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1614",
+  "id": "exercise-1615",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1614",
+  "url": "chap6-summary.html#exercise-1615",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1615",
+  "id": "exercise-1616",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1615",
+  "url": "chap6-summary.html#exercise-1616",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1616",
+  "id": "exercise-1617",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1616",
+  "url": "chap6-summary.html#exercise-1617",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1617",
+  "id": "exercise-1618",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1617",
+  "url": "chap6-summary.html#exercise-1618",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "     II  I  IV  "
 },
 {
-  "id": "exercise-1618",
+  "id": "exercise-1619",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1618",
+  "url": "chap6-summary.html#exercise-1619",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1619",
+  "id": "exercise-1620",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1619",
+  "url": "chap6-summary.html#exercise-1620",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": " The Earth's radius at the equator is 3960 miles. If you travel 150 miles along the equator, what fraction of its circumference have you covered? How many degrees of longitude have you crossed? Convert your answer to radians.  Use the arclength formula to calculate the answer to part (a). Do your answers agree?     "
 },
 {
-  "id": "exercise-1620",
+  "id": "exercise-1621",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1620",
+  "url": "chap6-summary.html#exercise-1621",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": "A lawn sprinkler has a range of 15 feet, and waters a porion of a circle whose curved edge is 39.27 feet long. Through what angle does the sprinkler turn? "
 },
 {
-  "id": "exercise-1621",
+  "id": "exercise-1622",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1621",
+  "url": "chap6-summary.html#exercise-1622",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": "Many telecommunications satellites are put into geostationary orbits, so that they have the same period as the rotation of the earth, and hence stay in the same relative position seen from earth. Hundreds of these satellites orbit 22,300 miles above the equator in what is called the Clarke belt, named after Arthur C. Clarke. What is the speed of the satellites? (The radius of the earth is about 4000 miles.) mph "
 },
 {
-  "id": "exercise-1622",
+  "id": "exercise-1623",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1622",
+  "url": "chap6-summary.html#exercise-1623",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": "The planet Neptune is 4504 million kilometers from the Sun. In one Earth year (365 days), it travels a distance of 171.58 million kilometers around its orbit.  What fraction of its orbit does Neptune travel in one Earth year? What angle in radians does it traverse in that time?  How many days does it take Neptune to complete one orbit around the Sun? What is its speed, in kilometers per day?  Earth is 150 million kilometers from the Sun. What is Earth's orbital speed?  "
 },
 {
-  "id": "exercise-1623",
+  "id": "exercise-1624",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1623",
+  "url": "chap6-summary.html#exercise-1624",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1624",
+  "id": "exercise-1625",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1624",
+  "url": "chap6-summary.html#exercise-1625",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1625",
+  "id": "exercise-1626",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1625",
+  "url": "chap6-summary.html#exercise-1626",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-1626",
+  "id": "exercise-1627",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1626",
+  "url": "chap6-summary.html#exercise-1627",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1627",
+  "id": "exercise-1628",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1627",
+  "url": "chap6-summary.html#exercise-1628",
   "type": "Exercise",
   "number": "23",
   "title": "",
   "body": "Find the coordinates of each point in terms of .        circle        "
 },
 {
-  "id": "exercise-1628",
+  "id": "exercise-1629",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1628",
+  "url": "chap6-summary.html#exercise-1629",
   "type": "Exercise",
   "number": "24",
   "title": "",
   "body": "Find the length of each arc in terms of .       circle  "
 },
 {
-  "id": "exercise-1629",
+  "id": "exercise-1630",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1629",
+  "url": "chap6-summary.html#exercise-1630",
   "type": "Exercise",
   "number": "25",
   "title": "",
   "body": "With a central angle of in a circle of radius 4 inches. "
 },
 {
-  "id": "exercise-1630",
+  "id": "exercise-1631",
   "level": "2",
-  "url": "chap6-summary.html#exercise-1630",
+  "url": "chap6-summary.html#exercise-1631",
   "type": "Exercise",
   "number": "26",
   "title": "",
   "body": "With a central angle of in a circle of radius 12 centimeters. "
 },
 {
-  "id": "exercise-1631",
-  "level": "2",
-  "url": "chap6-summary.html#exercise-1631",
-  "type": "Exercise",
-  "number": "27",
-  "title": "",
-  "body": "If , then "
-},
-{
   "id": "exercise-1632",
   "level": "2",
   "url": "chap6-summary.html#exercise-1632",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": "If , then "
 },
@@ -17546,7 +17600,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1633",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": "If , then "
 },
@@ -17555,7 +17609,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1634",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": "If , then "
 },
@@ -17564,16 +17618,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1635",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "for "
+  "body": "If , then "
 },
 {
   "id": "exercise-1636",
   "level": "2",
   "url": "chap6-summary.html#exercise-1636",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
   "body": "for "
 },
@@ -17582,7 +17636,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1637",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
   "body": "for "
 },
@@ -17591,7 +17645,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1638",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": "for "
 },
@@ -17600,52 +17654,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1639",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "          "
+  "body": "for "
 },
 {
   "id": "exercise-1640",
   "level": "2",
   "url": "chap6-summary.html#exercise-1640",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": "     "
+  "body": "          "
 },
 {
   "id": "exercise-1641",
   "level": "2",
   "url": "chap6-summary.html#exercise-1641",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "          "
+  "body": "     "
 },
 {
   "id": "exercise-1642",
   "level": "2",
   "url": "chap6-summary.html#exercise-1642",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": "     "
+  "body": "          "
 },
 {
   "id": "exercise-1643",
   "level": "2",
   "url": "chap6-summary.html#exercise-1643",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": ""
+  "body": "     "
 },
 {
   "id": "exercise-1644",
   "level": "2",
   "url": "chap6-summary.html#exercise-1644",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -17654,70 +17708,70 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1645",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": " Prepare a Cartesian coordinate system with the -axis scaled from 0 to 10 and the -axis scaled from to . Label multiples of on the -axis.  Sketch an accurate graph of on the grid. Sketch an accurate graph of on the same grid.   graph of cosine and sine    "
+  "body": ""
 },
 {
   "id": "exercise-1646",
   "level": "2",
   "url": "chap6-summary.html#exercise-1646",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": " Use your calculator to make a table of values for and , for and .  Plot the points from the table. Identify the graph. "
+  "body": " Prepare a Cartesian coordinate system with the -axis scaled from 0 to 10 and the -axis scaled from to . Label multiples of on the -axis.  Sketch an accurate graph of on the grid. Sketch an accurate graph of on the same grid.   graph of cosine and sine    "
 },
 {
   "id": "exercise-1647",
   "level": "2",
   "url": "chap6-summary.html#exercise-1647",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "      sinusoidal graph    mid: , amp: , period:    sinusoidal curve and horizontal line     "
+  "body": " Use your calculator to make a table of values for and , for and .  Plot the points from the table. Identify the graph. "
 },
 {
   "id": "exercise-1648",
   "level": "2",
   "url": "chap6-summary.html#exercise-1648",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "   "
+  "body": "      sinusoidal graph    mid: , amp: , period:    sinusoidal curve and horizontal line     "
 },
 {
   "id": "exercise-1649",
   "level": "2",
   "url": "chap6-summary.html#exercise-1649",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "      sinusoidal graph    mid: , amp: , period:    sinusoidal graph and horizontal line     "
+  "body": "   "
 },
 {
   "id": "exercise-1650",
   "level": "2",
   "url": "chap6-summary.html#exercise-1650",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "   "
+  "body": "      sinusoidal graph    mid: , amp: , period:    sinusoidal graph and horizontal line     "
 },
 {
   "id": "exercise-1651",
   "level": "2",
   "url": "chap6-summary.html#exercise-1651",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": ""
+  "body": "   "
 },
 {
   "id": "exercise-1652",
   "level": "2",
   "url": "chap6-summary.html#exercise-1652",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
   "body": ""
 },
@@ -17726,7 +17780,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1653",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
   "body": ""
 },
@@ -17735,7 +17789,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1654",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
   "body": ""
 },
@@ -17744,7 +17798,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1655",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
   "body": ""
 },
@@ -17753,7 +17807,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1656",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
   "body": ""
 },
@@ -17762,7 +17816,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1657",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
   "body": ""
 },
@@ -17771,7 +17825,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1658",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
   "body": ""
 },
@@ -17780,7 +17834,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1659",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
   "body": ""
 },
@@ -17789,7 +17843,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1660",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
   "body": ""
 },
@@ -17798,7 +17852,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1661",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
   "body": ""
 },
@@ -17807,7 +17861,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1662",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
   "body": ""
 },
@@ -17816,86 +17870,95 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap6-summary.html#exercise-1663",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "    "
+  "body": ""
 },
 {
   "id": "exercise-1664",
   "level": "2",
   "url": "chap6-summary.html#exercise-1664",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-1665",
   "level": "2",
   "url": "chap6-summary.html#exercise-1665",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-1666",
   "level": "2",
   "url": "chap6-summary.html#exercise-1666",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-1667",
   "level": "2",
   "url": "chap6-summary.html#exercise-1667",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "  parabola    Dom: all real numbers, Rge: "
+  "body": "  "
 },
 {
   "id": "exercise-1668",
   "level": "2",
   "url": "chap6-summary.html#exercise-1668",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": ""
+  "body": "  parabola    Dom: all real numbers, Rge: "
 },
 {
   "id": "exercise-1669",
   "level": "2",
   "url": "chap6-summary.html#exercise-1669",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "  semicircle    Dom: , Rge: "
+  "body": ""
 },
 {
   "id": "exercise-1670",
   "level": "2",
   "url": "chap6-summary.html#exercise-1670",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
-  "body": ""
+  "body": "  semicircle    Dom: , Rge: "
 },
 {
   "id": "exercise-1671",
   "level": "2",
   "url": "chap6-summary.html#exercise-1671",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": "Prove the Pythagorean identity by carrying out the following steps. Sketch a unit circle, and an arc in standard position.  Write the equation of the unit circle.  Use trig ratios to write the coordinates of the terminal point of the arc.  Substitute the coordinates of point into your equation from part (a).  Does the identity hold for all values of ?      Yes  "
+  "body": ""
 },
 {
   "id": "exercise-1672",
   "level": "2",
   "url": "chap6-summary.html#exercise-1672",
+  "type": "Exercise",
+  "number": "67",
+  "title": "",
+  "body": "Prove the Pythagorean identity by carrying out the following steps. Sketch a unit circle, and an arc in standard position.  Write the equation of the unit circle.  Use trig ratios to write the coordinates of the terminal point of the arc.  Substitute the coordinates of point into your equation from part (a).  Does the identity hold for all values of ?      Yes  "
+},
+{
+  "id": "exercise-1673",
+  "level": "2",
+  "url": "chap6-summary.html#exercise-1673",
   "type": "Exercise",
   "number": "68",
   "title": "",
@@ -17911,108 +17974,108 @@ var ptx_lunr_docs = [
   "body": " Transformations of Graphs  In Chapter 4 we saw that the amplitude, period, and midline of a sinusoidal graph are determined by the coefficients in its formula. The circular functions (sine and cosine of real numbers) behave the same way.  Period, Midline, and Amplitude  Changes to the amplitude, period, and midline are called transformations transformation of the basic sine and cosine graphs.   Changing the midline shifts the graph vertically.  Changing the amplitude stretches or compresses the graph vertically.  Changing the period stretches or compresses the graph horizontally.   First, we'll consider changes in amplitude.  Compare the graphs of and with the graph of .  With your calculator set in radian mode, graph the three functions in the ZTrig window (press ZOOM 7). The graphs are shown below.    sines     All three graphs have the same period ( ) and midline ( ), but the graph of has amplitude 2, and the graph of has amplitude 0.5.  The amplitude of is given by , and the same is true of . In the next exercise, remember that the amplitude is always a nonnegative number.  Compare the graphs of and with the graph of . Both graphs have amplitude 3. The graph of is reflected about the -axis.  Next, we'll consider changes in the period of the graph.  Compare the graphs of and with the graph of .  With your calculator set in radian mode, graph and in the same window, as shown below.    cosines     Both graphs have the same amplitude ( ) and midline ( ), but the graph of completes two cycles from to instead of one. The period of is .  Now graph and in the same window. Set Xmin and Xmax .    sines     The graph of completes one cycle between and . Its period is .  The period of is given by , and the same is true of .    Compare the graph of with the graph of . Use the window Xmin , Xmax , Ymin , Ymax .  Compare the graph of with the graph of . Use the window Xmin , Xmax , Ymin , Ymax .   The graph of completes 3 cycles from to . Its period is .  The graph of completes one cycle from to . Its period is .  Next we'll consider changes in midline.  Compare the graph of with the graph of .  Graph both functions in the ZTrig window. The graphs are shown below.    sines     Each point on the graph of has -coordinate 2 units higher than the corresponding point on the graph of . Thus, the graph of is shifted vertically by 2 units relative to the graph of . In particular, the midline of is the line .  Compare the graph of with the graph of .  The graph of is shifted down 3 units. Its midline is .   Here is a summary of our findings.  Amplitude, Period, and Midline of Sinusoidal Functions  amplitude  period  midline   The graph of has amplitude  .  The graph of has period  .  The graph of has midline  .    Graphs of Sinusoidal Functions  sinusoidal function graph  The values of the parameters determine the shape of the graphs of By adjusting the amplitude, period, and midline of the sine or cosine graph, we can sketch these sinusoidal functions.   State the amplitude, period, and midline of .  Sketch by hand a graph of .    The amplitude of the graph is 3, its midline is , and its period is .  One way to make a quick sketch of a sinusoidal graph is to use a table of values. The trick is to choose convenient values for the input variable. In the table below, notice that we choose the quadrantal angles as the input values for the trigonometric function.                                        Now we work backwards from to find the values of , and forwards from to find the values of .                                        Notice from the table that the graph completes one cycle from to , which confirms that the period is . Finally, we plot the points from the table, and use them as \"guidepoints\" to sketch a sinusoidal graph, as shown below.    transformation of cosine       State the amplitude, period, and midline of the graph of .  Complete the table and sketch a graph of .                                         grid      Amplitude: 2, period: , midline: .                                         sinuusoidal function       Modeling with Sinusoidal Functions  Sinusoidal functions are used to model a great variety of physical phenomena, including sound and light waves, tides and planetary orbits, and the life cycles of plants and animals. They are also often used to approximate periodic functions that are not exactly sinusoidal, such as blood pressure.  A typical blood pressure for a healthy adult, measured in millimeters of mercury, varies between 70 and 110, and a typical heart rate is 60 beats per minute. Write a sinusoidal function that approximates blood pressure, and sketch its graph.  We would like a function of the form , so we must find the values of the parameters and .  The midline of the graph is , and the amplitude is , so and .  The graph repeats 60 times per minute, so the period is minute, and . Thus, The graph of the function is shown below.    sinusoidal graph     In Example 5, we could have chosen either a sine or a cosine function to model blood pressure; both describe the periodic behavior described. However, if we are given, or would like to specify, the starting point for a sinusoidal function, one choice can be more suitable than the other. Consider the functions graphed below.    sinusoidal graph     sinusoidal graph       sinusoidal graph     sinusoidal graph     All four functions have the same amplitude and period, but they start at different points on the cycle.  The graphs in (a) and (b) start on the midline, so they are best modeled by sine functions.  The graph in (b) starts out decreasing instead of increasing, so the coefficient is negative.  The graph in (c) is modeled by a cosine, because it starts at the maximum point, and the graph in (d) starts at the minimum point, so we choose a negative cosine to model it.   (In Section 7.2, we'll consider sinusoidal functions that start at other positions on the cycle.)  In Exercise 5, note the starting point of the graph, and choose the most appropriate sinusoidal function to model the function.  The graph below shows the voltage of a generator, as seen on an oscilloscope.  Write a sinusoidal function for the voltage level.  What is the frequency of the signal, in cycles per second?    sinusoidal function       50 cycles per second     The Tangent Function  tangent function  The transformations of shifting and stretching can be applied to the tangent function as well. The graph of does not have an amplitude, but we can see any vertical stretch by comparing the function values at the guidepoints.   Graph .  Describe the transformations of the graph, compared to .   Recall that the period of the tangent function is . We make a table of values for one cycle of the function, choosing multiples of as the inputs for the tangent function. Then we plot the guidepoints, and sketch a tangent function through them. The graph is shown below.                                   transformed tangent graph     Writing the formula as we see that the graph is stretched vertically by a factor of . The midline is , so the graph is shifted up by 1 unit. Finally, the coefficient compresses the graph horizontally by a factor of 2, so the period of the graph is , and there are four cycles between and   Identify the midline and period of the tangent graph shown below.  Find an equation of the form for the graph.   transformed tangent graph     Midline: , period    Review the following skills you will need for this section.   Complete the table.                                                                          Algebra Refresher Answers                                                                   Section 7.1 Summary  Vocabulary   Transformation  Amplitude  Period  Midline    Concepts   Changes to the amplitude, period, and midline of the basic sine and cosine graphs are called transformations . Changing the midline shifts the graph vertically, changing the amplitude stretches or compresses the graph vertically, and changing the period stretches or compresses the graph horizontally.  Amplitude, Period, and Midline of Sinusoidal Functions   The graph of has amplitude  .  The graph of has period  .  The graph of has midline  .   One way to make a quick sketch of a sinusoidal graph is to use a table of values. The trick is to choose convenient values for the input variable.  The transformations of shifting and stretching can be applied to the tangent function as well.   Study Questions   Count from to by multiples of .  Count from to by multiples of .  Transformationhe maximum value of a certain sinusoidal function is , and its minimum value is . What is the midline of the function? What is its amplitude?  , and . What are the values of and ?   Skills   Identify the amplitude, period, and midline of a circular function #1 8, 23 30  Graph a circular function #9 16, 31 44  Find a formula for the graph of a circular function #17 30  Model periodic phenomena with circular functions #45 52  Graph transformations of the tangent function #535 8  Solve trigonometric equations graphically #59 70     Homework 7-1  For Problems 1 8, state the amplitude, period, and midline of the graph.  amplitude , period , midline    amplitude , period , midline    amplitude , period , midline    amplitude , period , midline     In Problems 9 16, we use transformations to sketch graphs of the functions in Problems 1 8. Sketch one cycle of each graph by hand and label scales on the axes.        transformations of sine graph                transformations of cosine                transformations of sine                cosine transformations           For Problems 17 22, write an equation for the graph using sine or cosine.    sinusoidal graph       sinusoidal graph       sinusoidal graph       sinusoidal graph       sinusoidal graph       sinusoidal graph      For Problems 23 30,  State the amplitude, period, and midline of the graph.  Write an equation for the graph using sine or cosine.     sinusoidal graph     amplitude , period , midline      sinusoidal graph       sinusoidal graph     amplitude , period , midline      sinusoidal graph       sinusoidal graph     amplitude , period , midline      sinusoidal graph       sinusoidal graph     amplitude , period , midline      sinusoidal graph      In Problems 31 36, we use a table of values to sketch circular functions.  Complete the table of values for the function.  Sketch a graph of the function and label the scales on the axes.                                           grid                                             sinusoidal graph                                            graph                                        graph                                          sinusoidal graph                                            graph                                        graph                                      width=\"85%\" margins=\"0% 5%\"    sinusoidal graph                                            graph  For Problems 37 44, label the scales on the axes for the graph.    sinusoidal graph, no scale on axes      sinusoidal graph       sinusoidal graph       sinusoidal graph, no scale      sinusoidal graph       sinusoidal graph       sinusoidal graph, no scale      sinusoidal graph       sinusoidal graph       sinusoidal graph      sinusoidal graph       sinusoidal graph      The height of the tide in Cabot Cove can be approximated by a sinusoidal function. At 5 am on July 23, the water level reached its high mark at the 20-foot line on the pier, and at 11 am, the water level was at its lowest at the 4-foot line.  Sketch a graph of , the water level as a function of time, from 5 am on July 23 to 5 am on July 24.  Write an equation for the function.     sinusoidal graph       The population of mosquitoes at Marsh Lake is a sinusoidal function of time. The population peaks around June 1 at about 6000 mosquitoes per square kilometer, and is smallest on December 1, at 1000 mosquitoes per square kilometer.  Sketch a graph of , the number of mosquitoes as a function of the month, where on June 1.  Write an equation for the function.  The paddlewheel on the Delta Queen steamboat is 28 feet in diameter, and is rotating once every ten seconds. The bottom of the paddlewheel is 4 feet below the surface of the water.  The ship's logo is painted on one of the paddlewheel blades. At , the blade with the logo is at the top of the wheel. Sketch a graph of the logo's heightabove the water as a function of .  Write an equation for the function.     sinusoidal graph       Delbert's bicycle wheel is 24 inches in diameter, and he has a light attached to the spokes 10 inches from the center of the wheel. It is dark, and he is cycling home slowly from work. The bicycle wheel makes one revolution every second.  At , the light is at its highest point the bicycle wheel. Sketch a graph of the light's height as a function of .  Write an equation for the function.  For Problems 49 52, write an equation for the sinusoidal function whose graph is shown.  The number of hours of daylight in Salt Lake City varies from a minimum of 9.6 hours on the winter solstice to a maximum of 14.4 hours on the summer solstice. Time is measured in months, starting at the winter solstice.   sinusoidal graph     A weight is 6.5 feet above the floor, suspended from the ceiling by a spring. The weight is pulled down to 5 feet above the floor and released, rising past 6.5 feet in 0.5 seconds before attaining its maximum height of feet. The weight oscillates between its minimum and maximum height.   sinusoidal graph     The voltage used in U.S. electrical current changes from 155V to 155V and back 60 times each second.   voltage     Although the moon is spherical, what we see from earth looks like a disk, sometimes only partly visible. The percentage of the moon's disk that is visible varies between 0 (at new moon) to 100 (at full moon), over a 28-day cycle.   sinusoidal graph      For Problems 53 58,   Make a table of values and sketch a graph of the function.  Give its period and midline.             undef     undef    transformed tangent function     period , midline               undef     undef    transformed tangent graph     period , midline               undef     undef    transformed tangent graph     period , midline     For Problems 59 64, use the graph to find all solutions between and .    sinusoidal graph and horizontal line    , , , , , , ,    sinusoidal graph and horizontal line       sinusoidal graph and horizontal line    , , ,    sinusoidal graph and horizontal line       transformed tangent and horizontal line    , , , , ,    transformed tangent and horizontal line      For Problems 65 70,   Use a calculator to graph the function for .  Use the intersect feature to find all solutions between and . Round your answers to hundredths.                             "
 },
 {
-  "id": "p-4326",
+  "id": "p-4360",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4326",
+  "url": "Transformations-of-Graphs.html#p-4360",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circular functions "
 },
 {
-  "id": "p-4327",
+  "id": "p-4361",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4327",
+  "url": "Transformations-of-Graphs.html#p-4361",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "transformations "
 },
 {
-  "id": "example-122",
+  "id": "example-123",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-122",
+  "url": "Transformations-of-Graphs.html#example-123",
   "type": "Example",
   "number": "7.1",
   "title": "",
   "body": "Compare the graphs of and with the graph of .  With your calculator set in radian mode, graph the three functions in the ZTrig window (press ZOOM 7). The graphs are shown below.    sines     All three graphs have the same period ( ) and midline ( ), but the graph of has amplitude 2, and the graph of has amplitude 0.5. "
 },
 {
-  "id": "exercise-1673",
+  "id": "exercise-1674",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1673",
+  "url": "Transformations-of-Graphs.html#exercise-1674",
   "type": "Checkpoint",
   "number": "7.2",
   "title": "",
   "body": "Compare the graphs of and with the graph of . Both graphs have amplitude 3. The graph of is reflected about the -axis. "
 },
 {
-  "id": "example-123",
+  "id": "example-124",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-123",
+  "url": "Transformations-of-Graphs.html#example-124",
   "type": "Example",
   "number": "7.3",
   "title": "",
   "body": "Compare the graphs of and with the graph of .  With your calculator set in radian mode, graph and in the same window, as shown below.    cosines     Both graphs have the same amplitude ( ) and midline ( ), but the graph of completes two cycles from to instead of one. The period of is .  Now graph and in the same window. Set Xmin and Xmax .    sines     The graph of completes one cycle between and . Its period is . "
 },
 {
-  "id": "exercise-1674",
+  "id": "exercise-1675",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1674",
+  "url": "Transformations-of-Graphs.html#exercise-1675",
   "type": "Checkpoint",
   "number": "7.4",
   "title": "",
   "body": "  Compare the graph of with the graph of . Use the window Xmin , Xmax , Ymin , Ymax .  Compare the graph of with the graph of . Use the window Xmin , Xmax , Ymin , Ymax .   The graph of completes 3 cycles from to . Its period is .  The graph of completes one cycle from to . Its period is . "
 },
 {
-  "id": "example-124",
+  "id": "example-125",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-124",
+  "url": "Transformations-of-Graphs.html#example-125",
   "type": "Example",
   "number": "7.5",
   "title": "",
   "body": "Compare the graph of with the graph of .  Graph both functions in the ZTrig window. The graphs are shown below.    sines     Each point on the graph of has -coordinate 2 units higher than the corresponding point on the graph of . Thus, the graph of is shifted vertically by 2 units relative to the graph of . In particular, the midline of is the line . "
 },
 {
-  "id": "exercise-1675",
+  "id": "exercise-1676",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1675",
+  "url": "Transformations-of-Graphs.html#exercise-1676",
   "type": "Checkpoint",
   "number": "7.6",
   "title": "",
   "body": "Compare the graph of with the graph of .  The graph of is shifted down 3 units. Its midline is .  "
 },
 {
-  "id": "p-4352",
+  "id": "p-4386",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4352",
+  "url": "Transformations-of-Graphs.html#p-4386",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "amplitude period midline "
 },
 {
-  "id": "example-125",
+  "id": "example-126",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-125",
+  "url": "Transformations-of-Graphs.html#example-126",
   "type": "Example",
   "number": "7.7",
   "title": "",
   "body": " State the amplitude, period, and midline of .  Sketch by hand a graph of .    The amplitude of the graph is 3, its midline is , and its period is .  One way to make a quick sketch of a sinusoidal graph is to use a table of values. The trick is to choose convenient values for the input variable. In the table below, notice that we choose the quadrantal angles as the input values for the trigonometric function.                                        Now we work backwards from to find the values of , and forwards from to find the values of .                                        Notice from the table that the graph completes one cycle from to , which confirms that the period is . Finally, we plot the points from the table, and use them as \"guidepoints\" to sketch a sinusoidal graph, as shown below.    transformation of cosine     "
 },
 {
-  "id": "exercise-1676",
+  "id": "exercise-1677",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1676",
+  "url": "Transformations-of-Graphs.html#exercise-1677",
   "type": "Checkpoint",
   "number": "7.8",
   "title": "",
   "body": " State the amplitude, period, and midline of the graph of .  Complete the table and sketch a graph of .                                         grid      Amplitude: 2, period: , midline: .                                         sinuusoidal function     "
 },
 {
-  "id": "example-126",
+  "id": "example-127",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-126",
+  "url": "Transformations-of-Graphs.html#example-127",
   "type": "Example",
   "number": "7.9",
   "title": "",
@@ -18028,27 +18091,27 @@ var ptx_lunr_docs = [
   "body": "In Example 5, we could have chosen either a sine or a cosine function to model blood pressure; both describe the periodic behavior described. However, if we are given, or would like to specify, the starting point for a sinusoidal function, one choice can be more suitable than the other. Consider the functions graphed below.    sinusoidal graph     sinusoidal graph       sinusoidal graph     sinusoidal graph     All four functions have the same amplitude and period, but they start at different points on the cycle.  The graphs in (a) and (b) start on the midline, so they are best modeled by sine functions.  The graph in (b) starts out decreasing instead of increasing, so the coefficient is negative.  The graph in (c) is modeled by a cosine, because it starts at the maximum point, and the graph in (d) starts at the minimum point, so we choose a negative cosine to model it.  "
 },
 {
-  "id": "exercise-1677",
+  "id": "exercise-1678",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1677",
+  "url": "Transformations-of-Graphs.html#exercise-1678",
   "type": "Checkpoint",
   "number": "7.11",
   "title": "",
   "body": "The graph below shows the voltage of a generator, as seen on an oscilloscope.  Write a sinusoidal function for the voltage level.  What is the frequency of the signal, in cycles per second?    sinusoidal function       50 cycles per second   "
 },
 {
-  "id": "example-127",
+  "id": "example-128",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-127",
+  "url": "Transformations-of-Graphs.html#example-128",
   "type": "Example",
   "number": "7.12",
   "title": "",
   "body": " Graph .  Describe the transformations of the graph, compared to .   Recall that the period of the tangent function is . We make a table of values for one cycle of the function, choosing multiples of as the inputs for the tangent function. Then we plot the guidepoints, and sketch a tangent function through them. The graph is shown below.                                   transformed tangent graph     Writing the formula as we see that the graph is stretched vertically by a factor of . The midline is , so the graph is shifted up by 1 unit. Finally, the coefficient compresses the graph horizontally by a factor of 2, so the period of the graph is , and there are four cycles between and "
 },
 {
-  "id": "exercise-1678",
+  "id": "exercise-1679",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1678",
+  "url": "Transformations-of-Graphs.html#exercise-1679",
   "type": "Checkpoint",
   "number": "7.13",
   "title": "",
@@ -18064,173 +18127,164 @@ var ptx_lunr_docs = [
   "body": " Complete the table.                                                                          Algebra Refresher Answers                                                                 "
 },
 {
-  "id": "p-4386",
+  "id": "p-4420",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4386",
+  "url": "Transformations-of-Graphs.html#p-4420",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "transformations amplitude period midline "
 },
 {
-  "id": "exercise-1679",
+  "id": "exercise-1680",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1679",
+  "url": "Transformations-of-Graphs.html#exercise-1680",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "amplitude , period , midline  "
 },
 {
-  "id": "exercise-1680",
+  "id": "exercise-1681",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1680",
+  "url": "Transformations-of-Graphs.html#exercise-1681",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1681",
+  "id": "exercise-1682",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1681",
+  "url": "Transformations-of-Graphs.html#exercise-1682",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "amplitude , period , midline  "
 },
 {
-  "id": "exercise-1682",
+  "id": "exercise-1683",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1682",
+  "url": "Transformations-of-Graphs.html#exercise-1683",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1683",
+  "id": "exercise-1684",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1683",
+  "url": "Transformations-of-Graphs.html#exercise-1684",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "amplitude , period , midline  "
 },
 {
-  "id": "exercise-1684",
+  "id": "exercise-1685",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1684",
+  "url": "Transformations-of-Graphs.html#exercise-1685",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1685",
+  "id": "exercise-1686",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1685",
+  "url": "Transformations-of-Graphs.html#exercise-1686",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "amplitude , period , midline  "
 },
 {
-  "id": "exercise-1686",
+  "id": "exercise-1687",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1686",
+  "url": "Transformations-of-Graphs.html#exercise-1687",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1687",
+  "id": "exercise-1688",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1687",
+  "url": "Transformations-of-Graphs.html#exercise-1688",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "      transformations of sine graph    "
 },
 {
-  "id": "exercise-1688",
+  "id": "exercise-1689",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1688",
+  "url": "Transformations-of-Graphs.html#exercise-1689",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1689",
+  "id": "exercise-1690",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1689",
+  "url": "Transformations-of-Graphs.html#exercise-1690",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "      transformations of cosine    "
 },
 {
-  "id": "exercise-1690",
+  "id": "exercise-1691",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1690",
+  "url": "Transformations-of-Graphs.html#exercise-1691",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1691",
+  "id": "exercise-1692",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1691",
+  "url": "Transformations-of-Graphs.html#exercise-1692",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "      transformations of sine    "
 },
 {
-  "id": "exercise-1692",
+  "id": "exercise-1693",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1692",
+  "url": "Transformations-of-Graphs.html#exercise-1693",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1693",
+  "id": "exercise-1694",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1693",
+  "url": "Transformations-of-Graphs.html#exercise-1694",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": "      cosine transformations    "
 },
 {
-  "id": "exercise-1694",
+  "id": "exercise-1695",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1694",
+  "url": "Transformations-of-Graphs.html#exercise-1695",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-1695",
-  "level": "2",
-  "url": "Transformations-of-Graphs.html#exercise-1695",
-  "type": "Exercise",
-  "number": "17",
-  "title": "",
-  "body": "  sinusoidal graph    "
-},
-{
   "id": "exercise-1696",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1696",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -18239,7 +18293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1697",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -18248,7 +18302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1698",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -18257,7 +18311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1699",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -18266,7 +18320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1700",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -18275,394 +18329,394 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1701",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "  sinusoidal graph     amplitude , period , midline   "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1702",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1702",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph     amplitude , period , midline   "
 },
 {
   "id": "exercise-1703",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1703",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "  sinusoidal graph     amplitude , period , midline   "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1704",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1704",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph     amplitude , period , midline   "
 },
 {
   "id": "exercise-1705",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1705",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": "  sinusoidal graph     amplitude , period , midline   "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1706",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1706",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph     amplitude , period , midline   "
 },
 {
   "id": "exercise-1707",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1707",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": "  sinusoidal graph     amplitude , period , midline   "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1708",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1708",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph     amplitude , period , midline   "
 },
 {
   "id": "exercise-1709",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1709",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "                                        grid                                             sinusoidal graph     "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1710",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1710",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": "                                      graph "
+  "body": "                                        grid                                             sinusoidal graph     "
 },
 {
   "id": "exercise-1711",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1711",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": "                                      graph                                          sinusoidal graph     "
+  "body": "                                      graph "
 },
 {
   "id": "exercise-1712",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1712",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": "                                      graph "
+  "body": "                                      graph                                          sinusoidal graph     "
 },
 {
   "id": "exercise-1713",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1713",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "                                      graph                                      width=\"85%\" margins=\"0% 5%\"    sinusoidal graph     "
+  "body": "                                      graph "
 },
 {
   "id": "exercise-1714",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1714",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": "                                      graph "
+  "body": "                                      graph                                      width=\"85%\" margins=\"0% 5%\"    sinusoidal graph     "
 },
 {
   "id": "exercise-1715",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1715",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "  sinusoidal graph, no scale on axes      sinusoidal graph    "
+  "body": "                                      graph "
 },
 {
   "id": "exercise-1716",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1716",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph, no scale on axes      sinusoidal graph    "
 },
 {
   "id": "exercise-1717",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1717",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "  sinusoidal graph, no scale      sinusoidal graph    "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1718",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1718",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph, no scale      sinusoidal graph    "
 },
 {
   "id": "exercise-1719",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1719",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "  sinusoidal graph, no scale      sinusoidal graph    "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1720",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1720",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph, no scale      sinusoidal graph    "
 },
 {
   "id": "exercise-1721",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1721",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "  sinusoidal graph      sinusoidal graph    "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1722",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1722",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph      sinusoidal graph    "
 },
 {
   "id": "exercise-1723",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1723",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "The height of the tide in Cabot Cove can be approximated by a sinusoidal function. At 5 am on July 23, the water level reached its high mark at the 20-foot line on the pier, and at 11 am, the water level was at its lowest at the 4-foot line.  Sketch a graph of , the water level as a function of time, from 5 am on July 23 to 5 am on July 24.  Write an equation for the function.     sinusoidal graph      "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1724",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1724",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "The population of mosquitoes at Marsh Lake is a sinusoidal function of time. The population peaks around June 1 at about 6000 mosquitoes per square kilometer, and is smallest on December 1, at 1000 mosquitoes per square kilometer.  Sketch a graph of , the number of mosquitoes as a function of the month, where on June 1.  Write an equation for the function. "
+  "body": "The height of the tide in Cabot Cove can be approximated by a sinusoidal function. At 5 am on July 23, the water level reached its high mark at the 20-foot line on the pier, and at 11 am, the water level was at its lowest at the 4-foot line.  Sketch a graph of , the water level as a function of time, from 5 am on July 23 to 5 am on July 24.  Write an equation for the function.     sinusoidal graph      "
 },
 {
   "id": "exercise-1725",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1725",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "The paddlewheel on the Delta Queen steamboat is 28 feet in diameter, and is rotating once every ten seconds. The bottom of the paddlewheel is 4 feet below the surface of the water.  The ship's logo is painted on one of the paddlewheel blades. At , the blade with the logo is at the top of the wheel. Sketch a graph of the logo's heightabove the water as a function of .  Write an equation for the function.     sinusoidal graph      "
+  "body": "The population of mosquitoes at Marsh Lake is a sinusoidal function of time. The population peaks around June 1 at about 6000 mosquitoes per square kilometer, and is smallest on December 1, at 1000 mosquitoes per square kilometer.  Sketch a graph of , the number of mosquitoes as a function of the month, where on June 1.  Write an equation for the function. "
 },
 {
   "id": "exercise-1726",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1726",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "Delbert's bicycle wheel is 24 inches in diameter, and he has a light attached to the spokes 10 inches from the center of the wheel. It is dark, and he is cycling home slowly from work. The bicycle wheel makes one revolution every second.  At , the light is at its highest point the bicycle wheel. Sketch a graph of the light's height as a function of .  Write an equation for the function. "
+  "body": "The paddlewheel on the Delta Queen steamboat is 28 feet in diameter, and is rotating once every ten seconds. The bottom of the paddlewheel is 4 feet below the surface of the water.  The ship's logo is painted on one of the paddlewheel blades. At , the blade with the logo is at the top of the wheel. Sketch a graph of the logo's heightabove the water as a function of .  Write an equation for the function.     sinusoidal graph      "
 },
 {
   "id": "exercise-1727",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1727",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "The number of hours of daylight in Salt Lake City varies from a minimum of 9.6 hours on the winter solstice to a maximum of 14.4 hours on the summer solstice. Time is measured in months, starting at the winter solstice.   sinusoidal graph    "
+  "body": "Delbert's bicycle wheel is 24 inches in diameter, and he has a light attached to the spokes 10 inches from the center of the wheel. It is dark, and he is cycling home slowly from work. The bicycle wheel makes one revolution every second.  At , the light is at its highest point the bicycle wheel. Sketch a graph of the light's height as a function of .  Write an equation for the function. "
 },
 {
   "id": "exercise-1728",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1728",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "A weight is 6.5 feet above the floor, suspended from the ceiling by a spring. The weight is pulled down to 5 feet above the floor and released, rising past 6.5 feet in 0.5 seconds before attaining its maximum height of feet. The weight oscillates between its minimum and maximum height.   sinusoidal graph    "
+  "body": "The number of hours of daylight in Salt Lake City varies from a minimum of 9.6 hours on the winter solstice to a maximum of 14.4 hours on the summer solstice. Time is measured in months, starting at the winter solstice.   sinusoidal graph    "
 },
 {
   "id": "exercise-1729",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1729",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "The voltage used in U.S. electrical current changes from 155V to 155V and back 60 times each second.   voltage    "
+  "body": "A weight is 6.5 feet above the floor, suspended from the ceiling by a spring. The weight is pulled down to 5 feet above the floor and released, rising past 6.5 feet in 0.5 seconds before attaining its maximum height of feet. The weight oscillates between its minimum and maximum height.   sinusoidal graph    "
 },
 {
   "id": "exercise-1730",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1730",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": "Although the moon is spherical, what we see from earth looks like a disk, sometimes only partly visible. The percentage of the moon's disk that is visible varies between 0 (at new moon) to 100 (at full moon), over a 28-day cycle.   sinusoidal graph    "
+  "body": "The voltage used in U.S. electrical current changes from 155V to 155V and back 60 times each second.   voltage    "
 },
 {
   "id": "exercise-1731",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1731",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": "           undef     undef    transformed tangent function     period , midline  "
+  "body": "Although the moon is spherical, what we see from earth looks like a disk, sometimes only partly visible. The percentage of the moon's disk that is visible varies between 0 (at new moon) to 100 (at full moon), over a 28-day cycle.   sinusoidal graph    "
 },
 {
   "id": "exercise-1732",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1732",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": ""
+  "body": "           undef     undef    transformed tangent function     period , midline  "
 },
 {
   "id": "exercise-1733",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1733",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "           undef     undef    transformed tangent graph     period , midline  "
+  "body": ""
 },
 {
   "id": "exercise-1734",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1734",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": ""
+  "body": "           undef     undef    transformed tangent graph     period , midline  "
 },
 {
   "id": "exercise-1735",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1735",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": "           undef     undef    transformed tangent graph     period , midline  "
+  "body": ""
 },
 {
   "id": "exercise-1736",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1736",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": ""
+  "body": "           undef     undef    transformed tangent graph     period , midline  "
 },
 {
   "id": "exercise-1737",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1737",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "  sinusoidal graph and horizontal line    , , , , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1738",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1738",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "  sinusoidal graph and horizontal line    "
+  "body": "  sinusoidal graph and horizontal line    , , , , , , , "
 },
 {
   "id": "exercise-1739",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1739",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "  sinusoidal graph and horizontal line    , , , "
+  "body": "  sinusoidal graph and horizontal line    "
 },
 {
   "id": "exercise-1740",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1740",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": "  sinusoidal graph and horizontal line    "
+  "body": "  sinusoidal graph and horizontal line    , , , "
 },
 {
   "id": "exercise-1741",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1741",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "  transformed tangent and horizontal line    , , , , , "
+  "body": "  sinusoidal graph and horizontal line    "
 },
 {
   "id": "exercise-1742",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1742",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": "  transformed tangent and horizontal line    "
+  "body": "  transformed tangent and horizontal line    , , , , , "
 },
 {
   "id": "exercise-1743",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1743",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "   "
+  "body": "  transformed tangent and horizontal line    "
 },
 {
   "id": "exercise-1744",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1744",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
   "body": "   "
 },
@@ -18671,7 +18725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1745",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
   "body": "   "
 },
@@ -18680,7 +18734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1746",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
   "body": "   "
 },
@@ -18689,7 +18743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1747",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
   "body": "   "
 },
@@ -18697,6 +18751,15 @@ var ptx_lunr_docs = [
   "id": "exercise-1748",
   "level": "2",
   "url": "Transformations-of-Graphs.html#exercise-1748",
+  "type": "Exercise",
+  "number": "69",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "exercise-1749",
+  "level": "2",
+  "url": "Transformations-of-Graphs.html#exercise-1749",
   "type": "Exercise",
   "number": "70",
   "title": "",
@@ -18712,72 +18775,72 @@ var ptx_lunr_docs = [
   "body": " The General Sinusoidal Function  Horizontal Shifts  In the previous section we considered transformations of sinusoidal graphs, including vertical shifts, which change the midline of the graph, vertical stretches and compressions, which change its amplitude, and horizontal stretches and compressions, which occur when we change the period of the graph. In this section we consider one more transformation, shifting the graph horizontally. The figure below shows four different transformations of the graph of .    translated sine     scaled sine       horizontal compression of sine     horizontal shift of sine     Graph and in the ZTrig window. How is the graph of different from the graph of ?  The graphs are shown below. The graph of has the same amplitude, midline, and period as the graph of , but the graph of is shifted to the right by units, compared to the graph of .    sinusoidal graph     We can see why this shift occurs by studying a table of values for the two functions.                                      Notice that in the table, has the same function values as , but each one is shifted units to the right. The same thing happens in the graph: each -value appears units farther to the right on than it does on .  Graph and in the ZTrig window. How is the graph of different from the graph of ? The graph of is shifted units to the left of .  The examples above illustrate the following principle.  Horizontal Shifts  horizontal shift  transformation horizontal shift  The graphs of are shifted horizontally compared to the graphs of and .   If , the graph is shifted to the right.  If , the graph is shifted to the left.   We can use a table of values to sketch graphs that involve horizontal shifts.  Make a table of values and sketch a graph of .  First notice that we can write the equation as so that , and we expect the graph to be shifted units to the left compared to the graph of .  We choose convenient values for the inputs of the cosine function, namely .                                  From those values, we work backwards to and forwards to . (To obtain the values of , we subtract from the values of .)                                  To make the graph, we'll scale the -axis in multiples of . We plot the guide points from the table, and sketch a sinusoidal graph through the points. One cycle of the graph is shown below. As we expected,the graph is shifted units to the left compared to the graph of .    transformed sine       Complete the table and sketch a graph of on the grid below. (Do you expect the graph to be shifted to the left or to the right, compared to the graph of ?)                                    grid                                    transformed sine      Combining Transformations  transformation combining  The order in which we apply transformations to a function makes a difference in the graph. We'll compare the graphs of the two functions Graph the two functions in the ZTrig window, along with , as shown below. Each graph involves a horizontal shift relative to , but the graph of is shifted units to the right, while the graph of is shifted only units to the right. This difference occurs because of the order of the transformations.    sinusoidal graphs     sinusoidal graphs     We transform the graph of into the graph of in two steps:  Step 1: First we replace by to get , which compresses the graph horizontally by a factor of 2. (See figure (a) below.)  Step 2: Then we replace by to get , which shifts the graph units to the right. (See figure (b).)    horizontal compression of sin x     translation of sin 2x     To transform the graph of into the graph of , we perform the two steps in the opposite order:  Step 1: We replace by which shifts the graph units to the right. (See figure (a).)  Step 2: Then we replace by to get which compresses the graph horizontally by a factor of 2, including the horizontal shift. This reduces the horizontal shift from to . (See figure (b.)    horizontal shift of sine     horizontal compression of shifted sine     It is easier to analyze the transformations in the function , because we can read the horizontal shift from the formula. where is the compression factor and is the horizontal shift.  We can write the formula for in the same easy-to-analyze form by factoring the input for the sine function:  In general, if we write the formula for a sinusoidal function in standard form , we can read all the transformations from the constants in the formula.  Standard Form for Sinusoidal Functions  sinusoidal function standard form  The graphs of the functions are transformations of the sine and cosine graphs.   The amplitude is .  The midline is .  The period is .  The horizontal shift is units to the right if is positive, and units to the left if is negative.    State the midline, amplitude, period, and horizontal shift for the function  Sketch a graph of the function for .    First, we write the input for the cosine function in factored form: Comparing the formula for with the standard form, we see that , , and . Thus, the midline is , the amplitude is , the period is , and the horizontal shift is units to the left.  Use a table of values to locate the guidepoints for the graph. Begin by choosing convenient values for the input, . Then work backwards to find values for and forwards to find values for .                                        Finally, plot the guidepoints and connect them with a sinusoidal curve. The graph is shown at right.   sinusoidal graph       State the midline, amplitude, period, and horizontal shift of the graph of  Make a table of values and sketch a graph of the function.                                        midline: , amplitude: , period: , horizontal shift: to the right                                          sinusoidal function       Modeling with Sinusoidal Functions  In Section 7.1 we found formulas for sinusoidal functions that start on the midline, or at their maximum or minimum value. We use horizontal transformations to write formulas for functions that start at other points on the cycle.  Find a formula for the sinusoidal function whose graph is shown below.    sinusoidal function     The midline of the graph is , and its amplitude is . It has the shape of a cosine, but its maximum value occurs at instead of at ; so the graph is shifted units to the right, compared to the graph of .  The graph completes one cycle between and , so its period is . Thus, we use the standard form with , and , giving us as our formula for the function.  In Example 4, our solution is not the only sinusoidal function that fits the given graph. For example, if we regard the graph as a sine function shifted units to the left, we would use the formula . You can check that the two functions have identical graphs. Usually it is a good idea to choose a formula with a small horizontal shift.  Find a formula for the sinusoidal function whose graph is shown at right.   sinusoidal function   Many natural phenomena can be modeled with sinusoidal functions.  Sunspots are dark regions on the Sun first observed by Galileo in 1610. The number of sunspots is not constant, but varies with a period of approximately 11 years, called the solar cycle. Solar activity is directly related to this cycle, and can cause disturbances in the earth's upper atmosphere. Planning for satellite orbits and space missions requires knowledge of solar activity levels years in advance.  The figure below shows sunspot data for the last solar cycle, from July, 1985 through June, 1996, and a sinusoidal function that models the data.  sine   The period of the solar cycle shown is actually 10.8 years. Use this information and the graph to write a formula for the model.  Improve the fit of the model by adjusting its horizontal shift.   The graph has the shape of . It appears to have midline and amplitude , so and To find , we compute Thus, a formula for the model is .  Fitting a curve by eye is a subjective process, but it looks like we can get a better fit by shifting the curve slightly to the left. By trying several values for in , we might settle on , which results in the curve shown below.  sine  The figure below shows the sunspot data for the current solar cycle, which began in July 1996, and a curve of best fit calculated by NASA. This curve is not sinusoidal, but has a similar shape.  sine   The minimum sunspot number occurred in October 1996. Use the graph to estimate the period, midline, and amplitude of a sinusoidal function that approximates the data.  Write a function that approximates the data.  Use your function to predict the sunspot number in January, 2005.   Period: 10 years, midline: , amplitude: 53   37   Review the following skills you will need for this section.    Write a formula for .  Graph and on the same axes.             Algebra Refresher Answers    parabolas      translated square root function      translation of reciprocal function      translation of inverse-square function      translation of inverse-square function      translation of exponential      Section 7.2 Summary  Concepts   Horizontal Shifts  The graphs of are shifted horizontally compared to the graphs of and .   If , the graph is shifted to the right.  If , the graph is shifted to the left.   The order in which we apply transformations to a function makes a difference in the graph.  Standard Form for Sinusoidal Functions  The graphs of the functions are transformations of the sine and cosine graphs.   The amplitude is .  The midline is .  The period is .  The horizontal shift is units to the right if is positive, and units to the left if is negative.    Study Questions   Which of the following functions are the same? Explain your answer.  Which of the following functions are the same? Explain your answer. Calculate the horizontal shift.         Skills   Graph trigonometric functions using a table of values #1 6, 11 16  Find a formula for a transformation of a trigonometric function #7 10, 17 26  Solve trigonometric equations graphically #1 6, 11 16  Model periodic phenomena with trigonometric functions #27 30  Fit a circular function to data #31 34     Homework 7-2  and   Fill in the table of values.                                                 Sketch the graphs of and on the same axes.    grid     What is the horizontal shift from to ?  Find all values of for which , for .  Find all values of for which , for .                                                    sine and translated sine     to the right     and   Fill in the table of values.                                                 Sketch the graphs of and on the same axes.  grid  What is the horizontal shift from to ?  Find all values of for which , for .  Find all values of for which , for .   and   Fill in the table of values.                                     Sketch the graphs of and on the same axes.   grid     What is the horizontal shift from to ?  Solve , for .  Solve , for .                   undef     undef       undef     undef        translated tangent function     to the left     and   Fill in the table of values.                                     Sketch the graphs of and on the same axes.  grid  What is the horizontal shift from to ?  Solve , for .  Solve , for .     What are the amplitude and the horizontal shift?  Fill in the table of values.                                            Sketch the graph.  grid  Solve , for  Solve , for   amplitude 2, shift to the left                                               sinusoidal graph          What are the amplitude and the horizontal shift?  Fill in the table of values.                                            Sketch the graph.  grid    Solve , for  Solve , for   The figure shows the graph of .    sinusoidal graph      Find a formula for as a shift of the sine function.  Find a formula for as a shift of the cosine function.      The figure shows the graph of .    sinusoidal graph      Find a formula for as a shift of the sine function.  Find a formula for as a shift of the cosine function.   The figure shows the graph of .    translated tangent function      Find a formula for as a shift of the tangent function.  Find another formula for as a different shift of the tangent function.      The figure shows the graph of .    translated tangent function      Find a formula for as a shift of the tangent function.  Find another formula for as a different shift of the tangent function.     What are the period and the horizontal shift? (Hint: Factor out 2 from .)  Fill in the table of values.                                  Sketch the graph.    grid     Solve , for  Solve , for   period , shift to the right                                   sinusoidal graph          What are the period and the horizontal shift? (Hint: Factor out 3 from .)  Fill in the table of values.                                  Sketch the graph.  grid  Solve , for  Solve , for     What are the period and the horizontal shift? (Hint: Factor out from .)  Fill in the table of values.                                  Sketch the graph.    grid     Solve , for  Solve , for   period 2, shift to the left                                    sinusoidal graph          What are the period and the horizontal shift? (Hint: Factor out from .)  Fill in the table of values.                                  Sketch the graph.  grid  Solve , for  Solve , for     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.    grid     Solve for :  Solve for :   midline , period , horizontal shift to the right, amplitude 3                                          sinusoidal graph     no solution for     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.    grid     Solve for :  Solve for :   Find a formula for a sinusoidal function that has an amplitude of 2, a period of 3, and is shifted 4 units to the left and 5 units upwards compared with the sine function. Sketch the graph for .     sinusoidal graph      Find a formula for a sinusoidal function that has an amplitude of 3, a period of 24, and is shifted 2 units to the right and 4 units upwards compared with the cosine function. Sketch the graph for .  Find a formula for a sinusoidal function that has an amplitude of 5, a period of 360, its midline at , and passes through . Sketch the graph for .    sinusoidal graph     Find a formula for a sinusoidal function that has an amplitude of 50, a period of 30, its midline at , and passes through . Sketch the graph for .  For Problems 21 26, find a formula for the circular function whose graph is shown.  Write the function in the form .  Write the function in the form     sinusoidal graph          sinusoidal graph       sinusoidal graph          sinusoidal graph       sinusoidal graph          sinusoidal graph      The average daily high temperature in Fairbanks, Alaska can be approximated by a sinusoidal function with a period of 12 months. The low temperature of occurs in January, and the high temperature of in July.  What are the midline, period, and amplitude?  Write a formula for the average daily high temperature , where is the number of months since January.  Graph for two periods, labeling the points that correspond to highest and lowest average temperature.   midline , period 12, amplitude 36.95     sinusoidal graph      Depending on its phase, the moon looks like a disk that is partially visible and partially in shadow. The visible fraction ranges from 0% to 100%, and can be approximated by a sinusoidal function , where is the number of days since the last full moon. The time between successive full moons (a lunar month) is 29.5 days.   What are the period, midline, and amplitude of ?  Write a formula for .  Graph your function over two periods, labeling the points that correspond to full moon, half moon, and new moon.    The tide in Yorktown is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.   What are the midline, period, and amplitude?  Graph for two periods, labeling the points that correspond to high tide and low tide.  If the last low tide occurred at 5:00 am, predict when the next high and low tides will occur.    midline , period , amplitude 1.4    sinusoidal graph     high 11:10 am, low 5:19 pm   The height of a child's toy suspended at the end of a spring is approximated by a sinusoidal function. The toy's height ranges between 200 centimeters and 260 centimeters above the ground, and it completes one up-and-down cycle every 0.8 seconds.   What are the midline, period, and amplitude?  Let be the height of the toy in centimeters, where seconds corresponds to a time when the object was at the midline and moving upwards. Graph for two periods, labeling the points that correspond to the high and low positions of the toy.  When does the toy reach its maximum height the second time?   In Problems 31 34,  Estimate the amplitude, period, and midline of a circular function that fits the data.  Write a formula for the function.                               amplitude 3.2, period 2, midline                                                        amplitude 5, period 1, midline                              "
 },
 {
-  "id": "example-128",
+  "id": "example-129",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-128",
+  "url": "The-General-Sinusoidal-Function.html#example-129",
   "type": "Example",
   "number": "7.14",
   "title": "",
   "body": "Graph and in the ZTrig window. How is the graph of different from the graph of ?  The graphs are shown below. The graph of has the same amplitude, midline, and period as the graph of , but the graph of is shifted to the right by units, compared to the graph of .    sinusoidal graph     We can see why this shift occurs by studying a table of values for the two functions.                                      Notice that in the table, has the same function values as , but each one is shifted units to the right. The same thing happens in the graph: each -value appears units farther to the right on than it does on . "
 },
 {
-  "id": "exercise-1749",
+  "id": "exercise-1750",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1749",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1750",
   "type": "Checkpoint",
   "number": "7.15",
   "title": "",
   "body": "Graph and in the ZTrig window. How is the graph of different from the graph of ? The graph of is shifted units to the left of . "
 },
 {
-  "id": "example-129",
+  "id": "example-130",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-129",
+  "url": "The-General-Sinusoidal-Function.html#example-130",
   "type": "Example",
   "number": "7.16",
   "title": "",
   "body": "Make a table of values and sketch a graph of .  First notice that we can write the equation as so that , and we expect the graph to be shifted units to the left compared to the graph of .  We choose convenient values for the inputs of the cosine function, namely .                                  From those values, we work backwards to and forwards to . (To obtain the values of , we subtract from the values of .)                                  To make the graph, we'll scale the -axis in multiples of . We plot the guide points from the table, and sketch a sinusoidal graph through the points. One cycle of the graph is shown below. As we expected,the graph is shifted units to the left compared to the graph of .    transformed sine     "
 },
 {
-  "id": "exercise-1750",
+  "id": "exercise-1751",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1750",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1751",
   "type": "Checkpoint",
   "number": "7.17",
   "title": "",
   "body": " Complete the table and sketch a graph of on the grid below. (Do you expect the graph to be shifted to the left or to the right, compared to the graph of ?)                                    grid                                    transformed sine    "
 },
 {
-  "id": "p-4517",
+  "id": "p-4551",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#p-4517",
+  "url": "The-General-Sinusoidal-Function.html#p-4551",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "standard form "
 },
 {
-  "id": "example-130",
+  "id": "example-131",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-130",
+  "url": "The-General-Sinusoidal-Function.html#example-131",
   "type": "Example",
   "number": "7.18",
   "title": "",
   "body": " State the midline, amplitude, period, and horizontal shift for the function  Sketch a graph of the function for .    First, we write the input for the cosine function in factored form: Comparing the formula for with the standard form, we see that , , and . Thus, the midline is , the amplitude is , the period is , and the horizontal shift is units to the left.  Use a table of values to locate the guidepoints for the graph. Begin by choosing convenient values for the input, . Then work backwards to find values for and forwards to find values for .                                        Finally, plot the guidepoints and connect them with a sinusoidal curve. The graph is shown at right.   sinusoidal graph     "
 },
 {
-  "id": "exercise-1751",
+  "id": "exercise-1752",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1751",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1752",
   "type": "Checkpoint",
   "number": "7.19",
   "title": "",
   "body": " State the midline, amplitude, period, and horizontal shift of the graph of  Make a table of values and sketch a graph of the function.                                        midline: , amplitude: , period: , horizontal shift: to the right                                          sinusoidal function     "
 },
 {
-  "id": "example-131",
+  "id": "example-132",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-131",
+  "url": "The-General-Sinusoidal-Function.html#example-132",
   "type": "Example",
   "number": "7.20",
   "title": "",
@@ -18793,27 +18856,27 @@ var ptx_lunr_docs = [
   "body": "In Example 4, our solution is not the only sinusoidal function that fits the given graph. For example, if we regard the graph as a sine function shifted units to the left, we would use the formula . You can check that the two functions have identical graphs. Usually it is a good idea to choose a formula with a small horizontal shift. "
 },
 {
-  "id": "exercise-1752",
+  "id": "exercise-1753",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1752",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1753",
   "type": "Checkpoint",
   "number": "7.22",
   "title": "",
   "body": "Find a formula for the sinusoidal function whose graph is shown at right.   sinusoidal function  "
 },
 {
-  "id": "example-132",
+  "id": "example-133",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-132",
+  "url": "The-General-Sinusoidal-Function.html#example-133",
   "type": "Example",
   "number": "7.23",
   "title": "",
   "body": "Sunspots are dark regions on the Sun first observed by Galileo in 1610. The number of sunspots is not constant, but varies with a period of approximately 11 years, called the solar cycle. Solar activity is directly related to this cycle, and can cause disturbances in the earth's upper atmosphere. Planning for satellite orbits and space missions requires knowledge of solar activity levels years in advance.  The figure below shows sunspot data for the last solar cycle, from July, 1985 through June, 1996, and a sinusoidal function that models the data.  sine   The period of the solar cycle shown is actually 10.8 years. Use this information and the graph to write a formula for the model.  Improve the fit of the model by adjusting its horizontal shift.   The graph has the shape of . It appears to have midline and amplitude , so and To find , we compute Thus, a formula for the model is .  Fitting a curve by eye is a subjective process, but it looks like we can get a better fit by shifting the curve slightly to the left. By trying several values for in , we might settle on , which results in the curve shown below.  sine "
 },
 {
-  "id": "exercise-1753",
+  "id": "exercise-1754",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1753",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1754",
   "type": "Checkpoint",
   "number": "7.24",
   "title": "",
@@ -18829,306 +18892,306 @@ var ptx_lunr_docs = [
   "body": "  Write a formula for .  Graph and on the same axes.             Algebra Refresher Answers    parabolas      translated square root function      translation of reciprocal function      translation of inverse-square function      translation of inverse-square function      translation of exponential    "
 },
 {
-  "id": "exercise-1754",
+  "id": "exercise-1755",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1754",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1755",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "and   Fill in the table of values.                                                 Sketch the graphs of and on the same axes.    grid     What is the horizontal shift from to ?  Find all values of for which , for .  Find all values of for which , for .                                                    sine and translated sine     to the right    "
 },
 {
-  "id": "exercise-1755",
+  "id": "exercise-1756",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1755",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1756",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "and   Fill in the table of values.                                                 Sketch the graphs of and on the same axes.  grid  What is the horizontal shift from to ?  Find all values of for which , for .  Find all values of for which , for .  "
 },
 {
-  "id": "exercise-1756",
+  "id": "exercise-1757",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1756",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1757",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "and   Fill in the table of values.                                     Sketch the graphs of and on the same axes.   grid     What is the horizontal shift from to ?  Solve , for .  Solve , for .                   undef     undef       undef     undef        translated tangent function     to the left    "
 },
 {
-  "id": "exercise-1757",
+  "id": "exercise-1758",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1757",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1758",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "and   Fill in the table of values.                                     Sketch the graphs of and on the same axes.  grid  What is the horizontal shift from to ?  Solve , for .  Solve , for .  "
 },
 {
-  "id": "exercise-1758",
+  "id": "exercise-1759",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1758",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1759",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "  What are the amplitude and the horizontal shift?  Fill in the table of values.                                            Sketch the graph.  grid  Solve , for  Solve , for   amplitude 2, shift to the left                                               sinusoidal graph       "
 },
 {
-  "id": "exercise-1759",
+  "id": "exercise-1760",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1759",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1760",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "  What are the amplitude and the horizontal shift?  Fill in the table of values.                                            Sketch the graph.  grid    Solve , for  Solve , for  "
 },
 {
-  "id": "exercise-1760",
+  "id": "exercise-1761",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1760",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1761",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "The figure shows the graph of .    sinusoidal graph      Find a formula for as a shift of the sine function.  Find a formula for as a shift of the cosine function.     "
 },
 {
-  "id": "exercise-1761",
+  "id": "exercise-1762",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1761",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1762",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": "The figure shows the graph of .    sinusoidal graph      Find a formula for as a shift of the sine function.  Find a formula for as a shift of the cosine function.  "
 },
 {
-  "id": "exercise-1762",
+  "id": "exercise-1763",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1762",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1763",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "The figure shows the graph of .    translated tangent function      Find a formula for as a shift of the tangent function.  Find another formula for as a different shift of the tangent function.     "
 },
 {
-  "id": "exercise-1763",
+  "id": "exercise-1764",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1763",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1764",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": "The figure shows the graph of .    translated tangent function      Find a formula for as a shift of the tangent function.  Find another formula for as a different shift of the tangent function.  "
 },
 {
-  "id": "exercise-1764",
+  "id": "exercise-1765",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1764",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1765",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "  What are the period and the horizontal shift? (Hint: Factor out 2 from .)  Fill in the table of values.                                  Sketch the graph.    grid     Solve , for  Solve , for   period , shift to the right                                   sinusoidal graph       "
 },
 {
-  "id": "exercise-1765",
+  "id": "exercise-1766",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1765",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1766",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "  What are the period and the horizontal shift? (Hint: Factor out 3 from .)  Fill in the table of values.                                  Sketch the graph.  grid  Solve , for  Solve , for  "
 },
 {
-  "id": "exercise-1766",
+  "id": "exercise-1767",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1766",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1767",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "  What are the period and the horizontal shift? (Hint: Factor out from .)  Fill in the table of values.                                  Sketch the graph.    grid     Solve , for  Solve , for   period 2, shift to the left                                    sinusoidal graph       "
 },
 {
-  "id": "exercise-1767",
+  "id": "exercise-1768",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1767",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1768",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": "  What are the period and the horizontal shift? (Hint: Factor out from .)  Fill in the table of values.                                  Sketch the graph.  grid  Solve , for  Solve , for  "
 },
 {
-  "id": "exercise-1768",
+  "id": "exercise-1769",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1768",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1769",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.    grid     Solve for :  Solve for :   midline , period , horizontal shift to the right, amplitude 3                                          sinusoidal graph     no solution for   "
 },
 {
-  "id": "exercise-1769",
+  "id": "exercise-1770",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1769",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1770",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": " What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.    grid     Solve for :  Solve for :  "
 },
 {
-  "id": "exercise-1770",
+  "id": "exercise-1771",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1770",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1771",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": "Find a formula for a sinusoidal function that has an amplitude of 2, a period of 3, and is shifted 4 units to the left and 5 units upwards compared with the sine function. Sketch the graph for .     sinusoidal graph     "
 },
 {
-  "id": "exercise-1771",
+  "id": "exercise-1772",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1771",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1772",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": "Find a formula for a sinusoidal function that has an amplitude of 3, a period of 24, and is shifted 2 units to the right and 4 units upwards compared with the cosine function. Sketch the graph for . "
 },
 {
-  "id": "exercise-1772",
+  "id": "exercise-1773",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1772",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1773",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "Find a formula for a sinusoidal function that has an amplitude of 5, a period of 360, its midline at , and passes through . Sketch the graph for .    sinusoidal graph    "
 },
 {
-  "id": "exercise-1773",
+  "id": "exercise-1774",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1773",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1774",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": "Find a formula for a sinusoidal function that has an amplitude of 50, a period of 30, its midline at , and passes through . Sketch the graph for . "
 },
 {
-  "id": "exercise-1774",
+  "id": "exercise-1775",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1774",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1775",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": "  sinusoidal graph       "
 },
 {
-  "id": "exercise-1775",
+  "id": "exercise-1776",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1775",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1776",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": "  sinusoidal graph    "
 },
 {
-  "id": "exercise-1776",
+  "id": "exercise-1777",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1776",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1777",
   "type": "Exercise",
   "number": "23",
   "title": "",
   "body": "  sinusoidal graph       "
 },
 {
-  "id": "exercise-1777",
+  "id": "exercise-1778",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1777",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1778",
   "type": "Exercise",
   "number": "24",
   "title": "",
   "body": "  sinusoidal graph    "
 },
 {
-  "id": "exercise-1778",
+  "id": "exercise-1779",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1778",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1779",
   "type": "Exercise",
   "number": "25",
   "title": "",
   "body": "  sinusoidal graph       "
 },
 {
-  "id": "exercise-1779",
+  "id": "exercise-1780",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1779",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1780",
   "type": "Exercise",
   "number": "26",
   "title": "",
   "body": "  sinusoidal graph    "
 },
 {
-  "id": "exercise-1780",
+  "id": "exercise-1781",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1780",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1781",
   "type": "Exercise",
   "number": "27",
   "title": "",
   "body": "The average daily high temperature in Fairbanks, Alaska can be approximated by a sinusoidal function with a period of 12 months. The low temperature of occurs in January, and the high temperature of in July.  What are the midline, period, and amplitude?  Write a formula for the average daily high temperature , where is the number of months since January.  Graph for two periods, labeling the points that correspond to highest and lowest average temperature.   midline , period 12, amplitude 36.95     sinusoidal graph     "
 },
 {
-  "id": "exercise-1781",
+  "id": "exercise-1782",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1781",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1782",
   "type": "Exercise",
   "number": "28",
   "title": "",
   "body": "Depending on its phase, the moon looks like a disk that is partially visible and partially in shadow. The visible fraction ranges from 0% to 100%, and can be approximated by a sinusoidal function , where is the number of days since the last full moon. The time between successive full moons (a lunar month) is 29.5 days.   What are the period, midline, and amplitude of ?  Write a formula for .  Graph your function over two periods, labeling the points that correspond to full moon, half moon, and new moon.   "
 },
 {
-  "id": "exercise-1782",
+  "id": "exercise-1783",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1782",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1783",
   "type": "Exercise",
   "number": "29",
   "title": "",
   "body": "The tide in Yorktown is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.   What are the midline, period, and amplitude?  Graph for two periods, labeling the points that correspond to high tide and low tide.  If the last low tide occurred at 5:00 am, predict when the next high and low tides will occur.    midline , period , amplitude 1.4    sinusoidal graph     high 11:10 am, low 5:19 pm  "
 },
 {
-  "id": "exercise-1783",
+  "id": "exercise-1784",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1783",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1784",
   "type": "Exercise",
   "number": "30",
   "title": "",
   "body": "The height of a child's toy suspended at the end of a spring is approximated by a sinusoidal function. The toy's height ranges between 200 centimeters and 260 centimeters above the ground, and it completes one up-and-down cycle every 0.8 seconds.   What are the midline, period, and amplitude?  Let be the height of the toy in centimeters, where seconds corresponds to a time when the object was at the midline and moving upwards. Graph for two periods, labeling the points that correspond to the high and low positions of the toy.  When does the toy reach its maximum height the second time?  "
 },
 {
-  "id": "exercise-1784",
+  "id": "exercise-1785",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1784",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1785",
   "type": "Exercise",
   "number": "31",
   "title": "",
   "body": "                            amplitude 3.2, period 2, midline   "
 },
 {
-  "id": "exercise-1785",
+  "id": "exercise-1786",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1785",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1786",
   "type": "Exercise",
   "number": "32",
   "title": "",
   "body": "                           "
 },
 {
-  "id": "exercise-1786",
+  "id": "exercise-1787",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1786",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1787",
   "type": "Exercise",
   "number": "33",
   "title": "",
   "body": "                        amplitude 5, period 1, midline   "
 },
 {
-  "id": "exercise-1787",
+  "id": "exercise-1788",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#exercise-1787",
+  "url": "The-General-Sinusoidal-Function.html#exercise-1788",
   "type": "Exercise",
   "number": "34",
   "title": "",
@@ -19162,126 +19225,126 @@ var ptx_lunr_docs = [
   "body": "Solving Equations   Solutions of  Use your calculator to graph and in the window  Use the Trace and intersect features to find the smallest solution to , accurate to two decimal places.  Look at the graph, and by symmetry write an expression for the second solution. Hint: What is the -coordinate of the first -intercept of ?  Solutions of  Use your calculator to graph and in the window  On your graph, locate the solution to given by .  Can you write an expression for the second solution similar to the expression you wrote in part (1c)?  Solutions of  Use your calculator to graph and in the window  How many solutions are there to the equation ?  Look at the first two solutions. How are they related to the solutions of that you found in part (1)? Test your conjecture by using the Trace and intersect features.  If you know the first two solutions of , how can you find the other solutions? Hint: What is the period of ?  Solutions of  Repeat part (1) for and .  Repeat part (2) for and .  Repeat part (3) for and .  "
 },
 {
-  "id": "example-133",
+  "id": "example-134",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-133",
+  "url": "Solving-Equations-Chap7.html#example-134",
   "type": "Example",
   "number": "7.26",
   "title": "",
   "body": "Solve for .  The calculator gives us the solution However, because this solution is not between and , we find a coterminal angle, for the solution in the fourth quadrant. The second quadrant solution is To four decimal places, the desired solutions are 3.7603 and 5.6645. "
 },
 {
-  "id": "exercise-1788",
+  "id": "exercise-1789",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1788",
+  "url": "Solving-Equations-Chap7.html#exercise-1789",
   "type": "Checkpoint",
   "number": "7.27",
   "title": "",
   "body": "Solve for . 1.9391, 4,3441 "
 },
 {
-  "id": "example-134",
+  "id": "example-135",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-134",
+  "url": "Solving-Equations-Chap7.html#example-135",
   "type": "Example",
   "number": "7.28",
   "title": "",
   "body": "Find all solutions of between and .  We begin as usual, by taking the inverse sine of each side of the equation, to get There are two values of between and with namely and . Solving these equations for yields and .  But these are only two of the four solutions! The graph of completes two cycles between and , each of length . We must add to each of the first two solutions to find the solutions in the second cycle. These two solutions are Note that the solutions in the second cycle are still less than , so they must be included in the set of all solutions between and . The four solutions are and . "
 },
 {
-  "id": "exercise-1789",
+  "id": "exercise-1790",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1789",
+  "url": "Solving-Equations-Chap7.html#exercise-1790",
   "type": "Checkpoint",
   "number": "7.29",
   "title": "",
   "body": " Sketch a graph of for .  Find exact values for all solutions of between and .     cos 2x     "
 },
 {
-  "id": "example-135",
+  "id": "example-136",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-135",
+  "url": "Solving-Equations-Chap7.html#example-136",
   "type": "Example",
   "number": "7.30",
   "title": "",
   "body": "Find all solutions of between and .  We expect to find four solutions between and . The first angle between and whose tangent is 1 is , so the first solution is . Now, the period of the graph of is , as shown at right.   tan 2 t   There is one solution in each cycle, so we add multiples of to to find the other solutions. The four solutions are and .  "
 },
 {
-  "id": "exercise-1790",
+  "id": "exercise-1791",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1790",
+  "url": "Solving-Equations-Chap7.html#exercise-1791",
   "type": "Checkpoint",
   "number": "7.31",
   "title": "",
   "body": "Find all solutions of between and . "
 },
 {
-  "id": "example-136",
+  "id": "example-137",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-136",
+  "url": "Solving-Equations-Chap7.html#example-137",
   "type": "Example",
   "number": "7.32",
   "title": "",
   "body": "Solve for .  We first solve for the trig ratio,  Next, we use a calculator to find two solutions of . The solutions of this equation, rounded to three decimal places, are Finally, because the period of the function is , we can find the other two solutions by adding to the first two solutions, to get To two decimal places, the four solutions are 0.66, 2.48, 3.80, and 5.62  "
 },
 {
-  "id": "exercise-1791",
+  "id": "exercise-1792",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1791",
+  "url": "Solving-Equations-Chap7.html#exercise-1792",
   "type": "Checkpoint",
   "number": "7.33",
   "title": "",
   "body": "Solve for . 0.24, 1.86, 2.33, 2,95, 4.43, 6.06 "
 },
 {
-  "id": "example-137",
+  "id": "example-138",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-137",
+  "url": "Solving-Equations-Chap7.html#example-138",
   "type": "Example",
   "number": "7.34",
   "title": "",
   "body": "Use a substitution to solve for .  We expect to find four solutions. Let , and use a calculator to find two solutions of . The solutions, rounded to three decimal places, are Because is not between and , we find a coterminal angle, Next we replace by to find two of the solutions of the original equation: Finally, because the period of the function is , we find the other two solutions by adding to the first two solutions, to get Rounded to hundredths, the four solutions are 0.97, 2.24, 4.11, and 5.38. "
 },
 {
-  "id": "exercise-1792",
+  "id": "exercise-1793",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1792",
+  "url": "Solving-Equations-Chap7.html#exercise-1793",
   "type": "Checkpoint",
   "number": "7.35",
   "title": "",
   "body": "Use a substitution to solve for . "
 },
 {
-  "id": "example-138",
+  "id": "example-139",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-138",
+  "url": "Solving-Equations-Chap7.html#example-139",
   "type": "Example",
   "number": "7.36",
   "title": "",
   "body": "Find all solutions between and to .  The graph of completes six cycles between and , so we expect to find six solutions, as illustrated below. We'll use the substitution to reduce the equation to . Next, we isolate the trig ratio. Subtract 5 from both sides of the equation, then divide by 0.4.   Now we can solve for .   5+0.4tan(3x-0.5)   Replacing by , we find the first solution. This value of is not between and , but because the period of is , we can add to any solution to find another solution. We stop here, because the next solution is greater than . Rounded to two decimal places, the six solutions are 0.92, 1.96, 3.01, 4.06, 5.10, and 6.15.  "
 },
 {
-  "id": "exercise-1793",
+  "id": "exercise-1794",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1793",
+  "url": "Solving-Equations-Chap7.html#exercise-1794",
   "type": "Checkpoint",
   "number": "7.37",
   "title": "",
   "body": " Graph from to .  Find all solutions of between and . Round your answers to two decimal places.    transformed tangent   "
 },
 {
-  "id": "example-139",
+  "id": "example-140",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-139",
+  "url": "Solving-Equations-Chap7.html#example-140",
   "type": "Example",
   "number": "7.38",
   "title": "",
   "body": "A piston is pumping vertically at a rate of 1000 cycles per second. The distance between its lowest and highest position is 16 centimeters.   Suppose the piston is at its midline position at and moving downwards. Find a formula for the sinusoidal function that gives the piston's height.  Use the formula to find the first two times the piston is 14 centimeters above its lowest position.   Because the piston starts at its midline and moves down, we will write as a sine function: The amplitude is , and the midline is . The period is , so , and . Thus  The graph is shown at right.  sinusoidal graph  With , we have We use the substitution and find two positive solutions of the equation . Replace by , and solve each equation for : Thus, the first two times the piston is at a height of 14 centimeters are approximately and seconds. "
 },
 {
-  "id": "exercise-1794",
+  "id": "exercise-1795",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1794",
+  "url": "Solving-Equations-Chap7.html#exercise-1795",
   "type": "Checkpoint",
   "number": "7.39",
   "title": "",
@@ -19297,101 +19360,92 @@ var ptx_lunr_docs = [
   "body": " Solve.                         Algebra Refresher Answers           "
 },
 {
-  "id": "exercise-1795",
+  "id": "exercise-1796",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1795",
+  "url": "Solving-Equations-Chap7.html#exercise-1796",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": ", , , "
 },
 {
-  "id": "exercise-1796",
+  "id": "exercise-1797",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1796",
+  "url": "Solving-Equations-Chap7.html#exercise-1797",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1797",
+  "id": "exercise-1798",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1797",
+  "url": "Solving-Equations-Chap7.html#exercise-1798",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": ", , , , "
 },
 {
-  "id": "exercise-1798",
+  "id": "exercise-1799",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1798",
+  "url": "Solving-Equations-Chap7.html#exercise-1799",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1799",
+  "id": "exercise-1800",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1799",
+  "url": "Solving-Equations-Chap7.html#exercise-1800",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": ", , , , , "
 },
 {
-  "id": "exercise-1800",
+  "id": "exercise-1801",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1800",
+  "url": "Solving-Equations-Chap7.html#exercise-1801",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1801",
+  "id": "exercise-1802",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1801",
+  "url": "Solving-Equations-Chap7.html#exercise-1802",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": ", , , "
 },
 {
-  "id": "exercise-1802",
+  "id": "exercise-1803",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1802",
+  "url": "Solving-Equations-Chap7.html#exercise-1803",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1803",
+  "id": "exercise-1804",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1803",
+  "url": "Solving-Equations-Chap7.html#exercise-1804",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": ", , , , , "
 },
 {
-  "id": "exercise-1804",
-  "level": "2",
-  "url": "Solving-Equations-Chap7.html#exercise-1804",
-  "type": "Exercise",
-  "number": "10",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-1805",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1805",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -19400,7 +19454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1806",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -19409,115 +19463,115 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1807",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
-  "body": ", , , , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1808",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1808",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
-  "body": ""
+  "body": ", , , , , , , "
 },
 {
   "id": "exercise-1809",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1809",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": ", , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1810",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1810",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
-  "body": ""
+  "body": ", , , , , "
 },
 {
   "id": "exercise-1811",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1811",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": ", , , "
+  "body": ""
 },
 {
   "id": "exercise-1812",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1812",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-1813",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1813",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": ", , , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1814",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1814",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
-  "body": ""
+  "body": ", , , , , , "
 },
 {
   "id": "exercise-1815",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1815",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": ", , , "
+  "body": ""
 },
 {
   "id": "exercise-1816",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1816",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-1817",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1817",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": ", , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1818",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1818",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": ""
+  "body": ", , , , , "
 },
 {
   "id": "exercise-1819",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1819",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
   "body": ""
 },
@@ -19526,7 +19580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1820",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
   "body": ""
 },
@@ -19535,115 +19589,115 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1821",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": ", , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1822",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1822",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": ""
+  "body": ", , , , , "
 },
 {
   "id": "exercise-1823",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1823",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": ", , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1824",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1824",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
-  "body": ""
+  "body": ", , , , , "
 },
 {
   "id": "exercise-1825",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1825",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": ", , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1826",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1826",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": ""
+  "body": ", , , , , "
 },
 {
   "id": "exercise-1827",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1827",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ", , "
+  "body": ""
 },
 {
   "id": "exercise-1828",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1828",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": ""
+  "body": ", , "
 },
 {
   "id": "exercise-1829",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1829",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": ", , , , , "
+  "body": ""
 },
 {
   "id": "exercise-1830",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1830",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": ""
+  "body": ", , , , , "
 },
 {
   "id": "exercise-1831",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1831",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": ", , "
+  "body": ""
 },
 {
   "id": "exercise-1832",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1832",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": ""
+  "body": ", , "
 },
 {
   "id": "exercise-1833",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1833",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
   "body": ""
 },
@@ -19652,7 +19706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1834",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -19661,7 +19715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1835",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
   "body": ""
 },
@@ -19670,7 +19724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1836",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
   "body": ""
 },
@@ -19679,32 +19733,41 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1837",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "The population of deer in Marquette County over the course of a typical year can be approximated by a sinusoidal function. The population reached a maximum of 50,000 deer on September 1, and a minimum of 42,000 deer on March 1.   Write a formula for the function that gives the deer population on the first of each month, where is September 1.  When is the deer population 45,000? Give exact expressions and approximations rounded to two decimal places.  Graph your function over one period, and label the points that correspond to a deer population of 45,000. Is the population greater or less than 45,000 between the two solutions?     months (Dec) or months (June)    sinusoidal graph    is less than 45,000 between and .   "
+  "body": ""
 },
 {
   "id": "exercise-1838",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1838",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "The percent of the moon visible from earth is a sinusoidal function ranging from 0% to 100%, with a period of 29.5 days.   Write a formula for the function that gives the percent of the moon that is visible, if a new moon (0% visible) occurs at days.  When is 25% of the moon visible? Give approximations rounded to two decimal places.  Graph your function over one period, and label the points that correspond to a quarter moon. Is more or less than 25% of the moon visible between the two solutions you found in part (b)?  "
+  "body": "The population of deer in Marquette County over the course of a typical year can be approximated by a sinusoidal function. The population reached a maximum of 50,000 deer on September 1, and a minimum of 42,000 deer on March 1.   Write a formula for the function that gives the deer population on the first of each month, where is September 1.  When is the deer population 45,000? Give exact expressions and approximations rounded to two decimal places.  Graph your function over one period, and label the points that correspond to a deer population of 45,000. Is the population greater or less than 45,000 between the two solutions?     months (Dec) or months (June)    sinusoidal graph    is less than 45,000 between and .   "
 },
 {
   "id": "exercise-1839",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1839",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "A Ferris wheel has a diameter of 20 meters and completes one revolution every 60 seconds. Delbert is at the lowest position of the Ferris wheel, 1 meter above ground, when seconds.   Write a formula for the function that gives Delbert's altitude in meters after seconds.  When is Delbert at an altitude of 18 meters during his first revolution? Give exact expressions and approximations rounded to two decimal places.  Graph your function over one period, labeling the points that correspond to an altitude of 18 meters. Is Delbert above or below 18 meters between the two solutions you found in part (b)?    sec or sec    sinusoidal graph    Delbert is above 18 m between and .   "
+  "body": "The percent of the moon visible from earth is a sinusoidal function ranging from 0% to 100%, with a period of 29.5 days.   Write a formula for the function that gives the percent of the moon that is visible, if a new moon (0% visible) occurs at days.  When is 25% of the moon visible? Give approximations rounded to two decimal places.  Graph your function over one period, and label the points that correspond to a quarter moon. Is more or less than 25% of the moon visible between the two solutions you found in part (b)?  "
 },
 {
   "id": "exercise-1840",
   "level": "2",
   "url": "Solving-Equations-Chap7.html#exercise-1840",
+  "type": "Exercise",
+  "number": "45",
+  "title": "",
+  "body": "A Ferris wheel has a diameter of 20 meters and completes one revolution every 60 seconds. Delbert is at the lowest position of the Ferris wheel, 1 meter above ground, when seconds.   Write a formula for the function that gives Delbert's altitude in meters after seconds.  When is Delbert at an altitude of 18 meters during his first revolution? Give exact expressions and approximations rounded to two decimal places.  Graph your function over one period, labeling the points that correspond to an altitude of 18 meters. Is Delbert above or below 18 meters between the two solutions you found in part (b)?    sec or sec    sinusoidal graph    Delbert is above 18 m between and .   "
+},
+{
+  "id": "exercise-1841",
+  "level": "2",
+  "url": "Solving-Equations-Chap7.html#exercise-1841",
   "type": "Exercise",
   "number": "46",
   "title": "",
@@ -19720,101 +19783,92 @@ var ptx_lunr_docs = [
   "body": " Chapter 7 Summary and Review  Key Concepts   Changes to the amplitude, period, and midline of the basic sine and cosine graphs are called transformations . Changing the midline shifts the graph vertically, changing the amplitude stretches or compresses the graph vertically, and changing the period stretches or compresses the graph horizontally.  The order in which we apply transformations to a function makes a difference in the graph.  Amplitude, Period, and Midline of Sinusoidal Functions   The graph of has amplitude  .  The graph of has period  .  The graph of has midline  .   Horizontal Shifts  The graphs of are shifted horizontally compared to the graphs of and .   If , the graph is shifted to the right.  If , the graph is shifted to the left.   Standard Form for Sinusoidal Functions  The graphs of the functions are transformations of the sine and cosine graphs.   The amplitude is .  The midline is .  The period is .  The horizontal shift is units to the right if is positive, and units to the left if is negative.   Solutions of Trigonometric Equations   The equation , has two solutions between and :  The equation , has two solutions between and :   The equation , has two solutions between and :    If is a positive integer, the equations and each have solutions between and , for .  The equation has one solution in each cycle of the graph.  Using a Substitution to Solve Trigonometric Equations  To solve the equation or :   Substitute , and find two solutions for or .  Replace by in each solution, and solve for .  Find the other solutions by adding multiples of to the first two solutions.   To solve the equation :   Substitute , and find one solution for .  Replace by and solve for .  Find the other solutions by adding multiples of to the first solution.       Review Problems  For Problems 1 4, state the amplitude, period, and midline of the graph.   amp: , period: ; mid:    amp: , period: ; mid:    For Problems 5 8, use transformations to sketch graphs of the functions.     sinusoidal graph        sinusoidal graph       For Problems 9 12, write an equation for the graph using sine or cosine.     sinusoidal graph       sinusoidal graph       sinusoidal graph       sinusoidal graph      For Problems 13 16, complete the table of values and sketch a graph of the function.    What are the period and the horizontal shift?  (Hint: Factor out from .)  Fill in the table of values.                                            Sketch the graph.  grid  Solve  Solve   period: , shift: left                                              sinusoidal graph          What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.  grid  Solve  Solve     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve   mid: , period: 0, amp: 5  Fill in the table of values.                                        sinusoidal graph  30  15, 45     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve    For Problems 17 18, label the scales on the axes for the graph.    sinusoidal graph      sinusoidal graph       sinusoidal graph      For Problems 19 20,  Use a calculator to graph the function for .  Use the intersect feature to find all solutions between and . Round your answers to hundredths.         sinusoidal graph     0.57, 3.07, 3.71        For Problems 21 22, write a formula for the function.  The average high temperature in Phoenix, Arizona is minimum in January at 66 and maximum in July at 105 . Write a sinusoidal function that models the average high temperature in Phoenix.   The average monthly rainfall in Hawaii reaches a maximum of 3.4 inches in December and a minimum of 0.4 inches in June. Write a sinusoidal function that models the monthly rainfall in Hawaii.  For Problems 23 24,  Estimate the amplitude, period, and midline of a circular function that fits the data.  Write a formula for the function.                         amp: 3, period: 12, midline:                             For Problems 25 28, give exact values for the solutions between and .  , , ,    , , , , , , ,     For Problems 29 32, find all solutions between and . Round your answers to three decimal places.  0.066, 1.113, 2.160, 3.207, 4.255, 5.302   1.150, 1.991, 4.292, 5.133    For Problems 33 36, use a substitution to find exact values for all solutions between and .  , , ,   No solution    For Problems 37 40, use a substitution to find all solutions between and . Round your answers to hundredths.  0.375, 1.422, 2.470, 3.517, 4.564, 5.611   2.120, 4.880       "
 },
 {
-  "id": "p-4814",
+  "id": "p-4848",
   "level": "2",
-  "url": "chap7-summary.html#p-4814",
+  "url": "chap7-summary.html#p-4848",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "transformations amplitude period midline "
 },
 {
-  "id": "exercise-1841",
+  "id": "exercise-1842",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1841",
+  "url": "chap7-summary.html#exercise-1842",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "amp: , period: ; mid:  "
 },
 {
-  "id": "exercise-1842",
+  "id": "exercise-1843",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1842",
+  "url": "chap7-summary.html#exercise-1843",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1843",
+  "id": "exercise-1844",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1843",
+  "url": "chap7-summary.html#exercise-1844",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "amp: , period: ; mid: "
 },
 {
-  "id": "exercise-1844",
+  "id": "exercise-1845",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1844",
+  "url": "chap7-summary.html#exercise-1845",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1845",
+  "id": "exercise-1846",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1845",
+  "url": "chap7-summary.html#exercise-1846",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "  sinusoidal graph    "
 },
 {
-  "id": "exercise-1846",
+  "id": "exercise-1847",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1846",
+  "url": "chap7-summary.html#exercise-1847",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1847",
+  "id": "exercise-1848",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1847",
+  "url": "chap7-summary.html#exercise-1848",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "  sinusoidal graph    "
 },
 {
-  "id": "exercise-1848",
+  "id": "exercise-1849",
   "level": "2",
-  "url": "chap7-summary.html#exercise-1848",
+  "url": "chap7-summary.html#exercise-1849",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-1849",
-  "level": "2",
-  "url": "chap7-summary.html#exercise-1849",
-  "type": "Exercise",
-  "number": "9",
-  "title": "",
-  "body": "  sinusoidal graph    "
-},
-{
   "id": "exercise-1850",
   "level": "2",
   "url": "chap7-summary.html#exercise-1850",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -19823,7 +19877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap7-summary.html#exercise-1851",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -19832,7 +19886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap7-summary.html#exercise-1852",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": "  sinusoidal graph    "
 },
@@ -19841,248 +19895,257 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap7-summary.html#exercise-1853",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
-  "body": "  What are the period and the horizontal shift?  (Hint: Factor out from .)  Fill in the table of values.                                            Sketch the graph.  grid  Solve  Solve   period: , shift: left                                              sinusoidal graph       "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1854",
   "level": "2",
   "url": "chap7-summary.html#exercise-1854",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
-  "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.  grid  Solve  Solve  "
+  "body": "  What are the period and the horizontal shift?  (Hint: Factor out from .)  Fill in the table of values.                                            Sketch the graph.  grid  Solve  Solve   period: , shift: left                                              sinusoidal graph       "
 },
 {
   "id": "exercise-1855",
   "level": "2",
   "url": "chap7-summary.html#exercise-1855",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve   mid: , period: 0, amp: 5  Fill in the table of values.                                        sinusoidal graph  30  15, 45  "
+  "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.  grid  Solve  Solve  "
 },
 {
   "id": "exercise-1856",
   "level": "2",
   "url": "chap7-summary.html#exercise-1856",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
-  "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve  "
+  "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve   mid: , period: 0, amp: 5  Fill in the table of values.                                        sinusoidal graph  30  15, 45  "
 },
 {
   "id": "exercise-1857",
   "level": "2",
   "url": "chap7-summary.html#exercise-1857",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": "  sinusoidal graph      sinusoidal graph    "
+  "body": "  What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve  "
 },
 {
   "id": "exercise-1858",
   "level": "2",
   "url": "chap7-summary.html#exercise-1858",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
-  "body": "  sinusoidal graph    "
+  "body": "  sinusoidal graph      sinusoidal graph    "
 },
 {
   "id": "exercise-1859",
   "level": "2",
   "url": "chap7-summary.html#exercise-1859",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": "      sinusoidal graph     0.57, 3.07, 3.71  "
+  "body": "  sinusoidal graph    "
 },
 {
   "id": "exercise-1860",
   "level": "2",
   "url": "chap7-summary.html#exercise-1860",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
-  "body": "   "
+  "body": "      sinusoidal graph     0.57, 3.07, 3.71  "
 },
 {
   "id": "exercise-1861",
   "level": "2",
   "url": "chap7-summary.html#exercise-1861",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": "The average high temperature in Phoenix, Arizona is minimum in January at 66 and maximum in July at 105 . Write a sinusoidal function that models the average high temperature in Phoenix.  "
+  "body": "   "
 },
 {
   "id": "exercise-1862",
   "level": "2",
   "url": "chap7-summary.html#exercise-1862",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": "The average monthly rainfall in Hawaii reaches a maximum of 3.4 inches in December and a minimum of 0.4 inches in June. Write a sinusoidal function that models the monthly rainfall in Hawaii. "
+  "body": "The average high temperature in Phoenix, Arizona is minimum in January at 66 and maximum in July at 105 . Write a sinusoidal function that models the average high temperature in Phoenix.  "
 },
 {
   "id": "exercise-1863",
   "level": "2",
   "url": "chap7-summary.html#exercise-1863",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "                       amp: 3, period: 12, midline:   "
+  "body": "The average monthly rainfall in Hawaii reaches a maximum of 3.4 inches in December and a minimum of 0.4 inches in June. Write a sinusoidal function that models the monthly rainfall in Hawaii. "
 },
 {
   "id": "exercise-1864",
   "level": "2",
   "url": "chap7-summary.html#exercise-1864",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": "                       "
+  "body": "                       amp: 3, period: 12, midline:   "
 },
 {
   "id": "exercise-1865",
   "level": "2",
   "url": "chap7-summary.html#exercise-1865",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": ", , ,  "
+  "body": "                       "
 },
 {
   "id": "exercise-1866",
   "level": "2",
   "url": "chap7-summary.html#exercise-1866",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": ""
+  "body": ", , ,  "
 },
 {
   "id": "exercise-1867",
   "level": "2",
   "url": "chap7-summary.html#exercise-1867",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": ", , , , , , ,  "
+  "body": ""
 },
 {
   "id": "exercise-1868",
   "level": "2",
   "url": "chap7-summary.html#exercise-1868",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": ""
+  "body": ", , , , , , ,  "
 },
 {
   "id": "exercise-1869",
   "level": "2",
   "url": "chap7-summary.html#exercise-1869",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": "0.066, 1.113, 2.160, 3.207, 4.255, 5.302 "
+  "body": ""
 },
 {
   "id": "exercise-1870",
   "level": "2",
   "url": "chap7-summary.html#exercise-1870",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
-  "body": ""
+  "body": "0.066, 1.113, 2.160, 3.207, 4.255, 5.302 "
 },
 {
   "id": "exercise-1871",
   "level": "2",
   "url": "chap7-summary.html#exercise-1871",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "1.150, 1.991, 4.292, 5.133 "
+  "body": ""
 },
 {
   "id": "exercise-1872",
   "level": "2",
   "url": "chap7-summary.html#exercise-1872",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": ""
+  "body": "1.150, 1.991, 4.292, 5.133 "
 },
 {
   "id": "exercise-1873",
   "level": "2",
   "url": "chap7-summary.html#exercise-1873",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ", , , "
+  "body": ""
 },
 {
   "id": "exercise-1874",
   "level": "2",
   "url": "chap7-summary.html#exercise-1874",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-1875",
   "level": "2",
   "url": "chap7-summary.html#exercise-1875",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "No solution "
+  "body": ""
 },
 {
   "id": "exercise-1876",
   "level": "2",
   "url": "chap7-summary.html#exercise-1876",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": ""
+  "body": "No solution "
 },
 {
   "id": "exercise-1877",
   "level": "2",
   "url": "chap7-summary.html#exercise-1877",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "0.375, 1.422, 2.470, 3.517, 4.564, 5.611 "
+  "body": ""
 },
 {
   "id": "exercise-1878",
   "level": "2",
   "url": "chap7-summary.html#exercise-1878",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": ""
+  "body": "0.375, 1.422, 2.470, 3.517, 4.564, 5.611 "
 },
 {
   "id": "exercise-1879",
   "level": "2",
   "url": "chap7-summary.html#exercise-1879",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "2.120, 4.880 "
+  "body": ""
 },
 {
   "id": "exercise-1880",
   "level": "2",
   "url": "chap7-summary.html#exercise-1880",
+  "type": "Exercise",
+  "number": "39",
+  "title": "",
+  "body": "2.120, 4.880 "
+},
+{
+  "id": "exercise-1881",
+  "level": "2",
+  "url": "chap7-summary.html#exercise-1881",
   "type": "Exercise",
   "number": "40",
   "title": "",
@@ -20098,18 +20161,18 @@ var ptx_lunr_docs = [
   "body": " Sum and Difference Formulas   In Chapter 5 we studied identities that relate the three trigonometric functions sine, cosine, and tangent.  Pythagorean and Tangent Identities  trigonometric identity  Pythagorean identity  tangent identity    If we know one of the three trig values for an angle, we can find the other two by using these identities. Identities are useful for changing from one form to another when solving equations, and for finding exact values for trigonometric functions.  Are there identities relating the trig ratios of different angles?  For example, if we know the sine of , can we find the sine of without using a calculator? Or, if we know and , can we calculate ?   The Sum of Angles Identities  trigonometric identity sum of angles  All of the identities that relate the trig ratios of different angles are derived from the sum and difference formulas. Let's see why we need these formulas.  Is it true that are equal for any values of and ? We can test this hypothesis by evaluating both expressions for some specific values of and , say and , as shown below.    3 circles     From the figure, you should be able to see that is in fact smaller than either or , so it cannot be true that is equal to .  Verify that is not equal to .  Use your calculator to evaluate each expression. The two expressions are not equal.  Show that is not equal to . , but  Because the values of the expressions in the previous Example and Exercise are different, it is not true that is equal to for all angles and , or that is equal to .  It turns out that there is a relationship between the trig ratios for and the trig ratios of and , but it is a little more complicated.  Sum of Angles Identities  trigonometric identity sum of angles  sum of angles  sum of angles trigonometric identity  addition formula  subtraction formula  subtraction formula difference of angles      Notice that to find the sine or cosine of we must know (or be able to find) both trig ratios for both and and .  The sum and difference formulas can be used to find exact values for trig ratios of various angles.  Find an exact value for .  We can write as the sum of two special angles: . Now apply the sum of angles identity for cosine. Thus, . You can check that your calculator gives the same decimal approximation of about for both and .  Find an exact value for .  Of course, the sum formulas hold for angles in radians as well as degrees.  Suppose that and . Find an exact value for .  Recall that and . Substituting these values into the sum formula for sine, we find   Negative Angles   I Using Reference Triangles   Suppose that is a first-quadrant angle. In which quadrant would you find ?  Sketch an example for , , and the reference triangle for each.  How is related to ? What about and ?  Repeat part (1) for the case where is a second-quadrant angle.   II Using Graphs   Look at the graph of , and choose three positive values of . Draw dots on the graph that show their function values.    sine graph     Find the negatives of your three values of from part (a), and draw dots to show their function values.  How do the values of compare to the values of ?  Repeat part (1) for the graph of .    cosine graph     Repeat part (1) for the graph of .    tangent graph      III Negative Angle Identities  State your conclusions from parts I and II as identities:     Suppose that and . Find an exact value for .   The Difference of Angles Identities  The difference formulas for sine and cosine can be derived easily from the sum formulas, using the identities for negative angles. Note that the difference formulas are identical to the corresponding sum formulas, except for the signs.  Difference of Angles Identities  trigonometric identity difference of angles  difference of angles  difference of angles trigonometric identity      Use the fact that to evaluate exactly.  Remember that , and . Substituting all these values into the difference formula for cosine, we obtain the following. You can check that your calculator gives the same decimal approximation of about 0.9659 for both and .  Evaluate exactly.   Sum and Difference Identities for Tangent  There are also sum and difference formulas for the tangent.  Sum and Difference Identities for Tangent  trigonometric identity sum and difference for tangent  difference of angles  sum of angles     Find an exact value for .  We observe that , so . We can apply the sum formula for tangent.   Evaluate exactly.    Double Angle Identities  double angle identity  There are a number of other very useful identities that can be derived from the sum and difference formulas. In particular, if we set in the sum of angles identities (also called addition formulas addition formula addition formula sum of angles ), we obtain the double angle formulas double angle formulas double angle formulas double angle identity . These identities are used frequently and should be memorized!  Double Angle Identities  trigonometric identity double angle  double angle identity      You can also justify the identities to yourself by graphing both sides of the formula to see that the graphs are identical.  The first thing we can learn from the double angle formulas is that is not equal to ! You can check this very easily by choosing a value for , say . Then and . Similarly, and  Find for the angle shown.   triangle     We start by using the Pythagorean Theorem to find the hypotenuse of the triangle. so . Thus, and . Now we can use these values in the double angle identity to find .   Find and for the angle shown in the previous example.  We can work with algebraic expressions instead of numerical values for the trig ratios.  Use the figure to express in terms of .   triangle     We use the Pythagorean Theorem to find an expression for the third side of the triangle. Now we can write expressions for the sine and cosine of . Finally, we substitute these expressions into the double angle identity.   For the triangle in the previous example, find expressions for and .  By using the Pythagorean identity, we can write the double angle formula for cosine in two alternate forms.    Thus, we have three forms for the double angle formula for cosine, and we can use whichever form is most convenient for a particular problem.  Double Angle Identities for Cosine  trigonometric identity double angle  double angle identity for cosine    Find an expression for if you know that .  We use the identity    Find an expression for if you know that .   Solving Equations  If a trigonometric equation involves more than one angle, we use identities to rewrite the equation in terms of a single angle.  Solve for .  We first use the double angle formula to write in terms of trig functions of alone.   Once we have all the trig functions in terms of a single angle, we try to write the equation in terms of a single trig function. In this case, we can factor the left side to separate the trig functions.   There are four solutions, and .  Solve for .  Identities   I Sum of Angles Identities   Is it true that ? Try it for and .   Recall the distributive law, , where the parentheses denote multiplication. Is the same law true when the parentheses denote a function? In other words, is it true that ?  In the expression , do the parentheses denote multiplication or the application of a function? Does the distributive law apply to ? Do you think that is an identity?   Look at the Sum of Angles Identities in this section. Make some observations that will help you memorize these formulas.  Do you think you would have to memorize these formulas if the equation were an identity?  II Difference of Angles Identities, Tangent Identities    Yikes! More formulas. Compare the Difference of Angles Identities with the Sum of Angles Identities. If you have memorized the Sum formulas, how can you also memorize the Difference formulas?  Comment on the sign patterns in the Sum and Difference Identities for Tangent.   Now let's use the formulas backwards: look at the expression below: Does it remind you of the left side of one of the six new identities? Use that identity to simplify the expression.  Do the same thing for this expression:  III Double Angle Identities    Is it true that ? Choose a value for and try it. Sketch and on a unit circle and show the sine of each.  Is it true that ? Repeat part (a) for cosine.   Substitute and into the sum of angles formulas for sine, cosine, and tangent to derive the double angle formulas.  Choose one of the three forms of the Double Angle Identity for Cosine. Use the Pythagorean Identity to convert from that form to each of the other two forms.   Review the following skills you will need for this section.    Compute , and .  For which of the following functions is it true that whenever the function values are defined?                         Algebra Refresher Answers    8, 11, 17  Not true   4, 9, 25  Not true    Not true    Not true   2, 3, 5  Not true   4, 8, 32  Not true      Section 8.1 Summary  Concepts   Identities are useful for changing from one form to another when solving equations, for simplifying expressions, and for finding exact values for trigonometric functions.  it is not true in general that is equal to for all angles and , or that is equal to .  Negative Angle Identities     Sum and Difference of Angles Identities          Double Angle Identities    Study Questions   Explain why is not a valid application of the distributive law.  Delbert says that . Is he correct? Explain.  Francine says that . Is she correct? Explain.  Provide an example to show that doubling an angle does not double its sine or cosine.   Skills   Find trig values for the negative of an angle #1 6  Verify or disprove possible formulas #7 12, 31 42, 73 76, 79 88  Find exact values for trigonometric functions #13 24, 55 62  Simplify or expand expressions #25 30, 43 54  Solve equations #63 72  Prove standard identities #77 78, 89 91      Homework 8-1   Sketch an angle in standard position, with . Also sketch the angle .  Choose a point on the terminal side of , and show that the negative angle identities hold for .    angles    , , and . Thus, , , and .   Sketch an angle in standard position, with . Also sketch the angle .  Choose a point on the terminal side of , and show that the negative angle identities hold for .   Given that , find . Sketch both angles.    angles     Given that , find . Sketch both angles.  If and , find and . ,  If and , find and .  Show that is not equal to . , but  Show that is not equal to .  Use your calculator to verify that is not equal to . , but  Use your calculator to verify that is not equal to .  Use graphs to show that is not equivalent to .   two sinusoidal graphs    The curves are different.   Use graphs to show that is not equivalent to .  For Problems 13 24, find exact values for the trig ratios. (Do not use a calculator!)  Suppose , and . Evaluate the following.           Suppose , and . Evaluate the following.       If and , find exact values for:         If and , find exact values for:      Suppose and , where and are in quadrant I. Evaluate the following.         Suppose , where is in quadrant IV, and , where is in quadrant II. Evaluate the following.      If , and , find exact values for:      Sketch the angles and .        angles      If , and , find exact values for:      Sketch the angles and .   Find the exact values of and . ,  Find the exact values of and .  If and , find .  If and , find .   For Problems 25 30, use the sum and difference formulas to expand each expression.         For Problems 31 34, use the unit circle to estimate trig values. Then verify with your calculator.    unit circle     Does ? No  Does ?  Does ? No  Does ?   For Problems 35 38, verify that each statement is true.       In Problems 39 42, is the statement true or false? Explain your answer.  If , then . False, but  If , then , so .  If , then , so . False, but  If , then .   For Problems 43 54, use the double angle identities to simplify the expression.               For Problems 55 58, use the figures to find the trigonometric ratios.    triangles                                                     Suppose and . Compute exact values for:      Sketch the angles and .          angles      Suppose and . Compute exact values for:      Sketch the angles and .   If and , find exact values for:           If and , find exact values for:      For Problems 63 72,  Use identities to rewrite the equation in terms of a single angle.  Solve. Give exact solutions between and .      , , ,        ,                           Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.         Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.     Use the difference of angles formulas for sine and cosine to prove that:         Use the difference of angles formulas for sine and cosine to derive formulas for:     Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .)  Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .)  For Problems 79 88,  Use graphs to decide if the equation is an identity.  If the equation is not an identity, find a value of the variable that makes the equation false.    Not an identity.  (many answers possible)    Identity    Not an identity.  (many answers possible)    Identity   Identity    sum of angles difference of angles addition formula Problems 89 and 90 verify the addition and subtraction formulas for acute angles.  The figure below shows a right triangle inscribed in a rectangle.    triangle inscribed in rectangle      Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the addition formulas for sine and cosine.    triangle inscribed in rectangle      and are both complements of ; and are alternate interior angles  ,   ,   ,   ,    The figure below shows a right triangle inscribed in a rectangle.    triangle inscribed in rectangle      Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the subtraction formulas for sine and cosine.    difference of angles Follow the steps to prove the difference of angles formula for cosine,    circle      Write an expression for , the square of the distance between the points and , using the Law of Cosines for .  Write another expression for using the distance formula and the coordinates of and .  Equate the two expressions for you obtained in (a) and (b). Simplify the equation to obtain .        "
 },
 {
-  "id": "example-140",
+  "id": "example-141",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-140",
+  "url": "Sum-and-Difference-Formulas.html#example-141",
   "type": "Example",
   "number": "8.1",
   "title": "",
   "body": "Verify that is not equal to .  Use your calculator to evaluate each expression. The two expressions are not equal. "
 },
 {
-  "id": "exercise-1881",
+  "id": "exercise-1882",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1881",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1882",
   "type": "Checkpoint",
   "number": "8.2",
   "title": "",
@@ -20125,27 +20188,27 @@ var ptx_lunr_docs = [
   "body": "Because the values of the expressions in the previous Example and Exercise are different, it is not true that is equal to for all angles and , or that is equal to .  It turns out that there is a relationship between the trig ratios for and the trig ratios of and , but it is a little more complicated. "
 },
 {
-  "id": "example-141",
+  "id": "example-142",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-141",
+  "url": "Sum-and-Difference-Formulas.html#example-142",
   "type": "Example",
   "number": "8.4",
   "title": "",
   "body": "Find an exact value for .  We can write as the sum of two special angles: . Now apply the sum of angles identity for cosine. Thus, . You can check that your calculator gives the same decimal approximation of about for both and . "
 },
 {
-  "id": "exercise-1882",
+  "id": "exercise-1883",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1882",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1883",
   "type": "Checkpoint",
   "number": "8.5",
   "title": "",
   "body": "Find an exact value for . "
 },
 {
-  "id": "example-142",
+  "id": "example-143",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-142",
+  "url": "Sum-and-Difference-Formulas.html#example-143",
   "type": "Example",
   "number": "8.6",
   "title": "",
@@ -20161,54 +20224,54 @@ var ptx_lunr_docs = [
   "body": "Negative Angles   I Using Reference Triangles   Suppose that is a first-quadrant angle. In which quadrant would you find ?  Sketch an example for , , and the reference triangle for each.  How is related to ? What about and ?  Repeat part (1) for the case where is a second-quadrant angle.   II Using Graphs   Look at the graph of , and choose three positive values of . Draw dots on the graph that show their function values.    sine graph     Find the negatives of your three values of from part (a), and draw dots to show their function values.  How do the values of compare to the values of ?  Repeat part (1) for the graph of .    cosine graph     Repeat part (1) for the graph of .    tangent graph      III Negative Angle Identities  State your conclusions from parts I and II as identities:    "
 },
 {
-  "id": "exercise-1883",
+  "id": "exercise-1884",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1883",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1884",
   "type": "Checkpoint",
   "number": "8.7",
   "title": "",
   "body": "Suppose that and . Find an exact value for . "
 },
 {
-  "id": "example-143",
+  "id": "example-144",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-143",
+  "url": "Sum-and-Difference-Formulas.html#example-144",
   "type": "Example",
   "number": "8.8",
   "title": "",
   "body": "Use the fact that to evaluate exactly.  Remember that , and . Substituting all these values into the difference formula for cosine, we obtain the following. You can check that your calculator gives the same decimal approximation of about 0.9659 for both and . "
 },
 {
-  "id": "exercise-1884",
+  "id": "exercise-1885",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1884",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1885",
   "type": "Checkpoint",
   "number": "8.9",
   "title": "",
   "body": "Evaluate exactly. "
 },
 {
-  "id": "example-144",
+  "id": "example-145",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-144",
+  "url": "Sum-and-Difference-Formulas.html#example-145",
   "type": "Example",
   "number": "8.10",
   "title": "",
   "body": "Find an exact value for .  We observe that , so . We can apply the sum formula for tangent.  "
 },
 {
-  "id": "exercise-1885",
+  "id": "exercise-1886",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1885",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1886",
   "type": "Checkpoint",
   "number": "8.11",
   "title": "",
   "body": "Evaluate exactly.  "
 },
 {
-  "id": "p-4970",
+  "id": "p-5004",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#p-4970",
+  "url": "Sum-and-Difference-Formulas.html#p-5004",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -20224,72 +20287,72 @@ var ptx_lunr_docs = [
   "body": "The first thing we can learn from the double angle formulas is that is not equal to ! You can check this very easily by choosing a value for , say . Then and . Similarly, and "
 },
 {
-  "id": "example-145",
+  "id": "example-146",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-145",
+  "url": "Sum-and-Difference-Formulas.html#example-146",
   "type": "Example",
   "number": "8.13",
   "title": "",
   "body": "Find for the angle shown.   triangle     We start by using the Pythagorean Theorem to find the hypotenuse of the triangle. so . Thus, and . Now we can use these values in the double angle identity to find .  "
 },
 {
-  "id": "exercise-1886",
+  "id": "exercise-1887",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1886",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1887",
   "type": "Checkpoint",
   "number": "8.14",
   "title": "",
   "body": "Find and for the angle shown in the previous example. "
 },
 {
-  "id": "example-146",
+  "id": "example-147",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-146",
+  "url": "Sum-and-Difference-Formulas.html#example-147",
   "type": "Example",
   "number": "8.15",
   "title": "",
   "body": "Use the figure to express in terms of .   triangle     We use the Pythagorean Theorem to find an expression for the third side of the triangle. Now we can write expressions for the sine and cosine of . Finally, we substitute these expressions into the double angle identity.  "
 },
 {
-  "id": "exercise-1887",
+  "id": "exercise-1888",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1887",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1888",
   "type": "Checkpoint",
   "number": "8.16",
   "title": "",
   "body": "For the triangle in the previous example, find expressions for and . "
 },
 {
-  "id": "example-147",
+  "id": "example-148",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-147",
+  "url": "Sum-and-Difference-Formulas.html#example-148",
   "type": "Example",
   "number": "8.17",
   "title": "",
   "body": "Find an expression for if you know that .  We use the identity   "
 },
 {
-  "id": "exercise-1888",
+  "id": "exercise-1889",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1888",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1889",
   "type": "Checkpoint",
   "number": "8.18",
   "title": "",
   "body": "Find an expression for if you know that . "
 },
 {
-  "id": "example-148",
+  "id": "example-149",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-148",
+  "url": "Sum-and-Difference-Formulas.html#example-149",
   "type": "Example",
   "number": "8.19",
   "title": "",
   "body": "Solve for .  We first use the double angle formula to write in terms of trig functions of alone.   Once we have all the trig functions in terms of a single angle, we try to write the equation in terms of a single trig function. In this case, we can factor the left side to separate the trig functions.   There are four solutions, and . "
 },
 {
-  "id": "exercise-1889",
+  "id": "exercise-1890",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1889",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1890",
   "type": "Checkpoint",
   "number": "8.20",
   "title": "",
@@ -20314,218 +20377,209 @@ var ptx_lunr_docs = [
   "body": "  Compute , and .  For which of the following functions is it true that whenever the function values are defined?                         Algebra Refresher Answers    8, 11, 17  Not true   4, 9, 25  Not true    Not true    Not true   2, 3, 5  Not true   4, 8, 32  Not true    "
 },
 {
-  "id": "exercise-1890",
+  "id": "exercise-1891",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1890",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1891",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": " Sketch an angle in standard position, with . Also sketch the angle .  Choose a point on the terminal side of , and show that the negative angle identities hold for .    angles    , , and . Thus, , , and . "
 },
 {
-  "id": "exercise-1891",
+  "id": "exercise-1892",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1891",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1892",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": " Sketch an angle in standard position, with . Also sketch the angle .  Choose a point on the terminal side of , and show that the negative angle identities hold for .  "
 },
 {
-  "id": "exercise-1892",
+  "id": "exercise-1893",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1892",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1893",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "Given that , find . Sketch both angles.    angles    "
 },
 {
-  "id": "exercise-1893",
+  "id": "exercise-1894",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1893",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1894",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "Given that , find . Sketch both angles. "
 },
 {
-  "id": "exercise-1894",
+  "id": "exercise-1895",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1894",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1895",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "If and , find and . , "
 },
 {
-  "id": "exercise-1895",
+  "id": "exercise-1896",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1895",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1896",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "If and , find and . "
 },
 {
-  "id": "exercise-1896",
+  "id": "exercise-1897",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1896",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1897",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "Show that is not equal to . , but "
 },
 {
-  "id": "exercise-1897",
+  "id": "exercise-1898",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1897",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1898",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": "Show that is not equal to . "
 },
 {
-  "id": "exercise-1898",
+  "id": "exercise-1899",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1898",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1899",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "Use your calculator to verify that is not equal to . , but "
 },
 {
-  "id": "exercise-1899",
+  "id": "exercise-1900",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1899",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1900",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": "Use your calculator to verify that is not equal to . "
 },
 {
-  "id": "exercise-1900",
+  "id": "exercise-1901",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1900",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1901",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "Use graphs to show that is not equivalent to .   two sinusoidal graphs    The curves are different.  "
 },
 {
-  "id": "exercise-1901",
+  "id": "exercise-1902",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1901",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1902",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "Use graphs to show that is not equivalent to . "
 },
 {
-  "id": "exercise-1902",
+  "id": "exercise-1903",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1902",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1903",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "Suppose , and . Evaluate the following.          "
 },
 {
-  "id": "exercise-1903",
+  "id": "exercise-1904",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1903",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1904",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": "Suppose , and . Evaluate the following.      "
 },
 {
-  "id": "exercise-1904",
+  "id": "exercise-1905",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1904",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1905",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": "If and , find exact values for:        "
 },
 {
-  "id": "exercise-1905",
+  "id": "exercise-1906",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1905",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1906",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": "If and , find exact values for:     "
 },
 {
-  "id": "exercise-1906",
+  "id": "exercise-1907",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1906",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1907",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": "Suppose and , where and are in quadrant I. Evaluate the following.        "
 },
 {
-  "id": "exercise-1907",
+  "id": "exercise-1908",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1907",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1908",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": "Suppose , where is in quadrant IV, and , where is in quadrant II. Evaluate the following.     "
 },
 {
-  "id": "exercise-1908",
+  "id": "exercise-1909",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1908",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1909",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "If , and , find exact values for:      Sketch the angles and .        angles     "
 },
 {
-  "id": "exercise-1909",
+  "id": "exercise-1910",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1909",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1910",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": "If , and , find exact values for:      Sketch the angles and .  "
 },
 {
-  "id": "exercise-1910",
+  "id": "exercise-1911",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1910",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1911",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": "Find the exact values of and . , "
 },
 {
-  "id": "exercise-1911",
+  "id": "exercise-1912",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1911",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1912",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": "Find the exact values of and . "
 },
 {
-  "id": "exercise-1912",
-  "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#exercise-1912",
-  "type": "Exercise",
-  "number": "23",
-  "title": "",
-  "body": "If and , find . "
-},
-{
   "id": "exercise-1913",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1913",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": "If and , find . "
 },
@@ -20534,16 +20588,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1914",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": ""
+  "body": "If and , find . "
 },
 {
   "id": "exercise-1915",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1915",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
   "body": ""
 },
@@ -20552,7 +20606,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1916",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
   "body": ""
 },
@@ -20561,7 +20615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1917",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -20570,7 +20624,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1918",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ""
 },
@@ -20579,7 +20633,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1919",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ""
 },
@@ -20588,52 +20642,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1920",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "Does ? No "
+  "body": ""
 },
 {
   "id": "exercise-1921",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1921",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": "Does ? "
+  "body": "Does ? No "
 },
 {
   "id": "exercise-1922",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1922",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": "Does ? No "
+  "body": "Does ? "
 },
 {
   "id": "exercise-1923",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1923",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": "Does ? "
+  "body": "Does ? No "
 },
 {
   "id": "exercise-1924",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1924",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": ""
+  "body": "Does ? "
 },
 {
   "id": "exercise-1925",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1925",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -20642,7 +20696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1926",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -20651,7 +20705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1927",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -20660,52 +20714,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1928",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "If , then . False, but "
+  "body": ""
 },
 {
   "id": "exercise-1929",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1929",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "If , then , so . "
+  "body": "If , then . False, but "
 },
 {
   "id": "exercise-1930",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1930",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "If , then , so . False, but "
+  "body": "If , then , so . "
 },
 {
   "id": "exercise-1931",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1931",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": "If , then . "
+  "body": "If , then , so . False, but "
 },
 {
   "id": "exercise-1932",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1932",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": ""
+  "body": "If , then . "
 },
 {
   "id": "exercise-1933",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1933",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
   "body": ""
 },
@@ -20714,7 +20768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1934",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
   "body": ""
 },
@@ -20723,7 +20777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1935",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
   "body": ""
 },
@@ -20732,7 +20786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1936",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
   "body": ""
 },
@@ -20741,7 +20795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1937",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
   "body": ""
 },
@@ -20750,7 +20804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1938",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
   "body": ""
 },
@@ -20759,7 +20813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1939",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
   "body": ""
 },
@@ -20768,7 +20822,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1940",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
   "body": ""
 },
@@ -20777,7 +20831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1941",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
   "body": ""
 },
@@ -20786,7 +20840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1942",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
   "body": ""
 },
@@ -20795,7 +20849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1943",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
   "body": ""
 },
@@ -20804,214 +20858,214 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1944",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "              "
+  "body": ""
 },
 {
   "id": "exercise-1945",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1945",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": "       "
+  "body": "              "
 },
 {
   "id": "exercise-1946",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1946",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": "              "
+  "body": "       "
 },
 {
   "id": "exercise-1947",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1947",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": "       "
+  "body": "              "
 },
 {
   "id": "exercise-1948",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1948",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "Suppose and . Compute exact values for:      Sketch the angles and .          angles     "
+  "body": "       "
 },
 {
   "id": "exercise-1949",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1949",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "Suppose and . Compute exact values for:      Sketch the angles and .  "
+  "body": "Suppose and . Compute exact values for:      Sketch the angles and .          angles     "
 },
 {
   "id": "exercise-1950",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1950",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "If and , find exact values for:          "
+  "body": "Suppose and . Compute exact values for:      Sketch the angles and .  "
 },
 {
   "id": "exercise-1951",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1951",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": "If and , find exact values for:     "
+  "body": "If and , find exact values for:          "
 },
 {
   "id": "exercise-1952",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1952",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "   , , ,   "
+  "body": "If and , find exact values for:     "
 },
 {
   "id": "exercise-1953",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1953",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": ""
+  "body": "   , , ,   "
 },
 {
   "id": "exercise-1954",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1954",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "   ,   "
+  "body": ""
 },
 {
   "id": "exercise-1955",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1955",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
-  "body": ""
+  "body": "   ,   "
 },
 {
   "id": "exercise-1956",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1956",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": "     "
+  "body": ""
 },
 {
   "id": "exercise-1957",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1957",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": ""
+  "body": "     "
 },
 {
   "id": "exercise-1958",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1958",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": "     "
+  "body": ""
 },
 {
   "id": "exercise-1959",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1959",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": ""
+  "body": "     "
 },
 {
   "id": "exercise-1960",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1960",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": "     "
+  "body": ""
 },
 {
   "id": "exercise-1961",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1961",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
-  "body": ""
+  "body": "     "
 },
 {
   "id": "exercise-1962",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1962",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
-  "body": "Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.        "
+  "body": ""
 },
 {
   "id": "exercise-1963",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1963",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
-  "body": "Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.    "
+  "body": "Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.        "
 },
 {
   "id": "exercise-1964",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1964",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
-  "body": "Use the difference of angles formulas for sine and cosine to prove that:        "
+  "body": "Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.    "
 },
 {
   "id": "exercise-1965",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1965",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
-  "body": "Use the difference of angles formulas for sine and cosine to derive formulas for:    "
+  "body": "Use the difference of angles formulas for sine and cosine to prove that:        "
 },
 {
   "id": "exercise-1966",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1966",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
-  "body": "Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .) "
+  "body": "Use the difference of angles formulas for sine and cosine to derive formulas for:    "
 },
 {
   "id": "exercise-1967",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1967",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
   "body": "Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .) "
 },
@@ -21020,113 +21074,122 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1968",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
-  "body": " Not an identity.  (many answers possible)  "
+  "body": "Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .) "
 },
 {
   "id": "exercise-1969",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1969",
   "type": "Exercise",
-  "number": "80",
+  "number": "79",
   "title": "",
-  "body": ""
+  "body": " Not an identity.  (many answers possible)  "
 },
 {
   "id": "exercise-1970",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1970",
   "type": "Exercise",
-  "number": "81",
+  "number": "80",
   "title": "",
-  "body": "Identity "
+  "body": ""
 },
 {
   "id": "exercise-1971",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1971",
   "type": "Exercise",
-  "number": "82",
+  "number": "81",
   "title": "",
-  "body": ""
+  "body": "Identity "
 },
 {
   "id": "exercise-1972",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1972",
   "type": "Exercise",
-  "number": "83",
+  "number": "82",
   "title": "",
-  "body": " Not an identity.  (many answers possible)  "
+  "body": ""
 },
 {
   "id": "exercise-1973",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1973",
   "type": "Exercise",
-  "number": "84",
+  "number": "83",
   "title": "",
-  "body": ""
+  "body": " Not an identity.  (many answers possible)  "
 },
 {
   "id": "exercise-1974",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1974",
   "type": "Exercise",
-  "number": "85",
+  "number": "84",
   "title": "",
-  "body": "Identity "
+  "body": ""
 },
 {
   "id": "exercise-1975",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1975",
   "type": "Exercise",
-  "number": "86",
+  "number": "85",
   "title": "",
-  "body": ""
+  "body": "Identity "
 },
 {
   "id": "exercise-1976",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1976",
   "type": "Exercise",
-  "number": "87",
+  "number": "86",
   "title": "",
-  "body": "Identity "
+  "body": ""
 },
 {
   "id": "exercise-1977",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1977",
   "type": "Exercise",
-  "number": "88",
+  "number": "87",
   "title": "",
-  "body": ""
+  "body": "Identity "
 },
 {
   "id": "exercise-1978",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1978",
   "type": "Exercise",
-  "number": "89",
+  "number": "88",
   "title": "",
-  "body": "The figure below shows a right triangle inscribed in a rectangle.    triangle inscribed in rectangle      Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the addition formulas for sine and cosine.    triangle inscribed in rectangle      and are both complements of ; and are alternate interior angles  ,   ,   ,   ,   "
+  "body": ""
 },
 {
   "id": "exercise-1979",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1979",
   "type": "Exercise",
-  "number": "90",
+  "number": "89",
   "title": "",
-  "body": "The figure below shows a right triangle inscribed in a rectangle.    triangle inscribed in rectangle      Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the subtraction formulas for sine and cosine.  "
+  "body": "The figure below shows a right triangle inscribed in a rectangle.    triangle inscribed in rectangle      Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the addition formulas for sine and cosine.    triangle inscribed in rectangle      and are both complements of ; and are alternate interior angles  ,   ,   ,   ,   "
 },
 {
   "id": "exercise-1980",
   "level": "2",
   "url": "Sum-and-Difference-Formulas.html#exercise-1980",
+  "type": "Exercise",
+  "number": "90",
+  "title": "",
+  "body": "The figure below shows a right triangle inscribed in a rectangle.    triangle inscribed in rectangle      Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the subtraction formulas for sine and cosine.  "
+},
+{
+  "id": "exercise-1981",
+  "level": "2",
+  "url": "Sum-and-Difference-Formulas.html#exercise-1981",
   "type": "Exercise",
   "number": "91",
   "title": "",
@@ -21142,18 +21205,18 @@ var ptx_lunr_docs = [
   "body": " Inverse Trigonometric Functions  inverse function  inverse function inverse trigonometric function  inverse trigonometric function  We have been using the calculator keys , , and to find approximate values of when we know either , or . For example, if we know that , then  In other words, we use the , , and keys to solve trigonometric equations, just as we use square roots to solve quadratic equations. Using one of these keys performs the inverse operation inverse operation inverse operation inverse for computing a sine, cosine or tangent, just as extracting square roots is the inverse of squaring a number.  Many functions can be described as an operation or as a sequence of operations on the input value, and this leads us to the notion of an inverse function.  Inverse of a Function  inverse function  Raising a number to the power and taking roots are an example of inverse operations. For example, if we first cube a number and then take the cube root of the result, we return to the original number.  inverse  We say that the two functions and are inverse functions inverse function . Each of the functions undoes the results of the other function. You can confirm this behavior by consulting the tables of values for the two functions.                                                      Observe that the table of values for can be obtained from the table for by interchanging the values of and in each ordered pair. In fact, we can often find a formula for the inverse function by interchanging the input and output variables in the formula for the function, and then solving for the new output variable.  For our example, we start with the formula for the cubing function: We use the notation to denote the inverse function. Thus, we have just shown that the inverse function for is .  The notation does mean !  For example, if , we have , but , and we know that .  Although it is true that a negative exponent denotes a reciprocal, so that, for instance, , the in is not an exponent; this is an entirely new use for the same symbol.  Let Find a formula for the inverse function.  We interchange the variables in the formula for (that is, in ) to get  Now we solve for in terms of by taking the reciprocal of both sides. so  The formula for the inverse function is .  Let . Find a formula for the inverse function.  In the examples above, note that , and .   The Graph of the Inverse  inverse graph of  If we graph the function and its inverse on the same set of axes, we see that the graphs are related in an interesting way, as shown below.  The graphs are symmetric about the line , which means that if we were to place a mirror along the line each graph would be the reflection of the other.  This symmetry occurs because we interchanged the roles of and when we defined the inverse function.   graph of inverse     Note that, for this example, both graphs pass the vertical line test, so they are both graphs of functions.   Graph the function and its inverse on the same grid, and sketch in the line to illustrate the symmetry.  Find the domain and range of , and the domain and range of .     The graph is shown at right. Note that has a vertical asymptote at , and has a horizontal asymptote at .   graph of inverse   Note that is undefined at , and is undefined at . Thus, the domain of is all real numbers except 3, and the domain of is all real numbers except 0.  We can find the range of each function by examining its graph:  has a horizontal asymptote at , so there is no point on the graph with . Its range is all real numbers except 0.  Similarly, there is no point on the graph of with , so its range is all real numbers except 3.   Graph and its inverse function on the grid at right, and sketch in the line to show the symmetry.   grid     Find the domain and range of , and the domain and range of .    linear function and inverse     The domain and range of and each include all real numbers   From the examples above, we see that the domain of is the same as the range of , and the range of is the same as the domain of . This should seem reasonable, because we obtain the inverse function by interchanging the values of theinput and output variables.  Domain and Range of Inverse Function  domain of inverse function  range of inverse function  Domain Range Domain Range   Does Every Function Have an Inverse?  In the examples above, the inverse of the function turned out to be a function as well. But this is not always the case. Consider the function . First we'll find a formula for the inverse. We interchange and and solve for :   The graphs of and its inverse are shown at right. You can see that although is a function, its inverse is not.   function and inverse   Is there some way to predict whether the inverse of a function will be a function, too? Yes! In order for the inverse to be a function, its graph must pass the vertical line test. (Recall that if a graph passes the vertical line test, there is only one -value for each value of .)  Now, we obtain the inverse by interchanging and in the formula for a function, so the inverse will be a function only if the original function passes the horizontal line test. A function that passes the horizontal line test is called one-to-one one-to-one .  Horizontal Line Test  horizontal line test  A function passes the Horizontal Line Test if every horizontal line intersects the graph at most once. In that case, there is only one -value for each -value, and the function is called one-to-one .  It is always the case that we can find the inverse of a function: we just interchange the domain and range values. However, the important question is whether the inverse is also a function. If the inverse is a function, we say that “ has an inverse function inverse function .” All of this leads us to the following result.  Inverse Function  A function has an inverse function if and only if is one-to-one.   Which of the graphs below represent functions?  Which of the functions are one-to-one?  Which of these functions have inverse functions?     three graphs      All three graphs pass the vertical line test, so all three represent functions.  Only the function represented by graph II passes the horizontal line test, so it is the only one-to-one function.  Only function II is one-to-one, so it is the only function that has an inverse function.   Which of the functions below are one-to-one?    three graphs    I and III   Restricting the Domain: The Inverse Sine Function  domain restrict  Sometimes it is so important that the inverse be a function that we are willing to sacrifice part of the original function to achieve this result.   Look again at the graph of . If we use only nonnegative -values for the domain, we create a new function, The graph of this new function is shown as a dashed curve in the figure at right.   function and inverse function     The new function is one-to-one, and its inverse, , is also a function. (We could also have used only negative -values for the domain, or some smaller interval, just as long as the resulting function is one-to-one.)  We say that we have restricted the domain domain restrict of the original function, and we will use this technique to define inverse functions for the trigonometric functions.  The sine function is not one-to-one; there are many angles that have the same sine value. In order to define its inverse function, we must restrict the domain of the sine to an interval on which the -values do not repeat. But there are many candidates for such an interval; which one shall we choose?  It turns out that the most useful interval is found by starting at and moving as far as we can in either direction until the -values begin to repeat. By doing so, we obtain the restricted domain , as shown below. This piece of the function includes all of the original range values, from to .    restricted sine     Because the sine function is one-to-one on this domain, its inverse is a function.  The graph of the inverse sine function, , is shown below. Its domain is the same as the range of the sine function, namely , and its range is our restricted domain for sine, .    inverse sine   The inverse sine function  inverse sine  sin  The function is defined as follows:  In other words, is the angle in radians, between and , whose sine is . There are many angles with a given sine value , but only one of these angles can be . This is why the calculator's key only gives outputs between and .  If is positive, the inverse sine function delivers a first quadrant angle, .  If is negative, the inverse sine function delivers a fourth quadrant angle, .   Simplify each expression without using a calculator.      We know that is an angle whose sine is , and that . Because is negative, we must find an angle in the fourth quadrant, and because , the reference angle for is . Thus, the angle we want is , and .  First note that ! We start by simplifying the expression inside parentheses: , so . We want an angle whose sine is 0, and which lies in the interval . This angle is 0, so . (It is also true that , but is not in the interval .)   Simplify each expression without using a calculator.         The Inverse Cosine and Inverse Tangent Functions  The cosine and tangent functions are also periodic, so, just as with the sine function, to define their inverse functions we must restrict their domains to intervals where they are one-to-one. The graph of cosine is shown below.    restricted cosine     Once again the choice of these intervals is arbitrary. If we start at on the cosine graph, we can move in only one direction, either right or left, without encountering repeated -values.  We choose to move in the positive direction, to obtain the interval , as shown above. On this domain, the inverse of cosine is a function. Its graph is shown below.    inverse cosine     The inverse cosine function  inverse cosine  cos  The function is defined as follows:  The range of the inverse cosine function is , so it delivers angles in the first and second quadrants. (Compare to the inverse sine, whose outputs are angles in the first or fourth quadrants.)  Simplify each expression without using a calculator.      The expression represents an angle in the second quadrant whose cosine is . Because , the reference angle for is . The angle in the second quadrant with this reference angle is , so .  Because is positive, the angle is a first quadrant angle whose cosine is the same as . This angle is , so .   Simplify without using a calculator.  Finally, consider the graph of the tangent function. To choose a convenient interval on which the tangent is one-to-one, we start at and move as far as we can in either direction along the -axis. In this way we obtain one cycle of the graph, on the interval , as shown at right.   tan     The range of the tangent on that interval includes all real numbers. Consequently, the domain of the inverse tangent function includes all real numbers, and its range is the interval . The graph of the inverse tangent function is shown below. Its outputs are angles in the first and fourth quadrants.   triangle   The inverse tangent function  inverse tangent  tan  The function is defined as follows:  Simplify each expression without using a calculator.      The expression represents an angle between and whose tangent is . Now, , and , so . Thus, .  Because is in the fourth quadrant, is negative. The angle is also in the fourth quadrant, but it must be between and 0. The angle is coterminal with , so   Simplify without using a calculator.  In the examples above, perhaps you noticed that for any value of in the domain of the inverse sine. In other words, if we find the inverse sine of a number between and , and then take the sine of the resulting angle, we get the original number back again. The same is true for the cosine and tangent, so that and .  However, if we apply the functions in the opposite order, we may not get back the original number. For example, This inequality occurs because the inverse sine function returns just one of the many angles whose sine is , and that angle may not be the angle we started with.  We summarize the content of the Caution above as follows.  Inverse Trigonometric Functions  inverse trigonometric function  inverse trigonometric function inverse cosine inverse trigonometric function inverse sine inverse trigonometric function inverse tangent      However,     Modeling with Inverse Functions  The inverse trig functions are used to model situations in which an angle is described in terms of one of its trigonometric ratios.  The bottom of a 3-meter tall tapestry on a chateau wall is at your eye level. The angle subtended vertically by the tapestry changes as you approach the wall.  Express your distance from the wall, , as a function of .  Express as a function of .   We draw a sketch of the triangle formed by the tapestry and the lines of sight to its bottom and top, as shown at right. From the triangle we see that , so .   triangle     Because , .   The tapestry from the previous example includes a 2-meter tall unicorn with its feet at the bottom of the tapestry.   Express , the angle subtended vertically by the unicorn, as a function of , your distance to the tapestry.  Express , the angle subtended by the portion of the tapestry above the unicorn, as a function of . (See the figure at right).   triangle        Alternate Notations  The inverse sine function, , is also called the arcsine arcsin arcsin inverse sine function and denoted by arcsin . (This terminology reminds us that the output of the inverse sine function is an angle, or the arc on a unit circle determined by that angle, as shown at right.)   unit circle     Similarly, the inverse cosine function is sometimes denoted by arccos arccos arccos inverse cosine , and the inverse tangent function by arctan arctan arctan inverse tangent . Some computer programs use the notation asin , accos , and atan . acos acos inverse cosine asin asin inverse sine atan atan inverse tangent  Simplify each expression.      Keep in mind that is an angle. We'll call it , so that , and hence . Then substituting for in the original expression gives us  We start inside the parentheses: . So . Now is the angle between and 0 whose sine is , and that angle is . Thus,   Simplify each expression.         Simplifying Expressions  The key to simplifying expressions involving inverse trigonometric functions is to remember that the inverse sine, cosine, or tangent of a number can be treated as an angle. If we assign a name such as or to the inverse trig value, it can often clarify the computations.  Evaluate .  Let represent the angle , so that , and consequently . Then simplifies to , and we know that . If we know one of the trigonometric ratios of an angle, we can find all the others, either by using a diagram or by using identities. In this case we'll use the Pythagorean identity, . We have and solving for gives us . But is a first quadrant angle, so its sine is positive. Thus, .  Evaluate .  We can verify the results of the previous example using a calculator, but the same technique can be applied to simplify similar expressions involving variables.  Simplify , assuming that .  Let , so that , and the expression . Now we use identities to write in terms of . First, from the Pythagorean identity we know that , and then  Simplify , assuming that .  Review the following skills you will need for this section.    Find a formula for the inverse function.  State the domain and range of the inverse function.  Graph the function and its inverse on the same grid.             Algebra Refresher Answers     Dom: Rge:   linear graph and inverse       Dom: Rge:   linear function and inverse      Dom: Rge:   transformations of reciprocal function      Dom: Rge:   transformations of reciprocal function      Dom: Rge:   transformations of square root      Dom: Rge:   transformations of cube root      Section 8.2 Summary  Vocabulary   Inverse function  One-to-one  Subtend    Concepts   Using one of the calculator keys , or performs the inverse operation for computing a sine, cosine or tangent.  Two functions are called inverse functions if each \"undoes\" the results of the other function.  If is a function, we can often find a formula for the inverse function by interchanging and in the formula for the function, and then solving for .  The graphs of and are symmetric about the line .  The domain of is the same as the range of , and the range of is the same as the domain of .  Horizontal Line Test  A function passes the Horizontal Line Test if every horizontal line intersects the graph at most once. In that case, there is only one -value for each -value, and the function is called one-to-one .  A function has an inverse function if and only if is one-to-one.  Definitions of the inverse trig functions      Inverse Trigonometric Functions     However,    The inverse sine function is also called the arcsine function and denoted by . Similarly, the inverse cosine function is sometimes denoted by , and the inverse tangent function by .  When simplifying expressions involving inverse trigonometric functions, it can often clarify the computations if we assign a name such as or to the inverse trig value.   Study Questions   Here is a table of values defining a function . Make a table of values for .                  What does it mean for a function to be one-to-one? Give an example.  Why do we restrict the domains of the trig functions when we define their inverse functions?  Which of the following expressions is undefined? Why?      Write as a function of .  Write as a function of .   triangle    Write as a function of .  Write as a function of .   triangle    Skills   Decide whether a function has an inverse function #1 8  Evaluate the inverse trig functions #9 20  Model problems with inverse trig functions #21 24  Solve formulas #25 30  Simplify expressions involving the inverse trig functions #31 42, 51 68  Graph the inverse trig functions #43 50, 69 and 70      Homework 8-2  In Problems 1 4, which functions have an inverse function? Explain your answer.    graph    No inverse: Some horizontal lines intersect the curve in more than one point.    transformed reciprocal function       graph    Inverse exists: The function is 1-1.    quartic graph      For Problems 5 8, graph the function and decide if it has an inverse function.     graph    No inverse       simicircle    No inverse    For Problems 9 14, use a calculator to evaluate. Round your answers to the nearest tenth of a degree.         For Problems 15 20, give exact values in radians.         For Problems 21 26, sketch a figure to help you model each problem.  Delbert is watching the launch of a satellite at Cape Canaveral. The viewing area is 500 yards from the launch site. The angle of elevation, , of Delbert's line of sight increases as the booster rocket rises.  Write a formula for the height, , of the rocket as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle        , so the angle of elevation is when the rocket is 1000 yd high.  Francine's house lies under the flight path from the city airport, and commercial airliners pass overhead at an altitude of 35,000 feet. As Francine watches an airplane recede, its angle of elevation, , decreases.  Write a formula for the horizontal distance, , to the airplane as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.  While driving along the interstate, you approach an enormous 50-foot-wide billboard that sits just beside the road. Your viewing angle, , increases as you get closer to the billboard.  Write a formula for your distance, , from the billboard as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle        ; the bilboard subtends an angle of at a distance of 200 ft.  Emma is walking along the bank of a straight river toward a 20-meter long bridge over the river. Let be the angle subtended horizontally by Emma's view of the bridge.  Write a formula for Emma's distance from the bridge, , as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.  Martin is viewing a 4-meter tall painting whose base is 1 meter above his eye level.  Write a formula for , the angle subtended from Martin's eye level to the bottom of the painting, when he stands meters from the wall.  Write a formula for , the angle subtended by the painting, in terms of .  Evaluate the formula in part (b) for , and interpret the result.   triangles        , so the painting subtends an angle of when Martin is 5 meters from the wall.  A 5-foot mirror is positioned so that its bottom is 1.5 feet below Jane's eye level.  Write a formula for , the angle subtended by the section of mirror below Jane's eye level, when she stands feet from the mirror.  Write a formula for , the angle subtended by the entire mirror, in terms of .  Evaluate the formula in part (b) for , and interpret the result.   For Problems 27 32, solve the formula for the given variable.  , for  , for  , for  , for  for  , for   For Problems 33 38, find exact values without using a calculator.         For Problems 39 44, simplify the expression.          For Problems 45 47, complete the table of values and sketch the function.                            grid                              arccosine                             grid                        grid                           arctangent      Use a graphing calculator to answer each of the following questions. Then explain the results.  Does ?  Does ?  Does ?   Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ?   a b.   transformations of arccos    c. No    Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ?   Sketch a graph of , and label the scales on the axes.  Use your calculator to graph on a suitable domain.  Does ?  a.  arctangent  c. No    Use your calculator to sketch and on .  Describe the similarities and differences in the two graphs.  Use the identities from Section 8.1 to help you find exact values for the expressions in Problems 53 58.         Let . Find exact values for the following.          Let . Find exact values for the following.      Find an exact value for .  Find an exact value for .  Express in terms of without trigonometric functions.      Express in terms of without trigonometric functions.    If , express and in terms of . ,  If , express and in terms of .  If , write in terms of .  If , write in terms of .   For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?   Yes.  All  or    For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does.  Domain: , range:   Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does.  In Problems 73 74, we find a formula for the area under part of a semicircle.  Use the figure of a unit circle to answer the following.   unit circle      Write an expression for the area of the shaded sector in terms of .  How are and related in the figure? (Hint: Write an expression for .)  Combine your answers to (a) and (b) to write an expression for the area of the sector in terms of .       Use the figure of a unit circle to answer the following.   unit circle      Write an expression for the height of the shaded triangle in terms of . (Hint: Use the Pythagorean theorem.)  Write an expression for the area of the triangle in terms of .  Combine your answers to (b) and to Problem 73 to write an expression for the area bounded above by the upper semicircle, below by the -axis, on the left by the -axis, and on the right by , when .     "
 },
 {
-  "id": "p-5225",
+  "id": "p-5259",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5225",
+  "url": "Inverse-Trigonometric-Functions.html#p-5259",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "inverse operation "
 },
 {
-  "id": "p-5228",
+  "id": "p-5262",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5228",
+  "url": "Inverse-Trigonometric-Functions.html#p-5262",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -21169,54 +21232,54 @@ var ptx_lunr_docs = [
   "body": "The notation does mean !  For example, if , we have , but , and we know that .  Although it is true that a negative exponent denotes a reciprocal, so that, for instance, , the in is not an exponent; this is an entirely new use for the same symbol. "
 },
 {
-  "id": "example-149",
+  "id": "example-150",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-149",
+  "url": "Inverse-Trigonometric-Functions.html#example-150",
   "type": "Example",
   "number": "8.22",
   "title": "",
   "body": "Let Find a formula for the inverse function.  We interchange the variables in the formula for (that is, in ) to get  Now we solve for in terms of by taking the reciprocal of both sides. so  The formula for the inverse function is . "
 },
 {
-  "id": "exercise-1981",
+  "id": "exercise-1982",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1981",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1982",
   "type": "Checkpoint",
   "number": "8.23",
   "title": "",
   "body": "Let . Find a formula for the inverse function. "
 },
 {
-  "id": "example-150",
+  "id": "example-151",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-150",
+  "url": "Inverse-Trigonometric-Functions.html#example-151",
   "type": "Example",
   "number": "8.24",
   "title": "",
   "body": " Graph the function and its inverse on the same grid, and sketch in the line to illustrate the symmetry.  Find the domain and range of , and the domain and range of .     The graph is shown at right. Note that has a vertical asymptote at , and has a horizontal asymptote at .   graph of inverse   Note that is undefined at , and is undefined at . Thus, the domain of is all real numbers except 3, and the domain of is all real numbers except 0.  We can find the range of each function by examining its graph:  has a horizontal asymptote at , so there is no point on the graph with . Its range is all real numbers except 0.  Similarly, there is no point on the graph of with , so its range is all real numbers except 3. "
 },
 {
-  "id": "exercise-1982",
+  "id": "exercise-1983",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1982",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1983",
   "type": "Checkpoint",
   "number": "8.25",
   "title": "",
   "body": " Graph and its inverse function on the grid at right, and sketch in the line to show the symmetry.   grid     Find the domain and range of , and the domain and range of .    linear function and inverse     The domain and range of and each include all real numbers  "
 },
 {
-  "id": "p-5259",
+  "id": "p-5293",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5259",
+  "url": "Inverse-Trigonometric-Functions.html#p-5293",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "one-to-one "
 },
 {
-  "id": "p-5260",
+  "id": "p-5294",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5260",
+  "url": "Inverse-Trigonometric-Functions.html#p-5294",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -21232,27 +21295,27 @@ var ptx_lunr_docs = [
   "body": "It is always the case that we can find the inverse of a function: we just interchange the domain and range values. However, the important question is whether the inverse is also a function. If the inverse is a function, we say that “ has an inverse function inverse function .” All of this leads us to the following result. "
 },
 {
-  "id": "p-5262",
+  "id": "p-5296",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5262",
+  "url": "Inverse-Trigonometric-Functions.html#p-5296",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "inverse function "
 },
 {
-  "id": "example-151",
+  "id": "example-152",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-151",
+  "url": "Inverse-Trigonometric-Functions.html#example-152",
   "type": "Example",
   "number": "8.27",
   "title": "",
   "body": " Which of the graphs below represent functions?  Which of the functions are one-to-one?  Which of these functions have inverse functions?     three graphs      All three graphs pass the vertical line test, so all three represent functions.  Only the function represented by graph II passes the horizontal line test, so it is the only one-to-one function.  Only function II is one-to-one, so it is the only function that has an inverse function.  "
 },
 {
-  "id": "exercise-1983",
+  "id": "exercise-1984",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1983",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1984",
   "type": "Checkpoint",
   "number": "8.28",
   "title": "",
@@ -21268,18 +21331,18 @@ var ptx_lunr_docs = [
   "body": "The inverse sine function  inverse sine  sin  The function is defined as follows: "
 },
 {
-  "id": "example-152",
+  "id": "example-153",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-152",
+  "url": "Inverse-Trigonometric-Functions.html#example-153",
   "type": "Example",
   "number": "8.30",
   "title": "",
   "body": "Simplify each expression without using a calculator.      We know that is an angle whose sine is , and that . Because is negative, we must find an angle in the fourth quadrant, and because , the reference angle for is . Thus, the angle we want is , and .  First note that ! We start by simplifying the expression inside parentheses: , so . We want an angle whose sine is 0, and which lies in the interval . This angle is 0, so . (It is also true that , but is not in the interval .)  "
 },
 {
-  "id": "exercise-1984",
+  "id": "exercise-1985",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1984",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1985",
   "type": "Checkpoint",
   "number": "8.31",
   "title": "",
@@ -21295,18 +21358,18 @@ var ptx_lunr_docs = [
   "body": "The inverse cosine function  inverse cosine  cos  The function is defined as follows: "
 },
 {
-  "id": "example-153",
+  "id": "example-154",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-153",
+  "url": "Inverse-Trigonometric-Functions.html#example-154",
   "type": "Example",
   "number": "8.33",
   "title": "",
   "body": "Simplify each expression without using a calculator.      The expression represents an angle in the second quadrant whose cosine is . Because , the reference angle for is . The angle in the second quadrant with this reference angle is , so .  Because is positive, the angle is a first quadrant angle whose cosine is the same as . This angle is , so .  "
 },
 {
-  "id": "exercise-1985",
+  "id": "exercise-1986",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1985",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1986",
   "type": "Checkpoint",
   "number": "8.34",
   "title": "",
@@ -21322,18 +21385,18 @@ var ptx_lunr_docs = [
   "body": "The inverse tangent function  inverse tangent  tan  The function is defined as follows: "
 },
 {
-  "id": "example-154",
+  "id": "example-155",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-154",
+  "url": "Inverse-Trigonometric-Functions.html#example-155",
   "type": "Example",
   "number": "8.36",
   "title": "",
   "body": "Simplify each expression without using a calculator.      The expression represents an angle between and whose tangent is . Now, , and , so . Thus, .  Because is in the fourth quadrant, is negative. The angle is also in the fourth quadrant, but it must be between and 0. The angle is coterminal with , so  "
 },
 {
-  "id": "exercise-1986",
+  "id": "exercise-1987",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1986",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1987",
   "type": "Checkpoint",
   "number": "8.37",
   "title": "",
@@ -21349,90 +21412,90 @@ var ptx_lunr_docs = [
   "body": "In the examples above, perhaps you noticed that for any value of in the domain of the inverse sine. In other words, if we find the inverse sine of a number between and , and then take the sine of the resulting angle, we get the original number back again. The same is true for the cosine and tangent, so that and .  However, if we apply the functions in the opposite order, we may not get back the original number. For example, This inequality occurs because the inverse sine function returns just one of the many angles whose sine is , and that angle may not be the angle we started with. "
 },
 {
-  "id": "example-155",
+  "id": "example-156",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-155",
+  "url": "Inverse-Trigonometric-Functions.html#example-156",
   "type": "Example",
   "number": "8.39",
   "title": "",
   "body": "The bottom of a 3-meter tall tapestry on a chateau wall is at your eye level. The angle subtended vertically by the tapestry changes as you approach the wall.  Express your distance from the wall, , as a function of .  Express as a function of .   We draw a sketch of the triangle formed by the tapestry and the lines of sight to its bottom and top, as shown at right. From the triangle we see that , so .   triangle     Because , .  "
 },
 {
-  "id": "exercise-1987",
+  "id": "exercise-1988",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1987",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1988",
   "type": "Checkpoint",
   "number": "8.40",
   "title": "",
   "body": "The tapestry from the previous example includes a 2-meter tall unicorn with its feet at the bottom of the tapestry.   Express , the angle subtended vertically by the unicorn, as a function of , your distance to the tapestry.  Express , the angle subtended by the portion of the tapestry above the unicorn, as a function of . (See the figure at right).   triangle      "
 },
 {
-  "id": "p-5314",
+  "id": "p-5348",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5314",
+  "url": "Inverse-Trigonometric-Functions.html#p-5348",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arcsine arcsin "
 },
 {
-  "id": "p-5315",
+  "id": "p-5349",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5315",
+  "url": "Inverse-Trigonometric-Functions.html#p-5349",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arccos arctan asin accos atan "
 },
 {
-  "id": "example-156",
+  "id": "example-157",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-156",
+  "url": "Inverse-Trigonometric-Functions.html#example-157",
   "type": "Example",
   "number": "8.41",
   "title": "",
   "body": "Simplify each expression.      Keep in mind that is an angle. We'll call it , so that , and hence . Then substituting for in the original expression gives us  We start inside the parentheses: . So . Now is the angle between and 0 whose sine is , and that angle is . Thus,  "
 },
 {
-  "id": "exercise-1988",
+  "id": "exercise-1989",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1988",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1989",
   "type": "Checkpoint",
   "number": "8.42",
   "title": "",
   "body": "Simplify each expression.       "
 },
 {
-  "id": "example-157",
+  "id": "example-158",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-157",
+  "url": "Inverse-Trigonometric-Functions.html#example-158",
   "type": "Example",
   "number": "8.43",
   "title": "",
   "body": "Evaluate .  Let represent the angle , so that , and consequently . Then simplifies to , and we know that . If we know one of the trigonometric ratios of an angle, we can find all the others, either by using a diagram or by using identities. In this case we'll use the Pythagorean identity, . We have and solving for gives us . But is a first quadrant angle, so its sine is positive. Thus, . "
 },
 {
-  "id": "exercise-1989",
+  "id": "exercise-1990",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1989",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1990",
   "type": "Checkpoint",
   "number": "8.44",
   "title": "",
   "body": "Evaluate . "
 },
 {
-  "id": "example-158",
+  "id": "example-159",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-158",
+  "url": "Inverse-Trigonometric-Functions.html#example-159",
   "type": "Example",
   "number": "8.45",
   "title": "",
   "body": "Simplify , assuming that .  Let , so that , and the expression . Now we use identities to write in terms of . First, from the Pythagorean identity we know that , and then "
 },
 {
-  "id": "exercise-1990",
+  "id": "exercise-1991",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1990",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1991",
   "type": "Checkpoint",
   "number": "8.46",
   "title": "",
@@ -21448,92 +21511,83 @@ var ptx_lunr_docs = [
   "body": "  Find a formula for the inverse function.  State the domain and range of the inverse function.  Graph the function and its inverse on the same grid.             Algebra Refresher Answers     Dom: Rge:   linear graph and inverse       Dom: Rge:   linear function and inverse      Dom: Rge:   transformations of reciprocal function      Dom: Rge:   transformations of reciprocal function      Dom: Rge:   transformations of square root      Dom: Rge:   transformations of cube root    "
 },
 {
-  "id": "p-5351",
+  "id": "p-5385",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5351",
+  "url": "Inverse-Trigonometric-Functions.html#p-5385",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Horizontal Line Test one-to-one "
 },
 {
-  "id": "exercise-1991",
+  "id": "exercise-1992",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1991",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1992",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "  graph    No inverse: Some horizontal lines intersect the curve in more than one point. "
 },
 {
-  "id": "exercise-1992",
+  "id": "exercise-1993",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1992",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1993",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "  transformed reciprocal function    "
 },
 {
-  "id": "exercise-1993",
+  "id": "exercise-1994",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1993",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1994",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "  graph    Inverse exists: The function is 1-1. "
 },
 {
-  "id": "exercise-1994",
+  "id": "exercise-1995",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1994",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1995",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "  quartic graph    "
 },
 {
-  "id": "exercise-1995",
+  "id": "exercise-1996",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1995",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1996",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "   graph    No inverse "
 },
 {
-  "id": "exercise-1996",
+  "id": "exercise-1997",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1996",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1997",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": " "
 },
 {
-  "id": "exercise-1997",
+  "id": "exercise-1998",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1997",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-1998",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "   simicircle    No inverse "
 },
 {
-  "id": "exercise-1998",
-  "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#exercise-1998",
-  "type": "Exercise",
-  "number": "8",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-1999",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-1999",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
   "body": ""
 },
@@ -21542,7 +21596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2000",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": ""
 },
@@ -21551,7 +21605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2001",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -21560,7 +21614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2002",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -21569,7 +21623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2003",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
   "body": ""
 },
@@ -21578,7 +21632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2004",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": ""
 },
@@ -21587,7 +21641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2005",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
   "body": ""
 },
@@ -21596,7 +21650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2006",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
   "body": ""
 },
@@ -21605,7 +21659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2007",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
   "body": ""
 },
@@ -21614,7 +21668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2008",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": ""
 },
@@ -21623,7 +21677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2009",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
   "body": ""
 },
@@ -21632,7 +21686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2010",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -21641,70 +21695,70 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2011",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": "Delbert is watching the launch of a satellite at Cape Canaveral. The viewing area is 500 yards from the launch site. The angle of elevation, , of Delbert's line of sight increases as the booster rocket rises.  Write a formula for the height, , of the rocket as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle        , so the angle of elevation is when the rocket is 1000 yd high. "
+  "body": ""
 },
 {
   "id": "exercise-2012",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2012",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": "Francine's house lies under the flight path from the city airport, and commercial airliners pass overhead at an altitude of 35,000 feet. As Francine watches an airplane recede, its angle of elevation, , decreases.  Write a formula for the horizontal distance, , to the airplane as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result. "
+  "body": "Delbert is watching the launch of a satellite at Cape Canaveral. The viewing area is 500 yards from the launch site. The angle of elevation, , of Delbert's line of sight increases as the booster rocket rises.  Write a formula for the height, , of the rocket as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle        , so the angle of elevation is when the rocket is 1000 yd high. "
 },
 {
   "id": "exercise-2013",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2013",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "While driving along the interstate, you approach an enormous 50-foot-wide billboard that sits just beside the road. Your viewing angle, , increases as you get closer to the billboard.  Write a formula for your distance, , from the billboard as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle        ; the bilboard subtends an angle of at a distance of 200 ft. "
+  "body": "Francine's house lies under the flight path from the city airport, and commercial airliners pass overhead at an altitude of 35,000 feet. As Francine watches an airplane recede, its angle of elevation, , decreases.  Write a formula for the horizontal distance, , to the airplane as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result. "
 },
 {
   "id": "exercise-2014",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2014",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": "Emma is walking along the bank of a straight river toward a 20-meter long bridge over the river. Let be the angle subtended horizontally by Emma's view of the bridge.  Write a formula for Emma's distance from the bridge, , as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result. "
+  "body": "While driving along the interstate, you approach an enormous 50-foot-wide billboard that sits just beside the road. Your viewing angle, , increases as you get closer to the billboard.  Write a formula for your distance, , from the billboard as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle        ; the bilboard subtends an angle of at a distance of 200 ft. "
 },
 {
   "id": "exercise-2015",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2015",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "Martin is viewing a 4-meter tall painting whose base is 1 meter above his eye level.  Write a formula for , the angle subtended from Martin's eye level to the bottom of the painting, when he stands meters from the wall.  Write a formula for , the angle subtended by the painting, in terms of .  Evaluate the formula in part (b) for , and interpret the result.   triangles        , so the painting subtends an angle of when Martin is 5 meters from the wall. "
+  "body": "Emma is walking along the bank of a straight river toward a 20-meter long bridge over the river. Let be the angle subtended horizontally by Emma's view of the bridge.  Write a formula for Emma's distance from the bridge, , as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result. "
 },
 {
   "id": "exercise-2016",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2016",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": "A 5-foot mirror is positioned so that its bottom is 1.5 feet below Jane's eye level.  Write a formula for , the angle subtended by the section of mirror below Jane's eye level, when she stands feet from the mirror.  Write a formula for , the angle subtended by the entire mirror, in terms of .  Evaluate the formula in part (b) for , and interpret the result. "
+  "body": "Martin is viewing a 4-meter tall painting whose base is 1 meter above his eye level.  Write a formula for , the angle subtended from Martin's eye level to the bottom of the painting, when he stands meters from the wall.  Write a formula for , the angle subtended by the painting, in terms of .  Evaluate the formula in part (b) for , and interpret the result.   triangles        , so the painting subtends an angle of when Martin is 5 meters from the wall. "
 },
 {
   "id": "exercise-2017",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2017",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": ", for "
+  "body": "A 5-foot mirror is positioned so that its bottom is 1.5 feet below Jane's eye level.  Write a formula for , the angle subtended by the section of mirror below Jane's eye level, when she stands feet from the mirror.  Write a formula for , the angle subtended by the entire mirror, in terms of .  Evaluate the formula in part (b) for , and interpret the result. "
 },
 {
   "id": "exercise-2018",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2018",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ", for "
 },
@@ -21713,7 +21767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2019",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ", for "
 },
@@ -21722,7 +21776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2020",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ", for "
 },
@@ -21731,34 +21785,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2021",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "for "
+  "body": ", for "
 },
 {
   "id": "exercise-2022",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2022",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": ", for "
+  "body": "for "
 },
 {
   "id": "exercise-2023",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2023",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ""
+  "body": ", for "
 },
 {
   "id": "exercise-2024",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2024",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -21767,7 +21821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2025",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
   "body": ""
 },
@@ -21776,7 +21830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2026",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -21785,7 +21839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2027",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -21794,7 +21848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2028",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -21803,7 +21857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2029",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
   "body": ""
 },
@@ -21812,7 +21866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2030",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -21821,7 +21875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2031",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
   "body": ""
 },
@@ -21830,7 +21884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2032",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
   "body": ""
 },
@@ -21839,106 +21893,106 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2033",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2034",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2034",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2035",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2035",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "                          grid                              arccosine    "
+  "body": ""
 },
 {
   "id": "exercise-2036",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2036",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "                        grid "
+  "body": "                          grid                              arccosine    "
 },
 {
   "id": "exercise-2037",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2037",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "                      grid                           arctangent    "
+  "body": "                        grid "
 },
 {
   "id": "exercise-2038",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2038",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "Use a graphing calculator to answer each of the following questions. Then explain the results.  Does ?  Does ?  Does ? "
+  "body": "                      grid                           arctangent    "
 },
 {
   "id": "exercise-2039",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2039",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": " Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ?   a b.   transformations of arccos    c. No  "
+  "body": "Use a graphing calculator to answer each of the following questions. Then explain the results.  Does ?  Does ?  Does ? "
 },
 {
   "id": "exercise-2040",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2040",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": " Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ? "
+  "body": " Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ?   a b.   transformations of arccos    c. No  "
 },
 {
   "id": "exercise-2041",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2041",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": " Sketch a graph of , and label the scales on the axes.  Use your calculator to graph on a suitable domain.  Does ?  a.  arctangent  c. No  "
+  "body": " Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ? "
 },
 {
   "id": "exercise-2042",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2042",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": " Use your calculator to sketch and on .  Describe the similarities and differences in the two graphs. "
+  "body": " Sketch a graph of , and label the scales on the axes.  Use your calculator to graph on a suitable domain.  Does ?  a.  arctangent  c. No  "
 },
 {
   "id": "exercise-2043",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2043",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": ""
+  "body": " Use your calculator to sketch and on .  Describe the similarities and differences in the two graphs. "
 },
 {
   "id": "exercise-2044",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2044",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
   "body": ""
 },
@@ -21947,7 +22001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2045",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
   "body": ""
 },
@@ -21956,7 +22010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2046",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
   "body": ""
 },
@@ -21965,7 +22019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2047",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
   "body": ""
 },
@@ -21974,7 +22028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2048",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
   "body": ""
 },
@@ -21983,34 +22037,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2049",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "Let . Find exact values for the following.         "
+  "body": ""
 },
 {
   "id": "exercise-2050",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2050",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "Let . Find exact values for the following.     "
+  "body": "Let . Find exact values for the following.         "
 },
 {
   "id": "exercise-2051",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2051",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "Find an exact value for . "
+  "body": "Let . Find exact values for the following.     "
 },
 {
   "id": "exercise-2052",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2052",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
   "body": "Find an exact value for . "
 },
@@ -22019,52 +22073,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2053",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "Express in terms of without trigonometric functions.     "
+  "body": "Find an exact value for . "
 },
 {
   "id": "exercise-2054",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2054",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": "Express in terms of without trigonometric functions.   "
+  "body": "Express in terms of without trigonometric functions.     "
 },
 {
   "id": "exercise-2055",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2055",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "If , express and in terms of . , "
+  "body": "Express in terms of without trigonometric functions.   "
 },
 {
   "id": "exercise-2056",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2056",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
-  "body": "If , express and in terms of . "
+  "body": "If , express and in terms of . , "
 },
 {
   "id": "exercise-2057",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2057",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": "If , write in terms of . "
+  "body": "If , express and in terms of . "
 },
 {
   "id": "exercise-2058",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2058",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
   "body": "If , write in terms of . "
 },
@@ -22073,50 +22127,59 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2059",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": " For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?   Yes.  All  or  "
+  "body": "If , write in terms of . "
 },
 {
   "id": "exercise-2060",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2060",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": " For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false? "
+  "body": " For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?   Yes.  All  or  "
 },
 {
   "id": "exercise-2061",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2061",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": "Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does.  Domain: , range:  "
+  "body": " For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false? "
 },
 {
   "id": "exercise-2062",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2062",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
-  "body": "Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does. "
+  "body": "Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does.  Domain: , range:  "
 },
 {
   "id": "exercise-2063",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2063",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
-  "body": "Use the figure of a unit circle to answer the following.   unit circle      Write an expression for the area of the shaded sector in terms of .  How are and related in the figure? (Hint: Write an expression for .)  Combine your answers to (a) and (b) to write an expression for the area of the sector in terms of .      "
+  "body": "Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does. "
 },
 {
   "id": "exercise-2064",
   "level": "2",
   "url": "Inverse-Trigonometric-Functions.html#exercise-2064",
+  "type": "Exercise",
+  "number": "73",
+  "title": "",
+  "body": "Use the figure of a unit circle to answer the following.   unit circle      Write an expression for the area of the shaded sector in terms of .  How are and related in the figure? (Hint: Write an expression for .)  Combine your answers to (a) and (b) to write an expression for the area of the sector in terms of .      "
+},
+{
+  "id": "exercise-2065",
+  "level": "2",
+  "url": "Inverse-Trigonometric-Functions.html#exercise-2065",
   "type": "Exercise",
   "number": "74",
   "title": "",
@@ -22141,36 +22204,36 @@ var ptx_lunr_docs = [
   "body": "Three More Functions  secant  cosecant  cotangent  If is an angle in standard position, and is a point on the terminal side, then we define the following functions.    angle "
 },
 {
-  "id": "example-159",
+  "id": "example-160",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-159",
+  "url": "The-Reciprocal-Functions.html#example-160",
   "type": "Example",
   "number": "8.48",
   "title": "",
   "body": "If , and , find exact values for the other five trig functions.  Because , we draw a reference triangle in the fourth quadrant, as shown at right. Because , we label the horizontal leg with and the hypotenuse with .   angle     From the Pythagorean theorem, we find . We can now compute the values of the six trigonometric ratios.  "
 },
 {
-  "id": "exercise-2065",
+  "id": "exercise-2066",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2065",
+  "url": "The-Reciprocal-Functions.html#exercise-2066",
   "type": "Checkpoint",
   "number": "8.49",
   "title": "",
   "body": "If , and , find exact values for the other five trig functions. , , , , "
 },
 {
-  "id": "example-160",
+  "id": "example-161",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-160",
+  "url": "The-Reciprocal-Functions.html#example-161",
   "type": "Example",
   "number": "8.50",
   "title": "",
   "body": "Use a calculator to approximate to three decimal places.  With the calculator in degree mode, enter  1  COS 47  ENTER   to obtain . Or we can calculate first, and then use the reciprocal key:  COS 47  ENTER   ENTER "
 },
 {
-  "id": "exercise-2066",
+  "id": "exercise-2067",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2066",
+  "url": "The-Reciprocal-Functions.html#exercise-2067",
   "type": "Checkpoint",
   "number": "8.51",
   "title": "",
@@ -22186,18 +22249,18 @@ var ptx_lunr_docs = [
   "body": "The reciprocal functions are not the same as the inverse trig functions!  For example, is not equal to . Remember that is an angle, namely the angle whose cosine is 0.8, while is the reciprocal of the cosine of 0.8 radians, or . You can check on your calculator that "
 },
 {
-  "id": "example-161",
+  "id": "example-162",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-161",
+  "url": "The-Reciprocal-Functions.html#example-162",
   "type": "Example",
   "number": "8.53",
   "title": "",
   "body": "For which angles is the cosecant undefined?  The cosecant is undefined when its denominator, , equals zero, and when is a multiple of . In radians, is undefined if is a multiple of . "
 },
 {
-  "id": "exercise-2067",
+  "id": "exercise-2068",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2067",
+  "url": "The-Reciprocal-Functions.html#exercise-2068",
   "type": "Checkpoint",
   "number": "8.54",
   "title": "",
@@ -22213,144 +22276,144 @@ var ptx_lunr_docs = [
   "body": "Although is undefined, . "
 },
 {
-  "id": "example-162",
+  "id": "example-163",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-162",
+  "url": "The-Reciprocal-Functions.html#example-163",
   "type": "Example",
   "number": "8.56",
   "title": "",
   "body": "The length, , of the shadow cast by a flagpole on a sunny day depends on the height, , of the flagpole and the angle, , that the sun's rays make with ground.   flagpole and shadow      Write an expression for the length, , of the shadow cast by a flagpole of height when the sun makes an angle of from the ground.  Find the length (to the nearest 0.01 meter) of the shadow cast by a 3-meter flagpole when the sun makes an angle of from the ground.   From the figure, we see that , or .  Substiting for and for , we find The shadow is about 8.24 meters long. "
 },
 {
-  "id": "exercise-2068",
+  "id": "exercise-2069",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2068",
+  "url": "The-Reciprocal-Functions.html#exercise-2069",
   "type": "Checkpoint",
   "number": "8.57",
   "title": "",
   "body": "The area of a regular polygon with sides having perimeter satisfies Refer to the figure at right showing to prove this formula in the following steps.   hexagon      Find an expression for the angle in terms of .  Find an expression for the base of the triangle shown.  Find an expression for the height of the triangle.  Write an expression for the area of the triangle, and then for the area of the entire polygon.      "
 },
 {
-  "id": "example-163",
+  "id": "example-164",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-163",
+  "url": "The-Reciprocal-Functions.html#example-164",
   "type": "Example",
   "number": "8.58",
   "title": "",
   "body": "Use the graph of to construct a graph of .  Consider the graph of shown at left below.  When and , so is undefined at these -values, and we insert vertical asymptotes at those -values to start our graph of , as shown at right below.    cosine    grid    To find some points on the graph, we look at points on the graph of . At each -value, the -coordinate of the point on the graph of is the reciprocal of .  For example, at and , we have , so . Thus, we plot the points and on the graph of . Similarly, at and , , so the value of is , and we plot the points and on the graph of .  Finally, we notice that the values of are decreasing toward as increases from to , so the graph of increases toward on the same interval.  By similar arguments, we fill in the graph of between each of the vertical asymptotes, to produce the graph below.    cosine and secant   "
 },
 {
-  "id": "exercise-2069",
+  "id": "exercise-2070",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2069",
+  "url": "The-Reciprocal-Functions.html#exercise-2070",
   "type": "Checkpoint",
   "number": "8.59",
   "title": "",
   "body": "Use the graph of to sketch a graph of .   tan and cotan    "
 },
 {
-  "id": "example-164",
+  "id": "example-165",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-164",
+  "url": "The-Reciprocal-Functions.html#example-165",
   "type": "Example",
   "number": "8.60",
   "title": "",
   "body": "State the domain and range of the secant function.  Because the cosine is defined for all real numbers, the domain of the secant includes all real numbers except for values where the cosine is zero. These values are the odd multiples of , that is, , and their opposites.  Because the range of the cosine consists of all -values with , the range of the secant includes the reciprocals of those values, namely and . "
 },
 {
-  "id": "exercise-2070",
+  "id": "exercise-2071",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2070",
+  "url": "The-Reciprocal-Functions.html#exercise-2071",
   "type": "Checkpoint",
   "number": "8.61",
   "title": "",
   "body": "State the domain and range of the cosecant and cotangent functions. Domain of cosecant: all real numbers except integer multiples of ; Range of cosecant:  Domain of cotangent: all real numbers except integer multiples of ; Range of cotangent: all real numbers "
 },
 {
-  "id": "example-165",
+  "id": "example-166",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-165",
+  "url": "The-Reciprocal-Functions.html#example-166",
   "type": "Example",
   "number": "8.62",
   "title": "",
   "body": "Solve for between and .  We take the reciprocal of each side of the equation to obtain Because is one of the special values, we recognize that one of the solutions is . The sine and the cosecant are also positive in the second quadrant, so the second solution is . "
 },
 {
-  "id": "exercise-2071",
+  "id": "exercise-2072",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2071",
+  "url": "The-Reciprocal-Functions.html#exercise-2072",
   "type": "Checkpoint",
   "number": "8.63",
   "title": "",
   "body": "Solve for between and . "
 },
 {
-  "id": "example-166",
+  "id": "example-167",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-166",
+  "url": "The-Reciprocal-Functions.html#example-167",
   "type": "Example",
   "number": "8.64",
   "title": "",
   "body": "If , and , find an exact value for .  Because , we see that , or . We use the Pythagorean identity to find the sine. Because lies in the fourth quadrant, where the sine function is negative, we choose the negative square root for . Once we know , we calculate its reciprocal to find . "
 },
 {
-  "id": "exercise-2072",
+  "id": "exercise-2073",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2072",
+  "url": "The-Reciprocal-Functions.html#exercise-2073",
   "type": "Checkpoint",
   "number": "8.65",
   "title": "",
   "body": "If , and , find an exact value for . "
 },
 {
-  "id": "example-167",
+  "id": "example-168",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-167",
+  "url": "The-Reciprocal-Functions.html#example-168",
   "type": "Example",
   "number": "8.66",
   "title": "",
   "body": "If and , find an expression for .  Because the sine is the reciprocal of the cosecant, we have . We substitute for in the Pythagorean identity to find We choose the positive root because cosine is positive in the first quadrant, and simplify to get We can replace by in this last expression because . (Do you see why ?) Finally, because the cotangent is the reciprocal of the tangent, we have "
 },
 {
-  "id": "exercise-2073",
+  "id": "exercise-2074",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2073",
+  "url": "The-Reciprocal-Functions.html#exercise-2074",
   "type": "Checkpoint",
   "number": "8.67",
   "title": "",
   "body": "If and , find expressions for and . , "
 },
 {
-  "id": "example-168",
+  "id": "example-169",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-168",
+  "url": "The-Reciprocal-Functions.html#example-169",
   "type": "Example",
   "number": "8.68",
   "title": "",
   "body": "Simplify .  We replace by and by to get  "
 },
 {
-  "id": "exercise-2074",
+  "id": "exercise-2075",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2074",
+  "url": "The-Reciprocal-Functions.html#exercise-2075",
   "type": "Checkpoint",
   "number": "8.69",
   "title": "",
   "body": "Show that . "
 },
 {
-  "id": "example-169",
+  "id": "example-170",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-169",
+  "url": "The-Reciprocal-Functions.html#example-170",
   "type": "Example",
   "number": "8.70",
   "title": "",
   "body": "If and lies in the third quadrant, find exact values for and .  We cannot find the sine and cosine of an angle directly from the value of the tangent; in particular, it is not true that and ! (Do you see why?) Instead, we begin with the Pythagorean identity for the tangent. Because is in the third quadrant, both its sine and cosine are negative. Therefore the reciprocals of cosine and sine, namely secant and cosecant, must also be negative, and hence . The cosine of is the reciprocal of the secant, so . "
 },
 {
-  "id": "exercise-2075",
+  "id": "exercise-2076",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2075",
+  "url": "The-Reciprocal-Functions.html#exercise-2076",
   "type": "Checkpoint",
   "number": "8.71",
   "title": "",
@@ -22375,20 +22438,11 @@ var ptx_lunr_docs = [
   "body": "    Solve    Solve    Simplify    Simplify    For what values of is ?    For what values of is ?   Graph the function .    Explain the difference between the graphs of and .      Algebra Refresher Answers          graph     The domain of is , and the domain of is .    "
 },
 {
-  "id": "exercise-2076",
-  "level": "2",
-  "url": "The-Reciprocal-Functions.html#exercise-2076",
-  "type": "Exercise",
-  "number": "1",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2077",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2077",
   "type": "Exercise",
-  "number": "2",
+  "number": "1",
   "title": "",
   "body": ""
 },
@@ -22397,7 +22451,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2078",
   "type": "Exercise",
-  "number": "3",
+  "number": "2",
   "title": "",
   "body": ""
 },
@@ -22406,7 +22460,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2079",
   "type": "Exercise",
-  "number": "4",
+  "number": "3",
   "title": "",
   "body": ""
 },
@@ -22415,16 +22469,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2080",
   "type": "Exercise",
-  "number": "5",
+  "number": "4",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2081",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2081",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
   "body": " "
 },
@@ -22433,7 +22487,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2082",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
   "body": " "
 },
@@ -22442,16 +22496,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2083",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2084",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2084",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
   "body": ""
 },
@@ -22460,7 +22514,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2085",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": ""
 },
@@ -22469,7 +22523,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2086",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -22478,7 +22532,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2087",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -22487,7 +22541,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2088",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
   "body": ""
 },
@@ -22496,7 +22550,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2089",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": ""
 },
@@ -22505,7 +22559,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2090",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
   "body": ""
 },
@@ -22514,7 +22568,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2091",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
   "body": ""
 },
@@ -22523,286 +22577,286 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2092",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": "                                                               undefined        undefined         undefined    undefined         undefined  "
+  "body": ""
 },
 {
   "id": "exercise-2093",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2093",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
-  "body": "                                             "
+  "body": "                                                               undefined        undefined         undefined    undefined         undefined  "
 },
 {
   "id": "exercise-2094",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2094",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": "Evaluate. Round answers to three decimal places.               "
+  "body": "                                             "
 },
 {
   "id": "exercise-2095",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2095",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
-  "body": "Evaluate. Round answers to three decimal places.        "
+  "body": "Evaluate. Round answers to three decimal places.               "
 },
 {
   "id": "exercise-2096",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2096",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": "  triangle    , , , , , "
+  "body": "Evaluate. Round answers to three decimal places.        "
 },
 {
   "id": "exercise-2097",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2097",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle    , , , , , "
 },
 {
   "id": "exercise-2098",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2098",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "  triangle    , , , , , "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2099",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2099",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle    , , , , , "
 },
 {
   "id": "exercise-2100",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2100",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "  angle    , , , , , "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2101",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2101",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": "  angle    "
+  "body": "  angle    , , , , , "
 },
 {
   "id": "exercise-2102",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2102",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": "  angle    , , , , , "
+  "body": "  angle    "
 },
 {
   "id": "exercise-2103",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2103",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": "  angle    "
+  "body": "  angle    , , , , , "
 },
 {
   "id": "exercise-2104",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2104",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": "The distance that sunlight must travel to pass through a layer of Earth's atmosphere depends on both the thickness of the atmosphere and the angle of the sun.    sunlight      Write an expression for the distance, , that sunlight travels through a layer of atmosphere of thickness .  Find the distance (to the nearest mile) that sunlight travels through a 100-mile layer of atmosphere when the sun is above the horizon.   155.572 miles  "
+  "body": "  angle    "
 },
 {
   "id": "exercise-2105",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2105",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
-  "body": "In railroad design, the degree of curvature of a section of track is the angle subtended by a chord 100 feet long.   railroad track      Use the figure to write an expression for the radius, , of a curve whose degree of curvature is . (Hint: The bisector of the angle is perpendicular to the chord.)  Find the radius of a curve whose degree of curvature is . "
+  "body": "The distance that sunlight must travel to pass through a layer of Earth's atmosphere depends on both the thickness of the atmosphere and the angle of the sun.    sunlight      Write an expression for the distance, , that sunlight travels through a layer of atmosphere of thickness .  Find the distance (to the nearest mile) that sunlight travels through a 100-mile layer of atmosphere when the sun is above the horizon.   155.572 miles  "
 },
 {
   "id": "exercise-2106",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2106",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "When a plane is tilted by an angle from the horizontal, the time required for a ball starting from rest to roll a horizontal distance of feet on the plane is    inclined plane      How long, to the nearest 0.01 second, will it take the ball to roll 2 feet horizontally on a plane tilted by ?  Solve the formula for in terms of and .  0.78 sec   "
+  "body": "In railroad design, the degree of curvature of a section of track is the angle subtended by a chord 100 feet long.   railroad track      Use the figure to write an expression for the radius, , of a curve whose degree of curvature is . (Hint: The bisector of the angle is perpendicular to the chord.)  Find the radius of a curve whose degree of curvature is . "
 },
 {
   "id": "exercise-2107",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2107",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": "After a heavy rainfall, the depth, , of the runoff flow at a distance feet from the watershed down a slope at angle is given by where is a constant determined by the surface roughness and the intensity of the runoff.  How deep, to the nearest 0.01 inch, is the runoff 100 feet down a slope of if ?  Solve the formula for in terms of and . "
+  "body": "When a plane is tilted by an angle from the horizontal, the time required for a ball starting from rest to roll a horizontal distance of feet on the plane is    inclined plane      How long, to the nearest 0.01 second, will it take the ball to roll 2 feet horizontally on a plane tilted by ?  Solve the formula for in terms of and .  0.78 sec   "
 },
 {
   "id": "exercise-2108",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2108",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": "  triangle    , , , , , "
+  "body": "After a heavy rainfall, the depth, , of the runoff flow at a distance feet from the watershed down a slope at angle is given by where is a constant determined by the surface roughness and the intensity of the runoff.  How deep, to the nearest 0.01 inch, is the runoff 100 feet down a slope of if ?  Solve the formula for in terms of and . "
 },
 {
   "id": "exercise-2109",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2109",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle    , , , , , "
 },
 {
   "id": "exercise-2110",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2110",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "  triangle    , , , , , "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2111",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2111",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle    , , , , , "
 },
 {
   "id": "exercise-2112",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2112",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "  angle    , , , , , "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2113",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2113",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": "  angle    "
+  "body": "  angle    , , , , , "
 },
 {
   "id": "exercise-2114",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2114",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "The diagram shows a unit circle. Find six line segments whose lengths are, respectively, and .   unit circle    "
+  "body": "  angle    "
 },
 {
   "id": "exercise-2115",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2115",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "Use the figure in Problem 39 to find each area in terms of the angle .    sector  "
+  "body": "The diagram shows a unit circle. Find six line segments whose lengths are, respectively, and .   unit circle    "
 },
 {
   "id": "exercise-2116",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2116",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "in Quadrant IV   angle    , , , , , "
+  "body": "Use the figure in Problem 39 to find each area in terms of the angle .    sector  "
 },
 {
   "id": "exercise-2117",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2117",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": "in Quadrant II "
+  "body": "in Quadrant IV   angle    , , , , , "
 },
 {
   "id": "exercise-2118",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2118",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "in Quadrant I   triangle   , , , , ,  "
+  "body": "in Quadrant II "
 },
 {
   "id": "exercise-2119",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2119",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "in Quadrant IV "
+  "body": "in Quadrant I   triangle   , , , , ,  "
 },
 {
   "id": "exercise-2120",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2120",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "in Quadrant III   angle   , , , , ,  "
+  "body": "in Quadrant IV "
 },
 {
   "id": "exercise-2121",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2121",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "in Quadrant I "
+  "body": "in Quadrant III   angle   , , , , ,  "
 },
 {
   "id": "exercise-2122",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2122",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": " "
+  "body": "in Quadrant I "
 },
 {
   "id": "exercise-2123",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2123",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
   "body": " "
 },
@@ -22811,7 +22865,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2124",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
   "body": " "
 },
@@ -22820,7 +22874,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2125",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
   "body": " "
 },
@@ -22829,7 +22883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2126",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
   "body": " "
 },
@@ -22838,7 +22892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2127",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
   "body": " "
 },
@@ -22847,70 +22901,70 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2128",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": "Complete the table and sketch a graph of .                            grid                    undefined     undefined       secant    "
+  "body": " "
 },
 {
   "id": "exercise-2129",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2129",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": "Complete the table and sketch a graph of .                          grid "
+  "body": "Complete the table and sketch a graph of .                            grid                    undefined     undefined       secant    "
 },
 {
   "id": "exercise-2130",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2130",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "Use the graph of to sketch a graph of its reciprocal, .    sine      sine and cosecant    "
+  "body": "Complete the table and sketch a graph of .                          grid "
 },
 {
   "id": "exercise-2131",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2131",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": "Use the graph of to sketch a graph of its reciprocal, .    cosine    "
+  "body": "Use the graph of to sketch a graph of its reciprocal, .    sine      sine and cosecant    "
 },
 {
   "id": "exercise-2132",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2132",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": "Complete the table and sketch a graph of .                          grid               undefined     undefined     undefined     cotangent    "
+  "body": "Use the graph of to sketch a graph of its reciprocal, .    cosine    "
 },
 {
   "id": "exercise-2133",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2133",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": "Use the graphs of and to sketch a graph of .    cos and sin    "
+  "body": "Complete the table and sketch a graph of .                          grid               undefined     undefined     undefined     cotangent    "
 },
 {
   "id": "exercise-2134",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2134",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": ""
+  "body": "Use the graphs of and to sketch a graph of .    cos and sin    "
 },
 {
   "id": "exercise-2135",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2135",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
   "body": ""
 },
@@ -22919,7 +22973,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2136",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
   "body": ""
 },
@@ -22928,7 +22982,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2137",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
   "body": ""
 },
@@ -22937,7 +22991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2138",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
   "body": ""
 },
@@ -22946,7 +23000,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2139",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
   "body": ""
 },
@@ -22955,7 +23009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2140",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
   "body": ""
 },
@@ -22964,7 +23018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2141",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
   "body": ""
 },
@@ -22973,7 +23027,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2142",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
   "body": ""
 },
@@ -22982,7 +23036,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2143",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
   "body": ""
 },
@@ -22991,7 +23045,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2144",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
   "body": ""
 },
@@ -23000,7 +23054,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2145",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
   "body": ""
 },
@@ -23009,16 +23063,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2146",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": "If and , find . "
+  "body": ""
 },
 {
   "id": "exercise-2147",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2147",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
   "body": "If and , find . "
 },
@@ -23027,7 +23081,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2148",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
   "body": "If and , find . "
 },
@@ -23036,7 +23090,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2149",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
   "body": "If and , find . "
 },
@@ -23045,7 +23099,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2150",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
   "body": "If and , find . "
 },
@@ -23054,7 +23108,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2151",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
   "body": "If and , find . "
 },
@@ -23063,52 +23117,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2152",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
-  "body": "  unit circle    , , "
+  "body": "If and , find . "
 },
 {
   "id": "exercise-2153",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2153",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
-  "body": "  unit circle    "
+  "body": "  unit circle    , , "
 },
 {
   "id": "exercise-2154",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2154",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
-  "body": "  unit circle    , , "
+  "body": "  unit circle    "
 },
 {
   "id": "exercise-2155",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2155",
   "type": "Exercise",
-  "number": "80",
+  "number": "79",
   "title": "",
-  "body": "  unit circle    "
+  "body": "  unit circle    , , "
 },
 {
   "id": "exercise-2156",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2156",
   "type": "Exercise",
-  "number": "81",
+  "number": "80",
   "title": "",
-  "body": ""
+  "body": "  unit circle    "
 },
 {
   "id": "exercise-2157",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2157",
   "type": "Exercise",
-  "number": "82",
+  "number": "81",
   "title": "",
   "body": ""
 },
@@ -23117,7 +23171,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2158",
   "type": "Exercise",
-  "number": "83",
+  "number": "82",
   "title": "",
   "body": ""
 },
@@ -23126,7 +23180,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2159",
   "type": "Exercise",
-  "number": "84",
+  "number": "83",
   "title": "",
   "body": ""
 },
@@ -23135,7 +23189,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2160",
   "type": "Exercise",
-  "number": "85",
+  "number": "84",
   "title": "",
   "body": ""
 },
@@ -23144,7 +23198,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2161",
   "type": "Exercise",
-  "number": "86",
+  "number": "85",
   "title": "",
   "body": ""
 },
@@ -23153,7 +23207,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2162",
   "type": "Exercise",
-  "number": "87",
+  "number": "86",
   "title": "",
   "body": ""
 },
@@ -23162,7 +23216,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2163",
   "type": "Exercise",
-  "number": "88",
+  "number": "87",
   "title": "",
   "body": ""
 },
@@ -23171,68 +23225,77 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2164",
   "type": "Exercise",
-  "number": "89",
+  "number": "88",
   "title": "",
-  "body": "Prove the Pythagorean identity . (Hint: Start with the identity and divide both sides of the equation by .)  "
+  "body": ""
 },
 {
   "id": "exercise-2165",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2165",
   "type": "Exercise",
-  "number": "90",
+  "number": "89",
   "title": "",
-  "body": "Pythagorean identity Prove the Pythagorean identity . (Hint: Start with the identity and divide both sides of the equation by .) "
+  "body": "Prove the Pythagorean identity . (Hint: Start with the identity and divide both sides of the equation by .)  "
 },
 {
   "id": "exercise-2166",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2166",
   "type": "Exercise",
-  "number": "91",
+  "number": "90",
   "title": "",
-  "body": "Pythagorean identity Suppose that and lies in the third quadrant.  Use the Pythagorean identity to find the value of .  Use identities to find the values of the other four trig functions of .     "
+  "body": "Pythagorean identity Prove the Pythagorean identity . (Hint: Start with the identity and divide both sides of the equation by .) "
 },
 {
   "id": "exercise-2167",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2167",
   "type": "Exercise",
-  "number": "92",
+  "number": "91",
   "title": "",
-  "body": "Suppose that and lies in the second quadrant.  Use the Pythagorean identity to find the value of .  Use identities to find the values of the other four trig functions of .  "
+  "body": "Pythagorean identity Suppose that and lies in the third quadrant.  Use the Pythagorean identity to find the value of .  Use identities to find the values of the other four trig functions of .     "
 },
 {
   "id": "exercise-2168",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2168",
   "type": "Exercise",
-  "number": "93",
+  "number": "92",
   "title": "",
-  "body": "Write each of the other five trig functions in terms of only. , , , , "
+  "body": "Suppose that and lies in the second quadrant.  Use the Pythagorean identity to find the value of .  Use identities to find the values of the other four trig functions of .  "
 },
 {
   "id": "exercise-2169",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2169",
   "type": "Exercise",
-  "number": "94",
+  "number": "93",
   "title": "",
-  "body": "Write each of the other five trig functions in terms of only. "
+  "body": "Write each of the other five trig functions in terms of only. , , , , "
 },
 {
   "id": "exercise-2170",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2170",
   "type": "Exercise",
-  "number": "95",
+  "number": "94",
   "title": "",
-  "body": "Show that if the angles of a triangle are and and the opposite sides are respectively and then  "
+  "body": "Write each of the other five trig functions in terms of only. "
 },
 {
   "id": "exercise-2171",
   "level": "2",
   "url": "The-Reciprocal-Functions.html#exercise-2171",
+  "type": "Exercise",
+  "number": "95",
+  "title": "",
+  "body": "Show that if the angles of a triangle are and and the opposite sides are respectively and then  "
+},
+{
+  "id": "exercise-2172",
+  "level": "2",
+  "url": "The-Reciprocal-Functions.html#exercise-2172",
   "type": "Exercise",
   "number": "96",
   "title": "",
@@ -23248,101 +23311,92 @@ var ptx_lunr_docs = [
   "body": " Chapter Summary and Review  Key Concepts   Identities are useful for changing from one form to another when solving equations, for simplifying expressions, and for finding exact values for trigonometric functions.  it is not true in general that is equal to for all angles and , or that is equal to .  Sum and Difference of Angles Identities          Double Angle Identities    Using one of the calculator keys , or performs the inverse operation for computing a sine, cosine or tangent.  Two functions are called inverse functions if each \"undoes\" the results of the other function.  If is a function, we can often find a formula for the inverse function by interchanging and in the formula for the function, and then solving for .  The graphs of and are symmetric about the line .  The domain of is the same as the range of , and the range of is the same as the domain of .  Horizontal Line Test  A function passes the Horizontal Line Test if every horizontal line intersects the graph at most once. In that case, there is only one -value for each -value, and the function is called one-to-one .  A function has an inverse function if and only if is one-to-one.  Definitions of the inverse trig functions      Inverse Trigonometric Functions     However,    The inverse sine function is also called the arcsine function and denoted by . Similarly, the inverse cosine function is sometimes denoted by , and the inverse tangent function by .  When simplifying expressions involving inverse trigonometric functions, it can often clarify the computations if we assign a name such as or to the inverse trig value.  Three More Functions  If is an angle in standard position, and is a point on the terminal side, then we define the following functions.      angle  Reciprocal Trigonometric Ratios  If is one of the acute angles in a right triangle,     triangle  Reciprocal Trigonometric Functions       We can obtain graphs of the secant, cosecant, and cotangent functions as the reciprocals of the three basic functions.  We can solve equations of the form , , and by taking the reciprocal of both sides.  If we know one of the trigonometric ratios for an angle, we can use identities to find any of the others.  Cotangent Identity   Two More Pythagorean Identities   We can often simplify trigonometric expressions by first converting all the trig ratios to sines and cosines.     Review Problems  For Problems 1 8, answer true or false.  False   True   False   False    If and find an exact value for .  If and find an exact value for .  If and find exact values for        If and find exact values for     If and find .  If and find .  For Problems 15-16, use the sum and difference formulas to expand each expression.     For Problems 17 18, use the figure to find the trigonometric ratios.   triangle                             For Problems 19 24, use identities to simplify each expression.         For Problems 25 26,  Use identities to rewrite the equation in terms of a single angle.  Solve. Give exact solutions between and .         For Problems 27 28, graph the function and decide if it has an inverse function.  graph  No    For Problems 29 30, give exact values in radians.              An IMAX movie screen is 52.8 feet high.  If your line of sight is level with the bottom of the screen, write an expression for the angle subtended by the screen when you sit feet away.  Evaluate your expression for feet and for feet.      Rembrandt's painting The Night Watch measures 13 feet high by 16 feet wide.  Write an expression for the angle subtended by the width of the painting if you sit feet back from the center of the painting.  Evaluate your expression for feet and for feet.   For Problems 33 34, solve for .     For Problems 35 36, find exact values without using a calculator.     For Problems 37 38, simplify the expression.     Explain why one of the expressions or must be undefined. Because is undefined for . If , then either or . If , then is undefined.   Does ? Does ?  For Problems 41 42, evaluate. Round answers to 3 decimal places if necessary.                 For Problems 43 50, find all six trigonometric ratios for the angle .    triangle    , , , , ,    triangle       angle    , , , , ,    angle       angle    , , , , ,    angle     , , , , ,  is obtuse   For Problems 51 56, write algebraic expressions for the six trigonometric ratios of the angle.    triangle            triangle       triangle            triangle             For Problems 57 58, find all six trigonometric ratios of the arc . Round to two places.    circle    , , , , ,    circle      For Problems 59 62, evaluate exactly.       For Problems 63 64, find all solutions between and . Round your solutions to tenths.     For Problems 65 70, sketch a graph of each function. Then choose the function or functions described by each statement.    The graph has vertical asymptotes at multiples of . or  The graph has a horizontal asymptote at .  The function values are the reciprocals of .  The function is defined only for -values between and , inclusive.   None of the function values lie between and . or  The graph includes the origin.   For Problems 71 74,  Graph the function on the interval , and use the graph to write the function in a simpler form.  Verify your conjecture algebraically.        For Problems 75 78, simplify the expression.       For Problems 79 82, use the suggested substitution to simplify the expression.       This problem outlines a geometric proof of difference of angles formula for tangent.  In the figure below left, and . Write expressions in terms of and for the sides and .    triangles     In the figure above right, explain why is similar to .  Explain why .  Write an expression in terms of and for side .  Explain why is similar to .  Justify each equality in the statement    They are right triangles that share .  is the complement of and is the complement of .  so  They are right triangles with .  so and are ratios of corresponding sides of similar triangles; by part (a), by part (d).   Let and be two lines with slopes and , respectively, and let be the acute angle formed between the two lines. Use an identity to show that  For Problems 85 86, use the fact that if is one angle of a triangle and is the length of the opposite side, then the diameter of the circumscribing circle is Round your answers to the nearest hundredth.   circle circumscribing a triangle      In the figure above, find the diameter of the circumscribing circle, the angle , and the sides and .  A triangle has one side of length 17cm and the angle opposite is . Find the diameter of the circle that circumscribes the triangle.     "
 },
 {
-  "id": "p-5747",
+  "id": "p-5781",
   "level": "2",
-  "url": "chap8-summary.html#p-5747",
+  "url": "chap8-summary.html#p-5781",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Horizontal Line Test one-to-one "
 },
 {
-  "id": "exercise-2172",
+  "id": "exercise-2173",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2172",
+  "url": "chap8-summary.html#exercise-2173",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "False "
 },
 {
-  "id": "exercise-2173",
+  "id": "exercise-2174",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2173",
+  "url": "chap8-summary.html#exercise-2174",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2174",
+  "id": "exercise-2175",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2174",
+  "url": "chap8-summary.html#exercise-2175",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "True "
 },
 {
-  "id": "exercise-2175",
+  "id": "exercise-2176",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2175",
+  "url": "chap8-summary.html#exercise-2176",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2176",
+  "id": "exercise-2177",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2176",
+  "url": "chap8-summary.html#exercise-2177",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "False "
 },
 {
-  "id": "exercise-2177",
+  "id": "exercise-2178",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2177",
+  "url": "chap8-summary.html#exercise-2178",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2178",
+  "id": "exercise-2179",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2178",
+  "url": "chap8-summary.html#exercise-2179",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "False "
 },
 {
-  "id": "exercise-2179",
+  "id": "exercise-2180",
   "level": "2",
-  "url": "chap8-summary.html#exercise-2179",
+  "url": "chap8-summary.html#exercise-2180",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2180",
-  "level": "2",
-  "url": "chap8-summary.html#exercise-2180",
-  "type": "Exercise",
-  "number": "9",
-  "title": "",
-  "body": "If and find an exact value for . "
-},
-{
   "id": "exercise-2181",
   "level": "2",
   "url": "chap8-summary.html#exercise-2181",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": "If and find an exact value for . "
 },
@@ -23351,34 +23405,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2182",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
-  "body": "If and find exact values for       "
+  "body": "If and find an exact value for . "
 },
 {
   "id": "exercise-2183",
   "level": "2",
   "url": "chap8-summary.html#exercise-2183",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
-  "body": "If and find exact values for    "
+  "body": "If and find exact values for       "
 },
 {
   "id": "exercise-2184",
   "level": "2",
   "url": "chap8-summary.html#exercise-2184",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
-  "body": "If and find . "
+  "body": "If and find exact values for    "
 },
 {
   "id": "exercise-2185",
   "level": "2",
   "url": "chap8-summary.html#exercise-2185",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": "If and find . "
 },
@@ -23387,16 +23441,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2186",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": ""
+  "body": "If and find . "
 },
 {
   "id": "exercise-2187",
   "level": "2",
   "url": "chap8-summary.html#exercise-2187",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
   "body": ""
 },
@@ -23405,34 +23459,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2188",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": "              "
+  "body": ""
 },
 {
   "id": "exercise-2189",
   "level": "2",
   "url": "chap8-summary.html#exercise-2189",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
-  "body": "       "
+  "body": "              "
 },
 {
   "id": "exercise-2190",
   "level": "2",
   "url": "chap8-summary.html#exercise-2190",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": ""
+  "body": "       "
 },
 {
   "id": "exercise-2191",
   "level": "2",
   "url": "chap8-summary.html#exercise-2191",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -23441,7 +23495,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2192",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
   "body": ""
 },
@@ -23450,7 +23504,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2193",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
   "body": ""
 },
@@ -23459,7 +23513,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2194",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
   "body": ""
 },
@@ -23468,7 +23522,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2195",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": ""
 },
@@ -23477,88 +23531,88 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2196",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "   "
+  "body": ""
 },
 {
   "id": "exercise-2197",
   "level": "2",
   "url": "chap8-summary.html#exercise-2197",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": ""
+  "body": "   "
 },
 {
   "id": "exercise-2198",
   "level": "2",
   "url": "chap8-summary.html#exercise-2198",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": "graph  No "
+  "body": ""
 },
 {
   "id": "exercise-2199",
   "level": "2",
   "url": "chap8-summary.html#exercise-2199",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": ""
+  "body": "graph  No "
 },
 {
   "id": "exercise-2200",
   "level": "2",
   "url": "chap8-summary.html#exercise-2200",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": "      "
+  "body": ""
 },
 {
   "id": "exercise-2201",
   "level": "2",
   "url": "chap8-summary.html#exercise-2201",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
-  "body": "   "
+  "body": "      "
 },
 {
   "id": "exercise-2202",
   "level": "2",
   "url": "chap8-summary.html#exercise-2202",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "An IMAX movie screen is 52.8 feet high.  If your line of sight is level with the bottom of the screen, write an expression for the angle subtended by the screen when you sit feet away.  Evaluate your expression for feet and for feet.     "
+  "body": "   "
 },
 {
   "id": "exercise-2203",
   "level": "2",
   "url": "chap8-summary.html#exercise-2203",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": "Rembrandt's painting The Night Watch measures 13 feet high by 16 feet wide.  Write an expression for the angle subtended by the width of the painting if you sit feet back from the center of the painting.  Evaluate your expression for feet and for feet.  "
+  "body": "An IMAX movie screen is 52.8 feet high.  If your line of sight is level with the bottom of the screen, write an expression for the angle subtended by the screen when you sit feet away.  Evaluate your expression for feet and for feet.     "
 },
 {
   "id": "exercise-2204",
   "level": "2",
   "url": "chap8-summary.html#exercise-2204",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ""
+  "body": "Rembrandt's painting The Night Watch measures 13 feet high by 16 feet wide.  Write an expression for the angle subtended by the width of the painting if you sit feet back from the center of the painting.  Evaluate your expression for feet and for feet.  "
 },
 {
   "id": "exercise-2205",
   "level": "2",
   "url": "chap8-summary.html#exercise-2205",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -23567,7 +23621,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2206",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
   "body": ""
 },
@@ -23576,7 +23630,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2207",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -23585,7 +23639,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2208",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -23594,7 +23648,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2209",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -23603,196 +23657,196 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2210",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "Explain why one of the expressions or must be undefined. Because is undefined for . If , then either or . If , then is undefined.  "
+  "body": ""
 },
 {
   "id": "exercise-2211",
   "level": "2",
   "url": "chap8-summary.html#exercise-2211",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "Does ? Does ? "
+  "body": "Explain why one of the expressions or must be undefined. Because is undefined for . If , then either or . If , then is undefined.  "
 },
 {
   "id": "exercise-2212",
   "level": "2",
   "url": "chap8-summary.html#exercise-2212",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "        "
+  "body": "Does ? Does ? "
 },
 {
   "id": "exercise-2213",
   "level": "2",
   "url": "chap8-summary.html#exercise-2213",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": "    "
+  "body": "        "
 },
 {
   "id": "exercise-2214",
   "level": "2",
   "url": "chap8-summary.html#exercise-2214",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "  triangle    , , , , , "
+  "body": "    "
 },
 {
   "id": "exercise-2215",
   "level": "2",
   "url": "chap8-summary.html#exercise-2215",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle    , , , , , "
 },
 {
   "id": "exercise-2216",
   "level": "2",
   "url": "chap8-summary.html#exercise-2216",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "  angle    , , , , , "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2217",
   "level": "2",
   "url": "chap8-summary.html#exercise-2217",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "  angle    "
+  "body": "  angle    , , , , , "
 },
 {
   "id": "exercise-2218",
   "level": "2",
   "url": "chap8-summary.html#exercise-2218",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "  angle    , , , , , "
+  "body": "  angle    "
 },
 {
   "id": "exercise-2219",
   "level": "2",
   "url": "chap8-summary.html#exercise-2219",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "  angle    "
+  "body": "  angle    , , , , , "
 },
 {
   "id": "exercise-2220",
   "level": "2",
   "url": "chap8-summary.html#exercise-2220",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": ", , , , , "
+  "body": "  angle    "
 },
 {
   "id": "exercise-2221",
   "level": "2",
   "url": "chap8-summary.html#exercise-2221",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "is obtuse "
+  "body": ", , , , , "
 },
 {
   "id": "exercise-2222",
   "level": "2",
   "url": "chap8-summary.html#exercise-2222",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "  triangle         "
+  "body": "is obtuse "
 },
 {
   "id": "exercise-2223",
   "level": "2",
   "url": "chap8-summary.html#exercise-2223",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle         "
 },
 {
   "id": "exercise-2224",
   "level": "2",
   "url": "chap8-summary.html#exercise-2224",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": "  triangle         "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2225",
   "level": "2",
   "url": "chap8-summary.html#exercise-2225",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": "  triangle    "
+  "body": "  triangle         "
 },
 {
   "id": "exercise-2226",
   "level": "2",
   "url": "chap8-summary.html#exercise-2226",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "     "
+  "body": "  triangle    "
 },
 {
   "id": "exercise-2227",
   "level": "2",
   "url": "chap8-summary.html#exercise-2227",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": ""
+  "body": "     "
 },
 {
   "id": "exercise-2228",
   "level": "2",
   "url": "chap8-summary.html#exercise-2228",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": "  circle    , , , , , "
+  "body": ""
 },
 {
   "id": "exercise-2229",
   "level": "2",
   "url": "chap8-summary.html#exercise-2229",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": "  circle    "
+  "body": "  circle    , , , , , "
 },
 {
   "id": "exercise-2230",
   "level": "2",
   "url": "chap8-summary.html#exercise-2230",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": ""
+  "body": "  circle    "
 },
 {
   "id": "exercise-2231",
   "level": "2",
   "url": "chap8-summary.html#exercise-2231",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
   "body": ""
 },
@@ -23801,7 +23855,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2232",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
   "body": ""
 },
@@ -23810,7 +23864,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2233",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
   "body": ""
 },
@@ -23819,7 +23873,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2234",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
   "body": ""
 },
@@ -23828,7 +23882,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2235",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
   "body": ""
 },
@@ -23837,70 +23891,70 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2236",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "The graph has vertical asymptotes at multiples of . or "
+  "body": ""
 },
 {
   "id": "exercise-2237",
   "level": "2",
   "url": "chap8-summary.html#exercise-2237",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
-  "body": "The graph has a horizontal asymptote at . "
+  "body": "The graph has vertical asymptotes at multiples of . or "
 },
 {
   "id": "exercise-2238",
   "level": "2",
   "url": "chap8-summary.html#exercise-2238",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": "The function values are the reciprocals of . "
+  "body": "The graph has a horizontal asymptote at . "
 },
 {
   "id": "exercise-2239",
   "level": "2",
   "url": "chap8-summary.html#exercise-2239",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": "The function is defined only for -values between and , inclusive.  "
+  "body": "The function values are the reciprocals of . "
 },
 {
   "id": "exercise-2240",
   "level": "2",
   "url": "chap8-summary.html#exercise-2240",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": "None of the function values lie between and . or "
+  "body": "The function is defined only for -values between and , inclusive.  "
 },
 {
   "id": "exercise-2241",
   "level": "2",
   "url": "chap8-summary.html#exercise-2241",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": "The graph includes the origin. "
+  "body": "None of the function values lie between and . or "
 },
 {
   "id": "exercise-2242",
   "level": "2",
   "url": "chap8-summary.html#exercise-2242",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": ""
+  "body": "The graph includes the origin. "
 },
 {
   "id": "exercise-2243",
   "level": "2",
   "url": "chap8-summary.html#exercise-2243",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
   "body": ""
 },
@@ -23909,7 +23963,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2244",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
   "body": ""
 },
@@ -23918,7 +23972,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2245",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
   "body": ""
 },
@@ -23927,7 +23981,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2246",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
   "body": ""
 },
@@ -23936,7 +23990,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2247",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
   "body": ""
 },
@@ -23945,7 +23999,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2248",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
   "body": ""
 },
@@ -23954,7 +24008,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2249",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
   "body": ""
 },
@@ -23963,7 +24017,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2250",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
   "body": ""
 },
@@ -23972,7 +24026,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2251",
   "type": "Exercise",
-  "number": "80",
+  "number": "79",
   "title": "",
   "body": ""
 },
@@ -23981,7 +24035,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2252",
   "type": "Exercise",
-  "number": "81",
+  "number": "80",
   "title": "",
   "body": ""
 },
@@ -23990,7 +24044,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2253",
   "type": "Exercise",
-  "number": "82",
+  "number": "81",
   "title": "",
   "body": ""
 },
@@ -23999,32 +24053,41 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-2254",
   "type": "Exercise",
-  "number": "83",
+  "number": "82",
   "title": "",
-  "body": "This problem outlines a geometric proof of difference of angles formula for tangent.  In the figure below left, and . Write expressions in terms of and for the sides and .    triangles     In the figure above right, explain why is similar to .  Explain why .  Write an expression in terms of and for side .  Explain why is similar to .  Justify each equality in the statement    They are right triangles that share .  is the complement of and is the complement of .  so  They are right triangles with .  so and are ratios of corresponding sides of similar triangles; by part (a), by part (d).  "
+  "body": ""
 },
 {
   "id": "exercise-2255",
   "level": "2",
   "url": "chap8-summary.html#exercise-2255",
   "type": "Exercise",
-  "number": "84",
+  "number": "83",
   "title": "",
-  "body": "Let and be two lines with slopes and , respectively, and let be the acute angle formed between the two lines. Use an identity to show that "
+  "body": "This problem outlines a geometric proof of difference of angles formula for tangent.  In the figure below left, and . Write expressions in terms of and for the sides and .    triangles     In the figure above right, explain why is similar to .  Explain why .  Write an expression in terms of and for side .  Explain why is similar to .  Justify each equality in the statement    They are right triangles that share .  is the complement of and is the complement of .  so  They are right triangles with .  so and are ratios of corresponding sides of similar triangles; by part (a), by part (d).  "
 },
 {
   "id": "exercise-2256",
   "level": "2",
   "url": "chap8-summary.html#exercise-2256",
   "type": "Exercise",
-  "number": "85",
+  "number": "84",
   "title": "",
-  "body": "In the figure above, find the diameter of the circumscribing circle, the angle , and the sides and . "
+  "body": "Let and be two lines with slopes and , respectively, and let be the acute angle formed between the two lines. Use an identity to show that "
 },
 {
   "id": "exercise-2257",
   "level": "2",
   "url": "chap8-summary.html#exercise-2257",
+  "type": "Exercise",
+  "number": "85",
+  "title": "",
+  "body": "In the figure above, find the diameter of the circumscribing circle, the angle , and the sides and . "
+},
+{
+  "id": "exercise-2258",
+  "level": "2",
+  "url": "chap8-summary.html#exercise-2258",
   "type": "Exercise",
   "number": "86",
   "title": "",
@@ -24040,45 +24103,45 @@ var ptx_lunr_docs = [
   "body": " Geometric Form  Introduction  One way to specify a location is to give a direction and a distance from a fixed landmark. For example, we might say that the airport is located 8 miles northeast of the town hall, or that a ship has been sighted 20 miles from the lighthouse in the direction 10° west of north. It's not enough to give just the distance to the object or just the direction; we need both to describe the object's location.  In mathematics, a quantity defined by both a magnitude (such as a distance) and a direction is called a vector vector . A vector used to designate location relative to a fixed landmark, as in the examples above, is called a position vector vector position . Vectors are also used to analyze motion and velocity in two or three dimensions, to study forces such as gravity and electric fields, and to design computer graphics and animation.  We often illustrate a vector by an arrow. The length of the arrow represents the magnitude of the vector, and the direction of the vector is indicated by the head of the arrow.  Draw an arrow to represent each vector.  The campsite is 3 miles away, in a direction north of east.  The wind is blowing due west at 50 kilometers per hour.   We draw an arrow making an angle of from east. The length of the arrow is 3 units, representing 3 miles. See figure (a) below.    position vector     velocity vector     We draw an arrow pointing due west, that is, making an angle of from east. The length of the arrow represents the speed of the wind, 50 kilometers per hour. See figure (b) above.   Draw an arrow to represent the velocity of an airplane travelling southeast at a speed of 300 miles per hour.   velocity vector      Notation for Vectors  vector notation  In print, we use boldface characters such as and to represent vectors. When writing by hand, we use an arrow above a variable to indicate that it is a vector, like this: .  It is important to distinguish vector quantities from quantities that have magnitude only, such as length or temperature. These quantities are called scalars scalar . They are the constants and variables you are used to dealing with, which are usually denoted by italic letters such as or .  The length of a vector is called its magnitude magnitude of a vector , and is denoted by  magnitude of a vector .  Note that the magnitude of a vector is a scalar quantity. Thus, denotes a vector, but denotes a scalar.   Two vectors may have the same length, but point in different directions. The figure at right shows two vectors, and , that have the same magnitude but different directions. For this example, , but . Two vectors are equal if and only if they have the same length and the same direction, but they can start at different locations. The fact that we can move vectors from one location to another is a useful property.   vectors     Which of the vectors shown at right are equal?   vectors     Only vectors and are equal. Vectors , , and are all the same length but have different directions. Vectors and also have equal lengths but different directions. Vectors and have the same direction but different lengths.  Sketch a vector that is equal to the vector shown at right, but that starts at the point .   vector      vectors      Scalar Multiplication of Vectors  scalar multiplication  We can multiply a vector by a scalar. The figure below shows the vector and the vector . Multiplying by a positive scalar changes the length of a vector but not its direction.    vectors     Thus, the vector is 3 times as long as the vector . If we multiply a vector by a negative scalar, we alter its length and reverse its direction; that is, we change the direction by . For example, the vector . It is half the length of , and points in the opposite direction.  In general, if is a real number, then represents the vector with magnitude times the magnitude of . It points in the same direction as when and in the opposite direction from when . Real numbers are called scalars because they “scale” vectors in this way, and multiplying a scalar times a vector is called scalar multiplication scalar multiplication .    The figure at right shows the vector and two scalar multiples of .  The vector points in the same direction as , but is only two-thirds as long as the vector . The vector points in the direction opposite to and is or approximately times as long as .   vectors   Note that because has a slope of , so does any nonzero multiple of .   For the vector shown at right, draw the vectors and .   vector      triangle      Addition of Vectors  A displacement vector vector displacement represents the change in position from one point to another.  For example, suppose you leave home and travel 6 miles east and then 8 miles north. These two displacements are represented by the vectors and shown at right. When we follow one displacement vector by a second one, the net displacement is a new vector, , starting at the base of the first vector and ending at the head of the second vector.   vectors     In this example, notice that forms the hypotenuse of a right triangle, so we can calculate its magnitude and direction. The net displacement gives your current position relative to home: 10 miles in the direction north of east. When we follow one vector by a second vector as described above, we are adding the two vectors. The sum is called the resultant vector vector resultant .  For each pair of vectors, draw the resultant vector .    vectors     We draw a copy of the vector so that its base (or starting point) is placed on the head (or ending point) of , and then we draw vector from the base of to the head of .    vectors     Draw the resultant vector .   vectors      vectors     When the resultant vector forms the third side of a triangle, we can use the laws of sines and cosines to calculate its length and direction.  You are camping in a state park. In the morning, you start off from your campground at point and hike 4 miles southwest to point . After taking a break, you continue hiking, and this time you cover 3 miles in the direction east of north, and arrive at point , as shown at right. What is your position relative to the campground?   vectors     The resultant vector, , forms the side opposite a angle. We use the law of cosines to compute its length. Thus, , so you are 1.348 miles from the campground. To find the direction back to the campground, we use the law of sines to calculate the angle at . The angle labeled in the figure is , so at point you are 1.348 miles from camp in the direction south of west.  Delbert has gone sailing with friends. After leaving the marina, they sail for 5 miles on a bearing of and stop at Gull Island for lunch. (Recall that bearings are measured clockwise from north.) After lunch, they have sailed for 3 miles on a bearing of when they get a phone call to return home. What bearing is the most direct route back to the marina, and how far is it? W of N, 3.58 mi  It doesn't matter which order we choose to add two vectors. As with the ordinary addition of scalars, the addition of vectors is commutative, so that . To see this, first draw and starting at the same point.    vector parallelogram rule     To represent , we place the base of at the head of , and draw the resultant vector as shown at left.  To represent , we place the base of at the head of , and the resultant vector is the same as the vector .  Because the vector sum forms the diagonal of a parallelogram in this picture, the rule for adding vectors is sometimes called the parallelogram rule parallelogram rule .  We summarize the operations on vectors as follows.  Operations on Vectors  vector operations on  vector operations on scale  vector operations on vector; adding  vector scaling  vector adding   We can multiply a vector, , by a scalar, .  If , the magnitude of is times the magnitude of . The direction of is the same as the direction of .  If , the direction of is opposite the direction of .  We can add two vectors and with the parallelogram rule.  Unless and are parallel vectors, it is not true that the length of is just the sum of the lengths of and . Vector addition is a geometric operation; the length of depends on the lengths of and and on the angle between them. Be careful to distinguish between regular addition of scalars, such as , and vector addition, , which requires the parallelogram rule.   Velocity  velocity  Physicists and mathematicians use the word velocity to mean not simply speed but the combination of speed and direction of motion. The interesting thing about velocities is that they add like vectors; if an object's motion consists of two simultaneous components, the resulting displacement is the same as if the motions had occurred one after the other.  For example, imagine a beetle walking across a moving conveyor belt, as shown in figure (a) below. The conveyor belt is moving at a speed of 4 inches per second, and the beetle walks at right angles to the motion of the belt at 2 inches per second. After 1 second, the beetle has traveled from his starting point at to point , distance of , or about 4.47 inches. His actual velocity relative to the ground is 4.47 inches per second at an angle of from the direction of the conveyor belt.    beetle on conveyor belt     Notice that if the two motions were performed in succession instead of simultaneously, as shown in figure (b), the resulting displacement would be the same. In other words, if the beetle had walked across the belt for 1 second before it started moving, and then ridden the belt for 1 second without walking, he would still end up at point .  Thus, velocity is a vector quantity, and we can calculate the result of two simultaneous motions by using the parallelogram rule. We treat the two motions as if they had occurred one after the other, by starting one vector at the endpoint of the other. (Remember we can move a vector from one location to another, as long as we preserve its length and direction.)  A ship travels at 15 miles per hour relative to the water on a bearing of . The water current flows at 6 miles per hour on a bearing of . What is the actual speed and direction of the ship?  We represent the ship's velocity by a vector and the velocity of the water current by vector , as shown in figure (a). The actual motion of the ship is the sum of these two vectors, and we can calculate the sum just as if the two motions had occurred separately, one after the other.  So we will add to by placing the base of at the head of , as shown in figure (b). The resultant vector, , represents the actual motion of the ship.    vectors     We first calculate the angle between the two vectors and . Because , we have , so . Now we can use the law of cosines to find . The ship's speed is mph. Next we use the law of sines to calculate the ship's bearing. The direction of the ship is south of due west, or on bearing .  A plane heads due north at an airspeed of 120 miles per hour. There is a 45 mph wind traveling south of due east. What are the plane’s actual speed and direction relative to the ground? W of N, 3.58 mi  In some situations, instead of calculating a vector sum, we would like to find a vector to produce a particular sum. That is, we know vectors and , and we want to find a vector so that .  Barbara wants to travel west to an island at a speed of 15 miles per hour. However, she must compensate for a current running east of north at a speed of 3 miles per hour. In what direction and at what speed should Barbara head her boat?  We draw a triangle using vectors to represent the desired velocity of Barbara's boat, , and the velocity of the current, , as shown below. We would like to find a vector that represents the speed and heading Barbara should take in order to compensate for the current.  We first use the law of cosines to calculate the length or magnitude of the vector . The angle at is . (Do you see why?). Thus,     vectors     So Barbara should travel at about 17.25 miles per hour.  To find her heading, we use the law of sines to calculate the angle . Barbara should head her boat about south of west, or at a bearing of .  Ahab would like to sail at 20 kilometers per hour due west towards a whale reported at that position. However, a steady ocean current is moving east of north at 8 kilometers per hour. At what speed and heading should Ahab sail? 26.76 kph S of W   Components of a Vector  component  component component vector  We have seen that we can add two vectors to get a third or resultant vector. We can also break down a vector into two or more component vectors. For many applications, it is useful to break a vector into horizontal and vertical components.  For example, the beetle on the conveyor belt moved at 4.47 inches per second in the direction . If we set up coordinate axes as shown at right, the vector representing his velocity is the sum of the beetle's motion in the -direction, , at 4 inches per second, and his motion in the -direction, , at 2 inches per second.   vectors     We can break down any vector into its - and -components, and the sum of those components is equal to the original vector. In other words, .  The horizontal and vertical vectors and are called the vector components component of . If we designate the direction of by an angle measured counter-clockwise from the positive -axis, then the scalar quantities given by  are called simply the components component of the vector .  Note that the components and of a vector are scalars; they are not vectors themselves. They can be either positive or negative (or zero), as shown below.    vectors     A plane flies at 300 miles per hour in the direction north of west. Find the - and -components of its velocity.  We draw a triangle showing the plane's velocity, , as the sum of components in the - and -directions, as shown at right. In this coordinate system, the angle is . Because the components are the legs of a right triangle, we have   vectorrs      The wind is blowing 50 kilometers per hour in a direction south of due west. Find the - and -components of its velocity. kph, kph   Using Components  We can describe a vector completely using either magnitude and direction or components. Many calculations with vectors are simpler when we use components. For example, to add two vectors using components, we don't need the laws of sines and cosines. We resolve each vector into its horizontal and vertical components, add the corresponding components, then compute the magnitude and direction of the resultant vector.  To calculate magnitude and direction from the components, we need only right triangle trigonometry.  After flying for some time, the airplane in the previous example encounters a steady wind blowing at 40 miles per hour from south of west. What are the actual speed and heading of the airplane relative to the ground?  We would like to add the vectors , representing the plane's intended velocity, and , representing the velocity of the wind. We first resolve into its components.   We find the components of the resultant, , by adding the components of and , as shown at right. That is,   velocity vectors       Finally, we compute the magnitude and direction of the resultant. So, the ground speed of the airplane is 272.41 miles per hour.  To find its heading, , we compute Because is a second-quadrant angle, we have The plane flies in the direction , or north of west.  In the previous example, the airplane's heading is not . Remember that there are always two angles with a given tangent. We can refer to a sketch of the vector or to the signs of its components to decide which of those two angles is appropriate.  A plane is flying in a wind blowing 50 kilometers per hour in a direction south of due west. The plane has an airspeed of 200 kph and heading What is the ground speed and actual direction of the plane? groundspeed 182 kph, S of E  Review the following skills you will need for this section.     State two versions of the Law of Sines.  State two versions of the Law of Cosines.   Find the unknown part of the triangle. Round to two decimal places.   cm, ?  ?  ?  ?     Skills Refresher Answers   ,  ,  3.79   9.89       Section 9.1 Summary  Vocabulary   Vector  Scalar  Magnitude  Scalar multiplication  Displacement vector  Resultant vector  Parallelogram rule  Velocity  Vector components  Components    Concepts   A quantity defined by both a magnitude (such as a distance) and a direction is called a vector .  Two vectors are equal if they have the same length and direction; it does not matter where the vector starts.  The length of a vector is called its magnitude , and is denoted by .  The sum of two vectors and is a new vector, , starting at the tail of the first vector and ending at the head of the second vector. The sum is called the resultant vector .  Addition of vectors is commutative. The rule for adding vectors is sometimes called the parallelogram rule .  Operations on Vectors   We can multiply a vector, , by a scalar, .  If , the magnitude of is times the magnitude of . The direction of is the same as the direction of .  If , the direction of is opposite the direction of .  We can add two vectors and with the parallelogram rule.  Any vector can be written as the sum of its horizontal and vertical vector components, and .  The components of a vector whose direction is given by the angle in standard position are the scalar quantities   The magnitude and direction of a vector with components and are given by  To add two vectors using components, we can resolve each vector into its horizontal and vertical components, add the corresponding components, then compute the magnitude and direction of the resultant.   Study Questions   What is the difference between a scalar and a vector?  If velocity is represented by a vector, what is its magnitude called?  Does ? Does ?  What is the parallelogram rule?  What are the components of a vector? Does ?    Skills   Sketch a vector #1 6  Identify equal vectors #7 10  Sketch a scalar multiple of a vector #11 14  Sketch the sum of two vectors #15 22  Calculate a resultant vector #23 32, 45 48  Use vectors to solve problems #33 36  Find components of a vector #37 40  Find the magnitude and direction of a vector given in components #41 44  Subtract vectors #49 58     Homework 9-1  For Problems 1 6, sketch a vector to represent the quantity.  The waterfall is 3 km away, in a direction south of west.   position vector     The cave entrance is 450 meters away, north of east.  The current is moving 6 feet per second in a direction east of north.   velocity vector     The bird is flying due south at 45 mile per hour.  The projectile was launched at a speed of 40 meters per second, at an angle of above horizontal.   velocity vector     The baseball was hit straight up at a speed of 60 miles per hour.   For Problems 7 10, which vectors are equal?    vectors on grid    and    vectors on grid       vectors on grid    and    vectors on grid      For Problems 11 14, sketch a vector equal to , but starting at the given point.    vector on grid      vecoor on grid       vector on grid       vector on grid      vector on grid       vector on grid      For Problems 15 18, draw the scalar multiples of the given vectors.    triangle    and   triangle       vector on grid    and    vector on grid    and   vectors on grid       vector on grid    and   For Problems 19 26,  draw the resultant vector,  calculate the length and direction of the resultant vector.    vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vector on grid      vector on       vector on grid      For Problems 27 30, find the magnitude and direction of the vector.       For Problems 31 38, sketch the vectors, then calculate the resultant.  Add the vector of length 45 pointing east of north to the vector of length 32 pointing south of west.   vectors     Add the vector of length 105 pointing west of south to the vector of length 77 pointing west of north.  Let have length 8 and point in the direction counterclockwise from the positive -axis. Let have length 13 and point in the direction counterclockwise from the positive -axis. Find .   vectors     Let have length 43 and point in the direction counterclockwise from the positive -axis. Let have length 19 and point in the direction counterclockwise from the positive -axis. Find .  Esther swam 3.6 miles heading east of north. However, the water current displaced her by 0.9 miles in the direction east of north. How far is Esther from her starting point, and in what direction?   vectors    4.47 mi, east of north  Rani paddles her canoe 4.5 miles in the direction west of north. The water current pushes her 0.3 miles off course in the direction east of north. How far is Rani from her starting point, and in what direction?  Brenda wants to fly to an airport that is 103 miles due west in 1 hour. The prevailing winds blow in the direction east of north at 28 miles per hour, so Brenda will head her plane somewhat north of due west to compensate. What airspeed and direction should Brenda take?   vectors     129.4 mph, west of north  Ryan wants to cross a 300 meter wide river running due south at 80 meters per minute. There are rocks upstream and rapids downstream, so he wants to paddle straight across from east to west. In what direction should he point his kayak, and how fast should his water speed be in order to cross the river in 2 minutes? (Hint: The current will move him 160 meters due south compared with where his speed and direction would take him if the current stopped. Compute the distance he would have traveled, then divide by 2 minutes to get the speed.)   For Problems 39 42,  find the horizontal and vertical components of the vectors,  use the components to calculate the resultant vector.  A ship maintains a heading of east of north and a speed of 20 miles per hour. There is a current in the water running south of east at a speed of 10 miles per hour. What is the actual direction and speed of the ship?   19.9 mph, east of north  A plane is heading due south, with an airspeed of 180 kilometers per hour. The wind is blowing at 50 kilometers per hour in a direction south of west. What is the actual direction and speed of the plane?  The campground is 3.6 kilometers from the trail head in the direction west of north. A ranger station is located 2.3 kilometers from the campsite in a direction of west of south. What is the distance and direction from the trail head to the ranger station?   1.9 km, west of north  The treasure is buried 40 paces due east from the dead tree. From the buried treasure, a hidden mine shaft is 100 paces distant in a direction of north of west. What is the distance and direction from the dead tree to mine shaft?   Subtracting Vectors  Multiplying a vector by gives a vector that has the same magnitude as but points in the opposite direction. We define subtraction of two vectors the same way we define subtraction of integers: That is, to subtract a vector , we add its opposite. For Problems 43 50, draw the resultant vector.    vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid      Find the horizontal and vertical components of , , and from Problem 43. What do you notice when you compare the horizontal components of two vectors with the horizontal component of the difference?  Find the horizontal and vertical components of , , and from Problem 44. What do you notice when you compare the vertical components of two vectors with the vertical component of the difference?   "
 },
 {
-  "id": "p-5911",
+  "id": "p-5945",
   "level": "2",
-  "url": "Geometric-Form.html#p-5911",
+  "url": "Geometric-Form.html#p-5945",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vector position vector "
 },
 {
-  "id": "example-170",
+  "id": "example-171",
   "level": "2",
-  "url": "Geometric-Form.html#example-170",
+  "url": "Geometric-Form.html#example-171",
   "type": "Example",
   "number": "9.1",
   "title": "",
   "body": "Draw an arrow to represent each vector.  The campsite is 3 miles away, in a direction north of east.  The wind is blowing due west at 50 kilometers per hour.   We draw an arrow making an angle of from east. The length of the arrow is 3 units, representing 3 miles. See figure (a) below.    position vector     velocity vector     We draw an arrow pointing due west, that is, making an angle of from east. The length of the arrow represents the speed of the wind, 50 kilometers per hour. See figure (b) above.  "
 },
 {
-  "id": "exercise-2258",
+  "id": "exercise-2259",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2258",
+  "url": "Geometric-Form.html#exercise-2259",
   "type": "Checkpoint",
   "number": "9.2",
   "title": "",
   "body": "Draw an arrow to represent the velocity of an airplane travelling southeast at a speed of 300 miles per hour.   velocity vector    "
 },
 {
-  "id": "p-5918",
+  "id": "p-5952",
   "level": "2",
-  "url": "Geometric-Form.html#p-5918",
+  "url": "Geometric-Form.html#p-5952",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "scalars "
 },
 {
-  "id": "p-5919",
+  "id": "p-5953",
   "level": "2",
-  "url": "Geometric-Form.html#p-5919",
+  "url": "Geometric-Form.html#p-5953",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -24094,108 +24157,108 @@ var ptx_lunr_docs = [
   "body": "Note that the magnitude of a vector is a scalar quantity. Thus, denotes a vector, but denotes a scalar. "
 },
 {
-  "id": "example-171",
+  "id": "example-172",
   "level": "2",
-  "url": "Geometric-Form.html#example-171",
+  "url": "Geometric-Form.html#example-172",
   "type": "Example",
   "number": "9.4",
   "title": "",
   "body": "Which of the vectors shown at right are equal?   vectors     Only vectors and are equal. Vectors , , and are all the same length but have different directions. Vectors and also have equal lengths but different directions. Vectors and have the same direction but different lengths. "
 },
 {
-  "id": "exercise-2259",
+  "id": "exercise-2260",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2259",
+  "url": "Geometric-Form.html#exercise-2260",
   "type": "Checkpoint",
   "number": "9.5",
   "title": "",
   "body": "Sketch a vector that is equal to the vector shown at right, but that starts at the point .   vector      vectors    "
 },
 {
-  "id": "p-5928",
+  "id": "p-5962",
   "level": "2",
-  "url": "Geometric-Form.html#p-5928",
+  "url": "Geometric-Form.html#p-5962",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "scalar multiplication "
 },
 {
-  "id": "example-172",
+  "id": "example-173",
   "level": "2",
-  "url": "Geometric-Form.html#example-172",
+  "url": "Geometric-Form.html#example-173",
   "type": "Example",
   "number": "9.6",
   "title": "",
   "body": "  The figure at right shows the vector and two scalar multiples of .  The vector points in the same direction as , but is only two-thirds as long as the vector . The vector points in the direction opposite to and is or approximately times as long as .   vectors   Note that because has a slope of , so does any nonzero multiple of .  "
 },
 {
-  "id": "exercise-2260",
+  "id": "exercise-2261",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2260",
+  "url": "Geometric-Form.html#exercise-2261",
   "type": "Checkpoint",
   "number": "9.7",
   "title": "",
   "body": "For the vector shown at right, draw the vectors and .   vector      triangle    "
 },
 {
-  "id": "p-5933",
+  "id": "p-5967",
   "level": "2",
-  "url": "Geometric-Form.html#p-5933",
+  "url": "Geometric-Form.html#p-5967",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "displacement vector "
 },
 {
-  "id": "p-5935",
+  "id": "p-5969",
   "level": "2",
-  "url": "Geometric-Form.html#p-5935",
+  "url": "Geometric-Form.html#p-5969",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "resultant vector "
 },
 {
-  "id": "example-173",
+  "id": "example-174",
   "level": "2",
-  "url": "Geometric-Form.html#example-173",
+  "url": "Geometric-Form.html#example-174",
   "type": "Example",
   "number": "9.8",
   "title": "",
   "body": "For each pair of vectors, draw the resultant vector .    vectors     We draw a copy of the vector so that its base (or starting point) is placed on the head (or ending point) of , and then we draw vector from the base of to the head of .    vectors    "
 },
 {
-  "id": "exercise-2261",
+  "id": "exercise-2262",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2261",
+  "url": "Geometric-Form.html#exercise-2262",
   "type": "Checkpoint",
   "number": "9.9",
   "title": "",
   "body": "Draw the resultant vector .   vectors      vectors    "
 },
 {
-  "id": "example-174",
+  "id": "example-175",
   "level": "2",
-  "url": "Geometric-Form.html#example-174",
+  "url": "Geometric-Form.html#example-175",
   "type": "Example",
   "number": "9.10",
   "title": "",
   "body": "You are camping in a state park. In the morning, you start off from your campground at point and hike 4 miles southwest to point . After taking a break, you continue hiking, and this time you cover 3 miles in the direction east of north, and arrive at point , as shown at right. What is your position relative to the campground?   vectors     The resultant vector, , forms the side opposite a angle. We use the law of cosines to compute its length. Thus, , so you are 1.348 miles from the campground. To find the direction back to the campground, we use the law of sines to calculate the angle at . The angle labeled in the figure is , so at point you are 1.348 miles from camp in the direction south of west. "
 },
 {
-  "id": "exercise-2262",
+  "id": "exercise-2263",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2262",
+  "url": "Geometric-Form.html#exercise-2263",
   "type": "Checkpoint",
   "number": "9.11",
   "title": "",
   "body": "Delbert has gone sailing with friends. After leaving the marina, they sail for 5 miles on a bearing of and stop at Gull Island for lunch. (Recall that bearings are measured clockwise from north.) After lunch, they have sailed for 3 miles on a bearing of when they get a phone call to return home. What bearing is the most direct route back to the marina, and how far is it? W of N, 3.58 mi "
 },
 {
-  "id": "p-5946",
+  "id": "p-5980",
   "level": "2",
-  "url": "Geometric-Form.html#p-5946",
+  "url": "Geometric-Form.html#p-5980",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -24211,81 +24274,81 @@ var ptx_lunr_docs = [
   "body": "Unless and are parallel vectors, it is not true that the length of is just the sum of the lengths of and . Vector addition is a geometric operation; the length of depends on the lengths of and and on the angle between them. Be careful to distinguish between regular addition of scalars, such as , and vector addition, , which requires the parallelogram rule. "
 },
 {
-  "id": "p-5955",
+  "id": "p-5989",
   "level": "2",
-  "url": "Geometric-Form.html#p-5955",
+  "url": "Geometric-Form.html#p-5989",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "velocity "
 },
 {
-  "id": "example-175",
+  "id": "example-176",
   "level": "2",
-  "url": "Geometric-Form.html#example-175",
+  "url": "Geometric-Form.html#example-176",
   "type": "Example",
   "number": "9.13",
   "title": "",
   "body": "A ship travels at 15 miles per hour relative to the water on a bearing of . The water current flows at 6 miles per hour on a bearing of . What is the actual speed and direction of the ship?  We represent the ship's velocity by a vector and the velocity of the water current by vector , as shown in figure (a). The actual motion of the ship is the sum of these two vectors, and we can calculate the sum just as if the two motions had occurred separately, one after the other.  So we will add to by placing the base of at the head of , as shown in figure (b). The resultant vector, , represents the actual motion of the ship.    vectors     We first calculate the angle between the two vectors and . Because , we have , so . Now we can use the law of cosines to find . The ship's speed is mph. Next we use the law of sines to calculate the ship's bearing. The direction of the ship is south of due west, or on bearing . "
 },
 {
-  "id": "exercise-2263",
+  "id": "exercise-2264",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2263",
+  "url": "Geometric-Form.html#exercise-2264",
   "type": "Checkpoint",
   "number": "9.14",
   "title": "",
   "body": "A plane heads due north at an airspeed of 120 miles per hour. There is a 45 mph wind traveling south of due east. What are the plane’s actual speed and direction relative to the ground? W of N, 3.58 mi "
 },
 {
-  "id": "example-176",
+  "id": "example-177",
   "level": "2",
-  "url": "Geometric-Form.html#example-176",
+  "url": "Geometric-Form.html#example-177",
   "type": "Example",
   "number": "9.15",
   "title": "",
   "body": "Barbara wants to travel west to an island at a speed of 15 miles per hour. However, she must compensate for a current running east of north at a speed of 3 miles per hour. In what direction and at what speed should Barbara head her boat?  We draw a triangle using vectors to represent the desired velocity of Barbara's boat, , and the velocity of the current, , as shown below. We would like to find a vector that represents the speed and heading Barbara should take in order to compensate for the current.  We first use the law of cosines to calculate the length or magnitude of the vector . The angle at is . (Do you see why?). Thus,     vectors     So Barbara should travel at about 17.25 miles per hour.  To find her heading, we use the law of sines to calculate the angle . Barbara should head her boat about south of west, or at a bearing of . "
 },
 {
-  "id": "exercise-2264",
+  "id": "exercise-2265",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2264",
+  "url": "Geometric-Form.html#exercise-2265",
   "type": "Checkpoint",
   "number": "9.16",
   "title": "",
   "body": "Ahab would like to sail at 20 kilometers per hour due west towards a whale reported at that position. However, a steady ocean current is moving east of north at 8 kilometers per hour. At what speed and heading should Ahab sail? 26.76 kph S of W "
 },
 {
-  "id": "p-5977",
+  "id": "p-6011",
   "level": "2",
-  "url": "Geometric-Form.html#p-5977",
+  "url": "Geometric-Form.html#p-6011",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vector components components "
 },
 {
-  "id": "example-177",
+  "id": "example-178",
   "level": "2",
-  "url": "Geometric-Form.html#example-177",
+  "url": "Geometric-Form.html#example-178",
   "type": "Example",
   "number": "9.17",
   "title": "",
   "body": "A plane flies at 300 miles per hour in the direction north of west. Find the - and -components of its velocity.  We draw a triangle showing the plane's velocity, , as the sum of components in the - and -directions, as shown at right. In this coordinate system, the angle is . Because the components are the legs of a right triangle, we have   vectorrs     "
 },
 {
-  "id": "exercise-2265",
+  "id": "exercise-2266",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2265",
+  "url": "Geometric-Form.html#exercise-2266",
   "type": "Checkpoint",
   "number": "9.18",
   "title": "",
   "body": "The wind is blowing 50 kilometers per hour in a direction south of due west. Find the - and -components of its velocity. kph, kph "
 },
 {
-  "id": "example-178",
+  "id": "example-179",
   "level": "2",
-  "url": "Geometric-Form.html#example-178",
+  "url": "Geometric-Form.html#example-179",
   "type": "Example",
   "number": "9.19",
   "title": "",
@@ -24301,9 +24364,9 @@ var ptx_lunr_docs = [
   "body": "In the previous example, the airplane's heading is not . Remember that there are always two angles with a given tangent. We can refer to a sketch of the vector or to the signs of its components to decide which of those two angles is appropriate. "
 },
 {
-  "id": "exercise-2266",
+  "id": "exercise-2267",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2266",
+  "url": "Geometric-Form.html#exercise-2267",
   "type": "Checkpoint",
   "number": "9.21",
   "title": "",
@@ -24319,263 +24382,254 @@ var ptx_lunr_docs = [
   "body": "   State two versions of the Law of Sines.  State two versions of the Law of Cosines.   Find the unknown part of the triangle. Round to two decimal places.   cm, ?  ?  ?  ?     Skills Refresher Answers   ,  ,  3.79   9.89     "
 },
 {
-  "id": "p-6008",
+  "id": "p-6042",
   "level": "2",
-  "url": "Geometric-Form.html#p-6008",
+  "url": "Geometric-Form.html#p-6042",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vector magnitude resultant vector parallelogram rule components "
 },
 {
-  "id": "exercise-2267",
+  "id": "exercise-2268",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2267",
+  "url": "Geometric-Form.html#exercise-2268",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "The waterfall is 3 km away, in a direction south of west.   position vector    "
 },
 {
-  "id": "exercise-2268",
+  "id": "exercise-2269",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2268",
+  "url": "Geometric-Form.html#exercise-2269",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "The cave entrance is 450 meters away, north of east. "
 },
 {
-  "id": "exercise-2269",
+  "id": "exercise-2270",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2269",
+  "url": "Geometric-Form.html#exercise-2270",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "The current is moving 6 feet per second in a direction east of north.   velocity vector    "
 },
 {
-  "id": "exercise-2270",
+  "id": "exercise-2271",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2270",
+  "url": "Geometric-Form.html#exercise-2271",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "The bird is flying due south at 45 mile per hour. "
 },
 {
-  "id": "exercise-2271",
+  "id": "exercise-2272",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2271",
+  "url": "Geometric-Form.html#exercise-2272",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "The projectile was launched at a speed of 40 meters per second, at an angle of above horizontal.   velocity vector    "
 },
 {
-  "id": "exercise-2272",
+  "id": "exercise-2273",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2272",
+  "url": "Geometric-Form.html#exercise-2273",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "The baseball was hit straight up at a speed of 60 miles per hour. "
 },
 {
-  "id": "exercise-2273",
+  "id": "exercise-2274",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2273",
+  "url": "Geometric-Form.html#exercise-2274",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "  vectors on grid    and "
 },
 {
-  "id": "exercise-2274",
+  "id": "exercise-2275",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2274",
+  "url": "Geometric-Form.html#exercise-2275",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": "  vectors on grid    "
 },
 {
-  "id": "exercise-2275",
+  "id": "exercise-2276",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2275",
+  "url": "Geometric-Form.html#exercise-2276",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "  vectors on grid    and "
 },
 {
-  "id": "exercise-2276",
+  "id": "exercise-2277",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2276",
+  "url": "Geometric-Form.html#exercise-2277",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": "  vectors on grid    "
 },
 {
-  "id": "exercise-2277",
+  "id": "exercise-2278",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2277",
+  "url": "Geometric-Form.html#exercise-2278",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "  vector on grid      vecoor on grid    "
 },
 {
-  "id": "exercise-2278",
+  "id": "exercise-2279",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2278",
+  "url": "Geometric-Form.html#exercise-2279",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "  vector on grid    "
 },
 {
-  "id": "exercise-2279",
+  "id": "exercise-2280",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2279",
+  "url": "Geometric-Form.html#exercise-2280",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "  vector on grid      vector on grid    "
 },
 {
-  "id": "exercise-2280",
+  "id": "exercise-2281",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2280",
+  "url": "Geometric-Form.html#exercise-2281",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": "  vector on grid    "
 },
 {
-  "id": "exercise-2281",
+  "id": "exercise-2282",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2281",
+  "url": "Geometric-Form.html#exercise-2282",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": "  triangle    and   triangle    "
 },
 {
-  "id": "exercise-2282",
+  "id": "exercise-2283",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2282",
+  "url": "Geometric-Form.html#exercise-2283",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": "  vector on grid    and "
 },
 {
-  "id": "exercise-2283",
+  "id": "exercise-2284",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2283",
+  "url": "Geometric-Form.html#exercise-2284",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": "  vector on grid    and   vectors on grid    "
 },
 {
-  "id": "exercise-2284",
+  "id": "exercise-2285",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2284",
+  "url": "Geometric-Form.html#exercise-2285",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": "  vector on grid    and "
 },
 {
-  "id": "exercise-2285",
+  "id": "exercise-2286",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2285",
+  "url": "Geometric-Form.html#exercise-2286",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "  vectors on grid      vectors on grid    "
 },
 {
-  "id": "exercise-2286",
+  "id": "exercise-2287",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2286",
+  "url": "Geometric-Form.html#exercise-2287",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": "  vectors on grid    "
 },
 {
-  "id": "exercise-2287",
+  "id": "exercise-2288",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2287",
+  "url": "Geometric-Form.html#exercise-2288",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": "  vectors on grid      vectors on grid    "
 },
 {
-  "id": "exercise-2288",
+  "id": "exercise-2289",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2288",
+  "url": "Geometric-Form.html#exercise-2289",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": "  vectors on grid    "
 },
 {
-  "id": "exercise-2289",
+  "id": "exercise-2290",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2289",
+  "url": "Geometric-Form.html#exercise-2290",
   "type": "Exercise",
   "number": "23",
   "title": "",
   "body": "  vectors on grid      vectors on grid    "
 },
 {
-  "id": "exercise-2290",
+  "id": "exercise-2291",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2290",
+  "url": "Geometric-Form.html#exercise-2291",
   "type": "Exercise",
   "number": "24",
   "title": "",
   "body": "  vectors on grid    "
 },
 {
-  "id": "exercise-2291",
+  "id": "exercise-2292",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2291",
+  "url": "Geometric-Form.html#exercise-2292",
   "type": "Exercise",
   "number": "25",
   "title": "",
   "body": "  vector on grid      vector on    "
 },
 {
-  "id": "exercise-2292",
+  "id": "exercise-2293",
   "level": "2",
-  "url": "Geometric-Form.html#exercise-2292",
+  "url": "Geometric-Form.html#exercise-2293",
   "type": "Exercise",
   "number": "26",
   "title": "",
   "body": "  vector on grid    "
 },
 {
-  "id": "exercise-2293",
-  "level": "2",
-  "url": "Geometric-Form.html#exercise-2293",
-  "type": "Exercise",
-  "number": "27",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2294",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2294",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -24584,7 +24638,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Geometric-Form.html#exercise-2295",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ""
 },
@@ -24593,7 +24647,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Geometric-Form.html#exercise-2296",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ""
 },
@@ -24602,194 +24656,203 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Geometric-Form.html#exercise-2297",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": "Add the vector of length 45 pointing east of north to the vector of length 32 pointing south of west.   vectors    "
+  "body": ""
 },
 {
   "id": "exercise-2298",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2298",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": "Add the vector of length 105 pointing west of south to the vector of length 77 pointing west of north. "
+  "body": "Add the vector of length 45 pointing east of north to the vector of length 32 pointing south of west.   vectors    "
 },
 {
   "id": "exercise-2299",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2299",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": "Let have length 8 and point in the direction counterclockwise from the positive -axis. Let have length 13 and point in the direction counterclockwise from the positive -axis. Find .   vectors    "
+  "body": "Add the vector of length 105 pointing west of south to the vector of length 77 pointing west of north. "
 },
 {
   "id": "exercise-2300",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2300",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": "Let have length 43 and point in the direction counterclockwise from the positive -axis. Let have length 19 and point in the direction counterclockwise from the positive -axis. Find . "
+  "body": "Let have length 8 and point in the direction counterclockwise from the positive -axis. Let have length 13 and point in the direction counterclockwise from the positive -axis. Find .   vectors    "
 },
 {
   "id": "exercise-2301",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2301",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "Esther swam 3.6 miles heading east of north. However, the water current displaced her by 0.9 miles in the direction east of north. How far is Esther from her starting point, and in what direction?   vectors    4.47 mi, east of north "
+  "body": "Let have length 43 and point in the direction counterclockwise from the positive -axis. Let have length 19 and point in the direction counterclockwise from the positive -axis. Find . "
 },
 {
   "id": "exercise-2302",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2302",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": "Rani paddles her canoe 4.5 miles in the direction west of north. The water current pushes her 0.3 miles off course in the direction east of north. How far is Rani from her starting point, and in what direction? "
+  "body": "Esther swam 3.6 miles heading east of north. However, the water current displaced her by 0.9 miles in the direction east of north. How far is Esther from her starting point, and in what direction?   vectors    4.47 mi, east of north "
 },
 {
   "id": "exercise-2303",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2303",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "Brenda wants to fly to an airport that is 103 miles due west in 1 hour. The prevailing winds blow in the direction east of north at 28 miles per hour, so Brenda will head her plane somewhat north of due west to compensate. What airspeed and direction should Brenda take?   vectors     129.4 mph, west of north "
+  "body": "Rani paddles her canoe 4.5 miles in the direction west of north. The water current pushes her 0.3 miles off course in the direction east of north. How far is Rani from her starting point, and in what direction? "
 },
 {
   "id": "exercise-2304",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2304",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": "Ryan wants to cross a 300 meter wide river running due south at 80 meters per minute. There are rocks upstream and rapids downstream, so he wants to paddle straight across from east to west. In what direction should he point his kayak, and how fast should his water speed be in order to cross the river in 2 minutes? (Hint: The current will move him 160 meters due south compared with where his speed and direction would take him if the current stopped. Compute the distance he would have traveled, then divide by 2 minutes to get the speed.) "
+  "body": "Brenda wants to fly to an airport that is 103 miles due west in 1 hour. The prevailing winds blow in the direction east of north at 28 miles per hour, so Brenda will head her plane somewhat north of due west to compensate. What airspeed and direction should Brenda take?   vectors     129.4 mph, west of north "
 },
 {
   "id": "exercise-2305",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2305",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "A ship maintains a heading of east of north and a speed of 20 miles per hour. There is a current in the water running south of east at a speed of 10 miles per hour. What is the actual direction and speed of the ship?   19.9 mph, east of north "
+  "body": "Ryan wants to cross a 300 meter wide river running due south at 80 meters per minute. There are rocks upstream and rapids downstream, so he wants to paddle straight across from east to west. In what direction should he point his kayak, and how fast should his water speed be in order to cross the river in 2 minutes? (Hint: The current will move him 160 meters due south compared with where his speed and direction would take him if the current stopped. Compute the distance he would have traveled, then divide by 2 minutes to get the speed.) "
 },
 {
   "id": "exercise-2306",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2306",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "A plane is heading due south, with an airspeed of 180 kilometers per hour. The wind is blowing at 50 kilometers per hour in a direction south of west. What is the actual direction and speed of the plane? "
+  "body": "A ship maintains a heading of east of north and a speed of 20 miles per hour. There is a current in the water running south of east at a speed of 10 miles per hour. What is the actual direction and speed of the ship?   19.9 mph, east of north "
 },
 {
   "id": "exercise-2307",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2307",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "The campground is 3.6 kilometers from the trail head in the direction west of north. A ranger station is located 2.3 kilometers from the campsite in a direction of west of south. What is the distance and direction from the trail head to the ranger station?   1.9 km, west of north "
+  "body": "A plane is heading due south, with an airspeed of 180 kilometers per hour. The wind is blowing at 50 kilometers per hour in a direction south of west. What is the actual direction and speed of the plane? "
 },
 {
   "id": "exercise-2308",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2308",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": "The treasure is buried 40 paces due east from the dead tree. From the buried treasure, a hidden mine shaft is 100 paces distant in a direction of north of west. What is the distance and direction from the dead tree to mine shaft? "
+  "body": "The campground is 3.6 kilometers from the trail head in the direction west of north. A ranger station is located 2.3 kilometers from the campsite in a direction of west of south. What is the distance and direction from the trail head to the ranger station?   1.9 km, west of north "
 },
 {
   "id": "exercise-2309",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2309",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "  vectors on grid      vectors on grid    "
+  "body": "The treasure is buried 40 paces due east from the dead tree. From the buried treasure, a hidden mine shaft is 100 paces distant in a direction of north of west. What is the distance and direction from the dead tree to mine shaft? "
 },
 {
   "id": "exercise-2310",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2310",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "  vectors on grid    "
+  "body": "  vectors on grid      vectors on grid    "
 },
 {
   "id": "exercise-2311",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2311",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "  vectors on grid      vectors on grid    "
+  "body": "  vectors on grid    "
 },
 {
   "id": "exercise-2312",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2312",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "  vectors on grid    "
+  "body": "  vectors on grid      vectors on grid    "
 },
 {
   "id": "exercise-2313",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2313",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "  vectors on grid      vectors on grid    "
+  "body": "  vectors on grid    "
 },
 {
   "id": "exercise-2314",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2314",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "  vectors on grid    "
+  "body": "  vectors on grid      vectors on grid    "
 },
 {
   "id": "exercise-2315",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2315",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "  vectors on grid      vectors on grid    "
+  "body": "  vectors on grid    "
 },
 {
   "id": "exercise-2316",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2316",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "  vectors on grid    "
+  "body": "  vectors on grid      vectors on grid    "
 },
 {
   "id": "exercise-2317",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2317",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "Find the horizontal and vertical components of , , and from Problem 43. What do you notice when you compare the horizontal components of two vectors with the horizontal component of the difference? "
+  "body": "  vectors on grid    "
 },
 {
   "id": "exercise-2318",
   "level": "2",
   "url": "Geometric-Form.html#exercise-2318",
+  "type": "Exercise",
+  "number": "51",
+  "title": "",
+  "body": "Find the horizontal and vertical components of , , and from Problem 43. What do you notice when you compare the horizontal components of two vectors with the horizontal component of the difference? "
+},
+{
+  "id": "exercise-2319",
+  "level": "2",
+  "url": "Geometric-Form.html#exercise-2319",
   "type": "Exercise",
   "number": "52",
   "title": "",
@@ -24805,216 +24868,216 @@ var ptx_lunr_docs = [
   "body": " Coordinate Form  vector coordinate form  Introduction  In Section 9.1 we saw how to resolve a vector into horizontal and vertical components. Thus, every vector can be expressed as the sum of a horizontal vector and a vertical vector.  A vector has magnitude 4 and direction , where is measured counter-clockwise from the positive -axis. Express as the sum of a horizontal vector, , and a vertical vector, .   The components of are given by      vectors on coordinate plane     Then , where is a horizontal vector of magnitude 3.50, and is a vertical vector of magnitude 1.94. See the figure above.  A vector has magnitude 2 and direction , where is in standard position. Express as the sum of a horizontal vector, , and a vertical vector, . , where   Unit Vectors  vector unit  It is often useful to describe a vector by giving its horizontal and vertical components, instead of its magnitude and direction. To make the notation easier, we give names to the vectors of length 1 that point in the - and -directions. A vector of magnitude 1 is called a unit vector . We can have unit vectors in any direction, but the unit vector in the -direction is denoted by , and the unit vector in the -direction is called , as shown below.  By taking scalar multiples of and , we can describe any vector that lies in the directions of the coordinate axes. For example, represents the vector of magnitude 4 pointing in the -direction, and represents the vector of magnitude 3 pointing in the -direction. And by adding multiples of and , we can represent any vector we like. The vector is shown at right.   vectors on xy-plane     Because the components of the vector are chosen to align with the coordinate system, we call this the coordinate form of the vector.  Coordinate Form of a Vector  vector coordinate form  The vector is the vector whose horizontal component is and whose vertical component is .  The coordinate form of the vector in the previous example is .  State the coordinate form of the vector shown at right.   vectors on xy-plane     From its base to its tip, the vector extends 4 units in the negative direction and 6 units in the direction. Thus, .  State the coordinate form of the vector shown at right.   vectors      Converting Between Geometric and Coordinate Form  vector geometric vs coordinate form  It is a simple matter to find the magnitude and direction of a vector given in coordinate form. The vector has magnitude and direction . Thus, we can readily convert vectors from geometric form to coordinate form or vice versa.  Comparing the Geometric and Coordinate Forms of a Vector  vector geometric vs coordinate form  Suppose that the vector has magnitude and points in the direction of the angle in standard position. If has the coordinate form , then    Find the geometric form of the vector .  Find the coordinate form of the vector whose magnitude is 5 and whose direction is the angle .   The magnitude of is . The direction satisfies the equation . Because the point lies in the third quadrant, we know that must be a third quadrant angle. Thus, .  The coordinates of the vector are given by so the coordinate form is .  Find the geometric form of the vector . magnitude 10, direction   Scalar Multiples of Vectors in Coordinate Form  Scalar multiplication is easy to compute in coordinate form. This is really a consequence of the fact that the sides of similar triangles are proportional.  The figure at right shows the vectors and . The vector is twice as long as and points in the same direction as . You can see that each component of is twice the corresponding component of , so that .   vectors     Scalar Multiplication in Coordinate Form  scalar multiplication  scalar multiplication vector  If and is a scalar, then  In other words, to find a scalar multiple of a vector in coordinate form, we multiply each component by the scalar.  The vector has coordinate form . Find the coordinate form for the vector .  We multiply each component of by to get .  Find the coordinate form for the vector , where .  If we divide a non-zero vector by its own length, we create a unit vector that points in the same direction as . (Dividing a vector by a scalar is the same as multiplying the vector by .)  Find a unit vector pointing in the same direction as .  We first compute the magnitude of . Next we multiply by the reciprocal of its length. The unit vector in the same direction as is then  By computing its length, you can check that the vector found in the previous Example really is a unit vector. Once we have a unit vector that points in a given direction, we can create a vector of any length in that direction, simply by scaling by the length we desire. For example, the vector of length 10 pointing in the same direction as in the previous example is   Scaling a Vector  scale a vector  scale a vector vector  vector scaling  vector unit  A unit vector in the direction of is given by  A vector of length in the direction of is given by  Find a unit vector and a vector of length 10 pointing in the same direction as . ,   Adding Vectors in Coordinate Form  vector adding  It is also easy to add vectors in coordinate form. The figure below shows the sum of and . Remember that we add two vectors by following the first vector by the second.  The vector sum describes the path But we arrive at the same endpoint by traveling   triangle    The resultant vector has components that are just the sums of the components of the vectors and . To add two vectors in coordinate form, we add the corresponding components.  Sum of Vectors in Coordinate Form  vector adding  If and , then  Kyle flew 15 miles southwest and then 20 miles on a bearing of . What is his current position relative to his starting point?  A sketch of Kyle's journey is shown below. We begin by converting the vector for each leg of his journey into coordinate form.     vectors     Thus, We find the resultant vector, , by adding and . Kyle's position vector is , or about 30.3 miles west and 14.1 miles south of his starting position.  Arianna's yacht heads west of north at a speed of 20 kilometers per hour relative to the water. However, the water is moving east of north at 4 kilometers per hour. What is Arianna's velocity relative to land? 22.7 kph due north  The coordinate form is especially efficient if we want to add more than two vectors.  While exploring an abandoned cottage in the woods, you discover an old map showing the location of a buried treasure.  From the cottage, go 10 km in the direction .  From that point, go 12.8 km in the direction .  Finally, go 9.5 km in the direction .  You wonder if the directions will lead you safely to the treasure. You draw vectors to illustrate the path described by the directions, as shown in the figure.  vectors  Instead of following the map directions, you plan to fly by helicopter from the abandoned cottage directly to the treasure, but you will need to know the correct heading and distance to fly. Draw the vector for the net displacement from the cottage to the treasure, and give its length and direction.  The helicopter's flight plan is the vector sum of the three vectors , , and shown in the figure. To find their sum, we resolve each of the three vectors into its components. In coordinate form, the three displacement vectors are The net displacement is given by the resultant vector, . We add the corresponding components of , , and .  The treasure is at the point 10 km east and 14.12 km north of the cottage. To find the flight plan for the helicopter, we compute the magnitude and direction of the vector . Thus, the treasure is 17.3 km from the cottage, in the direction from east. The helicopter's flight path is shown at right.  vectors  From your campsite you hike 1.6 km in the direction , then 0.8 km in the direction , and finally 1.2 km in the direction .  Draw a diagram for your hike, using vectors to represent each of the three segments. Use ae grid in which 1 square represents 0.1 km.  Resolve each vector into components, and determine your location after your hike.    vectors       Force  When you push or pull on something, you are exerting a force force on the object. For example, the weight of an object is actually a force, the result of gravity pulling the object towards the earth. A force has magnitude (measured in pounds) and direction, so force is a vector quantity. A force applied to an object causes the object to accelerate in the direction of the force.  When two or more forces act simultaneously on an object, the object moves as if it were acted on by the sum of the individual force vectors. The sum of all the forces acting on an object is called the resultant force resultant force .  Abe and Bart are trying to move a refrigerator by pulling on it with forces of 150 pounds and 120 pounds respectively, as shown in figure (a). What is the resulting force on the refrigerator, and in what direction will it move?   vectors     We write each force in its coordinate form. Next, we add the forces applied by Abe and Bart to find the resultant force, .  The magnitude of the resultant force is and the direction of the force is given by   vectors     The force exerted on the refrigerator is about 234 pounds, and it will move at an angle of from the horizontal segment shown in the figure.  Two tugboats pull on a barge in the river with forces and , measured in thousands of pounds. In what direction will the barge move, and what is the magnitude of the force propelling it? 48.04 thousand lbs  If vectors and have the same magnitude but opposite directions, then has zero magnitude and is called the zero vector zero vector vector zero . A zero displacement vector means that the object started and ended in the same place; a zero velocity vector means that the object is not moving. We denote the zero vector by , so .  The vector that has the same magnitude as but the opposite direction is called the opposite opposite vector vector opposite of and denoted by . Then If the sum of the forces acting on an object is , the forces are said to be in equilibrium equilibrium , and the object will remain stationary.  Recall the refrigerator in the previous example. Carl does not want Abe and Bart to move the refrigerator. How hard must Carl pull so that the refrigerator remains motionless?  The force that Carl applies must equal in magnitude the sum of the forces applied by Abe and Bart, but point in the opposite direction. That is, So Carl must pull with 234.3 pounds in the direction .  Suppose that and that and What is the coordinate form of vector ?  Review the following skills you will need for this section.     State the sum of angles formula for sine.  State the sum of angles formula for cosine.  State the sum of angles formula for tangent.  Explain how the difference of angles formulas differ from the sum of angles formulas.  For Problems 5 and 6, let .  Find an exact value for .  Find an exact value for .     Skills Refresher Answers      Change subtraction signs to addition and vice versa.        Section 9.2 Summary  Vocabulary   Unit vector  Coordinate form  Geometric form  Zero vector    Concepts   A vector of magnitude 1 is called a unit vector . The unit vector in the direction of the -axis is denoted by . The unit vector in the direction of the -axis is called .  Coordinate Form of a Vector  The vector is the vector whose horizontal component is and whose vertical component is .  Comparing the Geometric and Coordinate Forms of a Vector  Suppose that the vector has magnitude and points in the direction of the angle in standard position. If has the coordinate form , then   Scalar Multiplication in Coordinate Form  If and is a scalar, then  Sum of Vectors in Coordinate Form  If and , then  Scaling a Vector  A unit vector in the direction of is given by  A vector of length in the direction of is given by   Study Questions   Is it easier to add vectors in geometric form or in coordinate form? Why?  To find a unit vector in the direction of , multiply the coordinates of by .  To find a vector of length in the direction of , multiply the coordinates of by .  Name two physical quantities that are represented by vectors.   Skills   Convert the coordinate form of a vector to geometric form #7 18  Convert the geometric form of a vector to coordinate form #19 22, 47 50  Compute sums and scalar multiples of vectors #1 8, 23 28, 47 50  Find a vector in a given direction with a given length #39 46  Solve problems with vectors #51 60     Homework 9-2  For Problems 1 4, give the coordinate form of each vector shown in the figure. Use the coordinate form to find the following.    vectors                                  For the vectors and above, calculate and .  Which of the following statements is true?     and    For the vectors and above, calculate and .  Which of the following statements is true?     For Problems 7 10,   Sketch the vector and give its coordinate form.  Find the magnitude and direction of the vector.   grid     The displacement vector from to .    vector      The displacement vector from to .  The displacement vector from to .    vector      The displacement vector from to .   Hermione is 12 meters east and 3 meters north of Harry. Ron is 6 meters east and 9 meters north of Hermione.  Calculate the displacement vector from Harry to Ron in coordinate form. Let point east and point north.  Find the magnitude and direction of the displacement vector.    Delbert and Francine are climbing a rock wall. Delbert is 8 feet to the right and and 23 feet above their starting point. Francine is 2 feet to the right and 7 feet above Delbert.  Calculate the displacement vector from the starting point to Francine in coordinate form. Let point right and point up.  Find the magnitude and direction of the displacement vector.  For Problems 13 18, find the magnitude and direction of the vector.         For Problems 19 22, find the coordinate form of the vector.       For Problems 23 26, sketch each vector and its components. Use the coordinate form to find the resultant vector , and sketch it.    vectors        vectors       For Problems 27 30, find the sum of the given vectors.       For Problems 31 38, find the coordinate form of the vector, where           For Problems 39 42, find a unit vector in the same direction as the given vector.       For Problems 43 46, find a vector in the same direction as , but with the given length.       For Problems 47 50,  Draw a diagram using arrows to represent the vectors.  Convert each vector to coordinate form.  Use the coordinate form to add or subtract the vectors.  Find , where has magnitude 2.6 and direction , has magnitude 5.8 and direction .    vectors       Find , where has magnitude 50 and direction , has magnitude 70 and direction .  Find , where has magnitude 35 and direction , has magnitude 60 and direction .    vectors       Find , where has magnitude 12.4 and direction , has magnitude 8.8 and direction .   For Problems 51 56,  Make a sketch using vectors to illustrate the problem.  Use the coordinate form of the vectors to solve problem.  The tornado displaced the trash bin to a spot 500 meters north and 800 meters east of its original position, and the flood later displaced the bin 2000 meters due south from there. How far and in what direction was the trash bin moved from it original position?    vectors     1700 m, east of south  A radio-controlled model plane pointed due west with an airspeed of 15 miles per hour, but there was a crosswind from the north at a speed of 8 miles per hour. How fast and in what direction is the plane moving relative to the ground?  Nimish flies 10 km in a direction north from east, then turns and flies an additional 12 km due west. How far and in what direction is Nimish's final position relative to his starting point?    vectors     21.98 km, north of west  Dena sails 500 yards due south, then turns and sails 350 yards in the direction from east. How far and in what direction is Dena's final position relative to her strarting point?  After leaving the airport, Kelly flew 30 miles at a heading east of north, then 50 miles east of north, and finally 12 miles south of east. What is her current position relative to the airport?    vectors     83 mi, east of north  On a whale-watching trip, the SS Dolphin sailed 15 miles from port on a bearing of , then 8 miles on a bearing of , and then 4 miles on a bearing of . What is her current position relative to port?   For Problems 57 60,  Find the resultant force.  Find the additional force needed for the system to be in equilibrium.            vectors         vectors       Find the magnitude of the vector , and the magnitude of the vector , and verify that .  Let , and verify that , for .     Find the magnitude of the vector , and verify that the vector has magnitude 1.  Let , where and are not both , and verify that is a unit vector.   "
 },
 {
-  "id": "example-179",
+  "id": "example-180",
   "level": "2",
-  "url": "Coordinate-Form.html#example-179",
+  "url": "Coordinate-Form.html#example-180",
   "type": "Example",
   "number": "9.22",
   "title": "",
   "body": "A vector has magnitude 4 and direction , where is measured counter-clockwise from the positive -axis. Express as the sum of a horizontal vector, , and a vertical vector, .   The components of are given by      vectors on coordinate plane     Then , where is a horizontal vector of magnitude 3.50, and is a vertical vector of magnitude 1.94. See the figure above. "
 },
 {
-  "id": "exercise-2319",
+  "id": "exercise-2320",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2319",
+  "url": "Coordinate-Form.html#exercise-2320",
   "type": "Checkpoint",
   "number": "9.23",
   "title": "",
   "body": "A vector has magnitude 2 and direction , where is in standard position. Express as the sum of a horizontal vector, , and a vertical vector, . , where "
 },
 {
-  "id": "p-6101",
+  "id": "p-6135",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6101",
+  "url": "Coordinate-Form.html#p-6135",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "unit vector "
 },
 {
-  "id": "p-6103",
+  "id": "p-6137",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6103",
+  "url": "Coordinate-Form.html#p-6137",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "coordinate form "
 },
 {
-  "id": "example-180",
+  "id": "example-181",
   "level": "2",
-  "url": "Coordinate-Form.html#example-180",
+  "url": "Coordinate-Form.html#example-181",
   "type": "Example",
   "number": "9.24",
   "title": "",
   "body": "State the coordinate form of the vector shown at right.   vectors on xy-plane     From its base to its tip, the vector extends 4 units in the negative direction and 6 units in the direction. Thus, . "
 },
 {
-  "id": "exercise-2320",
+  "id": "exercise-2321",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2320",
+  "url": "Coordinate-Form.html#exercise-2321",
   "type": "Checkpoint",
   "number": "9.25",
   "title": "",
   "body": "State the coordinate form of the vector shown at right.   vectors    "
 },
 {
-  "id": "example-181",
+  "id": "example-182",
   "level": "2",
-  "url": "Coordinate-Form.html#example-181",
+  "url": "Coordinate-Form.html#example-182",
   "type": "Example",
   "number": "9.26",
   "title": "",
   "body": " Find the geometric form of the vector .  Find the coordinate form of the vector whose magnitude is 5 and whose direction is the angle .   The magnitude of is . The direction satisfies the equation . Because the point lies in the third quadrant, we know that must be a third quadrant angle. Thus, .  The coordinates of the vector are given by so the coordinate form is . "
 },
 {
-  "id": "exercise-2321",
+  "id": "exercise-2322",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2321",
+  "url": "Coordinate-Form.html#exercise-2322",
   "type": "Checkpoint",
   "number": "9.27",
   "title": "",
   "body": "Find the geometric form of the vector . magnitude 10, direction "
 },
 {
-  "id": "example-182",
+  "id": "example-183",
   "level": "2",
-  "url": "Coordinate-Form.html#example-182",
+  "url": "Coordinate-Form.html#example-183",
   "type": "Example",
   "number": "9.28",
   "title": "",
   "body": "The vector has coordinate form . Find the coordinate form for the vector .  We multiply each component of by to get . "
 },
 {
-  "id": "exercise-2322",
+  "id": "exercise-2323",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2322",
+  "url": "Coordinate-Form.html#exercise-2323",
   "type": "Checkpoint",
   "number": "9.29",
   "title": "",
   "body": "Find the coordinate form for the vector , where . "
 },
 {
-  "id": "example-183",
+  "id": "example-184",
   "level": "2",
-  "url": "Coordinate-Form.html#example-183",
+  "url": "Coordinate-Form.html#example-184",
   "type": "Example",
   "number": "9.30",
   "title": "",
   "body": "Find a unit vector pointing in the same direction as .  We first compute the magnitude of . Next we multiply by the reciprocal of its length. The unit vector in the same direction as is then "
 },
 {
-  "id": "exercise-2323",
+  "id": "exercise-2324",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2323",
+  "url": "Coordinate-Form.html#exercise-2324",
   "type": "Checkpoint",
   "number": "9.31",
   "title": "",
   "body": "Find a unit vector and a vector of length 10 pointing in the same direction as . , "
 },
 {
-  "id": "example-184",
+  "id": "example-185",
   "level": "2",
-  "url": "Coordinate-Form.html#example-184",
+  "url": "Coordinate-Form.html#example-185",
   "type": "Example",
   "number": "9.32",
   "title": "",
   "body": "Kyle flew 15 miles southwest and then 20 miles on a bearing of . What is his current position relative to his starting point?  A sketch of Kyle's journey is shown below. We begin by converting the vector for each leg of his journey into coordinate form.     vectors     Thus, We find the resultant vector, , by adding and . Kyle's position vector is , or about 30.3 miles west and 14.1 miles south of his starting position. "
 },
 {
-  "id": "exercise-2324",
+  "id": "exercise-2325",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2324",
+  "url": "Coordinate-Form.html#exercise-2325",
   "type": "Checkpoint",
   "number": "9.33",
   "title": "",
   "body": "Arianna's yacht heads west of north at a speed of 20 kilometers per hour relative to the water. However, the water is moving east of north at 4 kilometers per hour. What is Arianna's velocity relative to land? 22.7 kph due north "
 },
 {
-  "id": "example-185",
+  "id": "example-186",
   "level": "2",
-  "url": "Coordinate-Form.html#example-185",
+  "url": "Coordinate-Form.html#example-186",
   "type": "Example",
   "number": "9.34",
   "title": "",
   "body": "While exploring an abandoned cottage in the woods, you discover an old map showing the location of a buried treasure.  From the cottage, go 10 km in the direction .  From that point, go 12.8 km in the direction .  Finally, go 9.5 km in the direction .  You wonder if the directions will lead you safely to the treasure. You draw vectors to illustrate the path described by the directions, as shown in the figure.  vectors  Instead of following the map directions, you plan to fly by helicopter from the abandoned cottage directly to the treasure, but you will need to know the correct heading and distance to fly. Draw the vector for the net displacement from the cottage to the treasure, and give its length and direction.  The helicopter's flight plan is the vector sum of the three vectors , , and shown in the figure. To find their sum, we resolve each of the three vectors into its components. In coordinate form, the three displacement vectors are The net displacement is given by the resultant vector, . We add the corresponding components of , , and .  The treasure is at the point 10 km east and 14.12 km north of the cottage. To find the flight plan for the helicopter, we compute the magnitude and direction of the vector . Thus, the treasure is 17.3 km from the cottage, in the direction from east. The helicopter's flight path is shown at right.  vectors "
 },
 {
-  "id": "exercise-2325",
+  "id": "exercise-2326",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2325",
+  "url": "Coordinate-Form.html#exercise-2326",
   "type": "Checkpoint",
   "number": "9.35",
   "title": "",
   "body": "From your campsite you hike 1.6 km in the direction , then 0.8 km in the direction , and finally 1.2 km in the direction .  Draw a diagram for your hike, using vectors to represent each of the three segments. Use ae grid in which 1 square represents 0.1 km.  Resolve each vector into components, and determine your location after your hike.    vectors     "
 },
 {
-  "id": "p-6150",
+  "id": "p-6184",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6150",
+  "url": "Coordinate-Form.html#p-6184",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "force "
 },
 {
-  "id": "p-6151",
+  "id": "p-6185",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6151",
+  "url": "Coordinate-Form.html#p-6185",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "resultant force "
 },
 {
-  "id": "example-186",
+  "id": "example-187",
   "level": "2",
-  "url": "Coordinate-Form.html#example-186",
+  "url": "Coordinate-Form.html#example-187",
   "type": "Example",
   "number": "9.36",
   "title": "",
   "body": "Abe and Bart are trying to move a refrigerator by pulling on it with forces of 150 pounds and 120 pounds respectively, as shown in figure (a). What is the resulting force on the refrigerator, and in what direction will it move?   vectors     We write each force in its coordinate form. Next, we add the forces applied by Abe and Bart to find the resultant force, .  The magnitude of the resultant force is and the direction of the force is given by   vectors     The force exerted on the refrigerator is about 234 pounds, and it will move at an angle of from the horizontal segment shown in the figure. "
 },
 {
-  "id": "exercise-2326",
+  "id": "exercise-2327",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2326",
+  "url": "Coordinate-Form.html#exercise-2327",
   "type": "Checkpoint",
   "number": "9.37",
   "title": "",
   "body": "Two tugboats pull on a barge in the river with forces and , measured in thousands of pounds. In what direction will the barge move, and what is the magnitude of the force propelling it? 48.04 thousand lbs "
 },
 {
-  "id": "p-6158",
+  "id": "p-6192",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6158",
+  "url": "Coordinate-Form.html#p-6192",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "zero vector "
 },
 {
-  "id": "p-6159",
+  "id": "p-6193",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6159",
+  "url": "Coordinate-Form.html#p-6193",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "opposite equilibrium "
 },
 {
-  "id": "example-187",
+  "id": "example-188",
   "level": "2",
-  "url": "Coordinate-Form.html#example-187",
+  "url": "Coordinate-Form.html#example-188",
   "type": "Example",
   "number": "9.38",
   "title": "",
   "body": "Recall the refrigerator in the previous example. Carl does not want Abe and Bart to move the refrigerator. How hard must Carl pull so that the refrigerator remains motionless?  The force that Carl applies must equal in magnitude the sum of the forces applied by Abe and Bart, but point in the opposite direction. That is, So Carl must pull with 234.3 pounds in the direction . "
 },
 {
-  "id": "exercise-2327",
+  "id": "exercise-2328",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2327",
+  "url": "Coordinate-Form.html#exercise-2328",
   "type": "Checkpoint",
   "number": "9.39",
   "title": "",
@@ -25030,137 +25093,128 @@ var ptx_lunr_docs = [
   "body": "   State the sum of angles formula for sine.  State the sum of angles formula for cosine.  State the sum of angles formula for tangent.  Explain how the difference of angles formulas differ from the sum of angles formulas.  For Problems 5 and 6, let .  Find an exact value for .  Find an exact value for .     Skills Refresher Answers      Change subtraction signs to addition and vice versa.      "
 },
 {
-  "id": "p-6177",
+  "id": "p-6211",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6177",
+  "url": "Coordinate-Form.html#p-6211",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "unit vector "
 },
 {
-  "id": "exercise-2328",
+  "id": "exercise-2329",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2328",
+  "url": "Coordinate-Form.html#exercise-2329",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "       "
 },
 {
-  "id": "exercise-2329",
+  "id": "exercise-2330",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2329",
+  "url": "Coordinate-Form.html#exercise-2330",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-2330",
+  "id": "exercise-2331",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2330",
+  "url": "Coordinate-Form.html#exercise-2331",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "       "
 },
 {
-  "id": "exercise-2331",
+  "id": "exercise-2332",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2331",
+  "url": "Coordinate-Form.html#exercise-2332",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-2332",
+  "id": "exercise-2333",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2332",
+  "url": "Coordinate-Form.html#exercise-2333",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": " For the vectors and above, calculate and .  Which of the following statements is true?     and  "
 },
 {
-  "id": "exercise-2333",
+  "id": "exercise-2334",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2333",
+  "url": "Coordinate-Form.html#exercise-2334",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": " For the vectors and above, calculate and .  Which of the following statements is true?    "
 },
 {
-  "id": "exercise-2334",
+  "id": "exercise-2335",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2334",
+  "url": "Coordinate-Form.html#exercise-2335",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "The displacement vector from to .    vector     "
 },
 {
-  "id": "exercise-2335",
+  "id": "exercise-2336",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2335",
+  "url": "Coordinate-Form.html#exercise-2336",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": "The displacement vector from to . "
 },
 {
-  "id": "exercise-2336",
+  "id": "exercise-2337",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2336",
+  "url": "Coordinate-Form.html#exercise-2337",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": "The displacement vector from to .    vector     "
 },
 {
-  "id": "exercise-2337",
+  "id": "exercise-2338",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2337",
+  "url": "Coordinate-Form.html#exercise-2338",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": "The displacement vector from to . "
 },
 {
-  "id": "exercise-2338",
+  "id": "exercise-2339",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2338",
+  "url": "Coordinate-Form.html#exercise-2339",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "Hermione is 12 meters east and 3 meters north of Harry. Ron is 6 meters east and 9 meters north of Hermione.  Calculate the displacement vector from Harry to Ron in coordinate form. Let point east and point north.  Find the magnitude and direction of the displacement vector.   "
 },
 {
-  "id": "exercise-2339",
+  "id": "exercise-2340",
   "level": "2",
-  "url": "Coordinate-Form.html#exercise-2339",
+  "url": "Coordinate-Form.html#exercise-2340",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "Delbert and Francine are climbing a rock wall. Delbert is 8 feet to the right and and 23 feet above their starting point. Francine is 2 feet to the right and 7 feet above Delbert.  Calculate the displacement vector from the starting point to Francine in coordinate form. Let point right and point up.  Find the magnitude and direction of the displacement vector. "
 },
 {
-  "id": "exercise-2340",
-  "level": "2",
-  "url": "Coordinate-Form.html#exercise-2340",
-  "type": "Exercise",
-  "number": "13",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2341",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2341",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": ""
 },
@@ -25169,7 +25223,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2342",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
   "body": ""
 },
@@ -25178,7 +25232,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2343",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
   "body": ""
 },
@@ -25187,7 +25241,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2344",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
   "body": ""
 },
@@ -25196,7 +25250,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2345",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": ""
 },
@@ -25205,7 +25259,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2346",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
   "body": ""
 },
@@ -25214,7 +25268,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2347",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -25223,7 +25277,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2348",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
   "body": ""
 },
@@ -25232,7 +25286,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2349",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
   "body": ""
 },
@@ -25241,43 +25295,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2350",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "  vectors    "
+  "body": ""
 },
 {
   "id": "exercise-2351",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2351",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": ""
+  "body": "  vectors    "
 },
 {
   "id": "exercise-2352",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2352",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "  vectors    "
+  "body": ""
 },
 {
   "id": "exercise-2353",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2353",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": ""
+  "body": "  vectors    "
 },
 {
   "id": "exercise-2354",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2354",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
   "body": ""
 },
@@ -25286,7 +25340,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2355",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -25295,7 +25349,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2356",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ""
 },
@@ -25304,7 +25358,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2357",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ""
 },
@@ -25313,7 +25367,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2358",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
   "body": ""
 },
@@ -25322,7 +25376,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2359",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
   "body": ""
 },
@@ -25331,7 +25385,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2360",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
   "body": ""
 },
@@ -25340,7 +25394,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2361",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -25349,7 +25403,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2362",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
   "body": ""
 },
@@ -25358,7 +25412,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2363",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -25367,7 +25421,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2364",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -25376,7 +25430,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2365",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -25385,7 +25439,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2366",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
   "body": ""
 },
@@ -25394,7 +25448,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2367",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -25403,7 +25457,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2368",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
   "body": ""
 },
@@ -25412,7 +25466,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2369",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
   "body": ""
 },
@@ -25421,7 +25475,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2370",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
   "body": ""
 },
@@ -25430,7 +25484,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2371",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
   "body": ""
 },
@@ -25439,7 +25493,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2372",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
   "body": ""
 },
@@ -25448,7 +25502,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2373",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
   "body": ""
 },
@@ -25457,140 +25511,149 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2374",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "Find , where has magnitude 2.6 and direction , has magnitude 5.8 and direction .    vectors      "
+  "body": ""
 },
 {
   "id": "exercise-2375",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2375",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "Find , where has magnitude 50 and direction , has magnitude 70 and direction . "
+  "body": "Find , where has magnitude 2.6 and direction , has magnitude 5.8 and direction .    vectors      "
 },
 {
   "id": "exercise-2376",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2376",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "Find , where has magnitude 35 and direction , has magnitude 60 and direction .    vectors      "
+  "body": "Find , where has magnitude 50 and direction , has magnitude 70 and direction . "
 },
 {
   "id": "exercise-2377",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2377",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "Find , where has magnitude 12.4 and direction , has magnitude 8.8 and direction . "
+  "body": "Find , where has magnitude 35 and direction , has magnitude 60 and direction .    vectors      "
 },
 {
   "id": "exercise-2378",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2378",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "The tornado displaced the trash bin to a spot 500 meters north and 800 meters east of its original position, and the flood later displaced the bin 2000 meters due south from there. How far and in what direction was the trash bin moved from it original position?    vectors     1700 m, east of south "
+  "body": "Find , where has magnitude 12.4 and direction , has magnitude 8.8 and direction . "
 },
 {
   "id": "exercise-2379",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2379",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": "A radio-controlled model plane pointed due west with an airspeed of 15 miles per hour, but there was a crosswind from the north at a speed of 8 miles per hour. How fast and in what direction is the plane moving relative to the ground? "
+  "body": "The tornado displaced the trash bin to a spot 500 meters north and 800 meters east of its original position, and the flood later displaced the bin 2000 meters due south from there. How far and in what direction was the trash bin moved from it original position?    vectors     1700 m, east of south "
 },
 {
   "id": "exercise-2380",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2380",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": "Nimish flies 10 km in a direction north from east, then turns and flies an additional 12 km due west. How far and in what direction is Nimish's final position relative to his starting point?    vectors     21.98 km, north of west "
+  "body": "A radio-controlled model plane pointed due west with an airspeed of 15 miles per hour, but there was a crosswind from the north at a speed of 8 miles per hour. How fast and in what direction is the plane moving relative to the ground? "
 },
 {
   "id": "exercise-2381",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2381",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": "Dena sails 500 yards due south, then turns and sails 350 yards in the direction from east. How far and in what direction is Dena's final position relative to her strarting point? "
+  "body": "Nimish flies 10 km in a direction north from east, then turns and flies an additional 12 km due west. How far and in what direction is Nimish's final position relative to his starting point?    vectors     21.98 km, north of west "
 },
 {
   "id": "exercise-2382",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2382",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "After leaving the airport, Kelly flew 30 miles at a heading east of north, then 50 miles east of north, and finally 12 miles south of east. What is her current position relative to the airport?    vectors     83 mi, east of north "
+  "body": "Dena sails 500 yards due south, then turns and sails 350 yards in the direction from east. How far and in what direction is Dena's final position relative to her strarting point? "
 },
 {
   "id": "exercise-2383",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2383",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": "On a whale-watching trip, the SS Dolphin sailed 15 miles from port on a bearing of , then 8 miles on a bearing of , and then 4 miles on a bearing of . What is her current position relative to port? "
+  "body": "After leaving the airport, Kelly flew 30 miles at a heading east of north, then 50 miles east of north, and finally 12 miles south of east. What is her current position relative to the airport?    vectors     83 mi, east of north "
 },
 {
   "id": "exercise-2384",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2384",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": "    "
+  "body": "On a whale-watching trip, the SS Dolphin sailed 15 miles from port on a bearing of , then 8 miles on a bearing of , and then 4 miles on a bearing of . What is her current position relative to port? "
 },
 {
   "id": "exercise-2385",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2385",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-2386",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2386",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "  vectors      "
+  "body": "  "
 },
 {
   "id": "exercise-2387",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2387",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "  vectors    "
+  "body": "  vectors      "
 },
 {
   "id": "exercise-2388",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2388",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": " Find the magnitude of the vector , and the magnitude of the vector , and verify that .  Let , and verify that , for .   "
+  "body": "  vectors    "
 },
 {
   "id": "exercise-2389",
   "level": "2",
   "url": "Coordinate-Form.html#exercise-2389",
+  "type": "Exercise",
+  "number": "61",
+  "title": "",
+  "body": " Find the magnitude of the vector , and the magnitude of the vector , and verify that .  Let , and verify that , for .   "
+},
+{
+  "id": "exercise-2390",
+  "level": "2",
+  "url": "Coordinate-Form.html#exercise-2390",
   "type": "Exercise",
   "number": "62",
   "title": "",
@@ -25606,18 +25669,18 @@ var ptx_lunr_docs = [
   "body": " The Dot Product  Components  component  We have seen that it can be useful to resolve a vector into horizontal and vertical components. We can also break a vector into components that point in other directions.  Imagine the following experiment: Delbert holds a ball at shoulder height and then drops it, so that it falls to the ground. Francine holds a ball at shoulder height on an inclined ramp, then releases it so that it rolls downhill. Which ball will reach the ground first?  Although gravity causes both balls to speed up, the free-falling ball will reach the ground first. The force of gravity pulls straight down, the same direction as the motion of the free-falling ball, but the rolling ball must move at an angle to the pull of gravity, along the surface of the ramp. Only part of the gravitational force accelerates the rolling ball, and the rest of the force is counteracted by the surface of the ramp. What fraction of the gravitational force causes the ball to roll?    ramp     In figure (a), the gravitational force is resolved into the sum of two vectors, , where points down the ramp, and is perpendicular to the ramp. The magnitude of is called the component of in the direction of motion, and is denoted by . This is the portion of the gravitational force that moves the ball. From figure (b), we see that , where is the angle between and .  Component of a Vector  component  vector component  vector component component  The component of a vector in the direction of vector is where is the angle between and .  With a little geometry, you can verify that in this example the angle is the complement of the angle of inclination of the ramp, . (Think of similar triangles.) Now suppose that we increase the angle of inclination. As increases, decreases, increases, and hence increases. This result agrees with our experience: as the ramp gets steeper, the ball rolls faster.  Delbert uses a sheet of plywood as a ramp for his wheelbarrow. The ramp is inclined at an angle of to the horizontal. The plywood can support a maximum weight of 200 pounds. What weight will the ramp support?  The component of the weight perpendicular to the ramp cannot be more than 200 pounds. If the weight of the wheelbarrow is , and is a vector perpendicular to the ramp, as shown below, then the angle between and is , by similar triangles. Thus, the component of in the direction of is     ramp     The ramp can support no more than about 207 pounds.  Delbert pushes a lawn mower whose handle makes a angle with the horizontal. If he applies a force of 30 pounds in the direction of the handle, what is the component of the force in the horizontal direction?   lawn mower    23 pounds   Coordinate Form for Components  component coordinate form  In the examples above, we computed the component of a force in the direction of a vector by knowing the angle between and . If the vectors are given in coordinate form (that is, ), we may not know the angle between them. Can we compute the component of a vector in the direction of , in terms of the coordinates of and ?  Suppose and , as shown below. We will need to compute the cosine of in terms of and .  First verify that   vectors and components     Because , we use the subtraction formula for cosine. And finally,  Now we have a fromula for the component of a vector in the direction of a vector .  Component of a Vector in Coordinate Form  component coordinate form  If and , then the component of in the direction of is given by  Recall that the \"component\" of a vector is a scalar. If a vector is resolved into two component vectors, , its components are the lengths of the vectors and . The vectors and themselves are called the vector components component vector component vector component of .   Compute the component of in the direction of .  Find the vector component of in the direction of .  Find the vector component of perpendicular to .   We use the formula derived above. Remember that the component of in the direction of is a scalar; it is the length of the projection of onto .  We would like to find a vector of length 6 in the direction of , as shown at right. Because , we scale the components of by to get   vectors     Because , where is perpendicular to , we have  Write the vector as the sum of two components, one parallel to and the other perpendicular to .   The Dot Product  dot product  The expression , which we encountered above as part of the formula for , is quite useful and is given a name; it is called the dot product of the vectors and .  It is easy to remember the formula for the dot product if we think of adding the product of the -components and the product of the -components of the two vectors.  Dot Product  dot product  The dot product of two vectors and is the scalar  From the formula above, you can see that the dot product is commutative. That is, You can check that this is true in the following example.  Compute the dot product of and .  We apply the formula above to find  In the examples above, you can see that the dot product of two vectors is a scalar. For this reason, the dot product is also called the scalar product scalar product scalar product dot product dot product .  Compute the dot product of and .  We can now write the formula for using the dot product. We have derived an alternate formula for a component of a vector.  Component of a Vector  component  The component of in the direction of is the scalar  Compute the component of in the direction of .  Using the formula above, we have . We first compute and . Thus,   The length of the projection of in the direction of is units, as shown at right.   vectors on grid     Compute the component of in the direction of .   Geometric Meaning of the Dot Product  dot product geometric form  An even more important relationship, which gives geometric meaning to the dot product, follows from the formula for a component. We now have two ways to compute the component of in the direction of : Equating these two expressions, we find or . This is a geometric formula for the dot product.  Geometric Form for the Dot Product  dot product geometric form  The dot product of two vectors and is the scalar where is the angle between the vectors.  The dot product is a way of multiplying two vectors that depends on the angle between them.  If , so that and point in the same direction, then and is just the product of their lengths, .  If and are perpendicular, then , so . (Two vectors and are said to be orthogonal orthogonal if their dot product is zero.)  If is between and , the dot product multiplies the length of times the component of in the direction of .    vectors     Show that the vectors and are orthogonal.  We compute the dot product of the vectors. Thus, , so and are orthogonal. Because neither or , it must be the case that , so or .   Show that the vectors and are orthogonal.  Find a vector perpendicular to .    Using the dot product, we can find the angle between two vectors.  Angle Between Two Vectors  angle between vectors  vector angle between  The angle between two vectors and is given by   Find the angle between the vectors and .  We first compute and the magnitude of each vector.     vectors     Then we apply the formula for . The angle between the vectors is .  Find the angle between the vectors and .  Review the following skills you will need for this section.       Find the height of the triangle.  How far is the foot of the altitude from the vertex of the angle?   triangle     Find the height of the triangle.  Find the length of the third side of the triangle.   triangle     How far north is the tower from the airport? How far east?  What is the distance from to ?   triangle     Find the distance from to .  How far north is point from point ?   triangle      Skills Refresher Answers          36.92 mi, 15.63 mi  16.08 mi         Section 9.3 Summary  Vocabulary   Dot product  Scalar product  Orthogonal    Concepts   Dot Product (Coordinate Formula)  The dot product of two vectors and is the scalar  The dot product is a way of multiplying two vectors that depends on the angle between them.  Dot Product (Geometric Formula)  The dot product of two vectors and is the scalar where is the angle between the vectors.  The component of a vector in the direction of vector is the length of the vector projection of onto .  Component of a Vector  The component of in the direction of is the scalar  Angle Between Two Vectors  The angle between two vectors and is given by   Two vectors and are orthogonal if   Study Questions   If and have the same direction, what is ?  If is perpendicular to , what is ?  What is the angle between and that makes their dot product as large as possible?  What does the dot product of two unit vectors tell you?   Skills   Find the component of in the direction of #1 6, 37 40  Compute the dot product #11 22, 27 36  Find the angle between two vectors #23 26  Resolve a vector into components in given directions #7 10, 41 42     Homework 9-3  For Problems 1 6, find the component of in the direction of .              For Problems 7 10,  Resolve into two components, one parallel to and the other orthogonal to .  Sketch both vectors and the vector components.    grid     vectors      grid   grid     vectors      grid   For Problems 11 18, compute the dot product .          has magnitude 3 and direction , and has magnitude 8 and direction .  has magnitude and direction , and has magnitude and direction .    vectors       vectors      For Problems 19 22, decide whether the pair of vectors is orthogonal.  and not orthogonal  and  and orthogonal  and   For Problems 23 26, find the angle between the vectors.  and  and  and  and   For Problems 27 30, find a value of so that is orthogonal to .           For Problems 31 36, evaluate the expression for the vectors         Gary pulls a loaded wagon along a flat road. The handle of the wagon makes an angle of to the horizontal. If Gary pulls with a force of 60 pounds, find the component of the force in the direction of motion. 38.57 lbs  Wassily is trying to topple a statue by pulling on a rope tied to the statue's upraised arm. The rope is making a angle from horizontal. If Wassily is pulling on the rope with a force of 250 pounds, find the component of the force in the horizontal direction.  An SUV weighing 6200 pounds is parked on a hill with slope . Find the force needed to keep the SUV from rolling down the hill. 1289 lbs  Steve's boat is headed due north, and the sail points at an angle of east of north. The wind is blowing in the direction west of south, but because of the difference in air pressure between the front and back surfaces of the sail, the boat experiences a force of 400 pounds in the direction the sail is facing. Find the component of the force in the direction of the boat's motion.   Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .     and  vectors    Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .   For Problems 43 48, let and .  Show that .  If , show that .  Show that .  Prove the distributive law: .   Show that .  If , show that is perpendicular to .   Show that the component of in the direction of is , and the component of in the direction of is . and  Show that the dot product gives the length of times the coponent of in the direction of .   Start from the geometric definition and show that and .  Use part (a) and Problems 45 and 46 to derive the coordinate definition of .   Both and because ;     Show that  Use part (a) to prove the triangle inequality:    Use the dot product to show that .  Use the figure at right to explain why part (a) proves the law of cosines.   vectors      Let , and    If is a unit vector, and the angle between and is , show that .  Suppose and are unit vectors, as shown in the figure at right. Use the dot product to prove that   vectors      "
 },
 {
-  "id": "example-188",
+  "id": "example-189",
   "level": "2",
-  "url": "The-Dot-Product.html#example-188",
+  "url": "The-Dot-Product.html#example-189",
   "type": "Example",
   "number": "9.40",
   "title": "",
   "body": "Delbert uses a sheet of plywood as a ramp for his wheelbarrow. The ramp is inclined at an angle of to the horizontal. The plywood can support a maximum weight of 200 pounds. What weight will the ramp support?  The component of the weight perpendicular to the ramp cannot be more than 200 pounds. If the weight of the wheelbarrow is , and is a vector perpendicular to the ramp, as shown below, then the angle between and is , by similar triangles. Thus, the component of in the direction of is     ramp     The ramp can support no more than about 207 pounds. "
 },
 {
-  "id": "exercise-2390",
+  "id": "exercise-2391",
   "level": "2",
-  "url": "The-Dot-Product.html#exercise-2390",
+  "url": "The-Dot-Product.html#exercise-2391",
   "type": "Checkpoint",
   "number": "9.41",
   "title": "",
@@ -25633,36 +25696,36 @@ var ptx_lunr_docs = [
   "body": "Recall that the \"component\" of a vector is a scalar. If a vector is resolved into two component vectors, , its components are the lengths of the vectors and . The vectors and themselves are called the vector components component vector component vector component of . "
 },
 {
-  "id": "example-189",
+  "id": "example-190",
   "level": "2",
-  "url": "The-Dot-Product.html#example-189",
+  "url": "The-Dot-Product.html#example-190",
   "type": "Example",
   "number": "9.43",
   "title": "",
   "body": " Compute the component of in the direction of .  Find the vector component of in the direction of .  Find the vector component of perpendicular to .   We use the formula derived above. Remember that the component of in the direction of is a scalar; it is the length of the projection of onto .  We would like to find a vector of length 6 in the direction of , as shown at right. Because , we scale the components of by to get   vectors     Because , where is perpendicular to , we have "
 },
 {
-  "id": "exercise-2391",
+  "id": "exercise-2392",
   "level": "2",
-  "url": "The-Dot-Product.html#exercise-2391",
+  "url": "The-Dot-Product.html#exercise-2392",
   "type": "Checkpoint",
   "number": "9.44",
   "title": "",
   "body": "Write the vector as the sum of two components, one parallel to and the other perpendicular to . "
 },
 {
-  "id": "p-6322",
+  "id": "p-6356",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6322",
+  "url": "The-Dot-Product.html#p-6356",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dot product "
 },
 {
-  "id": "p-6324",
+  "id": "p-6358",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6324",
+  "url": "The-Dot-Product.html#p-6358",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25678,99 +25741,99 @@ var ptx_lunr_docs = [
   "body": "From the formula above, you can see that the dot product is commutative. That is, You can check that this is true in the following example. "
 },
 {
-  "id": "example-190",
+  "id": "example-191",
   "level": "2",
-  "url": "The-Dot-Product.html#example-190",
+  "url": "The-Dot-Product.html#example-191",
   "type": "Example",
   "number": "9.46",
   "title": "",
   "body": "Compute the dot product of and .  We apply the formula above to find "
 },
 {
-  "id": "p-6328",
+  "id": "p-6362",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6328",
+  "url": "The-Dot-Product.html#p-6362",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "scalar product "
 },
 {
-  "id": "exercise-2392",
+  "id": "exercise-2393",
   "level": "2",
-  "url": "The-Dot-Product.html#exercise-2392",
+  "url": "The-Dot-Product.html#exercise-2393",
   "type": "Checkpoint",
   "number": "9.47",
   "title": "",
   "body": "Compute the dot product of and . "
 },
 {
-  "id": "example-191",
+  "id": "example-192",
   "level": "2",
-  "url": "The-Dot-Product.html#example-191",
+  "url": "The-Dot-Product.html#example-192",
   "type": "Example",
   "number": "9.48",
   "title": "",
   "body": "Compute the component of in the direction of .  Using the formula above, we have . We first compute and . Thus,   The length of the projection of in the direction of is units, as shown at right.   vectors on grid    "
 },
 {
-  "id": "exercise-2393",
+  "id": "exercise-2394",
   "level": "2",
-  "url": "The-Dot-Product.html#exercise-2393",
+  "url": "The-Dot-Product.html#exercise-2394",
   "type": "Checkpoint",
   "number": "9.49",
   "title": "",
   "body": "Compute the component of in the direction of . "
 },
 {
-  "id": "p-6339",
+  "id": "p-6373",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6339",
+  "url": "The-Dot-Product.html#p-6373",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dot product "
 },
 {
-  "id": "p-6340",
+  "id": "p-6374",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6340",
+  "url": "The-Dot-Product.html#p-6374",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "orthogonal "
 },
 {
-  "id": "example-192",
+  "id": "example-193",
   "level": "2",
-  "url": "The-Dot-Product.html#example-192",
+  "url": "The-Dot-Product.html#example-193",
   "type": "Example",
   "number": "9.50",
   "title": "",
   "body": "Show that the vectors and are orthogonal.  We compute the dot product of the vectors. Thus, , so and are orthogonal. Because neither or , it must be the case that , so or . "
 },
 {
-  "id": "exercise-2394",
+  "id": "exercise-2395",
   "level": "2",
-  "url": "The-Dot-Product.html#exercise-2394",
+  "url": "The-Dot-Product.html#exercise-2395",
   "type": "Checkpoint",
   "number": "9.51",
   "title": "",
   "body": " Show that the vectors and are orthogonal.  Find a vector perpendicular to .   "
 },
 {
-  "id": "example-193",
+  "id": "example-194",
   "level": "2",
-  "url": "The-Dot-Product.html#example-193",
+  "url": "The-Dot-Product.html#example-194",
   "type": "Example",
   "number": "9.52",
   "title": "",
   "body": "Find the angle between the vectors and .  We first compute and the magnitude of each vector.     vectors     Then we apply the formula for . The angle between the vectors is . "
 },
 {
-  "id": "exercise-2395",
+  "id": "exercise-2396",
   "level": "2",
-  "url": "The-Dot-Product.html#exercise-2395",
+  "url": "The-Dot-Product.html#exercise-2396",
   "type": "Checkpoint",
   "number": "9.53",
   "title": "",
@@ -25786,29 +25849,20 @@ var ptx_lunr_docs = [
   "body": "     Find the height of the triangle.  How far is the foot of the altitude from the vertex of the angle?   triangle     Find the height of the triangle.  Find the length of the third side of the triangle.   triangle     How far north is the tower from the airport? How far east?  What is the distance from to ?   triangle     Find the distance from to .  How far north is point from point ?   triangle      Skills Refresher Answers          36.92 mi, 15.63 mi  16.08 mi       "
 },
 {
-  "id": "p-6367",
+  "id": "p-6401",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6367",
+  "url": "The-Dot-Product.html#p-6401",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dot product dot product "
 },
 {
-  "id": "exercise-2396",
-  "level": "2",
-  "url": "The-Dot-Product.html#exercise-2396",
-  "type": "Exercise",
-  "number": "1",
-  "title": "",
-  "body": " "
-},
-{
   "id": "exercise-2397",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2397",
   "type": "Exercise",
-  "number": "2",
+  "number": "1",
   "title": "",
   "body": " "
 },
@@ -25817,7 +25871,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2398",
   "type": "Exercise",
-  "number": "3",
+  "number": "2",
   "title": "",
   "body": " "
 },
@@ -25826,79 +25880,79 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2399",
   "type": "Exercise",
-  "number": "4",
+  "number": "3",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2400",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2400",
   "type": "Exercise",
-  "number": "5",
+  "number": "4",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2401",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2401",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2402",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2402",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
-  "body": "  grid     vectors    "
+  "body": ""
 },
 {
   "id": "exercise-2403",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2403",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
-  "body": " grid "
+  "body": "  grid     vectors    "
 },
 {
   "id": "exercise-2404",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2404",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
-  "body": " grid     vectors    "
+  "body": " grid "
 },
 {
   "id": "exercise-2405",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2405",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
-  "body": " grid "
+  "body": " grid     vectors    "
 },
 {
   "id": "exercise-2406",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2406",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
-  "body": " "
+  "body": " grid "
 },
 {
   "id": "exercise-2407",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2407",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": " "
 },
@@ -25907,7 +25961,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2408",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
   "body": " "
 },
@@ -25916,7 +25970,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2409",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": " "
 },
@@ -25925,34 +25979,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2410",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": "has magnitude 3 and direction , and has magnitude 8 and direction . "
+  "body": " "
 },
 {
   "id": "exercise-2411",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2411",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
-  "body": "has magnitude and direction , and has magnitude and direction . "
+  "body": "has magnitude 3 and direction , and has magnitude 8 and direction . "
 },
 {
   "id": "exercise-2412",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2412",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": "  vectors    "
+  "body": "has magnitude and direction , and has magnitude and direction . "
 },
 {
   "id": "exercise-2413",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2413",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": "  vectors    "
 },
@@ -25961,43 +26015,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2414",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": "and not orthogonal "
+  "body": "  vectors    "
 },
 {
   "id": "exercise-2415",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2415",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
-  "body": "and "
+  "body": "and not orthogonal "
 },
 {
   "id": "exercise-2416",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2416",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": "and orthogonal "
+  "body": "and "
 },
 {
   "id": "exercise-2417",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2417",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": "and "
+  "body": "and orthogonal "
 },
 {
   "id": "exercise-2418",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2418",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
   "body": "and "
 },
@@ -26006,7 +26060,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2419",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": "and "
 },
@@ -26015,7 +26069,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2420",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
   "body": "and "
 },
@@ -26024,7 +26078,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2421",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
   "body": "and "
 },
@@ -26033,16 +26087,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2422",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": " "
+  "body": "and "
 },
 {
   "id": "exercise-2423",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2423",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": " "
 },
@@ -26051,7 +26105,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2424",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": " "
 },
@@ -26060,7 +26114,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2425",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": " "
 },
@@ -26069,16 +26123,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2426",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2427",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2427",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
   "body": ""
 },
@@ -26087,7 +26141,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2428",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
   "body": ""
 },
@@ -26096,7 +26150,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2429",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -26105,7 +26159,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2430",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
   "body": ""
 },
@@ -26114,7 +26168,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2431",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -26123,158 +26177,167 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2432",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "Gary pulls a loaded wagon along a flat road. The handle of the wagon makes an angle of to the horizontal. If Gary pulls with a force of 60 pounds, find the component of the force in the direction of motion. 38.57 lbs "
+  "body": ""
 },
 {
   "id": "exercise-2433",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2433",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": "Wassily is trying to topple a statue by pulling on a rope tied to the statue's upraised arm. The rope is making a angle from horizontal. If Wassily is pulling on the rope with a force of 250 pounds, find the component of the force in the horizontal direction. "
+  "body": "Gary pulls a loaded wagon along a flat road. The handle of the wagon makes an angle of to the horizontal. If Gary pulls with a force of 60 pounds, find the component of the force in the direction of motion. 38.57 lbs "
 },
 {
   "id": "exercise-2434",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2434",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "An SUV weighing 6200 pounds is parked on a hill with slope . Find the force needed to keep the SUV from rolling down the hill. 1289 lbs "
+  "body": "Wassily is trying to topple a statue by pulling on a rope tied to the statue's upraised arm. The rope is making a angle from horizontal. If Wassily is pulling on the rope with a force of 250 pounds, find the component of the force in the horizontal direction. "
 },
 {
   "id": "exercise-2435",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2435",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "Steve's boat is headed due north, and the sail points at an angle of east of north. The wind is blowing in the direction west of south, but because of the difference in air pressure between the front and back surfaces of the sail, the boat experiences a force of 400 pounds in the direction the sail is facing. Find the component of the force in the direction of the boat's motion. "
+  "body": "An SUV weighing 6200 pounds is parked on a hill with slope . Find the force needed to keep the SUV from rolling down the hill. 1289 lbs "
 },
 {
   "id": "exercise-2436",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2436",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": " Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .     and  vectors  "
+  "body": "Steve's boat is headed due north, and the sail points at an angle of east of north. The wind is blowing in the direction west of south, but because of the difference in air pressure between the front and back surfaces of the sail, the boat experiences a force of 400 pounds in the direction the sail is facing. Find the component of the force in the direction of the boat's motion. "
 },
 {
   "id": "exercise-2437",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2437",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": " Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .  "
+  "body": " Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .     and  vectors  "
 },
 {
   "id": "exercise-2438",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2438",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "Show that . "
+  "body": " Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .  "
 },
 {
   "id": "exercise-2439",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2439",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "If , show that . "
+  "body": "Show that . "
 },
 {
   "id": "exercise-2440",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2440",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "Show that . "
+  "body": "If , show that . "
 },
 {
   "id": "exercise-2441",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2441",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "Prove the distributive law: .  "
+  "body": "Show that . "
 },
 {
   "id": "exercise-2442",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2442",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "Show that . "
+  "body": "Prove the distributive law: .  "
 },
 {
   "id": "exercise-2443",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2443",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "If , show that is perpendicular to . "
+  "body": "Show that . "
 },
 {
   "id": "exercise-2444",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2444",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "Show that the component of in the direction of is , and the component of in the direction of is . and "
+  "body": "If , show that is perpendicular to . "
 },
 {
   "id": "exercise-2445",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2445",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "Show that the dot product gives the length of times the coponent of in the direction of . "
+  "body": "Show that the component of in the direction of is , and the component of in the direction of is . and "
 },
 {
   "id": "exercise-2446",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2446",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": " Start from the geometric definition and show that and .  Use part (a) and Problems 45 and 46 to derive the coordinate definition of .   Both and because ;   "
+  "body": "Show that the dot product gives the length of times the coponent of in the direction of . "
 },
 {
   "id": "exercise-2447",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2447",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": " Show that  Use part (a) to prove the triangle inequality:  "
+  "body": " Start from the geometric definition and show that and .  Use part (a) and Problems 45 and 46 to derive the coordinate definition of .   Both and because ;   "
 },
 {
   "id": "exercise-2448",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2448",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": " Use the dot product to show that .  Use the figure at right to explain why part (a) proves the law of cosines.   vectors      Let , and  "
+  "body": " Show that  Use part (a) to prove the triangle inequality:  "
 },
 {
   "id": "exercise-2449",
   "level": "2",
   "url": "The-Dot-Product.html#exercise-2449",
+  "type": "Exercise",
+  "number": "53",
+  "title": "",
+  "body": " Use the dot product to show that .  Use the figure at right to explain why part (a) proves the law of cosines.   vectors      Let , and  "
+},
+{
+  "id": "exercise-2450",
+  "level": "2",
+  "url": "The-Dot-Product.html#exercise-2450",
   "type": "Exercise",
   "number": "54",
   "title": "",
@@ -26290,65 +26353,56 @@ var ptx_lunr_docs = [
   "body": " Chapter Summary and Review  Key Concepts   A quantity defined by both a magnitude (such as a distance) and a direction is called a vector .  Two vectors are equal if they have the same length and direction; it does not matter where the vector starts.  The length of a vector is called its magnitude , and is denoted by .  The sum of two vectors and is a new vector, , starting at the tail of the first vector and ending at the head of the second vector. The sum is called the resultant vector .  Addition of vectors is commutative. The rule for adding vectors is sometimes called the parallelogram rule .  Operations on Vectors   We can multiply a vector, , by a scalar, .  If , the magnitude of is times the magnitude of . The direction of is the same as the direction of .  If , the direction of is opposite the direction of .  We can add two vectors and with the parallelogram rule.  Any vector can be written as the sum of its horizontal and vertical vector components, and .  The components of a vector whose direction is given by the angle in standard position are the scalar quantities   The magnitude and direction of a vector with components and are given by  To add two vectors using components, we can resolve each vector into its horizontal and vertical components, add the corresponding components, then compute the magnitude and direction of the resultant.  A vector of magnitude 1 is called a unit vector . The unit vector in the direction of the -axis is denoted by . The unit vector in the direction of the -axis is called .  Coordinate Form of a Vector  The vector is the vector whose horizontal component is and whose vertical component is .  Comparing the Geometric and Coordinate Forms of a Vector  Suppose that the vector has magnitude and points in the direction of the angle in standard position. If has the coordinate form , then   Scalar Multiplication in Coordinate Form  If and is a scalar, then  Sum of Vectors in Coordinate Form  If and , then  Scaling a Vector  A unit vector in the direction of is given by  A vector of length in the direction of is given by  Dot Product (Coordinate Formula)  The dot product of two vectors and is the scalar  The dot product is a way of multiplying two vectors that depends on the angle between them.  Dot Product (Geometric Formula)  The dot product of two vectors and is the scalar where is the angle between the vectors.  The component of a vector in the direction of vector is the length of the vector projection of onto .  Component of a Vector  The component of in the direction of is the scalar  Angle Between Two Vectors  The angle between two vectors and is given by   Two vectors and are orthogonal if     Review Problems  For Problems 1 4, sketch an arrow to represent the vector. Find its components in the directions north and east.  A hawk is flying at a speed of 20 mph in the direction west of north.   vector    mph, mph   The island is located 36 miles from port on a bearing of .  The tractor pulls with a force of 1200 pounds in the direction west of south.   vector    lbs, lbs  The current runs southeast at a speed of 4 mph.   For Problems 5 6, find the magnitude and direction of the vector.     For Problems 7 8, find the coordinate form of the vector.     For Problems 9 12,  sketch the displacement vector and give its coordinate form,  find the magnitude and direction of the vector.   The displacement vector from to    vector       The displacement vector from to  This morning we began hiking from our camp 4 miles east and 2 miles south of the lodge, and this evening we are 6 miles east and 8 miles south of the lodge.    vector       The tunnel should start 100 meters east and 400 meters north of the survey point, and should end 500 meters west and 150 meters north of the survey point.   For Problems 13 16,  sketch the given vectors,  calculate the magnitude and direction of the resultant vector.   A fire crew is located 2 kilometers due west of the fire station. The station reports a new hot spot 6 kilometers away in the direction east of north. How far is the hot spot from the fire crew, and in what direction?    vectors       A helicopter has just delivered a patient to the hospital located 15 miles northwest of the heliport. The pilot gets a call to pick up a passenger located 18 miles from the heliport on a bearing of . How far is the passenger from the helicopter, and in what direction?  Red Rock is located at from the town of Dry Gulch, measured in miles, and Skull Point is located at from Dry Gulch. How far is it from Red Rock to Skull Point, and in what direction?    vectors       A coast guard cutter is located 7 miles south and 5 miles west of port when it gets a distress call from a sailboat that reports its location as 1 mile north and 5 miles east of port. How far is it from the cutter to the sailboat, and in what direcion?   For Problems 17 18,  find the horizontal and vertical components of the forces,  use the components to calculate the resultant force.     vectors           vectors      For Problems 19 22, find the vector, where        For Problems 23 26, find the vector described.  The unit vector in the same direction as .  The unit vector in the same direction as .  The vector of length 3 in the same direction as .  The vector of magnitude 6 in the same direction as   For Problems 27 28, find the component of in the direction of .     For Problems 29 30, compute the dot product .       For Problems 31 32, find the angle bertween the vectors.        "
 },
 {
-  "id": "p-6462",
+  "id": "p-6496",
   "level": "2",
-  "url": "chap9-summary.html#p-6462",
+  "url": "chap9-summary.html#p-6496",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vector magnitude resultant vector parallelogram rule components unit vector dot product dot product "
 },
 {
-  "id": "exercise-2450",
+  "id": "exercise-2451",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2450",
+  "url": "chap9-summary.html#exercise-2451",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "A hawk is flying at a speed of 20 mph in the direction west of north.   vector    mph, mph  "
 },
 {
-  "id": "exercise-2451",
+  "id": "exercise-2452",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2451",
+  "url": "chap9-summary.html#exercise-2452",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "The island is located 36 miles from port on a bearing of . "
 },
 {
-  "id": "exercise-2452",
+  "id": "exercise-2453",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2452",
+  "url": "chap9-summary.html#exercise-2453",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "The tractor pulls with a force of 1200 pounds in the direction west of south.   vector    lbs, lbs "
 },
 {
-  "id": "exercise-2453",
+  "id": "exercise-2454",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2453",
+  "url": "chap9-summary.html#exercise-2454",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "The current runs southeast at a speed of 4 mph. "
 },
 {
-  "id": "exercise-2454",
-  "level": "2",
-  "url": "chap9-summary.html#exercise-2454",
-  "type": "Exercise",
-  "number": "5",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2455",
   "level": "2",
   "url": "chap9-summary.html#exercise-2455",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
   "body": ""
 },
@@ -26357,7 +26411,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2456",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
   "body": ""
 },
@@ -26366,7 +26420,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2457",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
   "body": ""
 },
@@ -26375,106 +26429,106 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2458",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
-  "body": "The displacement vector from to    vector      "
+  "body": ""
 },
 {
   "id": "exercise-2459",
   "level": "2",
   "url": "chap9-summary.html#exercise-2459",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
-  "body": "The displacement vector from to "
+  "body": "The displacement vector from to    vector      "
 },
 {
   "id": "exercise-2460",
   "level": "2",
   "url": "chap9-summary.html#exercise-2460",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
-  "body": "This morning we began hiking from our camp 4 miles east and 2 miles south of the lodge, and this evening we are 6 miles east and 8 miles south of the lodge.    vector      "
+  "body": "The displacement vector from to "
 },
 {
   "id": "exercise-2461",
   "level": "2",
   "url": "chap9-summary.html#exercise-2461",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
-  "body": "The tunnel should start 100 meters east and 400 meters north of the survey point, and should end 500 meters west and 150 meters north of the survey point. "
+  "body": "This morning we began hiking from our camp 4 miles east and 2 miles south of the lodge, and this evening we are 6 miles east and 8 miles south of the lodge.    vector      "
 },
 {
   "id": "exercise-2462",
   "level": "2",
   "url": "chap9-summary.html#exercise-2462",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
-  "body": "A fire crew is located 2 kilometers due west of the fire station. The station reports a new hot spot 6 kilometers away in the direction east of north. How far is the hot spot from the fire crew, and in what direction?    vectors      "
+  "body": "The tunnel should start 100 meters east and 400 meters north of the survey point, and should end 500 meters west and 150 meters north of the survey point. "
 },
 {
   "id": "exercise-2463",
   "level": "2",
   "url": "chap9-summary.html#exercise-2463",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
-  "body": "A helicopter has just delivered a patient to the hospital located 15 miles northwest of the heliport. The pilot gets a call to pick up a passenger located 18 miles from the heliport on a bearing of . How far is the passenger from the helicopter, and in what direction? "
+  "body": "A fire crew is located 2 kilometers due west of the fire station. The station reports a new hot spot 6 kilometers away in the direction east of north. How far is the hot spot from the fire crew, and in what direction?    vectors      "
 },
 {
   "id": "exercise-2464",
   "level": "2",
   "url": "chap9-summary.html#exercise-2464",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": "Red Rock is located at from the town of Dry Gulch, measured in miles, and Skull Point is located at from Dry Gulch. How far is it from Red Rock to Skull Point, and in what direction?    vectors      "
+  "body": "A helicopter has just delivered a patient to the hospital located 15 miles northwest of the heliport. The pilot gets a call to pick up a passenger located 18 miles from the heliport on a bearing of . How far is the passenger from the helicopter, and in what direction? "
 },
 {
   "id": "exercise-2465",
   "level": "2",
   "url": "chap9-summary.html#exercise-2465",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
-  "body": "A coast guard cutter is located 7 miles south and 5 miles west of port when it gets a distress call from a sailboat that reports its location as 1 mile north and 5 miles east of port. How far is it from the cutter to the sailboat, and in what direcion? "
+  "body": "Red Rock is located at from the town of Dry Gulch, measured in miles, and Skull Point is located at from Dry Gulch. How far is it from Red Rock to Skull Point, and in what direction?    vectors      "
 },
 {
   "id": "exercise-2466",
   "level": "2",
   "url": "chap9-summary.html#exercise-2466",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": "  vectors        "
+  "body": "A coast guard cutter is located 7 miles south and 5 miles west of port when it gets a distress call from a sailboat that reports its location as 1 mile north and 5 miles east of port. How far is it from the cutter to the sailboat, and in what direcion? "
 },
 {
   "id": "exercise-2467",
   "level": "2",
   "url": "chap9-summary.html#exercise-2467",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
-  "body": "  vectors    "
+  "body": "  vectors        "
 },
 {
   "id": "exercise-2468",
   "level": "2",
   "url": "chap9-summary.html#exercise-2468",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": ""
+  "body": "  vectors    "
 },
 {
   "id": "exercise-2469",
   "level": "2",
   "url": "chap9-summary.html#exercise-2469",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -26483,7 +26537,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2470",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
   "body": ""
 },
@@ -26492,7 +26546,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2471",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
   "body": ""
 },
@@ -26501,16 +26555,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2472",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "The unit vector in the same direction as . "
+  "body": ""
 },
 {
   "id": "exercise-2473",
   "level": "2",
   "url": "chap9-summary.html#exercise-2473",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": "The unit vector in the same direction as . "
 },
@@ -26519,34 +26573,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2474",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "The vector of length 3 in the same direction as . "
+  "body": "The unit vector in the same direction as . "
 },
 {
   "id": "exercise-2475",
   "level": "2",
   "url": "chap9-summary.html#exercise-2475",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": "The vector of magnitude 6 in the same direction as "
+  "body": "The vector of length 3 in the same direction as . "
 },
 {
   "id": "exercise-2476",
   "level": "2",
   "url": "chap9-summary.html#exercise-2476",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": ""
+  "body": "The vector of magnitude 6 in the same direction as "
 },
 {
   "id": "exercise-2477",
   "level": "2",
   "url": "chap9-summary.html#exercise-2477",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -26555,16 +26609,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2478",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2479",
   "level": "2",
   "url": "chap9-summary.html#exercise-2479",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": " "
 },
@@ -26573,14 +26627,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2480",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2481",
   "level": "2",
   "url": "chap9-summary.html#exercise-2481",
+  "type": "Exercise",
+  "number": "31",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2482",
+  "level": "2",
+  "url": "chap9-summary.html#exercise-2482",
   "type": "Exercise",
   "number": "32",
   "title": "",
@@ -26596,45 +26659,45 @@ var ptx_lunr_docs = [
   "body": " Polar Coordinates   The Cartesian coordinate system is also called the rectangular coordinate system rectangular coordinate system , because it describes a location in the plane as the vertex of a rectangle. To construct a rectangular coordinate system, we begin with two perpendicular axes that intersect at the origin. The - and -coordinates of a point indicate the length and width of a rectangle with one vertex at the origin. The point sits at the opposite vertex of the rectangle, as shown in the figure below.  In Chapter 9 we used vectors to specify a location by giving a distance and a direction. For example, we might say that the airport is located 5 miles southwest of the city center. This method of designating locations is so useful that we will construct a new coordinate system using the same tools: distance and direction.    Cartesian     polar     In the polar coordinate system polar coordinates we start with the origin or pole pole , and a single ray from the pole, called the polar axis polar axis . We describe the location of a point in the plane by measuring the distance, , from to the pole, and the angle, , that makes with the polar axis (measured counterclockwise). The components of the ordered pair are called the polar coordinates of the point .  Polar Coordinates  polar coordinates  polar coordinates  polar coordinates  polar coordinates distance  polar coordinates angle   Greek alphabet  polar coordinates  The polar coordinates of a point in the plane are , where  is the distance from to the pole,  is the angle measured counterclockwise from the polar axis to the ray through from the pole.  In our work with polar coordinates, we will always use radians for the angle . For example, the point is located 2 units from the pole at an angle of radians, and is located 3 units from the pole at an angle of 4 radians. The graphs of and are shown at right.   points in polar coordinates     A piece of graph paper in rectangular coordinates consists of a grid of horizontal and vertical lines. These are the lines and , for evenly spaced values of . Each vertical grid line consists of points that have the same -coordinate, and each horizontal grid line is made up of points that have the same -coordinate. The grid lines are bench marks to help us locate points with specific rectangular coordinates.  A piece of graph paper in polar coordinates consists of a grid of concentric circles and radial lines, as shown below. Each circle consists of points with the same -coordinate; they are all the same distance from the pole. All points with the same -coordinate lie on one of the radial lines. This grid helps us locate points with specific polar coordinates.    rectangular and polar grids      Plotting Points  You are used to thinking in rectangular coordinates: to locate a point, we move so many units left or right, and so many units up or down. When working in polar coordinates, we want to \"think radially:\" how far to move from the pole, and in which direction.  Plot the points whose polar coordinates are given: and .  To plot point , we move 1 unit away from the pole in the direction , as shown at right. To plot point , we move 2 units away from the pole in the direction .   polar points     Note that even though the independent or input variable in polar coordinates is nearly always , it is customary to list the dependent or output variable first: .  Give the polar coordinates of the points and shown at right, with .   polar points    ,  Each point has infinitely many polar coordinates, because we can add multiples of to the value of . For example, the point with polar coordinates also has polar coordinates and .  If we allow negative values of , there are even more ways to write the coordinates of a point. Each angle designates a line through the pole, and each line has both a postive and a negative direction.  On the line at , for instance, the positive direction lies in the first quadrant, so that the point is designated by in the figure at right. To plot the point , we move in the opposite direction from the pole, arriving at point . Note that the point can also be designated by the coordinates .   point on polar grid     Non-Uniqueness of Polar Coordinates  polar coordinates non-uniqueness   Any point with polar coordinates also has coordinates , where is an integer.  The point can also be designated by .  The pole has coordinates , for any value of .  Give polar coordinates with negative -values for the points in the previous exercise.  The point is also or . The point can also be designated by , or .  Give polar coordinates with positive -values and for each point given in polar coordinates.       Regions in the Plane  In Cartesian coordinates, we use equations and inequalities to describe regions in the plane. For example, the shaded region in figure (a) is the graph of . The pair of inequalities describes the region in figure (b). This region is particularly simple, in that its boundaries are portions of the coordinate grid lines and , where is a constant.    regions in the plane     In the polar plane, the coordinate grid lines are circles centered at the pole, with equations , and lines through the pole, with equations .  Sketch the region designated by each set of inequalities.     The region consists of all points between 1 (inclusive) and 3 units from the pole. No restriction is given on , so the region is the annular ring shown in figure (a).    regions in polar coordinates     The region includes all points up to 2 units from the pole, but only between the lines and . These curves bound the pie-shaped wedge (circular sector) shown in figure (b).  Write inequalities to describe each region shown below.    regions       ,   Converting Between Polar and Cartesian Coordinates  polar coordinates converting Cartesian  Using trigonometry, it is easy to convert from polar coordinates to Cartesian, or vice versa. The figure below shows how the two sets of coordinates are related.  If we know the polar coordinates , we can compute the Cartesian coordinates as the legs of a right triangle.     rectangular and polar coordinates     Find the Cartesian coordinates of the point with polar coordinates .  The polar coordinates tell us that and , as shown below.  The -coordinate of the point is and its -coordinate is   point      Thus, the Cartesian coordinates are .  Find the Cartesian coordinates of the point with polar coordinates .  If we know the Cartesian coordinates of a point, we can compute the polar coordinates as follows.  To find the angle , it is not enough to compute ; we must choose the angle in the same quadrant as the given point.  Find the polar coordinates of the point with Cartesian coordinates .  We first compute the value of . Thus, , as shown at right. To find , we compute  There are infinitely many values of that satisfy this equation, but our point lies in the third quadrant, so we take .   polar     You can check that the polar coordinates convert back to Cartesian coordinates .  In the previous Example, the angle is not given by , because the given point lies in the third quadrant. Remember that there are always two angles between and with a given tangent.  Find polar coordinates for the points with Cartesian coordinates . Give decimal approximations rounded to hundredths.  Conversion Equations  conversions equations   To convert from polar coordinates to Cartesian:  To convert from Cartesian coordinates to polar:  where the choice of depends on the quadrant.   Equations in Polar Coordinates  conversions equations  polar coordinates equations  Polar coordinates are useful for studying objects or phenomena that have radial symmetry, such as circles, spheres, and cylinders, or the central forces (those that act equally in all directions), such as gravity and electric charge. The equations describing these objects are often simpler in polar coordinates than they are in Cartesian coordinates.  It is not hard to convert an equation from Cartesian to polar coordinates: we replace each with and each with .  Convert the equation to polar coordinates.  Replacing by by and by , we get If we solve for in terms of , we find Neither of these equations is simpler than the Cartesian version, but that should not surprise us, because the original equation describes a line, and Cartesian coordinates are better suited to rectilinear graphs.  Convert the equation to polar coordinates.  Perhaps you recognize the equation in the previous exercise as a circle. Note also that its polar equation has a simpler form than the familiar Cartesian version.  Converting equations from polar to Cartesian form is not as straightforward as the other direction (and is sometimes impossible). Here are some strategies to try:  Expressions of the form or can be replaced by and , respectively.  can be replaced by .  can be replaced by .  Convert the equation to Cartesian coordinates.  We multiply both sides of the equation by to obtain Now we can replace the left side by and the right side by to obtain This is the equation of a circle. By completing the square in each variable, we can write the equation in standard form, The center of the circle is , and its radius is .  Convert the equation to Cartesian coordinates.  Review the following skills you will need for this section.   Recall the standard form for the equation of a circle of radius centered at : Use completing the square to write each equation in standard form.                   Algebra Refresher Answers           Section 10.1 Summary  Vocabulary   Pole  Polar axis  Polar coordinates    Concepts   Polar Coordinates  The polar coordinates of a point in the plane are , where  is the distance from to the pole,  is the angle measured counterclockwise from the polar axis to the ray through from the pole. polar  Non-Uniqueness of Polar Coordinates   Any point with polar coordinates also has coordinates , where is an integer.  The point can also be designated by .  The pole has coordinates , for any value of .  In the polar plane, the coordinate grid lines are circles centered at the pole, with equations , and lines through the pole, with equations .   Conversion Equations   To convert from polar coordinates to Cartesian:  To convert from Cartesian coordinates to polar:  where the choice of depends on the quadrant.  To convert an equation from Cartesian to polar coordinates, we replace each with and each with with . To convert an equation from polar to Cartesian coordinates, look for expressions of the form , or .   Study Questions   Why is the Cartesian coordinate system sometimes called the rectangular system?  What do the graphs of the polar equations and , where is a constant, look like?  Fill in the blank: the point with polar coordinates also has coordinates .  What does the region described by look like? What does the region described by look like?  Sketch a figure that explains how to convert between polar and Cartesian coordinates.   Skills   Plot points in polar coordinates #1 8  Write polar coordinates for points #9 16  Convert Cartesian coordinates to polar #17 24  Convert Polar coordinates to Cartesian #25 32  Write alternate versions of polar coordinates #33 38  Sketch a region described by polar inequalities #39 44  Write polar inequalities to describe a region #45 50  Convert an equation to Cartesian coordinates #51 64  Convert an equation to polar coordinates #65 72     Homework 10-1  For Problems 1 8, use the grid below to plot the points whose polar coordinates are given.    polar grid        polar plot         polar plot         polar plot         polar plot        For Problems 9 16, give polar coordinates for each point shown below, with and .    polar grid              For Problems 17 24, convert the polar coordinates to Cartesian coordinates.           For Problems 25 32, convert the Cartesian coordinates to polar coordinates with and . Give exact values for and .           In Problems 33 38, polar coordinates are given.  Convert to polar coordinates with .  Convert to polar coordinates with .                 For Problems 39 44, sketch the region described by the inequalities.    polar plot        polar grid        polar grid       For Problems 45 50, write inequalities to describe the region.    polar region     polar region    polar region       polar region       polar region       polar region      For Problems 51 64, convert the equation into Cartesian coordinates.                 For Problems 65 72, convert the equation into polar coordinates.           Use the Law of Cosines to prove the distance formula in polar coordinates:    Show that the graph of is a circle. Find its center and radius.   "
 },
 {
-  "id": "p-6554",
+  "id": "p-6588",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6554",
+  "url": "Polar-Coordinates.html#p-6588",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "rectangular coordinate system "
 },
 {
-  "id": "p-6556",
+  "id": "p-6590",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6556",
+  "url": "Polar-Coordinates.html#p-6590",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polar coordinate system pole polar axis polar coordinates "
 },
 {
-  "id": "p-6557",
+  "id": "p-6591",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6557",
+  "url": "Polar-Coordinates.html#p-6591",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polar coordinates "
 },
 {
-  "id": "p-6558",
+  "id": "p-6592",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6558",
+  "url": "Polar-Coordinates.html#p-6592",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "distance angle "
 },
 {
-  "id": "example-194",
+  "id": "example-195",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-194",
+  "url": "Polar-Coordinates.html#example-195",
   "type": "Example",
   "number": "10.1",
   "title": "",
@@ -26650,72 +26713,72 @@ var ptx_lunr_docs = [
   "body": "Note that even though the independent or input variable in polar coordinates is nearly always , it is customary to list the dependent or output variable first: . "
 },
 {
-  "id": "exercise-2482",
+  "id": "exercise-2483",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2482",
+  "url": "Polar-Coordinates.html#exercise-2483",
   "type": "Checkpoint",
   "number": "10.3",
   "title": "",
   "body": "Give the polar coordinates of the points and shown at right, with .   polar points    , "
 },
 {
-  "id": "example-195",
+  "id": "example-196",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-195",
+  "url": "Polar-Coordinates.html#example-196",
   "type": "Example",
   "number": "10.4",
   "title": "",
   "body": "Give polar coordinates with negative -values for the points in the previous exercise.  The point is also or . The point can also be designated by , or . "
 },
 {
-  "id": "exercise-2483",
+  "id": "exercise-2484",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2483",
+  "url": "Polar-Coordinates.html#exercise-2484",
   "type": "Checkpoint",
   "number": "10.5",
   "title": "",
   "body": "Give polar coordinates with positive -values and for each point given in polar coordinates.     "
 },
 {
-  "id": "example-196",
+  "id": "example-197",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-196",
+  "url": "Polar-Coordinates.html#example-197",
   "type": "Example",
   "number": "10.6",
   "title": "",
   "body": "Sketch the region designated by each set of inequalities.     The region consists of all points between 1 (inclusive) and 3 units from the pole. No restriction is given on , so the region is the annular ring shown in figure (a).    regions in polar coordinates     The region includes all points up to 2 units from the pole, but only between the lines and . These curves bound the pie-shaped wedge (circular sector) shown in figure (b). "
 },
 {
-  "id": "exercise-2484",
+  "id": "exercise-2485",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2484",
+  "url": "Polar-Coordinates.html#exercise-2485",
   "type": "Checkpoint",
   "number": "10.7",
   "title": "",
   "body": "Write inequalities to describe each region shown below.    regions       , "
 },
 {
-  "id": "example-197",
+  "id": "example-198",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-197",
+  "url": "Polar-Coordinates.html#example-198",
   "type": "Example",
   "number": "10.8",
   "title": "",
   "body": "Find the Cartesian coordinates of the point with polar coordinates .  The polar coordinates tell us that and , as shown below.  The -coordinate of the point is and its -coordinate is   point      Thus, the Cartesian coordinates are . "
 },
 {
-  "id": "exercise-2485",
+  "id": "exercise-2486",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2485",
+  "url": "Polar-Coordinates.html#exercise-2486",
   "type": "Checkpoint",
   "number": "10.9",
   "title": "",
   "body": "Find the Cartesian coordinates of the point with polar coordinates . "
 },
 {
-  "id": "example-198",
+  "id": "example-199",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-198",
+  "url": "Polar-Coordinates.html#example-199",
   "type": "Example",
   "number": "10.10",
   "title": "",
@@ -26731,45 +26794,45 @@ var ptx_lunr_docs = [
   "body": "In the previous Example, the angle is not given by , because the given point lies in the third quadrant. Remember that there are always two angles between and with a given tangent. "
 },
 {
-  "id": "exercise-2486",
+  "id": "exercise-2487",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2486",
+  "url": "Polar-Coordinates.html#exercise-2487",
   "type": "Checkpoint",
   "number": "10.12",
   "title": "",
   "body": "Find polar coordinates for the points with Cartesian coordinates . Give decimal approximations rounded to hundredths. "
 },
 {
-  "id": "example-199",
+  "id": "example-200",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-199",
+  "url": "Polar-Coordinates.html#example-200",
   "type": "Example",
   "number": "10.13",
   "title": "",
   "body": "Convert the equation to polar coordinates.  Replacing by by and by , we get If we solve for in terms of , we find Neither of these equations is simpler than the Cartesian version, but that should not surprise us, because the original equation describes a line, and Cartesian coordinates are better suited to rectilinear graphs. "
 },
 {
-  "id": "exercise-2487",
+  "id": "exercise-2488",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2487",
+  "url": "Polar-Coordinates.html#exercise-2488",
   "type": "Checkpoint",
   "number": "10.14",
   "title": "",
   "body": "Convert the equation to polar coordinates. "
 },
 {
-  "id": "example-200",
+  "id": "example-201",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-200",
+  "url": "Polar-Coordinates.html#example-201",
   "type": "Example",
   "number": "10.15",
   "title": "",
   "body": "Convert the equation to Cartesian coordinates.  We multiply both sides of the equation by to obtain Now we can replace the left side by and the right side by to obtain This is the equation of a circle. By completing the square in each variable, we can write the equation in standard form, The center of the circle is , and its radius is . "
 },
 {
-  "id": "exercise-2488",
+  "id": "exercise-2489",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2488",
+  "url": "Polar-Coordinates.html#exercise-2489",
   "type": "Checkpoint",
   "number": "10.16",
   "title": "",
@@ -26785,92 +26848,83 @@ var ptx_lunr_docs = [
   "body": " Recall the standard form for the equation of a circle of radius centered at : Use completing the square to write each equation in standard form.                   Algebra Refresher Answers         "
 },
 {
-  "id": "p-6629",
+  "id": "p-6663",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6629",
+  "url": "Polar-Coordinates.html#p-6663",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polar coordinates distance angle "
 },
 {
-  "id": "exercise-2489",
+  "id": "exercise-2490",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2489",
+  "url": "Polar-Coordinates.html#exercise-2490",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "  polar plot     "
 },
 {
-  "id": "exercise-2490",
+  "id": "exercise-2491",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2490",
+  "url": "Polar-Coordinates.html#exercise-2491",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2491",
+  "id": "exercise-2492",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2491",
+  "url": "Polar-Coordinates.html#exercise-2492",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "  polar plot     "
 },
 {
-  "id": "exercise-2492",
+  "id": "exercise-2493",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2492",
+  "url": "Polar-Coordinates.html#exercise-2493",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2493",
+  "id": "exercise-2494",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2493",
+  "url": "Polar-Coordinates.html#exercise-2494",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "  polar plot     "
 },
 {
-  "id": "exercise-2494",
+  "id": "exercise-2495",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2494",
+  "url": "Polar-Coordinates.html#exercise-2495",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2495",
+  "id": "exercise-2496",
   "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2495",
+  "url": "Polar-Coordinates.html#exercise-2496",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": "  polar plot     "
 },
 {
-  "id": "exercise-2496",
-  "level": "2",
-  "url": "Polar-Coordinates.html#exercise-2496",
-  "type": "Exercise",
-  "number": "8",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2497",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2497",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
   "body": ""
 },
@@ -26879,7 +26933,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2498",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": ""
 },
@@ -26888,7 +26942,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2499",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -26897,7 +26951,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2500",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -26906,7 +26960,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2501",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
   "body": ""
 },
@@ -26915,7 +26969,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2502",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": ""
 },
@@ -26924,7 +26978,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2503",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
   "body": ""
 },
@@ -26933,7 +26987,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2504",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
   "body": ""
 },
@@ -26942,7 +26996,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2505",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
   "body": ""
 },
@@ -26951,7 +27005,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2506",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": ""
 },
@@ -26960,7 +27014,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2507",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
   "body": ""
 },
@@ -26969,7 +27023,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2508",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -26978,7 +27032,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2509",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
   "body": ""
 },
@@ -26987,7 +27041,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2510",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
   "body": ""
 },
@@ -26996,7 +27050,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2511",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
   "body": ""
 },
@@ -27005,7 +27059,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2512",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": ""
 },
@@ -27014,7 +27068,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2513",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
   "body": ""
 },
@@ -27023,7 +27077,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2514",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
   "body": ""
 },
@@ -27032,7 +27086,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2515",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
   "body": ""
 },
@@ -27041,7 +27095,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2516",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -27050,7 +27104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2517",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ""
 },
@@ -27059,7 +27113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2518",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ""
 },
@@ -27068,7 +27122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2519",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
   "body": ""
 },
@@ -27077,7 +27131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2520",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
   "body": ""
 },
@@ -27086,142 +27140,142 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2521",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": "  "
+  "body": ""
 },
 {
   "id": "exercise-2522",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2522",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": ""
+  "body": "  "
 },
 {
   "id": "exercise-2523",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2523",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "   "
+  "body": ""
 },
 {
   "id": "exercise-2524",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2524",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": ""
+  "body": "   "
 },
 {
   "id": "exercise-2525",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2525",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "  "
+  "body": ""
 },
 {
   "id": "exercise-2526",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2526",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": ""
+  "body": "  "
 },
 {
   "id": "exercise-2527",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2527",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "  polar plot    "
+  "body": ""
 },
 {
   "id": "exercise-2528",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2528",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": ""
+  "body": "  polar plot    "
 },
 {
   "id": "exercise-2529",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2529",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "  polar grid    "
+  "body": ""
 },
 {
   "id": "exercise-2530",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2530",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": ""
+  "body": "  polar grid    "
 },
 {
   "id": "exercise-2531",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2531",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "  polar grid    "
+  "body": ""
 },
 {
   "id": "exercise-2532",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2532",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": ""
+  "body": "  polar grid    "
 },
 {
   "id": "exercise-2533",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2533",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "  polar region    "
+  "body": ""
 },
 {
   "id": "exercise-2534",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2534",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "polar region "
+  "body": "  polar region    "
 },
 {
   "id": "exercise-2535",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2535",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "  polar region    "
+  "body": "polar region "
 },
 {
   "id": "exercise-2536",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2536",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
   "body": "  polar region    "
 },
@@ -27230,7 +27284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2537",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
   "body": "  polar region    "
 },
@@ -27239,7 +27293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2538",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
   "body": "  polar region    "
 },
@@ -27248,16 +27302,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2539",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": ""
+  "body": "  polar region    "
 },
 {
   "id": "exercise-2540",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2540",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
   "body": ""
 },
@@ -27266,7 +27320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2541",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
   "body": ""
 },
@@ -27275,7 +27329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2542",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
   "body": ""
 },
@@ -27284,7 +27338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2543",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
   "body": ""
 },
@@ -27293,7 +27347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2544",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
   "body": ""
 },
@@ -27302,7 +27356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2545",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
   "body": ""
 },
@@ -27311,7 +27365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2546",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
   "body": ""
 },
@@ -27320,7 +27374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2547",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
   "body": ""
 },
@@ -27329,7 +27383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2548",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
   "body": ""
 },
@@ -27338,7 +27392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2549",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
   "body": ""
 },
@@ -27347,7 +27401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2550",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
   "body": ""
 },
@@ -27356,7 +27410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2551",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
   "body": ""
 },
@@ -27365,7 +27419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2552",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
   "body": ""
 },
@@ -27374,7 +27428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2553",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
   "body": ""
 },
@@ -27383,7 +27437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2554",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
   "body": ""
 },
@@ -27392,7 +27446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2555",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
   "body": ""
 },
@@ -27401,7 +27455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2556",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
   "body": ""
 },
@@ -27410,7 +27464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2557",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
   "body": ""
 },
@@ -27419,7 +27473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2558",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
   "body": ""
 },
@@ -27428,7 +27482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2559",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
   "body": ""
 },
@@ -27437,7 +27491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2560",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
   "body": ""
 },
@@ -27446,14 +27500,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2561",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
-  "body": "Use the Law of Cosines to prove the distance formula in polar coordinates:   "
+  "body": ""
 },
 {
   "id": "exercise-2562",
   "level": "2",
   "url": "Polar-Coordinates.html#exercise-2562",
+  "type": "Exercise",
+  "number": "73",
+  "title": "",
+  "body": "Use the Law of Cosines to prove the distance formula in polar coordinates:   "
+},
+{
+  "id": "exercise-2563",
+  "level": "2",
+  "url": "Polar-Coordinates.html#exercise-2563",
   "type": "Exercise",
   "number": "74",
   "title": "",
@@ -27469,126 +27532,126 @@ var ptx_lunr_docs = [
   "body": " Polar Graphs  polar graphs  polar coordinates graphing  Graphing in Polar Coordinates  When we plot points in Cartesian coordinates, we start at the origin and move a distance right or left given by the -coordinate of the point, then move up or down according to the -coordinate. When we sketch the graph of an equation or function, we think of drawing the graph from left to right, with the \"height\" of the graph at each -value given by the function, as shown in figure (a).    Cartesian and polar graphs     In polar coordinates, however, the dependent variable, , gives not a height but a distance from the pole in direction , as shown in figure (b). When graphing an equation in polar coordinates, we think of sweeping around the pole in the counterclockwise direction, and at each angle the -value tells us how far the graph is from the pole.  Graph the polar equation .  We make a table of values, choosing the special values for . For each value of , we evaluate .                          First we'll plot the points in the first quadrant. Observe that as increases from to , increases from to . Starting at the pole, we connect the points in order of increasing . Imagine a radial line sweeping around the graph through the first quadrant: as the angle increases, the length of the segment increases, so that its tip traces out the graph shown in figure (a).    polar graphs     Now continue plotting the points in the table as increases from to . In the second quadrant, decreases as increases, as shown in figure (b). The graph we obtain is, in fact, a circle, which we will prove algebraically shortly. However, we have not yet plotted points for between and . Because is negative in the third and fourth quadrants, all the -values for these angles are negative.                          When we plot the points in this table, we see that the original graph is traced out again. For example, the point is the same as the point , the point is the same as the point , and so on, around the circle. Thus, the graph of is a circle, traced twice for .  To prove that the graph in Example 1 is really a circle, we convert the equation to Cartesian form. First, multiply both sides by to obtain Next, replace by and by , to get This equation is quadratic in two variables, so its graph is a conic section. We put the equation in standard form by completing the square in . We have the equation of a circle with center and radius .  Graph the polar equation .   polar graph      Using a Graphing Calculator  You are familiar with the graphs of many equations in Cartesian coordinates, including lines, parabolas and other conic sections, and the graphs of basic functions. You should now become familiar with some standard graphs in polar coordinates. These include circles and roses, cardioids and limaçons, lemniscates, and spirals.  At the end of this section you will find a Catalog of the basic polar graphs and their properties. You can use your calculator, set in Polar mode, to experiment with these graphs.  Graph the Archimedean spiral , for .  After setting the calculator in Polar mode, we enter the equation and enter the window settings   We then press Zoom 5 to set a square window. The graph is shown at right.   polar graph     Studying a table of values can help us understand the shape of the graph.                  As increases, increases also, at a constant rate. We wind our way around the pole, steadily increasing our distance from the pole as we go. We spiral outwards, tracing the graph shown above.  Use a calculator to graph the polar equation . Use the window settings    polar graph spiral     It is important to connect the points on the graph in order of increasing .  Graph the polar equation .  We'll graph the equation in stages in order to see how the graph is traced out. Begin with the window settings Watch as your calculator produces the graph shown in figure (a).    one loop     two loops     three loops     Observe that, as increases from to , first increases, reaching its maximum value of 2 at and then decreases back to 0. You can verify the values in the table below, which shows the points at multiples of . These points create the first loop of the graph.                               Next, change to , and graph again. This time the calculator traces out two loops, as shown in figure (b). For between and , is negative, so the second loop lies in the third and fourth quadrants.                               Finally, change to , and graph again. For between and , the graph traces out a third loop, as shown in figure (c). For between and , the entire graph is traced a second time. The finished graph is a rose with 3 petals of length 2.   Use your calculator to graph the polar equation .  Complete the table of values for the function.                      Sketch the graph by hand on the grid at right.   polar grid      polar graph: three petals      Sketching Familiar Equations  You should also be able to sketch the standard polar graphs by hand. Once you recognize an equation as a particular type of graph, say a rose or a limaçon, you can sketch the graph quickly by finding just a few well-chosen guidepoints. The next example demonstrates a technique for sketching a rose.  Graph the polar equation .  Referring to the Catalog of Polar Graphs, we see that the graph of this equation is a rose , with petal length and four petals, because . If we can locate the tips of the petals, we can use them as guidepoints to sketch the graph.  Now, the points at the tips of the petals have , so we substitute into the equation of the rose to find the values of at those points.  Thus, one of the petal tips is located at . Because the 4 petals are evenly spaced around the pole, the angle between the petals is , and the other petal tips occur at  We plot the tips of the petals as guidepoints, at , , and . Now we can sketch a rose with 4 petals of length 3, as shown at right.   rose     Graph the polar equation .   rose     The limaçons , and , are another family of polar graphs. In particular, the cardioid is a special case of a limaçon with .  Graph the polar equation .  This is the equation for a limaçon, with and . Because , the limaçon will have a dent, like a lima bean, rather than a loop. As guidepoints, we locate the points at the four quadrantal angles.                   We plot the guidepoints and connect them in order with a smooth curve, as shown below. Note that this limaçon involving cosine is symmetric about the -axis; limaçons involving sine are symmetric about the -axis.   limacon     Graph the polar equation .   limacon     You should also be able to identify a polar graph and write its equation.  Give a polar equation for each of the graphs below.    circle     cardioid      The graph is a circle centered at and with radius 2, so we choose the equation , with . Thus, .  The graph is a cardioid with its axis of symmetry on the -axis, and the \"bottom\" of the heart points in the positive direction, so its equation has the form . At , so we can solve for : Thus, and we choose the equation .  Give a polar equation for each of the graphs below.    lemniscate     cardioid        Finding Intersection Points  To find the intersection points of two graphs, we solve the system made up of their equations. If the equations are and , we simply solve the equation . For example, we find the intersection points of and by solving the equation to get  These are the -coordinates of the intersection points, and we can find the -coordinates by substituting these values into either equation.  For we find  For we find Thus, the intersection points are and , as shown at right.   line intersecting parabola     To find the intersection points of the polar graphs and we solve the equation .  Find all intersection points of the graphs of and .  We equate the two expressions for and solve for .  We evaluate either expression for to find the other coordinate of the intersection point.  Thus, two of the intersection points are and , as shown at right. However, you can see in the figure that the graphs also appear to intersect at the pole. To verify that the pole indeed lies on both graphs, we can solve for in each equation when .   cardioids     However, you can see in the figure that the graphs also appear to intersect at the pole. To verify that the pole indeed lies on both graphs, we can solve for in each equation when .  Both points, and , represent the pole. Thus, the graphs intersect at three points: , , and the pole.  As we saw in the previous Example, solving a system of equations and will not always reveal an intersection at the pole, because may be equal to zero for different values of in the two equations. We should always check separately whether the pole is a point on both graphs.  Find all intersection points of the graphs of and . ,  Review the following skills you will need for this section.   Solve each equation. Give two solutions, .               Skills Refresher Answers   ,  ,  ,  ,  ,  ,  ,  ,      A Catalog of Polar Curves  polar graphs catalog of curves  The Coordinate Curves   ( a constant)  A line through the pole.  gives the angle of inclination of the line (in radians).   line  ( a constant)  A circle centered at the pole.  is the radius of the circle.   circle   Circles     A circle with center on the -axis, and radius .   circle    A circle with center on the -axis, and radius .   circle    Roses     A rose with petal length .  petals if is odd; petals if is even.   rose    A rose with petal length .  petals if is odd; petals if is even.   rose   Limaçons  or   , with a dent.   limacon with dent  , with a loop.   limacon with loop  , a cardioid .   cardioid   Lemniscates     lemniscate    lemniscate   Spirals   Archimedean spiral   Archimedean spiral     Logarithmic spiral   Logarithmic spiral       Section 10.2 Summary  Vocabulary   Rose  Limaçon  Cardioid  Lemniscate    Concepts   When graphing an equation in polar coordinates, we think of sweeping around the pole in the counterclockwise direction, and at each angle the -value tells us how far the graph is from the pole.  Standard graphs in polar coordinates include circles and roses, cardioids and limaçons, lemniscates, and spirals.  To find the intersection points of the polar graphs and we solve the equation . In addition, we should always check whether the pole is a point on both graphs.   Study Questions   Delbert says that the graph of in the first example cannot be correct, because there are no points on the graph for angles between and . How do you respond?  Is it possible to have a rose with only two petals? What would its equation be?  Francine says that a circle of the form is just a special case of a limaçon. Support or refute her statement.  There are no points on the graph of for angles between and Why is that?   Skills   Describe the effect of parameters in polar curves #1 16, 83 84  Compare polar and Cartesian graphs #21 24  Sketch standard polar graphs #17 20, 25 42, 75 82  Identify standard polar graphs #43 58  Write equations for standard polar graphs #59 66  Find intersection points of polar graphs #67 74     Homework 10-2  In Problems 1-4, use your calculator to graph the equations.   Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).    circles    is the radius    Graph , for . How does these graphs compare to the graphs in Problem 1?  Write a Cartesian equation for each graph in part (a).   Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).    lines on polar grid     is the slope    Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).   Complete the table of values for each equation. Plot the points in order of increasing . What is different about the two graphs?  Equation 1:                       Equation 2:                                                                  The graph of begins at the right-most point (and proceeds counter-clockwise); the graph of begins at the left-most point.    polar points on circle     Graph each line, and label the points with their coordinates. How are the points on the two lines related?  Equation 1:                 Equation 1:                  Graph the circle . Label the points corresponding to and .  Complete the table of values. What happens to the graph as increases from to ?                  Find the center and radius of the circle.  Give the Cartesian equation of the circle.    circle on polar grid                     The graph is traced again.  center: , radius:    Graph the circle . Label the points corresponding to and .  Complete the table of values. What happens to the graph as increases from to ?                  Find the center and radius of the circle.  Give the Cartesian equation of the circle.   Graph for .  How do the graphs change for different values of ?    circcles on polar grid     For , is the radius of a circle centerd on the positive -axis; for , is the radius of a circle centerd on the negative -axis.    Graph for .  How do the graphs change for different values of ?  Complete the table of values for each cardioid, and graph the equation.                         cardioid                       cardioid                       cardioid                       cardioid                      Complete the table of values for each cardioid, and graph the equation.                       Complete the table of values for each limaçon, and graph the equation.                         limacon                       limacon                       limacon                       limacon                     Complete the table of values for each limaçon, and graph the equation.                        Graph the following roses and compare. How is the number of petals related to the value of in the equation ?  For each graph above, list the values of where the tips of the petals occur.  Graph for and . How does the value of affect the graph?    4-petal rose     3-petal rose     8-petal rose     5 petal rose    There are petals if is odd, and petals if is even.         3-petal rose     3-petal rose     3-petal rose    is the length of the petal.    Graph the following roses and compare. How is the number of petals related to the value of in the equation ?  For each graph above, list the values of where the tips of the petals occur.  Graph for and . How does the value of affect the graph?   Solve for . (You should get two equations for .)  Graph both equations together. Change step to 0.02 to see the whole graph.  How does the value of affect the graph of ?     lemniscate     is the length of the loop.    Solve for . (You should get two equations for .)  Graph both equations together. Change step to 0.02 to see the whole graph.  How does this graph differ from the graph in Problem 17?  Graph the Archimedean spiral . Set your window to Then graph by pressing Zoom 5.   Archimedean spiral     Graph the logarithmic spiral . Set your window to Then graph by pressing Zoom 5.   Complete the table and graph the equation in Cartesian coordinates, for .                                     Complete the table and graph the equation in polar coordinates, for .                                                                          sinusoidal curve                                          three-petal rose       Complete the table and graph the equation in Cartesian coordinates, for .                                     Complete the table and graph the equation in polar coordinates, for .                                      Complete the table and graph the equation in Cartesian coordinates, for .                          Complete the table and graph the equation in polar coordinates, for .                                                    sinusoidal graph                               cardioid       Complete the table and graph the equation in Cartesian coordinates, for .                          Complete the table and graph the equation in polar coordinates, for .                          For Problems 25 42, use the catalog of polar graphs to help you identify and sketch the following curves. Check your work by graphing with a calculator.  circle   circle on polar grid      line   line on polar grid      circle   circle      cardioid   cardioid      limaçon   limacon      rose   four-petal rose       rose   rose      limaçon   limacon      lemniscate   lemniscate       For Problems 43 52, identify each curve, and graph it.  circle   circle      arcs of a circle   arcs of circle      semicircle   semicircle      rose   eight-petal rose      cardioid   cardioid       For Problems 53 58, graph the following polar curves. Do you recognize them?  parabola   parabola      ellipse   ellipse      hyperbola   hyperbola       For Problems 59 66, write a polar equation for the graph.    cardioid       cardioid       five-petal rose       four-petal rose       circle       circle       limacon       limacon      For Problems 67 74, find the coordinates of the intersection points of the two curves analytically. Then graph the curves to verify your answers.  , ,   , ,   ,   ,    For Problems 75 82, graph the polar curve.    polar plot      (conchoid)   conchoid     (kappa curve)  (strophoid)   strophoid     (cissoid)    polar plot       Graph the polar curves for . Explain how the value of the parameter affects the curve. The curve has large loops and small loops.  Graph the polar curves for . Explain how the value of the parameter affects the curve.   "
 },
 {
-  "id": "example-201",
+  "id": "example-202",
   "level": "2",
-  "url": "Polar-Graphs.html#example-201",
+  "url": "Polar-Graphs.html#example-202",
   "type": "Example",
   "number": "10.17",
   "title": "",
   "body": "Graph the polar equation .  We make a table of values, choosing the special values for . For each value of , we evaluate .                          First we'll plot the points in the first quadrant. Observe that as increases from to , increases from to . Starting at the pole, we connect the points in order of increasing . Imagine a radial line sweeping around the graph through the first quadrant: as the angle increases, the length of the segment increases, so that its tip traces out the graph shown in figure (a).    polar graphs     Now continue plotting the points in the table as increases from to . In the second quadrant, decreases as increases, as shown in figure (b). The graph we obtain is, in fact, a circle, which we will prove algebraically shortly. However, we have not yet plotted points for between and . Because is negative in the third and fourth quadrants, all the -values for these angles are negative.                          When we plot the points in this table, we see that the original graph is traced out again. For example, the point is the same as the point , the point is the same as the point , and so on, around the circle. Thus, the graph of is a circle, traced twice for . "
 },
 {
-  "id": "exercise-2563",
+  "id": "exercise-2564",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2563",
+  "url": "Polar-Graphs.html#exercise-2564",
   "type": "Checkpoint",
   "number": "10.18",
   "title": "",
   "body": "Graph the polar equation .   polar graph    "
 },
 {
-  "id": "example-202",
+  "id": "example-203",
   "level": "2",
-  "url": "Polar-Graphs.html#example-202",
+  "url": "Polar-Graphs.html#example-203",
   "type": "Example",
   "number": "10.19",
   "title": "",
   "body": "Graph the Archimedean spiral , for .  After setting the calculator in Polar mode, we enter the equation and enter the window settings   We then press Zoom 5 to set a square window. The graph is shown at right.   polar graph     Studying a table of values can help us understand the shape of the graph.                  As increases, increases also, at a constant rate. We wind our way around the pole, steadily increasing our distance from the pole as we go. We spiral outwards, tracing the graph shown above. "
 },
 {
-  "id": "exercise-2564",
+  "id": "exercise-2565",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2564",
+  "url": "Polar-Graphs.html#exercise-2565",
   "type": "Checkpoint",
   "number": "10.20",
   "title": "",
   "body": "Use a calculator to graph the polar equation . Use the window settings    polar graph spiral    "
 },
 {
-  "id": "example-203",
+  "id": "example-204",
   "level": "2",
-  "url": "Polar-Graphs.html#example-203",
+  "url": "Polar-Graphs.html#example-204",
   "type": "Example",
   "number": "10.21",
   "title": "",
   "body": "Graph the polar equation .  We'll graph the equation in stages in order to see how the graph is traced out. Begin with the window settings Watch as your calculator produces the graph shown in figure (a).    one loop     two loops     three loops     Observe that, as increases from to , first increases, reaching its maximum value of 2 at and then decreases back to 0. You can verify the values in the table below, which shows the points at multiples of . These points create the first loop of the graph.                               Next, change to , and graph again. This time the calculator traces out two loops, as shown in figure (b). For between and , is negative, so the second loop lies in the third and fourth quadrants.                               Finally, change to , and graph again. For between and , the graph traces out a third loop, as shown in figure (c). For between and , the entire graph is traced a second time. The finished graph is a rose with 3 petals of length 2. "
 },
 {
-  "id": "exercise-2565",
+  "id": "exercise-2566",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2565",
+  "url": "Polar-Graphs.html#exercise-2566",
   "type": "Checkpoint",
   "number": "10.22",
   "title": "",
   "body": " Use your calculator to graph the polar equation .  Complete the table of values for the function.                      Sketch the graph by hand on the grid at right.   polar grid      polar graph: three petals    "
 },
 {
-  "id": "example-204",
+  "id": "example-205",
   "level": "2",
-  "url": "Polar-Graphs.html#example-204",
+  "url": "Polar-Graphs.html#example-205",
   "type": "Example",
   "number": "10.23",
   "title": "",
   "body": "Graph the polar equation .  Referring to the Catalog of Polar Graphs, we see that the graph of this equation is a rose , with petal length and four petals, because . If we can locate the tips of the petals, we can use them as guidepoints to sketch the graph.  Now, the points at the tips of the petals have , so we substitute into the equation of the rose to find the values of at those points.  Thus, one of the petal tips is located at . Because the 4 petals are evenly spaced around the pole, the angle between the petals is , and the other petal tips occur at  We plot the tips of the petals as guidepoints, at , , and . Now we can sketch a rose with 4 petals of length 3, as shown at right.   rose    "
 },
 {
-  "id": "exercise-2566",
+  "id": "exercise-2567",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2566",
+  "url": "Polar-Graphs.html#exercise-2567",
   "type": "Checkpoint",
   "number": "10.24",
   "title": "",
   "body": "Graph the polar equation .   rose    "
 },
 {
-  "id": "p-6779",
+  "id": "p-6813",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6779",
+  "url": "Polar-Graphs.html#p-6813",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "limaçons cardioid "
 },
 {
-  "id": "example-205",
+  "id": "example-206",
   "level": "2",
-  "url": "Polar-Graphs.html#example-205",
+  "url": "Polar-Graphs.html#example-206",
   "type": "Example",
   "number": "10.25",
   "title": "",
   "body": "Graph the polar equation .  This is the equation for a limaçon, with and . Because , the limaçon will have a dent, like a lima bean, rather than a loop. As guidepoints, we locate the points at the four quadrantal angles.                   We plot the guidepoints and connect them in order with a smooth curve, as shown below. Note that this limaçon involving cosine is symmetric about the -axis; limaçons involving sine are symmetric about the -axis.   limacon    "
 },
 {
-  "id": "exercise-2567",
+  "id": "exercise-2568",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2567",
+  "url": "Polar-Graphs.html#exercise-2568",
   "type": "Checkpoint",
   "number": "10.26",
   "title": "",
   "body": "Graph the polar equation .   limacon    "
 },
 {
-  "id": "example-206",
+  "id": "example-207",
   "level": "2",
-  "url": "Polar-Graphs.html#example-206",
+  "url": "Polar-Graphs.html#example-207",
   "type": "Example",
   "number": "10.27",
   "title": "",
   "body": "Give a polar equation for each of the graphs below.    circle     cardioid      The graph is a circle centered at and with radius 2, so we choose the equation , with . Thus, .  The graph is a cardioid with its axis of symmetry on the -axis, and the \"bottom\" of the heart points in the positive direction, so its equation has the form . At , so we can solve for : Thus, and we choose the equation . "
 },
 {
-  "id": "exercise-2568",
+  "id": "exercise-2569",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2568",
+  "url": "Polar-Graphs.html#exercise-2569",
   "type": "Checkpoint",
   "number": "10.28",
   "title": "",
   "body": "Give a polar equation for each of the graphs below.    lemniscate     cardioid      "
 },
 {
-  "id": "example-207",
+  "id": "example-208",
   "level": "2",
-  "url": "Polar-Graphs.html#example-207",
+  "url": "Polar-Graphs.html#example-208",
   "type": "Example",
   "number": "10.29",
   "title": "",
@@ -27604,9 +27667,9 @@ var ptx_lunr_docs = [
   "body": "As we saw in the previous Example, solving a system of equations and will not always reveal an intersection at the pole, because may be equal to zero for different values of in the two equations. We should always check separately whether the pole is a point on both graphs. "
 },
 {
-  "id": "exercise-2569",
+  "id": "exercise-2570",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2569",
+  "url": "Polar-Graphs.html#exercise-2570",
   "type": "Checkpoint",
   "number": "10.31",
   "title": "",
@@ -27622,605 +27685,596 @@ var ptx_lunr_docs = [
   "body": " Solve each equation. Give two solutions, .               Skills Refresher Answers   ,  ,  ,  ,  ,  ,  ,  ,    "
 },
 {
-  "id": "p-6826",
+  "id": "p-6860",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6826",
+  "url": "Polar-Graphs.html#p-6860",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "line circle "
 },
 {
-  "id": "p-6833",
+  "id": "p-6867",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6833",
+  "url": "Polar-Graphs.html#p-6867",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circle circle "
 },
 {
-  "id": "p-6838",
+  "id": "p-6872",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6838",
+  "url": "Polar-Graphs.html#p-6872",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "rose rose "
 },
 {
-  "id": "p-6845",
+  "id": "p-6879",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6845",
+  "url": "Polar-Graphs.html#p-6879",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-6846",
+  "id": "p-6880",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6846",
+  "url": "Polar-Graphs.html#p-6880",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cardioid "
 },
 {
-  "id": "p-6850",
+  "id": "p-6884",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6850",
+  "url": "Polar-Graphs.html#p-6884",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-6853",
+  "id": "p-6887",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6853",
+  "url": "Polar-Graphs.html#p-6887",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Archimedean spiral Logarithmic spiral "
 },
 {
-  "id": "exercise-2570",
+  "id": "exercise-2571",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2570",
+  "url": "Polar-Graphs.html#exercise-2571",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": " Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).    circles    is the radius  "
 },
 {
-  "id": "exercise-2571",
+  "id": "exercise-2572",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2571",
+  "url": "Polar-Graphs.html#exercise-2572",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": " Graph , for . How does these graphs compare to the graphs in Problem 1?  Write a Cartesian equation for each graph in part (a). "
 },
 {
-  "id": "exercise-2572",
+  "id": "exercise-2573",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2572",
+  "url": "Polar-Graphs.html#exercise-2573",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": " Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).    lines on polar grid     is the slope  "
 },
 {
-  "id": "exercise-2573",
+  "id": "exercise-2574",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2573",
+  "url": "Polar-Graphs.html#exercise-2574",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": " Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a). "
 },
 {
-  "id": "exercise-2574",
+  "id": "exercise-2575",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2574",
+  "url": "Polar-Graphs.html#exercise-2575",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": "Complete the table of values for each equation. Plot the points in order of increasing . What is different about the two graphs?  Equation 1:                       Equation 2:                                                                  The graph of begins at the right-most point (and proceeds counter-clockwise); the graph of begins at the left-most point.    polar points on circle    "
 },
 {
-  "id": "exercise-2575",
+  "id": "exercise-2576",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2575",
+  "url": "Polar-Graphs.html#exercise-2576",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": "Graph each line, and label the points with their coordinates. How are the points on the two lines related?  Equation 1:                 Equation 1:                "
 },
 {
-  "id": "exercise-2576",
+  "id": "exercise-2577",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2576",
+  "url": "Polar-Graphs.html#exercise-2577",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": " Graph the circle . Label the points corresponding to and .  Complete the table of values. What happens to the graph as increases from to ?                  Find the center and radius of the circle.  Give the Cartesian equation of the circle.    circle on polar grid                     The graph is traced again.  center: , radius:  "
 },
 {
-  "id": "exercise-2577",
+  "id": "exercise-2578",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2577",
+  "url": "Polar-Graphs.html#exercise-2578",
   "type": "Exercise",
   "number": "8",
   "title": "",
   "body": " Graph the circle . Label the points corresponding to and .  Complete the table of values. What happens to the graph as increases from to ?                  Find the center and radius of the circle.  Give the Cartesian equation of the circle. "
 },
 {
-  "id": "exercise-2578",
+  "id": "exercise-2579",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2578",
+  "url": "Polar-Graphs.html#exercise-2579",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": " Graph for .  How do the graphs change for different values of ?    circcles on polar grid     For , is the radius of a circle centerd on the positive -axis; for , is the radius of a circle centerd on the negative -axis.  "
 },
 {
-  "id": "exercise-2579",
+  "id": "exercise-2580",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2579",
+  "url": "Polar-Graphs.html#exercise-2580",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": " Graph for .  How do the graphs change for different values of ? "
 },
 {
-  "id": "exercise-2580",
+  "id": "exercise-2581",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2580",
+  "url": "Polar-Graphs.html#exercise-2581",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": "Complete the table of values for each cardioid, and graph the equation.                         cardioid                       cardioid                       cardioid                       cardioid                     "
 },
 {
-  "id": "exercise-2581",
+  "id": "exercise-2582",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2581",
+  "url": "Polar-Graphs.html#exercise-2582",
   "type": "Exercise",
   "number": "12",
   "title": "",
   "body": "Complete the table of values for each cardioid, and graph the equation.                      "
 },
 {
-  "id": "exercise-2582",
+  "id": "exercise-2583",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2582",
+  "url": "Polar-Graphs.html#exercise-2583",
   "type": "Exercise",
   "number": "13",
   "title": "",
   "body": "Complete the table of values for each limaçon, and graph the equation.                         limacon                       limacon                       limacon                       limacon                    "
 },
 {
-  "id": "exercise-2583",
+  "id": "exercise-2584",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2583",
+  "url": "Polar-Graphs.html#exercise-2584",
   "type": "Exercise",
   "number": "14",
   "title": "",
   "body": "Complete the table of values for each limaçon, and graph the equation.                      "
 },
 {
-  "id": "exercise-2584",
+  "id": "exercise-2585",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2584",
+  "url": "Polar-Graphs.html#exercise-2585",
   "type": "Exercise",
   "number": "15",
   "title": "",
   "body": " Graph the following roses and compare. How is the number of petals related to the value of in the equation ?  For each graph above, list the values of where the tips of the petals occur.  Graph for and . How does the value of affect the graph?    4-petal rose     3-petal rose     8-petal rose     5 petal rose    There are petals if is odd, and petals if is even.         3-petal rose     3-petal rose     3-petal rose    is the length of the petal.  "
 },
 {
-  "id": "exercise-2585",
+  "id": "exercise-2586",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2585",
+  "url": "Polar-Graphs.html#exercise-2586",
   "type": "Exercise",
   "number": "16",
   "title": "",
   "body": " Graph the following roses and compare. How is the number of petals related to the value of in the equation ?  For each graph above, list the values of where the tips of the petals occur.  Graph for and . How does the value of affect the graph? "
 },
 {
-  "id": "exercise-2586",
+  "id": "exercise-2587",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2586",
+  "url": "Polar-Graphs.html#exercise-2587",
   "type": "Exercise",
   "number": "17",
   "title": "",
   "body": " Solve for . (You should get two equations for .)  Graph both equations together. Change step to 0.02 to see the whole graph.  How does the value of affect the graph of ?     lemniscate     is the length of the loop.  "
 },
 {
-  "id": "exercise-2587",
+  "id": "exercise-2588",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2587",
+  "url": "Polar-Graphs.html#exercise-2588",
   "type": "Exercise",
   "number": "18",
   "title": "",
   "body": " Solve for . (You should get two equations for .)  Graph both equations together. Change step to 0.02 to see the whole graph.  How does this graph differ from the graph in Problem 17? "
 },
 {
-  "id": "exercise-2588",
+  "id": "exercise-2589",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2588",
+  "url": "Polar-Graphs.html#exercise-2589",
   "type": "Exercise",
   "number": "19",
   "title": "",
   "body": "Graph the Archimedean spiral . Set your window to Then graph by pressing Zoom 5.   Archimedean spiral    "
 },
 {
-  "id": "exercise-2589",
+  "id": "exercise-2590",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2589",
+  "url": "Polar-Graphs.html#exercise-2590",
   "type": "Exercise",
   "number": "20",
   "title": "",
   "body": "Graph the logarithmic spiral . Set your window to Then graph by pressing Zoom 5. "
 },
 {
-  "id": "exercise-2590",
+  "id": "exercise-2591",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2590",
+  "url": "Polar-Graphs.html#exercise-2591",
   "type": "Exercise",
   "number": "21",
   "title": "",
   "body": " Complete the table and graph the equation in Cartesian coordinates, for .                                     Complete the table and graph the equation in polar coordinates, for .                                                                          sinusoidal curve                                          three-petal rose     "
 },
 {
-  "id": "exercise-2591",
+  "id": "exercise-2592",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2591",
+  "url": "Polar-Graphs.html#exercise-2592",
   "type": "Exercise",
   "number": "22",
   "title": "",
   "body": " Complete the table and graph the equation in Cartesian coordinates, for .                                     Complete the table and graph the equation in polar coordinates, for .                                    "
 },
 {
-  "id": "exercise-2592",
+  "id": "exercise-2593",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2592",
+  "url": "Polar-Graphs.html#exercise-2593",
   "type": "Exercise",
   "number": "23",
   "title": "",
   "body": " Complete the table and graph the equation in Cartesian coordinates, for .                          Complete the table and graph the equation in polar coordinates, for .                                                    sinusoidal graph                               cardioid     "
 },
 {
-  "id": "exercise-2593",
+  "id": "exercise-2594",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2593",
+  "url": "Polar-Graphs.html#exercise-2594",
   "type": "Exercise",
   "number": "24",
   "title": "",
   "body": " Complete the table and graph the equation in Cartesian coordinates, for .                          Complete the table and graph the equation in polar coordinates, for .                         "
 },
 {
-  "id": "exercise-2594",
+  "id": "exercise-2595",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2594",
+  "url": "Polar-Graphs.html#exercise-2595",
   "type": "Exercise",
   "number": "25",
   "title": "",
   "body": "circle   circle on polar grid    "
 },
 {
-  "id": "exercise-2595",
+  "id": "exercise-2596",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2595",
+  "url": "Polar-Graphs.html#exercise-2596",
   "type": "Exercise",
   "number": "26",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2596",
+  "id": "exercise-2597",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2596",
+  "url": "Polar-Graphs.html#exercise-2597",
   "type": "Exercise",
   "number": "27",
   "title": "",
   "body": "line   line on polar grid    "
 },
 {
-  "id": "exercise-2597",
+  "id": "exercise-2598",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2597",
+  "url": "Polar-Graphs.html#exercise-2598",
   "type": "Exercise",
   "number": "28",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2598",
+  "id": "exercise-2599",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2598",
+  "url": "Polar-Graphs.html#exercise-2599",
   "type": "Exercise",
   "number": "29",
   "title": "",
   "body": "circle   circle    "
 },
 {
-  "id": "exercise-2599",
+  "id": "exercise-2600",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2599",
+  "url": "Polar-Graphs.html#exercise-2600",
   "type": "Exercise",
   "number": "30",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2600",
+  "id": "exercise-2601",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2600",
+  "url": "Polar-Graphs.html#exercise-2601",
   "type": "Exercise",
   "number": "31",
   "title": "",
   "body": "cardioid   cardioid    "
 },
 {
-  "id": "exercise-2601",
+  "id": "exercise-2602",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2601",
+  "url": "Polar-Graphs.html#exercise-2602",
   "type": "Exercise",
   "number": "32",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2602",
+  "id": "exercise-2603",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2602",
+  "url": "Polar-Graphs.html#exercise-2603",
   "type": "Exercise",
   "number": "33",
   "title": "",
   "body": "limaçon   limacon    "
 },
 {
-  "id": "exercise-2603",
+  "id": "exercise-2604",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2603",
+  "url": "Polar-Graphs.html#exercise-2604",
   "type": "Exercise",
   "number": "34",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2604",
+  "id": "exercise-2605",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2604",
+  "url": "Polar-Graphs.html#exercise-2605",
   "type": "Exercise",
   "number": "35",
   "title": "",
   "body": "rose   four-petal rose     "
 },
 {
-  "id": "exercise-2605",
+  "id": "exercise-2606",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2605",
+  "url": "Polar-Graphs.html#exercise-2606",
   "type": "Exercise",
   "number": "36",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2606",
+  "id": "exercise-2607",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2606",
+  "url": "Polar-Graphs.html#exercise-2607",
   "type": "Exercise",
   "number": "37",
   "title": "",
   "body": "rose   rose    "
 },
 {
-  "id": "exercise-2607",
+  "id": "exercise-2608",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2607",
+  "url": "Polar-Graphs.html#exercise-2608",
   "type": "Exercise",
   "number": "38",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2608",
+  "id": "exercise-2609",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2608",
+  "url": "Polar-Graphs.html#exercise-2609",
   "type": "Exercise",
   "number": "39",
   "title": "",
   "body": "limaçon   limacon    "
 },
 {
-  "id": "exercise-2609",
+  "id": "exercise-2610",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2609",
+  "url": "Polar-Graphs.html#exercise-2610",
   "type": "Exercise",
   "number": "40",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2610",
+  "id": "exercise-2611",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2610",
+  "url": "Polar-Graphs.html#exercise-2611",
   "type": "Exercise",
   "number": "41",
   "title": "",
   "body": "lemniscate   lemniscate    "
 },
 {
-  "id": "exercise-2611",
+  "id": "exercise-2612",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2611",
+  "url": "Polar-Graphs.html#exercise-2612",
   "type": "Exercise",
   "number": "42",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2612",
+  "id": "exercise-2613",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2612",
+  "url": "Polar-Graphs.html#exercise-2613",
   "type": "Exercise",
   "number": "43",
   "title": "",
   "body": "circle   circle    "
 },
 {
-  "id": "exercise-2613",
+  "id": "exercise-2614",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2613",
+  "url": "Polar-Graphs.html#exercise-2614",
   "type": "Exercise",
   "number": "44",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2614",
+  "id": "exercise-2615",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2614",
+  "url": "Polar-Graphs.html#exercise-2615",
   "type": "Exercise",
   "number": "45",
   "title": "",
   "body": "arcs of a circle   arcs of circle    "
 },
 {
-  "id": "exercise-2615",
+  "id": "exercise-2616",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2615",
+  "url": "Polar-Graphs.html#exercise-2616",
   "type": "Exercise",
   "number": "46",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2616",
+  "id": "exercise-2617",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2616",
+  "url": "Polar-Graphs.html#exercise-2617",
   "type": "Exercise",
   "number": "47",
   "title": "",
   "body": "semicircle   semicircle    "
 },
 {
-  "id": "exercise-2617",
+  "id": "exercise-2618",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2617",
+  "url": "Polar-Graphs.html#exercise-2618",
   "type": "Exercise",
   "number": "48",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2618",
+  "id": "exercise-2619",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2618",
+  "url": "Polar-Graphs.html#exercise-2619",
   "type": "Exercise",
   "number": "49",
   "title": "",
   "body": "rose   eight-petal rose    "
 },
 {
-  "id": "exercise-2619",
+  "id": "exercise-2620",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2619",
+  "url": "Polar-Graphs.html#exercise-2620",
   "type": "Exercise",
   "number": "50",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2620",
+  "id": "exercise-2621",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2620",
+  "url": "Polar-Graphs.html#exercise-2621",
   "type": "Exercise",
   "number": "51",
   "title": "",
   "body": "cardioid   cardioid    "
 },
 {
-  "id": "exercise-2621",
+  "id": "exercise-2622",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2621",
+  "url": "Polar-Graphs.html#exercise-2622",
   "type": "Exercise",
   "number": "52",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2622",
+  "id": "exercise-2623",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2622",
+  "url": "Polar-Graphs.html#exercise-2623",
   "type": "Exercise",
   "number": "53",
   "title": "",
   "body": "parabola   parabola    "
 },
 {
-  "id": "exercise-2623",
+  "id": "exercise-2624",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2623",
+  "url": "Polar-Graphs.html#exercise-2624",
   "type": "Exercise",
   "number": "54",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2624",
+  "id": "exercise-2625",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2624",
+  "url": "Polar-Graphs.html#exercise-2625",
   "type": "Exercise",
   "number": "55",
   "title": "",
   "body": "ellipse   ellipse    "
 },
 {
-  "id": "exercise-2625",
+  "id": "exercise-2626",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2625",
+  "url": "Polar-Graphs.html#exercise-2626",
   "type": "Exercise",
   "number": "56",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2626",
+  "id": "exercise-2627",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2626",
+  "url": "Polar-Graphs.html#exercise-2627",
   "type": "Exercise",
   "number": "57",
   "title": "",
   "body": "hyperbola   hyperbola    "
 },
 {
-  "id": "exercise-2627",
+  "id": "exercise-2628",
   "level": "2",
-  "url": "Polar-Graphs.html#exercise-2627",
+  "url": "Polar-Graphs.html#exercise-2628",
   "type": "Exercise",
   "number": "58",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2628",
-  "level": "2",
-  "url": "Polar-Graphs.html#exercise-2628",
-  "type": "Exercise",
-  "number": "59",
-  "title": "",
-  "body": "  cardioid    "
-},
-{
   "id": "exercise-2629",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2629",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
   "body": "  cardioid    "
 },
@@ -28229,34 +28283,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2630",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "  five-petal rose    "
+  "body": "  cardioid    "
 },
 {
   "id": "exercise-2631",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2631",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": "  four-petal rose    "
+  "body": "  five-petal rose    "
 },
 {
   "id": "exercise-2632",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2632",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "  circle    "
+  "body": "  four-petal rose    "
 },
 {
   "id": "exercise-2633",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2633",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
   "body": "  circle    "
 },
@@ -28265,16 +28319,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2634",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "  limacon    "
+  "body": "  circle    "
 },
 {
   "id": "exercise-2635",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2635",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
   "body": "  limacon    "
 },
@@ -28283,158 +28337,167 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2636",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": ", , "
+  "body": "  limacon    "
 },
 {
   "id": "exercise-2637",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2637",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": ""
+  "body": ", , "
 },
 {
   "id": "exercise-2638",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2638",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": ", , "
+  "body": ""
 },
 {
   "id": "exercise-2639",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2639",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": ""
+  "body": ", , "
 },
 {
   "id": "exercise-2640",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2640",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
-  "body": ", "
+  "body": ""
 },
 {
   "id": "exercise-2641",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2641",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
-  "body": ""
+  "body": ", "
 },
 {
   "id": "exercise-2642",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2642",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
-  "body": ", "
+  "body": ""
 },
 {
   "id": "exercise-2643",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2643",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
-  "body": ""
+  "body": ", "
 },
 {
   "id": "exercise-2644",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2644",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
-  "body": "  polar plot    "
+  "body": ""
 },
 {
   "id": "exercise-2645",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2645",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
-  "body": ""
+  "body": "  polar plot    "
 },
 {
   "id": "exercise-2646",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2646",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
-  "body": "(conchoid)   conchoid    "
+  "body": ""
 },
 {
   "id": "exercise-2647",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2647",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
-  "body": "(kappa curve) "
+  "body": "(conchoid)   conchoid    "
 },
 {
   "id": "exercise-2648",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2648",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
-  "body": "(strophoid)   strophoid    "
+  "body": "(kappa curve) "
 },
 {
   "id": "exercise-2649",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2649",
   "type": "Exercise",
-  "number": "80",
+  "number": "79",
   "title": "",
-  "body": "(cissoid) "
+  "body": "(strophoid)   strophoid    "
 },
 {
   "id": "exercise-2650",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2650",
   "type": "Exercise",
-  "number": "81",
+  "number": "80",
   "title": "",
-  "body": "  polar plot    "
+  "body": "(cissoid) "
 },
 {
   "id": "exercise-2651",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2651",
   "type": "Exercise",
-  "number": "82",
+  "number": "81",
   "title": "",
-  "body": ""
+  "body": "  polar plot    "
 },
 {
   "id": "exercise-2652",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2652",
   "type": "Exercise",
-  "number": "83",
+  "number": "82",
   "title": "",
-  "body": "Graph the polar curves for . Explain how the value of the parameter affects the curve. The curve has large loops and small loops. "
+  "body": ""
 },
 {
   "id": "exercise-2653",
   "level": "2",
   "url": "Polar-Graphs.html#exercise-2653",
+  "type": "Exercise",
+  "number": "83",
+  "title": "",
+  "body": "Graph the polar curves for . Explain how the value of the parameter affects the curve. The curve has large loops and small loops. "
+},
+{
+  "id": "exercise-2654",
+  "level": "2",
+  "url": "Polar-Graphs.html#exercise-2654",
   "type": "Exercise",
   "number": "84",
   "title": "",
@@ -28450,144 +28513,144 @@ var ptx_lunr_docs = [
   "body": " Complex Numbers  complex number  So far most of your work in mathematics has been done using the set of real numbers . We often represent the real numbers by a number line, because they can be matched up one-for-one with the points on the line. Every real number is either rational or irrational, and can be expressed as a decimal number, although irrational numbers are non-repeating, non-terminating decimals. However, the real numbers are actually a subset of a larger set of numbers called the complex numbers .  You may have first encountered complex numbers as solutions of certain quadratic equations. For example, the graph of has no -intercepts (as shown at right), because the equation has no real-valued solutions.   triangle     Applying the quadratic formula, we find The solutions of the equation are and , but they are not real numbers. Because is not a real number, the equation has no real solutions.  Imaginary Numbers  complex number imaginary number  Although square roots of negative numbers such as are not real numbers, they occur often in mathematics and its applications. Mathematicians began working with square roots of negative numbers in the sixteenth century, in their attempts to solve quadratic and cubic equations. René Descartes gave them the name imaginary numbers , which reflected the mistrust with which mathematicians regarded them at the time. Today, however, such numbers are well understood and used routinely by scientists and engineers.  We begin by defining a new number, called , whose square is .  Imaginary Unit  imaginary unit  We define the imaginary unit, , by  The letter used in this way is not a variable, it is the name of a specific number, and hence is a constant. The square root of any negative number can be written as the product of a real number and . For example, or . Any number that is the product of and a real number is called an imaginary number .  Imaginary Numbers  imaginary number  For any real number ,  Examples of imaginary numbers are and .  Write each radical as an imaginary number.       Write each radical as an imaginary number.      Just as each positive number has two real-valued square roots, every negative number has two imaginary square roots. For example, the two square roots of are and .   Complex Numbers  Consider the quadratic equation Using the quadratic formula to solve the equation, we find If we now replace by , we have The two solutions are and . These are examples of complex numbers .  Complex Numbers  complex number  A complex number can be written in the form where and are real numbers.  Examples of complex numbers are In a complex number , is called the real part real part , and is called the imaginary part imaginary part . All real numbers are also complex numbers (with imaginary part equal to zero). A complex number whose real part equals 0 is called a pure imaginary number pure imaginary number imaginary number .  The real and imaginary parts of a complex number cannot be combined. Thus, two complex numbers and are equal if and only if their real parts are equal and their imaginary parts are equal.  Equality of Complex Numbers  Two complex numbers and are equal if and only if  The solutions of the equation are . Write these solutions as complex numbers, and simplify.  Because we have , or . The solutions are and .  Use extraction of roots to solve . Write your answers as complex numbers.   Arithmetic of Complex Numbers  We add and subtract complex numbers by combining their real and imaginary parts separately. For example, The algebraic form of this rule can be stated as follows.  Sum and Difference of Complex Numbers  complex number sum of  complex number difference of  The sum of two complex numbers and is Their difference is  Subtract: .  Combine the real and imaginary parts.  Subtract:   Products of Complex Numbers  To find the product of two imaginary numbers, we use the fact that . For example,  To find the product of two complex numbers, we use the distributive law, as if the numbers were binomials.  Multiply .  We multiply each term of the first complex number by each term of the second one. Because , the last term, , can be replaced by , or , to obtain Finally, we combine the real parts and imaginary parts to obtain  Multiply .  In the Homework Probems, you will verify that the following rule holds.  Product of Complex Numbers  complex number product of  The product of two complex numbers and is  One property of real numbers that is not true of complex numbers is . This identity fails when and are both negative. For example, if , we have but so . We can avoid possible errors by writing square roots of negative numbers as imaginary numbers before attempting any calculations.   Quotients of Complex Numbers  complex number quotient of  To find the quotient of two complex numbers, we use the technique of rationalizing the denominator. First consider division by a pure imaginary number.  Divide .  Because is really a radical (remember that ), we multiply the numerator and denominator of the quotient by to obtain To write the quotient in the form , we divide into each term of the numerator. The quotient is .  Divide .  Perhaps you recall that to rationalize a binomial denominator, we multiply by its conjugate. For example, to rationalize the denominator of , we multiply numerator and denominator by . A similar technique works for dividing complex numbers. We first define the conjugate complex conjugate conjugate complex conjugate of a complex number.  Complex Conjugate  complex conjugate   complex conjugate  For any complex number , the number is called the complex conjugate of .  The conjugate of a complex number has several useful properties. In particular, the product of a nonzero complex number and its conjugate is always a positive real number.  To illustrate, we calculate the quotient . We multiply numerator and denominator by the complex conjugate of the denominator, , to obtain The denominator is then a real number, because and the quotient is  Divide .  We multiply numerator and denominator by , the complex conjugate of the denominator.  Write the quotient in the form .  In the Homework Problems you will verify the rule for dividing complex numbers.  Quotient of Complex Numbers  complex number quotient of  The quotient of two complex numbers and is   Graphing Complex Numbers  complex number graphing  complex plane  real axis  imaginary axis  Real numbers can be plotted on a number line, but to graph a complex number we use a plane, called the complex plane . In the complex plane, the real numbers lie on the horizontal or real axis , and pure imaginary numbers lie on the vertical or imaginary axis . To plot a complex number we move units from the origin in the horizontal direction and units in the vertical direction.  Plot the numbers and in the complex plane.  To plot , we move from the origin 2 units to the right and 3 units up. To plot we move from the origin 2 units to the right and 3 units down. The numbers and are plotted in the figure at right.   complex conjugates     Plot and its conjugate in the complex plane.   complex conjugates     You are used to plotting ordered pairs in the Cartesian plane, so that one point represents two real numbers, given by its coordinates. However, in the complex plane one point represents a single complex number , and the coordinates of the point are the real and imaginary parts of . For example, the point in the real plane represents the pair of real numbers and , but the point in the complex plane represents the complex number .  The modulus modulus complex number length complex number length modulus , or length, of a complex number is its distance from the origin in the complex plane. The modulus of a complex number is analogous to the absolute value of a real number, and is denoted by . If , we can use the Pythagorean theorem to compute its modulus.  Modulus of a Complex Number  modulus  The modulus of a complex number is given by  For example, the modulus of is  Plot all points in the complex plane that satisfy the equation .  The points that satisfy all lie at a distance of 4 units from the origin. In other words, they lie on a circle of radius 4 centered at the origin, as shown at right.   circle     Write an equation for the circle of radius 1 centered at the origin in the complex plane.  We can think of the graph of a complex number as the vector (or arrow) that starts at the origin and ends at the point in the complex plane, as shown in figure (a).    complex numbers as vectors     Then the sum of two complex numbers corresponds to the sum of the two vectors representing them. Figure (b) illustrates the sum of two complex numbers, and , by vector addition using the parallelogram law: we form a parallelogram with the vectors and and as adjacent sides. Their sum is the vector that forms the diagonal of the parallelogram, starting at the origin.  Illustrate the sum of and by vector addition.  Draw a vector starting at the origin and ending at the point in the complex plane to represent , and another vector ending at to represent . Now sketch the opposite sides of a parallelogram, and draw the diagonal starting at the origin, as shown at right.   complex numbers as vectors     This vector represents the sum . You can check that the vector ends at the point  To visualize subtraction, we add the opposite of the second vector, because Recall that the opposite of a vector has the same length, but it points in the opposite direction.  Illustrate , for and .   complex numbers as vectors      Zeros of Polynomials  zero of a polynomial  A polynomial with real-number coefficients may or may not have real-valued zeros. For example, the polynomial has no real-valued zeros. But a polynomial always has a zero if we allow complex numbers as inputs. Because we can add, subtract, and multiply any two complex numbers, we can evaluate a polynomial function at a complex number. Thus, we can extend the domain of any polynomial to include all complex numbers.  Evaluate the polynomial for , and simplify.  We substitute , to find Thus, , so is a zero of the polynomial.  If , evaluate .  The zeros of a quadratic polynomial , of course, are the solutions of the quadratic equation and those solutions are given by the quadratic formula, If the discriminant is negative, the two solutions are complex conjugates. For example, the solutions of the equation are or and . Thus, if we know that is one complex solution of a quadratic equation, we know that is the other solution.  We can now write a quadratic polynomial, with real coefficients, having any complex number as one of its zeros. The factored form of the quadratic polynomial with zeros and is Expanding the right side, we find Because and are both real numbers, this polynomial has real-valued coefficients.  Complex Zeros of a Quadratic Polynomial  zero of a polynomial  If , is a complex zero of a quadratic polynomial with real coefficients and lead coefficient 1, then is the other zero, and   Let . Compute and .  Find a quadratic polynomial with one zero being .   The conjugate of is , so and  The polynomial is   Let . Compute and .  Find a quadratic polynomial with one zero being .  ,   One of the most important results in mathematics is the fundamental theorem of algebra , which says that if we allow complex numbers as inputs, then every polynomial of degree has exactly complex number zeros.  Fundamental Theorem of Algebra  fundamental theorem of algebra  Let be a polynomial of degree . Then has exactly complex zeros, counting multiplicities.  A polynomial has a zero \"of multiplicity \" at if occurs times as a factor of the polynomial. For example, the polynomial has a zero of multiplicity 2 at .  As a result, every polynomial of degree can be factored as the product of linear terms.  For example, although the graph of shown at right has no -intercepts, the fundamental theorem tells us that there are four complex solutions to , and that can be factored. You can check that the four solutions to are   quartic     For example, if , then and Because each zero corresponds to a factor of the polynomial, the factored form of is The four solutions to form two complex conjugate pairs, namely and . We see again that, for every polynomial with real coefficients, the nonreal zeros always occur in complex conjugate pairs.  Find a fourth degree polynomial with real coefficients, two of whose zeros are and .  The other two zeros are and . The factored form of the polynomial is We multiply together the factors to find the polynomial. The product of is , and Finally, we multiply these two partial products to find the polynomial we seek,   Find the zeros of the polynomial .  Write the polynomial in factored form.    Review the following skills you will need for this section.   Solve.             Algebra Refresher Answers             Section 10.3 Summary  Vocabulary   Imaginary unit  Imaginary number  Complex number  Complex conjugate  Real part  Imaginary part  Complex plane  Real axis  Imaginary axis  Modulus    Concepts   Imaginary Unit  We define the imaginary unit, , by  The square root of a negative number is an imaginary number: if  A complex number is the sum of a real number and an imaginary number, .  We can perform the four arithmetic operations on complex numbers. Operations on Complex Numbers       The product of a nonzero complex number and its conjugate is always a positive real number. .  We can graph complex numbers in the complex plane.  We can visualize the sum of two complex numbers by vector addition in the complex plane.  Fundamental Theorem of Algebra  Let be a polynomial of degree . Then has exactly complex zeros.  The nonreal zeros of a polynomial with real coefficients always occur in conjugate pairs.   Study Questions   What are imaginary numbers, and why were they invented?  Simplify the following powers of : What do you notice?  Explain how the complex conjugate is used in dividing complex numbers.  If one solution of a quadratic equation is , what is the other solution?  If is a polynomial of degree , how many zeros does have? How many -intercepts could its graph have? How many complex zeros could have?   Skills   Write and simplify complex numbers #1 6  Perform arithmetic operations on complex numbers #7 34  Evaluate polynomials at complex numbers, expand polynomials #35 46  Graph complex numbers #47 58  Find a polynomial with given zeros #67 74     Homework 10-3  For Problems 1 2, write the complex number in the form , where and are real numbers.               For Problems 3 6, find the zeros of the quadratic polynomial. Write each zero in the form , where and are real numbers.       For Problems 7 10, add or subtract.       For Problems 11 20, multiply.             For Problems 21 32, divide.                Simplify.          Express with a positive exponent and simplify.      For Problems 35-40, evaluate the polynomial for the given values of the variable.                             For Problems 41 46, expand the product of polynomials.         For Problems 47 50, plot the number and its complex conjugate in the complex plane. What is the geometric relationship between complex conjugates?    complex conjugates        complex conjugates       For Problems 51 54, sketch the set of points in the complex plane.    disk      The set of all for which   inequality     The set of all for which   For Problems 55 58, illustrate addition using the parallelogram rule in the complex plane.    complex numbers as vectors        complex numbers as vectors       Prove that the product of two complex numbers and is  Prove that the quotient of two complex numbers and is  Prove the commutative laws for addition and multiplication of complex numbers:     Prove the distributive law for complex numbers:   Show that is a real number, and is an imaginary number.  Show that     Show that  Suppose and are complex numbers. If , is it necessarily true that ? Provide examples to support your conclusion. No. Let and . Then so but  Prove the triangle inequality for complex numbers:   In Problems 67 70,  Given one solution of a quadratic equation with rational coefficients, find the other solution.  Write a quadratic equation that has those solutions.           For Problems 71 74, find a fourth degree polynomial with real coefficients that has the given complex numbers as two of its zeros.        "
 },
 {
-  "id": "p-7006",
+  "id": "p-7040",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7006",
+  "url": "Complex-Numbers.html#p-7040",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "real numbers complex numbers "
 },
 {
-  "id": "p-7009",
+  "id": "p-7043",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7009",
+  "url": "Complex-Numbers.html#p-7043",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "imaginary numbers "
 },
 {
-  "id": "p-7010",
+  "id": "p-7044",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7010",
+  "url": "Complex-Numbers.html#p-7044",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-7011",
+  "id": "p-7045",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7011",
+  "url": "Complex-Numbers.html#p-7045",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-7012",
+  "id": "p-7046",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7012",
+  "url": "Complex-Numbers.html#p-7046",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "imaginary number "
 },
 {
-  "id": "example-208",
+  "id": "example-209",
   "level": "2",
-  "url": "Complex-Numbers.html#example-208",
+  "url": "Complex-Numbers.html#example-209",
   "type": "Example",
   "number": "10.32",
   "title": "",
   "body": "Write each radical as an imaginary number.      "
 },
 {
-  "id": "exercise-2654",
+  "id": "exercise-2655",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2654",
+  "url": "Complex-Numbers.html#exercise-2655",
   "type": "Checkpoint",
   "number": "10.33",
   "title": "",
   "body": "Write each radical as an imaginary number.     "
 },
 {
-  "id": "p-7020",
+  "id": "p-7054",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7020",
+  "url": "Complex-Numbers.html#p-7054",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex numbers "
 },
 {
-  "id": "p-7021",
+  "id": "p-7055",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7021",
+  "url": "Complex-Numbers.html#p-7055",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex number "
 },
 {
-  "id": "p-7022",
+  "id": "p-7056",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7022",
+  "url": "Complex-Numbers.html#p-7056",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "real part imaginary part pure imaginary number "
 },
 {
-  "id": "example-209",
+  "id": "example-210",
   "level": "2",
-  "url": "Complex-Numbers.html#example-209",
+  "url": "Complex-Numbers.html#example-210",
   "type": "Example",
   "number": "10.34",
   "title": "",
   "body": "The solutions of the equation are . Write these solutions as complex numbers, and simplify.  Because we have , or . The solutions are and . "
 },
 {
-  "id": "exercise-2655",
+  "id": "exercise-2656",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2655",
+  "url": "Complex-Numbers.html#exercise-2656",
   "type": "Checkpoint",
   "number": "10.35",
   "title": "",
   "body": "Use extraction of roots to solve . Write your answers as complex numbers. "
 },
 {
-  "id": "example-210",
+  "id": "example-211",
   "level": "2",
-  "url": "Complex-Numbers.html#example-210",
+  "url": "Complex-Numbers.html#example-211",
   "type": "Example",
   "number": "10.36",
   "title": "",
   "body": "Subtract: .  Combine the real and imaginary parts. "
 },
 {
-  "id": "exercise-2656",
+  "id": "exercise-2657",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2656",
+  "url": "Complex-Numbers.html#exercise-2657",
   "type": "Checkpoint",
   "number": "10.37",
   "title": "",
   "body": "Subtract: "
 },
 {
-  "id": "example-211",
+  "id": "example-212",
   "level": "2",
-  "url": "Complex-Numbers.html#example-211",
+  "url": "Complex-Numbers.html#example-212",
   "type": "Example",
   "number": "10.38",
   "title": "",
   "body": "Multiply .  We multiply each term of the first complex number by each term of the second one. Because , the last term, , can be replaced by , or , to obtain Finally, we combine the real parts and imaginary parts to obtain "
 },
 {
-  "id": "exercise-2657",
+  "id": "exercise-2658",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2657",
+  "url": "Complex-Numbers.html#exercise-2658",
   "type": "Checkpoint",
   "number": "10.39",
   "title": "",
@@ -28603,27 +28666,27 @@ var ptx_lunr_docs = [
   "body": "One property of real numbers that is not true of complex numbers is . This identity fails when and are both negative. For example, if , we have but so . We can avoid possible errors by writing square roots of negative numbers as imaginary numbers before attempting any calculations. "
 },
 {
-  "id": "example-212",
+  "id": "example-213",
   "level": "2",
-  "url": "Complex-Numbers.html#example-212",
+  "url": "Complex-Numbers.html#example-213",
   "type": "Example",
   "number": "10.41",
   "title": "",
   "body": "Divide .  Because is really a radical (remember that ), we multiply the numerator and denominator of the quotient by to obtain To write the quotient in the form , we divide into each term of the numerator. The quotient is . "
 },
 {
-  "id": "exercise-2658",
+  "id": "exercise-2659",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2658",
+  "url": "Complex-Numbers.html#exercise-2659",
   "type": "Checkpoint",
   "number": "10.42",
   "title": "",
   "body": "Divide . "
 },
 {
-  "id": "p-7049",
+  "id": "p-7083",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7049",
+  "url": "Complex-Numbers.html#p-7083",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -28648,45 +28711,45 @@ var ptx_lunr_docs = [
   "body": "The conjugate of a complex number has several useful properties. In particular, the product of a nonzero complex number and its conjugate is always a positive real number. "
 },
 {
-  "id": "example-213",
+  "id": "example-214",
   "level": "2",
-  "url": "Complex-Numbers.html#example-213",
+  "url": "Complex-Numbers.html#example-214",
   "type": "Example",
   "number": "10.45",
   "title": "",
   "body": "Divide .  We multiply numerator and denominator by , the complex conjugate of the denominator. "
 },
 {
-  "id": "exercise-2659",
+  "id": "exercise-2660",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2659",
+  "url": "Complex-Numbers.html#exercise-2660",
   "type": "Checkpoint",
   "number": "10.46",
   "title": "",
   "body": "Write the quotient in the form . "
 },
 {
-  "id": "p-7059",
+  "id": "p-7093",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7059",
+  "url": "Complex-Numbers.html#p-7093",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex plane real axis imaginary axis "
 },
 {
-  "id": "example-214",
+  "id": "example-215",
   "level": "2",
-  "url": "Complex-Numbers.html#example-214",
+  "url": "Complex-Numbers.html#example-215",
   "type": "Example",
   "number": "10.47",
   "title": "",
   "body": "Plot the numbers and in the complex plane.  To plot , we move from the origin 2 units to the right and 3 units up. To plot we move from the origin 2 units to the right and 3 units down. The numbers and are plotted in the figure at right.   complex conjugates    "
 },
 {
-  "id": "exercise-2660",
+  "id": "exercise-2661",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2660",
+  "url": "Complex-Numbers.html#exercise-2661",
   "type": "Checkpoint",
   "number": "10.48",
   "title": "",
@@ -28702,99 +28765,99 @@ var ptx_lunr_docs = [
   "body": "You are used to plotting ordered pairs in the Cartesian plane, so that one point represents two real numbers, given by its coordinates. However, in the complex plane one point represents a single complex number , and the coordinates of the point are the real and imaginary parts of . For example, the point in the real plane represents the pair of real numbers and , but the point in the complex plane represents the complex number . "
 },
 {
-  "id": "p-7064",
+  "id": "p-7098",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7064",
+  "url": "Complex-Numbers.html#p-7098",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "modulus "
 },
 {
-  "id": "p-7065",
+  "id": "p-7099",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7065",
+  "url": "Complex-Numbers.html#p-7099",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "modulus "
-},
-{
-  "id": "example-215",
-  "level": "2",
-  "url": "Complex-Numbers.html#example-215",
-  "type": "Example",
-  "number": "10.50",
-  "title": "",
-  "body": "Plot all points in the complex plane that satisfy the equation .  The points that satisfy all lie at a distance of 4 units from the origin. In other words, they lie on a circle of radius 4 centered at the origin, as shown at right.   circle    "
-},
-{
-  "id": "exercise-2661",
-  "level": "2",
-  "url": "Complex-Numbers.html#exercise-2661",
-  "type": "Checkpoint",
-  "number": "10.51",
-  "title": "",
-  "body": "Write an equation for the circle of radius 1 centered at the origin in the complex plane. "
 },
 {
   "id": "example-216",
   "level": "2",
   "url": "Complex-Numbers.html#example-216",
   "type": "Example",
-  "number": "10.52",
+  "number": "10.50",
   "title": "",
-  "body": "Illustrate the sum of and by vector addition.  Draw a vector starting at the origin and ending at the point in the complex plane to represent , and another vector ending at to represent . Now sketch the opposite sides of a parallelogram, and draw the diagonal starting at the origin, as shown at right.   complex numbers as vectors     This vector represents the sum . You can check that the vector ends at the point "
+  "body": "Plot all points in the complex plane that satisfy the equation .  The points that satisfy all lie at a distance of 4 units from the origin. In other words, they lie on a circle of radius 4 centered at the origin, as shown at right.   circle    "
 },
 {
   "id": "exercise-2662",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2662",
   "type": "Checkpoint",
-  "number": "10.53",
+  "number": "10.51",
   "title": "",
-  "body": "Illustrate , for and .   complex numbers as vectors    "
+  "body": "Write an equation for the circle of radius 1 centered at the origin in the complex plane. "
 },
 {
   "id": "example-217",
   "level": "2",
   "url": "Complex-Numbers.html#example-217",
   "type": "Example",
-  "number": "10.54",
+  "number": "10.52",
   "title": "",
-  "body": "Evaluate the polynomial for , and simplify.  We substitute , to find Thus, , so is a zero of the polynomial. "
+  "body": "Illustrate the sum of and by vector addition.  Draw a vector starting at the origin and ending at the point in the complex plane to represent , and another vector ending at to represent . Now sketch the opposite sides of a parallelogram, and draw the diagonal starting at the origin, as shown at right.   complex numbers as vectors     This vector represents the sum . You can check that the vector ends at the point "
 },
 {
   "id": "exercise-2663",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2663",
   "type": "Checkpoint",
-  "number": "10.55",
+  "number": "10.53",
   "title": "",
-  "body": "If , evaluate . "
+  "body": "Illustrate , for and .   complex numbers as vectors    "
 },
 {
   "id": "example-218",
   "level": "2",
   "url": "Complex-Numbers.html#example-218",
   "type": "Example",
-  "number": "10.56",
+  "number": "10.54",
   "title": "",
-  "body": " Let . Compute and .  Find a quadratic polynomial with one zero being .   The conjugate of is , so and  The polynomial is "
+  "body": "Evaluate the polynomial for , and simplify.  We substitute , to find Thus, , so is a zero of the polynomial. "
 },
 {
   "id": "exercise-2664",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2664",
   "type": "Checkpoint",
+  "number": "10.55",
+  "title": "",
+  "body": "If , evaluate . "
+},
+{
+  "id": "example-219",
+  "level": "2",
+  "url": "Complex-Numbers.html#example-219",
+  "type": "Example",
+  "number": "10.56",
+  "title": "",
+  "body": " Let . Compute and .  Find a quadratic polynomial with one zero being .   The conjugate of is , so and  The polynomial is "
+},
+{
+  "id": "exercise-2665",
+  "level": "2",
+  "url": "Complex-Numbers.html#exercise-2665",
+  "type": "Checkpoint",
   "number": "10.57",
   "title": "",
   "body": " Let . Compute and .  Find a quadratic polynomial with one zero being .  ,  "
 },
 {
-  "id": "p-7091",
+  "id": "p-7125",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7091",
+  "url": "Complex-Numbers.html#p-7125",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -28810,18 +28873,18 @@ var ptx_lunr_docs = [
   "body": "A polynomial has a zero \"of multiplicity \" at if occurs times as a factor of the polynomial. For example, the polynomial has a zero of multiplicity 2 at . "
 },
 {
-  "id": "example-219",
+  "id": "example-220",
   "level": "2",
-  "url": "Complex-Numbers.html#example-219",
+  "url": "Complex-Numbers.html#example-220",
   "type": "Example",
   "number": "10.59",
   "title": "",
   "body": "Find a fourth degree polynomial with real coefficients, two of whose zeros are and .  The other two zeros are and . The factored form of the polynomial is We multiply together the factors to find the polynomial. The product of is , and Finally, we multiply these two partial products to find the polynomial we seek, "
 },
 {
-  "id": "exercise-2665",
+  "id": "exercise-2666",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2665",
+  "url": "Complex-Numbers.html#exercise-2666",
   "type": "Checkpoint",
   "number": "10.60",
   "title": "",
@@ -28837,47 +28900,38 @@ var ptx_lunr_docs = [
   "body": " Solve.             Algebra Refresher Answers           "
 },
 {
-  "id": "p-7114",
+  "id": "p-7148",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7114",
+  "url": "Complex-Numbers.html#p-7148",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2666",
+  "id": "exercise-2667",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2666",
+  "url": "Complex-Numbers.html#exercise-2667",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "       "
 },
 {
-  "id": "exercise-2667",
+  "id": "exercise-2668",
   "level": "2",
-  "url": "Complex-Numbers.html#exercise-2667",
+  "url": "Complex-Numbers.html#exercise-2668",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "   "
 },
 {
-  "id": "exercise-2668",
-  "level": "2",
-  "url": "Complex-Numbers.html#exercise-2668",
-  "type": "Exercise",
-  "number": "3",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2669",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2669",
   "type": "Exercise",
-  "number": "4",
+  "number": "3",
   "title": "",
   "body": ""
 },
@@ -28886,7 +28940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2670",
   "type": "Exercise",
-  "number": "5",
+  "number": "4",
   "title": "",
   "body": ""
 },
@@ -28895,7 +28949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2671",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
   "body": ""
 },
@@ -28904,7 +28958,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2672",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
   "body": ""
 },
@@ -28913,7 +28967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2673",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
   "body": ""
 },
@@ -28922,7 +28976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2674",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
   "body": ""
 },
@@ -28931,7 +28985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2675",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": ""
 },
@@ -28940,7 +28994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2676",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -28949,7 +29003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2677",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -28958,7 +29012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2678",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
   "body": ""
 },
@@ -28967,7 +29021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2679",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
   "body": ""
 },
@@ -28976,7 +29030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2680",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
   "body": ""
 },
@@ -28985,7 +29039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2681",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
   "body": ""
 },
@@ -28994,7 +29048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2682",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
   "body": ""
 },
@@ -29003,7 +29057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2683",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": ""
 },
@@ -29012,7 +29066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2684",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
   "body": ""
 },
@@ -29021,7 +29075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2685",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -29030,25 +29084,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2686",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2687",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2687",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2688",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2688",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
   "body": ""
 },
@@ -29057,7 +29111,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2689",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": ""
 },
@@ -29066,7 +29120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2690",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
   "body": ""
 },
@@ -29075,7 +29129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2691",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
   "body": ""
 },
@@ -29084,7 +29138,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2692",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
   "body": ""
 },
@@ -29093,7 +29147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2693",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
   "body": ""
 },
@@ -29102,7 +29156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2694",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
   "body": ""
 },
@@ -29111,7 +29165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2695",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": ""
 },
@@ -29120,7 +29174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2696",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
   "body": ""
 },
@@ -29129,7 +29183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2697",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
   "body": ""
 },
@@ -29138,88 +29192,88 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2698",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": "Simplify.         "
+  "body": ""
 },
 {
   "id": "exercise-2699",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2699",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": "Express with a positive exponent and simplify.     "
+  "body": "Simplify.         "
 },
 {
   "id": "exercise-2700",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2700",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "     "
+  "body": "Express with a positive exponent and simplify.     "
 },
 {
   "id": "exercise-2701",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2701",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": "  "
+  "body": "     "
 },
 {
   "id": "exercise-2702",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2702",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-2703",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2703",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
-  "body": "   "
+  "body": "    "
 },
 {
   "id": "exercise-2704",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2704",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
-  "body": "    "
+  "body": "   "
 },
 {
   "id": "exercise-2705",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2705",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-2706",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2706",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": ""
+  "body": "  "
 },
 {
   "id": "exercise-2707",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2707",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
   "body": ""
 },
@@ -29228,7 +29282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2708",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
   "body": ""
 },
@@ -29237,7 +29291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2709",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
   "body": ""
 },
@@ -29246,7 +29300,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2710",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
   "body": ""
 },
@@ -29255,7 +29309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2711",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
   "body": ""
 },
@@ -29264,223 +29318,223 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2712",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "  complex conjugates    "
+  "body": ""
 },
 {
   "id": "exercise-2713",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2713",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": ""
+  "body": "  complex conjugates    "
 },
 {
   "id": "exercise-2714",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2714",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "  complex conjugates    "
+  "body": ""
 },
 {
   "id": "exercise-2715",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2715",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": ""
+  "body": "  complex conjugates    "
 },
 {
   "id": "exercise-2716",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2716",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "  disk    "
+  "body": ""
 },
 {
   "id": "exercise-2717",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2717",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": ""
+  "body": "  disk    "
 },
 {
   "id": "exercise-2718",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2718",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": "The set of all for which   inequality    "
+  "body": ""
 },
 {
   "id": "exercise-2719",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2719",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": "The set of all for which "
+  "body": "The set of all for which   inequality    "
 },
 {
   "id": "exercise-2720",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2720",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "  complex numbers as vectors    "
+  "body": "The set of all for which "
 },
 {
   "id": "exercise-2721",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2721",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": ""
+  "body": "  complex numbers as vectors    "
 },
 {
   "id": "exercise-2722",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2722",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": "  complex numbers as vectors    "
+  "body": ""
 },
 {
   "id": "exercise-2723",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2723",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": ""
+  "body": "  complex numbers as vectors    "
 },
 {
   "id": "exercise-2724",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2724",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": "Prove that the product of two complex numbers and is "
+  "body": ""
 },
 {
   "id": "exercise-2725",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2725",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": "Prove that the quotient of two complex numbers and is "
+  "body": "Prove that the product of two complex numbers and is "
 },
 {
   "id": "exercise-2726",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2726",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": "Prove the commutative laws for addition and multiplication of complex numbers:    "
+  "body": "Prove that the quotient of two complex numbers and is "
 },
 {
   "id": "exercise-2727",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2727",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": "Prove the distributive law for complex numbers: "
+  "body": "Prove the commutative laws for addition and multiplication of complex numbers:    "
 },
 {
   "id": "exercise-2728",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2728",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": " Show that is a real number, and is an imaginary number.  Show that    "
+  "body": "Prove the distributive law for complex numbers: "
 },
 {
   "id": "exercise-2729",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2729",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": "Show that "
+  "body": " Show that is a real number, and is an imaginary number.  Show that    "
 },
 {
   "id": "exercise-2730",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2730",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "Suppose and are complex numbers. If , is it necessarily true that ? Provide examples to support your conclusion. No. Let and . Then so but "
+  "body": "Show that "
 },
 {
   "id": "exercise-2731",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2731",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
-  "body": "Prove the triangle inequality for complex numbers:  "
+  "body": "Suppose and are complex numbers. If , is it necessarily true that ? Provide examples to support your conclusion. No. Let and . Then so but "
 },
 {
   "id": "exercise-2732",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2732",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": "  "
+  "body": "Prove the triangle inequality for complex numbers:  "
 },
 {
   "id": "exercise-2733",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2733",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": ""
+  "body": "  "
 },
 {
   "id": "exercise-2734",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2734",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": "  "
+  "body": ""
 },
 {
   "id": "exercise-2735",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2735",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": ""
+  "body": "  "
 },
 {
   "id": "exercise-2736",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2736",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
   "body": ""
 },
@@ -29489,7 +29543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2737",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
   "body": ""
 },
@@ -29498,7 +29552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2738",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
   "body": ""
 },
@@ -29506,6 +29560,15 @@ var ptx_lunr_docs = [
   "id": "exercise-2739",
   "level": "2",
   "url": "Complex-Numbers.html#exercise-2739",
+  "type": "Exercise",
+  "number": "73",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2740",
+  "level": "2",
+  "url": "Complex-Numbers.html#exercise-2740",
   "type": "Exercise",
   "number": "74",
   "title": "",
@@ -29521,117 +29584,117 @@ var ptx_lunr_docs = [
   "body": " Polar Form for Complex Numbers  polar form  Introduction  In Section 10.3 we represented the sum of two complex numbers graphically as a vector addition. Is there a way to visualize the product or quotient of two complex numbers? One way to explore a new idea is to consider a simple case. What happens to the vector representing a complex number when we multiply the number by ?  Represent and as vectors in the complex plane.  The vectors are shown at right. We see that multiplication by corresponds to rotating the vector around the origin by in the counterclockwise direction.   complex numbers as vectors      Let and calculate and .  Plot and as points on the complex plane.     rotations of complex number     The previous example suggests that multiplication by a complex number results in a rotation. Polar coordinates are well suited to processes that involve rotation, because they use angles to specify location. Thus, we will next represent complex numbers in an alternate polar form.  Polar Form  polar form  The figure below shows the complex number , represented as a vector in the complex plane. The distance from the origin to is and the angle from the real axis to the vector is .  Using right triangle trigonometry, we see that   polar form of complex number     In general, we can write the real and imaginary parts of in terms of and as Thus, the complex number can also be written as .  Find the polar form for .  We compute    The angle is in the first quadrant, so   polar form of complex number     Thus,  Polar Form for a Complex Number  complex number polar form  polar form  argument  modulus  The complex number can be written in the polar form where and is defined by The angle is called the argument of the complex number, and is its length, or modulus .  Find the polar form for .  Of course, we can always recover the Cartesian form of a complex number from its polar form by evaluating the trigonometric functions. We'll check the result of the previous example:   Products and Quotients in Polar Form  The polar form is especially convenient for computing the product or quotient of two complex numbers.  Product in Polar Form  polar form product  If and , then   This formula, which you will prove in the Homework Problems, says that the product of two complex numbers in polar form is the complex number with modulus and argument . Thus, to find the product of two complex numbers, we multiply their lengths and add their arguments.  Find the product of and .  We multiply the moduli, , and add the arguments, . The polar form of the product is thus Note that and are the numbers from the previous Example and Exercise, namely and . You can compute the product in Cartesian form to check that you get the same result, .  The figure at right shows the graphs of and , and their product, . You can see that multiplying by rotates the graph of by the argument of , namely or .   product of complex numbers      Find the polar forms of and .  Compute the product .  ,   The quotient of two complex numbers in polar form is computed in a similar fashion.  Quotient in Polar Form  polar form quotient  If and , then   Find the quotient of and .  We divide the moduli, , and subtract the arguments, .  The polar form of the quotient is thus The figure at right shows the graphs of , and the quotient .   quotient of complex numbers     Compute the quotient for and .   Powers and Roots of Complex Numbers  Because raising to a power is just repeated multiplication, we can also use the polar form to simplify powers of a complex number. For example, if , then We compute by squaring the modulus, , and doubling the argument, , so the polar form is An analogous result holds for all positive integers , and is known as De Moivre's Theorem.  De Moivre's Theorem  DeMoivre's Theorem  If is a complex number in polar form, and is a positive integer, then  Raise to the fourth power.  We use the polar form, , and apply De Moivre's theorem. Then The Cartesian form of is thus , or . You can check that you get this same result if you compute by expanding the power.  Compute , for .  DeMoivre's Theorem also works for fractional values of , so we can compute roots of complex numbers. For example, by applying the theorem with , we see that one of the square roots of is Now, every number,whether real or complex, has two square roots. To find the other root, remember that we can add a multiple of to the argument of , that is, we can also write the polar form of as The second square root of is thus  As an example consider whose polar form is , or by adding to the argument, . The two square roots of are  You can verify that both of these numbers are square roots of , for instance, The graphs of and its two square roots are shown at right.   square roots of complex number     It is not hard to show that every number has three complex cube roots, four complex fourth roots, and so on.  Find three complex cube roots of .  One polar form of is so one of its cube roots is But by adding multiples of to the argument, we can also write the polar form of as  Applying De Moivre's theorem to each of these expressions gives us two more cube roots  The three roots are shown at right. Note that they are evenly spaced around a circle of radius 2. You can check that adding further muliples of to the argument does not generate any new cube roots.   square roots of complex number     Roots of a Complex Number  A complex number in polar form has complex th roots, given by for .   Write in polar form.  Find four complex fourth roots of .   , , ,  Review the following skills you will need for this section.   Write with fractional exponents.               Algebra Refresher Answers               Section 10.4 Summary  Vocabulary   Argument  Modulus    Concepts   Multiplying a complex number by rotates its graph by around the origin.  Polar Form for a Complex Number  The complex number can be written in the polar form where and is defined by The angle is called the argument of the complex number, and is its length, or modulus .  Product and Quotient in Polar Form  If and , then and   De Moivre's Theorem  If is a complex number in polar form, and is a positive integer, then  Roots of a Complex Number  A complex number in polar form has complex th roots, given by for .   Study Questions   What happens to the vector representing a complex number when we multiply the number by ?  If , what do these expressions represent?  If and lie on the unit circle, explain why and also lie on the unit circle.  Explain how you could use DeMoivre's theorem to compute .   Skills   Convert from polar form to standard form #5 12  Write a complex number in polar form #13-22  Find the product or quotient of two complex numbers in polar form #25 32  Find a power of a complex number #33 42  Find the complex roots of a number #43 48, 51 52, 55 60     Homework 10-4  For Problems 1 4, simplify and plot each complex number as a point on the complex plane.  and , , , ,   powers of i     and  and ,   complex numbers     and   For Problems 5 8, write the complex numbers in standard form. Give exact values for your answers.       For Problems 9 12, write the complex numbers in standard form. Round your answers to hundredths.       For Problems 13 16, write the complex numbers in polar form. Give exact values for your answers.  and ,  and  and ,  and   For Problems 17 22, write the complex numbers in polar form. Round your answers to hundredths.  and   and  and   and  and     and   What can you conclude about the polar forms of and ?  If then  What can you conclude about the polar forms of and ?  For Problems 25 28, find the product and the quotient .   ;     ;     For Problems 29 32, convert the complex number to polar form, then find the product and the quotient .  ;   , ;  ,   For Problems 33 38, find the power.         For Problems 39 42, use DeMoivre's theorem to find the reciprocal.       For Problems 43 48,  Find the roots and plot them in the complex plane.  Write the roots in standard form.  The square roots of .  ,  ,    square roots      The fourth roots of .  The fifth roots of .  , , ,  , , ,    fifth roots of complex number     The cube roots of .  The cube roots of .  , ,  , ,    cube roots of complex number     The square roots of .   Show that any complex number of the form lies on the unit circle in the complex plane.  Show that if , then .   Find three distinct cube roots of 1.  Find four distinct fourth roots of 1.  Find five distinct fifth roots of 1.  Find six distinct sixth roots of 1.         Find the sum of the three distinct cube roots of 1. (Hint: Plot the roots.)  Find the sum of the four distinct fourth roots of 1.  Find the sum of the five distinct fifth roots of 1.  Find the sum of the six distinct sixth roots of 1.  If is a positive integer, define for Show that . (We call an root of unity .)  Let , where is a positive integer. Show that the distinct roots of unity are .  For Problems 55-60, solve the equation.  , , ,   , , , , ,    , , ,     Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .        Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .   Problems 63 and 64 show that multiplication by results in a rotation of .  Suppose that and that the real numbers and are both nonzero.  What is the slope of the segment in the complex plane joining the origin to ?  What is the slope of the segment in the complex plane joining the origin to ?  What is the product of the slopes of the two segments from parts (a) and (b)? What can you conclude about the angle between the two segments?    ,  Suppose that and that and are both real numbers.  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  What can you conclude about the angle between the two segments from parts (a) and (b)?   Prove the product rule by following the steps.  Suppose and . Compute .  Now suppose that and . Write and in terms of and .  Substitute your expressions for and into your formula for .  Use the laws of sines and cosines to simplify your answer to part (c).         Let and . Prove the quotient rule as follows: Set and show that .   "
 },
 {
-  "id": "example-220",
+  "id": "example-221",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-220",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-221",
   "type": "Example",
   "number": "10.61",
   "title": "",
   "body": "Represent and as vectors in the complex plane.  The vectors are shown at right. We see that multiplication by corresponds to rotating the vector around the origin by in the counterclockwise direction.   complex numbers as vectors    "
 },
 {
-  "id": "exercise-2740",
+  "id": "exercise-2741",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2740",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2741",
   "type": "Checkpoint",
   "number": "10.62",
   "title": "",
   "body": " Let and calculate and .  Plot and as points on the complex plane.     rotations of complex number    "
 },
 {
-  "id": "example-221",
+  "id": "example-222",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-221",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-222",
   "type": "Example",
   "number": "10.63",
   "title": "",
   "body": "Find the polar form for .  We compute    The angle is in the first quadrant, so   polar form of complex number     Thus, "
 },
 {
-  "id": "p-7250",
+  "id": "p-7284",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#p-7250",
+  "url": "Polar-Form-for-Complex-Numbers.html#p-7284",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "argument modulus "
 },
 {
-  "id": "exercise-2741",
+  "id": "exercise-2742",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2741",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2742",
   "type": "Checkpoint",
   "number": "10.64",
   "title": "",
   "body": "Find the polar form for . "
 },
 {
-  "id": "example-222",
+  "id": "example-223",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-222",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-223",
   "type": "Example",
   "number": "10.65",
   "title": "",
   "body": "Find the product of and .  We multiply the moduli, , and add the arguments, . The polar form of the product is thus Note that and are the numbers from the previous Example and Exercise, namely and . You can compute the product in Cartesian form to check that you get the same result, .  The figure at right shows the graphs of and , and their product, . You can see that multiplying by rotates the graph of by the argument of , namely or .   product of complex numbers    "
 },
 {
-  "id": "exercise-2742",
+  "id": "exercise-2743",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2742",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2743",
   "type": "Checkpoint",
   "number": "10.66",
   "title": "",
   "body": " Find the polar forms of and .  Compute the product .  ,  "
 },
 {
-  "id": "example-223",
+  "id": "example-224",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-223",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-224",
   "type": "Example",
   "number": "10.67",
   "title": "",
   "body": "Find the quotient of and .  We divide the moduli, , and subtract the arguments, .  The polar form of the quotient is thus The figure at right shows the graphs of , and the quotient .   quotient of complex numbers    "
 },
 {
-  "id": "exercise-2743",
+  "id": "exercise-2744",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2743",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2744",
   "type": "Checkpoint",
   "number": "10.68",
   "title": "",
   "body": "Compute the quotient for and . "
 },
 {
-  "id": "example-224",
+  "id": "example-225",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-224",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-225",
   "type": "Example",
   "number": "10.69",
   "title": "",
   "body": "Raise to the fourth power.  We use the polar form, , and apply De Moivre's theorem. Then The Cartesian form of is thus , or . You can check that you get this same result if you compute by expanding the power. "
 },
 {
-  "id": "exercise-2744",
+  "id": "exercise-2745",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2744",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2745",
   "type": "Checkpoint",
   "number": "10.70",
   "title": "",
   "body": "Compute , for . "
 },
 {
-  "id": "example-225",
+  "id": "example-226",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-225",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-226",
   "type": "Example",
   "number": "10.71",
   "title": "",
   "body": "Find three complex cube roots of .  One polar form of is so one of its cube roots is But by adding multiples of to the argument, we can also write the polar form of as  Applying De Moivre's theorem to each of these expressions gives us two more cube roots  The three roots are shown at right. Note that they are evenly spaced around a circle of radius 2. You can check that adding further muliples of to the argument does not generate any new cube roots.   square roots of complex number    "
 },
 {
-  "id": "exercise-2745",
+  "id": "exercise-2746",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2745",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2746",
   "type": "Checkpoint",
   "number": "10.72",
   "title": "",
@@ -29647,65 +29710,56 @@ var ptx_lunr_docs = [
   "body": " Write with fractional exponents.               Algebra Refresher Answers             "
 },
 {
-  "id": "p-7302",
+  "id": "p-7336",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#p-7302",
+  "url": "Polar-Form-for-Complex-Numbers.html#p-7336",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "argument modulus "
 },
 {
-  "id": "exercise-2746",
+  "id": "exercise-2747",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2746",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2747",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "and , , , ,   powers of i    "
 },
 {
-  "id": "exercise-2747",
+  "id": "exercise-2748",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2747",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2748",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "and "
 },
 {
-  "id": "exercise-2748",
+  "id": "exercise-2749",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2748",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2749",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "and ,   complex numbers    "
 },
 {
-  "id": "exercise-2749",
+  "id": "exercise-2750",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2749",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2750",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": "and "
 },
 {
-  "id": "exercise-2750",
-  "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2750",
-  "type": "Exercise",
-  "number": "5",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2751",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2751",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
   "body": ""
 },
@@ -29714,7 +29768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2752",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
   "body": ""
 },
@@ -29723,7 +29777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2753",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
   "body": ""
 },
@@ -29732,7 +29786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2754",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
   "body": ""
 },
@@ -29741,7 +29795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2755",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": ""
 },
@@ -29750,7 +29804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2756",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -29759,7 +29813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2757",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -29768,196 +29822,196 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2758",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
-  "body": "and , "
+  "body": ""
 },
 {
   "id": "exercise-2759",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2759",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
-  "body": "and "
+  "body": "and , "
 },
 {
   "id": "exercise-2760",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2760",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": "and , "
+  "body": "and "
 },
 {
   "id": "exercise-2761",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2761",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
-  "body": "and "
+  "body": "and , "
 },
 {
   "id": "exercise-2762",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2762",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
-  "body": "and  "
+  "body": "and "
 },
 {
   "id": "exercise-2763",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2763",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
-  "body": "and "
+  "body": "and  "
 },
 {
   "id": "exercise-2764",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2764",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
-  "body": "and  "
+  "body": "and "
 },
 {
   "id": "exercise-2765",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2765",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
-  "body": "and "
+  "body": "and  "
 },
 {
   "id": "exercise-2766",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2766",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
-  "body": "and    "
+  "body": "and "
 },
 {
   "id": "exercise-2767",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2767",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
-  "body": "and "
+  "body": "and    "
 },
 {
   "id": "exercise-2768",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2768",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
-  "body": "What can you conclude about the polar forms of and ?  If then "
+  "body": "and "
 },
 {
   "id": "exercise-2769",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2769",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
-  "body": "What can you conclude about the polar forms of and ? "
+  "body": "What can you conclude about the polar forms of and ?  If then "
 },
 {
   "id": "exercise-2770",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2770",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": " ; "
+  "body": "What can you conclude about the polar forms of and ? "
 },
 {
   "id": "exercise-2771",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2771",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": " "
+  "body": " ; "
 },
 {
   "id": "exercise-2772",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2772",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": " ; "
+  "body": " "
 },
 {
   "id": "exercise-2773",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2773",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": " "
+  "body": " ; "
 },
 {
   "id": "exercise-2774",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2774",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": "; "
+  "body": " "
 },
 {
   "id": "exercise-2775",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2775",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
-  "body": ""
+  "body": "; "
 },
 {
   "id": "exercise-2776",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2776",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
-  "body": ", ; "
+  "body": ""
 },
 {
   "id": "exercise-2777",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2777",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
-  "body": ", "
+  "body": ", ; "
 },
 {
   "id": "exercise-2778",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2778",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ""
+  "body": ", "
 },
 {
   "id": "exercise-2779",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2779",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
   "body": ""
 },
@@ -29966,7 +30020,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2780",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
   "body": ""
 },
@@ -29975,7 +30029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2781",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
   "body": ""
 },
@@ -29984,7 +30038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2782",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -29993,7 +30047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2783",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -30002,7 +30056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2784",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
   "body": ""
 },
@@ -30011,7 +30065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2785",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -30020,7 +30074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2786",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
   "body": ""
 },
@@ -30029,7 +30083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2787",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
   "body": ""
 },
@@ -30038,212 +30092,221 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2788",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "The square roots of .  ,  ,    square roots     "
+  "body": ""
 },
 {
   "id": "exercise-2789",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2789",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "The fourth roots of . "
+  "body": "The square roots of .  ,  ,    square roots     "
 },
 {
   "id": "exercise-2790",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2790",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "The fifth roots of .  , , ,  , , ,    fifth roots of complex number    "
+  "body": "The fourth roots of . "
 },
 {
   "id": "exercise-2791",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2791",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
-  "body": "The cube roots of . "
+  "body": "The fifth roots of .  , , ,  , , ,    fifth roots of complex number    "
 },
 {
   "id": "exercise-2792",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2792",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": "The cube roots of .  , ,  , ,    cube roots of complex number    "
+  "body": "The cube roots of . "
 },
 {
   "id": "exercise-2793",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2793",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
-  "body": "The square roots of . "
+  "body": "The cube roots of .  , ,  , ,    cube roots of complex number    "
 },
 {
   "id": "exercise-2794",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2794",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
-  "body": "Show that any complex number of the form lies on the unit circle in the complex plane. "
+  "body": "The square roots of . "
 },
 {
   "id": "exercise-2795",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2795",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
-  "body": "Show that if , then . "
+  "body": "Show that any complex number of the form lies on the unit circle in the complex plane. "
 },
 {
   "id": "exercise-2796",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2796",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": " Find three distinct cube roots of 1.  Find four distinct fourth roots of 1.  Find five distinct fifth roots of 1.  Find six distinct sixth roots of 1.       "
+  "body": "Show that if , then . "
 },
 {
   "id": "exercise-2797",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2797",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": " Find the sum of the three distinct cube roots of 1. (Hint: Plot the roots.)  Find the sum of the four distinct fourth roots of 1.  Find the sum of the five distinct fifth roots of 1.  Find the sum of the six distinct sixth roots of 1. "
+  "body": " Find three distinct cube roots of 1.  Find four distinct fourth roots of 1.  Find five distinct fifth roots of 1.  Find six distinct sixth roots of 1.       "
 },
 {
   "id": "exercise-2798",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2798",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
-  "body": "If is a positive integer, define for Show that . (We call an root of unity .) "
+  "body": " Find the sum of the three distinct cube roots of 1. (Hint: Plot the roots.)  Find the sum of the four distinct fourth roots of 1.  Find the sum of the five distinct fifth roots of 1.  Find the sum of the six distinct sixth roots of 1. "
 },
 {
   "id": "exercise-2799",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2799",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": "Let , where is a positive integer. Show that the distinct roots of unity are . "
+  "body": "If is a positive integer, define for Show that . (We call an root of unity .) "
 },
 {
   "id": "exercise-2800",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2800",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": ", , , "
+  "body": "Let , where is a positive integer. Show that the distinct roots of unity are . "
 },
 {
   "id": "exercise-2801",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2801",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-2802",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2802",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
-  "body": ", , , , ,  "
+  "body": ""
 },
 {
   "id": "exercise-2803",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2803",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
-  "body": ""
+  "body": ", , , , ,  "
 },
 {
   "id": "exercise-2804",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2804",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
-  "body": ", , , "
+  "body": ""
 },
 {
   "id": "exercise-2805",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2805",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-2806",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2806",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
-  "body": " Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .      "
+  "body": ""
 },
 {
   "id": "exercise-2807",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2807",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
-  "body": " Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .  "
+  "body": " Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .      "
 },
 {
   "id": "exercise-2808",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2808",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
-  "body": "Suppose that and that the real numbers and are both nonzero.  What is the slope of the segment in the complex plane joining the origin to ?  What is the slope of the segment in the complex plane joining the origin to ?  What is the product of the slopes of the two segments from parts (a) and (b)? What can you conclude about the angle between the two segments?    , "
+  "body": " Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .  "
 },
 {
   "id": "exercise-2809",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2809",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
-  "body": "Suppose that and that and are both real numbers.  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  What can you conclude about the angle between the two segments from parts (a) and (b)? "
+  "body": "Suppose that and that the real numbers and are both nonzero.  What is the slope of the segment in the complex plane joining the origin to ?  What is the slope of the segment in the complex plane joining the origin to ?  What is the product of the slopes of the two segments from parts (a) and (b)? What can you conclude about the angle between the two segments?    , "
 },
 {
   "id": "exercise-2810",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2810",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
-  "body": "Prove the product rule by following the steps.  Suppose and . Compute .  Now suppose that and . Write and in terms of and .  Substitute your expressions for and into your formula for .  Use the laws of sines and cosines to simplify your answer to part (c).        "
+  "body": "Suppose that and that and are both real numbers.  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  What can you conclude about the angle between the two segments from parts (a) and (b)? "
 },
 {
   "id": "exercise-2811",
   "level": "2",
   "url": "Polar-Form-for-Complex-Numbers.html#exercise-2811",
+  "type": "Exercise",
+  "number": "65",
+  "title": "",
+  "body": "Prove the product rule by following the steps.  Suppose and . Compute .  Now suppose that and . Write and in terms of and .  Substitute your expressions for and into your formula for .  Use the laws of sines and cosines to simplify your answer to part (c).        "
+},
+{
+  "id": "exercise-2812",
+  "level": "2",
+  "url": "Polar-Form-for-Complex-Numbers.html#exercise-2812",
   "type": "Exercise",
   "number": "66",
   "title": "",
@@ -30259,56 +30322,47 @@ var ptx_lunr_docs = [
   "body": " Chapter Summary and Review  Key Concepts   Polar Coordinates  The polar coordinates of a point in the plane are , where  is the distance from to the pole,  is the angle measured counterclockwise from the polar axis to the ray through from the pole. polar  Non-Uniqueness of Polar Coordinates   Any point with polar coordinates also has coordinates , where is an integer.  The point can also be designated by .  The pole has coordinates , for any value of .  In the polar plane, the coordinate grid lines are circles centered at the pole, with equations , and lines through the pole, with equations .   Conversion Equations   To convert from polar coordinates to Cartesian:  To convert from Cartesian coordinates to polar:  where the choice of depends on the quadrant.  To convert an equation from Cartesian to polar coordinates, we replace each with and each with with . To convert an equation from polar to Cartesian coordinates, look for expressions of the form , or .  When graphing an equation in polar coordinates, we think of sweeping around the pole in the counterclockwise direction, and at each angle the -value tells us how far the graph is from the pole.  Standard graphs in polar coordinates include circles and roses, cardioids and limaçons, lemniscates, and spirals.  To find the intersection points of the polar graphs and we solve the equation . In addition, we should always check whether the pole is a point on both graphs.  Imaginary Unit  We define the imaginary unit, , by  The square root of a negative number is an imaginary number: if  A complex number is the sum of a real number and an imaginary number, .  We can perform the four arithmetic operations on complex numbers. Operations on Complex Numbers       The product of a nonzero complex number and its conjugate is always a positive real number. .  We can graph complex numbers in the complex plane.  We can visualize the sum of two complex numbers by vector addition in the complex plane.  Fundamental Theorem of Algebra  Let be a polynomial of degree . Then has exactly complex zeros.  The nonreal zeros of a polynomial with real coefficients always occur in conjugate pairs.  Multiplying a complex number by rotates its graph by around the origin.  Polar Form for a Complex Number  The complex number can be written in the polar form where and is defined by The angle is called the argument of the complex number, and is its length, or modulus .  Product and Quotient in Polar Form  If and , then and   De Moivre's Theorem  If is a complex number in polar form, and is a positive integer, then  Roots of a Complex Number  A complex number in polar form has complex th roots, given by for .     Review Problems   For Problems 1 4, use the grid at right to plot the points whose polar coordinates are given.  grid    polar plot        polar plot       For Problems 5 8, convert the polar coordinates to Cartesian coordinates.       For Problems 9 12, convert the Cartesian coordinates to polar coordinates with and . Give exact values for and .       For Problems 13 16, sketch the region described by the inequalities.    region on polar grid        region on polar grid       For Problems 17 20, convert the equation into Cartesian coordinates.       For Problems 21 24, convert the equation into polar coordinates.       For Problems 25 28, use the catalog of polar graphs to help you identify and sketch the curve. Check your work by graphing with a calculator.  Circle of radius 3 centered at the origin   Circle of radius 3 centered at    For Problems 29 32, write a polar equation for the graph.    polar grid       polar grid       polar grid       polar grid      For Problems 33 36, find the coordinates of the intersection points of the two curves analytically. Then graph the curves to verify your answers.  ,   and the pole    For Problems 37 40, perform the indicated operations on the complex numbers.       For Problems 41 44, evaluate the polynomial for the given values of the variable.                     Verify that and are roots of the equation .  Verify that and are roots of the equation .  For Problems 47 50, expand the product of polynomials.       For Problems 51 52, sketch the set of points in the complex plane.       complex numbers          For Problems 53 56,  Given one solution of a quadratic equation with rational coefficients, find the other solution.  Write a quadratic equation that has those solutions.             For Problems 57 60, write the complex numbers in standard form. Give exact values for your answers.       For Problems 61 66, write the complex numbers in polar form. Give exact values for your answers.         For Problems 67 70, find the product and the quotient .         For Problems 71 74, find the power.       For Problems 75 78,  Find the roots and plot them in the complex plane.  Write the roots in standard form.   The square roots of    complex square roots     ,   The cube roots of  The cube roots of    complex cube roots     , ,   The square roots of   For Problems 79 82, solve the equation.  for        for         "
 },
 {
-  "id": "p-7420",
+  "id": "p-7454",
   "level": "2",
-  "url": "chap10-summary.html#p-7420",
+  "url": "chap10-summary.html#p-7454",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polar coordinates distance angle argument modulus "
 },
 {
-  "id": "exercise-2812",
+  "id": "exercise-2813",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2812",
+  "url": "chap10-summary.html#exercise-2813",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "  polar plot    "
 },
 {
-  "id": "exercise-2813",
+  "id": "exercise-2814",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2813",
+  "url": "chap10-summary.html#exercise-2814",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2814",
+  "id": "exercise-2815",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2814",
+  "url": "chap10-summary.html#exercise-2815",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": "  polar plot    "
 },
 {
-  "id": "exercise-2815",
-  "level": "2",
-  "url": "chap10-summary.html#exercise-2815",
-  "type": "Exercise",
-  "number": "4",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-2816",
   "level": "2",
   "url": "chap10-summary.html#exercise-2816",
   "type": "Exercise",
-  "number": "5",
+  "number": "4",
   "title": "",
   "body": ""
 },
@@ -30317,7 +30371,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2817",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
   "body": ""
 },
@@ -30326,7 +30380,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2818",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
   "body": ""
 },
@@ -30335,7 +30389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2819",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
   "body": ""
 },
@@ -30344,7 +30398,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2820",
   "type": "Exercise",
-  "number": "9",
+  "number": "8",
   "title": "",
   "body": ""
 },
@@ -30353,7 +30407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2821",
   "type": "Exercise",
-  "number": "10",
+  "number": "9",
   "title": "",
   "body": ""
 },
@@ -30362,7 +30416,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2822",
   "type": "Exercise",
-  "number": "11",
+  "number": "10",
   "title": "",
   "body": ""
 },
@@ -30371,7 +30425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2823",
   "type": "Exercise",
-  "number": "12",
+  "number": "11",
   "title": "",
   "body": ""
 },
@@ -30380,43 +30434,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2824",
   "type": "Exercise",
-  "number": "13",
+  "number": "12",
   "title": "",
-  "body": "  region on polar grid    "
+  "body": ""
 },
 {
   "id": "exercise-2825",
   "level": "2",
   "url": "chap10-summary.html#exercise-2825",
   "type": "Exercise",
-  "number": "14",
+  "number": "13",
   "title": "",
-  "body": ""
+  "body": "  region on polar grid    "
 },
 {
   "id": "exercise-2826",
   "level": "2",
   "url": "chap10-summary.html#exercise-2826",
   "type": "Exercise",
-  "number": "15",
+  "number": "14",
   "title": "",
-  "body": "  region on polar grid    "
+  "body": ""
 },
 {
   "id": "exercise-2827",
   "level": "2",
   "url": "chap10-summary.html#exercise-2827",
   "type": "Exercise",
-  "number": "16",
+  "number": "15",
   "title": "",
-  "body": ""
+  "body": "  region on polar grid    "
 },
 {
   "id": "exercise-2828",
   "level": "2",
   "url": "chap10-summary.html#exercise-2828",
   "type": "Exercise",
-  "number": "17",
+  "number": "16",
   "title": "",
   "body": ""
 },
@@ -30425,7 +30479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2829",
   "type": "Exercise",
-  "number": "18",
+  "number": "17",
   "title": "",
   "body": ""
 },
@@ -30434,7 +30488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2830",
   "type": "Exercise",
-  "number": "19",
+  "number": "18",
   "title": "",
   "body": ""
 },
@@ -30443,7 +30497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2831",
   "type": "Exercise",
-  "number": "20",
+  "number": "19",
   "title": "",
   "body": ""
 },
@@ -30452,7 +30506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2832",
   "type": "Exercise",
-  "number": "21",
+  "number": "20",
   "title": "",
   "body": ""
 },
@@ -30461,7 +30515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2833",
   "type": "Exercise",
-  "number": "22",
+  "number": "21",
   "title": "",
   "body": ""
 },
@@ -30470,7 +30524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2834",
   "type": "Exercise",
-  "number": "23",
+  "number": "22",
   "title": "",
   "body": ""
 },
@@ -30479,7 +30533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2835",
   "type": "Exercise",
-  "number": "24",
+  "number": "23",
   "title": "",
   "body": ""
 },
@@ -30488,52 +30542,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2836",
   "type": "Exercise",
-  "number": "25",
+  "number": "24",
   "title": "",
-  "body": "Circle of radius 3 centered at the origin "
+  "body": ""
 },
 {
   "id": "exercise-2837",
   "level": "2",
   "url": "chap10-summary.html#exercise-2837",
   "type": "Exercise",
-  "number": "26",
+  "number": "25",
   "title": "",
-  "body": ""
+  "body": "Circle of radius 3 centered at the origin "
 },
 {
   "id": "exercise-2838",
   "level": "2",
   "url": "chap10-summary.html#exercise-2838",
   "type": "Exercise",
-  "number": "27",
+  "number": "26",
   "title": "",
-  "body": "Circle of radius 3 centered at "
+  "body": ""
 },
 {
   "id": "exercise-2839",
   "level": "2",
   "url": "chap10-summary.html#exercise-2839",
   "type": "Exercise",
-  "number": "28",
+  "number": "27",
   "title": "",
-  "body": ""
+  "body": "Circle of radius 3 centered at "
 },
 {
   "id": "exercise-2840",
   "level": "2",
   "url": "chap10-summary.html#exercise-2840",
   "type": "Exercise",
-  "number": "29",
+  "number": "28",
   "title": "",
-  "body": "  polar grid    "
+  "body": ""
 },
 {
   "id": "exercise-2841",
   "level": "2",
   "url": "chap10-summary.html#exercise-2841",
   "type": "Exercise",
-  "number": "30",
+  "number": "29",
   "title": "",
   "body": "  polar grid    "
 },
@@ -30542,7 +30596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2842",
   "type": "Exercise",
-  "number": "31",
+  "number": "30",
   "title": "",
   "body": "  polar grid    "
 },
@@ -30551,7 +30605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2843",
   "type": "Exercise",
-  "number": "32",
+  "number": "31",
   "title": "",
   "body": "  polar grid    "
 },
@@ -30560,43 +30614,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2844",
   "type": "Exercise",
-  "number": "33",
+  "number": "32",
   "title": "",
-  "body": ", "
+  "body": "  polar grid    "
 },
 {
   "id": "exercise-2845",
   "level": "2",
   "url": "chap10-summary.html#exercise-2845",
   "type": "Exercise",
-  "number": "34",
+  "number": "33",
   "title": "",
-  "body": ""
+  "body": ", "
 },
 {
   "id": "exercise-2846",
   "level": "2",
   "url": "chap10-summary.html#exercise-2846",
   "type": "Exercise",
-  "number": "35",
+  "number": "34",
   "title": "",
-  "body": "and the pole "
+  "body": ""
 },
 {
   "id": "exercise-2847",
   "level": "2",
   "url": "chap10-summary.html#exercise-2847",
   "type": "Exercise",
-  "number": "36",
+  "number": "35",
   "title": "",
-  "body": ""
+  "body": "and the pole "
 },
 {
   "id": "exercise-2848",
   "level": "2",
   "url": "chap10-summary.html#exercise-2848",
   "type": "Exercise",
-  "number": "37",
+  "number": "36",
   "title": "",
   "body": ""
 },
@@ -30605,7 +30659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2849",
   "type": "Exercise",
-  "number": "38",
+  "number": "37",
   "title": "",
   "body": ""
 },
@@ -30614,7 +30668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2850",
   "type": "Exercise",
-  "number": "39",
+  "number": "38",
   "title": "",
   "body": ""
 },
@@ -30623,7 +30677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2851",
   "type": "Exercise",
-  "number": "40",
+  "number": "39",
   "title": "",
   "body": ""
 },
@@ -30632,52 +30686,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2852",
   "type": "Exercise",
-  "number": "41",
+  "number": "40",
   "title": "",
-  "body": "     "
+  "body": ""
 },
 {
   "id": "exercise-2853",
   "level": "2",
   "url": "chap10-summary.html#exercise-2853",
   "type": "Exercise",
-  "number": "42",
+  "number": "41",
   "title": "",
-  "body": "  "
+  "body": "     "
 },
 {
   "id": "exercise-2854",
   "level": "2",
   "url": "chap10-summary.html#exercise-2854",
   "type": "Exercise",
-  "number": "43",
+  "number": "42",
   "title": "",
-  "body": "     "
+  "body": "  "
 },
 {
   "id": "exercise-2855",
   "level": "2",
   "url": "chap10-summary.html#exercise-2855",
   "type": "Exercise",
-  "number": "44",
+  "number": "43",
   "title": "",
-  "body": "  "
+  "body": "     "
 },
 {
   "id": "exercise-2856",
   "level": "2",
   "url": "chap10-summary.html#exercise-2856",
   "type": "Exercise",
-  "number": "45",
+  "number": "44",
   "title": "",
-  "body": "Verify that and are roots of the equation . "
+  "body": "  "
 },
 {
   "id": "exercise-2857",
   "level": "2",
   "url": "chap10-summary.html#exercise-2857",
   "type": "Exercise",
-  "number": "46",
+  "number": "45",
   "title": "",
   "body": "Verify that and are roots of the equation . "
 },
@@ -30686,16 +30740,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2858",
   "type": "Exercise",
-  "number": "47",
+  "number": "46",
   "title": "",
-  "body": ""
+  "body": "Verify that and are roots of the equation . "
 },
 {
   "id": "exercise-2859",
   "level": "2",
   "url": "chap10-summary.html#exercise-2859",
   "type": "Exercise",
-  "number": "48",
+  "number": "47",
   "title": "",
   "body": ""
 },
@@ -30704,7 +30758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2860",
   "type": "Exercise",
-  "number": "49",
+  "number": "48",
   "title": "",
   "body": ""
 },
@@ -30713,7 +30767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2861",
   "type": "Exercise",
-  "number": "50",
+  "number": "49",
   "title": "",
   "body": ""
 },
@@ -30722,25 +30776,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2862",
   "type": "Exercise",
-  "number": "51",
+  "number": "50",
   "title": "",
-  "body": "     complex numbers    "
+  "body": ""
 },
 {
   "id": "exercise-2863",
   "level": "2",
   "url": "chap10-summary.html#exercise-2863",
   "type": "Exercise",
-  "number": "52",
+  "number": "51",
   "title": "",
-  "body": "   "
+  "body": "     complex numbers    "
 },
 {
   "id": "exercise-2864",
   "level": "2",
   "url": "chap10-summary.html#exercise-2864",
   "type": "Exercise",
-  "number": "53",
+  "number": "52",
   "title": "",
   "body": "   "
 },
@@ -30749,34 +30803,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2865",
   "type": "Exercise",
-  "number": "54",
+  "number": "53",
   "title": "",
-  "body": ""
+  "body": "   "
 },
 {
   "id": "exercise-2866",
   "level": "2",
   "url": "chap10-summary.html#exercise-2866",
   "type": "Exercise",
-  "number": "55",
+  "number": "54",
   "title": "",
-  "body": "  "
+  "body": ""
 },
 {
   "id": "exercise-2867",
   "level": "2",
   "url": "chap10-summary.html#exercise-2867",
   "type": "Exercise",
-  "number": "56",
+  "number": "55",
   "title": "",
-  "body": ""
+  "body": "  "
 },
 {
   "id": "exercise-2868",
   "level": "2",
   "url": "chap10-summary.html#exercise-2868",
   "type": "Exercise",
-  "number": "57",
+  "number": "56",
   "title": "",
   "body": ""
 },
@@ -30785,7 +30839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2869",
   "type": "Exercise",
-  "number": "58",
+  "number": "57",
   "title": "",
   "body": ""
 },
@@ -30794,7 +30848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2870",
   "type": "Exercise",
-  "number": "59",
+  "number": "58",
   "title": "",
   "body": ""
 },
@@ -30803,7 +30857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2871",
   "type": "Exercise",
-  "number": "60",
+  "number": "59",
   "title": "",
   "body": ""
 },
@@ -30812,7 +30866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2872",
   "type": "Exercise",
-  "number": "61",
+  "number": "60",
   "title": "",
   "body": ""
 },
@@ -30821,7 +30875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2873",
   "type": "Exercise",
-  "number": "62",
+  "number": "61",
   "title": "",
   "body": ""
 },
@@ -30830,7 +30884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2874",
   "type": "Exercise",
-  "number": "63",
+  "number": "62",
   "title": "",
   "body": ""
 },
@@ -30839,7 +30893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2875",
   "type": "Exercise",
-  "number": "64",
+  "number": "63",
   "title": "",
   "body": ""
 },
@@ -30848,7 +30902,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2876",
   "type": "Exercise",
-  "number": "65",
+  "number": "64",
   "title": "",
   "body": ""
 },
@@ -30857,7 +30911,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2877",
   "type": "Exercise",
-  "number": "66",
+  "number": "65",
   "title": "",
   "body": ""
 },
@@ -30866,43 +30920,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2878",
   "type": "Exercise",
-  "number": "67",
+  "number": "66",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2879",
   "level": "2",
   "url": "chap10-summary.html#exercise-2879",
   "type": "Exercise",
-  "number": "68",
+  "number": "67",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2880",
   "level": "2",
   "url": "chap10-summary.html#exercise-2880",
   "type": "Exercise",
-  "number": "69",
+  "number": "68",
   "title": "",
-  "body": " "
+  "body": ""
 },
 {
   "id": "exercise-2881",
   "level": "2",
   "url": "chap10-summary.html#exercise-2881",
   "type": "Exercise",
-  "number": "70",
+  "number": "69",
   "title": "",
-  "body": ""
+  "body": " "
 },
 {
   "id": "exercise-2882",
   "level": "2",
   "url": "chap10-summary.html#exercise-2882",
   "type": "Exercise",
-  "number": "71",
+  "number": "70",
   "title": "",
   "body": ""
 },
@@ -30911,7 +30965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2883",
   "type": "Exercise",
-  "number": "72",
+  "number": "71",
   "title": "",
   "body": ""
 },
@@ -30920,7 +30974,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2884",
   "type": "Exercise",
-  "number": "73",
+  "number": "72",
   "title": "",
   "body": ""
 },
@@ -30929,7 +30983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2885",
   "type": "Exercise",
-  "number": "74",
+  "number": "73",
   "title": "",
   "body": ""
 },
@@ -30938,68 +30992,77 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2886",
   "type": "Exercise",
-  "number": "75",
+  "number": "74",
   "title": "",
-  "body": "The square roots of    complex square roots     ,  "
+  "body": ""
 },
 {
   "id": "exercise-2887",
   "level": "2",
   "url": "chap10-summary.html#exercise-2887",
   "type": "Exercise",
-  "number": "76",
+  "number": "75",
   "title": "",
-  "body": "The cube roots of "
+  "body": "The square roots of    complex square roots     ,  "
 },
 {
   "id": "exercise-2888",
   "level": "2",
   "url": "chap10-summary.html#exercise-2888",
   "type": "Exercise",
-  "number": "77",
+  "number": "76",
   "title": "",
-  "body": "The cube roots of    complex cube roots     , ,  "
+  "body": "The cube roots of "
 },
 {
   "id": "exercise-2889",
   "level": "2",
   "url": "chap10-summary.html#exercise-2889",
   "type": "Exercise",
-  "number": "78",
+  "number": "77",
   "title": "",
-  "body": "The square roots of "
+  "body": "The cube roots of    complex cube roots     , ,  "
 },
 {
   "id": "exercise-2890",
   "level": "2",
   "url": "chap10-summary.html#exercise-2890",
   "type": "Exercise",
-  "number": "79",
+  "number": "78",
   "title": "",
-  "body": "for      "
+  "body": "The square roots of "
 },
 {
   "id": "exercise-2891",
   "level": "2",
   "url": "chap10-summary.html#exercise-2891",
   "type": "Exercise",
-  "number": "80",
+  "number": "79",
   "title": "",
-  "body": ""
+  "body": "for      "
 },
 {
   "id": "exercise-2892",
   "level": "2",
   "url": "chap10-summary.html#exercise-2892",
   "type": "Exercise",
-  "number": "81",
+  "number": "80",
   "title": "",
-  "body": "for    "
+  "body": ""
 },
 {
   "id": "exercise-2893",
   "level": "2",
   "url": "chap10-summary.html#exercise-2893",
+  "type": "Exercise",
+  "number": "81",
+  "title": "",
+  "body": "for    "
+},
+{
+  "id": "exercise-2894",
+  "level": "2",
+  "url": "chap10-summary.html#exercise-2894",
   "type": "Exercise",
   "number": "82",
   "title": "",
