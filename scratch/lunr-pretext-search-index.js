@@ -16,25 +16,52 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Scratch section",
-  "body": "Scratch section   nothing here   Stuff  cols=\"3\"                                       cols=\"2\"                                       cols=\"4\"                                       Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.         Homework 6.2  Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle       "
+  "body": "Scratch section   nothing here   One slash through word, another only through first letter   Kayla drove 130 miles in 212 hours. Compute the ratio of the distance she traveled to the time it took.  What is the every-day interpretation of the ratio in part (a).    The ratio of distance to time is To simplify the ratio, we divide 130 by 2.5 to find  We can interpret the simplified ratio as \"52 miles per hour.\" It gives us the average speed at which Kayla traveled. For each hour that elapsed, Kayla traveled 52 miles.   The simplified rate in the previous Example is called a unit rate because it gives us the distance Kayla traveled in one hour. We can use the unit rate to find the distance Kayla would travel (at the same rate) over other time periods. For example, in 3 hours Kayla would travel    Slash before intended text  The basketball player Yao Ming is 90 inches tall. Convert 90 inches to feet.  We'll use a conversion factor. Because 1 foot = 12 inches, the two fractions are both equal to 1. We can multiply 90 inches by either fraction without changing its value. We'd like to eliminate inches and end up with feet, so we choose the second factor. Notice how the \"inches\" cancel out, leaving us with \"feet\" as the unit. And we also see that we should divide 90 by 12. Yao Ming is 7.5 feet, or 7 feet 6 inches, tall.    "
 },
 {
-  "id": "exercise-1",
+  "id": "example-1",
   "level": "2",
-  "url": "section-1.html#exercise-1",
-  "type": "Checkpoint",
+  "url": "section-1.html#example-1",
+  "type": "Example",
   "number": "1.1",
   "title": "",
-  "body": "Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.      "
+  "body": " Kayla drove 130 miles in 212 hours. Compute the ratio of the distance she traveled to the time it took.  What is the every-day interpretation of the ratio in part (a).    The ratio of distance to time is To simplify the ratio, we divide 130 by 2.5 to find  We can interpret the simplified ratio as \"52 miles per hour.\" It gives us the average speed at which Kayla traveled. For each hour that elapsed, Kayla traveled 52 miles.  "
 },
 {
-  "id": "exercise-2",
+  "id": "note-1",
   "level": "2",
-  "url": "section-1.html#exercise-2",
-  "type": "Exercise",
-  "number": "45",
+  "url": "section-1.html#note-1",
+  "type": "Note",
+  "number": "1.2",
   "title": "",
-  "body": "Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle     "
+  "body": "The simplified rate in the previous Example is called a unit rate because it gives us the distance Kayla traveled in one hour. We can use the unit rate to find the distance Kayla would travel (at the same rate) over other time periods. For example, in 3 hours Kayla would travel  "
+},
+{
+  "id": "example-2",
+  "level": "2",
+  "url": "section-1.html#example-2",
+  "type": "Example",
+  "number": "1.3",
+  "title": "",
+  "body": "The basketball player Yao Ming is 90 inches tall. Convert 90 inches to feet.  We'll use a conversion factor. Because 1 foot = 12 inches, the two fractions are both equal to 1. We can multiply 90 inches by either fraction without changing its value. We'd like to eliminate inches and end up with feet, so we choose the second factor. Notice how the \"inches\" cancel out, leaving us with \"feet\" as the unit. And we also see that we should divide 90 by 12. Yao Ming is 7.5 feet, or 7 feet 6 inches, tall. "
+},
+{
+  "id": "section-2",
+  "level": "1",
+  "url": "section-2.html",
+  "type": "Section",
+  "number": "1.2",
+  "title": "Same markup but different context",
+  "body": "Same markup but different context  Remove example before the Note  The simplified rate in the previous Example is called a unit rate because it gives us the distance Kayla traveled in one hour. We can use the unit rate to find the distance Kayla would travel (at the same rate) over other time periods. For example, in 3 hours Kayla would travel    Isolate the displayed equation    "
+},
+{
+  "id": "note-2",
+  "level": "2",
+  "url": "section-2.html#note-2",
+  "type": "Note",
+  "number": "1.4",
+  "title": "",
+  "body": "The simplified rate in the previous Example is called a unit rate because it gives us the distance Kayla traveled in one hour. We can use the unit rate to find the distance Kayla would travel (at the same rate) over other time periods. For example, in 3 hours Kayla would travel  "
 },
 {
   "id": "solutions-1",
