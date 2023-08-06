@@ -3895,7 +3895,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Solving Right Triangles",
-  "body": " Solving Right Triangles  solve right triangle  right triangle solving  Introduction  A triangle has six parts: three sides and three angles. In a right triangle, we know that one of the angles is . If we know three parts of a right triangle, including one of the sides, we can use trigonometry to find all the other unknown parts. This is called solving solve a triangle the triangle.   The hypotenuse of a right triangle is 150 feet long, and one of the angles is , as shown in the figure. Solve the triangle.  triangle  We can find the side opposite the 35° angle by using the sine ratio. The opposite side is about 86 feet long. To find side we could use the Pythagorean theorem now, but it is better to use given information, rather than values we have calculated, to find the other unknown parts. We will use the cosine ratio. The adjacent side is about 123 feet long. Finally, the unknown angle is the complement of , or .  Sketch a right triangle with   one angle of ,  the side adjacent to that angle of length 5 centimeters.  Without doing the calculations, list the steps you would use to solve the triangle. Use tan to find the opposite side. Use cos to find the hypotenuse. Subtract from to find the third angle.   Finding an Angle  angle find  While watching her niece at the playground, Francine wonders how steep the slide is. She happens to have a tape measure and her calculator with her, and finds that the slide is 77 inches high and covers a horizontal distance of 136 inches, as shown below.   slide  Francine knows that one way to describe the steepness of an incline is to calculate its slope, which in this case is However, Francine would really like to know what angle the slide makes with the horizontal. She realizes that the slope she has just calculated is also the tangent of the angle she wants.  If we know the tangent of an angle, can we find the angle? Yes, we can: locate the key labeled on your calculator; it is probably the second function above the TAN key. Enter  2nd  TAN 0.5662  and you should find that . tan tan inverse trigonometric function This means that is the angle whose tangent is . We read the notation as \" inverse tangent inverse trigonometric function of 0.5662 is 29.52 degrees.\"  When we find tan of a number, we are finding an angle whose tangent is that number. Similarly, sin  sin sin inverse trigonometric function and cos  cos cos inverse trigonometric function are read as “inverse sine” and “inverse cosine.” They find an angle with the given sine or cosine.  Find the angle whose sine is .  Enter 2nd  SIN 0.6834 into your calculator to find So is the angle whose sine is . Or we can say that You can check the last equation on your calculator.  In the last example, the two equations say the same thing in different ways.  The notation does not mean . It is true that we use negative exponents to indicate reciprocals of numbers, for example and . But “sin” by itself is not a variable.   means “the angle whose sine is ”  means “the reciprocal of the sine of angle ”  (You may recall that denotes the inverse function for . We will study trigonometric functions in Chapter 4.)  Write the following fact in two different ways: is the angle whose cosine is . or  Find the angle of inclination of a hill if you gain 400 feet in elevation while traveling half a mile.  A sketch of the hill is shown at right. (Recall that 1 mile = 5280 feet.)    triangle  The angle of inclination of the hill is about .   The tallest living tree is a coast redwood named Hyperion, at 378.1 feet tall. If you stand 100 feet from the base of the tree, what is the angle of elevation of your line of sight to the top of the tree? Round your answer to the nearest degree.   The Special Angles  angle special  The trigonometric ratios for most angles are irrational numbers, but there are a few angles whose trig ratios are “nice” values. You already know one of these values: the sine of . Because the sides of a right triangle are related by the Pythagorean theorem, if we know any one of the trig ratios for an angle, we can find the others.  Recall that the side opposite a angle is half the length of the hypotenuse, so .   The figure at right shows a 30-60-90 triangle with hypotenuse of length 2. The opposite side has length 1, and we can calculate the length of the adjacent side.  triangle   Now we know the cosine and tangent of .  These are exact values for the trig ratios, but we can also find decimal approximations. Use your calculator to verify the following approximate values.  It is important for you to understand the difference between exact and approximate values. These decimal approximations, like nearly all the other trig values your calculator gives you, are rounded off. Even if your calculator shows you ten or twelve digits, the values are not exactly correct -- although they are quite adequate for most practical calculations!  The angles , , and are “special” angle special because we can easily find exact values for their trig ratios, and use those exact values to find exact lengths for the sides of triangles with those angles.  The sides of an equilateral triangle are 8 centimeters long. Find the exact length of the triangle's altitude, .  The altitude divides the triangle into two 30-60-90 right triangles as shown in the figure. The altitude is adjacent to the angle, and the hypotenuse of the right triangle is 8 centimeters. Thus,  45-45-90 triangle  The altitude is exactly centimeters long.   From this exact answer, we can find approximations to any degree of accuracy we like. You can check that , so the altitude is approximately 6.9 centimeters long.  Use the figure in the previous example to find exact values for the sine, cosine, and tangent of . , ,  There is one more special angle angle special : . We find the trig ratios for this angle using an isosceles right triangle. Because the base angles of an isosceles triangle are equal, they must both be .  The figure shows an isosceles right triangle with equal sides of length 1. You can use the Pythagorean theorem to show that the hypotenuse has length , so the trig ratios for are    45-45-90 triangle   The Trigonometric Ratios for the Special Angles  angle special  Here is a summary of the trig ratios for the special angles.    Trigonometric Ratios for the Special Angles   Angle  Sine  Cosine  Tangent                   You should be familiar with the exact values for these trig ratios. A good way to remember them is to know the two special triangles shown below. From these triangles, you can always write down the three trig ratios for the special angles.   45-45-90 triangle    30-60-90 triangle    You should also be able to recognize their decimal approximations.  We can use the special angles as benchmarks for estimating and mental calculation. For example, we know that sin , so if sin for some unknown angle , we know that , because as increases from the sine of increases also.  If , what can we say about ?  As an angle increases from to , its cosine decreases. Now, , so if , then must be less than .  If , what can we say about ?  Review the following skills you will need for this section.   Simplify.   1.  2.  3.  4.   Rationalize the denominator.   5.  6.  7.  8.     Algebra Refresher Answers                Section 2.3 Summary  Vocabulary   Solve a triangle  Inverse sine  Inverse cosine  Inverse tangent  Special angles  Exact value  Decimal approximation   Concepts   If we know one of the sides of a right triangle and any one of the other four parts, we can use trigonometry to find all the other unknown parts.  If we know one of the trigonometric ratios of an acute angle, we can find the angle using the inverse trig key on a calculator.  The exact values of trigonometric ratios of the special angles should be memorized.    Angle  Sine  Cosine  Tangent                  You can remember the trig values for the special angles if you know two triangles:   triangle  triangle   For the trigonometric ratios of most angles, your calculator gives approximations, not exact values.   Study Questions   How many parts of a right triangle (including the right angle) do you need to know in order to solve the triangle?  Why is it better to use the given values when solving a triangle, rather than values you have calculated?  What is the (or or ) button on the calculator used for?  Which are the \"special\" angles, and why are they special?   Skills  Practice each skill in the Homework Problems listed.   Solve a right triangle #1-16, 63-74  Use inverse trig ratio notation #17-34  Use trig ratios to find an angle #17-22, 35-38  Solve problems involving right triangles #35-48  Know the trig ratios for the special angles #49-62, 75-78     Homework 2.3   In these Homework Problems, we use the following standard notation for a right triangle: in , is a right angle. The side opposite has length , and so on. (See the figure at right.)  triangle  For Problems 1 4, solve the triangle. Round answers to hundredths.   triangle   triangle   triangle   triangle   For Problems 5 10,  Sketch the right triangle described.  Solve the triangle.     triangle  , ,      triangle  , ,      triangle  , ,     For Problems 11 16,  Sketch the right triangle described.  Without doing the calculations, list the steps you would use to solve the triangle.     triangle   Solve for .  Solve for .  Subtract from to find .       triangle    Solve for .  Solve for .  Subtract from to find .       triangle \\small  Solve for .  Solve for .  Subtract from to find .      For Problems 17 22, find the labeled angle. Round your answer to tenths of a degree.   triangle   triangle   triangle   triangle   triangle   triangle   For Problems 23 28, evaluate the expression and sketch a right triangle to illustrate.   triangle    triangle    triangle    For Problems 29 32, write two different equations for the statement.  The cosine of is . and  The sine of is .  The angle whose tangent is is . and  The angle whose cosine is is .   Evaluate the expressions, and explain what each means. is the angle whose sine is . is the reciprocal of .  Evaluate the expressions, and explain what each means.  For Problems 35 38,  Sketch a right triangle that illustrates the situation. Label your sketch with the given information.  Choose the appropriate trig ratio and write an equation, then solve the problem.   The gondola cable for the ski lift at Snowy Peak is 2458 yards long and climbs 1860 feet. What angle with the horizontal does the cable make?   triangle    The Leaning Tower of Pisa is 55 meters in length. An object dropped from the top of the tower lands 4.8 meters from the base of the tower. At what angle from the horizontal does the tower lean?  A mining company locates a vein of minerals at a depth of 32 meters. However, there is a layer of granite directly above the minerals, so they decide to drill at an angle, starting 10 meters from their original location. At what angle from the horizontal should they drill?   triangle    The birdhouse in Carolyn's front yard is 12 feet tall, and its shadow at 4 pm is 15 feet 4 inches long. What is the angle of elevation of the sun at 4 pm?   For Problems 39 42,   Sketch the right triangle described.  Solve the triangle.     triangle  , ,      triangle  , ,     For Problems 43 48,   Make a sketch that illustrates the situation. Label your sketch with the given information.  Write an equation and solve the problem.   The Mayan pyramid of El Castillo at Chichen Itza in Mexico has 91 steps. Each step is 26 cm high and 30 cm deep.   What angle does the side of the pyramid make with the horizontal?  What is the distance up the face of the pyramid, from base to top platform?    triangle  cm   An airplane begins its descent when its altitude is 10 kilometers. The angle of descent should be from horizontal.   How far from the airport (measured along the ground) should the airplane begin its descent?  How far will the airplane travel on its descent to the airport?   A communications satellite is in a low earth orbit (LOE) at an altitude of 400 km. From the satellite, the angle of depression to earth's horizon is . Use this information\\small to calculate the radius of the earth.   triangle  km   The first Ferris wheel was built for the 1893 Chicago world's fair. It had a diameter of 250 feet, and the boarding platform, at the base of the wheel, was 14 feet above the ground. If you boarded the wheel and rotated through an angle of , what would be your height above the ground?  To find the distance across a ravine, Delbert takes some measurements from a small airplane. When he is a short distance from the ravine at an altitude of 500 feet, he finds that the angle of depression to the near side of the ravine is , and the angle of depression to the far side is . What is the width of the ravine? (Hint: First find the horizontal distance from Delbert to the near side of the ravine.)   triangle  ft   The window in Francine's office is 4 feet wide and 5 feet tall. The bottom of the window is 3 feet from the floor. When the sun is at an angle of elevation of , what is the area of the sunny spot on the floor?   Which of the following numbers are equal to ?       (a) and (b)  Which of the following numbers are equal to ?        Which of the following numbers are equal to ?       (a) and (d)  Which of the following numbers are equal to ?        For Problems 53 58, choose all values from the list below that are exactly equal to, or decimal approximations for, the given trig ratio. (Try not to use a calculator!)                                     Fill in the table from memory with exact values. Do you notice any patterns that might help you learn the values?                                                            undefined   Fill in the table from memory with decimal approximations to four places.                                For Problems 61 and 62, compare the given value with the trig ratios of the special angles to answer the questions. Try not to use a calculator.  Is the acute angle larger or smaller than ?       smaller  larger  larger   Is the acute angle larger or smaller than ?        For Problems 63 72, solve the triangle. Give your answers as exact values.   triangle   triangle   triangle   triangle   triangle   triangle   triangle   triangle   triangle   triangle     Find the perimeter of a regular hexagon if the apothegm is 8 cm long. (The apothegm is the segment from the center of the hexagon and perpendicular to one of its sides.)  Find the area of the hexagon.   triangle  cm  sq cm   Triangle is equilateral, and its angle bisectors meet at point . The sides of are 6 inches long. Find the length of .  triangle  Find an exact value for the area of each triangle.    triangle   triangle   triangle   sq cm  sq cm  sq cm   Find an exact value for the perimeter of each parallelogram.     triangle   triangle   triangle     Find the area of the outer square.  Find the dimensions and the area of the inner square.  What is the ratio of the area of the outer square to the area of the inner square?   triangle  sq in  by , area sq in       Find the area of the inner square.  Find the dimensions and the area of the outer square.  What is the ratio of the area of the outer square to the area of the inner square?   triangle   "
+  "body": " Solving Right Triangles  solve right triangle  right triangle solving  Introduction  A triangle has six parts: three sides and three angles. In a right triangle, we know that one of the angles is . If we know three parts of a right triangle, including one of the sides, we can use trigonometry to find all the other unknown parts. This is called solving solve a triangle the triangle.   The hypotenuse of a right triangle is 150 feet long, and one of the angles is , as shown in the figure. Solve the triangle.  triangle  We can find the side opposite the 35° angle by using the sine ratio. The opposite side is about 86 feet long. To find side we could use the Pythagorean theorem now, but it is better to use given information, rather than values we have calculated, to find the other unknown parts. We will use the cosine ratio. The adjacent side is about 123 feet long. Finally, the unknown angle is the complement of , or .  Sketch a right triangle with   one angle of ,  the side adjacent to that angle of length 5 centimeters.  Without doing the calculations, list the steps you would use to solve the triangle. Use tan to find the opposite side. Use cos to find the hypotenuse. Subtract from to find the third angle.   Finding an Angle  angle find  While watching her niece at the playground, Francine wonders how steep the slide is. She happens to have a tape measure and her calculator with her, and finds that the slide is 77 inches high and covers a horizontal distance of 136 inches, as shown below.   slide  Francine knows that one way to describe the steepness of an incline is to calculate its slope, which in this case is However, Francine would really like to know what angle the slide makes with the horizontal. She realizes that the slope she has just calculated is also the tangent of the angle she wants.  If we know the tangent of an angle, can we find the angle? Yes, we can: locate the key labeled on your calculator; it is probably the second function above the TAN key. Enter  2nd  TAN 0.5662  and you should find that . tan tan inverse trigonometric function This means that is the angle whose tangent is . We read the notation as \" inverse tangent inverse trigonometric function of 0.5662 is 29.52 degrees.\"  When we find tan of a number, we are finding an angle whose tangent is that number. Similarly, sin  sin sin inverse trigonometric function and cos  cos cos inverse trigonometric function are read as “inverse sine” and “inverse cosine.” They find an angle with the given sine or cosine.  Find the angle whose sine is .  Enter 2nd  SIN 0.6834 into your calculator to find So is the angle whose sine is . Or we can say that You can check the last equation on your calculator.  In the last example, the two equations say the same thing in different ways.  The notation does not mean . It is true that we use negative exponents to indicate reciprocals of numbers, for example and . But “sin” by itself is not a variable.   means “the angle whose sine is ”  means “the reciprocal of the sine of angle ”  (You may recall that denotes the inverse function for . We will study trigonometric functions in Chapter 4.)  Write the following fact in two different ways: is the angle whose cosine is . or  Find the angle of inclination of a hill if you gain 400 feet in elevation while traveling half a mile.  A sketch of the hill is shown at right. (Recall that 1 mile = 5280 feet.)    triangle  The angle of inclination of the hill is about .   The tallest living tree is a coast redwood named Hyperion, at 378.1 feet tall. If you stand 100 feet from the base of the tree, what is the angle of elevation of your line of sight to the top of the tree? Round your answer to the nearest degree.    The Special Angles  angle special  The trigonometric ratios for most angles are irrational numbers, but there are a few angles whose trig ratios are “nice” values. You already know one of these values: the sine of . Because the sides of a right triangle are related by the Pythagorean theorem, if we know any one of the trig ratios for an angle, we can find the others.  Recall that the side opposite a angle is half the length of the hypotenuse, so .   The figure at right shows a 30-60-90 triangle with hypotenuse of length 2. The opposite side has length 1, and we can calculate the length of the adjacent side.  triangle   Now we know the cosine and tangent of .  These are exact values for the trig ratios, but we can also find decimal approximations. Use your calculator to verify the following approximate values.  It is important for you to understand the difference between exact and approximate values. These decimal approximations, like nearly all the other trig values your calculator gives you, are rounded off. Even if your calculator shows you ten or twelve digits, the values are not exactly correct -- although they are quite adequate for most practical calculations!  The angles , , and are “special” angle special because we can easily find exact values for their trig ratios, and use those exact values to find exact lengths for the sides of triangles with those angles.  The sides of an equilateral triangle are 8 centimeters long. Find the exact length of the triangle's altitude, .  The altitude divides the triangle into two 30-60-90 right triangles as shown in the figure. The altitude is adjacent to the angle, and the hypotenuse of the right triangle is 8 centimeters. Thus,  45-45-90 triangle  The altitude is exactly centimeters long.   From this exact answer, we can find approximations to any degree of accuracy we like. You can check that , so the altitude is approximately 6.9 centimeters long.  Use the figure in the previous example to find exact values for the sine, cosine, and tangent of . , ,  There is one more special angle angle special : . We find the trig ratios for this angle using an isosceles right triangle. Because the base angles of an isosceles triangle are equal, they must both be .  The figure shows an isosceles right triangle with equal sides of length 1. You can use the Pythagorean theorem to show that the hypotenuse has length , so the trig ratios for are    45-45-90 triangle   The Trigonometric Ratios for the Special Angles  angle special  Here is a summary of the trig ratios for the special angles.    Trigonometric Ratios for the Special Angles   Angle  Sine  Cosine  Tangent                   You should be familiar with the exact values for these trig ratios. A good way to remember them is to know the two special triangles shown below. From these triangles, you can always write down the three trig ratios for the special angles.   45-45-90 triangle    30-60-90 triangle    You should also be able to recognize their decimal approximations.  We can use the special angles as benchmarks for estimating and mental calculation. For example, we know that sin , so if sin for some unknown angle , we know that , because as increases from the sine of increases also.  If , what can we say about ?  As an angle increases from to , its cosine decreases. Now, , so if , then must be less than .  If , what can we say about ?  Review the following skills you will need for this section.   Simplify.   1.  2.  3.  4.   Rationalize the denominator.   5.  6.  7.  8.     Algebra Refresher Answers                Section 2.3 Summary  Vocabulary   Solve a triangle  Inverse sine  Inverse cosine  Inverse tangent  Special angles  Exact value  Decimal approximation   Concepts   If we know one of the sides of a right triangle and any one of the other four parts, we can use trigonometry to find all the other unknown parts.  If we know one of the trigonometric ratios of an acute angle, we can find the angle using the inverse trig key on a calculator.  The exact values of trigonometric ratios of the special angles should be memorized.    Angle  Sine  Cosine  Tangent                  You can remember the trig values for the special angles if you know two triangles:   triangle  triangle   For the trigonometric ratios of most angles, your calculator gives approximations, not exact values.   Study Questions   How many parts of a right triangle (including the right angle) do you need to know in order to solve the triangle?  Why is it better to use the given values when solving a triangle, rather than values you have calculated?  What is the (or or ) button on the calculator used for?  Which are the \"special\" angles, and why are they special?   Skills  Practice each skill in the Homework Problems listed.   Solve a right triangle #1-16, 63-74  Use inverse trig ratio notation #17-34  Use trig ratios to find an angle #17-22, 35-38  Solve problems involving right triangles #35-48  Know the trig ratios for the special angles #49-62, 75-78     Homework 2.3   In these Homework Problems, we use the following standard notation for a right triangle: in , is a right angle. The side opposite has length , and so on. (See the figure at right.)  triangle  For Problems 1 4, solve the triangle. Round answers to hundredths.   triangle   triangle   triangle   triangle   For Problems 5 10,  Sketch the right triangle described.  Solve the triangle.     triangle  , ,      triangle  , ,      triangle  , ,     For Problems 11 16,  Sketch the right triangle described.  Without doing the calculations, list the steps you would use to solve the triangle.     triangle   Solve for .  Solve for .  Subtract from to find .       triangle    Solve for .  Solve for .  Subtract from to find .       triangle \\small  Solve for .  Solve for .  Subtract from to find .      For Problems 17 22, find the labeled angle. Round your answer to tenths of a degree.   triangle   triangle   triangle   triangle   triangle   triangle   For Problems 23 28, evaluate the expression and sketch a right triangle to illustrate.   triangle    triangle    triangle    For Problems 29 32, write two different equations for the statement.  The cosine of is . and  The sine of is .  The angle whose tangent is is . and  The angle whose cosine is is .   Evaluate the expressions, and explain what each means. is the angle whose sine is . is the reciprocal of .  Evaluate the expressions, and explain what each means.  For Problems 35 38,  Sketch a right triangle that illustrates the situation. Label your sketch with the given information.  Choose the appropriate trig ratio and write an equation, then solve the problem.   The gondola cable for the ski lift at Snowy Peak is 2458 yards long and climbs 1860 feet. What angle with the horizontal does the cable make?   triangle    The Leaning Tower of Pisa is 55 meters in length. An object dropped from the top of the tower lands 4.8 meters from the base of the tower. At what angle from the horizontal does the tower lean?  A mining company locates a vein of minerals at a depth of 32 meters. However, there is a layer of granite directly above the minerals, so they decide to drill at an angle, starting 10 meters from their original location. At what angle from the horizontal should they drill?   triangle    The birdhouse in Carolyn's front yard is 12 feet tall, and its shadow at 4 pm is 15 feet 4 inches long. What is the angle of elevation of the sun at 4 pm?   For Problems 39 42,   Sketch the right triangle described.  Solve the triangle.     triangle  , ,      triangle  , ,     For Problems 43 48,   Make a sketch that illustrates the situation. Label your sketch with the given information.  Write an equation and solve the problem.   The Mayan pyramid of El Castillo at Chichen Itza in Mexico has 91 steps. Each step is 26 cm high and 30 cm deep.   What angle does the side of the pyramid make with the horizontal?  What is the distance up the face of the pyramid, from base to top platform?    triangle  cm   An airplane begins its descent when its altitude is 10 kilometers. The angle of descent should be from horizontal.   How far from the airport (measured along the ground) should the airplane begin its descent?  How far will the airplane travel on its descent to the airport?   A communications satellite is in a low earth orbit (LOE) at an altitude of 400 km. From the satellite, the angle of depression to earth's horizon is . Use this information to calculate the radius of the earth.   triangle  km   The first Ferris wheel was built for the 1893 Chicago world's fair. It had a diameter of 250 feet, and the boarding platform, at the base of the wheel, was 14 feet above the ground. If you boarded the wheel and rotated through an angle of , what would be your height above the ground?  To find the distance across a ravine, Delbert takes some measurements from a small airplane. When he is a short distance from the ravine at an altitude of 500 feet, he finds that the angle of depression to the near side of the ravine is , and the angle of depression to the far side is . What is the width of the ravine? (Hint: First find the horizontal distance from Delbert to the near side of the ravine.)   triangle  ft   The window in Francine's office is 4 feet wide and 5 feet tall. The bottom of the window is 3 feet from the floor. When the sun is at an angle of elevation of , what is the area of the sunny spot on the floor?   Which of the following numbers are equal to ?       (a) and (b)  Which of the following numbers are equal to ?        Which of the following numbers are equal to ?       (a) and (d)  Which of the following numbers are equal to ?        For Problems 53 58, choose all values from the list below that are exactly equal to, or decimal approximations for, the given trig ratio. (Try not to use a calculator!)                                     Fill in the table from memory with exact values. Do you notice any patterns that might help you learn the values?                                                            undefined   Fill in the table from memory with decimal approximations to four places.                                For Problems 61 and 62, compare the given value with the trig ratios of the special angles to answer the questions. Try not to use a calculator.  Is the acute angle larger or smaller than ?       smaller  larger  larger   Is the acute angle larger or smaller than ?        For Problems 63 72, solve the triangle. Give your answers as exact values.   triangle   triangle   triangle   triangle   triangle   triangle   triangle   triangle   triangle   triangle     Find the perimeter of a regular hexagon if the apothegm is 8 cm long. (The apothegm is the segment from the center of the hexagon and perpendicular to one of its sides.)  Find the area of the hexagon.   triangle  cm  sq cm   Triangle is equilateral, and its angle bisectors meet at point . The sides of are 6 inches long. Find the length of .  triangle  Find an exact value for the area of each triangle.    triangle   triangle   triangle   sq cm  sq cm  sq cm   Find an exact value for the perimeter of each parallelogram.     triangle   triangle   triangle     Find the area of the outer square.  Find the dimensions and the area of the inner square.  What is the ratio of the area of the outer square to the area of the inner square?   triangle  sq in  by , area sq in       Find the area of the inner square.  Find the dimensions and the area of the outer square.  What is the ratio of the area of the outer square to the area of the inner square?   triangle   "
 },
 {
   "id": "example-29",
@@ -3976,7 +3976,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "2.39",
   "title": "",
-  "body": "The tallest living tree is a coast redwood named Hyperion, at 378.1 feet tall. If you stand 100 feet from the base of the tree, what is the angle of elevation of your line of sight to the top of the tree? Round your answer to the nearest degree. "
+  "body": "The tallest living tree is a coast redwood named Hyperion, at 378.1 feet tall. If you stand 100 feet from the base of the tree, what is the angle of elevation of your line of sight to the top of the tree? Round your answer to the nearest degree.  "
 },
 {
   "id": "warning-8",
@@ -4444,7 +4444,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "45",
   "title": "",
-  "body": "A communications satellite is in a low earth orbit (LOE) at an altitude of 400 km. From the satellite, the angle of depression to earth's horizon is . Use this information\\small to calculate the radius of the earth.   triangle  km  "
+  "body": "A communications satellite is in a low earth orbit (LOE) at an altitude of 400 km. From the satellite, the angle of depression to earth's horizon is . Use this information to calculate the radius of the earth.   triangle  km  "
 },
 {
   "id": "exercise-389",
@@ -4753,9 +4753,9 @@ var ptx_lunr_docs = [
   "body": " Chapter 2 Summary and Review  Key Concepts    The longest side in a triangle is opposite the largest angle, and the shortest side is opposite the smallest angle  Triangle Inequality : In any triangle, the sum of the lengths of any two sides is greater than the length of the third side.  Pythagorean Theorem : In a right triangle with hypotenuse .  If the sides of a triangle satisfy the relationship , then the triangle is a right triangle.  By using similar triangles, we can find the unknown sides of a right triangle if we know only one side and one of the acute angles.  Trigonometric Ratios  If is one of the angles in a right triangle,    triangle    The trigonometric ratio of an angle is the same for every right triangle containing the angle.  If we know one of the sides of a right triangle and any one of the other four parts, we can use trigonometry to find all the other unknown parts.  If we know one of the trigonometric ratios of an acute angle, we can find the angle using the inverse trig key on a calculator.  The exact values of trigonometric ratios of the special angles are useful benchmarks.    Trigonometric Ratios for the Special Angles   Angle  Sine  Cosine  Tangent                  You can remember the trig values for the special angles if you memorize two triangles:    45-45-90 triangle  30-60-90triangle   For the trigonometric ratios of most angles, your calculator gives approximations, not exact values.     Chapter 2 Review Problems  For Problems 1 6, explain why the description of is impossible.  , and If , then  , and  and If , then  and    and If , then  and   For Problems 7 and 8, sketch the triangle.  The three angles of a triangle are and the three sides are 15 cm, 6.7 cm, and 18.4 cm. Sketch and label the triangle.  triangle  Sketch and label an isosceles triangle with sides 5 in and 12 in, and one angle .   For Problems 9 12, find the unknown side of the right triangle.   triangle   triangle   triangle   triangle   A triangle has sides of length 33, 56, and 65. Is it a right triangle? Yes  A triangle has sides of length 22.5, 27.2, and 35.3. Is it a right triangle?  Find the angle between the diagonal of a cube and the diagonal of one of the sides. (See the figure at right.)  cube  Find the angle between the diagonal of a cube and one edge. (See the figure at right.)  cube  In the triangle shown, . Can we conclude that and ? Give two other possibilities for the values of and .  triangle No. or   In the triangle shown, . Can we conclude that and ? Give two other possibilities for the values of and .  triangle  For Problems 19 22,   Find the unknown side.  Find the sine, cosine, and tangent of . Round your answers to four decimal places.    triangle      triangle      triangle       triangle   For Problems 23 28,find the unknown side of the triangle. Round your answer to hundredths.   triangle   triangle   triangle   triangle   triangle   triangle   For Problems 29 32,solve the triangle. Give exact values.   triangle   triangle   triangle   triangle   Find the diameter of a hex nut if one of the sides is 1.5 cm.  hexagon cm  Find the long edge of the trapezoidal block of height 3 centimeters.  trapezoid  If a stop sign is 80 centimeters across, what is the radius of a circle that circumscribes the stop sign?  octagon cm  The Pentagon, which houses the U.S. Department of Defense, is in the shape of a regular pentagon. Each of the five outer walls is 921.6 feet long. What is the shortest distance from one of the outer walls to the opposite vertex of the pentagon?  cube  A building casts a 12 meter shadow. At that moment, the sun is above the horizon. How tall is the building? m  A ramp is rising at an angle from horizontal. What is the distance (along the ramp) from the base of the ramp to the point on the ramp that is 1 meter higher than the base of the ramp?  A baseball diamond is a square with sides 90 feet long. The corners are called (in clockwise order) first base, second base, third base, and home plate. The sides are called baselines. A runner is on the baseline between first and second base, 20 feet from second base. How far is the runner from home plate? What is the angle between the baseline from home plate to first base and the line from home plate to the runner? ft,  A runner is on the baseline between second and third base, 10 feet from second base. How far is the runner from home plate? What is the angle between the baseline from home plate to third base and the line from home plate to the runner?  Let be the line that passes through the origin and the point . Let be the angle that makes with the positive -axis.   Find the value of . Hint: Draw the triangle with vertices at the origin, , and , labeling the angle at the origin . What is ?)  Let be any line parallel to . Find the measure of the acute angle that makes with the positive -axis.  What is the slope of the line ? How is it related to ?       Let be the line that passes through the origin and the point , where and are positive numbers. Let be the angle that makes with the positive -axis.   Find the value of . Hint: Draw the triangle with vertices at the origin, , and , labeling the angle at the origin . What is ?)  What is the slope of the line ? How is it related to ?  Let be any line parallel to . How is the slope of the line related to ?    The figure illustrates the Pythagorean theorem.  What is the area of the whole square?  What is the side of the smaller interior square? What is its area?  What is the area of one of the right triangles?  Add the areas of the four triangles and the smaller square to obtain another expression for the area of the whole square.   square       The figure illustrates a proof of the Pythagorean theorem given by Euclid. It shows that the area of the square on the hypotenuse is the sum of the areas of the squares on legs and . We first draw a line segment from point perpendicular to the hypotenuse to meet the far side of the square on the hypotenuse. This segment meets at and the opposite side of the square at .  Pythagorean theorem   How does the area of compare with the area of ? (Hint: Show that the triangles are congruent.)  How does the area of compare with the area of the square on ? (Hint: Consider to be the base of the triangle. What is the height?)  How does the area of compare with the area of the rectangle ? (Hint: Consider to be the base of the triangle. What is the height?)  Explain why the area of the square on equals the area of the rectangle .  An argument similar to parts (a) (d) will show that the area of the square on equals the area of the rectangle . Explain how writing the area of the square on as the sum of the areas of two rectangles gives the Pythagorean theorem.     "
 },
 {
-  "id": "p-1057",
+  "id": "p-1058",
   "level": "2",
-  "url": "chap2-summary.html#p-1057",
+  "url": "chap2-summary.html#p-1058",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5167,27 +5167,27 @@ var ptx_lunr_docs = [
   "body": " Obtuse Angles  angle obtuse  The town of Avery lies 48 miles due east of Baker, and Clio is 34 miles from Baker, in the direction west of north. How far is it from Avery to Clio?   We know how to solve right triangles using the trigonometric ratios. But the triangle formed by the three towns is not a right triangle, because it includes an obtuse angle of at , as shown in the figure.  triangle  A triangle that is not a right triangle is called an oblique oblique triangle triangle oblique triangle. In this chapter we learn how to solve oblique triangles using the laws of sines and cosines. But first we must be able to find the sine, cosine, and tangent ratios for obtuse angles.   Angles in Standard Position  angle standard position  To extend our definition of the trigonometric ratios to obtuse angles, we use a Cartesian coordinate system. We put an angle in standard position as follows:  angle standard position   Place the vertex at the origin with the initial side initial side of an angle in standard position on the positive -axis;  the terminal side terminal side of an angle in standard position opens in the counter-clockwise direction.  We choose a point on the terminal side of the angle, and form a right triangle by drawing a vertical line from to the -axis.   The length of the side adjacent to is the -coordinate of point , and the length of the side opposite is the -coordinate of . The length of the hypotenuse is the distance from the origin to , which we call . With this notation, our definitions of the trigonometric ratios are as follows.  Coordinate Definitions of the Trigonometric Ratios  trigonometric ratios coordinate definition  cosine ratio trigonometric ratios  sine ratio trigonometric ratios  tangent ratio trigonometric ratios         standard position   It doesn't matter which point on the terminal side we use to calculate the trig ratios. If we choose some other point, say , with coordinates , as shown at right, we will get the same values for the sine, cosine and tangent of . The new triangle formed is similar to the first one, so the ratios of the sides of the new triangle are equal to the corresponding ratios in the first triangle.  similar triangles  Find the values of cos , sin , and tan if the point is on the terminal side of .  For the point , we have and . We use the distance formula to find . The trig ratios are    angle  In the previous example, we get the same results by using the triangle definitions of the trig ratios. We create a right triangle by dropping a vertical line from to the -axis, as shown in the figure. The legs of the right triangle have lengths 12 and 5, and the hypotenuse has length 13.   Find the equation of the terminal side of the angle in the previous example. (Hint: The terminal side lies on a line that goes through the origin and the point .)  Show that the point also lies on the terminal side of the angle.  Compute the trig ratios for using the point instead of .    satisfies , that is, the equation is true.  , so Then , and .  Obtuse Angles  obtuse angle  trigonometric ratios obtuse angle   An obtuse angle has measure between and . In this section we will define the trigonometric ratios of an obtuse angle as follows.  Place the angle in standard position and choose a point with coordinates on the terminal side.  The distance from the origin to is .  The trigonometric ratios of are defined as follows.  The Trigonometric Ratios    grid    Draw an angle in standard position with the point on its terminal side.  Find , the distance from the origin to .  Calculate , and . Give both exact answers and decimal approximations rounded to four places.  Use the inverse cosine key on your calculator to find . Use your calculator to verify the values of , and that you found in part (3).   Draw another angle in standard position with the point on its terminal side.  Explain why is the supplement of . (Hint: Consider the right triangles formed by drawing vertical lines from and .)  Can you use the right triangle definitions (using opposite, adjacent and hypotenuse) to compute the sine and cosine of ? Why or why not?  Calculate , and using the extended definitions listed above. How are the trig values of related to the trig values of ?   Explain why and have the same sine but different cosines.  Use the inverse cosine key on your calculator to find . Use your calculator to verify the values of , and that you found above.  Compute . What answer should you expect to get?     Trigonometric Ratios for Obtuse Angles  trigonometric ratios obtuse angle  Our new definitions for the trig ratios work just as well for obtuse angles, even though is not technically “inside” a triangle, because we use the coordinates of instead of the sides of a triangle to compute the ratios.  Notice first of all that because -coordinates are negative in the second quadrant, the cosine and tangent ratios are both negative for obtuse angles. For example, in the figure below, the point lies on the terminal side of the angle . We see that , so    obtuse angle  Find the values of cos and tan if is an obtuse angle with .  Because is obtuse, the terminal side of the angle lies in the second quadrant, as shown in the figure below. Because , we know that , so we can choose a point with and . To find cos and tan we need to know the value of . From the Pythagorean Theorem,    obtuse angle  Remember that is negative in the second quadrant! Thus     Sketch an obtuse angle whose cosine is .  Find the sine and the tangent of .     point     Using a Calculator  In the examples above, we used a point on the terminal side to find exact values for the trigonometric ratios of obtuse angles. Scientific and graphing calculators are programmed with approximations for these trig ratios.  Find the sine and cosine of . Compare to the sine and cosine of .  Using a calculator and rounding the values to four places, we find  We see that and . This result should not be surprising when we look at both angles in standard position, as shown below.   The angles and are supplementary. The right triangles formed by choosing the points and on their terminal sides are congruent triangles.  supplementary angles  Consequently, the trigonometric ratios for and for are equal, except that the cosine of is negative.  Use your calculator to fill in the table. Round to four decimal places.                                                                                                                                      Trigonometric Ratios for Supplementary Angles  trigonometric ratios supplementary angles  supplementary angles trigonometric ratios of  The examples above illustrate the following equations for supplementary angles. These three equations are called identities , which means that they are true for all values of the variable .  Trigonometric Ratios for Supplementary Angles  trigonometric ratios supplementary angles  supplementary angles trigonometric ratios of        supplementary angles in standard position    Because of these relationships, there are always two (supplementary) angles between and that have the same sine. Your calculator will only tell you one of them, so you have to be able to find the other one on your own! Fortunately, this is not difficult.  Find two different angles , rounded to the nearest , that satisfy .  To find an angle with , we calculate . With the calculator in degree mode, we press  2nd  SIN 0.25  ENTER  and find that one angle is . We draw this acute angle in standard position in the first quadrant, and sketch in a right triangle as shown below. There must also be an obtuse angle whose sine is . To see the second angle, we draw a congruent triangle in the second quadrant as shown.   supplementary angle  The supplement of , namely , is the obtuse angle we need. Notice that for both triangles, so for both angles.  Find two different angles that satisfy . ,  Because there are two angles with the same sine, it is easier to find an obtuse angle if we know its cosine instead of its sine.   Find the angle shown at right.  obtuse angle  Using and , we find so , and We can enter to see that .  In the previous example, you might notice that and try to find by calculating . However, if we press  2nd  TAN 4 3  ENTER  the calculator returns an angle of . It is true that , but this is not the obtuse angle we want.   We also know that , and if we press  2nd  SIN 4 5  ENTER  we get .  supplementary angles  This is the acute angle whose terminal side passes through the point , as shown in the figure above. The angle we want is its supplement, .    Find the cosine of an obtuse angle with .  Find the angle in part (a).       Supplements of the Special Angles  angle supplementary  special angles supplements of   In Chapter 2 we learned that the angles and are useful because we can find exact values for their trigonometric ratios. The same is true for the supplements of these angles in the second quadrant, shown at right.  supplements of special angles  Find exact values for the trigonometric ratios of .  We sketch an angle of in standard position, as shown below. The terminal side is in the second quadrant and makes an acute angle of with the negative -axis, and passes through the point . Thus, , and we calculate    obtuse angle  Find exact values for the trigonometric ratios of and .                  We can also find the trig ratios for the quadrantal quadrantal angles angles. These are the angles, including , and , whose terminal sides lie on one of the axes.  Find exact values for the trigonometric ratios of .   The terminal side of a angle in standard position is the positive -axis. If we take the point on the terminal side as shown at right, then and . Although we don't have a triangle, we can still calculate a value for , the distance from the origin to .  right angle  Our coordinate definitions for the trig ratios give us so and Also, so is undefined.  Find exact values for the trigonometric ratios of . , ,   The Area of a Triangle  area of triangle  triangle area of  The figure below shows part of the map for a new housing development, Pacific Shores. You are interested in the corner lot, number 86, and you would like to know the area of the lot in square feet. The sales representative for Pacific Shores provides you with the dimensions of the lot, but you don't know a formula for the area of an irregularly shaped quadrilateral.  house lots  It occurs to you that you can divide the quadrilateral into two triangles, and find the area of each. Now, you know a formula for the area of a triangle in terms of its base and height, namely, ,  Lot 86  but unfortunately, you don't know the height of either triangle.  However, you can easily measure the angles at the corners of the lot using the plot map and a protractor. You can check the values on the plot map for lot 86 shown above.  Using trigonometry, we can find the area of a triangle if we know two of its sides, say and , and the included angle, . The figure below shows three possibilities, depending on whether the angle is acute, obtuse, or .  three triangles  In each case, is the base of the triangle, and its altitude is . Our task is to find an expression for in terms of the quantities we know: , , and . You should check that in all three triangles Solving for gives us . Finally, we substitute this expression for into our old formula for the area to get   Area of a Triangle  area of triangle  triangle area of  If a triangle has sides of length and , and the angle between those two sides is , then the area of the triangle is given by    Triangle-angle-theta-sides-a-and-b    Find the area of lot 86.  For the triangle in the lower portion of lot 86, , , and . The area of that portion is   For the triangle in the upper portion of the lot, , , and . The area of that portion is   The total area of the lot is the sum of the areas of the triangles Lot 86 has an area of approximately 17,669 square feet.  The formula does not mean that we always use the sides labeled and to find the area of a triangle.   In this formula, the variables and represent the lengths of the sides that include the known angle. For example, the area of the triangle at right is given by .  triangle  A triangle has sides of length 6 and 7, and the angle between those sides is . Find the area of the triangle.  Review the following skills you will need for this section.   Find the area of the triangle.   1. triangle  2. triangle   3. triangle  4. triangle  How many degrees are in each fraction of one complete revolution?   5.  6.  7.  8.     Algebra Refresher Answers              Section 3.1 Summary  Vocabulary   Standard position  Initial side  Terminal side  Quadrantal angle  Oblique triangle  Quadrilateral  Identity    Concepts   We put an angle in standard position by placing its vertex at the origin and the initial side on the positive -axis.  Coordinate Definitions of the Trigonometric Ratios         supplementary angles in standard position   Trigonometric Ratios for Supplementary Angles        supplementary angles in standard position    There are always two (supplementary) angles between and that have the same sine. Your calculator will only tell you one of them.  Area of a Triangle  If a triangle has sides of length and , and the angle between those two sides is , then the area of the triangle is given by   Triangle-angle-theta-sides-a-and-b      Study Questions   Delbert says that in the figure. Is he correct? Why or why not?   triangle  Give the lengths of the legs of each right triangle.   a.  triangle  b.  triangle  Explain why the length of the horizontal leg of the right triangle is .   triangle  Why are the sines of supplementary angles equal, but the cosines are not? What about the tangents of supplementary angles?  Use your calculator to evaluate , then evaluate . Explain the result.   Write an expression for the area of the triangle.  triangle    Skills  Practice each skill in the Homework Problems listed.   Use the coordinate definition of the trig ratios #3-20, 45-48  Find the trig ratios of supplementary angles #7-10, 21-38  Know the trig ratios of the special angles in the second quadrant #21, 41-44  Find two solutions of the equation #29-38  Find the area of a triangle #49-58     Homework 3.1  Without using pencil and paper or a calculator, give the supplement of each angle.                 Without using pencil and paper or a calculator, give the complement of each angle.          For Problems 3 6,   Give the coordinates of point on the terminal side of the angle.  Find the distance from the origin to point .  Find and     angle        angle    angle        angle   For Problems 7 10,   Find the sine and cosine of the angle.  Sketch the supplement of the angle in standard position. (Use congruent triangles.)  Find the sine and cosine of the supplement.  Find the angle and its supplement, rounded to the nearest degree.     angle  ,   angle  ,      angle    angle  ,    angle  ,     angle   For Problems 11 20,   Sketch an angle in standard position with the given properties.  Find and  Find the angle , rounded to tenths of a degree.   The point is on the terminal side.   Grid for quadrants I and II   angle  , ,    The point is on the terminal side.  Grid for quadrants I and II  Grid for quadrants I and II   angle      Grid for quadrants I and II   Grid for quadrants I and II   angle  ,     Grid for quadrants I and II   Grid for quadrants I and II   angle  ,     Grid for quadrants I and II   Grid for quadrants I and II   angle  ,     Grid for quadrants I and II   Fill in exact values from memory without using a calculator.                                                                                             Use your calculator to fill in the table. Round values to four decimal places.                                            For each angle in the table for Problem 22, the angle is also in the table.   What is true about and ?  What is true about and ?  What is true about and ?          Describe and explain any patterns of equal values you see in the table for Problem 22.  For Problems 25 28,   Evaluate each pair of angles to the nearest , and show that they are supplements.  Sketch both angles.  Find the sine of each angle.   ,     angles    ,  ,     angles    ,   For Problems 29 34, find two different angles that satisfy the equation. Round to the nearest .  and   and    and     For Problems 35 38, fill in the blanks with complements or supplements.  If , then also, , and . , ,  If , then also, , and .  If , then , and and both equal . , ,  If , then , and and both equal .    Sketch the line .  Find two points on the line with positive -coordinates.  The line makes an angle with the positive -axis. What is that angle?  Repeat parts (a) through (c) for the line , except find two points with negative  -coordinates.     angles         angles     Sketch the line .  Find two points on the line with positive -coordinates.  The line makes an angle with the positive -axis. What is that angle?  Repeat parts (a) through (c) for the line , except find two points with negative  -coordinates.   For Problems 41 44,  Find exact values for the base and height of the triangle.  Compute an exact value for the area of the triangle.    triangle  in, in  sq in    triangle   triangle  mi, mi  sq mi    triangle   Sketch an angle of in standard position. Find the missing coordinates of the points on the terminal side.      angle      Sketch an angle of in standard position. Find the missing coordinates of the points on the terminal side.     Sketch an angle of in standard position. Find the missing coordinates of the points on the terminal side.     triangle       Use a sketch to explain why .  Use a sketch to explain why .   For Problems 49 54, find the area of the triangle with the given properties. Round your answer to two decimal places.   triangle sq m   triangle   triangle sq cm   triangle  m, m,    Find the area of the regular pentagon shown at right. (Hint: The pentagon can be divided into five congruent triangles.)  pentagon sq units   Find the area of the regular hexagon shown at right. (Hint: The hexagon can be divided into six congruent triangles.)  hexagon   For Problems 57 and 58, lots from a housing development have been subdivided into triangles. Find the total area of each lot by computing and adding the areas of each triangle.   lot sq ft   lot   For Problems 59 and 60,  Find the coordinates of point . Round to two decimal places.  Find the sides and of .  Find side .    triangle       triangle   Later we will be able to show that . What is the exact value of (Hint: Sketch both angles in standard position.)  Later we will be able to show that . What is the exact value of (Hint: Sketch both angles in standard position.)  Alice wants an obtuse angle that satisfies . Bob presses some buttons on his calculator and reports that . Explain Bob's error and give a correct approximation of accurate to two decimal places. Bob found an acute angle. The obtuse angle is the supplement of , or .  Yaneli finds that the angle opposite the longest side of a triangle satisfies . Zelda reports that . Explain Zelda's error and give a correct approximation of accurate to two decimal places.  For Problems 65 70,  Sketch an angle in standard position, , with the given properties.  Find expressions for , and in terms of the given variable.     triangle  , ,      is obtuse and   triangle  , ,    is obtuse and  is obtuse and   triangle  , ,       "
 },
 {
-  "id": "p-1137",
-  "level": "2",
-  "url": "Obtuse-Angles.html#p-1137",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "oblique "
-},
-{
   "id": "p-1138",
   "level": "2",
   "url": "Obtuse-Angles.html#p-1138",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "standard position "
+  "body": "oblique "
 },
 {
   "id": "p-1139",
   "level": "2",
   "url": "Obtuse-Angles.html#p-1139",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "standard position "
+},
+{
+  "id": "p-1140",
+  "level": "2",
+  "url": "Obtuse-Angles.html#p-1140",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5266,9 +5266,9 @@ var ptx_lunr_docs = [
   "body": "Use your calculator to fill in the table. Round to four decimal places.                                                                                                                                    "
 },
 {
-  "id": "p-1172",
+  "id": "p-1173",
   "level": "2",
-  "url": "Obtuse-Angles.html#p-1172",
+  "url": "Obtuse-Angles.html#p-1173",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5347,9 +5347,9 @@ var ptx_lunr_docs = [
   "body": "Find exact values for the trigonometric ratios of and .                 "
 },
 {
-  "id": "p-1199",
+  "id": "p-1200",
   "level": "2",
-  "url": "Obtuse-Angles.html#p-1199",
+  "url": "Obtuse-Angles.html#p-1200",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5410,9 +5410,9 @@ var ptx_lunr_docs = [
   "body": " Find the area of the triangle.   1. triangle  2. triangle   3. triangle  4. triangle  How many degrees are in each fraction of one complete revolution?   5.  6.  7.  8.     Algebra Refresher Answers            "
 },
 {
-  "id": "p-1238",
+  "id": "p-1239",
   "level": "2",
-  "url": "Obtuse-Angles.html#p-1238",
+  "url": "Obtuse-Angles.html#p-1239",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6058,9 +6058,9 @@ var ptx_lunr_docs = [
   "body": "Reducing a new problem to an earlier one is a frequently used technique in mathematics. "
 },
 {
-  "id": "p-1362",
+  "id": "p-1363",
   "level": "2",
-  "url": "The-Law-of-Sines.html#p-1362",
+  "url": "The-Law-of-Sines.html#p-1363",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6175,9 +6175,9 @@ var ptx_lunr_docs = [
   "body": "Solve the problem in the previous example again, but instead of finding , find the length , and then use to find .  , the castle is about 38.33 yards tall. "
 },
 {
-  "id": "p-1407",
+  "id": "p-1408",
   "level": "2",
-  "url": "The-Law-of-Sines.html#p-1407",
+  "url": "The-Law-of-Sines.html#p-1408",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6202,18 +6202,18 @@ var ptx_lunr_docs = [
   "body": "Two observers 800 kilometers apart observe an object with a parallax of . How far is the object from Earth?  About 91,673,247 km "
 },
 {
-  "id": "p-1418",
+  "id": "p-1419",
   "level": "2",
-  "url": "The-Law-of-Sines.html#p-1418",
+  "url": "The-Law-of-Sines.html#p-1419",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "minutes seconds "
 },
 {
-  "id": "p-1420",
+  "id": "p-1421",
   "level": "2",
-  "url": "The-Law-of-Sines.html#p-1420",
+  "url": "The-Law-of-Sines.html#p-1421",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6760,9 +6760,9 @@ var ptx_lunr_docs = [
   "body": "Using the Law of Sines requires fewer calculations than the Law of Cosines, but the Law of Cosines uses only the original values, instead of the results of our previous calculations and approximations.  Whenever we round off a number, we introduce inaccuracy into the calculations, and these inaccuracies grow with each additional calculation. Thus, for the sake of accuracy, it is best to use given values in preference to calculated values whenever possible. "
 },
 {
-  "id": "p-1578",
+  "id": "p-1579",
   "level": "2",
-  "url": "The-Law-of-Cosines.html#p-1578",
+  "url": "The-Law-of-Cosines.html#p-1579",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7963,7 +7963,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Angles and Rotation",
-  "body": " Angles and Rotation  angle as rotation  rotation  Introduction  So far we have studied angles as parts of triangles, but we can also use angles to describe rotation. For example, think of the minute hand on a clock. Every hour, the minute hand moves through one complete rotation, or . In two hours, the minute hand rotates through .   Through how many degrees does the minute hand rotate in an hour and a half? In forty minutes?   Look at the figure at right. An hour and a half represents 1.5 complete rotations, or  clock   Forty minutes is two-thirds of an hour, so the minute hand rotates through   clock   The volume control on an amplifier is a dial with ten settings, as shown at right. Through how many degrees would you rotate the dial to increase the volume level from 0 to 7?  dial   Angles in Standard Position  angle standard position  The degree measure of an angle depends only on the fraction of a whole rotation between its sides, and not on the location or position of the angle. To compare and analyze angles, we place them in standard position , so that the vertex of the angle is located at the origin and its initial side lies on the positive -axis. If the terminal side rotates counter-clockwise, the degree measure of the angle is positive; it is negative if the terminal side rotates clockwise. The figure below shows four angles and how each appears in standard position.    angles   angles  angles  angles    One-half a complete revolution is , and three-quarters of one revolution is . Thus, for angles between and in standard position, the terminal side lies in the third quadrant, and for angles between and , the terminal side lies in the fourth quadrant.  Find the degree measure of the angles and shown below, and sketch each angle in standard position.   Regular pentagon inscribed in circle  Clock with minute hand pointing to 12 and to 11  a. The angle is one-fifth of a complete revolution, or In standard position, it is a first-quadrant angle, as shown in figure (a) below.   72 degree angle in standard position  330 degree angle in standard position  b. The angle is of a complete revolution, or In standard position, it is a fourth-quadrant angle. (See Figure (b).)  Find the degree measure of each angle below, and sketch the angle in standard position.   Circle divided into 3 equal sectors  angle difference between 250 degrees and straight angle a.  120 degree angle in standard position  b.  70 degree angle in standard position   Trigonometric Ratios for All Angles  trigonometric ratios for all angles  In Chapter 3 we defined the sine, cosine, and tangent for obtuse angles by placing the angle in a Cartesian coordinate system. We can do the same for angles that represent rotations.   First, we place the angle in standard position, with its vertex at the origin. We picture the terminal side sweeping counter-clockwise around a circle to form the angle.  Next, we choose a point with coordinates on the terminal side, as shown at right. The distance from the origin to is then . The trigonometric ratios of are defined as follows.   Reference triangle in third quadrant    The Trigonometric Ratios  trigonometric ratios  trigonometric ratios for all angles  If is an angle in standard position, and is a point on its terminal side, with , then   We can choose any point on the terminal side of the angle, and the trig ratios defined by its coordinates will be the same. (Can you explain why? Think about similar triangles.) And, as we noted when we first defined the trig ratios, they are functions of the input angle, so there is only one sine, cosine, or tangent for a given angle.  The notation is read \"sine of theta,\" just as we say \"f of x\" for . The parentheses do not mean multiplication, but rather tell us to apply the function.  Because it is the distance from the origin to , is always positive. However, and can be positive or negative (or zero), depending on the angle . For example, in the second quadrant, is negative but is positive, so the cosine and the tangent of angles between and are negative, but their sines are positive.  Give the sign of each of the three trigonometric ratios of the angles.     a. In standard position, the terminal side of an angle of lies in the third quadrant. (See figure (a) below.) In the third quadrant, and , but . Thus, is negative, is negative, and is positive.   200 deg angle  300 deg angle    b. The terminal side of lies in the fourth quadrant, so and , and . Thus, is negative, is positive, and is negative.  For angles in each of the four quadrants shown below, explain why the indicated trig ratios are positive. Then complete the table.    Quadrant  Degrees  Sine  Cosine  Tangent   First   positive  positive  positive   Second       Third       Fourth        quadrants     Quadrant  Degrees  Sine  Cosine  Tangent   First   positive  positive  positive   Second   positive  negative  negative   Third   negative  negative  positive   Fourth   negative  positive  negative   Find the sine, cosine, and tangent of the angle shown at right.  angle  The -coordinate of the point is , and , so To find the -coordinate of , we use the equation of a circle of radius , . Because is in the third quadrant, . Thus,  Find the sine, cosine, and tangent of the angle shown at right. The circle has radius 4.  angles   Reference Angles  reference angle  angle reference  In Section 3.1 we learned that the trig ratios for angles in the second quadrant are the same as the trig ratios for their supplements, except for sign. For example, you can use your calculator to verify that             angles  The trig ratios for and have the same absolute value because the two triangles formed by the angles are congruent, as shown above.  is called a reference triangle reference triangle triangle reference for , and is called the reference angle reference angle  angle reference .  The trig ratios for angles between and , whose terminal sides lie in the third and fourth quadrants, are also related to the trig ratios of familiar angles in the first quadrant. We \"refer\" the angle to a first quadrant angle with a congruent reference triangle.  Reference angles reference angle will be important when we need to solve trigonometric equations. trigonometric equation There will always be two angles with the same trig ratio (except for quadrantal angles), and they will have the same reference angle.  We can construct reference triangles for angles in any of the four quadrants, and the trig ratios of the angle are the same as the trig ratios of its reference angle, up to sign. Here is how to construct a reference triangle for an angle :  Constructing a reference triangle   Choose a point on the terminal side.  Draw a line from point perpendicular to the -axis.    The figure below shows angles between and , and the reference angle, , for each. Study the figures, and make sure you understand the formula for finding the reference angle in each quadrant.   Reference angles for all quadrants     These observations may help you remember the formulas:   The right triangle formed in this way always lies between the terminal side and the -axis.  The positive acute angle formed between the terminal side and the -axis is the reference angle, and the right triangle is the reference triangle.   Reference Angles  reference angle angle reference reference angle  The circle below has radius 1 and is centered at the origin.  unit circle on grid    Use a protractor to draw an angle of in standard position. Draw its reference triangle.  Use your calculator to find the sine and cosine of , rounded to two decimal places. Label the sides of the reference triangle with their lengths.  What are the coordinates of the point where your angle intersects the circle?  Draw the reflection of your reference triangle across the -axis, so that you have a congruent triangle in the second quadrant.    You now have the reference triangle for a second-quadrant angle in standard position. What is that angle?  Use your calculator to find the sine and cosine of your new angle. Label the coordinates of the point where the angle intersects the circle.  Draw the reflection of your triangle from part (1d) across the -axis, so that you have a congruent triangle in the third quadrant.    You now have the reference triangle for a third-quadrant angle in standard position. What is that angle?  Use your calculator to find the sine and cosine of your new angle. Label the coordinates of the point where the angle intersects the circle.  Draw the reflection of your triangle from part (2c) across the -axis, so that you have a congruent triangle in the fourth quadrant.    You now have the reference triangle for a fourth-quadrant angle in standard position. What is that angle?  Use your calculator to find the sine and cosine of your new angle. Label the coordinates of the point where the angle intersects the circle.    Generalize: All four of your angles have the same reference angle, . For each quadrant, write a formula for the angle whose reference angle is .  Quadrant I:  Quadrant II:  Quadrant III:  Quadrant IV:   Find the reference angle for .  Sketch and its reference angle in standard position, along with their reference triangles. Verify that both angles have the same trigonometric ratios, up to sign.     In standard position, an angle of lies in the third quadrant. Its reference angle is  Both angles are shown at right. Note that the reference triangle for is congruent to the reference triangle for . You can use your calculator to verify the following values.   200 degree and reference angles     Find the reference angle for .  Sketch and its reference angle in standard position, along with their reference triangles. Verify that both angles have the same trigonometric ratios, up to sign.       285 degree and reference angles    , ,   Using Reference Angles  reference angle  Here is a summary of our discussion about reference angles.  Reference Angles  reference angle  The trigonometric ratios of any angle are equal to the ratios of its reference angle, except for sign. The sign of the ratio is determined by the quadrant.  Any acute angle is the reference angle for four angles between and , one in each quadrant. The figure below shows the four angles in standard position whose reference angle is . Note that each angle is found by measuring from the -axis in the appropriate quadrant, and that the four angles together make a “bow-tie” shape.   angles  From the figure, you can see that the angles in each quadrant with a given reference angle are computed as follows.  To find an angle with a given reference angle :  reference angle    Quadrant I:   Quadrant II:   Quadrant III:   Quadrant IV:    Find two angles between and whose cosine is . Round your answers to the nearest tenth of a degree.  Find two angles between and whose cosine is . Sketch the reference triangle for each angle.    One of the angles we want is . Use your calculator to find the first quadrant angle, . The cosine is also positive in the fourth quadrant, so we look for the angle in the fourth quadrant with reference angle . That angle is , as shown at right.  angles  Because the cosine is negative in the second and third quadrants, we would like angles in those quadrants whose reference angle is . In the second quadrant, we find And in the third quadrant,  angles  Both angles are shown above. You can check that the cosines of and are both approximately .     Find an angle in the third quadrant whose tangent is . Round your answer to the nearest tenth of a degree.  Use reference angles to find two angles whose tangent is .  ,  The Special Angles  special angles  Recall that the angles and are called the special angles because we can express the exact values of their trigonometric ratios in terms of radicals. There are special angles in all four quadrants; namely, those whose reference angles are and .  Find exact values for the sine, cosine, and tangent of .  An angle of lies in the third quadrant, and its reference angle is In the third quadrant, the sine and cosine are negative, so we have  Alternatively, consider the reference triangle in the figure at right, where . Because the sides of a 30-60-90 triangle are in the ratio , the point has coordinates . Using the definitions of the trig ratios, we can calculate the values above.  angles    Sketch an angle of in standard position, and its reference triangle. Find the reference angle for .  Find exact values for the sine, cosine, and tangent of .    Reference angle for 300 degrees  Reference angle:  , ,   All of the special angles are shown at right. In the Homework Problems you will calculate the three trigonometric ratios for all the special angles, and it will be useful to be familiar with these values, and be able to calculate them quickly.  Special angles on unit circle  Coterminal Angles  angle coterminal  coterminal angles  Because represents one complete revolution, we can add or subtract a multiple of to any angle, and the terminal side will arrive at the same position. For example, the angles and have the same terminal side because . Such angles are called coterminal .  The angle is also coterminal with , because if we add two revolutions to , we get , as shown below.   angles  angles  Because coterminal angles have the same standard position, their trigonometric ratios are equal. For example, you can verify that, to four decimal places,   Find an angle between and that is coterminal with .  Use a calculator to verify that the trig ratios of are the same as the ratios of the coterminal angle.    We subtract multiples of from until the remainder is less than . Because is between and , this is the angle we want.  You can use your calculator to see that    If the direction of rotation rotation is important, we let positive angles represent rotation in the counter-clockwise direction, and negative angles represent rotation in the clockwise direction. For example, the angle shown at right lies in the fourth quadrant. It is coterminal with .  angles   Find two angles coterminal with , one positive and one negative. ,   Review the following skills you will need for this section.   Evaluate the function.                                  Algebra Refresher Answers                               Section 4.1 Summary  Vocabulary   Standard position  Reference angle  Reference triangle  Coterminal angle    Concepts   We can use angles to describe rotation. Positive angles indicate rotation in the counter-clockwise direction; negative angles describe clockwise rotation.  We define the trigonometric ratios of any angle by placing the angle in standard position and choosing a point on the terminal side, with . The Trigonometric Ratios  If is an angle in standard position, and is a point on its terminal side, with , then   To construct a reference triangle for an angle :   Choose a point on the terminal side.  Draw a line from point perpendicular to the -axis.   The reference angle for is the positive acute angle formed between the terminal side of and the -axis.  angles    The trigonometric ratios of any angle are equal to the ratios of its reference angle, except for sign. The sign of the ratio is determined by the quadrant.  To find an angle with a given reference angle :    Quadrant I:   Quadrant II:   Quadrant III:   Quadrant IV:    angles    There are always two angles between and (except for the quadrantal angles) with a given trigonometric ratio.  Coterminal angles have equal trigonometric ratios.   Study Questions   Explain why for any angle .  Is it true that for any angle ? Explain.  Sketch a figure showing how to compute the reference angle for angles in each of the four quadrants.  True or false: If , then .  How many angles have a cosine equal to 0.4? How many angles between and have a cosine equal to 0.4?    Skills   Use angles to represent rotations #1-6  Sketch angles in standard position #7-12  Find coterminal angles #13-24  Find and use reference angles #25-44, 55-64  Find trigonometric ratios for the special angles #45-54     Homework 4.1  How many degrees are in each angle?   of one rotation  of one rotation  of one rotation  of one rotation         How many degrees are in each angle?   of one rotation  of one rotation  of one rotation  of one rotation   What fraction of a complete rotation is represented by each angle?               What fraction of a complete rotation is represented by each angle?            Through what angle does the hour hand of a clock rotate between 2 pm and 10 pm?  Through what angle does the hour hand of a clock rotate between 2 am and 10 pm?       Through what angle does the minute hand of a clock rotate between 3:25 am and 3:50 am?  Through what angle does the minute hand of a clock rotate between 4:10 pm and 6:25 pm?   For Problems 7 12, calculate the degree measure of the unknown angle, and sketch the angle in standard position.   dial    speedometer    sundial   revolving door   pendulum   Ferris wheel   For Problems 13 18, find two angles, one positive and one negative, that are coterminal with the given angle.  and (Answers vary.)   and (Answers vary.)   and (Answers vary.)    For Problems 19 24, find a positive angle between and that is coterminal with the given angle.         For Problems 25 26, use the grid provided below.  unit circle on grid   Draw two different angles and in standard position whose sine is . Note that the radius of the circle is 1,  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.     angles on grid   Draw two different angles and in standard position whose sine is .  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.    For Problems 27 28, use the grid provided below.   unit circle on grid    Draw two different angles and in standard position whose cosine is .  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.     graph    Draw two different angles and in standard position whose cosine is .  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.    For Problems 29 34, find the reference angle. Make a sketch showing the angle, the reference angle, and the reference triangle.    angles        angles        angles       For Problems 35 40, find three angles between and with the given reference angle, and sketch all four angles on the same grid.  , ,   angles      , ,   angles      , ,   angles       For Problems 41 48, use the values given below to find the trigonometric ratio. Do not use a calculator!            On the circle in the figure, all angles are shown in standard position. Find the measure in degrees of the angles labeled (a)-(i).  circle            Find the reference angle for each of your answers in Problem 45.    Draw three angles, one in each quadrant except the first, whose reference angle is .  Find exact values for the sine, cosine, and tangent of each of the angles in part (a).     angles        Draw three angles, one in each quadrant except the first, whose reference angle is .  Find exact values for the sine, cosine, and tangent of each of the angles in part (a).    Draw three angles, one in each quadrant except the first, whose reference angle is .  Find exact values for the sine, cosine, and tangent of each of the angles in part (a).     angles       Complete the table with exact values.                                                           In which two quadrants is the statement true?   The sine is negative.  The cosine is negative.  The tangent is positive.   III and IV  II and III  I and III   Find all angles between and for which the statement is true.            Find two angles, , with .  Find two angles, , with .       Find two angles, , with .  Find two angles, , with .   For Problems 59 64, find a second angle between and with the given trigonometric ratio.         Explain why the definitions of the trigonometric ratios for a third-quadrant angle (between and ) are independent of the point chosen on the terminal side. Illustrate with a figure. Sides of similar triangles are proportional.   Explain why the definitions of the trigonometric ratios for a fourth-quadrant angle (between and ) are independent of the point chosen on the terminal side. Illustrate with a figure.   "
+  "body": " Angles and Rotation  angle as rotation  rotation  Introduction  So far we have studied angles as parts of triangles, but we can also use angles to describe rotation. For example, think of the minute hand on a clock. Every hour, the minute hand moves through one complete rotation, or . In two hours, the minute hand rotates through .   Through how many degrees does the minute hand rotate in an hour and a half? In forty minutes?   Look at the figure at right. An hour and a half represents 1.5 complete rotations, or  clock   Forty minutes is two-thirds of an hour, so the minute hand rotates through   clock   The volume control on an amplifier is a dial with ten settings, as shown at right. Through how many degrees would you rotate the dial to increase the volume level from 0 to 7?  dial   Angles in Standard Position  angle standard position  The degree measure of an angle depends only on the fraction of a whole rotation between its sides, and not on the location or position of the angle. To compare and analyze angles, we place them in standard position , so that the vertex of the angle is located at the origin and its initial side lies on the positive -axis. If the terminal side rotates counter-clockwise, the degree measure of the angle is positive; it is negative if the terminal side rotates clockwise. The figure below shows four angles and how each appears in standard position.    angles   angles  angles  angles    One-half a complete revolution is , and three-quarters of one revolution is . Thus, for angles between and in standard position, the terminal side lies in the third quadrant, and for angles between and , the terminal side lies in the fourth quadrant.  Find the degree measure of the angles and shown below, and sketch each angle in standard position.   Regular pentagon inscribed in circle  Clock with minute hand pointing to 12 and to 11  a. The angle is one-fifth of a complete revolution, or In standard position, it is a first-quadrant angle, as shown in figure (a) below.   72 degree angle in standard position  330 degree angle in standard position  b. The angle is of a complete revolution, or In standard position, it is a fourth-quadrant angle. (See Figure (b).)  Find the degree measure of each angle below, and sketch the angle in standard position.   Circle divided into 3 equal sectors  angle difference between 250 degrees and straight angle a.  120 degree angle in standard position  b.  70 degree angle in standard position   Trigonometric Ratios for All Angles  trigonometric ratios for all angles  In Chapter 3 we defined the sine, cosine, and tangent for obtuse angles by placing the angle in a Cartesian coordinate system. We can do the same for angles that represent rotations.   First, we place the angle in standard position, with its vertex at the origin. We picture the terminal side sweeping counter-clockwise around a circle to form the angle.  Next, we choose a point with coordinates on the terminal side, as shown at right. The distance from the origin to is then . The trigonometric ratios of are defined as follows.   Reference triangle in third quadrant    The Trigonometric Ratios  trigonometric ratios  trigonometric ratios for all angles  If is an angle in standard position, and is a point on its terminal side, with , then   We can choose any point on the terminal side of the angle, and the trig ratios defined by its coordinates will be the same. (Can you explain why? Think about similar triangles.) And, as we noted when we first defined the trig ratios, they are functions of the input angle, so there is only one sine, cosine, or tangent for a given angle.  The notation is read \"sine of theta,\" just as we say \"f of x\" for . The parentheses do not mean multiplication, but rather tell us to apply the function.  Because it is the distance from the origin to , is always positive. However, and can be positive or negative (or zero), depending on the angle . For example, in the second quadrant, is negative but is positive, so the cosine and the tangent of angles between and are negative, but their sines are positive.  Give the sign of each of the three trigonometric ratios of the angles.     a. In standard position, the terminal side of an angle of lies in the third quadrant. (See figure (a) below.) In the third quadrant, and , but . Thus, is negative, is negative, and is positive.   200 deg angle  300 deg angle    b. The terminal side of lies in the fourth quadrant, so and , and . Thus, is negative, is positive, and is negative.  For angles in each of the four quadrants shown below, explain why the indicated trig ratios are positive. Then complete the table.    Quadrant  Degrees  Sine  Cosine  Tangent   First   positive  positive  positive   Second       Third       Fourth        quadrants     Quadrant  Degrees  Sine  Cosine  Tangent   First   positive  positive  positive   Second   positive  negative  negative   Third   negative  negative  positive   Fourth   negative  positive  negative   Find the sine, cosine, and tangent of the angle shown at right.  angle  The -coordinate of the point is , and , so To find the -coordinate of , we use the equation of a circle of radius , . Because is in the third quadrant, . Thus,  Find the sine, cosine, and tangent of the angle shown at right. The circle has radius 4.  angles   Reference Angles  reference angle  angle reference  In Section 3.1 we learned that the trig ratios for angles in the second quadrant are the same as the trig ratios for their supplements, except for sign. For example, you can use your calculator to verify that             angles  The trig ratios for and have the same absolute value because the two triangles formed by the angles are congruent, as shown above.  is called a reference triangle reference triangle triangle reference for , and is called the reference angle reference angle  angle reference .  The trig ratios for angles between and , whose terminal sides lie in the third and fourth quadrants, are also related to the trig ratios of familiar angles in the first quadrant. We \"refer\" the angle to a first quadrant angle with a congruent reference triangle.  Reference angles reference angle will be important when we need to solve trigonometric equations. trigonometric equation There will always be two angles with the same trig ratio (except for quadrantal angles), and they will have the same reference angle.  We can construct reference triangles for angles in any of the four quadrants, and the trig ratios of the angle are the same as the trig ratios of its reference angle, up to sign. Here is how to construct a reference triangle for an angle :  Constructing a reference triangle   Choose a point on the terminal side.  Draw a line from point perpendicular to the -axis.    The figure below shows angles between and , and the reference angle, , for each. Study the figures, and make sure you understand the formula for finding the reference angle in each quadrant.   Reference angles for all quadrants     These observations may help you remember the formulas:   The right triangle formed in this way always lies between the terminal side and the -axis.  The positive acute angle formed between the terminal side and the -axis is the reference angle, and the right triangle is the reference triangle.   Reference Angles  reference angle angle reference reference angle  The circle below has radius 1 and is centered at the origin.  unit circle on grid    Use a protractor to draw an angle of in standard position. Draw its reference triangle.  Use your calculator to find the sine and cosine of , rounded to two decimal places. Label the sides of the reference triangle with their lengths.  What are the coordinates of the point where your angle intersects the circle?  Draw the reflection of your reference triangle across the -axis, so that you have a congruent triangle in the second quadrant.    You now have the reference triangle for a second-quadrant angle in standard position. What is that angle?  Use your calculator to find the sine and cosine of your new angle. Label the coordinates of the point where the angle intersects the circle.  Draw the reflection of your triangle from part (1d) across the -axis, so that you have a congruent triangle in the third quadrant.    You now have the reference triangle for a third-quadrant angle in standard position. What is that angle?  Use your calculator to find the sine and cosine of your new angle. Label the coordinates of the point where the angle intersects the circle.  Draw the reflection of your triangle from part (2c) across the -axis, so that you have a congruent triangle in the fourth quadrant.    You now have the reference triangle for a fourth-quadrant angle in standard position. What is that angle?  Use your calculator to find the sine and cosine of your new angle. Label the coordinates of the point where the angle intersects the circle.    Generalize: All four of your angles have the same reference angle, . For each quadrant, write a formula for the angle whose reference angle is .  Quadrant I:  Quadrant II:  Quadrant III:  Quadrant IV:   Find the reference angle for .  Sketch and its reference angle in standard position, along with their reference triangles. Verify that both angles have the same trigonometric ratios, up to sign.     In standard position, an angle of lies in the third quadrant. Its reference angle is  Both angles are shown at right. Note that the reference triangle for is congruent to the reference triangle for . You can use your calculator to verify the following values.   200 degree and reference angles     Find the reference angle for .  Sketch and its reference angle in standard position, along with their reference triangles. Verify that both angles have the same trigonometric ratios, up to sign.       285 degree and reference angles    , ,   Using Reference Angles  reference angle  Here is a summary of our discussion about reference angles.  Reference Angles  reference angle  The trigonometric ratios of any angle are equal to the ratios of its reference angle, except for sign. The sign of the ratio is determined by the quadrant.  Any acute angle is the reference angle for four angles between and , one in each quadrant. The figure below shows the four angles in standard position whose reference angle is . Note that each angle is found by measuring from the -axis in the appropriate quadrant, and that the four angles together make a “bow-tie” shape.   angles  From the figure, you can see that the angles in each quadrant with a given reference angle are computed as follows.  To find an angle with a given reference angle :  reference angle    Quadrant I:   Quadrant II:   Quadrant III:   Quadrant IV:    Find two angles between and whose cosine is . Round your answers to the nearest tenth of a degree.  Find two angles between and whose cosine is . Sketch the reference triangle for each angle.    One of the angles we want is . Use your calculator to find the first quadrant angle, . The cosine is also positive in the fourth quadrant, so we look for the angle in the fourth quadrant with reference angle . That angle is , as shown at right.  angles  Because the cosine is negative in the second and third quadrants, we would like angles in those quadrants whose reference angle is . In the second quadrant, we find And in the third quadrant,  angles  Both angles are shown above. You can check that the cosines of and are both approximately .     Find an angle in the third quadrant whose tangent is . Round your answer to the nearest tenth of a degree.  Use reference angles to find two angles whose tangent is .  ,  The Special Angles  special angles  Recall that the angles and are called the special angles because we can express the exact values of their trigonometric ratios in terms of radicals. There are special angles in all four quadrants; namely, those whose reference angles are and .  Find exact values for the sine, cosine, and tangent of .  An angle of lies in the third quadrant, and its reference angle is In the third quadrant, the sine and cosine are negative, so we have  Alternatively, consider the reference triangle in the figure at right, where . Because the sides of a 30-60-90 triangle are in the ratio , the point has coordinates . Using the definitions of the trig ratios, we can calculate the values above.  angles    Sketch an angle of in standard position, and its reference triangle. Find the reference angle for .  Find exact values for the sine, cosine, and tangent of .    Reference angle for 300 degrees  Reference angle:  , ,   All of the special angles are shown at right. In the Homework Problems you will calculate the three trigonometric ratios for all the special angles, and it will be useful to be familiar with these values, and be able to calculate them quickly. You may want to review the two \"special triangles\" in Section 2.3.  Special angles on unit circle  Coterminal Angles  angle coterminal  coterminal angles  Because represents one complete revolution, we can add or subtract a multiple of to any angle, and the terminal side will arrive at the same position. For example, the angles and have the same terminal side because . Such angles are called coterminal .  The angle is also coterminal with , because if we add two revolutions to , we get , as shown below.   angles  angles  Because coterminal angles have the same standard position, their trigonometric ratios are equal. For example, you can verify that, to four decimal places,   Find an angle between and that is coterminal with .  Use a calculator to verify that the trig ratios of are the same as the ratios of the coterminal angle.    We subtract multiples of from until the remainder is less than . Because is between and , this is the angle we want.  You can use your calculator to see that    If the direction of rotation rotation is important, we let positive angles represent rotation in the counter-clockwise direction, and negative angles represent rotation in the clockwise direction. For example, the angle shown at right lies in the fourth quadrant. It is coterminal with .  angles   Find two angles coterminal with , one positive and one negative. ,   Review the following skills you will need for this section.   Evaluate the function.                                  Algebra Refresher Answers                               Section 4.1 Summary  Vocabulary   Standard position  Reference angle  Reference triangle  Coterminal angle    Concepts   We can use angles to describe rotation. Positive angles indicate rotation in the counter-clockwise direction; negative angles describe clockwise rotation.  We define the trigonometric ratios of any angle by placing the angle in standard position and choosing a point on the terminal side, with . The Trigonometric Ratios  If is an angle in standard position, and is a point on its terminal side, with , then   To construct a reference triangle for an angle :   Choose a point on the terminal side.  Draw a line from point perpendicular to the -axis.   The reference angle for is the positive acute angle formed between the terminal side of and the -axis.  angles    The trigonometric ratios of any angle are equal to the ratios of its reference angle, except for sign. The sign of the ratio is determined by the quadrant.  To find an angle with a given reference angle :    Quadrant I:   Quadrant II:   Quadrant III:   Quadrant IV:    angles    There are always two angles between and (except for the quadrantal angles) with a given trigonometric ratio.  Coterminal angles have equal trigonometric ratios.   Study Questions   Explain why for any angle .  Is it true that for any angle ? Explain.  Sketch a figure showing how to compute the reference angle for angles in each of the four quadrants.  True or false: If , then .  How many angles have a cosine equal to 0.4? How many angles between and have a cosine equal to 0.4?    Skills   Use angles to represent rotations #1-6  Sketch angles in standard position #7-12  Find coterminal angles #13-24  Find and use reference angles #25-44, 55-64  Find trigonometric ratios for the special angles #45-54     Homework 4.1  How many degrees are in each angle?   of one rotation  of one rotation  of one rotation  of one rotation         How many degrees are in each angle?   of one rotation  of one rotation  of one rotation  of one rotation   What fraction of a complete rotation is represented by each angle?               What fraction of a complete rotation is represented by each angle?            Through what angle does the hour hand of a clock rotate between 2 pm and 10 pm?  Through what angle does the hour hand of a clock rotate between 2 am and 10 pm?       Through what angle does the minute hand of a clock rotate between 3:25 am and 3:50 am?  Through what angle does the minute hand of a clock rotate between 4:10 pm and 6:25 pm?   For Problems 7 12, calculate the degree measure of the unknown angle, and sketch the angle in standard position.   dial    speedometer    sundial   revolving door   pendulum   Ferris wheel   For Problems 13 18, find two angles, one positive and one negative, that are coterminal with the given angle.  and (Answers vary.)   and (Answers vary.)   and (Answers vary.)    For Problems 19 24, find a positive angle between and that is coterminal with the given angle.         For Problems 25 26, use the grid provided below.  unit circle on grid   Draw two different angles and in standard position whose sine is . Note that the radius of the circle is 1,  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.     angles on grid   Draw two different angles and in standard position whose sine is .  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.    For Problems 27 28, use the grid provided below.   unit circle on grid    Draw two different angles and in standard position whose cosine is .  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.     graph    Draw two different angles and in standard position whose cosine is .  Use a protractor to measure and .  Find the reference angles for both and . Draw in the reference triangles.    For Problems 29 34, find the reference angle. Make a sketch showing the angle, the reference angle, and the reference triangle.    angles        angles        angles       For Problems 35 40, find three angles between and with the given reference angle, and sketch all four angles on the same grid.  , ,   angles      , ,   angles      , ,   angles       For Problems 41 48, use the values given below to find the trigonometric ratio. Do not use a calculator!            On the circle in the figure, all angles are shown in standard position. Find the measure in degrees of the angles labeled (a)-(i).  circle            Find the reference angle for each of your answers in Problem 45.    Draw three angles, one in each quadrant except the first, whose reference angle is .  Find exact values for the sine, cosine, and tangent of each of the angles in part (a).     angles        Draw three angles, one in each quadrant except the first, whose reference angle is .  Find exact values for the sine, cosine, and tangent of each of the angles in part (a).    Draw three angles, one in each quadrant except the first, whose reference angle is .  Find exact values for the sine, cosine, and tangent of each of the angles in part (a).     angles       Complete the table with exact values.                                                           In which two quadrants is the statement true?   The sine is negative.  The cosine is negative.  The tangent is positive.   III and IV  II and III  I and III   Find all angles between and for which the statement is true.            Find two angles, , with .  Find two angles, , with .       Find two angles, , with .  Find two angles, , with .   For Problems 59 64, find a second angle between and with the given trigonometric ratio.         Explain why the definitions of the trigonometric ratios for a third-quadrant angle (between and ) are independent of the point chosen on the terminal side. Illustrate with a figure. Sides of similar triangles are proportional.   Explain why the definitions of the trigonometric ratios for a fourth-quadrant angle (between and ) are independent of the point chosen on the terminal side. Illustrate with a figure.   "
 },
 {
   "id": "example-54",
@@ -7984,9 +7984,9 @@ var ptx_lunr_docs = [
   "body": "The volume control on an amplifier is a dial with ten settings, as shown at right. Through how many degrees would you rotate the dial to increase the volume level from 0 to 7?  dial "
 },
 {
-  "id": "p-1883",
+  "id": "p-1884",
   "level": "2",
-  "url": "Angles-and-Rotation.html#p-1883",
+  "url": "Angles-and-Rotation.html#p-1884",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8056,9 +8056,9 @@ var ptx_lunr_docs = [
   "body": "Find the sine, cosine, and tangent of the angle shown at right. The circle has radius 4.  angles "
 },
 {
-  "id": "p-1907",
+  "id": "p-1908",
   "level": "2",
-  "url": "Angles-and-Rotation.html#p-1907",
+  "url": "Angles-and-Rotation.html#p-1908",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8146,9 +8146,9 @@ var ptx_lunr_docs = [
   "body": " Sketch an angle of in standard position, and its reference triangle. Find the reference angle for .  Find exact values for the sine, cosine, and tangent of .    Reference angle for 300 degrees  Reference angle:  , ,  "
 },
 {
-  "id": "p-1947",
+  "id": "p-1948",
   "level": "2",
-  "url": "Angles-and-Rotation.html#p-1947",
+  "url": "Angles-and-Rotation.html#p-1948",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8182,9 +8182,9 @@ var ptx_lunr_docs = [
   "body": " Evaluate the function.                                  Algebra Refresher Answers                             "
 },
 {
-  "id": "p-1974",
+  "id": "p-1975",
   "level": "2",
-  "url": "Angles-and-Rotation.html#p-1974",
+  "url": "Angles-and-Rotation.html#p-1975",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8791,16 +8791,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Graphs of Trigonometric Functions",
-  "body": " Graphs of Trigonometric Functions  trigonometric function graph  A Periodic Function of Angle  periodic function  Imagine that you are riding on a Ferris wheel. As the wheel turns, your height above the ground increases and then decreases again, repeating the same pattern each time the Ferris wheel makes a complete rotation. This pattern is an example of a periodic function periodic function . We use periodic functions to model phenomena that exhibit cyclical behavior, such as the height of tides, seasonal patterns of growth in plants and animals, radio waves, and planetary motion.  We'll create a mathematical model mathematical model for a ride on a Ferris wheel that has a radius of 100 feet and rotates counterclockwise. Our model will be a function that describes your height above the ground as you ride the wheel. In order to graph the Ferris wheel function, we must first specify the input and output variables, and then choose a coordinate system to display their values.  We'll place the origin at the center of the Ferris wheel. Then the line from the origin to your position on the wheel makes an angle with the horizontal, as shown at right. This angle, , will be the input variable input variable for the function. Your height, , is also a variable, and is related to the -coordinate of your position; in fact, we see that , because the center of the wheel is 100 feet above the ground.  ferris wheel  To simplify the model, we'll first graph as the output variable output variable , instead of . As the angle increases from to , your -coordinate increases from 0 to 100. You are then at the top of the wheel. Then, as increases from to , your -coordinate decreases from 100 back to 0.   ferris wheel  Finally, as increases from to , your -coordinate decreases from 0 to and then increases from back to 0. You have made one complete rotation on the Ferris wheel. If you go around again, increases from to , and the graph of your -coordinate will repeat the pattern of the first rotation. The figure above shows how your -coordinate is plotted as a function of the angle .  Look back at the diagram of the Ferris wheel and notice that , so  For example, when , the -coordinate is   and your height above the ground is  ferris wheel  In general, then, is given as a function of by This is our model for your height on a Ferris wheel ride.   The Sine Function  sine function  sine function sine  Our Ferris wheel model used values of , so let us explore its properties. Remember that the trigonometric ratio is actually a function of the angle . Thus, for each value of , there is only one value of , and we may write .   Graph the sine function .  We first make a table of values. You can use your calculator's table feature to verify the following values, rounded to two decimal places.                            If we plot the points in the table, we can graph the sine function in the first quadrant, from to . Recall that the values of in the second quadrant can be found using reference angles: . This fact gives us values of from to .                          The values of in the third and fourth quadrants are the negatives of their values in the second and first quadrants.                                                  The graph of from to is shown below.  sine graph  If we continue the graph for angles larger than or smaller than , we find that the same pattern repeats, as shown below. This should not be surprising, because we know that coterminal angles have the same trigonometric ratios.  sine graph  The sine is an example of a periodic function. periodic function The smallest interval on which the graph repeats is called the period period of the graph. From the graph in the previous example, we make the following observations:   The period of the sine function is .  The maximum and minimum function values are 1 and 1, respectively.  The graph oscillates around its midline midline , the horizontal line .  The distance between the midline and either the maximum or minimum value is called the amplitude amplitude of the function, so the amplitude of the sine function is 1.   You can use your calculator to graph the sine function, by entering  SIN    and pressing ZOOM  for the trig window. The graph shows two periods of the sine function, from to .  Your height on the Ferris wheel is a function of ,    Complete the table of values and graph the Ferris wheel function, .                                                        grid    Give the period, amplitude, and midline of the graph.                                                             sine graph    Period: , amplitude: 100, midline:      The Cosine Function  cosine function  cosine function cosine  In the previous exercise you graphed the height of a person riding on a Ferris wheel. Your graph involved , because the sine function tells us the -coordinate of a point that travels around a circle. The cosine function tells us the -coordinate of a point that travels around a circle.   Small adjustments to the fit of a bicycle can affect both the cyclist's efficiency and the stress on his or her jounts. The KOPS rule (Knee Over Pedal Stem) aligns the cyclist's knee directly over the pedal at the point of maximum force, as shown at right. As the cyclist's foot rotates away from this KOPS line, stress on the knee increases.   bicycle   Suppose the pedal crank is 18 centimeters long. When the crank makes an angle with the horizontal, how far is the cyclist's foot displaced horizontally from the KOPS line?  Graph the horizontal displacement, , as a function of .    The cyclist's foot travels around a circle of radius 18 centimeters. If we place the origin at the center of the chain gear, the -coordinate of the foot is given by   (See the figure at right.) The KOPS line is the vertical line , so the horizontal distance between the cyclist's foot and the KOPS line is   KOPS line and circle  You can use your calculator to verify the table and graph for the function shown below.                                  cosine graph    In the example above, the period is , the amplitude is 18 cm, and the midline is .  You can see that the cosine graph is similar to the sine graph, but they are not identical.   Complete the table below with values rounded to two decimal places. Use the table and your knowledge of reference angles to graph the cosine function, from to .                             grid  Use your graph to find the period, amplitude, and midline of the cosine function. How does the graph of cosine differ from the graph of sine? (Hint: Consider the intercepts of the graph, and the location of the maximum and minimum values.)                             graph  Period: , amplitude: 1, midline: . The cosine graph starts at its high point, while the sine graph starts at its midline.   Interlude: Review of Function Notation  function notation  Perhaps it is time to review our use of function notation. Recall that we use the notation function notation to indicate that is a function of , that is, input variable is the input variable and output variable is the output variable.  Make a table of input and output values and a graph for the function .  We choose several values for the input variable, , and evaluate the function to find the corresponding values of the output variable, . For example,  We plot the points in the table and connect them to obtain the graph shown at right.                      semicircle graph  Of course, we don't always use and for the input and output variables. In the previous example, we could write for the function, so that is the input and is the output. The table of values and the graph are the same; only the names of the variables have changed.  When we discuss trigonometric functions, there are several variables involved. Our definitions of the trig ratios involve four variables: , , , and , as illustrated below.   angles   graphs  If the value of is fixed for a given situation, such as the Ferris wheel or the bicycle wheel discussed above, then and are both functions of . This means that the values of and depend only on the value of the angle . If , we have The graphs of these functions are shown below. Note particularly that the horizontal axis displays values of the input variable, and the vertical axis displays the output variable.  cosine graph  sine graph  If we use different variables for the input and output, the functions and their graphs are the same, but the axes should be labeled with the appropriate variables.  Sketch a graph of each function, and label the axes.       sine graph  cosine graph    When we write , we are using \"cos\" as the name of a function whose input is .  A common mistake is to think of as a product, cos times  , but this makes no sense, because \"cos\" by itself has no meaning. Remember that represents a single number, namely the output of the cosine function.   The Tangent Function  tangent function  tangent function tangent  The tangent function is periodic, but its graph is not similar to the graphs of sine and cosine. Recall that the tangent of an angle in standard position is defined by Study the figure at right to see that as increases from to , increases while remains constant, so the value of increases.  Right triangles with a common base x and increasing y    Sketch a graph of for .  You can use your calculator to verify the following values for .                     As gets closer to , increases very rapidly. Recall that is undefined, so there is no point on the graph at . The graph of for is shown at right.  graph  For in the second quadrant, the tangent is negative. The reference angle for each angle in the second quadrant is its supplement, so    as shown at right. For example, you can verify that  supplementary angles   In particular, for values of close to , the values of are large negative numbers. We plot several points and sketch the graph in the second quadrant.                  In the figure at right, note that the graph has a break at , because is undefined.  tangent graph  Now let's consider the graph of in the third and fourth quadrants. The tangent is positive in the third quadrant, and negative in the fourth quadrant. In fact, from the figure below you can see that the angles and are vertical angles.    angles differing by 180 degrees     angles differing by 180 deg   Because and have the same reference angle, they have the same tangent. For example, Thus, the graph of in the third quadrant is the same as its graph in the first quadrant. Similarly, the graph of the tangent function in the fourth quadrant is the same as its graph in the second quadrant. The completed graph is shown below.  tangent graph    What is the period of the tangent function?  Does the graph of tangent have an amplitude?  For what values of is undefined?  Give the equations of any horizontal or vertical asymptotes for .    No  , and their coterminal angles     Period, Midline and Amplitude  All sine and cosine graphs have the characteristic \"wave\" shape we've seen in previous examples. But we can alter the size and frequency of the waves by changing the formula for the function. In the next example we consider three variations of the sine function.  Make a table of values and sketch a graph for each of the functions. How does each differ from the graph of ?        We make a table with multiples of .                          We plot the points, and connect them with a sine-shaped wave. Compare the graph, shown at right, to the graph of . The graph is like a sine graph, except that it oscillates between a maximum value of and a minimum value of . The amplitude of this function is 3.   graphs of sine and 3 sine     Again, we make a table of values with multiples of and plot the points.                          This graph has the same amplitude as , but the entire graph is shifted up by 3 units, as shown at right. The midline of this function is the line .   graph of sine and translated sine     This time we'll make a table with multiples of .                                You can continue the table for between and , and plot the points to find the graph shown at right. The graph has the same amplitude and midline as , but it completes three cycles from to instead of one cycle. The period of this graph is one-third of , or .   graph of sine and sine 3 theta    The graphs in the previous example illustrate a general rule about sine and cosine graphs.  Amplitude, Period, and Midline  amplitude  period  midline  periodic function   The graph of has amplitude .  The graph of has period .  The graph of has midline .   Sketch a graph for each of the following functions. Describe how each is different from the graph of .          graph of 2+cosine    The midline is .    graph of cosine 2 theta    The period is .    graph of 2 cosine    The amplitude is 2.    The quantities and in the equations above are called parameters parameter , and their values for a particular function give us information about its graph.  State the period, midline, and amplitude of the graph of and graph the function.  For this function, and . Its amplitude is 4, its period is , and its midline is . The graph is shown at right.   graph -3+4sin(3 theta)     State the period, midline, and amplitude of the graph of and graph the function.  Amplitude 3, period , midline   sinusoidal graph        Review the following skills you will need for this section.    Graph the function.  Give the coordinates of any intercepts, and any maximum or minimum values.              Algebra Refresher Answers     graph      graph  ,     parabola      parabola      graph      graph        Section 4.2 Summary  Vocabulary   Input variable  Output variable  Periodic function  Period  Midline  Amplitude  Asymptote  Angle of Inclination  Bearings    Concepts   Coordinates  If point is located at a distance from the origin in the direction specified by angle in standard position, then the coordinates of are   Navigational directions for ships and planes are sometimes given as bearings , which are angles measured clockwise from north.  Periodic functions are used to model phenomena that exhibit cyclical behavior.  The trigonometric ratios and are functions of the angle .  The period of the sine function is . Its midline is the horizontal line , and the amplitude of the sine function is 1.  The graph of the cosine function has the same period, midline, and amplitude as the graph of the sine function. However, the locations of the intercepts and of the maximum and minimum values are different.  We use the notation to indicate that is a function of , that is, is the input variable and is the output variable.  The tangent function has period . It is undefined at odd multiples of , and is increasing on each interval of its domain.  Angle of Inclination  The angle of inclination of a line is the angle measured in the positive direction from the positive -axis to the line. If the slope of the line is , then where .   Study Questions   Use the figure to help you fill in the blanks.  circle   As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .   Use the figure to help you fill in the blanks.  circle   As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .   List several ways in which the graph of is different from the graphs of and .  If the angle of inclination of a line is greater than , what can you say about its slope?   Skills   Find coordinates #1-12, 19-20  Use bearings to determine position #13-18  Sketch graphs of the sine and cosine functions #21-26, 31-32  Find the coordinates of points on a sine or cosine graph #27-30, 41-44  Use function notation #33-40  Find reference angles #45-48  Solve equations graphically #49-56  Graph the tangent function #57-60  Find and use the angle of inclination of a line #61-70     Homework 4.2   Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .   sine graph    Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .    Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .   cosine graph    Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .   For Problems 5 8, give the coordinates of each point on the graph of or .    sine graph     sine graph    cosine graph      cosine graph    Make a short table of values like the one shown, and sketch the function by hand. Be sure to label the -axis and -axis appropriately.                                        cosine graph                    cosine graph   One of these graphs is , and the other is . Explain how you know which is which.  sinusoidal graphs   For Problems 11 18, evaluate the expression for and .      , for  , for  , for  , for   The graph shows your height as a function of angle as you ride the Ferris wheel. For each location on the Ferris wheel, mark the corresponding point on the graph.  circle and graph sine graph   The graph shows your height as a function of angle as you ride the Ferris wheel. For each location on the graph, mark the corresponding point on the Ferris wheel.  circle and graph   The graph shows the horizontal displacement of your foot from the center of the chain gear as you pedal a bicycle. For each location on the chain gear, mark the corresponding point on the graph.  circle and graph graph   The graph shows the horizontal displacement of your foot from the center of the chain gear as you pedal a bicycle. For each location on the graph, mark the corresponding point on the chain gear.  circle and graph     Fill in the table for values of . Round your answers to three decimal places.                          What happens to as increases toward ?  Fill in the table for values of . Round your answers to three decimal places.                          What happens to as decreases toward ?  What value does your calculator give for ? Why?                                                     The calculator gives an error message because is undefined.     Fill in the table with exact values of . Then give decimal approximations to two places.               (exact)            (approx.)            Fill in the table with exact values of . Then give decimal approximations to two places.               (exact)            (approx.)            Plot the points from the tables and sketch a graph of .  tan grid   Write an equation for a sine function with amplitude 6.   Write an equation for a cosine function with amplitude .  Write an equation for a cosine function with midline .  Write an equation for a sine function with midline 2.  Write an equation for a sine function with period .  Write an equation for a cosine function with period .  For Problems 31 36,   Graph the function.  State the amplitude, period and midline of the function.    grid     graph of y = 3 cos theta   grid     grid    graph of 3 + sin theta   grid      grid    graph of cos 3 theta    grid      For Problems 37 42, give the coordinates of the points on the graph.   sinusoidal graph , ,   sinusoidal graph    sinusoidal graph , ,   triangle    sinusoidal graph , ,   sinusoidal graph    For Problems 43 48, graph the function using technology. State the amplitude, period, and midline.  amp , period , midline:    amp , period , midline:    amp , period , midline:     For Problems 49 56,   State the amplitude, period, and midline for the graph.  Write an equation for the graph using sine or cosine.    sinusoidal graph   amp , period , midline:     sinusoidal graph    sinusoidal graph   amp , period , midline:     sinusoidal graph    sinusoidal graph   amp , period , midline:     sinusoidal graph    sinusoidal graph   amp , period , midline:     sinusoidal graph    For Problems 57 62, write the equation of a sine or cosine function with the given properties.  Midline , amplitude , period (Answers vary)  Midline , amplitude , period  Maximum points at and , minimum point at (Answers vary)  Maximum point at , minimum point at  Horizontal intercepts at and , vertical intercept at (Answers vary)  Horizontal intercepts at and , vertical intercept at   For Problems 63 66, the table describes a sine or cosine function. Find an equation for the function.                                                                                                            "
-},
-{
-  "id": "p-2101",
-  "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#p-2101",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "periodic function "
+  "body": " Graphs of Trigonometric Functions  trigonometric function graph  A Periodic Function of Angle  periodic function  Imagine that you are riding on a Ferris wheel. As the wheel turns, your height above the ground increases and then decreases again, repeating the same pattern each time the Ferris wheel makes a complete rotation. This pattern is an example of a periodic function periodic function . We use periodic functions to model phenomena that exhibit cyclical behavior, such as the height of tides, seasonal patterns of growth in plants and animals, radio waves, and planetary motion.  We'll create a mathematical model mathematical model for a ride on a Ferris wheel that has a radius of 100 feet and rotates counterclockwise. Our model will be a function that describes your height above the ground as you ride the wheel. In order to graph the Ferris wheel function, we must first specify the input and output variables, and then choose a coordinate system to display their values.  We'll place the origin at the center of the Ferris wheel. Then the line from the origin to your position on the wheel makes an angle with the horizontal, as shown at right. This angle, , will be the input variable input variable for the function. Your height, , is also a variable, and is related to the -coordinate of your position; in fact, we see that , because the center of the wheel is 100 feet above the ground.  ferris wheel  To simplify the model, we'll first graph as the output variable output variable , instead of . As the angle increases from to , your -coordinate increases from 0 to 100. You are then at the top of the wheel. Then, as increases from to , your -coordinate decreases from 100 back to 0.   ferris wheel  Finally, as increases from to , your -coordinate decreases from 0 to and then increases from back to 0. You have made one complete rotation on the Ferris wheel. If you go around again, increases from to , and the graph of your -coordinate will repeat the pattern of the first rotation. The figure above shows how your -coordinate is plotted as a function of the angle .  Look back at the diagram of the Ferris wheel and notice that , so  For example, when , the -coordinate is   and your height above the ground is  ferris wheel  In general, then, is given as a function of by This is our model for your height on a Ferris wheel ride.   The Sine Function  sine function  sine function sine  Our Ferris wheel model used values of , so let us explore its properties. Remember that the trigonometric ratio is actually a function of the angle . Thus, for each value of , there is only one value of , and we may write .  Graph of the Sine Function  Graph the sine function .   First make a table of values. You can use your calculator's table feature to fill in the following values, rounded to two decimal places.                            Plot the points in the table and connect them with a smooth curve to graph the sine function in the first quadrant, from to .  Recall that the values of in the second quadrant can be found using reference angles: . This fact gives us values of from to .                          Continue your graph from part (2) for second quadrant angles.  The values of in the third and fourth quadrants are the negatives of their values in the second and first quadrants.                                                  The graph of from to is shown below.  sine graph   If we continue the graph for angles larger than or smaller than , we find that the same pattern repeats, as shown below. This should not be surprising, because we know that coterminal angles have the same trigonometric ratios.  sine graph  The sine is an example of a periodic function. periodic function The smallest interval on which the graph repeats is called the period period of the graph. From the graph in the previous example, we make the following observations:  Properties of the Sine Function   The period of the sine function is .  The maximum and minimum function values are 1 and 1, respectively.  The graph oscillates around its midline midline , the horizontal line .  The distance between the midline and either the maximum or minimum value is called the amplitude amplitude of the function, so the amplitude of the sine function is 1.   You can use your calculator to graph the sine function, by entering  SIN    and pressing ZOOM  for the trig window. The graph shows two periods of the sine function, from to .  Your height on the Ferris wheel is a function of ,    Complete the table of values and graph the Ferris wheel function, .                                                        grid    Give the period, amplitude, and midline of the graph.                                                             sine graph    Period: , amplitude: 100, midline:      The Cosine Function  cosine function  cosine function cosine  In the previous exercise you graphed the height of a person riding on a Ferris wheel. Your graph involved , because the sine function tells us the -coordinate of a point that travels around a circle. The cosine function tells us the -coordinate of a point that travels around a circle.   Small adjustments to the fit of a bicycle can affect both the cyclist's efficiency and the stress on his or her jounts. The KOPS rule (Knee Over Pedal Stem) aligns the cyclist's knee directly over the pedal at the point of maximum force, as shown at right. As the cyclist's foot rotates away from this KOPS line, stress on the knee increases.   bicycle   Suppose the pedal crank is 18 centimeters long. When the crank makes an angle with the horizontal, how far is the cyclist's foot displaced horizontally from the KOPS line?  Graph the horizontal displacement, , as a function of .    The cyclist's foot travels around a circle of radius 18 centimeters. If we place the origin at the center of the chain gear, the -coordinate of the foot is given by   (See the figure at right.) The KOPS line is the vertical line , so the horizontal distance between the cyclist's foot and the KOPS line is   KOPS line and circle  You can use your calculator to verify the table and graph for the function shown below.                                  cosine graph    In the example above, the period is , the amplitude is 18 cm, and the midline is .  You can see that the cosine graph is similar to the sine graph, but they are not identical.   Complete the table below with values rounded to two decimal places. Use the table and your knowledge of reference angles to graph the cosine function, from to .                             grid  Use your graph to find the period, amplitude, and midline of the cosine function. How does the graph of cosine differ from the graph of sine? (Hint: Consider the intercepts of the graph, and the location of the maximum and minimum values.)                             graph  Period: , amplitude: 1, midline: . The cosine graph starts at its high point, while the sine graph starts at its midline.   Interlude: Review of Function Notation  function notation  Perhaps it is time to review our use of function notation. Recall that we use the notation function notation to indicate that is a function of , that is, input variable is the input variable and output variable is the output variable.  Make a table of input and output values and a graph for the function .  We choose several values for the input variable, , and evaluate the function to find the corresponding values of the output variable, . For example,  We plot the points in the table and connect them to obtain the graph shown at right.                      semicircle graph  Of course, we don't always use and for the input and output variables. In the previous example, we could write for the function, so that is the input and is the output. The table of values and the graph are the same; only the names of the variables have changed.  When we discuss trigonometric functions, there are several variables involved. Our definitions of the trig ratios involve four variables: , , , and , as illustrated below.   angles   graphs  If the value of is fixed for a given situation, such as the Ferris wheel or the bicycle wheel discussed above, then and are both functions of . This means that the values of and depend only on the value of the angle . If , we have The graphs of these functions are shown below. Note particularly that the horizontal axis displays values of the input variable, and the vertical axis displays the output variable.  cosine graph  sine graph  If we use different variables for the input and output, the functions and their graphs are the same, but the axes should be labeled with the appropriate variables.  Sketch a graph of each function, and label the axes.       sine graph  cosine graph    When we write , we are using \"cos\" as the name of a function whose input is .  A common mistake is to think of as a product, cos times  , but this makes no sense, because \"cos\" by itself has no meaning. Remember that represents a single number, namely the output of the cosine function.   The Tangent Function  tangent function  tangent function tangent  The tangent function is periodic, but its graph is not similar to the graphs of sine and cosine. Recall that the tangent of an angle in standard position is defined by Study the figure at right to see that as increases from to , increases while remains constant, so the value of increases.  Right triangles with a common base x and increasing y    Sketch a graph of for .  You can use your calculator to verify the following values for .                     As gets closer to , increases very rapidly. Recall that is undefined, so there is no point on the graph at . The graph of for is shown at right.  graph  For in the second quadrant, the tangent is negative. The reference angle for each angle in the second quadrant is its supplement, so    as shown at right. For example, you can verify that  supplementary angles   In particular, for values of close to , the values of are large negative numbers. We plot several points and sketch the graph in the second quadrant.                  In the figure at right, note that the graph has a break at , because is undefined.  tangent graph  Now let's consider the graph of in the third and fourth quadrants. The tangent is positive in the third quadrant, and negative in the fourth quadrant. In fact, from the figure below you can see that the angles and are vertical angles.    angles differing by 180 degrees     angles differing by 180 deg   Because and have the same reference angle, they have the same tangent. For example, Thus, the graph of in the third quadrant is the same as its graph in the first quadrant. Similarly, the graph of the tangent function in the fourth quadrant is the same as its graph in the second quadrant. The completed graph is shown below.  tangent graph    What is the period of the tangent function?  Does the graph of tangent have an amplitude?  For what values of is undefined?  Give the equations of any horizontal or vertical asymptotes for .    No  , and their coterminal angles     Period, Midline and Amplitude  All sine and cosine graphs have the characteristic \"wave\" shape we've seen in previous examples. But we can alter the size and frequency of the waves by changing the formula for the function. In the next example we consider three variations of the sine function.  Make a table of values and sketch a graph for each of the functions. How does each differ from the graph of ?        We make a table with multiples of .                          We plot the points, and connect them with a sine-shaped wave. Compare the graph, shown at right, to the graph of . The graph is like a sine graph, except that it oscillates between a maximum value of and a minimum value of . The amplitude of this function is 3.   graphs of sine and 3 sine     Again, we make a table of values with multiples of and plot the points.                          This graph has the same amplitude as , but the entire graph is shifted up by 3 units, as shown at right. The midline of this function is the line .   graph of sine and translated sine     This time we'll make a table with multiples of .                                You can continue the table for between and , and plot the points to find the graph shown at right. The graph has the same amplitude and midline as , but it completes three cycles from to instead of one cycle. The period of this graph is one-third of , or .   graph of sine and sine 3 theta    The graphs in the previous example illustrate a general rule about sine and cosine graphs.  Amplitude, Period, and Midline  amplitude  period  midline  periodic function   The graph of has amplitude .  The graph of has period .  The graph of has midline .   Sketch a graph for each of the following functions. Describe how each is different from the graph of .          graph of 2+cosine    The midline is .    graph of cosine 2 theta    The period is .    graph of 2 cosine    The amplitude is 2.    The quantities and in the equations above are called parameters parameter , and their values for a particular function give us information about its graph.  State the period, midline, and amplitude of the graph of and graph the function.  For this function, and . Its amplitude is 4, its period is , and its midline is . The graph is shown at right.   graph -3+4sin(3 theta)     State the period, midline, and amplitude of the graph of and graph the function.  Amplitude 3, period , midline   sinusoidal graph        Review the following skills you will need for this section.    Graph the function.  Give the coordinates of any intercepts, and any maximum or minimum values.              Algebra Refresher Answers     graph      graph  ,     parabola      parabola      graph      graph        Section 4.2 Summary  Vocabulary   Input variable  Output variable  Periodic function  Period  Midline  Amplitude  Asymptote  Angle of Inclination  Bearings    Concepts   Coordinates  If point is located at a distance from the origin in the direction specified by angle in standard position, then the coordinates of are   Navigational directions for ships and planes are sometimes given as bearings , which are angles measured clockwise from north.  Periodic functions are used to model phenomena that exhibit cyclical behavior.  The trigonometric ratios and are functions of the angle .  The period of the sine function is . Its midline is the horizontal line , and the amplitude of the sine function is 1.  The graph of the cosine function has the same period, midline, and amplitude as the graph of the sine function. However, the locations of the intercepts and of the maximum and minimum values are different.  We use the notation to indicate that is a function of , that is, is the input variable and is the output variable.  The tangent function has period . It is undefined at odd multiples of , and is increasing on each interval of its domain.  Angle of Inclination  The angle of inclination of a line is the angle measured in the positive direction from the positive -axis to the line. If the slope of the line is , then where .   Study Questions   Use the figure to help you fill in the blanks.  circle   As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .   Use the figure to help you fill in the blanks.  circle   As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .  As increases from to ,  from to .   List several ways in which the graph of is different from the graphs of and .  If the angle of inclination of a line is greater than , what can you say about its slope?   Skills   Find coordinates #1-12, 19-20  Use bearings to determine position #13-18  Sketch graphs of the sine and cosine functions #21-26, 31-32  Find the coordinates of points on a sine or cosine graph #27-30, 41-44  Use function notation #33-40  Find reference angles #45-48  Solve equations graphically #49-56  Graph the tangent function #57-60  Find and use the angle of inclination of a line #61-70     Homework 4.2   Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .   sine graph    Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .    Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .   cosine graph    Prepare a graph with the horizontal axis scaled from to in multiples of .  Sketch a graph of by plotting points for multiples of .   For Problems 5 8, give the coordinates of each point on the graph of or .    sine graph     sine graph    cosine graph      cosine graph    Make a short table of values like the one shown, and sketch the function by hand. Be sure to label the -axis and -axis appropriately.                                        cosine graph                    cosine graph   One of these graphs is , and the other is . Explain how you know which is which.  sinusoidal graphs   For Problems 11 18, evaluate the expression for and .      , for  , for  , for  , for   The graph shows your height as a function of angle as you ride the Ferris wheel. For each location on the Ferris wheel, mark the corresponding point on the graph.  circle and graph sine graph   The graph shows your height as a function of angle as you ride the Ferris wheel. For each location on the graph, mark the corresponding point on the Ferris wheel.  circle and graph   The graph shows the horizontal displacement of your foot from the center of the chain gear as you pedal a bicycle. For each location on the chain gear, mark the corresponding point on the graph.  circle and graph graph   The graph shows the horizontal displacement of your foot from the center of the chain gear as you pedal a bicycle. For each location on the graph, mark the corresponding point on the chain gear.  circle and graph     Fill in the table for values of . Round your answers to three decimal places.                          What happens to as increases toward ?  Fill in the table for values of . Round your answers to three decimal places.                          What happens to as decreases toward ?  What value does your calculator give for ? Why?                                                     The calculator gives an error message because is undefined.     Fill in the table with exact values of . Then give decimal approximations to two places.               (exact)            (approx.)            Fill in the table with exact values of . Then give decimal approximations to two places.               (exact)            (approx.)            Plot the points from the tables and sketch a graph of .  tan grid   Write an equation for a sine function with amplitude 6.   Write an equation for a cosine function with amplitude .  Write an equation for a cosine function with midline .  Write an equation for a sine function with midline 2.  Write an equation for a sine function with period .  Write an equation for a cosine function with period .  For Problems 31 36,   Graph the function.  State the amplitude, period and midline of the function.    grid     graph of y = 3 cos theta   grid     grid    graph of 3 + sin theta   grid      grid    graph of cos 3 theta    grid      For Problems 37 42, give the coordinates of the points on the graph.   sinusoidal graph , ,   sinusoidal graph    sinusoidal graph , ,   triangle    sinusoidal graph , ,   sinusoidal graph    For Problems 43 48, graph the function using technology. State the amplitude, period, and midline.  amp , period , midline:    amp , period , midline:    amp , period , midline:     For Problems 49 56,   State the amplitude, period, and midline for the graph.  Write an equation for the graph using sine or cosine.    sinusoidal graph   amp , period , midline:     sinusoidal graph    sinusoidal graph   amp , period , midline:     sinusoidal graph    sinusoidal graph   amp , period , midline:     sinusoidal graph    sinusoidal graph   amp , period , midline:     sinusoidal graph    For Problems 57 62, write the equation of a sine or cosine function with the given properties.  Midline , amplitude , period (Answers vary)  Midline , amplitude , period  Maximum points at and , minimum point at (Answers vary)  Maximum point at , minimum point at  Horizontal intercepts at and , vertical intercept at (Answers vary)  Horizontal intercepts at and , vertical intercept at   For Problems 63 66, the table describes a sine or cosine function. Find an equation for the function.                                                                                                            "
 },
 {
   "id": "p-2102",
@@ -8809,7 +8800,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mathematical model "
+  "body": "periodic function "
 },
 {
   "id": "p-2103",
@@ -8818,7 +8809,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "input variable "
+  "body": "mathematical model "
 },
 {
   "id": "p-2104",
@@ -8827,30 +8818,39 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
+  "body": "input variable "
+},
+{
+  "id": "p-2105",
+  "level": "2",
+  "url": "Graphs-of-Trigonometric-Functions.html#p-2105",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
   "body": "output variable "
 },
 {
-  "id": "example-62",
+  "id": "activity-6",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#example-62",
-  "type": "Example",
-  "number": "4.20",
-  "title": "",
-  "body": " Graph the sine function .  We first make a table of values. You can use your calculator's table feature to verify the following values, rounded to two decimal places.                            If we plot the points in the table, we can graph the sine function in the first quadrant, from to . Recall that the values of in the second quadrant can be found using reference angles: . This fact gives us values of from to .                          The values of in the third and fourth quadrants are the negatives of their values in the second and first quadrants.                                                  The graph of from to is shown below.  sine graph "
+  "url": "Graphs-of-Trigonometric-Functions.html#activity-6",
+  "type": "Activity",
+  "number": "4.3",
+  "title": "Graph of the Sine Function.",
+  "body": "Graph of the Sine Function  Graph the sine function .   First make a table of values. You can use your calculator's table feature to fill in the following values, rounded to two decimal places.                            Plot the points in the table and connect them with a smooth curve to graph the sine function in the first quadrant, from to .  Recall that the values of in the second quadrant can be found using reference angles: . This fact gives us values of from to .                          Continue your graph from part (2) for second quadrant angles.  The values of in the third and fourth quadrants are the negatives of their values in the second and first quadrants.                                                  The graph of from to is shown below.  sine graph  "
 },
 {
-  "id": "p-2118",
+  "id": "p-2121",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#p-2118",
+  "url": "Graphs-of-Trigonometric-Functions.html#p-2121",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "period "
 },
 {
-  "id": "p-2119",
+  "id": "p-2122",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#p-2119",
+  "url": "Graphs-of-Trigonometric-Functions.html#p-2122",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8861,7 +8861,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#exercise-798",
   "type": "Checkpoint",
-  "number": "4.21",
+  "number": "4.20",
   "title": "",
   "body": "Your height on the Ferris wheel is a function of ,    Complete the table of values and graph the Ferris wheel function, .                                                        grid    Give the period, amplitude, and midline of the graph.                                                             sine graph    Period: , amplitude: 100, midline:    "
 },
@@ -8870,7 +8870,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#Example-KOPS-Rule",
   "type": "Example",
-  "number": "4.22",
+  "number": "4.21",
   "title": "",
   "body": " Small adjustments to the fit of a bicycle can affect both the cyclist's efficiency and the stress on his or her jounts. The KOPS rule (Knee Over Pedal Stem) aligns the cyclist's knee directly over the pedal at the point of maximum force, as shown at right. As the cyclist's foot rotates away from this KOPS line, stress on the knee increases.   bicycle   Suppose the pedal crank is 18 centimeters long. When the crank makes an angle with the horizontal, how far is the cyclist's foot displaced horizontally from the KOPS line?  Graph the horizontal displacement, , as a function of .    The cyclist's foot travels around a circle of radius 18 centimeters. If we place the origin at the center of the chain gear, the -coordinate of the foot is given by   (See the figure at right.) The KOPS line is the vertical line , so the horizontal distance between the cyclist's foot and the KOPS line is   KOPS line and circle  You can use your calculator to verify the table and graph for the function shown below.                                  cosine graph   "
 },
@@ -8879,16 +8879,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#exercise-799",
   "type": "Checkpoint",
-  "number": "4.23",
+  "number": "4.22",
   "title": "",
   "body": " Complete the table below with values rounded to two decimal places. Use the table and your knowledge of reference angles to graph the cosine function, from to .                             grid  Use your graph to find the period, amplitude, and midline of the cosine function. How does the graph of cosine differ from the graph of sine? (Hint: Consider the intercepts of the graph, and the location of the maximum and minimum values.)                             graph  Period: , amplitude: 1, midline: . The cosine graph starts at its high point, while the sine graph starts at its midline. "
 },
 {
-  "id": "example-64",
+  "id": "example-63",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#example-64",
+  "url": "Graphs-of-Trigonometric-Functions.html#example-63",
   "type": "Example",
-  "number": "4.24",
+  "number": "4.23",
   "title": "",
   "body": "Make a table of input and output values and a graph for the function .  We choose several values for the input variable, , and evaluate the function to find the corresponding values of the output variable, . For example,  We plot the points in the table and connect them to obtain the graph shown at right.                      semicircle graph "
 },
@@ -8897,7 +8897,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#note-20",
   "type": "Note",
-  "number": "4.25",
+  "number": "4.24",
   "title": "",
   "body": "When we discuss trigonometric functions, there are several variables involved. Our definitions of the trig ratios involve four variables: , , , and , as illustrated below.   angles   graphs  If the value of is fixed for a given situation, such as the Ferris wheel or the bicycle wheel discussed above, then and are both functions of . This means that the values of and depend only on the value of the angle . If , we have The graphs of these functions are shown below. Note particularly that the horizontal axis displays values of the input variable, and the vertical axis displays the output variable.  cosine graph  sine graph  If we use different variables for the input and output, the functions and their graphs are the same, but the axes should be labeled with the appropriate variables. "
 },
@@ -8906,7 +8906,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#exercise-800",
   "type": "Checkpoint",
-  "number": "4.26",
+  "number": "4.25",
   "title": "",
   "body": "Sketch a graph of each function, and label the axes.       sine graph  cosine graph   "
 },
@@ -8915,16 +8915,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#warning-14",
   "type": "Caution",
-  "number": "4.27",
+  "number": "4.26",
   "title": "",
   "body": "When we write , we are using \"cos\" as the name of a function whose input is .  A common mistake is to think of as a product, cos times  , but this makes no sense, because \"cos\" by itself has no meaning. Remember that represents a single number, namely the output of the cosine function. "
 },
 {
-  "id": "example-65",
+  "id": "example-64",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#example-65",
+  "url": "Graphs-of-Trigonometric-Functions.html#example-64",
   "type": "Example",
-  "number": "4.28",
+  "number": "4.27",
   "title": "",
   "body": "Sketch a graph of for .  You can use your calculator to verify the following values for .                     As gets closer to , increases very rapidly. Recall that is undefined, so there is no point on the graph at . The graph of for is shown at right.  graph  For in the second quadrant, the tangent is negative. The reference angle for each angle in the second quadrant is its supplement, so    as shown at right. For example, you can verify that  supplementary angles   In particular, for values of close to , the values of are large negative numbers. We plot several points and sketch the graph in the second quadrant.                  In the figure at right, note that the graph has a break at , because is undefined.  tangent graph "
 },
@@ -8933,16 +8933,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#exercise-801",
   "type": "Checkpoint",
-  "number": "4.29",
+  "number": "4.28",
   "title": "",
   "body": "  What is the period of the tangent function?  Does the graph of tangent have an amplitude?  For what values of is undefined?  Give the equations of any horizontal or vertical asymptotes for .    No  , and their coterminal angles   "
 },
 {
-  "id": "example-66",
+  "id": "example-65",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#example-66",
+  "url": "Graphs-of-Trigonometric-Functions.html#example-65",
   "type": "Example",
-  "number": "4.30",
+  "number": "4.29",
   "title": "",
   "body": "Make a table of values and sketch a graph for each of the functions. How does each differ from the graph of ?        We make a table with multiples of .                          We plot the points, and connect them with a sine-shaped wave. Compare the graph, shown at right, to the graph of . The graph is like a sine graph, except that it oscillates between a maximum value of and a minimum value of . The amplitude of this function is 3.   graphs of sine and 3 sine     Again, we make a table of values with multiples of and plot the points.                          This graph has the same amplitude as , but the entire graph is shifted up by 3 units, as shown at right. The midline of this function is the line .   graph of sine and translated sine     This time we'll make a table with multiples of .                                You can continue the table for between and , and plot the points to find the graph shown at right. The graph has the same amplitude and midline as , but it completes three cycles from to instead of one cycle. The period of this graph is one-third of , or .   graph of sine and sine 3 theta   "
 },
@@ -8951,25 +8951,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#exercise-802",
   "type": "Checkpoint",
-  "number": "4.31",
+  "number": "4.30",
   "title": "",
   "body": "Sketch a graph for each of the following functions. Describe how each is different from the graph of .          graph of 2+cosine    The midline is .    graph of cosine 2 theta    The period is .    graph of 2 cosine    The amplitude is 2.   "
 },
 {
-  "id": "p-2183",
+  "id": "p-2186",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#p-2183",
+  "url": "Graphs-of-Trigonometric-Functions.html#p-2186",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "parameters "
 },
 {
-  "id": "example-67",
+  "id": "example-66",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#example-67",
+  "url": "Graphs-of-Trigonometric-Functions.html#example-66",
   "type": "Example",
-  "number": "4.32",
+  "number": "4.31",
   "title": "",
   "body": "State the period, midline, and amplitude of the graph of and graph the function.  For this function, and . Its amplitude is 4, its period is , and its midline is . The graph is shown at right.   graph -3+4sin(3 theta)    "
 },
@@ -8978,7 +8978,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#exercise-803",
   "type": "Checkpoint",
-  "number": "4.33",
+  "number": "4.32",
   "title": "",
   "body": "State the period, midline, and amplitude of the graph of and graph the function.  Amplitude 3, period , midline   sinusoidal graph     "
 },
@@ -8987,14 +8987,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Graphs-of-Trigonometric-Functions.html#project-11",
   "type": "Algebra Refresher",
-  "number": "4.3",
+  "number": "4.4",
   "title": "",
   "body": "  Graph the function.  Give the coordinates of any intercepts, and any maximum or minimum values.              Algebra Refresher Answers     graph      graph  ,     parabola      parabola      graph      graph      "
 },
 {
-  "id": "p-2207",
+  "id": "p-2210",
   "level": "2",
-  "url": "Graphs-of-Trigonometric-Functions.html#p-2207",
+  "url": "Graphs-of-Trigonometric-Functions.html#p-2210",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9604,11 +9604,11 @@ var ptx_lunr_docs = [
   "body": " Using Trigonometric Functions  periodic function  Solving Trigonometric Equations  trigonometric equation  One of the main reasons we learned about reference angles is to help us solve trigonometric equations. Remember that there are always two angles between and with a given sine ratio between 0 and 1.  For example, the two solutions to the equation are and . That is, These two angles are supplementary, so they have the same reference angle, as shown below.   angles  angles  There are also two solutions between and to the equation . They are the angles in the third and fourth quadrants whose reference angle is , namely and , as shown above. But your calculator will only give you one of these angles!  You are riding on the Ferris wheel we modeled in Section 4.2, where your height above ground is given as a function of by When your height is at least 136 feet, you can see the snow on a distant mountain range. Between what angles of rotation can you see snow?   Look at the diagram of the Ferris wheel to see that when your height is 136 feet, the sine of the angle is , or 0.36. The angle with sine 0.36 is  ferris wheel where height is 136  And you will be able to see snow until you descend again below 136 feet. That will happen at the angle in the second quadrant with sine 0.36, namely, the second quadrant angle with reference angle 21.1°. And that angle is .   Refer to the Example in Section 4.2. about the Knee Over Pedal Stem Rule. The distance between the cyclist's foot and the KOPS line is At what angles is the cyclist's knee within 9 centimeters of the KOPS line? When the angle of the crank is between 0° and 60°, and again between 300° and 360°.  knee within 9cm of KOPS line   Solve the equation for angles between and . Round your answers to the nearest degree.  Use your calculator to evaluate The angle is in the fourth quadrant, but it is not between and . We need an angle that is coterminal with , so we add . Thus, one of the solutions is .   The sine is also negative in the third quadrant, so there should also be a solution in the third quadrant. The reference angle for is , and the third-quadrant angle with reference angle is , as shown at right. You can check that, rounded to four decimal places, both angles satisfy the equation, that is,   angles in 3rd and 4th quadrants   In the previous example we found two solutions of the equation . Actually, there are infinitely many solutions -- namely, all the angles coterminal with or . Because we can easily find coterminal solutions by adding or subtracting multiples of , when solving an equation we usually list only the solutions between and .  When you ask your calculator to find an angle with a given sine (or cosine or tangent), it will give you only one of the many possible answers. You must be careful to choose the appropriate answer for the situation, using reference and coterminal angles.  Solve the equation for angles between and . ,   The Unit Circle  unit circle  Now that we are thinking of angles as rotations, we'll introduce a tool called the unit circle that will be useful as we proceed.  Figure (a) below shows an angle of in standard position in a circle of radius 2. The hypotenuse of its reference triangle is the radius of the circle, so the legs of the triangle have lengths 1 and . The coordinates of the point where the terminal side meets the circle are thus . (You can check that these coordinates satisfy the equation of the circle, .)  angle on circle of radius 2   angle in unit circle  Now consider the circle of radius 1 in Figure (b). A circle of radius 1 is called a unit circle unit circle . In this figure, the hypotenuse of the reference triangle for has length 1. What are the coordinates of the point where the terminal side meets the circle? Each side of this triangle is the length of the sides of the similar triangle in Figure (a), so the coordinates of are . (Once again, you should check that these coordinates satisfy the equation of the circle, .)  Perhaps you recognize the coordinates of the point . Because in this circle, the definitions of the sine and cosine are We see that the coordinates of are given by . We have discovered an important property of unit circles.  Angles in a Unit Circle  unit circle angles in  unit circle coordinates of point  Let be a point on a unit circle determined by the terminal side of an angle in standard position. Then the coordinates of are given by    Find the coordinates of point on the unit circle shown at right.  angles  The coordinates of are given by . The reference angle for is , so the trig ratios of are the same as the ratios for , up to sign.  Because is in the fourth quadrant, we have and . Thus, the coordinates of are .  Find the sine, cosine, and tangent of the angle shown at right.  angles  , ,  Unit Circles  unit circle  grid     Use a protractor to draw an angle in standard position.  Estimate the coordinates of the point where the terminal side of the angle intersects the circle of radius .  Calculate approximate values for and using the coordinates of .  Estimate the coordinates of the point where the terminal side of the angle intersects the circle of radius .  Calculate approximate values for and using the coordinates of .   Use a protractor to draw an angle in standard position. Repeat parts (a)-(d) for this new angle.  Use a protractor to draw an angle in standard position. Repeat parts (a)-(d) for this new angle.  Use a protractor to draw an angle in standard position. Repeat parts (a)-(d) for this new angle.  What do you notice about the coordinates of the point located on the unit circle by an angle and the values of the trig ratios of that angle?    Location by Coordinates  One of the most useful applications of the trigonometric ratios allows us to find distances or locations specified by angles. Starting with the definitions of sine and cosine, we can solve for and , the coordinates of points on the terminal side of the angle, and obtain the following results.  Coordinates  coordinates of point  coordinates of point polar coordinates  If point is located at a distance from the origin in the direction specified by angle in standard position, then the coordinates of are    These formulas make sense when we think of the unit circle. On a unit circle, the coordinates of a point designated by angle are , as shown at right. On a circle of radius , the angle forms a similar triangle whose dimensions are scaled up by a factor of . In particular, the legs of the new triangle are times larger than the original triangle.   circle   Point is located 6 centimeters from the origin in the direction of . Find the coordinates of , rounded to hundredths.   The location of point is shown at right. We see that , and we can use a calculator to evaluate and . The coordinates of are approximately .  angle    You find an old map that shows a buried treasure located 500 yards from the big oak tree in the direction , as shown below. You don't have anything with you to measure angles, but you have your calculator.    Find the cosine of . How far west should you walk from the big oak in order to be directly north of the treasure?  Find the sine of . How far south should you walk from your present location before you begin digging?   angle  409.58 yds 286.79 yds    Bearings  bearing   Navigational directions for ships and planes are sometimes given as bearings bearing , which are angles measured clockwise from north. For example, a bearing of is equivalent to an angle of in standard position, or to its coterminal angle , as shown at right.  Bearing of 110 degrees  From this example, we see that to convert a bearing to an angle in standard position, we can subtract the bearing from , or  Francine leaves the airport at a bearing of and flies 60 miles. How far south of the airport is she at that time?  A bearing of is in the same direction as an angle of  in standard position, as shown at right, or as the coterminal angle .  Bearing of 245 degrees, 60 miles distance  We would like the -coordinate of Francine's position, so we calculate . Francine is about 25.4 miles south of the airport.  Delbert leaves the airport and flies 150 miles at a bearing of . How far east of the airport is he at that time? 111.5 mile   Angle of Inclination  angle of inclination   The tangent function also has applications in measurement. The figure at right shows a line in the -plane. The angle measured in the positive direction from the positive -axis to the line is called the angle of inclination of the line.  angle of inclination   Recall that the slope slope of a line is given by the ratio as we move from one point to another on the line. So, if we create a right triangle by dropping a perpendicular segment from the line to the -axis, the ratio of sides gives the slope of the line.  angle of inclination   But the ratio is also the tangent of the angle .  Angle of Inclination  angle of inclination  angle of inclination  angle of inclination angle of inclination  The angle of inclination of a line is the angle measured in the positive direction from the positive -axis to the line. If the slope of the line is , then where .  Find the angle of inclination of the line .  The slope of the line is . Therefore, The angle of inclination is .  graph y = 3\/4 x - 3   Find the angle of inclination of the line shown at right,   graph y= -6\/5 x +2  Thinking about slope and the angle of inclination can help us understand the graph of the tangent functin.   What happens to the slope of a line as its angle of inclination increases from toward ?  What happens to the slope of a line as its angle of inclination decreases from toward ?      Consider the slopes of the lines shown at right, as increases.                     lines with different angles of inclination    The slopes increase towards infinity as increases. But the values of the slope are the values of , and if we plot those values against , we see the graph of the tangent function emerging.  graph      Now consider the slopes of the lines as decreases from toward .                   lines with different angles of inclination     The slopes decrease towards negative infinity as decreases. But, as before, the values of the slope are the values of , and if we plot those values against , we see the graph of the tangent function.  graph      What happens to the angle of inclination of a line as its slope increases from toward ?  What happens to the angle of inclination of a line as its slope decreases through negative values from toward ?   The angle increases from toward .  The angle decreases from toward    Sinusoidal Functions  sinusoidal function  function sinusoidal  Many interesting functions have graphs shaped like sines or cosines, even though they may not be functions of angles.  Imagine a grandfather clock. As the minute hand sweeps around, the height of its tip changes with time. Which of the graphs shown below best represents the height of the tip of the minute hand as a function of time?   grandfather clock and 2 graphs   Figure (a) is not the graph of a function at all: It does not pass the vertical line test. That is, some values of , such as , correspond to more than one value of , which is not possible in the graph of a function.  Figure (b) shows the height of the minute hand varying between a maximum and minimum value. The height decreases at a constant rate (the graph is straight and the slope is constant) until the minimum is reached, and then increases at a constant rate.  But notice that during the 10 minutes from 12:10 to 12:20 the height of the minute hand decreases about half the diameter of the clock, while from 12:20 to 12:30 the height decreases only about a quarter of the diameter of the clock, as shown at right.   clock   Thus the height of the minute hand does not decrease at a constant rate.  Figure (c) is the best choice. The graph is curved because the slopes are not constant. The graph is steep when the height is changing rapidly, and the graph is nearly horizontal when the height is changing slowly. The height changes slowly near the hour and the half-hour, and more rapidly near the quarter-hours.  As the moon revolves around the earth, the percent of the disk that we see varies sinusoidally with a period of approximately 30 days. There are eight phases, starting with the new moon, when the moon's disk is dark, followed by waxing crescent, first quarter, waxing gibbous, full moon, waning gibbous, last quarter, and waning crescent. Which graph best represents the phases of the moon?   sinusoidal graph   sinusoidal graph   sinusoidal graph  (b)  The table shows the number of hours of daylight in Glasgow, Scotland on the first of each month.    Month  Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Daylight Hours                Sketch a sinusoidal graph of daylight hours as a function of time, with in January.  Estimate the period, amplitude, and midline of the graph.    Plot the data points and fit a sinusoidal curve by eye, as shown below.  sinusoidal graph  The period of the graph is 12 months. The midline is approximately and the amplitude is approximately 5.25.   The figure shows the number of daylight hours in Jacksonville, Florida, in Anchorage, Alaska, at the Arctic Circle, and at the Equator.  graph   Which graph corresponds to each location?  What are the maxium and minimum number of daylight hours in Jacksonville?  For how long are there 24 hours of daylight per day at the Arctic Circle?   From top to bottom in January: Equator, Jacksonville, Anchorage, Arctic Circle  14 hours and 10 hours  Four months    Other Periodic Functions  periodic function  There are other periodic functions besides sinusoidal functions. Any function that repeats a pattern at intervals of fixed length is periodic.  Periodic Function  periodic function  period  The function is periodic if there is a smallest value of such that for all . The constant is called the period of the function.  Which of the functions shown below are periodic? If the function is periodic, give its period.   Arccos graph  Arccos graph  Arccos graph    This graph is periodic with period 360.  This graph is not periodic.  This graph is periodic with period 8.   Which of the functions shown below are periodic? If the function is periodic, give its period.   Arccos graph  Arccos graph  Arccos graph   Period: 2  Period: 3  Not periodic   A patient receives regular doses of medication to maintain a certain level of the drug in his body. After each dose, the patient's body eliminates a certain percent of the medication before the next dose is administered. The graph shows the amount of the drug, in milliliters, in the patient's body as a function of time in hours.    Piecewise decreasing exponential graph    How much of the medication is administered with each dose?  How often is the medication administered?  What percent of the drug is eliminated from the body between doses?    The medication level increase from 30 ml to 50 ml at each cycle of the graph, so 20 ml of medication are administerd at each dose.  The medication level peaks sharply evey four hours, when each new dose is administered.  The medication level declines by 20 ml between doses, or , or 40%   You are sitting on your front porch late one evening, and you see a light coming down the road tracing out the path shown below, with distances in inches. You realize that you are seeing a bicycle light, fixed to the front wheel of the bike.    Curtate troichoid traced by fixed point inside circle as circle rolls without slipping    Approximately what is the period of the graph?  How far above the ground is the light?  What is the diameter of the bicycle wheel?   75 in  4 in  24 in   Review the following skills you will need for this section.   Sketch the graph. Give the equations of any vertical or horizontal asymptotes.            Algebra Refresher Answers     graph     graph    graph    graph    graph    graph        Section 4.3 Summary  Vocabulary   Angle of Inclination  Bearings  Unit Circle  Period  Periodic   Concepts   To solve an equation of the form , or , or , we can use the appropriate inverse trig key on a calculator to find one solution (or a coterminal angle.) We use reference angles to find a second solution between and .  Angles in a Unit Circle  Let be a point on a unit circle determined by the terminal side of an angle in standard position. Then the coordinates of are given by  Coordinates If point is located at a distance from the origin in the direction specified by angle in standard position, then the coordinates of are   Navigational directions for ships and planes are sometimes given as bearings , which are angles measured clockwise from north.  Angle of Inclination  The angle of inclination of a line is the angle measured in the positive direction from the positive -axis to the line. If the slope of the line is , then where .  Periodic Function  The function is periodic if there is a smallest value of such that for all . The constant is called the period of the function.   Study Questions   If the angle of inclination of a line is greater than , what can you say about its slope?  Sketch two examples of a function with period 8: one that is sinusoidal, and one that is not.  Explain why the coordinates of points on a unit circle are given by the cosine and sine of an angle in standard position.  How are bearings measured?   Skills   Solve trigonometric equations, graphically and algebraically #1-20  Find coordinates of points on circles #21-36  Use bearings to determine position #37-42  Find and use the angle of inclination of a line #43-50  Identify periodic functions and give their periods #51 54  Sketch periodic functions #55-58  Sketch graphs to model sinusoidal functions #59-68  Analyze periodic graphs #69-7     Homework 4.3  For Problems 1 8, use the graphs to estimate the solutions to the equations. Show your work on the graph.   sine graph   cosine graph           For Problems 9 14, find all solutions between and . Round to the nearest degree.           For Problems 15 20, find exact values for all solutions between and .          For Problems 21 24,   Use a calculator to find the coordinates of the point . Round to hundredths.  Find the coordinates of the point on the circle of radius 2.    circle         circle   circle         circle   For Problems 25 30, find exact values for the coordinates of the point.   circle   circle   circle   circle   circle   circle   For Problems 31 36, find the coordinates of the point, rounded to hundredths.   circle   circle   circle   circle   circle   circle   For Problems 37 41, a ship sails from the seaport on the given bearing for the given distance.   Make a sketch showing the ship's current location relative to the seaport.  How far east or west of the seaport is the ship's present location? How far north or south?   , 26 miles   angle  15.3 mi east, 21 mi north   , 80 km  , 120 km   angle  91.9 km west, 77.1 km south   , 75 miles  , 32 km    angle  30.9 km west, 8.3 km north   , 260 miles   For Problems 43 46,find the angle of inclination of the line.       For Problems 47 50, find an equation for the line passing through the given point with angle of inclination .  or    or    Which of the graphs in Problems Problems 51 54 are periodic? If the graph is periodic, give its period.  graph not periodic  graph  graph Periodic with period 4  graph   For Problems 55 58, sketch a periodic function that models the situation.  At a ski slope, the lift chairs take 5 minutes to travel from the bottom, at an elevation of 3000 feet, to the top, at elevation 4000 feet. The cable supporting the ski lift chairs is a loop turning on pulleys at a constant speed. At the top and bottom, the chairs are at a constant elevation for a few seconds to allow skiers to get on and off.   Sketch a graph of , the height of one chair at time . Show at least two complete trips.  What is the period of ?   piecewise linear graph   10 minutes   The heater in Paul's house doesn't have a thermostat; it runs on a timer. It uses 300 watts when it is running. Paul sets the heater to run from 6 am to noon, and again from 4 pm to 10 pm in the evening.   Sketch a graph of , the power drawn by the heater as a function of time. Show at least two days of heater use.  What is the period of ?   Francine adds water to her fish pond once a week to keep the depth at 30 centimeters. During the week the water evaporates at a constant rate of 0.5 centimeters per day.   Sketch a graph of , the depth of the water as a function of time. Show at least two weeks.  What is the period of ?    piercewise linear graph  1 week  Erin's fox terrier, Casey, is very energetic and bounces excitedly at dinner time. Casey can jump 30 inches high, and each jump takes him 0.8 seconds.   Sketch a graph of Casey's height, , as a function of time. Show at least two jumps.  What is the period of ?    For Problems 59 64, sketch a sinusoidal function that models the situation.   Delbert's bicycle wheel is 24 inches in diameter, and he has a light attached to the spokes 10 inches from the center of the wheel. It is dark, and he is cycling home slowly from work. The bicycle wheel makes one revolution every second.   At , the light is at its highest point the bicycle wheel. Sketch a graph of the light's height as a function of .  Give the period, midline, and amplitude of your graph.    sinusoidal graph  period 1 sec, midline , amp 10 inches   The paddlewheel on the Delta Queen steamboat is 28 feet in diameter, and is rotating once every ten seconds. The bottom of the paddlewheel is 4 feet below the surface of the water.   The ship's logo is painted on the center of one of the paddlewheel blades. At , the logo is at the top of the wheel. Sketch a graph of the logo's heightabove the water as a function of .  Give the period, midline, and amplitude of your graph.   The population of mosquitoes at Marsh Lake is a sinusoidal function of time. The population peaks around June 1 at about 6000 mosquitoes per square kilometer, and is smallest on December 1, at 1000 mosquitoes per square kilometer.   Sketch a graph of , the number of mosquitoes as a function of the month, where on January 1.  Give the period, midline, and amplitude of your graph.    sinusoidal graph  period 1 year, midline , amp 2500   The height of the tide in Cabot Cove can be approximated by a sinusoidal function. At 5 am on July 23, the water level reached its high mark at the 20-foot line on the pier, and at 11 am, the water level was at its lowest at the 4-foot line.   Sketch a graph of , the water level as a function of time, from midnight on July 23 to midnight on July 24.  Give the period, midline, and amplitude of your graph.   The average daily maximum temperature in Stockholm, Sweden is F in January and F in July.   Sketch a sinusoidal graph of , the average maximum temperature in Stockholm as a function of time, for one year.  Give the period, midline, and amplitude of your graph.    sinusoidal graph  period 1 year, midline , amp 21   The average daily maximum temperature in Riyadh, Saudi Arabia is Fin January and F in July.   Sketch a sinusoidal graph of , the average maximum temperature in Riyadh as a function of time, for one year.  Give the period, midline, and amplitude of your graph.    Each situation describes a periodic function. Match each situation with the appropriate graph.   When the heart contracts, blood pressure in the arteries rises rapidly to a peak (systolic blood pressure) and then falls off quickly to a minimum (diastolic blood pressure). Blood pressure is a function of time.  After an injection is given to a patient, the amount of the drug present in his bloodstream decreases over time. The patient receives injections at regular intervals to restore the drug level to the prescribed level. The amount of the drug present is a function of time.  The monorail shuttle train between the north and south terminals at Gatwick Airport departs from the south terminal every 12 minutes. The distance from the train to the south terminal is a function of time.  Delbert gets a haircut every two weeks. The length of his hair is a function of time.   graph a. IV b. III c. II d. I  Match each of the following situations with an appropriate graph below.   The number of hours of daylight in Salt Lake City varies from a minimum of 9.6 hours on the winter solstice to a maximum of 14.4 hours on the summer solstice.  A weight is 6.5 feet above the floor, suspended from the ceiling by a spring. The weight is pulled down to 5 feet above the floor and released, rising past 6.5 feet in 0.5 seconds before attaining its maximum height of feet. Neglecting the effects of friction, the height of the weight will continue to oscillate between its minimum and maximum height.  The voltage used in U.S. electrical current changes from V to V and back 60 times each second.  Although the moon is spherical, what we see from earth looks like a disk, sometimes only partly visible. The percentage of the moon's disk that is visible varies between 0 (at new moon) to 100 (at full moon).  graph  The table shows sunrise and sunset times in Los Angeles on the fifteenth of each month.    Month  Oct  Nov  Dec  Jan  Feb  Mar   Sunrise         Sunset           Month  Apr  May  Jun  Jul  Aug  Sep   Sunrise         Sunset          Use the left-hand grid to plot the sunrise times and sketch a sinusoidal graph through the points.  Use the right-hand grid to plot the sunset times and sketch a sinusoidal graph through the points.    grid  two graphs   Use the data from Problem 67 to complete the table with the hours of sunlight in Los Angeles on the fifteenth of each month.    Month  Oct  Nov  Dec  Jan  Feb  Mar   Hours of Daylight           Month  Apr  May  Jun  Jul  Aug  Sep   Hours of Daylight         Plot the daylight hours and sketch a sinusoidal graph through the points.  grid  Many people who believe in astrology also believe in biorhythms. The graph shows an individual's three biorhythms, physical, emotional, and intellectual, for 36 days, from on September 30 to November 5. grid   Find the dates of highest and lowest activity for each biorhythm during the month of October.  Find the period of each biorhythm in days.  On the day of your birth, all three biorhythms are at their maximum. How old will you be before all three are again at the maximum level?   Emotional high: Oct 5 and Nov 3, low: Oct 19; Physical high: Sep 30 and Oct 23, low: Oct 12 and Nov 4; Intellectual high: Oct 10, low: Oct 26  Emotional: 28 days, physical: 23 days, intellectual: 32 days  5152 days   The path of a satellite orbiting above the earth makes a sinusoidal graph on a map of the earth, with its midline at the equator. On the map on the next page, sketch a graph for a satellite that orbits the earth every 90 minutes, and strays no farther than 4000 km from the equator. (One degree of latitude is equal to 111 kilometers.) The satellite passes over the spot latitude and longitude at time . Label a scale on the equator to serve as a time axis for your graph.  map    Is the function shown periodic? If so, what is its period? If not, explain why not. graph  Compute the difference between the maximum and minimum function values. Sketch in the midline of the graph.  Find the smallest positive value of for which for all .  Find the smallest positive values of and for which is a maximum.   periodic, period 8  4, midline:      Find the period, the maximum and minimum values, and the midline of the graph of shown.  graph  Sketch a graph of .  Sketch a graph of .  Modify the graph of so that the period is twice its current value.   The graph shows arterial blood pressure, measured in millimeters of mercury (mmHg), as a function of time.  graph   What are the maximum (systolic) and minimum (diastolic) pressures? The pulse pressure is the difference of systolic and diastolic pressures. What is the pulse pressure?  The mean arterial pressure is the diastolic pressure plus one-third of the pulse pressure. Calculate the mean arterial pressure, and draw a horizontal line on the graph at that pressure.  The blood pressure graph repeats its cycle with each heartbeat. What is the heart rate, in beats per minute, of the person whose blood pressure is shown in the graph?   systolic 120 mm Hg, diastolic 80 mm Hg, pulse pressure 40 mm Hg.   72 beats per minute   Here is a tide chart for Los Angeles for the week of December 17–23, 2000. The horizontal axis shows time in hours, with corresponding to noon on December 17. The vertical axis shows the height of the tide in feet above mean sea level.  graph   High tides occurred at 3:07 am and 2:08 pm on December 17, and low tides at 8:41 am and 9:02 pm. Estimate the heights of the high and low tides on that day.  Is tide height a periodic function of time? Use the information from part (a) to justify your answer.  Make a table showing approximate times and heights for the high tides throughout the week. Make a similar table for the low tides.  Describe the trend in the heights of the high tides over the week. Describe the trend in the heights of the low tides.  What is the largest height difference between consecutive high and low tides during the week shown? When does it occur?   The apparent magnitude of a star is a measure of its brightness as seen from earth. Smaller values of apparent magnitude correspond to brighter stars. The graph below, called a light curve, shows the apparent magnitude of the star Algol as a function of time. Algol is actually a system of two stars, a bright principal star and its dimmer companion, in orbit around each other. As each star passes in front of the other it eclipses some of the light that reaches earth.  graph   The light curve is periodic. What is its period?  What is the range of apparent magnitudes of the Algol system?  Explain the large and small dips in the light curve. What is happening to cause the dips?   69 hours.  2.2 to 3.5  The larger dip corresponds to when the brighter star is eclipsed, the smaller dip corresponds to when the dimmer star is eclipsed.   Some stars, called Cepheid variable stars, appear to pulse, getting brighter and dimmer periodically. The graph shows the light curve for the star Delta Cephei.  graph   What is the period of the graph?  What is the range of apparent magnitudes for Delta Cephei?    "
 },
 {
-  "id": "example-68",
+  "id": "example-67",
   "level": "2",
-  "url": "Periodic-Functions.html#example-68",
+  "url": "Periodic-Functions.html#example-67",
   "type": "Example",
-  "number": "4.34",
+  "number": "4.33",
   "title": "",
   "body": "You are riding on the Ferris wheel we modeled in Section 4.2, where your height above ground is given as a function of by When your height is at least 136 feet, you can see the snow on a distant mountain range. Between what angles of rotation can you see snow?   Look at the diagram of the Ferris wheel to see that when your height is 136 feet, the sine of the angle is , or 0.36. The angle with sine 0.36 is  ferris wheel where height is 136  And you will be able to see snow until you descend again below 136 feet. That will happen at the angle in the second quadrant with sine 0.36, namely, the second quadrant angle with reference angle 21.1°. And that angle is .  "
 },
@@ -9617,16 +9617,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-870",
   "type": "Checkpoint",
-  "number": "4.35",
+  "number": "4.34",
   "title": "",
   "body": "Refer to the Example in Section 4.2. about the Knee Over Pedal Stem Rule. The distance between the cyclist's foot and the KOPS line is At what angles is the cyclist's knee within 9 centimeters of the KOPS line? When the angle of the crank is between 0° and 60°, and again between 300° and 360°.  knee within 9cm of KOPS line  "
 },
 {
-  "id": "example-69",
+  "id": "example-68",
   "level": "2",
-  "url": "Periodic-Functions.html#example-69",
+  "url": "Periodic-Functions.html#example-68",
   "type": "Example",
-  "number": "4.36",
+  "number": "4.35",
   "title": "",
   "body": "Solve the equation for angles between and . Round your answers to the nearest degree.  Use your calculator to evaluate The angle is in the fourth quadrant, but it is not between and . We need an angle that is coterminal with , so we add . Thus, one of the solutions is .   The sine is also negative in the third quadrant, so there should also be a solution in the third quadrant. The reference angle for is , and the third-quadrant angle with reference angle is , as shown at right. You can check that, rounded to four decimal places, both angles satisfy the equation, that is,   angles in 3rd and 4th quadrants  "
 },
@@ -9635,7 +9635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#note-21",
   "type": "Note",
-  "number": "4.37",
+  "number": "4.36",
   "title": "",
   "body": "In the previous example we found two solutions of the equation . Actually, there are infinitely many solutions -- namely, all the angles coterminal with or . Because we can easily find coterminal solutions by adding or subtracting multiples of , when solving an equation we usually list only the solutions between and . "
 },
@@ -9644,7 +9644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#warning-15",
   "type": "Caution",
-  "number": "4.38",
+  "number": "4.37",
   "title": "",
   "body": "When you ask your calculator to find an angle with a given sine (or cosine or tangent), it will give you only one of the many possible answers. You must be careful to choose the appropriate answer for the situation, using reference and coterminal angles. "
 },
@@ -9653,34 +9653,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-871",
   "type": "Checkpoint",
-  "number": "4.39",
+  "number": "4.38",
   "title": "",
   "body": "Solve the equation for angles between and . , "
 },
 {
-  "id": "p-2339",
+  "id": "p-2342",
   "level": "2",
-  "url": "Periodic-Functions.html#p-2339",
+  "url": "Periodic-Functions.html#p-2342",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "unit circle "
 },
 {
-  "id": "p-2341",
+  "id": "p-2344",
   "level": "2",
-  "url": "Periodic-Functions.html#p-2341",
+  "url": "Periodic-Functions.html#p-2344",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "unit circle "
 },
 {
-  "id": "example-70",
+  "id": "example-69",
   "level": "2",
-  "url": "Periodic-Functions.html#example-70",
+  "url": "Periodic-Functions.html#example-69",
   "type": "Example",
-  "number": "4.40",
+  "number": "4.39",
   "title": "",
   "body": "  Find the coordinates of point on the unit circle shown at right.  angles  The coordinates of are given by . The reference angle for is , so the trig ratios of are the same as the ratios for , up to sign.  Because is in the fourth quadrant, we have and . Thus, the coordinates of are . "
 },
@@ -9689,25 +9689,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-872",
   "type": "Checkpoint",
-  "number": "4.41",
+  "number": "4.40",
   "title": "",
   "body": "Find the sine, cosine, and tangent of the angle shown at right.  angles  , , "
 },
 {
-  "id": "activity-6",
+  "id": "activity-7",
   "level": "2",
-  "url": "Periodic-Functions.html#activity-6",
+  "url": "Periodic-Functions.html#activity-7",
   "type": "Activity",
-  "number": "4.4",
+  "number": "4.5",
   "title": "Unit Circles.",
   "body": "Unit Circles  unit circle  grid     Use a protractor to draw an angle in standard position.  Estimate the coordinates of the point where the terminal side of the angle intersects the circle of radius .  Calculate approximate values for and using the coordinates of .  Estimate the coordinates of the point where the terminal side of the angle intersects the circle of radius .  Calculate approximate values for and using the coordinates of .   Use a protractor to draw an angle in standard position. Repeat parts (a)-(d) for this new angle.  Use a protractor to draw an angle in standard position. Repeat parts (a)-(d) for this new angle.  Use a protractor to draw an angle in standard position. Repeat parts (a)-(d) for this new angle.  What do you notice about the coordinates of the point located on the unit circle by an angle and the values of the trig ratios of that angle?  "
 },
 {
-  "id": "example-71",
+  "id": "example-70",
   "level": "2",
-  "url": "Periodic-Functions.html#example-71",
+  "url": "Periodic-Functions.html#example-70",
   "type": "Example",
-  "number": "4.42",
+  "number": "4.41",
   "title": "",
   "body": "Point is located 6 centimeters from the origin in the direction of . Find the coordinates of , rounded to hundredths.   The location of point is shown at right. We see that , and we can use a calculator to evaluate and . The coordinates of are approximately .  angle  "
 },
@@ -9716,25 +9716,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-873",
   "type": "Checkpoint",
-  "number": "4.43",
+  "number": "4.42",
   "title": "",
   "body": " You find an old map that shows a buried treasure located 500 yards from the big oak tree in the direction , as shown below. You don't have anything with you to measure angles, but you have your calculator.    Find the cosine of . How far west should you walk from the big oak in order to be directly north of the treasure?  Find the sine of . How far south should you walk from your present location before you begin digging?   angle  409.58 yds 286.79 yds  "
 },
 {
-  "id": "p-2360",
+  "id": "p-2363",
   "level": "2",
-  "url": "Periodic-Functions.html#p-2360",
+  "url": "Periodic-Functions.html#p-2363",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "bearings "
 },
 {
-  "id": "example-72",
+  "id": "example-71",
   "level": "2",
-  "url": "Periodic-Functions.html#example-72",
+  "url": "Periodic-Functions.html#example-71",
   "type": "Example",
-  "number": "4.44",
+  "number": "4.43",
   "title": "",
   "body": "Francine leaves the airport at a bearing of and flies 60 miles. How far south of the airport is she at that time?  A bearing of is in the same direction as an angle of  in standard position, as shown at right, or as the coterminal angle .  Bearing of 245 degrees, 60 miles distance  We would like the -coordinate of Francine's position, so we calculate . Francine is about 25.4 miles south of the airport. "
 },
@@ -9743,27 +9743,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-874",
   "type": "Checkpoint",
-  "number": "4.45",
+  "number": "4.44",
   "title": "",
   "body": "Delbert leaves the airport and flies 150 miles at a bearing of . How far east of the airport is he at that time? 111.5 mile "
-},
-{
-  "id": "p-2368",
-  "level": "2",
-  "url": "Periodic-Functions.html#p-2368",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "angle of inclination "
-},
-{
-  "id": "p-2369",
-  "level": "2",
-  "url": "Periodic-Functions.html#p-2369",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "slope "
 },
 {
   "id": "p-2371",
@@ -9775,11 +9757,29 @@ var ptx_lunr_docs = [
   "body": "angle of inclination "
 },
 {
-  "id": "example-73",
+  "id": "p-2372",
   "level": "2",
-  "url": "Periodic-Functions.html#example-73",
+  "url": "Periodic-Functions.html#p-2372",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "slope "
+},
+{
+  "id": "p-2374",
+  "level": "2",
+  "url": "Periodic-Functions.html#p-2374",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "angle of inclination "
+},
+{
+  "id": "example-72",
+  "level": "2",
+  "url": "Periodic-Functions.html#example-72",
   "type": "Example",
-  "number": "4.46",
+  "number": "4.45",
   "title": "",
   "body": "Find the angle of inclination of the line .  The slope of the line is . Therefore, The angle of inclination is .  graph y = 3\/4 x - 3 "
 },
@@ -9788,16 +9788,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-875",
   "type": "Checkpoint",
-  "number": "4.47",
+  "number": "4.46",
   "title": "",
   "body": " Find the angle of inclination of the line shown at right,   graph y= -6\/5 x +2 "
 },
 {
-  "id": "example-74",
+  "id": "example-73",
   "level": "2",
-  "url": "Periodic-Functions.html#example-74",
+  "url": "Periodic-Functions.html#example-73",
   "type": "Example",
-  "number": "4.48",
+  "number": "4.47",
   "title": "",
   "body": " What happens to the slope of a line as its angle of inclination increases from toward ?  What happens to the slope of a line as its angle of inclination decreases from toward ?      Consider the slopes of the lines shown at right, as increases.                     lines with different angles of inclination    The slopes increase towards infinity as increases. But the values of the slope are the values of , and if we plot those values against , we see the graph of the tangent function emerging.  graph      Now consider the slopes of the lines as decreases from toward .                   lines with different angles of inclination     The slopes decrease towards negative infinity as decreases. But, as before, the values of the slope are the values of , and if we plot those values against , we see the graph of the tangent function.  graph    "
 },
@@ -9806,16 +9806,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-876",
   "type": "Checkpoint",
-  "number": "4.49",
+  "number": "4.48",
   "title": "",
   "body": " What happens to the angle of inclination of a line as its slope increases from toward ?  What happens to the angle of inclination of a line as its slope decreases through negative values from toward ?   The angle increases from toward .  The angle decreases from toward  "
 },
 {
-  "id": "example-75",
+  "id": "example-74",
   "level": "2",
-  "url": "Periodic-Functions.html#example-75",
+  "url": "Periodic-Functions.html#example-74",
   "type": "Example",
-  "number": "4.50",
+  "number": "4.49",
   "title": "",
   "body": "Imagine a grandfather clock. As the minute hand sweeps around, the height of its tip changes with time. Which of the graphs shown below best represents the height of the tip of the minute hand as a function of time?   grandfather clock and 2 graphs   Figure (a) is not the graph of a function at all: It does not pass the vertical line test. That is, some values of , such as , correspond to more than one value of , which is not possible in the graph of a function.  Figure (b) shows the height of the minute hand varying between a maximum and minimum value. The height decreases at a constant rate (the graph is straight and the slope is constant) until the minimum is reached, and then increases at a constant rate.  But notice that during the 10 minutes from 12:10 to 12:20 the height of the minute hand decreases about half the diameter of the clock, while from 12:20 to 12:30 the height decreases only about a quarter of the diameter of the clock, as shown at right.   clock   Thus the height of the minute hand does not decrease at a constant rate.  Figure (c) is the best choice. The graph is curved because the slopes are not constant. The graph is steep when the height is changing rapidly, and the graph is nearly horizontal when the height is changing slowly. The height changes slowly near the hour and the half-hour, and more rapidly near the quarter-hours. "
 },
@@ -9824,16 +9824,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-877",
   "type": "Checkpoint",
-  "number": "4.51",
+  "number": "4.50",
   "title": "",
   "body": "As the moon revolves around the earth, the percent of the disk that we see varies sinusoidally with a period of approximately 30 days. There are eight phases, starting with the new moon, when the moon's disk is dark, followed by waxing crescent, first quarter, waxing gibbous, full moon, waning gibbous, last quarter, and waning crescent. Which graph best represents the phases of the moon?   sinusoidal graph   sinusoidal graph   sinusoidal graph  (b) "
 },
 {
-  "id": "example-76",
+  "id": "example-75",
   "level": "2",
-  "url": "Periodic-Functions.html#example-76",
+  "url": "Periodic-Functions.html#example-75",
   "type": "Example",
-  "number": "4.52",
+  "number": "4.51",
   "title": "",
   "body": "The table shows the number of hours of daylight in Glasgow, Scotland on the first of each month.    Month  Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Daylight Hours                Sketch a sinusoidal graph of daylight hours as a function of time, with in January.  Estimate the period, amplitude, and midline of the graph.    Plot the data points and fit a sinusoidal curve by eye, as shown below.  sinusoidal graph  The period of the graph is 12 months. The midline is approximately and the amplitude is approximately 5.25.  "
 },
@@ -9842,25 +9842,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-878",
   "type": "Checkpoint",
-  "number": "4.53",
+  "number": "4.52",
   "title": "",
   "body": "The figure shows the number of daylight hours in Jacksonville, Florida, in Anchorage, Alaska, at the Arctic Circle, and at the Equator.  graph   Which graph corresponds to each location?  What are the maxium and minimum number of daylight hours in Jacksonville?  For how long are there 24 hours of daylight per day at the Arctic Circle?   From top to bottom in January: Equator, Jacksonville, Anchorage, Arctic Circle  14 hours and 10 hours  Four months  "
 },
 {
-  "id": "p-2409",
+  "id": "p-2412",
   "level": "2",
-  "url": "Periodic-Functions.html#p-2409",
+  "url": "Periodic-Functions.html#p-2412",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "periodic period "
 },
 {
-  "id": "example-77",
+  "id": "example-76",
   "level": "2",
-  "url": "Periodic-Functions.html#example-77",
+  "url": "Periodic-Functions.html#example-76",
   "type": "Example",
-  "number": "4.54",
+  "number": "4.53",
   "title": "",
   "body": "Which of the functions shown below are periodic? If the function is periodic, give its period.   Arccos graph  Arccos graph  Arccos graph    This graph is periodic with period 360.  This graph is not periodic.  This graph is periodic with period 8.  "
 },
@@ -9869,16 +9869,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-879",
   "type": "Checkpoint",
-  "number": "4.55",
+  "number": "4.54",
   "title": "",
   "body": "Which of the functions shown below are periodic? If the function is periodic, give its period.   Arccos graph  Arccos graph  Arccos graph   Period: 2  Period: 3  Not periodic  "
 },
 {
-  "id": "example-78",
+  "id": "example-77",
   "level": "2",
-  "url": "Periodic-Functions.html#example-78",
+  "url": "Periodic-Functions.html#example-77",
   "type": "Example",
-  "number": "4.56",
+  "number": "4.55",
   "title": "",
   "body": "A patient receives regular doses of medication to maintain a certain level of the drug in his body. After each dose, the patient's body eliminates a certain percent of the medication before the next dose is administered. The graph shows the amount of the drug, in milliliters, in the patient's body as a function of time in hours.    Piecewise decreasing exponential graph    How much of the medication is administered with each dose?  How often is the medication administered?  What percent of the drug is eliminated from the body between doses?    The medication level increase from 30 ml to 50 ml at each cycle of the graph, so 20 ml of medication are administerd at each dose.  The medication level peaks sharply evey four hours, when each new dose is administered.  The medication level declines by 20 ml between doses, or , or 40%  "
 },
@@ -9887,7 +9887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#exercise-880",
   "type": "Checkpoint",
-  "number": "4.57",
+  "number": "4.56",
   "title": "",
   "body": "You are sitting on your front porch late one evening, and you see a light coming down the road tracing out the path shown below, with distances in inches. You realize that you are seeing a bicycle light, fixed to the front wheel of the bike.    Curtate troichoid traced by fixed point inside circle as circle rolls without slipping    Approximately what is the period of the graph?  How far above the ground is the light?  What is the diameter of the bicycle wheel?   75 in  4 in  24 in  "
 },
@@ -9896,14 +9896,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Periodic-Functions.html#project-12",
   "type": "Algebra Refresher",
-  "number": "4.5",
+  "number": "4.6",
   "title": "",
   "body": " Sketch the graph. Give the equations of any vertical or horizontal asymptotes.            Algebra Refresher Answers     graph     graph    graph    graph    graph    graph      "
 },
 {
-  "id": "p-2439",
+  "id": "p-2442",
   "level": "2",
-  "url": "Periodic-Functions.html#p-2439",
+  "url": "Periodic-Functions.html#p-2442",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10603,9 +10603,9 @@ var ptx_lunr_docs = [
   "body": " Chapter 4 Summary and Review  Key Concepts   We can use angles to describe rotation. Positive angles indicate rotation in the counter-clockwise direction; negative angles describe clockwise rotation.  We define the trigonometric ratios of any angle by placing the angle in standard position and choosing a point on the terminal side, with . The Trigonometric Ratios  If is an angle in standard position, and is a point on its terminal side, with , then   To construct a reference triangle for an angle :   Choose a point on the terminal side.  Draw a line from point perpendicular to the -axis.   The reference angle for is the positive acute angle formed between the terminal side of and the -axis.    Reference angles for all quadrants     The trigonometric ratios of any angle are equal to the ratios of its reference angle, except for sign. The sign of the ratio is determined by the quadrant.  To find an angle with a given reference angle :    Quadrant I:   Quadrant II:   Quadrant III:   Quadrant IV:     angles     There are always two angles between and (except for the quadrantal angles) with a given trigonometric ratio.  Coterminal angles have equal trigonometric ratios.  To solve an equation of the form , or , or , we can use the appropriate inverse trig key on a calculator to find one solution (or a coterminal angle.) We use reference angles to find a second solution between and .  Angles in a Unit Circle  Let be a point on a unit circle determined by the terminal side of an angle in standard position. Then the coordinates of are given by  Coordinates  If point is located at a distance from the origin in the direction specified by angle in standard position, then the coordinates of are   Navigational directions for ships and planes are sometimes given as bearings , which are angles measured clockwise from north.  Periodic functions are used to model phenomena that exhibit cyclical behavior.  The trigonometric ratios and are functions of the angle .  The period of the sine function is . Its midline is the horizontal line , and the amplitude of the sine function is 1.  The graph of the cosine function has the same period, midline, and amplitude as the graph of the sine function. However, the locations of the intercepts and of the maximum and minimum values are different.  We use the notation to indicate that is a function of , that is, is the input variable and is the output variable.  The tangent function has period . It is undefined at odd multiples of , and is increasing on each interval of its domain.  Angle of Inclination  The angle of inclination of a line is the angle measured in the positive direction from the positive -axis to the line. If the slope of the line is , then where .  Amplitude, Period, and Midline   The graph of has amplitude .  The graph of has period .  The graph of has midline .   The graph of has amplitude , period , and midline . The same is true for the graph of .  Functions that have graphs shaped like sines or cosines are called sinusoidal .  Periodic Function  The function is periodic if there is a smallest value of such that for all . The constant is called the period of the function.     Chapter 4 Review Problems  The London Eye, the world's largest Ferris wheel, completes one revolution every 30 minutes. By how many degrees will it rotate in 1 minute?  The London Eye in Problem 1 has 32 cabins evenly spaced along the wheel. If the cabins are numbered consecutively from 1 to 32, what is the angular separation between cabins number 1 and number 15?   For Problems 3 4,find two angles, one positive and one negative, that are coterminal with the given angle.                     For the angles in Problems 5 6, state the corresponding quadrant and reference angle. Give three other angles with the same reference angle, one for each of the other three quadrants. Sketch all four angles.                    Let be the function that gives the reference angle of . For example, because the reference angle for is .   Fill in the table of values.                                  Choose appropriate scales for the axes and graph the function for .   grid                                        graph of referance angle vs angle      Let be the function that gives the reference angle of . (See Problem 7.) Is a periodic function? If so, give its period, midline, and amplitude. If not, explain why not.   For Problems 9 20, solve the equation exactly for .                    For Problems 21 26, solve the equation for . Round your answers to two decimal places.          For Problems 27 32, find the coordinates of the point where the terminal side of angle in standard position intersects the circle of radius centered at the origin. Round your answers to two decimal places.         If you follow a bearing of for 10 miles, how far south and how far west are you from your starting point? Round to two decimal places. south: 1.74 mi, west: 9.85 mi  A child releases a balloon, which then follows a bearing of for 150 meters. How far east and how far north is the balloon from where it was released? Round to the nearest meter.  For Problems 35 38, write the equation of a sine or cosine function with the given properties and sketch the graph, including at least one period.  Amplitude 7, midline , period 2, -intercept 4   sinusoidal graph     Amplitude 100, midline , period 12, -intercept 100  Maximum point at and minimum point at   sinusoidal graph     Horizontal intercept at , maximum points at and   For Problems 39 42, evaluate the expression for and .  for  for  for 0  for   For Problems 43 46, write an equation for the given graph, and give the exact coordinates of the labeled points.    sinusoidal graph       sinusoidal graph       sinusoidal graph       sinusoidal graph      Every 24 hours Delbert takes 50 mg of a therapeutic drug. The level of that drug in Delbert's bloodstream immediately jumps to its peak level of 60 mg, but the level diminishes to its lowest level of 10 mg just before the next dose.   Sketch a graph of , the amount of the drug in Delbert's bloodstream after one of his doses, Show at least three doses.  What is the period of ?     periodic graph     24 hours   A water fountain has water trickling into a container, but once the container is full, it tilts and the water pours quickly out. Then the container tilts back and starts to fill again. The container is filled 5 times every minute.   Sketch a graph of , the height of water in the container at time Show at least two complete fill-and-empty cycles.  What is the period of ?   Henry is watching Billie ride a carousel. He stands 2 meters from the carousel, which has a diameter of 10 meters. He notices that she passes by him three times each minute.   Sketch a graph of , the distance between Henry and Billie at time . Show at least two complete circuits.  What is the period of ?     periodic graph     20 sec   An ant walks at constant unit speed (1 unit of distance per second) along the triangle with vertices at and .   How far does the ant need to walk to get from to ? From to ? From to ?  Sketch a graph of , the ant's -coordinate at time . Show at least two circuits around the triangle.  What is the period of ?    For Problems 51 54,   Graph the function.  State the amplitude, period, and midline of the function.      y = 4 + 2 cos theta     amp: 2, period: , midline:       y = 1.5 + 3.5 sin (2 theta)     amp: 3.5, period: , midline:     For Problems 55 58, find the angle of inclination of the line.       For Problems 59 62, find an equation for the line passing through the given point with angle of inclination .  ,  ,  ,  ,   Sketch the graphs of and on the same grid for . How are the -intercepts of the graph of related to the graph of ?   cosine and tangent graphs    The -intercepts of occur at the vertical asymptotes of .  Sketch the graphs of and on the same grid for . How are the -intercepts of the graph of related to the graph of ?    "
 },
 {
-  "id": "p-2575",
+  "id": "p-2578",
   "level": "2",
-  "url": "chap4-summary.html#p-2575",
+  "url": "chap4-summary.html#p-2578",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -11194,12 +11194,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Algebra with Trigonometric Ratios",
-  "body": " Algebra with Trigonometric Ratios  In this chapter we apply some techniques from algebra to analyze more complicated trigonometric expressions. Before we begin, let's review some algebraic terminology.   An algebraic expression expression algebraic expression algebraic expression expression is any meaningful collection of numbers, variables, and operation symbols. For example, the height of a golf ball is given in feet by the expression , where is the number of seconds after the ball is hit.  We evaluate evaluate an expression by substituting a specific value for the variable or variables involved. Thus, after 1 second, the height of the golf ball is and after 2 seconds, the height is and so on.   Evaluating Trigonometric Expressions  trigonometric expression  expression trigonometric  expression trigonometric trigonometric expression  Trigonometric ratios represent numbers, and they may appear as part of an algebraic expression. Expressions containing trig ratios can be simplified or evaluated like other algebraic expressions.  Keep in mind that , for example, is not a product: it does not mean \"sin times X\" (whatever that might be). Instead, \"sin\" is the name of a function, and means to evaluate the sine function at X. Thus, is a single number, the output of the sine function.  Evaluate each expression for and .       Substituting the values for and , we get Next, we evaluate each trig ratio and follow the order of operations.  This expression includes the product of two trig ratios, .   Evaluate each expression for , .         In the previous Exercise, is not equal to . That is, (You can check this for yourself.) We must follow the order of operations and evaluate the expression inside parentheses before applying the sine function.   Simplifying Trigonometric Expressions  trigonometric expression simplifying  When we simplify simplify an algebraic expression, we obtain a new expression that has the same values as the old one, but is easier to work with. For example, we can apply the distributive law and combine like terms to simplify The new expression is equivalent equivalent to the old one, that is, the expressions have the same value when we evaluate them at any value of . For instance, you can check that, at , To simplify an expression containing trig ratios, we treat each ratio as a single variable. Compare the two calculations below: Both calculations are examples of combining like terms. In the second calculation, we treat and as variables, just as we treat and as variables in the first calculation.  Simplify.       Combine like terms. Note that and are not like terms.  Combine like terms. Note that is treated as .   Simplify  In the previous Exercise, note that and are not like terms. (We can choose values for and so that and have different values.)  Simplify, and evaluate for .  We can combine like terms to get Because is not one of the angles for which we know exact trig values, we use a calculator to evaluate the expression.   Simplify, and evaluate for    Powers of Trigonometric Ratios  trigonometric function raising to power  Compare the two expressions They are not the same.   The first expression, , says to compute and then square the result.  says to square the angle first, and then compute the cosine.   For example, if , then  We usually write instead of , to distinguish it from , and to reduce the number of parentheses.  The square of cosine  trigonometric function raising to power   The same notation applies to the other trig ratios, so that  trigonometric function raising to power  Evaluate .   Other powers are written in the same fashion. Thus, for example, .  Evaluate   Products  trigonometric function product of  We can multiply together trigonometric expressions, just as we multiply algebraic expressions. Recall that we use the distributive law in computing products such as and  Using the distributive law, multiply .  Think of as a single variable, and multiply by each term inside parentheses. (The algebraic form of the calculation is shown on the right in blue). Notice that we write as .  Multiply  We can also use the distributive law to multiply binomials that include trig ratios. You may have used the acronym FOIL (acronym: First, Outside, Inside, Last) to remember the four multiplications in a product of binomials:  irst terms, utside terms, nside terms, and ast terms.  Multiply .  This calculation is similar to the product , except that the variable has been replaced by . Compare the calculations for the two products; first the familiar algebraic product: We compute the product in this example in the same way, but replacing by .  Expand   Factoring  trigonometric expression factoring  We can factor trigonometric expressions with the same techniques we use for algebraic expressions. In the next two Examples, compare the familiar algebraic factoring with a similar trigonometric expression.  Factor.       We factor out the common factor, .  We factor out the common factor, .   Factor.         We can also factor quadratic trinomials.  Factor.       We look for numbers and so that . Their product is , and their sum is . By checking the factors of for the correct sum, we find and . Thus,  Now replace by to find   Factor.         Review the following skills you will need for this section.   Factor.            Algebra Refresher Answers             Section 5.1 Summary  Vocabulary   Expression  Evaluate  Binomial  Trinomial  Simplify  Equivalent expression  Like terms  Distributive law  Factor    Concepts   Expressions containing trig ratios can be simplified or evaluated like other algebraic expressions. To simplify an expression containing trig ratios, we treat each ratio as a single variable.  is not equal to (and the same holds for the other trig ratios). Remember that the parentheses indicate function notation, not multiplication.  We write to denote , and to denote . (Similarly for the other trig ratios.)  We can factor trigonometric expressions with the same techniques we use for algebraic expressions.   Study Questions   To evaluate , Delbert used the keystrokes and got the answer 1. Were his keystrokes correct? Why or why not?  Make up an example to show that .  Factor each expression, if possible.            Skills   Evaluate trigonometric expressions #1 22  Simplify trigonometric expressions #23 34  Recognize equivalent expressions #35 44  Multiply or expand trigonometric expressions #45 56  Factor trigonometric expressions #57 70     Homework 5.1  For Problems 1 8, evaluate the expressions, using exact values for the trigonometric ratios.           For Problems 9 16, evaluate the expressions for , and . Give exact values for your answers.           For Problems 17 22,evaluate the expressions using a calculator.                                             For Problems 23 28, combine like terms.                                    For Problems 29 34, simplify the expression, then evaluate.  for   for  for  for  for  for   For Problems 35 44, decide whether or not the expressions are equivalent. Explain.  No   No   Yes   No   No    For Problems 45 56, multiply or expand.                                                                         For Problems 57 70, factor.                                                                                 "
+  "body": " Algebra with Trigonometric Ratios  In this chapter we apply some techniques from algebra to analyze more complicated trigonometric expressions. Before we begin, let's review some algebraic terminology.  Algebra Refresher   An algebraic expression expression algebraic expression algebraic expression expression is any meaningful collection of numbers, variables, and operation symbols. For example, the height of a golf ball is given in feet by the expression , where is the number of seconds after the ball is hit.  We evaluate evaluate an expression by substituting a specific value for the variable or variables involved. Thus, after 1 second, the height of the golf ball is and after 2 seconds, the height is and so on.    Evaluating Trigonometric Expressions  trigonometric expression  expression trigonometric  expression trigonometric trigonometric expression  Trigonometric ratios represent numbers, and they may appear as part of an algebraic expression. Expressions containing trig ratios can be simplified or evaluated like other algebraic expressions.  Keep in mind that , for example, is not a product: it does not mean \"sin times X\" (whatever that might be). Instead, \"sin\" is the name of a function, and means to evaluate the sine function at X. Thus, is a single number, the output of the sine function.  Evaluate each expression for and .       Substituting the values for and , we get Next, we evaluate each trig ratio and follow the order of operations.  This expression includes the product of two trig ratios, .   Evaluate each expression for , .         In the previous Exercise, is not equal to . That is, (You can check this for yourself.) We must follow the order of operations and evaluate the expression inside parentheses before applying the sine function.   Simplifying Trigonometric Expressions  trigonometric expression simplifying  Because expressions such as and are just variables, we can use algebra skills to simplify expressions involving the trig functions. For the rest of this section, we'll try to illustrate all the skills you will need going forward with your study of trigonometry.  More Algebra  When we simplify simplify an algebraic expression, we obtain a new expression that has the same values as the old one, but is easier to work with. For example, we can apply the distributive law and combine like terms to simplify The new expression is equivalent equivalent to the old one, that is, the expressions have the same value when we evaluate them at any value of . For instance, you can check that, at ,  To simplify an expression containing trig ratios, we treat each ratio as a single variable. Compare the two calculations below: Both calculations are examples of combining like terms. In the second calculation, we treat and as variables, just as we treat and as variables in the first calculation.  Simplify.       Combine like terms. Note that and are not like terms.  Combine like terms. Note that is treated as .   Simplify  In the previous Checkpoint, note that and are not like terms. (We can choose values for and so that and have different values.)  Simplify, and evaluate for .  We can combine like terms to get Because is not one of the angles for which we know exact trig values, we use a calculator to evaluate the expression.   Simplify, and evaluate for    Powers of Trigonometric Ratios  trigonometric function raising to power  Compare the two expressions They are not the same.   The first expression, , says to compute and then square the result.  says to square the angle first, and then compute the cosine.   For example, if , then  We usually write instead of , to distinguish it from , and to reduce the number of parentheses. Thus, means the square of .  The square of cosine  trigonometric function raising to power   The same notation applies to the other trig ratios, so that  trigonometric function raising to power  Evaluate .   Other powers are written in the same fashion. Thus, for example, .  Evaluate   Products  trigonometric function product of  We can multiply together trigonometric expressions, just as we multiply algebraic expressions. Recall that we use the distributive law in computing products such as and  Using the distributive law, multiply .  Think of as a single variable, and multiply by each term inside parentheses. (The algebraic form of the calculation is shown below in blue).  Notice that we write as .  Multiply  We can also use the distributive law to multiply binomials that include trig ratios. You may have used the acronym FOIL (acronym: First, Outside, Inside, Last) to remember the four multiplications in a product of binomials:  irst terms, utside terms, nside terms, and ast terms.  Multiply .  This calculation is similar to the product , except that the variable has been replaced by . Compare the calculations for the two products; first the familiar algebraic product: We compute the product in this example in the same way, but replacing by .  Expand   Factoring  trigonometric expression factoring  We can factor trigonometric expressions with the same techniques we use for algebraic expressions. In the next two Examples, compare the familiar algebraic factoring with a similar trigonometric expression.  Factor.       We factor out the common factor, .  We factor out the common factor, .   Factor.         We can also factor quadratic trinomials.  Factor.       We look for numbers and so that . We see that their product must be , and their sum must be . By checking the factors of for the correct sum, we find and . Thus,  Now replace by to find   Factor.         Review the following skills you will need for this section.   Factor.            Algebra Refresher Answers             Section 5.1 Summary  Vocabulary   Expression  Evaluate  Binomial  Trinomial  Simplify  Equivalent expression  Like terms  Distributive law  Factor    Concepts   Expressions containing trig ratios can be simplified or evaluated like other algebraic expressions. To simplify an expression containing trig ratios, we treat each ratio as a single variable.  is not equal to (and the same holds for the other trig ratios). Remember that the parentheses indicate function notation, not multiplication.  We write to denote , and to denote . (Similarly for the other trig ratios.)  We can factor trigonometric expressions with the same techniques we use for algebraic expressions.   Study Questions   To evaluate , Delbert used the keystrokes and got the answer 1. Were his keystrokes correct? Why or why not?  Make up an example to show that .  Factor each expression, if possible.            Skills   Evaluate trigonometric expressions #1 22  Simplify trigonometric expressions #23 34  Recognize equivalent expressions #35 44  Multiply or expand trigonometric expressions #45 56  Factor trigonometric expressions #57 70     Homework 5.1  For Problems 1 8, evaluate the expressions, using exact values for the trigonometric ratios.           For Problems 9 16, evaluate the expressions for , and . Give exact values for your answers.           For Problems 17 22,evaluate the expressions using a calculator.                                             For Problems 23 28, combine like terms.                                    For Problems 29 34, simplify the expression, then evaluate.  for   for  for  for  for  for   For Problems 35 44, decide whether or not the expressions are equivalent. Explain.  No   No   Yes   No   No    For Problems 45 56, multiply or expand.                                                                         For Problems 57 70, factor.                                                                                 "
 },
 {
-  "id": "p-2699",
+  "id": "p-2702",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#p-2699",
+  "url": "Algebra-with-Trigonometric-Ratios.html#p-2702",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -11215,9 +11215,9 @@ var ptx_lunr_docs = [
   "body": "Keep in mind that , for example, is not a product: it does not mean \"sin times X\" (whatever that might be). Instead, \"sin\" is the name of a function, and means to evaluate the sine function at X. Thus, is a single number, the output of the sine function. "
 },
 {
-  "id": "example-79",
+  "id": "example-78",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-79",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-78",
   "type": "Example",
   "number": "5.2",
   "title": "",
@@ -11242,18 +11242,18 @@ var ptx_lunr_docs = [
   "body": "In the previous Exercise, is not equal to . That is, (You can check this for yourself.) We must follow the order of operations and evaluate the expression inside parentheses before applying the sine function. "
 },
 {
-  "id": "p-2709",
+  "id": "p-2713",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#p-2709",
+  "url": "Algebra-with-Trigonometric-Ratios.html#p-2713",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "simplify equivalent "
 },
 {
-  "id": "example-80",
+  "id": "example-79",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-80",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-79",
   "type": "Example",
   "number": "5.5",
   "title": "",
@@ -11275,12 +11275,12 @@ var ptx_lunr_docs = [
   "type": "Caution",
   "number": "5.7",
   "title": "",
-  "body": "In the previous Exercise, note that and are not like terms. (We can choose values for and so that and have different values.) "
+  "body": "In the previous Checkpoint, note that and are not like terms. (We can choose values for and so that and have different values.) "
 },
 {
-  "id": "example-81",
+  "id": "example-80",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-81",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-80",
   "type": "Example",
   "number": "5.8",
   "title": "",
@@ -11296,9 +11296,9 @@ var ptx_lunr_docs = [
   "body": "Simplify, and evaluate for  "
 },
 {
-  "id": "example-82",
+  "id": "example-81",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-82",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-81",
   "type": "Example",
   "number": "5.10",
   "title": "",
@@ -11314,13 +11314,13 @@ var ptx_lunr_docs = [
   "body": "Evaluate "
 },
 {
-  "id": "example-83",
+  "id": "example-82",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-83",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-82",
   "type": "Example",
   "number": "5.12",
   "title": "",
-  "body": "Using the distributive law, multiply .  Think of as a single variable, and multiply by each term inside parentheses. (The algebraic form of the calculation is shown on the right in blue). Notice that we write as . "
+  "body": "Using the distributive law, multiply .  Think of as a single variable, and multiply by each term inside parentheses. (The algebraic form of the calculation is shown below in blue).  Notice that we write as . "
 },
 {
   "id": "exercise-1025",
@@ -11332,9 +11332,9 @@ var ptx_lunr_docs = [
   "body": "Multiply "
 },
 {
-  "id": "example-84",
+  "id": "example-83",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-84",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-83",
   "type": "Example",
   "number": "5.14",
   "title": "",
@@ -11350,9 +11350,9 @@ var ptx_lunr_docs = [
   "body": "Expand "
 },
 {
-  "id": "example-85",
+  "id": "example-84",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-85",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-84",
   "type": "Example",
   "number": "5.16",
   "title": "",
@@ -11368,13 +11368,13 @@ var ptx_lunr_docs = [
   "body": "Factor.        "
 },
 {
-  "id": "example-86",
+  "id": "example-85",
   "level": "2",
-  "url": "Algebra-with-Trigonometric-Ratios.html#example-86",
+  "url": "Algebra-with-Trigonometric-Ratios.html#example-85",
   "type": "Example",
   "number": "5.18",
   "title": "",
-  "body": "Factor.       We look for numbers and so that . Their product is , and their sum is . By checking the factors of for the correct sum, we find and . Thus,  Now replace by to find  "
+  "body": "Factor.       We look for numbers and so that . We see that their product must be , and their sum must be . By checking the factors of for the correct sum, we find and . Thus,  Now replace by to find  "
 },
 {
   "id": "exercise-1028",
@@ -12031,21 +12031,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Solving Equations",
-  "body": " Solving Equations  Introduction  It is important to distinguish between an algebraic expression and an equation . An equation equation is a statement that two algebraic expressions are equal. It may be true or false, depending on the values of any variables involved. Here are some examples of equations. The first equation is true, the second is false, and the third equation is true only if or . When you solve solve an equation an equation, you are finding the values of the variable that make the equation true.   Evaluate for .  Solve .    Substitute into the expression to find  We must find a value for that makes equal to 20. In part (a) we saw that this expression equals 20 when , so the solution of the equation is .   Use trial and error to find a solution of the equation  Try small integer values for .  You probably remember a number of algebraic techniques for solving equations of different types. Another useful equation-solving method uses graphs. solve an equation using a graph  Use a graph to solve the equation .  We graph the expressions on either side of the equation, that is, we graph and on the same grid, as shown below.   We are looking for any values of where the two -values are equal, and these occur at the intersection points of the two graphs. At those points, the -values are and , and these are the solutions of the equation. You can check that all three values make the equation true.  cubic graph  Use a graph to show that the equation has no real-valued solutions. The graph does not cross the line .   parabola   Trigonometric Equations  trigonometric equation  equation trigonometric  equation trigonometric trigonometric equation  The first Ferris wheel was built for the Chicago World's Fair in 1893. It had a diameter of 250 feet and could carry 2160 people in 36 carriages. From the top of the wheel, passengers could see into four states. After loading all the passengers, the wheel made one revolution in nine minutes.  If you are in the bottom carriage of the Ferris wheel at the start of its revolution, your height after seconds is given by For how long are you more than 240 feet above the ground?  The figure below shows a graph of the height function and a horizontal line at .  sinusoidal graph  From the graph, we see that at approximately 215 seconds and 325 seconds into the ride. Your height is more than 240 feet between those two times, or for about 110 seconds.   Solving Trigonometric Equations  trigonometric equation solving  solve trigonometric equations  solve trigonometric equations trigonometric equation  In the example above, we used a graph to solve the equation , or To find a more precise solution, we can use algebraic methods. As an example, we'll solve the slightly simpler equation We'll look for all solutions for between and . We begin by isolating the trigonometric ratio on one side of the equation. We have solved equations like this one before: we use the inverse cosine to solve for . Remember that there are two angles between and that have a cosine of , one in the second quadrant and one in the third quadrant. The calculator will give us only the second quadrant solution. To find the second solution, we need the third-quadrant angle whose cosine is .   Now, the reference angle for is and the angle in the third quadrant with the same reference angle is (See the figure at right.) Thus, the other solution is .  angles  To solve simple equations involving a single trigonometric ratio (either or ), we can follow the steps below.  To Solve a Trigonometric Equation for  trigonometric equation solving   Isolate the trigonometric ratio.  Find one solution.  Give an exact solution if the trig ratio is one of the special values.  Otherwise use the inverse trig keys on a calculator.  Use reference angles to find a second solution (if there is one).   In step 3, note that if the first solution is a quadrantal angle, there may not be a second solution. Consider, for example, the equation .  Solve the equation for .  We begin by isolating the trig ratio.   We recognize that for one of the special angles, namely , and also for the obtuse angle , as shown at right.  angles  Note that is the second-quadrant angle with reference angle . Because the sine is negative in the third and fourth quadrants, there are no other solutions between and . The solutions we want are and .  To solve the equation in the previous example, it is not enough to find the solution ; we must find all the solutions between and . To find the solutions in other quadrants, we use reference angles.  In the previous example, we found two solutions of the equation . The equation actually has infinitely many solutions, as you can see in the figure below, which shows a graph of and the horizontal line . The line intersects the sine graph infinitely many times, twice in each cycle.   sinusoidal graph  Each intersection represents a solution of the equation. Thus, all of the angles coterminal with and are also solutions. We can easily find these solutions by adding integer multiples of to or . This is why, when solving a trigonometric equation, we usually list only the solutions in one cycle, typically those between and .  Solve the equation for .  We can use a calculator to help us solve equations that do not involve special angles.  Solve the equation for . Round your solutions to three decimal places.  First, we isolate the trig ratio.   There are two angles with tangent -3, one in the second quadrant and one in the fourth quadrant. The calculator finds the solution This angle is in the fourth quadrant, but it is not between and .   angles     The angle we want is coterminal with , so we add to get the first solution:  The other solution is in the second quadrant, as shown in the figure. This angle is less than the fourth quadrant solution:  In the previous example, notice that the solutions are apart. The solutions of an equation always differ by , so the use of reference angles is not necessary for these equations: once we have found one solution, we can add or subtract to find the other solution between and . (See Homework Problems 69 and 70.)  Solve the equation , for . Round your solutions to three decimal places. or  Some trigonometric equations have no solution. As we can observe from their graphs or from their definitions, the sine and cosine functions only have values ranging from to .  Solve for .  We begin by isolating . Because is never greater than 1, there is no angle whose sine is 20. The equation has no solution.  Solve for . No solution   Graphical Solutions  trigonometric equation graphical solutions  We can use graphs to approximate the solutions to trigonometric equations.  Use a graph to solve the equation .  Graph the equation and the horizontal line on the same axes, as shown below.   tangent graph  It is difficult to read the graph with much accuracy, but you can use the intersect feature on your calculator to verify that the graph of has -value when is about or .  Use a graph to verify your solutions to from .   sinusoidal graph    Equations with Squares of Trig Ratios  trigonometric equation with squares of trig ratios  Simple quadratic equations can be solved by extracting roots. For example, to solve the equation we first isolate : and then take square roots of both sides to find Recall that a quadratic equation may have two real solutions, one (repeated) real solution, or no real solutions. We can use extraction of roots to solve trigonometric equations as well.  Solve for .  We begin by isolating the power of tangent, . Next, we solve for by extracting roots. There are two angles between and with tangent and two angles with tangent , making four solutions to this equation. We know that , so one of the solutions is .   The tangent function is also positive in the third quadrant, and the angle in the third quadrant with reference angle is . The angles in the second and fourth quadrants with reference angle have tangent . These angles are  angles   The four solutions are shown at right.  Solve the equation for . , , , or  Other quadratic equations can be solved by factoring. For example, we can solve the equation by factoring the left side to get Then we apply the Zero Factor Principle to set each factor equal to zero, and solve each equation. The solutions are and .  Solve for .  Compare this equation to the algebraic equation . Our equation has the same algebraic form, but with replaced by .  We can solve the algebraic equation by factoring as and we'll use the same strategy on the trigonometric equation. Now we solve each equation for . We know that and the cosine function is negative in the second and third quadrants. The angles in those quadrants with reference angle are Also, when . Thus, the original equation has three solutions: and  Solve for . Round your answers to the nearest degree. , , , or   Snell's Law  Snell's Law  When you view an object through a liquid, such as a spoon in a glass of water, or a fish in an aquarium, the object looks distorted or bent. This distortion is caused by refraction of light. Light rays bend when they pass from one medium to another, for instance from water to glass or from glass to air. spoon in glass of water  A light ray enters the boundary between the two media at a certain angle, called the angle of incidence angle of incidence , but leaves the boundary at a different angle, the angle of refraction angle of refraction . Both angles are acute angles measured from the normal normal line line perpendicular to the boundary, as shown below.  The change of angle is caused by the fact that light travels at different speeds in different media. The relationship between the angle of incidence and the angle of refraction is given by Snell's Law Snell's Law :  water-glass interface  where is the angle in the medium where light travels at speed , and is the angle where light travels at speed . The ratio of the speeds is called the index of refraction .  The index of refraction from water to glass is 1.1. If light passes from water to glass with a angle of incidence, what is the angle of refraction?  If is the angle of refraction, then from Snell's Law we have Because , (For Snell's Law we use only acute angles.) The angle of refraction is approximately .  A light ray passes from water to glass with an angle of incidence. What is the angle of refraction?  Review the following skills you will need for this section.   Each of the following \"solutions\" contains an error. Find the error, and supply a correct solution.          Algebra Refresher Answers   We can't divide by  3 has two square roots.  4 has two square roots.  One side must be zero to use the zero-factor principle. No real solutions.      Section 5.2 Summary  Vocabulary   Equation  Solve  Zero Factor Principle  Angle of incidence  Angle of refraction  Normal    Concepts   An equation is a statement that two algebraic expressions are equal. It may be true or false.  We can solve equations by trial and error, by using graphs, or by algebraic techniques.  To solve a trigonometric equation, we first isolate the trigonometric ratio on one side of the equation.  We use reference angles to find all the solutions between and .  We can use factoring or extraction of roots to solve some quadratic equations.   Study Questions   How many solutions between and does the equation have for each value of between -1 and 0?  How many solutions between and does the equation have for each value of greater than 1?  How many solutions between and does the equation have for each value of between -1 and 0?   Skills   Use reference angles #1 8  Solve equations by trial and error #9 14  Use graphs to solve equations #15 18, #39 52  Solve trigonometric equations for exact values #19 32, 39 46  Use a calculator to solve trigonometric equations #33 38, 47 52, 65 68  Solve trigonometric equations that involve factoring #53 64     Homework 5.2  For Problems 1 4, find the reference angle. (If you would like to review reference angles, see Section 4.1.)       For Problems 5 8, find an angle in each quadrant with the given reference angle.  I: II: III: IV:   I: II: III: IV:    For Problems 9 14,   Evaluate the expression at the given values of the variable.  Give one solution of the equation.                           For Problems 15 18, use a graph to solve the equation. Check your solution by substitution.       For Problems 19 32, solve the equation exactly for .  or   or   or   or   or    or   or    For Problems 33 38, solve the equation for . Round your answers to two decimal places.  or   or   or    For Problems 39 46,   Use a graph to estimate the solutions for angles between and .  Solve the equation algebraically.   or   or     or    For Problems 47 52,   Use a graph to estimate the solutions for angles between and .  Solve the equation algebraically, rounding angles to the nearest degree.   or     or    For Problems 53 64, solve the equation for . Round angles to two decimal places.  or   , , or   , , or   , , , or   , , , or      For Problems 65 68, use Snell's Law to answer the question.  A light ray passes from water to glass, with a angle of incidence. What is the angle of refraction?  A light ray passes from water to glass, with an angle of incidence. What is the angle of refraction?  A light ray passes from water to glass, with a angle of refraction. What is the angle of incidence?  A light ray passes from water to glass, with a angle of refraction. What is the angle of incidence?    Use your calculator to graph the function in the ZTrig window (press ), along with the horizontal line . Use the intersect feature to verify that the solutions of the equation differ by .  Repeat part (a) with the horizontal line to verify that the solutions of the equation differ by .    What is the angle in the third quadrant with reference angle ? Show this angle differs from by . Explain how this fact shows that the solutions of , for , differ by .  What is the angle in the second quadrant with reference angle ? What is the angle in the fourth quadrant with reference angle ? Show that these two angles differ by . Explain how this fact shows that the solutions , for , differ by .    "
+  "body": " Solving Equations  Introduction  Now that we understand that trigonometric functions can be used to model rotations and cyclical behavior, we can begin to consider some applications. An important part of any model involves solving equations. In Chapter 4 we solved simple trigonometric equations, and now we are equipped to tackle more challenging ones.   Algebra Refresher  It is important to distinguish between an algebraic expression and an equation . An equation equation is a statement that two algebraic expressions are equal. It may be true or false, depending on the values of any variables involved. Here are some examples of equations. The first equation is true, the second is false, and the third equation is true only if or . When you solve solve an equation an equation, you are finding the values of the variable that make the equation true.  You already know several algebraic techniques for solving equations of different types. But sometimes simple trial and error is the best approach.   Evaluate for .  Solve .    Substitute into the expression to find  We must find a value for that makes equal to 20. In part (a) we saw that this expression equals 20 when , so the solution of the equation is .   Use trial and error to find a solution of the equation  Try small integer values for .  Another useful equation-solving method uses graphs. solve an equation using a graph  Use a graph to solve the equation .  We graph the expressions on either side of the equation, that is, we graph and on the same grid, as shown below.   We are looking for any values of where the two -values are equal, and these occur at the intersection points of the two graphs. At those points, the -values are and , and these are the solutions of the equation. You can check that all three values make the equation true.  cubic graph  Use a graph to show that the equation has no real-valued solutions. The graph does not cross the line .   parabola   Trigonometric Equations  trigonometric equation  equation trigonometric  equation trigonometric trigonometric equation  The first Ferris wheel was built for the Chicago World's Fair in 1893. It had a diameter of 250 feet and could carry 2160 people in 36 carriages. From the top of the wheel, passengers could see into four states. After loading all the passengers, the wheel made one revolution in nine minutes.   If you are in the bottom carriage of the Ferris wheel at the start of its revolution, your height after seconds is given by For how long are you more than 240 feet above the ground?  In case you are wondering, the boarding platform is 14 feet above the ground, so that when . And notice that when seconds, or 9 minutes.  The figure below shows a graph of the height function and a horizontal line at .  sinusoidal graph  From the graph, we see that at approximately 215 seconds (or 3 minutes and 35 seconds) and 325 seconds (or 5 minutes and 25 seconds) into the ride. Your height is more than 240 feet between those two times, or for about 110 seconds.   Solving Trigonometric Equations  trigonometric equation solving  solve trigonometric equations  solve trigonometric equations trigonometric equation  In the example above, we used a graph to solve the equation , or To find a more precise solution, we can use algebraic methods. To start, we'll solve the slightly simpler equation We'll look for all solutions for between and . We begin by isolating the trigonometric ratio on one side of the equation. We have solved equations like this one before: we use the inverse cosine to solve for . Remember that there are two angles between and that have a cosine of , one in the second quadrant and one in the third quadrant. The calculator will give us only the second quadrant solution. To find the second solution, we need the third-quadrant angle whose cosine is .   Now, the reference angle for is and the angle in the third quadrant with the same reference angle is (See the figure at right.) Thus, the other solution is .  angles  To solve simple equations involving a single trigonometric ratio (either or ), we can follow the steps below.  To Solve a Trigonometric Equation for  trigonometric equation solving   Isolate the trigonometric ratio.  Find one solution.  Give an exact solution if the trig ratio is one of the special values.  Otherwise use the inverse trig keys on a calculator.  Use reference angles to find a second solution (if there is one).   In step 3, note that if the first solution is a quadrantal angle, there may not be a second solution. Consider, for example, the equation .  To finish up our Ferris wheel example, we can replace by to get two equations:     Your height is above 240 feet between 215.35 seconds and 324.15 seconds. Our estimates from the graphical solutions were pretty good.  Solve the equation for .  We begin by isolating the trig ratio.   We recognize that for one of the special angles, namely , and also for the obtuse angle , as shown at right.  angles  We know that is the second-quadrant angle with reference angle . What about the other quadrants? Because the sine is negative in the third and fourth quadrants, there are no other solutions between and . The solutions we want are and .  Be careful! It is worth repeating that to solve a trigonometric equation, it is not enough to find one solution; we must find all the solutions between and . To find the solutions in other quadrants, we use reference angles.  In the previous Example, we found two solutions of the equation . The equation actually has infinitely many solutions, as you can see in the figure below, which shows a graph of and the horizontal line . The line intersects the sine graph infinitely many times, twice in each cycle.   sinusoidal graph  Each intersection represents a solution of the equation. Thus, all of the angles coterminal with and are also solutions. We can easily find these solutions by adding integer multiples of to or . This is why, when solving a trigonometric equation, we usually list only the solutions in one cycle, typically those between and .  Solve the equation for .  We can use a calculator to help us solve equations that do not involve special angles.  Solve the equation for . Round your solutions to three decimal places.  First, we isolate the trig ratio.   There are two angles with tangent , one in the second quadrant and one in the fourth quadrant. The calculator finds the solution This angle is in the fourth quadrant, but it is not between and .   angles     The angle we want is coterminal with , so we add to get the first solution:  The other solution is in the second quadrant, as shown in the figure. This angle is less than the fourth quadrant solution:  In the previous Example, notice that the solutions are apart. The solutions of an equation always differ by , so the use of reference angles is not necessary for these equations: once we have found one solution, we can add or subtract to find the other solution between and . (See Homework Problems 69 and 70.)  Solve the equation , for . Round your solutions to three decimal places. or  Some trigonometric equations have no solution. As we can observe from their graphs or from their definitions, the sine and cosine functions only have values ranging from to .  Solve for .  We begin by isolating . Because is never greater than 1, there is no angle whose sine is 20. The equation has no solution.  Solve for . No solution   Graphical Solutions  trigonometric equation graphical solutions  Sometimes it is helpful to have a visual image of an equation, and we can use graphs to find approximate solutions.  Use a graph to solve the equation .  Graph the equation and the horizontal line on the same axes, as shown below.   tangent graph  It is difficult to read the graph with much accuracy, but you can use the intersect feature on your calculator to verify that the graph of has -value when is about or .  Use a graph to verify your solutions to from .   sinusoidal graph    Equations with Squares of Trig Ratios  trigonometric equation with squares of trig ratios  You know several techniques for solving quadratic equations. Simple quadratic equations can be solved by extracting roots. For example, to solve the equation we first isolate : and then take square roots of both sides to find Recall that a quadratic equation may have two real solutions, one (repeated) real solution, or no real solutions. We can use extraction of roots to solve trigonometric equations as well.  Solve for .  We begin by isolating the power of tangent, . Next, we solve for by extracting roots. There are two angles between and with tangent and two angles with tangent , making four solutions to this equation. We know that , so one of the solutions is .   The tangent function is also positive in the third quadrant, and the angle in the third quadrant with reference angle is . The angles in the second and fourth quadrants with reference angle have tangent . These angles are  angles   The four solutions are shown at right.  Solve the equation for . , , , or  Other quadratic equations can be solved by factoring. For example, we can solve the equation by factoring the left side to get Then we apply the Zero Factor Principle to set each factor equal to zero, and solve each equation. The solutions are and .  Solve for .  Compare this equation to the algebraic equation . Our equation has the same algebraic form, but with replaced by .  We can solve the algebraic equation by factoring as and we'll use the same strategy on the trigonometric equation. Now we solve each equation for . We know that and the cosine function is negative in the second and third quadrants. The angles in those quadrants with reference angle are Also, when . Thus, the original equation has three solutions: and  Solve for . Round your answers to the nearest degree. , , , or   Snell's Law  Snell's Law  When you view an object through a liquid, such as a spoon in a glass of water, or a fish in an aquarium, the object may look distorted or bent. This distortion is caused by refraction of light. Light rays bend when they pass from one medium to another, for instance from water to glass or from glass to air. spoon in glass of water  A light ray enters the boundary between the two media at a certain angle, called the angle of incidence angle of incidence , but leaves the boundary at a different angle, the angle of refraction angle of refraction . Both angles are acute angles measured from the normal normal line line perpendicular to the boundary, as shown below.  The change of angle is caused by the fact that light travels at different speeds in different media. The relationship between the angle of incidence and the angle of refraction is given by Snell's Law Snell's Law :  water-glass interface  where is the angle in the medium where light travels at speed , and is the angle where light travels at speed . The ratio of the speeds is called the index of refraction .  The index of refraction from water to glass is 1.1. If light passes from water to glass with a angle of incidence, what is the angle of refraction?  If is the angle of refraction, then from Snell's Law we have Because , (For Snell's Law we use only acute angles.) The angle of refraction is approximately .  A light ray passes from water to glass with an angle of incidence. What is the angle of refraction?  Review the following skills you will need for this section.   Each of the following \"solutions\" contains an error. Find the error, and supply a correct solution.          Algebra Refresher Answers   We can't divide by  3 has two square roots.  4 has two square roots.  One side must be zero to use the zero-factor principle. No real solutions.      Section 5.2 Summary  Vocabulary   Equation  Solve  Zero Factor Principle  Angle of incidence  Angle of refraction  Normal    Concepts   An equation is a statement that two algebraic expressions are equal. It may be true or false.  We can solve equations by trial and error, by using graphs, or by algebraic techniques.  To solve a trigonometric equation, we first isolate the trigonometric ratio on one side of the equation.  We use reference angles to find all the solutions between and .  We can use factoring or extraction of roots to solve some quadratic equations.   Study Questions   How many solutions between and does the equation have for each value of between -1 and 0?  How many solutions between and does the equation have for each value of greater than 1?  How many solutions between and does the equation have for each value of between -1 and 0?   Skills   Use reference angles #1 8  Solve equations by trial and error #9 14  Use graphs to solve equations #15 18, #39 52  Solve trigonometric equations for exact values #19 32, 39 46  Use a calculator to solve trigonometric equations #33 38, 47 52, 65 68  Solve trigonometric equations that involve factoring #53 64     Homework 5.2  For Problems 1 4, find the reference angle. (If you would like to review reference angles, see Section 4.1.)       For Problems 5 8, find an angle in each quadrant with the given reference angle.  I: II: III: IV:   I: II: III: IV:    For Problems 9 14,   Evaluate the expression at the given values of the variable.  Give one solution of the equation.                           For Problems 15 18, use a graph to solve the equation. Check your solution by substitution.       For Problems 19 32, solve the equation exactly for .  or   or   or   or   or    or   or    For Problems 33 38, solve the equation for . Round your answers to two decimal places.  or   or   or    For Problems 39 46,   Use a graph to estimate the solutions for angles between and .  Solve the equation algebraically.   or   or     or    For Problems 47 52,   Use a graph to estimate the solutions for angles between and .  Solve the equation algebraically, rounding angles to the nearest degree.   or     or    For Problems 53 64, solve the equation for . Round angles to two decimal places.  or   , , or   , , or   , , , or   , , , or      For Problems 65 68, use Snell's Law to answer the question.  A light ray passes from water to glass, with a angle of incidence. What is the angle of refraction?  A light ray passes from water to glass, with an angle of incidence. What is the angle of refraction?  A light ray passes from water to glass, with a angle of refraction. What is the angle of incidence?  A light ray passes from water to glass, with a angle of refraction. What is the angle of incidence?    Use your calculator to graph the function in the ZTrig window (press ), along with the horizontal line . Use the intersect feature to verify that the solutions of the equation differ by .  Repeat part (a) with the horizontal line to verify that the solutions of the equation differ by .    What is the angle in the third quadrant with reference angle ? Show this angle differs from by . Explain how this fact shows that the solutions of , for , differ by .  What is the angle in the second quadrant with reference angle ? What is the angle in the fourth quadrant with reference angle ? Show that these two angles differ by . Explain how this fact shows that the solutions , for , differ by .    "
 },
 {
-  "id": "p-2896",
+  "id": "p-2903",
   "level": "2",
-  "url": "Solving-Equations.html#p-2896",
+  "url": "Solving-Equations.html#p-2903",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "equation solve "
 },
 {
-  "id": "example-87",
+  "id": "example-86",
   "level": "2",
-  "url": "Solving-Equations.html#example-87",
+  "url": "Solving-Equations.html#example-86",
   "type": "Example",
   "number": "5.20",
   "title": "",
@@ -12061,9 +12061,9 @@ var ptx_lunr_docs = [
   "body": "Use trial and error to find a solution of the equation  Try small integer values for . "
 },
 {
-  "id": "example-88",
+  "id": "example-87",
   "level": "2",
-  "url": "Solving-Equations.html#example-88",
+  "url": "Solving-Equations.html#example-87",
   "type": "Example",
   "number": "5.22",
   "title": "",
@@ -12085,34 +12085,34 @@ var ptx_lunr_docs = [
   "type": "Note",
   "number": "5.24",
   "title": "",
-  "body": "In step 3, note that if the first solution is a quadrantal angle, there may not be a second solution. Consider, for example, the equation . "
-},
-{
-  "id": "example-89",
-  "level": "2",
-  "url": "Solving-Equations.html#example-89",
-  "type": "Example",
-  "number": "5.25",
-  "title": "",
-  "body": "Solve the equation for .  We begin by isolating the trig ratio.   We recognize that for one of the special angles, namely , and also for the obtuse angle , as shown at right.  angles  Note that is the second-quadrant angle with reference angle . Because the sine is negative in the third and fourth quadrants, there are no other solutions between and . The solutions we want are and . "
-},
-{
-  "id": "warning-18",
-  "level": "2",
-  "url": "Solving-Equations.html#warning-18",
-  "type": "Caution",
-  "number": "5.26",
-  "title": "",
-  "body": "To solve the equation in the previous example, it is not enough to find the solution ; we must find all the solutions between and . To find the solutions in other quadrants, we use reference angles. "
+  "body": "In case you are wondering, the boarding platform is 14 feet above the ground, so that when . And notice that when seconds, or 9 minutes. "
 },
 {
   "id": "note-24",
   "level": "2",
   "url": "Solving-Equations.html#note-24",
   "type": "Note",
+  "number": "5.25",
+  "title": "",
+  "body": "In step 3, note that if the first solution is a quadrantal angle, there may not be a second solution. Consider, for example, the equation . "
+},
+{
+  "id": "example-88",
+  "level": "2",
+  "url": "Solving-Equations.html#example-88",
+  "type": "Example",
+  "number": "5.26",
+  "title": "",
+  "body": "Solve the equation for .  We begin by isolating the trig ratio.   We recognize that for one of the special angles, namely , and also for the obtuse angle , as shown at right.  angles  We know that is the second-quadrant angle with reference angle . What about the other quadrants? Because the sine is negative in the third and fourth quadrants, there are no other solutions between and . The solutions we want are and . "
+},
+{
+  "id": "warning-18",
+  "level": "2",
+  "url": "Solving-Equations.html#warning-18",
+  "type": "Caution",
   "number": "5.27",
   "title": "",
-  "body": "In the previous example, we found two solutions of the equation . The equation actually has infinitely many solutions, as you can see in the figure below, which shows a graph of and the horizontal line . The line intersects the sine graph infinitely many times, twice in each cycle.   sinusoidal graph  Each intersection represents a solution of the equation. Thus, all of the angles coterminal with and are also solutions. We can easily find these solutions by adding integer multiples of to or . This is why, when solving a trigonometric equation, we usually list only the solutions in one cycle, typically those between and . "
+  "body": "Be careful! It is worth repeating that to solve a trigonometric equation, it is not enough to find one solution; we must find all the solutions between and . To find the solutions in other quadrants, we use reference angles. "
 },
 {
   "id": "exercise-1101",
@@ -12124,13 +12124,13 @@ var ptx_lunr_docs = [
   "body": "Solve the equation for . "
 },
 {
-  "id": "example-90",
+  "id": "example-89",
   "level": "2",
-  "url": "Solving-Equations.html#example-90",
+  "url": "Solving-Equations.html#example-89",
   "type": "Example",
   "number": "5.29",
   "title": "",
-  "body": "Solve the equation for . Round your solutions to three decimal places.  First, we isolate the trig ratio.   There are two angles with tangent -3, one in the second quadrant and one in the fourth quadrant. The calculator finds the solution This angle is in the fourth quadrant, but it is not between and .   angles     The angle we want is coterminal with , so we add to get the first solution:  The other solution is in the second quadrant, as shown in the figure. This angle is less than the fourth quadrant solution: "
+  "body": "Solve the equation for . Round your solutions to three decimal places.  First, we isolate the trig ratio.   There are two angles with tangent , one in the second quadrant and one in the fourth quadrant. The calculator finds the solution This angle is in the fourth quadrant, but it is not between and .   angles     The angle we want is coterminal with , so we add to get the first solution:  The other solution is in the second quadrant, as shown in the figure. This angle is less than the fourth quadrant solution: "
 },
 {
   "id": "note-25",
@@ -12139,7 +12139,7 @@ var ptx_lunr_docs = [
   "type": "Note",
   "number": "5.30",
   "title": "",
-  "body": "In the previous example, notice that the solutions are apart. The solutions of an equation always differ by , so the use of reference angles is not necessary for these equations: once we have found one solution, we can add or subtract to find the other solution between and . (See Homework Problems 69 and 70.) "
+  "body": "In the previous Example, notice that the solutions are apart. The solutions of an equation always differ by , so the use of reference angles is not necessary for these equations: once we have found one solution, we can add or subtract to find the other solution between and . (See Homework Problems 69 and 70.) "
 },
 {
   "id": "checkpoint-solve-algebraically",
@@ -12151,9 +12151,9 @@ var ptx_lunr_docs = [
   "body": "Solve the equation , for . Round your solutions to three decimal places. or "
 },
 {
-  "id": "example-91",
+  "id": "example-90",
   "level": "2",
-  "url": "Solving-Equations.html#example-91",
+  "url": "Solving-Equations.html#example-90",
   "type": "Example",
   "number": "5.32",
   "title": "",
@@ -12169,9 +12169,9 @@ var ptx_lunr_docs = [
   "body": "Solve for . No solution "
 },
 {
-  "id": "example-92",
+  "id": "example-91",
   "level": "2",
-  "url": "Solving-Equations.html#example-92",
+  "url": "Solving-Equations.html#example-91",
   "type": "Example",
   "number": "5.34",
   "title": "",
@@ -12187,9 +12187,9 @@ var ptx_lunr_docs = [
   "body": "Use a graph to verify your solutions to from .   sinusoidal graph  "
 },
 {
-  "id": "example-93",
+  "id": "example-92",
   "level": "2",
-  "url": "Solving-Equations.html#example-93",
+  "url": "Solving-Equations.html#example-92",
   "type": "Example",
   "number": "5.36",
   "title": "",
@@ -12205,9 +12205,9 @@ var ptx_lunr_docs = [
   "body": "Solve the equation for . , , , or "
 },
 {
-  "id": "example-94",
+  "id": "example-93",
   "level": "2",
-  "url": "Solving-Equations.html#example-94",
+  "url": "Solving-Equations.html#example-93",
   "type": "Example",
   "number": "5.38",
   "title": "",
@@ -12223,18 +12223,27 @@ var ptx_lunr_docs = [
   "body": "Solve for . Round your answers to the nearest degree. , , , or "
 },
 {
-  "id": "p-2961",
+  "id": "p-2975",
   "level": "2",
-  "url": "Solving-Equations.html#p-2961",
+  "url": "Solving-Equations.html#p-2975",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "angle of incidence angle of refraction normal "
 },
 {
-  "id": "example-95",
+  "id": "p-2977",
   "level": "2",
-  "url": "Solving-Equations.html#example-95",
+  "url": "Solving-Equations.html#p-2977",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "index of refraction "
+},
+{
+  "id": "example-94",
+  "level": "2",
+  "url": "Solving-Equations.html#example-94",
   "type": "Example",
   "number": "5.40",
   "title": "",
@@ -12259,9 +12268,9 @@ var ptx_lunr_docs = [
   "body": " Each of the following \"solutions\" contains an error. Find the error, and supply a correct solution.          Algebra Refresher Answers   We can't divide by  3 has two square roots.  4 has two square roots.  One side must be zero to use the zero-factor principle. No real solutions.    "
 },
 {
-  "id": "p-2979",
+  "id": "p-2993",
   "level": "2",
-  "url": "Solving-Equations.html#p-2979",
+  "url": "Solving-Equations.html#p-2993",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -12904,39 +12913,39 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Trigonometric Identities",
-  "body": " Trigonometric Identities  What is an Identity?  identity  Recall that an equation may be true or false, depending on the values of any variables involved. For example, the equation is true only if or . An equation that is true only for certain values of the variable, and false for others, is called a conditional equation equation conditional . When you solve a conditional equation, you are finding the values of the variable that make the equation true.  Some equations are true for all legitimate values of the variables. Such equations are called identities identity . Here are some examples of identities. In an identity, the expressions on either side of the equal sign are equivalent expressions , because they have the same value for all values of the variable.  Identity  identity  An identity is an equation that is true for all legitimate values of the variables.  Which of the following equations are identities?        Many of the algebraic operations you have already learned, such as combining like terms or applying the distributive law, produce equivalent expressions.   Equation (a) is an identity obtained by combining like terms on the left side.  Equation (b) is an identity obtained by applying the distributive law on the left side.  Equation (c) is not an identity, because the equation is true only for .   Which of the following equations are identities?       (a) and (c)  Of course, you wouldn't be asked to solve an identity, because all values of the variable are solutions. Instead, we use identities to replace one form of an expression by a more useful form. You do this when you solve a quadratic equation by factoring. For example, Because is equivalent to , we have not changed the equation or its solutions. But now we can apply the Zero Factor principle and solve the equation.  Using identities is especially useful when we are working with trigonometric ratios.   Using Trigonometric Ratios in Identities  trigonometric identity  identity with trigonometric ratios  identity with trigonometric ratios trigonometric identity  Because the identity is true for any value of , it is true when is replaced, for instance, by . This gives us a new identity Expressions involving can be manipulated by the same rules (such as the distributive law or the laws of exponents) that we use with simple variables.  Which of the following equations are identities?        These equations are obtained from the equations in the previous example by replacing the variable with , the variable with , and the variable with . Equations (a) and (b) are identities, and equation (c) is not, for the same reasons as before.  Which of the following equations are identities?       (a) and (c)  To show that an equation is not an identity, we need only find one value of the variable for which the equation is false. However, to show that a given equation is an identity, it is not enough to show that the equation is true for one or even a dozen values of the variable. The equation must be true for all legitimate values of the variable. Because we cannot check all values of the variable numerically, we must use algebraic methods to prove that an equation is an identity.  Checking Identities Graphically  identity check graphically  Is the equation an identity? The answer is no! Even though the equation is true for all positive values of , it is false for negative values of . For example, if , then so . Because the radical symbol stands for the nonnegative square root, the left side of the equation, , is never negative. Therefore, cannot equal when is a negative number. The equation is false for .  One way to see that and are not equivalent is to compare the graphs of and , shown below. You can see that and do not have the same value for .  two graphs  Thus, to check to whether an equation is an identity, we can compare graphs of (left side of the equation) and (right side of the equation). If the two graphs are identical, the equation is an identity. If the two graphs are not the same, the equation is not an identity.  Which of the following equations are identities?       Compare the graphs of and . Enter the two equations in the ZTrig window and press ZOOM  to see the graphs shown below.  graph  To help distinguish which graph is which, we can use the calculator's trace feature, illustrated in the figure at right. Because there are two distinct graphs, the expressions and are not equivalent, and consequently is not an identity.  This time we graph and . Although the graphs appear to be identical, when we use the trace feature we see that their -values differ at (and at many other values of .) See the figures below.  graph  The graphs are so close together that calculator's resolution does not distinguish them, but tracing the graphs reveals that they are not identical. Because the two graphs differ, the equation is not an identity.    The example above illustrates the fact that graphs can be deceiving: even if two graphs look identical, it is always a good idea to check some numerical values as well.  Remember that we can use graphs to prove that an equation is not an identity, if the two graphs are clearly different, but to prove that an equation is an identity, we will need algebraic methods.  Use graphs to decide which of the following equations are identities.      (b)   Pythagorean Identity  Pythagorean identity  identity Pythagorean  identity Pythagorean Pythagorean identity  All of the trigonometric functions are related. We begin by considering the relationship between and . Complete the following table with exact values.                                              You should find that all the entries in the last column are 1.   For all of the angles in the table, We can verify that this equation holds for all angles by graphing the expressions on either side of the equal sign. The graphs of these two functions in the ZTrig window are shown at right.  graph  We see that the graph of appears identical to the horizontal line . In fact, the graphs are identical, and the equation is an identity. It is important enough to earn a special name.  Pythagorean Identity  Pythagorean identity  For any angle ,  As you might guess from its name, the Pythagorean identity is true because it is related to the Pythagorean theorem. We have not actually proved the identity, and a skeptical student may wonder if is only very close to 1, or if it equals 1 for only some values of . Homework Problem 77 offers a proof of the Pythagorean identity.  Evaluate without using a calculator.  Because the identity is true for any value of , it is true in particular for . So .  Evaluate without using a calculator.  When we solve more complicated trigonometric equations in later chapters, we will need to simplify trigonometric expressions so that they involve only one of the trig functions. The Pythagorean identity is useful when we wish to write an equivalent expression for either or for . Note that we can write the identity in two alternate forms:  Alternate Forms of the Pythagorean Identity  Pythagorean identity alternate forms    Rewrite as an expression involving only.  Using one of the alternate forms of the Pythagorean identity, we replace by to get  In the previous example, we have shown that is an identity.   If we graph  graph  for we see that they have the same graph, as shown in the figure.   Rewrite as an expression in .  Verify your identity by graphing.    Tangent Identity  tangent identity  There is also a relationship between the tangent ratio and the sine and cosine. Complete the following table with exact values. You should find that the entries in the last two columns are identical.                                  For the angles in the table, Because , the quotient is undefined for , and is undefined, too. The same is true for . For all other angles between and , . A proof of the tangent identity is outlined in Homework Problem 78.  Tangent Identity  tangent identity  For any angle not coterminal with or ,  Now we can see how to use identities to simplify trigonometric expressions. One strategy for simplifying a trigonometric expression is to reduce the number of different trig ratios involved. We can use the tangent identity to replace the tangent ratio by sines and cosines.  Simplify the expression .  We apply the tangent identity to replace by and obtain  Simplify the expression .   Trig Ratios are Related  All three of the trigonometric functions of an angle are related. If we know the value of one of the three, we can calculate the other two (up to sign) by using the Pythagorean and tangent identities. We do not need to find the angle itself in order to do this. We need only know in which quadrant the angle lies to determine the correct sign for the trig ratios.  If and find and .  We substitute into the Pythagorean identity to get Because is between and , must be negative, so . To find , we use the tangent identity.    We can also solve the previous example by sketching an appropriate triangle. We begin by drawing an obtuse angle and its reference triangle. Because , we can choose a point on the terminal side to have -coordinate 7 and , as shown below. In order to calculate and , we must find the -coordinate of the point. By the Pythagorean theorem,    angle  Note that is negative because the point is in the second quadrant. Then   If and find and .  Find and by using an appropriate sketch.  ,   Solving Equations  trigonometric equation solving  Now we'll see how identities are useful for solving trigonometric equations. So far we have only solved equations that involve a single trigonometric ratio. If the equation involves more than one trig function, we use identities to rewrite the equation in terms of a single trig function.  Solve for .  The equation involves both the cosine and sine functions, and we will rewrite the left side in terms of the sine only. To eliminate the cosines, we use the Pythagorean identity . Set each factor equal to zero to see that either or . Now, when or , and when . The solutions are , or .  Solve for . , ,  Like the Pythagorean identity, the tangent identity can be helpful in solving trigonometric equations.  Solve for .  We first try to write the equation in terms of a single trig function.   Because , we see that has a reference angle of . And because the tangent is negative in the second and fourth quadrants, we have or , as shown in the figure.  angle  Solve for . ,   Proving Identities  identity proving  When we show that one trigonometric expression is equivalent to another expression, we have proved a trigonometric identity. In a previous example we proved that the equation is an identity; it is true for all values of . A common strategy for proving an identity is to transform one side of the equation using equivalent expressions until it is identical to the other side. To help us choose the transformations at each step of the proof, we try to match the algebraic form of the final expression.  Prove the identity  By manipulating the left side of the equation, we will show that the expression is equivalent to . First, we use the tangent identity to write the expression in terms of sines and cosines: Next, we notice that the right side of the proposed identity has only one term, so we combine the terms on the left side. So that the fractions have the same denominator, we write 1 as . Finally, we apply the Pythagorean identity to the numerator. Thus, , and the identity is proved.  When you write out the proof of an identity, you should transform the expression on one side of the identity into the expression on the other side, showing one step of the calculation on each line of your proof. You can provide a justification for each step to the right of the calculation. The proof of the identity in the previous example would look like this:  Prove the identity  Review the following skills you will need for this section.   Write each expression as a single fraction in simplest form.              Algebra Refresher Answers               Section 5.3 Summary  Vocabulary   Conditional equation  Identity  Equivalent expressions    Concepts   An equation that is true only for certain values of the variable, and false for others, is called a conditional equation . An equation that is true for all legitimate values of the variables is called an identity .  The expressions on either side of the equal sign in an identity are called equivalent expressions , because they have the same value for all values of the variable.  We often use identities to replace one form of an expression by a more useful form.  To check to whether an equation is an identity we can compare graphs of (left side of the equation) and (right side of the equation). If the two graphs agree, the equation is an identity. If the two graphs are not the same, the equation is not an identity.  Pythagorean Identity  For any angle , Alternate forms:  Tangent Identity  For any angle not coterminal with or ,  To solve an equation involving more than one trig function, we use identities to rewrite the equation in terms of a single trig function.  To prove an identity, we write one side of the equation in equivalent forms until it is identical to the other side of the equation.   Study Questions   What is the difference between a conditional equation and an identity? Give an example of each.  What happens when you try to \"solve\" an identity?  Explain how to use graphs to verify an identity.  Delbert claims that since , we can take the square root of both sides to get the simpler form . Is he correct? Why or why not?  If , is it necessarily true that and ? Explain. If , is it true that and ?   Skills   Recognize identities #1 16, 41 46  Verify identities #17 26, 73 78  Rewrite expressions using identities #27 34, 47 50  Use identities to evaluate expressions #35 40  olve trigonometric equations #51 58, 67 72  Given one trig ratio, find the others #59 72     Homework 5.3  For Problems 1 8, decide which of the following equations are identities. Explain your reasoning.  not an identity   not an identity   identity   not an identity    For Problems 9 16, use graphs to decide which of the following equations are identities.  not an identity   not an identity   identity   identity    For Problems 17 26, show that the equation is an identity by transforming the left side into the right side.          Multiply numerator and denominator of the left side by .  Multiply numerator and denominator of the left side by .   For Problems 27 34, simplify, using identities as necessary.            For Problems 35 40, evaluate without using a calculator.         For Problems 41 46, one side of an identity is given. Graph the expression, and make a conjecture about the other side of the identity.         For Problems 47 50, use identities to rewrite each expression.  as an expression in only  as an expression in only  as an expression in only  as an expression in only   For Problems 51 58, solve the equation for . Round angles to three decimal places if necessary.           For Problems 59 62, use identities to find exact values for the other two trig ratios.  and  and  and  and   For Problems 63 66, use the identity below to find the sine and cosine of the angle.  and ,  and  and ,  and   For Problems 67 72, find exact values for the sine, cosine, and tangent of the angle.  and , ,  and  and , ,  and  and  and   For Problems 73 76, prove the identity by rewriting tangents in terms of sines and cosines. (These problems involve simplifying complex fractions. See the Algebra Refresher to review this skill.)       Pythagorean identity Prove the Pythagorean identity by carrying out the following steps. Sketch an angle in standard position, and label a point on the terminal side, at a distance from the vertex.   Begin with the equation , and square both sides.  Divide both sides of your equation from part (a) by .  Write the left side of the equation as the sum of the squares of two fractions.  Substitute the appropriate trigonometric ratio for each fraction.  angle  By the distance formula, , or .      tangent identity Prove the tangent identity by carrying out the following steps. Sketch an angle in standard position, and label a point on the terminal side, at a distance from the vertex.   Write in terms of and , and solve for .  Write in terms of and , and solve for .  Write in terms of and , then substitute your results from parts (a) and (b).  Simplify your fraction in part (c).    "
+  "body": " Trigonometric Identities  What is an Identity?  identity  Recall that an equation may be true or false, depending on the values of any variables involved. For example, the equation is true only if or . An equation that is true only for certain values of the variable, and false for others, is called a conditional equation equation conditional . When you solve a conditional equation, you are finding the values of the variable that make the equation true.  Some equations are true for all legitimate values of the variables. Such equations are called identities identity . Here are some examples of identities. In an identity, the expressions on either side of the equal sign are equivalent expressions , because they have the same value for all values of the variable. When we simplify an algebraic expression, we are in fact creating an identity.  Identity  identity  An identity is an equation that is true for all legitimate values of the variables.  Which of the following equations are identities?        Many of the algebraic operations you have already learned, such as combining like terms or applying the distributive law, produce equivalent expressions.   Equation (a) is an identity obtained by combining like terms on the left side.  Equation (b) is an identity obtained by applying the distributive law on the left side.  Equation (c) is not an identity, because the equation is true only for .   Which of the following equations are identities?       (a) and (c)  Of course, you wouldn't be asked to solve an identity, because all values of the variable are solutions. Instead, we use identities to replace one form of an expression by a more useful form. You do this when you solve a quadratic equation by factoring. For example, Because is equivalent to , we have not changed the equation or its solutions. But now we can apply the Zero Factor principle and solve the equation.  Using identities is especially useful when we are working with trigonometric ratios.   Using Trigonometric Ratios in Identities  trigonometric identity  identity with trigonometric ratios  identity with trigonometric ratios trigonometric identity  Because the identity is true for any value of , it is true when is replaced, for instance, by . This gives us a new identity Expressions involving can be manipulated by the same rules (such as the distributive law or the laws of exponents) that we use with simple variables.  Which of the following equations are identities?        These equations are obtained from the equations in the previous Example by replacing the variable with , the variable with , and the variable with . Equations (a) and (b) are identities, for the same reasons as before, and equation (c) is not. It is false, for example, when .  Which of the following equations are identities?       (a) and (c)  To show that an equation is not an identity, we need only find one value of the variable for which the equation is false. However, to show that a given equation is an identity, it is not enough to show that the equation is true for one or even a dozen values of the variable. The equation must be true for all legitimate values of the variable. Because we cannot check all values of the variable numerically, we must use algebraic methods to prove that an equation is an identity.  Checking Identities Graphically  identity check graphically  Is the equation an identity? The answer is no! Even though the equation is true for all positive values of , it is false for negative values of . For example, if , then so . Because the radical symbol stands for the nonnegative square root, the left side of the equation, , is never negative. Therefore, cannot equal when is a negative number. The equation is false for .  One way to see that and are not equivalent is to compare the graphs of and , shown below. You can see that and do not have the same value for .  two graphs  Thus, to check to whether an equation is an identity, we can compare graphs of (left side of the equation) and (right side of the equation). If the two graphs are identical, the equation is an identity. If the two graphs are not the same, the equation is not an identity.  Which of the following equations are identities?       Compare the graphs of and . Enter the two equations in the ZTrig window and press ZOOM  to see the graphs shown below.  graph  To help distinguish which graph is which, we can use the calculator's trace feature, illustrated in the figure at right. Because there are two distinct graphs, the expressions and are not equivalent, and consequently is not an identity.  This time we graph and . Although the graphs appear to be identical, when we use the trace feature we see that their -values differ at (and at many other values of .) See the figures below.  graph  The graphs are so close together that calculator's resolution does not distinguish them, but tracing the graphs reveals that they are not identical. Because the two graphs differ, the equation is not an identity.    The Example above illustrates the fact that graphs can be deceiving: even if two graphs look identical, it is always a good idea to check some numerical values as well.  Remember that we can use graphs to prove that an equation is not an identity, if the two graphs are clearly different, but to prove that an equation is an identity, we will need algebraic methods.  Use graphs to decide which of the following equations are identities.      (b)   Pythagorean Identity  Pythagorean identity  identity Pythagorean  identity Pythagorean Pythagorean identity  All of the trigonometric functions are related. This is plausible when you think about it, because the three trig ratios all involve the three sides of a right triangle. Taking advantage of these relationships will simplify many calculations involving the trig functions.  We'll begin by considering the relationship between and . Complete the following table with exact values.                                              You should find that all the entries in the last column are 1.   For all of the angles in the table, We can verify that this equation holds for all angles by graphing the expressions on either side of the equal sign. The graphs of these two functions in the ZTrig window are shown at right.  graph  We see that the graph of appears identical to the horizontal line . In fact, the graphs are identical, and the equation is an identity. It is important enough to earn a special name.  Pythagorean Identity  Pythagorean identity  For any angle ,  As you might guess from its name, the Pythagorean identity is true because it is related to the Pythagorean theorem. We have not actually proved the identity, and a skeptical student may wonder if is only very close to 1, or if it equals 1 for only some values of . Homework Problem 77 offers a proof of the Pythagorean identity.  Evaluate without using a calculator.  Because the identity is true for any value of , it is true in particular for . So .  Evaluate without using a calculator.  When we solve more complicated trigonometric equations in later chapters, we will need to simplify trigonometric expressions so that they involve only one of the trig functions. The Pythagorean identity is useful when we wish to write an equivalent expression for either or for . Note that we can write the identity in two alternate forms:  Alternate Forms of the Pythagorean Identity  Pythagorean identity alternate forms    Rewrite as an expression involving only.  Using one of the alternate forms of the Pythagorean identity, we replace by to get  In the previous Example, we have shown that is an identity.   If we graph  graph  for we see that they have the same graph, as shown in the figure.   Rewrite as an expression in .  Verify your identity by graphing.    Tangent Identity  tangent identity  There is also a relationship between the tangent ratio and the sine and cosine. Complete the following table with exact values. You should find that the entries in the last two columns are identical.                                  For the angles in the table, Because , the quotient is undefined for , and is undefined, too. The same is true for . For all other angles between and , . A proof of the tangent identity is outlined in Homework Problem 78.  Tangent Identity  tangent identity  For any angle not coterminal with or ,  Now we can see how to use identities to simplify trigonometric expressions. One strategy for simplifying a trigonometric expression is to reduce the number of different trig ratios involved. We can use the tangent identity to replace the tangent ratio by sines and cosines.  Simplify the expression .  We apply the tangent identity to replace by and obtain  Simplify the expression .   Trig Ratios are Related  All three of the trigonometric functions of an angle are related. If we know the value of one of the three, we can calculate the other two (up to sign) by using the Pythagorean and tangent identities. We do not need to find the angle itself in order to do this. We need only know in which quadrant the angle lies to determine the correct sign for the trig ratios.  If and find and .  We substitute into the Pythagorean identity to get Because is between and , must be negative, so . To find , we use the tangent identity.    We can also work the previous Example by sketching an appropriate triangle. We begin by drawing an obtuse angle and its reference triangle. Because , we can choose a point on the terminal side to have -coordinate 7 and , as shown below. In order to calculate and , we must find the -coordinate of the point. By the Pythagorean theorem,    angle  Note that is negative because the point is in the second quadrant. Then   If and find and .  Find and by using an appropriate sketch.  ,   Solving Equations  trigonometric equation solving  Now we'll see how identities are useful for solving trigonometric equations. So far we have only solved equations that involve a single trigonometric ratio. If the equation involves more than one trig function, we use identities to rewrite the equation in terms of a single trig function.  Solve for .  The equation involves both the cosine and sine functions, and we will rewrite the left side in terms of the sine only. To eliminate the cosines, we use the Pythagorean identity . Set each factor equal to zero to see that either or . Now, when or , and when . The solutions are , or .  Solve for . , ,  Like the Pythagorean identity, the tangent identity can be helpful in solving trigonometric equations.  Solve for .  We first try to write the equation in terms of a single trig function.   Because , we see that has a reference angle of . And because the tangent is negative in the second and fourth quadrants, we have or , as shown in the figure.  angle  Solve for . ,   Proving Identities  identity proving  When we show that one trigonometric expression is equivalent to another expression, we have proved a trigonometric identity. In a previous example we proved that the equation is an identity; it is true for all values of . A common strategy for proving an identity is to transform one side of the equation using equivalent expressions until it is identical to the other side. To help us choose the transformations at each step of the proof, we try to match the algebraic form of the final expression.  Prove the identity  By manipulating the left side of the equation, we will show that the expression is equivalent to . First, we use the tangent identity to write the expression in terms of sines and cosines: Next, we notice that the right side of the proposed identity has only one term, so we combine the terms on the left side. So that the fractions have the same denominator, we write 1 as . Finally, we apply the Pythagorean identity to the numerator. Thus, , and the identity is proved.  When you write out the proof of an identity, you should transform the expression on one side of the identity into the expression on the other side, showing one step of the calculation on each line of your proof. You can provide a justification for each step to the right of the calculation. The proof of the identity in the previous example would look like this:  Prove the identity  Review the following skills you will need for this section.   Write each expression as a single fraction in simplest form.              Algebra Refresher Answers               Section 5.3 Summary  Vocabulary   Conditional equation  Identity  Equivalent expressions    Concepts   An equation that is true only for certain values of the variable, and false for others, is called a conditional equation . An equation that is true for all legitimate values of the variables is called an identity .  The expressions on either side of the equal sign in an identity are called equivalent expressions , because they have the same value for all values of the variable.  We often use identities to replace one form of an expression by a more useful form.  To check to whether an equation is an identity we can compare graphs of (left side of the equation) and (right side of the equation). If the two graphs agree, the equation is an identity. If the two graphs are not the same, the equation is not an identity.  Pythagorean Identity  For any angle , Alternate forms:  Tangent Identity  For any angle not coterminal with or ,  To solve an equation involving more than one trig function, we use identities to rewrite the equation in terms of a single trig function.  To prove an identity, we write one side of the equation in equivalent forms until it is identical to the other side of the equation.   Study Questions   What is the difference between a conditional equation and an identity? Give an example of each.  What happens when you try to \"solve\" an identity?  Explain how to use graphs to verify an identity.  Delbert claims that since , we can take the square root of both sides to get the simpler form . Is he correct? Why or why not?  If , is it necessarily true that and ? Explain. If , is it true that and ?   Skills   Recognize identities #1 16, 41 46  Verify identities #17 26, 73 78  Rewrite expressions using identities #27 34, 47 50  Use identities to evaluate expressions #35 40  olve trigonometric equations #51 58, 67 72  Given one trig ratio, find the others #59 72     Homework 5.3  For Problems 1 8, decide which of the following equations are identities. Explain your reasoning.  not an identity   not an identity   identity   not an identity    For Problems 9 16, use graphs to decide which of the following equations are identities.  not an identity   not an identity   identity   identity    For Problems 17 26, show that the equation is an identity by transforming the left side into the right side.          Multiply numerator and denominator of the left side by .  Multiply numerator and denominator of the left side by .   For Problems 27 34, simplify, using identities as necessary.            For Problems 35 40, evaluate without using a calculator.         For Problems 41 46, one side of an identity is given. Graph the expression, and make a conjecture about the other side of the identity.         For Problems 47 50, use identities to rewrite each expression.  as an expression in only  as an expression in only  as an expression in only  as an expression in only   For Problems 51 58, solve the equation for . Round angles to three decimal places if necessary.           For Problems 59 62, use identities to find exact values for the other two trig ratios.  and  and  and  and   For Problems 63 66, use the identity below to find the sine and cosine of the angle.  and ,  and  and ,  and   For Problems 67 72, find exact values for the sine, cosine, and tangent of the angle.  and , ,  and  and , ,  and  and  and   For Problems 73 76, prove the identity by rewriting tangents in terms of sines and cosines. (These problems involve simplifying complex fractions. See the Algebra Refresher to review this skill.)       Pythagorean identity Prove the Pythagorean identity by carrying out the following steps. Sketch an angle in standard position, and label a point on the terminal side, at a distance from the vertex.   Begin with the equation , and square both sides.  Divide both sides of your equation from part (a) by .  Write the left side of the equation as the sum of the squares of two fractions.  Substitute the appropriate trigonometric ratio for each fraction.  angle  By the distance formula, , or .      tangent identity Prove the tangent identity by carrying out the following steps. Sketch an angle in standard position, and label a point on the terminal side, at a distance from the vertex.   Write in terms of and , and solve for .  Write in terms of and , and solve for .  Write in terms of and , then substitute your results from parts (a) and (b).  Simplify your fraction in part (c).    "
 },
 {
-  "id": "p-3099",
+  "id": "p-3113",
   "level": "2",
-  "url": "Trigonometric-Identities.html#p-3099",
+  "url": "Trigonometric-Identities.html#p-3113",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "conditional equation "
 },
 {
-  "id": "p-3100",
+  "id": "p-3114",
   "level": "2",
-  "url": "Trigonometric-Identities.html#p-3100",
+  "url": "Trigonometric-Identities.html#p-3114",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "identities "
 },
 {
-  "id": "p-3101",
+  "id": "p-3115",
   "level": "2",
-  "url": "Trigonometric-Identities.html#p-3101",
+  "url": "Trigonometric-Identities.html#p-3115",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "identity "
 },
 {
-  "id": "example-96",
+  "id": "example-95",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-96",
+  "url": "Trigonometric-Identities.html#example-95",
   "type": "Example",
   "number": "5.42",
   "title": "",
@@ -12952,13 +12961,13 @@ var ptx_lunr_docs = [
   "body": "Which of the following equations are identities?       (a) and (c) "
 },
 {
-  "id": "example-97",
+  "id": "example-96",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-97",
+  "url": "Trigonometric-Identities.html#example-96",
   "type": "Example",
   "number": "5.44",
   "title": "",
-  "body": "Which of the following equations are identities?        These equations are obtained from the equations in the previous example by replacing the variable with , the variable with , and the variable with . Equations (a) and (b) are identities, and equation (c) is not, for the same reasons as before. "
+  "body": "Which of the following equations are identities?        These equations are obtained from the equations in the previous Example by replacing the variable with , the variable with , and the variable with . Equations (a) and (b) are identities, for the same reasons as before, and equation (c) is not. It is false, for example, when . "
 },
 {
   "id": "exercise-1179",
@@ -12979,9 +12988,9 @@ var ptx_lunr_docs = [
   "body": "To show that an equation is not an identity, we need only find one value of the variable for which the equation is false. However, to show that a given equation is an identity, it is not enough to show that the equation is true for one or even a dozen values of the variable. The equation must be true for all legitimate values of the variable. Because we cannot check all values of the variable numerically, we must use algebraic methods to prove that an equation is an identity. "
 },
 {
-  "id": "example-98",
+  "id": "example-97",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-98",
+  "url": "Trigonometric-Identities.html#example-97",
   "type": "Example",
   "number": "5.47",
   "title": "",
@@ -12994,7 +13003,7 @@ var ptx_lunr_docs = [
   "type": "Caution",
   "number": "5.48",
   "title": "",
-  "body": " The example above illustrates the fact that graphs can be deceiving: even if two graphs look identical, it is always a good idea to check some numerical values as well.  Remember that we can use graphs to prove that an equation is not an identity, if the two graphs are clearly different, but to prove that an equation is an identity, we will need algebraic methods. "
+  "body": " The Example above illustrates the fact that graphs can be deceiving: even if two graphs look identical, it is always a good idea to check some numerical values as well.  Remember that we can use graphs to prove that an equation is not an identity, if the two graphs are clearly different, but to prove that an equation is an identity, we will need algebraic methods. "
 },
 {
   "id": "exercise-1180",
@@ -13006,9 +13015,9 @@ var ptx_lunr_docs = [
   "body": "Use graphs to decide which of the following equations are identities.      (b) "
 },
 {
-  "id": "example-99",
+  "id": "example-98",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-99",
+  "url": "Trigonometric-Identities.html#example-98",
   "type": "Example",
   "number": "5.50",
   "title": "",
@@ -13024,9 +13033,9 @@ var ptx_lunr_docs = [
   "body": "Evaluate without using a calculator. "
 },
 {
-  "id": "example-100",
+  "id": "example-99",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-100",
+  "url": "Trigonometric-Identities.html#example-99",
   "type": "Example",
   "number": "5.52",
   "title": "",
@@ -13042,9 +13051,9 @@ var ptx_lunr_docs = [
   "body": " Rewrite as an expression in .  Verify your identity by graphing.  "
 },
 {
-  "id": "example-101",
+  "id": "example-100",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-101",
+  "url": "Trigonometric-Identities.html#example-100",
   "type": "Example",
   "number": "5.54",
   "title": "",
@@ -13060,9 +13069,9 @@ var ptx_lunr_docs = [
   "body": "Simplify the expression . "
 },
 {
-  "id": "example-102",
+  "id": "example-101",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-102",
+  "url": "Trigonometric-Identities.html#example-101",
   "type": "Example",
   "number": "5.56",
   "title": "",
@@ -13078,9 +13087,9 @@ var ptx_lunr_docs = [
   "body": " If and find and .  Find and by using an appropriate sketch.  , "
 },
 {
-  "id": "example-103",
+  "id": "example-102",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-103",
+  "url": "Trigonometric-Identities.html#example-102",
   "type": "Example",
   "number": "5.58",
   "title": "",
@@ -13096,9 +13105,9 @@ var ptx_lunr_docs = [
   "body": "Solve for . , , "
 },
 {
-  "id": "example-104",
+  "id": "example-103",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-104",
+  "url": "Trigonometric-Identities.html#example-103",
   "type": "Example",
   "number": "5.60",
   "title": "",
@@ -13114,9 +13123,9 @@ var ptx_lunr_docs = [
   "body": "Solve for . , "
 },
 {
-  "id": "example-105",
+  "id": "example-104",
   "level": "2",
-  "url": "Trigonometric-Identities.html#example-105",
+  "url": "Trigonometric-Identities.html#example-104",
   "type": "Example",
   "number": "5.62",
   "title": "",
@@ -13141,9 +13150,9 @@ var ptx_lunr_docs = [
   "body": " Write each expression as a single fraction in simplest form.              Algebra Refresher Answers             "
 },
 {
-  "id": "p-3200",
+  "id": "p-3215",
   "level": "2",
-  "url": "Trigonometric-Identities.html#p-3200",
+  "url": "Trigonometric-Identities.html#p-3215",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -13861,9 +13870,9 @@ var ptx_lunr_docs = [
   "body": " Chapter 5 Summary and Review  Key Concepts   Expressions containing trig ratios can be simplified or evaluated like other algebraic expressions. To simplify an expression containing trig ratios, we treat each ratio as a single variable.  The parentheses in an expression such as indicate function notation, not multiplication.  We write to denote , and to denote . (Similarly for the other trig ratios.)  An equation is a statement that two algebraic expressions are equal. It may be true or false.  We can solve equations by trial and error, by using graphs, or by algebraic techniques.  To solve a trigonometric equation, we first isolate the trigonometric ratio on one side of the equation. We then use reference angles to find all the solutions between and .  An equation that is true only for certain values of the variable, and false for others, is called a conditional equation . An equation that is true for all legitimate values of the variables is called an identity .  The expressions on either side of the equal sign in an identity are called equivalent expressions , because they have the same value for all values of the variable.  We often use identities to replace one form of an expression by a more useful form.  To check to whether an equation is an identity we can compare graphs of (left side of the equation) and (right side of the equation). If the two graphs agree, the equation is an identity. If the two graphs are not the same, the equation is not an identity.  Pythagorean Identity  For any angle , Alternate forms:  Tangent Identity  For any angle not coterminal with or ,  To solve an equation involving more than one trig function, we use identities to rewrite the equation in terms of a single trig function.  To prove an identity, we write one side of the equation in equivalent forms until it is identical to the other side of the equation.     Chapter 5 Review Problems  For Problems 1 4, evaluate the expressions for and . Give exact values for your answers.       For Problems 5 8, evaluate the expressions using a calculator. Are they equal?       No            Yes        For Problems 9 12, simplify the expression.       For Problems 13 16, decide whether or not the expressions are equivalent. Explain.  Not equivalent    Equivalent     For Problems 17 20, multiply or expand.        For Problems 21 24, factor the expression.       For Problems 25 30, reduce the fraction.         For Problems 31 32, use a graph to solve the equation for . Check your solutions by substitution.     For Problems 33 40, find all solutions between and . Give exact answers.  , , ,   , ,   , , ,   , ,    For Problems 41 44, solve the equation for . Round your answers to two decimal places.       A light ray passes from glass to water, with a angle of incidence. What is the angle of refraction? The index of refraction from water to glass is 1.1.  A light ray passes from glass to water, with a angle of incidence. What is the angle of refraction? The index of refraction from water to glass is 1.1.  For Problems 47 50, decide which of the following equations are identities. Explain your reasoning.  Identity   Not an identity    For Problems 51 54, use graphs to decide which of the following equations are identities.  Not an identity   Identity    For Problems 55 58, show that the equation is an identity by transforming the left side into the right side.        For Problems 59 62, simplify, using identities as necessary.       For Problems 63 66, evaluate the expressions without using a calculator.       For Problems 67 70,use identities to rewrite each expression.  Write in terms of .  Write in terms of .  Write in terms of .  Write in terms of .   For Problems 71 74, find the values of the three trigonometric functions.       For Problems 75 82, solve the equation for . Round angles to three decimal places if necessary.             "
 },
 {
-  "id": "p-3338",
+  "id": "p-3353",
   "level": "2",
-  "url": "chap5-summary.html#p-3338",
+  "url": "chap5-summary.html#p-3353",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -14617,27 +14626,27 @@ var ptx_lunr_docs = [
   "body": " Arclength and Radians  arclength  radian   Imagine that you are riding on a Ferris wheel of radius 100 feet, and each rotation takes eight minutes. We can use angles in standard position to describe your location as you travel around the wheel. The figure at right shows the locations indicated by and . But degrees are not the only way to specify location on a circle.   triangle  We could use percent of one complete rotation and label the same locations by . Or we could use the time elapsed, so that for this example we would have minutes.  Another useful method to describe your location uses the distance traveled, or arclength , along the circle. How far have you traveled around the Ferris wheel at each of the locations shown?  Before we consider that question, let's agree on some vocabulary. An arc is a portion of a circle, and its length, quite naturally, is called arclength . An angle with vertex at the center of the circle is called a central angle , and a central angle whose sides meet the endpoints of an arc is said to subtend the arc. Or we may say that the angle spans the arc. If the arc represents a distance traveled, we sometimes refer to such an angle as the angle of displacement .   Arclength  arclength  Recall that the circumference of a circle is proportional to its radius, If we walk around the entire circumference of a circle, the distance we travel is times the length of the radius, or about 6.28 times the radius. If we walk only part of the way around the circle, then the distance we travel depends also on the angle of displacement.  For example, an angle of is of a complete revolution, so the the length of the arc from point to point , called in the figure at right, is of the circumference. Thus  arc on circle   Similarly, the angle of displacement from point to point is of a complete revolution, so the arclength along the circle from to , shown at right, is  arc on circle   In general, for a given circle the length of the arc spanned by an angle is proportional to the size of the angle.  Arclength on a Circle  arclength   The Ferris wheel in the introduction has circumference so in half a revolution you travel 314 feet around the edge, and in one-quarter revolution you travel 157 feet.   To indicate the same four locations on the wheel by distance traveled, we would use , as shown at right.  circle  What length of arc is spanned by an angle of on a circle of radius 12 centimeters?  Because , an angle of is of a complete revolution, as shown at right.   Using the formula above with , we find that or about 25.1 cm.  arc on circle  How far have you traveled around the edge of a Ferris wheel of radius 100 feet when you have turned through an angle of ? ft    Measuring Angles in Radians  radian  angle in radians  angle in radians radian  If you think about measuring arclength, you will see that the degree measure of the spanning angle is not as important as the fraction of one revolution it covers. This observation suggests a new unit of measurement for angles, one that is better suited to calculations involving arclength. We'll make one change in our formula for arclength, from to We'll call the quantity in parentheses, (fraction of one revolution ), the radian measure of the angle that spans the arc.  Radians  radian  The radian measure of an angle is given by  For example, one complete revolution, or , is equal to radians, and one-quarter revolution, or , is equal to or radians. The figure below shows the radian measure of the quadrantal angles.   angle on unit circle from positive x-axis to positive y-axis  angle on unit circle from positive x-axis to negative x-axis  angle on unit circle from positive x-axis to negative y-axis  angle on unit circle from positive x-axis counterclockwise back to positive x-axis  What is the radian measure of an angle of ?  An angle of is of a complete revolution, as we saw in the previous example. Thus, an angle of has a radian measure of , or .   What fraction of a revolution is radians? How many degrees is that? Half a revolution,  Radian measure does not have to be expressed in multiples of . Remember that , so one complete revolution is about 6.28 radians, and one-quarter revolution is , or about 1.57 radians. The figure below shows decimal approximations for the quadrantal angles.     Degrees  Radians: Exact Values  Radians: Decimal Approximations                       Quadrantal angles on unit circle radian approximation    Because they are \"benchmarks\" for comparing angles, you should be very familiar with both the exact values of these angles in radians and their approximations!  In which quadrant would you find an angle of 2 radians? An angle of 5 radians?  Look at the figure above. The second quadrant includes angles between and , or 1.57 and 3.14 radians, so 2 radians lies in the second quadrant. An angle of 5 radians is between 4.71 and 6.28, or between and radians, so it lies in the fourth quadrant.  Draw circles centered at the origin and sketch (in standard position) angles of approximately 3 radians, 4 radians, and 6 radians.  circle  circle  circle   It turns out that measuring angles in radians is useful for many applications besides calculating arclengths, so we need to start thinking in radians. To help that process, we'll first learn to convert between degrees and radians.   Converting Between Degrees and Radians  It is not difficult to convert the measure of an angle in degrees to its measure in radians, or vice versa. One complete revolution is equal to radians or to , so If we divide both sides of this equation by , we get a fraction that is equal to 1: And of course it is also true that  Because multiplying by 1 does not change the value of a number, we can use these fractions to convert between degrees and radians.  Converting between degrees and radians   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .     Convert 3 radians to degrees.  Convert 3 degrees to radians.        Convert to radians. Give both an exact answer and an approximation to three decimal places.  Convert radians to degrees.  radians  Thus, the fraction (or its reciprocal ) gives us a conversion factor between degrees and radians:  Unit Conversion for Angles  angle converting measurement units    You can review the use of conversion factors in the Algebra Refresher at the end of this Section.   From our conversion factor we also learn that So while is a relatively small angle, 1 radian is much larger — nearly , in fact.  circle  But this is reasonable, because there are only a little more than 6 radians in an entire revolution. An angle of 1 radian is shown above.  We'll soon see that, for many applications, it is easier to work entirely in radians. For reference, the figure below shows a radian protractor.  triangle   Arclength Formula  arclength formula  Now let us return to our calculation of arclength, and we'll see the first instance in which measuring angles in radians is useful: To calculate an arclength we need only multiply the radius of the circle by the radian measure of the spanning angle, . Look again at our formula for arclength:  The quantity in parentheses, fraction of one revolution , is just the measure of the spanning angle in radians. Thus, if is measured in radians, we have the following simple formula for arclength, .  Arclength Formula  arclength formula  On a circle of radius , the length of an arc spanned by an angle in radians is   Thus, there is a special relationship between arclength and radians. An angle of 1 radian spans an arc on a circle equal to the radius of the circle, as shown at right. And the length of any arc is just the measure of its spanning angle in radians times the radius of the circle.  arcs on circles   So for instance, we can use the formula to find the arclength spanned by an angle of 2.5 radians on a circle of radius six inches:  arcs on circles  We can also use the formula in the form to find an angle that spans a given arc. For example, an arclength equal to one radius determines a central angle of one radian, or about . In the next example, we compute a change in latitude on the Earth's surface.  The radius of the Earth is about 3960 miles. If you travel 500 miles due north, how many degrees of latitude will you traverse? (Latitude is measured in degrees north or south of the equator.)  We think of the distance 500 miles as an arclength on the surface of the Earth, as shown at right. Substituting and into the arclength formula gives   circle     To convert the angle measure to degrees, we multiply by to get Your latitude has changed by about .  The distance around the face of a large clock from 2 to 3 is five feet. What is the radius of the clock? ft   Unit Circle  unit circle arclength and radians  In the rest of this chapter we will see how to use the trigonometric functions sine, cosine, and tangent when the input variable is measured in radians instead of degrees, and why making that change greatly increases the utility of those functions. In Section 4.1 we connected the sine and cosine to the coordinates of points on a unit circle , a circle of radius 1. Here is an important observation that will inform our study:  On a unit circle, , so the arclength formula becomes . Thus, on a unit circle, an arc of length 1 determines a central angle of 1 radian, or about . And the measure of a (positive) angle in radians is equal to the length of the arc it spans. In other words, if we walk around the circle, each time we travel over an arclength of one radius, we turn through an angle of one radian.  You are walking on a trail around a circular pond of radius one mile. You have have walked 4 miles from the trailhead. Sketch your location now.  The pond is a unit circle, so you have traversed an angle in radians equal to the arc length traveled, 4 miles. An angle of 4 radians is in the middle of the third quadrant relative to your starting point, more than halfway but less than three-quarters around the pond. walk along circle pond    An ant walks around the rim of a circular birdbath of diameter 2 feet. How far has the ant walked when it has turned through an angle of ?  walk along circular birdbath  ft  Review the following skills you will need for this section.   Use the appropriate conversion factor to convert units.     10 miles = km  50 km = miles     40 acres = hectares  5 hectares = acres     250 horsepower = watts  1000 watts = horsepower     0.5 troy oz = grains  100 grains = troy oz      Algebra Refresher Answers   a. km b. mi  a. hectares b. acres  a. watts b. horsepower  a. grains b. troy oz      Section 6.1 Summary  Vocabulary   Arclength  Radian  Conversion factor  Latitude  Unit circle    Concepts   The distance we travel around a circle of radius is proportional to the angle of displacement.  We measure angles in radians when we work with arclength.  Radians  The radian measure of an angle is given by  An arclength equal to one radius determines a central angle of one radian.  Radian measure can be expressed as multiples of or as decimals.     Degrees                        Quadrantal angles on unit circle radian approximation    We multiply by the appropriate conversion factor to convert between degrees and radians.  Unit Conversion for Angles   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .   Arclength Formula  On a circle of radius , the length of an arc spanned by an angle in radians is  On a unit circle , the measure of a (positive) angle in radians is equal to the length of the arc it spans.   Study Questions   The length of a circular arc depends on what two variables?  Define the radian measure of an angle.  What is the conversion factor from radians to degrees?  On a unit circle, the length of an arc is equal to what other quantity?    Skills   Express angles in degrees and radians #1 8, 25 32  Sketch angles given in radians #1 and 2, 11 and 12  Estimate angles in radians #9 10, 13 24  Use the arclength formula #33 46  Find coordinates of a point on a unit circle #47 52  Calculate angular velocity and area of a sector #55 60     Homework 6.1    Radians            Degrees              Convert each angle to degrees.  Sketch each angle on a circle like this one, and label in radians.    circle     Radians            Degrees             circle       Radians                Degrees                 Convert each angle to degrees.  Sketch each angle on a circle like this one, and label in radians.   circle    For Problems 3 6, express each fraction of one complete rotation in degrees and in radians.          circle                  circle             circle                  circle      For Problems 7 8, label each angle in standard position with radian measure.  Rotate counter-clockwise from 0.   circle      circle     Rotate clockwise from 0.  circle     For Problems 9 10, give a decimal approximation to hundredths for each angle in radians.                     Locate and label each angle from Problem 9 on the unit circle below. (The circle is marked off in tenths of a radian.)   circle     circle     Locate and label each angle from Problem 10 on the unit circle below. (The circle is marked off in tenths of a radian.)  circle  From the list below, choose the best decimal approximation for each angle in radians in Problems 13 20. Do not use a calculator; use the fact that is a little greater than 3.            For Problems 21 24, say in which quadrant each angle lies.        II  IV  IV  I               III  II  I  IV          For Problems 25 28, complete the table.    Radians      Degrees       Radians      Degrees        Radians      Degrees        Radians      Degrees       Radians      Degrees        Radians      Degrees       For Problems 29 30, convert to radians. Round to hundredths.                 For Problems 31 32, convert to degrees. Round to tenths.                 For Problems 33 37, use the arclength formula to answer the questions. Round answers to hundredths.  Find the arclength spanned by an angle of on a circle of radius 4 inches.  Find the arclength spanned by an angle of on a circle of radius 18 feet.  Find the radius of a cricle if an angle of spans an arclength of 18 meters.  Find the radius of a cricle if an angle of spans an arclength of 0.5 kilometers.  Find the angle subtended by an arclength of 28 centimeters on a circle of diameter 20 centimeters.  Find the angle subtended by an arclength of 1.6 yards on a circle of diameter 2 yards.   For Problems 39 46, use the arclength formula to answer the questions.   Through how many radians does the minute hand of a clock sweep between 9:05 pm and 9:30 pm?  The dial of Big Ben's clock in London is 23 feet in diameter. How long is the arc traced by the minute hand between 9:05 pm and 9:30 pm?      The largest clock ever constructed was the Floral Clock in the garden of the 1904 World's Fair in St. Louis. The hour hand was 50 feet long, the minute hand was 75 feet long, and the radius of the clockface was 112 feet.   If you started at the 12 and walked 500 feet clockwise around the clockface, through how many radians would you walk?  If you started your walk at noon, how long would it take the minute hand to reach your position? How far did the tip of the minute hand move in its arc?   In 1851 Jean-Bernard Foucault demonstrated the rotation of the earth with a pendulum installed in the Pantheon in Paris. Foucault's pendulum consisted of a cannonball suspended on a 67 meter wire, and it swept out an arc of 8 meters on each swing. Through what angle did the pendulum swing? Give your answer in radians and then in degrees, rounded to the nearest hundredth.  A wheel with radius 40 centimeters is rolled a distance of 1000 centimeters on a flat surface. Through what angle has the wheel rotated? Give your answer in radians and then in degrees, rounded to one decimal place.  Clothes dryers draw 3.5 times as much power as washing machines, so newer machines have been engineered for greater efficiency. A vigorous spin cycle reduces the time needed for drying, and some front-loading models spin at a rate of 1500 rotations per minute.   If the radius of the drum is 11 inches, how far do your socks travel in one minute?  How fast are your socks traveling during the spin cycle?      The Hubble telescope is in orbit around the earth at an altitude of 600 kilometers, and completes one orbit in 97 minutes.  How far does the telescope travel in one hour? (The radius of the earth is 6400 kilometers.)  What is the speed of the Hubble telescope?   The first large windmill used to generate electricity was built in Cleveland, Ohio in 1888. Its sails were 17 meters in diameter, and moved at 10 rotations per minute. How fast did the ends of the sails travel?  The largest windmill operating today has wings 54 meters in length. To be most efficient, the tips of the wings must travel at 50 meters per second. How fast must the wings rotate?   For Problems 47 52, find two points on the unit circle with the given coordinate.Sketch the approximate location of the points on the circle. (Hint: what is the equation for the unit circle?)    unit circle    ,     unit circle    ,     unit circle    ,     Sketch a circle of radius 4 units, and mark the positions of 1, 2, 3, 4, 5, and 6 radians on the circle.  On a circle of radius 4 feet, find the arclength determined by each angle in radians.                   Graph against . What is the slope of the graph?  If you double the angle , what happens to the arclength? What happens if you triple ?    grid       circle                         linear graph of arclength vs angle     Arclength doubles; arclength triples    Sketch several concentric circles with increasing radius, and draw an angle of 2 radians through all of them.  Find the arclength determined by an angle of 2 radians on circles of given radius.                   Graph against . What is the slope of the graph?  If you double the radus , what happens to the arclength? What happens if you triple ?    grid     The angular velocity, , of a rotating object is given in radians per unit time. Thus, an object that rotates through radians in time has angular velocity given by . Find the angular velocity of the following objects.   The London Eye ferris wheel, which makes one revolution every 20 minutes.  An old-fashioned long-playing record, which revolved times in 60 seconds.      Use the arclength formula to derive a formula relating linear velocity, , and angular velocity, . (See Problem 55 for the definition of angular velocity.) Start with the formula for linear velocity: and substitute the arclength formula for .  Recall that to calculate a fraction of a revolution in degrees we divide the angle by . For example, is of a revolution because .   Write an expression that gives the fraction of a revolution for an angle in radians.  Use your expression to calculate what fraction of a revolution is represented by each of the following angles: .      Use your result from Problem 57a to write each statement as a mathematical formula.    circle     circle      The length of the arc, , is equal to:  The area of the sector, , is equal to:   For Problems 59 60, Use the formula for the area of a sector from Problem 58.    circle       circle       "
 },
 {
-  "id": "p-3501",
+  "id": "p-3516",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3501",
+  "url": "Arclength-and-Radians.html#p-3516",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arclength "
 },
 {
-  "id": "p-3502",
+  "id": "p-3517",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3502",
+  "url": "Arclength-and-Radians.html#p-3517",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arc arclength central angle subtend spans angle of displacement "
 },
 {
-  "id": "example-106",
+  "id": "example-105",
   "level": "2",
-  "url": "Arclength-and-Radians.html#example-106",
+  "url": "Arclength-and-Radians.html#example-105",
   "type": "Example",
   "number": "6.1",
   "title": "",
@@ -14653,27 +14662,27 @@ var ptx_lunr_docs = [
   "body": "How far have you traveled around the edge of a Ferris wheel of radius 100 feet when you have turned through an angle of ? ft  "
 },
 {
-  "id": "p-3517",
+  "id": "p-3532",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3517",
+  "url": "Arclength-and-Radians.html#p-3532",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "radian measure "
 },
 {
-  "id": "p-3518",
+  "id": "p-3533",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3518",
+  "url": "Arclength-and-Radians.html#p-3533",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "radian measure "
 },
 {
-  "id": "example-107",
+  "id": "example-106",
   "level": "2",
-  "url": "Arclength-and-Radians.html#example-107",
+  "url": "Arclength-and-Radians.html#example-106",
   "type": "Example",
   "number": "6.3",
   "title": "",
@@ -14698,9 +14707,9 @@ var ptx_lunr_docs = [
   "body": "Because they are \"benchmarks\" for comparing angles, you should be very familiar with both the exact values of these angles in radians and their approximations! "
 },
 {
-  "id": "example-108",
+  "id": "example-107",
   "level": "2",
-  "url": "Arclength-and-Radians.html#example-108",
+  "url": "Arclength-and-Radians.html#example-107",
   "type": "Example",
   "number": "6.6",
   "title": "",
@@ -14716,9 +14725,9 @@ var ptx_lunr_docs = [
   "body": "Draw circles centered at the origin and sketch (in standard position) angles of approximately 3 radians, 4 radians, and 6 radians.  circle  circle  circle  "
 },
 {
-  "id": "example-109",
+  "id": "example-108",
   "level": "2",
-  "url": "Arclength-and-Radians.html#example-109",
+  "url": "Arclength-and-Radians.html#example-108",
   "type": "Example",
   "number": "6.8",
   "title": "",
@@ -14743,18 +14752,18 @@ var ptx_lunr_docs = [
   "body": "You can review the use of conversion factors in the Algebra Refresher at the end of this Section. "
 },
 {
-  "id": "p-3549",
+  "id": "p-3564",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3549",
+  "url": "Arclength-and-Radians.html#p-3564",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "length of an arc "
 },
 {
-  "id": "example-110",
+  "id": "example-109",
   "level": "2",
-  "url": "Arclength-and-Radians.html#example-110",
+  "url": "Arclength-and-Radians.html#example-109",
   "type": "Example",
   "number": "6.11",
   "title": "",
@@ -14770,18 +14779,18 @@ var ptx_lunr_docs = [
   "body": "The distance around the face of a large clock from 2 to 3 is five feet. What is the radius of the clock? ft "
 },
 {
-  "id": "p-3558",
+  "id": "p-3573",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3558",
+  "url": "Arclength-and-Radians.html#p-3573",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "unit circle "
 },
 {
-  "id": "example-111",
+  "id": "example-110",
   "level": "2",
-  "url": "Arclength-and-Radians.html#example-111",
+  "url": "Arclength-and-Radians.html#example-110",
   "type": "Example",
   "number": "6.13",
   "title": "",
@@ -14806,9 +14815,9 @@ var ptx_lunr_docs = [
   "body": " Use the appropriate conversion factor to convert units.     10 miles = km  50 km = miles     40 acres = hectares  5 hectares = acres     250 horsepower = watts  1000 watts = horsepower     0.5 troy oz = grains  100 grains = troy oz      Algebra Refresher Answers   a. km b. mi  a. hectares b. acres  a. watts b. horsepower  a. grains b. troy oz    "
 },
 {
-  "id": "p-3575",
+  "id": "p-3590",
   "level": "2",
-  "url": "Arclength-and-Radians.html#p-3575",
+  "url": "Arclength-and-Radians.html#p-3590",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -15364,18 +15373,18 @@ var ptx_lunr_docs = [
   "body": " The Circular Functions  Trigonometric Functions of Angles in Radians  Measuring angles in radians has other applications besides calculating arclength, and we will need to evaluate trigonometric functions of angles in radians. The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  In Section 4.1 we saw that the sine and cosine are related to points on a unit circle.  Angles in a Unit Circle  unit circle angles in  unit circle coordinates of point  Let be a point on a unit circle determined by the terminal side of an angle in standard position. Then the coordinates of are given by  This fact follows easily from the definitions of sine and cosine, because on a unit circle . In the next Activity we'll use this relationship to get a feel for the trig values of angles in radians.  Trigonometry in Radians  radian  Here is a unit circle with arclengths labeled, measured counterclockwise from . (Note that the distance around the whole circle is 6.28 units!) In Section 6.1 we learned that on a unit circle, the measure of a positive angle in radians is equal to the length of the arc that it spans.   grid   Use the unit circle to estimate the sine, cosine, and tangent of each angle in radians.      Use the unit circle to estimate two solutions to each equation.    Sketch the angle on the unit circle. Use symmetry to find three more angles with the same sine and cosine, up to sign.         Using a Calculator  Your calculator can give you the trigonometric function values for angles expressed in radians. For example, radians is the same as , because , so However, we don't have to convert radians to degrees in order to evaluate trig ratios. First, change the calculator setting from Degree mode to Radian mode. Then enter and the calculator will return . You can check that this number is a decimal approximation for .  Use your calculator to find the sine and cosine of the following angles in radians. Round your answers to four decimal places.      With the calculator in radian mode, and rounding to four decimal places we find  Your calculator will also give you the values rounded to four places. Note that 3.5 radians is a third-quadrant angle, so the signs of the trig values make sense.   Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.        If two angles are coterminal they have the same trig values, just as they do when measured in degrees. So adding or subtracting a multiple of to any angle results in a new angle in the same standard position and with the same trig values.  Find the sine and cosine of the following angles in radians. Round your answers to four decimal places.      Because  is coterminal with and it has the same sine and cosine as . And radians is equal to , so  Rounded to four places, your calculator will give you the values By adding 6.2832 (that's approximately ) to we see that radians is coterminal with radians, a second-quadrant angle. You can check that radians has (approximately) the same trig values as radians.   Use your calculator to find the tangent of the following angles in radians. Round your answers to four decimal places.       Recall the formula for arclength when the angle is measured in radians: . If we solve for , we see that , a ratio of two lengths. The units of length cancel out, so that radian measure has no units; it is a \"dimensionless\" quantity. In other words, a radian measure is just a real number.  We shall see that this property makes radians especially useful in applications. From now on we shall omit the tag \"radians,\" and you may assume that any angle given without units is in radians.   Sine and Cosine of Real Numbers  sine of a real number  cosine of a real number  We have observed that the measure of an angle in radians is just a real number. This is an important observation, because it allows us to define the sine and cosine as functions of real numbers, instead of as functions of angles.  Sine and Cosine of Real Numbers  sine of a real number  cosine of a real number  We define the trigonometric functions of the real number by where is an angle measured in radians.   We can think of the definition this way: to find the sine or cosine of a real number , we find the sine or cosine of the angle in radians.  To understand the connection between real numbers and radians, you may find it helpful to remember that the measure of a positive angle in radians is equal to the length of the arc it spans on a unit circle.  Consider the unit circle shown at right, and the angle determined by the arc of length . The radian measure of is the same as the length of the arc. (For example, in this figure .)  circle  In practice, there is no difference between finding the sine or cosine of the number 2 and the sine or cosine of an angle of 2 radians: in each case we set the calculator in Radian mode and evaluate   So, in some sense then, a trig function of a radian is the same as a trig function of a real number. This result is so important that it bears repeating: to find the sine or cosine of a real number , we find the sine or cosine of the angle radians. We can now use the trigonometric functions to model periodic behavior as functions of time, or indeed, of any variable.  The sunset time in Stockholm, Sweden, on the th day of the year can be modeled by where is given in hours after noon. Find the sunset time on January 1 (day ) and on July 1 (day ).  Sinusoidal graph of Stockholm's sunset time vs days   Evaluate the function for to find On January 1, sunset in Stockholm occurs about 2.99 hours after noon, or at 2:59 pm.  Evaluate the function at to find On July 1, sunset occurs about 9.11 hours after noon, or at 9:07 pm. (Actually, 10:07 pm, because of daylight savings time.)  Variable stars are important in astronomy because they are used to estimate distances. Their magnitude, or brightness, varies periodically and can be modeled by trigonometric functions. The star T Herculis reached its minimum magnitude on December 27, 2004, and days later its magnitude is approximately  Sinusoidal graph of star brightness   What was the magnitude of T Herculis on December 27, 2004?  What was the magnitude of T Herculis be on December 27, 2006 (730 days later)?       The Tangent Function  tangent function  We can also define the tangent function for real numbers. Let be the terminal point of an arc of length in standard position on a unit circle. Then Of course, this definition agrees with our earlier definition of the tangent function for angles, because the point lies on the terminal side of the angle radians.   For example, we saw earlier that, rounded to four decimal places, so the coordinates of point on the unit circle in the figure at right are . Therefore,  circle  You can set your calculator in radian mode to verify that, to three decimal places,  Because the trig values can be found as coordinates on a unit circle, our three trig functions are often called the circular functions . We now have the following definitions for the circular functions of real numbers.  The Circular Functions  circular function  sine of a real number  cosine of a real number  tangent of a real number  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle    Use the graph of the unit circle shown below to estimate , and .  Unit circle    The circle is scaled in units of 0.1 radians, and an arc of 2.5 radians in standard position has its terminal point, , in the second quadrant. The coordinates of are approximately , so we have To find , we calculate .  Use the graph of the unit circle in the previous example to estimate , and . , ,   The Special Values  special angles radians  In Chapter 2 you learned the exact trig values for the \"special angles\" and . Recall that the trig values for these angles can be used as benchmarks for estimating and mental calculation. Now we review those values when the angles are measured in radians.  The easiest way to remember the special values is to refer to the sides of the two special triangles:   45-45-90 triangle    30-60-90 triangle        Degrees  Radians  Sine  Cosine  Tangent                               undefined   circle  You can use these values to find trig values for the special angles in all four quadrants.  Recall that we use reference angles to define the trigonometric ratios for angles greater than . (See Section 4.1 to review reference angles.) The figure below shows how to calculate reference angles in radians. Note that the formulas are the same as those for degrees if we replace by !  Reference Angles in Radians  angles  Give exact values for the following.       The reference angle for is , and the tangent is negative in the second quadrant. (See the figure at right.) Thus,   angles   The reference angle for is , and the cosine is negative in the third quadrant, so  angles   At this point, you may feel that expressions such as look like hieroglyphics. Keep in mind that and are just numbers, so the equation above says that \"the cosine of an angle of 3.9 radians is about -0.7.\"  Give exact values for the following.         Special Angles in Radians  radian  Here is a unit circle with arclengths labeled, measured counterclockwise from .   grid   Give a decimal approximation to two places for each angle, then the degree measure of each.    Radians            Decimal Approx.            Degrees              Radians            Decimal Approx.            Degrees            On the unit circle above, plot the endpoint of each arc in standard position.     Use the unit circle to estimate the sine, cosine and tangent for each angle in part (2). Then compare your estimate with the exact trig value.    Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.  The coordinates of are , so    circle  Thus, the coordinates of are , as shown at right.  Find the coordinates of the terminal point, , of an arc of length starting at on a unit circle.  Review the following skills you will need for this section.   Simplify.                                          Algebra Refresher Answers                               Section 6.2 Summary  Vocabulary   Circular functions    Concepts   The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  You should memorize the trig values of the special angles in radians.    Degrees  Radians  Sine  Cosine  Tangent                               undefined   To find the sine or cosine of a real number , we find the sine or cosine of the angle in radians.  Coordinates on a Unit Circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are circle    The Circular Functions  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle     Study Questions   Write each statement using decimal approximations to four places.      Sketch a figure on a unit circle to illustrate each equation.      Write down the multiples of from to . Reduce each fraction.  On a unit circle, sketch arcs in standard position with the following lengths.    Skills   Know the trigonometric function values for the special angles in radians #1 4, 46 48  Use a unit circle to find trig values #5 30, 45 58  Find reference angles in radians #33 45  Evaluate trigonometric expressions #31 32, 49 54  Find coordinates on a unit circle #55 60, 67 68  Find an angle with a given terminal point on a unit circle #61 66  Use the tangent ratio to find slope #69 74  Find coordinates on a circle of radius #77 80     Homework 6.2  For Problems 1 4, each point on the unit circle is the terminal point of an angle in standard position. Give exact values for the radian measure, , of the angle, and the coordinates of the point.   circle     a  b  c  d                       a  b  c  d                      circle     a  b  c  d                      circle     a  b  c  d                       a  b  c  d                      circle     a  b  c  d                      For Problems 5 8, use the unit circle to estimate the sine, cosine, and tangent of each arc of given length.  Unit circle                                     For Problems 9 14, use the unit circle to estimate two numbers with the given trig value. Unit circle    or   or   or    Each of Problems 13 20 describes an arc in standard position on the unit circle. In which quadrant does the terminal point of the arc lie?  II   II   III    For Problems 21 26, without using a calculator, decide whether the quantity is positive or negative.  Negative   Positive   Positive    For Problems 27 30, place the trig values in order from smallest to largest. Use the figure to help you, but try not to use a calculator! Unit circle    , , , , , ,  , , ,  , , , , , ,  , , ,   The sunrise time in Wellington, New Zealand, on the th day of the year can be modeled by where is given in hours after midnight. Find the sunrise time on January 1 (day ), April 1 (day ), July 1 (day ), and on October 1 (day ). January 1: 4:24, April 1: 6:45, July 1: 8:02, October 1: 5:55  The variable star RT Cygni reached its maximum magnitude on May 22, 2004, and days later its magnitude is given by Find the magnitude of RT Cygni on days and . (Note that smaller values of denote brighter magnitudes.)  For Problems 33 38, find the reference angle in radians, rounded to two decimal places.         For Problems 39 44, find the reference angle in radians, expressed as a multiple of .         Find three angles in radians between and with the given reference angle. Sketch all the angles on a unit circle.       , ,   circle     , ,   circle     , ,   circle      Complete the table.                        Complete the table.                                             Complete the table.                        For Problems 49 54, evaluate the expression exactly.         Starting at , you walk units around a unit circle. For Problems 55 58, sketch a unit circle showing your position. What are your coordinates?       City Park features a circular jogging track of radius 1 mile, centered on the open-air bandstand. You start jogging on the track 1 mile due east of the bandstand and proceed counterclockwise. What are your coordinates, relative to the bandstand, when you have jogged five miles? mi east, mi north, or about 0.96 mi south  Silver Reservoir is a circular man-made lake of radius 1 kilometer. If you start at the easternmost point on the reservoir and walk counterclockwise for 4 kilometers, how far south of your intial position are you?  For Problems 61 66, find the angle in radians between and determined by the terminal point on the unit circle. Round your answer to hundredths.          Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.     circle    Intersections: and  and    Sketch a unit circle and the line . Find the coordinates of the two points where the line and the circle intersect.  State your answers to part (a) using trigonometric functions.    Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?    grid       graph        Sketch a line that passes through the origin and the point . What is the slope of the line?  What is the angle of inclination of the line in radians, measured from the positive -axis?   grid    For Problems 71 74, find an equation for the line with the given angle of inclination, passing through the given point. (See Section 4.3 to review angle of inclination.)    or    Use similar triangles to show that the coordinates of point on the unit circle shown at right are .   circle    Any point on the terminal side of satisfies , . For the point where , , . The arc of length is spanned by an angle in standard position. Because arclength is and , so , .  Use similar triangles to show that .   circle     Use the results of Problem 77 for for Problems 78 80.  Use similar triangles to show that the coordinates of a point determined by angle on a circle of radius are . (See the figure at right.)   circles    The two right triangles shown are similar, so their sides are proportional. The hypotenuse of the large triangle is times the hypotenuse of the small triangle, so the two legs of the large triangle must be times the legs of the small triangle. Thus, because the coordinates of the vertex on the unit circle are , the coordinates of must be .  The Astrodome in Houston has a diameter of 710 feet. If you start at the easternmost point and walk counterclockwise around its perimeter for a distance of 250 feet, how far north of your starting point are you?  The Barringer meteor crater near Winslow, Arizona is 1182 meters in diameter. You start at the easternmost point on the rim of the crater and walk counterclockwise around the edge. After walking for 1 kilometer, what is your position relative to your starting point 71 m west, 587 m north  One of the most intriguing features of Stonehenge is the position of the four Station Stones. Stonehenge  They form the corners of a rectangle inscribed in the Aubrey Circle on the perimeter of the henge, which has diameter 288 feet. A line from the center of the circle and perpendicular to the long edge of the rectangle points through the Slaughter Stones at the entrance of the henge and out to the Heel Stone. If you stood in the center of the circle on the summer solstice, you would see the sun rise directly over the Heel Stone.  Stonehenge   The sun rises east of north on the summer solstice at Stonehenge. If the positive -axis points north, find the coordinates of the henge entrance relative to its center.  The northernmost station stone is located of arc counterclockwise from the entrance. Find its coordinates relative to the center of the henge.     "
 },
 {
-  "id": "activity-7",
+  "id": "activity-8",
   "level": "2",
-  "url": "The-Circular-Functions.html#activity-7",
+  "url": "The-Circular-Functions.html#activity-8",
   "type": "Activity",
   "number": "6.2",
   "title": "Trigonometry in Radians.",
   "body": "Trigonometry in Radians  radian  Here is a unit circle with arclengths labeled, measured counterclockwise from . (Note that the distance around the whole circle is 6.28 units!) In Section 6.1 we learned that on a unit circle, the measure of a positive angle in radians is equal to the length of the arc that it spans.   grid   Use the unit circle to estimate the sine, cosine, and tangent of each angle in radians.      Use the unit circle to estimate two solutions to each equation.    Sketch the angle on the unit circle. Use symmetry to find three more angles with the same sine and cosine, up to sign.       "
 },
 {
-  "id": "example-112",
+  "id": "example-111",
   "level": "2",
-  "url": "The-Circular-Functions.html#example-112",
+  "url": "The-Circular-Functions.html#example-111",
   "type": "Example",
   "number": "6.15",
   "title": "",
@@ -15391,9 +15400,9 @@ var ptx_lunr_docs = [
   "body": "Use your calculator to find the tangents of the following angles in radians. Round your answers to four decimal places.       "
 },
 {
-  "id": "example-113",
+  "id": "example-112",
   "level": "2",
-  "url": "The-Circular-Functions.html#example-113",
+  "url": "The-Circular-Functions.html#example-112",
   "type": "Example",
   "number": "6.17",
   "title": "",
@@ -15418,9 +15427,9 @@ var ptx_lunr_docs = [
   "body": "To understand the connection between real numbers and radians, you may find it helpful to remember that the measure of a positive angle in radians is equal to the length of the arc it spans on a unit circle.  Consider the unit circle shown at right, and the angle determined by the arc of length . The radian measure of is the same as the length of the arc. (For example, in this figure .)  circle  In practice, there is no difference between finding the sine or cosine of the number 2 and the sine or cosine of an angle of 2 radians: in each case we set the calculator in Radian mode and evaluate  "
 },
 {
-  "id": "example-114",
+  "id": "example-113",
   "level": "2",
-  "url": "The-Circular-Functions.html#example-114",
+  "url": "The-Circular-Functions.html#example-113",
   "type": "Example",
   "number": "6.20",
   "title": "",
@@ -15436,27 +15445,27 @@ var ptx_lunr_docs = [
   "body": "Variable stars are important in astronomy because they are used to estimate distances. Their magnitude, or brightness, varies periodically and can be modeled by trigonometric functions. The star T Herculis reached its minimum magnitude on December 27, 2004, and days later its magnitude is approximately  Sinusoidal graph of star brightness   What was the magnitude of T Herculis on December 27, 2004?  What was the magnitude of T Herculis be on December 27, 2006 (730 days later)?     "
 },
 {
-  "id": "p-3733",
+  "id": "p-3748",
   "level": "2",
-  "url": "The-Circular-Functions.html#p-3733",
+  "url": "The-Circular-Functions.html#p-3748",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circular functions "
 },
 {
-  "id": "p-3734",
+  "id": "p-3749",
   "level": "2",
-  "url": "The-Circular-Functions.html#p-3734",
+  "url": "The-Circular-Functions.html#p-3749",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circular functions "
 },
 {
-  "id": "example-115",
+  "id": "example-114",
   "level": "2",
-  "url": "The-Circular-Functions.html#example-115",
+  "url": "The-Circular-Functions.html#example-114",
   "type": "Example",
   "number": "6.22",
   "title": "",
@@ -15472,9 +15481,9 @@ var ptx_lunr_docs = [
   "body": "Use the graph of the unit circle in the previous example to estimate , and . , , "
 },
 {
-  "id": "example-116",
+  "id": "example-115",
   "level": "2",
-  "url": "The-Circular-Functions.html#example-116",
+  "url": "The-Circular-Functions.html#example-115",
   "type": "Example",
   "number": "6.24",
   "title": "",
@@ -15499,18 +15508,18 @@ var ptx_lunr_docs = [
   "body": "Give exact values for the following.        "
 },
 {
-  "id": "activity-8",
+  "id": "activity-9",
   "level": "2",
-  "url": "The-Circular-Functions.html#activity-8",
+  "url": "The-Circular-Functions.html#activity-9",
   "type": "Activity",
   "number": "6.3",
   "title": "Special Angles in Radians.",
   "body": "Special Angles in Radians  radian  Here is a unit circle with arclengths labeled, measured counterclockwise from .   grid   Give a decimal approximation to two places for each angle, then the degree measure of each.    Radians            Decimal Approx.            Degrees              Radians            Decimal Approx.            Degrees            On the unit circle above, plot the endpoint of each arc in standard position.     Use the unit circle to estimate the sine, cosine and tangent for each angle in part (2). Then compare your estimate with the exact trig value.   "
 },
 {
-  "id": "example-117",
+  "id": "example-116",
   "level": "2",
-  "url": "The-Circular-Functions.html#example-117",
+  "url": "The-Circular-Functions.html#example-116",
   "type": "Example",
   "number": "6.27",
   "title": "",
@@ -15535,9 +15544,9 @@ var ptx_lunr_docs = [
   "body": " Simplify.                                          Algebra Refresher Answers                             "
 },
 {
-  "id": "p-3783",
+  "id": "p-3798",
   "level": "2",
-  "url": "The-Circular-Functions.html#p-3783",
+  "url": "The-Circular-Functions.html#p-3798",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -16273,9 +16282,9 @@ var ptx_lunr_docs = [
   "body": " Graphs of the Circular Functions  We can graph the circular functions and just as we graphed trigonometric functions of angles in degrees. The only difference is that we scale the horizontal axis in radians.  The Sine and Cosine Functions  Consider the graph shown below.   sine   You can probably recognize this graph as one cycle of . For example, you can see that the graph completes one cycle at radians, or approximately 6.28. It reaches its maximum value, , at , or approximately 1.57. You should also notice that at , approximately 3.14.  Instead of scaling the horizontal axis with integers, we often use multiples of . Using such a scale, we can show the exact location of the intercepts of the graph, and of its high and low points.  Graph one cycle of , and scale the horizontal axis in multiples of .  We start by making a table of values for , where is in radians. We'll use the special values of , because we know the sines of those values.                          In order to plot the points in the table, we scale the horizontal axis in multiples of . (Note that the special values are all multiples of . Thus, , , and so on.) The table lists values of in the first two quadrants; in quadrants three and four the sine values are negative.                          The completed graph is shown below.   sine   If we continued to plot points for values of greater than or less than 0, we would see the periodic behavior of the graph, as it repeats the same shape over each interval of length , just as it does for periods of when the angles are measured in degrees.   Complete the table of values for .                                                  Graph one cycle of , and scale the horizontal axis in multiples of . Use the grid below.  grid                                                     sinusoidal graph     Because we know the basic shapes of the sine and cosine graphs, to make an adequate graph it is usually sufficient to plot the guide points at the quadrantal angles, and then draw a smooth curve through the points. Try it for yourself. Use the axes below.                  axes   Graphs of Sine and Cosine   We are going to graph and from their definitions. The unit circle at the left of each grid is marked off in radians. (Each tick mark is radian.) The horizontal -axis of each grid is also marked in radians.   Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the vertical (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   circle and grid    Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the horizontal (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   unit circle and grid     The Tangent Function  Finally, we consider the graph of the tangent function. Once again, the only difference between this new graph and our old version of the tangent graph in degrees is that the horizontal axis is scaled in radians.  Graph the tangent function, , where is measured in radians.  We begin by making a table of values for the tangent function. We choose the special values for between and .                          Plot the points and connect them with smooth curves, remembering that is undefined. The graph repeats for values of between and . So, while the graph in degrees had vertical asymptotes at and , this graph has vertical asymptotes at and . The figure at right shows the graph of for .  tangent   Sketch a graph of the tangent function and scale the horizontal axis in integers, as shown below. Label the -intercepts and the vertical asymptotes with their coordinates.  grid   tangent graph    Solving Equations  We can use the graphs of the circular functions find solutions to trigonometric equations.  Use a graph to find all solutions of between and .  The figure shows a graph of , with in radians, and the horizontal line . The solutions of the equation are the -coordinates of the intersection points, and these appear to be about and slightly over , perhaps . You can check that these values roughly satisfy the equation; it is difficult to read the graph with any greater accuracy.   cosine graph   Use a graph to find the two angles between and that satisfy . Approximately 4.14 and 5.25  Solving Equations   unit circle and sine graph     Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   unit circle and cosine graph    Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   We can also solve equations algebraically, using a calculator or computer to obtain more accurate values for the solutions.   Solve the equation algebraically, for .  Find all solutions of the equation.    The cosine is negative in the second and third quadrants, so we expect to find our answers between and . We use a calculator to find one of the angles: Rounded to hundredths, the second quadrant angle is radans. To find the other angle, we first find the reference angle for :   The third quadrant angle with the same reference angle is  unit circle  Thus, the two solutions are and radians, as shown in the figure.  All angles coterminal with and are also solutions of the equation . So adding or subtracting multiples of to and produces all the solutions. For example, and are solutions. We write the solutions as and , where is an integer.    Solve the equation algebraically, for .  Find all solutions of the equation.   and  and   We can find exact values for the solutions of equations involving the special values without using a calculator.  Find exact values for all the solutions of .  Because , one of the solutions is . Remember that there are two solutions between and ; and the tangent function is positive in the third quadrant.  The third quadrant angle with reference angle is so the second solution is .  All other solutions of the equation can be found by adding (or subtracting) multiples of to these two solutions. We write the solutions as   Find exact values for all the solutions of . ,   Modeling with Circular Functions  Now that we have defined trigonometric functions of real numbers, we can describe periodic phenomena as functions of time (or other variables besides angles).  For example, we began this chapter with a Ferris wheel of radius 100 feet that rotates once every 8 minutes. If you board the Ferris wheel at the bottom, your height is given as a function of time by where is measured in minutes after boarding.   Thus, after minutes your height is and after minutes your height is  sinusoidal graph   The graph of is shown above. From the graph, we see that the midline of the function is , its amplitude is 100, and its period is 8 (which is reasonable because the Ferris wheel rotates every 8 minutes). You can review period, midline, and amplitude of periodic functions in Section 4.3.  The formula gives the number of hours of daylight in Glasgow, Scotland, as a function of time, in months after January 1.   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  How many hours of daylight does Glasgow enjoy on the longest day of the year?  In which months does Glasgow experience less than 8 hours of light per day?    The graph is shown below.  sinusoidal graph  The midline of the graph is hours, the amplitude is 5.25 hours, and the period is 12 months.  On the longest day of the year, there are hours of daylight in Glasgow.  From the graph, we see that for between 0 and 2, or in January and February. is also less than 8 for a short time between and , at the end of December.   The pistons in an automobile engine move up and down in the cylinders. If is in milliseconds, the distance from the top of the piston to the top of the cylinder is given in centimeters by   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  Find the largest and the smallest clearance between the piston and the top of the cylinder.   sinusoidal graph   Midline: , amplitude: , period: millisec  Largest: 13 cm, smallest: 1 cm     Domain and Range  The domain domain of a function is the set of all possible input values. For many familiar functions, the domain is the set of all real numbers. In particular, the domain of any linear or quadratic function is the set of all real numbers.  Consider the functions and shown below. We can use any real number as an input for either of these functions, and their graphs extend across the entire -axis.   three graphs   However, for other types of functions we must sometimes exclude certain values from the domain. For example, the domain of the function is restricted because we cannot take the square root of a negative number. We must have , so the domain of the function consists of all .  You can see the domain of a function in its graph; notice that there are no points on the graph of with -coordinates less than .  The range range of a function is the set of all output values for the function. We can also see the range of a function in its graph; it is the set of all -values for points on the graph.   Because the graph of extends infinitely in both directions, its range consists of all real numbers. There is an input value that will produce any output we want.  However, the range of consists of all , because there are no points on the graph with -coordinate less than .  The range of consists of all .   Domain and Range  The domain domain of a function is the set of all possible input values.  The range range of a function is the set of all output values for the function.   Find the domain and range of each function.       There are no restrictions on the input values for this function, so its domain is all real numbers. The graph is a parabola with high point at , so the range of the function is all . See the figure below left.   parabola  graph of hyperbola   Because we cannot divide by zero, we cannot allow for this function. Thus, the domain of is all real numbers except . The graph has a horizontal asymptote at , and you can see that there is no input that will produce an output of zero. So the range of is all real numbers except .    Use the formula and a graph to find the domain and range.       Dom ( ): all real numbers except , Rge ( ): all real numbers except  Dom ( ): , Rge ( ):    What about the domain and range of the trigonometric functions? The sine and cosine both include all real numbers in their domains; we can find the sine or cosine of any number. Because the output values of the sine and cosine are both defined by the coordinates of points on a unit circle, their values cannot be greater than or less than . The range of both sine and cosine is the interval .  The tangent function is undefined at odd multiples of (that is, at ), so those values must be excluded from its domain. However, the output values of the tangent function increase without bound as the input approaches from the left, and decrease from the right. The range of the tangent is all real numbers.  These facts about the three trigonometric functions appear in the Section 6.3 Summary.  Review the following skills you will need for this section.   Evaluate the function in part (a), and solve the equation in part (b).                      Algebra Refresher Answers                       Section 6.3 Summary  Vocabulary   Domain  Range    Concepts   We can use circular functions of real numbers to describe periodic phenomena.  The domain of a function is the set of all possible input values. The range of a function is the set of all output values for the function.  We can use a graph to solve trigonometric equations, or the inverse trig keys on a calculator or computer. We can find exact values for the solutions of equations involving the special values without using a calculator.    Domain: all real numbers  Range:  Period:   sine graph       Domain: all real numbers  Range:  Period:   cosine graph       Domain: all real numbers except  Range: all real numbers  Period:   tangent graph      Study Questions   How do the graphs of the circular functions differ from the graphs of the trigonometric functions of angles in degrees?  Use guidepoints to sketch graphs of and .  For each equation below, suppose that is one of the solutions between and . Use the diagram to find the other solution.   circle          Skills   Graph the trig functions of real numbers #1 8  Solve trigonometric equations graphically #9 20  Work with reference angles #21 26  Solve trigonometric equations algebraically #27 52  Evaluate trigonometric functions of real numbers #45 58  Use trigonometric models #59 62  Locate points on the graphs of the trigonometric functions #63 70  Find the domain and range of a function #71 80     Homework 6.3   Use your calculator to complete the table of values. Round values to hundredths.                                 Sketch a graph of on the grid.  grid               \\tikzset{% }                       cosine graph    Use your calculator to complete the table of values. Round values to hundredths.                               Sketch a graph of on the grid. grid     Sketch a graph of on each grid.  grid     grid      sine graph     sine graph   Sketch a graph of on each grid.  grid    grid      Sketch a graph of where is a real number.  State the domain and range of .     grid       sine graph     Domain: , range:    Sketch a graph of where is a real number.  State the domain and range of .    grid      Sketch a graph of where is a real number.  State the domain and range of .     grid       tangent graph     Domain: an odd integer, range:   Sketch and on the same grid.    grid     For Problems 9 10, use the figures below. Show your solutions on the graphs.   sine graph       unit circle      Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .    For Problems 11 12, use the figures below. Show your solutions on the graphs.    cosine graph      unit circle     Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .  or  or   Use the graph of to estimate two solutions of the equation .  Use the unit circle to estimate two solutions of the equation .    For Problems 13 20, use the graph of to estimate two solutions to the equation.   tangent graph     or   or   or   or    For Problems 21 26, find an angle in each quadrant, rounded to tenths, with the same reference angle as the angle given in radians.  I: 0.5, II: 2.7, III: 3.6, IV: 5.8   I: 0.6, II: 2.6, III: 3.7, IV: 5.7   I: 1.3, II: 1.8, III: 4.5, IV: 4.9    For Problems 27 32, find all solutions between and . Round to two decimal places. Sketch your solutions on a unit circle. Unit circle    or   or   or    For Problems 33 44, solve the equation. Give exact values between and .    or   or   or   or   or    For Problems 45 52, use your calculator in radian mode. In part (a),evaluate the trigonometric function, and in part (b), find all solutions between and . Round your answers to two decimal places.                             No solution     \\sin (x) = 1.2               For Problems 53 58, evaluate the function.             When observed from earth, the moon looks like a disk that is partially visible and partially in shadow. The percentage of the disk that is visible can be approximated by where is the number of days since the last full moon.   Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to full moon, half moon, and new moon. ( New moon occurs when the part of the moon receiving sunlight is facing directly away from the earth.)  At what times during the lunar month is 25% of the moon visible? Mark those points on your graph.  During which days is less than 50% of the moon visible? Mark the corresponding points on your graph.  b-c.   sinusoidal graph     d. and e. to  The tide in Malibu is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to high tide and low tide.  How high is high tide, and at what times does it occur?  At what times during the 25-hour period is the tide 4 feet above low tide? Mark those points on your graph.  Kathie walks along the beach only when the tide is below 1 foot. Find the intervals on your graph when the tide is below 1 foot.  The average daily high temperature in the town of Beardsley, Arizona is approximated by the function where the temperature is measured in degrees Fahrenheit, and is the number of days since January 1.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest average temperature.  What is the hottest day and what is its average temperature? What is the day with the lowest average temperature, and what is that temperature?  At what times during the year are average high temperatures above ? Mark those points on your graph.  b-c.   sinusoidal graph     d. High: day 204, ; low: day 25, e. to  A weight is suspended from the ceiling on a spring. The weight is pushed straight up, compressing the spring, then released. The height of the weight above the ground is given by the function where the height is measured in meters, and is the number of seconds since the mass was released.  Graph in the window   grid     Sketch the graph on the grid.  Label on your graph the points that correspond to highest and lowest positions of the mass.  How high is highest point, and when is that height attained during the first 3 seconds?  How high is lowest point, and when is that height attained during the first 3 seconds?  Find the intervals during the first 3 seconds when the mass is less than 2 meters above the ground.   For Problems 63 66, the figure shows an arc of length , and the coordinates of its terminal point. Find the terminal point of each related arc given below, and give its sine, cosine, and tangent.         unit circle            unit circle       unit circle            unit circle      Locate the four values and from Problem 63 on the graph of , on the graph of , and on the graph of shown below.   sine graph     cosine graph     tangent graph      three trig graphs     Repeat Problem 67 for the values in Problem 64.  Repeat Problem 67 for the values in Problem 65.   three trig graphs     Repeat Problem 67 for the values in Problem 66.  For Problems 71 78,   Sketch a graph of the function.  State the domain and range of the function.      parabola     Domain: , range:       graph of 2 - 1\/(x^2)     Domain: , range:       graph of translated square root     Domain: , range:       semicircle     Domain: , range:      Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .                     cosine graph      Domain: , Range:     Sketch a graph of , using the guidepoints in the table below.                  State the domain and range of the function .    "
 },
 {
-  "id": "example-118",
+  "id": "example-117",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-118",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-117",
   "type": "Example",
   "number": "6.29",
   "title": "",
@@ -16300,18 +16309,18 @@ var ptx_lunr_docs = [
   "body": "Because we know the basic shapes of the sine and cosine graphs, to make an adequate graph it is usually sufficient to plot the guide points at the quadrantal angles, and then draw a smooth curve through the points. Try it for yourself. Use the axes below.                  axes  "
 },
 {
-  "id": "activity-9",
+  "id": "activity-10",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#activity-9",
+  "url": "Graphs-of-the-The-Circular-Functions.html#activity-10",
   "type": "Activity",
   "number": "6.5",
   "title": "Graphs of Sine and Cosine.",
   "body": "Graphs of Sine and Cosine   We are going to graph and from their definitions. The unit circle at the left of each grid is marked off in radians. (Each tick mark is radian.) The horizontal -axis of each grid is also marked in radians.   Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the vertical (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   circle and grid    Choose a value of along the horizontal axis of the grid. This value of represents an angle in radians.  Now look at the unit circle and find the point designated by that same angle in radians.  Measure the horizontal (signed) distance that gives the -coordinate of point .  At the value of you chose in step 1, lightly draw a vertical line segment the same length as the -coordinate of . Put a dot at the top (or bottom) of the line segment.  Repeat for some more values of . Connect the dots to see the graph of .   unit circle and grid   "
 },
 {
-  "id": "example-119",
+  "id": "example-118",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-119",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-118",
   "type": "Example",
   "number": "6.32",
   "title": "",
@@ -16327,9 +16336,9 @@ var ptx_lunr_docs = [
   "body": "Sketch a graph of the tangent function and scale the horizontal axis in integers, as shown below. Label the -intercepts and the vertical asymptotes with their coordinates.  grid   tangent graph  "
 },
 {
-  "id": "example-120",
+  "id": "example-119",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-120",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-119",
   "type": "Example",
   "number": "6.34",
   "title": "",
@@ -16345,18 +16354,18 @@ var ptx_lunr_docs = [
   "body": "Use a graph to find the two angles between and that satisfy . Approximately 4.14 and 5.25 "
 },
 {
-  "id": "activity-10",
+  "id": "activity-11",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#activity-10",
+  "url": "Graphs-of-the-The-Circular-Functions.html#activity-11",
   "type": "Activity",
   "number": "6.6",
   "title": "Solving Equations.",
   "body": "Solving Equations   unit circle and sine graph     Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   unit circle and cosine graph    Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.   Use the graph of to estimate two solutions of the equation . Show your solutions on the graph.  Use the unit circle to estimate two solutions of the equation . Show your solutions on the circle.  "
 },
 {
-  "id": "example-121",
+  "id": "example-120",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-121",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-120",
   "type": "Example",
   "number": "6.36",
   "title": "",
@@ -16372,9 +16381,9 @@ var ptx_lunr_docs = [
   "body": " Solve the equation algebraically, for .  Find all solutions of the equation.   and  and  "
 },
 {
-  "id": "example-122",
+  "id": "example-121",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-122",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-121",
   "type": "Example",
   "number": "6.38",
   "title": "",
@@ -16390,9 +16399,9 @@ var ptx_lunr_docs = [
   "body": "Find exact values for all the solutions of . , "
 },
 {
-  "id": "example-123",
+  "id": "example-122",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-123",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-122",
   "type": "Example",
   "number": "6.40",
   "title": "",
@@ -16408,45 +16417,45 @@ var ptx_lunr_docs = [
   "body": "The pistons in an automobile engine move up and down in the cylinders. If is in milliseconds, the distance from the top of the piston to the top of the cylinder is given in centimeters by   Graph the function on your calculator (make sure the calculator is set in radian mode).  State the midline, amplitude, and period of the graph.  Find the largest and the smallest clearance between the piston and the top of the cylinder.   sinusoidal graph   Midline: , amplitude: , period: millisec  Largest: 13 cm, smallest: 1 cm   "
 },
 {
-  "id": "p-3994",
+  "id": "p-4009",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-3994",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4009",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "domain "
 },
 {
-  "id": "p-3998",
+  "id": "p-4013",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-3998",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4013",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "range "
 },
 {
-  "id": "p-4000",
+  "id": "p-4015",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-4000",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4015",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "domain "
 },
 {
-  "id": "p-4001",
+  "id": "p-4016",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-4001",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4016",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "range "
 },
 {
-  "id": "example-124",
+  "id": "example-123",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#example-124",
+  "url": "Graphs-of-the-The-Circular-Functions.html#example-123",
   "type": "Example",
   "number": "6.42",
   "title": "",
@@ -16471,9 +16480,9 @@ var ptx_lunr_docs = [
   "body": " Evaluate the function in part (a), and solve the equation in part (b).                      Algebra Refresher Answers                     "
 },
 {
-  "id": "p-4027",
+  "id": "p-4042",
   "level": "2",
-  "url": "Graphs-of-the-The-Circular-Functions.html#p-4027",
+  "url": "Graphs-of-the-The-Circular-Functions.html#p-4042",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -17209,9 +17218,9 @@ var ptx_lunr_docs = [
   "body": " Chapter 6 Summary and Review  Key Concepts   The distance we travel around a circle of radius is proportional to the angle of displacement.  We measure angles in radians when we work with arclength.  Radians  The radian measure of an angle is given by  An arclength equal to one radius determines a central angle of one radian.  Radian measure can be expressed as multiples of or as decimals.     Degrees                        Quadrantal angles on unit circle radian approximation    We multiply by the appropriate conversion factor to convert between degrees and radians.  Unit Conversion for Angles   To convert from radians to degrees we multiply the radian measure by .  To convert from degrees to radians we multiply the degree measure by .   Arclength Formula  On a circle of radius , the length of an arc spanned by an angle in radians is  On a unit circle , the measure of a (positive) angle in radians is equal to the length of the arc it spans.  The sine, cosine, or tangent of a particular angle is the same whether the angle is measured in radians or in degrees.  You should be familiar with the trig values of the special angles in radians.    Degrees  Radians  Sine  Cosine  Tangent                               undefined   To find the sine or cosine of a real number , we draw an arc of length on a unit circle, and then find the sine or cosine of the angle determined by the arc.  Coordinates on a Unit Circle  The coordinates of the point determined by an arc of length in standard position on a unit circle are circle    The Circular Functions  Let be the terminal point of an arc of length in standard position on a unit circle. The circular functions of are defined by    circle    The domain of a function is the set of all possible input values. The range of a function is the set of all output values for the function.    Domain: all real numbers  Range:  Period:   sine graph       Domain: all real numbers  Range:  Period:   cosine graph       Domain: all real numbers except  Range: all real numbers  Period:   tangent graph         Chapter 6 Review Problems  For Problems 1 2, convert from degrees to radians. Give exact answers.                 For Problems 3 4, convert from degrees to radians. Round to two decimal places.                 For Problems 5 8, convert from radians to degrees. Round to hundredths if necessary.                               For Problems 9 10, express each fraction of one revolution as an angle in radians.                 For Problems 11 12, express each angle in radians as a fraction of one revolution.                 For Problems 13 14, in which quadrant on a unit circle does an arc with given length lie?       II  I  IV          The Earth's radius at the equator is 3960 miles. If you travel 150 miles along the equator, what fraction of its circumference have you covered? How many degrees of longitude have you crossed? Convert your answer to radians.  Use the arclength formula to calculate the answer to part (a). Do your answers agree?      A lawn sprinkler has a range of 15 feet, and waters a porion of a circle whose curved edge is 39.27 feet long. Through what angle does the sprinkler turn?  Many telecommunications satellites are put into geostationary orbits, so that they have the same period as the rotation of the earth, and hence stay in the same relative position seen from earth. Hundreds of these satellites orbit 22,300 miles above the equator in what is called the Clarke belt, named after Arthur C. Clarke. What is the speed of the satellites? (The radius of the earth is about 4000 miles.) mph  The planet Neptune is 4504 million kilometers from the Sun. In one Earth year (365 days), it travels a distance of 171.58 million kilometers around its orbit.   What fraction of its orbit does Neptune travel in one Earth year? What angle in radians does it traverse in that time?  How many days does it take Neptune to complete one orbit around the Sun? What is its speed, in kilometers per day?  Earth is 150 million kilometers from the Sun. What is Earth's orbital speed?   For Problems 19 20, evaluate exactly.                 For Problems 21 22, factor the expressionsketch an arc with the given length in standard position on a unit circle. Find the coordinates of the terminal point. Round to tenths.                 In Problems 23 24, the circle has radius , and its center is the point .  Find the coordinates of each point in terms of .       circle        Find the length of each arc in terms of .       circle    For Problems 25 26, find an exact value for the area of the sector.  With a central angle of in a circle of radius 4 inches.  With a central angle of in a circle of radius 12 centimeters.   If , then .  If , then .  If , then .  If , then .  For Problems 31 34, evaluate the function  for  for  for  for   For Problems 35 38, find the reference angle in radians.                                     For Problems 39 40, find the angle of inclination of the line.      Prepare a Cartesian coordinate system with the -axis scaled from 0 to 10 and the -axis scaled from to . Label multiples of on the -axis.  Sketch an accurate graph of on the grid. Sketch an accurate graph of on the same grid.  graph of cosine and sine   Use your calculator to make a table of values for and , for and .  Plot the points from the table. Identify the graph.  For Problems 43 46,  Graph the function for . State the amplitude, period, and midline of the graph.  Use the graph to solve the equation for .        sinusoidal graph  mid: , amp: , period:   sinusoidal curve and horizontal line             sinusoidal graph  mid: , amp: , period:   sinusoidal graph and horizontal line         For Problems 47 48, solve the equation graphically for .     For Problems 49 52, solve the equation exactly for .       For Problems 53 58, find all solutions between and . Round to two decimal places.         For Problems 59 62, solve for .                   For Problems 63 66, sketch the graph. State its domain and range.   parabola  Dom: all real numbers, Rge:    semicircle  Dom: , Rge:    Prove the Pythagorean identity by carrying out the following steps. Sketch a unit circle, and an arc in standard position.  Write the equation of the unit circle.  Use trig ratios to write the coordinates of the terminal point of the arc.  Substitute the coordinates of point into your equation from part (a).  Does the identity hold for all values of ?      Yes   Prove the tangent identity by carrying out the following steps. Sketch an arc in standard position on a unit circle, and label its terminal point .   Write and in terms of and .  Write the definition of .  Substitute your results from part (a) into your expression for (b).  Does the identity hold for all values of ?      "
 },
 {
-  "id": "p-4186",
+  "id": "p-4201",
   "level": "2",
-  "url": "chap6-summary.html#p-4186",
+  "url": "chap6-summary.html#p-4201",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -17839,27 +17848,27 @@ var ptx_lunr_docs = [
   "body": " Transformations of Graphs  In Chapter 4 we saw that the amplitude, period, and midline of a sinusoidal graph are determined by the coefficients in its formula. The circular functions (sine and cosine of real numbers) behave the same way.  Period, Midline, and Amplitude  Changes to the amplitude, period, and midline are called transformations transformation of the basic sine and cosine graphs.   Changing the midline shifts the graph vertically.  Changing the amplitude stretches or compresses the graph vertically.  Changing the period stretches or compresses the graph horizontally.   First, we'll consider changes in amplitude.  Compare the graphs of and with the graph of .  Use technology to graph the three functions for . The graphs are shown below.   sines  All three graphs have the same period ( ) and midline ( ), but the graph of has amplitude 2, and the graph of has amplitude 0.5.  The amplitude of is given by , and the same is true of . In the next exercise, remember that the amplitude is always a nonnegative number.  Compare the graphs of and with the graph of . Both graphs have amplitude 3. The graph of is reflected about the -axis.  cosines  Next, we'll consider changes in the period of the graph.  Compare the graphs of and with the graph of .  Use technology to graph and for , as shown below.   cos(x) and cos(2x)  Both graphs have the same amplitude ( ) and midline ( ), but the graph of completes two cycles from to instead of one. The period of is .  Now graph and for .   sines  The graph of completes one cycle between and . Its period is .  The period of is given by , and the same is true of .    Compare the graph of with the graph of for .  Compare the graph of with the graph of for .   The graph of completes 3 cycles from to . Its period is .  The graph of completes one cycle from to . Its period is .  Next we'll consider changes in midline.  Compare the graph of with the graph of .  Graph both functions . The graphs are shown below.   sin(x) and 2+sin(x)  Each point on the graph of has -coordinate 2 units higher than the corresponding point on the graph of . Thus, the graph of is shifted vertically by 2 units relative to the graph of . In particular, the midline of is the line .  Compare the graph of with the graph of .  The graph of is shifted down 3 units. Its midline is .   Here is a summary of our findings.  Amplitude, Period, and Midline of Sinusoidal Functions  amplitude  period  midline   The graph of has amplitude  .  The graph of has period  .  The graph of has midline  .    Graphs of Sinusoidal Functions  sinusoidal function graph  The values of the parameters determine the shape of the graphs of By adjusting the amplitude, period, and midline of the sine or cosine graph, we can sketch these sinusoidal functions.   State the amplitude, period, and midline of .  Sketch by hand a graph of .    The amplitude of the graph is 3, its midline is , and its period is .  One way to make a quick sketch of a sinusoidal graph is to use a table of values. The trick is to choose convenient values for the input variable. In the table below, notice that we choose the quadrantal angles as the input values for the trigonometric function.                                        Now we work backwards from to find the values of , and forwards from to find the values of .                                        Notice from the table that the graph completes one cycle from to , which confirms that the period is . Finally, we plot the points from the table, and use them as \"guidepoints\" to sketch a sinusoidal graph, as shown below.   Graph of y=2+3cos(4t)    State the amplitude, period, and midline of the graph of .  Complete the table and sketch a graph of .                                        grid    Amplitude: 2, period: , midline: .                                        Graph of y=4-2sin(t\/3)    Modeling with Sinusoidal Functions  Sinusoidal functions are used to model a great variety of physical phenomena, including sound and light waves, tides and planetary orbits, and the life cycles of plants and animals. They are also often used to approximate periodic functions that are not exactly sinusoidal, such as blood pressure.  A typical blood pressure for a healthy adult, measured in millimeters of mercury, varies between 70 and 110, and a typical heart rate is 60 beats per minute. Write a sinusoidal function that approximates blood pressure, and sketch its graph.  We would like a function of the form , so we must find the values of the parameters and .  The midline of the graph is , and the amplitude is , so and .  The graph repeats 60 times per minute, so the period is minute, and .  Thus, The graph of the function is shown below.   sinusoidal graph   In the preceding Example , we could have chosen either a sine or a cosine function to model blood pressure; both describe the periodic behavior described. However, if we are given, or would like to specify, the starting point for a sinusoidal function, one choice can be more suitable than the other. Consider the functions graphed below.   sinusoidal graph  sinusoidal graph   sinusoidal graph  sinusoidal graph  All four functions have the same amplitude and period, but they start at different points on the cycle.  The graphs in (a) and (b) start on the midline, so they are best modeled by sine functions.  The graph in (b) starts out decreasing instead of increasing, so the coefficient is negative.  The graph in (c) is modeled by a cosine, because it starts at the maximum point, and the graph in (d) starts at the minimum point, so we choose a negative cosine to model it.   (In , we'll consider sinusoidal functions that start at other positions on the cycle.)  In the next Checkpoint , note the starting point of the graph, and choose the most appropriate sinusoidal function to model the function.  The graph below shows the voltage of a generator, as seen on an oscilloscope.  Write a sinusoidal function for the voltage level.  What is the frequency of the signal, in cycles per second?   sinusoidal function   50 cycles per second    The Tangent Function  tangent function  The transformations of shifting and stretching can be applied to the tangent function as well. The graph of does not have an amplitude, but we can see any vertical stretch by comparing the function values at the guidepoints.   Graph .  Describe the transformations of the graph, compared to .   Recall that the period of the tangent function is . We make a table of values for one cycle of the function, choosing multiples of as the inputs for the tangent function. Then we plot the guidepoints, and sketch a tangent function through them. The graph is shown below.                                  transformed tangent graph  Writing the formula as we see that the graph is stretched vertically by a factor of . The midline is , so the graph is shifted up by 1 unit. Finally, the coefficient compresses the graph horizontally by a factor of 2, so the period of the graph is , and there are four cycles between and    Identify the midline and period of the tangent graph shown below.  Find an equation of the form for the graph.   transformed tangent graph     Midline: , period    Review the following skills you will need for this section.   Complete the table.                                                                          Algebra Refresher Answers                                                                   Section 7.1 Summary  Vocabulary   Transformation  Amplitude  Period  Midline    Concepts   Changes to the amplitude, period, and midline of the basic sine and cosine graphs are called transformations . Changing the midline shifts the graph vertically, changing the amplitude stretches or compresses the graph vertically, and changing the period stretches or compresses the graph horizontally.  Amplitude, Period, and Midline of Sinusoidal Functions   The graph of has amplitude  .  The graph of has period  .  The graph of has midline  .   One way to make a quick sketch of a sinusoidal graph is to use a table of values. The trick is to choose convenient values for the input variable.  The transformations of shifting and stretching can be applied to the tangent function as well.   Study Questions   Count from to by multiples of .  Count from to by multiples of .  Transformationhe maximum value of a certain sinusoidal function is , and its minimum value is . What is the midline of the function? What is its amplitude?  , and . What are the values of and ?   Skills   Identify the amplitude, period, and midline of a circular function #1 8, 23 30  Graph a circular function #9 16, 31 44  Find a formula for the graph of a circular function #17 30  Model periodic phenomena with circular functions #45 52  Graph transformations of the tangent function #535 8  Solve trigonometric equations graphically #59 70     Homework 7-1  For Problems 1 8, state the amplitude, period, and midline of the graph.  amplitude , period , midline    amplitude , period , midline    amplitude , period , midline    amplitude , period , midline     In Problems 9 16, we use transformations to sketch graphs of the functions in Problems 1 8. Sketch one cycle of each graph by hand and label scales on the axes.       transformations of sine graph            transformations of cosine            transformations of sine            cosine transformations        For Problems 17 22, write an equation for the graph using sine or cosine.   sinusoidal graph   sinusoidal graph   sinusoidal graph   sinusoidal graph   sinusoidal graph   sinusoidal graph   For Problems 23 30,  State the amplitude, period, and midline of the graph.  Write an equation for the graph using sine or cosine.    sinusoidal graph  amplitude , period , midline     sinusoidal graph   sinusoidal graph  amplitude , period , midline     sinusoidal graph   sinusoidal graph  amplitude , period , midline     sinusoidal graph   sinusoidal graph  amplitude , period , midline     sinusoidal graph   In Problems 31 36, we use a table of values to sketch circular functions.   Complete the table of values for the function.  Sketch a graph of the function and label the scales on the axes.                                          grid                                           sinusoidal graph                                          grid                                           grid                                           sinusoidal graph                                          grid                                            grid                35                           sinusoidal graph                                          grid      For Problems 37 44, label the scales on the axes for the graph.   sinusoidal graph, no scale on axes  sinusoidal graph   sinusoidal graph   sinusoidal graph, no scale  sinusoidal graph   sinusoidal graph   sinusoidal graph, no scale  sinusoidal graph   sinusoidal graph   sinusoidal graph  sinusoidal graph   sinusoidal graph   The height of the tide in Cabot Cove can be approximated by a sinusoidal function. At 5 am on July 23, the water level reached its high mark at the 20-foot line on the pier, and at 11 am, the water level was at its lowest at the 4-foot line.  Sketch a graph of , the water level as a function of time, from 5 am on July 23 to 5 am on July 24.  Write an equation for the function.   sinusoidal graph    The population of mosquitoes at Marsh Lake is a sinusoidal function of time. The population peaks around June 1 at about 6000 mosquitoes per square kilometer, and is smallest on December 1, at 1000 mosquitoes per square kilometer.  Sketch a graph of , the number of mosquitoes as a function of the month, where on June 1.  Write an equation for the function.   The paddlewheel on the Delta Queen steamboat is 28 feet in diameter, and is rotating once every ten seconds. The bottom of the paddlewheel is 4 feet below the surface of the water.  The ship's logo is painted on one of the paddlewheel blades. At , the blade with the logo is at the top of the wheel. Sketch a graph of the logo's heightabove the water as a function of .  Write an equation for the function.   sinusoidal graph    Delbert's bicycle wheel is 24 inches in diameter, and he has a light attached to the spokes 10 inches from the center of the wheel. It is dark, and he is cycling home slowly from work. The bicycle wheel makes one revolution every second.  At , the light is at its highest point the bicycle wheel. Sketch a graph of the light's height as a function of .  Write an equation for the function.   For Problems 49 52, write an equation for the sinusoidal function whose graph is shown.  The number of hours of daylight in Salt Lake City varies from a minimum of 9.6 hours on the winter solstice to a maximum of 14.4 hours on the summer solstice. Time is measured in months, starting at the winter solstice.  sinusoidal graph  A weight is 6.5 feet above the floor, suspended from the ceiling by a spring. The weight is pulled down to 5 feet above the floor and released, rising past 6.5 feet in 0.5 seconds before attaining its maximum height of feet. The weight oscillates between its minimum and maximum height.  sinusoidal graph  The voltage used in U.S. electrical current changes from 155V to 155V and back 60 times each second.  voltage  Although the moon is spherical, what we see from earth looks like a disk, sometimes only partly visible. The percentage of the moon's disk that is visible varies between 0 (at new moon) to 100 (at full moon), over a 28-day cycle.  sinusoidal graph   For Problems 53 58,   Make a table of values and sketch a graph of the function.  Give its period and midline.              undef     undef  transformed tangent function  period , midline                undef     undef  transformed tangent graph  period , midline                undef     undef  transformed tangent graph  period , midline      For Problems 59 64, use the graph to find all solutions between and .   sinusoidal graph and horizontal line , , , , , , ,    sinusoidal graph and horizontal line   sinusoidal graph and horizontal line , , ,    sinusoidal graph and horizontal line   transformed tangent and horizontal line , , , , ,    transformed tangent and horizontal line   For Problems 65 70,   Use technology to graph the function for .  Use the intersect feature to find all solutions between and . Round your answers to hundredths.                             "
 },
 {
-  "id": "p-4350",
+  "id": "p-4365",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4350",
+  "url": "Transformations-of-Graphs.html#p-4365",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circular functions "
 },
 {
-  "id": "p-4351",
+  "id": "p-4366",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4351",
+  "url": "Transformations-of-Graphs.html#p-4366",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "transformations "
 },
 {
-  "id": "example-125",
+  "id": "example-124",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-125",
+  "url": "Transformations-of-Graphs.html#example-124",
   "type": "Example",
   "number": "7.1",
   "title": "",
@@ -17875,9 +17884,9 @@ var ptx_lunr_docs = [
   "body": "Compare the graphs of and with the graph of . Both graphs have amplitude 3. The graph of is reflected about the -axis.  cosines "
 },
 {
-  "id": "example-126",
+  "id": "example-125",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-126",
+  "url": "Transformations-of-Graphs.html#example-125",
   "type": "Example",
   "number": "7.3",
   "title": "",
@@ -17893,9 +17902,9 @@ var ptx_lunr_docs = [
   "body": "  Compare the graph of with the graph of for .  Compare the graph of with the graph of for .   The graph of completes 3 cycles from to . Its period is .  The graph of completes one cycle from to . Its period is . "
 },
 {
-  "id": "example-127",
+  "id": "example-126",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-127",
+  "url": "Transformations-of-Graphs.html#example-126",
   "type": "Example",
   "number": "7.5",
   "title": "",
@@ -17911,18 +17920,18 @@ var ptx_lunr_docs = [
   "body": "Compare the graph of with the graph of .  The graph of is shifted down 3 units. Its midline is .  "
 },
 {
-  "id": "p-4376",
+  "id": "p-4391",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4376",
+  "url": "Transformations-of-Graphs.html#p-4391",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "amplitude period midline "
 },
 {
-  "id": "example-128",
+  "id": "example-127",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-128",
+  "url": "Transformations-of-Graphs.html#example-127",
   "type": "Example",
   "number": "7.7",
   "title": "",
@@ -17965,9 +17974,9 @@ var ptx_lunr_docs = [
   "body": "The graph below shows the voltage of a generator, as seen on an oscilloscope.  Write a sinusoidal function for the voltage level.  What is the frequency of the signal, in cycles per second?   sinusoidal function   50 cycles per second  "
 },
 {
-  "id": "example-130",
+  "id": "example-129",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#example-130",
+  "url": "Transformations-of-Graphs.html#example-129",
   "type": "Example",
   "number": "7.12",
   "title": "",
@@ -17992,9 +18001,9 @@ var ptx_lunr_docs = [
   "body": " Complete the table.                                                                          Algebra Refresher Answers                                                                 "
 },
 {
-  "id": "p-4410",
+  "id": "p-4425",
   "level": "2",
-  "url": "Transformations-of-Graphs.html#p-4410",
+  "url": "Transformations-of-Graphs.html#p-4425",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -18640,9 +18649,9 @@ var ptx_lunr_docs = [
   "body": " The General Sinusoidal Function  Horizontal Shifts  In the previous section we considered transformations of sinusoidal graphs, including vertical shifts, which change the midline of the graph, vertical stretches and compressions, which change its amplitude, and horizontal stretches and compressions, which occur when we change the period of the graph. In this section we consider one more transformation, shifting the graph horizontally. The figure below shows four different transformations of the graph of .   translated sine  scaled sine   horizontal compression of sine  horizontal shift of sine  Graph and for . How is the graph of different from the graph of ?  The graphs are shown below. The graph of has the same amplitude, midline, and period as the graph of , but the graph of is shifted to the right by units, compared to the graph of .    sinusoidal graph     We can see why this shift occurs by studying a table of values for the two functions.                                      Notice that in the table, has the same function values as , but each one is shifted units to the right. The same thing happens in the graph: each -value appears units farther to the right on than it does on .  Graph and for . How is the graph of different from the graph of ? The graph of is shifted units to the left of .  The examples above illustrate the following principle.  Horizontal Shifts  horizontal shift  transformation horizontal shift  The graphs of are shifted horizontally compared to the graphs of and .   If , the graph is shifted to the right.  If , the graph is shifted to the left.   We can use a table of values to sketch graphs that involve horizontal shifts.  Make a table of values and sketch a graph of .  First notice that we can write the equation as so that , and we expect the graph to be shifted units to the left compared to the graph of .  We choose convenient values for the inputs of the cosine function, namely .                                  From those values, we work backwards to and forwards to . (To obtain the values of , we subtract from the values of .)                                  To make the graph, we'll scale the -axis in multiples of . We plot the guide points from the table, and sketch a sinusoidal graph through the points. One cycle of the graph is shown below. As we expected,the graph is shifted units to the left compared to the graph of .   transformed cosine  Complete the table and sketch a graph of on the grid below. (Do you expect the graph to be shifted to the left or to the right, compared to the graph of ?)                                   grid                                  transformed sine   Combining Transformations  transformation combining  The order in which we apply transformations to a function makes a difference in the graph. We'll compare the graphs of the two functions Graph the two functions for , along with , as shown below. Each graph involves a horizontal shift relative to , but the graph of is shifted units to the right, while the graph of is shifted only units to the right. This difference occurs because of the order of the transformations.   sinusoidal graphs  sinusoidal graphs  We transform the graph of into the graph of in two steps:  Step 1: First we replace by to get , which compresses the graph horizontally by a factor of 2. (See figure (a) below.)  Step 2: Then we replace by to get , which shifts the graph units to the right. (See figure (b).)   horizontal compression of sin x  translation of sin 2x    To transform the graph of into the graph of , we perform the two steps in the opposite order:  Step 1: We replace by which shifts the graph units to the right. (See figure (a).)  Step 2: Then we replace by to get which compresses the graph horizontally by a factor of 2, including the horizontal shift. This reduces the horizontal shift from to . (See figure (b.)   horizontal shift of sine  horizontal compression of shifted sine  It is easier to analyze the transformations in the function , because we can read the horizontal shift from the formula. where is the compression factor and is the horizontal shift.  We can write the formula for in the same easy-to-analyze form by factoring the input for the sine function:  In general, if we write the formula for a sinusoidal function in standard form , we can read all the transformations from the constants in the formula.  Standard Form for Sinusoidal Functions  sinusoidal function standard form  The graphs of the functions are transformations of the sine and cosine graphs.   The amplitude is .  The midline is .  The period is .  The horizontal shift is units to the right if is positive, and units to the left if is negative.    State the midline, amplitude, period, and horizontal shift for the function  Sketch a graph of the function for .    First, we write the input for the cosine function in factored form: Comparing the formula for with the standard form, we see that , , and . Thus, the midline is , the amplitude is , the period is , and the horizontal shift is units to the left.  Use a table of values to locate the guidepoints for the graph. Begin by choosing convenient values for the input, . Then work backwards to find values for and forwards to find values for .                                        Finally, plot the guidepoints and connect them with a sinusoidal curve. The graph is shown at right.  sinusoidal graph    State the midline, amplitude, period, and horizontal shift of the graph of  Make a table of values and sketch a graph of the function.                                        midline: , amplitude: , period: , horizontal shift: to the right                                         sinusoidal function    Modeling with Sinusoidal Functions  In Section 7.1 we found formulas for sinusoidal functions that start on the midline, or at their maximum or minimum value. We use horizontal transformations to write formulas for functions that start at other points on the cycle.  Find a formula for the sinusoidal function whose graph is shown below.   sinusoidal function   The midline of the graph is , and its amplitude is . It has the shape of a cosine, but its maximum value occurs at instead of at ; so the graph is shifted units to the right, compared to the graph of .  The graph completes one cycle between and , so its period is . Thus, we use the standard form with , and , giving us as our formula for the function.  In Example 4, our solution is not the only sinusoidal function that fits the given graph. For example, if we regard the graph as a sine function shifted units to the left, we would use the formula . You can check that the two functions have identical graphs. Usually it is a good idea to choose a formula with a small horizontal shift.  Find a formula for the sinusoidal function whose graph is shown at right.  sinusoidal function  Many natural phenomena can be modeled with sinusoidal functions.  Sunspots are dark regions on the Sun first observed by Galileo in 1610. The number of sunspots is not constant, but varies with a period of approximately 11 years, called the solar cycle. Solar activity is directly related to this cycle, and can cause disturbances in the earth's upper atmosphere. Planning for satellite orbits and space missions requires knowledge of solar activity levels years in advance.  The figure below shows sunspot data for the last solar cycle, from July, 1985 through June, 1996, and a sinusoidal function that models the data.  sine   The period of the solar cycle shown is actually 10.8 years. Use this information and the graph to write a formula for the model.  Improve the fit of the model by adjusting its horizontal shift.   The graph has the shape of . It appears to have midline and amplitude , so and To find , we compute Thus, a formula for the model is .  Fitting a curve by eye is a subjective process, but it looks like we can get a better fit by shifting the curve slightly to the left. By trying several values for in , we might settle on , which results in the curve shown below.  sine  The figure below shows the sunspot data for the solar cycle that began in July 1996, and a curve of best fit calculated by NASA. This curve is not sinusoidal, but has a similar shape.  sine   The minimum sunspot number occurred in October 1996. Use the graph to estimate the period, midline, and amplitude of a sinusoidal function that approximates the data.  Write a function that approximates the data.  Use your function to predict the sunspot number in January, 2005.   Period: 10 years, midline: , amplitude: 53   37   Review the following skills you will need for this section.    Write a formula for .  Graph and on the same axes.             Algebra Refresher Answers    parabolas   translated square root function   translation of reciprocal function   translation of inverse-square function   translation of inverse-square function   translation of exponential     Section 7.2 Summary  Concepts   Horizontal Shifts  The graphs of are shifted horizontally compared to the graphs of and .   If , the graph is shifted to the right.  If , the graph is shifted to the left.   The order in which we apply transformations to a function makes a difference in the graph.  Standard Form for Sinusoidal Functions  The graphs of the functions are transformations of the sine and cosine graphs.   The amplitude is .  The midline is .  The period is .  The horizontal shift is units to the right if is positive, and units to the left if is negative.    Study Questions   Which of the following functions are the same? Explain your answer.  Which of the following functions are the same? Explain your answer. Calculate the horizontal shift.         Skills   Graph trigonometric functions using a table of values #1 6, 11 16  Find a formula for a transformation of a trigonometric function #7 10, 17 26  Solve trigonometric equations graphically #1 6, 11 16  Model periodic phenomena with trigonometric functions #27 30  Fit a circular function to data #31 34     Homework 7-2  and   Fill in the table of values.                                                 Sketch the graphs of and on the same axes.   grid  What is the horizontal shift from to ?  Find all values of for which , for .  Find all values of for which , for .                                                   sine and translated sine  to the right     and   Fill in the table of values.                                                 Sketch the graphs of and on the same axes.   grid   What is the horizontal shift from to ?  Find all values of for which , for .  Find all values of for which , for .   and   Fill in the table of values.                                      Sketch the graphs of and on the same axes.  grid  What is the horizontal shift from to ?  Solve , for .  Solve , for .                   undef     undef       undef     undef       translated tangent function  to the left     and   Fill in the table of values.                                     Sketch the graphs of and on the same axes.  grid  What is the horizontal shift from to ?  Solve , for .  Solve , for .     What are the amplitude and the horizontal shift?  Fill in the table of values.                                            Sketch the graph.  grid  Solve , for  Solve , for   amplitude 2, shift to the left                                              sinusoidal graph       What are the amplitude and the horizontal shift?  Fill in the table of values.                                            Sketch the graph.  grid  Solve , for  Solve , for   The figure shows the graph of .   sinusoidal graph   Find a formula for as a shift of the sine function.  Find a formula for as a shift of the cosine function.      The figure shows the graph of .   sinusoidal graph   Find a formula for as a shift of the sine function.  Find a formula for as a shift of the cosine function.   The figure shows the graph of .   translated tangent function   Find a formula for as a shift of the tangent function.  Find another formula for as a different shift of the tangent function.      The figure shows the graph of .   translated tangent function   Find a formula for as a shift of the tangent function.  Find another formula for as a different shift of the tangent function.     What are the period and the horizontal shift? (Hint: Factor out 2 from .)  Fill in the table of values.                                  Sketch the graph.   grid  Solve , for  Solve , for   period , shift to the right                                  sinusoidal graph       What are the period and the horizontal shift? (Hint: Factor out 3 from .)  Fill in the table of values.                                  Sketch the graph.  grid  Solve , for  Solve , for     What are the period and the horizontal shift? (Hint: Factor out from .)  Fill in the table of values.                                  Sketch the graph.  grid  Solve , for  Solve , for   period 2, shift to the left                                   sinusoidal graph       What are the period and the horizontal shift? (Hint: Factor out from .)  Fill in the table of values.                                  Sketch the graph.   grid   Solve , for  Solve , for     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.  grid  Solve for :  Solve for :   midline , period , horizontal shift to the right, amplitude 3                                         sinusoidal graph  no solution for     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.  grid  Solve for :  Solve for :   Find a formula for a sinusoidal function that has an amplitude of 2, a period of 3, and is shifted 4 units to the left and 5 units upwards compared with the sine function. Sketch the graph for .   sinusoidal graph   Find a formula for a sinusoidal function that has an amplitude of 3, a period of 24, and is shifted 2 units to the right and 4 units upwards compared with the cosine function. Sketch the graph for .  Find a formula for a sinusoidal function that has an amplitude of 5, a period of 360, its midline at , and passes through . Sketch the graph for .  sinusoidal graph  Find a formula for a sinusoidal function that has an amplitude of 50, a period of 30, its midline at , and passes through . Sketch the graph for .  For Problems 21 26, find a formula for the circular function whose graph is shown.  Write the function in the form .  Write the function in the form    sinusoidal graph       sinusoidal graph   sinusoidal graph      sinusoidal graph   sinusoidal graph      sinusoidal graph   The average daily high temperature in Fairbanks, Alaska can be approximated by a sinusoidal function with a period of 12 months. The low temperature of occurs in January, and the high temperature of in July.  What are the midline, period, and amplitude?  Write a formula for the average daily high temperature , where is the number of months since January.  Graph for two periods, labeling the points that correspond to highest and lowest average temperature.   midline , period 12, amplitude 36.95    sinusoidal graph   Depending on its phase, the moon looks like a disk that is partially visible and partially in shadow. The visible fraction ranges from 0% to 100%, and can be approximated by a sinusoidal function , where is the number of days since the last full moon. The time between successive full moons (a lunar month) is 29.5 days.   What are the period, midline, and amplitude of ?  Write a formula for .  Graph your function over two periods, labeling the points that correspond to full moon, half moon, and new moon.    The tide in Yorktown is approximated by the function measured in feet above low tide, where is the number of hours since the last low tide.   What are the midline, period, and amplitude?  Graph for two periods, labeling the points that correspond to high tide and low tide.  If the last low tide occurred at 5:00 am, predict when the next high and low tides will occur.    midline , period , amplitude 1.4   sinusoidal graph  high 11:10 am, low 5:19 pm   The height of a child's toy suspended at the end of a spring is approximated by a sinusoidal function. The toy's height ranges between 200 centimeters and 260 centimeters above the ground, and it completes one up-and-down cycle every 0.8 seconds.   What are the midline, period, and amplitude?  Let be the height of the toy in centimeters, where seconds corresponds to a time when the object was at the midline and moving upwards. Graph for two periods, labeling the points that correspond to the high and low positions of the toy.  When does the toy reach its maximum height the second time?   In Problems 31 34,  Estimate the amplitude, period, and midline of a circular function that fits the data.  Write a formula for the function.                               amplitude 3.2, period 2, midline                                                        amplitude 5, period 1, midline                              "
 },
 {
-  "id": "example-131",
+  "id": "example-130",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-131",
+  "url": "The-General-Sinusoidal-Function.html#example-130",
   "type": "Example",
   "number": "7.14",
   "title": "",
@@ -18658,9 +18667,9 @@ var ptx_lunr_docs = [
   "body": "Graph and for . How is the graph of different from the graph of ? The graph of is shifted units to the left of . "
 },
 {
-  "id": "example-132",
+  "id": "example-131",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-132",
+  "url": "The-General-Sinusoidal-Function.html#example-131",
   "type": "Example",
   "number": "7.16",
   "title": "",
@@ -18676,18 +18685,18 @@ var ptx_lunr_docs = [
   "body": "Complete the table and sketch a graph of on the grid below. (Do you expect the graph to be shifted to the left or to the right, compared to the graph of ?)                                   grid                                  transformed sine "
 },
 {
-  "id": "p-4541",
+  "id": "p-4556",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#p-4541",
+  "url": "The-General-Sinusoidal-Function.html#p-4556",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "standard form "
 },
 {
-  "id": "example-133",
+  "id": "example-132",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-133",
+  "url": "The-General-Sinusoidal-Function.html#example-132",
   "type": "Example",
   "number": "7.18",
   "title": "",
@@ -18703,9 +18712,9 @@ var ptx_lunr_docs = [
   "body": " State the midline, amplitude, period, and horizontal shift of the graph of  Make a table of values and sketch a graph of the function.                                        midline: , amplitude: , period: , horizontal shift: to the right                                         sinusoidal function  "
 },
 {
-  "id": "example-134",
+  "id": "example-133",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-134",
+  "url": "The-General-Sinusoidal-Function.html#example-133",
   "type": "Example",
   "number": "7.20",
   "title": "",
@@ -18730,9 +18739,9 @@ var ptx_lunr_docs = [
   "body": "Find a formula for the sinusoidal function whose graph is shown at right.  sinusoidal function "
 },
 {
-  "id": "example-135",
+  "id": "example-134",
   "level": "2",
-  "url": "The-General-Sinusoidal-Function.html#example-135",
+  "url": "The-General-Sinusoidal-Function.html#example-134",
   "type": "Example",
   "number": "7.23",
   "title": "",
@@ -19081,18 +19090,18 @@ var ptx_lunr_docs = [
   "body": "Why is greater than in the figure above? Think about negative numbers: if is a negative number, then is greater than . For example, if , then "
 },
 {
-  "id": "activity-11",
+  "id": "activity-12",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#activity-11",
+  "url": "Solving-Equations-Chap7.html#activity-12",
   "type": "Activity",
   "number": "7.3",
   "title": "Solving Equations.",
   "body": "Solving Equations   Solutions of  Use your calculator to graph and for .  Use the Trace and intersect features to find the smallest solution to , accurate to two decimal places.  Look at the graph, and by symmetry write an expression for the second solution. Hint: What is the -coordinate of the first -intercept of ?  Solutions of  Use your calculator to graph and for  On your graph, locate the solution to given by .  Can you write an expression for the second solution similar to the expression you wrote in part (1c)?  Solutions of  Use your calculator to graph and for .  How many solutions are there to the equation ?  Look at the first two solutions. How are they related to the solutions of that you found in part (1)? Test your conjecture by using the Trace and intersect features.  If you know the first two solutions of , how can you find the other solutions? Hint: What is the period of ?  Solutions of  Repeat part (1) for and .  Repeat part (2) for and .  Repeat part (3) for and .  "
 },
 {
-  "id": "example-136",
+  "id": "example-135",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-136",
+  "url": "Solving-Equations-Chap7.html#example-135",
   "type": "Example",
   "number": "7.26",
   "title": "",
@@ -19108,9 +19117,9 @@ var ptx_lunr_docs = [
   "body": "Solve for . 1.9391, 4.3441 "
 },
 {
-  "id": "example-137",
+  "id": "example-136",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-137",
+  "url": "Solving-Equations-Chap7.html#example-136",
   "type": "Example",
   "number": "7.28",
   "title": "",
@@ -19126,9 +19135,9 @@ var ptx_lunr_docs = [
   "body": " Sketch a graph of for .  Find exact values for all solutions of between and .    cos 2x  "
 },
 {
-  "id": "example-138",
+  "id": "example-137",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-138",
+  "url": "Solving-Equations-Chap7.html#example-137",
   "type": "Example",
   "number": "7.30",
   "title": "",
@@ -19144,9 +19153,9 @@ var ptx_lunr_docs = [
   "body": "Find all solutions of between and . "
 },
 {
-  "id": "example-139",
+  "id": "example-138",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-139",
+  "url": "Solving-Equations-Chap7.html#example-138",
   "type": "Example",
   "number": "7.32",
   "title": "",
@@ -19162,9 +19171,9 @@ var ptx_lunr_docs = [
   "body": "Solve for . 0.24, 1.86, 2.33, 2,95, 4.43, 6.06 "
 },
 {
-  "id": "example-140",
+  "id": "example-139",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-140",
+  "url": "Solving-Equations-Chap7.html#example-139",
   "type": "Example",
   "number": "7.34",
   "title": "",
@@ -19180,9 +19189,9 @@ var ptx_lunr_docs = [
   "body": "Use a substitution to solve for . "
 },
 {
-  "id": "example-141",
+  "id": "example-140",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-141",
+  "url": "Solving-Equations-Chap7.html#example-140",
   "type": "Example",
   "number": "7.36",
   "title": "",
@@ -19198,9 +19207,9 @@ var ptx_lunr_docs = [
   "body": " Graph from to .  Find all solutions of between and . Round your answers to two decimal places.   transformed tangent  "
 },
 {
-  "id": "example-142",
+  "id": "example-141",
   "level": "2",
-  "url": "Solving-Equations-Chap7.html#example-142",
+  "url": "Solving-Equations-Chap7.html#example-141",
   "type": "Example",
   "number": "7.38",
   "title": "",
@@ -19648,9 +19657,9 @@ var ptx_lunr_docs = [
   "body": " Chapter 7 Summary and Review  Key Concepts   Changes to the amplitude, period, and midline of the basic sine and cosine graphs are called transformations . Changing the midline shifts the graph vertically, changing the amplitude stretches or compresses the graph vertically, and changing the period stretches or compresses the graph horizontally.  The order in which we apply transformations to a function makes a difference in the graph.  Amplitude, Period, and Midline of Sinusoidal Functions   The graph of has amplitude  .  The graph of has period  .  The graph of has midline  .   Horizontal Shifts  The graphs of are shifted horizontally compared to the graphs of and .   If , the graph is shifted to the right.  If , the graph is shifted to the left.   Standard Form for Sinusoidal Functions  The graphs of the functions are transformations of the sine and cosine graphs.   The amplitude is .  The midline is .  The period is .  The horizontal shift is units to the right if is positive, and units to the left if is negative.   Solutions of Trigonometric Equations   The equation , has two solutions between and :  The equation , has two solutions between and :   The equation , has two solutions between and :    If is a positive integer, the equations and each have solutions between and , for .  The equation has one solution in each cycle of the graph.  Using a Substitution to Solve Trigonometric Equations  To solve the equation or :   Substitute , and find two solutions for or .  Replace by in each solution, and solve for .  Find the other solutions by adding multiples of to the first two solutions.   To solve the equation :   Substitute , and find one solution for .  Replace by and solve for .  Find the other solutions by adding multiples of to the first solution.       Review Problems  For Problems 1 4, state the amplitude, period, and midline of the graph.   amp: , period: ; mid:    amp: , period: ; mid:    For Problems 5 8, use transformations to sketch graphs of the functions.   sinusoidal graph   sinusoidal graph    For Problems 9 12, write an equation for the graph using sine or cosine.    sinusoidal graph   sinusoidal graph   sinusoidal graph   sinusoidal graph   For Problems 13 16, complete the table of values and sketch a graph of the function.    What are the period and the horizontal shift?  (Hint: Factor out from .)  Fill in the table of values.                                            Sketch the graph.  grid  Solve  Solve   period: , shift: left                                             sinusoidal graph       What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                        Sketch the graph.  grid  Solve  Solve     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve   mid: , period: 0, amp: 5  Fill in the table of values.                                        sinusoidal graph  30  15, 45     What are the midline, period, horizontal shift, and amplitude?  Fill in the table of values.                                       Sketch the graph.  grid  Solve  Solve    For Problems 17 18, label the scales on the axes for the graph.   sinusoidal graph  sinusoidal graph   sinusoidal graph   For Problems 19 20,  Use a calculator to graph the function for .  Use the intersect feature to find all solutions between and . Round your answers to hundredths.        sinusoidal graph  0.57, 3.07, 3.71        For Problems 21 22, write a formula for the function.  The average high temperature in Phoenix, Arizona is minimum in January at 66 and maximum in July at 105 . Write a sinusoidal function that models the average high temperature in Phoenix.   The average monthly rainfall in Hawaii reaches a maximum of 3.4 inches in December and a minimum of 0.4 inches in June. Write a sinusoidal function that models the monthly rainfall in Hawaii.  For Problems 23 24,  Estimate the amplitude, period, and midline of a circular function that fits the data.  Write a formula for the function.                         amp: 3, period: 12, midline:                             For Problems 25 28, give exact values for the solutions between and .  , , ,    , , , , , , ,     For Problems 29 32, find all solutions between and . Round your answers to three decimal places.  0.066, 1.113, 2.160, 3.207, 4.255, 5.302   1.150, 1.991, 4.292, 5.133    For Problems 33 36, use a substitution to find exact values for all solutions between and .  , , ,   No solution    For Problems 37 40, use a substitution to find all solutions between and . Round your answers to hundredths.  0.375, 1.422, 2.470, 3.517, 4.564, 5.611   2.120, 4.880       "
 },
 {
-  "id": "p-4838",
+  "id": "p-4853",
   "level": "2",
-  "url": "chap7-summary.html#p-4838",
+  "url": "chap7-summary.html#p-4853",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -20026,9 +20035,9 @@ var ptx_lunr_docs = [
   "body": " Sum and Difference Formulas   In Chapter 5 we studied identities that relate the three trigonometric functions sine, cosine, and tangent.  Pythagorean and Tangent Identities  trigonometric identity  Pythagorean identity  tangent identity    If we know one of the three trig values for an angle, we can find the other two by using these identities. Identities are useful for changing from one form to another when solving equations, and for finding exact values for trigonometric functions.  Are there identities relating the trig ratios of different angles?  For example, if we know the sine of , can we find the sine of without using a calculator? Or, if we know and , can we calculate ?   The Sum of Angles Identities  trigonometric identity sum of angles  All of the identities that relate the trig ratios of different angles are derived from the sum and difference formulas. Let's see why we need these formulas.  Is it true that are equal for any values of and ? We can test this hypothesis by evaluating both expressions for some specific values of and , say and , as shown below.   3 circles  From the figure, you should be able to see that is in fact smaller than either or , so it cannot be true that is equal to .  Verify that is not equal to .  Use your calculator to evaluate each expression. The two expressions are not equal.  Show that is not equal to . , but  Because the values of the expressions in the previous Example and Exercise are different, it is not true that is equal to for all angles and , or that is equal to .  It turns out that there is a relationship between the trig ratios for and the trig ratios of and , but it is a little more complicated.  Sum of Angles Identities  trigonometric identity sum of angles  sum of angles  sum of angles trigonometric identity  addition formula  subtraction formula  subtraction formula difference of angles      Notice that to find the sine or cosine of we must know (or be able to find) both trig ratios for both and and .  The sum and difference formulas can be used to find exact values for trig ratios of various angles.  Find an exact value for .  We can write as the sum of two special angles: . Now apply the sum of angles identity for cosine. Thus, . You can check that your calculator gives the same decimal approximation of about for both and .   Find an exact value for .  Of course, the sum formulas hold for angles in radians as well as degrees.  Suppose that and . Find an exact value for .  Recall that and . Substituting these values into the sum formula for sine, we find   Suppose that and . Find an exact value for .  Negative Angles  I Using Reference Triangles   Suppose that is a first-quadrant angle. In which quadrant would you find ?  Sketch an example for , , and the reference triangle for each.  How is related to ? What about and ?  Repeat part (1) for the case where is a second-quadrant angle.   II Using Graphs   Look at the graph of , and choose three positive values of . Draw dots on the graph that show their function values.   sine graph  Find the negatives of your three values of from part (a), and draw dots to show their function values.  How do the values of compare to the values of ?  Repeat part (1) for the graph of .   cosine graph  Repeat part (1) for the graph of .   tangent graph   III Negative Angle Identities  State your conclusions from parts I and II as identities:      The Difference of Angles Identities  The difference formulas for sine and cosine can be derived easily from the sum formulas, using the identities for negative angles. Note that the difference formulas are identical to the corresponding sum formulas, except for the signs.  Difference of Angles Identities  trigonometric identity difference of angles  difference of angles  difference of angles trigonometric identity      Use the fact that to evaluate exactly.  Remember that , and . Substituting all these values into the difference formula for cosine, we obtain the following. You can check that your calculator gives the same decimal approximation of about 0.9659 for both and .  Evaluate exactly.   Sum and Difference Identities for Tangent  There are also sum and difference formulas for the tangent.  Sum and Difference Identities for Tangent  trigonometric identity sum and difference for tangent  difference of angles  sum of angles     Find an exact value for .  We observe that , so . We can apply the sum formula for tangent.   Evaluate exactly.   Double Angle Identities  double angle identity  There are a number of other very useful identities that can be derived from the sum and difference formulas. In particular, if we set in the sum of angles identities (also called addition formulas addition formula addition formula sum of angles ), we obtain the double angle formulas double angle formulas double angle formulas double angle identity . These identities are used frequently, so it is helpful to know them well.  Double Angle Identities  trigonometric identity double angle  double angle identity      You can also justify the identities to yourself by graphing both sides of the formula to see that the graphs are identical.  The first thing we can learn from the double angle formulas is that is not equal to ! You can check this very easily by choosing a value for , say . Then and . Similarly, and  Find for the angle shown.  triangle  We start by using the Pythagorean Theorem to find the hypotenuse of the triangle. so . Thus, and . Now we can use these values in the double angle identity to find .   Find and for the angle shown in the previous example.  We will often work with algebraic expressions instead of numerical values for the trig ratios.  Use the figure to express in terms of .  triangle  We use the Pythagorean Theorem to find an expression for the third side of the triangle. Now we can write expressions for the sine and cosine of . Finally, we substitute these expressions into the double angle identity.   For the triangle in the previous example, find expressions for and .   By using the Pythagorean identity, we can write the double angle formula for cosine in two alternate forms.    Thus, we have three forms for the double angle formula for cosine, and we can use whichever form is most convenient for a particular problem.  Double Angle Identities for Cosine  trigonometric identity double angle  double angle identity for cosine    Find an expression for if you know that .  We use the identity    Find an expression for if you know that .   Solving Equations  If a trigonometric equation involves more than one angle, we use identities to rewrite the equation in terms of a single angle.  Solve for .  We first use the double angle formula to write in terms of trig functions of alone.   Once we have all the trig functions in terms of a single angle, we try to write the equation in terms of a single trig function. In this case, we can factor the left side to separate the trig functions.   There are four solutions, and .  Solve for .  Identities  I Sum of Angles Identities   Is it true that ? Try it for and .   Recall the distributive law, , where the parentheses denote multiplication. Is the same law true when the parentheses denote a function? In other words, is it true that ?  In the expression , do the parentheses denote multiplication or the application of a function? Does the distributive law apply to ? Do you think that is an identity?   Look at the Sum of Angles Identities in this section. Make some observations that will help you memorize these formulas.  Do you think you would have to memorize these formulas if the equation were an identity?  II Difference of Angles Identities, Tangent Identities    Yikes! More formulas. Compare the Difference of Angles Identities with the Sum of Angles Identities. If you have memorized the Sum formulas, how can you also memorize the Difference formulas?  Comment on the sign patterns in the Sum and Difference Identities for Tangent.   Now let's use the formulas backwards: look at the expression below: Does it remind you of the left side of one of the six new identities? Use that identity to simplify the expression.  Do the same thing for this expression:   III Double Angle Identities    Is it true that ? Choose a value for and try it. Sketch and on a unit circle and show the sine of each.  Is it true that ? Repeat part (a) for cosine.   Substitute and into the sum of angles formulas for sine, cosine, and tangent to derive the double angle formulas.  Choose one of the three forms of the Double Angle Identity for Cosine. Use the Pythagorean Identity to convert from that form to each of the other two forms.   Review the following skills you will need for this section.    Compute , and .  For which of the following functions is it true that whenever the function values are defined?             Algebra Refresher Answers    8, 11, 17  Not true   4, 9, 25  Not true    Not true    Not true   2, 3, 5  Not true   4, 8, 32  Not true      Section 8.1 Summary  Concepts   Identities are useful for changing from one form to another when solving equations, for simplifying expressions, and for finding exact values for trigonometric functions.  it is not true in general that is equal to for all angles and , or that is equal to .  Negative Angle Identities     Sum and Difference of Angles Identities          Double Angle Identities    Study Questions   Explain why is not a valid application of the distributive law.  Delbert says that . Is he correct? Explain.  Francine says that . Is she correct? Explain.  Provide an example to show that doubling an angle does not double its sine or cosine.   Skills   Find trig values for the negative of an angle #1 6  Verify or disprove possible formulas #7 12, 31 42, 73 76, 79 88  Find exact values for trigonometric functions #13 24, 55 62  Simplify or expand expressions #25 30, 43 54  Solve equations #63 72  Prove standard identities #77 78, 89 91      Homework 8-1   Sketch an angle in standard position, with . Also sketch the angle .  Choose a point on the terminal side of , and show that the negative angle identities hold for .  angles  , , and . Thus, , , and .   Sketch an angle in standard position, with . Also sketch the angle .  Choose a point on the terminal side of , and show that the negative angle identities hold for .   Given that , find . Sketch both angles.   angles  Given that , find . Sketch both angles.  If and , find and . ,  If and , find and .  Show that is not equal to . , but  Show that is not equal to .  Use your calculator to verify that is not equal to . , but  Use your calculator to verify that is not equal to .  Use graphs to show that is not equivalent to .  two sinusoidal graphs  The curves are different.  Use graphs to show that is not equivalent to .  For Problems 13 24, find exact values for the trig ratios. (Do not use a calculator!)  Suppose , and . Evaluate the following.          Suppose , and . Evaluate the following.      If and , find exact values for:        If and , find exact values for:     Suppose and , where and are in quadrant I. Evaluate the following.        Suppose , where is in quadrant IV, and , where is in quadrant II. Evaluate the following.>     If , and , find exact values for:     Sketch the angles and .       angles   If , and , find exact values for:     Sketch the angles and .   Find the exact values of and . ,  Find the exact values of and .  If and , find .  If and , find .   For Problems 25 30, use the sum and difference formulas to expand each expression.         For Problems 31 34, use the unit circle to estimate trig values. Then verify with your calculator.   unit circle   Does ? No  Does ?  Does ? No  Does ?   For Problems 35 38, verify that each statement is true.       In Problems 39 42, is the statement true or false? Explain your answer.  If , then . False, but  If , then , so .  If , then , so . False, but  If , then .   For Problems 43 54, use the double angle identities to simplify the expression.               For Problems 55 58, use the figures to find the trigonometric ratios.   triangles                                                 Suppose and . Compute exact values for:      Sketch the angles and .        angles   Suppose and . Compute exact values for:      Sketch the angles and .   If and , find exact values for:          If and , find exact values for:      For Problems 63 72,  Use identities to rewrite the equation in terms of a single angle.  Solve. Give exact solutions between and .     , , ,       ,       , , ,       ,       , ,      Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.         Use the sum of angles formulas for sine and cosine to derive a formula for each expression. Then use graphs to verify your formula.     Use the difference of angles formulas for sine and cosine to prove that:         Use the difference of angles formulas for sine and cosine to derive formulas for:     Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .)  Prove the double angle identity . (Hint: Start with the sum of angles formula for sine and replace both and by .)  For Problems 79 88,  Use graphs to decide if the equation is an identity.  If the equation is not an identity, find a value of the variable that makes the equation false.    Not an identity.  (many answers possible)    Identity    Not an identity.  (many answers possible)    Identity   Identity    sum of angles difference of angles addition formula  Problems 89 and 90 verify the addition and subtraction formulas for acute angles.  The figure below shows a right triangle inscribed in a rectangle.   triangle inscribed in rectangle   Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the addition formulas for sine and cosine.   triangle inscribed in rectangle    and are both complements of ; and are alternate interior angles  ,   ,   ,   ,    The figure below shows a right triangle inscribed in a rectangle.   triangle inscribed in rectangle   Label the legs and of the right triangle with their lengths.  Explain why and . Label the diagram with these angles.  Label the legs and of the bottom triangle with their lengths.  Label the legs and of the top left triangle with their lengths.  Label the legs and of the top right triangle with their lengths.  Use the fact that the opposite sides of a rectangle are equal to state the subtraction formulas for sine and cosine.    difference of angles Follow the steps to prove the difference of angles formula for cosine,   circle   Write an expression for , the square of the distance between the points and , using the Law of Cosines for .  Write another expression for using the distance formula and the coordinates of and .  Equate the two expressions for you obtained in (a) and (b). Simplify the equation to obtain .        "
 },
 {
-  "id": "example-143",
+  "id": "example-142",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-143",
+  "url": "Sum-and-Difference-Formulas.html#example-142",
   "type": "Example",
   "number": "8.1",
   "title": "",
@@ -20053,9 +20062,9 @@ var ptx_lunr_docs = [
   "body": "Because the values of the expressions in the previous Example and Exercise are different, it is not true that is equal to for all angles and , or that is equal to .  It turns out that there is a relationship between the trig ratios for and the trig ratios of and , but it is a little more complicated. "
 },
 {
-  "id": "example-144",
+  "id": "example-143",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-144",
+  "url": "Sum-and-Difference-Formulas.html#example-143",
   "type": "Example",
   "number": "8.4",
   "title": "",
@@ -20071,9 +20080,9 @@ var ptx_lunr_docs = [
   "body": "Find an exact value for . "
 },
 {
-  "id": "example-145",
+  "id": "example-144",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-145",
+  "url": "Sum-and-Difference-Formulas.html#example-144",
   "type": "Example",
   "number": "8.6",
   "title": "",
@@ -20089,18 +20098,18 @@ var ptx_lunr_docs = [
   "body": "Suppose that and . Find an exact value for . "
 },
 {
-  "id": "activity-12",
+  "id": "activity-13",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#activity-12",
+  "url": "Sum-and-Difference-Formulas.html#activity-13",
   "type": "Activity",
   "number": "8.1",
   "title": "Negative Angles.",
   "body": "Negative Angles  I Using Reference Triangles   Suppose that is a first-quadrant angle. In which quadrant would you find ?  Sketch an example for , , and the reference triangle for each.  How is related to ? What about and ?  Repeat part (1) for the case where is a second-quadrant angle.   II Using Graphs   Look at the graph of , and choose three positive values of . Draw dots on the graph that show their function values.   sine graph  Find the negatives of your three values of from part (a), and draw dots to show their function values.  How do the values of compare to the values of ?  Repeat part (1) for the graph of .   cosine graph  Repeat part (1) for the graph of .   tangent graph   III Negative Angle Identities  State your conclusions from parts I and II as identities:    "
 },
 {
-  "id": "example-146",
+  "id": "example-145",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-146",
+  "url": "Sum-and-Difference-Formulas.html#example-145",
   "type": "Example",
   "number": "8.8",
   "title": "",
@@ -20116,9 +20125,9 @@ var ptx_lunr_docs = [
   "body": "Evaluate exactly. "
 },
 {
-  "id": "example-147",
+  "id": "example-146",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-147",
+  "url": "Sum-and-Difference-Formulas.html#example-146",
   "type": "Example",
   "number": "8.10",
   "title": "",
@@ -20134,9 +20143,9 @@ var ptx_lunr_docs = [
   "body": "Evaluate exactly. "
 },
 {
-  "id": "p-4993",
+  "id": "p-5008",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#p-4993",
+  "url": "Sum-and-Difference-Formulas.html#p-5008",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -20152,9 +20161,9 @@ var ptx_lunr_docs = [
   "body": "The first thing we can learn from the double angle formulas is that is not equal to ! You can check this very easily by choosing a value for , say . Then and . Similarly, and "
 },
 {
-  "id": "example-148",
+  "id": "example-147",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-148",
+  "url": "Sum-and-Difference-Formulas.html#example-147",
   "type": "Example",
   "number": "8.13",
   "title": "",
@@ -20170,9 +20179,9 @@ var ptx_lunr_docs = [
   "body": "Find and for the angle shown in the previous example. "
 },
 {
-  "id": "example-149",
+  "id": "example-148",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-149",
+  "url": "Sum-and-Difference-Formulas.html#example-148",
   "type": "Example",
   "number": "8.15",
   "title": "",
@@ -20188,9 +20197,9 @@ var ptx_lunr_docs = [
   "body": "For the triangle in the previous example, find expressions for and .  "
 },
 {
-  "id": "example-150",
+  "id": "example-149",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-150",
+  "url": "Sum-and-Difference-Formulas.html#example-149",
   "type": "Example",
   "number": "8.17",
   "title": "",
@@ -20206,9 +20215,9 @@ var ptx_lunr_docs = [
   "body": "Find an expression for if you know that . "
 },
 {
-  "id": "example-151",
+  "id": "example-150",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#example-151",
+  "url": "Sum-and-Difference-Formulas.html#example-150",
   "type": "Example",
   "number": "8.19",
   "title": "",
@@ -20224,9 +20233,9 @@ var ptx_lunr_docs = [
   "body": "Solve for . "
 },
 {
-  "id": "activity-13",
+  "id": "activity-14",
   "level": "2",
-  "url": "Sum-and-Difference-Formulas.html#activity-13",
+  "url": "Sum-and-Difference-Formulas.html#activity-14",
   "type": "Activity",
   "number": "8.2",
   "title": "Identities.",
@@ -21070,18 +21079,18 @@ var ptx_lunr_docs = [
   "body": " Inverse Trigonometric Functions  inverse function  inverse function inverse trigonometric function  inverse trigonometric function  We have been using the calculator keys , , and to find approximate values of when we know either , or . For example, if we know that , then  In other words, we use the , , and keys to solve trigonometric equations, just as we use square roots to solve quadratic equations. Using one of these keys performs the inverse operation inverse operation inverse operation inverse for computing a sine, cosine or tangent, just as extracting square roots is the inverse of squaring a number.  Many functions can be described as an operation or as a sequence of operations on the input value, and this leads us to the notion of an inverse function.  Inverse of a Function  inverse function  Raising a number to the power and taking roots are an example of inverse operations. For example, if we first cube a number and then take the cube root of the result, we return to the original number.  inverse  We say that the two functions and are inverse functions inverse function . Each of the functions undoes the results of the other function. You can confirm this behavior by consulting the tables of values for the two functions.                                                      Observe that the table of values for can be obtained from the table for by interchanging the values of and in each ordered pair. In fact, we can often find a formula for the inverse function by interchanging the input and output variables in the formula for the function, and then solving for the new output variable.  For our example, we start with the formula for the cubing function: We use the notation to denote the inverse function. Thus, we have just shown that the inverse function for is .  The notation does mean !  For example, if , we have , but , and we know that .  Although it is true that a negative exponent denotes a reciprocal, so that, for instance, , the in is not an exponent; this is an entirely new use for the same symbol.  Let Find a formula for the inverse function.  We interchange the variables in the formula for (that is, in ) to get  Now we solve for in terms of by taking the reciprocal of both sides. so  The formula for the inverse function is .  Let . Find a formula for the inverse function.  In the examples above, note that , and .   The Graph of the Inverse  inverse graph of  If we graph the function and its inverse on the same set of axes, we see that the graphs are related in an interesting way, as shown below.  The graphs are symmetric about the line , which means that if we were to place a mirror along the line each graph would be the reflection of the other.  This symmetry occurs because we interchanged the roles of and when we defined the inverse function.  graph of inverse  Note that, for this example, both graphs pass the vertical line test, so they are both graphs of functions.   Graph the function and its inverse on the same grid, and sketch in the line to illustrate the symmetry.  Find the domain and range of , and the domain and range of .     The graph is shown at right. Note that has a vertical asymptote at , and has a horizontal asymptote at .  graph of inverse  Note that is undefined at , and is undefined at . Thus, the domain of is all real numbers except 3, and the domain of is all real numbers except 0.  We can find the range of each function by examining its graph:  has a horizontal asymptote at , so there is no point on the graph with . Its range is all real numbers except 0.  Similarly, there is no point on the graph of with , so its range is all real numbers except 3.     Graph and its inverse function on the grid at right, and sketch in the line to show the symmetry.  grid  Find the domain and range of , and the domain and range of .    linear function and inverse  The domain and range of and each include all real numbers   From the examples above, we see that the domain of is the same as the range of , and the range of is the same as the domain of . This should seem reasonable, because we obtain the inverse function by interchanging the values of theinput and output variables.  Domain and Range of Inverse Function  domain of inverse function  range of inverse function  Domain Range Domain Range   Does Every Function Have an Inverse?  In the examples above, the inverse of the function turned out to be a function as well. But this is not always the case. Consider the function . First we'll find a formula for the inverse. We interchange and and solve for :   The graphs of and its inverse are shown at right. You can see that although is a function, its inverse is not.  function and inverse  Is there some way to predict whether the inverse of a function will be a function, too? Yes! In order for the inverse to be a function, its graph must pass the vertical line test. (Recall that if a graph passes the vertical line test, there is only one -value for each value of .)  Now, we obtain the inverse by interchanging and in the formula for a function, so the inverse will be a function only if the original function passes the horizontal line test. A function that passes the horizontal line test is called one-to-one one-to-one .  Horizontal Line Test  horizontal line test  A function passes the Horizontal Line Test if every horizontal line intersects the graph at most once. In that case, there is only one -value for each -value, and the function is called one-to-one .  It is always the case that we can find the inverse of a function: we just interchange the domain and range values. However, the important question is whether the inverse is also a function. If the inverse is a function, we say that “ has an inverse function inverse function .” All of this leads us to the following result.  Inverse Function  A function has an inverse function if and only if is one-to-one.   Which of the graphs below represent functions?  Which of the functions are one-to-one?  Which of these functions have inverse functions?    three graphs   All three graphs pass the vertical line test, so all three represent functions.  Only the function represented by graph II passes the horizontal line test, so it is the only one-to-one function.  Only function II is one-to-one, so it is the only function that has an inverse function.   Which of the functions below are one-to-one?   three graphs I and III   Restricting the Domain: The Inverse Sine Function  domain restrict  Sometimes it is so important that the inverse be a function that we are willing to sacrifice part of the original function to achieve this result.   Look again at the graph of . If we use only nonnegative -values for the domain, we create a new function, The graph of this new function is shown as a dashed curve in the figure at right.  function and inverse function  The new function is one-to-one, and its inverse, , is also a function. (We could also have used only negative -values for the domain, or some smaller interval, just as long as the resulting function is one-to-one.)  We say that we have restricted the domain domain restrict of the original function, and we will use this technique to define inverse functions for the trigonometric functions.  The sine function is not one-to-one; there are many angles that have the same sine value. In order to define its inverse function, we must restrict the domain of the sine to an interval on which the -values do not repeat. But there are many candidates for such an interval; which one shall we choose?  It turns out that the most useful interval is found by starting at and moving as far as we can in either direction until the -values begin to repeat. By doing so, we obtain the restricted domain , as shown below. This piece of the function includes all of the original range values, from to .   restricted sine  Because the sine function is one-to-one on this domain, its inverse is a function.  The graph of the inverse sine function, , is shown below. Its domain is the same as the range of the sine function, namely , and its range is our restricted domain for sine, .   inverse sine  The inverse sine function  inverse sine  sin  The function is defined as follows:  In other words, is the angle in radians, between and , whose sine is . There are many angles with a given sine value , but only one of these angles can be . This is why the calculator's key only gives outputs between and .  If is positive, the inverse sine function delivers a first quadrant angle, .  If is negative, the inverse sine function delivers a fourth quadrant angle, .   Simplify each expression without using a calculator.      We know that is an angle whose sine is , and that . Because is negative, we must find an angle in the fourth quadrant, and because , the reference angle for is . Thus, the angle we want is , and .  First note that ! We start by simplifying the expression inside parentheses: , so . We want an angle whose sine is 0, and which lies in the interval . This angle is 0, so . (It is also true that , but is not in the interval .)   Simplify each expression without using a calculator.         The Inverse Cosine and Inverse Tangent Functions  The cosine and tangent functions are also periodic, so, just as with the sine function, to define their inverse functions we must restrict their domains to intervals where they are one-to-one. The graph of cosine is shown below.   restricted cosine  Once again the choice of these intervals is arbitrary. If we start at on the cosine graph, we can move in only one direction, either right or left, without encountering repeated -values.  We choose to move in the positive direction, to obtain the interval , as shown above. On this domain, the inverse of cosine is a function. Its graph is shown below.   inverse cosine  The inverse cosine function  inverse cosine  cos  The function is defined as follows:  The range of the inverse cosine function is , so it delivers angles in the first and second quadrants. (Compare to the inverse sine, whose outputs are angles in the first or fourth quadrants.)  Simplify each expression without using a calculator.      The expression represents an angle in the second quadrant whose cosine is . Because , the reference angle for is . The angle in the second quadrant with this reference angle is , so .  Because is positive, the angle is a first quadrant angle whose cosine is the same as . This angle is , so .   Simplify without using a calculator.  Finally, consider the graph of the tangent function. To choose a convenient interval on which the tangent is one-to-one, we start at and move as far as we can in either direction along the -axis. In this way we obtain one cycle of the graph, on the interval , as shown at right.  tan  The range of the tangent on that interval includes all real numbers. Consequently, the domain of the inverse tangent function includes all real numbers, and its range is the interval . The graph of the inverse tangent function is shown below. Its outputs are angles in the first and fourth quadrants.  triangle  The inverse tangent function  inverse tangent  tan  The function is defined as follows:  Simplify each expression without using a calculator.      The expression represents an angle between and whose tangent is . Now, , and , so . Thus, .  Because is in the fourth quadrant, is negative. The angle is also in the fourth quadrant, but it must be between and 0. The angle is coterminal with , so   Simplify without using a calculator.  In the examples above, perhaps you noticed that for any value of in the domain of the inverse sine. In other words, if we find the inverse sine of a number between and , and then take the sine of the resulting angle, we get the original number back again. The same is true for the cosine and tangent, so that and .  However, if we apply the functions in the opposite order, we may not get back the original number. For example, This inequality occurs because the inverse sine function returns just one of the many angles whose sine is , and that angle may not be the angle we started with.  We summarize the content of the Caution above as follows.  Inverse Trigonometric Functions  inverse trigonometric function  inverse trigonometric function inverse cosine inverse trigonometric function inverse sine inverse trigonometric function inverse tangent      However,     Modeling with Inverse Functions  The inverse trig functions are used to model situations in which an angle is described in terms of one of its trigonometric ratios.  The bottom of a 3-meter tall tapestry on a chateau wall is at your eye level. The angle subtended vertically by the tapestry changes as you approach the wall.  Express your distance from the wall, , as a function of .  Express as a function of .   We draw a sketch of the triangle formed by the tapestry and the lines of sight to its bottom and top, as shown at right. From the triangle we see that , so .  triangle  Because , .   The tapestry from the previous example includes a 2-meter tall unicorn with its feet at the bottom of the tapestry.   Express , the angle subtended vertically by the unicorn, as a function of , your distance to the tapestry.  Express , the angle subtended by the portion of the tapestry above the unicorn, as a function of . (See the figure at right).  triangle       Alternate Notations  The inverse sine function, , is also called the arcsine arcsin arcsin inverse sine function and denoted by arcsin . (This terminology reminds us that the output of the inverse sine function is an angle, or the arc on a unit circle determined by that angle, as shown at right.)  unit circle  Similarly, the inverse cosine function is sometimes denoted by arccos arccos arccos inverse cosine , and the inverse tangent function by arctan arctan arctan inverse tangent . Some computer programs use the notation asin , accos , and atan . acos acos inverse cosine asin asin inverse sine atan atan inverse tangent  Simplify each expression.      Keep in mind that is an angle. We'll call it , so that , and hence . Then substituting for in the original expression gives us  We start inside the parentheses: . So . Now is the angle between and 0 whose sine is , and that angle is . Thus,   Simplify each expression.         Simplifying Expressions  The key to simplifying expressions involving inverse trigonometric functions is to remember that the inverse sine, cosine, or tangent of a number can be treated as an angle. If we assign a name such as or to the inverse trig value, it can often clarify the computations.  Evaluate .  Let represent the angle , so that , and consequently . Then simplifies to , and we know that . If we know one of the trigonometric ratios of an angle, we can find all the others, either by using a diagram or by using identities. In this case we'll use the Pythagorean identity, . We have and solving for gives us . But is a first quadrant angle, so its sine is positive. Thus, .  Evaluate .  We can verify the results of the previous example using a calculator, but the same technique can be applied to simplify similar expressions involving variables.  Simplify , assuming that .  Let , so that , and we can rewrite the expression as . Now we use identities to write in terms of . First, from the Pythagorean identity we know that and then  Simplify , assuming that .  Review the following skills you will need for this section.    Find a formula for the inverse function.  State the domain and range of the inverse function.  Graph the function and its inverse on the same grid.             Algebra Refresher Answers     Dom: Rge:   linear graph and inverse     Dom: Rge:   linear function and inverse    Dom: Rge:   transformations of reciprocal function    Dom: Rge:   transformations of reciprocal function    Dom: Rge:   transformations of square root     Dom: Rge:   transformations of cube root      Section 8.2 Summary  Vocabulary   Inverse function  One-to-one  Subtend    Concepts   Using one of the calculator keys , or performs the inverse operation for computing a sine, cosine or tangent.  Two functions are called inverse functions if each \"undoes\" the results of the other function.  If is a function, we can often find a formula for the inverse function by interchanging and in the formula for the function, and then solving for .  The graphs of and are symmetric about the line .  The domain of is the same as the range of , and the range of is the same as the domain of .  Horizontal Line Test  A function passes the Horizontal Line Test if every horizontal line intersects the graph at most once. In that case, there is only one -value for each -value, and the function is called one-to-one .  A function has an inverse function if and only if is one-to-one.  Definitions of the inverse trig functions      Inverse Trigonometric Functions      However,    The inverse sine function is also called the arcsine function and denoted by . Similarly, the inverse cosine function is sometimes denoted by , and the inverse tangent function by .  When simplifying expressions involving inverse trigonometric functions, it can often clarify the computations if we assign a name such as or to the inverse trig value.   Study Questions   Here is a table of values defining a function . Make a table of values for .                  What does it mean for a function to be one-to-one? Give an example.  Why do we restrict the domains of the trig functions when we define their inverse functions?  Which of the following expressions is undefined? Why?      Write as a function of .  Write as a function of .  triangle   Write as a function of .  Write as a function of .  triangle   Skills   Decide whether a function has an inverse function #1 8  Evaluate the inverse trig functions #9 20  Model problems with inverse trig functions #21 24  Solve formulas #25 30  Simplify expressions involving the inverse trig functions #31 42, 51 68  Graph the inverse trig functions #43 50, 69 and 70      Homework 8-2  In Problems 1 4, which functions have an inverse function? Explain your answer.   graph No inverse: Some horizontal lines intersect the curve in more than one point.   transformed reciprocal function   graph Inverse exists: The function is 1-1.   quartic graph   For Problems 5 8, graph the function and decide if it has an inverse function.    graph  No inverse      simicircle  No inverse    For Problems 9 14, use a calculator to evaluate. Round your answers to the nearest tenth of a degree.         For Problems 15 20, give exact values in radians.         For Problems 21 26, sketch a figure to help you model each problem.  Delbert is watching the launch of a satellite at Cape Canaveral. The viewing area is 500 yards from the launch site. The angle of elevation, , of Delbert's line of sight increases as the booster rocket rises.  Write a formula for the height, , of the rocket as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle     , so the angle of elevation is when the rocket is 1000 yd high.   Francine's house lies under the flight path from the city airport, and commercial airliners pass overhead at an altitude of 35,000 feet. As Francine watches an airplane recede, its angle of elevation, , decreases.  Write a formula for the horizontal distance, , to the airplane as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   While driving along the interstate, you approach an enormous 50-foot-wide billboard that sits just beside the road. Your viewing angle, , increases as you get closer to the billboard.  Write a formula for your distance, , from the billboard as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   triangle     ; the bilboard subtends an angle of at a distance of 200 ft.   Emma is walking along the bank of a straight river toward a 20-meter long bridge over the river. Let be the angle subtended horizontally by Emma's view of the bridge.  Write a formula for Emma's distance from the bridge, , as a function of .  Write a formula for as a function of .  Evaluate the formula in part (b) for , and interpret the result.   Martin is viewing a 4-meter tall painting whose base is 1 meter above his eye level.  Write a formula for , the angle subtended from Martin's eye level to the bottom of the painting, when he stands meters from the wall.  Write a formula for , the angle subtended by the painting, in terms of .  Evaluate the formula in part (b) for , and interpret the result.   triangles     , so the painting subtends an angle of when Martin is 5 meters from the wall.   A 5-foot mirror is positioned so that its bottom is 1.5 feet below Jane's eye level.  Write a formula for , the angle subtended by the section of mirror below Jane's eye level, when she stands feet from the mirror.  Write a formula for , the angle subtended by the entire mirror, in terms of .  Evaluate the formula in part (b) for , and interpret the result.    For Problems 27 32, solve the formula for the given variable.  , for  , for  , for  , for  for  , for   For Problems 33 38, find exact values without using a calculator.         For Problems 39 44, simplify the expression.          For Problems 45 47, complete the table of values and sketch the function.                           grid                          arccosine                           grid                       grid                       arctangent     Use a graphing calculator to answer each of the following questions. Then explain the results.  Does ?  Does ?  Does ?   Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ?   a b.  transformations of arccos  c. No    Sketch a graph of , and label the scales on the axes.  Use transformations to sketch graphs of and .  Does ?    Sketch a graph of , and label the scales on the axes.  Use technology to graph on a suitable domain.  Does ?   a.  arctangent    c. No    Use technology to graph and for .  Describe the similarities and differences in the two graphs.   Use the identities from Section 8.1 to help you find exact values for the expressions in Problems 53 58.         Let . Find exact values for the following.            Let . Find exact values for the following.       Find an exact value for .   Find an exact value for .   Express in terms of without trigonometric functions.        Express in terms of without trigonometric functions.     If , express and in terms of . ,   If , express and in terms of .   If , write in terms of .  If , write in terms of .   For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?    Yes.  All  or    For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?  For what values of is the function defined?  Is for all where it is defined? If not, for what values of is the equation false?   Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does.   Domain: , range:  Let . Then and . So .   Use your calculator to graph .  State the domain and range of the graph.  Explain why the graph looks as it does.   In Problems 73 74, we find a formula for the area under part of a semicircle.  Use the figure of a unit circle to answer the following.    Write an expression for the area of the shaded sector in terms of .  How are and related in the figure? (Hint: Write an expression for .)  Combine your answers to (a) and (b) to write an expression for the area of the sector in terms of .   unit circle      Use the figure of a unit circle to answer the following.   Write an expression for the height of the shaded triangle in terms of . (Hint: Use the Pythagorean theorem.)  Write an expression for the area of the triangle in terms of .  Combine your answers to (b) and to Problem 73 to write an expression for the area bounded above by the upper semicircle, below by the -axis, on the left by the -axis, and on the right by , when .   unit circle    "
 },
 {
-  "id": "p-5239",
+  "id": "p-5254",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5239",
+  "url": "Inverse-Trigonometric-Functions.html#p-5254",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "inverse operation "
 },
 {
-  "id": "p-5242",
+  "id": "p-5257",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5242",
+  "url": "Inverse-Trigonometric-Functions.html#p-5257",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -21097,9 +21106,9 @@ var ptx_lunr_docs = [
   "body": "The notation does mean !  For example, if , we have , but , and we know that .  Although it is true that a negative exponent denotes a reciprocal, so that, for instance, , the in is not an exponent; this is an entirely new use for the same symbol. "
 },
 {
-  "id": "example-152",
+  "id": "example-151",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-152",
+  "url": "Inverse-Trigonometric-Functions.html#example-151",
   "type": "Example",
   "number": "8.22",
   "title": "",
@@ -21115,9 +21124,9 @@ var ptx_lunr_docs = [
   "body": "Let . Find a formula for the inverse function. "
 },
 {
-  "id": "example-153",
+  "id": "example-152",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-153",
+  "url": "Inverse-Trigonometric-Functions.html#example-152",
   "type": "Example",
   "number": "8.24",
   "title": "",
@@ -21133,18 +21142,18 @@ var ptx_lunr_docs = [
   "body": "  Graph and its inverse function on the grid at right, and sketch in the line to show the symmetry.  grid  Find the domain and range of , and the domain and range of .    linear function and inverse  The domain and range of and each include all real numbers  "
 },
 {
-  "id": "p-5273",
+  "id": "p-5288",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5273",
+  "url": "Inverse-Trigonometric-Functions.html#p-5288",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "one-to-one "
 },
 {
-  "id": "p-5274",
+  "id": "p-5289",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5274",
+  "url": "Inverse-Trigonometric-Functions.html#p-5289",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -21160,18 +21169,18 @@ var ptx_lunr_docs = [
   "body": "It is always the case that we can find the inverse of a function: we just interchange the domain and range values. However, the important question is whether the inverse is also a function. If the inverse is a function, we say that “ has an inverse function inverse function .” All of this leads us to the following result. "
 },
 {
-  "id": "p-5276",
+  "id": "p-5291",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5276",
+  "url": "Inverse-Trigonometric-Functions.html#p-5291",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "inverse function "
 },
 {
-  "id": "example-154",
+  "id": "example-153",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-154",
+  "url": "Inverse-Trigonometric-Functions.html#example-153",
   "type": "Example",
   "number": "8.27",
   "title": "",
@@ -21196,9 +21205,9 @@ var ptx_lunr_docs = [
   "body": "The inverse sine function  inverse sine  sin  The function is defined as follows: "
 },
 {
-  "id": "example-155",
+  "id": "example-154",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-155",
+  "url": "Inverse-Trigonometric-Functions.html#example-154",
   "type": "Example",
   "number": "8.30",
   "title": "",
@@ -21223,9 +21232,9 @@ var ptx_lunr_docs = [
   "body": "The inverse cosine function  inverse cosine  cos  The function is defined as follows: "
 },
 {
-  "id": "example-156",
+  "id": "example-155",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-156",
+  "url": "Inverse-Trigonometric-Functions.html#example-155",
   "type": "Example",
   "number": "8.33",
   "title": "",
@@ -21250,9 +21259,9 @@ var ptx_lunr_docs = [
   "body": "The inverse tangent function  inverse tangent  tan  The function is defined as follows: "
 },
 {
-  "id": "example-157",
+  "id": "example-156",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-157",
+  "url": "Inverse-Trigonometric-Functions.html#example-156",
   "type": "Example",
   "number": "8.36",
   "title": "",
@@ -21277,9 +21286,9 @@ var ptx_lunr_docs = [
   "body": "In the examples above, perhaps you noticed that for any value of in the domain of the inverse sine. In other words, if we find the inverse sine of a number between and , and then take the sine of the resulting angle, we get the original number back again. The same is true for the cosine and tangent, so that and .  However, if we apply the functions in the opposite order, we may not get back the original number. For example, This inequality occurs because the inverse sine function returns just one of the many angles whose sine is , and that angle may not be the angle we started with. "
 },
 {
-  "id": "example-158",
+  "id": "example-157",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-158",
+  "url": "Inverse-Trigonometric-Functions.html#example-157",
   "type": "Example",
   "number": "8.39",
   "title": "",
@@ -21295,27 +21304,27 @@ var ptx_lunr_docs = [
   "body": "The tapestry from the previous example includes a 2-meter tall unicorn with its feet at the bottom of the tapestry.   Express , the angle subtended vertically by the unicorn, as a function of , your distance to the tapestry.  Express , the angle subtended by the portion of the tapestry above the unicorn, as a function of . (See the figure at right).  triangle     "
 },
 {
-  "id": "p-5328",
+  "id": "p-5343",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5328",
+  "url": "Inverse-Trigonometric-Functions.html#p-5343",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arcsine arcsin "
 },
 {
-  "id": "p-5329",
+  "id": "p-5344",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5329",
+  "url": "Inverse-Trigonometric-Functions.html#p-5344",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arccos arctan asin accos atan "
 },
 {
-  "id": "example-159",
+  "id": "example-158",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-159",
+  "url": "Inverse-Trigonometric-Functions.html#example-158",
   "type": "Example",
   "number": "8.41",
   "title": "",
@@ -21331,9 +21340,9 @@ var ptx_lunr_docs = [
   "body": "Simplify each expression.       "
 },
 {
-  "id": "example-160",
+  "id": "example-159",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-160",
+  "url": "Inverse-Trigonometric-Functions.html#example-159",
   "type": "Example",
   "number": "8.43",
   "title": "",
@@ -21349,9 +21358,9 @@ var ptx_lunr_docs = [
   "body": "Evaluate . "
 },
 {
-  "id": "example-161",
+  "id": "example-160",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#example-161",
+  "url": "Inverse-Trigonometric-Functions.html#example-160",
   "type": "Example",
   "number": "8.45",
   "title": "",
@@ -21376,9 +21385,9 @@ var ptx_lunr_docs = [
   "body": "  Find a formula for the inverse function.  State the domain and range of the inverse function.  Graph the function and its inverse on the same grid.             Algebra Refresher Answers     Dom: Rge:   linear graph and inverse     Dom: Rge:   linear function and inverse    Dom: Rge:   transformations of reciprocal function    Dom: Rge:   transformations of reciprocal function    Dom: Rge:   transformations of square root     Dom: Rge:   transformations of cube root    "
 },
 {
-  "id": "p-5365",
+  "id": "p-5380",
   "level": "2",
-  "url": "Inverse-Trigonometric-Functions.html#p-5365",
+  "url": "Inverse-Trigonometric-Functions.html#p-5380",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -22069,9 +22078,9 @@ var ptx_lunr_docs = [
   "body": "Three More Functions  secant  cosecant  cotangent  If is an angle in standard position, and is a point on the terminal side, then we define the following functions.    angle  "
 },
 {
-  "id": "example-162",
+  "id": "example-161",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-162",
+  "url": "The-Reciprocal-Functions.html#example-161",
   "type": "Example",
   "number": "8.48",
   "title": "",
@@ -22087,9 +22096,9 @@ var ptx_lunr_docs = [
   "body": "If , and , find exact values for the other five trig functions. , , , ,  "
 },
 {
-  "id": "example-163",
+  "id": "example-162",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-163",
+  "url": "The-Reciprocal-Functions.html#example-162",
   "type": "Example",
   "number": "8.50",
   "title": "",
@@ -22114,9 +22123,9 @@ var ptx_lunr_docs = [
   "body": "The reciprocal functions are not the same as the inverse trig functions!  For example, is not equal to . Remember that is an angle, namely the angle whose cosine is 0.8, while is the reciprocal of the cosine of 0.8 radians, or . You can check on your calculator that "
 },
 {
-  "id": "example-164",
+  "id": "example-163",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-164",
+  "url": "The-Reciprocal-Functions.html#example-163",
   "type": "Example",
   "number": "8.53",
   "title": "",
@@ -22141,9 +22150,9 @@ var ptx_lunr_docs = [
   "body": "Although is undefined, . "
 },
 {
-  "id": "example-165",
+  "id": "example-164",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-165",
+  "url": "The-Reciprocal-Functions.html#example-164",
   "type": "Example",
   "number": "8.56",
   "title": "",
@@ -22159,9 +22168,9 @@ var ptx_lunr_docs = [
   "body": "The area of a regular polygon with sides having perimeter satisfies Refer to the figure at right showing to prove this formula in the following steps.  hexagon   Find an expression for the angle in terms of .  Find an expression for the base of the triangle shown.  Find an expression for the height of the triangle.  Write an expression for the area of the triangle, and then for the area of the entire polygon.       "
 },
 {
-  "id": "example-166",
+  "id": "example-165",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-166",
+  "url": "The-Reciprocal-Functions.html#example-165",
   "type": "Example",
   "number": "8.58",
   "title": "",
@@ -22177,9 +22186,9 @@ var ptx_lunr_docs = [
   "body": "Use the graph of to sketch a graph of .  tan and cotan "
 },
 {
-  "id": "example-167",
+  "id": "example-166",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-167",
+  "url": "The-Reciprocal-Functions.html#example-166",
   "type": "Example",
   "number": "8.60",
   "title": "",
@@ -22195,9 +22204,9 @@ var ptx_lunr_docs = [
   "body": "State the domain and range of the cosecant and cotangent functions. Domain of cosecant: all real numbers except integer multiples of ; Range of cosecant:  Domain of cotangent: all real numbers except integer multiples of ; Range of cotangent: all real numbers  "
 },
 {
-  "id": "example-168",
+  "id": "example-167",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-168",
+  "url": "The-Reciprocal-Functions.html#example-167",
   "type": "Example",
   "number": "8.62",
   "title": "",
@@ -22213,9 +22222,9 @@ var ptx_lunr_docs = [
   "body": "Solve for between and . "
 },
 {
-  "id": "example-169",
+  "id": "example-168",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-169",
+  "url": "The-Reciprocal-Functions.html#example-168",
   "type": "Example",
   "number": "8.64",
   "title": "",
@@ -22231,9 +22240,9 @@ var ptx_lunr_docs = [
   "body": "If , and , find an exact value for . "
 },
 {
-  "id": "example-170",
+  "id": "example-169",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-170",
+  "url": "The-Reciprocal-Functions.html#example-169",
   "type": "Example",
   "number": "8.66",
   "title": "",
@@ -22249,9 +22258,9 @@ var ptx_lunr_docs = [
   "body": "If and , find expressions for and . , "
 },
 {
-  "id": "example-171",
+  "id": "example-170",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-171",
+  "url": "The-Reciprocal-Functions.html#example-170",
   "type": "Example",
   "number": "8.68",
   "title": "",
@@ -22267,9 +22276,9 @@ var ptx_lunr_docs = [
   "body": "Show that . "
 },
 {
-  "id": "example-172",
+  "id": "example-171",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#example-172",
+  "url": "The-Reciprocal-Functions.html#example-171",
   "type": "Example",
   "number": "8.70",
   "title": "",
@@ -22285,9 +22294,9 @@ var ptx_lunr_docs = [
   "body": "If and lies in the second quadrant, find exact values for and . , "
 },
 {
-  "id": "activity-14",
+  "id": "activity-15",
   "level": "2",
-  "url": "The-Reciprocal-Functions.html#activity-14",
+  "url": "The-Reciprocal-Functions.html#activity-15",
   "type": "Activity",
   "number": "8.5",
   "title": "Reciprocal Ratios.",
@@ -23176,9 +23185,9 @@ var ptx_lunr_docs = [
   "body": " Chapter Summary and Review  Key Concepts   Identities are useful for changing from one form to another when solving equations, for simplifying expressions, and for finding exact values for trigonometric functions.  it is not true in general that is equal to for all angles and , or that is equal to .  Sum and Difference of Angles Identities          Double Angle Identities   Using one of the calculator keys , or performs the inverse operation for computing a sine, cosine or tangent.  Two functions are called inverse functions if each \"undoes\" the results of the other function.  If is a function, we can often find a formula for the inverse function by interchanging and in the formula for the function, and then solving for .  The graphs of and are symmetric about the line .  The domain of is the same as the range of , and the range of is the same as the domain of .  Horizontal Line Test  A function passes the Horizontal Line Test if every horizontal line intersects the graph at most once. In that case, there is only one -value for each -value, and the function is called one-to-one .  A function has an inverse function if and only if is one-to-one.  Definitions of the inverse trig functions       Inverse Trigonometric Functions     However,    The inverse sine function is also called the arcsine function and denoted by . Similarly, the inverse cosine function is sometimes denoted by , and the inverse tangent function by .  When simplifying expressions involving inverse trigonometric functions, it can often clarify the computations if we assign a name such as or to the inverse trig value.  Three More Functions  If is an angle in standard position, and is a point on the terminal side, then we define the following functions.      angles   Reciprocal Trigonometric Ratios  If is one of the acute angles in a right triangle,    triangle   Reciprocal Trigonometric Functions       We can obtain graphs of the secant, cosecant, and cotangent functions as the reciprocals of the three basic functions.  We can solve equations of the form , , and by taking the reciprocal of both sides.  If we know one of the trigonometric ratios for an angle, we can use identities to find any of the others.  Cotangent Identity    Two More Pythagorean Identities   We can often simplify trigonometric expressions by first converting all the trig ratios to sines and cosines.     Review Problems  For Problems 1 8, answer true or false.  False   True   False   False    If and find an exact value for .  If and find an exact value for .  If and find exact values for        If and find exact values for     If and find .  If and find .   For Problems 15-16, use the sum and difference formulas to expand each expression.      For Problems 17 18, use the figure to find the trigonometric ratios.  triangle                           For Problems 19 24, use identities to simplify each expression.         For Problems 25 26,  Use identities to rewrite the equation in terms of a single angle.  Solve. Give exact solutions between and .         For Problems 27 28, graph the function and decide if it has an inverse function.  graph  No    For Problems 29 30, give exact values in radians.              An IMAX movie screen is 52.8 feet high.  If your line of sight is level with the bottom of the screen, write an expression for the angle subtended by the screen when you sit feet away.  Evaluate your expression for feet and for feet.      Rembrandt's painting The Night Watch measures 13 feet high by 16 feet wide.  Write an expression for the angle subtended by the width of the painting if you sit feet back from the center of the painting.  Evaluate your expression for feet and for feet.   For Problems 33 34, solve for .     For Problems 35 36, find exact values without using a calculator.     For Problems 37 38, simplify the expression.     Explain why one of the expressions or must be undefined. Because is undefined for . If , then either or . If , then is undefined.   Does ? Does ?  For Problems 41 42, evaluate. Round answers to 3 decimal places if necessary.                 For Problems 43 50, find all six trigonometric ratios for the angle .   triangle , , , , ,   triangle   angle , , , , ,   angle   angle , , , , ,   angle   , , , , ,  is obtuse   For Problems 51 56, write algebraic expressions for the six trigonometric ratios of the angle.   triangle        triangle   triangle        triangle          For Problems 57 58, find all six trigonometric ratios of the arc . Round to two places.   circle , , , , ,   circle   For Problems 59 62, evaluate exactly.       For Problems 63 64, find all solutions between and . Round your solutions to tenths.     For Problems 65 70, sketch a graph of each function. Then choose the function or functions described by each statement.    The graph has vertical asymptotes at multiples of . or  The graph has a horizontal asymptote at .  The function values are the reciprocals of .  The function is defined only for -values between and , inclusive.  None of the function values lie between and . or  The graph includes the origin.   For Problems 71 74,  Graph the function on the interval , and use the graph to write the function in a simpler form.  Verify your conjecture algebraically.        For Problems 75 78, simplify the expression.       For Problems 79 82, use the suggested substitution to simplify the expression.       This problem outlines a geometric proof of difference of angles formula for tangent.  In the figure below left, and . Write expressions in terms of and for the sides and .   triangles  In the figure above right, explain why is similar to .  Explain why .  Write an expression in terms of and for side .  Explain why is similar to .  Justify each equality in the statement    They are right triangles that share .  is the complement of and is the complement of .  so  They are right triangles with .  so and are ratios of corresponding sides of similar triangles; by part (a), by part (d).   Let and be two lines with slopes and , respectively, and let be the acute angle formed between the two lines. Use an identity to show that   For Problems 85 86, use the fact that if is one angle of a triangle and is the length of the opposite side, then the diameter of the circumscribing circle is Round your answers to the nearest hundredth.  circle circumscribing a triangle   In the figure above, find the diameter of the circumscribing circle, the angle , and the sides and .  A triangle has one side of length 17cm and the angle opposite is . Find the diameter of the circle that circumscribes the triangle.     "
 },
 {
-  "id": "p-5762",
+  "id": "p-5777",
   "level": "2",
-  "url": "chap8-summary.html#p-5762",
+  "url": "chap8-summary.html#p-5777",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -23968,18 +23977,18 @@ var ptx_lunr_docs = [
   "body": " Geometric Form  Introduction  One way to specify a location is to give a direction and a distance from a fixed landmark. For example, we might say that the airport is located 8 miles northeast of the town hall, or that a ship has been sighted 20 miles from the lighthouse in the direction 10° west of north. It's not enough to give just the distance to the object or just the direction; we need both to describe the object's location.  In mathematics, a quantity defined by both a magnitude (such as a distance) and a direction is called a vector vector . A vector used to designate location relative to a fixed landmark, as in the examples above, is called a position vector vector position . Vectors are also used to analyze motion and velocity in two or three dimensions, to study forces such as gravity and electric fields, and to design computer graphics and animation.  We often illustrate a vector by an arrow. The length of the arrow represents the magnitude of the vector, and the direction of the vector is indicated by the head of the arrow.  Draw an arrow to represent each vector.  The campsite is 3 miles away, in a direction north of east.  The wind is blowing due west at 50 kilometers per hour.   We draw an arrow making an angle of from east. The length of the arrow is 3 units, representing 3 miles. See figure (a) below.    position vector     velocity vector     We draw an arrow pointing due west, that is, making an angle of from east. The length of the arrow represents the speed of the wind, 50 kilometers per hour. See figure (b) above.   Draw an arrow to represent the velocity of an airplane travelling southeast at a speed of 300 miles per hour.   velocity vector      Notation for Vectors  vector notation  In print, we use boldface characters such as and to represent vectors. When writing by hand, we use an arrow above a variable to indicate that it is a vector, like this: .  It is important to distinguish vector quantities from quantities that have magnitude only, such as length or temperature. These quantities are called scalars scalar . They are the constants and variables you are used to dealing with, which are usually denoted by italic letters such as or .  The length of a vector is called its magnitude magnitude of a vector , and is denoted by  magnitude of a vector .  Note that the magnitude of a vector is a scalar quantity. Thus, denotes a vector, but denotes a scalar.  Two vectors may have the same length, but point in different directions. The figure at right shows two vectors, and , that have the same magnitude but different directions. For this example, , but . Two vectors are equal if and only if they have the same length and the same direction, but they can start at different locations. The fact that we can move vectors from one location to another is a useful property.   vectors     Which of the vectors shown at right are equal?   vectors     Only vectors and are equal. Vectors , , and are all the same length but have different directions. Vectors and also have equal lengths but different directions. Vectors and have the same direction but different lengths.  Sketch a vector that is equal to the vector shown at right, but that starts at the point .   vector      vectors      Scalar Multiplication of Vectors  scalar multiplication  We can multiply a vector by a scalar. The figure below shows the vector and the vector . Multiplying by a positive scalar changes the length of a vector but not its direction.    vectors     Thus, the vector is 3 times as long as the vector . If we multiply a vector by a negative scalar, we alter its length and reverse its direction; that is, we change the direction by . For example, the vector . It is half the length of , and points in the opposite direction.  In general, if is a real number, then represents the vector with magnitude times the magnitude of . It points in the same direction as when and in the opposite direction from when . Real numbers are called scalars because they “scale” vectors in this way, and multiplying a scalar times a vector is called scalar multiplication scalar multiplication .    The figure at right shows the vector and two scalar multiples of .  The vector points in the same direction as , but is only two-thirds as long as the vector . The vector points in the direction opposite to and is or approximately times as long as .   vectors   Note that because has a slope of , so does any nonzero multiple of .   For the vector shown at right, draw the vectors and .   vector      triangle      Addition of Vectors  A displacement vector vector displacement represents the change in position from one point to another.  For example, suppose you leave home and travel 6 miles east and then 8 miles north. These two displacements are represented by the vectors and shown at right. When we follow one displacement vector by a second one, the net displacement is a new vector, , starting at the base of the first vector and ending at the head of the second vector.   vectors     In this example, notice that forms the hypotenuse of a right triangle, so we can calculate its magnitude and direction. The net displacement gives your current position relative to home: 10 miles in the direction north of east. When we follow one vector by a second vector as described above, we are adding the two vectors. The sum is called the resultant vector vector resultant .  For each pair of vectors, draw the resultant vector .    vectors     We draw a copy of the vector so that its base (or starting point) is placed on the head (or ending point) of , and then we draw vector from the base of to the head of .    vectors     Draw the resultant vector .   vectors      vectors     When the resultant vector forms the third side of a triangle, we can use the laws of sines and cosines to calculate its length and direction.  You are camping in a state park. In the morning, you start off from your campground at point and hike 4 miles southwest to point . After taking a break, you continue hiking, and this time you cover 3 miles in the direction east of north, and arrive at point , as shown at right. What is your position relative to the campground?   vectors     The resultant vector, , forms the side opposite a angle. We use the law of cosines to compute its length. Thus, , so you are 1.348 miles from the campground. To find the direction back to the campground, we use the law of sines to calculate the angle at . The angle labeled in the figure is , so at point you are 1.348 miles from camp in the direction south of west.  Delbert has gone sailing with friends. After leaving the marina, they sail for 5 miles on a bearing of and stop at Gull Island for lunch. (Recall that bearings are measured clockwise from north.) After lunch, they have sailed for 3 miles on a bearing of when they get a phone call to return home. What bearing is the most direct route back to the marina, and how far is it? W of N, 3.58 mi  It doesn't matter which order we choose to add two vectors. As with the ordinary addition of scalars, the addition of vectors is commutative, so that . To see this, first draw and starting at the same point.    vector parallelogram rule     To represent , we place the base of at the head of , and draw the resultant vector as shown at left.  To represent , we place the base of at the head of , and the resultant vector is the same as the vector .  Because the vector sum forms the diagonal of a parallelogram in this picture, the rule for adding vectors is sometimes called the parallelogram rule parallelogram rule .  We summarize the operations on vectors as follows.  Operations on Vectors  vector operations on  vector operations on scale  vector operations on vector; adding  vector scaling  vector adding   We can multiply a vector, , by a scalar, .  If , the magnitude of is times the magnitude of . The direction of is the same as the direction of .  If , the direction of is opposite the direction of .  We can add two vectors and with the parallelogram rule.  Unless and are parallel vectors, it is not true that the length of is just the sum of the lengths of and . Vector addition is a geometric operation; the length of depends on the lengths of and and on the angle between them. Be careful to distinguish between regular addition of scalars, such as , and vector addition, , which requires the parallelogram rule.   Velocity  velocity  Physicists and mathematicians use the word velocity to mean not simply speed but the combination of speed and direction of motion. The interesting thing about velocities is that they add like vectors; if an object's motion consists of two simultaneous components, the resulting displacement is the same as if the motions had occurred one after the other.  For example, imagine a beetle walking across a moving conveyor belt, as shown in figure (a) below. The conveyor belt is moving at a speed of 4 inches per second, and the beetle walks at right angles to the motion of the belt at 2 inches per second. After 1 second, the beetle has traveled from his starting point at to point , distance of , or about 4.47 inches. His actual velocity relative to the ground is 4.47 inches per second at an angle of from the direction of the conveyor belt.    beetle on conveyor belt   Notice that if the two motions were performed in succession instead of simultaneously, as shown in figure (b), the resulting displacement would be the same. In other words, if the beetle had walked across the belt for 1 second before it started moving, and then ridden the belt for 1 second without walking, he would still end up at point .  Thus, velocity is a vector quantity, and we can calculate the result of two simultaneous motions by using the parallelogram rule. We treat the two motions as if they had occurred one after the other, by starting one vector at the endpoint of the other. (Remember we can move a vector from one location to another, as long as we preserve its length and direction.)  A ship travels at 15 miles per hour relative to the water on a bearing of . The water current flows at 6 miles per hour on a bearing of . What is the actual speed and direction of the ship?  We represent the ship's velocity by a vector and the velocity of the water current by vector , as shown in figure (a). The actual motion of the ship is the sum of these two vectors, and we can calculate the sum just as if the two motions had occurred separately, one after the other.  So we will add to by placing the base of at the head of , as shown in figure (b). The resultant vector, , represents the actual motion of the ship.    vectors     We first calculate the angle between the two vectors and . Because , we have , so . Now we can use the law of cosines to find . The ship's speed is mph. Next we use the law of sines to calculate the ship's bearing. The direction of the ship is south of due west, or on bearing .  A plane heads due north at an airspeed of 120 miles per hour. There is a 45 mph wind traveling south of due east. What are the plane’s actual speed and direction relative to the ground? W of N, 3.58 mi  In some situations, instead of calculating a vector sum, we would like to find a vector to produce a particular sum. That is, we know vectors and , and we want to find a vector so that .  Barbara wants to travel west to an island at a speed of 15 miles per hour. However, she must compensate for a current running east of north at a speed of 3 miles per hour. In what direction and at what speed should Barbara head her boat?  We draw a triangle using vectors to represent the desired velocity of Barbara's boat, , and the velocity of the current, , as shown below. We would like to find a vector that represents the speed and heading Barbara should take in order to compensate for the current.  We first use the law of cosines to calculate the length or magnitude of the vector . The angle at is . (Do you see why?). Thus,     vectors     So Barbara should travel at about 17.25 miles per hour.  To find her heading, we use the law of sines to calculate the angle . Barbara should head her boat about south of west, or at a bearing of .  Ahab would like to sail at 20 kilometers per hour due west towards a whale reported at that position. However, a steady ocean current is moving east of north at 8 kilometers per hour. At what speed and heading should Ahab sail? 26.76 kph S of W   Components of a Vector  component  component component vector  We have seen that we can add two vectors to get a third or resultant vector. We can also break down a vector into two or more component vectors. For many applications, it is useful to break a vector into horizontal and vertical components.  For example, the beetle on the conveyor belt moved at 4.47 inches per second in the direction . If we set up coordinate axes as shown at right, the vector representing his velocity is the sum of the beetle's motion in the -direction, , at 4 inches per second, and his motion in the -direction, , at 2 inches per second.   vectors     We can break down any vector into its - and -components, and the sum of those components is equal to the original vector. In other words, .  The horizontal and vertical vectors and are called the vector components component of . If we designate the direction of by an angle measured counter-clockwise from the positive -axis, then the scalar quantities given by  are called simply the components component of the vector .  Note that the components and of a vector are scalars; they are not vectors themselves. They can be either positive or negative (or zero), as shown below.    vectors     A plane flies at 300 miles per hour in the direction north of west. Find the - and -components of its velocity.  We draw a triangle showing the plane's velocity, , as the sum of components in the - and -directions, as shown at right. In this coordinate system, the angle is . Because the components are the legs of a right triangle, we have   vectorrs      The wind is blowing 50 kilometers per hour in a direction south of due west. Find the - and -components of its velocity. kph, kph   Using Components  We can describe a vector completely using either magnitude and direction or components. Many calculations with vectors are simpler when we use components. For example, to add two vectors using components, we don't need the laws of sines and cosines. We resolve each vector into its horizontal and vertical components, add the corresponding components, then compute the magnitude and direction of the resultant vector.  To calculate magnitude and direction from the components, we need only right triangle trigonometry.  After flying for some time, the airplane in the previous example encounters a steady wind blowing at 40 miles per hour from south of west. What are the actual speed and heading of the airplane relative to the ground?  We would like to add the vectors , representing the plane's intended velocity, and , representing the velocity of the wind. We first resolve into its components.   We find the components of the resultant, , by adding the components of and , as shown at right. That is,   velocity vectors       Finally, we compute the magnitude and direction of the resultant. So, the ground speed of the airplane is 272.41 miles per hour.  To find its heading, , we compute Because is a second-quadrant angle, we have The plane flies in the direction , or north of west.  In the previous example, the airplane's heading is not . Remember that there are always two angles with a given tangent. We can refer to a sketch of the vector or to the signs of its components to decide which of those two angles is appropriate.  A plane is flying in a wind blowing 50 kilometers per hour in a direction south of due west. The plane has an airspeed of 200 kph and heading What is the ground speed and actual direction of the plane? groundspeed 182 kph, S of E  Review the following skills you will need for this section.     State two versions of the Law of Sines.  State two versions of the Law of Cosines.   Find the unknown part of the triangle. Round to two decimal places.   cm, ?  ?  ?  ?     Skills Refresher Answers   ,  ,  3.79   9.89       Section 9.1 Summary  Vocabulary   Vector  Scalar  Magnitude  Scalar multiplication  Displacement vector  Resultant vector  Parallelogram rule  Velocity  Vector components  Components    Concepts   A quantity defined by both a magnitude (such as a distance) and a direction is called a vector .  Two vectors are equal if they have the same length and direction; it does not matter where the vector starts.  The length of a vector is called its magnitude , and is denoted by .  The sum of two vectors and is a new vector, , starting at the tail of the first vector and ending at the head of the second vector. The sum is called the resultant vector .  Addition of vectors is commutative. The rule for adding vectors is sometimes called the parallelogram rule .  Operations on Vectors   We can multiply a vector, , by a scalar, .  If , the magnitude of is times the magnitude of . The direction of is the same as the direction of .  If , the direction of is opposite the direction of .  We can add two vectors and with the parallelogram rule.   Any vector can be written as the sum of its horizontal and vertical vector components, and .  The components of a vector whose direction is given by the angle in standard position are the scalar quantities   The magnitude and direction of a vector with components and are given by  To add two vectors using components, we can resolve each vector into its horizontal and vertical components, add the corresponding components, then compute the magnitude and direction of the resultant.   Study Questions   What is the difference between a scalar and a vector?  If velocity is represented by a vector, what is its magnitude called?  Does ? Does ?  What is the parallelogram rule?  What are the components of a vector? Does ?    Skills   Sketch a vector #1 6  Identify equal vectors #7 10  Sketch a scalar multiple of a vector #11 14  Sketch the sum of two vectors #15 22  Calculate a resultant vector #23 32, 45 48  Use vectors to solve problems #33 36  Find components of a vector #37 40  Find the magnitude and direction of a vector given in components #41 44  Subtract vectors #49 58     Homework 9-1  For Problems 1 6, sketch a vector to represent the quantity.  The waterfall is 3 km away, in a direction south of west.   position vector     The cave entrance is 450 meters away, north of east.  The current is moving 6 feet per second in a direction east of north.   velocity vector     The bird is flying due south at 45 mile per hour.  The projectile was launched at a speed of 40 meters per second, at an angle of above horizontal.   velocity vector     The baseball was hit straight up at a speed of 60 miles per hour.   For Problems 7 10, which vectors are equal?    vectors on grid    and    vectors on grid       vectors on grid    and    vectors on grid      For Problems 11 14, sketch a vector equal to , but starting at the given point.    vector on grid      vecoor on grid       vector on grid       vector on grid      vector on grid       vector on grid      For Problems 15 18, draw the scalar multiples of the given vectors.    triangle    and   triangle       vector on grid    and    vector on grid    and   vectors on grid       vector on grid    and   For Problems 19 26,  draw the resultant vector,  calculate the length and direction of the resultant vector.    vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vector on grid      vector on       vector on grid      For Problems 27 30, find the magnitude and direction of the vector.       For Problems 31 38, sketch the vectors, then calculate the resultant.  Add the vector of length 45 pointing east of north to the vector of length 32 pointing south of west.   vectors     Add the vector of length 105 pointing west of south to the vector of length 77 pointing west of north.  Let have length 8 and point in the direction counterclockwise from the positive -axis. Let have length 13 and point in the direction counterclockwise from the positive -axis. Find .   vectors     Let have length 43 and point in the direction counterclockwise from the positive -axis. Let have length 19 and point in the direction counterclockwise from the positive -axis. Find .  Esther swam 3.6 miles heading east of north. However, the water current displaced her by 0.9 miles in the direction east of north. How far is Esther from her starting point, and in what direction?   vectors    4.47 mi, east of north  Rani paddles her canoe 4.5 miles in the direction west of north. The water current pushes her 0.3 miles off course in the direction east of north. How far is Rani from her starting point, and in what direction?  Brenda wants to fly to an airport that is 103 miles due west in 1 hour. The prevailing winds blow in the direction east of north at 28 miles per hour, so Brenda will head her plane somewhat north of due west to compensate. What airspeed and direction should Brenda take?   vectors     129.4 mph, west of north  Ryan wants to cross a 300 meter wide river running due south at 80 meters per minute. There are rocks upstream and rapids downstream, so he wants to paddle straight across from east to west. In what direction should he point his kayak, and how fast should his water speed be in order to cross the river in 2 minutes? (Hint: The current will move him 160 meters due south compared with where his speed and direction would take him if the current stopped. Compute the distance he would have traveled, then divide by 2 minutes to get the speed.)   For Problems 39 42,  find the horizontal and vertical components of the vectors,  use the components to calculate the resultant vector.  A ship maintains a heading of east of north and a speed of 20 miles per hour. There is a current in the water running south of east at a speed of 10 miles per hour. What is the actual direction and speed of the ship?   19.9 mph, east of north  A plane is heading due south, with an airspeed of 180 kilometers per hour. The wind is blowing at 50 kilometers per hour in a direction south of west. What is the actual direction and speed of the plane?  The campground is 3.6 kilometers from the trail head in the direction west of north. A ranger station is located 2.3 kilometers from the campsite in a direction of west of south. What is the distance and direction from the trail head to the ranger station?   1.9 km, west of north  The treasure is buried 40 paces due east from the dead tree. From the buried treasure, a hidden mine shaft is 100 paces distant in a direction of north of west. What is the distance and direction from the dead tree to mine shaft?   Subtracting Vectors  Multiplying a vector by gives a vector that has the same magnitude as but points in the opposite direction. We define subtraction of two vectors the same way we define subtraction of integers: That is, to subtract a vector , we add its opposite. For Problems 43 50, draw the resultant vector.    vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid       vectors on grid      vectors on grid       vectors on grid      Find the horizontal and vertical components of , , and from Problem 43. What do you notice when you compare the horizontal components of two vectors with the horizontal component of the difference? , , , , , ; ,  Find the horizontal and vertical components of , , and from Problem 44. What do you notice when you compare the vertical components of two vectors with the vertical component of the difference?   "
 },
 {
-  "id": "p-5926",
+  "id": "p-5941",
   "level": "2",
-  "url": "Geometric-Form.html#p-5926",
+  "url": "Geometric-Form.html#p-5941",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vector position vector "
 },
 {
-  "id": "example-173",
+  "id": "example-172",
   "level": "2",
-  "url": "Geometric-Form.html#example-173",
+  "url": "Geometric-Form.html#example-172",
   "type": "Example",
   "number": "9.1",
   "title": "",
@@ -23995,18 +24004,18 @@ var ptx_lunr_docs = [
   "body": "Draw an arrow to represent the velocity of an airplane travelling southeast at a speed of 300 miles per hour.   velocity vector    "
 },
 {
-  "id": "p-5933",
+  "id": "p-5948",
   "level": "2",
-  "url": "Geometric-Form.html#p-5933",
+  "url": "Geometric-Form.html#p-5948",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "scalars "
 },
 {
-  "id": "p-5934",
+  "id": "p-5949",
   "level": "2",
-  "url": "Geometric-Form.html#p-5934",
+  "url": "Geometric-Form.html#p-5949",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -24022,9 +24031,9 @@ var ptx_lunr_docs = [
   "body": "Note that the magnitude of a vector is a scalar quantity. Thus, denotes a vector, but denotes a scalar. "
 },
 {
-  "id": "example-174",
+  "id": "example-173",
   "level": "2",
-  "url": "Geometric-Form.html#example-174",
+  "url": "Geometric-Form.html#example-173",
   "type": "Example",
   "number": "9.4",
   "title": "",
@@ -24040,18 +24049,18 @@ var ptx_lunr_docs = [
   "body": "Sketch a vector that is equal to the vector shown at right, but that starts at the point .   vector      vectors    "
 },
 {
-  "id": "p-5942",
+  "id": "p-5957",
   "level": "2",
-  "url": "Geometric-Form.html#p-5942",
+  "url": "Geometric-Form.html#p-5957",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "scalar multiplication "
 },
 {
-  "id": "example-175",
+  "id": "example-174",
   "level": "2",
-  "url": "Geometric-Form.html#example-175",
+  "url": "Geometric-Form.html#example-174",
   "type": "Example",
   "number": "9.6",
   "title": "",
@@ -24067,27 +24076,27 @@ var ptx_lunr_docs = [
   "body": "For the vector shown at right, draw the vectors and .   vector      triangle    "
 },
 {
-  "id": "p-5947",
+  "id": "p-5962",
   "level": "2",
-  "url": "Geometric-Form.html#p-5947",
+  "url": "Geometric-Form.html#p-5962",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "displacement vector "
 },
 {
-  "id": "p-5949",
+  "id": "p-5964",
   "level": "2",
-  "url": "Geometric-Form.html#p-5949",
+  "url": "Geometric-Form.html#p-5964",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "resultant vector "
 },
 {
-  "id": "example-176",
+  "id": "example-175",
   "level": "2",
-  "url": "Geometric-Form.html#example-176",
+  "url": "Geometric-Form.html#example-175",
   "type": "Example",
   "number": "9.8",
   "title": "",
@@ -24103,9 +24112,9 @@ var ptx_lunr_docs = [
   "body": "Draw the resultant vector .   vectors      vectors    "
 },
 {
-  "id": "example-177",
+  "id": "example-176",
   "level": "2",
-  "url": "Geometric-Form.html#example-177",
+  "url": "Geometric-Form.html#example-176",
   "type": "Example",
   "number": "9.10",
   "title": "",
@@ -24121,9 +24130,9 @@ var ptx_lunr_docs = [
   "body": "Delbert has gone sailing with friends. After leaving the marina, they sail for 5 miles on a bearing of and stop at Gull Island for lunch. (Recall that bearings are measured clockwise from north.) After lunch, they have sailed for 3 miles on a bearing of when they get a phone call to return home. What bearing is the most direct route back to the marina, and how far is it? W of N, 3.58 mi "
 },
 {
-  "id": "p-5960",
+  "id": "p-5975",
   "level": "2",
-  "url": "Geometric-Form.html#p-5960",
+  "url": "Geometric-Form.html#p-5975",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -24139,18 +24148,18 @@ var ptx_lunr_docs = [
   "body": "Unless and are parallel vectors, it is not true that the length of is just the sum of the lengths of and . Vector addition is a geometric operation; the length of depends on the lengths of and and on the angle between them. Be careful to distinguish between regular addition of scalars, such as , and vector addition, , which requires the parallelogram rule. "
 },
 {
-  "id": "p-5969",
+  "id": "p-5984",
   "level": "2",
-  "url": "Geometric-Form.html#p-5969",
+  "url": "Geometric-Form.html#p-5984",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "velocity "
 },
 {
-  "id": "example-178",
+  "id": "example-177",
   "level": "2",
-  "url": "Geometric-Form.html#example-178",
+  "url": "Geometric-Form.html#example-177",
   "type": "Example",
   "number": "9.13",
   "title": "",
@@ -24166,9 +24175,9 @@ var ptx_lunr_docs = [
   "body": "A plane heads due north at an airspeed of 120 miles per hour. There is a 45 mph wind traveling south of due east. What are the plane’s actual speed and direction relative to the ground? W of N, 3.58 mi "
 },
 {
-  "id": "example-179",
+  "id": "example-178",
   "level": "2",
-  "url": "Geometric-Form.html#example-179",
+  "url": "Geometric-Form.html#example-178",
   "type": "Example",
   "number": "9.15",
   "title": "",
@@ -24184,9 +24193,9 @@ var ptx_lunr_docs = [
   "body": "Ahab would like to sail at 20 kilometers per hour due west towards a whale reported at that position. However, a steady ocean current is moving east of north at 8 kilometers per hour. At what speed and heading should Ahab sail? 26.76 kph S of W "
 },
 {
-  "id": "p-5991",
+  "id": "p-6006",
   "level": "2",
-  "url": "Geometric-Form.html#p-5991",
+  "url": "Geometric-Form.html#p-6006",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -24211,9 +24220,9 @@ var ptx_lunr_docs = [
   "body": "The wind is blowing 50 kilometers per hour in a direction south of due west. Find the - and -components of its velocity. kph, kph "
 },
 {
-  "id": "example-181",
+  "id": "example-180",
   "level": "2",
-  "url": "Geometric-Form.html#example-181",
+  "url": "Geometric-Form.html#example-180",
   "type": "Example",
   "number": "9.19",
   "title": "",
@@ -24247,9 +24256,9 @@ var ptx_lunr_docs = [
   "body": "   State two versions of the Law of Sines.  State two versions of the Law of Cosines.   Find the unknown part of the triangle. Round to two decimal places.   cm, ?  ?  ?  ?     Skills Refresher Answers   ,  ,  3.79   9.89     "
 },
 {
-  "id": "p-6022",
+  "id": "p-6037",
   "level": "2",
-  "url": "Geometric-Form.html#p-6022",
+  "url": "Geometric-Form.html#p-6037",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -24733,9 +24742,9 @@ var ptx_lunr_docs = [
   "body": " Coordinate Form  vector coordinate form  Introduction  In Section 9.1 we saw how to resolve a vector into horizontal and vertical components. Thus, every vector can be expressed as the sum of a horizontal vector and a vertical vector.  A vector has magnitude 4 and direction , where is measured counter-clockwise from the positive -axis. Express as the sum of a horizontal vector, , and a vertical vector, .   The components of are given by      vectors on coordinate plane     Then , where is a horizontal vector of magnitude 3.50, and is a vertical vector of magnitude 1.94. See the figure above.  A vector has magnitude 2 and direction , where is in standard position. Express as the sum of a horizontal vector, , and a vertical vector, . , where   Unit Vectors  vector unit  It is often useful to describe a vector by giving its horizontal and vertical components, instead of its magnitude and direction. To make the notation easier, we give names to the vectors of length 1 that point in the - and -directions. A vector of magnitude 1 is called a unit vector . We can have unit vectors in any direction, but the unit vector in the -direction is denoted by , and the unit vector in the -direction is called , as shown below.  By taking scalar multiples of and , we can describe any vector that lies in the directions of the coordinate axes. For example, represents the vector of magnitude 4 pointing in the -direction, and represents the vector of magnitude 3 pointing in the -direction. And by adding multiples of and , we can represent any vector we like. The vector is shown at right.   vectors on xy-plane     Because the components of the vector are chosen to align with the coordinate system, we call this the coordinate form of the vector.  Coordinate Form of a Vector  vector coordinate form  The vector is the vector whose horizontal component is and whose vertical component is .  The coordinate form of the vector in the previous example is .  State the coordinate form of the vector shown at right.   vectors on xy-plane     From its base to its tip, the vector extends 4 units in the negative direction and 6 units in the direction. Thus, .  State the coordinate form of the vector shown at right.   vectors      Converting Between Geometric and Coordinate Form  vector geometric vs coordinate form  It is a simple matter to find the magnitude and direction of a vector given in coordinate form. The vector has magnitude and direction . Thus, we can readily convert vectors from geometric form to coordinate form or vice versa.  Comparing the Geometric and Coordinate Forms of a Vector  vector geometric vs coordinate form  Suppose that the vector has magnitude and points in the direction of the angle in standard position. If has the coordinate form , then    Find the geometric form of the vector .  Find the coordinate form of the vector whose magnitude is 5 and whose direction is the angle .   The magnitude of is . The direction satisfies the equation . Because the point lies in the third quadrant, we know that must be a third quadrant angle. Thus, .  The coordinates of the vector are given by so the coordinate form is .  Find the geometric form of the vector . magnitude 10, direction   Scalar Multiples of Vectors in Coordinate Form  Scalar multiplication is easy to compute in coordinate form. This is really a consequence of the fact that the sides of similar triangles are proportional.  The figure at right shows the vectors and . The vector is twice as long as and points in the same direction as . You can see that each component of is twice the corresponding component of , so that .   vectors     Scalar Multiplication in Coordinate Form  scalar multiplication  scalar multiplication vector  If and is a scalar, then  In other words, to find a scalar multiple of a vector in coordinate form, we multiply each component by the scalar.  The vector has coordinate form . Find the coordinate form for the vector .  We multiply each component of by to get .  Find the coordinate form for the vector , where .  If we divide a non-zero vector by its own length, we create a unit vector that points in the same direction as . (Dividing a vector by a scalar is the same as multiplying the vector by .)  Find a unit vector pointing in the same direction as .  We first compute the magnitude of . Next we multiply by the reciprocal of its length. The unit vector in the same direction as is then  By computing its length, you can check that the vector found in the previous Example really is a unit vector. Once we have a unit vector that points in a given direction, we can create a vector of any length in that direction, simply by scaling by the length we desire. For example, the vector of length 10 pointing in the same direction as in the previous example is   Scaling a Vector  scale a vector  scale a vector vector  vector scaling  vector unit  A unit vector in the direction of is given by  A vector of length in the direction of is given by  Find a unit vector and a vector of length 10 pointing in the same direction as . ,   Adding Vectors in Coordinate Form  vector adding  It is also easy to add vectors in coordinate form. The figure below shows the sum of and . Remember that we add two vectors by following the first vector by the second.  The vector sum describes the path But we arrive at the same endpoint by traveling   triangle    The resultant vector has components that are just the sums of the components of the vectors and . To add two vectors in coordinate form, we add the corresponding components.  Sum of Vectors in Coordinate Form  vector adding  If and , then  Kyle flew 15 miles southwest and then 20 miles on a bearing of . What is his current position relative to his starting point?  A sketch of Kyle's journey is shown below. We begin by converting the vector for each leg of his journey into coordinate form.     vectors     Thus, We find the resultant vector, , by adding and . Kyle's position vector is , or about 30.3 miles west and 14.1 miles south of his starting position.  Arianna's yacht heads west of north at a speed of 20 kilometers per hour relative to the water. However, the water is moving east of north at 4 kilometers per hour. What is Arianna's velocity relative to land? 22.7 kph due north  The coordinate form is especially efficient if we want to add more than two vectors.  While exploring an abandoned cottage in the woods, you discover an old map showing the location of a buried treasure.  From the cottage, go 10 km in the direction .  From that point, go 12.8 km in the direction .  Finally, go 9.5 km in the direction .  You wonder if the directions will lead you safely to the treasure. You draw vectors to illustrate the path described by the directions, as shown in the figure.  vectors  Instead of following the map directions, you plan to fly by helicopter from the abandoned cottage directly to the treasure, but you will need to know the correct heading and distance to fly. Draw the vector for the net displacement from the cottage to the treasure, and give its length and direction.  The helicopter's flight plan is the vector sum of the three vectors , , and shown in the figure. To find their sum, we resolve each of the three vectors into its components. In coordinate form, the three displacement vectors are The net displacement is given by the resultant vector, . We add the corresponding components of , , and .  The treasure is at the point 10 km east and 14.12 km north of the cottage. To find the flight plan for the helicopter, we compute the magnitude and direction of the vector . Thus, the treasure is 17.3 km from the cottage, in the direction from east. The helicopter's flight path is shown at right.  vectors  From your campsite you hike 1.6 km in the direction , then 0.8 km in the direction , and finally 1.2 km in the direction .  Draw a diagram for your hike, using vectors to represent each of the three segments. Use ae grid in which 1 square represents 0.1 km.  Resolve each vector into components, and determine your location after your hike.    vectors     , , ,   Force  When you push or pull on something, you are exerting a force force on the object. For example, the weight of an object is actually a force, the result of gravity pulling the object towards the earth. A force has magnitude (measured in pounds) and direction, so force is a vector quantity. A force applied to an object causes the object to accelerate in the direction of the force.  When two or more forces act simultaneously on an object, the object moves as if it were acted on by the sum of the individual force vectors. The sum of all the forces acting on an object is called the resultant force resultant force .  Abe and Bart are trying to move a refrigerator by pulling on it with forces of 150 pounds and 120 pounds respectively, as shown in figure (a). What is the resulting force on the refrigerator, and in what direction will it move?   vectors     We write each force in its coordinate form. Next, we add the forces applied by Abe and Bart to find the resultant force, .  The magnitude of the resultant force is and the direction of the force is given by   vectors     The force exerted on the refrigerator is about 234 pounds, and it will move at an angle of from the horizontal segment shown in the figure.  Two tugboats pull on a barge in the river with forces and , measured in thousands of pounds. In what direction will the barge move, and what is the magnitude of the force propelling it? 48.04 thousand lbs  If vectors and have the same magnitude but opposite directions, then has zero magnitude and is called the zero vector zero vector vector zero . A zero displacement vector means that the object started and ended in the same place; a zero velocity vector means that the object is not moving. We denote the zero vector by , so .  The vector that has the same magnitude as but the opposite direction is called the opposite opposite vector vector opposite of and denoted by . Then If the sum of the forces acting on an object is , the forces are said to be in equilibrium equilibrium , and the object will remain stationary.  Recall the refrigerator in the previous example. Carl does not want Abe and Bart to move the refrigerator. How hard must Carl pull so that the refrigerator remains motionless?  The force that Carl applies must equal in magnitude the sum of the forces applied by Abe and Bart, but point in the opposite direction. That is, So Carl must pull with 234.3 pounds in the direction .  Suppose that and that and What is the coordinate form of vector ?  Review the following skills you will need for this section.     State the sum of angles formula for sine.  State the sum of angles formula for cosine.  State the sum of angles formula for tangent.  Explain how the difference of angles formulas differ from the sum of angles formulas.  For Problems 5 and 6, let .  Find an exact value for .  Find an exact value for .     Skills Refresher Answers      Change subtraction signs to addition and vice versa.        Section 9.2 Summary  Vocabulary   Unit vector  Coordinate form  Geometric form  Zero vector    Concepts   A vector of magnitude 1 is called a unit vector . The unit vector in the direction of the -axis is denoted by . The unit vector in the direction of the -axis is called .  Coordinate Form of a Vector  The vector is the vector whose horizontal component is and whose vertical component is .  Comparing the Geometric and Coordinate Forms of a Vector  Suppose that the vector has magnitude and points in the direction of the angle in standard position. If has the coordinate form , then   Scalar Multiplication in Coordinate Form  If and is a scalar, then  Sum of Vectors in Coordinate Form  If and , then  Scaling a Vector  A unit vector in the direction of is given by  A vector of length in the direction of is given by   Study Questions   Is it easier to add vectors in geometric form or in coordinate form? Why?  To find a unit vector in the direction of , multiply the coordinates of by .  To find a vector of length in the direction of , multiply the coordinates of by .  Name two physical quantities that are represented by vectors.   Skills   Convert the coordinate form of a vector to geometric form #7 18  Convert the geometric form of a vector to coordinate form #19 22, 47 50  Compute sums and scalar multiples of vectors #1 8, 23 28, 47 50  Find a vector in a given direction with a given length #39 46  Solve problems with vectors #51 60     Homework 9-2  For Problems 1 4, give the coordinate form of each vector shown in the figure. Use the coordinate form to find the following.    vectors                                  For the vectors and above, calculate and .  Which of the following statements is true?     and    For the vectors and above, calculate and .  Which of the following statements is true?     For Problems 7 10,   Sketch the vector and give its coordinate form.  Find the magnitude and direction of the vector.   grid     The displacement vector from to .    vector      The displacement vector from to .  The displacement vector from to .    vector      The displacement vector from to .   Hermione is 12 meters east and 3 meters north of Harry. Ron is 6 meters east and 9 meters north of Hermione.  Calculate the displacement vector from Harry to Ron in coordinate form. Let point east and point north.  Find the magnitude and direction of the displacement vector.    Delbert and Francine are climbing a rock wall. Delbert is 8 feet to the right and and 23 feet above their starting point. Francine is 2 feet to the right and 7 feet above Delbert.  Calculate the displacement vector from the starting point to Francine in coordinate form. Let point right and point up.  Find the magnitude and direction of the displacement vector.  For Problems 13 18, find the magnitude and direction of the vector.         For Problems 19 22, find the coordinate form of the vector.       For Problems 23 26, sketch each vector and its components. Use the coordinate form to find the resultant vector , and sketch it.    vectors        vectors       For Problems 27 30, find the sum of the given vectors.       For Problems 31 38, find the coordinate form of the vector, where           For Problems 39 42, find a unit vector in the same direction as the given vector.       For Problems 43 46, find a vector in the same direction as , but with the given length.       For Problems 47 50,  Draw a diagram using arrows to represent the vectors.  Convert each vector to coordinate form.  Use the coordinate form to add or subtract the vectors.  Find , where has magnitude 2.6 and direction , has magnitude 5.8 and direction .    vectors       Find , where has magnitude 50 and direction , has magnitude 70 and direction .  Find , where has magnitude 35 and direction , has magnitude 60 and direction .    vectors       Find , where has magnitude 12.4 and direction , has magnitude 8.8 and direction .   For Problems 51 56,  Make a sketch using vectors to illustrate the problem.  Use the coordinate form of the vectors to solve problem.  The tornado displaced the trash bin to a spot 500 meters north and 800 meters east of its original position, and the flood later displaced the bin 2000 meters due south from there. How far and in what direction was the trash bin moved from it original position?    vectors     1700 m, east of south  A radio-controlled model plane pointed due west with an airspeed of 15 miles per hour, but there was a crosswind from the north at a speed of 8 miles per hour. How fast and in what direction is the plane moving relative to the ground?  Nimish flies 10 km in a direction north from east, then turns and flies an additional 12 km due west. How far and in what direction is Nimish's final position relative to his starting point?    vectors     21.98 km, north of west  Dena sails 500 yards due south, then turns and sails 350 yards in the direction from east. How far and in what direction is Dena's final position relative to her strarting point?  After leaving the airport, Kelly flew 30 miles at a heading east of north, then 50 miles east of north, and finally 12 miles south of east. What is her current position relative to the airport?    vectors     83 mi, east of north  On a whale-watching trip, the SS Dolphin sailed 15 miles from port on a bearing of , then 8 miles on a bearing of , and then 4 miles on a bearing of . What is her current position relative to port?   For Problems 57 60,  Find the resultant force.  Find the additional force needed for the system to be in equilibrium.            vectors         vectors       Find the magnitude of the vector , and the magnitude of the vector , and verify that .  Let , and verify that , for .     Find the magnitude of the vector , and verify that the vector has magnitude 1.  Let , where and are not both , and verify that is a unit vector.   "
 },
 {
-  "id": "example-182",
+  "id": "example-181",
   "level": "2",
-  "url": "Coordinate-Form.html#example-182",
+  "url": "Coordinate-Form.html#example-181",
   "type": "Example",
   "number": "9.22",
   "title": "",
@@ -24751,27 +24760,27 @@ var ptx_lunr_docs = [
   "body": "A vector has magnitude 2 and direction , where is in standard position. Express as the sum of a horizontal vector, , and a vertical vector, . , where "
 },
 {
-  "id": "p-6115",
+  "id": "p-6130",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6115",
+  "url": "Coordinate-Form.html#p-6130",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "unit vector "
 },
 {
-  "id": "p-6117",
+  "id": "p-6132",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6117",
+  "url": "Coordinate-Form.html#p-6132",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "coordinate form "
 },
 {
-  "id": "example-183",
+  "id": "example-182",
   "level": "2",
-  "url": "Coordinate-Form.html#example-183",
+  "url": "Coordinate-Form.html#example-182",
   "type": "Example",
   "number": "9.24",
   "title": "",
@@ -24787,9 +24796,9 @@ var ptx_lunr_docs = [
   "body": "State the coordinate form of the vector shown at right.   vectors    "
 },
 {
-  "id": "example-184",
+  "id": "example-183",
   "level": "2",
-  "url": "Coordinate-Form.html#example-184",
+  "url": "Coordinate-Form.html#example-183",
   "type": "Example",
   "number": "9.26",
   "title": "",
@@ -24805,9 +24814,9 @@ var ptx_lunr_docs = [
   "body": "Find the geometric form of the vector . magnitude 10, direction "
 },
 {
-  "id": "example-185",
+  "id": "example-184",
   "level": "2",
-  "url": "Coordinate-Form.html#example-185",
+  "url": "Coordinate-Form.html#example-184",
   "type": "Example",
   "number": "9.28",
   "title": "",
@@ -24823,9 +24832,9 @@ var ptx_lunr_docs = [
   "body": "Find the coordinate form for the vector , where . "
 },
 {
-  "id": "example-186",
+  "id": "example-185",
   "level": "2",
-  "url": "Coordinate-Form.html#example-186",
+  "url": "Coordinate-Form.html#example-185",
   "type": "Example",
   "number": "9.30",
   "title": "",
@@ -24841,9 +24850,9 @@ var ptx_lunr_docs = [
   "body": "Find a unit vector and a vector of length 10 pointing in the same direction as . , "
 },
 {
-  "id": "example-187",
+  "id": "example-186",
   "level": "2",
-  "url": "Coordinate-Form.html#example-187",
+  "url": "Coordinate-Form.html#example-186",
   "type": "Example",
   "number": "9.32",
   "title": "",
@@ -24859,9 +24868,9 @@ var ptx_lunr_docs = [
   "body": "Arianna's yacht heads west of north at a speed of 20 kilometers per hour relative to the water. However, the water is moving east of north at 4 kilometers per hour. What is Arianna's velocity relative to land? 22.7 kph due north "
 },
 {
-  "id": "example-188",
+  "id": "example-187",
   "level": "2",
-  "url": "Coordinate-Form.html#example-188",
+  "url": "Coordinate-Form.html#example-187",
   "type": "Example",
   "number": "9.34",
   "title": "",
@@ -24877,27 +24886,27 @@ var ptx_lunr_docs = [
   "body": "From your campsite you hike 1.6 km in the direction , then 0.8 km in the direction , and finally 1.2 km in the direction .  Draw a diagram for your hike, using vectors to represent each of the three segments. Use ae grid in which 1 square represents 0.1 km.  Resolve each vector into components, and determine your location after your hike.    vectors     , , , "
 },
 {
-  "id": "p-6164",
+  "id": "p-6179",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6164",
+  "url": "Coordinate-Form.html#p-6179",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "force "
 },
 {
-  "id": "p-6165",
+  "id": "p-6180",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6165",
+  "url": "Coordinate-Form.html#p-6180",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "resultant force "
 },
 {
-  "id": "example-189",
+  "id": "example-188",
   "level": "2",
-  "url": "Coordinate-Form.html#example-189",
+  "url": "Coordinate-Form.html#example-188",
   "type": "Example",
   "number": "9.36",
   "title": "",
@@ -24913,27 +24922,27 @@ var ptx_lunr_docs = [
   "body": "Two tugboats pull on a barge in the river with forces and , measured in thousands of pounds. In what direction will the barge move, and what is the magnitude of the force propelling it? 48.04 thousand lbs "
 },
 {
-  "id": "p-6172",
+  "id": "p-6187",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6172",
+  "url": "Coordinate-Form.html#p-6187",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "zero vector "
 },
 {
-  "id": "p-6173",
+  "id": "p-6188",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6173",
+  "url": "Coordinate-Form.html#p-6188",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "opposite equilibrium "
 },
 {
-  "id": "example-190",
+  "id": "example-189",
   "level": "2",
-  "url": "Coordinate-Form.html#example-190",
+  "url": "Coordinate-Form.html#example-189",
   "type": "Example",
   "number": "9.38",
   "title": "",
@@ -24958,9 +24967,9 @@ var ptx_lunr_docs = [
   "body": "   State the sum of angles formula for sine.  State the sum of angles formula for cosine.  State the sum of angles formula for tangent.  Explain how the difference of angles formulas differ from the sum of angles formulas.  For Problems 5 and 6, let .  Find an exact value for .  Find an exact value for .     Skills Refresher Answers      Change subtraction signs to addition and vice versa.      "
 },
 {
-  "id": "p-6191",
+  "id": "p-6206",
   "level": "2",
-  "url": "Coordinate-Form.html#p-6191",
+  "url": "Coordinate-Form.html#p-6206",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25534,9 +25543,9 @@ var ptx_lunr_docs = [
   "body": " The Dot Product  Components  component  We have seen that it can be useful to resolve a vector into horizontal and vertical components. We can also break a vector into components that point in other directions.  Imagine the following experiment: Delbert holds a ball at shoulder height and then drops it, so that it falls to the ground. Francine holds a ball at shoulder height on an inclined ramp, then releases it so that it rolls downhill. Which ball will reach the ground first?  Although gravity causes both balls to speed up, the free-falling ball will reach the ground first. The force of gravity pulls straight down, the same direction as the motion of the free-falling ball, but the rolling ball must move at an angle to the pull of gravity, along the surface of the ramp. Only part of the gravitational force accelerates the rolling ball, and the rest of the force is counteracted by the surface of the ramp. What fraction of the gravitational force causes the ball to roll?    ramp     In figure (a), the gravitational force is resolved into the sum of two vectors, , where points down the ramp, and is perpendicular to the ramp. The magnitude of is called the component of in the direction of motion, and is denoted by . This is the portion of the gravitational force that moves the ball. From figure (b), we see that , where is the angle between and .  Component of a Vector  component  vector component  vector component component  The component of a vector in the direction of vector is where is the angle between and .  With a little geometry, you can verify that in this example the angle is the complement of the angle of inclination of the ramp, . (Think of similar triangles.) Now suppose that we increase the angle of inclination. As increases, decreases, increases, and hence increases. This result agrees with our experience: as the ramp gets steeper, the ball rolls faster.  Delbert uses a sheet of plywood as a ramp for his wheelbarrow. The ramp is inclined at an angle of to the horizontal. The plywood can support a maximum weight of 200 pounds. What weight will the ramp support?  The component of the weight perpendicular to the ramp cannot be more than 200 pounds. If the weight of the wheelbarrow is , and is a vector perpendicular to the ramp, as shown below, then the angle between and is , by similar triangles. Thus, the component of in the direction of is     ramp     The ramp can support no more than about 207 pounds.  Delbert pushes a lawn mower whose handle makes a angle with the horizontal. If he applies a force of 30 pounds in the direction of the handle, what is the component of the force in the horizontal direction?   lawn mower    23 pounds   Coordinate Form for Components  component coordinate form  In the examples above, we computed the component of a force in the direction of a vector by knowing the angle between and . If the vectors are given in coordinate form (that is, ), we may not know the angle between them. Can we compute the component of a vector in the direction of , in terms of the coordinates of and ?  Suppose and , as shown below. We will need to compute the cosine of in terms of and .  First verify that   vectors and components     Because , we use the subtraction formula for cosine. And finally,  Now we have a fromula for the component of a vector in the direction of a vector .  Component of a Vector in Coordinate Form  component coordinate form  If and , then the component of in the direction of is given by  Recall that the \"component\" of a vector is a scalar. If a vector is resolved into two component vectors, , its components are the lengths of the vectors and . The vectors and themselves are called the vector components component vector component vector component of .   Compute the component of in the direction of .  Find the vector component of in the direction of .  Find the vector component of perpendicular to .   We use the formula derived above. Remember that the component of in the direction of is a scalar; it is the length of the projection of onto .  We would like to find a vector of length 6 in the direction of , as shown at right. Because , we scale the components of by to get   vectors     Because , where is perpendicular to , we have  Write the vector as the sum of two components, one parallel to and the other perpendicular to .   The Dot Product  dot product  The expression , which we encountered above as part of the formula for , is quite useful and is given a name; it is called the dot product of the vectors and .  It is easy to remember the formula for the dot product if we think of adding the product of the -components and the product of the -components of the two vectors.  Dot Product  dot product  The dot product of two vectors and is the scalar  From the formula above, you can see that the dot product is commutative. That is, You can check that this is true in the following example.  Compute the dot product of and .  We apply the formula above to find  In the examples above, you can see that the dot product of two vectors is a scalar. For this reason, the dot product is also called the scalar product scalar product scalar product dot product dot product .  Compute the dot product of and .  We can now write the formula for using the dot product. We have derived an alternate formula for a component of a vector.  Component of a Vector  component  The component of in the direction of is the scalar  Compute the component of in the direction of .  Using the formula above, we have . We first compute and . Thus,   The length of the projection of in the direction of is units, as shown at right.   vectors on grid     Compute the component of in the direction of .   Geometric Meaning of the Dot Product  dot product geometric form  An even more important relationship, which gives geometric meaning to the dot product, follows from the formula for a component. We now have two ways to compute the component of in the direction of : Equating these two expressions, we find or . This is a geometric formula for the dot product.  Geometric Form for the Dot Product  dot product geometric form  The dot product of two vectors and is the scalar where is the angle between the vectors.  The dot product is a way of multiplying two vectors that depends on the angle between them.  If , so that and point in the same direction, then and is just the product of their lengths, .  If and are perpendicular, then , so . (Two vectors and are said to be orthogonal orthogonal if their dot product is zero.)  If is between and , the dot product multiplies the length of times the component of in the direction of .    vectors     Show that the vectors and are orthogonal.  We compute the dot product of the vectors. Thus, , so and are orthogonal. Because neither or , it must be the case that , so or .   Show that the vectors and are orthogonal.  Find a vector perpendicular to .    Using the dot product, we can find the angle between two vectors.  Angle Between Two Vectors  angle between vectors  vector angle between  The angle between two vectors and is given by   Find the angle between the vectors and .  We first compute and the magnitude of each vector.     vectors     Then we apply the formula for . The angle between the vectors is .  Find the angle between the vectors and .  Review the following skills you will need for this section.       Find the height of the triangle.  How far is the foot of the altitude from the vertex of the angle?   triangle     Find the height of the triangle.  Find the length of the third side of the triangle.   triangle     How far north is the tower from the airport? How far east?  What is the distance from to ?   triangle     Find the distance from to .  How far north is point from point ?   triangle      Skills Refresher Answers          36.92 mi, 15.63 mi  16.08 mi         Section 9.3 Summary  Vocabulary   Dot product  Scalar product  Orthogonal    Concepts   Dot Product (Coordinate Formula)  The dot product of two vectors and is the scalar  The dot product is a way of multiplying two vectors that depends on the angle between them.  Dot Product (Geometric Formula)  The dot product of two vectors and is the scalar where is the angle between the vectors.  The component of a vector in the direction of vector is the length of the vector projection of onto .  Component of a Vector  The component of in the direction of is the scalar  Angle Between Two Vectors  The angle between two vectors and is given by   Two vectors and are orthogonal if   Study Questions   If and have the same direction, what is ?  If is perpendicular to , what is ?  What is the angle between and that makes their dot product as large as possible?  What does the dot product of two unit vectors tell you?   Skills   Find the component of in the direction of #1 6, 37 40  Compute the dot product #11 22, 27 36  Find the angle between two vectors #23 26  Resolve a vector into components in given directions #7 10, 41 42     Homework 9-3  For Problems 1 6, find the component of in the direction of .              For Problems 7 10,  Resolve into two components, one parallel to and the other orthogonal to .  Sketch both vectors and the vector components.    8x8 grid       vectors      8x8 grid     8x8 grid       vectors      8x8 grid     For Problems 11 18, compute the dot product .          has magnitude 3 and direction , and has magnitude 8 and direction .  has magnitude and direction , and has magnitude and direction .    vectors       vectors      For Problems 19 22, decide whether the pair of vectors is orthogonal.  and not orthogonal  and  and orthogonal  and   For Problems 23 26, find the angle between the vectors.  and  and  and  and   For Problems 27 30, find a value of so that is orthogonal to .           For Problems 31 36, evaluate the expression for the vectors         Gary pulls a loaded wagon along a flat road. The handle of the wagon makes an angle of to the horizontal. If Gary pulls with a force of 60 pounds, find the component of the force in the direction of motion. 38.57 lbs  Wassily is trying to topple a statue by pulling on a rope tied to the statue's upraised arm. The rope is making a angle from horizontal. If Wassily is pulling on the rope with a force of 250 pounds, find the component of the force in the horizontal direction.  An SUV weighing 6200 pounds is parked on a hill with slope . Find the force needed to keep the SUV from rolling down the hill. 1289 lbs  Steve's boat is headed due north, and the sail points at an angle of east of north. The wind is blowing in the direction west of south, but because of the difference in air pressure between the front and back surfaces of the sail, the boat experiences a force of 400 pounds in the direction the sail is facing. Find the component of the force in the direction of the boat's motion.   Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .     and    orthogonal vectors       Find unit vectors and in the directions of and .  Show that and are orthogonal.  Find the components of in the directions of and .  Sketch the vectors and , and show the components of .   For Problems 43 48, let and .  Show that .  If , show that .  Show that .  Prove the distributive law: .   Show that .  If , show that is perpendicular to .   Show that the component of in the direction of is , and the component of in the direction of is . and  Show that the dot product gives the length of times the coponent of in the direction of .   Start from the geometric definition and show that and .  Use part (a) and Problems 45 and 46 to derive the coordinate definition of .   Both and because ;     Show that  Use part (a) to prove the triangle inequality:    Use the dot product to show that .  Use the figure at right to explain why part (a) proves the law of cosines.   vectors      Let , and    If is a unit vector, and the angle between and is , show that .  Suppose and are unit vectors, as shown in the figure at right. Use the dot product to prove that   vectors      "
 },
 {
-  "id": "example-191",
+  "id": "example-190",
   "level": "2",
-  "url": "The-Dot-Product.html#example-191",
+  "url": "The-Dot-Product.html#example-190",
   "type": "Example",
   "number": "9.40",
   "title": "",
@@ -25561,9 +25570,9 @@ var ptx_lunr_docs = [
   "body": "Recall that the \"component\" of a vector is a scalar. If a vector is resolved into two component vectors, , its components are the lengths of the vectors and . The vectors and themselves are called the vector components component vector component vector component of . "
 },
 {
-  "id": "example-192",
+  "id": "example-191",
   "level": "2",
-  "url": "The-Dot-Product.html#example-192",
+  "url": "The-Dot-Product.html#example-191",
   "type": "Example",
   "number": "9.43",
   "title": "",
@@ -25579,18 +25588,18 @@ var ptx_lunr_docs = [
   "body": "Write the vector as the sum of two components, one parallel to and the other perpendicular to . "
 },
 {
-  "id": "p-6336",
+  "id": "p-6351",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6336",
+  "url": "The-Dot-Product.html#p-6351",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dot product "
 },
 {
-  "id": "p-6338",
+  "id": "p-6353",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6338",
+  "url": "The-Dot-Product.html#p-6353",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25606,18 +25615,18 @@ var ptx_lunr_docs = [
   "body": "From the formula above, you can see that the dot product is commutative. That is, You can check that this is true in the following example. "
 },
 {
-  "id": "example-193",
+  "id": "example-192",
   "level": "2",
-  "url": "The-Dot-Product.html#example-193",
+  "url": "The-Dot-Product.html#example-192",
   "type": "Example",
   "number": "9.46",
   "title": "",
   "body": "Compute the dot product of and .  We apply the formula above to find "
 },
 {
-  "id": "p-6342",
+  "id": "p-6357",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6342",
+  "url": "The-Dot-Product.html#p-6357",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25633,9 +25642,9 @@ var ptx_lunr_docs = [
   "body": "Compute the dot product of and . "
 },
 {
-  "id": "example-194",
+  "id": "example-193",
   "level": "2",
-  "url": "The-Dot-Product.html#example-194",
+  "url": "The-Dot-Product.html#example-193",
   "type": "Example",
   "number": "9.48",
   "title": "",
@@ -25651,27 +25660,27 @@ var ptx_lunr_docs = [
   "body": "Compute the component of in the direction of . "
 },
 {
-  "id": "p-6353",
+  "id": "p-6368",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6353",
+  "url": "The-Dot-Product.html#p-6368",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dot product "
 },
 {
-  "id": "p-6354",
+  "id": "p-6369",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6354",
+  "url": "The-Dot-Product.html#p-6369",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "orthogonal "
 },
 {
-  "id": "example-195",
+  "id": "example-194",
   "level": "2",
-  "url": "The-Dot-Product.html#example-195",
+  "url": "The-Dot-Product.html#example-194",
   "type": "Example",
   "number": "9.50",
   "title": "",
@@ -25687,9 +25696,9 @@ var ptx_lunr_docs = [
   "body": " Show that the vectors and are orthogonal.  Find a vector perpendicular to .   "
 },
 {
-  "id": "example-196",
+  "id": "example-195",
   "level": "2",
-  "url": "The-Dot-Product.html#example-196",
+  "url": "The-Dot-Product.html#example-195",
   "type": "Example",
   "number": "9.52",
   "title": "",
@@ -25714,9 +25723,9 @@ var ptx_lunr_docs = [
   "body": "     Find the height of the triangle.  How far is the foot of the altitude from the vertex of the angle?   triangle     Find the height of the triangle.  Find the length of the third side of the triangle.   triangle     How far north is the tower from the airport? How far east?  What is the distance from to ?   triangle     Find the distance from to .  How far north is point from point ?   triangle      Skills Refresher Answers          36.92 mi, 15.63 mi  16.08 mi       "
 },
 {
-  "id": "p-6381",
+  "id": "p-6396",
   "level": "2",
-  "url": "The-Dot-Product.html#p-6381",
+  "url": "The-Dot-Product.html#p-6396",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -26218,9 +26227,9 @@ var ptx_lunr_docs = [
   "body": " Chapter Summary and Review  Key Concepts   A quantity defined by both a magnitude (such as a distance) and a direction is called a vector .  Two vectors are equal if they have the same length and direction; it does not matter where the vector starts.  The length of a vector is called its magnitude , and is denoted by .  The sum of two vectors and is a new vector, , starting at the tail of the first vector and ending at the head of the second vector. The sum is called the resultant vector .  Addition of vectors is commutative. The rule for adding vectors is sometimes called the parallelogram rule .  Operations on Vectors   We can multiply a vector, , by a scalar, .  If , the magnitude of is times the magnitude of . The direction of is the same as the direction of .  If , the direction of is opposite the direction of .  We can add two vectors and with the parallelogram rule.   Any vector can be written as the sum of its horizontal and vertical vector components, and .  The components of a vector whose direction is given by the angle in standard position are the scalar quantities   The magnitude and direction of a vector with components and are given by  To add two vectors using components, we can resolve each vector into its horizontal and vertical components, add the corresponding components, then compute the magnitude and direction of the resultant.  A vector of magnitude 1 is called a unit vector . The unit vector in the direction of the -axis is denoted by . The unit vector in the direction of the -axis is called .  Coordinate Form of a Vector  The vector is the vector whose horizontal component is and whose vertical component is .   Comparing the Geometric and Coordinate Forms of a Vector  Suppose that the vector has magnitude and points in the direction of the angle in standard position. If has the coordinate form , then    Scalar Multiplication in Coordinate Form  If and is a scalar, then   Sum of Vectors in Coordinate Form  If and , then   Scaling a Vector  A unit vector in the direction of is given by  A vector of length in the direction of is given by   Dot Product (Coordinate Formula)  The dot product of two vectors and is the scalar   The dot product is a way of multiplying two vectors that depends on the angle between them.  Dot Product (Geometric Formula)  The dot product of two vectors and is the scalar where is the angle between the vectors.   The component of a vector in the direction of vector is the length of the vector projection of onto .  Component of a Vector  The component of in the direction of is the scalar   Angle Between Two Vectors  The angle between two vectors and is given by    Two vectors and are orthogonal if     Review Problems  For Problems 1 4, sketch an arrow to represent the vector. Find its components in the directions north and east.  A hawk is flying at a speed of 20 mph in the direction west of north.   vector    mph, mph   The island is located 36 miles from port on a bearing of .  The tractor pulls with a force of 1200 pounds in the direction west of south.   vector    lbs, lbs  The current runs southeast at a speed of 4 mph.   For Problems 5 6, find the magnitude and direction of the vector.     For Problems 7 8, find the coordinate form of the vector.     For Problems 9 12,  sketch the displacement vector and give its coordinate form,  find the magnitude and direction of the vector.   The displacement vector from to    vector       The displacement vector from to  This morning we began hiking from our camp 4 miles east and 2 miles south of the lodge, and this evening we are 6 miles east and 8 miles south of the lodge.    vector       The tunnel should start 100 meters east and 400 meters north of the survey point, and should end 500 meters west and 150 meters north of the survey point.   For Problems 13 16,  sketch the given vectors,  calculate the magnitude and direction of the resultant vector.   A fire crew is located 2 kilometers due west of the fire station. The station reports a new hot spot 6 kilometers away in the direction east of north. How far is the hot spot from the fire crew, and in what direction?    vectors       A helicopter has just delivered a patient to the hospital located 15 miles northwest of the heliport. The pilot gets a call to pick up a passenger located 18 miles from the heliport on a bearing of . How far is the passenger from the helicopter, and in what direction?  Red Rock is located at from the town of Dry Gulch, measured in miles, and Skull Point is located at from Dry Gulch. How far is it from Red Rock to Skull Point, and in what direction?    vectors       A coast guard cutter is located 7 miles south and 5 miles west of port when it gets a distress call from a sailboat that reports its location as 1 mile north and 5 miles east of port. How far is it from the cutter to the sailboat, and in what direcion?   For Problems 17 18,  find the horizontal and vertical components of the forces,  use the components to calculate the resultant force.     vectors           vectors      For Problems 19 22, find the vector, where        For Problems 23 26, find the vector described.  The unit vector in the same direction as .  The unit vector in the same direction as .  The vector of length 3 in the same direction as .  The vector of magnitude 6 in the same direction as   For Problems 27 28, find the component of in the direction of .     For Problems 29 30, compute the dot product .       For Problems 31 32, find the angle bertween the vectors.        "
 },
 {
-  "id": "p-6476",
+  "id": "p-6491",
   "level": "2",
-  "url": "chap9-summary.html#p-6476",
+  "url": "chap9-summary.html#p-6491",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -26524,45 +26533,45 @@ var ptx_lunr_docs = [
   "body": " Polar Coordinates   The Cartesian coordinate system is also called the rectangular coordinate system rectangular coordinate system , because it describes a location in the plane as the vertex of a rectangle. To construct a rectangular coordinate system, we begin with two perpendicular axes that intersect at the origin. The - and -coordinates of a point indicate the length and width of a rectangle with one vertex at the origin. The point sits at the opposite vertex of the rectangle, as shown in the figure below.  In Chapter 9 we used vectors to specify a location by giving a distance and a direction. For example, we might say that the airport is located 5 miles southwest of the city center. This method of designating locations is so useful that we will construct a new coordinate system using the same tools: distance and direction.    Cartesian     polar     In the polar coordinate system polar coordinates we start with the origin or pole pole , and a single ray from the pole, called the polar axis polar axis . We describe the location of a point in the plane by measuring the distance, , from to the pole, and the angle, , that makes with the polar axis (measured counterclockwise). The components of the ordered pair are called the polar coordinates of the point .  Polar Coordinates  polar coordinates  polar coordinates  polar coordinates  polar coordinates distance  polar coordinates angle   Greek alphabet  polar coordinates  The polar coordinates of a point in the plane are , where  is the distance from to the pole,  is the angle measured counterclockwise from the polar axis to the ray through from the pole.  In our work with polar coordinates, we will always use radians for the angle . For example, the point is located 2 units from the pole at an angle of radians, and is located 3 units from the pole at an angle of 4 radians. The graphs of and are shown at right.   points in polar coordinates     A piece of graph paper in rectangular coordinates consists of a grid of horizontal and vertical lines. These are the lines and , for evenly spaced values of . Each vertical grid line consists of points that have the same -coordinate, and each horizontal grid line is made up of points that have the same -coordinate. The grid lines are bench marks to help us locate points with specific rectangular coordinates.  A piece of graph paper in polar coordinates consists of a grid of concentric circles and radial lines, as shown below. Each circle consists of points with the same -coordinate; they are all the same distance from the pole. All points with the same -coordinate lie on one of the radial lines. This grid helps us locate points with specific polar coordinates.    rectangular and polar grids      Plotting Points  You are used to thinking in rectangular coordinates: to locate a point, we move so many units left or right, and so many units up or down. When working in polar coordinates, we want to \"think radially:\" how far to move from the pole, and in which direction.  Plot the points whose polar coordinates are given: and .  To plot point , we move 1 unit away from the pole in the direction , as shown at right. To plot point , we move 2 units away from the pole in the direction .   polar points     Note that even though the independent or input variable in polar coordinates is nearly always , it is customary to list the dependent or output variable first: .  Give the polar coordinates of the points and shown at right, with .   polar points    ,  Each point has infinitely many polar coordinates, because we can add multiples of to the value of . For example, the point with polar coordinates also has polar coordinates and .  If we allow negative values of , there are even more ways to write the coordinates of a point. Each angle designates a line through the pole, and each line has both a postive and a negative direction.  On the line at , for instance, the positive direction lies in the first quadrant, so that the point is designated by in the figure at right. To plot the point , we move in the opposite direction from the pole, arriving at point . Note that the point can also be designated by the coordinates .   point on polar grid     Non-Uniqueness of Polar Coordinates  polar coordinates non-uniqueness   Any point with polar coordinates also has coordinates , where is an integer.  The point can also be designated by .  The pole has coordinates , for any value of .  Give polar coordinates with negative -values for the points in the previous exercise.  The point is also or . The point can also be designated by , or .  Give polar coordinates with positive -values and for each point given in polar coordinates.       Regions in the Plane  In Cartesian coordinates, we use equations and inequalities to describe regions in the plane. For example, the shaded region in figure (a) is the graph of . The pair of inequalities describes the region in figure (b). This region is particularly simple, in that its boundaries are portions of the coordinate grid lines and , where is a constant.    regions in the plane     In the polar plane, the coordinate grid lines are circles centered at the pole, with equations , and lines through the pole, with equations .  Sketch the region designated by each set of inequalities.     The region consists of all points between 1 (inclusive) and 3 units from the pole. No restriction is given on , so the region is the annular ring shown in figure (a).    regions in polar coordinates     The region includes all points up to 2 units from the pole, but only between the lines and . These curves bound the pie-shaped wedge (circular sector) shown in figure (b).  Write inequalities to describe each region shown below.    regions       ,   Converting Between Polar and Cartesian Coordinates  polar coordinates converting Cartesian  Using trigonometry, it is easy to convert from polar coordinates to Cartesian, or vice versa. The figure below shows how the two sets of coordinates are related.  If we know the polar coordinates , we can compute the Cartesian coordinates as the legs of a right triangle.     rectangular and polar coordinates     Find the Cartesian coordinates of the point with polar coordinates .  The polar coordinates tell us that and , as shown below.  The -coordinate of the point is and its -coordinate is   point      Thus, the Cartesian coordinates are .  Find the Cartesian coordinates of the point with polar coordinates .  If we know the Cartesian coordinates of a point, we can compute the polar coordinates as follows.  To find the angle , it is not enough to compute ; we must choose the angle in the same quadrant as the given point.  Find the polar coordinates of the point with Cartesian coordinates .  We first compute the value of . Thus, , as shown at right. To find , we compute   There are infinitely many values of that satisfy this equation, but our point lies in the third quadrant, so we take .   polar     You can check that the polar coordinates convert back to Cartesian coordinates .  In the previous Example, the angle is not given by , because the given point lies in the third quadrant. Remember that there are always two angles between and with a given tangent.  Find polar coordinates for the points with Cartesian coordinates . Give decimal approximations rounded to hundredths.  Conversion Equations  conversions equations   To convert from polar coordinates to Cartesian:  To convert from Cartesian coordinates to polar:  where the choice of depends on the quadrant.   Equations in Polar Coordinates  conversions equations  polar coordinates equations  Polar coordinates are useful for studying objects or phenomena that have radial symmetry, such as circles, spheres, and cylinders, or the central forces (those that act equally in all directions), such as gravity and electric charge. The equations describing these objects are often simpler in polar coordinates than they are in Cartesian coordinates.  It is not hard to convert an equation from Cartesian to polar coordinates: we replace each with and each with .  Convert the equation to polar coordinates.  Replacing by by and by , we get If we solve for in terms of , we find Neither of these equations is simpler than the Cartesian version, but that should not surprise us, because the original equation describes a line, and Cartesian coordinates are better suited to rectilinear graphs.  Convert the equation to polar coordinates.  Perhaps you recognize the equation in the previous exercise as a circle. Note also that its polar equation has a simpler form than the familiar Cartesian version.  Converting equations from polar to Cartesian form is not as straightforward as the other direction (and is sometimes impossible). Here are some strategies to try:  Expressions of the form or can be replaced by and , respectively.  can be replaced by .  can be replaced by .   Convert the equation to Cartesian coordinates.  We multiply both sides of the equation by to obtain Now we can replace the left side by and the right side by to obtain This is the equation of a circle. By completing the square in each variable, we can write the equation in standard form, The center of the circle is , and its radius is .  Convert the equation to Cartesian coordinates.  Review the following skills you will need for this section.   Recall the standard form for the equation of a circle of radius centered at : Use completing the square to write each equation in standard form.           Algebra Refresher Answers           Section 10.1 Summary  Vocabulary   Pole  Polar axis  Polar coordinates    Concepts   Polar Coordinates  The polar coordinates of a point in the plane are , where  is the distance from to the pole,  is the angle measured counterclockwise from the polar axis to the ray through from the pole.   rectangular and polar coordinates     Non-Uniqueness of Polar Coordinates   Any point with polar coordinates also has coordinates , where is an integer.  The point can also be designated by .  The pole has coordinates , for any value of .   In the polar plane, the coordinate grid lines are circles centered at the pole, with equations , and lines through the pole, with equations .   Conversion Equations   To convert from polar coordinates to Cartesian:  To convert from Cartesian coordinates to polar:   where the choice of depends on the quadrant.   To convert an equation from Cartesian to polar coordinates, we replace each with and each with with . To convert an equation from polar to Cartesian coordinates, look for expressions of the form , or .   Study Questions   Why is the Cartesian coordinate system sometimes called the rectangular system?  What do the graphs of the polar equations and , where is a constant, look like?  Fill in the blank: the point with polar coordinates also has coordinates .  What does the region described by look like? What does the region described by look like?  Sketch a figure that explains how to convert between polar and Cartesian coordinates.   Skills   Plot points in polar coordinates #1 8  Write polar coordinates for points #9 16  Convert Cartesian coordinates to polar #17 24  Convert Polar coordinates to Cartesian #25 32  Write alternate versions of polar coordinates #33 38  Sketch a region described by polar inequalities #39 44  Write polar inequalities to describe a region #45 50  Convert an equation to Cartesian coordinates #51 64  Convert an equation to polar coordinates #65 72     Homework 10-1  For Problems 1 8, use the grid below to plot the points whose polar coordinates are given.    polar grid        polar plot        polar plot        polar plot        polar plot       For Problems 9 16, give polar coordinates for each point shown below, with and .    polar grid              For Problems 17 24, convert the polar coordinates to Cartesian coordinates.           For Problems 25 32, convert the Cartesian coordinates to polar coordinates with and . Give exact values for and .           In Problems 33 38, polar coordinates are given.  Convert to polar coordinates with .  Convert to polar coordinates with .                 For Problems 39 44, sketch the region described by the inequalities.    polar plot        polar grid        polar grid       For Problems 45 50, write inequalities to describe the region.    polar region      polar grid      polar region       polar region       polar region       polar region      For Problems 51 64, convert the equation into Cartesian coordinates.                 For Problems 65 72, convert the equation into polar coordinates.           Use the Law of Cosines to prove the distance formula in polar coordinates:    Show that the graph of is a circle. Find its center and radius.   "
 },
 {
-  "id": "p-6568",
+  "id": "p-6583",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6568",
+  "url": "Polar-Coordinates.html#p-6583",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "rectangular coordinate system "
 },
 {
-  "id": "p-6570",
+  "id": "p-6585",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6570",
+  "url": "Polar-Coordinates.html#p-6585",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polar coordinate system pole polar axis polar coordinates "
 },
 {
-  "id": "p-6571",
+  "id": "p-6586",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6571",
+  "url": "Polar-Coordinates.html#p-6586",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polar coordinates "
 },
 {
-  "id": "p-6572",
+  "id": "p-6587",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6572",
+  "url": "Polar-Coordinates.html#p-6587",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "distance angle "
 },
 {
-  "id": "example-197",
+  "id": "example-196",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-197",
+  "url": "Polar-Coordinates.html#example-196",
   "type": "Example",
   "number": "10.1",
   "title": "",
@@ -26587,9 +26596,9 @@ var ptx_lunr_docs = [
   "body": "Give the polar coordinates of the points and shown at right, with .   polar points    , "
 },
 {
-  "id": "example-198",
+  "id": "example-197",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-198",
+  "url": "Polar-Coordinates.html#example-197",
   "type": "Example",
   "number": "10.4",
   "title": "",
@@ -26605,9 +26614,9 @@ var ptx_lunr_docs = [
   "body": "Give polar coordinates with positive -values and for each point given in polar coordinates.     "
 },
 {
-  "id": "example-199",
+  "id": "example-198",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-199",
+  "url": "Polar-Coordinates.html#example-198",
   "type": "Example",
   "number": "10.6",
   "title": "",
@@ -26623,9 +26632,9 @@ var ptx_lunr_docs = [
   "body": "Write inequalities to describe each region shown below.    regions       , "
 },
 {
-  "id": "example-200",
+  "id": "example-199",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-200",
+  "url": "Polar-Coordinates.html#example-199",
   "type": "Example",
   "number": "10.8",
   "title": "",
@@ -26641,9 +26650,9 @@ var ptx_lunr_docs = [
   "body": "Find the Cartesian coordinates of the point with polar coordinates . "
 },
 {
-  "id": "example-201",
+  "id": "example-200",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-201",
+  "url": "Polar-Coordinates.html#example-200",
   "type": "Example",
   "number": "10.10",
   "title": "",
@@ -26668,9 +26677,9 @@ var ptx_lunr_docs = [
   "body": "Find polar coordinates for the points with Cartesian coordinates . Give decimal approximations rounded to hundredths. "
 },
 {
-  "id": "example-202",
+  "id": "example-201",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-202",
+  "url": "Polar-Coordinates.html#example-201",
   "type": "Example",
   "number": "10.13",
   "title": "",
@@ -26686,9 +26695,9 @@ var ptx_lunr_docs = [
   "body": "Convert the equation to polar coordinates. "
 },
 {
-  "id": "example-203",
+  "id": "example-202",
   "level": "2",
-  "url": "Polar-Coordinates.html#example-203",
+  "url": "Polar-Coordinates.html#example-202",
   "type": "Example",
   "number": "10.15",
   "title": "",
@@ -26713,9 +26722,9 @@ var ptx_lunr_docs = [
   "body": " Recall the standard form for the equation of a circle of radius centered at : Use completing the square to write each equation in standard form.           Algebra Refresher Answers         "
 },
 {
-  "id": "p-6643",
+  "id": "p-6658",
   "level": "2",
-  "url": "Polar-Coordinates.html#p-6643",
+  "url": "Polar-Coordinates.html#p-6658",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -27397,9 +27406,9 @@ var ptx_lunr_docs = [
   "body": " Polar Graphs  polar graphs  polar coordinates graphing  Graphing in Polar Coordinates  When we plot points in Cartesian coordinates, we start at the origin and move a distance right or left given by the -coordinate of the point, then move up or down according to the -coordinate. When we sketch the graph of an equation or function, we think of drawing the graph from left to right, with the \"height\" of the graph at each -value given by the function, as shown in figure (a).    Cartesian and polar graphs     In polar coordinates, however, the dependent variable, , gives not a height but a distance from the pole in direction , as shown in figure (b). When graphing an equation in polar coordinates, we think of sweeping around the pole in the counterclockwise direction, and at each angle the -value tells us how far the graph is from the pole.  Graph the polar equation .  We make a table of values, choosing the special values for . For each value of , we evaluate .                          First we'll plot the points in the first quadrant. Observe that as increases from to , increases from to . Starting at the pole, we connect the points in order of increasing . Imagine a radial line sweeping around the graph through the first quadrant: as the angle increases, the length of the segment increases, so that its tip traces out the graph shown in figure (a).    polar graphs     Now continue plotting the points in the table as increases from to . In the second quadrant, decreases as increases, as shown in figure (b). The graph we obtain is, in fact, a circle, which we will prove algebraically shortly. However, we have not yet plotted points for between and . Because is negative in the third and fourth quadrants, all the -values for these angles are negative.                          When we plot the points in this table, we see that the original graph is traced out again. For example, the point is the same as the point , the point is the same as the point , and so on, around the circle. Thus, the graph of is a circle, traced twice for .  To prove that the graph in Example 1 is really a circle, we convert the equation to Cartesian form. First, multiply both sides by to obtain Next, replace by and by , to get This equation is quadratic in two variables, so its graph is a conic section. We put the equation in standard form by completing the square in . We have the equation of a circle with center and radius .  Graph the polar equation .   polar graph      Using a Graphing Calculator  You are familiar with the graphs of many equations in Cartesian coordinates, including lines, parabolas and other conic sections, and the graphs of basic functions. You should now become familiar with some standard graphs in polar coordinates. These include circles and roses, cardioids and limaçons, lemniscates, and spirals.  At the end of this section you will find a Catalog of the basic polar graphs and their properties. You can use your calculator, set in Polar mode, to experiment with these graphs.  Graph the Archimedean spiral , for .  After setting the calculator in Polar mode, we enter the equation and enter the window settings   We then press Zoom 5 to set a square window. The graph is shown at right.   polar graph     Studying a table of values can help us understand the shape of the graph.                  As increases, increases also, at a constant rate. We wind our way around the pole, steadily increasing our distance from the pole as we go. We spiral outwards, tracing the graph shown above.  Use a calculator to graph the polar equation . Use the window settings    polar graph spiral     It is important to connect the points on the graph in order of increasing .  Graph the polar equation .  We'll graph the equation in stages in order to see how the graph is traced out. Begin with the window settings Watch as your calculator produces the graph shown in figure (a).    one loop     two loops     three loops     Observe that, as increases from to , first increases, reaching its maximum value of 2 at and then decreases back to 0. You can verify the values in the table below, which shows the points at multiples of . These points create the first loop of the graph.                               Next, change to , and graph again. This time the calculator traces out two loops, as shown in figure (b). For between and , is negative, so the second loop lies in the third and fourth quadrants.                               Finally, change to , and graph again. For between and , the graph traces out a third loop, as shown in figure (c). For between and , the entire graph is traced a second time. The finished graph is a rose with 3 petals of length 2.   Use your calculator to graph the polar equation .  Complete the table of values for the function.                      Sketch the graph by hand on the grid at right.   polar grid      polar graph: three petals      Sketching Familiar Equations  You should also be able to sketch the standard polar graphs by hand. Once you recognize an equation as a particular type of graph, say a rose or a limaçon, you can sketch the graph quickly by finding just a few well-chosen guidepoints. The next example demonstrates a technique for sketching a rose.  Graph the polar equation .  Referring to the Catalog of Polar Graphs, we see that the graph of this equation is a rose , with petal length and four petals, because . If we can locate the tips of the petals, we can use them as guidepoints to sketch the graph.  Now, the points at the tips of the petals have , so we substitute into the equation of the rose to find the values of at those points.  Thus, one of the petal tips is located at . Because the 4 petals are evenly spaced around the pole, the angle between the petals is , and the other petal tips occur at  We plot the tips of the petals as guidepoints, at , , and . Now we can sketch a rose with 4 petals of length 3, as shown at right.   rose     Graph the polar equation .   rose     The limaçons , and , are another family of polar graphs. In particular, the cardioid is a special case of a limaçon with .  Graph the polar equation .  This is the equation for a limaçon, with and . Because , the limaçon will have a dent, like a lima bean, rather than a loop. As guidepoints, we locate the points at the four quadrantal angles.                   We plot the guidepoints and connect them in order with a smooth curve, as shown below. Note that this limaçon involving cosine is symmetric about the -axis; limaçons involving sine are symmetric about the -axis.   limacon     Graph the polar equation .   limacon     You should also be able to identify a polar graph and write its equation.  Give a polar equation for each of the graphs below.    circle     cardioid      The graph is a circle centered at and with radius 2, so we choose the equation , with . Thus, .  The graph is a cardioid with its axis of symmetry on the -axis, and the \"bottom\" of the heart points in the positive direction, so its equation has the form . At , so we can solve for : Thus, and we choose the equation .  Give a polar equation for each of the graphs below.    lemniscate     cardioid        Finding Intersection Points  To find the intersection points of two graphs, we solve the system made up of their equations. If the equations are and , we simply solve the equation . For example, we find the intersection points of and by solving the equation to get  These are the -coordinates of the intersection points, and we can find the -coordinates by substituting these values into either equation.  For we find  For we find Thus, the intersection points are and , as shown at right.   line intersecting parabola     To find the intersection points of the polar graphs and we solve the equation .  Find all intersection points of the graphs of and .  We equate the two expressions for and solve for .  We evaluate either expression for to find the other coordinate of the intersection point.  Thus, two of the intersection points are and , as shown at right. However, you can see in the figure that the graphs also appear to intersect at the pole. To verify that the pole indeed lies on both graphs, we can solve for in each equation when .   cardioids     However, you can see in the figure that the graphs also appear to intersect at the pole. To verify that the pole indeed lies on both graphs, we can solve for in each equation when .  Both points, and , represent the pole. Thus, the graphs intersect at three points: , , and the pole.  As we saw in the previous Example, solving a system of equations and will not always reveal an intersection at the pole, because may be equal to zero for different values of in the two equations. We should always check separately whether the pole is a point on both graphs.  Find all intersection points of the graphs of and . ,  Review the following skills you will need for this section.   Solve each equation. Give two solutions, .               Skills Refresher Answers   ,  ,  ,  ,  ,  ,  ,  ,      A Catalog of Polar Curves  polar graphs catalog of curves  The Coordinate Curves   ( a constant)  A line through the pole.  gives the angle of inclination of the line (in radians).   line  ( a constant)  A circle centered at the pole.  is the radius of the circle.   circle   Circles     A circle with center on the -axis, and radius .   circle    A circle with center on the -axis, and radius .   circle    Roses     A rose with petal length .  petals if is odd; petals if is even.   rose    A rose with petal length .  petals if is odd; petals if is even.   rose   Limaçons  or   , with a dent.   limacon with dent  , with a loop.   limacon with loop  , a cardioid .   cardioid   Lemniscates     lemniscate    lemniscate   Spirals   Archimedean spiral   Archimedean spiral     Logarithmic spiral   Logarithmic spiral       Section 10.2 Summary  Vocabulary   Rose  Limaçon  Cardioid  Lemniscate    Concepts   When graphing an equation in polar coordinates, we think of sweeping around the pole in the counterclockwise direction, and at each angle the -value tells us how far the graph is from the pole.  Standard graphs in polar coordinates include circles and roses, cardioids and limaçons, lemniscates, and spirals.  To find the intersection points of the polar graphs and we solve the equation . In addition, we should always check whether the pole is a point on both graphs.   Study Questions   Delbert says that the graph of in the first example cannot be correct, because there are no points on the graph for angles between and . How do you respond?  Is it possible to have a rose with only two petals? What would its equation be?  Francine says that a circle of the form is just a special case of a limaçon. Support or refute her statement.  There are no points on the graph of for angles between and Why is that?   Skills   Describe the effect of parameters in polar curves #1 16, 83 84  Compare polar and Cartesian graphs #21 24  Sketch standard polar graphs #17 20, 25 42, 75 82  Identify standard polar graphs #43 58  Write equations for standard polar graphs #59 66  Find intersection points of polar graphs #67 74     Homework 10-2  In Problems 1-4, use graphing technology to graph the equations.   Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).    circles    is the radius    Graph , for . How does these graphs compare to the graphs in Problem 1?  Write a Cartesian equation for each graph in part (a).   Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).    lines on polar grid     is the slope    Graph , for . How does the graph change for different values of ?  Write a Cartesian equation for each graph in part (a).   Complete the table of values for each equation. Plot the points in order of increasing . What is different about the two graphs?  Equation 1:                       Equation 2:                                                                  The graph of begins at the right-most point (and proceeds counter-clockwise); the graph of begins at the left-most point.    polar points on circle     Graph each line, and label the points with their coordinates. How are the points on the two lines related?  Equation 1:                 Equation 1:                  Graph the circle . Label the points corresponding to and .  Complete the table of values. What happens to the graph as increases from to ?                  Find the center and radius of the circle.  Give the Cartesian equation of the circle.    circle on polar grid                     The graph is traced again.  center: , radius:    Graph the circle . Label the points corresponding to and .  Complete the table of values. What happens to the graph as increases from to ?                  Find the center and radius of the circle.  Give the Cartesian equation of the circle.   Graph for .  How do the graphs change for different values of ?    circcles on polar grid     For , is the radius of a circle centerd on the positive -axis; for , is the radius of a circle centerd on the negative -axis.    Graph for .  How do the graphs change for different values of ?  Complete the table of values for each cardioid, and graph the equation.                         cardioid                    cardioid                   cardioid                   cardioid                   Complete the table of values for each cardioid, and graph the equation.                       Complete the table of values for each limaçon, and graph the equation.                         limacon                       limacon                       limacon                       limacon                     Complete the table of values for each limaçon, and graph the equation.                        Graph the following roses and compare. How is the number of petals related to the value of in the equation ?  For each graph above, list the values of where the tips of the petals occur.  Graph for and . How does the value of affect the graph?    4-petal rose     3-petal rose     8-petal rose     5 petal rose    There are petals if is odd, and petals if is even.         3-petal rose     3-petal rose     3-petal rose    is the length of the petal.    Graph the following roses and compare. How is the number of petals related to the value of in the equation ?  For each graph above, list the values of where the tips of the petals occur.  Graph for and . How does the value of affect the graph?   Solve for . (You should get two equations for .)  Graph both equations together. Change step to 0.02 to see the whole graph.  How does the value of affect the graph of ?     lemniscate     is the length of the loop.    Solve for . (You should get two equations for .)  Graph both equations together. Change step to 0.02 to see the whole graph.  How does this graph differ from the graph in Problem 17?  Graph the Archimedean spiral . Set your window to Then graph by pressing Zoom 5.   Archimedean spiral     Graph the logarithmic spiral . Set your window to Then graph by pressing Zoom 5.   Complete the table and graph the equation in Cartesian coordinates, for .                                     Complete the table and graph the equation in polar coordinates, for .                                                                          sinusoidal curve                                          three-petal rose       Complete the table and graph the equation in Cartesian coordinates, for .                                     Complete the table and graph the equation in polar coordinates, for .                                      Complete the table and graph the equation in Cartesian coordinates, for .                          Complete the table and graph the equation in polar coordinates, for .                                                    sinusoidal graph                               cardioid       Complete the table and graph the equation in Cartesian coordinates, for .                          Complete the table and graph the equation in polar coordinates, for .                          For Problems 25 42, use the catalog of polar graphs to help you identify and sketch the following curves. Check your work by graphing with a calculator.  circle   circle on polar grid      line   line on polar grid      circle   circle      cardioid   cardioid      limaçon   limacon      rose   four-petal rose       rose   rose      limaçon   limacon      lemniscate   lemniscate       For Problems 43 52, identify each curve, and graph it.  circle   circle      arcs of a circle   arcs of circle      semicircle   semicircle      rose   eight-petal rose      cardioid   cardioid       For Problems 53 58, graph the following polar curves. Do you recognize them?  parabola   parabola      ellipse   ellipse      hyperbola   hyperbola       For Problems 59 66, write a polar equation for the graph.    cardioid       cardioid       five-petal rose       four-petal rose       circle       circle       limacon       limacon      For Problems 67 74, find the coordinates of the intersection points of the two curves analytically. Then graph the curves to verify your answers.  , ,   , ,   ,   ,    For Problems 75 82, graph the polar curve.    polar plot      (conchoid)   conchoid     (kappa curve)  (strophoid)   strophoid     (cissoid)    polar plot       Graph the polar curves for . Explain how the value of the parameter affects the curve. The curve has large loops and small loops.  Graph the polar curves for . Explain how the value of the parameter affects the curve.   "
 },
 {
-  "id": "example-204",
+  "id": "example-203",
   "level": "2",
-  "url": "Polar-Graphs.html#example-204",
+  "url": "Polar-Graphs.html#example-203",
   "type": "Example",
   "number": "10.17",
   "title": "",
@@ -27415,9 +27424,9 @@ var ptx_lunr_docs = [
   "body": "Graph the polar equation .   polar graph    "
 },
 {
-  "id": "example-205",
+  "id": "example-204",
   "level": "2",
-  "url": "Polar-Graphs.html#example-205",
+  "url": "Polar-Graphs.html#example-204",
   "type": "Example",
   "number": "10.19",
   "title": "",
@@ -27433,9 +27442,9 @@ var ptx_lunr_docs = [
   "body": "Use a calculator to graph the polar equation . Use the window settings    polar graph spiral    "
 },
 {
-  "id": "example-206",
+  "id": "example-205",
   "level": "2",
-  "url": "Polar-Graphs.html#example-206",
+  "url": "Polar-Graphs.html#example-205",
   "type": "Example",
   "number": "10.21",
   "title": "",
@@ -27451,9 +27460,9 @@ var ptx_lunr_docs = [
   "body": " Use your calculator to graph the polar equation .  Complete the table of values for the function.                      Sketch the graph by hand on the grid at right.   polar grid      polar graph: three petals    "
 },
 {
-  "id": "example-207",
+  "id": "example-206",
   "level": "2",
-  "url": "Polar-Graphs.html#example-207",
+  "url": "Polar-Graphs.html#example-206",
   "type": "Example",
   "number": "10.23",
   "title": "",
@@ -27469,18 +27478,18 @@ var ptx_lunr_docs = [
   "body": "Graph the polar equation .   rose    "
 },
 {
-  "id": "p-6793",
+  "id": "p-6808",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6793",
+  "url": "Polar-Graphs.html#p-6808",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "limaçons cardioid "
 },
 {
-  "id": "example-208",
+  "id": "example-207",
   "level": "2",
-  "url": "Polar-Graphs.html#example-208",
+  "url": "Polar-Graphs.html#example-207",
   "type": "Example",
   "number": "10.25",
   "title": "",
@@ -27496,9 +27505,9 @@ var ptx_lunr_docs = [
   "body": "Graph the polar equation .   limacon    "
 },
 {
-  "id": "example-209",
+  "id": "example-208",
   "level": "2",
-  "url": "Polar-Graphs.html#example-209",
+  "url": "Polar-Graphs.html#example-208",
   "type": "Example",
   "number": "10.27",
   "title": "",
@@ -27514,9 +27523,9 @@ var ptx_lunr_docs = [
   "body": "Give a polar equation for each of the graphs below.    lemniscate     cardioid      "
 },
 {
-  "id": "example-210",
+  "id": "example-209",
   "level": "2",
-  "url": "Polar-Graphs.html#example-210",
+  "url": "Polar-Graphs.html#example-209",
   "type": "Example",
   "number": "10.29",
   "title": "",
@@ -27550,63 +27559,63 @@ var ptx_lunr_docs = [
   "body": " Solve each equation. Give two solutions, .               Skills Refresher Answers   ,  ,  ,  ,  ,  ,  ,  ,    "
 },
 {
-  "id": "p-6840",
+  "id": "p-6855",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6840",
+  "url": "Polar-Graphs.html#p-6855",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "line circle "
 },
 {
-  "id": "p-6847",
+  "id": "p-6862",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6847",
+  "url": "Polar-Graphs.html#p-6862",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circle circle "
 },
 {
-  "id": "p-6852",
+  "id": "p-6867",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6852",
+  "url": "Polar-Graphs.html#p-6867",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "rose rose "
 },
 {
-  "id": "p-6859",
+  "id": "p-6874",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6859",
+  "url": "Polar-Graphs.html#p-6874",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-6860",
+  "id": "p-6875",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6860",
+  "url": "Polar-Graphs.html#p-6875",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cardioid "
 },
 {
-  "id": "p-6864",
+  "id": "p-6879",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6864",
+  "url": "Polar-Graphs.html#p-6879",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-6867",
+  "id": "p-6882",
   "level": "2",
-  "url": "Polar-Graphs.html#p-6867",
+  "url": "Polar-Graphs.html#p-6882",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -28378,54 +28387,54 @@ var ptx_lunr_docs = [
   "body": " Complex Numbers  complex number  So far most of your work in mathematics has been done using the set of real numbers . We often represent the real numbers by a number line, because they can be matched up one-for-one with the points on the line. Every real number is either rational or irrational, and can be expressed as a decimal number, although irrational numbers are non-repeating, non-terminating decimals. However, the real numbers are actually a subset of a larger set of numbers called the complex numbers .  You may have first encountered complex numbers as solutions of certain quadratic equations. For example, the graph of has no -intercepts (as shown at right), because the equation has no real-valued solutions.   triangle     Applying the quadratic formula, we find The solutions of the equation are and , but they are not real numbers. Because is not a real number, the equation has no real solutions.  Imaginary Numbers  complex number imaginary number  Although square roots of negative numbers such as are not real numbers, they occur often in mathematics and its applications. Mathematicians began working with square roots of negative numbers in the sixteenth century, in their attempts to solve quadratic and cubic equations. René Descartes gave them the name imaginary numbers , which reflected the mistrust with which mathematicians regarded them at the time. Today, however, such numbers are well understood and used routinely by scientists and engineers.  We begin by defining a new number, called , whose square is .  Imaginary Unit  imaginary unit  We define the imaginary unit, , by  The letter used in this way is not a variable, it is the name of a specific number, and hence is a constant. The square root of any negative number can be written as the product of a real number and . For example, or . Any number that is the product of and a real number is called an imaginary number .  Imaginary Numbers  imaginary number  For any real number ,  Examples of imaginary numbers are and .  Write each radical as an imaginary number.       Write each radical as an imaginary number.      Just as each positive number has two real-valued square roots, every negative number has two imaginary square roots. For example, the two square roots of are and .   Complex Numbers  Consider the quadratic equation Using the quadratic formula to solve the equation, we find If we now replace by , we have The two solutions are and . These are examples of complex numbers .  Complex Numbers  complex number  A complex number can be written in the form where and are real numbers.  Examples of complex numbers are In a complex number , is called the real part real part , and is called the imaginary part imaginary part . All real numbers are also complex numbers (with imaginary part equal to zero). A complex number whose real part equals 0 is called a pure imaginary number pure imaginary number imaginary number .  The real and imaginary parts of a complex number cannot be combined. Thus, two complex numbers and are equal if and only if their real parts are equal and their imaginary parts are equal.  Equality of Complex Numbers  Two complex numbers and are equal if and only if  The solutions of the equation are . Write these solutions as complex numbers, and simplify.  Because we have , or . The solutions are and .  Use extraction of roots to solve . Write your answers as complex numbers.   Arithmetic of Complex Numbers  We add and subtract complex numbers by combining their real and imaginary parts separately. For example, The algebraic form of this rule can be stated as follows.  Sum and Difference of Complex Numbers  complex number sum of  complex number difference of  The sum of two complex numbers and is Their difference is  Subtract: .  Combine the real and imaginary parts.  Subtract:   Products of Complex Numbers  To find the product of two imaginary numbers, we use the fact that . For example,  To find the product of two complex numbers, we use the distributive law, as if the numbers were binomials.  Multiply .  We multiply each term of the first complex number by each term of the second one. Because , the last term, , can be replaced by , or , to obtain Finally, we combine the real parts and imaginary parts to obtain  Multiply .  In the Homework Probems, you will verify that the following rule holds.  Product of Complex Numbers  complex number product of  The product of two complex numbers and is  One property of real numbers that is not true of complex numbers is . This identity fails when and are both negative. For example, if , we have but so . We can avoid possible errors by writing square roots of negative numbers as imaginary numbers before attempting any calculations.   Quotients of Complex Numbers  complex number quotient of  To find the quotient of two complex numbers, we use the technique of rationalizing the denominator. First consider division by a pure imaginary number.  Divide .  Because is really a radical (remember that ), we multiply the numerator and denominator of the quotient by to obtain To write the quotient in the form , we divide into each term of the numerator. The quotient is .  Divide .  Perhaps you recall that to rationalize a binomial denominator, we multiply by its conjugate. For example, to rationalize the denominator of , we multiply numerator and denominator by . A similar technique works for dividing complex numbers. We first define the conjugate complex conjugate conjugate complex conjugate of a complex number.  Complex Conjugate  complex conjugate   complex conjugate  For any complex number , the number is called the complex conjugate of .  The conjugate of a complex number has several useful properties. In particular, the product of a nonzero complex number and its conjugate is always a positive real number.  To illustrate, we calculate the quotient . We multiply numerator and denominator by the complex conjugate of the denominator, , to obtain The denominator is then a real number, because and the quotient is  Divide .  We multiply numerator and denominator by , the complex conjugate of the denominator.  Write the quotient in the form .  In the Homework Problems you will verify the rule for dividing complex numbers.  Quotient of Complex Numbers  complex number quotient of  The quotient of two complex numbers and is   Graphing Complex Numbers  complex number graphing  complex plane  real axis  imaginary axis  Real numbers can be plotted on a number line, but to graph a complex number we use a plane, called the complex plane . In the complex plane, the real numbers lie on the horizontal or real axis , and pure imaginary numbers lie on the vertical or imaginary axis . To plot a complex number we move units from the origin in the horizontal direction and units in the vertical direction.  Plot the numbers and in the complex plane.  To plot , we move from the origin 2 units to the right and 3 units up. To plot we move from the origin 2 units to the right and 3 units down. The numbers and are plotted in the figure at right.   complex conjugates     Plot and its conjugate in the complex plane.   complex conjugates     You are used to plotting ordered pairs in the Cartesian plane, so that one point represents two real numbers, given by its coordinates. However, in the complex plane one point represents a single complex number , and the coordinates of the point are the real and imaginary parts of . For example, the point in the real plane represents the pair of real numbers and , but the point in the complex plane represents the complex number .  The modulus modulus complex number length complex number length modulus , or length, of a complex number is its distance from the origin in the complex plane. The modulus of a complex number is analogous to the absolute value of a real number, and is denoted by . If , we can use the Pythagorean theorem to compute its modulus.  Modulus of a Complex Number  modulus  The modulus of a complex number is given by  For example, the modulus of is  Plot all points in the complex plane that satisfy the equation .  The points that satisfy all lie at a distance of 4 units from the origin. In other words, they lie on a circle of radius 4 centered at the origin, as shown at right.   circle     Write an equation for the circle of radius 1 centered at the origin in the complex plane.  We can think of the graph of a complex number as the vector (or arrow) that starts at the origin and ends at the point in the complex plane, as shown in figure (a).    complex numbers as vectors     Then the sum of two complex numbers corresponds to the sum of the two vectors representing them. Figure (b) illustrates the sum of two complex numbers, and , by vector addition using the parallelogram law: we form a parallelogram with the vectors and and as adjacent sides. Their sum is the vector that forms the diagonal of the parallelogram, starting at the origin.  Illustrate the sum of and by vector addition.  Draw a vector starting at the origin and ending at the point in the complex plane to represent , and another vector ending at to represent . Now sketch the opposite sides of a parallelogram, and draw the diagonal starting at the origin, as shown at right.   complex numbers as vectors     This vector represents the sum . You can check that the vector ends at the point  To visualize subtraction, we add the opposite of the second vector, because Recall that the opposite of a vector has the same length, but it points in the opposite direction.  Illustrate , for and .   complex numbers as vectors      Zeros of Polynomials  zero of a polynomial  A polynomial with real-number coefficients may or may not have real-valued zeros. For example, the polynomial has no real-valued zeros. But a polynomial always has a zero if we allow complex numbers as inputs. Because we can add, subtract, and multiply any two complex numbers, we can evaluate a polynomial function at a complex number. Thus, we can extend the domain of any polynomial to include all complex numbers.  Evaluate the polynomial for , and simplify.  We substitute , to find Thus, , so is a zero of the polynomial.  If , evaluate .  The zeros of a quadratic polynomial , of course, are the solutions of the quadratic equation and those solutions are given by the quadratic formula, If the discriminant is negative, the two solutions are complex conjugates. For example, the solutions of the equation are or and . Thus, if we know that is one complex solution of a quadratic equation, we know that is the other solution.  We can now write a quadratic polynomial, with real coefficients, having any complex number as one of its zeros. The factored form of the quadratic polynomial with zeros and is Expanding the right side, we find Because and are both real numbers, this polynomial has real-valued coefficients.  Complex Zeros of a Quadratic Polynomial  zero of a polynomial  If , is a complex zero of a quadratic polynomial with real coefficients and lead coefficient 1, then is the other zero, and   Let . Compute and .  Find a quadratic polynomial with one zero being .   The conjugate of is , so and  The polynomial is   Let . Compute and .  Find a quadratic polynomial with one zero being .  ,   One of the most important results in mathematics is the fundamental theorem of algebra , which says that if we allow complex numbers as inputs, then every polynomial of degree has exactly complex number zeros.  Fundamental Theorem of Algebra  fundamental theorem of algebra  Let be a polynomial of degree . Then has exactly complex zeros, counting multiplicities.  A polynomial has a zero \"of multiplicity \" at if occurs times as a factor of the polynomial. For example, the polynomial has a zero of multiplicity 2 at .  As a result, every polynomial of degree can be factored as the product of linear terms.  For example, although the graph of shown at right has no -intercepts, the fundamental theorem tells us that there are four complex solutions to , and that can be factored. You can check that the four solutions to are   quartic     For example, if , then and Because each zero corresponds to a factor of the polynomial, the factored form of is The four solutions to form two complex conjugate pairs, namely and . We see again that, for every polynomial with real coefficients, the nonreal zeros always occur in complex conjugate pairs.  Find a fourth degree polynomial with real coefficients, two of whose zeros are and .  The other two zeros are and . The factored form of the polynomial is We multiply together the factors to find the polynomial. The product of is , and Finally, we multiply these two partial products to find the polynomial we seek,   Find the zeros of the polynomial .  Write the polynomial in factored form.    Review the following skills you will need for this section.   Solve.             Algebra Refresher Answers             Section 10.3 Summary  Vocabulary   Imaginary unit  Imaginary number  Complex number  Complex conjugate  Real part  Imaginary part  Complex plane  Real axis  Imaginary axis  Modulus    Concepts   Imaginary Unit  We define the imaginary unit, , by  The square root of a negative number is an imaginary number: if  A complex number is the sum of a real number and an imaginary number, .  We can perform the four arithmetic operations on complex numbers. Operations on Complex Numbers       The product of a nonzero complex number and its conjugate is always a positive real number. .  We can graph complex numbers in the complex plane.  We can visualize the sum of two complex numbers by vector addition in the complex plane.  Fundamental Theorem of Algebra  Let be a polynomial of degree . Then has exactly complex zeros.  The nonreal zeros of a polynomial with real coefficients always occur in conjugate pairs.   Study Questions   What are imaginary numbers, and why were they invented?  Simplify the following powers of : What do you notice?  Explain how the complex conjugate is used in dividing complex numbers.  If one solution of a quadratic equation is , what is the other solution?  If is a polynomial of degree , how many zeros does have? How many -intercepts could its graph have? How many complex zeros could have?   Skills   Write and simplify complex numbers #1 6  Perform arithmetic operations on complex numbers #7 34  Evaluate polynomials at complex numbers, expand polynomials #35 46  Graph complex numbers #47 58  Find a polynomial with given zeros #67 74     Homework 10-3  For Problems 1 2, write the complex number in the form , where and are real numbers.               For Problems 3 6, find the zeros of the quadratic polynomial. Write each zero in the form , where and are real numbers.       For Problems 7 10, add or subtract.       For Problems 11 20, multiply.             For Problems 21 32, divide.                Simplify.          Express with a positive exponent and simplify.      For Problems 35-40, evaluate the polynomial for the given values of the variable.                             For Problems 41 46, expand the product of polynomials.         For Problems 47 50, plot the number and its complex conjugate in the complex plane. What is the geometric relationship between complex conjugates?    complex conjugates        complex conjugates       For Problems 51 54, sketch the set of points in the complex plane.    disk      The set of all for which   inequality     The set of all for which   For Problems 55 58, illustrate addition using the parallelogram rule in the complex plane.    complex numbers as vectors        complex numbers as vectors       Prove that the product of two complex numbers and is  Prove that the quotient of two complex numbers and is  Prove the commutative laws for addition and multiplication of complex numbers:     Prove the distributive law for complex numbers:   Show that is a real number, and is an imaginary number.  Show that     Show that  Suppose and are complex numbers. If , is it necessarily true that ? Provide examples to support your conclusion. No. Let and . Then so but  Prove the triangle inequality for complex numbers:   In Problems 67 70,  Given one solution of a quadratic equation with rational coefficients, find the other solution.  Write a quadratic equation that has those solutions.           For Problems 71 74, find a fourth degree polynomial with real coefficients that has the given complex numbers as two of its zeros.        "
 },
 {
-  "id": "p-7020",
+  "id": "p-7035",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7020",
+  "url": "Complex-Numbers.html#p-7035",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "real numbers complex numbers "
 },
 {
-  "id": "p-7023",
+  "id": "p-7038",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7023",
+  "url": "Complex-Numbers.html#p-7038",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "imaginary numbers "
 },
 {
-  "id": "p-7024",
+  "id": "p-7039",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7024",
+  "url": "Complex-Numbers.html#p-7039",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-7025",
+  "id": "p-7040",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7025",
+  "url": "Complex-Numbers.html#p-7040",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": ""
 },
 {
-  "id": "p-7026",
+  "id": "p-7041",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7026",
+  "url": "Complex-Numbers.html#p-7041",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "imaginary number "
 },
 {
-  "id": "example-211",
+  "id": "example-210",
   "level": "2",
-  "url": "Complex-Numbers.html#example-211",
+  "url": "Complex-Numbers.html#example-210",
   "type": "Example",
   "number": "10.32",
   "title": "",
@@ -28441,36 +28450,36 @@ var ptx_lunr_docs = [
   "body": "Write each radical as an imaginary number.     "
 },
 {
-  "id": "p-7034",
+  "id": "p-7049",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7034",
+  "url": "Complex-Numbers.html#p-7049",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex numbers "
 },
 {
-  "id": "p-7035",
+  "id": "p-7050",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7035",
+  "url": "Complex-Numbers.html#p-7050",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex number "
 },
 {
-  "id": "p-7036",
+  "id": "p-7051",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7036",
+  "url": "Complex-Numbers.html#p-7051",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "real part imaginary part pure imaginary number "
 },
 {
-  "id": "example-212",
+  "id": "example-211",
   "level": "2",
-  "url": "Complex-Numbers.html#example-212",
+  "url": "Complex-Numbers.html#example-211",
   "type": "Example",
   "number": "10.34",
   "title": "",
@@ -28486,9 +28495,9 @@ var ptx_lunr_docs = [
   "body": "Use extraction of roots to solve . Write your answers as complex numbers. "
 },
 {
-  "id": "example-213",
+  "id": "example-212",
   "level": "2",
-  "url": "Complex-Numbers.html#example-213",
+  "url": "Complex-Numbers.html#example-212",
   "type": "Example",
   "number": "10.36",
   "title": "",
@@ -28504,9 +28513,9 @@ var ptx_lunr_docs = [
   "body": "Subtract: "
 },
 {
-  "id": "example-214",
+  "id": "example-213",
   "level": "2",
-  "url": "Complex-Numbers.html#example-214",
+  "url": "Complex-Numbers.html#example-213",
   "type": "Example",
   "number": "10.38",
   "title": "",
@@ -28531,9 +28540,9 @@ var ptx_lunr_docs = [
   "body": "One property of real numbers that is not true of complex numbers is . This identity fails when and are both negative. For example, if , we have but so . We can avoid possible errors by writing square roots of negative numbers as imaginary numbers before attempting any calculations. "
 },
 {
-  "id": "example-215",
+  "id": "example-214",
   "level": "2",
-  "url": "Complex-Numbers.html#example-215",
+  "url": "Complex-Numbers.html#example-214",
   "type": "Example",
   "number": "10.41",
   "title": "",
@@ -28549,9 +28558,9 @@ var ptx_lunr_docs = [
   "body": "Divide . "
 },
 {
-  "id": "p-7063",
+  "id": "p-7078",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7063",
+  "url": "Complex-Numbers.html#p-7078",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -28576,9 +28585,9 @@ var ptx_lunr_docs = [
   "body": "The conjugate of a complex number has several useful properties. In particular, the product of a nonzero complex number and its conjugate is always a positive real number. "
 },
 {
-  "id": "example-216",
+  "id": "example-215",
   "level": "2",
-  "url": "Complex-Numbers.html#example-216",
+  "url": "Complex-Numbers.html#example-215",
   "type": "Example",
   "number": "10.45",
   "title": "",
@@ -28594,18 +28603,18 @@ var ptx_lunr_docs = [
   "body": "Write the quotient in the form . "
 },
 {
-  "id": "p-7073",
+  "id": "p-7088",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7073",
+  "url": "Complex-Numbers.html#p-7088",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex plane real axis imaginary axis "
 },
 {
-  "id": "example-217",
+  "id": "example-216",
   "level": "2",
-  "url": "Complex-Numbers.html#example-217",
+  "url": "Complex-Numbers.html#example-216",
   "type": "Example",
   "number": "10.47",
   "title": "",
@@ -28630,27 +28639,27 @@ var ptx_lunr_docs = [
   "body": "You are used to plotting ordered pairs in the Cartesian plane, so that one point represents two real numbers, given by its coordinates. However, in the complex plane one point represents a single complex number , and the coordinates of the point are the real and imaginary parts of . For example, the point in the real plane represents the pair of real numbers and , but the point in the complex plane represents the complex number . "
 },
 {
-  "id": "p-7078",
+  "id": "p-7093",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7078",
+  "url": "Complex-Numbers.html#p-7093",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "modulus "
 },
 {
-  "id": "p-7079",
+  "id": "p-7094",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7079",
+  "url": "Complex-Numbers.html#p-7094",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "modulus "
 },
 {
-  "id": "example-218",
+  "id": "example-217",
   "level": "2",
-  "url": "Complex-Numbers.html#example-218",
+  "url": "Complex-Numbers.html#example-217",
   "type": "Example",
   "number": "10.50",
   "title": "",
@@ -28666,9 +28675,9 @@ var ptx_lunr_docs = [
   "body": "Write an equation for the circle of radius 1 centered at the origin in the complex plane. "
 },
 {
-  "id": "example-219",
+  "id": "example-218",
   "level": "2",
-  "url": "Complex-Numbers.html#example-219",
+  "url": "Complex-Numbers.html#example-218",
   "type": "Example",
   "number": "10.52",
   "title": "",
@@ -28684,9 +28693,9 @@ var ptx_lunr_docs = [
   "body": "Illustrate , for and .   complex numbers as vectors    "
 },
 {
-  "id": "example-220",
+  "id": "example-219",
   "level": "2",
-  "url": "Complex-Numbers.html#example-220",
+  "url": "Complex-Numbers.html#example-219",
   "type": "Example",
   "number": "10.54",
   "title": "",
@@ -28702,9 +28711,9 @@ var ptx_lunr_docs = [
   "body": "If , evaluate . "
 },
 {
-  "id": "example-221",
+  "id": "example-220",
   "level": "2",
-  "url": "Complex-Numbers.html#example-221",
+  "url": "Complex-Numbers.html#example-220",
   "type": "Example",
   "number": "10.56",
   "title": "",
@@ -28720,9 +28729,9 @@ var ptx_lunr_docs = [
   "body": " Let . Compute and .  Find a quadratic polynomial with one zero being .  ,  "
 },
 {
-  "id": "p-7105",
+  "id": "p-7120",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7105",
+  "url": "Complex-Numbers.html#p-7120",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -28738,9 +28747,9 @@ var ptx_lunr_docs = [
   "body": "A polynomial has a zero \"of multiplicity \" at if occurs times as a factor of the polynomial. For example, the polynomial has a zero of multiplicity 2 at . "
 },
 {
-  "id": "example-222",
+  "id": "example-221",
   "level": "2",
-  "url": "Complex-Numbers.html#example-222",
+  "url": "Complex-Numbers.html#example-221",
   "type": "Example",
   "number": "10.59",
   "title": "",
@@ -28765,9 +28774,9 @@ var ptx_lunr_docs = [
   "body": " Solve.             Algebra Refresher Answers           "
 },
 {
-  "id": "p-7128",
+  "id": "p-7143",
   "level": "2",
-  "url": "Complex-Numbers.html#p-7128",
+  "url": "Complex-Numbers.html#p-7143",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -29449,9 +29458,9 @@ var ptx_lunr_docs = [
   "body": " Polar Form for Complex Numbers  polar form  Introduction  In Section 10.3 we represented the sum of two complex numbers graphically as a vector addition. Is there a way to visualize the product or quotient of two complex numbers? One way to explore a new idea is to consider a simple case. What happens to the vector representing a complex number when we multiply the number by ?  Represent and as vectors in the complex plane.  The vectors are shown at right. We see that multiplication by corresponds to rotating the vector around the origin by in the counterclockwise direction.   complex numbers as vectors      Let and calculate and .  Plot and as points on the complex plane.     rotations of complex number     The previous example suggests that multiplication by a complex number results in a rotation. Polar coordinates are well suited to processes that involve rotation, because they use angles to specify location. Thus, we will next represent complex numbers in an alternate polar form.  Polar Form  polar form  The figure below shows the complex number , represented as a vector in the complex plane. The distance from the origin to is and the angle from the real axis to the vector is .  Using right triangle trigonometry, we see that   polar form of complex number     In general, we can write the real and imaginary parts of in terms of and as Thus, the complex number can also be written as .  Find the polar form for .  We compute    The angle is in the first quadrant, so   polar form of complex number     Thus,  Polar Form for a Complex Number  complex number polar form  polar form  argument  modulus  The complex number can be written in the polar form where and is defined by The angle is called the argument of the complex number, and is its length, or modulus .  Find the polar form for .  Of course, we can always recover the Cartesian form of a complex number from its polar form by evaluating the trigonometric functions. We'll check the result of the previous example:   Products and Quotients in Polar Form  The polar form is especially convenient for computing the product or quotient of two complex numbers.  Product in Polar Form  polar form product  If and , then   This formula, which you will prove in the Homework Problems, says that the product of two complex numbers in polar form is the complex number with modulus and argument . Thus, to find the product of two complex numbers, we multiply their lengths and add their arguments.  Find the product of and .  We multiply the moduli, , and add the arguments, . The polar form of the product is thus Note that and are the numbers from the previous Example and Exercise, namely and . You can compute the product in Cartesian form to check that you get the same result, .  The figure at right shows the graphs of and , and their product, . You can see that multiplying by rotates the graph of by the argument of , namely or .   product of complex numbers      Find the polar forms of and .  Compute the product .  ,   The quotient of two complex numbers in polar form is computed in a similar fashion.  Quotient in Polar Form  polar form quotient  If and , then   Find the quotient of and .  We divide the moduli, , and subtract the arguments, .  The polar form of the quotient is thus The figure at right shows the graphs of , and the quotient .   quotient of complex numbers     Compute the quotient for and .   Powers and Roots of Complex Numbers  Because raising to a power is just repeated multiplication, we can also use the polar form to simplify powers of a complex number. For example, if , then We compute by squaring the modulus, , and doubling the argument, , so the polar form is An analogous result holds for all positive integers , and is known as De Moivre's Theorem.  De Moivre's Theorem  DeMoivre's Theorem  If is a complex number in polar form, and is a positive integer, then  Raise to the fourth power.  We use the polar form, , and apply De Moivre's theorem. Then The Cartesian form of is thus , or . You can check that you get this same result if you compute by expanding the power.  Compute , for .  DeMoivre's Theorem also works for fractional values of , so we can compute roots of complex numbers. For example, by applying the theorem with , we see that one of the square roots of is Now, every number,whether real or complex, has two square roots. To find the other root, remember that we can add a multiple of to the argument of , that is, we can also write the polar form of as The second square root of is thus  As an example consider whose polar form is , or by adding to the argument, . The two square roots of are  You can verify that both of these numbers are square roots of , for instance, The graphs of and its two square roots are shown at right.   square roots of complex number     It is not hard to show that every number has three complex cube roots, four complex fourth roots, and so on.  Find three complex cube roots of .  One polar form of is so one of its cube roots is But by adding multiples of to the argument, we can also write the polar form of as  Applying De Moivre's theorem to each of these expressions gives us two more cube roots  The three roots are shown at right. Note that they are evenly spaced around a circle of radius 2. You can check that adding further muliples of to the argument does not generate any new cube roots.   square roots of complex number     Roots of a Complex Number  A complex number in polar form has complex th roots, given by for .   Write in polar form.  Find four complex fourth roots of .   , , ,  Review the following skills you will need for this section.   Write with fractional exponents.               Algebra Refresher Answers               Section 10.4 Summary  Vocabulary   Argument  Modulus    Concepts   Multiplying a complex number by rotates its graph by around the origin.  Polar Form for a Complex Number  The complex number can be written in the polar form where and is defined by The angle is called the argument of the complex number, and is its length, or modulus .  Product and Quotient in Polar Form  If and , then and   De Moivre's Theorem  If is a complex number in polar form, and is a positive integer, then  Roots of a Complex Number  A complex number in polar form has complex th roots, given by for .   Study Questions   What happens to the vector representing a complex number when we multiply the number by ?  If , what do these expressions represent?  If and lie on the unit circle, explain why and also lie on the unit circle.  Explain how you could use DeMoivre's theorem to compute .   Skills   Convert from polar form to standard form #5 12  Write a complex number in polar form #13-22  Find the product or quotient of two complex numbers in polar form #25 32  Find a power of a complex number #33 42  Find the complex roots of a number #43 48, 51 52, 55 60     Homework 10-4  For Problems 1 4, simplify and plot each complex number as a point on the complex plane.  and , , , ,   powers of i     and  and ,   complex numbers     and   For Problems 5 8, write the complex numbers in standard form. Give exact values for your answers.       For Problems 9 12, write the complex numbers in standard form. Round your answers to hundredths.    )   For Problems 13 16, write the complex numbers in polar form. Give exact values for your answers.  and ,  and  and ,  and   For Problems 17 22, write the complex numbers in polar form. Round your answers to hundredths.  and   and  and   and  and     and   What can you conclude about the polar forms of and ?  If then  What can you conclude about the polar forms of and ?  For Problems 25 28, find the product and the quotient .   ;     ;     For Problems 29 32, convert the complex number to polar form, then find the product and the quotient .  ;   , ;  ,   For Problems 33 38, find the power.         For Problems 39 42, use DeMoivre's theorem to find the reciprocal.       For Problems 43 48,  Find the roots and plot them in the complex plane.  Write the roots in standard form.  The square roots of .  ,  ,    square roots      The fourth roots of .  The fifth roots of .  , , ,  , , ,   fifth roots of complex number     The cube roots of .  The cube roots of .  , ,  , ,   cube roots of complex number     The square roots of .   Show that any complex number of the form lies on the unit circle in the complex plane.  Show that if , then .   Find three distinct cube roots of 1.  Find four distinct fourth roots of 1.  Find five distinct fifth roots of 1.  Find six distinct sixth roots of 1.         Find the sum of the three distinct cube roots of 1. (Hint: Plot the roots.)  Find the sum of the four distinct fourth roots of 1.  Find the sum of the five distinct fifth roots of 1.  Find the sum of the six distinct sixth roots of 1.  If is a positive integer, define for Show that . (We call an root of unity .)  Let , where is a positive integer. Show that the distinct roots of unity are .  For Problems 55-60, solve the equation.  , , ,   , , , , ,    , , ,     Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .        Let . Compute by expanding the product.  Use DeMoivre's theorem to compute .  Compare your answers to (a) and (b) to write identities for and .   Problems 63 and 64 show that multiplication by results in a rotation of .  Suppose that and that the real numbers and are both nonzero.  What is the slope of the segment in the complex plane joining the origin to ?  What is the slope of the segment in the complex plane joining the origin to ?  What is the product of the slopes of the two segments from parts (a) and (b)? What can you conclude about the angle between the two segments?    ,  Suppose that and that and are both real numbers.  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  If and , then what is the slope of the segment in the complex plane joining the origin to ? What is the slope of the segment joining the origin to ?  What can you conclude about the angle between the two segments from parts (a) and (b)?   Prove the product rule by following the steps.  Suppose and . Compute .  Now suppose that and . Write and in terms of and .  Substitute your expressions for and into your formula for .  Use the laws of sines and cosines to simplify your answer to part (c).         Let and . Prove the quotient rule as follows: Set and show that .   "
 },
 {
-  "id": "example-223",
+  "id": "example-222",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-223",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-222",
   "type": "Example",
   "number": "10.61",
   "title": "",
@@ -29467,18 +29476,18 @@ var ptx_lunr_docs = [
   "body": " Let and calculate and .  Plot and as points on the complex plane.     rotations of complex number    "
 },
 {
-  "id": "example-224",
+  "id": "example-223",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-224",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-223",
   "type": "Example",
   "number": "10.63",
   "title": "",
   "body": "Find the polar form for .  We compute    The angle is in the first quadrant, so   polar form of complex number     Thus, "
 },
 {
-  "id": "p-7264",
+  "id": "p-7279",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#p-7264",
+  "url": "Polar-Form-for-Complex-Numbers.html#p-7279",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -29494,9 +29503,9 @@ var ptx_lunr_docs = [
   "body": "Find the polar form for . "
 },
 {
-  "id": "example-225",
+  "id": "example-224",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-225",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-224",
   "type": "Example",
   "number": "10.65",
   "title": "",
@@ -29512,9 +29521,9 @@ var ptx_lunr_docs = [
   "body": " Find the polar forms of and .  Compute the product .  ,  "
 },
 {
-  "id": "example-226",
+  "id": "example-225",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-226",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-225",
   "type": "Example",
   "number": "10.67",
   "title": "",
@@ -29530,9 +29539,9 @@ var ptx_lunr_docs = [
   "body": "Compute the quotient for and . "
 },
 {
-  "id": "example-227",
+  "id": "example-226",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-227",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-226",
   "type": "Example",
   "number": "10.69",
   "title": "",
@@ -29548,9 +29557,9 @@ var ptx_lunr_docs = [
   "body": "Compute , for . "
 },
 {
-  "id": "example-228",
+  "id": "example-227",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#example-228",
+  "url": "Polar-Form-for-Complex-Numbers.html#example-227",
   "type": "Example",
   "number": "10.71",
   "title": "",
@@ -29575,9 +29584,9 @@ var ptx_lunr_docs = [
   "body": " Write with fractional exponents.               Algebra Refresher Answers             "
 },
 {
-  "id": "p-7316",
+  "id": "p-7331",
   "level": "2",
-  "url": "Polar-Form-for-Complex-Numbers.html#p-7316",
+  "url": "Polar-Form-for-Complex-Numbers.html#p-7331",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -30187,9 +30196,9 @@ var ptx_lunr_docs = [
   "body": " Chapter Summary and Review  Key Concepts   Polar Coordinates  The polar coordinates of a point in the plane are , where  is the distance from to the pole,  is the angle measured counterclockwise from the polar axis to the ray through from the pole. polar   Non-Uniqueness of Polar Coordinates   Any point with polar coordinates also has coordinates , where is an integer.  The point can also be designated by .  The pole has coordinates , for any value of .   In the polar plane, the coordinate grid lines are circles centered at the pole, with equations , and lines through the pole, with equations .   Conversion Equations   To convert from polar coordinates to Cartesian:  To convert from Cartesian coordinates to polar:  where the choice of depends on the quadrant.   To convert an equation from Cartesian to polar coordinates, we replace each with and each with with . To convert an equation from polar to Cartesian coordinates, look for expressions of the form , or .  When graphing an equation in polar coordinates, we think of sweeping around the pole in the counterclockwise direction, and at each angle the -value tells us how far the graph is from the pole.  Standard graphs in polar coordinates include circles and roses, cardioids and limaçons, lemniscates, and spirals.  To find the intersection points of the polar graphs and we solve the equation . In addition, we should always check whether the pole is a point on both graphs.  Imaginary Unit  We define the imaginary unit, , by  The square root of a negative number is an imaginary number: if  A complex number is the sum of a real number and an imaginary number, .  We can perform the four arithmetic operations on complex numbers. Operations on Complex Numbers        The product of a nonzero complex number and its conjugate is always a positive real number. .  We can graph complex numbers in the complex plane.  We can visualize the sum of two complex numbers by vector addition in the complex plane.  Fundamental Theorem of Algebra  Let be a polynomial of degree . Then has exactly complex zeros.   The nonreal zeros of a polynomial with real coefficients always occur in conjugate pairs.  Multiplying a complex number by rotates its graph by around the origin.  Polar Form for a Complex Number  The complex number can be written in the polar form where and is defined by The angle is called the argument of the complex number, and is its length, or modulus .   Product and Quotient in Polar Form  If and , then and   De Moivre's Theorem  If is a complex number in polar form, and is a positive integer, then  Roots of a Complex Number  A complex number in polar form has complex th roots, given by for .      Review Problems   For Problems 1 4, use the grid at right to plot the points whose polar coordinates are given.   polar grid      polar plot        polar plot       For Problems 5 8, convert the polar coordinates to Cartesian coordinates.       For Problems 9 12, convert the Cartesian coordinates to polar coordinates with and . Give exact values for and .       For Problems 13 16, sketch the region described by the inequalities.    region on polar grid        region on polar grid       For Problems 17 20, convert the equation into Cartesian coordinates.       For Problems 21 24, convert the equation into polar coordinates.       For Problems 25 28, use the catalog of polar graphs to help you identify and sketch the curve. Check your work by graphing with a calculator.  Circle of radius 3 centered at the origin   Circle of radius 3 centered at    For Problems 29 32, write a polar equation for the graph.    polar grid       polar grid       polar grid       polar grid      For Problems 33 36, find the coordinates of the intersection points of the two curves analytically. Then graph the curves to verify your answers.  ,   and the pole    For Problems 37 40, perform the indicated operations on the complex numbers.       For Problems 41 44, evaluate the polynomial for the given values of the variable.                     Verify that and are roots of the equation .  Verify that and are roots of the equation .  For Problems 47 50, expand the product of polynomials.       For Problems 51 52, sketch the set of points in the complex plane.       complex numbers          For Problems 53 56,  Given one solution of a quadratic equation with rational coefficients, find the other solution.  Write a quadratic equation that has those solutions.             For Problems 57 60, write the complex numbers in standard form. Give exact values for your answers.       For Problems 61 66, write the complex numbers in polar form. Give exact values for your answers.         For Problems 67 70, find the product and the quotient .         For Problems 71 74, find the power.       For Problems 75 78,  Find the roots and plot them in the complex plane.  Write the roots in standard form.   The square roots of    complex square roots     ,   The cube roots of  The cube roots of    complex cube roots     , ,   The square roots of   For Problems 79 82, solve the equation.  for        for         "
 },
 {
-  "id": "p-7434",
+  "id": "p-7449",
   "level": "2",
-  "url": "chap10-summary.html#p-7434",
+  "url": "chap10-summary.html#p-7449",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -30961,234 +30970,234 @@ var ptx_lunr_docs = [
   "body": " Glossary  Abbreviations used in this glossary: n (noun), v (verb), adj (adjective)  A    absolute value   n , the distance on the number line from a number to . For example, the absolute value of is . This fact is expressed by the equation .  absolute value equation   n , an equation in which the variable occurs between the absolute value bars.  absolute value inequality  n , an inequality in which the variable occurs between the absolute value bars.  algebraic expression  n , a meaningful combination of numbers, variables, and operation symbols. Also called an expression .  algebraic fraction  n , a fraction whose numerator and denominator are polynomials. Also called a rational expression .  algebraic solution  n , a method for solving equations (or inequalities) by manipulating the equations (or inequalities). Compare with graphical solution and numerical solution .  altitude  n , (i) the distance above the ground or above sea level; (ii) the vertical distance between the base and the opposite vertex of a triangle, pyramid, or cone; (iii) the distance between parallel sides of a parallelogram, trapezoid, or rectangle. Also called height .  amplitude  n , the vertical distance between the midline and the maximum value of a sinusoidal function.  approximation  n , an inexact result.  arclength  n , (i) the length of an arc. (ii) the distance along a curve connecting two points.  area  n , a measure of the two-dimensional space enclosed by a polygon or curve, typically expressed in terms of square units, such as square meters or square feet, etc.  associative law of addition  n , the property that when adding three or more terms, the grouping of terms does not affect the sum. We express this formally by saying that if , , and are any numbers, then .  associative law of multiplication  n , the property that when multiplying three or more factors, the grouping of factors does not affect the product. We express this formally by saying that if , , and are any numbers, then .  asymptote  n , a reference line (or curve) towards which the graph of an equation tends as the value of x and\/or y grows or diminishes without bound.  axis  n , ( plural  axes ), a line used as a reference for position and\/or orientation.  axis of symmetry  n , a line that cuts a plane figure into two parts, each a mirror image of the other.     B    back substitution   n , a technique for solving a triangular system of linear equations.  bar graph  n , a picture of numerical information in which the lengths or heights of bars are used to represent the values of variables.  base  n , (i) a number or algebraic expression that is used as a repeated factor, where an exponent indicates how many times the base is used as a factor. For example, when we write , the base is . (ii) The bottom side of a polygon. (iii) The bottom face of a solid.  base angles  n , the angles opposite the equal sides in an isosceles triangle.  binomial  n , a polynomial with exactly two terms.  binomial expression  n , a sum of two unlike terms, such as .  build (a fraction)  v , to find an equivalent fraction by multiplying numerator and denominator by the same nonzero expression.  building factor  n , an expression by which both numerator and denominator of a given fraction are multiplied (in order to build the fraction).     C    cartesian coordinate system  n , the grid that associates points in the coordinate plane to ordered pairs of numbers.  cartesian plane  n , a plane with a pair of coordinate axes. Also called a coordinate plane .  central angle (of a circle)  n , an angle with its vertex at the center of the circle and it two sides intersecting the circumference.  change in (a variable)  n , the final value (of the variable) minus the starting value.  change of variables  n , (i) a transformation of data, (ii) substitution of a new variable for a variable expression, for example, replacing with so that the equation becomes .  circle  n , the set of all points in a plane at a fixed distance (the radius ) from the center.  circumference  n , the distance around a circle.  closed interval  n , a set of numbers, denoted by , which includes all the numbers between and as well as the numbers and thtermselves, where and are real numbers and . Or the set of numbers denoted by , which includes the real number and all numbers less than , or the set of numbers denoted by , which includes the real number and all numbers greater than .  coefficient  n , the numerical factor in a term. For example, in the expression , the coefficient of is and the coefficient of is .  coefficient matrix (for a linear system with n variables in standard form)  n , the matrix of columns obtained by making each row of the matrix correspond to an equation of the system, with the coefficients of the variables filling the columns (and the constants are not represented in the matrix).  common factor (of two or more expressions)  n , a quantity that divides evenly into each of the given expressions.  common log or common logarithm (of a given positive number x)  n , the exponent, denoted by (or by ) for the number to obtain the value , that is, .  commutative law of addition  n , the property that when adding terms, the order of the terms does not affect the sum. We express this formally by saying that if and are any numbers, then .  commutative law of multiplication  n , the property that when multiplying factors, the order of the factors does not affect the product. We express this formally by saying that if and are any numbers, then .  complementary angles  n , two angles whose measures add up to .  complete the square  v , to determine the appropriate constant to add to a binomial of the form so that the result can be written in the form .  complex conjugate (of a complex number)  n , the complex number with the same real part and opposite imaginary part; for example, the complex conjugate of is .  complex fraction  n , a fraction that contains one or more fractions in its numerator and\/or in its denominator.  complex plane  n , a coordinate plane representing complex numbers, with the real parts corresponding to the values on the horizontal axis and imaginary parts corresponding to values on the vertical axis.  complex number  n , a number that can be written in the form , where and are real numbers and .  component  n , one of the values of an ordered pair or ordered triple.  compound inequality  n , a mathtermatical statterment involving two order symbols. For example, the compound inequality says that \" is less than , and is less than .\"  compound interest (or compounded interest)  n , an interest earning agreterment in which the interest payment at a given time is computed based on the sum of the original principal and any interest money already accrued.  compounding period  n , the time interval between consecutive interest payments to an account that earns interest.  concave down (of a graph)  adj , curving so that the ends of a flexible rod would need to be bent downward (compared with a straight rod) to lie along the graph. Or equivalently, curving so that a line segment tangent to the curve will lie above the curve.  concave up (of a graph)  adj , curving so that the ends of a flexible rod would need to be bent upward (compared with a straight rod) to lie along the graph. Or equivalently, curving so that a line segment tangent to the curve will lie below the curve.  concavity  n , a description of a curve as either concave up or concave down.  concentric (of circles or spheres)  adj , having the same center.  conditional equation  n , an equation that is true for some (but not all) values of the variable(s).  cone  n , a three-dimensional object whose base is a circle and whose vertex is a point above the circle. The points on the segments joining the circle to the vertex make up the cone.  congruent  adj , having all measure(s) matching exactly. For example, two line segments are congruent when they have the same length; two triangles are congruent if all three sides and all three angles of one match exactly with the corresponding parts of the other triangle.  conjugate  n , (i) (of a complex number) the complex number with the same real part and opposite imaginary part; (ii) (of a binomial expression) the binomial expression with the same first term and opposite second term.  conjugate pair  n , (i) (of a complex number) a complex number and its conjugate; (ii) (of a binomial expression) the binomial expression and its conjugate.  consistent (of a system of equations)  adj , having at least one solution.  consistent and independent (of a system of linear equations)  adj , having exactly one solution.  constant  adj , unchanging, not variable. For example, we say that the product of two variables is constant if the product is always the same number, for any values of the variables.  constant  n , a number (as opposed to a variable).  constant of proportionality  n , the quotient of two directly proportional variables, or the product of two inversely proportional variables. Also called the constant of variation .  constant of variation  see constant of proportionality.  constraint  n , an equation or inequality involving one or more variables, typically specifying a condition that must be true in the given context.  continuous  adj , without holes or gaps. For example, a curve is continuous if it can be drawn without lifting the pencil from the page, and a function is continuous if its graph can be drawn without lifting the pencil from the page.  continuous compounding  n , an interest earning agreterment in which the amount in the account is , where is the initial principal, is the annual interest rate, and is the base of the natural logarithm.  conversion factor  n , a ratio used to convert from one unit of measure to another.  coordinate  n , a number used with a number line or an axis to designate position.  coordinate axis  n , one of the two perpendicular number lines used to define the coordinates of points in the plane.  coordinate plane  n , a plane with a pair of coordinate axes. Also called the Cartesian plane or -plane .  corollary  n , a mathtermatical fact that is a consequence of a previously known fact.  costs  n , money that an individual or group must pay out. For example, the costs of a company might include payments for wages, supplies, and rent.  counting number  n , one of the numbers .  cube  n , (i) a three-dimensional box whose six faces all consist of squares; (ii) an expression raised to the power .  cube  v , to raise an expression to the power . For example, to cube means to form the product of three s: .  cube root  n , a number that when raised to the power gives a desired value. For example, is the cube root of because .  cubic  adj , having to do with the third degree of a variable or with a polynomial of degree .  cylinder  n , a three-dimensional figure in the shape of a soft drink can. The top and base are circles of identical size, and the line segments joining the two circles are perpendicular to the planes containing the two circles.     D    decay factor  n , the factor by which an initial value of a diminishing quantity is multiplied to obtain the final value.  decimal  adj , having to do with a base- numeration system.  decimal place  n , the position of a digit relative to the decimal point. For example, in the number , the digit is in the second decimal place, or hundredths place.  decimal point  n , the mark \".\" that is written between the whole number part and the fractional part of a decimal number. For example, the decimal form of is .  decreasing  adj , (i) (of numbers) moving to the left on a number line: Positive numbers are decreasing when getting closer to zero, and negative numbers are decreasing when they move farther from ; (ii) (of a graph) having decreasing values of when moving along the graph from left to right; (iii) (of a function) having a decreasing graph.  degree  n , a measure of angle equal to of a complete revolution.  degree  n , (i) (of a monomial) the exponent on the variable, or if there are more than one variable, the sum of the exponents of all the variables; (ii) (of a polynomial) the largest degree of the monomials in the polynomial.  demand equation  n , an equation that gives the quantity of some product that consumers are willing to purchase in terms of the price of that product.  denominator  n , the expression below the fraction bar in a fraction.  dependent  adj , (of a system of equations) having infinitely many solutions.  dependent variable  n , a variable whose value is determined by specifying the value of the independent variable.  descending powers  n , expressed with the term with the highest degree written first, then the term with the second highest degree, etc.  diagonal  n , (i) a line segment joining one vertex of a quadrilateral to the opposite vertex; (ii) a line segment joining opposite corners of a box; (iii) the entries of a matrix whose row number match the column number, that is, the entries  diameter  n , (i) a line segment passing through the center of a circle (or sphere) with endpoints on the circle (sphere); (ii) the length of that line segment.  difference  n , the result of a subtraction. For example, the expression represents the difference between and .  difference of squares  n , an expression of the form .  dimension  n , (i) (of a matrix) the numbers of rows and columns respectively of the matrix, also called the order of the matrix. For example, a matrix with dimension by (or ) has two rows and three columns; (ii) a measurterment defining a geometric figure, for example, the length and width are dimensions of a rectangle.  direct variation  n , a relation between two variables in which one is a constant multiple of the other (so that the ratio between the two variables is the constant), or in which one is a constant multiple of a positive exponent power of the other variable.  directed distance  n , the difference between the ending coordinate and the starting coordinate of points on a number line; the directed distance is negative if the ending value is smaller than the starting value. For example, the directed distance from to is .  directly proportional  adj , describing variables related by direct variation.  discriminant  n , (for the quadratic polynomial ) the quantity .  distributive law  n , the property that for any numbers , , and , .  divisor  n , a quantity that is divided into another quantity. For example, in the expression , the divisor is .  domain  n , the set of all acceptable inputs for a function or equation.  doubling time  n , (of exponential growth) the time required for a quantity to double in size.     E    elementary row operation  n , one of the three following operations: (1) an exchange of two rows, (2) multiplying all entries of a row by a nonzero constant, (3) adding a multiple of any row to another row.  elimination  n , a method for solving a system of equations that involves adding together the equations of the system or multiples of the equations of the system.  empirical model  n , an equation whose graph (approximately) fits a given set of data (but gives no information about the physical processes involved).  entry  n , a value in a matrix, often identified by specifying location by row and column.  equation  n , a mathtermatical statterment that two expressions are equal, for example, .  equation in two variables  n , an equation that involves two variables.  equilateral  adj , (of a polygon) having all sides of equal length.  equilibrium point  n , the point where the graphs of the supply and dtermand equations intersect  equivalent  adj , representing the same value.  equivalent equations  n , equations that have the same solutions.  equivalent expressions  n , expressions that have the same value for all permissible values of their variables.  error tolerance  n , the allowable difference between an estimate and the actual value.  evaluate  v , to determine the value of an expression when the variable in the expression is replaced by a number.  exact  adj , not simply close, but with absolutely no deviation from an intended value.  exact solution  n , the exact value of a solution, i.e., not an approximation.  exponent  n , the expression that indicates how many times the base is used as a factor. For example, when we write , the exponent is , and .  exponential decay  n , a manner of decreasing characterized by a constant decay factor for any fixed specified interval of time, or equivalently, modeled by a function with the form , where and are positive constants and .  exponential equation  n , an equation containing a variable expression as an exponent.  exponential function  n , a function which can be put in the form , where is a nonzero constant and is a positive constant.  exponential growth  n , growth characterized by a constant growth factor for any fixed specified interval of time, or equivalently, modeled by a function with the form , where and are positive constants and .  exponential notation  n , a way of writing an expression that involves radicals and\/or reciprocals in terms of powers that have fractional and\/or negative exponents. For example, the exponential notation for is .  expression  see algebraic expression.  extraction of roots  n , a method used to solve (quadratic) equations.  extraneous solution  n , a value that is not a solution to a given equation but is a solution to an equation derived from the original.  extrapolate  v , to estimate the value of a dependent variable for a value of the independent variable that is outside the range of the data.     F    factor  n , an expression that divides evenly into another expression. For example, is a factor of .  factor  v , to write as a product. For example, to factor we write .  factored form  n , (i) (of a polynomial or algebraic expression) an expression written as a product of two or more factors, where the algebraic factors cannot be further factored; (ii) (of an equation of a parabola) the form .  feasible solution  n , an ordered pair which satisfies the constraints of a linear programming problterm.  FOIL  n , an acronym for a method for computing the product of two binomials: F stands for First terms, O for Outer terms, I for Inner terms, and L stands for Last terms.  formula  n , an equation involving two or more variables.  fraction bar  n , the line segment separating the numerator and denominator of a fraction. In the fraction , the fraction bar is the short segment between the and the .  function  n , a relationship between two variables in which each value of the input variable determines a unique value of the output variable.  function of two variables  n , a relationship between an output variable and an ordered pair of input variables in which each ordered pair of the input variables determines a unique value of the output variable.  function value  n , an output value of a function.  fundamental principle of fractions  n , the property that the value of a fraction is unchanged when both its numerator and denominator are multiplied by the same nonzero value. We express this formally by saying if is any number, and and are nonzero numbers, then .     G    Gaussian reduction  n , the process of performing eltermentary row operations on a matrix to obtain a matrix in echelon form.  geometrically similar  adj , having the same shape (but possibly different size).  graph  n , a visual representation of the values of a variable or variables, typically drawn on a number line or on the Cartesian plane.  graph  v , to draw a graph.  graph of an equation (or inequality)  n , a picture of the solutions of an equation (or inequality) using a number line or coordinate plane.  graphical solution  n , a method for solving equations (or inequalities) by reading values off an appropriate graph. Compare with algebraic solution and numerical solution .  greatest common factor (GCF) of two or more expressions  n , the largest factor that divides evenly into each expression.  growth factor  n , the factor by which an initial value of a growing quantity is multiplied to obtain the final value.  guidepoints  n , individual points that are plotted to help draw a graph (by hand).     H    half-life  n , (of exponential decay) the time required for a quantity to diminish to half its original size.  half-plane  n , either of the two regions of a plane that has been divided into two regions by a straight line  height  see altitude.  hemisphere  n , half a sphere (on one side or the other of a plane passing through the center).  horizontal asymptote  n , a line parallel to the -axis toward which the graph of an equation tends as the value of grows or diminishes without bound.  horizontal axis  n , the horizontal coordinate axis. Often called the - axis .  horizontal intercept  n , where the graph meets the horizontal axis. Also called - intercept .  horizontal line test  n , a test to determine if a function has an inverse function: If no horizontal line intersects the graph of a function more than once, then the inverse is also a function.  horizontal translation (of a graph)  n , the result of moving all points of the graph straight left (or all straight right) by the same distance.  hypotenuse  n , the longest side of a right triangle. (It is always the side opposite the right angle.)     I    identity  n , an equation that is true for all permissible values of the variable(s).  imaginary axis  n , the vertical axis in the complex plane.  imaginary number  n , a complex number of the form , where is a real number and .  imaginary part  n , (of a complex number) the coefficient of when the complex number is written in the form , where and are real numbers. For example, the imaginary part of is .  imaginary unit  n , a nonreal number denoted by and which satisfies , that is, is defined to be a square root of .  inconsistent  adj , (of a system of equations) having no solution.  increasing  adj , (i) (of numbers) moving to the right on a number line: Positive numbers are increasing when moving farther from zero, and negative numbers are increasing when they move closer to ; (ii) (of a graph) having increasing values of y when moving along the graph from left to right; (iii) (of a function) having an increasing graph.  independent  adj , (i) (of a system of linear equations in variables) having different graphs for the two equations; (ii) (of a system of linear equations in variables) having no one equation equal to a linear combination of the others.  independent variable  n , a variable whose value determines the value of the dependent variable.  index  n , (of a radical) the number at the left of the radical symbol that indicates the type of root involved; for example, the index of in the expression indicates a cube root.  inequality  n , a mathematical statement of the form , , , , or .  inflation  n , a persistent increase over time of consumer prices.  inflection point  n , a point where a graph changes concavity.  initial value  n , the starting value of a variable, often when .  input  n , value of the independent variable.  inscribed angle (of a circle)  n , an angle with its vertex at the center of the circle and it two sides intersecting the circumference.  integer  n , a whole number or the negative of a whole number.  intercept  n , a point where a graph meets a coordinate axis.  intercept method  n , a method for graphing a line by finding its horizontal and vertical intercepts.  interest  n , money paid for the use of money. For example, after borrowing money, the borrower must pay the lender not only the original amount of money borrowed (known as the principal ) but also the interest on the principal.  interest rate  n , the fraction of the principal that is paid as interest for one year. For example, an interest rate of means that the interest for one year will be of the principal.  interpolate  v , to estimate the value of a dependent variable based on data that include both larger and smaller values of the independent variable.  intersection point  n , a point in common to two graphs.  interval  n , a set of numbers that includes all the numbers between and (possibly but not necessarily including and\/or ), where and are real numbers. Or the set of all numbers less than (and possibly including ), or the set all numbers greater than (and possibly including ).  interval notation  n , notation used to designate an interval. For example, is the interval notation to designate all the real numbers from to , including both and .  inverse function  n , a function whose inputs are outputs of a given function , and whose outputs are the corresponding inputs of .  inverse square law  n , a physical law that states that the magnitude of some quantity is inversely proportional to the square of the distance to the source of that quantity.  inverse variation  n , a relation between two variables in which one is a constant divided by the other (so that the product of the two variables is the constant), or in which one is a constant divided by a positive exponent power of the other.  inversely proportional  adj , describing variables related by inverse variation.  irrational number  n , a number that is not rational but does correspond to a point on the number line.  isolate  v , (a variable or expression) to create an equivalent equation (or inequality) in which the variable or expression is by itself on one side of the equation (or inequality).  isosceles triangle  n , a triangle with two sides of equal length.     J    joint variation  n , a relationship among three or more variables in which whenever all but two variables are held constant, those remaining two variables vary directly or inversely with each other.     L    law of exponents  n , a basic property about powers and exponents.  lead coefficient  n , (of a polynomial) the coefficient of term with highest degree.  leading entry  n , (of a row in a matrix) the first nonzero entry of the row, when read from left to right.  leg  n , one of the two shorter sides of a right triangle, or the length of that side.  like fractions  n , fractions with equivalent denominators.  like terms  n , terms with equivalent variable parts.  line segment  n , the points on a single line that join two specified points (the endpoints ) on that line.  linear combination  n , (i) the sum of a nonzero constant multiple of one equation and a nonzero constant multiple of a second equation; (ii) the sum of constant multiples of quantities.  linear combinations  n , a procedure for solving a linear system of equations which requires taking one or more linear combination of equations.  linear equation  n , an equation such as or in which each term has degree or .  linear programming  n , the study of optimizing functions with constraint equations and\/or constraint inequalities.  linear regression  n , the process of using a line to predict values of a (dependent) variable.  linear system  n , a set of linear equations.  linear term  n , a term that consists of a constant times a variable.  log  see  logarithm .  log scale  n , a scale of measurement that uses the logarithm of a physical quantity rather than the quantity itself.  log-log paper  n , a type of graph paper in which both horizontal and vertical axes use log scales.  lowest common denominator (LCD)  n , (of two or more fractions) the smallest denominator that is a multiple of the denominators in the given fractions.  lowest common multiple (LCM)  n , (of two or more counting numbers) the smallest counting number that the given numbers divide into evenly.     M    mathematical model  n , a representation of relationships among quantities using equations, tables, and\/or graphs.  maximum  adj , largest or greatest.  maximum  n , largest value.  maximum value  n , (of a variable expression) the largest value that the expression can equal when the variable is allowed to assume all possible values.  mean  n , the average of a set of numbers, computed by adding the numbers and dividing by how many are in the set. For example, the mean of , , and is .  mechanistic model  n , an equation whose graph (approximately) fits a given set of data and whose parameters are estimates about the physical properties involved.  median  n , the middle number in a set of numbers when written in increasing order. For example, the median of , , and is . If the set has two numbers in the middle when written in order, then the median of the set is the mean of those middle numbers. For example, the median of , , , and is .  minimum  adj , least or smallest.  minimum  n , smallest value.  minimum value  n , (of a variable expression) the smallest value that the expression can equal when the variable is allowed to assume all possible values.  mode  n , the number that occurs most frequently in a set of numbers. For example, the mode of , , , and is .  model  n , a mathematical equation or graph or table used to represent a situation in the world or a situation described in words. For example, the equation is a model for the relationship among the variables of profit, revenue, and cost.  model  v , to create a model.  monomial  n , an algebraic expression with only one term.  monotonic  adj , (of a function or graph) either never increasing or never decreasing.  multiplicative property (of absolute values)  n , the property that for any real numbers and .  multiplicity  n , (i) (of a zero of a polynomial) the number of times the corresponding linear factor appears as a factor of the polynomial. For example, is a zero of multiplicity one and is a zero of multiplicity two for the polynomial because factors as ; (ii) (of a solution to a polynomial equation) the multiplicity of the zero of the corresponding polynomial. For example, is a solution of multiplicity one and is a solution of multiplicity two for the polynomial equation because the equation can be written in the standard form , where factors as .     N    natural base  n , the irrational number , which is useful in calculus, statistics, and other mathematical topics.  natural exponential function  n , the function , where is the natural base.  natural log or natural logarithm  n , the logarithm with base , where is the natural base.  natural number  n , a counting number.  negative number  n , a number that is less than zero.  negative of  n , the opposite of.  net change  n , the final value of a variable minus the initial value. For example, if an object's weight decreases from pounds to pounds, the net change in weight is pounds.  nonstrict inequality  n , a mathematical statement of the form or .  normal  adj , perpendicular.  th root  n , a number which when raised to the power gives a desired value. When , then is an th root of .  number line  n , a line with coordinates marked on it representing the real numbers.  numerator  n , the expression in a fraction that is above the fraction bar.  numerical solution  n , a method for solving equations by reading values from an appropriate table of values. Compare with algebraic solution and graphical solution .     O    objective function  n , (in linear programming) the function that is to be optimized.  one-to-one  adj , (pertaining to a function) having the property that every output comes from one and only one input.  open interval  n , a set of numbers denoted by , which includes all the numbers between and but not the numbers and themselves, where and are real numbers and . Or the set of numbers denoted by , which includes all numbers less than , or the set of numbers denoted by , which includes all numbers greater than .  operation  n , addition, subtraction, multiplication, or division (or raising to a power or taking a root).  opposite  n , the number on the number line that is on the other side of and at the same distance. For example, and are opposites.  order  n , (of a matrix) the numbers of rows and columns respectively of the matrix, also called the dimension of the matrix. For example, a matrix with order by (or ) has two rows and three columns.  order of operations  n , rules that prescribe the order in which to carry out the operations in an expression.  order symbol  n , one of the four symbols , or , or , or .  ordered pair  n , a pair of numbers enclosed in parentheses, like this: . Often used to specify a point or a location on the coordinate plane.  ordered triple  n , three numbers enclosed in parentheses, like this: . Often used to specify a solution to a system of equations in three variables or a point in three-dimensional space.  origin  n , the point where the coordinate axes meet. It has coordinates (0, 0).  output  n , value of the dependent variable.     P    parabola  n , a curve with the shape of the graph of , where .  parallel lines  n , lines that lie in the same plane but do not intersect, even if extended indefinitely.  parallelogram  n , a quadrilateral whose opposite sides are parallel.  parameter  n , a constant in an equation that varies in other equations of the same form. For example, in the slope-intercept formula , the constants and are parameters.  percent  n , a fraction with (an understood) denominator of . For example, to express the fraction as a percent, we write or say \" percent.\"  percent increase  n , the change in some quantity, expressed as a percentage of the starting amount.  perfect square  n , the square of an integer. For example, is a perfect square because .  perimeter  n , the distance around the edge or boundary of a two-dimensional figure.  perpendicular lines  n , lines that meet and form right angles with each other.  piecewise defined function  n , a function defined by multiple expressions, one expression for each specified interval of the independent variable.  point-slope form  n , one way of writing the equation for a line: or .  polygon  n , a simple closed geometric figure in the plane consisting of line segments (called sides) that meet only at their endpoints. For example, triangles are polygons with three sides.  polynomial  n , a sum of terms, where each term is either a constant or a constant times a power of a variable, and the exponent is a positive integer.  polynomial function  n , a function that can be written in the form where are constants.  positive number  n , a number greater than zero.  power  n , an expression that consists of a base and an exponent.  power function  n , a function of the form , where and are constants.  prime (or prime number)  n , an integer greater than whose only whole number factors are itself and .  principal  n , the original amount of money deposited in an account or borrowed from a lender. (Compare with interest .)  principal root  see  principal square root .  principal square root  n , the nonnegative square root.  product  n , the result of a multiplication. For example, the expression represents the product of and .  profit  n , the money left after counting all the revenue that came in and subtracting the costs that had to be paid out.  proportion  n , an equation in which each side is a ratio.  proportional  see  directly proportional , inversely proportional .  pyramid  n , a three-dimensional object like a cone except that the base is a polygon instead of a circle.  Pythagorean theorem: If the legs of a right triangle are and and the hypotenuse is , then .     Q    quadrant  n , any of the four regions into which the coordinate axes divide the plane. The first quadrant consists of the points where both coordinates are positive; the second quadrant where the first coordinate is negative and the second coordinate positive; the third quadrant consists of points where both coordinates are negative; and the fourth quadrant contains the points where the first coordinate is positive and the second coordinate is negative.  quadratic  adj , relating to the square of a variable (or of an expression).  quadratic equation  n , an equation that equates zero to a polynomial of degree (or an equivalent equation).  quadratic formula  n , the formula that gives the solutions of the quadratic equation , namely .  quadratic function  n , a function of the form .  quadratic polynomial  n , a polynomial whose degree is .  quadratic regression  n , the process of using a quadratic function to predict values of a (dependent) variable.  quadratic term  n , a term whose degree is .  quadratic trinomial  n , a polynomial of degree and having exactly terms.  quadrilateral  n , a polygon with exactly sides.  quartic  adj , (pertaining to a polynomial) having degree .  quotient  n , the result of a division. For example, the expression represents the quotient of and .     R    radical  n , a root of a number, such as a square root or a cube root.  radical expression  n , a square root, a cube root, or an th root.  radical equation  n , an equation in which the variable appears under a radical sign.  radical notation  n , notation using the radical sign to indicate a root.  radical sign  n , the symbol , which is used to indicate the principal square root, or the symbol , which is used to indicate cube root, or the symbol , which is used to indicate th root, where is a counting number greater than .  radicand  n , the expression under a radical sign.  radius  n , (i) a line segment from the center of a circle (or sphere) to a point on the circle (sphere), (ii) the length of that line segment.  raise to a power  v , use as a repeated factor, for example, to raise to the power is the same as multiplying .  range  n , (i) the set of all output values for a function; (ii) the difference between the largest and smallest values in a set of data.  rate  n , a ratio that compares two quantities (typically) with different units.  rate of change  n , the ratio of change in the dependent variable to the corresponding change in the independent variable, measuring the change in the dependent variable per unit change in the independent variable.  ratio  n , (i) a way to compare two quantities by division, (ii) a fraction. For example, \"the ratio of to \" can be written as .  rational  adj , having to do with ratios.  rational exponent  n , an exponent that is a rational number. For example, the expression has a rational exponent of , and .  rational expression  n , a ratio of two polynomials. Also called an algebraic fraction .  rational function  n , a function of the form , where and are polynomial functions.  rational number  n , a number that can be expressed as the ratio of two integers.  rationalize the denominator  v , to find an equivalent fraction that contains no radical in the denominator. For example, when we rationalize , we obtain .  real axis  n , the horizontal axis in the complex plane.  real line  see  number line .  real part  n , (of a complex number) the term which does not include when the complex number is written in the form , where and are real numbers. For example, the real part of is .  real number  n , a number that corresponds to a point on a number line.  reciprocal (of a number)  n , the result of dividing by the given number. For example, the reciprocal of is . Two numbers are reciprocals of each other when their product is .  rectangle  n , a four-sided figure (in the plane) with four right angles. The opposite sides are equal in length and parallel.  reduce a fraction  v , to find an equivalent fraction whose numerator and denominator share no common factors (other than and ).  reduced row echelon form  n , (of a matrix) a row echelon form matrix that also satisfies (1) the leading entry in each nonzero row is a , (2) each leading is the only nonzero entry in its column.  reflection (of a point or graph across a line)  n , the transformation that replaces each point of a graph with its mirror image on the other side of the line.  regression line  n , the line used for linear regression.  regular polygon  n , a polygon all of whose sides have equal length and all of whose angles are congruent.  repeating decimal  n , a decimal representation of a number that, at some point becomes periodic, that is, repeats the same sequence of digits indefinitely.  restricted domain  n , a domain of a function that does not include all real numbers.  revenue  n , money that an individual or group receives. For example, a person might have revenues from both a salary and from earnings on investments.  right angle  n , an angle of .  right triangle  n , a triangle that includes one right angle.  root  n , the solution to an equation. See also cube root ; th root ; principal square root ; square root .  round  v , to give an approximate value of a number by choosing the nearest number of a specified form. For example, to round to two decimal places, we use .  row echelon form  n , (of a matrix) a matrix in which (1) only zeros occur below each nonzero leading entry, (2) the leading entry in any row is to the right of any leading entry above it, and (3) any row consisting entirely of zeros is below all rows with any nonzero entry.     S    satisfy  v , to make an equation true (when substituted for the variable or variables). For example, the number satisfies the equation .  scale  n , marked values on a number line or axes to establish how wide an interval of numbers is represented by a physical distance on the number line.  scale  v , (i) to determine the scale on an axis or axes; (ii) to multiply (measurements) by a fixed number (the scale factor ).  scale factor  n , a fixed number by which measurements or values are multiplied.  scaling exponent  n , the exponent defining direct variation or a power function. For example, if , then the scaling exponent is .  scatterplot  n , a type of graph used to represent pairs of data values. Each pair of data values provides the coordinates for one point on the scatterplot. Also called a scatter diagram .  scientific notation  n , a standard method for writing very large or very small numbers that uses powers of . For example, the scientific notation for is .  semicircle  n , half a circle (on one side or the other of a diameter).  signed number  n , a positive or negative number.  significant digit  n , (in the decimal form of a number) a digit warranted by the accuracy of the measuring device. When the decimal point is present, the significant digits are all those from the leftmost nonzero digit to the rightmost digit after the decimal point. When there is no decimal point, the significant digits are all those from the leftmost nonzero digit to the rightmost nonzero digit. For example, has five significant digits, but has only four significant digits. Also called significant figure .  significant figure  see  significant digit .  similar  see  geometrically similar .  simplify  v , to write in an equivalent but simpler or more convenient form. For example, we can simplify the expression to .  sinusoidal  adj , having the shape of a sine or cosine graph.  slope  n , a measure of the steepness of a line or of the rate of change of one variable with respect to another.  slope-intercept form  n , a standard form for the equation of a nonvertical line: .  slope-intercept method  n , a method for graphing a line that uses the slope and the -intercept.  solution  n , a value for the variable that makes an equation or an inequality true. A solution to an equation in two variables is an ordered pair that satisfies the equation. A solution to a system is an ordered pair that satisfies each equation of the system.  solve  v , (i) (an equation) to find any and all solutions to an equation, inequality, or system; (ii) (a formula) to write an equation for one variable in terms of any other variables, for example, when we solve for to get ; (iii) (a triangle) to find the measures of all three sides and of all three angles.  sphere  n , a three-dimensional object in the shape of a ball. A sphere consists of all the points in space at a fixed distance (the radius) from the center of the sphere.  square  n , (i) any expression times itself; (ii) a rectangle whose sides are all the same length.  square  v , to multiply by itself, that is, to raise to the power .  square matrix  n , a matrix with the same number of rows as columns.  square root  n , a number that when squared gives a desired value. For example, is a square root of because .  standard form  n , (i) (of a linear, quadratic, or other polynomial equation) an equation in which the right side is 0, so the equation has the form ; (ii) (of a system of linear equations) a system in which the variables occur only on the left side of each equation and in alphabetic order.  straight angle  n , an angle of half a full rotation, or .  strict inequality  n , a mathematical statement of the form or .  subscript  n , a small number written below and to the right of a variable. For example, in the equation , the variable has the subscript .  substitution method  n , a method for solving a system of equations that begins by expressing one variable in terms of the other.  sum  n , the result of an addition. For example, the expression represents the sum of and .  surface area  n , the total area of the faces or surfaces of a three-dimensional object.  supplementary angles  n , two angles whose measures add up to .  supply equation  n , an equation that gives the quantity of some product that producers are willing to produce in terms of the price of that product.  symmetry  n , a geometric property of having sameness on opposite sides of a line (or plane) or about a point.  system of equations  n , two or more equations involving the same variables.     T    term  n , (i) (in a sum) a quantity that is added to another. For example, in the expression , , , and are the terms; (ii) an algebraic expression that is not a sum or difference, for example, 4x is one term.  test point  n , (for an inequality) a point in the plane (or on a number line) used to determine which side of the plane (or number line) is included in the solution.  transform  v , to apply a transformation .  transformation  n , (i) (of data) applying a function to one or both components in a set of data, typically so that the resulting data becomes approximately linear; (ii) (of a graph) a change that occurs in the graph of an equation when one or more of the parameters defining that equation are altered.  translation  n , (of a graph or geometric figure) sliding horizontally and\/or vertically without rotating or changing any shapes.  trapezoid  n , a four-sided figure in the plane with one pair of parallel sides.  triangle  n , a three-sided figure in the plane.  triangle inequality  n , the inequality , which is true for any two real numbers and .  triangular form  n , a system of linear equations in which the first variable does not occur in the second equation, the first two variables do not occur in the third equation (and the first three variables do not occur in the fourth equation if there are more than three variables, and so on).  trigonometric equation  n , an equation involving at least one of the trigonometric functions or ratios.  trinomial  n , a polynomial with exactly three terms.  turning point  n , (of a graph) where the graph either changes from increasing to decreasing or vice versa.     U    union  n , the set obtained by collecting all the elements of one set along with all the elements of another set.  unit circle  n , a circle of radius unit (usually centered at the origin).  unlike fractions  n , fractions whose denominators are not equivalent.  unlike terms  n , terms with variable parts that are not equivalent.  upper triangular form  n , (of a matrix) a matrix with all zeros in the lower left corner. More precisely, the entry in the th row and th column is whenever .     V    variable  adj , not constant, subject to change.  variable  n , a numerical quantity that changes over time or in different situations.  variation  see  direct variation ; inverse variation .  verify  v , to prove the truth or validity of an assertion.  vertex  n , ( plural  vertices ), (i) a point where two sides of a polygon meet; (ii) a corner or extreme point of a geometric object; (iii) the highest or lowest point on a parabola.  vertex angle  n , the angle between the equal sides in an isosceles triangle.  vertex form  n , one way of writing a quadratic equation, , which displays the vertex, .  vertical asymptote  n , a line parallel to the -axis toward which the graph of an equation tends as the value of approaches .  vertical axis  n , the vertical coordinate axis. Often called the -axis .  vertical compression  n , (of a graph) the result of replacing each point of the graph with the point obtained by scaling the -coordinate by a fixed factor (when that factor is between and ).  vertical intercept  n , where the graph meets the vertical axis. Also called the -intercept .  vertical line test  n , a test to decide whether a graph defines a function: A graph represents a function if and only if every vertical line intersects the graph in at most one point.  vertical stretch  n , (of a graph) the result of replacing each point of the graph with the point obtained by scaling the -coordinate by a fixed factor (when that factor is greater than ).  vertical translation  n , (of a graph) the result of moving all points of the graph straight up (or all straight down) by the same distance.  vertices  n , the plural of vertex .  volume  n , a measure of the three-dimensional space enclosed by a three-dimensional object, typically expressed in terms of cubic units, such as cubic meters or cubic feet.     W    whole number  n , one of the numbers .     X    -axis  see  horizontal axis .  -intercept  see  horizontal intercept .  -plane  see  coordinate plane .     Y    -axis  see  vertical axis .  -intercept  see  vertical intercept .     Z    zero  n , (i) the number , with the property that when it is added to any other number, the resulting sum is equal to that second number; (ii) an input to a function which yields an output of .  zero-factor principle  n , The statement that, if the product of two numbers is zero, then one (or both) of the numbers must be zero.     "
 },
 {
-  "id": "p-7645",
+  "id": "p-7660",
   "level": "2",
-  "url": "glossary.html#p-7645",
+  "url": "glossary.html#p-7660",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n v adj "
 },
 {
-  "id": "p-7646",
+  "id": "p-7661",
   "level": "2",
-  "url": "glossary.html#p-7646",
+  "url": "glossary.html#p-7661",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n expression n rational expression n graphical solution numerical solution n height n n n n n n n n plural axes n "
 },
 {
-  "id": "p-7663",
+  "id": "p-7678",
   "level": "2",
-  "url": "glossary.html#p-7663",
+  "url": "glossary.html#p-7678",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n n v n "
 },
 {
-  "id": "p-7672",
+  "id": "p-7687",
   "level": "2",
-  "url": "glossary.html#p-7672",
+  "url": "glossary.html#p-7687",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n coordinate plane n n n transformation n radius n n n n n n n n n v n n n n n n n n adj adj n adj n n adj n n adj adj adj n n constant of variation n adj n n n n n Cartesian plane -plane n n n n v n adj n "
 },
 {
-  "id": "p-7727",
+  "id": "p-7742",
   "level": "2",
-  "url": "glossary.html#p-7727",
+  "url": "glossary.html#p-7742",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n adj n n adj n n n n adj n n n n n n n order n n adj n n n n n "
 },
 {
-  "id": "p-7753",
+  "id": "p-7768",
   "level": "2",
-  "url": "glossary.html#p-7753",
+  "url": "glossary.html#p-7768",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n n adj n adj n n n v adj n n n n n n n n n v "
 },
 {
-  "id": "p-7779",
+  "id": "p-7794",
   "level": "2",
-  "url": "glossary.html#p-7779",
+  "url": "glossary.html#p-7794",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n v n n n F O I L n n n n n n "
 },
 {
-  "id": "p-7791",
+  "id": "p-7806",
   "level": "2",
-  "url": "glossary.html#p-7791",
+  "url": "glossary.html#p-7806",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n adj n v n n algebraic solution numerical solution n n n "
 },
 {
-  "id": "p-7801",
+  "id": "p-7816",
   "level": "2",
-  "url": "glossary.html#p-7801",
+  "url": "glossary.html#p-7816",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n axis n intercept n n n "
 },
 {
-  "id": "p-7812",
+  "id": "p-7827",
   "level": "2",
-  "url": "glossary.html#p-7812",
+  "url": "glossary.html#p-7827",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n adj adj adj n n n n n n n n n n n n principal n v n n n n n n adj n v n "
 },
 {
-  "id": "p-7845",
+  "id": "p-7860",
   "level": "2",
-  "url": "glossary.html#p-7845",
+  "url": "glossary.html#p-7860",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n "
 },
 {
-  "id": "p-7847",
+  "id": "p-7862",
   "level": "2",
-  "url": "glossary.html#p-7847",
+  "url": "glossary.html#p-7862",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n n n endpoints n n n n n n n logarithm n n n n "
 },
 {
-  "id": "p-7867",
+  "id": "p-7882",
   "level": "2",
-  "url": "glossary.html#p-7867",
+  "url": "glossary.html#p-7882",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n adj n n n n n adj n n n n v n adj n n "
 },
 {
-  "id": "p-7885",
+  "id": "p-7900",
   "level": "2",
-  "url": "glossary.html#p-7885",
+  "url": "glossary.html#p-7900",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n n n n adj n n n n algebraic solution graphical solution "
 },
 {
-  "id": "p-7899",
+  "id": "p-7914",
   "level": "2",
-  "url": "glossary.html#p-7899",
+  "url": "glossary.html#p-7914",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n adj n n n n dimension n n n n n n "
 },
 {
-  "id": "p-7912",
+  "id": "p-7927",
   "level": "2",
-  "url": "glossary.html#p-7912",
+  "url": "glossary.html#p-7927",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n n n n n n n n n n n n n n n interest principal square root n n n n directly proportional inversely proportional n "
 },
 {
-  "id": "p-7940",
+  "id": "p-7955",
   "level": "2",
-  "url": "glossary.html#p-7940",
+  "url": "glossary.html#p-7955",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n first quadrant second quadrant third quadrant fourth quadrant adj n n n n n n n n adj n "
 },
 {
-  "id": "p-7953",
+  "id": "p-7968",
   "level": "2",
-  "url": "glossary.html#p-7953",
+  "url": "glossary.html#p-7968",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n n n v n n n n adj n n algebraic fraction n n v n number line n n n n v n n n n n n n n n n cube root th root principal square root square root v n "
 },
 {
-  "id": "p-7991",
+  "id": "p-8006",
   "level": "2",
-  "url": "glossary.html#p-7991",
+  "url": "glossary.html#p-8006",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "v n v scale factor n n n scatter diagram n n n n significant figure significant digit geometrically similar v adj n n n n v n n v n n n n n n n n n n n n n "
 },
 {
-  "id": "p-8027",
+  "id": "p-8042",
   "level": "2",
-  "url": "glossary.html#p-8027",
+  "url": "glossary.html#p-8042",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n v transformation n n n n n n n n n "
 },
 {
-  "id": "p-8040",
+  "id": "p-8055",
   "level": "2",
-  "url": "glossary.html#p-8040",
+  "url": "glossary.html#p-8055",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n n n n n "
 },
 {
-  "id": "p-8046",
+  "id": "p-8061",
   "level": "2",
-  "url": "glossary.html#p-8046",
+  "url": "glossary.html#p-8061",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "adj n direct variation inverse variation v n vertices n n n n -axis n n -intercept n n n n vertex n "
 },
 {
-  "id": "p-8063",
+  "id": "p-8078",
   "level": "2",
-  "url": "glossary.html#p-8063",
+  "url": "glossary.html#p-8078",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "n "
 },
 {
-  "id": "p-8065",
+  "id": "p-8080",
   "level": "2",
-  "url": "glossary.html#p-8065",
+  "url": "glossary.html#p-8080",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "horizontal axis horizontal intercept coordinate plane "
 },
 {
-  "id": "p-8069",
+  "id": "p-8084",
   "level": "2",
-  "url": "glossary.html#p-8069",
+  "url": "glossary.html#p-8084",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vertical axis vertical intercept "
 },
 {
-  "id": "p-8072",
+  "id": "p-8087",
   "level": "2",
-  "url": "glossary.html#p-8072",
+  "url": "glossary.html#p-8087",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
