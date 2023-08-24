@@ -15,26 +15,71 @@ var ptx_lunr_docs = [
   "url": "section-1.html",
   "type": "Section",
   "number": "1.1",
-  "title": "Scratch section",
-  "body": "Scratch section   nothing here   Section 2.1   A 10 foot ladder is leaning againt a wall. If the base of the ladder is too far from the wall, the base can slide out. If the ladder base is too close to the wall, there’s a risk that the ladder could tip over backwards. For safety reasons, the leaning ladder should make a angle with the ground.  How far should the base of the ladder be from the wall?  How far up the wall will the top of the ladder reach?   triangle    The distance between the base of the ladder and the wall is the side adjacent to the angle. We can find the side adjacent to the angle angle by using the cosine ratio. The base of the ladder should be about 2.6 feet from the wall.  To find side how far up the wall the ladder will reach, we could use the Pythagorean theorem now, but it is better to use given information, rather than values we have calculated, to find the other unknown parts. We will use the sine ratio. The ladder will reach about 9.7 feet.   Matterhorn Chocolate bars are sold in boxes shaped like triangular prisms. The two triangular ends are equilateral triangles with 8 centimeter sides. When stacking Matterhorn chocolates on a shelf, the second level is raised by a triangle's altitude above the level below it. Find the exact length of the triangle's altitude, .  The altitude divides the triangle into two 30-60-90 right triangles as shown in the figure. The altitude is adjacent to the angle, and the hypotenuse of the right triangle is 8 centimeters. Thus,  Equilateral triangle  The altitude is centimeters long, which is approximately 6.9 cm.     "
+  "title": "chap 2",
+  "body": "chap 2        design     ch 3  Babylonian astronomers kept detailed records on the motion of the planets, and were able to predict solar and lunar eclipses. All of this required familiarity with angular distances measured on the celestial sphere.  To find angles and distances on this imaginary sphere, astronomers invented techniques that are now part of spherical trigonometry . The laws of sines and cosines were first stated in this context, in a slightly different form than the laws for plane trigonometry.   sphere   On a sphere, a great-circle lies in a plane passing through the sphere's center. It gives the shortest distance between any two points on a sphere, and is the analogue of a straight line on a plane. A spherical angle is formed where two such arcs intersect, and a spherical triangle is made up of three arcs of great circles.  The spherical law of sines was first introduced in Europe in 1464 by Johann Muller, also known as Regiomontus, who wrote:  \"You, who wish to study great and wondrous things, who wonder about the movement of the stars, must read these theorems about triangles. ... For no one can bypass the science of triangles and reach a satisfying knowledge of the stars.\"   Ch 4  A Lissajous figure Lissajous figure is a pattern produced by the intersection of two sinusoidal curves at right angles to each other. They are the curves you often see on oscilloscope screens depicting compound vibration.  Lissajous    They were first studied by the American mathematician Nathaniel Bowditch in 1815, and later by the French mathematician Jules-Antoine Lissajous, and today have applications in physics and astronomy, medicine, music, and many other fields.    Review Problems  For Problems 27 30, fill in the correct inequality symbol.  If , then .  If , then .  If , then .  If , then .     "
 },
 {
-  "id": "example-1",
+  "id": "p-4",
   "level": "2",
-  "url": "section-1.html#example-1",
-  "type": "Example",
-  "number": "1.1",
+  "url": "section-1.html#p-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": " A 10 foot ladder is leaning againt a wall. If the base of the ladder is too far from the wall, the base can slide out. If the ladder base is too close to the wall, there’s a risk that the ladder could tip over backwards. For safety reasons, the leaning ladder should make a angle with the ground.  How far should the base of the ladder be from the wall?  How far up the wall will the top of the ladder reach?   triangle    The distance between the base of the ladder and the wall is the side adjacent to the angle. We can find the side adjacent to the angle angle by using the cosine ratio. The base of the ladder should be about 2.6 feet from the wall.  To find side how far up the wall the ladder will reach, we could use the Pythagorean theorem now, but it is better to use given information, rather than values we have calculated, to find the other unknown parts. We will use the sine ratio. The ladder will reach about 9.7 feet.  "
+  "body": "spherical trigonometry "
 },
 {
-  "id": "example-2",
+  "id": "p-5",
   "level": "2",
-  "url": "section-1.html#example-2",
-  "type": "Example",
-  "number": "1.2",
+  "url": "section-1.html#p-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": "Matterhorn Chocolate bars are sold in boxes shaped like triangular prisms. The two triangular ends are equilateral triangles with 8 centimeter sides. When stacking Matterhorn chocolates on a shelf, the second level is raised by a triangle's altitude above the level below it. Find the exact length of the triangle's altitude, .  The altitude divides the triangle into two 30-60-90 right triangles as shown in the figure. The altitude is adjacent to the angle, and the hypotenuse of the right triangle is 8 centimeters. Thus,  Equilateral triangle  The altitude is centimeters long, which is approximately 6.9 cm.  "
+  "body": "great-circle "
+},
+{
+  "id": "p-8",
+  "level": "2",
+  "url": "section-1.html#p-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Lissajous figure "
+},
+{
+  "id": "exercise-1",
+  "level": "2",
+  "url": "section-1.html#exercise-1",
+  "type": "Exercise",
+  "number": "27",
+  "title": "",
+  "body": "If , then . "
+},
+{
+  "id": "exercise-2",
+  "level": "2",
+  "url": "section-1.html#exercise-2",
+  "type": "Exercise",
+  "number": "28",
+  "title": "",
+  "body": "If , then . "
+},
+{
+  "id": "exercise-3",
+  "level": "2",
+  "url": "section-1.html#exercise-3",
+  "type": "Exercise",
+  "number": "29",
+  "title": "",
+  "body": "If , then . "
+},
+{
+  "id": "exercise-4",
+  "level": "2",
+  "url": "section-1.html#exercise-4",
+  "type": "Exercise",
+  "number": "30",
+  "title": "",
+  "body": "If , then . "
 },
 {
   "id": "solutions-1",
