@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,8 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/0.31/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.31</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.31/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.31/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.31/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -616,62 +598,64 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-180" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-181" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Products of Polynomials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Special Products</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Factoring Cubics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Modeling with Polynomials</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Problem Set 8.1</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Modeling with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Approximations with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Special Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-185" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Factoring Cubics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-186" class="internal"><span class="codenumber">8.1.7</span> <span class="title">An Application of Cubic Splines</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.8</span> <span class="title">Problem Set 8.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="AlgebraicFractions.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-185" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-186" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="AlgebraicFractions.html#section-8-2-exercises" class="internal"><span class="codenumber">8.2.5</span> <span class="title">Problem Set 8.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="OperationsAlgebraicFractions.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Operations on Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-196" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-197" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#section-8-3-exercises" class="internal"><span class="codenumber">8.3.8</span> <span class="title">Problem Set 8.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="MoreOperationsonFractions.html" class="internal"><span class="codenumber">8.4</span> <span class="title">More Operations on Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-196" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-197" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-200" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-201" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#section-8-4-exercises" class="internal"><span class="codenumber">8.4.5</span> <span class="title">Problem Set 8.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="EquationswithFractions.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Equations with Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-200" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-201" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-206" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-207" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="EquationswithFractions.html#section-8-5-exercises" class="internal"><span class="codenumber">8.5.7</span> <span class="title">Problem Set 8.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap8-summary.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Chapter 8 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-206" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-207" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-208" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-209" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap8-summary.html#chap8-rev-problems" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Chapter 8 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -683,60 +667,60 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="PropertiesOfLines.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Properties of Lines</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-208" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-209" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-211" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-212" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PropertiesOfLines.html#section-9-1-exercises" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Problem Set 9.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Distance-and-Midpoint.html" class="internal"><span class="codenumber">9.2</span> <span class="title">The Distance and Midpoint Formulas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-211" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-212" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Finding the Midpoint</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.4</span> <span class="title">The Midpoint Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.5</span> <span class="title">Circles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.6</span> <span class="title">General Form for Circles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Problem Set 9.2</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.3</span> <span class="title">The Midpoint Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.4</span> <span class="title">Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.5</span> <span class="title">General Form for Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-218" class="internal"><span class="codenumber">9.2.6</span> <span class="title">Finding an Equation for a Circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-219" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Problem Set 9.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Ellipses.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Conic Sections: Ellipses</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-218" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-219" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-222" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-223" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Ellipses.html#section-9-3-exercises" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Problem Set 9.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Hyperbolas.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Conic Sections: Hyperbolas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-222" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-223" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-227" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-228" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Hyperbolas.html#section-9-4-exercises" class="internal"><span class="codenumber">9.4.6</span> <span class="title">Problem Set 9.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="NonlinearSystems.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Nonlinear Systems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-227" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-228" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-230" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-231" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="NonlinearSystems.html#section-9-5-exercises" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Problem Set 9.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap9-summary.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Chapter 9 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-230" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-231" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-232" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-233" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap9-summary.html#chap9-rev-problems" class="internal"><span class="codenumber">9.6.3</span> <span class="title">Chapter 9 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -748,41 +732,43 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicFunctions.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Logarithmic Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-232" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-233" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-237" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-238" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicFunctions.html#section-10-1-exercises" class="internal"><span class="codenumber">10.1.6</span> <span class="title">Problem Set 10.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicScales.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Logarithmic Scales</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-237" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-238" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-242" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-243" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicScales.html#section-10-2-exercises" class="internal"><span class="codenumber">10.2.6</span> <span class="title">Problem Set 10.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="The-Natural-Base.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Natural Base</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-242" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-243" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Solving Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Continuous Compounding</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Homework 10.3</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Properties of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-247" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Solving Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-248" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-249" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Continuous Compounding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-250" class="internal"><span class="codenumber">10.3.7</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.8</span> <span class="title">Homework 10.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="chap10-summary.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Chapter 10 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-247" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-248" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-251" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-252" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap10-summary.html#chap10-rev-problems" class="internal"><span class="codenumber">10.4.3</span> <span class="title">Chapter 10 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -797,37 +783,37 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-getting-started.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-249" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-250" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-251" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-253" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-254" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-255" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Entering-Expressions.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Entering Expressions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-252" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-253" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-254" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-255" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-260" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-261" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-262" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-263" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Graphing an Equation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-260" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-261" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-262" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-264" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-265" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-266" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-more-graphing.html" class="internal"><span class="codenumber">A.4</span> <span class="title">More graphing</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-263" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-264" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-267" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-268" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -846,34 +832,34 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="chap10-summary"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.4</span><span class="space"> </span><span class="title">Chapter 10 Summary and Review</span>
 </h2>
-<section class="subsection" id="subsection-247"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-251"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.4.1</span><span class="space"> </span><span class="title">Glossary</span>
 </h3>
-<div class="para logical" id="p-11135"><ul class="disc cols2">
-<li id="li-6993"><div class="para" id="p-11136">inverse function</div></li>
-<li id="li-6994"><div class="para" id="p-11137">logarithmic function</div></li>
-<li id="li-6995"><div class="para" id="p-11138">logarithmic equation</div></li>
-<li id="li-6996"><div class="para" id="p-11139">compound interest</div></li>
-<li id="li-6997"><div class="para" id="p-11140">natural base</div></li>
-<li id="li-6998"><div class="para" id="p-11141">natural log function</div></li>
-<li id="li-6999"><div class="para" id="p-11142">natural exponential function</div></li>
-<li id="li-7000"><div class="para" id="p-11143">continuous compounding</div></li>
-<li id="li-7001"><div class="para" id="p-11144">log scale</div></li>
-<li id="li-7002"><div class="para" id="p-11145">pH value</div></li>
-<li id="li-7003"><div class="para" id="p-11146">decibels</div></li>
-<li id="li-7004"><div class="para" id="p-11147">Richter magnitude</div></li>
-</ul></div></section><section class="subsection" id="subsection-248"><h3 class="heading hide-type">
+<div class="para logical" id="p-10115"><ul class="disc cols2">
+<li id="li-6496"><div class="para" id="p-10116">inverse function</div></li>
+<li id="li-6497"><div class="para" id="p-10117">logarithmic function</div></li>
+<li id="li-6498"><div class="para" id="p-10118">logarithmic equation</div></li>
+<li id="li-6499"><div class="para" id="p-10119">compound interest</div></li>
+<li id="li-6500"><div class="para" id="p-10120">natural base</div></li>
+<li id="li-6501"><div class="para" id="p-10121">natural log function</div></li>
+<li id="li-6502"><div class="para" id="p-10122">natural exponential function</div></li>
+<li id="li-6503"><div class="para" id="p-10123">continuous compounding</div></li>
+<li id="li-6504"><div class="para" id="p-10124">log scale</div></li>
+<li id="li-6505"><div class="para" id="p-10125">pH value</div></li>
+<li id="li-6506"><div class="para" id="p-10126">decibels</div></li>
+<li id="li-6507"><div class="para" id="p-10127">Richter magnitude</div></li>
+</ul></div></section><section class="subsection" id="subsection-252"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.4.2</span><span class="space"> </span><span class="title">Key Concepts</span>
 </h3>
-<div class="para logical" id="p-11148"><ol class="decimal">
-<li id="li-7005"><div class="para" id="p-derived-li-7005">Two functions are called <em class="emphasis">inverse functions</em> if each function undoes the effects of the other.</div></li>
-<li id="li-7006"><div class="para" id="p-derived-li-7006">We can make a table of values for the inverse function by interchanging the columns of a table for <span class="process-math">\(f\text{.}\)</span>
+<div class="para logical" id="p-10128"><ol class="decimal">
+<li id="li-6508"><div class="para" id="p-derived-li-6508">Two functions are called <em class="emphasis">inverse functions</em> if each function undoes the effects of the other.</div></li>
+<li id="li-6509"><div class="para" id="p-derived-li-6509">We can make a table of values for the inverse function by interchanging the columns of a table for <span class="process-math">\(f\text{.}\)</span>
 </div></li>
-<li id="li-7007"><div class="para" id="p-derived-li-7007">If we apply the inverse function to the output of <span class="process-math">\(f\text{,}\)</span> we return to the original input value.</div></li>
-<li id="li-7008"><div class="para" id="p-derived-li-7008">The graphs of <span class="process-math">\(f\)</span> and its inverse function are <dfn class="terminology">symmetric about the line <span class="process-math">\(y = x\)</span></dfn>.</div></li>
-<li id="li-7009"><div class="para" id="p-derived-li-7009">We define the logarithmic function, <span class="process-math">\(g(x) = \log_b x\text{,}\)</span> which takes the log base <span class="process-math">\(b\)</span> of its input values. The log function <span class="process-math">\(g(x) = \log_b x\)</span> is the inverse of the exponential function <span class="process-math">\(f(x) = b^x\text{.}\)</span>
+<li id="li-6510"><div class="para" id="p-derived-li-6510">If we apply the inverse function to the output of <span class="process-math">\(f\text{,}\)</span> we return to the original input value.</div></li>
+<li id="li-6511"><div class="para" id="p-derived-li-6511">The graphs of <span class="process-math">\(f\)</span> and its inverse function are <dfn class="terminology">symmetric about the line <span class="process-math">\(y = x\)</span></dfn>.</div></li>
+<li id="li-6512"><div class="para" id="p-derived-li-6512">We define the logarithmic function, <span class="process-math">\(g(x) = \log_b x\text{,}\)</span> which takes the log base <span class="process-math">\(b\)</span> of its input values. The log function <span class="process-math">\(g(x) = \log_b x\)</span> is the inverse of the exponential function <span class="process-math">\(f(x) = b^x\text{.}\)</span>
 </div></li>
-<li id="li-7010"><div class="para" id="p-derived-li-7010"><article class="assemblage assemblage-like" id="assemblage-177"><div class="para logical" id="p-11149">
+<li id="li-6513"><div class="para" id="p-derived-li-6513"><article class="assemblage assemblage-like" id="assemblage-178"><div class="para logical" id="p-10129">
 <div class="para">Because <span class="process-math">\(f (x) = b^x\)</span> and <span class="process-math">\(g(x) = \log_b x\)</span> are inverse functions for <span class="process-math">\(b\gt 0, ~b\ne 1\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -882,16 +868,16 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article></div></li>
-<li id="li-7011"><div class="para" id="p-11150">A <dfn class="terminology">logarithmic equation</dfn> is one where the variable appears inside of a logarithm. We can solve logarithmic equations by converting to exponential form.</div></li>
-<li id="li-7012"><div class="para" id="p-derived-li-7012"><article class="assemblage assemblage-like" id="assemblage-178"><h4 class="heading"><span class="title">Steps for Solving Logarithmic Equations.</span></h4>
-<div class="para logical" id="p-11151"><ol class="decimal">
-<li id="li-7013"><div class="para" id="p-derived-li-7013">Use the properties of logarithms to combine all logs into one log.</div></li>
-<li id="li-7014"><div class="para" id="p-derived-li-7014">Isolate the log on one side of the equation.</div></li>
-<li id="li-7015"><div class="para" id="p-derived-li-7015">Convert the equation to exponential form.</div></li>
-<li id="li-7016"><div class="para" id="p-derived-li-7016">Solve for the variable.</div></li>
-<li id="li-7017"><div class="para" id="p-derived-li-7017">Check for extraneous solutions.</div></li>
+<li id="li-6514"><div class="para" id="p-10130">A <dfn class="terminology">logarithmic equation</dfn> is one where the variable appears inside of a logarithm. We can solve logarithmic equations by converting to exponential form.</div></li>
+<li id="li-6515"><div class="para" id="p-derived-li-6515"><article class="assemblage assemblage-like" id="assemblage-179"><h4 class="heading"><span class="title">Steps for Solving Logarithmic Equations.</span></h4>
+<div class="para logical" id="p-10131"><ol class="decimal">
+<li id="li-6516"><div class="para" id="p-derived-li-6516">Use the properties of logarithms to combine all logs into one log.</div></li>
+<li id="li-6517"><div class="para" id="p-derived-li-6517">Isolate the log on one side of the equation.</div></li>
+<li id="li-6518"><div class="para" id="p-derived-li-6518">Convert the equation to exponential form.</div></li>
+<li id="li-6519"><div class="para" id="p-derived-li-6519">Solve for the variable.</div></li>
+<li id="li-6520"><div class="para" id="p-derived-li-6520">Check for extraneous solutions.</div></li>
 </ol></div></article></div></li>
-<li id="li-7018"><div class="para logical" id="p-11152">
+<li id="li-6521"><div class="para logical" id="p-10132">
 <div class="para">The natural base is an irrational number called <span class="process-math">\(e\text{,}\)</span> where</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -899,24 +885,24 @@ e\approx 2.71828182845
 \end{equation*}
 </div>
 </div></li>
-<li id="li-7019"><div class="para" id="p-11153">The <dfn class="terminology">natural exponential function</dfn> is the function <span class="process-math">\(f(x) = e^x\text{.}\)</span> The <dfn class="terminology">natural log function</dfn> is the function <span class="process-math">\(g(x) = \ln x = \log_e x\text{.}\)</span>
+<li id="li-6522"><div class="para" id="p-10133">The <dfn class="terminology">natural exponential function</dfn> is the function <span class="process-math">\(f(x) = e^x\text{.}\)</span> The <dfn class="terminology">natural log function</dfn> is the function <span class="process-math">\(g(x) = \ln x = \log_e x\text{.}\)</span>
 </div></li>
-<li id="li-7020"><div class="para" id="p-derived-li-7020"><article class="assemblage assemblage-like" id="assemblage-179"><h4 class="heading"><span class="title">Conversion Formulas for the Natural Base.</span></h4>
-<div class="para logical" id="p-11154"><div class="displaymath process-math">
+<li id="li-6523"><div class="para" id="p-derived-li-6523"><article class="assemblage assemblage-like" id="assemblage-180"><h4 class="heading"><span class="title">Conversion Formulas for the Natural Base.</span></h4>
+<div class="para logical" id="p-10134"><div class="displaymath process-math">
 \begin{equation*}
 y = \ln x~~~~~~\text{if and only if}~~~~~~e^y = x
 \end{equation*}
 </div></div></article></div></li>
-<li id="li-7021"><div class="para" id="p-derived-li-7021"><article class="assemblage assemblage-like" id="assemblage-180"><h4 class="heading"><span class="title">Properties of Natural Logarithms.</span></h4>
-<div class="para logical" id="p-11155">
+<li id="li-6524"><div class="para" id="p-derived-li-6524"><article class="assemblage assemblage-like" id="assemblage-181"><h4 class="heading"><span class="title">Properties of Natural Logarithms.</span></h4>
+<div class="para logical" id="p-10135">
 <div class="para">If <span class="process-math">\(x, y \gt 0\text{,}\)</span> then</div>
 <ol class="decimal">
-<li id="li-7022"><div class="para" id="p-derived-li-7022"><span class="process-math">\(\displaystyle \ln{(xy)} = \ln{x} + \ln{y}\)</span></div></li>
-<li id="li-7023"><div class="para" id="p-derived-li-7023"><span class="process-math">\(\displaystyle \ln\dfrac{x}{y} = \ln x - \ln y\)</span></div></li>
-<li id="li-7024"><div class="para" id="p-derived-li-7024"><span class="process-math">\(\displaystyle \ln{x^k} = k \ln x \)</span></div></li>
+<li id="li-6525"><div class="para" id="p-derived-li-6525"><span class="process-math">\(\displaystyle \ln{(xy)} = \ln{x} + \ln{y}\)</span></div></li>
+<li id="li-6526"><div class="para" id="p-derived-li-6526"><span class="process-math">\(\displaystyle \ln\dfrac{x}{y} = \ln x - \ln y\)</span></div></li>
+<li id="li-6527"><div class="para" id="p-derived-li-6527"><span class="process-math">\(\displaystyle \ln{x^k} = k \ln x \)</span></div></li>
 </ol>
 </div>
-<div class="para logical" id="p-11156">
+<div class="para logical" id="p-10136">
 <div class="para">also</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -924,10 +910,10 @@ y = \ln x~~~~~~\text{if and only if}~~~~~~e^y = x
 \end{equation*}
 </div>
 </div></article></div></li>
-<li id="li-7025"><div class="para" id="p-11157">We use the natural logarithm to solve exponential equations with base <span class="process-math">\(e\text{.}\)</span>
+<li id="li-6528"><div class="para" id="p-10137">We use the natural logarithm to solve exponential equations with base <span class="process-math">\(e\text{.}\)</span>
 </div></li>
-<li id="li-7026"><div class="para" id="p-derived-li-7026"><article class="assemblage assemblage-like" id="assemblage-181"><h4 class="heading"><span class="title">Exponential Growth and Decay.</span></h4>
-<div class="para logical" id="p-11158">
+<li id="li-6529"><div class="para" id="p-derived-li-6529"><article class="assemblage assemblage-like" id="assemblage-182"><h4 class="heading"><span class="title">Exponential Growth and Decay.</span></h4>
+<div class="para logical" id="p-10138">
 <div class="para">The function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -937,7 +923,7 @@ P(t) = P_0 e^{kt}
 <div class="para">describes  exponential growth if <span class="process-math">\(k \gt 0\text{,}\)</span> and exponential decay if <span class="process-math">\(k \lt 0\text{.}\)</span>
 </div>
 </div></article></div></li>
-<li id="li-7027"><div class="para logical" id="p-11159">
+<li id="li-6530"><div class="para logical" id="p-10139">
 <div class="para">
 <dfn class="terminology">Continuous compounding</dfn>: The amount accumulated in an account after <span class="process-math">\(t\)</span> years at interest rate <span class="process-math">\(r\)</span> compounded continuously is given by</div>
 <div class="displaymath process-math">
@@ -947,9 +933,9 @@ A(t) = Pe^{rt}
 </div>
 <div class="para">where <span class="process-math">\(P\)</span> is the principal invested.</div>
 </div></li>
-<li id="li-7028"><div class="para" id="p-11160">A <dfn class="terminology">log scale</dfn> is useful for plotting values that vary greatly in magnitude. We plot the log of the variable, instead of the variable itself.</div></li>
-<li id="li-7029"><div class="para" id="p-11161">A log scale is a <dfn class="terminology">multiplicative scale</dfn>: Each increment of equal length on the scale indicates that the value is multiplied by an equal amount.</div></li>
-<li id="li-7030"><div class="para logical" id="p-11162">
+<li id="li-6531"><div class="para" id="p-10140">A <dfn class="terminology">log scale</dfn> is useful for plotting values that vary greatly in magnitude. We plot the log of the variable, instead of the variable itself.</div></li>
+<li id="li-6532"><div class="para" id="p-10141">A log scale is a <dfn class="terminology">multiplicative scale</dfn>: Each increment of equal length on the scale indicates that the value is multiplied by an equal amount.</div></li>
+<li id="li-6533"><div class="para logical" id="p-10142">
 <div class="para">The pH value of a substance is defined by the formula</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -958,7 +944,7 @@ A(t) = Pe^{rt}
 </div>
 <div class="para">where <span class="process-math">\([H^+]\)</span> denotes the concentration of hydrogen ions in the substance.</div>
 </div></li>
-<li id="li-7031"><div class="para logical" id="p-11163">
+<li id="li-6534"><div class="para logical" id="p-10143">
 <div class="para">The loudness of a sound is measured in decibels, <span class="process-math">\(D\text{,}\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -967,7 +953,7 @@ D=10 \log_{10}\left(\frac{I}{10^{-12}}\right)
 </div>
 <div class="para">where <span class="process-math">\(I\)</span> is the intensity of its sound waves (in watts per square meter).</div>
 </div></li>
-<li id="li-7032"><div class="para logical" id="p-11164">
+<li id="li-6535"><div class="para logical" id="p-10144">
 <div class="para">The Richter magnitude, <span class="process-math">\(M\text{,}\)</span> of an earthquake is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -976,109 +962,109 @@ M=\log_{10}\left(\frac{A}{A_0} \right)
 </div>
 <div class="para">where <span class="process-math">\(A\)</span> is the amplitude of its seismographic trace and <span class="process-math">\(A_0\)</span> is the amplitude of the smallest detectable earthquake.</div>
 </div></li>
-<li id="li-7033"><div class="para" id="p-11165">A <em class="emphasis">difference</em> of <span class="process-math">\(K\)</span> units on a logarithmic scale corresponds to a <em class="emphasis">factor</em> of <span class="process-math">\(10^K\)</span> units in the value of the variable.</div></li>
+<li id="li-6536"><div class="para" id="p-10145">A <em class="emphasis">difference</em> of <span class="process-math">\(K\)</span> units on a logarithmic scale corresponds to a <em class="emphasis">factor</em> of <span class="process-math">\(10^K\)</span> units in the value of the variable.</div></li>
 </ol></div></section><section class="exercises" id="chap10-rev-problems"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">10.4.3</span><span class="space"> </span><span class="title">Chapter 10 Review Problems</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-349">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-378"><div class="para" id="p-11166">For Problems 1 and 2, make a table of values for the function and sketch a graph.</div></div>
+<div class="introduction" id="introduction-374"><div class="para" id="p-10146">For Problems 1 and 2, make a table of values for the function and sketch a graph.</div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-2381"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-11167"><span class="process-math">\(f(x)=\log_4 {x}\)</span></div></article><article class="exercise exercise-like" id="exercise-2382"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-11168"><span class="process-math">\(f(x)=\log_{1/4} {x}\)</span></div></article>
+<article class="exercise exercise-like" id="exercise-2379"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-10147"><span class="process-math">\(f(x)=\log_4 {x}\)</span></div></article><article class="exercise exercise-like" id="exercise-2380"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-10148"><span class="process-math">\(f(x)=\log_{1/4} {x}\)</span></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-350">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-379"><div class="para" id="p-11169">For Problems 3 and 4, simplify.</div></div>
+<div class="introduction" id="introduction-375"><div class="para" id="p-10149">For Problems 3 and 4, simplify.</div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-2383"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para logical" id="p-11170"><ol class="lower-alpha">
-<li id="li-7034"><div class="para" id="p-derived-li-7034"><span class="process-math">\(\displaystyle 10^{\log_6 n}\)</span></div></li>
-<li id="li-7035"><div class="para" id="p-derived-li-7035"><span class="process-math">\(\displaystyle \log_2{4^{x+3}}\)</span></div></li>
-</ol></div></article><article class="exercise exercise-like" id="exercise-2384"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para logical" id="p-11171"><ol class="lower-alpha">
-<li id="li-7036"><div class="para" id="p-derived-li-7036"><span class="process-math">\(\displaystyle \log {100^x}\)</span></div></li>
-<li id="li-7037"><div class="para" id="p-derived-li-7037"><span class="process-math">\(\displaystyle 3^{2 \log_3 t}\)</span></div></li>
+<article class="exercise exercise-like" id="exercise-2381"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para logical" id="p-10150"><ol class="lower-alpha">
+<li id="li-6537"><div class="para" id="p-derived-li-6537"><span class="process-math">\(\displaystyle 10^{\log_6 n}\)</span></div></li>
+<li id="li-6538"><div class="para" id="p-derived-li-6538"><span class="process-math">\(\displaystyle \log_2{4^{x+3}}\)</span></div></li>
+</ol></div></article><article class="exercise exercise-like" id="exercise-2382"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para logical" id="p-10151"><ol class="lower-alpha">
+<li id="li-6539"><div class="para" id="p-derived-li-6539"><span class="process-math">\(\displaystyle \log {100^x}\)</span></div></li>
+<li id="li-6540"><div class="para" id="p-derived-li-6540"><span class="process-math">\(\displaystyle 3^{2 \log_3 t}\)</span></div></li>
 </ol></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-351">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-380"><div class="para" id="p-11172">For Problems 5-12, solve.</div></div>
+<div class="introduction" id="introduction-376"><div class="para" id="p-10152">For Problems 5-12, solve.</div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-2385"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="p-11173"><span class="process-math">\(\log_{3}\dfrac{1}{3}=y \)</span></div></article><article class="exercise exercise-like" id="exercise-2386"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="p-11175"><span class="process-math">\(\log_{3}x=4 \)</span></div></article><article class="exercise exercise-like" id="exercise-2387"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para" id="p-11176"><span class="process-math">\(\log_{2}y=-1 \)</span></div></article><article class="exercise exercise-like" id="exercise-2388"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="para" id="p-11178"><span class="process-math">\(\log_{5}y=-2 \)</span></div></article><article class="exercise exercise-like" id="exercise-2389"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<div class="para" id="p-11179"><span class="process-math">\(\log_{b} 16=2 \)</span></div></article><article class="exercise exercise-like" id="exercise-2390"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="para" id="p-11181"><span class="process-math">\(\log_{b}9=\dfrac{1}{2} \)</span></div></article><article class="exercise exercise-like" id="exercise-2391"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<div class="para" id="p-11182"><span class="process-math">\(\log_{4}\left(\dfrac{1}{2}t+1\right)=-2 \)</span></div></article><article class="exercise exercise-like" id="exercise-2392"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<div class="para" id="p-11184"><span class="process-math">\(\log_{2}(3x-1)=3 \)</span></div></article>
+<article class="exercise exercise-like" id="exercise-2383"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="p-10153"><span class="process-math">\(\log_{3}\dfrac{1}{3}=y \)</span></div></article><article class="exercise exercise-like" id="exercise-2384"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="p-10155"><span class="process-math">\(\log_{3}x=4 \)</span></div></article><article class="exercise exercise-like" id="exercise-2385"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="p-10156"><span class="process-math">\(\log_{2}y=-1 \)</span></div></article><article class="exercise exercise-like" id="exercise-2386"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="para" id="p-10158"><span class="process-math">\(\log_{5}y=-2 \)</span></div></article><article class="exercise exercise-like" id="exercise-2387"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="para" id="p-10159"><span class="process-math">\(\log_{b} 16=2 \)</span></div></article><article class="exercise exercise-like" id="exercise-2388"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="para" id="p-10161"><span class="process-math">\(\log_{b}9=\dfrac{1}{2} \)</span></div></article><article class="exercise exercise-like" id="exercise-2389"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="para" id="p-10162"><span class="process-math">\(\log_{4}\left(\dfrac{1}{2}t+1\right)=-2 \)</span></div></article><article class="exercise exercise-like" id="exercise-2390"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="para" id="p-10164"><span class="process-math">\(\log_{2}(3x-1)=3 \)</span></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-352">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-381"><div class="para" id="p-11185">For Problems 13-16, solve.</div></div>
+<div class="introduction" id="introduction-377"><div class="para" id="p-10165">For Problems 13-16, solve.</div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-2393"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<div class="para" id="p-11186"><span class="process-math">\(\log_3 x + \log_3 4 = 2\)</span></div></article><article class="exercise exercise-like" id="exercise-2394"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
-<div class="para" id="p-11188"><span class="process-math">\(\log_2(x + 2) - \log_2 3 = 6\)</span></div></article><article class="exercise exercise-like" id="exercise-2395"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
-<div class="para" id="p-11189"><span class="process-math">\(\log_{10}(x-1) + \log_{10} (x+2) = 1\)</span></div></article><article class="exercise exercise-like" id="exercise-2396"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
-<div class="para" id="p-11191"><span class="process-math">\(\log_{10}(x + 2) - \log_{10} (x-3) = 1\)</span></div></article>
+<article class="exercise exercise-like" id="exercise-2391"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<div class="para" id="p-10166"><span class="process-math">\(\log_3 x + \log_3 4 = 2\)</span></div></article><article class="exercise exercise-like" id="exercise-2392"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<div class="para" id="p-10168"><span class="process-math">\(\log_2(x + 2) - \log_2 3 = 6\)</span></div></article><article class="exercise exercise-like" id="exercise-2393"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<div class="para" id="p-10169"><span class="process-math">\(\log_{10}(x-1) + \log_{10} (x+2) = 1\)</span></div></article><article class="exercise exercise-like" id="exercise-2394"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<div class="para" id="p-10171"><span class="process-math">\(\log_{10}(x + 2) - \log_{10} (x-3) = 1\)</span></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-353">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-382"><div class="para" id="p-11192">For Problems 17-22, solve.</div></div>
+<div class="introduction" id="introduction-378"><div class="para" id="p-10172">For Problems 17-22, solve.</div></div>
 <div class="exercisegroup-exercises cols3">
-<article class="exercise exercise-like" id="exercise-2397"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
-<div class="para" id="p-11193"><span class="process-math">\(e^x=4.7 \)</span></div></article><article class="exercise exercise-like" id="exercise-2398"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
-<div class="para" id="p-11195"><span class="process-math">\(e^x=0.5 \)</span></div></article><article class="exercise exercise-like" id="exercise-2399"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
-<div class="para" id="p-11196"><span class="process-math">\(\ln x =6.02 \)</span></div></article><article class="exercise exercise-like" id="exercise-2400"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
-<div class="para" id="p-11198"><span class="process-math">\(\ln x=-1.4 \)</span></div></article><article class="exercise exercise-like" id="exercise-2401"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
-<div class="para" id="p-11199"><span class="process-math">\(4.73=1.2e^{0.6x} \)</span></div></article><article class="exercise exercise-like" id="exercise-2402"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
-<div class="para" id="p-11201"><span class="process-math">\(1.75=0.3e^{-1.2x} \)</span></div></article>
+<article class="exercise exercise-like" id="exercise-2395"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<div class="para" id="p-10173"><span class="process-math">\(e^x=4.7 \)</span></div></article><article class="exercise exercise-like" id="exercise-2396"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<div class="para" id="p-10175"><span class="process-math">\(e^x=0.5 \)</span></div></article><article class="exercise exercise-like" id="exercise-2397"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<div class="para" id="p-10176"><span class="process-math">\(\ln x =6.02 \)</span></div></article><article class="exercise exercise-like" id="exercise-2398"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<div class="para" id="p-10178"><span class="process-math">\(\ln x=-1.4 \)</span></div></article><article class="exercise exercise-like" id="exercise-2399"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
+<div class="para" id="p-10179"><span class="process-math">\(4.73=1.2e^{0.6x} \)</span></div></article><article class="exercise exercise-like" id="exercise-2400"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<div class="para" id="p-10181"><span class="process-math">\(1.75=0.3e^{-1.2x} \)</span></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-354">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-383"><div class="para" id="p-11202">For Problems 23-26, simplify.</div></div>
+<div class="introduction" id="introduction-379"><div class="para" id="p-10182">For Problems 23-26, simplify.</div></div>
 <div class="exercisegroup-exercises cols4">
-<article class="exercise exercise-like" id="exercise-2403"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
-<div class="para" id="p-11203"><span class="process-math">\(e^{(\ln x)/2} \)</span></div></article><article class="exercise exercise-like" id="exercise-2404"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
-<div class="para" id="p-11205"><span class="process-math">\(\ln \left(\dfrac{1}{e} \right)^{2n} \)</span></div></article><article class="exercise exercise-like" id="exercise-2405"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
-<div class="para" id="p-11206"><span class="process-math">\(\ln \left(\dfrac{e^k}{e^3} \right) \)</span></div></article><article class="exercise exercise-like" id="exercise-2406"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<div class="para" id="p-11208"><span class="process-math">\(e^{\ln(e+x)} \)</span></div></article>
+<article class="exercise exercise-like" id="exercise-2401"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<div class="para" id="p-10183"><span class="process-math">\(e^{(\ln x)/2} \)</span></div></article><article class="exercise exercise-like" id="exercise-2402"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<div class="para" id="p-10185"><span class="process-math">\(\ln \left(\dfrac{1}{e} \right)^{2n} \)</span></div></article><article class="exercise exercise-like" id="exercise-2403"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<div class="para" id="p-10186"><span class="process-math">\(\ln \left(\dfrac{e^k}{e^3} \right) \)</span></div></article><article class="exercise exercise-like" id="exercise-2404"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<div class="para" id="p-10188"><span class="process-math">\(e^{\ln(e+x)} \)</span></div></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-2407"><h4 class="heading"><span class="codenumber">27<span class="period">.</span></span></h4>
-<div class="para logical" id="p-11209">
+<article class="exercise exercise-like" id="exercise-2405"><h4 class="heading"><span class="codenumber">27<span class="period">.</span></span></h4>
+<div class="para logical" id="p-10189">
 <div class="para">In 1970, the population of New York City was 7,894,862. In 1980, the population had fallen to 7,071,639.</div>
 <ol class="lower-alpha">
-<li id="li-7038"><div class="para" id="p-11210">Write an exponential function using base <span class="process-math">\(e\)</span> for the population of New York over that decade.</div></li>
-<li id="li-7039"><div class="para" id="p-11211">By what percent did the population decline annually?</div></li>
+<li id="li-6541"><div class="para" id="p-10190">Write an exponential function using base <span class="process-math">\(e\)</span> for the population of New York over that decade.</div></li>
+<li id="li-6542"><div class="para" id="p-10191">By what percent did the population decline annually?</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-2408"><h4 class="heading"><span class="codenumber">28<span class="period">.</span></span></h4>
-<div class="para logical" id="p-11215">
+</div></article><article class="exercise exercise-like" id="exercise-2406"><h4 class="heading"><span class="codenumber">28<span class="period">.</span></span></h4>
+<div class="para logical" id="p-10195">
 <div class="para">In 1990, the population of New York City was 7,322,564. In 2000, the population was 8,008,278.</div>
 <ol class="lower-alpha">
-<li id="li-7042"><div class="para" id="p-11216">Write an exponential function using base <span class="process-math">\(e\)</span> for the population of New York over that decade.</div></li>
-<li id="li-7043"><div class="para" id="p-11217">By what percent did the population increase annually?</div></li>
+<li id="li-6545"><div class="para" id="p-10196">Write an exponential function using base <span class="process-math">\(e\)</span> for the population of New York over that decade.</div></li>
+<li id="li-6546"><div class="para" id="p-10197">By what percent did the population increase annually?</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-2409"><h4 class="heading"><span class="codenumber">29<span class="period">.</span></span></h4>
-<div class="para logical" id="p-11218">
+</div></article><article class="exercise exercise-like" id="exercise-2407"><h4 class="heading"><span class="codenumber">29<span class="period">.</span></span></h4>
+<div class="para logical" id="p-10198">
 <div class="para">You deposit $1000 in a savings account paying 5% interest compounded continuously.</div>
 <ol class="lower-alpha">
-<li id="li-7044"><div class="para" id="p-11219">Find the amount in the account after 7 years.</div></li>
-<li id="li-7045"><div class="para" id="p-11220">How long will it take for the original principal to double?</div></li>
-<li id="li-7046"><div class="para" id="p-11221">Find a formula for the time <span class="process-math">\(t\)</span> required for the amount to reach <span class="process-math">\(A\text{.}\)</span>
+<li id="li-6547"><div class="para" id="p-10199">Find the amount in the account after 7 years.</div></li>
+<li id="li-6548"><div class="para" id="p-10200">How long will it take for the original principal to double?</div></li>
+<li id="li-6549"><div class="para" id="p-10201">Find a formula for the time <span class="process-math">\(t\)</span> required for the amount to reach <span class="process-math">\(A\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-2410"><h4 class="heading"><span class="codenumber">30<span class="period">.</span></span></h4>
-<div class="para logical" id="p-11226">
+</div></article><article class="exercise exercise-like" id="exercise-2408"><h4 class="heading"><span class="codenumber">30<span class="period">.</span></span></h4>
+<div class="para logical" id="p-10206">
 <div class="para">The voltage, <span class="process-math">\(V\text{,}\)</span> across a capacitor in a certain circuit is given by the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1087,51 +1073,51 @@ V(t) = 100(1-e^{-0.5t})
 </div>
 <div class="para">where <span class="process-math">\(t\)</span> is the time in seconds.</div>
 <ol class="lower-alpha">
-<li id="li-7050"><div class="para" id="p-11227">Make a table of values and graph <span class="process-math">\(V(t)\)</span> for <span class="process-math">\(t = 0\)</span> to <span class="process-math">\(t = 10\text{.}\)</span>
+<li id="li-6553"><div class="para" id="p-10207">Make a table of values and graph <span class="process-math">\(V(t)\)</span> for <span class="process-math">\(t = 0\)</span> to <span class="process-math">\(t = 10\text{.}\)</span>
 </div></li>
-<li id="li-7051"><div class="para" id="p-11228">Describe the graph. What happens to the voltage in the long run?</div></li>
-<li id="li-7052"><div class="para" id="p-11229">How much time must elapse (to the nearest hundredth of a second) for the voltage to reach 75 volts?</div></li>
+<li id="li-6554"><div class="para" id="p-10208">Describe the graph. What happens to the voltage in the long run?</div></li>
+<li id="li-6555"><div class="para" id="p-10209">How much time must elapse (to the nearest hundredth of a second) for the voltage to reach 75 volts?</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-2411"><h4 class="heading"><span class="codenumber">31<span class="period">.</span></span></h4>
-<div class="para" id="p-11230">Solve for <span class="process-math">\(t\text{:}\)</span> <span class="process-math">\(~~y = 12 e^{-kt} + 6\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2412"><h4 class="heading"><span class="codenumber">32<span class="period">.</span></span></h4>
-<div class="para" id="p-11232">Solve for <span class="process-math">\(k\text{:}\)</span> <span class="process-math">\(~~N = N_0 + 4 \ln(k + 10)\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2413"><h4 class="heading"><span class="codenumber">33<span class="period">.</span></span></h4>
-<div class="para" id="p-11233">Solve for <span class="process-math">\(M\text{:}\)</span> <span class="process-math">\(~~Q=\dfrac{1}{t}\left(\dfrac{\log M}{\log N} \right) \)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2414"><h4 class="heading"><span class="codenumber">34<span class="period">.</span></span></h4>
-<div class="para" id="p-11235">Solve for <span class="process-math">\(t\text{:}\)</span> <span class="process-math">\(~~C_H = C_L\cdot 10^{k}t \)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2415"><h4 class="heading"><span class="codenumber">35<span class="period">.</span></span></h4>
-<div class="para" id="p-11236">Express <span class="process-math">\(P(t) = 750e^{0.32t}\)</span> in the form <span class="process-math">\(P(t) = P_0b^t\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2416"><h4 class="heading"><span class="codenumber">36<span class="period">.</span></span></h4>
-<div class="para" id="p-11238">Express <span class="process-math">\(P(t) = 80e^{-0.6t}\)</span> in the form <span class="process-math">\(P(t) = P_0 b^t\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2417"><h4 class="heading"><span class="codenumber">37<span class="period">.</span></span></h4>
-<div class="para" id="p-11239">Express <span class="process-math">\(N(t)=600(0.4)^{t}\)</span> in the form <span class="process-math">\(N(t) = N_0 e^{kt}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2418"><h4 class="heading"><span class="codenumber">38<span class="period">.</span></span></h4>
-<div class="para" id="p-11241">Express <span class="process-math">\(N(t) =100(1.06)^{t}\)</span> in the form <span class="process-math">\(N(t) = N_0 e^{kt}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-2419"><h4 class="heading"><span class="codenumber">39<span class="period">.</span></span></h4>
-<div class="para" id="p-11242">Plot the values on a log scale.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
+</div></article><article class="exercise exercise-like" id="exercise-2409"><h4 class="heading"><span class="codenumber">31<span class="period">.</span></span></h4>
+<div class="para" id="p-10210">Solve for <span class="process-math">\(t\text{:}\)</span> <span class="process-math">\(~~y = 12 e^{-kt} + 6\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2410"><h4 class="heading"><span class="codenumber">32<span class="period">.</span></span></h4>
+<div class="para" id="p-10212">Solve for <span class="process-math">\(k\text{:}\)</span> <span class="process-math">\(~~N = N_0 + 4 \ln(k + 10)\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2411"><h4 class="heading"><span class="codenumber">33<span class="period">.</span></span></h4>
+<div class="para" id="p-10213">Solve for <span class="process-math">\(M\text{:}\)</span> <span class="process-math">\(~~Q=\dfrac{1}{t}\left(\dfrac{\log M}{\log N} \right) \)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2412"><h4 class="heading"><span class="codenumber">34<span class="period">.</span></span></h4>
+<div class="para" id="p-10215">Solve for <span class="process-math">\(t\text{:}\)</span> <span class="process-math">\(~~C_H = C_L\cdot 10^{k}t \)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2413"><h4 class="heading"><span class="codenumber">35<span class="period">.</span></span></h4>
+<div class="para" id="p-10216">Express <span class="process-math">\(P(t) = 750e^{0.32t}\)</span> in the form <span class="process-math">\(P(t) = P_0b^t\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2414"><h4 class="heading"><span class="codenumber">36<span class="period">.</span></span></h4>
+<div class="para" id="p-10218">Express <span class="process-math">\(P(t) = 80e^{-0.6t}\)</span> in the form <span class="process-math">\(P(t) = P_0 b^t\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2415"><h4 class="heading"><span class="codenumber">37<span class="period">.</span></span></h4>
+<div class="para" id="p-10219">Express <span class="process-math">\(N(t)=600(0.4)^{t}\)</span> in the form <span class="process-math">\(N(t) = N_0 e^{kt}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2416"><h4 class="heading"><span class="codenumber">38<span class="period">.</span></span></h4>
+<div class="para" id="p-10221">Express <span class="process-math">\(N(t) =100(1.06)^{t}\)</span> in the form <span class="process-math">\(N(t) = N_0 e^{kt}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2417"><h4 class="heading"><span class="codenumber">39<span class="period">.</span></span></h4>
+<div class="para" id="p-10222">Plot the values on a log scale.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
 <td class="l m b1 r3 l1 t1 lines"><span class="process-math">\(x\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(0.04\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(45\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(1200\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(560,000\)</span></td>
-</tr></table></div></div></div></article><article class="exercise exercise-like" id="exercise-2420"><h4 class="heading"><span class="codenumber">40<span class="period">.</span></span></h4>
-<div class="para" id="p-11243">Plot the values on a log scale.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
+</tr></table></div></div></div></article><article class="exercise exercise-like" id="exercise-2418"><h4 class="heading"><span class="codenumber">40<span class="period">.</span></span></h4>
+<div class="para" id="p-10223">Plot the values on a log scale.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular"><tr>
 <td class="l m b1 r3 l1 t1 lines"><span class="process-math">\(x\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(0.0007\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(0.8\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(3.2\)</span></td>
 <td class="l m b1 r1 l0 t1 lines"><span class="process-math">\(2500\)</span></td>
-</tr></table></div></div></div></article><article class="exercise exercise-like" id="exercise-2421"><h4 class="heading"><span class="codenumber">41<span class="period">.</span></span></h4>
+</tr></table></div></div></div></article><article class="exercise exercise-like" id="exercise-2419"><h4 class="heading"><span class="codenumber">41<span class="period">.</span></span></h4>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel top" style="width:55.5555555555556%;"><div class="para" id="p-11244">The graph describes a network of streams near Santa Fe, New Mexico. It shows the number of streams of a given order, which is a measure of their size. Use the graph to estimate the number of streams of orders 3, 4, 8, and 9. (Source: Leopold, Wolman, and Miller)</div></div>
+<div class="sbspanel top" style="width:55.5555555555556%;"><div class="para" id="p-10224">The graph describes a network of streams near Santa Fe, New Mexico. It shows the number of streams of a given order, which is a measure of their size. Use the graph to estimate the number of streams of orders 3, 4, 8, and 9. (Source: Leopold, Wolman, and Miller)</div></div>
 <div class="sbspanel top" style="width:33.3333333333333%;"><img src="external/images/fig-chap5-rev-65.svg" role="img" class="contained" alt="stream order on semi-log scale"></div>
-</div></div></article><article class="exercise exercise-like" id="exercise-2422"><h4 class="heading"><span class="codenumber">42<span class="period">.</span></span></h4>
-<div class="para" id="p-11246">Large animals use oxygen more efficiently when running than small animals do. The graph shows the amount of oxygen various animals use, per gram of their body weight, to run 1 kilometer. Estimate the body mass and oxygen use for a kangaroo rat, a dog, and a horse. (Source: Schmidt-Neilsen, 1972)</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-O2-efficiency-log-log.svg" role="img" class="contained"></div></div></div></article><article class="exercise exercise-like" id="exercise-2423"><h4 class="heading"><span class="codenumber">43<span class="period">.</span></span></h4>
-<div class="para" id="p-11247">The loudest sound created in a laboratory registered at 210 decibels.  The energy from such a sound is sufficient to bore holes in solid material.  Find the intensity of a 210-decibel sound.</div></article><article class="exercise exercise-like" id="exercise-2424"><h4 class="heading"><span class="codenumber">44<span class="period">.</span></span></h4>
-<div class="para" id="p-11248">The most powerful earthquake ever recorded occurred in Chile on 22 May 1960. The magnitude of the earthquake was approximately 9.5. What was the amplitude of its seismographic trace.</div></article><article class="exercise exercise-like" id="exercise-2425"><h4 class="heading"><span class="codenumber">45<span class="period">.</span></span></h4>
-<div class="para" id="p-11249">In 2004, a magnitude 9.0 earthquake struck Sumatra in Indonesia. How much more powerful was this quake than the 1906 San Francisco earthquake of magnitude 8.3?</div></article><article class="exercise exercise-like" id="exercise-2426"><h4 class="heading"><span class="codenumber">46<span class="period">.</span></span></h4>
-<div class="para" id="p-11250">The sound of rainfall registers at 50 decibels. What is the decibel level of a sound twice as loud?</div></article></section></section></div>
+</div></div></article><article class="exercise exercise-like" id="exercise-2420"><h4 class="heading"><span class="codenumber">42<span class="period">.</span></span></h4>
+<div class="para" id="p-10226">Large animals use oxygen more efficiently when running than small animals do. The graph shows the amount of oxygen various animals use, per gram of their body weight, to run 1 kilometer. Estimate the body mass and oxygen use for a kangaroo rat, a dog, and a horse. (Source: Schmidt-Neilsen, 1972)</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-O2-efficiency-log-log.svg" role="img" class="contained"></div></div></div></article><article class="exercise exercise-like" id="exercise-2421"><h4 class="heading"><span class="codenumber">43<span class="period">.</span></span></h4>
+<div class="para" id="p-10227">The loudest sound created in a laboratory registered at 210 decibels.  The energy from such a sound is sufficient to bore holes in solid material.  Find the intensity of a 210-decibel sound.</div></article><article class="exercise exercise-like" id="exercise-2422"><h4 class="heading"><span class="codenumber">44<span class="period">.</span></span></h4>
+<div class="para" id="p-10228">The most powerful earthquake ever recorded occurred in Chile on 22 May 1960. The magnitude of the earthquake was approximately 9.5. What was the amplitude of its seismographic trace.</div></article><article class="exercise exercise-like" id="exercise-2423"><h4 class="heading"><span class="codenumber">45<span class="period">.</span></span></h4>
+<div class="para" id="p-10229">In 2004, a magnitude 9.0 earthquake struck Sumatra in Indonesia. How much more powerful was this quake than the 1906 San Francisco earthquake of magnitude 8.3?</div></article><article class="exercise exercise-like" id="exercise-2424"><h4 class="heading"><span class="codenumber">46<span class="period">.</span></span></h4>
+<div class="para" id="p-10230">The sound of rainfall registers at 50 decibels. What is the decibel level of a sound twice as loud?</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="The-Natural-Base.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

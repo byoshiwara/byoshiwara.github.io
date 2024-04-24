@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,8 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/0.31/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.31</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.31/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.31/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.31/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -616,62 +598,64 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-180" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-181" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Products of Polynomials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Special Products</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Factoring Cubics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Modeling with Polynomials</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Problem Set 8.1</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Modeling with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Approximations with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Special Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-185" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Factoring Cubics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-186" class="internal"><span class="codenumber">8.1.7</span> <span class="title">An Application of Cubic Splines</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.8</span> <span class="title">Problem Set 8.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="AlgebraicFractions.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-185" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-186" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="AlgebraicFractions.html#section-8-2-exercises" class="internal"><span class="codenumber">8.2.5</span> <span class="title">Problem Set 8.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="OperationsAlgebraicFractions.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Operations on Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-196" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-197" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#section-8-3-exercises" class="internal"><span class="codenumber">8.3.8</span> <span class="title">Problem Set 8.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="MoreOperationsonFractions.html" class="internal"><span class="codenumber">8.4</span> <span class="title">More Operations on Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-196" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-197" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-200" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-201" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#section-8-4-exercises" class="internal"><span class="codenumber">8.4.5</span> <span class="title">Problem Set 8.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="EquationswithFractions.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Equations with Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-200" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-201" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-206" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-207" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="EquationswithFractions.html#section-8-5-exercises" class="internal"><span class="codenumber">8.5.7</span> <span class="title">Problem Set 8.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap8-summary.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Chapter 8 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-206" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-207" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-208" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-209" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap8-summary.html#chap8-rev-problems" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Chapter 8 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -683,60 +667,60 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="PropertiesOfLines.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Properties of Lines</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-208" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-209" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-211" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-212" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PropertiesOfLines.html#section-9-1-exercises" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Problem Set 9.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Distance-and-Midpoint.html" class="internal"><span class="codenumber">9.2</span> <span class="title">The Distance and Midpoint Formulas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-211" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-212" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Finding the Midpoint</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.4</span> <span class="title">The Midpoint Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.5</span> <span class="title">Circles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.6</span> <span class="title">General Form for Circles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Problem Set 9.2</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.3</span> <span class="title">The Midpoint Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.4</span> <span class="title">Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.5</span> <span class="title">General Form for Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-218" class="internal"><span class="codenumber">9.2.6</span> <span class="title">Finding an Equation for a Circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-219" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Problem Set 9.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Ellipses.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Conic Sections: Ellipses</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-218" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-219" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-222" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-223" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Ellipses.html#section-9-3-exercises" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Problem Set 9.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Hyperbolas.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Conic Sections: Hyperbolas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-222" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-223" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-227" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-228" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Hyperbolas.html#section-9-4-exercises" class="internal"><span class="codenumber">9.4.6</span> <span class="title">Problem Set 9.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="NonlinearSystems.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Nonlinear Systems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-227" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-228" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-230" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-231" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="NonlinearSystems.html#section-9-5-exercises" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Problem Set 9.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap9-summary.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Chapter 9 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-230" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-231" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-232" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-233" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap9-summary.html#chap9-rev-problems" class="internal"><span class="codenumber">9.6.3</span> <span class="title">Chapter 9 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -748,41 +732,43 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicFunctions.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Logarithmic Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-232" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-233" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-237" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-238" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicFunctions.html#section-10-1-exercises" class="internal"><span class="codenumber">10.1.6</span> <span class="title">Problem Set 10.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicScales.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Logarithmic Scales</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-237" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-238" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-242" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-243" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicScales.html#section-10-2-exercises" class="internal"><span class="codenumber">10.2.6</span> <span class="title">Problem Set 10.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="The-Natural-Base.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Natural Base</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-242" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-243" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Solving Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Continuous Compounding</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Homework 10.3</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Properties of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-247" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Solving Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-248" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-249" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Continuous Compounding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-250" class="internal"><span class="codenumber">10.3.7</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.8</span> <span class="title">Homework 10.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap10-summary.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Chapter 10 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-247" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-248" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-251" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-252" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap10-summary.html#chap10-rev-problems" class="internal"><span class="codenumber">10.4.3</span> <span class="title">Chapter 10 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -797,37 +783,37 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-getting-started.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-249" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-250" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-251" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-253" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-254" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-255" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Entering-Expressions.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Entering Expressions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-252" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-253" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-254" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-255" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-260" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-261" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-262" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-263" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Graphing an Equation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-260" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-261" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-262" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-264" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-265" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-266" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-more-graphing.html" class="internal"><span class="codenumber">A.4</span> <span class="title">More graphing</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-263" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-264" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-267" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-268" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -846,10 +832,10 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="EquationswithFractions"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">8.5</span><span class="space"> </span><span class="title">Equations with Fractions</span>
 </h2>
-<section class="introduction" id="introduction-303"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<section class="introduction" id="introduction-302"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel middle" style="width:34%;"><img src="external/images/fig-solve-rational-equation.svg" role="img" class="contained" alt="graph of rational function for solving equation"></div>
-<div class="sbspanel middle" style="width:64%;"><div class="para logical" id="p-8557">
-<div class="para">In <a href="" class="xref" data-knowl="./knowl/example-pedal-aircraft.html" title="Example 8.2.18">Example 8.2.18</a> of Section 8.2 Francine planned a 60-mile training run on her cycle-plane. The time required for the training run, in terms of the windspeed, <span class="process-math">\(x\text{,}\)</span> is given by:</div>
+<div class="sbspanel middle" style="width:64%;"><div class="para logical" id="p-8235">
+<div class="para">In <a href="" class="xref" data-knowl="./knowl/example-pedal-aircraft.html" title="Example 8.2.19">Example 8.2.19</a> of Section 8.2 Francine planned a 60-mile training run on her cycle-plane. The time required for the training run, in terms of the windspeed, <span class="process-math">\(x\text{,}\)</span> is given by:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/example-pedal-aircraft.html">
 \begin{equation*}
 t=f(x) = \dfrac{60}{15-x}
@@ -857,10 +843,10 @@ t=f(x) = \dfrac{60}{15-x}
 </div>
 <div class="para">If it takes Francine 9 hours to cover 60 miles, what is the speed of the wind? We can answer this question by reading values from the graph of <span class="process-math">\(f\text{,}\)</span> as shown at left. When <span class="process-math">\(t = 9\text{,}\)</span> the value of <span class="process-math">\(x\)</span> is between 8 and 9, so the windspeed is between 8 and 9 miles per hour.</div>
 </div></div>
-</div></div></section><section class="subsection" id="subsection-200"><h3 class="heading hide-type">
+</div></div></section><section class="subsection" id="subsection-202"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.5.1</span><span class="space"> </span><span class="title">Solving Algebraically</span>
 </h3>
-<div class="para logical" id="p-8558">
+<div class="para logical" id="p-8236">
 <div class="para">If we need a more accurate value for the windspeed, we can solve the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -869,22 +855,22 @@ t=f(x) = \dfrac{60}{15-x}
 </div>
 <div class="para">To start, we multiply each side of the equation by the denominator of the fraction. This will clear the fraction and give us an equivalent equation without fractions.</div>
 </div>
-<article class="example example-like" id="example-217"><h4 class="heading">
+<article class="example example-like" id="example-219"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8559">Solve the equation  <span class="process-math">\(~~\dfrac{60}{15-x}=9\)</span>
+<div class="para" id="p-8237">Solve the equation  <span class="process-math">\(~~\dfrac{60}{15-x}=9\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-419" id="solution-419"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-419"><div class="solution solution-like"><div class="para logical" id="p-8560">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-408" id="solution-408"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-408"><div class="solution solution-like"><div class="para logical" id="p-8238">
 <div class="para">We multiply both sides of the equation by <span class="process-math">\(\alert{15 - x}\)</span> to obtain</div>
-<div class="displaymath process-math" id="md-487">
+<div class="displaymath process-math" id="md-488">
 \begin{align*}
 \alert{(15 - x)}\frac{60}{15-x}\amp =9\alert{(15 - x)}\\
 60 \amp = 9(15 - x)\amp\amp \blert{\text{Apply the distributive law.}}
 \end{align*}
 </div>
 <div class="para">From here we can proceed as usual.</div>
-<div class="displaymath process-math" id="md-488">
+<div class="displaymath process-math" id="md-489">
 \begin{align*}
 60 \amp = 135 - 9x\amp\amp \blert{\text{Subtract 135 from both sides.}}\\
 -75 \amp = -9x\amp\amp \blert{\text{Divide by }-9.}\\
@@ -893,39 +879,31 @@ t=f(x) = \dfrac{60}{15-x}
 </div>
 <div class="para">The windspeed was <span class="process-math">\(8.\overline{3}\text{,}\)</span> or <span class="process-math">\(8\frac{1}{3}\)</span> miles per hour.</div>
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1882"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1882"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1883"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1883"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1882"><article class="exercise exercise-like"><div id="webwork-43" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="43" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCItMiIpOwokcjIgPSBDb21wdXRlKCI0Iik7CiRhID0gTGlzdCgiJHIxLCAkcjIiKTsKJG15X2V2YWx1YXRvciA9ICRhIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApTb2x2ZSBbYFxkZnJhY3t4XjJ9e3grNH09MmBdCgpbYHg9YF1bX117JG15X2V2YWx1YXRvcn17MTB9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYS4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHggPSAtMiwgeCA9IDRgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-43')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="p-8561">Solve <span class="process-math">\(\dfrac{x^2}{x+4}=2\)</span>
-</div> <div class="para" id="p-8562">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1883"><article class="exercise exercise-like"><div class="para" id="p-8239">Solve <span class="process-math">\(\dfrac{x^2}{x+4}=2\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1000" id="answer-1000"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1000"><div class="answer solution-like"><div class="para" id="p-8563"><span class="process-math">\(-2, 4\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-420" id="solution-420"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-420"><div class="solution solution-like"><div class="para" id="p-8564"><span class="process-math">\(x = -2, x = 4\)</span></div></div></div>
-</div>
-</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-409" id="solution-409"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-409"><div class="solution solution-like"><div class="para" id="p-8240"><span class="process-math">\(x = -2, x = 4\)</span></div></div></div>
 </div></article></div>
-<div class="para" id="p-8565">If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions. </div>
+<div class="para" id="p-8241">If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions. </div>
 <article class="example example-like" id="example-clear-fractions"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8566">Solve  <span class="process-math">\(~~\dfrac{3}{4} = 8- \dfrac{2x+11}{x-5}\)</span>
+<div class="para" id="p-8242">Solve  <span class="process-math">\(~~\dfrac{3}{4} = 8- \dfrac{2x+11}{x-5}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-421" id="solution-421"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-421"><div class="solution solution-like"><div class="para logical" id="p-8567">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-410" id="solution-410"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-410"><div class="solution solution-like"><div class="para logical" id="p-8243">
 <div class="para">The LCD for the two fractions in the equation is <span class="process-math">\(\blert{4(x-5)}\text{.}\)</span> We multiply both sides of the equation by the LCD.</div>
-<div class="displaymath process-math" id="md-489">
+<div class="displaymath process-math" id="md-490">
 \begin{align*}
-\blert{4(x-5)}\left(\dfrac{3}{4}\right)  \amp = \left(8- \dfrac{2x+11}{x-5}\right) \cdot \blert{4(x-5)} \amp \amp  \blert{\stackrel{{\Large\text{Apply the}}} {\text{distributive law.}}}\\
-\blert{\cancel{4}(x-5)}\left(\dfrac{3}{\cancel{4}}\right)  \amp = \blert{4(x-5)}(8)- \blert{4\cancel{(x-5)}}\left(\dfrac{2x+11}{\cancel{x-5}}\right)\\
+{\blert{4(x-5)}}\left(\dfrac{3}{4}\right)  \amp = \left(8- \dfrac{2x+11}{x-5}\right) \cdot {\blert{4(x-5)}} \amp \amp  \blert{\stackrel{{\Large\text{Apply the}}} {\text{distributive law.}}}\\
+{\blert{\cancel{4}(x-5)}}\left(\dfrac{3}{\cancel{4}}\right)  \amp = {\blert{4(x-5)}}(8)- {\blert{4\cancel{(x-5)}}}\left(\dfrac{2x+11}{\cancel{x-5}}\right)\\
 3(x-5) \amp = 32(x-5)-4(2x+11)
 \end{align*}
 </div>
 <div class="para">We proceed as usual to complete the solution. First we use the distributive law to remove parentheses.</div>
-<div class="displaymath process-math" id="md-490">
+<div class="displaymath process-math" id="md-491">
 \begin{align*}
 3x-15 \amp = 32x-160-8x-44 \amp \amp \blert{\text{Combine like terms.}}\\
 3x-15 \amp = 24x-204\\
@@ -934,28 +912,21 @@ x \amp = 9
 \end{align*}
 </div>
 </div></div></div>
-</div></article><article class="warning remark-like" id="warning-43"><h4 class="heading">
+</div></article><article class="warning remark-like" id="warning-42"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.5.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8568">We must multiply each term of an equation by the LCD, whether or not the term is a fraction. In the previous <a href="" class="xref" data-knowl="./knowl/example-clear-fractions.html" title="Example 8.5.3">Example</a> we multiplied each term by the LCD, including the 8.</div></article><article class="exercise exercise-like" id="exercise-1883"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1883"><h4 class="heading">
+<div class="para" id="p-8244">We must multiply <em class="emphasis">each term</em> of an equation by the LCD, whether or not the term is a fraction. In the previous <a href="" class="xref" data-knowl="./knowl/example-clear-fractions.html" title="Example 8.5.3">Example</a> we multiplied each term by the LCD, including the 8.</div></article><article class="exercise exercise-like" id="exercise-1884"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1884"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1883"><article class="exercise exercise-like"><div id="webwork-44" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="44" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCI0Iik7CiRyMiA9IENvbXB1dGUoIjEiKTsKJGFuc3dlciA9IExpc3QoIiRyMSwgJHIyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApTb2x2ZSAgIFtgXHF1YWRcZGZyYWN7MX17eC0yfStcZGZyYWN7Mn17eH0gPSAxYF0KCltgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXs2fSBFbnRlciBzb2x1dGlvbnMgc2VwYXJhdGVkIGJ5IGEgY29tbWEuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2AxXHRleHR7LH1gXSBbYDRgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-44')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="p-8569">Solve   <span class="process-math">\(\quad\dfrac{1}{x-2}+\dfrac{2}{x} = 1\)</span>
-</div> <div class="para" id="p-8570">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span> Enter solutions separated by a comma.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1884"><article class="exercise exercise-like"><div class="para" id="p-8245">Solve   <span class="process-math">\(\quad\dfrac{1}{x-2}+\dfrac{2}{x} = 1\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1001" id="answer-1001"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1001"><div class="answer solution-like"><div class="para" id="p-8571"><span class="process-math">\(4, 1\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-422" id="solution-422"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-422"><div class="solution solution-like"><div class="para" id="p-8572">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-411" id="solution-411"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-411"><div class="solution solution-like"><div class="para" id="p-8246">
 <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(4\)</span>
 </div></div></div>
-</div>
-</div>
-</div></article></div></section><section class="subsection" id="subsection-201"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-203"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.5.2</span><span class="space"> </span><span class="title">Proportions</span>
 </h3>
-<div class="para logical" id="p-8573">
+<div class="para logical" id="p-8247">
 <div class="para">A proportion  is a statement that two ratios are equal.  For example,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -963,7 +934,7 @@ x \amp = 9
 \end{equation*}
 </div>
 <div class="para">To solve this proportion, we multiply both sides by the LCD, 30, to get</div>
-<div class="displaymath process-math" id="md-491">
+<div class="displaymath process-math" id="md-492">
 \begin{align*}
 \alert{30}\left(\dfrac{7}{5}\right) \amp = \left(\dfrac{x}{6}\right)\alert{30}\\
 42 \amp = 5x \amp \amp \blert{\text{Divide both sides by 5.}}\\
@@ -971,22 +942,22 @@ x = \dfrac{42}{5} = 8.4
 \end{align*}
 </div>
 </div>
-<div class="para" id="p-8574">There is a short-cut we can use that avoids calculating an LCD. Observe that we can arrive at the equation <span class="process-math">\(42=5x\)</span> by <dfn class="terminology">cross-multiplying</dfn>:</div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:42.5%;margin-right:42.5%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fig-cross-multiply.svg" role="img" class="contained" alt="cross-multiplying"></div></div></div>
-<div class="para" id="p-8575">We then proceed as before to complete the solution.</div>
-<div class="para" id="p-8576">The cross-multiplying shortcut is a fundamental property of proportions.</div>
+<div class="para" id="p-8248">There is a short-cut we can use that avoids calculating an LCD. Observe that we can arrive at the equation <span class="process-math">\(42=5x\)</span> by <dfn class="terminology">cross-multiplying</dfn>:</div>
+<div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/fig-cross-multiply.svg" role="img" class="contained" alt="cross-multiplying"></div>
+<div class="para" id="p-8249">We then proceed as before to complete the solution.</div>
+<div class="para" id="p-8250">The cross-multiplying shortcut is a fundamental property of proportions.</div>
 <article class="assemblage assemblage-like" id="assemblage-134"><h4 class="heading"><span class="title">Property of Proportions.</span></h4>
-<div class="para logical" id="p-8577"><div class="displaymath process-math">
+<div class="para logical" id="p-8251"><div class="displaymath process-math">
 \begin{equation*}
 \blert{\text{If}~~\dfrac{a}{b}=\dfrac{c}{d},~~~\text{then}~~~ad=bc,~~\text{as long as}~ b,d \ne 0}
 \end{equation*}
-</div></div></article><article class="example example-like" id="example-219"><h4 class="heading">
+</div></div></article><article class="example example-like" id="example-221"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8578">The scale on a map of Fairfield County says that <span class="process-math">\(\dfrac{3}{4}\)</span> centimeter represents a distance of 10 kilometers.  If Eastlake and Kenwood are 6 centimeters apart on the map, what is the distance between the two towns?</div>
+<div class="para" id="p-8252">The scale on a map of Fairfield County says that <span class="process-math">\(\dfrac{3}{4}\)</span> centimeter represents a distance of 10 kilometers.  If Eastlake and Kenwood are 6 centimeters apart on the map, what is the distance between the two towns?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-423" id="solution-423"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-423"><div class="solution solution-like">
-<div class="para" id="p-8579">The ratio of the two actual distances is the same as the ratio of the corresponding distances on the map.  We let <span class="process-math">\(x\)</span> stand for the distance between Eastlake and Kenwood, and write a proportion.</div> <div class="para logical" id="p-8580">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-412" id="solution-412"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-412"><div class="solution solution-like">
+<div class="para" id="p-8253">The ratio of the two actual distances is the same as the ratio of the corresponding distances on the map.  We let <span class="process-math">\(x\)</span> stand for the distance between Eastlake and Kenwood, and write a proportion.</div> <div class="para logical" id="p-8254">
 <div class="para">We must be careful to keep the same order in both ratios. We choose to put the distance between towns in the numerators, and the distances on the scale in the denominator.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -994,7 +965,7 @@ x = \dfrac{42}{5} = 8.4
 \end{equation*}
 </div>
 <div class="para">To solve the propotion, we cross-multiply.</div>
-<div class="displaymath process-math" id="md-492">
+<div class="displaymath process-math" id="md-493">
 \begin{align*}
 \dfrac{3}{4}x \amp = 10 \cdot 6\\
 x \amp = \dfrac{60}{\dfrac{3}{4}} = 80
@@ -1003,81 +974,27 @@ x \amp = \dfrac{60}{\dfrac{3}{4}} = 80
 <div class="para">The two towns are 80 kilometers apart.</div>
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1884"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1884"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1885"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1885"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1884"><article class="exercise exercise-like"><div id="webwork-45" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="45" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZyYWN0aW9uLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIkZyYWN0aW9uIik7CiRhID0gQ29tcHV0ZSgiNjY2KyAyLzMiKTsKCkJFR0lOX1BHTUwKT24gYSBzY2FsZSBtb2RlbCBvZiBGYW50YXN5IFZhbGxleSwgW2AxXGRmcmFjezF9ezJ9YF0gaW5jaGVzIHJlcHJlc2VudHMgNTAgeWFyZHMuIElmIHRoZSBkaXN0YW5jZSBmcm9tIHRoZSB3YXRlciBzbGlkZSB0byB0aGUgYnVuZ2VlIGp1bXAgaXMgMjAgaW5jaGVzIG9uIHRoZSBtb2RlbCwgd2hhdCBpcyB0aGUgZGlzdGFuY2UgYmV0d2VlbiB0aGUgdHdvIHJpZGVzPwoKW19deyRhfXs3fSB5YXJkcwoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgNjY2XGRmcmFjezJ9ezN9YF0geWFyZHMKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-45')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="p-8581">On a scale model of Fantasy Valley, <span class="process-math">\(1\dfrac{1}{2}\)</span> inches represents 50 yards. If the distance from the water slide to the bungee jump is 20 inches on the model, what is the distance between the two rides?</div> <div class="para" id="p-8582">
-<span class="fillin underline" role="img" aria-label="7-character blank" style="width: 3.181818181818182em;"></span> yards</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1885"><article class="exercise exercise-like"><div class="para" id="p-8255">On a scale model of Fantasy Valley, <span class="process-math">\(1\dfrac{1}{2}\)</span> inches represents 50 yards. If the distance from the water slide to the bungee jump is 20 inches on the model, what is the distance between the two rides?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1002" id="answer-1002"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1002"><div class="answer solution-like"><div class="para" id="p-8583"><span class="process-math">\(666+{\frac{2}{3}}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-424" id="solution-424"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-424"><div class="solution solution-like"><div class="para" id="p-8584">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-413" id="solution-413"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-413"><div class="solution solution-like"><div class="para" id="p-8256">
 <span class="process-math">\(666\dfrac{2}{3}\)</span> yards</div></div></div>
-</div>
-</div>
 </div></article></div>
-<article class="warning remark-like" id="warning-44"><h4 class="heading">
+<article class="warning remark-like" id="warning-43"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.5.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8585">Do not try to use "cross-multiplying" on equations that are not proportions, or on any other operations involving fractions.  The shortcut works only on proportions.</div></article><article class="exercise exercise-like" id="exercise-1885"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1885"><h4 class="heading">
+<div class="para" id="p-8257">Do not try to use "cross-multiplying" on equations that are not proportions, or on any other operations involving fractions.  The shortcut works only on proportions.</div></article><article class="exercise exercise-like" id="exercise-1886"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1886"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1885"><article class="exercise exercise-like"><div id="webwork-46" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="46" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOyAgICAgICAgCiRsY2QgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJMQ0QiLCAKICAgICJhdmVyYWdlIiwKICAgICJyZWNpcHJvY2FsIl0sCiAgICAxCik7ICAgICAgICAKJHJhdGlvcyA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImVxdWF0aW9ucyIsIAogICAgImZhY3RvcnMiLAogICAgInJhdGlvcyJdLAogICAgMwopOyAgICAgICAgCiRwcm9wID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAicmVkdWNlZCBmcmFjdGlvbnMiLCAKICAgICJpbXByb3BlciBmcmFjdGlvbnMiLAogICAgInByb3BvcnRpb25zIl0sCiAgICAzCik7CgpCRUdJTl9QR01MCmEuICBUbyBjbGVhciBmcmFjdGlvbnMgZnJvbSBhbiBlcXVhdGlvbiwgd2UgbXVsdGlwbHkgZWFjaCB0ZXJtIGJ5IHRoZSBbX117JGxjZH17NX0gb2YgYWxsIHRoZSBmcmFjdGlvbnMuCgoKYS4gIFRydWUgb3IgRmFsc2U6ICBXaGVuIGNsZWFyaW5nIGZyYWN0aW9uIGZyb20gYW4gZXF1YXRpb24sIHdlIGRvIG5vdCBtdWx0aXBseSB0ZXJtcyB0aGF0IGFyZSBub3QgZnJhY3Rpb25zLiBbX117JEZhbHNlfXs1fQoKCmEuICBBIHByb3BvcnRpb24gaXMgYSBzdGF0ZW1lbnQgdGhhdCB0d28gW19deyRyYXRpb3N9ezV9IGFyZSBlcXVhbC4KCgphLiAgQ3Jvc3MtbXVsdGlwbHlpbmcgd29ya3Mgb25seSBvbiAgW19deyRwcm9wfXs1fS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIExDRAphLiAgRmFsc2UKYS4gIHJhdGlvcwphLiAgcHJvcG9ydGlvbnMgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-46')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="p-8586"><ol class="lower-alpha">
-<li id="li-5726"><div class="para logical" id="p-8587">
-<div class="para">To clear fractions from an equation, we multiply each term by the</div>
-<ul class="square">
-<li id="li-5727"><div class="para" id="p-8588">LCD</div></li>
-<li id="li-5728"><div class="para" id="p-8589">average</div></li>
-<li id="li-5729"><div class="para" id="p-8590">reciprocal</div></li>
-</ul>
-<div class="para">of all the fractions.</div>
-</div></li>
-<li id="li-5730"><div class="para logical" id="p-8591">
-<div class="para">True or False:  When clearing fraction from an equation, we do not multiply terms that are not fractions.</div>
-<ul class="square">
-<li id="li-5731"><div class="para" id="p-8592">True</div></li>
-<li id="li-5732"><div class="para" id="p-8593">False</div></li>
-</ul>
-</div></li>
-<li id="li-5733"><div class="para logical" id="p-8594">
-<div class="para">A proportion is a statement that two</div>
-<ul class="square">
-<li id="li-5734"><div class="para" id="p-8595">equations</div></li>
-<li id="li-5735"><div class="para" id="p-8596">factors</div></li>
-<li id="li-5736"><div class="para" id="p-8597">ratios</div></li>
-</ul>
-<div class="para">are equal.</div>
-</div></li>
-<li id="li-5737"><div class="para logical" id="p-8598">
-<div class="para">Cross-multiplying works only on</div>
-<ul class="square">
-<li id="li-5738"><div class="para" id="p-8599">reduced fractions</div></li>
-<li id="li-5739"><div class="para" id="p-8600">improper fractions</div></li>
-<li id="li-5740"><div class="para" id="p-8601">proportions</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-</ol></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1003" id="answer-1003"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1003"><div class="answer solution-like"><div class="para" id="p-8602"><span class="process-math">\(\text{LCD}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1004" id="answer-1004"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1004"><div class="answer solution-like"><div class="para" id="p-8603"><span class="process-math">\(\text{False}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1005" id="answer-1005"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1005"><div class="answer solution-like"><div class="para" id="p-8604"><span class="process-math">\(\text{ratios}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1006" id="answer-1006"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1006"><div class="answer solution-like"><div class="para" id="p-8605"><span class="process-math">\(\text{proportions}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-425" id="solution-425"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-425"><div class="solution solution-like"><div class="para logical" id="p-8606"><ol class="lower-alpha">
-<li id="li-5741"><div class="para" id="p-8607">LCD</div></li>
-<li id="li-5742"><div class="para" id="p-8608">False</div></li>
-<li id="li-5743"><div class="para" id="p-8609">ratios</div></li>
-<li id="li-5744"><div class="para" id="p-8610">proportions</div></li>
-</ol></div></div></div>
-</div>
-</div>
-</div></article></div></section><section class="subsection" id="subsection-202"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1886"><article class="exercise exercise-like"><div class="para logical" id="p-8258"><ol class="lower-alpha">
+<li id="li-5542"><div class="para" id="p-8259">To clear fractions from an equation, we multiply each term by the <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> of all the fractions.</div></li>
+<li id="li-5543"><div class="para" id="p-8260">True or False:  When clearing fraction from an equation, we do not multiply terms that are not fractions.</div></li>
+<li id="li-5544"><div class="para" id="p-8261">A proportion is a statement that two <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> are equal.</div></li>
+<li id="li-5545"><div class="para" id="p-8262">Cross-multiplying works only on <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</div></li>
+</ol></div></article></div></section><section class="subsection" id="subsection-204"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.5.3</span><span class="space"> </span><span class="title">Extraneous Solutions</span>
 </h3>
-<div class="para logical" id="p-8611">
+<div class="para logical" id="p-8263">
 <div class="para">An algebraic fraction is undefined for any values of <span class="process-math">\(x\)</span> that make its denominator equal zero. These values cannot be solutions to equations involving the fraction. Consider the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1085,7 +1002,7 @@ x \amp = \dfrac{60}{\dfrac{3}{4}} = 80
 \end{equation*}
 </div>
 <div class="para">When we multiply both sides by the LCD, <span class="process-math">\(x - 3\text{,}\)</span> we obtain</div>
-<div class="displaymath process-math" id="md-493">
+<div class="displaymath process-math" id="md-494">
 \begin{align*}
 \alert{(x - 3)}\frac{x}{x-3} \amp =\alert{(x - 3)}\frac{3}{x-3}+\alert{(x - 3)}\cdot 2\\
 x \amp = 3 + 2x - 6
@@ -1099,15 +1016,15 @@ Y_1=\frac{x}{x-3} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{3}{x-3}+2
 </div>
 <div class="para">you will find that the graphs never intersect, which means that there is no solution to the original equation.</div>
 </div>
-<div class="para" id="p-8612">What went wrong with our method of solution? We multiplied both sides of the equation by <span class="process-math">\(x - 3\text{,}\)</span> which is zero when <span class="process-math">\(x = 3\text{,}\)</span> so we really multiplied both sides of the equation by zero. Multiplying by zero does not produce an equivalent equation, and false solutions may be introduced.</div>
-<div class="para" id="p-8613">An apparent solution that does not satisfy the original equation is called an <dfn class="terminology">extraneous solution</dfn>. Whenever we multiply an equation by an expression containing the variable, we should check that the solution obtained does not cause any of the fractions to be undefined.</div>
+<div class="para" id="p-8264">What went wrong with our method of solution? We multiplied both sides of the equation by <span class="process-math">\(x - 3\text{,}\)</span> which is zero when <span class="process-math">\(x = 3\text{,}\)</span> so we really multiplied both sides of the equation by zero. Multiplying by zero does not produce an equivalent equation, and false solutions may be introduced.</div>
+<div class="para" id="p-8265">An apparent solution that does not satisfy the original equation is called an <dfn class="terminology">extraneous solution</dfn>. Whenever we multiply an equation by an expression containing the variable, we should check that the solution obtained does not cause any of the fractions to be undefined.</div>
 <article class="example example-like" id="example-clear-fractions2"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8614">Solve the equation  <span class="process-math">\(~\dfrac{6}{x}+1=\dfrac{1}{x+2}\text{.}\)</span>
+<div class="para" id="p-8266">Solve the equation  <span class="process-math">\(~\dfrac{6}{x}+1=\dfrac{1}{x+2}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-426" id="solution-426"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-426"><div class="solution solution-like"><div class="para logical" id="p-8615">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-414" id="solution-414"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-414"><div class="solution solution-like"><div class="para logical" id="p-8267">
 <div class="para">We multiply both sides by the LCD, <span class="process-math">\(x(x + 2)\text{.}\)</span> Notice that we multiply <em class="emphasis">each term</em> on the left side by the LCD, to get</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1121,7 +1038,7 @@ Y_1=\frac{x}{x-3} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{3}{x-3}+2
 \end{equation*}
 </div>
 <div class="para">We use the distributive law to remove the parentheses and write the result in standard form:</div>
-<div class="displaymath process-math" id="md-494">
+<div class="displaymath process-math" id="md-495">
 \begin{align*}
 6x + 12 + x^2 + 2x\amp = x\\
 x^2 + 7x + 12 \amp = 0
@@ -1135,12 +1052,12 @@ x^2 + 7x + 12 \amp = 0
 </div>
 <div class="para">so the solutions are <span class="process-math">\(x = -3\)</span> and <span class="process-math">\(x = -4\text{.}\)</span> Neither of these values causes either denominator to equal zero, so they are not extraneous solutions.</div>
 </div></div></div>
-</div></article><article class="warning remark-like" id="warning-45"><h4 class="heading">
+</div></article><article class="warning remark-like" id="warning-44"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.5.11</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-8616">
+<div class="para logical" id="p-8268">
 <div class="para">The following "solution" for the previous <a href="" class="xref" data-knowl="./knowl/example-clear-fractions2.html" title="Example 8.5.10">Example</a> is incorrect.  Do you see why?</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-clear-fractions2.html" id="md-495">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-clear-fractions2.html" id="md-496">
 \begin{align*}
 \alert{x(x + 2)}\frac{6}{x}+1 \amp =\alert{x(x + 2)}\frac{1}{x+2}\\
 6x+12+1 \amp = x\\
@@ -1148,91 +1065,32 @@ x^2 + 7x + 12 \amp = 0
 x \amp = \dfrac{-13}{5}
 \end{align*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-1886"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1886"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1887"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1887"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1886"><article class="exercise exercise-like"><div id="webwork-47" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="47" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR1bmRlZiA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgInRoZSBudW1lcmF0b3IgZXF1YWxzIHplcm8iLCAKICAgICJ0aGUgZGVub21pbmF0b3IgZXF1YWxzIHplcm8iLAogICAgIml0IGluY2x1ZGVzIGRlY2ltYWxzIiwKICAgICJ0aGVyZSBpcyBhIHZhcmlhYmxlIGluIHRoZSBkZW5vbWluYXRvciJdLAogICAgMgopOyAgICAgICAgCiRleHRyYSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImFuIGV4dHJhbmVvdXMiLCAKICAgICJhIGRvdWJsZSIsCiAgICAiYSBwcmluY2lwYWwiLAogICAgImEgbXVsdGlwbGUiXSwKICAgIDEKKTsgICAgICAgIAokemVybyA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImEgbm9uemVybyBpbnRlZ2VyIiwKICAgICJhbiBleHByZXNzaW9uIGNvbnRhaW5pbmcgdGhlIHZhcmlhYmxlIiwgCiAgICAiYW55IGlycmF0aW9uYWwgbnVtYmVyIl0sCiAgICAyCik7ICAgICAgICAKJHRlcm0gPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJ0ZXJtIiwgCiAgICAiZGVub21pbmF0b3IiLAogICAgImZyYWN0aW9uIG9ubHkiXSwKICAgIDEKKTsKCkJFR0lOX1BHTUwKYS4gIEFuIGFsZ2VicmFpYyBmcmFjdGlvbiBpcyB1bmRlZmluZWQgd2hlbiBbX117JHVuZGVmfXs1fS4KYS4gIEFuIGFwcGFyZW50IHNvbHV0aW9uIHRoYXQgZG9lcyBub3Qgc2F0aXNmeSB0aGUgb3JpZ2luYWwgZXF1YXRpb24gaXMgY2FsbGVkICBbX117JGV4dHJhfXs1fSBzb2x1dGlvbi4KYS4gIFdlIG1heSBpbnRyb2R1Y2UgZXh0cmFuZW91cyBzb2x1dGlvbnMgaWYgd2UgbXVsdGlwbHkgYm90aCBzaWRlcyBvZiBhbiBlcXVhdGlvbiBieSBbX117JHplcm99ezV9LgphLiAgV2UgbXVzdCBtdWx0aXBseSBlYWNoIFtfXXskdGVybX17NX0gb2YgdGhlIGVxdWF0aW9uIGJ5IHRoZSBMQ0QuICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICB0aGUgZGVub21pbmF0b3IgZXF1YWxzIHplcm8KYS4gIGFuIGV4dHJhbmVvdXMKYS4gIGFuIGV4cHJlc3Npb24gY29udGFpbmluZyB0aGUgdmFyaWFibGUKYS4gIHRlcm0gICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-47')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="p-8617"><ol class="lower-alpha">
-<li id="li-5745"><div class="para logical" id="p-8618">
-<div class="para">An algebraic fraction is undefined when</div>
-<ul class="square">
-<li id="li-5746"><div class="para" id="p-8619">the numerator equals zero</div></li>
-<li id="li-5747"><div class="para" id="p-8620">the denominator equals zero</div></li>
-<li id="li-5748"><div class="para" id="p-8621">it includes decimals</div></li>
-<li id="li-5749"><div class="para" id="p-8622">there is a variable in the denominator</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="li-5750"><div class="para logical" id="p-8623">
-<div class="para">An apparent solution that does not satisfy the original equation is called</div>
-<ul class="square">
-<li id="li-5751"><div class="para" id="p-8624">an extraneous</div></li>
-<li id="li-5752"><div class="para" id="p-8625">a double</div></li>
-<li id="li-5753"><div class="para" id="p-8626">a principal</div></li>
-<li id="li-5754"><div class="para" id="p-8627">a multiple</div></li>
-</ul>
-<div class="para">solution.</div>
-</div></li>
-<li id="li-5755"><div class="para logical" id="p-8628">
-<div class="para">We may introduce extraneous solutions if we multiply both sides of an equation by</div>
-<ul class="square">
-<li id="li-5756"><div class="para" id="p-8629">a nonzero integer</div></li>
-<li id="li-5757"><div class="para" id="p-8630">an expression containing the variable</div></li>
-<li id="li-5758"><div class="para" id="p-8631">any irrational number</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="li-5759"><div class="para logical" id="p-8632">
-<div class="para">We must multiply each</div>
-<ul class="square">
-<li id="li-5760"><div class="para" id="p-8633">term</div></li>
-<li id="li-5761"><div class="para" id="p-8634">denominator</div></li>
-<li id="li-5762"><div class="para" id="p-8635">fraction only</div></li>
-</ul>
-<div class="para">of the equation by the LCD.</div>
-</div></li>
-</ol></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1007" id="answer-1007"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1007"><div class="answer solution-like"><div class="para" id="p-8636"><span class="process-math">\(\text{the denominator equals zero}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1008" id="answer-1008"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1008"><div class="answer solution-like"><div class="para" id="p-8637"><span class="process-math">\(\text{an extraneous}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1009" id="answer-1009"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1009"><div class="answer solution-like"><div class="para" id="p-8638"><span class="process-math">\(\text{an expression containing the variable}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1010" id="answer-1010"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1010"><div class="answer solution-like"><div class="para" id="p-8639"><span class="process-math">\(\text{term}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-427" id="solution-427"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-427"><div class="solution solution-like"><div class="para logical" id="p-8640"><ol class="lower-alpha">
-<li id="li-5763"><div class="para" id="p-8641">the denominator equals zero</div></li>
-<li id="li-5764"><div class="para" id="p-8642">an extraneous</div></li>
-<li id="li-5765"><div class="para" id="p-8643">an expression containing the variable</div></li>
-<li id="li-5766"><div class="para" id="p-8644">term</div></li>
-</ol></div></div></div>
-</div>
-</div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-1887"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1887"><h4 class="heading">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1887"><article class="exercise exercise-like"><div class="para logical" id="p-8269"><ol class="lower-alpha">
+<li id="li-5546"><div class="para" id="p-8270">An algebraic fraction is undefined when <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</div></li>
+<li id="li-5547"><div class="para" id="p-8271">An apparent solution that does not satisfy the original equation is called <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> solution.</div></li>
+<li id="li-5548"><div class="para" id="p-8272">We may introduce extraneous solutions if we multiply both sides of an equation by <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</div></li>
+<li id="li-5549"><div class="para" id="p-8273">We must multiply each <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> of the equation by the LCD.</div></li>
+</ol></div></article></div>
+<article class="exercise exercise-like" id="exercise-1888"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1888"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.13</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1887"><article class="exercise exercise-like"><div id="webwork-48" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="48" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zd2VyID0gQ29tcHV0ZSgiLTEvMiIpOwoKQkVHSU5fUEdNTApTb2x2ZSBbYFxxdWFkXGRmcmFjezl9e3heMit4LTJ9ICsgXGRmcmFjezF9e3heMi14fSA9IFxkZnJhY3s0fXt4LTF9YF0KCltgeD1gXVtfXXskYW5zd2VyfXs3fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgXGRmcmFjey0xfXsyfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-48')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="p-8645">Solve <span class="process-math">\(\quad\dfrac{9}{x^2+x-2} + \dfrac{1}{x^2-x} = \dfrac{4}{x-1}\)</span>
-</div> <div class="para" id="p-8646">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="7-character blank" style="width: 3.181818181818182em;"></span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1888"><article class="exercise exercise-like"><div class="para" id="p-8274">Solve <span class="process-math">\(\quad\dfrac{9}{x^2+x-2} + \dfrac{1}{x^2-x} = \dfrac{4}{x-1}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1011" id="answer-1011"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1011"><div class="answer solution-like"><div class="para" id="p-8647"><span class="process-math">\(\frac{-1}{2}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-428" id="solution-428"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-428"><div class="solution solution-like"><div class="para" id="p-8648"><span class="process-math">\(\dfrac{-1}{2}\)</span></div></div></div>
-</div>
-</div>
-</div></article></div></section><section class="subsection" id="subsection-203"><h3 class="heading hide-type">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-415" id="solution-415"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-415"><div class="solution solution-like"><div class="para" id="p-8275"><span class="process-math">\(\dfrac{-1}{2}\)</span></div></div></div>
+</div></article></div></section><section class="subsection" id="subsection-205"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.5.4</span><span class="space"> </span><span class="title">Solving Graphically</span>
 </h3>
-<div class="para" id="p-8649">We can use graphs to solve the equation in the following Example.</div>
-<article class="example example-like" id="example-221"><h4 class="heading">
+<div class="para" id="p-8276">We can use graphs to solve the equation in the following Example.</div>
+<article class="example example-like" id="example-223"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.14</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8650">Solve the equation graphically: <span class="process-math">\(~\dfrac{6}{x}+1=\dfrac{1}{x+2}\text{.}\)</span>
+<div class="para" id="p-8277">Solve the equation graphically: <span class="process-math">\(~\dfrac{6}{x}+1=\dfrac{1}{x+2}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-429" id="solution-429"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-429"><div class="solution solution-like">
-<div class="para logical" id="p-8651">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-416" id="solution-416"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-416"><div class="solution solution-like">
+<div class="para logical" id="p-8278">
 <div class="para">We graph the two functions</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1240,16 +1098,16 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 \end{equation*}
 </div>
 <div class="para">in the window</div>
-<div class="displaymath process-math" id="md-496">
+<div class="displaymath process-math" id="md-497">
 \begin{align*}
 \text{Xmin} \amp = -4.7 \amp\amp \text{Xmax} = 4.7\\
 \text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
 \end{align*}
 </div>
 <div class="para">as shown in figure (a).</div>
-</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-intersection-of-rational-functions.svg" role="img" class="contained" alt="GC images of intersecting rational functions"></div></div></div> <div class="para logical" id="p-8652">
+</div> <div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-GC-intersection-of-rational-functions.svg" role="img" class="contained" alt="GC images of intersecting rational functions"></div> <div class="para logical" id="p-8279">
 <div class="para">It appears that the two graphs may intersect in the third quadrant, around <span class="process-math">\(x = -3\text{.}\)</span> To investigate further, we change the window settings to</div>
-<div class="displaymath process-math" id="md-497">
+<div class="displaymath process-math" id="md-498">
 \begin{align*}
 \text{Xmin} \amp = -4.55 \amp\amp \text{Xmax} = -2.2\\
 \text{Ymin} \amp = -1.3 \amp\amp \text{Ymax} = -0.3
@@ -1259,57 +1117,44 @@ Y_1=\frac{6}{x}+1 \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{1}{x+2}
 </div>
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1888"><a href="" data-knowl="" class="id-ref exercise-knowl original has-image" data-refid="hk-exercise-1888"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1889"><a href="" data-knowl="" class="id-ref exercise-knowl original has-image" data-refid="hk-exercise-1889"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1888"><article class="exercise exercise-like"><div id="webwork-49" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="49" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7JHIxID0gQ29tcHV0ZSgiMSIpOwokcjIgPSBDb21wdXRlKCI0Iik7CiRhbnN3ZXIgPSBMaXN0KCIkcjEsICRyMiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKVGhlIG1hbmFnZXIgb2YgYSBuZXcgaGVhbHRoIGNsdWIga2VwdCB0cmFjayBvZiB0aGUgbnVtYmVyIG9mIGFjdGl2ZSBtZW1iZXJzIG92ZXIgdGhlIGNsdWIncyBmaXJzdCBmZXcgbW9udGhzIG9mIG9wZXJhdGlvbi4gIFRoZSBudW1iZXIsIFtgTmBdICBvZiBhY3RpdmUgbWVtYmVycywgaW4gaHVuZHJlZHMsIFtgdGBdIG1vbnRocyBhZnRlciB0aGUgY2x1YiBvcGVuZWQgaXMgZ2l2ZW4gYnkgdGhlIGVxdWF0aW9uCgpbYGBgXGJlZ2lue2dhdGhlcmVkfQpOPVxkZnJhY3sxMHR9ezQrdF4yfQpcZW5ke2dhdGhlcmVkfQpgYGBdCgoKYS4gIEdyYXBoIHRoZSBlcXVhdGlvbiBpbiB0aGUgd2luZG93CgogICAgW2BgYFxiZWdpbnthbGlnbmVkfQogICAgXHRleHR7WG1pbn0gXGFtcCA9IDAgXGFtcFxhbXAgXHRleHR7WG1heH0gPSA5LjRcXAogICAgXHRleHR7WW1pbn0gXGFtcCA9IDAgXGFtcFxhbXAgXHRleHR7WW1heH0gPSAzCiAgICBcZW5ke2FsaWduZWR9CiAgICBgYGBdCgoKCgphLiAgVXNlIHRoZSBncmFwaCB0byBmaW5kIG91dCBpbiB3aGljaCBtb250aHMgdGhlIGNsdWIgaGFkIDIwMCBhY3RpdmUgbWVtYmVycy4KCiAgICBNb250aHM6IFtfXXskYW5zd2VyfXs1fSBFbnRlciBtb250aCBudW1iZXJzIHNlcGFyYXRlZCBieSBhIGNvbW1hLgoKCmEuICBWZXJpZnkgeW91ciBhbnN3ZXIgYWxnZWJyYWljYWxseSBieSBzb2x2aW5nIGFuIGVxdWF0aW9uLiAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgQSBncmFwaCBpcyBiZWxvdy4KYS4gIDEsIDQgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-49')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="p-8653">The manager of a new health club kept track of the number of active members over the club’s first few months of operation.  The number, <span class="process-math">\(N\)</span>  of active members, in hundreds, <span class="process-math">\(t\)</span> months after the club opened is given by the equation</div> <div class="para logical" id="p-8654"><div class="displaymath process-math">
-\begin{equation*}
-\begin{gathered}
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1889"><article class="exercise exercise-like"><div class="para logical" id="p-8280">
+<div class="para">The manager of a new health club kept track of the number of active members over the club’s first few months of operation.  The number, <span class="process-math">\(N\)</span>  of active members, in hundreds, <span class="process-math">\(t\)</span> months after the club opened is given by the equation</div>
+<div class="displaymath process-math" id="md-499">
+\begin{gather*}
 N=\dfrac{10t}{4+t^2}
-\end{gathered}
-\end{equation*}
-</div></div> <div class="para logical" id="p-8655"><ol class="lower-alpha">
-<li id="li-5767">
-<div class="para" id="p-8656">Graph the equation in the window</div>
-<div class="para logical" id="p-8657"><div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
+\end{gather*}
+</div>
+</div> <div class="para logical" id="p-8281"><ol class="lower-alpha">
+<li id="li-5550"><div class="para logical" id="p-8282">
+<div class="para">Graph the equation in the window</div>
+<div class="displaymath process-math" id="md-500">
+\begin{align*}
 \text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 9.4\\
 \text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 3
-\end{aligned}
-\end{equation*}
-</div></div>
-</li>
-<li id="li-5768">
-<div class="para" id="p-8658">Use the graph to find out in which months the club had 200 active members.</div>
-<div class="para" id="p-8659">Months: <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> Enter month numbers separated by a comma.</div>
-</li>
-<li id="li-5769"><div class="para" id="p-8660">Verify your answer algebraically by solving an equation.</div></li>
+\end{align*}
+</div>
+</div></li>
+<li id="li-5551"><div class="para" id="p-8283">Use the graph to find out in which months the club had 200 active members.</div></li>
+<li id="li-5552"><div class="para" id="p-8284">Verify your answer algebraically by solving an equation.</div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1012" id="answer-1012"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1012"><div class="answer solution-like"><div class="para" id="p-8661"><span class="process-math">\(1, 4\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-430" id="solution-430"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-430"><div class="solution solution-like"><div class="para logical" id="p-8662"><ol class="lower-alpha">
-<li id="li-5770"><div class="para" id="p-8663">A graph is below.</div></li>
-<li id="li-5771"><div class="para" id="p-8664">1, 4</div></li>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-417" id="solution-417"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-417"><div class="solution solution-like"><div class="para logical" id="p-8285"><ol class="lower-alpha">
+<li id="li-5553"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-GC-healt-club-membership.svg" role="img" class="contained" alt="graph"></div></li>
+<li id="li-5554"><div class="para" id="p-derived-li-5554">1, 4</div></li>
 </ol></div></div></div>
-</div>
-</div>
-</div>
-<div class="conclusion" id="conclusion-4">
-<div class="para" id="p-8665">Graph for (a):</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:42.1052631578947%;"><img src="external/images/fig-GC-healt-club-membership.svg" role="img" class="contained" alt="graph"></div></div></div>
-</div></article></div></section><section class="subsection" id="subsection-204"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-206"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.5.5</span><span class="space"> </span><span class="title">Applications</span>
 </h3>
-<div class="para" id="p-8666">Application problems may lead to equations with algebraic fractions.</div>
+<div class="para" id="p-8286">Application problems may lead to equations with algebraic fractions.</div>
 <article class="example example-like" id="example-kayak-current"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.16</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8667">Rani times herself as she kayaks 30 miles down the Derwent River with the help of the current. Returning upstream against the current, she manages only 18 miles in the same amount of time. Rani knows that she can kayak at a rate of 12 miles per hour in still water. What is the speed of the current?</div>
+<div class="para" id="p-8287">Rani times herself as she kayaks 30 miles down the Derwent River with the help of the current. Returning upstream against the current, she manages only 18 miles in the same amount of time. Rani knows that she can kayak at a rate of 12 miles per hour in still water. What is the speed of the current?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-431" id="solution-431"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-431"><div class="solution solution-like">
-<div class="para logical" id="p-8668">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-418" id="solution-418"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-418"><div class="solution solution-like">
+<div class="para logical" id="p-8288">
 <div class="para">If we let <span class="process-math">\(x\)</span> represent the speed of the current, we can use the formula</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1317,7 +1162,7 @@ N=\dfrac{10t}{4+t^2}
 \end{equation*}
 </div>
 <div class="para">to fill in the following table.</div>
-</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines"></td>
 <td class="c m b1 r1 l0 t3 lines">Distance</td>
@@ -1336,7 +1181,7 @@ N=\dfrac{10t}{4+t^2}
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(12-x\)</span></td>
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\dfrac{18}{12-x}\)</span></td>
 </tr>
-</table></div></div></div> <div class="para logical" id="p-8669">
+</table></div> <div class="para logical" id="p-8289">
 <div class="para">Because Rani paddled for equal amounts of time upstream and downstream, we have the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1344,14 +1189,14 @@ N=\dfrac{10t}{4+t^2}
 \end{equation*}
 </div>
 <div class="para">The LCD for the fractions in this equation is <span class="process-math">\(\alert{(12 + x)(12 - x)}\text{.}\)</span> We multiply both sides of the equation by the LCD to obtain</div>
-<div class="displaymath process-math" id="md-498">
+<div class="displaymath process-math" id="md-501">
 \begin{align*}
 \alert{\cancel{(12 + x)}(12 - x)}\dfrac{30}{\cancel{12+x}} \amp =\dfrac{18}{\cancel{12-x}}\alert{(12 + x)\cancel{(12 - x)}}\\
 30 (12 - x) \amp = 18 (12 + x)
 \end{align*}
 </div>
 <div class="para">Solving this equation, we find</div>
-<div class="displaymath process-math" id="md-499">
+<div class="displaymath process-math" id="md-502">
 \begin{align*}
 360 - 30x \amp = 216 + 18x\\
 144 \amp = 48x\\
@@ -1361,7 +1206,7 @@ N=\dfrac{10t}{4+t^2}
 <div class="para">The speed of the current is 3 miles per hour.</div>
 </div>
 </div></div>
-</div></article><div class="para logical" id="p-8670">
+</div></article><div class="para logical" id="p-8290">
 <div class="para">We can solve the equation in <a href="" class="xref" data-knowl="./knowl/example-kayak-current.html" title="Example 8.5.16">Example 8.5.16</a> graphically by considering two functions, one for each side of the equation. Graph the two functions</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/example-kayak-current.html">
 \begin{equation*}
@@ -1369,7 +1214,7 @@ Y_1=\frac{30}{12+x} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{30}{12-x
 \end{equation*}
 </div>
 <div class="para">in the window</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-kayak-current.html" id="md-500">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-kayak-current.html" id="md-503">
 \begin{align*}
 \text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 9.4\\
 \text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 10
@@ -1377,73 +1222,50 @@ Y_1=\frac{30}{12+x} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{30}{12-x
 </div>
 <div class="para">to obtain the graph shown below.</div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-GC-intersecting-rational-functions.svg" role="img" class="contained" alt="intersecting rational functions"></div></div></div>
-<div class="para" id="p-8671">The function <span class="process-math">\(Y_1\)</span> gives the time it takes Rani to paddle 30 miles downstream, and <span class="process-math">\(Y_2\)</span> gives the time it takes her to paddle 18 miles upstream. Both of these times depend on the speed of the current, <span class="process-math">\(x\text{.}\)</span>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/fig-GC-intersecting-rational-functions.svg" role="img" class="contained" alt="intersecting rational functions"></div>
+<div class="para" id="p-8291">The function <span class="process-math">\(Y_1\)</span> gives the time it takes Rani to paddle 30 miles downstream, and <span class="process-math">\(Y_2\)</span> gives the time it takes her to paddle 18 miles upstream. Both of these times depend on the speed of the current, <span class="process-math">\(x\text{.}\)</span>
 </div>
-<div class="para" id="p-8672">We are looking for a value of <span class="process-math">\(x\)</span> that makes <span class="process-math">\(Y_1\)</span> and <span class="process-math">\(Y_2\)</span> equal. This occurs at the intersection point of the two graphs, <span class="process-math">\((3, 2)\text{.}\)</span> Thus, the speed of the current is 3 miles per hour, as we found in <a href="" class="xref" data-knowl="./knowl/example-kayak-current.html" title="Example 8.5.16">Example 8.5.16</a>. The y-coordinate of the intersection point gives the time Rani paddled on each part of her trip: 2 hours each way.</div>
-<article class="exercise exercise-like" id="exercise-1889"><a href="" data-knowl="" class="id-ref exercise-knowl original has-tabular" data-refid="hk-exercise-1889"><h4 class="heading">
+<div class="para" id="p-8292">We are looking for a value of <span class="process-math">\(x\)</span> that makes <span class="process-math">\(Y_1\)</span> and <span class="process-math">\(Y_2\)</span> equal. This occurs at the intersection point of the two graphs, <span class="process-math">\((3, 2)\text{.}\)</span> Thus, the speed of the current is 3 miles per hour, as we found in <a href="" class="xref" data-knowl="./knowl/example-kayak-current.html" title="Example 8.5.16">Example 8.5.16</a>. The y-coordinate of the intersection point gives the time Rani paddled on each part of her trip: 2 hours each way.</div>
+<article class="exercise exercise-like" id="exercise-1890"><a href="" data-knowl="" class="id-ref exercise-knowl original has-tabular" data-refid="hk-exercise-1890"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.17</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1889"><article class="exercise exercise-like"><div id="webwork-50" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="50" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZCA9IENvbXB1dGUoIjE4Iik7CiRkb3ducmF0ZSA9IEZvcm11bGEoIngrMyIpOwokdXByYXRlID0gRm9ybXVsYSgieC0zIik7CiRkb3dudGltZSA9IEZvcm11bGEoIiRkLyh4KzMpIik7CiR1cHRpbWUgPSBGb3JtdWxhKCIkZC8oeC0zKSIpOwokdGltZXMgPSBGb3JtdWxhKCIkZG93bnRpbWUgKyAkdXB0aW1lIik7CiR0ID0gQ29tcHV0ZSgiOS8yIik7CiRhbnMgPSBDb21wdXRlKCI5Iik7CgpCRUdJTl9QR01MCkEgY3J1aXNlIGJvYXQgdHJhdmVscyAxOCBtaWxlcyBkb3duc3RyZWFtIGFuZCBiYWNrIGluIFtgNFxkZnJhY3sxfXsyfWBdIGhvdXJzLiBJZiB0aGUgc3BlZWQgb2YgdGhlIGN1cnJlbnQgaXMgMyBtaWxlcyBwZXIgaG91ciwgd2hhdCBpcyB0aGUgc3BlZWQgb2YgdGhlIGJvYXQgaW4gc3RpbGwgd2F0ZXI/CmEuICBMZXQgW2B4YF0gcmVwcmVzZW50IHRoZSBzcGVlZCBvZiB0aGUgYm9hdCBpbiBzdGlsbCB3YXRlciwgYW5kIGZpbGwgaW4gdGhlIHRhYmxlLgoKICAgIFtARGF0YVRhYmxlKFtbW1BHTUwoJycpLGJvdHRvbSwnMScsbWlkcnVsZSwnMScsXSxQR01MKCdEaXN0YW5jZScpLFBHTUwoJ1JhdGUnKSxQR01MKCdUaW1lJyksXSxbW1BHTUwoJ0Rvd25zdHJlYW0nKSxib3R0b20sJzEnLG1pZHJ1bGUsJzEnLF0sUEdNTCgnW19deyRkfXsyfScpLFBHTUwoJ1tfXXskZG93bnJhdGV9ezN9JyksUEdNTCgnW19deyRkb3dudGltZX17OH0nKSxdLFtbUEdNTCgnVXBzdHJlYW0nKSxib3R0b20sJzEnLG1pZHJ1bGUsJzEnLF0sUEdNTCgnW19deyRkfXsyfScpLFBHTUwoJ1tfXXskdXByYXRlfXszfScpLFBHTUwoJ1tfXXskdXB0aW1lfXs4fScpLF0sXSxhbGlnbiwnfCp7NH17Y3x9Jyx2YWxpZ24sJ21pZGRsZScsdG9wLCczJywpO0BdKgoKCmEuICBXcml0ZSBhbiBlcXVhdGlvbiB0byBtb2RlbCB0aGUgcHJvYmxlbToKCiAgICBbYFx0ZXh0e0Rvd25zdHJlYW0gdGltZSArIFVwc3RyZWFtIHRpbWUgPSBUb3RhbCB0cmlwIHRpbWV9YF0KCiAgICBbX117JHRpbWVzfXsyMH1bYD1gXSBbX117JHR9ezN9CgoKYS4gIFNvbHZlIHlvdXIgZXF1YXRpb24sIGFuZCBhbnN3ZXIgdGhlIHF1ZXN0aW9uIGluIHRoZSBwcm9ibGVtLgoKICAgIFtgeD1gXVtfXXskYW5zfXszfTogVGhlIHNwZWVkIG9mIHRoZSBib2F0IGluIHN0aWxsIHdhdGVyIGlzIFtfXXskYW5zfXsyfSBtcGguCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbQERhdGFUYWJsZShbW1tQR01MKCcnKSxib3R0b20sJzEnLG1pZHJ1bGUsJzEnLF0sUEdNTCgnRGlzdGFuY2UnKSxQR01MKCdSYXRlJyksUEdNTCgnVGltZScpLF0sW1tQR01MKCdEb3duc3RyZWFtJyksYm90dG9tLCcxJyxtaWRydWxlLCcxJyxdLFBHTUwoJ1tgMThgXScpLFBHTUwoJ1tgeCszYF0nKSxQR01MKCdbYFxkZnJhY3sxOH17eCszfWBdJyksXSxbW1BHTUwoJ1Vwc3RyZWFtJyksYm90dG9tLCcxJyxtaWRydWxlLCcxJyxdLFBHTUwoJ1tgMThgXScpLFBHTUwoJ1tgeC0zYF0nKSxQR01MKCdbYFxkZnJhY3sxOH17eC0zfWBdJyksXSxdLGFsaWduLCd8Kns0fXtjfH0nLHZhbGlnbiwnbWlkZGxlJyx0b3AsJzMnLCk7QF0qCgoKYS4gIFtgXGRmcmFjezE4fXt4KzN9ICsgXGRmcmFjezE4fXt4LTN9ID0gXGRmcmFjezl9ezJ9YF0KYS4gIDkgbXBoICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-50')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="p-8673">
-<div class="para">A cruise boat travels 18 miles downstream and back in <span class="process-math">\(4\dfrac{1}{2}\)</span> hours. If the speed of the current is 3 miles per hour, what is the speed of the boat in still water?</div>
-<ol class="lower-alpha">
-<li id="li-5772">
-<div class="para" id="p-8674">Let <span class="process-math">\(x\)</span> represent the speed of the boat in still water, and fill in the table.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1890"><article class="exercise exercise-like"><div class="para" id="p-8293">A cruise boat travels 18 miles downstream and back in <span class="process-math">\(4\dfrac{1}{2}\)</span> hours. If the speed of the current is 3 miles per hour, what is the speed of the boat in still water?</div> <div class="para logical" id="p-8294"><ol class="lower-alpha">
+<li id="li-5555">
+<div class="para" id="p-8295">Let <span class="process-math">\(x\)</span> represent the speed of the boat in still water, and fill in the table.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="c m b1 r1 l1 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines">Distance</td>
-<td class="c m b1 r1 l0 t0 lines">Rate</td>
-<td class="c m b1 r1 l0 t0 lines">Time</td>
+<td class="c m b1 r1 l1 t3 lines"></td>
+<td class="c m b1 r1 l0 t3 lines">Distance</td>
+<td class="c m b1 r1 l0 t3 lines">Rate</td>
+<td class="c m b1 r1 l0 t3 lines">Time</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Downstream</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\hphantom{00000}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\hphantom{00000}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\hphantom{00000}\)</span></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Upstream</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\hphantom{00000}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\hphantom{00000}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\hphantom{00000}\)</span></td>
 </tr>
 </table></div>
 </li>
-<li id="li-5773">
-<div class="para" id="p-8675">Write an equation to model the problem:</div>
-<div class="para" id="p-8676"><span class="process-math">\(\text{Downstream time + Upstream time = Total trip time}\)</span></div>
-<div class="para" id="p-8677">
-<span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span><span class="process-math">\(=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
-</div>
+<li id="li-5556">
+<div class="para" id="p-8296">Write an equation to model the problem:</div>
+<div class="para" id="p-8297"><span class="process-math">\(\text{Downstream time + Upstream time = Total trip time}\)</span></div>
 </li>
-<li id="li-5774">
-<div class="para" id="p-8678">Solve your equation, and answer the question in the problem.</div>
-<div class="para" id="p-8679">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>: The speed of the boat in still water is <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> mph.</div>
-</li>
-</ol>
-</div>
+<li id="li-5557"><div class="para" id="p-8298">Solve your equation, and answer the question in the problem.</div></li>
+</ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1013" id="answer-1013"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1013"><div class="answer solution-like"><div class="para" id="p-8680"><span class="process-math">\(18\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1014" id="answer-1014"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1014"><div class="answer solution-like"><div class="para" id="p-8681"><span class="process-math">\(x+3\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1015" id="answer-1015"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1015"><div class="answer solution-like"><div class="para" id="p-8682"><span class="process-math">\(\frac{18}{x+3}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1016" id="answer-1016"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1016"><div class="answer solution-like"><div class="para" id="p-8683"><span class="process-math">\(18\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1017" id="answer-1017"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1017"><div class="answer solution-like"><div class="para" id="p-8684"><span class="process-math">\(x-3\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1018" id="answer-1018"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1018"><div class="answer solution-like"><div class="para" id="p-8685"><span class="process-math">\(\frac{18}{x-3}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1019" id="answer-1019"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1019"><div class="answer solution-like"><div class="para" id="p-8686"><span class="process-math">\(\frac{18}{x+3}+\frac{18}{x-3}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1020" id="answer-1020"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1020"><div class="answer solution-like"><div class="para" id="p-8687"><span class="process-math">\(\frac{9}{2}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1021" id="answer-1021"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1021"><div class="answer solution-like"><div class="para" id="p-8688"><span class="process-math">\(9\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1022" id="answer-1022"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1022"><div class="answer solution-like"><div class="para" id="p-8689"><span class="process-math">\(9\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-432" id="solution-432"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-432"><div class="solution solution-like"><div class="para logical" id="p-8690"><ol class="lower-alpha">
-<li id="li-5775"><div class="tabular-box natural-width"><table class="tabular">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-419" id="solution-419"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-419"><div class="solution solution-like"><div class="para logical" id="p-8299"><ol class="lower-alpha">
+<li id="li-5558"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="c m b1 r1 l1 t0 lines"></td>
-<td class="c m b1 r1 l0 t0 lines">Distance</td>
-<td class="c m b1 r1 l0 t0 lines">Rate</td>
-<td class="c m b1 r1 l0 t0 lines">Time</td>
+<td class="c m b1 r1 l1 t3 lines"></td>
+<td class="c m b1 r1 l0 t3 lines">Distance</td>
+<td class="c m b1 r1 l0 t3 lines">Rate</td>
+<td class="c m b1 r1 l0 t3 lines">Time</td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">Downstream</td>
@@ -1458,147 +1280,96 @@ Y_1=\frac{30}{12+x} \hphantom{space}\text{and}\hphantom{space}Y_2=\frac{30}{12-x
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\dfrac{18}{x-3}\)</span></td>
 </tr>
 </table></div></li>
-<li id="li-5776"><div class="para" id="p-8691"><span class="process-math">\(\displaystyle \dfrac{18}{x+3} + \dfrac{18}{x-3} = \dfrac{9}{2}\)</span></div></li>
-<li id="li-5777"><div class="para" id="p-8692">9 mph</div></li>
+<li id="li-5559"><div class="para" id="p-derived-li-5559"><span class="process-math">\(\displaystyle \dfrac{18}{x+3} + \dfrac{18}{x-3} = \dfrac{9}{2}\)</span></div></li>
+<li id="li-5560"><div class="para" id="p-8300">9 mph</div></li>
 </ol></div></div></div>
-</div>
-</div>
-</div></article></div></section><section class="subsection" id="subsection-205"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-207"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.5.6</span><span class="space"> </span><span class="title">Formulas</span>
 </h3>
-<div class="para" id="p-8693">Algebraic fractions may appear in formulas that relate several variables.  If we want to solve for one variable in terms of the others, we may need to clear the fractions.</div>
-<article class="example example-like" id="example-223"><h4 class="heading">
+<div class="para" id="p-8301">Algebraic fractions may appear in formulas that relate several variables.  If we want to solve for one variable in terms of the others, we may need to clear the fractions.</div>
+<article class="example example-like" id="example-225"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-8694">Solve the formula <span class="process-math">\(~~p=\dfrac{v}{q+v}~~ \)</span> for <span class="process-math">\(v\text{.}\)</span>
+<div class="para" id="p-8302">Solve the formula <span class="process-math">\(~~p=\dfrac{v}{q+v}~~ \)</span> for <span class="process-math">\(v\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-433" id="solution-433"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-433"><div class="solution solution-like"><div class="para logical" id="p-8695">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-420" id="solution-420"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-420"><div class="solution solution-like"><div class="para logical" id="p-8303">
 <div class="para">Because the variable we want appears in the denominator, we must first multiply both sides of the equation by that denominator, <span class="process-math">\(q+v\text{.}\)</span>
 </div>
-<div class="displaymath process-math" id="md-501">
+<div class="displaymath process-math" id="md-504">
 \begin{align*}
 \alert{(q+v)}p \amp= \alert{(q+v)}\frac{v}{q+v}\\
 (q + v)p \amp = v
 \end{align*}
 </div>
 <div class="para">We apply the distributive law on the left side, then collect all terms that involve <span class="process-math">\(v\)</span> on one side of the equation.</div>
-<div class="displaymath process-math" id="md-502">
+<div class="displaymath process-math" id="md-505">
 \begin{align*}
 qp + vp \amp = v \amp\amp \blert{\text{Subtract }vp \text{ from both sides.}}\\
 qp = v - vp
 \end{align*}
 </div>
 <div class="para">We cannot combine the two terms containing <span class="process-math">\(v\)</span> because they are not like terms. However, we can factor out <span class="process-math">\(v\text{,}\)</span> so that the right side is written as a single term containing the variable <span class="process-math">\(v\text{.}\)</span> We can then complete the solution.</div>
-<div class="displaymath process-math" id="md-503">
+<div class="displaymath process-math" id="md-506">
 \begin{align*}
 qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 \frac{qp}{1-p} \amp= v
 \end{align*}
 </div>
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1890"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1890"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-1891"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1891"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.19</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1890"><article class="exercise exercise-like"><div id="webwork-51" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="51" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChhPT4iUmVhbCIsIGI9PiJSZWFsIiwgSD0+IlJlYWwiKTsKJGYgPSBGb3JtdWxhKCIoYipIKS8oMmItSCkiKTsKCkJFR0lOX1BHTUwKU29sdmUgZm9yIFtgYVx0ZXh0ezp9YF0gW2B+XGRmcmFjezJhYn17YStifT1IIGBdCgpbYGE9YF1bX117JGZ9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgYT1cZGZyYWN7Ykh9ezJiLUh9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-51')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="p-8696">Solve for <span class="process-math">\(a\text{:}\)</span> <span class="process-math">\(~\dfrac{2ab}{a+b}=H\)</span>
-</div> <div class="para" id="p-8697">
-<span class="process-math">\(a=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1891"><article class="exercise exercise-like"><div class="para" id="p-8304">Solve for <span class="process-math">\(a\text{:}\)</span> <span class="process-math">\(~\dfrac{2ab}{a+b}=H \)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1023" id="answer-1023"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1023"><div class="answer solution-like"><div class="para" id="p-8698"><span class="process-math">\(\frac{bH}{2b-H}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-434" id="solution-434"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-434"><div class="solution solution-like"><div class="para" id="p-8699"><span class="process-math">\(a=\dfrac{bH}{2b-H}\)</span></div></div></div>
-</div>
-</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-421" id="solution-421"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-421"><div class="solution solution-like"><div class="para" id="p-8305"><span class="process-math">\(a=\dfrac{bH}{2b-H}\)</span></div></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-1891"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1891"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-1892"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1892"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.5.20</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1891"><article class="exercise exercise-like"><div id="webwork-52" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="52" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVG8gc29sdmUgYW4gZXF1YXRpb24gZ3JhcGhpY2FsbHksIHdlIGdyYXBoIHR3byBmdW5jdGlvbnMsIFtgeT1gXSAoZWFjaCBzaWRlIG9mIHRoZSBlcXVhdGlvbi4pIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIHNvbHV0aW9ucyBhcmUgdGhlIFtgeWBdLWNvb3JkaW5hdGVzIG9mIHRoZSBpbnRlcnNlY3Rpb24gcG9pbnRzIG9mIHRoZSB0d28gZ3JhcGhzLiAgW19deyRGYWxzZX17NX0KCgphLiAgVG8gc29sdmUgYSBmb3JtdWxhIHRoYXQgaXMgbGluZWFyIGluIHRoZSBkZXNpcmVkIHZhcmlhYmxlLCB3ZSBtdXN0IGdldCBhbGwgdGVybXMgaW5jbHVkaW5nIHRoYXQgdmFyaWFibGUgb24gb25lIHNpZGUgb2YgdGhlIGVxdWF0aW9uLiBbX117JFRydWV9ezV9CgoKYS4gIElmIHR3byBvciBtb3JlIHRlcm1zIG9uIG9uZSBzaWRlIG9mIHRoZSBlcXVhdGlvbiBpbmNsdWRlIHRoZSBkZXNpcmVkIHZhcmlhYmxlLCB3ZSBmYWN0b3IgaXQgb3V0LiBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUcnVlCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-52')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="p-8700">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1892"><article class="exercise exercise-like"><div class="para logical" id="p-8306">
 <div class="para">True or False.</div>
 <ol class="lower-alpha">
-<li id="li-5778"><div class="para logical" id="p-8701">
-<div class="para">To solve an equation graphically, we graph two functions, <span class="process-math">\(y=\)</span> (each side of the equation.)</div>
-<ul class="square">
-<li id="li-5779"><div class="para" id="p-8702">True</div></li>
-<li id="li-5780"><div class="para" id="p-8703">False</div></li>
-</ul>
-</div></li>
-<li id="li-5781"><div class="para logical" id="p-8704">
-<div class="para">The solutions are the <span class="process-math">\(y\)</span>-coordinates of the intersection points of the two graphs.</div>
-<ul class="square">
-<li id="li-5782"><div class="para" id="p-8705">True</div></li>
-<li id="li-5783"><div class="para" id="p-8706">False</div></li>
-</ul>
-</div></li>
-<li id="li-5784"><div class="para logical" id="p-8707">
-<div class="para">To solve a formula that is linear in the desired variable, we must get all terms including that variable on one side of the equation.</div>
-<ul class="square">
-<li id="li-5785"><div class="para" id="p-8708">True</div></li>
-<li id="li-5786"><div class="para" id="p-8709">False</div></li>
-</ul>
-</div></li>
-<li id="li-5787"><div class="para logical" id="p-8710">
-<div class="para">If two or more terms on one side of the equation include the desired variable, we factor it out.</div>
-<ul class="square">
-<li id="li-5788"><div class="para" id="p-8711">True</div></li>
-<li id="li-5789"><div class="para" id="p-8712">False</div></li>
-</ul>
-</div></li>
+<li id="li-5561"><div class="para" id="p-8307">To solve an equation graphically, we graph two functions, <span class="process-math">\(y=\)</span> (each side of the equation.)</div></li>
+<li id="li-5562"><div class="para" id="p-8308">The solutions are the <span class="process-math">\(y\)</span>-coordinates of the intersection points of the two graphs.</div></li>
+<li id="li-5563"><div class="para" id="p-8309">To solve a formula that is linear in the desired variable, we must get all terms including that variable on one side of the equation.</div></li>
+<li id="li-5564"><div class="para" id="p-8310">If two or more terms on one side of the equation include the desired variable, we factor it out.</div></li>
 </ol>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1024" id="answer-1024"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1024"><div class="answer solution-like"><div class="para" id="p-8713"><span class="process-math">\(\text{True}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1025" id="answer-1025"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1025"><div class="answer solution-like"><div class="para" id="p-8714"><span class="process-math">\(\text{False}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1026" id="answer-1026"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1026"><div class="answer solution-like"><div class="para" id="p-8715"><span class="process-math">\(\text{True}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1027" id="answer-1027"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1027"><div class="answer solution-like"><div class="para" id="p-8716"><span class="process-math">\(\text{True}\)</span></div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-435" id="solution-435"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-435"><div class="solution solution-like"><div class="para logical" id="p-8717"><ol class="lower-alpha">
-<li id="li-5790"><div class="para" id="p-8718">True</div></li>
-<li id="li-5791"><div class="para" id="p-8719">False</div></li>
-<li id="li-5792"><div class="para" id="p-8720">True</div></li>
-<li id="li-5793"><div class="para" id="p-8721">True</div></li>
-</ol></div></div></div>
-</div>
-</div>
 </div></article></div></section><section class="exercises" id="section-8-5-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">8.5.7</span><span class="space"> </span><span class="title">Problem Set 8.5</span>
 </h3>
 <article class="subexercises" id="subexercises-116"><h4 class="heading"><span class="title">Warm Up</span></h4>
 <div class="exercisegroup" id="exercisegroup-284">
 <h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-304"><div class="para" id="p-8722">For Problems 1–8, solve.</div></div>
+<div class="introduction" id="introduction-303"><div class="para" id="p-8311">For Problems 1–8, solve.</div></div>
 <div class="exercisegroup-exercises cols3">
-<article class="exercise exercise-like" id="exercise-1892"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<div class="para" id="p-8723"><span class="process-math">\(\dfrac{6}{w+2}=4 \)</span></div></article><article class="exercise exercise-like" id="exercise-1893"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<div class="para" id="p-8725"><span class="process-math">\(\dfrac{12}{r-7}=3 \)</span></div></article><article class="exercise exercise-like" id="exercise-1894"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<div class="para" id="p-8726"><span class="process-math">\(9=\dfrac{h-5}{h-2} \)</span></div></article><article class="exercise exercise-like" id="exercise-1895"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<div class="para" id="p-8728"><span class="process-math">\(-3=\dfrac{v+1}{v-6} \)</span></div></article><article class="exercise exercise-like" id="exercise-1896"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<div class="para" id="p-8729"><span class="process-math">\(\dfrac{15}{s^2}=8 \)</span></div></article><article class="exercise exercise-like" id="exercise-1897"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<div class="para" id="p-8731"><span class="process-math">\(\dfrac{3}{m^2}=5 \)</span></div></article><article class="exercise exercise-like" id="exercise-1898"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<div class="para" id="p-8732"><span class="process-math">\(4.3=\sqrt{\dfrac{18}{y}} \)</span></div></article><article class="exercise exercise-like" id="exercise-1899"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<div class="para" id="p-8734"><span class="process-math">\(6.5=\dfrac{52}{\sqrt{z}} \)</span></div></article>
+<article class="exercise exercise-like" id="exercise-1893"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="para" id="p-8312"><span class="process-math">\(\dfrac{6}{w+2}=4 \)</span></div></article><article class="exercise exercise-like" id="exercise-1894"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="para" id="p-8314"><span class="process-math">\(\dfrac{12}{r-7}=3 \)</span></div></article><article class="exercise exercise-like" id="exercise-1895"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="para" id="p-8315"><span class="process-math">\(9=\dfrac{h-5}{h-2} \)</span></div></article><article class="exercise exercise-like" id="exercise-1896"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="para" id="p-8317"><span class="process-math">\(-3=\dfrac{v+1}{v-6} \)</span></div></article><article class="exercise exercise-like" id="exercise-1897"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="para" id="p-8318"><span class="process-math">\(\dfrac{15}{s^2}=8 \)</span></div></article><article class="exercise exercise-like" id="exercise-1898"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="para" id="p-8320"><span class="process-math">\(\dfrac{3}{m^2}=5 \)</span></div></article><article class="exercise exercise-like" id="exercise-1899"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="para" id="p-8321"><span class="process-math">\(4.3=\sqrt{\dfrac{18}{y}} \)</span></div></article><article class="exercise exercise-like" id="exercise-1900"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="para" id="p-8323"><span class="process-math">\(6.5=\dfrac{52}{\sqrt{z}} \)</span></div></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-117"><h4 class="heading"><span class="title">Skills Practice</span></h4>
 <div class="exercisegroup" id="exercisegroup-285">
 <h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-305"><div class="para" id="p-8735">For Problems 9–16, solve.</div></div>
+<div class="introduction" id="introduction-304"><div class="para" id="p-8324">For Problems 9–16, solve.</div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-1900"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<div class="para" id="p-8736"><span class="process-math">\(\dfrac{4}{x} - 3 = \dfrac{5}{2x+3}\)</span></div></article><article class="exercise exercise-like" id="exercise-1901"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<div class="para" id="p-8738"><span class="process-math">\(\dfrac{4}{x-1} - \dfrac{4}{x+2} = \dfrac{3}{7}\)</span></div></article><article class="exercise exercise-like" id="exercise-1902"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<div class="para" id="p-8739"><span class="process-math">\(\dfrac{2}{n^2-2n} + \dfrac{1}{2n} = \dfrac{-1}{n^2+2n}\)</span></div></article><article class="exercise exercise-like" id="exercise-1903"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<div class="para" id="p-8741"><span class="process-math">\(\dfrac{3}{x-2}=\dfrac{1}{2}+\dfrac{2x-7}{2x-4} \)</span></div></article><article class="exercise exercise-like" id="exercise-1904"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<div class="para" id="p-8742"><span class="process-math">\(\dfrac{4}{x+2}-\dfrac{1}{x}=\dfrac{2x-1}{x^2+2x} \)</span></div></article><article class="exercise exercise-like" id="exercise-1905"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<div class="para" id="p-8744"><span class="process-math">\(\dfrac{1}{x-1} +\dfrac{2}{x+1}=\dfrac{x-2}{x^2-1} \)</span></div></article><article class="exercise exercise-like" id="exercise-1906"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<div class="para" id="p-8745"><span class="process-math">\(\dfrac{x}{x+2} -\dfrac{3}{x-2}=\dfrac{x^2+8}{x^2-4} \)</span></div></article><article class="exercise exercise-like" id="exercise-1907"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<div class="para" id="p-8747"><span class="process-math">\(-3= \dfrac{-10}{x+2} +\dfrac{10}{x+5}\)</span></div></article>
+<article class="exercise exercise-like" id="exercise-1901"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="para" id="p-8325"><span class="process-math">\(\dfrac{4}{x} - 3 = \dfrac{5}{2x+3}\)</span></div></article><article class="exercise exercise-like" id="exercise-1902"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="para" id="p-8327"><span class="process-math">\(\dfrac{4}{x-1} - \dfrac{4}{x+2} = \dfrac{3}{7}\)</span></div></article><article class="exercise exercise-like" id="exercise-1903"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<div class="para" id="p-8328"><span class="process-math">\(\dfrac{2}{n^2-2n} + \dfrac{1}{2n} = \dfrac{-1}{n^2+2n}\)</span></div></article><article class="exercise exercise-like" id="exercise-1904"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<div class="para" id="p-8330"><span class="process-math">\(\dfrac{3}{x-2}=\dfrac{1}{2}+\dfrac{2x-7}{2x-4} \)</span></div></article><article class="exercise exercise-like" id="exercise-1905"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<div class="para" id="p-8331"><span class="process-math">\(\dfrac{4}{x+2}-\dfrac{1}{x}=\dfrac{2x-1}{x^2+2x} \)</span></div></article><article class="exercise exercise-like" id="exercise-1906"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<div class="para" id="p-8333"><span class="process-math">\(\dfrac{1}{x-1} +\dfrac{2}{x+1}=\dfrac{x-2}{x^2-1} \)</span></div></article><article class="exercise exercise-like" id="exercise-1907"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<div class="para" id="p-8334"><span class="process-math">\(\dfrac{x}{x+2} -\dfrac{3}{x-2}=\dfrac{x^2+8}{x^2-4} \)</span></div></article><article class="exercise exercise-like" id="exercise-1908"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<div class="para" id="p-8336"><span class="process-math">\(-3= \dfrac{-10}{x+2} +\dfrac{10}{x+5}\)</span></div></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-1908"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8748">
+<article class="exercise exercise-like" id="exercise-1909"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8337">
 <div class="para">What is wrong with the solution to the following addition problem:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1606,56 +1377,56 @@ qp \amp = v(1 - p) \amp\amp \blert{\text{Divide both sides by }  1- p.}\\
 \end{equation*}
 </div>
 <div class="para">Solution:</div>
-<div class="displaymath process-math" id="md-504">
+<div class="displaymath process-math" id="md-507">
 \begin{align*}
 \alert{8} \cdot \dfrac{3}{8} + \alert{8} \cdot \dfrac{1}{2} \amp = 3+4 \amp \amp \blert{\text{Multiply by the LCD, 8.}}\\
 \amp = 7  \amp \amp \blert{\text{The answer is 7.}}
 \end{align*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-1909"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8750">
+</div></article><article class="exercise exercise-like" id="exercise-1910"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8339">
 <div class="para">Compare the methods in each calculation with fractions. Explain how the LCD is used in each operation.</div>
 <ol class="lower-alpha cols2">
-<li id="li-5794"><div class="para" id="p-8751">Add:  <span class="process-math">\(~\dfrac{3}{x} + \dfrac{1}{x+3}\)</span>
+<li id="li-5565"><div class="para" id="p-8340">Add:  <span class="process-math">\(~\dfrac{3}{x} + \dfrac{1}{x+3}\)</span>
 </div></li>
-<li id="li-5795"><div class="para" id="p-8752">Divide:  <span class="process-math">\(~\dfrac{3}{x} \div \dfrac{1}{x+3}\)</span>
+<li id="li-5566"><div class="para" id="p-8341">Divide:  <span class="process-math">\(~\dfrac{3}{x} \div \dfrac{1}{x+3}\)</span>
 </div></li>
-<li id="li-5796"><div class="para" id="p-8753">Solve:  <span class="process-math">\(~\dfrac{3}{x} + \dfrac{1}{x+3} = 3\)</span>
+<li id="li-5567"><div class="para" id="p-8342">Solve:  <span class="process-math">\(~\dfrac{3}{x} + \dfrac{1}{x+3} = 3\)</span>
 </div></li>
-<li id="li-5797"><div class="para" id="p-8754">Simplify:  <span class="process-math">\(~\dfrac{1+\dfrac{3}{x}}{3+\dfrac{1}{x+3}}\)</span>
+<li id="li-5568"><div class="para" id="p-8343">Simplify:  <span class="process-math">\(~\dfrac{1+\dfrac{3}{x}}{3+\dfrac{1}{x+3}}\)</span>
 </div></li>
 </ol>
 </div></article><div class="exercisegroup" id="exercisegroup-286">
 <h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-306"><div class="para" id="p-8755">For Problems 19–24, solve the formula for the specified variable.</div></div>
+<div class="introduction" id="introduction-305"><div class="para" id="p-8344">For Problems 19–24, solve the formula for the specified variable.</div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-1910"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<div class="para" id="p-8756">
+<article class="exercise exercise-like" id="exercise-1911"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<div class="para" id="p-8345">
 <span class="process-math">\(S=\dfrac{a}{1-r},~~~~\)</span> for <span class="process-math">\(r\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-1911"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
-<div class="para" id="p-8758">
+</div></article><article class="exercise exercise-like" id="exercise-1912"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<div class="para" id="p-8347">
 <span class="process-math">\(m=\dfrac{y-k}{x-h},~~~~\)</span> for <span class="process-math">\(x\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-1912"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
-<div class="para" id="p-8759">
+</div></article><article class="exercise exercise-like" id="exercise-1913"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<div class="para" id="p-8348">
 <span class="process-math">\(\dfrac{x}{a} + \dfrac{y}{b} = 1,~~~~\)</span> for <span class="process-math">\(x\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-1913"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
-<div class="para" id="p-8761">
+</div></article><article class="exercise exercise-like" id="exercise-1914"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<div class="para" id="p-8350">
 <span class="process-math">\(F=\dfrac{Gm_1m_2}{d^2},~~~~\)</span> for <span class="process-math">\(d\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-1914"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
-<div class="para" id="p-8762">
+</div></article><article class="exercise exercise-like" id="exercise-1915"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
+<div class="para" id="p-8351">
 <span class="process-math">\(C=\dfrac{rR}{r+R},~~~~\)</span> for <span class="process-math">\(R\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-1915"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
-<div class="para" id="p-8764">
+</div></article><article class="exercise exercise-like" id="exercise-1916"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
+<div class="para" id="p-8353">
 <span class="process-math">\(E=\dfrac{Ff}{(P-x)p},~~~~\)</span> for <span class="process-math">\(x\)</span>
 </div></article>
 </div>
 </div></article><article class="subexercises" id="subexercises-118"><h4 class="heading"><span class="title">Applications</span></h4>
-<article class="exercise exercise-like" id="exercise-1916"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
-<div class="para" id="p-8765">Rani went hiking in the Santa Monica mountains last weekend.  She drove 10 miles in her car and then walked 4 miles, and arrived at a small lake  hours after she left home.  If Rani drives 20 times faster than she walks, how fast does she walk?</div></article><article class="exercise exercise-like" id="exercise-1917"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<div class="para" id="p-8767">Sam Scholarship and Reginald Privilege each travel the 360 miles to Fort Lauderdale on spring break, but Reginald drives his Porsche while Sam hitches a ride on a vegetable truck.  Reginald travels 20 miles per hour faster than Sam and arrives in 3 hours less time.  How fast did each travel?</div></article><article class="exercise exercise-like" id="exercise-1918"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
-<div class="para" id="p-8768">Walt and Irma use a tank of fuel oil for their furnace every 25 days during the winter.  Last winter it was so cold that they also lit their space heater 10 days after they filled the fuel oil tank.  If the space heater uses a tank of fuel oil every 40 days, how much longer will the fuel last with both heaters running?</div></article><article class="exercise exercise-like" id="exercise-1919"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
-<div class="para" id="p-8770">An underground spring fills a small pond in 12 days.  Evaporation from the surface of the pond can empty the pond in 28 days.  If the pond is completely dry, how long will it take to fill again?</div></article><article class="exercise exercise-like" id="exercise-1920"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8771">
+<article class="exercise exercise-like" id="exercise-1917"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<div class="para" id="p-8354">Rani went hiking in the Santa Monica mountains last weekend.  She drove 10 miles in her car and then walked 4 miles, and arrived at a small lake  hours after she left home.  If Rani drives 20 times faster than she walks, how fast does she walk?</div></article><article class="exercise exercise-like" id="exercise-1918"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<div class="para" id="p-8356">Sam Scholarship and Reginald Privilege each travel the 360 miles to Fort Lauderdale on spring break, but Reginald drives his Porsche while Sam hitches a ride on a vegetable truck.  Reginald travels 20 miles per hour faster than Sam and arrives in 3 hours less time.  How fast did each travel?</div></article><article class="exercise exercise-like" id="exercise-1919"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
+<div class="para" id="p-8357">Walt and Irma use a tank of fuel oil for their furnace every 25 days during the winter.  Last winter it was so cold that they also lit their space heater 10 days after they filled the fuel oil tank.  If the space heater uses a tank of fuel oil every 40 days, how much longer will the fuel last with both heaters running?</div></article><article class="exercise exercise-like" id="exercise-1920"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
+<div class="para" id="p-8359">An underground spring fills a small pond in 12 days.  Evaporation from the surface of the pond can empty the pond in 28 days.  If the pond is completely dry, how long will it take to fill again?</div></article><article class="exercise exercise-like" id="exercise-1921"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8360">
 <div class="para">The cost, in thousands of dollars, for immunizing <span class="process-math">\(p\)</span> percent of the residents of Emporia against a dangerous new disease is given by the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1663,79 +1434,79 @@ C(p) = \frac{72p}{100-p}
 \end{equation*}
 </div>
 <div class="para">Write and solve an equation to determine what percent of the population can be immunized for $168,000.</div>
-</div></article><article class="exercise exercise-like" id="exercise-1921"><h5 class="heading"><span class="codenumber">30<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8773">
+</div></article><article class="exercise exercise-like" id="exercise-1922"><h5 class="heading"><span class="codenumber">30<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8362">
 <div class="para">A school of bluefin tuna average 36 miles per hour on a 200-mile trip in still water, but this time they encounter a current.</div>
 <ol class="lower-alpha">
-<li id="li-5798"><div class="para logical" id="p-8774">
+<li id="li-5569"><div class="para logical" id="p-8363">
 <div class="para">Express the tuna’s travel time, <span class="process-math">\(t\text{,}\)</span> as a function of the current speed, <span class="process-math">\(v\text{,}\)</span> and graph the function in the window</div>
-<div class="displaymath process-math" id="md-505">
+<div class="displaymath process-math" id="md-508">
 \begin{align*}
 {\text{Xmin}} \amp = 0 \amp\amp {\text{Xmax}} = 36\\
 {\text{Ymin}} \amp = 0 \amp\amp {\text{Ymax}} =50
 \end{align*}
 </div>
 </div></li>
-<li id="li-5799"><div class="para" id="p-8775">Write and solve an equation to find the current speed if the school makes its trip in 8 hours. Label the corresponding point on your graph.</div></li>
+<li id="li-5570"><div class="para" id="p-8364">Write and solve an equation to find the current speed if the school makes its trip in 8 hours. Label the corresponding point on your graph.</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-1922"><h5 class="heading"><span class="codenumber">31<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8776">
+</div></article><article class="exercise exercise-like" id="exercise-1923"><h5 class="heading"><span class="codenumber">31<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8365">
 <div class="para">During the baseball season so far this year, Pete got hits 44 times out of 164 times at bat.</div>
 <ol class="lower-alpha">
-<li id="li-5800"><div class="para" id="p-derived-li-5800">What is Pete’s batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)</div></li>
-<li id="li-5801"><div class="para" id="p-derived-li-5801">If Pete gets hits on every one of his next <span class="process-math">\(x\)</span> at-bats, write an expression for his new batting average.</div></li>
-<li id="li-5802"><div class="para" id="p-derived-li-5802">How many consecutive hits does Pete need to raise his batting average to 0.350 ?</div></li>
+<li id="li-5571"><div class="para" id="p-derived-li-5571">What is Pete’s batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)</div></li>
+<li id="li-5572"><div class="para" id="p-derived-li-5572">If Pete gets hits on every one of his next <span class="process-math">\(x\)</span> at-bats, write an expression for his new batting average.</div></li>
+<li id="li-5573"><div class="para" id="p-derived-li-5573">How many consecutive hits does Pete need to raise his batting average to 0.350 ?</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-1923"><h5 class="heading"><span class="codenumber">32<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8778">
+</div></article><article class="exercise exercise-like" id="exercise-1924"><h5 class="heading"><span class="codenumber">32<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8367">
 <div class="para">The manager of Joe’s Burgers discovers that he will sell <span class="process-math">\(\dfrac{160}{x}\)</span> burgers per day if the price of a burger is <span class="process-math">\(x\)</span> dollars.  On the other hand, he can afford to make <span class="process-math">\(6x+49\)</span> burgers if he charges <span class="process-math">\(x\)</span> dollars apiece for them.</div>
 <ol class="lower-alpha">
-<li id="li-5806"><div class="para" id="p-derived-li-5806">Graph the demand function, <span class="process-math">\(D(x) = \dfrac{160}{x}\)</span> and the supply function, <span class="process-math">\(S(x) = 6x+49\text{,}\)</span> in the same window.  At what price <span class="process-math">\(x\)</span> does the demand for burgers equal the number that Joe can afford to supply?  This value for  is called the equilibrium price.</div></li>
-<li id="li-5807"><div class="para" id="p-derived-li-5807">Write and solve an equation to verify your equilibrium price.</div></li>
+<li id="li-5577"><div class="para" id="p-derived-li-5577">Graph the demand function, <span class="process-math">\(D(x) = \dfrac{160}{x}\)</span> and the supply function, <span class="process-math">\(S(x) = 6x+49\text{,}\)</span> in the same window.  At what price <span class="process-math">\(x\)</span> does the demand for burgers equal the number that Joe can afford to supply?  This value for  is called the equilibrium price.</div></li>
+<li id="li-5578"><div class="para" id="p-derived-li-5578">Write and solve an equation to verify your equilibrium price.</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-1924"><h5 class="heading"><span class="codenumber">33<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8779">
+</div></article><article class="exercise exercise-like" id="exercise-1925"><h5 class="heading"><span class="codenumber">33<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8368">
 <div class="para">A chartered sightseeing flight over the Grand Canyon is scheduled to return to its departure point in 3 hours. The pilot would like to cover a distance of 144 miles before turning around, and he hears on the Weather Service that there will be a headwind of 20 miles per hour on the outward journey.</div>
 <ol class="lower-alpha">
-<li id="li-5808"><div class="para" id="p-8780">Express the time it takes for the outward journey as a function of the airspeed of the plane.</div></li>
-<li id="li-5809"><div class="para" id="p-8781">Express the time it takes for the return journey as a function of the speed of the plane.</div></li>
-<li id="li-5810"><div class="para" id="p-8782">Graph the sum of the two functions and find the point on the graph with <span class="process-math">\(y\)</span>-coordinate 3. Interpret the coordinates of the point in the context of the problem.</div></li>
-<li id="li-5811"><div class="para" id="p-8783">The pilot would like to know what airspeed to maintain in order to complete the tour in 3 hours. Write an equation to describe this situation.</div></li>
-<li id="li-5812"><div class="para" id="p-8784">Solve your equation to find the appropriate airspeed.</div></li>
+<li id="li-5579"><div class="para" id="p-8369">Express the time it takes for the outward journey as a function of the airspeed of the plane.</div></li>
+<li id="li-5580"><div class="para" id="p-8370">Express the time it takes for the return journey as a function of the speed of the plane.</div></li>
+<li id="li-5581"><div class="para" id="p-8371">Graph the sum of the two functions and find the point on the graph with <span class="process-math">\(y\)</span>-coordinate 3. Interpret the coordinates of the point in the context of the problem.</div></li>
+<li id="li-5582"><div class="para" id="p-8372">The pilot would like to know what airspeed to maintain in order to complete the tour in 3 hours. Write an equation to describe this situation.</div></li>
+<li id="li-5583"><div class="para" id="p-8373">Solve your equation to find the appropriate airspeed.</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-1925"><h5 class="heading"><span class="codenumber">34<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8786">
+</div></article><article class="exercise exercise-like" id="exercise-1926"><h5 class="heading"><span class="codenumber">34<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8375">
 <div class="para">The cost of wire fencing is $7.50 per foot. A rancher wants to enclose a rectangular pasture of 1000 square feet with this fencing.</div>
 <ol class="lower-alpha">
-<li id="li-5818"><div class="para" id="p-8787">Express the length of the pasture as a function of its width.</div></li>
-<li id="li-5819"><div class="para" id="p-8788">Express the cost of the fence as a function of its width.</div></li>
-<li id="li-5820"><div class="para" id="p-8789">Graph your function for the cost and find the coordinates of the lowest point on the graph. Interpret those coordinates in the context of the problem.</div></li>
-<li id="li-5821"><div class="para" id="p-8790">The rancher has $1050 to spend on the fence, and she would like to know what the width of the pasture should be. Write an equation to describe this situation.</div></li>
-<li id="li-5822"><div class="para" id="p-8791">Solve your equation and find the dimensions of the pasture.</div></li>
+<li id="li-5589"><div class="para" id="p-8376">Express the length of the pasture as a function of its width.</div></li>
+<li id="li-5590"><div class="para" id="p-8377">Express the cost of the fence as a function of its width.</div></li>
+<li id="li-5591"><div class="para" id="p-8378">Graph your function for the cost and find the coordinates of the lowest point on the graph. Interpret those coordinates in the context of the problem.</div></li>
+<li id="li-5592"><div class="para" id="p-8379">The rancher has $1050 to spend on the fence, and she would like to know what the width of the pasture should be. Write an equation to describe this situation.</div></li>
+<li id="li-5593"><div class="para" id="p-8380">Solve your equation and find the dimensions of the pasture.</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-1926"><h5 class="heading"><span class="codenumber">35<span class="period">.</span></span></h5>
-<div class="para" id="p-8792">Distances on a map vary directly with actual distances. The scale on a map of Michigan uses <span class="process-math">\(\dfrac{3}{8}\)</span> inch to represent 10 miles. If Isle Royale is <span class="process-math">\(1\dfrac{11}{16}\)</span> inches long on the map, what is the actual length of the island?</div></article><article class="exercise exercise-like" id="exercise-1927"><h5 class="heading"><span class="codenumber">36<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8794">
+</div></article><article class="exercise exercise-like" id="exercise-1927"><h5 class="heading"><span class="codenumber">35<span class="period">.</span></span></h5>
+<div class="para" id="p-8381">Distances on a map vary directly with actual distances. The scale on a map of Michigan uses <span class="process-math">\(\dfrac{3}{8}\)</span> inch to represent 10 miles. If Isle Royale is <span class="process-math">\(1\dfrac{11}{16}\)</span> inches long on the map, what is the actual length of the island?</div></article><article class="exercise exercise-like" id="exercise-1928"><h5 class="heading"><span class="codenumber">36<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8383">
 <div class="para">The highest point on Earth is Mount Everest in Tibet, with an elevation of 8848 meters. The deepest part of the ocean is the Challenger Deep in the Mariana Trench, near Indonesia, 11,034 meters below sea level.</div>
 <ol class="lower-alpha">
-<li id="li-5823"><div class="para" id="p-8795">What is the total height variation in the surface of the Earth?</div></li>
-<li id="li-5824"><div class="para" id="p-8796">What percentage of the Earth’s radius, 6400 kilometers, is this variation?</div></li>
-<li id="li-5825"><div class="para" id="p-8797">If the Earth were shrunk to the size of a basketball, with a radius of 4.75 inches, what would be the corresponding height of Mount Everest?</div></li>
+<li id="li-5594"><div class="para" id="p-8384">What is the total height variation in the surface of the Earth?</div></li>
+<li id="li-5595"><div class="para" id="p-8385">What percentage of the Earth’s radius, 6400 kilometers, is this variation?</div></li>
+<li id="li-5596"><div class="para" id="p-8386">If the Earth were shrunk to the size of a basketball, with a radius of 4.75 inches, what would be the corresponding height of Mount Everest?</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="exercise-1928"><h5 class="heading"><span class="codenumber">37<span class="period">.</span></span></h5>
-<div class="para" id="p-8798">The rectangle <span class="process-math">\(ABCD\)</span> is divided into a square and a smaller rectangle, <span class="process-math">\(CDEF\text{.}\)</span> The two rectangles <span class="process-math">\(ABCD\)</span> and <span class="process-math">\(CDEF\)</span> are similar (their corresponding sides are proportional.) A rectangle <span class="process-math">\(ABCD\)</span> with this property is called a <dfn class="terminology">golden rectangle</dfn>, and the ratio of its length to its width is called the golden ratio.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel middle" style="width:68.4210526315789%;"><div class="para" id="p-8799">The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-1929"><h5 class="heading"><span class="codenumber">37<span class="period">.</span></span></h5>
+<div class="para" id="p-8387">The rectangle <span class="process-math">\(ABCD\)</span> is divided into a square and a smaller rectangle, <span class="process-math">\(CDEF\text{.}\)</span> The two rectangles <span class="process-math">\(ABCD\)</span> and <span class="process-math">\(CDEF\)</span> are similar (their corresponding sides are proportional.) A rectangle <span class="process-math">\(ABCD\)</span> with this property is called a <dfn class="terminology">golden rectangle</dfn>, and the ratio of its length to its width is called the golden ratio.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel middle" style="width:68.4210526315789%;"><div class="para" id="p-8388">The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.</div></div>
 <div class="sbspanel middle" style="width:26.3157894736842%;"><img src="external/images/fig-golden-rectangle.svg" role="img" class="contained" alt="golden rectangle"></div>
 </div></div>
-<div class="para logical" id="p-8800"><ol class="lower-alpha">
-<li id="li-5826"><div class="para" id="p-8801">Let <span class="process-math">\(AB = 1\)</span> and <span class="process-math">\(AD = x\text{.}\)</span> What are the lengths of <span class="process-math">\(AE\text{,}\)</span> <span class="process-math">\(DE\text{,}\)</span> and <span class="process-math">\(CD\text{?}\)</span>
+<div class="para logical" id="p-8389"><ol class="lower-alpha">
+<li id="li-5597"><div class="para" id="p-8390">Let <span class="process-math">\(AB = 1\)</span> and <span class="process-math">\(AD = x\text{.}\)</span> What are the lengths of <span class="process-math">\(AE\text{,}\)</span> <span class="process-math">\(DE\text{,}\)</span> and <span class="process-math">\(CD\text{?}\)</span>
 </div></li>
-<li id="li-5827"><div class="para" id="p-8802">Write a proportion in terms of <span class="process-math">\(x\)</span> for the similarity of rectangles <span class="process-math">\(ABCD\)</span> and <span class="process-math">\(CDEF\text{.}\)</span> Be careful to match up the corresponding sides.</div></li>
-<li id="li-5828"><div class="para" id="p-8803">Solve your proportion for <span class="process-math">\(x\text{.}\)</span> Find the golden ratio, <span class="process-math">\(\dfrac{AD}{AB}=\dfrac{x}{1} \text{.}\)</span>
+<li id="li-5598"><div class="para" id="p-8391">Write a proportion in terms of <span class="process-math">\(x\)</span> for the similarity of rectangles <span class="process-math">\(ABCD\)</span> and <span class="process-math">\(CDEF\text{.}\)</span> Be careful to match up the corresponding sides.</div></li>
+<li id="li-5599"><div class="para" id="p-8392">Solve your proportion for <span class="process-math">\(x\text{.}\)</span> Find the golden ratio, <span class="process-math">\(\dfrac{AD}{AB}=\dfrac{x}{1} \text{.}\)</span>
 </div></li>
-</ol></div></article><article class="exercise exercise-like" id="exercise-1929"><h5 class="heading"><span class="codenumber">38<span class="period">.</span></span></h5>
+</ol></div></article><article class="exercise exercise-like" id="exercise-1930"><h5 class="heading"><span class="codenumber">38<span class="period">.</span></span></h5>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel middle" style="width:63.1578947368421%;"><div class="para logical" id="p-8808">
+<div class="sbspanel middle" style="width:63.1578947368421%;"><div class="para logical" id="p-8397">
 <div class="para">The figure shows the graphs of two equations,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1744,14 +1515,14 @@ y = x~~~~\text{and}~~~~y=\dfrac{1}{x}+1 \text{.}
 </div>
 </div></div>
 <div class="sbspanel middle" style="width:31.5789473684211%;"><img src="external/images/fig-reciprocal-and-identity.svg" role="img" class="contained" alt="line and translated reciprocal"></div>
-</div></div> <div class="para logical" id="p-8809"><ol class="lower-alpha">
-<li id="li-5832"><div class="para" id="p-8810">Find the <span class="process-math">\(x\)</span>-coordinate of the intersection point of the two graphs.</div></li>
-<li id="li-5833"><div class="para" id="p-8811">Compare your answer to the golden ratio you computed in Problem 37.</div></li>
-</ol></div></article><article class="exercise exercise-like" id="exercise-1930"><h5 class="heading"><span class="codenumber">39<span class="period">.</span></span></h5>
-<div class="para logical" id="p-8812">
+</div></div> <div class="para logical" id="p-8398"><ol class="lower-alpha">
+<li id="li-5603"><div class="para" id="p-8399">Find the <span class="process-math">\(x\)</span>-coordinate of the intersection point of the two graphs.</div></li>
+<li id="li-5604"><div class="para" id="p-8400">Compare your answer to the golden ratio you computed in Problem 37.</div></li>
+</ol></div></article><article class="exercise exercise-like" id="exercise-1931"><h5 class="heading"><span class="codenumber">39<span class="period">.</span></span></h5>
+<div class="para logical" id="p-8401">
 <div class="para">Find the <span class="process-math">\(\alert{\text{error}}\)</span> in the following "proof" that <span class="process-math">\(1=0\text{:}\)</span> Start by letting  <span class="process-math">\(x=1\text{.}\)</span>
 </div>
-<div class="displaymath process-math" id="md-506">
+<div class="displaymath process-math" id="md-509">
 \begin{align*}
 x \amp = 1  \amp \amp \blert{\text{Multiply both sides by}~x.}\\
 x^2 \amp = x  \amp \amp \blert{\text{Subtract 1 from both sides.}}\\
@@ -1765,18 +1536,18 @@ x \amp = 0
 </div>
 </div></article><div class="exercisegroup" id="exercisegroup-287">
 <h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-307"><div class="para logical" id="p-8814">
+<div class="introduction" id="introduction-306"><div class="para logical" id="p-8403">
 <div class="para">For Problems 40–42,</div>
 <ol class="lower-alpha">
-<li id="li-5834"><div class="para" id="p-8815">Solve the equation graphically by graphing two functions, one for each side of the equation.</div></li>
-<li id="li-5835"><div class="para" id="p-8816">Solve the equation algebraically.</div></li>
+<li id="li-5605"><div class="para" id="p-8404">Solve the equation graphically by graphing two functions, one for each side of the equation.</div></li>
+<li id="li-5606"><div class="para" id="p-8405">Solve the equation algebraically.</div></li>
 </ol>
 </div></div>
 <div class="exercisegroup-exercises cols2">
-<article class="exercise exercise-like" id="exercise-1931"><h6 class="heading"><span class="codenumber">40<span class="period">.</span></span></h6>
-<div class="para" id="p-8817"><span class="process-math">\(\dfrac{2x}{x+1}=\dfrac{x+1}{2} \)</span></div></article><article class="exercise exercise-like" id="exercise-1932"><h6 class="heading"><span class="codenumber">41<span class="period">.</span></span></h6>
-<div class="para" id="p-8818"><span class="process-math">\(\dfrac{2}{x+1}=\dfrac{x}{x+1}+1 \)</span></div></article><article class="exercise exercise-like" id="exercise-1933"><h6 class="heading"><span class="codenumber">42<span class="period">.</span></span></h6>
-<div class="para" id="p-8821"><span class="process-math">\(\dfrac{15x}{1+x^2}=6 \)</span></div></article>
+<article class="exercise exercise-like" id="exercise-1932"><h6 class="heading"><span class="codenumber">40<span class="period">.</span></span></h6>
+<div class="para" id="p-8406"><span class="process-math">\(\dfrac{2x}{x+1}=\dfrac{x+1}{2} \)</span></div></article><article class="exercise exercise-like" id="exercise-1933"><h6 class="heading"><span class="codenumber">41<span class="period">.</span></span></h6>
+<div class="para" id="p-8407"><span class="process-math">\(\dfrac{2}{x+1}=\dfrac{x}{x+1}+1 \)</span></div></article><article class="exercise exercise-like" id="exercise-1934"><h6 class="heading"><span class="codenumber">42<span class="period">.</span></span></h6>
+<div class="para" id="p-8410"><span class="process-math">\(\dfrac{15x}{1+x^2}=6 \)</span></div></article>
 </div>
 </div></article></section></section></div>
 <div class="ptx-content-footer">

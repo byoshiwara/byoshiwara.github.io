@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,8 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/0.31/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.31</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.31/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.31/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.31/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -619,62 +601,64 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-180" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-181" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Products of Polynomials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Special Products</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Factoring Cubics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Modeling with Polynomials</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Problem Set 8.1</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Modeling with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Approximations with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Special Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-185" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Factoring Cubics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-186" class="internal"><span class="codenumber">8.1.7</span> <span class="title">An Application of Cubic Splines</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.8</span> <span class="title">Problem Set 8.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="AlgebraicFractions.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-185" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-186" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="AlgebraicFractions.html#section-8-2-exercises" class="internal"><span class="codenumber">8.2.5</span> <span class="title">Problem Set 8.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="OperationsAlgebraicFractions.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Operations on Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-196" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-197" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#section-8-3-exercises" class="internal"><span class="codenumber">8.3.8</span> <span class="title">Problem Set 8.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="MoreOperationsonFractions.html" class="internal"><span class="codenumber">8.4</span> <span class="title">More Operations on Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-196" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-197" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-200" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-201" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#section-8-4-exercises" class="internal"><span class="codenumber">8.4.5</span> <span class="title">Problem Set 8.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="EquationswithFractions.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Equations with Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-200" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-201" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-206" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-207" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="EquationswithFractions.html#section-8-5-exercises" class="internal"><span class="codenumber">8.5.7</span> <span class="title">Problem Set 8.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap8-summary.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Chapter 8 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-206" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-207" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-208" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-209" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap8-summary.html#chap8-rev-problems" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Chapter 8 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -686,60 +670,60 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="PropertiesOfLines.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Properties of Lines</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-208" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-209" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-211" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-212" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PropertiesOfLines.html#section-9-1-exercises" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Problem Set 9.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Distance-and-Midpoint.html" class="internal"><span class="codenumber">9.2</span> <span class="title">The Distance and Midpoint Formulas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-211" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-212" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Finding the Midpoint</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.4</span> <span class="title">The Midpoint Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.5</span> <span class="title">Circles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.6</span> <span class="title">General Form for Circles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Problem Set 9.2</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.3</span> <span class="title">The Midpoint Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.4</span> <span class="title">Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.5</span> <span class="title">General Form for Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-218" class="internal"><span class="codenumber">9.2.6</span> <span class="title">Finding an Equation for a Circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-219" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Problem Set 9.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Ellipses.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Conic Sections: Ellipses</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-218" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-219" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-222" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-223" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Ellipses.html#section-9-3-exercises" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Problem Set 9.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Hyperbolas.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Conic Sections: Hyperbolas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-222" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-223" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-227" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-228" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Hyperbolas.html#section-9-4-exercises" class="internal"><span class="codenumber">9.4.6</span> <span class="title">Problem Set 9.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="NonlinearSystems.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Nonlinear Systems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-227" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-228" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-230" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-231" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="NonlinearSystems.html#section-9-5-exercises" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Problem Set 9.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap9-summary.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Chapter 9 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-230" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-231" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-232" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-233" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap9-summary.html#chap9-rev-problems" class="internal"><span class="codenumber">9.6.3</span> <span class="title">Chapter 9 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -751,41 +735,43 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicFunctions.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Logarithmic Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-232" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-233" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-237" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-238" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicFunctions.html#section-10-1-exercises" class="internal"><span class="codenumber">10.1.6</span> <span class="title">Problem Set 10.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicScales.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Logarithmic Scales</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-237" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-238" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-242" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-243" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicScales.html#section-10-2-exercises" class="internal"><span class="codenumber">10.2.6</span> <span class="title">Problem Set 10.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="The-Natural-Base.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Natural Base</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-242" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-243" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Solving Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Continuous Compounding</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Homework 10.3</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Properties of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-247" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Solving Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-248" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-249" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Continuous Compounding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-250" class="internal"><span class="codenumber">10.3.7</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.8</span> <span class="title">Homework 10.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap10-summary.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Chapter 10 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-247" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-248" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-251" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-252" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap10-summary.html#chap10-rev-problems" class="internal"><span class="codenumber">10.4.3</span> <span class="title">Chapter 10 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -800,37 +786,37 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-getting-started.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-249" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-250" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-251" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-253" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-254" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-255" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Entering-Expressions.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Entering Expressions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-252" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-253" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-254" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-255" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-260" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-261" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-262" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-263" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Graphing an Equation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-260" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-261" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-262" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-264" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-265" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-266" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-more-graphing.html" class="internal"><span class="codenumber">A.4</span> <span class="title">More graphing</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-263" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-264" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-267" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-268" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -859,11 +845,11 @@ window.MathJax = {
 </div>
 <div class="subindexitem">inequalities<span class="indexknowl">, <a href="FunctionsasModels.html#subsection-120" class="internal" title="Subsection 5.6.5: Absolute Value Inequalities">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-58.html" title="Assemblage: Absolute Value Inequalities">Assemblage</a></span>
 </div>
-<div class="indexitem">acid (pH) scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10594.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">acid (pH) scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9661.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">algebraic equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-24.html" title="Item 3">Item</a></span>
 </div>
-<div class="indexitem">algebraic fraction<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7722.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">algebraic fraction<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7656.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">adding or subtracting<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-131.html" title="Assemblage: To add or subtract algebraic fraction">Assemblage</a></span>
 </div>
@@ -875,27 +861,27 @@ window.MathJax = {
 </div>
 <div class="indexitem">allometric equations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4836.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">ascending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7416.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">ascending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7417.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">astronomical units<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/exercise-699.html" title="Exercise 4.3.5.21">Exercise</a> <a href="" class="xref" data-knowl="./knowl/li-3232.html" title="Item b">Item</a></span>
 </div>
 <div class="indexitem">asymptote</div>
-<div class="subindexitem">horizontal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3936.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6336.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7902.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">horizontal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3936.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6336.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7738.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">of hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9652.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">of hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9032.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">vertical<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3935.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7884.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vertical<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3935.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7730.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">axis</div>
-<div class="subindexitem">conjugate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">conjugate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">major<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">major<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">minor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">minor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of symmetry<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-1406.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">transverse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">transverse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">axis of symmetry<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-1406.html" title="Item">Item</a>. <span class="seealso"><em>See also</em> parabola</span></span>
 </div>
@@ -919,7 +905,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">denominator with radical<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-5672.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">opposite of<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-187" class="internal" title="Subsection 8.2.3: Opposite of a Binomial">Subsection</a></span>
+<div class="subindexitem">opposite of<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-189" class="internal" title="Subsection 8.2.3: Opposite of a Binomial">Subsection</a></span>
 </div>
 <div class="subindexitem">special products of<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-120.html" title="Assemblage: Special Products of Binomials">Assemblage</a></span>
 </div>
@@ -929,7 +915,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">break even<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1427.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">building factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8188.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">building factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7938.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Bézier curves<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7411.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -938,46 +924,46 @@ window.MathJax = {
 <div class="indexitem">carrying capacity<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3500.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/exercise-996.html" title="Exercise 5.6.6.31">Exercise</a></span>
 </div>
 <div class="indexitem">center</div>
-<div class="subindexitem">of a circle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9269.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">of a circle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8766.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of an ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-157.html" title="Assemblage: Central Ellipse">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-158.html" title="Assemblage: Ellipse">Assemblage</a></span>
 </div>
 <div class="subindexitem">of hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-159.html" title="Assemblage: Central Hyperbola">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-160.html" title="Assemblage: Hyperbolas">Assemblage</a></span>
 </div>
 <div class="indexitem">central</div>
-<div class="subindexitem">conics<span class="indexknowl">, <a href="Hyperbolas.html#subsection-223" class="internal" title="Subsection 9.4.2: The Central Conics">Subsection</a></span>
+<div class="subindexitem">conics<span class="indexknowl">, <a href="Hyperbolas.html#subsection-225" class="internal" title="Subsection 9.4.2: The Central Conics">Subsection</a></span>
 </div>
 <div class="subindexitem">ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-157.html" title="Assemblage: Central Ellipse">Assemblage</a></span>
 </div>
 <div class="subindexitem">hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-159.html" title="Assemblage: Central Hyperbola">Assemblage</a></span>
 </div>
-<div class="indexitem">central conic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9429.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">central conic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8882.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">central rectangle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9652.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">central rectangle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9032.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">change in<span class="indexknowl">. <span class="see"><em>See</em> Delta</span></span>
 </div>
-<div class="indexitem">circle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9269.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9428.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9727.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9855.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">circle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8766.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8881.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9058.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9124.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">center<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9269.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-156.html" title="Assemblage: Standard Form for a Circle">Assemblage</a></span>
+<div class="subindexitem">center<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8766.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-156.html" title="Assemblage: Standard Form for a Circle">Assemblage</a></span>
 </div>
 <div class="subindexitem">equation of<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-156.html" title="Assemblage: Standard Form for a Circle">Assemblage</a></span>
 </div>
-<div class="subindexitem">general quadratic form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9309.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">general quadratic form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8787.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">radius<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-156.html" title="Assemblage: Standard Form for a Circle">Assemblage</a></span>
 </div>
 <div class="indexitem">closed interval<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-2014.html" title="Item 1">Item</a>. <span class="seealso"><em>See also</em> interval notation</span></span>
 </div>
-<div class="indexitem">common factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7724.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> fraction</span></span>
+<div class="indexitem">common factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7658.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> fraction</span></span>
 </div>
 <div class="indexitem">common logarithms<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6648.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">completing the square<span class="indexknowl">, <a href="CompletingSquare.html" class="internal" title="Section 3.4: Completing the Square">Section</a> <a href="" class="xref" data-knowl="./knowl/p-2564.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-3050.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9311.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9548.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9797.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">completing the square<span class="indexknowl">, <a href="CompletingSquare.html" class="internal" title="Section 3.4: Completing the Square">Section</a> <a href="" class="xref" data-knowl="./knowl/p-2564.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-3050.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8789.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8935.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9088.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">complex conjugate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-35.html" title="Assemblage: The Discriminant">Assemblage</a>. <span class="seealso"><em>See also</em> conjugate pair</span></span>
 </div>
-<div class="indexitem">complex fraction<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8368.html" title="Paragraph">Paragraph</a> <a href="MoreOperationsonFractions.html#subsection-196" class="internal" title="Subsection 8.4.1: Complex Fractions">Subsection</a></span>
+<div class="indexitem">complex fraction<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8095.html" title="Paragraph">Paragraph</a> <a href="MoreOperationsonFractions.html#subsection-198" class="internal" title="Subsection 8.4.1: Complex Fractions">Subsection</a></span>
 </div>
 <div class="subindexitem">simplify<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-133.html" title="Assemblage: To simplify a complex fraction">Assemblage</a></span>
 </div>
@@ -991,7 +977,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">principal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2171.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-93.html" title="Assemblage: Compound Interest">Assemblage</a></span>
 </div>
-<div class="indexitem">compounded continuously<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10883.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">compounded continuously<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9865.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">concave down<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4345.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1001,21 +987,21 @@ window.MathJax = {
 </div>
 <div class="indexitem">conic<span class="indexknowl">. <span class="see"><em>See</em> conic section</span></span>
 </div>
-<div class="indexitem">conic section<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8996.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9428.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9645.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9727.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-161.html" title="Assemblage: Conic Sections">Assemblage</a>. <span class="seealso"><em>See also</em> circle, ellipse, hyperbola, parabola</span></span>
+<div class="indexitem">conic section<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8585.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8881.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9025.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9058.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-161.html" title="Assemblage: Conic Sections">Assemblage</a>. <span class="seealso"><em>See also</em> circle, ellipse, hyperbola, parabola</span></span>
 </div>
-<div class="subindexitem">central<span class="indexknowl">, <a href="Hyperbolas.html#subsection-223" class="internal" title="Subsection 9.4.2: The Central Conics">Subsection</a></span>
+<div class="subindexitem">central<span class="indexknowl">, <a href="Hyperbolas.html#subsection-225" class="internal" title="Subsection 9.4.2: The Central Conics">Subsection</a></span>
 </div>
-<div class="subindexitem">degenerate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9838.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">degenerate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9107.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">standard form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9855.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">standard form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9124.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">systems involving<span class="indexknowl">, <a href="NonlinearSystems.html#subsection-228" class="internal" title="Subsection 9.5.2: Systems Involving Conic Sections">Subsection</a></span>
+<div class="subindexitem">systems involving<span class="indexknowl">, <a href="NonlinearSystems.html#subsection-230" class="internal" title="Subsection 9.5.2: Systems Involving Conic Sections">Subsection</a></span>
 </div>
 <div class="indexitem">conjugate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-5672.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">pair<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2886.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">conjugate axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> hyperbola</span></span>
+<div class="indexitem">conjugate axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> hyperbola</span></span>
 </div>
 <div class="indexitem">conjugate pair<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2886.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> complex conjugate</span></span>
 </div>
@@ -1023,9 +1009,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">constant of variation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-50.html" title="Assemblage: Direct Variation">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-53.html" title="Assemblage: Inverse Variation">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-4218.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">continuous compounding<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-6842.html" title="Item 6">Item</a></span>
+<div class="indexitem">continuous compounding<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-6345.html" title="Item 6">Item</a></span>
 </div>
-<div class="indexitem">conversion equations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-97.html" title="Assemblage: Logarithms and Exponents: Conversion Equations">Assemblage</a></span>
+<div class="indexitem">conversion equations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-97.html" title="Assemblage: Logarithms and Exponents: Conversion Equations">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-172.html" title="Assemblage: Logarithms and Exponents: Conversion Equations">Assemblage</a></span>
 </div>
 <div class="indexitem">coordinate formula for slope<span class="indexknowl">, <a href="EquationsOfLines.html#subsection-23" class="internal" title="Subsection 1.5.3: Coordinate Formula for Slope">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-12.html" title="Assemblage: Coordinate Formula for Slope">Assemblage</a></span>
 </div>
@@ -1039,9 +1025,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">cube root<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-14.html" title="Definition 5.3.1: Cube Root">Definition</a></span>
 </div>
-<div class="indexitem">cubic formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7553.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">cubic formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7478.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">cubic spline<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7554.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">cubic spline<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7479.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">curve fitting<span class="indexknowl">, <a href="CurveFitting.html" class="internal" title="Section 4.3: Curve Fitting">Section</a> <a href="" class="xref" data-knowl="./knowl/p-7412.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1049,15 +1035,15 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-d">
 <div class="indexitem">decay factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6192.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-4321.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">decibel scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10603.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">decibel scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9668.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">decreasing function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/warning-14.html" title="Caution 5.5.1">Caution</a> <a href="" class="xref" data-knowl="./knowl/p-4242.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6330.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-4428.html" title="Item 1">Item</a></span>
 </div>
 <div class="indexitem">decreasing graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-67.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> decreasing function</span></span>
 </div>
-<div class="indexitem">degenerate conic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9428.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9838.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">degenerate conic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8881.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9107.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">degree (of a polynomial)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2093.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7416.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">degree (of a polynomial)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2093.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7417.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of a product<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-119.html" title="Assemblage: Degree of a Product">Assemblage</a></span>
 </div>
@@ -1069,7 +1055,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">dependent system<span class="indexknowl">. <span class="see"><em>See</em> system of equations</span></span>
 </div>
-<div class="indexitem">descending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7416.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">descending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7417.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">direct variation<span class="indexknowl">, <a href="DirectVariation.html#subsection-108" class="internal" title="Subsection 5.4.1: Proportion and Variation">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-50.html" title="Assemblage: Direct Variation">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-4043.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1094,7 +1080,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-154.html" title="Assemblage: Distance Formula">Assemblage</a></span>
 </div>
-<div class="indexitem">distance formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9220.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">distance formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8740.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">dividing algebraic fractions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-128.html" title="Assemblage: To divide algebraic fractions:">Assemblage</a></span>
 </div>
@@ -1103,29 +1089,29 @@ window.MathJax = {
 </div>
 <div class="indexletter" id="indexletter-e">
 <div class="indexitem">
-<em class="emphasis">e</em><span class="process-math">\(\thinspace\)</span><span class="indexknowl">, <a href="The-Natural-Base.html" class="internal" title="Section 10.3: The Natural Base">Section</a> <a href="" class="xref" data-knowl="./knowl/p-10712.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-10737.html" title="Paragraph">Paragraph</a></span>
+<em class="emphasis">e</em><span class="process-math">\(\thinspace\)</span><span class="indexknowl">, <a href="The-Natural-Base.html" class="internal" title="Section 10.3: The Natural Base">Section</a> <a href="" class="xref" data-knowl="./knowl/p-9752.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9769.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">elimination method<span class="indexknowl">, <a href="AlgebraicSolution.html#subsection-39" class="internal" title="Subsection 2.3.2: Elimination Method">Subsection</a> <a href="NonlinearSystems.html#subsection-229" class="internal" title="Subsection 9.5.3: Solving Systems by Elimination">Subsection</a>. <span class="seealso"><em>See also</em> system of equations</span></span>
+<div class="indexitem">elimination method<span class="indexknowl">, <a href="AlgebraicSolution.html#subsection-39" class="internal" title="Subsection 2.3.2: Elimination Method">Subsection</a> <a href="NonlinearSystems.html#subsection-231" class="internal" title="Subsection 9.5.3: Solving Systems by Elimination">Subsection</a>. <span class="seealso"><em>See also</em> system of equations</span></span>
 </div>
-<div class="indexitem">ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9428.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9431.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/definition-20.html" title="Definition 9.3.1: Ellipse">Definition</a> <a href="" class="xref" data-knowl="./knowl/definition-20.html" title="Definition 9.3.1: Ellipse">Definition</a> <a href="" class="xref" data-knowl="./knowl/assemblage-157.html" title="Assemblage: Central Ellipse">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-9855.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8881.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8884.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.3.1: Ellipse">Definition</a> <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.3.1: Ellipse">Definition</a> <a href="" class="xref" data-knowl="./knowl/assemblage-157.html" title="Assemblage: Central Ellipse">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-9124.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">central<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-157.html" title="Assemblage: Central Ellipse">Assemblage</a></span>
 </div>
-<div class="subindexitem">covertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">covertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">finding the equation of<span class="indexknowl">, <a href="Ellipses.html#subsection-221" class="internal" title="Subsection 9.3.4: Finding the Equation of an Ellipse">Subsection</a></span>
+<div class="subindexitem">finding the equation of<span class="indexknowl">, <a href="Ellipses.html#subsection-223" class="internal" title="Subsection 9.3.4: Finding the Equation of an Ellipse">Subsection</a></span>
 </div>
-<div class="subindexitem">foci<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-20.html" title="Definition 9.3.1: Ellipse">Definition</a></span>
+<div class="subindexitem">foci<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.3.1: Ellipse">Definition</a></span>
 </div>
-<div class="subindexitem">major axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">major axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">minor axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">minor axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">standard form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-158.html" title="Assemblage: Ellipse">Assemblage</a></span>
 </div>
 <div class="subindexitem">translated<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-158.html" title="Assemblage: Ellipse">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-158.html" title="Assemblage: Ellipse">Assemblage</a></span>
 </div>
-<div class="subindexitem">vertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">empirical model<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4396.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1162,7 +1148,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">exponent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-18.html" title="Definition 7.3.1: Definition of Logarithm">Definition</a></span>
 </div>
-<div class="subindexitem">(logarithm)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10517.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">(logarithm)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9641.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">fractional<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4834.html" title="Paragraph">Paragraph</a> <a href="RootsandRadicals.html#subsection-128" class="internal" title="Subsection 6.2.2: Exponential Notation for Radicals">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Exponential Notation for Radicals">Assemblage</a> <a href="RootsandRadicals.html#subsection-130" class="internal" title="Subsection 6.2.4: Working with Fractional Exponents">Subsection</a> <a href="RootsandRadicals.html#subsection-131" class="internal" title="Subsection 6.2.5: Using Fractional Exponents to Solve Equations">Subsection</a> <a href="RationalExponents.html#subsection-135" class="internal" title="Subsection 6.3.1: Powers of the Form a^{m/n}">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-73.html" title="Assemblage: Rational Exponents">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-74.html" title="Assemblage: Rational Exponents and Radicals">Assemblage</a></span>
 </div>
@@ -1178,31 +1164,31 @@ window.MathJax = {
 </div>
 <div class="subindexitem">zero<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-66.html" title="Assemblage: Definition of Negative and Zero Exponents">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-68.html" title="Assemblage: Zero as Exponent">Assemblage</a></span>
 </div>
-<div class="indexitem">exponential decay<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/investigation-9.html" title="Investigation 7.1.2: Exponential Decay">Investigation</a> <a href="" class="xref" data-knowl="./knowl/p-7154.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-10825.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-176.html" title="Assemblage: Exponential Growth and Decay">Assemblage</a></span>
+<div class="indexitem">exponential decay<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/investigation-9.html" title="Investigation 7.1.2: Exponential Decay">Investigation</a> <a href="" class="xref" data-knowl="./knowl/p-7154.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9833.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-177.html" title="Assemblage: Exponential Growth and Decay">Assemblage</a></span>
 </div>
 <div class="subindexitem">decay factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">exponential equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6394.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-10784.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">exponential equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6394.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9802.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">graphical solution of<span class="indexknowl">, <a href="ExponentialFunctions.html#subsection-164" class="internal" title="Subsection 7.2.6: Graphical Solution of Exponential Equations">Subsection</a></span>
 </div>
-<div class="subindexitem">solving<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6395.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6429.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-99.html" title="Assemblage: Steps for Solving Exponential Equations">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-10807.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">solving<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6395.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6429.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-99.html" title="Assemblage: Steps for Solving Exponential Equations">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-9820.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">solving with logarithms<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-99.html" title="Assemblage: Steps for Solving Exponential Equations">Assemblage</a> <a href="PropertiesofLogarithms.html#subsection-173" class="internal" title="Subsection 7.4.3: Solving Exponential Equations">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-10784.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">solving with logarithms<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-99.html" title="Assemblage: Steps for Solving Exponential Equations">Assemblage</a> <a href="PropertiesofLogarithms.html#subsection-173" class="internal" title="Subsection 7.4.3: Solving Exponential Equations">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-9802.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">exponential function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-17.html" title="Definition 7.2.1: Exponential Function">Definition</a> <a href="" class="xref" data-knowl="./knowl/assemblage-95.html" title="Assemblage: Properties of Exponential Functions, f(x) = ab^x a \gt 0">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/warning-30.html" title="Caution 7.2.8">Caution</a> <a href="" class="xref" data-knowl="./knowl/p-10712.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6090.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">exponential function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-17.html" title="Definition 7.2.1: Exponential Function">Definition</a> <a href="" class="xref" data-knowl="./knowl/assemblage-95.html" title="Assemblage: Properties of Exponential Functions, f(x) = ab^x a \gt 0">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/warning-30.html" title="Caution 7.2.8">Caution</a> <a href="" class="xref" data-knowl="./knowl/p-9752.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6090.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">base of<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6321.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">finding a formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-101.html" title="Assemblage: To find an exponential function f(x)=ab^x through two points:">Assemblage</a></span>
 </div>
-<div class="subindexitem">natural<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10712.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">natural<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9752.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">vs linear growth<span class="indexknowl">, <a href="ExponentialGrowthandDecay.html#subsection-155" class="internal" title="Subsection 7.1.3: Comparing Linear Growth and Exponential Growth">Subsection</a></span>
 </div>
 <div class="subindexitem">vs power functions<span class="indexknowl">, <a href="ExponentialFunctions.html#subsection-161" class="internal" title="Subsection 7.2.3: Comparing Exponential and Power Functions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-96.html" title="Assemblage: Power Functions vs Exponential Functions">Assemblage</a></span>
 </div>
-<div class="indexitem">exponential growth<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-91.html" title="Assemblage: Exponential Growth">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-6128.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7112.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-10825.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-176.html" title="Assemblage: Exponential Growth and Decay">Assemblage</a></span>
+<div class="indexitem">exponential growth<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-91.html" title="Assemblage: Exponential Growth">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-6128.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7112.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9833.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-177.html" title="Assemblage: Exponential Growth and Decay">Assemblage</a></span>
 </div>
 <div class="subindexitem">growth factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6101.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-91.html" title="Assemblage: Exponential Growth">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-92.html" title="Assemblage: Growth by a Constant Percent">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-4321.html" title="Item">Item</a></span>
 </div>
@@ -1219,7 +1205,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">extraction of roots<span class="indexknowl">, <a href="ExtractRoots.html" class="internal" title="Section 3.1: Extraction of Roots">Section</a> <a href="" class="xref" data-knowl="./knowl/assemblage-19.html" title="Assemblage: Extraction of Roots">Assemblage</a> <a href="ExtractRoots.html#subsection-57" class="internal" title="Subsection 3.1.6: More Extraction of Roots">Subsection</a>. <span class="seealso"><em>See also</em> quadratic equation</span></span>
 </div>
-<div class="indexitem">extraneous solution<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/note-15.html" title="Note 6.2.26">Note</a> <a href="" class="xref" data-knowl="./knowl/p-5780.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8613.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/warning-48.html" title="Caution 10.1.16">Caution</a></span>
+<div class="indexitem">extraneous solution<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/note-15.html" title="Note 6.2.26">Note</a> <a href="" class="xref" data-knowl="./knowl/p-5780.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8265.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/warning-47.html" title="Caution 10.1.16">Caution</a></span>
 </div>
 <div class="indexitem">extrapolation<span class="indexknowl">, <a href="LinReg.html#subsection-31" class="internal" title="Subsection 2.1.3: Interpolation and Extrapolation">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-1234.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1238,26 +1224,26 @@ window.MathJax = {
 <div class="indexitem">first-degree equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2093.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">focus</div>
-<div class="subindexitem">of a hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.4.1: Hyperbola">Definition</a></span>
+<div class="subindexitem">of a hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-22.html" title="Definition 9.4.1: Hyperbola">Definition</a></span>
 </div>
-<div class="subindexitem">of an ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-20.html" title="Definition 9.3.1: Ellipse">Definition</a></span>
+<div class="subindexitem">of an ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.3.1: Ellipse">Definition</a></span>
 </div>
 <div class="indexitem">fraction</div>
-<div class="subindexitem">adding or subtracting<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-191" class="internal" title="Subsection 8.3.3: Adding and Subtracting Like Fractions">Subsection</a></span>
+<div class="subindexitem">adding or subtracting<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-193" class="internal" title="Subsection 8.3.3: Adding and Subtracting Like Fractions">Subsection</a></span>
 </div>
 <div class="subindexitem">adding or subtracting algebraic fractions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-131.html" title="Assemblage: To add or subtract algebraic fraction">Assemblage</a></span>
 </div>
 <div class="subindexitem">adding or subtracting like fractions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-129.html" title="Assemblage: Sum or Difference of Like Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-130.html" title="Assemblage: To add or subtract like fractions">Assemblage</a></span>
 </div>
-<div class="subindexitem">adding or subtracting unlike fractions<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-194" class="internal" title="Subsection 8.3.6: Adding and Subtracting Unlike Fractions">Subsection</a></span>
+<div class="subindexitem">adding or subtracting unlike fractions<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-196" class="internal" title="Subsection 8.3.6: Adding and Subtracting Unlike Fractions">Subsection</a></span>
 </div>
-<div class="subindexitem">building factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8188.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">building factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7938.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">common factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7724.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">common factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7658.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">complex<span class="indexknowl">, <a href="MoreOperationsonFractions.html#subsection-196" class="internal" title="Subsection 8.4.1: Complex Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-133.html" title="Assemblage: To simplify a complex fraction">Assemblage</a></span>
+<div class="subindexitem">complex<span class="indexknowl">, <a href="MoreOperationsonFractions.html#subsection-198" class="internal" title="Subsection 8.4.1: Complex Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-133.html" title="Assemblage: To simplify a complex fraction">Assemblage</a></span>
 </div>
-<div class="subindexitem">dividing<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-190" class="internal" title="Subsection 8.3.2: Quotients of Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-127.html" title="Assemblage: Quotient of Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-128.html" title="Assemblage: To divide algebraic fractions:">Assemblage</a></span>
+<div class="subindexitem">dividing<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-192" class="internal" title="Subsection 8.3.2: Quotients of Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-127.html" title="Assemblage: Quotient of Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-128.html" title="Assemblage: To divide algebraic fractions:">Assemblage</a></span>
 </div>
 <div class="subindexitem">fundamental principal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-123.html" title="Assemblage: Fundamental Principle of Fractions">Assemblage</a></span>
 </div>
@@ -1265,13 +1251,13 @@ window.MathJax = {
 </div>
 <div class="subindexitem">multiplying<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-126.html" title="Assemblage: To multiply algebraic fractions:">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-126.html" title="Assemblage: To multiply algebraic fractions:">Assemblage</a></span>
 </div>
-<div class="subindexitem">reducing<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7724.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">reducing<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7658.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">reducing an algebraic fraction<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-124.html" title="Assemblage: To reduce an algebraic fraction">Assemblage</a></span>
 </div>
 <div class="subindexitem">simplify<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-133.html" title="Assemblage: To simplify a complex fraction">Assemblage</a></span>
 </div>
-<div class="subindexitem">unlike<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-192" class="internal" title="Subsection 8.3.4: Unlike Fractions">Subsection</a></span>
+<div class="subindexitem">unlike<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-194" class="internal" title="Subsection 8.3.4: Unlike Fractions">Subsection</a></span>
 </div>
 <div class="indexitem">function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3512.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/Definition-function.html" title="Definition 5.1.1: Definition of Function">Definition</a></span>
 </div>
@@ -1287,7 +1273,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">inverse variation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4025.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">natural exponential<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10712.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">natural exponential<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9752.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">notation<span class="indexknowl">, <a href="Functions.html#subsection-98" class="internal" title="Subsection 5.1.5: Function Notation">Subsection</a></span>
 </div>
@@ -1297,7 +1283,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">power<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4834.html" title="Paragraph">Paragraph</a><span class="seealso"> (<em>see also</em> power function)</span></span>
 </div>
-<div class="subindexitem">rational<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-188" class="internal" title="Subsection 8.2.4: Rational Functions">Subsection</a></span>
+<div class="subindexitem">rational<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-190" class="internal" title="Subsection 8.2.4: Rational Functions">Subsection</a></span>
 </div>
 <div class="subindexitem">vertical line test<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-49.html" title="Assemblage: The Vertical Line Test">Assemblage</a></span>
 </div>
@@ -1310,11 +1296,11 @@ window.MathJax = {
 <div class="indexitem">general form for a linear equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-6.html" title="Definition 1.3.7: General Form for a Linear Equation">Definition</a></span>
 </div>
 <div class="indexitem">general quadratic form</div>
-<div class="subindexitem">of a circle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9309.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">of a circle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8787.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">geometric formulas<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Summary-volume-and-surface-area.html" title="Assemblage: Formulas for Volume and Surface Area">Assemblage</a></span>
 </div>
-<div class="indexitem">golden rectangle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/exercise-1928.html" title="Exercise 8.5.7.37">Exercise</a></span>
+<div class="indexitem">golden rectangle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/exercise-1929.html" title="Exercise 8.5.7.37">Exercise</a></span>
 </div>
 <div class="indexitem">graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-4.html" title="Definition 1.2.11: Graph">Definition</a> <a href="" class="xref" data-knowl="./knowl/definition-4.html" title="Definition 1.2.11: Graph">Definition</a> <a href="" class="xref" data-knowl="./knowl/li-23.html" title="Item 2">Item</a></span>
 </div>
@@ -1342,27 +1328,27 @@ window.MathJax = {
 </div>
 <div class="indexitem">half-plane<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1804.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">horizontal asymptote<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3936.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6336.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7902.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">horizontal asymptote<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3936.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6336.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7738.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">horizontal line<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1837.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-150.html" title="Assemblage: Horizontal and Vertical Lines">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-5942.html" title="Item 1">Item</a></span>
+<div class="indexitem">horizontal line<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1837.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-150.html" title="Assemblage: Horizontal and Vertical Lines">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-5713.html" title="Item 1">Item</a></span>
 </div>
 <div class="subindexitem">slope of<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-151.html" title="Assemblage: Slopes of Horizontal and Vertical Lines">Assemblage</a></span>
 </div>
-<div class="indexitem">hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9428.html" title="Paragraph">Paragraph</a> <a href="Hyperbolas.html" class="internal" title="Section 9.4: Conic Sections: Hyperbolas">Section</a> <a href="" class="xref" data-knowl="./knowl/p-9645.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.4.1: Hyperbola">Definition</a> <a href="" class="xref" data-knowl="./knowl/definition-21.html" title="Definition 9.4.1: Hyperbola">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-9855.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8881.html" title="Paragraph">Paragraph</a> <a href="Hyperbolas.html" class="internal" title="Section 9.4: Conic Sections: Hyperbolas">Section</a> <a href="" class="xref" data-knowl="./knowl/p-9025.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/definition-22.html" title="Definition 9.4.1: Hyperbola">Definition</a> <a href="" class="xref" data-knowl="./knowl/definition-22.html" title="Definition 9.4.1: Hyperbola">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-9124.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">asymptotes<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9652.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">asymptotes<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9032.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">branches<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9645.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">branches<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9025.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">central<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-159.html" title="Assemblage: Central Hyperbola">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-9666.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">central<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-159.html" title="Assemblage: Central Hyperbola">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-9037.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">conjugate axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">conjugate axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">translated<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-160.html" title="Assemblage: Hyperbolas">Assemblage</a></span>
 </div>
-<div class="subindexitem">transverse axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">transverse axis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">vertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-i">
@@ -1377,7 +1363,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">inconsistent system<span class="indexknowl">. <span class="see"><em>See</em> system of equations</span></span>
 </div>
-<div class="indexitem">increasing function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4094.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-4428.html" title="Item 1">Item</a> <a href="ExponentialFunctions.html#subsection-161" class="internal" title="Subsection 7.2.3: Comparing Exponential and Power Functions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-10368.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> increasing graph</span></span>
+<div class="indexitem">increasing function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4094.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-6139.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-4428.html" title="Item 1">Item</a> <a href="ExponentialFunctions.html#subsection-161" class="internal" title="Subsection 7.2.3: Comparing Exponential and Power Functions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-9528.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> increasing graph</span></span>
 </div>
 <div class="indexitem">increasing graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-67.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1451,9 +1437,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">least-squares regression line<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1211.html" title="Paragraph">Paragraph</a> <a href="LinReg.html#subsection-30" class="internal" title="Subsection 2.1.2: Line of Best Fit">Subsection</a></span>
 </div>
-<div class="indexitem">like fractions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8083.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">like fractions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7881.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">adding or subtracting<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-191" class="internal" title="Subsection 8.3.3: Adding and Subtracting Like Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-129.html" title="Assemblage: Sum or Difference of Like Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-130.html" title="Assemblage: To add or subtract like fractions">Assemblage</a></span>
+<div class="subindexitem">adding or subtracting<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-193" class="internal" title="Subsection 8.3.3: Adding and Subtracting Like Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-129.html" title="Assemblage: Sum or Difference of Like Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-130.html" title="Assemblage: To add or subtract like fractions">Assemblage</a></span>
 </div>
 <div class="indexitem">like radical<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-5614.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1462,13 +1448,13 @@ window.MathJax = {
 </div>
 <div class="subindexitem">of best fit<span class="indexknowl"> <span class="see">(<em>see</em> least-squares regression line)</span></span>
 </div>
-<div class="subindexitem">parallel<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-209" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5972.html" title="Item 1">Item</a></span>
+<div class="subindexitem">parallel<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-211" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5727.html" title="Item 1">Item</a></span>
 </div>
-<div class="subindexitem">perpendicular<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-209" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5973.html" title="Item 2">Item</a></span>
+<div class="subindexitem">perpendicular<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-211" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5728.html" title="Item 2">Item</a></span>
 </div>
 <div class="subindexitem">regression<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1211.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">vertical<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-5943.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/assemblage-151.html" title="Assemblage: Slopes of Horizontal and Vertical Lines">Assemblage</a></span>
+<div class="subindexitem">vertical<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-5714.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/assemblage-151.html" title="Assemblage: Slopes of Horizontal and Vertical Lines">Assemblage</a></span>
 </div>
 <div class="indexitem">linear combination<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1552.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> Gaussian reduction</span></span>
 </div>
@@ -1507,15 +1493,15 @@ window.MathJax = {
 <div class="subindexitem">
 <span class="process-math">\(3\times 3\)</span><span class="indexknowl">, <a href="GaussReduct.html#subsection-41" class="internal" title="Subsection 2.4.1: 3\times 3 Linear Systems">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-16.html" title="Assemblage: Steps for Solving a 3\times 3 Linear System">Assemblage</a></span>
 </div>
-<div class="indexitem">log-log graph paper<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10559.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">log-log graph paper<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9653.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">logarithm<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6580.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/definition-18.html" title="Definition 7.3.1: Definition of Logarithm">Definition</a></span>
 </div>
 <div class="subindexitem">base<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-18.html" title="Definition 7.3.1: Definition of Logarithm">Definition</a></span>
 </div>
-<div class="subindexitem">conversion equations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-97.html" title="Assemblage: Logarithms and Exponents: Conversion Equations">Assemblage</a></span>
+<div class="subindexitem">conversion equations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-97.html" title="Assemblage: Logarithms and Exponents: Conversion Equations">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-172.html" title="Assemblage: Logarithms and Exponents: Conversion Equations">Assemblage</a></span>
 </div>
-<div class="subindexitem">equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10399.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9546.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">properties<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/properties-of-logarithms.html" title="Assemblage: Properties of Logarithms">Assemblage</a></span>
 </div>
@@ -1523,18 +1509,18 @@ window.MathJax = {
 </div>
 <div class="subindexitem">some useful<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-98.html" title="Assemblage: Some Useful Logarithms">Assemblage</a></span>
 </div>
-<div class="indexitem">logarithmic equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10399.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> conversion equations</span></span>
+<div class="indexitem">logarithmic equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9546.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> conversion equations</span></span>
 </div>
-<div class="indexitem">logarithmic function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10285.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">logarithmic function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9476.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">logarithmic scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10517.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> logarithm</span></span>
+<div class="indexitem">logarithmic scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9641.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> logarithm</span></span>
 </div>
 <div class="indexitem">logarithms</div>
 <div class="subindexitem">common (base 10)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-6648.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">lowest common denominator<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8126.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8167.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">lowest common denominator<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7904.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7921.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">clearing fractions with<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8565.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">clearing fractions with<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8241.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">finding the<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-132.html" title="Assemblage: To Find the LCD">Assemblage</a></span>
 </div>
@@ -1550,7 +1536,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">mechanistic models<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4397.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">midpoint<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9256.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-155.html" title="Assemblage: Midpoint Formula">Assemblage</a></span>
+<div class="indexitem">midpoint<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8756.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-155.html" title="Assemblage: Midpoint Formula">Assemblage</a></span>
 </div>
 <div class="indexitem">minimum value<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/note-9.html" title="Note 4.2.6">Note</a>. <span class="seealso"><em>See also</em> parabola</span></span>
 </div>
@@ -1573,19 +1559,19 @@ window.MathJax = {
 <div class="indexitem">
 <em class="emphasis">n</em><span class="process-math">\(\vphantom{n}^{\text{th}}\)</span> root<span class="indexknowl">, <a href="RootsandRadicals.html#subsection-127" class="internal" title="Subsection 6.2.1: n^\text{th} Roots">Subsection</a></span>
 </div>
-<div class="indexitem">natural base<span class="indexknowl">, <a href="The-Natural-Base.html" class="internal" title="Section 10.3: The Natural Base">Section</a> <a href="" class="xref" data-knowl="./knowl/p-10711.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-6843.html" title="Item 7">Item</a>. <span class="seealso"><em>See also</em> <em class="emphasis">e</em><span class="process-math">\(\thinspace\)</span></span></span>
+<div class="indexitem">natural base<span class="indexknowl">, <a href="The-Natural-Base.html" class="internal" title="Section 10.3: The Natural Base">Section</a> <a href="" class="xref" data-knowl="./knowl/p-9751.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-6346.html" title="Item 7">Item</a>. <span class="seealso"><em>See also</em> <em class="emphasis">e</em><span class="process-math">\(\thinspace\)</span></span></span>
 </div>
-<div class="indexitem">natural exponential function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10712.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">natural exponential function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9752.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">natural log function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10750.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">natural log function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9776.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">natural logarithm<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10737.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-172.html" title="Assemblage: The Natural Logarithm">Assemblage</a></span>
+<div class="indexitem">natural logarithm<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9769.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-173.html" title="Assemblage: The Natural Logarithm">Assemblage</a></span>
 </div>
 <div class="indexitem">negative and zero exponents<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-66.html" title="Assemblage: Definition of Negative and Zero Exponents">Assemblage</a></span>
 </div>
-<div class="indexitem">negative exponents<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-66.html" title="Assemblage: Definition of Negative and Zero Exponents">Assemblage</a> <a href="MoreOperationsonFractions.html#subsection-197" class="internal" title="Subsection 8.4.2: Negative Exponents">Subsection</a></span>
+<div class="indexitem">negative exponents<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-66.html" title="Assemblage: Definition of Negative and Zero Exponents">Assemblage</a> <a href="MoreOperationsonFractions.html#subsection-199" class="internal" title="Subsection 8.4.2: Negative Exponents">Subsection</a></span>
 </div>
-<div class="indexitem">negative reciprocal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9053.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">negative reciprocal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8619.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">net change<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-825.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1593,7 +1579,7 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-o">
 <div class="indexitem">open interval<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-2015.html" title="Item 2">Item</a>. <span class="seealso"><em>See also</em> interval notation</span></span>
 </div>
-<div class="indexitem">opposite of a binomial<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-187" class="internal" title="Subsection 8.2.3: Opposite of a Binomial">Subsection</a></span>
+<div class="indexitem">opposite of a binomial<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-189" class="internal" title="Subsection 8.2.3: Opposite of a Binomial">Subsection</a></span>
 </div>
 <div class="indexitem">ordered triple<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1664.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1603,7 +1589,7 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-p">
-<div class="indexitem">parabola<span class="indexknowl">, <a href="ExtractRoots.html#subsection-53" class="internal" title="Subsection 3.1.2: Graphs of Quadratic Equations">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-2422.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9428.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9855.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">parabola<span class="indexknowl">, <a href="ExtractRoots.html#subsection-53" class="internal" title="Subsection 3.1.2: Graphs of Quadratic Equations">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-2422.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8881.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-9124.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">axis of symmetry<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-1406.html" title="Item">Item</a></span>
 </div>
@@ -1615,7 +1601,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">vertex of<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Summary-vertex-of-parabola.html" title="Assemblage: Vertex of a Parabola">Assemblage</a></span>
 </div>
-<div class="indexitem">parallel lines<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-209" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5972.html" title="Item 1">Item</a></span>
+<div class="indexitem">parallel lines<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-211" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5727.html" title="Item 1">Item</a></span>
 </div>
 <div class="indexitem">parameter<span class="indexknowl">, <a href="Graphing-Parabolas.html#section-3-3-exercises" class="internal" title="Exercises 3.3.6: Problem Set 3.3">Exercises</a> <a href="" class="xref" data-knowl="./knowl/p-3125.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-4396.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> quadratic equation</span></span>
 </div>
@@ -1625,9 +1611,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">perfect square<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2560.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">perpendicular lines<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-209" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5973.html" title="Item 2">Item</a></span>
+<div class="indexitem">perpendicular lines<span class="indexknowl">, <a href="PropertiesOfLines.html#subsection-211" class="internal" title="Subsection 9.1.2: Parallel and Perpendicular Lines">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-5728.html" title="Item 2">Item</a></span>
 </div>
-<div class="indexitem">pH scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-10594.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">pH scale<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9661.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">point-slope form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-863.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> point-slope formula</span></span>
 </div>
@@ -1635,19 +1621,19 @@ window.MathJax = {
 </div>
 <div class="indexitem">polynomial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7411.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">ascending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7416.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">ascending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7417.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">cubic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-121.html" title="Assemblage: Cube of a Binomial">Assemblage</a> <a href="PolynomialFunctions.html#subsection-183" class="internal" title="Subsection 8.1.4: Factoring Cubics">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-122.html" title="Assemblage: Factoring the Sum or Difference of Two Cubes">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-7542.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7553.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7554.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">cubic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7467.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7478.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7479.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-121.html" title="Assemblage: Cube of a Binomial">Assemblage</a> <a href="PolynomialFunctions.html#subsection-185" class="internal" title="Subsection 8.1.6: Factoring Cubics">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-122.html" title="Assemblage: Factoring the Sum or Difference of Two Cubes">Assemblage</a></span>
 </div>
-<div class="subindexitem">descending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7416.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">descending powers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7417.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">division<span class="indexknowl">, <a href="MoreOperationsonFractions.html#subsection-199" class="internal" title="Subsection 8.4.4: Polynomial Division">Subsection</a></span>
+<div class="subindexitem">division<span class="indexknowl">, <a href="MoreOperationsonFractions.html#subsection-201" class="internal" title="Subsection 8.4.4: Polynomial Division">Subsection</a></span>
 </div>
 <div class="subindexitem">function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-19.html" title="Definition 8.1.1: Polynomial Function">Definition</a></span>
 </div>
 <div class="subindexitem">lead coefficient<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-19.html" title="Definition 8.1.1: Polynomial Function">Definition</a></span>
 </div>
-<div class="subindexitem">modeling with<span class="indexknowl">, <a href="PolynomialFunctions.html#subsection-184" class="internal" title="Subsection 8.1.5: Modeling with Polynomials">Subsection</a></span>
+<div class="subindexitem">modeling with<span class="indexknowl">, <a href="PolynomialFunctions.html#subsection-182" class="internal" title="Subsection 8.1.3: Modeling with Polynomials">Subsection</a></span>
 </div>
 <div class="subindexitem">products of<span class="indexknowl">, <a href="PolynomialFunctions.html#subsection-181" class="internal" title="Subsection 8.1.2: Products of Polynomials">Subsection</a></span>
 </div>
@@ -1675,9 +1661,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">property of proportions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-134.html" title="Assemblage: Property of Proportions">Assemblage</a></span>
 </div>
-<div class="indexitem">proportion<span class="indexknowl">, <a href="EquationswithFractions.html#subsection-201" class="internal" title="Subsection 8.5.2: Proportions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-8573.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">proportion<span class="indexknowl">, <a href="EquationswithFractions.html#subsection-203" class="internal" title="Subsection 8.5.2: Proportions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-8247.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">cross-multiplying<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8574.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-134.html" title="Assemblage: Property of Proportions">Assemblage</a></span>
+<div class="subindexitem">cross-multiplying<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8248.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-134.html" title="Assemblage: Property of Proportions">Assemblage</a></span>
 </div>
 <div class="indexitem">proportional</div>
 <div class="subindexitem">directly<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-4026.html" title="Paragraph">Paragraph</a></span>
@@ -1724,7 +1710,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">quadratic trinomial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2562.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">quotient of fractions<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-190" class="internal" title="Subsection 8.3.2: Quotients of Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-127.html" title="Assemblage: Quotient of Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-128.html" title="Assemblage: To divide algebraic fractions:">Assemblage</a></span>
+<div class="indexitem">quotient of fractions<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-192" class="internal" title="Subsection 8.3.2: Quotients of Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-127.html" title="Assemblage: Quotient of Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-128.html" title="Assemblage: To divide algebraic fractions:">Assemblage</a></span>
 </div>
 <div class="indexitem">quotient rule for radicals<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Summary-quotient-rule-radicals.html" title="Assemblage: Quotient Rule for Radicals">Assemblage</a></span>
 </div>
@@ -1748,7 +1734,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">radicand<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-5044.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">radius<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9269.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-156.html" title="Assemblage: Standard Form for a Circle">Assemblage</a>. <span class="seealso"><em>See also</em> circle</span></span>
+<div class="indexitem">radius<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8766.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-156.html" title="Assemblage: Standard Form for a Circle">Assemblage</a>. <span class="seealso"><em>See also</em> circle</span></span>
 </div>
 <div class="indexitem">rate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-5.html" title="Assemblage: Rate">Assemblage</a></span>
 </div>
@@ -1758,13 +1744,13 @@ window.MathJax = {
 </div>
 <div class="indexitem">rational exponents<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-73.html" title="Assemblage: Rational Exponents">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-74.html" title="Assemblage: Rational Exponents and Radicals">Assemblage</a></span>
 </div>
-<div class="indexitem">rational expression<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7722.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> algebraic fraction</span></span>
+<div class="indexitem">rational expression<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-7656.html" title="Paragraph">Paragraph</a>. <span class="seealso"><em>See also</em> algebraic fraction</span></span>
 </div>
-<div class="indexitem">rational function<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-188" class="internal" title="Subsection 8.2.4: Rational Functions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-7872.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">rational function<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-190" class="internal" title="Subsection 8.2.4: Rational Functions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/definition-20.html" title="Definition 8.2.18: Rational Function">Definition</a></span>
 </div>
 <div class="indexitem">rationalizing the denominator<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-5663.html" title="Paragraph">Paragraph</a> <a href="WorkingwithRadicals.html#subsection-145" class="internal" title="Subsection 6.4.5: Rationalizing the Denominator">Subsection</a>. <span class="seealso"><em>See also</em> radical</span></span>
 </div>
-<div class="indexitem">reducing fractions<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-186" class="internal" title="Subsection 8.2.2: Reducing Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-7724.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-123.html" title="Assemblage: Fundamental Principle of Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-124.html" title="Assemblage: To reduce an algebraic fraction">Assemblage</a></span>
+<div class="indexitem">reducing fractions<span class="indexknowl">, <a href="AlgebraicFractions.html#subsection-188" class="internal" title="Subsection 8.2.2: Reducing Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-7658.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-123.html" title="Assemblage: Fundamental Principle of Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-124.html" title="Assemblage: To reduce an algebraic fraction">Assemblage</a></span>
 </div>
 <div class="indexitem">regression<span class="indexknowl">. <span class="see"><em>See</em> linear regression</span></span>
 </div>
@@ -1772,7 +1758,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">revenue<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1427.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-3006.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">Richter scale (or magnitude)<span class="indexknowl">, <a href="LogarithmicScales.html#subsection-241" class="internal" title="Subsection 10.2.5: The Richter Scale">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-10619.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">Richter scale (or magnitude)<span class="indexknowl">, <a href="LogarithmicScales.html#subsection-243" class="internal" title="Subsection 10.2.5: The Richter Scale">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-9680.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">root</div>
 <div class="subindexitem">cube root<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-14.html" title="Definition 5.3.1: Cube Root">Definition</a></span>
@@ -1846,11 +1832,11 @@ window.MathJax = {
 </div>
 <div class="indexitem">substitution method<span class="indexknowl">. <span class="see"><em>See</em> system of equations</span></span>
 </div>
-<div class="indexitem">sum or difference of fractions<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-191" class="internal" title="Subsection 8.3.3: Adding and Subtracting Like Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-129.html" title="Assemblage: Sum or Difference of Like Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-130.html" title="Assemblage: To add or subtract like fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-131.html" title="Assemblage: To add or subtract algebraic fraction">Assemblage</a></span>
+<div class="indexitem">sum or difference of fractions<span class="indexknowl">, <a href="OperationsAlgebraicFractions.html#subsection-193" class="internal" title="Subsection 8.3.3: Adding and Subtracting Like Fractions">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-129.html" title="Assemblage: Sum or Difference of Like Fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-130.html" title="Assemblage: To add or subtract like fractions">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-131.html" title="Assemblage: To add or subtract algebraic fraction">Assemblage</a></span>
 </div>
 <div class="indexitem">supply equation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1420.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">surface area<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-586.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7523.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">surface area<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-586.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7451.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of a cone<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Summary-volume-and-surface-area.html" title="Assemblage: Formulas for Volume and Surface Area">Assemblage</a></span>
 </div>
@@ -1876,7 +1862,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">dependent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Definition-solution-system.html" title="Definition 2.2.7: Solutions of Linear Systems">Definition</a> <a href="" class="xref" data-knowl="./knowl/assemblage-15.html" title="Assemblage: Inconsistent and Dependent Systems">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-1666.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-1715.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">elimination method<span class="indexknowl">, <a href="AlgebraicSolution.html#subsection-39" class="internal" title="Subsection 2.3.2: Elimination Method">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-15.html" title="Assemblage: Inconsistent and Dependent Systems">Assemblage</a> <a href="NonlinearSystems.html#subsection-229" class="internal" title="Subsection 9.5.3: Solving Systems by Elimination">Subsection</a></span>
+<div class="subindexitem">elimination method<span class="indexknowl">, <a href="AlgebraicSolution.html#subsection-39" class="internal" title="Subsection 2.3.2: Elimination Method">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-15.html" title="Assemblage: Inconsistent and Dependent Systems">Assemblage</a> <a href="NonlinearSystems.html#subsection-231" class="internal" title="Subsection 9.5.3: Solving Systems by Elimination">Subsection</a></span>
 </div>
 <div class="subindexitem">Gaussian reduction<span class="indexknowl">, <a href="GaussReduct.html#subsection-43" class="internal" title="Subsection 2.4.3: Gaussian Reduction">Subsection</a> <a href="" class="xref" data-knowl="./knowl/assemblage-16.html" title="Assemblage: Steps for Solving a 3\times 3 Linear System">Assemblage</a></span>
 </div>
@@ -1886,7 +1872,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">independent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Definition-solution-system.html" title="Definition 2.2.7: Solutions of Linear Systems">Definition</a></span>
 </div>
-<div class="subindexitem">involving conic sections<span class="indexknowl">, <a href="NonlinearSystems.html#subsection-228" class="internal" title="Subsection 9.5.2: Systems Involving Conic Sections">Subsection</a></span>
+<div class="subindexitem">involving conic sections<span class="indexknowl">, <a href="NonlinearSystems.html#subsection-230" class="internal" title="Subsection 9.5.2: Systems Involving Conic Sections">Subsection</a></span>
 </div>
 <div class="subindexitem">linear combination<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1552.html" title="Paragraph">Paragraph</a> <a href="GaussReduct.html#subsection-43" class="internal" title="Subsection 2.4.3: Gaussian Reduction">Subsection</a></span>
 </div>
@@ -1919,13 +1905,13 @@ window.MathJax = {
 <div class="indexitem">varies inversely<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-53.html" title="Assemblage: Inverse Variation">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/assemblage-54.html" title="Assemblage: Inverse Variation with a Power">Assemblage</a></span>
 </div>
 <div class="indexitem">vertex</div>
-<div class="subindexitem">of a hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9650.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">of a hyperbola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9030.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of a parabola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-1405.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/assemblage-25.html" title="Assemblage: Vertex of a Parabola">Assemblage</a></span>
 </div>
 <div class="subindexitem">of a system of inequalities<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1857.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">of ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-9437.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">of ellipse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-8890.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">vertex form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3032.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1935,9 +1921,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">vertex of a parabola<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Summary-vertex-of-parabola.html" title="Assemblage: Vertex of a Parabola">Assemblage</a></span>
 </div>
-<div class="indexitem">vertical asymptote<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3935.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7884.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">vertical asymptote<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3935.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-7730.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">vertical line<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1837.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-150.html" title="Assemblage: Horizontal and Vertical Lines">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-5943.html" title="Item 2">Item</a></span>
+<div class="indexitem">vertical line<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1837.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/assemblage-150.html" title="Assemblage: Horizontal and Vertical Lines">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-5714.html" title="Item 2">Item</a></span>
 </div>
 <div class="subindexitem">slope of<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-151.html" title="Assemblage: Slopes of Horizontal and Vertical Lines">Assemblage</a></span>
 </div>
@@ -1945,7 +1931,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">vertices<span class="indexknowl">. <span class="see"><em>See</em> ellipse</span><span class="see">; hyperbola</span><span class="see">; system of inequalities</span></span>
 </div>
-<div class="indexitem">volume<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-586.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8995.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">volume<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-586.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-8584.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of a cone<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/Summary-volume-and-surface-area.html" title="Assemblage: Formulas for Volume and Surface Area">Assemblage</a></span>
 </div>
@@ -1959,10 +1945,10 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-w"><div class="indexitem">World3<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3499.html" title="Paragraph">Paragraph</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-x"><div class="indexitem">
-<em class="emphasis">x</em>-intercept<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-249.html" title="Item 1">Item</a> <a href="" class="xref" data-knowl="./knowl/li-1305.html" title="Item 3">Item</a> <a href="" class="xref" data-knowl="./knowl/p-2272.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-1407.html" title="Item">Item</a> <a href="QuadraticInequalities.html#subsection-88" class="internal" title="Subsection 4.4.2: Using the x-Intercepts">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-2034.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/p-9001.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-6548.html" title="Item 2">Item</a></span>
+<em class="emphasis">x</em>-intercept<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-249.html" title="Item 1">Item</a> <a href="" class="xref" data-knowl="./knowl/li-1305.html" title="Item 3">Item</a> <a href="" class="xref" data-knowl="./knowl/p-2272.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-1407.html" title="Item">Item</a> <a href="QuadraticInequalities.html#subsection-88" class="internal" title="Subsection 4.4.2: Using the x-Intercepts">Subsection</a> <a href="" class="xref" data-knowl="./knowl/li-2034.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/p-8590.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/li-6111.html" title="Item 2">Item</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-y"><div class="indexitem">
-<em class="emphasis">y</em>-intercept<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-250.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/li-483.html" title="Item 1">Item</a> <a href="" class="xref" data-knowl="./knowl/assemblage-11.html" title="Assemblage: Slope-Intercept Form">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-531.html" title="Item 1">Item</a> <a href="" class="xref" data-knowl="./knowl/li-1407.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/li-4429.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/p-9001.html" title="Paragraph">Paragraph</a></span>
+<em class="emphasis">y</em>-intercept<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-250.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/li-483.html" title="Item 1">Item</a> <a href="" class="xref" data-knowl="./knowl/assemblage-11.html" title="Assemblage: Slope-Intercept Form">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/li-531.html" title="Item 1">Item</a> <a href="" class="xref" data-knowl="./knowl/li-1407.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/li-4429.html" title="Item 2">Item</a> <a href="" class="xref" data-knowl="./knowl/p-8590.html" title="Paragraph">Paragraph</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-z">
 <div class="indexitem">zero exponent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/assemblage-68.html" title="Assemblage: Zero as Exponent">Assemblage</a></span>

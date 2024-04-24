@@ -9448,7 +9448,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Graphs of Functions",
-  "body": " Graphs of Functions  Reading Function Values from a Graph  The graph below shows the Dow-Jones Industrial Average (the average value of the stock prices of 500 major companies) recorded at noon each day during the stock market correction around October 10, 1987 (\"Black Monday\").  DJIA  The graph describes a function because there is only one value of the output, DJIA, for each value of the input, . There is no formula that gives the DJIA for a particular day; but it is still a function, defined by its graph. The value of is specified by the vertical coordinate of the point with the given -coordinate.   The coordinates of point on the DJIA graph are . What do the coordinates tell you about the function ?  If the DJIA was 1726 at noon on October 20, what can you say about the graph of ?    The coordinates of point tell us that , so the DJIA was 2412 at noon on October 15.  We can say that , so the point lies on the graph of . This point is labeled in the figure above.   The coordinates of each point on the graph of the function give the output for a specific input.  Graph of a Function  The point lies on the graph of the function if and only if .  Practice 1 The water level in Lake Huron alters unpredictably over time. The graph below gives the average water level, , in meters in the year over a 20-year period. (Source: The Canadian Hydrographic Service)  graph of Lake Huron water level   The coordinates of point on the graph are . What do the coordinates tell you about the function ?  The average water level in was meters. Write this fact in function notation. What can you say about the graph of ?    ; the average water level was meters in .  . The point lies on the graph of .   The second coordinate of a point on the graph is the function value for the first coordinate.  Functions and Coordinates  Each point on the graph of the function has coordinates for some value of .  QuickCheck 1 True or False.   If lies on the graph of , then .  If , then lies on the graph of .  We can find the function value at by finding the -coordinate of the corresponding point on the graph of .  Every -coordinate on the graph of represents a function value for .   The figure shows the graph of a function . graph of a function   Find and .  For what value(s) of is ?  What is the largest, or maximum, value of ? For what value of does the function take on its maximum value?  On what intervals is increasing?    To find , we look for the point with -coordinate . The point lies on the graph of , so . Similarly, the point lies on the graph, so .  We look for points on the graph with -coordinate . Because the points , , and lie on the graph, we know that , , and . Thus, the -values we want are , , and .  The highest point on the graph is , so the largest -value is . Thus, the maximum value of is , and it occurs when .  A graph is increasing if the -values get larger as we read from left to right. The graph of is increasing for -values between and , and between and . Thus, is increasing on the intervals and .    QuickCheck 2 True or False.   A graph is called increasing if its -values increase.  The maximum function value is the -coordinate of the highest point on the graph.  If we say that is increasing on the interval , we mean that the function values increased from 2 to 7.  It is not possible for a function of to take on the same value at two different -values.   Practice 2 Refer to the graph of the function shown in .   Find .  For what value(s) of is ?  What is the smallest, or minimum, value of ? For what value of does the function take on its minimum value?  On what intervals is decreasing?      ;  and    Constructing the Graph of a Function  We can construct a graph for a function described by a table or an equation. We make these graphs the same way we graph equations in two variables: by plotting points whose coordinates satisfy the equation.  Graph the function  We choose several convenient values for and evaluate the function to find the corresponding -values. For this function we cannot choose -values less than , because the square root of a negative number is not a real number.     The results are shown in the table.                       square root graph  Points on the graph have coordinates , so the vertical coordinate of each point is given by the value of . We plot the points and connect them with a smooth curve, as shown in the figure. Notice that no points on the graph have -coordinates less than .  QuickCheck 3 How do we find the value of from a graph of ?   Using Technology to Graph a Function  We can also use a graphing utility to obtain a table and graph for the function in . We graph a function just as we graphed an equation. For this function, we enter and press ZOOM  for the standard window. Your calculator does not use the notation for graphs, so we will continue to use etc. for the output variable. Don't forget to enclose in parentheses, because it appears under a radical. The graph is shown below.  GC square root graph   Practice 3  Complete the table of values and sketch a graph of the function by hand. Then use technology to make a table of values and graph the function.                                         cubic    The Vertical Line Test  In a function, two different outputs cannot be related to the same input. This restriction means that two different ordered pairs cannot have the same first coordinate. What does it mean for the graph of the function?  Consider the graph shown in Figure (a). Every vertical line intersects the graph in at most one point, so there is only one point on the graph for each -value. This graph represents a function.  vertical line test  In Figure (b), however, the line intersects the graph at two points, and . Two different -values, 1 and 4, are related to the same -value, 2. This graph cannot be the graph of a function.  The Vertical Line Test function vertical line test vertical line test function  A graph represents a function if and only if every vertical line intersects the graph in at most one point.   Use the vertical line test to decide which of the graphs in the figure represent functions.  vertical line test   Graph (a) represents a function, because it passes the vertical line test.  Graph (b) is not the graph of a function, because the vertical line at (for example) intersects the graph at two points.  For graph (c), notice the break in the curve at : The solid dot at is the only point on the graph with ; the open circle at indicates that is not a point on the graph. Thus, graph (c) is a function, with .   QuickCheck 4 The vertical line test is used to decide whether a graph represents a .  If it is, there cannot be two poits on the graph with the same .  Practice 4 Use the vertical line test to determine which of the graphs below represent functions.  vertical line test Only (b) is a function.   Graphical Solution of Equations and Inequalities  We have used graphs to solve linear and quadratic equations and inequalities. We can also use a graphical technique to solve equations and inequalities involving other functions.  Use a graph of to solve the equation  If we sketch in the horizontal line , we can see that there are three points on the graph of that have -coordinate , as shown below. The -coordinates of these points are the solutions of the equation.  graph of cubic  From the graph, we see that the solutions are , , and approximately . We can verify each solution algebraically.  For example, if , we have so is a solution. Similarly, you can check that and are solutions.   Practice 5 Use the graph of shown at right to solve Verify your solutions algebraically.  graph of parabola  QuickCheck 5 To solve an equation graphically, it is helpful to sketch in a line. We are looking for values that give the required value.  Use the graph in to solve the inequality  We first locate all points on the graph that have -coordinates greater than or equal to . The -coordinates of these points are the solutions of the inequality.  The figure below shows the points in red, and their -coordinates as intervals on the -axis. The solutions are and , or in interval notation, . > graph of cubic  Practice 6 Use the graph above from to solve the inequality   More about Notation  To simplify the notation, we sometimes use the same letter for the output variable and for the name of the function. In the next example, is used in this way.  TrailGear decides to market a line of backpacks. The cost, , of manufacturing backpacks is a function of the number of backpacks produced, , given by the equation where is in dollars. Find the cost of producing 500 backpacks.  To find the value of that corresponds to , we evaluate : The cost of producing 500 backpacks is $13,000.   Practice 7 The volume of a sphere of radius centimeters is given by Evaluate and explain what it means. is the volume of a sphere whose radius is 10 cm.    Problem Set 5.2  Warm Up  For problems 1 4, sketch a graph of the linear or quadratic function by hand, and label the significant points.     10 by 10 grid      y = 3x-4        10 by 10 grid        10 by 10 grid      y = 3x-4        10 by 10 grid      Use the graph of to solve the inequalities. Show your method on the graph.   y = 1.4x - 0.64   y = 1.4x - 0.64       y = 1.4x - 0.64          y = 1.4x - 0.64       Use the graphs to solve the inequalities. Show your method on the graph.   parabola    parabola     Skills Practice  For Problems 7 10,  Make a table of values and sketch a graph of the function by plotting points. (Use the suggested -values.)  Use your calculator to make a table of values and to graph the function. Compare the calculator's graph with your sketch.   graph     graph      Applications  For Problems 11 14, use the graph.   curve   Find and .  For what value(s) of is ?  Find the intercepts of the graph. List the function values given by the intercepts.  What is the maximum value of ?  For what value(s) of does take on its maximum value?  On what intervals is the function increasing? Decreasing?    2    5  3  increasing: and ; decreasing:   curve   Find and .  For what value(s) of is ?  Find the intercepts of the graph. List the function values given by the intercepts.  Find the maximum and minimum values of .  For what value(s) of does take on its maximum and minimum values?  On what intervals is the function increasing? Decreasing?    curve   Find and .  Estimate the value of from the graph.  For what value(s) of is ?  Find the maximum and minimum values of .  For what value(s) of does take on its maximum and minimum values?  On what intervals is the function increasing? Decreasing?        Max at , min at   step function   Find and .  For what value(s) of is ?  Find the maximum and minimum values of .  For what value(s) of does take on its maximum and minimum values?    The graph shows the speed of sound in the ocean as a function of depth, . The speed of sound is affected both by increasing water pressure and by dropping temperature. (Source: Scientific American)  speed of sound vs depth  Evaluate and explain its meaning.  Solve and explain its meaning.  At what depth is the speed of sound the slowest, and what is the speed? Write your answer with function notation.  Describe the behavior of as increases.  : The speed of sound at a depth of meters is approximately meters per second.  or : The speed of sound is meters per second at both a depth of meters and a depth of meters.  The slowest speed occurs at a depth of about meters and the speed is about meters per second, so .  increases from about to in the first meters of depth, then drops to about at meters, then rises again, passing at a depth of about meters.  The figure shows the temperature of the ocean at various depths.  graph  Is depth a function of temperature?  Is temperature a function of depth?  The axes in this figure are scaled in an unusual way. Why is it useful to present the graph in this way?  What is the difference in temperature between the surface of the ocean and the deepest level shown?  Over what depths does the temperature change most rapidly?  What is the average rate of change of temperature with respect to depth in the region called the thermocline?   Which of the following graphs represent functions?  graph  (a) and (d)  Which of the following graphs represent functions?  graph   The figure shows the graph of . Use the graph to solve the following equations and inequalities. Show your work on the graph. Write your answers in interval notation.  bell-like curve             The figure shows the graph of . Use the graph to solve the following equations and inequalities. Show your work on the graph. Write your answers in interval notation.  cubic        The figure shows a graph of .  mystery curve  Find all values of for which      For what values of is increasing?    and  and  The figure shows a graph of .  mystery curve  Find all values of for which      For what values of is increasing?  For Problems 23 and 24, graph each function in the \"friendly\" window Then answer the questions about the graph.   Find the intercepts of the graph. Write your answers in function notation.  Find all points on the graph for which .  Explain why there are no points on the graph with or .    none  is undefined for those -values    Estimate the coordinates of the turning points of the graph, where the graph changes from increasing to decreasing or vice versa.  Estimate the coordinates of the -intercepts.  Write an equation of the form for each turning point and each -intercept.   For Problems 25 and 26,  Compute and .  Find all values of for which .  Find all values of for which .  Find all values of for which .  Graph and on the same axes, and illustrate your answers to (a) (d) as points on the graph.      grid            parabola and line         grid          "
+  "body": " Graphs of Functions  Reading Function Values from a Graph  The graph below shows the Dow-Jones Industrial Average (the average value of the stock prices of 500 major companies) recorded at noon each day during the stock market correction around October 10, 1987 (\"Black Monday\").  DJIA  The graph describes a function because there is only one value of the output, DJIA, for each value of the input, . There is no formula that gives the DJIA for a particular day; but it is still a function, defined by its graph. The value of is specified by the vertical coordinate of the point with the given -coordinate.   The coordinates of point on the DJIA graph are . What do the coordinates tell you about the function ?  If the DJIA was 1726 at noon on October 20, what can you say about the graph of ?    The coordinates of point tell us that , so the DJIA was 2412 at noon on October 15.  We can say that , so the point lies on the graph of . This point is labeled in the figure above.   The coordinates of each point on the graph of the function give the output for a specific input.  Graph of a Function  The point lies on the graph of the function if and only if .  Practice 1 The water level in Lake Huron alters unpredictably over time. The graph below gives the average water level, , in meters in the year over a 20-year period. (Source: The Canadian Hydrographic Service)  graph of Lake Huron water level   The coordinates of point on the graph are . What do the coordinates tell you about the function ?  The average water level in was meters. Write this fact in function notation. What can you say about the graph of ?    ; the average water level was meters in .  . The point lies on the graph of .   The second coordinate of a point on the graph is the function value for the first coordinate.  Functions and Coordinates  Each point on the graph of the function has coordinates for some value of .  QuickCheck 1 True or False.   If lies on the graph of , then .  If , then lies on the graph of .  We can find the function value at by finding the -coordinate of the corresponding point on the graph of .  Every -coordinate on the graph of represents a function value for .   The figure shows the graph of a function . graph of a function   Find and .  For what value(s) of is ?  What is the largest, or maximum, value of ? For what value of does the function take on its maximum value?  On what intervals is increasing?    To find , we look for the point with -coordinate . The point lies on the graph of , so . Similarly, the point lies on the graph, so .  We look for points on the graph with -coordinate . Because the points , , and lie on the graph, we know that , , and . Thus, the -values we want are , , and .  The highest point on the graph is , so the largest -value is . Thus, the maximum value of is , and it occurs when .  A graph is increasing if the -values get larger as we read from left to right. The graph of is increasing for -values between and , and between and . Thus, is increasing on the intervals and .    QuickCheck 2 True or False.   A graph is called increasing if its -values increase.  The maximum function value is the -coordinate of the highest point on the graph.  If we say that is increasing on the interval , we mean that the function values increased from 2 to 7.  It is not possible for a function of to take on the same value at two different -values.   Practice 2 Refer to the graph of the function shown in .   Find .  For what value(s) of is ?  What is the smallest, or minimum, value of ? For what value of does the function take on its minimum value?  On what intervals is decreasing?      ;  and    Constructing the Graph of a Function  We can construct a graph for a function described by a table or an equation. We make these graphs the same way we graph equations in two variables: by plotting points whose coordinates satisfy the equation.  Graph the function  We choose several convenient values for and evaluate the function to find the corresponding -values. For this function we cannot choose -values less than , because the square root of a negative number is not a real number.     The results are shown in the table.                       square root graph  Points on the graph have coordinates , so the vertical coordinate of each point is given by the value of . We plot the points and connect them with a smooth curve, as shown in the figure. Notice that no points on the graph have -coordinates less than .  QuickCheck 3 How do we find the value of from a graph of ?   Using Technology to Graph a Function  We can also use a graphing utility to obtain a table and graph for the function in . We graph a function just as we graphed an equation. For this function, we enter and press ZOOM  for the standard window. Your calculator does not use the notation for graphs, so we will continue to use etc. for the output variable. Don't forget to enclose in parentheses, because it appears under a radical. The graph is shown below.  GC square root graph   Practice 3  Complete the table of values and sketch a graph of the function by hand. Then use technology to make a table of values and graph the function.                                         cubic    The Vertical Line Test  In a function, two different outputs cannot be related to the same input. This restriction means that two different ordered pairs cannot have the same first coordinate. What does it mean for the graph of the function?  Consider the graph shown in Figure (a). Every vertical line intersects the graph in at most one point, so there is only one point on the graph for each -value. This graph represents a function.  vertical line test  In Figure (b), however, the line intersects the graph at two points, and . Two different -values, 1 and 4, are related to the same -value, 2. This graph cannot be the graph of a function.  The Vertical Line Test function vertical line test vertical line test function  A graph represents a function if and only if every vertical line intersects the graph in at most one point.   Use the vertical line test to decide which of the graphs in the figure represent functions.  vertical line test   Graph (a) represents a function, because it passes the vertical line test.  Graph (b) is not the graph of a function, because the vertical line at (for example) intersects the graph at two points.  For graph (c), notice the break in the curve at : The solid dot at is the only point on the graph with ; the open circle at indicates that is not a point on the graph. Thus, graph (c) is a function, with .   QuickCheck 4 The vertical line test is used to decide whether a graph represents a .  If it is, there cannot be two points on the graph with the same .  Practice 4 Use the vertical line test to determine which of the graphs below represent functions.  vertical line test Only (b) is a function.   Graphical Solution of Equations and Inequalities  We have used graphs to solve linear and quadratic equations and inequalities. We can also use a graphical technique to solve equations and inequalities involving other functions.  Use a graph of to solve the equation  If we sketch in the horizontal line , we can see that there are three points on the graph of that have -coordinate , as shown below. The -coordinates of these points are the solutions of the equation.  graph of cubic  From the graph, we see that the solutions are , , and approximately . We can verify each solution algebraically.  For example, if , we have so is a solution. Similarly, you can check that and are solutions.   Practice 5 Use the graph of shown at right to solve Verify your solutions algebraically.  graph of parabola  QuickCheck 5 To solve an equation graphically, it is helpful to sketch in a line. We are looking for values that give the required value.  Use the graph in to solve the inequality  We first locate all points on the graph that have -coordinates greater than or equal to . The -coordinates of these points are the solutions of the inequality.  The figure below shows the points in red, and their -coordinates as intervals on the -axis. The solutions are and , or in interval notation, . > graph of cubic  Practice 6 Use the graph above from to solve the inequality   More about Notation  To simplify the notation, we sometimes use the same letter for the output variable and for the name of the function. In the next example, is used in this way.  TrailGear decides to market a line of backpacks. The cost, , of manufacturing backpacks is a function of the number of backpacks produced, , given by the equation where is in dollars. Find the cost of producing 500 backpacks.  To find the value of that corresponds to , we evaluate : The cost of producing 500 backpacks is $13,000.   Practice 7 The volume of a sphere of radius centimeters is given by Evaluate and explain what it means. is the volume of a sphere whose radius is 10 cm.    Problem Set 5.2  Warm Up  For problems 1 4, sketch a graph of the linear or quadratic function by hand, and label the significant points.     10 by 10 grid      y = 3x-4        10 by 10 grid        10 by 10 grid      y = 3x-4        10 by 10 grid      Use the graph of to solve the inequalities. Show your method on the graph.   y = 1.4x - 0.64   y = 1.4x - 0.64       y = 1.4x - 0.64          y = 1.4x - 0.64       Use the graphs to solve the inequalities. Show your method on the graph.   parabola    parabola     Skills Practice  For Problems 7 10,  Make a table of values and sketch a graph of the function by plotting points. (Use the suggested -values.)  Use your calculator to make a table of values and to graph the function. Compare the calculator's graph with your sketch.   graph     graph      Applications  For Problems 11 14, use the graph.   curve   Find and .  For what value(s) of is ?  Find the intercepts of the graph. List the function values given by the intercepts.  What is the maximum value of ?  For what value(s) of does take on its maximum value?  On what intervals is the function increasing? Decreasing?    2    5  3  increasing: and ; decreasing:   curve   Find and .  For what value(s) of is ?  Find the intercepts of the graph. List the function values given by the intercepts.  Find the maximum and minimum values of .  For what value(s) of does take on its maximum and minimum values?  On what intervals is the function increasing? Decreasing?    curve   Find and .  Estimate the value of from the graph.  For what value(s) of is ?  Find the maximum and minimum values of .  For what value(s) of does take on its maximum and minimum values?  On what intervals is the function increasing? Decreasing?        Max at , min at   step function   Find and .  For what value(s) of is ?  Find the maximum and minimum values of .  For what value(s) of does take on its maximum and minimum values?    The graph shows the speed of sound in the ocean as a function of depth, . The speed of sound is affected both by increasing water pressure and by dropping temperature. (Source: Scientific American)  speed of sound vs depth  Evaluate and explain its meaning.  Solve and explain its meaning.  At what depth is the speed of sound the slowest, and what is the speed? Write your answer with function notation.  Describe the behavior of as increases.  : The speed of sound at a depth of meters is approximately meters per second.  or : The speed of sound is meters per second at both a depth of meters and a depth of meters.  The slowest speed occurs at a depth of about meters and the speed is about meters per second, so .  increases from about to in the first meters of depth, then drops to about at meters, then rises again, passing at a depth of about meters.  The figure shows the temperature of the ocean at various depths.  graph  Is depth a function of temperature?  Is temperature a function of depth?  The axes in this figure are scaled in an unusual way. Why is it useful to present the graph in this way?  What is the difference in temperature between the surface of the ocean and the deepest level shown?  Over what depths does the temperature change most rapidly?  What is the average rate of change of temperature with respect to depth in the region called the thermocline?   Which of the following graphs represent functions?  graph  (a) and (d)  Which of the following graphs represent functions?  graph   The figure shows the graph of . Use the graph to solve the following equations and inequalities. Show your work on the graph. Write your answers in interval notation.  bell-like curve             The figure shows the graph of . Use the graph to solve the following equations and inequalities. Show your work on the graph. Write your answers to the inequalities in interval notation.  cubic        The figure shows a graph of .  mystery curve  Find all values of for which      For what values of is increasing?    and  and  The figure shows a graph of .  mystery curve  Find all values of for which      For what values of is increasing?  For Problems 23 and 24, graph each function in the \"friendly\" window Then answer the questions about the graph.   Find the intercepts of the graph. Write your answers in function notation.  Find all points on the graph for which .  Explain why there are no points on the graph with or .    none  is undefined for those -values    Estimate the coordinates of the turning points of the graph, where the graph changes from increasing to decreasing or vice versa.  Estimate the coordinates of the -intercepts.  Write an equation of the form for each turning point and each -intercept.   For Problems 25 and 26,  Compute and .  Find all values of for which .  Find all values of for which .  Find all values of for which .  Graph and on the same axes, and illustrate your answers to (a) (d) as points on the graph.      grid            parabola and line         grid          "
 },
 {
   "id": "example-DJIA",
@@ -9556,7 +9556,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.2.12",
   "title": "QuickCheck 4.",
-  "body": "QuickCheck 4 The vertical line test is used to decide whether a graph represents a .  If it is, there cannot be two poits on the graph with the same . "
+  "body": "QuickCheck 4 The vertical line test is used to decide whether a graph represents a .  If it is, there cannot be two points on the graph with the same . "
 },
 {
   "id": "exercise-824",
@@ -9808,7 +9808,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.2.6.20",
   "title": "",
-  "body": "The figure shows the graph of . Use the graph to solve the following equations and inequalities. Show your work on the graph. Write your answers in interval notation.  cubic       "
+  "body": "The figure shows the graph of . Use the graph to solve the following equations and inequalities. Show your work on the graph. Write your answers to the inequalities in interval notation.  cubic       "
 },
 {
   "id": "exercise-849",
@@ -9871,7 +9871,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Some Basic Graphs",
-  "body": " Some Basic Graphs  In this section we study the graphs of some important basic functions. Many functions fall into families or classes of similar functions, and recognizing the appropriate family for a given situation is an important part of modeling.  We'll need two new algebraic operations.  Cube Roots  You are familiar with square roots. Every non-negative number has two square roots, defined as follows. There are several other kinds of roots, one of which is called the cube root . We define the cube root as follows.  Cube Root cube root root cube root  is the cube root of if cubed equals . In symbols, we write  Square roots of negative numbers are not real (they are complex), but every real number has a real cube root. For example, Simplifying radicals occupies the same position in the order of operations as computing powers: after parentheses, and before products and quotients.  Simplify each expression.          Practice 1 Simplify each expression.          QuickCheck 1 True or False.   A negative number has a negative cube root.  A negative number has a negative square root.  A positive number has a negative square root  A positive number has a negative cube root.   We can use the calculator to find cube roots as follows. Press the MATH key to get a menu of options. Option 4 is labeled ; this is the cube root key. To find the cube root of, say, 15.625, we key in  MATH  4    ENTER and the calculator returns the result, 2.5. Thus, . You can check this result by verifying that .   Absolute Value  We use the absolute value to discuss problems involving distance. For example, consider the number line below. Starting at the origin, we travel in opposite directions to reach the two numbers and , but the distance we travel in each case is the same.  absolute value  The distance from a number to the origin is called the absolute value absolute value function absolute value absolute value of , denoted by . Because distance is never negative, the absolute value of a number is always positive (or zero). Thus, and . In general, we define the absolute value of a number as follows.  Absolute Value  The absolute value absolute value of is defined by   This definition is called piecewise , because the formula has two pieces. It says that the absolute value of a positive number (or zero) is the same as the number. To find the absolute value of a negative number, we take the opposite of the number, which is then positive. For instance,  QuickCheck 2 If , what can you say about ?   must be zero.  must be negative.  must be zero or negative.  This cannot happen for any value of .   Absolute value bars act like grouping devices in the order of operations: you should complete any operations that appear inside absolute value bars before you compute the absolute value.  Simplify each expression.       We simplify the expression inside the absolute value bars first.  We simplify each absolute value; then subtract.   Practice 2 Simplify each expression.         QuickCheck 3 True or False:  Hint: Try some values of and .    Eight Basic Graphs graph eight basic  Most of the graphs in this section will be new to you, but many useful graphs are variations of the eight basic functions shown below.  Consider the first pair of graphs. You have already studied the graph of , the basic parabola. Compare that graph with the graph of . Notice several differences in the shape of the two graphs. Once you have a good idea of the shape of a graph, up can make a quick sketch with just a few \"guide points.\" For these two graphs, complete a short table of values to find useful guide points:                         graphs  The next pair of graphs are and . Once again, notice the differences in the two graphs. For example, we cannot take the square root of a negative number, but we can take its cube root. How is this reflected in the graphs?   square root graph  cube root graph  The next pair of functions, and , are both undefined at , so thier graphs do not include any points with -coordinate zero. For very small positive values of , both and get very large. As gets closer to zero, the graphs approach the vertical line (the -axis). This line is called a vertical asymptote vertical asymptote asymptote vertical for the graph.  Also, notice that for very large values of , both and get very close to zero. Their graphs approach the horizontal line (the -axis). This line is called the horizontal asymptote asymptote horizontal horizontal asymptote for the graph.  graphs  Finally, compare the familiar graph of with the graph of . The piecewise definition of means that we graph in the first quadrant (where ), and in the first quadrant ). The result is the V-shaped graph shown below.   y=x  y=abs(x)  Because they are fundamental to further study of mathematics and its applications, you should become familiar with the properties of these eight graphs, and be able to sketch them easily from memory, using their basic shapes and a few guidepoints.   Problem Set 5.3  Warm Up  Evaluate each function.        For Problems 2 and 3, compute each cube root. Round your answers to three decimal places if necessary. Verify your answers by cubing them.                  For Problems 4 6, simplify each by following the order of operations.               For problems 7 10, simplify the expression according to the order of operations.                                Skills Practice  For Problems 11 16, sketch the graph of the function by hand, paying attention to the shape of the graph. Carefully plot at least three “guide points” to ensure accuracy. If possible, plot the points with -coordinates and .     grid       grid         grid          grid       square root of x          grid          grid        grid        graph     Use your calculator to graph and on the same axes for . Which function is greater on that interval?  Use your calculator to graph and on the same axes for . Which function is greater on that interval?      Use your calculator to graph and on the same axes for . Which function is greater on that interval?  Use your calculator to graph and on the same axes for . Which function is greater on that interval?   Applications  Use the graph of to solve the inequality .    graph of 1\/x      Use the graph of to solve the inequality .    graph of abs(x-2)      For Problems 21 26, graph the functions in the same window on your calculator. Describe how the graphs in parts (b) and (c) are different from the basic graph.     (b): 2 units down, (c): 1 unit up         (b): 1.5 units left, (c): 1 unit right         (b): reflected about -axis, (c): reflected about -axis       Match each graph with its equation.   parabola  cubic  reciprocal    square root  cube root  line           vi  ii  iv  i  v  iii  Match each graph with its equation.   parabola  cubic  inverse square    square root  cube root  absolute value           For Problems 29 and 30, each graph is a variation of one of the eight basic graphs. Identify the basic graph for each.    translated square root      translated square root      translated absolute value      reflected reciprocal      transformed cubic      transformed inverse-square      horizontal shift of square root  vertical shift of cube root  vertical shift of absolute value  vertical flip of reciprocal  vertical flip and vertical shift of cube  vertical flip and vertical shift of inverse-square     transformed cube root      transformed absolute value      transformed reciprocal      transformed square root      transformed inverse-square      transformed inverse-cube       For Problems 31 and 32, use the graph to estimate the solutions to the inequalities.  The figure shows a graph of .   translated reciprocal          The figure shows a graph of .   translated reciprocal         For Problems 33 and 34, graph the function in the window Use the graph to solve each equation or inequality. Check your solutions algebraically.  Graph .  Solve  Solve  Solve    no solution    Graph .  Solve  Solve  Solve       "
+  "body": " Some Basic Graphs  In this section we study the graphs of some important basic functions. Many functions fall into families or classes of similar functions, and recognizing the appropriate family for a given situation is an important part of modeling.  We'll need two new algebraic operations.  Cube Roots  You are familiar with square roots. Every non-negative number has two square roots, defined as follows. There are several other kinds of roots, one of which is called the cube root . We define the cube root as follows.  Cube Root cube root root cube root  is the cube root of if cubed equals . In symbols, we write  Square roots of negative numbers are not real (they are complex), but every real number has a real cube root. For example, Simplifying radicals occupies the same position in the order of operations as computing powers: after parentheses, and before products and quotients.  Simplify each expression.          Practice 1 Simplify each expression.          QuickCheck 1 True or False.   A negative number has a negative cube root.  A negative number has a negative square root.  A positive number has a negative square root  A positive number has a negative cube root.   We can use the calculator to find cube roots as follows. Press the MATH key to get a menu of options. Option 4 is labeled ; this is the cube root key. To find the cube root of, say, 15.625, we key in  MATH  4    ENTER and the calculator returns the result, 2.5. Thus, . You can check this result by verifying that .   Absolute Value  We use the absolute value to discuss problems involving distance. For example, consider the number line below. Starting at the origin, we travel in opposite directions to reach the two numbers and , but the distance we travel in each case is the same.  absolute value  The distance from a number to the origin is called the absolute value absolute value function absolute value absolute value of , denoted by . Because distance is never negative, the absolute value of a number is always positive (or zero). Thus, and . In general, we define the absolute value of a number as follows.  Absolute Value  The absolute value absolute value of is defined by   This definition is called piecewise , because the formula has two pieces. It says that the absolute value of a positive number (or zero) is the same as the number. To find the absolute value of a negative number, we take the opposite of the number, which is then positive. For instance,  QuickCheck 2 If , what can you say about ?   must be zero.  must be negative.  must be zero or negative.  This cannot happen for any value of .   Absolute value bars act like grouping devices in the order of operations: you should complete any operations that appear inside absolute value bars before you compute the absolute value.  Simplify each expression.       We simplify the expression inside the absolute value bars first.  We simplify each absolute value; then subtract.   Practice 2 Simplify each expression.         QuickCheck 3 True or False:  Hint: Try some values of and .    Eight Basic Graphs graph eight basic  Most of the graphs in this section will be new to you, but many useful graphs are variations of the eight basic functions shown below.  Consider the first pair of graphs. You have already studied the graph of , the basic parabola. Compare that graph with the graph of . Notice several differences in the shape of the two graphs. Once you have a good idea of the shape of a graph, up can make a quick sketch with just a few \"guide points.\" For these two graphs, complete a short table of values to find useful guide points:                         graphs  The next pair of graphs are and . Once again, notice the differences in the two graphs. For example, we cannot take the square root of a negative number, but we can take its cube root. How is this reflected in the graphs?   square root graph  cube root graph  The next pair of functions, and , are both undefined at , so thier graphs do not include any points with -coordinate zero. For very small positive values of , both and get very large. As gets closer to zero, the graphs approach the vertical line (the -axis). This line is called a vertical asymptote vertical asymptote asymptote vertical for the graph.  Also, notice that for very large values of , both and get very close to zero. Their graphs approach the horizontal line (the -axis). This line is called the horizontal asymptote asymptote horizontal horizontal asymptote for the graph.  graphs  Finally, compare the familiar graph of with the graph of . The piecewise definition of means that we graph in the first quadrant (where ), and in the first quadrant ). The result is the V-shaped graph shown below.   y=x  y=abs(x)  Because they are fundamental to further study of mathematics and its applications, you should become familiar with the properties of these eight graphs, and be able to sketch them easily from memory, using their basic shapes and a few guidepoints.   Problem Set 5.3  Warm Up  Evaluate each function.        For Problems 2 and 3, compute each cube root. Round your answers to three decimal places if necessary. Verify your answers by cubing them.                  For Problems 4 6, simplify each by following the order of operations.               For problems 7 10, simplify the expression according to the order of operations.                                Skills Practice  For Problems 11 16, sketch the graph of the function by hand, paying attention to the shape of the graph. Carefully plot at least three “guide points” to ensure accuracy. If possible, plot the points with -coordinates and .     grid       grid         grid          grid       square root of x          grid          grid        grid        graph     Use your calculator to graph and on the same axes for . Which function is greater on that interval?  Use your calculator to graph and on the same axes for . Which function is greater on that interval?      Use your calculator to graph and on the same axes for . Which function is greater on that interval?  Use your calculator to graph and on the same axes for . Which function is greater on that interval?   Applications  Use the graph of to solve the inequality .    graph of 1\/x      Use the graph of to solve the inequality .    graph of abs(x-2)      For Problems 21 26, graph the functions in the same window on your calculator. Describe how the graphs in parts (b) and (c) are different from the basic graph.     (b): 2 units down, (c): 1 unit up         (b): 1.5 units left, (c): 1 unit right         (b): reflected about -axis, (c): reflected about -axis       Match each graph with its equation.   parabola  cubic  reciprocal    square root  cube root  line           vi  ii  iv  i  v  iii  Match each graph with its equation.   parabola  cubic  inverse square    square root  cube root  absolute value           For Problems 29 and 30, each graph is a variation of one of the eight basic graphs. Identify the basic graph for each.    translated square root      translated square root      translated absolute value      reflected reciprocal      transformed cubic      transformed inverse-square      horizontal shift of square root  vertical shift of cube root  vertical shift of absolute value  vertical flip of reciprocal  vertical flip and vertical shift of cube  vertical flip and vertical shift of inverse-square     transformed cube root      transformed absolute value      transformed reciprocal      transformed square root      transformed inverse-square      transformed cube       For Problems 31 and 32, use the graph to estimate the solutions to the inequalities.  The figure shows a graph of .   translated reciprocal          The figure shows a graph of .   translated reciprocal         For Problems 33 and 34, graph the function in the window Use the graph to solve each equation or inequality. Check your solutions algebraically.  Graph .  Solve  Solve  Solve    no solution    Graph .  Solve  Solve  Solve       "
 },
 {
   "id": "p-3888",
@@ -10276,7 +10276,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.4.30",
   "title": "",
-  "body": "  transformed cube root      transformed absolute value      transformed reciprocal      transformed square root      transformed inverse-square      transformed inverse-cube     "
+  "body": "  transformed cube root      transformed absolute value      transformed reciprocal      transformed square root      transformed inverse-square      transformed cube     "
 },
 {
   "id": "exercise-890",
@@ -10321,7 +10321,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Direct Variation",
-  "body": " Direct Variation  Two types of functions are widely used in modeling and are known by special names: direct variation function direct variation and inverse variation function inverse variation .  Proportion and Variation direct variation variation direct variation  Two variables are directly proportional directly proportional directly proportional direct variation (or just proportional proportional directly ) if the ratios of their corresponding values are always equal. Consider the functions described in the tables below. The first table shows the price of gasoline as a function of the number of gallons purchased.    Gallons of gasoline  Total price  Price\/ Gallons                         Years  Population  People\/Years                           The ratio , or price per gallon, is the same for each pair of values in the first table. This agrees with everyday experience: The price per gallon of gasoline is the same no matter how many gallons you buy. Thus, the total price of a gasoline purchase is directly proportional to the number of gallons purchased.  The second table shows the population of a small town as a function of the town’s age. The ratio gives the average rate of growth of the population in people per year. You can see that this ratio is not constant; in fact, it increases as time goes on. Thus, the population of the town is not proportional to its age.  QuickCheck 1 When does a table represent proportional variables?   If it has a constant slope  If it includes the point  If the ratio output\/input is constant  If each output is double the previous one   The graphs of the two functions described above by tables (the gasoline price and the small town population tables) are shown below.  graphs of gas price and population growth  We see that the price, , of a fill-up is a linear function of the number of gallons, , purchased. This should not be surprising if we write an equation relating the variables and . Because the ratio of their values is constant, we can write where is a constant. In this example, the constant is , the price of gasoline per gallon. Solving for in terms of , we have which we recognize as the equation of a line through the origin.  In general, we make the following definition.  Direct Variation direct variation varies directly   varies directly with if where is a positive constant called the constant of variation constant of variation direct variation constant of variation .  Thus, if varies directly with , it means that is directly proportional to . The two phrases mean the same thing.    The circumference, , of a circle varies directly with its radius, , because The constant of variation is , or about 6.28.  The amount of interest, , earned in one year on an account paying 7% simple interest, varies directly with the principal, , invested, because   From the definition above, we see that direct variation defines a linear function of the form Compared to the standard form for a linear function, , the constant term, , is zero, so the graph of a direct variation passes through the origin. The positive constant in the equation is just the slope of the graph, so it tells us how rapidly the graph increases. direct variation  Practice 1 graphs of three lines  Which of the graphs above could represent direct variation? Explain why.   (a). The graph is a straight line that increases.  (b). The graph is a straight line through the origin.  (c). The graph is a straight line that decreases.  None of the above  (b): The graph is a straight line through the origin.  QuickCheck 2  A table describes direct variation if the ratio of corresponding entries is .  A graph describes direct variation if it is a .  An equation describes direct variation if it has the form .  If two variables vary directly, we may also say that they are .     The Scaling Property of Direct Variation  Because the graph of passes through the origin, direct variation has the following scaling property: if we double the value of , then the value of will double also. In fact, increasing by any factor causes to increase by the same factor. Look again at the table for the price of buying gasoline. Doubling the number of gallons of gas purchased, say, from gallons to gallons or from gallons to gallons, causes the total price to double also.  QuickCheck 3 You invest $800 for one year at 7% simple interest. The interest earned is  If you increase the investment by a factor of, say, 1.6, to 1.6(800) or $1280, the interest will be  The original interest is increased by a factor of .  $56; $89.60; 1.6   Tuition at Woodrow University is $400 plus $30 per unit. Is the tuition proportional to the number of units you take?  Imogen makes a 15% commission on her sales of environmentally friendly products marketed by her co-op. Do her earnings vary directly with her sales?    Let represent the number of units you take, and let represent your tuition. Then Thus, is a linear function of , but the -intercept is , not . Your tuition is not proportional to the number of units you take, so this is not an example of direct variation. You can check that doubling the number of units does not double the tuition. For example, and Tuition for units is not double the tuition for units. The graph of in figure (a) does not pass through the origin.  calculator graphs of two linear functions  Let represent Imogen’s sales, and let represent her commission. Then Thus, is a linear function of with a -intercept of zero, so Imogen's earnings do vary directly with her sales.   Practice 2 Which table could represent direct variation? Explain why. (Hint: What happens to if you multiply by a constant?)                                       (a): If we multiply by a constant, is also multiplied by the same constant.   Finding a Formula for Direct Variation direct variation finding a formula for  If we know any one pair of values for the variables in a direct variation, we can find the constant of variation. Then we can use the constant to write a formula for one of the variables as a function of the other.  If you kick a rock off the rim of the Grand Canyon, its speed, , varies directly with the time, , it has been falling. The rock is falling at a speed of 39.2 meters per second when it passes a lizard on a ledge 4 seconds later.  Express as a function of .  What is the speed of the rock after it has fallen for 6 seconds?  Sketch a graph of versus .    Because varies directly with , there is a positive constant for which . We substitute and and solve for to find Replacing by , we find the formula .  We evaluate the function found in part (a) for . At seconds, the rock is falling at a speed of 58.8 meters per second.  You can use your calculator to graph the function . The graph is shown below.  GC graph   Practice 3 The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A 2-pound bag contains 3.5 cups of rice.   Express the volume, , of a bag of rice as a function of its weight, .  How many cups of rice are in a -pound bag?    cups   QuickCheck 3 How can you find the value of the constant of variation?   Double the value of  Find the -intercept of the graph  Substitute a pair of related values into  All of the above    Direct Variation with a Power of  In many situations, is proportional to a power of , instead of itself.  Direct Variation with a Power direct variation with a power   varies directly varies directly with a power of if where and are positive constants.   The surface area of a sphere varies directly with the square of its radius. A balloon of radius 5 centimeters has surface area square centimeters, or about 314 square centimeters. Find a formula for the surface area of a sphere as a function of its radius.  If stands for the surface area of a sphere of radius , then To find the constant of variation, , we substitute the values of and . Thus, .  Practice 4 The volume of a sphere varies directly with the cube of its radius. A balloon of radius 5 centimeters has volume cubic centimeters, or about 524 cubic centimeters. Find a formula for the volume, , of a sphere as a function of its radius, .  In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function, increasing function increasing function increasing graph as we can see when we consider the graphs of some typical direct variations shown below.  graphs of three variation with power  The graph of a direct variation always passes through the origin, so when the input is zero, the output is also zero. Thus, the functions and , for example, are not direct variation, even though they are increasing functions for positive .  QuickCheck 4 True or False.   Every increasing function is a direct variation.  Every direct variation is an increasing function.  The graph of every direct variation is a straight line.  The graph of every direct variation passes through the origin.   Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If varies directly with , then , or, equivalently,  Test for Direct Variation direct variation test for test for direct variation  If the ratio is constant, then varies directly with .  Delbert collects the following data and would like to know if varies directly with the square of . What should he calculate?                  If varies directly with , then , or . Delbert should calculate the ratio for each data point.                         Because the ratio is not constant, does not vary directly with .   Scaling scaling property of direct variation direct variation scaling property  If varies directly with , then doubling causes to double also. But what if varies directly with a power of :  Is the area of a -inch circular pizza double the area of an -inch pizza?  If you double the dimensions of a model of a skyscraper, will its weight double also?    You probably know that the answer to both of these questions is No . The area of a circle is proportional to the square of its radius, and the volume (and hence the weight) of an object is proportional to the cube of its linear dimension. Variation with a power of produces a different scaling effect.  The Taipei 101 building is 1671 feet tall, and in 2006 it was the tallest skyscraper in the world. Show that doubling the dimensions of a model of the Taipei 101 building produces a model that weighs 8 times as much.  The Taipei 101 skyscraper is approximately box shaped, so its volume is given by the product of its linear dimensions, . The weight of an object is proportional to its volume, so the weight, , of the model is where the constant depends on the material of the model. If we double the length, width, and height of the model, then The weight of the new model is times the weight of the original model.  Practice 6 Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.  Step 1: The formula for the area of a circle of radius is  Step 2: If we double the diameter, the new radius is  Step 3: Substitute the new expression for the radius into the area formula to get the area of the new circle.   The new radius is .  The new area is  In general, if varies directly with a power of , that is, if , then doubling the value of causes to increase by a factor of . In fact, if we multiply by any positive number , then so the value of is multiplied by .  We will call the scaling exponent scaling exponent direct variation scaling exponent exponent scaling , and you will often see variation described in terms of scaling. For example, we might say that \"the area of a circle scales as the square of its radius.\" (In many applications, the power is called the scale factor , even though it is not a factor but an exponent.)   Problem Set 5.4  Warm Up  Solve        Sketch a graph in the first quadrant.                                                 Skills Practice  For Problems 3 and 4,  Use the values in the table to find the constant of variation, , and write as a function of .  Fill in the rest of the table with the correct values.  What happens to when you double the value of ?  varies directly with .                                   doubles also  varies directly with the square of .                   For Problems 5 8, decide whether  varies directly with  varies directly with  does not vary directly with a power of  Explain why your choice is correct. If your choice is (a) or (b), find the constant of variation, .                 (b),                               (c)                   Applications  Delbert's credit card statement lists three purchases he made while on a business trip in the Midwest. His company's accountant would like to know the sales tax rate on the purchases.                 Compute the ratio of the tax to the price of each item. Is the tax proportional to the price? What is the tax rate?  Express the tax, , as a function of the price, , of the item.  Sketch a graph of the function by hand, and label the scales on the axes.                   Yes;   direct variation   At constant acceleration from rest, the distance traveled by a race car is proportional to the square of the time elapsed. The highest recorded road-tested acceleration is 0 to 60 miles per hour in 3.07 seconds, which produces the following data.                  Compute the ratios of the distance traveled to the square of the time elapsed. What was the acceleration, in feet per second squared?  Express the distance traveled, , as a function of time in seconds, .  Sketch a graph of the function by hand, and label the scales on the axes.   The weight of an object on the Moon varies directly with its weight on Earth. A person who weighs 150 pounds on Earth would weigh only 24.75 pounds on the Moon.  Find a function that gives the weight of an object on the Moon in terms of its weight on Earth. Complete the table and graph your function in a suitable window.              How much would a person weigh on the Moon if she weighs 120 pounds on Earth?  A piece of rock weighs 50 pounds on the Moon. How much will it weigh back on Earth?  If you double the weight of an object on Earth, what will happen to its weight on the Moon?                19.8 lb  303.03 lb  It will double.   The length of a rectangle is 10 inches, and its width is 8 inches. Suppose we increase the length of the rectangle while holding the width constant.  Fill in the table.   Length  Width  Perimeter  Area                   Does the perimeter vary directly with the length?  Write a formula for the perimeter of the rectangle in terms of its length.  Does the area vary directly with the length?  Write a formula for the area of the rectangle in terms of its length.   Hubble's law says that distant galaxies are receding from us at a rate that varies directly with their distance. (The speeds of the galaxies are measured using a phenomenon called redshifting.) A galaxy in the constellation Ursa Major is 980 million light-years away and is receding at a speed of 15,000 kilometers per second.  Find a function that gives the speed, , of a galaxy in terms of its distance, , from Earth. Complete the table and graph your function in a suitable window. (Distances are given in millions of light-years.)              How far away is a galaxy in the constellation Hydra that is receding at 61,000 kilometers per second?  A galaxy in Leo is 1240 million light-years away. How fast is it receding from us?    3985 million light-years  18,979 km\/sec  The length, , of a pendulum varies directly with the square of its period, , the time required for the pendulum to make one complete swing back and forth. The pendulum on a grandfather clock is 3.25 feet long and has a period of 2 seconds.  Express as a function of . Complete the table and graph your function in a suitable window.              How long is the Foucault pendulum in the Pantheon in Paris, which has a period of 17 seconds?  A hypnotist uses a gold pendant as a pendulum to mesmerize his clients. If the chain on the pendant is 9 inches long, what is the period of its swing?  In order to double the period of a pendulum, how must you vary its length?   The amount of power, , generated by a windmill varies directly with the cube of the wind speed, . A windmill on Oahu, Hawaii, produces 7300 kilowatts of power when the wind speed is 32 miles per hour.  Express the power as a function of wind speed. Complete the table and graph your function in a suitable window.              How much power would the windmill produce in a light breeze of 15 miles per hour?  What wind speed is needed to produce 10,000 kilowatts of power?  If the wind speed doubles, what happens to the amount of power generated?                752 kilowatts  33.54 mph  It is multiplied by 8.   The functions described by a table or a graph in Problems 16-19 are examples of direct variation.  Find an algebraic formula for the function, including the constant of variation, .  Answer the question in the problem.  A wide pipe can handle a greater water flow than a narrow pipe. The graph shows the water flow through a pipe, , as a function of its radius, . How great is the water flow through a pipe of radius of 10 inches?  increasing concave up  The faster a car moves, the more difficult it is to stop. The graph shows the distance, , required to stop a car as a function of its velocity, , before the brakes were applied. What distance is needed to stop a car moving at 100 kilometers per hour?  increasing concave up   50 m   The maximum height attained by a cannonball depends on the speed at which it was shot. The table shows maximum height as a function of initial speed. What height is attained by a cannonball whose initial upward speed was 100 feet per second?   Speed (ft\/sec)  Height (ft)           The strength of a cylindrical rod depends on its diameter. The greater the diameter of the rod, the more weight it can support before collapsing. The table shows the maximum weight supported by a rod as a function of its diameter. How much weight can a 1.2-centimeter rod support before collapsing?   Diameter (cm)  Weight (newtons)            864 newtons    The wind resistance, , experienced by a vehicle on the freeway varies directly with the square of its speed, .  If you double your speed, what happens to the wind resistance?  If you drive one-third as fast, what happens to the wind resistance?  If you decrease your speed by 10%, what happens to the wind resistance?   Wind resistance quadruples.  It is one-ninth as great.  It is decreased by 19% because it is 81% of the original.      "
+  "body": " Direct Variation  Two types of functions are widely used in modeling and are known by special names: direct variation function direct variation and inverse variation function inverse variation .  Proportion and Variation direct variation variation direct variation  Two variables are directly proportional directly proportional directly proportional direct variation (or just proportional proportional directly ) if the ratios of their corresponding values are always equal. Consider the functions described in the tables below. The first table shows the price of gasoline as a function of the number of gallons purchased.    Gallons of gasoline  Total price  Price\/ Gallons                         Years  Population  People\/Years                           The ratio , or price per gallon, is the same for each pair of values in the first table. This agrees with everyday experience: The price per gallon of gasoline is the same no matter how many gallons you buy. Thus, the total price of a gasoline purchase is directly proportional to the number of gallons purchased.  The second table shows the population of a small town as a function of the town’s age. The ratio gives the average rate of growth of the population in people per year. You can see that this ratio is not constant; in fact, it increases as time goes on. Thus, the population of the town is not proportional to its age.  QuickCheck 1 When does a table represent proportional variables?   If it has a constant slope  If it includes the point  If the ratio output\/input is constant  If each output is double the previous one   The graphs of the two functions described above by tables (the gasoline price and the small town population tables) are shown below.  graphs of gas price and population growth  We see that the price, , of a fill-up is a linear function of the number of gallons, , purchased. This should not be surprising if we write an equation relating the variables and . Because the ratio of their values is constant, we can write where is a constant. In this example, the constant is , the price of gasoline per gallon. Solving for in terms of , we have which we recognize as the equation of a line through the origin.  In general, we make the following definition.  Direct Variation direct variation varies directly   varies directly with if where is a positive constant called the constant of variation constant of variation direct variation constant of variation .  Thus, if varies directly with , it means that is directly proportional to . The two phrases mean the same thing.    The circumference, , of a circle varies directly with its radius, , because The constant of variation is , or about 6.28.  The amount of interest, , earned in one year on an account paying 7% simple interest, varies directly with the principal, , invested, because   From the definition above, we see that direct variation defines a linear function of the form Compared to the standard form for a linear function, , the constant term, , is zero, so the graph of a direct variation passes through the origin. The positive constant in the equation is just the slope of the graph, so it tells us how rapidly the graph increases. direct variation  Practice 1 graphs of three lines  Which of the graphs above could represent direct variation? Explain why.   (a). The graph is a straight line that increases.  (b). The graph is a straight line through the origin.  (c). The graph is a straight line that decreases.  None of the above  (b): The graph is a straight line through the origin.  QuickCheck 2  A table describes direct variation if the ratio of corresponding entries is .  A graph describes direct variation if it is a .  An equation describes direct variation if it has the form .  If two variables vary directly, we may also say that they are .     The Scaling Property of Direct Variation  Because the graph of passes through the origin, direct variation has the following scaling property: if we double the value of , then the value of will double also. In fact, increasing by any factor causes to increase by the same factor. Look again at the table for the price of buying gasoline. Doubling the number of gallons of gas purchased, say, from gallons to gallons or from gallons to gallons, causes the total price to double also.  QuickCheck 3 You invest $800 for one year at 7% simple interest. The interest earned is  If you increase the investment by a factor of, say, 1.6, to 1.6(800) or $1280, the interest will be  The original interest is increased by a factor of .  $56; $89.60; 1.6   Tuition at Woodrow University is $400 plus $30 per unit. Is the tuition proportional to the number of units you take?  Imogen makes a 15% commission on her sales of environmentally friendly products marketed by her co-op. Do her earnings vary directly with her sales?    Let represent the number of units you take, and let represent your tuition. Then Thus, is a linear function of , but the -intercept is , not . Your tuition is not proportional to the number of units you take, so this is not an example of direct variation. You can check that doubling the number of units does not double the tuition. For example, and Tuition for units is not double the tuition for units. The graph of in figure (a) does not pass through the origin.  calculator graphs of two linear functions  Let represent Imogen’s sales, and let represent her commission. Then Thus, is a linear function of with a -intercept of zero, so Imogen's earnings do vary directly with her sales.   Practice 2 Which table could represent direct variation? Explain why. (Hint: What happens to if you multiply by a constant?)                                       (a): If we multiply by a constant, is also multiplied by the same constant.   Finding a Formula for Direct Variation direct variation finding a formula for  If we know any one pair of values for the variables in a direct variation, we can find the constant of variation. Then we can use the constant to write a formula for one of the variables as a function of the other.  If you kick a rock off the rim of the Grand Canyon, its speed, , varies directly with the time, , it has been falling. The rock is falling at a speed of 39.2 meters per second when it passes a lizard on a ledge 4 seconds later.  Express as a function of .  What is the speed of the rock after it has fallen for 6 seconds?  Sketch a graph of versus .    Because varies directly with , there is a positive constant for which . We substitute and and solve for to find Replacing by , we find the formula .  We evaluate the function found in part (a) for . At seconds, the rock is falling at a speed of 58.8 meters per second.  You can use your calculator to graph the function . The graph is shown below.  GC graph   Practice 3 The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A 2-pound bag contains 3.5 cups of rice.   Express the volume, , of a bag of rice as a function of its weight, .  How many cups of rice are in a -pound bag?    cups   QuickCheck 4 How can you find the value of the constant of variation?   Double the value of  Find the -intercept of the graph  Substitute a pair of related values into  All of the above    Direct Variation with a Power of  In many situations, is proportional to a power of , instead of itself.  Direct Variation with a Power direct variation with a power   varies directly varies directly with a power of if where and are positive constants.   The surface area of a sphere varies directly with the square of its radius. A balloon of radius 5 centimeters has surface area square centimeters, or about 314 square centimeters. Find a formula for the surface area of a sphere as a function of its radius.  If stands for the surface area of a sphere of radius , then To find the constant of variation, , we substitute the values of and . Thus, .  Practice 4 The volume of a sphere varies directly with the cube of its radius. A balloon of radius 5 centimeters has volume cubic centimeters, or about 524 cubic centimeters. Find a formula for the volume, , of a sphere as a function of its radius, .  In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function, increasing function increasing function increasing graph as we can see when we consider the graphs of some typical direct variations shown below.  graphs of three variation with power  The graph of a direct variation always passes through the origin, so when the input is zero, the output is also zero. Thus, the functions and , for example, are not direct variation, even though they are increasing functions for positive .  QuickCheck 5 True or False.   Every increasing function is a direct variation.  Every direct variation is an increasing function.  The graph of every direct variation is a straight line.  The graph of every direct variation passes through the origin.   Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If varies directly with , then , or, equivalently,  Test for Direct Variation direct variation test for test for direct variation  If the ratio is constant, then varies directly with .  Delbert collects the following data and would like to know if varies directly with the square of . What should he calculate?                  If varies directly with , then , or . Delbert should calculate the ratio for each data point.                         Because the ratio is not constant, does not vary directly with .   Scaling scaling property of direct variation direct variation scaling property  If varies directly with , then doubling causes to double also. But what if varies directly with a power of :  Is the area of a -inch circular pizza double the area of an -inch pizza?  If you double the dimensions of a model of a skyscraper, will its weight double also?    You probably know that the answer to both of these questions is No . The area of a circle is proportional to the square of its radius, and the volume (and hence the weight) of an object is proportional to the cube of its linear dimension. Variation with a power of produces a different scaling effect.  The Taipei 101 building is 1671 feet tall, and in 2006 it was the tallest skyscraper in the world. Show that doubling the dimensions of a model of the Taipei 101 building produces a model that weighs 8 times as much.  The Taipei 101 skyscraper is approximately box shaped, so its volume is given by the product of its linear dimensions, . The weight of an object is proportional to its volume, so the weight, , of the model is where the constant depends on the material of the model. If we double the length, width, and height of the model, then The weight of the new model is times the weight of the original model.  Practice 6 Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.  Step 1: The formula for the area of a circle of radius is  Step 2: If we double the diameter, the new radius is  Step 3: Substitute the new expression for the radius into the area formula to get the area of the new circle.   The new radius is .  The new area is  In general, if varies directly with a power of , that is, if , then doubling the value of causes to increase by a factor of . In fact, if we multiply by any positive number , then so the value of is multiplied by .  We will call the scaling exponent scaling exponent direct variation scaling exponent exponent scaling , and you will often see variation described in terms of scaling. For example, we might say that \"the area of a circle scales as the square of its radius.\" (In many applications, the power is called the scale factor , even though it is not a factor but an exponent.)   Problem Set 5.4  Warm Up  Solve        Sketch a graph in the first quadrant.                                                 Skills Practice  For Problems 3 and 4,  Use the values in the table to find the constant of variation, , and write as a function of .  Fill in the rest of the table with the correct values.  What happens to when you double the value of ?  varies directly with .                                   doubles also  varies directly with the square of .                   For Problems 5 8, decide whether  varies directly with  varies directly with  does not vary directly with a power of  Explain why your choice is correct. If your choice is (a) or (b), find the constant of variation, .                 (b),                               (c)                   Applications  Delbert's credit card statement lists three purchases he made while on a business trip in the Midwest. His company's accountant would like to know the sales tax rate on the purchases.                 Compute the ratio of the tax to the price of each item. Is the tax proportional to the price? What is the tax rate?  Express the tax, , as a function of the price, , of the item.  Sketch a graph of the function by hand, and label the scales on the axes.                   Yes;   direct variation   At constant acceleration from rest, the distance traveled by a race car is proportional to the square of the time elapsed. The highest recorded road-tested acceleration is 0 to 60 miles per hour in 3.07 seconds, which produces the following data.                  Compute the ratios of the distance traveled to the square of the time elapsed. What was the acceleration, in feet per second squared?  Express the distance traveled, , as a function of time in seconds, .  Sketch a graph of the function by hand, and label the scales on the axes.   The weight of an object on the Moon varies directly with its weight on Earth. A person who weighs 150 pounds on Earth would weigh only 24.75 pounds on the Moon.  Find a function that gives the weight of an object on the Moon in terms of its weight on Earth. Complete the table and graph your function in a suitable window.              How much would a person weigh on the Moon if she weighs 120 pounds on Earth?  A piece of rock weighs 50 pounds on the Moon. How much will it weigh back on Earth?  If you double the weight of an object on Earth, what will happen to its weight on the Moon?                19.8 lb  303.03 lb  It will double.   The length of a rectangle is 10 inches, and its width is 8 inches. Suppose we increase the length of the rectangle while holding the width constant.  Fill in the table.   Length  Width  Perimeter  Area                   Does the perimeter vary directly with the length?  Write a formula for the perimeter of the rectangle in terms of its length.  Does the area vary directly with the length?  Write a formula for the area of the rectangle in terms of its length.   Hubble's law says that distant galaxies are receding from us at a rate that varies directly with their distance. (The speeds of the galaxies are measured using a phenomenon called redshifting.) A galaxy in the constellation Ursa Major is 980 million light-years away and is receding at a speed of 15,000 kilometers per second.  Find a function that gives the speed, , of a galaxy in terms of its distance, , from Earth. Complete the table and graph your function in a suitable window. (Distances are given in millions of light-years.)              How far away is a galaxy in the constellation Hydra that is receding at 61,000 kilometers per second?  A galaxy in Leo is 1240 million light-years away. How fast is it receding from us?    3985 million light-years  18,979 km\/sec  The length, , of a pendulum varies directly with the square of its period, , the time required for the pendulum to make one complete swing back and forth. The pendulum on a grandfather clock is 3.25 feet long and has a period of 2 seconds.  Express as a function of . Complete the table and graph your function in a suitable window.              How long is the Foucault pendulum in the Pantheon in Paris, which has a period of 17 seconds?  A hypnotist uses a gold pendant as a pendulum to mesmerize his clients. If the chain on the pendant is 9 inches long, what is the period of its swing?  In order to double the period of a pendulum, how must you vary its length?   The amount of power, , generated by a windmill varies directly with the cube of the wind speed, . A windmill on Oahu, Hawaii, produces 7300 kilowatts of power when the wind speed is 32 miles per hour.  Express the power as a function of wind speed. Complete the table and graph your function in a suitable window.              How much power would the windmill produce in a light breeze of 15 miles per hour?  What wind speed is needed to produce 10,000 kilowatts of power?  If the wind speed doubles, what happens to the amount of power generated?                752 kilowatts  33.54 mph  It is multiplied by 8.   The functions described by a table or a graph in Problems 16-19 are examples of direct variation.  Find an algebraic formula for the function, including the constant of variation, .  Answer the question in the problem.  A wide pipe can handle a greater water flow than a narrow pipe. The graph shows the water flow through a pipe, , as a function of its radius, . How great is the water flow through a pipe of radius of 10 inches?  increasing concave up  The faster a car moves, the more difficult it is to stop. The graph shows the distance, , required to stop a car as a function of its velocity, , before the brakes were applied. What distance is needed to stop a car moving at 100 kilometers per hour?  increasing concave up   50 m   The maximum height attained by a cannonball depends on the speed at which it was shot. The table shows maximum height as a function of initial speed. What height is attained by a cannonball whose initial upward speed was 100 feet per second?   Speed (ft\/sec)  Height (ft)           The strength of a cylindrical rod depends on its diameter. The greater the diameter of the rod, the more weight it can support before collapsing. The table shows the maximum weight supported by a rod as a function of its diameter. How much weight can a 1.2-centimeter rod support before collapsing?   Diameter (cm)  Weight (newtons)            864 newtons    The wind resistance, , experienced by a vehicle on the freeway varies directly with the square of its speed, .  If you double your speed, what happens to the wind resistance?  If you drive one-third as fast, what happens to the wind resistance?  If you decrease your speed by 10%, what happens to the wind resistance?   Wind resistance quadruples.  It is one-ninth as great.  It is decreased by 19% because it is 81% of the original.      "
 },
 {
   "id": "p-4025",
@@ -10455,8 +10455,8 @@ var ptx_lunr_docs = [
   "url": "DirectVariation.html#exercise-900",
   "type": "Checkpoint",
   "number": "5.4.10",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3 How can you find the value of the constant of variation?   Double the value of  Find the -intercept of the graph  Substitute a pair of related values into  All of the above  "
+  "title": "QuickCheck 4.",
+  "body": "QuickCheck 4 How can you find the value of the constant of variation?   Double the value of  Find the -intercept of the graph  Substitute a pair of related values into  All of the above  "
 },
 {
   "id": "p-4089",
@@ -10500,8 +10500,8 @@ var ptx_lunr_docs = [
   "url": "DirectVariation.html#exercise-902",
   "type": "Checkpoint",
   "number": "5.4.14",
-  "title": "QuickCheck 4.",
-  "body": "QuickCheck 4 True or False.   Every increasing function is a direct variation.  Every direct variation is an increasing function.  The graph of every direct variation is a straight line.  The graph of every direct variation passes through the origin.  "
+  "title": "QuickCheck 5.",
+  "body": "QuickCheck 5 True or False.   Every increasing function is a direct variation.  Every direct variation is an increasing function.  The graph of every direct variation is a straight line.  The graph of every direct variation passes through the origin.  "
 },
 {
   "id": "example-test-variation-with-square",
@@ -18889,7 +18889,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.1",
   "title": "Polynomial Functions",
-  "body": "Polynomial Functions  Introduction  We have already encountered some examples of polynomial functions. Linear functions, and quadratic functions are special cases of polynomial functions. In general, we make the following definition.  Polynomial Function  A polynomial function polynomial function function polynomial has the form where , , , , are constants and . The coefficient of the highest power term is called the lead coefficient lead coefficient polynomial lead coefficient .  Some examples of polynomials are  Each of the polynomials above is written in descending powers descending powers polynomial descending powers , which means that the highest-degree degree (of a polynomial) term comes first, and the degrees of the terms decrease from largest to smallest. Sometimes it is useful to write a polynomial in ascending powers ascending powers polynomial ascending powers , so that the degrees of the terms increase. For example, the polynomial above would be written as in ascending powers.  QuickCheck 1   What is the lead coefficient of a polynomial?    A) The first coefficient    B) The constant term    C) The largest coefficient    D) The coefficient of the highest power          The coefficient of the highest power, that is, the coefficient of the largest degree        Products of Polynomials polynomial products of  When we multiply two or more polynomials together, we get another polynomial of higher degree.  Compute the products.      diagram of polynomial multiplication  Practice 1   Multiply .              In part (a) of the Example above, we multiplied a polynomial of degree one by a polynomial of degree three, and the product was a polynomial of degree four. In the Example part (b), the product of three first-degree polynomials is a third-degree polynomial.  Degree of a Product degree (of a polynomial) of a product  The degree of a product of non-zero polynomials is the sum of the degrees of the factors. That is:  If has degree and has degree , then their product has degree .  QuickCheck 2   What is the linear term of the product ?                      is the linear term of       Let , and .  What is the degree of their product? What is the coefficient of the lead term?  Find the coefficient of the -term of the product.   The degree of is 4, and the degree of is 3, so the degree of their product is . The only degree 7 term of the product is , which has coefficient 15.  In the product, each term of is multiplied by each term of . We get degree 3 terms by multiplying together terms of degree 0 and 3, or 1 and 2. For these polynomials, the possible combinations are:      Product                   The sum of the third-degree terms of the product is , with coefficient 34.   Practice 2   Find the coefficient of the fourth-degree term of the product of and  Answer:        is the coefficient of the term in the product.  To compute the fourth-degree term in the product, we multiply a term of of degree 4, 3, 2, or 0 by a term of of degree 0, 1, 2, or 4 respectively. We add those four products of terms:   So the fourth-degree term in the product is and the coefficient is        Special Products  Recall the following special products involving quadratic expressions.  Special Products of Binomials special products of binomials binomial special products of polynomial quadratic   There are also special products resulting in cubic polynomials. In the Homework problems, you will be asked to verify the following products.  Cube of a Binomial binomial cube of cube of a binomial polynomial cubic      If you become familiar with these general forms, you can use them as patterns to find specific examples of such products.  Write as a polynomial.  Use product above, with replaced by and replaced by .   Of course, we can also expand the product in simply by polynomial multiplication and arrive at the same answer.  Practice 3   Write as a polynomial.  Answer:              QuickCheck 3   Fill in the blanks.   The coefficient of the highest power term of a polynomial is called the   discriminant    lead coefficient   .    The largest exponent in a polynomial is called the   degree    logarithm   of the polynomial.    If the degrees of the terms decrease from largest to smallest, the polynomial is written in   ascending powers    descending powers   .    The degree of a product of two cubic polynomials is .                           lead coefficient    degree    descending powers    6          Factoring Cubics polynomial cubic  Another pair of products is useful for factoring cubic polynomials. In the Homework problems, you will be asked to verify the following products:  Viewing these products from right to left, we have the following special factorizations for the sum and difference of two cubes.  Factoring the Sum or Difference of Two Cubes factoring cubics polynomial cubic      When we recognize a polynomial as a sum or difference of two perfect cubes, we then identify the two cubed expressions and apply the formula.  Factor each polynomial.     This polynomial is a sum of two cubes. The cubed expressions are , because , and . Use formula as a pattern, replacing with , and with .  This polynomial is a difference of two cubes. The cubed expressions are , because , and , because . Use formula above as a pattern, replacing by , and by :   Practice 4   Factor                   QuickCheck 4   True or False.   We cannot factor the sum of two squares.   True    False      We cannot factor the sum of two cubes.   True    False         True    False      To factor we must first identify and    True    False                             True    False    False    True          Modeling with Polynomials polynomial modeling with  Polynomials model many variable relationships, including volume and surface area. surface area  A closed box has a square base of length and width inches and a height of 8 inches, as shown at right.  box with height inches with both length and width of inches  Write a polynomial function that gives the surface area of the box in terms of the dimensions of the base.  What is the surface area of a box of length and width 18 inches?    The surface area of a box is the sum of the areas of its six faces, Substituting for and , and 8 for gives us  We evaluate the polynomial for to find   Practice 5  rectangular hole 3 ft deep, x feet wide, x+8 ft long    An empty reflecting pool is feet deep. It is feet longer than it is wide, as illustrated above.    Write a polynomial function that gives the surface area of the empty pool.     Write a polynomial function for the volume of the pool.                  We add the area of the bottom to the areas of each of the sides of the pool:    We multiply depth, length, and width:         Cubic polynomials polynomial cubic are often used in economics to model cost functions. The cost of producing items is an increasing function of , but its rate of increase is usually not constant.  Pegasus Printing, Ltd. is launching a new magazine. The cost of printing thousand copies is given by  What are the fixed costs , that is, the costs incurred before any copies are printed?  Graph the cost function in the window below and describe the graph.  How many copies can be printed for $1200?  What does the concavity of the graph tell you about the cost function?    Fixed costs are given by , or $250. The fixed costs include expenses like utility bills that must be paid even if no magazines are produced.  The graph is shown in figure (a). It is increasing from a vertical intercept of 250. The graph is concave down for approximately, and concave up for .  GC graphs of a cubic cost function  We must solve the equation We will solve the equation graphically, as shown in figure (b). Graph along with the cost function, and use the intersect command to find the intersection point of the graphs, . when is about 15.319, so 15,319 copies can be printed for $1200.  Although the cost is always increasing, it increases very slowly from about to about . The flattening of the graph in this interval is a result of economy of scale: By buying supplies in bulk and using time efficiently, the cost per magazine can be minimized. However, if the production level is too large, costs begin to rise rapidly again.   In c, we solved a cubic equation graphically. There is a cubic formula, cubic formula analogous to the quadratic formula, that allows us to solve cubic equations polynomial cubic algebraically, but it is complicated and not often used.  Cubic polynomials polynomial cubic are also used to model smooth curves connecting given points. Such a curve is called a cubic spline cubic spline .  Practice 6   Leon is flying his plane to Au Gres, Michigan. He maintains a constant altitude until he passes over a marker just outside the neighboring town of Omer, when he begins his descent for landing. During the descent, his altitude, in feet, is given by   where is the number of miles Leon has traveled since passing over the marker in Omer.    What is Leon s altitude when he begins his descent?  ft    Graph in the window     Use the Trace feature to discover how far from Omer Leon will travel before landing. (In other words, how far is Au Gres from Omer?)  mi    Verify your answer to part (c) algebraically.                       8000 ft    A graph is below.    5 mi    that is, Leon is on the ground (at altitude 0) when he is 5 miles past Omer.         Graph for part (b)  cubic   QuickCheck 5   Fill in the blanks.   We find the surface area of an object by calculating the area of each face and then   adding    averaging    folding    multiplying   them.    In economics,   cubic polynomials    decreasing lines    demand curves    inverse-square functions   are often used to model cost functions.    The flattening of a cost function in its midrange is a result of   consumer surplus    economy of scale    inflation    measurement error   .    A smooth curve connecting given points by cubic polynomials is called a   cubic spline    elastic demand    a catenary    an ogive   .                           adding    cubic polynomials    economy of scale    cubic spline         Bézier Curves  A Bézier curve is actually a sequence of short curves pieced together. Each piece has two endpoints and (for nonlinear curves) at least one control point. The control points do not lie on the curve itself, but they determine its shape. Two polynomials define the curve, one for the -coordinate and one for the -coordinate.  A. Linear Bézier Curves  The linear Bézier curve for two endpoints, and , is the straight line segment joining those two points. The curve is defined by the two functions for .   Find the functions and defining the linear Bézier curve joining the two points and . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                          8 by 8 grid  B. Quadratic Bézier Curves: Drawing a Simple Numeral 7  The quadratic Bézier curve is defined by two endpoints, and , and a control point, . for .   Find the functions and for the quadratic Bézier curve defined by the endpoints and , and the control point . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Draw a line segment from to on the grid above to complete the numeral 7.  We can adjust the curvature of the diagonal stroke of the 7 by moving the control point. Find the functions and for the quadratic Bézier curve defined by the endpoints and , and the control point . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Draw a line segment from to on the grid above to complete the numeral 7.  On your graphs in steps (5) and (8), plot the three points that defined the curved section of the numeral 7, then connect them in order with line segments. How does the position of the control point change the curve?   C. Cubic Bézier Curves: Drawing a Letter y  A cubic Bézier curve is defined by two endpoints, and , and two control points, and . for .   Find the functions and for the cubic Bézier curve defined by the endpoints and , and the control points and . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for step (2).     Problem Set 8.1  Warm Up  Complete the formulas for the special products of quadratic polynomials.      Factor if possible.      Use the formulas to factor the polynomials, if possible.       cannot be factored    Use the formulas to write down the products without multiplying:       Skills Practice  Which of the following are polynomials? If it is not a polynomial, explain why not.     (b) and (c) are not polynomials; they have variables in a denominator.  Give the degree of each polynomial.     Write each polynomial in descending powers of .      Add or subtract the polynomials.    Without performing the multiplication, give the degree of each product.     4  5  7  For Problems 10 and 11, multiply.            For Problems 12 and 13, use the formulas for the cube of a binomial to expand the products.            For Problems 14 and 15, write each product as a polynomial and simplify.           For Problems 16 and 21, factor completely.         Evaluate each polynomial for . Try to do the calculations mentally. What do you notice?       Applications  A large wooden box (without lid) is 3 feet longer than it is wide, and its height is 2 feet shorter than its width.  If the width of the box is , write expressions for its length and its height.  Write a polynomial for the volume of the box.  Write a polynomial for the surface area of the box.  length: ; height:    A paper company plans to make boxes without tops from sheets of cardboard 12 inches wide and 16 inches long. The company will cut out four squares of side inches from the corners of the sheet and fold up the edges as shown in the figure.  box   Write expressions in terms of for the length, width, and height of the resulting box.  Write a formula for the volume, , of the box as a function of .  What are the largest and smallest reasonable values for ?  Make a table of values for on its domain.  Graph your function in the window  Use your graph to find the value of that will yield a box with maximum possible volume. What is the maximum possible volume?    A grain silo is built in the shape of a cylinder with a hemisphere on top (see the figure). Write an expression for the volume of the silo in terms of the radius and height of the cylindrical portion of the silo.  If the total height of the silo is five times its radius, write a polynomial function in one variable for its volume.  grain silo     The annual profit, , of the Enviro Company, in thousands of dollars, is given by where is the number of years since 1980, the first year that the company showed a profit.  Graph in the window  What was the profit in 1980? In 2000? In 2020?  How did the profit change from 1980 to 1981? From 2000 to 2001? From 2020 to 2021?  During which years did the profit decrease from one year to the next?   A doctor who is treating a heart patient wants to prescribe medication to lower the patient's blood pressure. The body's reaction to this medication is a function of the dose administered. If the patient takes milliliters of the medication, his blood pressure should decrease by points, where  For what values of is ?  What values of make sense for this function? Why?  Graph the function in the window  How much should the patient's blood pressure drop if he takes 2 milliliters of medication?  What is the maximum drop in blood pressure that can be achieved with this medication?  There may be risks associated with a large change in blood pressure. How many milliliters of the medication should be administered to produce half the maximum possible drop in blood pressure?    ; for these values  cubic   points  points  ml or ml   The water level (in feet) at a harbor is approximated by the polynomial where is the number of hours since the high tide. The approximation is valid for . (A negative value of corresponds to a number of hours before the high tide.)  Graph the polynomial for .  What is the water level at high tide?  What is the water level 3 hours before high tide?  When is the water level below 8 feet?  When is the water level above 7 feet?   During an earthquake, Nordhoff Street split in two, and one section shifted up several centimeters. Engineers created a ramp from the lower section to the upper section. In the coordinate system shown in the figure below, the ramp is part of the graph of  ramp   By how much did the upper section of the street shift during the earthquake?  What is the horizontal distance from the bottom of the ramp to the raised part of the street?   cm  cm   Expand each expression by removing parentheses. What do you notice?    Evaluate each expression for . Can you do this mentally? Is it easier to evaluate the expression before or after expanding it?  Use a calculator to evaluate each expression for .  Find the first three terms of the product in ascending powers. (Do not compute the entire product!)      Find the indicated term in each product. (Do not compute the entire product!)  ;  ;  Verify the formula for factoring the sum of two cubes:  Verify the formula for factoring the difference of two cubes:    "
+  "body": "Polynomial Functions  Introduction  We have already encountered some examples of polynomial functions. Linear functions, and quadratic functions are special cases of polynomial functions. In general, we make the following definition.  Polynomial Function  A polynomial function polynomial function function polynomial has the form where , , , , are constants and .  The coefficient of the highest power term is called the lead coefficient lead coefficient polynomial lead coefficient .  Some examples of polynomials are  Each of the polynomials above is written in descending powers descending powers polynomial descending powers , which means that the highest-degree degree (of a polynomial) term comes first, and the degrees of the terms decrease from largest to smallest. Sometimes it is useful to write a polynomial in ascending powers ascending powers polynomial ascending powers , so that the degrees of the terms increase. For example, the polynomial above would be written as in ascending powers.  QuickCheck 1 What is the lead coefficient of a polynomial?   The first coefficient  The constant term  The largest coefficient  The coefficient of the highest power   We can evaluate polynomials just as we do for any other function.  Evaluate the polynomial at and at .   ,  .  Here is a graph of the polynomial.  x-cubed-.5xsquared-4x+2    Products of Polynomials polynomial products of  In Section 3.2, we solved some quadratic equations by factoring. For example, because the solutions of the equation are and . But now notice that the product of the two linear polynomials and is a quadratic polynomial. Or in other words, the product of two first-degree polynomials gives us a second-degree polynomial. In fact, whenever we multiply two or more polynomials together, we get another polynomial of higher degree.  Compute the products.      diagram of polynomial multiplication  Practice 1 Multiply  In part (a) of the Example above, we multiplied a polynomial of degree one by a polynomial of degree three, and the product was a polynomial of degree four. In the Example part (b), the product of three first-degree polynomials is a third-degree polynomial.  Degree of a Product degree (of a polynomial) of a product  The degree of a product of non-zero polynomials is the sum of the degrees of the factors. That is:  If has degree and has degree , then their product has degree .  Let , and .  What is the degree of their product? What is the coefficient of the lead term?  Find the coefficient of the -term of the product.    The degree of is 4, and the degree of is 3, so the degree of their product is . The only degree 7 term of the product is , which has coefficient 15.  In the product, each term of is multiplied by each term of . We get degree 3 terms by multiplying together terms of degree 0 and 3, or 1 and 2. For these polynomials, the possible combinations are:      Product                   The sum of the third-degree terms of the product is , with coefficient 34.   Practice 2 Find the coefficient of the fourth-degree term of the product of and .  QuickCheck 2 What is the linear term of the product ?         Modeling with Polynomials polynomial modeling with  Polynomials are used to model many variable relationships, including volume and surface area. surface area  A closed box has a square base of length and width inches and a height of 8 inches, as shown at right.  box with height 8 inches with both length and width of x inches   Write a polynomial function that gives the surface area of the box in terms of the dimensions of the base.  What is the surface area of a box of length and width 18 inches?    The surface area of a box is the sum of the areas of its six faces, Substituting for and , and 8 for gives us  We evaluate the polynomial for to find   You probably recall that the formula for the volume of a box is , the product of its length, width, and height. So the box in the previous Example has volume cubic inches.  Practice 3  An empty reflecting pool is feet deep. It is feet longer than it is wide, as illustrated at right.   Write a polynomial function that gives the surface area of the empty pool.  Write a polynomial function for the volume of the pool.   rectangular hole 3 ft deep, x feet wide, x+8 ft long     A polynomial of degree 3 is called a cubic polynomial . polynomial cubic Cubic polynomials are often used in economics to model cost functions. The cost of producing items is an increasing function of , but its rate of increase is usually not constant.  Pegasus Printing, Ltd. is launching a new magazine. The cost of printing thousand copies is given by  What are the fixed costs , that is, the costs incurred before any copies are printed?  Graph the cost function in the window below and describe the graph.  How many copies can be printed for $1200?  What does the concavity of the graph tell you about the cost function?    Fixed costs are given by , or $250. The fixed costs include expenses like utility bills that must be paid even if no magazines are produced.  The graph is shown in figure (a). It is increasing from a vertical intercept of 250. The graph is concave down for approximately, and concave up for .  GC graphs of a cubic cost function  We must solve the equation We will solve the equation graphically, as shown in figure (b). Graph along with the cost function, and use the intersect command to find the intersection point of the graphs, . when is about 15.319, so 15,319 copies can be printed for $1200.  Although the cost is always increasing, it increases very slowly from about to about . The flattening of the graph in this interval is a result of economy of scale: By buying supplies in bulk and using time efficiently, the cost per magazine can be minimized. However, if the production level is too large, costs begin to rise rapidly again.   In c, we solved a cubic equation graphically. There is a cubic formula, cubic formula analogous to the quadratic formula, that allows us to solve cubic equations polynomial cubic algebraically, but it is complicated and not often used in applications.  Cubic polynomials polynomial cubic are also used to model smooth curves connecting given points. Such a curve is called a cubic spline cubic spline .  Practice 4 Leon is flying his plane to Au Gres, Michigan. He maintains a constant altitude until he passes over a marker just outside the neighboring town of Omer, when he begins his descent for landing. During the descent, his altitude, in feet, is given by where is the number of miles Leon has traveled since passing over the marker in Omer.   What is Leon's altitude when he begins his descent?  Graph in the window  Use the Trace feature to discover how far from Omer Leon will travel before landing. (In other words, how far is Au Gres from Omer?)  Verify your answer to part (c) algebraically.   8000 ft  cubic  5 mi    QuickCheck 3 Fill in the blanks.   We find the surface area of an object by calculating the area of each face and then them.  In economics, are often used to model cost functions.  The flattening of a cost function in its midrange is a result of .  A smooth curve connecting given points by cubic polynomials is called a .    Approximations with Polynomials  Did you ever wonder how your calculator obtains decimal values for numbers such as or ? One way to do it is to use a polynomial. Functions such as and can be approximated by polynomials, and the higher the degree of the polynomial, the better the approximation. Because evaluating a polynomial uses only addition and multiplication, calculators and computers can perform the calculations quickly and give us decimal values with great accuracy.   Evaluate the polynomial at to find an approximation for .  Use a calculator to evaluate . How close is your approximation from part (a)?    Substituting into we find  A calculator returns the value . Our approximation is accurate to four decimal places. One can use a polynomial of higher degree to obtain an approximation with greater accuracy.   Practice 5  Evaluate the polynomial at to find an approximation for .  Use a calculator to evaluate . How close is your approximation from part (a)?    The approximation is accurate to two decimal places.    Special Products  As we mentioned earlier, many quadratic polynomials can be factored into a product of two linear expressions, and these factors give us information about the roots of a quadratic equation or the -intercepts of its graph. The same is true of cubic polynomials, so we will take a brief look at how they can be factored.  To begin, recall the following special products involving quadratic expressions.  Special Products of Binomials special products of binomials binomial special products of polynomial quadratic    There are also special products resulting in cubic polynomials. In the Homework problems, you will be asked to verify the following products.  Cube of a Binomial binomial cube of cube of a binomial polynomial cubic      If you become familiar with these general forms, you can use them as patterns to find specific examples of such products.  Write as a polynomial.  Use product above, with replaced by and replaced by .   Of course, we can also expand the product in simply by polynomial multiplication and arrive at the same answer.  Practice 6 Write as a polynomial.  QuickCheck 4 Fill in the blanks.   The coefficient of the highest power term of a polynomial is called the .  The largest exponent in a polynomial is called the of the polynomial.  If the degrees of the terms decrease from largest to smallest, the polynomial is written in .  The degree of a product of two cubic polynomials is .    Factoring Cubics polynomial cubic  Another pair of products is useful for factoring cubic polynomials. In the Homework problems, you will be asked to verify the following products:  Viewing these products from right to left, we have the following special factorizations for the sum and difference of two cubes.  Factoring the Sum or Difference of Two Cubes factoring cubics polynomial cubic      When we recognize a polynomial as a sum or difference of two perfect cubes, we then identify the two cubed expressions and apply the formula.  Factor each polynomial.      This polynomial is a sum of two cubes. The cubed expressions are , because , and . Use formula as a pattern, replacing with , and with .  This polynomial is a difference of two cubes. The cubed expressions are , because , and , because . Use formula above as a pattern, replacing by , and by :   Practice 7 Factor   QuickCheck 5 True or False.   We cannot factor the sum of two squares.  We cannot factor the sum of two cubes.    To factor , we must first identify and .    An Application of Cubic Splines  Bézier Curves  A Bézier curve is actually a sequence of short curves pieced together. Each piece has two endpoints and (for nonlinear curves) at least one control point. The control points do not lie on the curve itself, but they determine its shape. Two polynomials define the curve, one for the -coordinate and one for the -coordinate.  A. Linear Bézier Curves  The linear Bézier curve for two endpoints, and , is the straight line segment joining those two points. The curve is defined by the two functions for .   Find the functions and defining the linear Bézier curve joining the two points and . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                          8 by 8 grid  B. Quadratic Bézier Curves: Drawing a Simple Numeral 7  The quadratic Bézier curve is defined by two endpoints, and , and a control point, . for .   Find the functions and for the quadratic Bézier curve defined by the endpoints and , and the control point . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Draw a line segment from to on the grid above to complete the numeral 7.  We can adjust the curvature of the diagonal stroke of the 7 by moving the control point. Find the functions and for the quadratic Bézier curve defined by the endpoints and , and the control point . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Draw a line segment from to on the grid above to complete the numeral 7.  On your graphs in steps (5) and (8), plot the three points that defined the curved section of the numeral 7, then connect them in order with line segments. How does the position of the control point change the curve?   C. Cubic Bézier Curves: Drawing a Letter y  A cubic Bézier curve is defined by two endpoints, and , and two control points, and . for .   Find the functions and for the cubic Bézier curve defined by the endpoints and , and the control points and . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for step (2).     Problem Set 8.1  Warm Up  Complete the formulas for the special products of quadratic polynomials.      Factor if possible.      Use the formulas to factor the polynomials, if possible.       cannot be factored    Use the formulas to write down the products without multiplying:       Skills Practice  Which of the following are polynomials? If it is not a polynomial, explain why not.     (b) and (c) are not polynomials; they have variables in a denominator.  Give the degree of each polynomial.     Write each polynomial in descending powers of .      Add or subtract the polynomials.    Without performing the multiplication, give the degree of each product.     4  5  7  For Problems 10 and 11, multiply.            For Problems 12 and 13, use the formulas for the cube of a binomial to expand the products.            For Problems 14 and 15, write each product as a polynomial and simplify.           For Problems 16 and 21, factor completely.         Evaluate each polynomial for . Try to do the calculations mentally. What do you notice?       Applications  A large wooden box (without lid) is 3 feet longer than it is wide, and its height is 2 feet shorter than its width.  If the width of the box is , write expressions for its length and its height.  Write a polynomial for the volume of the box.  Write a polynomial for the surface area of the box.  length: ; height:    A paper company plans to make boxes without tops from sheets of cardboard 12 inches wide and 16 inches long. The company will cut out four squares of side inches from the corners of the sheet and fold up the edges as shown in the figure.  box   Write expressions in terms of for the length, width, and height of the resulting box.  Write a formula for the volume, , of the box as a function of .  What are the largest and smallest reasonable values for ?  Make a table of values for on its domain.  Graph your function in the window  Use your graph to find the value of that will yield a box with maximum possible volume. What is the maximum possible volume?    A grain silo is built in the shape of a cylinder with a hemisphere on top (see the figure). Write an expression for the volume of the silo in terms of the radius and height of the cylindrical portion of the silo.  If the total height of the silo is five times its radius, write a polynomial function in one variable for its volume.  grain silo     The annual profit, , of the Enviro Company, in thousands of dollars, is given by where is the number of years since 1980, the first year that the company showed a profit.  Graph in the window  What was the profit in 1980? In 2000? In 2020?  How did the profit change from 1980 to 1981? From 2000 to 2001? From 2020 to 2021?  During which years did the profit decrease from one year to the next?   A doctor who is treating a heart patient wants to prescribe medication to lower the patient's blood pressure. The body's reaction to this medication is a function of the dose administered. If the patient takes milliliters of the medication, his blood pressure should decrease by points, where  For what values of is ?  What values of make sense for this function? Why?  Graph the function in the window  How much should the patient's blood pressure drop if he takes 2 milliliters of medication?  What is the maximum drop in blood pressure that can be achieved with this medication?  There may be risks associated with a large change in blood pressure. How many milliliters of the medication should be administered to produce half the maximum possible drop in blood pressure?    ; for these values  cubic   points  points  ml or ml   The water level (in feet) at a harbor is approximated by the polynomial where is the number of hours since the high tide. The approximation is valid for . (A negative value of corresponds to a number of hours before the high tide.)  Graph the polynomial for .  What is the water level at high tide?  What is the water level 3 hours before high tide?  When is the water level below 8 feet?  When is the water level above 7 feet?   During an earthquake, Nordhoff Street split in two, and one section shifted up several centimeters. Engineers created a ramp from the lower section to the upper section. In the coordinate system shown in the figure below, the ramp is part of the graph of  ramp   By how much did the upper section of the street shift during the earthquake?  What is the horizontal distance from the bottom of the ramp to the raised part of the street?   cm  cm   Expand each expression by removing parentheses. What do you notice?    Evaluate each expression for . Can you do this mentally? Is it easier to evaluate the expression before or after expanding it?  Use a calculator to evaluate each expression for .  Find the first three terms of the product in ascending powers. (Do not compute the entire product!)      Find the indicated term in each product. (Do not compute the entire product!)  ;  ;  Verify the formula for factoring the sum of two cubes:  Verify the formula for factoring the difference of two cubes:    "
 },
 {
   "id": "definition-19",
@@ -18898,12 +18898,12 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.1.1",
   "title": "Polynomial Function.",
-  "body": "Polynomial Function  A polynomial function polynomial function function polynomial has the form where , , , , are constants and . The coefficient of the highest power term is called the lead coefficient lead coefficient polynomial lead coefficient . "
+  "body": "Polynomial Function  A polynomial function polynomial function function polynomial has the form where , , , , are constants and .  The coefficient of the highest power term is called the lead coefficient lead coefficient polynomial lead coefficient . "
 },
 {
-  "id": "p-7416",
+  "id": "p-7417",
   "level": "2",
-  "url": "PolynomialFunctions.html#p-7416",
+  "url": "PolynomialFunctions.html#p-7417",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -18916,14 +18916,23 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "8.1.2",
   "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   What is the lead coefficient of a polynomial?    A) The first coefficient    B) The constant term    C) The largest coefficient    D) The coefficient of the highest power          The coefficient of the highest power, that is, the coefficient of the largest degree      "
+  "body": "QuickCheck 1 What is the lead coefficient of a polynomial?   The first coefficient  The constant term  The largest coefficient  The coefficient of the highest power  "
+},
+{
+  "id": "example-189",
+  "level": "2",
+  "url": "PolynomialFunctions.html#example-189",
+  "type": "Example",
+  "number": "8.1.3",
+  "title": "",
+  "body": "Evaluate the polynomial at and at .   ,  .  Here is a graph of the polynomial.  x-cubed-.5xsquared-4x+2  "
 },
 {
   "id": "example-polynomial-product",
   "level": "2",
   "url": "PolynomialFunctions.html#example-polynomial-product",
   "type": "Example",
-  "number": "8.1.3",
+  "number": "8.1.4",
   "title": "",
   "body": "Compute the products.      diagram of polynomial multiplication "
 },
@@ -18932,144 +18941,171 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1655",
   "type": "Checkpoint",
-  "number": "8.1.4",
+  "number": "8.1.5",
   "title": "Practice 1.",
-  "body": "Practice 1   Multiply .             "
+  "body": "Practice 1 Multiply "
+},
+{
+  "id": "example-191",
+  "level": "2",
+  "url": "PolynomialFunctions.html#example-191",
+  "type": "Example",
+  "number": "8.1.6",
+  "title": "",
+  "body": "Let , and .  What is the degree of their product? What is the coefficient of the lead term?  Find the coefficient of the -term of the product.    The degree of is 4, and the degree of is 3, so the degree of their product is . The only degree 7 term of the product is , which has coefficient 15.  In the product, each term of is multiplied by each term of . We get degree 3 terms by multiplying together terms of degree 0 and 3, or 1 and 2. For these polynomials, the possible combinations are:      Product                   The sum of the third-degree terms of the product is , with coefficient 34.  "
 },
 {
   "id": "exercise-1656",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1656",
   "type": "Checkpoint",
-  "number": "8.1.5",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   What is the linear term of the product ?                      is the linear term of      "
-},
-{
-  "id": "example-190",
-  "level": "2",
-  "url": "PolynomialFunctions.html#example-190",
-  "type": "Example",
-  "number": "8.1.6",
-  "title": "",
-  "body": "Let , and .  What is the degree of their product? What is the coefficient of the lead term?  Find the coefficient of the -term of the product.   The degree of is 4, and the degree of is 3, so the degree of their product is . The only degree 7 term of the product is , which has coefficient 15.  In the product, each term of is multiplied by each term of . We get degree 3 terms by multiplying together terms of degree 0 and 3, or 1 and 2. For these polynomials, the possible combinations are:      Product                   The sum of the third-degree terms of the product is , with coefficient 34.  "
+  "number": "8.1.7",
+  "title": "Practice 2.",
+  "body": "Practice 2 Find the coefficient of the fourth-degree term of the product of and . "
 },
 {
   "id": "exercise-1657",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1657",
   "type": "Checkpoint",
-  "number": "8.1.7",
-  "title": "Practice 2.",
-  "body": "Practice 2   Find the coefficient of the fourth-degree term of the product of and  Answer:        is the coefficient of the term in the product.  To compute the fourth-degree term in the product, we multiply a term of of degree 4, 3, 2, or 0 by a term of of degree 0, 1, 2, or 4 respectively. We add those four products of terms:   So the fourth-degree term in the product is and the coefficient is      "
-},
-{
-  "id": "example-cube-binomial",
-  "level": "2",
-  "url": "PolynomialFunctions.html#example-cube-binomial",
-  "type": "Example",
   "number": "8.1.8",
-  "title": "",
-  "body": "Write as a polynomial.  Use product above, with replaced by and replaced by .  "
-},
-{
-  "id": "exercise-1658",
-  "level": "2",
-  "url": "PolynomialFunctions.html#exercise-1658",
-  "type": "Checkpoint",
-  "number": "8.1.9",
-  "title": "Practice 3.",
-  "body": "Practice 3   Write as a polynomial.  Answer:             "
-},
-{
-  "id": "exercise-1659",
-  "level": "2",
-  "url": "PolynomialFunctions.html#exercise-1659",
-  "type": "Checkpoint",
-  "number": "8.1.10",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   Fill in the blanks.   The coefficient of the highest power term of a polynomial is called the   discriminant    lead coefficient   .    The largest exponent in a polynomial is called the   degree    logarithm   of the polynomial.    If the degrees of the terms decrease from largest to smallest, the polynomial is written in   ascending powers    descending powers   .    The degree of a product of two cubic polynomials is .                           lead coefficient    degree    descending powers    6        "
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 What is the linear term of the product ?       "
 },
 {
   "id": "example-192",
   "level": "2",
   "url": "PolynomialFunctions.html#example-192",
   "type": "Example",
-  "number": "8.1.11",
+  "number": "8.1.9",
   "title": "",
-  "body": "Factor each polynomial.     This polynomial is a sum of two cubes. The cubed expressions are , because , and . Use formula as a pattern, replacing with , and with .  This polynomial is a difference of two cubes. The cubed expressions are , because , and , because . Use formula above as a pattern, replacing by , and by :  "
+  "body": "A closed box has a square base of length and width inches and a height of 8 inches, as shown at right.  box with height 8 inches with both length and width of x inches   Write a polynomial function that gives the surface area of the box in terms of the dimensions of the base.  What is the surface area of a box of length and width 18 inches?    The surface area of a box is the sum of the areas of its six faces, Substituting for and , and 8 for gives us  We evaluate the polynomial for to find  "
 },
 {
-  "id": "exercise-1660",
+  "id": "exercise-1658",
   "level": "2",
-  "url": "PolynomialFunctions.html#exercise-1660",
+  "url": "PolynomialFunctions.html#exercise-1658",
   "type": "Checkpoint",
-  "number": "8.1.12",
-  "title": "Practice 4.",
-  "body": "Practice 4   Factor                  "
+  "number": "8.1.10",
+  "title": "Practice 3.",
+  "body": "Practice 3  An empty reflecting pool is feet deep. It is feet longer than it is wide, as illustrated at right.   Write a polynomial function that gives the surface area of the empty pool.  Write a polynomial function for the volume of the pool.   rectangular hole 3 ft deep, x feet wide, x+8 ft long    "
 },
 {
-  "id": "exercise-1661",
+  "id": "p-7467",
   "level": "2",
-  "url": "PolynomialFunctions.html#exercise-1661",
-  "type": "Checkpoint",
-  "number": "8.1.13",
-  "title": "QuickCheck 4.",
-  "body": "QuickCheck 4   True or False.   We cannot factor the sum of two squares.   True    False      We cannot factor the sum of two cubes.   True    False         True    False      To factor we must first identify and    True    False                             True    False    False    True        "
-},
-{
-  "id": "example-193",
-  "level": "2",
-  "url": "PolynomialFunctions.html#example-193",
-  "type": "Example",
-  "number": "8.1.14",
+  "url": "PolynomialFunctions.html#p-7467",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": "A closed box has a square base of length and width inches and a height of 8 inches, as shown at right.  box with height inches with both length and width of inches  Write a polynomial function that gives the surface area of the box in terms of the dimensions of the base.  What is the surface area of a box of length and width 18 inches?    The surface area of a box is the sum of the areas of its six faces, Substituting for and , and 8 for gives us  We evaluate the polynomial for to find  "
-},
-{
-  "id": "exercise-1662",
-  "level": "2",
-  "url": "PolynomialFunctions.html#exercise-1662",
-  "type": "Checkpoint",
-  "number": "8.1.15",
-  "title": "Practice 5.",
-  "body": "Practice 5  rectangular hole 3 ft deep, x feet wide, x+8 ft long    An empty reflecting pool is feet deep. It is feet longer than it is wide, as illustrated above.    Write a polynomial function that gives the surface area of the empty pool.     Write a polynomial function for the volume of the pool.                  We add the area of the bottom to the areas of each of the sides of the pool:    We multiply depth, length, and width:        "
+  "body": "cubic polynomial "
 },
 {
   "id": "example-cubic-cost-function",
   "level": "2",
   "url": "PolynomialFunctions.html#example-cubic-cost-function",
   "type": "Example",
-  "number": "8.1.16",
+  "number": "8.1.11",
   "title": "",
   "body": "Pegasus Printing, Ltd. is launching a new magazine. The cost of printing thousand copies is given by  What are the fixed costs , that is, the costs incurred before any copies are printed?  Graph the cost function in the window below and describe the graph.  How many copies can be printed for $1200?  What does the concavity of the graph tell you about the cost function?    Fixed costs are given by , or $250. The fixed costs include expenses like utility bills that must be paid even if no magazines are produced.  The graph is shown in figure (a). It is increasing from a vertical intercept of 250. The graph is concave down for approximately, and concave up for .  GC graphs of a cubic cost function  We must solve the equation We will solve the equation graphically, as shown in figure (b). Graph along with the cost function, and use the intersect command to find the intersection point of the graphs, . when is about 15.319, so 15,319 copies can be printed for $1200.  Although the cost is always increasing, it increases very slowly from about to about . The flattening of the graph in this interval is a result of economy of scale: By buying supplies in bulk and using time efficiently, the cost per magazine can be minimized. However, if the production level is too large, costs begin to rise rapidly again.  "
 },
 {
-  "id": "p-7554",
+  "id": "p-7479",
   "level": "2",
-  "url": "PolynomialFunctions.html#p-7554",
+  "url": "PolynomialFunctions.html#p-7479",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cubic spline "
 },
 {
+  "id": "exercise-1659",
+  "level": "2",
+  "url": "PolynomialFunctions.html#exercise-1659",
+  "type": "Checkpoint",
+  "number": "8.1.12",
+  "title": "Practice 4.",
+  "body": "Practice 4 Leon is flying his plane to Au Gres, Michigan. He maintains a constant altitude until he passes over a marker just outside the neighboring town of Omer, when he begins his descent for landing. During the descent, his altitude, in feet, is given by where is the number of miles Leon has traveled since passing over the marker in Omer.   What is Leon's altitude when he begins his descent?  Graph in the window  Use the Trace feature to discover how far from Omer Leon will travel before landing. (In other words, how far is Au Gres from Omer?)  Verify your answer to part (c) algebraically.   8000 ft  cubic  5 mi   "
+},
+{
+  "id": "exercise-1660",
+  "level": "2",
+  "url": "PolynomialFunctions.html#exercise-1660",
+  "type": "Checkpoint",
+  "number": "8.1.13",
+  "title": "QuickCheck 3.",
+  "body": "QuickCheck 3 Fill in the blanks.   We find the surface area of an object by calculating the area of each face and then them.  In economics, are often used to model cost functions.  The flattening of a cost function in its midrange is a result of .  A smooth curve connecting given points by cubic polynomials is called a .  "
+},
+{
+  "id": "example-194",
+  "level": "2",
+  "url": "PolynomialFunctions.html#example-194",
+  "type": "Example",
+  "number": "8.1.14",
+  "title": "",
+  "body": " Evaluate the polynomial at to find an approximation for .  Use a calculator to evaluate . How close is your approximation from part (a)?    Substituting into we find  A calculator returns the value . Our approximation is accurate to four decimal places. One can use a polynomial of higher degree to obtain an approximation with greater accuracy.  "
+},
+{
+  "id": "exercise-1661",
+  "level": "2",
+  "url": "PolynomialFunctions.html#exercise-1661",
+  "type": "Checkpoint",
+  "number": "8.1.15",
+  "title": "Practice 5.",
+  "body": "Practice 5  Evaluate the polynomial at to find an approximation for .  Use a calculator to evaluate . How close is your approximation from part (a)?    The approximation is accurate to two decimal places.  "
+},
+{
+  "id": "example-cube-binomial",
+  "level": "2",
+  "url": "PolynomialFunctions.html#example-cube-binomial",
+  "type": "Example",
+  "number": "8.1.16",
+  "title": "",
+  "body": "Write as a polynomial.  Use product above, with replaced by and replaced by .  "
+},
+{
+  "id": "exercise-1662",
+  "level": "2",
+  "url": "PolynomialFunctions.html#exercise-1662",
+  "type": "Checkpoint",
+  "number": "8.1.17",
+  "title": "Practice 6.",
+  "body": "Practice 6 Write as a polynomial. "
+},
+{
   "id": "exercise-1663",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1663",
   "type": "Checkpoint",
-  "number": "8.1.17",
-  "title": "Practice 6.",
-  "body": "Practice 6   Leon is flying his plane to Au Gres, Michigan. He maintains a constant altitude until he passes over a marker just outside the neighboring town of Omer, when he begins his descent for landing. During the descent, his altitude, in feet, is given by   where is the number of miles Leon has traveled since passing over the marker in Omer.    What is Leon s altitude when he begins his descent?  ft    Graph in the window     Use the Trace feature to discover how far from Omer Leon will travel before landing. (In other words, how far is Au Gres from Omer?)  mi    Verify your answer to part (c) algebraically.                       8000 ft    A graph is below.    5 mi    that is, Leon is on the ground (at altitude 0) when he is 5 miles past Omer.         Graph for part (b)  cubic  "
+  "number": "8.1.18",
+  "title": "QuickCheck 4.",
+  "body": "QuickCheck 4 Fill in the blanks.   The coefficient of the highest power term of a polynomial is called the .  The largest exponent in a polynomial is called the of the polynomial.  If the degrees of the terms decrease from largest to smallest, the polynomial is written in .  The degree of a product of two cubic polynomials is .  "
+},
+{
+  "id": "example-196",
+  "level": "2",
+  "url": "PolynomialFunctions.html#example-196",
+  "type": "Example",
+  "number": "8.1.19",
+  "title": "",
+  "body": "Factor each polynomial.      This polynomial is a sum of two cubes. The cubed expressions are , because , and . Use formula as a pattern, replacing with , and with .  This polynomial is a difference of two cubes. The cubed expressions are , because , and , because . Use formula above as a pattern, replacing by , and by :  "
 },
 {
   "id": "exercise-1664",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1664",
   "type": "Checkpoint",
-  "number": "8.1.18",
+  "number": "8.1.20",
+  "title": "Practice 7.",
+  "body": "Practice 7 Factor  "
+},
+{
+  "id": "exercise-1665",
+  "level": "2",
+  "url": "PolynomialFunctions.html#exercise-1665",
+  "type": "Checkpoint",
+  "number": "8.1.21",
   "title": "QuickCheck 5.",
-  "body": "QuickCheck 5   Fill in the blanks.   We find the surface area of an object by calculating the area of each face and then   adding    averaging    folding    multiplying   them.    In economics,   cubic polynomials    decreasing lines    demand curves    inverse-square functions   are often used to model cost functions.    The flattening of a cost function in its midrange is a result of   consumer surplus    economy of scale    inflation    measurement error   .    A smooth curve connecting given points by cubic polynomials is called a   cubic spline    elastic demand    a catenary    an ogive   .                           adding    cubic polynomials    economy of scale    cubic spline        "
+  "body": "QuickCheck 5 True or False.   We cannot factor the sum of two squares.  We cannot factor the sum of two cubes.    To factor , we must first identify and .  "
 },
 {
   "id": "investigation-10",
@@ -19081,155 +19117,146 @@ var ptx_lunr_docs = [
   "body": "Bézier Curves  A Bézier curve is actually a sequence of short curves pieced together. Each piece has two endpoints and (for nonlinear curves) at least one control point. The control points do not lie on the curve itself, but they determine its shape. Two polynomials define the curve, one for the -coordinate and one for the -coordinate.  A. Linear Bézier Curves  The linear Bézier curve for two endpoints, and , is the straight line segment joining those two points. The curve is defined by the two functions for .   Find the functions and defining the linear Bézier curve joining the two points and . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                          8 by 8 grid  B. Quadratic Bézier Curves: Drawing a Simple Numeral 7  The quadratic Bézier curve is defined by two endpoints, and , and a control point, . for .   Find the functions and for the quadratic Bézier curve defined by the endpoints and , and the control point . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Draw a line segment from to on the grid above to complete the numeral 7.  We can adjust the curvature of the diagonal stroke of the 7 by moving the control point. Find the functions and for the quadratic Bézier curve defined by the endpoints and , and the control point . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Draw a line segment from to on the grid above to complete the numeral 7.  On your graphs in steps (5) and (8), plot the three points that defined the curved section of the numeral 7, then connect them in order with line segments. How does the position of the control point change the curve?   C. Cubic Bézier Curves: Drawing a Letter y  A cubic Bézier curve is defined by two endpoints, and , and two control points, and . for .   Find the functions and for the cubic Bézier curve defined by the endpoints and , and the control points and . Simplify the formulas defining each function.  Fill in the table of values and plot the curve.                         8 by 8 grid  Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for step (2).  "
 },
 {
-  "id": "exercise-1665",
-  "level": "2",
-  "url": "PolynomialFunctions.html#exercise-1665",
-  "type": "Exercise",
-  "number": "8.1.6.1",
-  "title": "",
-  "body": "Complete the formulas for the special products of quadratic polynomials.     "
-},
-{
   "id": "exercise-1666",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1666",
   "type": "Exercise",
-  "number": "8.1.6.2",
+  "number": "8.1.8.1",
   "title": "",
-  "body": "Factor if possible.     "
+  "body": "Complete the formulas for the special products of quadratic polynomials.     "
 },
 {
   "id": "exercise-1667",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1667",
   "type": "Exercise",
-  "number": "8.1.6.3",
+  "number": "8.1.8.2",
   "title": "",
-  "body": "Use the formulas to factor the polynomials, if possible.       cannot be factored   "
+  "body": "Factor if possible.     "
 },
 {
   "id": "exercise-1668",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1668",
   "type": "Exercise",
-  "number": "8.1.6.4",
+  "number": "8.1.8.3",
   "title": "",
-  "body": "Use the formulas to write down the products without multiplying:     "
+  "body": "Use the formulas to factor the polynomials, if possible.       cannot be factored   "
 },
 {
   "id": "exercise-1669",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1669",
   "type": "Exercise",
-  "number": "8.1.6.5",
+  "number": "8.1.8.4",
   "title": "",
-  "body": "Which of the following are polynomials? If it is not a polynomial, explain why not.     (b) and (c) are not polynomials; they have variables in a denominator. "
+  "body": "Use the formulas to write down the products without multiplying:     "
 },
 {
   "id": "exercise-1670",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1670",
   "type": "Exercise",
-  "number": "8.1.6.6",
+  "number": "8.1.8.5",
   "title": "",
-  "body": "Give the degree of each polynomial.    "
+  "body": "Which of the following are polynomials? If it is not a polynomial, explain why not.     (b) and (c) are not polynomials; they have variables in a denominator. "
 },
 {
   "id": "exercise-1671",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1671",
   "type": "Exercise",
-  "number": "8.1.6.7",
+  "number": "8.1.8.6",
   "title": "",
-  "body": "Write each polynomial in descending powers of .     "
+  "body": "Give the degree of each polynomial.    "
 },
 {
   "id": "exercise-1672",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1672",
   "type": "Exercise",
-  "number": "8.1.6.8",
+  "number": "8.1.8.7",
   "title": "",
-  "body": "Add or subtract the polynomials.   "
+  "body": "Write each polynomial in descending powers of .     "
 },
 {
   "id": "exercise-1673",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1673",
   "type": "Exercise",
-  "number": "8.1.6.9",
+  "number": "8.1.8.8",
   "title": "",
-  "body": "Without performing the multiplication, give the degree of each product.     4  5  7 "
+  "body": "Add or subtract the polynomials.   "
 },
 {
   "id": "exercise-1674",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1674",
   "type": "Exercise",
-  "number": "8.1.6.10",
+  "number": "8.1.8.9",
   "title": "",
-  "body": "  "
+  "body": "Without performing the multiplication, give the degree of each product.     4  5  7 "
 },
 {
   "id": "exercise-1675",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1675",
   "type": "Exercise",
-  "number": "8.1.6.11",
+  "number": "8.1.8.10",
   "title": "",
-  "body": "     "
+  "body": "  "
 },
 {
   "id": "exercise-1676",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1676",
   "type": "Exercise",
-  "number": "8.1.6.12",
+  "number": "8.1.8.11",
   "title": "",
-  "body": "  "
+  "body": "     "
 },
 {
   "id": "exercise-1677",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1677",
   "type": "Exercise",
-  "number": "8.1.6.13",
+  "number": "8.1.8.12",
   "title": "",
-  "body": "     "
+  "body": "  "
 },
 {
   "id": "exercise-1678",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1678",
   "type": "Exercise",
-  "number": "8.1.6.14",
+  "number": "8.1.8.13",
   "title": "",
-  "body": "  "
+  "body": "     "
 },
 {
   "id": "exercise-1679",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1679",
   "type": "Exercise",
-  "number": "8.1.6.15",
+  "number": "8.1.8.14",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-1680",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1680",
   "type": "Exercise",
-  "number": "8.1.6.16",
+  "number": "8.1.8.15",
   "title": "",
-  "body": ""
+  "body": "    "
 },
 {
   "id": "exercise-1681",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1681",
   "type": "Exercise",
-  "number": "8.1.6.17",
+  "number": "8.1.8.16",
   "title": "",
   "body": ""
 },
@@ -19238,7 +19265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1682",
   "type": "Exercise",
-  "number": "8.1.6.18",
+  "number": "8.1.8.17",
   "title": "",
   "body": ""
 },
@@ -19247,7 +19274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1683",
   "type": "Exercise",
-  "number": "8.1.6.19",
+  "number": "8.1.8.18",
   "title": "",
   "body": ""
 },
@@ -19256,7 +19283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1684",
   "type": "Exercise",
-  "number": "8.1.6.20",
+  "number": "8.1.8.19",
   "title": "",
   "body": ""
 },
@@ -19265,7 +19292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1685",
   "type": "Exercise",
-  "number": "8.1.6.21",
+  "number": "8.1.8.20",
   "title": "",
   "body": ""
 },
@@ -19274,115 +19301,124 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1686",
   "type": "Exercise",
-  "number": "8.1.6.22",
+  "number": "8.1.8.21",
   "title": "",
-  "body": "Evaluate each polynomial for . Try to do the calculations mentally. What do you notice?     "
+  "body": ""
 },
 {
   "id": "exercise-1687",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1687",
   "type": "Exercise",
-  "number": "8.1.6.23",
+  "number": "8.1.8.22",
   "title": "",
-  "body": "A large wooden box (without lid) is 3 feet longer than it is wide, and its height is 2 feet shorter than its width.  If the width of the box is , write expressions for its length and its height.  Write a polynomial for the volume of the box.  Write a polynomial for the surface area of the box.  length: ; height:   "
+  "body": "Evaluate each polynomial for . Try to do the calculations mentally. What do you notice?     "
 },
 {
   "id": "exercise-1688",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1688",
   "type": "Exercise",
-  "number": "8.1.6.24",
+  "number": "8.1.8.23",
   "title": "",
-  "body": "A paper company plans to make boxes without tops from sheets of cardboard 12 inches wide and 16 inches long. The company will cut out four squares of side inches from the corners of the sheet and fold up the edges as shown in the figure.  box   Write expressions in terms of for the length, width, and height of the resulting box.  Write a formula for the volume, , of the box as a function of .  What are the largest and smallest reasonable values for ?  Make a table of values for on its domain.  Graph your function in the window  Use your graph to find the value of that will yield a box with maximum possible volume. What is the maximum possible volume?  "
+  "body": "A large wooden box (without lid) is 3 feet longer than it is wide, and its height is 2 feet shorter than its width.  If the width of the box is , write expressions for its length and its height.  Write a polynomial for the volume of the box.  Write a polynomial for the surface area of the box.  length: ; height:   "
 },
 {
   "id": "exercise-1689",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1689",
   "type": "Exercise",
-  "number": "8.1.6.25",
+  "number": "8.1.8.24",
   "title": "",
-  "body": " A grain silo is built in the shape of a cylinder with a hemisphere on top (see the figure). Write an expression for the volume of the silo in terms of the radius and height of the cylindrical portion of the silo.  If the total height of the silo is five times its radius, write a polynomial function in one variable for its volume.  grain silo    "
+  "body": "A paper company plans to make boxes without tops from sheets of cardboard 12 inches wide and 16 inches long. The company will cut out four squares of side inches from the corners of the sheet and fold up the edges as shown in the figure.  box   Write expressions in terms of for the length, width, and height of the resulting box.  Write a formula for the volume, , of the box as a function of .  What are the largest and smallest reasonable values for ?  Make a table of values for on its domain.  Graph your function in the window  Use your graph to find the value of that will yield a box with maximum possible volume. What is the maximum possible volume?  "
 },
 {
   "id": "exercise-1690",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1690",
   "type": "Exercise",
-  "number": "8.1.6.26",
+  "number": "8.1.8.25",
   "title": "",
-  "body": "The annual profit, , of the Enviro Company, in thousands of dollars, is given by where is the number of years since 1980, the first year that the company showed a profit.  Graph in the window  What was the profit in 1980? In 2000? In 2020?  How did the profit change from 1980 to 1981? From 2000 to 2001? From 2020 to 2021?  During which years did the profit decrease from one year to the next?  "
+  "body": " A grain silo is built in the shape of a cylinder with a hemisphere on top (see the figure). Write an expression for the volume of the silo in terms of the radius and height of the cylindrical portion of the silo.  If the total height of the silo is five times its radius, write a polynomial function in one variable for its volume.  grain silo    "
 },
 {
   "id": "exercise-1691",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1691",
   "type": "Exercise",
-  "number": "8.1.6.27",
+  "number": "8.1.8.26",
   "title": "",
-  "body": "A doctor who is treating a heart patient wants to prescribe medication to lower the patient's blood pressure. The body's reaction to this medication is a function of the dose administered. If the patient takes milliliters of the medication, his blood pressure should decrease by points, where  For what values of is ?  What values of make sense for this function? Why?  Graph the function in the window  How much should the patient's blood pressure drop if he takes 2 milliliters of medication?  What is the maximum drop in blood pressure that can be achieved with this medication?  There may be risks associated with a large change in blood pressure. How many milliliters of the medication should be administered to produce half the maximum possible drop in blood pressure?    ; for these values  cubic   points  points  ml or ml  "
+  "body": "The annual profit, , of the Enviro Company, in thousands of dollars, is given by where is the number of years since 1980, the first year that the company showed a profit.  Graph in the window  What was the profit in 1980? In 2000? In 2020?  How did the profit change from 1980 to 1981? From 2000 to 2001? From 2020 to 2021?  During which years did the profit decrease from one year to the next?  "
 },
 {
   "id": "exercise-1692",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1692",
   "type": "Exercise",
-  "number": "8.1.6.28",
+  "number": "8.1.8.27",
   "title": "",
-  "body": "The water level (in feet) at a harbor is approximated by the polynomial where is the number of hours since the high tide. The approximation is valid for . (A negative value of corresponds to a number of hours before the high tide.)  Graph the polynomial for .  What is the water level at high tide?  What is the water level 3 hours before high tide?  When is the water level below 8 feet?  When is the water level above 7 feet?  "
+  "body": "A doctor who is treating a heart patient wants to prescribe medication to lower the patient's blood pressure. The body's reaction to this medication is a function of the dose administered. If the patient takes milliliters of the medication, his blood pressure should decrease by points, where  For what values of is ?  What values of make sense for this function? Why?  Graph the function in the window  How much should the patient's blood pressure drop if he takes 2 milliliters of medication?  What is the maximum drop in blood pressure that can be achieved with this medication?  There may be risks associated with a large change in blood pressure. How many milliliters of the medication should be administered to produce half the maximum possible drop in blood pressure?    ; for these values  cubic   points  points  ml or ml  "
 },
 {
   "id": "exercise-1693",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1693",
   "type": "Exercise",
-  "number": "8.1.6.29",
+  "number": "8.1.8.28",
   "title": "",
-  "body": "During an earthquake, Nordhoff Street split in two, and one section shifted up several centimeters. Engineers created a ramp from the lower section to the upper section. In the coordinate system shown in the figure below, the ramp is part of the graph of  ramp   By how much did the upper section of the street shift during the earthquake?  What is the horizontal distance from the bottom of the ramp to the raised part of the street?   cm  cm  "
+  "body": "The water level (in feet) at a harbor is approximated by the polynomial where is the number of hours since the high tide. The approximation is valid for . (A negative value of corresponds to a number of hours before the high tide.)  Graph the polynomial for .  What is the water level at high tide?  What is the water level 3 hours before high tide?  When is the water level below 8 feet?  When is the water level above 7 feet?  "
 },
 {
   "id": "exercise-1694",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1694",
   "type": "Exercise",
-  "number": "8.1.6.30",
+  "number": "8.1.8.29",
   "title": "",
-  "body": "Expand each expression by removing parentheses. What do you notice?    Evaluate each expression for . Can you do this mentally? Is it easier to evaluate the expression before or after expanding it?  Use a calculator to evaluate each expression for . "
+  "body": "During an earthquake, Nordhoff Street split in two, and one section shifted up several centimeters. Engineers created a ramp from the lower section to the upper section. In the coordinate system shown in the figure below, the ramp is part of the graph of  ramp   By how much did the upper section of the street shift during the earthquake?  What is the horizontal distance from the bottom of the ramp to the raised part of the street?   cm  cm  "
 },
 {
   "id": "exercise-1695",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1695",
   "type": "Exercise",
-  "number": "8.1.6.31",
+  "number": "8.1.8.30",
   "title": "",
-  "body": "Find the first three terms of the product in ascending powers. (Do not compute the entire product!)     "
+  "body": "Expand each expression by removing parentheses. What do you notice?    Evaluate each expression for . Can you do this mentally? Is it easier to evaluate the expression before or after expanding it?  Use a calculator to evaluate each expression for . "
 },
 {
   "id": "exercise-1696",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1696",
   "type": "Exercise",
-  "number": "8.1.6.32",
+  "number": "8.1.8.31",
   "title": "",
-  "body": "Find the indicated term in each product. (Do not compute the entire product!)  ;  ; "
+  "body": "Find the first three terms of the product in ascending powers. (Do not compute the entire product!)     "
 },
 {
   "id": "exercise-1697",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1697",
   "type": "Exercise",
-  "number": "8.1.6.33",
+  "number": "8.1.8.32",
   "title": "",
-  "body": "Verify the formula for factoring the sum of two cubes: "
+  "body": "Find the indicated term in each product. (Do not compute the entire product!)  ;  ; "
 },
 {
   "id": "exercise-1698",
   "level": "2",
   "url": "PolynomialFunctions.html#exercise-1698",
   "type": "Exercise",
-  "number": "8.1.6.34",
+  "number": "8.1.8.33",
+  "title": "",
+  "body": "Verify the formula for factoring the sum of two cubes: "
+},
+{
+  "id": "exercise-1699",
+  "level": "2",
+  "url": "PolynomialFunctions.html#exercise-1699",
+  "type": "Exercise",
+  "number": "8.1.8.34",
   "title": "",
   "body": "Verify the formula for factoring the difference of two cubes: "
 },
@@ -19393,88 +19429,88 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Algebraic Fractions",
-  "body": "Algebraic Fractions  Introduction  An algebraic fraction algebraic fraction (or rational expression rational expression rational expression algebraic fraction , as they are someitmes called,) is a fraction in which both numerator and denominator are polynomials. Here are some examples of algebraic fractions: We can evaluate algebraic fractions just as we evaluate any other algebraic expression.  If we try to evaluate the fraction for , we get or , which is undefined. When working with fractions, we must exclude any values of the variable that make the denominators equal to zero.   Reducing Fractions reducing fractions  You'll recall from your study of arithmetic that we can reduce fraction reducing reducing fractions a fraction if we can divide both numerator and denominator by a common factor common factor fraction common factor common factor fraction . In algebra, it is helpful to think of factoring out the common factor first. For example, where we have divided both numerator and denominator by 9. The new fraction has the same value as the old one, namely 0.75, but it is simpler (the numbers are smaller.) Reducing is an application of the Fundamental Principle of Fractions.  Fundamental Principle of Fractions fraction fundamental principal fundamental principal of fractions reducing fractions  We can multiply or divide the numerator and denominator of a fraction by the same nonzero factor, and the new fraction will be equivalent to the old one.  Reduce  The common factor for numerator and denominator is . We factor from the numerator and denominator, then divide by the common factor.   Practice 1   Reduce                             When we cancel common factors, we are dividing . Because division is the inverse or opposite operation for multiplication, we can cancel common factors , but we cannot cancel common terms .  Use your calculator to decide which calculation is correct.    We can cancel the 4's in part (a), because they are factors of numerator and denominator.  We cannot cancel the 4's in part (b), because they are terms.  You can verify that , but .  QuickCheck 1   Fill in the blanks.   An algebraic fraction is undefined when the   denominator    index    numerator    radicand   is   even    negative    positive    zero   .    Canceling common factors uses the operation of   addition    division    subtraction    squaring   .    Terms are expressions that are   added    exponentiated    multiplied    reduced   or   divided    expended    simplified    subtracted   .    When we reduce a fraction, the new fraction is   equivalent    inverse    superior    unrelated   to the old one.                                     denominator, zero    division    added, subtracted    equivalent         Practice 2   Which calculation is correct? Choose a value for and use your calculator to verify your answer.    (a)    (b)          (a)       If the numerator or denominator of the fraction contains more than one term, it is especially important to factor before reducing , so that numerator and denominator are written as products of factors, instead of sums of terms.  Reduce each fraction.    First we factor the numerator and denominator. Then we divide numerator and denominator by any common factors.     We cannot cancel the 4's in part (a) of the Example above, because 4 is not a factor of the entire numerator. Thus, In the Example part (b), we cannot cancel the 3's, because they are terms and not factors. Thus,    Practice 3   Explain why each calculation is incorrect.      A) 3 is not a factor of numerator or denominator.    B) More cancelling is required.         A) 2 is not a factor of the numerator.    B) 2 should be subtracted from 5.                   3 is not a factor of numerator or denominator    2 is not a factor of the numerator         We summarize the procedure for reducing algebraic fractions as follows.  To reduce an algebraic fraction algebraic fraction reducing fraction reducing an algebraic fraction reducing fractions   Factor the numerator and the denominator.  Divide the numerator and denominator by any common factors.   Reduce each fraction.     We first factor the numerator and denominator completely. Then we divide numerator and denominator by the common factors 3 and . We must cancel the entire expression from numerator and denominator (we cannot cancel the 's or the 4's separately!). All the factors are canceled from the numerator, so we replace them by 1, because any expression divided by itself is 1.  The numerator of the fraction is a difference of two cubes, and the denominator is a difference of two squares. We factor each to obtain We cancel the factor from top and bottom, to get Because we cannot factor any further, we cannot reduce the fraction any further.   QuickCheck 2   Fill in the blanks.   If we want to cancel an expression from a fraction, we must be able to   exponentiate    factor    invalidate    subtract   it from numerator and denominator.    When we factor an expression, we write it as a   difference    product    quotient    sum   .    If a factor appears in both numerator and denominator, it is called a   common    fallacious    missing    zero   factor.    If all the factors in the numerator or denominator cancel out, we replace it by .                           factor    product    common    1         Practice 4   Reduce each fraction.                                                       Keep in mind that the reduced form is equivalent to the original form of the fraction. If we evaluate the original form and the reduced form at the same value of the variable, the results are equal.  Verify that is equal to for .  We evaluate each fraction at . and   Practice 5   If you evaluate for and for what answer do you expect to get? (Recall the earlier Example with the same algebraic fraction in part a.)               Opposite of a Binomial binomial opposite of opposite of a binomial  Any number (except zero) divided by itself is 1, and any number divided by its opposite is . For example, The same is true for binomials and other algebraic expressions. The opposite of an expression can be found by multiplying it by . Thus, the opposite of is and so Here are some examples of opposites. We can cancel opposites when we reduce fractions.  Reduce  We first factor the numerator and denominator. We see that is the opposite of , that is, . Thus,   Practice 6   Reduce if possible.                                         1    cannot be reduced       cannot be reduced          Rational Functions rational function function rational  A rational function rational function is a function defined by an algebraic fraction. That is, it has the form where and are polynomials. A rational function is undefined at any -values where .  Francine is planning a 60-mile training flight through the desert on her cycle-plane, a pedal-driven aircraft. If there is no wind, she can pedal at an average speed of 15 miles per hour, so she can complete the flight in 4 hours.  If there is a headwind of miles per hour, it will take Francine longer to fly 60 miles. Express the time it will take to complete the training flight as a function of .  Make a table of values for the function.  Graph the function and explain what it tells you about the time Francine should allot for the flight.    If there is a headwind of miles per hour, Francine's ground speed will be miles per hour. Using the fact that , we find that the time needed for the flight will be  We evaluate the function for several values of , as shown in the table below.                    For example, if the headwind is miles per hour, then Francine's effective speed is only 10 miles per hour, and it will take her 6 hours to fly the 60 miles. The table shows that as the speed of the headwind increases, the time required for the flight increases also.  The graph of the function is shown below. You can use your calculator with the window to verify the graph. In particular, the point lies on the graph. This point tells us that if there is no wind, Francine can fly 60 miles in 4 hours, as we calculated earlier.  graph showing time to complete trip vs speed of headwind  The graph is increasing, as indicated by the table of values. In fact, as the speed of the wind gets close to 15 miles per hour, Francine's flying time becomes extremely large. In theory, if the wind speed were exactly 15 miles per hour, Francine would never complete her flight. On the graph, the time becomes infinite at .  What about negative values for ? If we interpret a negative headwind as a tailwind, Francine's flying time should decrease for negative -values. For example, if , there is a tailwind of 5 miles per hour, so Francine's effective speed is 20 miles per hour, and she can complete the flight in 3 hours. As the tailwind gets stronger (that is, as we move farther to the left in the -direction), Francine's flying time continues to decrease, and the graph approaches the -axis.   The vertical dashed line at on the graph of is a vertical asymptote asymptote vertical vertical asymptote for the graph. We first encountered asymptotes in when we studied the graph of . Locating the vertical asymptotes of a rational function is an important part of determining the shape of the graph.  Practice 7   EarthCare decides to sell T-shirts to raise money. The company makes an initial investment of $100 to pay for the design of the T-shirt and to set up the printing process. After that, the T-shirts cost $5 each for labor and materials.   Express the average cost, per T-shirt as a function of the number of T-shirts EarthCare produces.     Make a table of values for the function.                               Graph the function and explain what it tells you about the cost of the T-shirts.                                                                          A graph is below.  As the number of T-shirts increases, the average cost per shirt decreases, but eventually levels off and approaches $5 per T-shirt.         Graph for part (c):   graph of average cost of production      In Practice 7 , the horizontal line is a horizontal asymptote asymptote horizontal horizontal asymptote for the graph of the function. As increases, the graph approaches the line but will never actually meet it. The average price per T-shirt will always be slightly more than $5. Horizontal asymptotes are also important in sketching the graphs of rational functions.  QuickCheck 3   True or False.   A rational function is a quotient of polynomials.   True    False      A vertical asymptote occurs where a rational function is undefined.   True    False      A horizontal asymptote is a line that the graph of a rational function approaches as increases.   True    False      The algebraic fraction is never equal to zero.   True    False                             True    True    True    True           Problem Set 8.2  Warm Up  For Problems 1 2,  Evaluate the fraction for the given values of the variable.  For what values of the variable is the fraction undefined?  Find a value of for which the fraction is equal to zero.   ,       ,       For Problems 5 8, reduce the fraction.                    Skills Practice  Which of the following is a correct application of the fundamental principle of fractions? Explain why or why not in each case.     None are correct  For Problems 10 and 11, decide whether the fraction is equivalent to 1, to , or cannot be reduced.            cannot be reduced   cannot be reduced  cannot be reduced    For Problems 12-15, reduce if possible, and select the correct reduced form.      neither of these     neither of these (b)     neither of these     neither of these (a)   Reduce each fraction. Which of the fractions are equivalent to ?      For Problems 17-28, reduce if possible.                Applications  The crew team can row at a steady pace of 10 miles per hour in still water. Every afternoon, their training includes a five-mile row upstream on the river. If the current in the river on a given day is miles per hour, then the time required for this exercise, in minutes, is given by Use the graph of this equation shown in the figure to answer questions (a) and (b).    curve      How long does the exercise take if there is no current in the river?  How long will it take if the current is 4 miles per hour?  Find an exact answer for part (b) by using the equation.  If the exercise took 2 hours, what was the current in the river?  As the speed of the current increases, what happens to the time needed for the exercise?   30 min  50 min  50 min  6 mph  The time increases. If the current is 10 mph, the team will not be able to row upstream   The eider duck, one of the world's fastest flying birds, can exceed an airspeed of 65 miles per hour. A flock of eider ducks is migrating south at an average airspeed of 50 miles per hour against a moderate headwind. Their next feeding grounds are 150 miles away.  Express the ducks' travel time, , as a function of the windspeed, .  Complete the table showing the travel time for various windspeeds.                    What happens to the travel time as the headwind increases?  Use the table to choose an appropriate window and graph your function . Label the scales on the axes.  Estimate the wind speed if the travel time was 12 hours. Illustrate your result on the graph.  Give the equations of any horizontal or vertical asymptotes. What does the vertical asymptote tell us about the problem?   The cost, in thousands of dollars, for extracting percent of a precious ore from a mine is given by the equation   What input values make sense for ?  Complete the table showing the cost of extracting various percentages of the ore. (Note: do not convert percents to decimals.)                    Graph the function in an appropriate window. What percentage of the ore can be extracted if $540,000 can be spent on the extraction?  For what values of is the total cost less than $1,440,000?  The graph has a vertical asymptote. What is it? What is its significance in the context of this problem?                            curve    60%     : The cost of extracting more ore grows without bound as the amount extracted approaches 100%.    The total cost in dollars of producing calculators is approximately .  Express the cost per calculator, , as a function of the number of calculators produced.  Complete the table showing the cost per calculator for various production levels.                    Graph the function for the cost per calculator. Use the window  How many calculators should be produced so that the cost per calculator is $18?  For what values of is the cost less than $12 per calculator?  Find the horizontal asymptote of the graph. What does it represent in this context?   The volume of a test tube is given by its height times the area of its cross-section. A test tube that holds 200 cubic centimeters is centimeters long.  What is the area of its cross-section?  Evaluate your fraction for . What does your answer mean in the context of the problem?  square centimeters  8; If , the area of the cross-section is 8 .   Delbert prepares a 25% glucose solution of by mixing 2 ml of glucose with 8 ml of water. If he adds ml of glucose to the solution, its concentration is given by  How many ml of glucose should Delbert add to increase the concentration to 50%?  Graph the function for  What is the horizontal asymptote of the graph? What does it tell you about the solution?   A computer store sells approximately 300 of its most popular model per year. The manager would like to minimize her annual inventory cost by ordering the optimal number of computers, , at regular intervals. If she orders computers in each shipment, the cost of storage will be dollars, and the cost of reordering will be dollars. The inventory cost is the sum of the storage cost and the reordering cost.  Use the distributive law to simplify the expression for the reordering cost. Then express the inventory cost, , as a function of .  Complete the table of values for the inventory cost for various reorder sizes.                  Graph the function for the cost per calculator. Use the window Estimate the minimum possible value for .  How many computers should the manager order in each shipment so as to minimize the inventory cost? How many orders will she make during the year?  Graph the function in the same window with the function . What do you observe?   ;                 $4768.33 rational function  22; 14>  rational function with slant asymptote The graph of approaches the line as an asymptote.   A train whistle sounds higher when the train is approaching you than when it is moving away from you. This phenomenon is known as the Doppler effect. If the actual pitch of the whistle is 440 hertz (this is the A note below middle C), then the note you hear will have the pitch where the velocity, , in meters per second is positive as the train approaches and is negative when the train is moving away. (The number 332 that appears in this expression is the speed of sound in meters per second.)  Complete the table of values showing the pitch of the whistle at various train velocities.                          Graph the function in an appropriate window.  What is the velocity of the train if the note you hear has a pitch of 415 hertz (corresponding to the note A-flat)? A pitch of hertz (C-sharp)?  For what velocities will the pitch you hear be greater than 456.5 hertz?  The graph has a vertical asymptote (although it is not visible in the window). Where is it and what is its significance in this context?     "
+  "body": "Algebraic Fractions  Introduction  An algebraic fraction algebraic fraction (or rational expression rational expression rational expression algebraic fraction , as they are someitmes called,) is a fraction in which both numerator and denominator are polynomials. Here are some examples of algebraic fractions: We can evaluate algebraic fractions just as we evaluate any other algebraic expression.  If we try to evaluate the fraction for , we get or , which is undefined. When working with fractions, we must exclude any values of the variable that make the denominators equal to zero.   Reducing Fractions reducing fractions  You'll recall from your study of arithmetic that we can reduce fraction reducing reducing fractions a fraction if we can divide both numerator and denominator by a common factor common factor fraction common factor common factor fraction . In algebra, it is helpful to think of factoring out the common factor first. For example, where we have divided both numerator and denominator by 9. The new fraction has the same value as the old one, namely 0.75, but it is simpler (the numbers are smaller.) Reducing is an application of the Fundamental Principle of Fractions.  Fundamental Principle of Fractions fraction fundamental principal fundamental principal of fractions reducing fractions  We can multiply or divide the numerator and denominator of a fraction by the same nonzero factor, and the new fraction will be equivalent to the old one.  Reduce  The common factor for numerator and denominator is . We factor from the numerator and denominator, then divide by the common factor.   Practice 1 Reduce  When we cancel common factors, we are dividing . Because division is the inverse or opposite operation for multiplication, we can cancel common factors , but we cannot cancel common terms .  Use your calculator to decide which calculation is correct.    We can cancel the 4's in part (a), because they are factors of numerator and denominator.  We cannot cancel the 4's in part (b), because they are terms.  You can verify that , but .   QuickCheck 1 Fill in the blanks.   An algebraic fraction is undefined when the is .  \"Canceling\" common factors uses the operation of .  Terms are expressions that are or .  When we reduce a fraction, the new fraction is to the old one.   Practice 2 Which calculation is correct? Choose a value for and use your calculator to verify your answer.     (a)  If the numerator or denominator of the fraction contains more than one term, it is especially important to factor before reducing , so that numerator and denominator are written as products of factors, instead of sums of terms.  Reduce each fraction.     First we factor the numerator and denominator. Then we divide numerator and denominator by any common factors.      We cannot cancel the 4's in part (a) of the Example above, because 4 is not a factor of the entire numerator. Thus, In the Example part (b), we cannot cancel the 3's, because they are terms and not factors. Thus,   Practice 3 Explain why each calculation is incorrect.      3 is not a factor of numerator or denominator  2 is not a factor of the numerator  We summarize the procedure for reducing algebraic fractions as follows.  To reduce an algebraic fraction algebraic fraction reducing fraction reducing an algebraic fraction reducing fractions   Factor the numerator and the denominator.  Divide the numerator and denominator by any common factors.   Reduce each fraction.     We first factor the numerator and denominator completely. Then we divide numerator and denominator by the common factors 3 and . We must cancel the entire expression from numerator and denominator (we cannot cancel the 's or the 4's separately!). All the factors are canceled from the numerator, so we replace them by 1, because any expression divided by itself is 1.  The numerator of the fraction is a difference of two cubes, and the denominator is a difference of two squares. We factor each to obtain We cancel the factor from top and bottom, to get Because we cannot factor any further, we cannot reduce the fraction any further.   QuickCheck 2 Fill in the blanks.   If we want to cancel an expression from a fraction, we must be able to it from numerator and denominator.  When we factor an expression, we write it as a .  If a factor appears in both numerator and denominator, it is called a factor.  If all the factors in the numerator or denominator cancel out, we replace it by .   Practice 4 Reduce each fraction.       Keep in mind that the reduced form is equivalent to the original form of the fraction. If we evaluate the original form and the reduced form at the same value of the variable, the results are equal.  Verify that is equal to for .  We evaluate each fraction at . and   Practice 5 If you evaluate for and for , what answer do you expect to get?  Hint: see   Opposite of a Binomial binomial opposite of opposite of a binomial  Any number (except zero) divided by itself is 1, and any number divided by its opposite is . For example, The same is true for binomials and other algebraic expressions. The opposite of an expression can be found by multiplying it by . Thus, the opposite of is and so Here are some examples of opposites. We can cancel opposites when we reduce fractions.  Reduce  We first factor the numerator and denominator. We see that is the opposite of , that is, . Thus,   Practice 6 Reduce if possible.         1  cannot be reduced   cannot be reduced    Rational Functions rational function function rational  Rational Function  A rational function rational function is a function defined by an algebraic fraction. That is, it has the form where and are polynomials. A rational function is undefined at any -values where .  Francine is planning a 60-mile training flight through the desert on her cycle-plane, a pedal-driven aircraft. If there is no wind, she can pedal at an average speed of 15 miles per hour, so she can complete the flight in 4 hours.  If there is a headwind of miles per hour, it will take Francine longer to fly 60 miles. Express the time it will take to complete the training flight as a function of .  Make a table of values for the function.  Graph the function and explain what it tells you about the time Francine should allot for the flight.    If there is a headwind of miles per hour, Francine's ground speed will be miles per hour. Using the fact that , we find that the time needed for the flight will be  We evaluate the function for several values of , as shown in the table below.                    For example, if the headwind is miles per hour, then Francine's effective speed is only 10 miles per hour, and it will take her 6 hours to fly the 60 miles. The table shows that as the speed of the headwind increases, the time required for the flight increases also.  The graph of the function is shown below. You can use your calculator with the window to verify the graph. In particular, the point lies on the graph. This point tells us that if there is no wind, Francine can fly 60 miles in 4 hours, as we calculated earlier.  graph showing time to complete trip vs speed of headwind  The graph is increasing, as indicated by the table of values. In fact, as the speed of the wind gets close to 15 miles per hour, Francine's flying time becomes extremely large. In theory, if the wind speed were exactly 15 miles per hour, Francine would never complete her flight. On the graph, the time becomes infinite at .  What about negative values for ? If we interpret a negative headwind as a tailwind, Francine's flying time should decrease for negative -values. For example, if , there is a tailwind of 5 miles per hour, so Francine's effective speed is 20 miles per hour, and she can complete the flight in 3 hours. As the tailwind gets stronger (that is, as we move farther to the left in the -direction), Francine's flying time continues to decrease, and the graph approaches the -axis.   The vertical dashed line at on the graph of is a vertical asymptote asymptote vertical vertical asymptote for the graph. We first encountered asymptotes in when we studied the graph of . Locating the vertical asymptotes of a rational function is an important part of determining the shape of the graph.  Practice 7 EarthCare decides to sell T-shirts to raise money. The company makes an initial investment of $100 to pay for the design of the T-shirt and to set up the printing process. After that, the T-shirts cost $5 each for labor and materials.   Express the average cost, , per T-shirt as a function of the number of T-shirts EarthCare produces.  Make a table of values for the function.                    Graph the function and explain what it tells you about the cost of the T-shirts.                      graph of average cost of production  As the number of T-shirts increases, the average cost per shirt decreases, but eventually levels off and approaches $5 per T-shirt.   In Practice 7 , the horizontal line is a horizontal asymptote asymptote horizontal horizontal asymptote for the graph of the function. As increases, the graph approaches the line but will never actually meet it. The average price per T-shirt will always be slightly more than $5. Horizontal asymptotes are also important in sketching the graphs of rational functions.  QuickCheck 3 True or False.   A rational function is a quotient of polynomials.  A vertical asymptote occurs where a rational function is undefined.  A horizontal asymptote is a line that the graph of a rational function approaches as increases.  The algebraic fraction is never equal to zero.     Problem Set 8.2  Warm Up  For Problems 1 2,  Evaluate the fraction for the given values of the variable.  For what values of the variable is the fraction undefined?  Find a value of for which the fraction is equal to zero.   ,       ,       For Problems 5 8, reduce the fraction.                    Skills Practice  Which of the following is a correct application of the fundamental principle of fractions? Explain why or why not in each case.     None are correct  For Problems 10 and 11, decide whether the fraction is equivalent to 1, to , or cannot be reduced.            cannot be reduced   cannot be reduced  cannot be reduced    For Problems 12-15, reduce if possible, and select the correct reduced form.      neither of these     neither of these (b)     neither of these     neither of these (a)   Reduce each fraction. Which of the fractions are equivalent to ?      For Problems 17-28, reduce if possible.                Applications  The crew team can row at a steady pace of 10 miles per hour in still water. Every afternoon, their training includes a five-mile row upstream on the river. If the current in the river on a given day is miles per hour, then the time required for this exercise, in minutes, is given by Use the graph of this equation shown in the figure to answer questions (a) and (b).    curve      How long does the exercise take if there is no current in the river?  How long will it take if the current is 4 miles per hour?  Find an exact answer for part (b) by using the equation.  If the exercise took 2 hours, what was the current in the river?  As the speed of the current increases, what happens to the time needed for the exercise?   30 min  50 min  50 min  6 mph  The time increases. If the current is 10 mph, the team will not be able to row upstream   The eider duck, one of the world's fastest flying birds, can exceed an airspeed of 65 miles per hour. A flock of eider ducks is migrating south at an average airspeed of 50 miles per hour against a moderate headwind. Their next feeding grounds are 150 miles away.  Express the ducks' travel time, , as a function of the windspeed, .  Complete the table showing the travel time for various windspeeds.                    What happens to the travel time as the headwind increases?  Use the table to choose an appropriate window and graph your function . Label the scales on the axes.  Estimate the wind speed if the travel time was 12 hours. Illustrate your result on the graph.  Give the equations of any horizontal or vertical asymptotes. What does the vertical asymptote tell us about the problem?   The cost, in thousands of dollars, for extracting percent of a precious ore from a mine is given by the equation   What input values make sense for ?  Complete the table showing the cost of extracting various percentages of the ore. (Note: do not convert percents to decimals.)                    Graph the function in an appropriate window. What percentage of the ore can be extracted if $540,000 can be spent on the extraction?  For what values of is the total cost less than $1,440,000?  The graph has a vertical asymptote. What is it? What is its significance in the context of this problem?                            curve    60%     : The cost of extracting more ore grows without bound as the amount extracted approaches 100%.    The total cost in dollars of producing calculators is approximately .  Express the cost per calculator, , as a function of the number of calculators produced.  Complete the table showing the cost per calculator for various production levels.                    Graph the function for the cost per calculator. Use the window  How many calculators should be produced so that the cost per calculator is $18?  For what values of is the cost less than $12 per calculator?  Find the horizontal asymptote of the graph. What does it represent in this context?   The volume of a test tube is given by its height times the area of its cross-section. A test tube that holds 200 cubic centimeters is centimeters long.  What is the area of its cross-section?  Evaluate your fraction for . What does your answer mean in the context of the problem?  square centimeters  8; If , the area of the cross-section is 8 .   Delbert prepares a 25% glucose solution of by mixing 2 ml of glucose with 8 ml of water. If he adds ml of glucose to the solution, its concentration is given by  How many ml of glucose should Delbert add to increase the concentration to 50%?  Graph the function for  What is the horizontal asymptote of the graph? What does it tell you about the solution?   A computer store sells approximately 300 of its most popular model per year. The manager would like to minimize her annual inventory cost by ordering the optimal number of computers, , at regular intervals. If she orders computers in each shipment, the cost of storage will be dollars, and the cost of reordering will be dollars. The inventory cost is the sum of the storage cost and the reordering cost.  Use the distributive law to simplify the expression for the reordering cost. Then express the inventory cost, , as a function of .  Complete the table of values for the inventory cost for various reorder sizes.                  Graph the function for the cost per calculator. Use the window Estimate the minimum possible value for .  How many computers should the manager order in each shipment so as to minimize the inventory cost? How many orders will she make during the year?  Graph the function in the same window with the function . What do you observe?   ;                 $4768.33 rational function  22; 14>  rational function with slant asymptote The graph of approaches the line as an asymptote.   A train whistle sounds higher when the train is approaching you than when it is moving away from you. This phenomenon is known as the Doppler effect. If the actual pitch of the whistle is 440 hertz (this is the A note below middle C), then the note you hear will have the pitch where the velocity, , in meters per second is positive as the train approaches and is negative when the train is moving away. (The number 332 that appears in this expression is the speed of sound in meters per second.)  Complete the table of values showing the pitch of the whistle at various train velocities.                          Graph the function in an appropriate window.  What is the velocity of the train if the note you hear has a pitch of 415 hertz (corresponding to the note A-flat)? A pitch of hertz (C-sharp)?  For what velocities will the pitch you hear be greater than 456.5 hertz?  The graph has a vertical asymptote (although it is not visible in the window). Where is it and what is its significance in this context?     "
 },
 {
-  "id": "p-7722",
+  "id": "p-7656",
   "level": "2",
-  "url": "AlgebraicFractions.html#p-7722",
+  "url": "AlgebraicFractions.html#p-7656",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "algebraic fraction rational expression "
 },
 {
-  "id": "warning-36",
+  "id": "note-25",
   "level": "2",
-  "url": "AlgebraicFractions.html#warning-36",
-  "type": "Caution",
+  "url": "AlgebraicFractions.html#note-25",
+  "type": "Note",
   "number": "8.2.1",
   "title": "",
   "body": "If we try to evaluate the fraction for , we get or , which is undefined. When working with fractions, we must exclude any values of the variable that make the denominators equal to zero. "
 },
 {
-  "id": "p-7724",
+  "id": "p-7658",
   "level": "2",
-  "url": "AlgebraicFractions.html#p-7724",
+  "url": "AlgebraicFractions.html#p-7658",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "reduce common factor "
 },
 {
-  "id": "example-195",
+  "id": "example-197",
   "level": "2",
-  "url": "AlgebraicFractions.html#example-195",
+  "url": "AlgebraicFractions.html#example-197",
   "type": "Example",
   "number": "8.2.2",
   "title": "",
   "body": "Reduce  The common factor for numerator and denominator is . We factor from the numerator and denominator, then divide by the common factor.  "
 },
 {
-  "id": "exercise-1699",
+  "id": "exercise-1700",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1699",
+  "url": "AlgebraicFractions.html#exercise-1700",
   "type": "Checkpoint",
   "number": "8.2.3",
   "title": "Practice 1.",
-  "body": "Practice 1   Reduce                            "
+  "body": "Practice 1 Reduce "
 },
 {
-  "id": "warning-37",
+  "id": "warning-36",
   "level": "2",
-  "url": "AlgebraicFractions.html#warning-37",
+  "url": "AlgebraicFractions.html#warning-36",
   "type": "Caution",
   "number": "8.2.4",
   "title": "",
   "body": "When we cancel common factors, we are dividing . Because division is the inverse or opposite operation for multiplication, we can cancel common factors , but we cannot cancel common terms . "
 },
 {
-  "id": "example-196",
+  "id": "example-198",
   "level": "2",
-  "url": "AlgebraicFractions.html#example-196",
+  "url": "AlgebraicFractions.html#example-198",
   "type": "Example",
   "number": "8.2.5",
   "title": "",
-  "body": "Use your calculator to decide which calculation is correct.    We can cancel the 4's in part (a), because they are factors of numerator and denominator.  We cannot cancel the 4's in part (b), because they are terms.  You can verify that , but . "
-},
-{
-  "id": "exercise-1700",
-  "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1700",
-  "type": "Checkpoint",
-  "number": "8.2.6",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   Fill in the blanks.   An algebraic fraction is undefined when the   denominator    index    numerator    radicand   is   even    negative    positive    zero   .    Canceling common factors uses the operation of   addition    division    subtraction    squaring   .    Terms are expressions that are   added    exponentiated    multiplied    reduced   or   divided    expended    simplified    subtracted   .    When we reduce a fraction, the new fraction is   equivalent    inverse    superior    unrelated   to the old one.                                     denominator, zero    division    added, subtracted    equivalent        "
+  "body": "Use your calculator to decide which calculation is correct.    We can cancel the 4's in part (a), because they are factors of numerator and denominator.  We cannot cancel the 4's in part (b), because they are terms.  You can verify that , but .  "
 },
 {
   "id": "exercise-1701",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1701",
   "type": "Checkpoint",
+  "number": "8.2.6",
+  "title": "QuickCheck 1.",
+  "body": "QuickCheck 1 Fill in the blanks.   An algebraic fraction is undefined when the is .  \"Canceling\" common factors uses the operation of .  Terms are expressions that are or .  When we reduce a fraction, the new fraction is to the old one.  "
+},
+{
+  "id": "exercise-1702",
+  "level": "2",
+  "url": "AlgebraicFractions.html#exercise-1702",
+  "type": "Checkpoint",
   "number": "8.2.7",
   "title": "Practice 2.",
-  "body": "Practice 2   Which calculation is correct? Choose a value for and use your calculator to verify your answer.    (a)    (b)          (a)      "
+  "body": "Practice 2 Which calculation is correct? Choose a value for and use your calculator to verify your answer.     (a) "
 },
 {
   "id": "example-reduce",
@@ -19483,25 +19519,25 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "8.2.8",
   "title": "",
-  "body": "Reduce each fraction.    First we factor the numerator and denominator. Then we divide numerator and denominator by any common factors.    "
+  "body": "Reduce each fraction.     First we factor the numerator and denominator. Then we divide numerator and denominator by any common factors.     "
 },
 {
-  "id": "warning-38",
+  "id": "warning-37",
   "level": "2",
-  "url": "AlgebraicFractions.html#warning-38",
+  "url": "AlgebraicFractions.html#warning-37",
   "type": "Caution",
   "number": "8.2.9",
   "title": "",
-  "body": "We cannot cancel the 4's in part (a) of the Example above, because 4 is not a factor of the entire numerator. Thus, In the Example part (b), we cannot cancel the 3's, because they are terms and not factors. Thus,   "
+  "body": "We cannot cancel the 4's in part (a) of the Example above, because 4 is not a factor of the entire numerator. Thus, In the Example part (b), we cannot cancel the 3's, because they are terms and not factors. Thus,  "
 },
 {
-  "id": "exercise-1702",
+  "id": "exercise-1703",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1702",
+  "url": "AlgebraicFractions.html#exercise-1703",
   "type": "Checkpoint",
   "number": "8.2.10",
   "title": "Practice 3.",
-  "body": "Practice 3   Explain why each calculation is incorrect.      A) 3 is not a factor of numerator or denominator.    B) More cancelling is required.         A) 2 is not a factor of the numerator.    B) 2 should be subtracted from 5.                   3 is not a factor of numerator or denominator    2 is not a factor of the numerator        "
+  "body": "Practice 3 Explain why each calculation is incorrect.      3 is not a factor of numerator or denominator  2 is not a factor of the numerator "
 },
 {
   "id": "Reduce-algebraic-fractions",
@@ -19513,81 +19549,81 @@ var ptx_lunr_docs = [
   "body": "Reduce each fraction.     We first factor the numerator and denominator completely. Then we divide numerator and denominator by the common factors 3 and . We must cancel the entire expression from numerator and denominator (we cannot cancel the 's or the 4's separately!). All the factors are canceled from the numerator, so we replace them by 1, because any expression divided by itself is 1.  The numerator of the fraction is a difference of two cubes, and the denominator is a difference of two squares. We factor each to obtain We cancel the factor from top and bottom, to get Because we cannot factor any further, we cannot reduce the fraction any further.  "
 },
 {
-  "id": "exercise-1703",
-  "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1703",
-  "type": "Checkpoint",
-  "number": "8.2.12",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   Fill in the blanks.   If we want to cancel an expression from a fraction, we must be able to   exponentiate    factor    invalidate    subtract   it from numerator and denominator.    When we factor an expression, we write it as a   difference    product    quotient    sum   .    If a factor appears in both numerator and denominator, it is called a   common    fallacious    missing    zero   factor.    If all the factors in the numerator or denominator cancel out, we replace it by .                           factor    product    common    1        "
-},
-{
   "id": "exercise-1704",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1704",
   "type": "Checkpoint",
-  "number": "8.2.13",
-  "title": "Practice 4.",
-  "body": "Practice 4   Reduce each fraction.                                                      "
-},
-{
-  "id": "example-199",
-  "level": "2",
-  "url": "AlgebraicFractions.html#example-199",
-  "type": "Example",
-  "number": "8.2.14",
-  "title": "",
-  "body": "Verify that is equal to for .  We evaluate each fraction at . and  "
+  "number": "8.2.12",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 Fill in the blanks.   If we want to cancel an expression from a fraction, we must be able to it from numerator and denominator.  When we factor an expression, we write it as a .  If a factor appears in both numerator and denominator, it is called a factor.  If all the factors in the numerator or denominator cancel out, we replace it by .  "
 },
 {
   "id": "exercise-1705",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1705",
   "type": "Checkpoint",
-  "number": "8.2.15",
-  "title": "Practice 5.",
-  "body": "Practice 5   If you evaluate for and for what answer do you expect to get? (Recall the earlier Example with the same algebraic fraction in part a.)             "
+  "number": "8.2.13",
+  "title": "Practice 4.",
+  "body": "Practice 4 Reduce each fraction.      "
 },
 {
-  "id": "example-200",
+  "id": "example-201",
   "level": "2",
-  "url": "AlgebraicFractions.html#example-200",
+  "url": "AlgebraicFractions.html#example-201",
   "type": "Example",
-  "number": "8.2.16",
+  "number": "8.2.14",
   "title": "",
-  "body": "Reduce  We first factor the numerator and denominator. We see that is the opposite of , that is, . Thus,  "
+  "body": "Verify that is equal to for .  We evaluate each fraction at . and  "
 },
 {
   "id": "exercise-1706",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1706",
   "type": "Checkpoint",
-  "number": "8.2.17",
-  "title": "Practice 6.",
-  "body": "Practice 6   Reduce if possible.                                         1    cannot be reduced       cannot be reduced        "
+  "number": "8.2.15",
+  "title": "Practice 5.",
+  "body": "Practice 5 If you evaluate for and for , what answer do you expect to get?  Hint: see "
 },
 {
-  "id": "p-7872",
+  "id": "example-202",
   "level": "2",
-  "url": "AlgebraicFractions.html#p-7872",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
+  "url": "AlgebraicFractions.html#example-202",
+  "type": "Example",
+  "number": "8.2.16",
   "title": "",
-  "body": "rational function "
+  "body": "Reduce  We first factor the numerator and denominator. We see that is the opposite of , that is, . Thus,  "
+},
+{
+  "id": "exercise-1707",
+  "level": "2",
+  "url": "AlgebraicFractions.html#exercise-1707",
+  "type": "Checkpoint",
+  "number": "8.2.17",
+  "title": "Practice 6.",
+  "body": "Practice 6 Reduce if possible.         1  cannot be reduced   cannot be reduced  "
+},
+{
+  "id": "definition-20",
+  "level": "2",
+  "url": "AlgebraicFractions.html#definition-20",
+  "type": "Definition",
+  "number": "8.2.18",
+  "title": "Rational Function.",
+  "body": "Rational Function  A rational function rational function is a function defined by an algebraic fraction. That is, it has the form where and are polynomials. A rational function is undefined at any -values where . "
 },
 {
   "id": "example-pedal-aircraft",
   "level": "2",
   "url": "AlgebraicFractions.html#example-pedal-aircraft",
   "type": "Example",
-  "number": "8.2.18",
+  "number": "8.2.19",
   "title": "",
   "body": "Francine is planning a 60-mile training flight through the desert on her cycle-plane, a pedal-driven aircraft. If there is no wind, she can pedal at an average speed of 15 miles per hour, so she can complete the flight in 4 hours.  If there is a headwind of miles per hour, it will take Francine longer to fly 60 miles. Express the time it will take to complete the training flight as a function of .  Make a table of values for the function.  Graph the function and explain what it tells you about the time Francine should allot for the flight.    If there is a headwind of miles per hour, Francine's ground speed will be miles per hour. Using the fact that , we find that the time needed for the flight will be  We evaluate the function for several values of , as shown in the table below.                    For example, if the headwind is miles per hour, then Francine's effective speed is only 10 miles per hour, and it will take her 6 hours to fly the 60 miles. The table shows that as the speed of the headwind increases, the time required for the flight increases also.  The graph of the function is shown below. You can use your calculator with the window to verify the graph. In particular, the point lies on the graph. This point tells us that if there is no wind, Francine can fly 60 miles in 4 hours, as we calculated earlier.  graph showing time to complete trip vs speed of headwind  The graph is increasing, as indicated by the table of values. In fact, as the speed of the wind gets close to 15 miles per hour, Francine's flying time becomes extremely large. In theory, if the wind speed were exactly 15 miles per hour, Francine would never complete her flight. On the graph, the time becomes infinite at .  What about negative values for ? If we interpret a negative headwind as a tailwind, Francine's flying time should decrease for negative -values. For example, if , there is a tailwind of 5 miles per hour, so Francine's effective speed is 20 miles per hour, and she can complete the flight in 3 hours. As the tailwind gets stronger (that is, as we move farther to the left in the -direction), Francine's flying time continues to decrease, and the graph approaches the -axis.  "
 },
 {
-  "id": "p-7884",
+  "id": "p-7730",
   "level": "2",
-  "url": "AlgebraicFractions.html#p-7884",
+  "url": "AlgebraicFractions.html#p-7730",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -19598,187 +19634,178 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#average-tshirt-cost",
   "type": "Checkpoint",
-  "number": "8.2.19",
+  "number": "8.2.20",
   "title": "Practice 7.",
-  "body": "Practice 7   EarthCare decides to sell T-shirts to raise money. The company makes an initial investment of $100 to pay for the design of the T-shirt and to set up the printing process. After that, the T-shirts cost $5 each for labor and materials.   Express the average cost, per T-shirt as a function of the number of T-shirts EarthCare produces.     Make a table of values for the function.                               Graph the function and explain what it tells you about the cost of the T-shirts.                                                                          A graph is below.  As the number of T-shirts increases, the average cost per shirt decreases, but eventually levels off and approaches $5 per T-shirt.         Graph for part (c):   graph of average cost of production     "
+  "body": "Practice 7 EarthCare decides to sell T-shirts to raise money. The company makes an initial investment of $100 to pay for the design of the T-shirt and to set up the printing process. After that, the T-shirts cost $5 each for labor and materials.   Express the average cost, , per T-shirt as a function of the number of T-shirts EarthCare produces.  Make a table of values for the function.                    Graph the function and explain what it tells you about the cost of the T-shirts.                      graph of average cost of production  As the number of T-shirts increases, the average cost per shirt decreases, but eventually levels off and approaches $5 per T-shirt.  "
 },
 {
-  "id": "p-7902",
+  "id": "p-7738",
   "level": "2",
-  "url": "AlgebraicFractions.html#p-7902",
+  "url": "AlgebraicFractions.html#p-7738",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "horizontal asymptote "
 },
 {
-  "id": "exercise-1708",
-  "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1708",
-  "type": "Checkpoint",
-  "number": "8.2.20",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   True or False.   A rational function is a quotient of polynomials.   True    False      A vertical asymptote occurs where a rational function is undefined.   True    False      A horizontal asymptote is a line that the graph of a rational function approaches as increases.   True    False      The algebraic fraction is never equal to zero.   True    False                             True    True    True    True        "
-},
-{
   "id": "exercise-1709",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1709",
-  "type": "Exercise",
-  "number": "8.2.5.1",
-  "title": "",
-  "body": " ,    "
+  "type": "Checkpoint",
+  "number": "8.2.21",
+  "title": "QuickCheck 3.",
+  "body": "QuickCheck 3 True or False.   A rational function is a quotient of polynomials.  A vertical asymptote occurs where a rational function is undefined.  A horizontal asymptote is a line that the graph of a rational function approaches as increases.  The algebraic fraction is never equal to zero.  "
 },
 {
   "id": "exercise-1710",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1710",
   "type": "Exercise",
-  "number": "8.2.5.2",
+  "number": "8.2.5.1",
   "title": "",
-  "body": ""
+  "body": " ,    "
 },
 {
   "id": "exercise-1711",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1711",
   "type": "Exercise",
-  "number": "8.2.5.3",
+  "number": "8.2.5.2",
   "title": "",
-  "body": " ,    "
+  "body": ""
 },
 {
   "id": "exercise-1712",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1712",
   "type": "Exercise",
-  "number": "8.2.5.4",
+  "number": "8.2.5.3",
   "title": "",
-  "body": ""
+  "body": " ,    "
 },
 {
   "id": "exercise-1713",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1713",
   "type": "Exercise",
-  "number": "8.2.5.5",
+  "number": "8.2.5.4",
   "title": "",
-  "body": "    "
+  "body": ""
 },
 {
   "id": "exercise-1714",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1714",
   "type": "Exercise",
-  "number": "8.2.5.6",
+  "number": "8.2.5.5",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-1715",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1715",
   "type": "Exercise",
-  "number": "8.2.5.7",
+  "number": "8.2.5.6",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-1716",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1716",
   "type": "Exercise",
-  "number": "8.2.5.8",
+  "number": "8.2.5.7",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-1717",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1717",
   "type": "Exercise",
-  "number": "8.2.5.9",
+  "number": "8.2.5.8",
   "title": "",
-  "body": "Which of the following is a correct application of the fundamental principle of fractions? Explain why or why not in each case.     None are correct "
+  "body": "  "
 },
 {
   "id": "exercise-1718",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1718",
   "type": "Exercise",
-  "number": "8.2.5.10",
+  "number": "8.2.5.9",
   "title": "",
-  "body": "    "
+  "body": "Which of the following is a correct application of the fundamental principle of fractions? Explain why or why not in each case.     None are correct "
 },
 {
   "id": "exercise-1719",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1719",
   "type": "Exercise",
-  "number": "8.2.5.11",
+  "number": "8.2.5.10",
   "title": "",
-  "body": "     cannot be reduced   cannot be reduced  cannot be reduced  "
+  "body": "    "
 },
 {
   "id": "exercise-1720",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1720",
   "type": "Exercise",
-  "number": "8.2.5.12",
+  "number": "8.2.5.11",
   "title": "",
-  "body": "   neither of these "
+  "body": "     cannot be reduced   cannot be reduced  cannot be reduced  "
 },
 {
   "id": "exercise-1721",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1721",
   "type": "Exercise",
-  "number": "8.2.5.13",
+  "number": "8.2.5.12",
   "title": "",
-  "body": "   neither of these (b) "
+  "body": "   neither of these "
 },
 {
   "id": "exercise-1722",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1722",
   "type": "Exercise",
-  "number": "8.2.5.14",
+  "number": "8.2.5.13",
   "title": "",
-  "body": "   neither of these "
+  "body": "   neither of these (b) "
 },
 {
   "id": "exercise-1723",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1723",
   "type": "Exercise",
-  "number": "8.2.5.15",
+  "number": "8.2.5.14",
   "title": "",
-  "body": "   neither of these (a) "
+  "body": "   neither of these "
 },
 {
   "id": "exercise-1724",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1724",
   "type": "Exercise",
-  "number": "8.2.5.16",
+  "number": "8.2.5.15",
   "title": "",
-  "body": "Reduce each fraction. Which of the fractions are equivalent to ?     "
+  "body": "   neither of these (a) "
 },
 {
   "id": "exercise-1725",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1725",
   "type": "Exercise",
-  "number": "8.2.5.17",
+  "number": "8.2.5.16",
   "title": "",
-  "body": ""
+  "body": "Reduce each fraction. Which of the fractions are equivalent to ?     "
 },
 {
   "id": "exercise-1726",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1726",
   "type": "Exercise",
-  "number": "8.2.5.18",
+  "number": "8.2.5.17",
   "title": "",
   "body": ""
 },
@@ -19787,7 +19814,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1727",
   "type": "Exercise",
-  "number": "8.2.5.19",
+  "number": "8.2.5.18",
   "title": "",
   "body": ""
 },
@@ -19796,7 +19823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1728",
   "type": "Exercise",
-  "number": "8.2.5.20",
+  "number": "8.2.5.19",
   "title": "",
   "body": ""
 },
@@ -19805,7 +19832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1729",
   "type": "Exercise",
-  "number": "8.2.5.21",
+  "number": "8.2.5.20",
   "title": "",
   "body": ""
 },
@@ -19814,7 +19841,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1730",
   "type": "Exercise",
-  "number": "8.2.5.22",
+  "number": "8.2.5.21",
   "title": "",
   "body": ""
 },
@@ -19823,7 +19850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1731",
   "type": "Exercise",
-  "number": "8.2.5.23",
+  "number": "8.2.5.22",
   "title": "",
   "body": ""
 },
@@ -19832,7 +19859,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1732",
   "type": "Exercise",
-  "number": "8.2.5.24",
+  "number": "8.2.5.23",
   "title": "",
   "body": ""
 },
@@ -19841,7 +19868,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1733",
   "type": "Exercise",
-  "number": "8.2.5.25",
+  "number": "8.2.5.24",
   "title": "",
   "body": ""
 },
@@ -19850,7 +19877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1734",
   "type": "Exercise",
-  "number": "8.2.5.26",
+  "number": "8.2.5.25",
   "title": "",
   "body": ""
 },
@@ -19859,7 +19886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1735",
   "type": "Exercise",
-  "number": "8.2.5.27",
+  "number": "8.2.5.26",
   "title": "",
   "body": ""
 },
@@ -19868,7 +19895,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1736",
   "type": "Exercise",
-  "number": "8.2.5.28",
+  "number": "8.2.5.27",
   "title": "",
   "body": ""
 },
@@ -19876,6 +19903,15 @@ var ptx_lunr_docs = [
   "id": "exercise-1737",
   "level": "2",
   "url": "AlgebraicFractions.html#exercise-1737",
+  "type": "Exercise",
+  "number": "8.2.5.28",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-1738",
+  "level": "2",
+  "url": "AlgebraicFractions.html#exercise-1738",
   "type": "Exercise",
   "number": "8.2.5.29",
   "title": "",
@@ -19891,54 +19927,54 @@ var ptx_lunr_docs = [
   "body": "The eider duck, one of the world's fastest flying birds, can exceed an airspeed of 65 miles per hour. A flock of eider ducks is migrating south at an average airspeed of 50 miles per hour against a moderate headwind. Their next feeding grounds are 150 miles away.  Express the ducks' travel time, , as a function of the windspeed, .  Complete the table showing the travel time for various windspeeds.                    What happens to the travel time as the headwind increases?  Use the table to choose an appropriate window and graph your function . Label the scales on the axes.  Estimate the wind speed if the travel time was 12 hours. Illustrate your result on the graph.  Give the equations of any horizontal or vertical asymptotes. What does the vertical asymptote tell us about the problem? "
 },
 {
-  "id": "exercise-1739",
+  "id": "exercise-1740",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1739",
+  "url": "AlgebraicFractions.html#exercise-1740",
   "type": "Exercise",
   "number": "8.2.5.31",
   "title": "",
   "body": " The cost, in thousands of dollars, for extracting percent of a precious ore from a mine is given by the equation   What input values make sense for ?  Complete the table showing the cost of extracting various percentages of the ore. (Note: do not convert percents to decimals.)                    Graph the function in an appropriate window. What percentage of the ore can be extracted if $540,000 can be spent on the extraction?  For what values of is the total cost less than $1,440,000?  The graph has a vertical asymptote. What is it? What is its significance in the context of this problem?                            curve    60%     : The cost of extracting more ore grows without bound as the amount extracted approaches 100%.   "
 },
 {
-  "id": "exercise-1740",
+  "id": "exercise-1741",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1740",
+  "url": "AlgebraicFractions.html#exercise-1741",
   "type": "Exercise",
   "number": "8.2.5.32",
   "title": "",
   "body": "The total cost in dollars of producing calculators is approximately .  Express the cost per calculator, , as a function of the number of calculators produced.  Complete the table showing the cost per calculator for various production levels.                    Graph the function for the cost per calculator. Use the window  How many calculators should be produced so that the cost per calculator is $18?  For what values of is the cost less than $12 per calculator?  Find the horizontal asymptote of the graph. What does it represent in this context?  "
 },
 {
-  "id": "exercise-1741",
+  "id": "exercise-1742",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1741",
+  "url": "AlgebraicFractions.html#exercise-1742",
   "type": "Exercise",
   "number": "8.2.5.33",
   "title": "",
   "body": "The volume of a test tube is given by its height times the area of its cross-section. A test tube that holds 200 cubic centimeters is centimeters long.  What is the area of its cross-section?  Evaluate your fraction for . What does your answer mean in the context of the problem?  square centimeters  8; If , the area of the cross-section is 8 .  "
 },
 {
-  "id": "exercise-1742",
+  "id": "exercise-1743",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1742",
+  "url": "AlgebraicFractions.html#exercise-1743",
   "type": "Exercise",
   "number": "8.2.5.34",
   "title": "",
   "body": "Delbert prepares a 25% glucose solution of by mixing 2 ml of glucose with 8 ml of water. If he adds ml of glucose to the solution, its concentration is given by  How many ml of glucose should Delbert add to increase the concentration to 50%?  Graph the function for  What is the horizontal asymptote of the graph? What does it tell you about the solution?  "
 },
 {
-  "id": "exercise-1743",
+  "id": "exercise-1744",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1743",
+  "url": "AlgebraicFractions.html#exercise-1744",
   "type": "Exercise",
   "number": "8.2.5.35",
   "title": "",
   "body": "A computer store sells approximately 300 of its most popular model per year. The manager would like to minimize her annual inventory cost by ordering the optimal number of computers, , at regular intervals. If she orders computers in each shipment, the cost of storage will be dollars, and the cost of reordering will be dollars. The inventory cost is the sum of the storage cost and the reordering cost.  Use the distributive law to simplify the expression for the reordering cost. Then express the inventory cost, , as a function of .  Complete the table of values for the inventory cost for various reorder sizes.                  Graph the function for the cost per calculator. Use the window Estimate the minimum possible value for .  How many computers should the manager order in each shipment so as to minimize the inventory cost? How many orders will she make during the year?  Graph the function in the same window with the function . What do you observe?   ;                 $4768.33 rational function  22; 14>  rational function with slant asymptote The graph of approaches the line as an asymptote.  "
 },
 {
-  "id": "exercise-1744",
+  "id": "exercise-1745",
   "level": "2",
-  "url": "AlgebraicFractions.html#exercise-1744",
+  "url": "AlgebraicFractions.html#exercise-1745",
   "type": "Exercise",
   "number": "8.2.5.36",
   "title": "",
@@ -19951,88 +19987,88 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.3",
   "title": "Operations on Algebraic Fractions",
-  "body": "Operations on Algebraic Fractions  Products of Fractions  To multiply two fractions together, we multiply their numerators together and then multiply their denominators together.  Product of Fractions product of fractions  If and , then  If a common factor occurs in a numerator and a denominator of either fraction, we can divide it out either before or after multiplying. For example, or It is usually easier to cancel any common factors before multiplying.  Multiply  First, we factor each numerator and denominator. Then we divide numerator and denominator by any common factors.   Practice 1   Find the product                             To multiply a fraction by a whole number, we write the whole number with 1 as denominator. The same applies to the product of an algebraic fraction and any nonfractional expression. For example,  We summarize the procedure for multiplying algebraic fractions as follows.  To multiply algebraic fractions: algebraic fraction multiplying product of fractions fraction multiplying fraction multiplying muliplying algebraic fractions   Factor each numerator and denominator.  If any factor appears in both a numerator and a denominator, divide out that factor.  Multiply the remaining factors of the numerator and the remaining factors of the denominator.  Reduce the product if necessary.   Quotients of Fractions quotient of fractions fraction dividing  To divide one fraction by another, we multiply the first fraction by the reciprocal of the second fraction. For example, We express this rule in symbols as follows.  Quotient of Fractions quotient of fractions fraction dividing  If , then  Thus, to divide two algebraic fractions, we take the reciprocal of the divisor and then follow the rules for multiplying algebraic fractions.  Divide:  First, we change the operation to multiplication by taking the reciprocal of the divisor. Now we follow the rules for multiplication: First, we factor each numerator and denominator.  When working with algebraic fractions, we often leave the denominators in factored form. This makes it easier to add and subtract fractions, and to check whether they can be reducecd.  QuickCheck 1   Fill in the blanks.   The first step in multiplying fractions is to   add together the numerators    factor each numerator and denominator    find the reciprocal of each fraction    remove any exponents   .    It is usually easier to cancel common factors   after    before   multiplying.    To divide two fractions, we multiply the first fraction by the   GCF    LCD    opposite    reciprocal   of the second fraction.    We can write a whole number as a fraction with denominator .                           factor    before    reciprocal    1         We summarize the procedure for dividing algebraic fractions as follows.  To divide algebraic fractions: algebraic fraction dividing dividing algebraic fractions quotient of fractions fraction dividing   Take the reciprocal of the second fraction and change the operation to multiplication.  Follow the rules for multiplication of fractions.  Practice 2   Divide:                              Adding and Subtracting Like Fractions fraction adding or subtracting like fractions adding or subtracting sum or difference of fractions  Fractions with the same denominator are called like fractions like fractions . For example, are like fractions, while are unlike fractions. We can add or subtract like fractions for the same reason that we can add like terms. Just as we can think of the sum as or . The denominators of the terms must be the same because they tell us what kind of quantity we are adding. We can add two quantities if they are the same kind.  When we add like fractions, we add their numerators and keep their denominators the same. For example, The same holds true for all algebraic fractions.  Sum or Difference of Like Fractions sum or difference of fractions fraction adding or subtracting like fractions like fractions adding or subtracting  If , then  Add.     Because these are like fractions, we add their numerators and keep the same denominator.  We combine the numerators over a single denominator.   We summarize our procedure for adding or subtracting like fractions as follows.  To add or subtract like fractions like fractions adding or subtracting fraction adding or subtracting like fractions sum or difference of fractions   Add or subtract the numerators.  Keep the same denominator.  Reduce the sum or difference if necessary.  Practice 3   Add:                             We must be careful when subtracting algebraic fractions: A subtraction sign in front of a fraction applies to the entire numerator.  Subtract:  We combine the numerators over a single denominator. We use parentheses around to show that the subtraction applies to the entire numerator. We should always check to see whether the fraction can be reduced. Factor the numerator to find   In the Example above, the subtraction symbol in the numerator applies to both terms of . That is why  QuickCheck 2   True or False.   Like fractions have the same denominator.   True    False      To add like fractions, we add their numerators and add their denominators.   True    False      A negative sign in front of a fraction changes the sign of both numerator and denominator.   True    False      When we subtract fractions, the subtraction symbol applies only to the first term of the numerator.   True    False                             True    False    False    False         Practice 4   Subtract:                              Unlike Fractions fraction unlike  Let's review the steps for adding or subtracting unlike fractions. For example, to compute the sum we first find the lowest common denominator lowest common denominator LCD lowest common denominator , or LCD, for the two fractions: The smallest number that is a multiple of both 3 and 4 is 12.  Next, we use the fundamental principle of fractions to build each fraction to an equivalent one with denominator 12: There is noting mysterious about the building process; we are breaking up each fraction into smaller pieces of the same size so that we can add them together.    subdivided rectangles  Finally, the new fractions are like fractions, and we can add them by combining their numerators. We add or subtract algebraic fractions with the same three steps.  To add or subtract algebraic fraction algebraic fraction adding or subtracting fraction adding or subtracting algebraic fractions sum or difference of fractions   Find the lowest common denominator (LCD) for the fractions.  Build each fraction to an equivalent one with the same denominator.  Add or subtract the resulting like fractions: Add or subtract their numerators, and keep the same denominator.  Reduce the sum or difference if necessary.   Subtract:  Step 1: We find the LCD: The smallest multiple of both 6 and 15 is 30.  Step 2: We build each fraction to an equivalent one with denominator 30. The building factor for the first fraction is , and for the second fraction the building factor is .  Step 3: We subtract the resulting like fractions to obtain  Step 4: Finally, we reduce the fraction.   Practice 5   Add:                             QuickCheck 3   Fill in the blanks.   To add unlike fractions, we must first convert them into   decimal    factored    like    reduced   fractions.    Building a fraction is an application of the   distributive law    fundamental principle of fractions    Pythagorean Theorem    zero factor principle   .    The LCD is the smallest   divisor    factor    multiple   . of each denominator.    The last step in adding fractions is to   check the solution in the equation    factor the numerator    reduce the fraction   .                           like    fundamental principle of fractions    multiple    reduce          Finding the Lowest Common Denominator  The lowest common denominator lowest common denominator fraction lowest common denominator lowest common denominator for two or more algebraic fractions is the simplest algebraic expression that is a multiple of each denominator. If neither denominator can be factored, then their LCD is just the product of the two expressions.  Add:  Step 1: The LCD for these fractions is just the product of their denominators, .  Step 2: We build each fraction to an equivalent one with denominator . The building factor for is and the building factor for is . We multiply numerator and denominator of each fraction by its building factor.  Step 3: We combine the resulting like fractions.  Step 4: The numerator of this fraction cannot be factored, so the sum cannot be reduced.  Practice 6   Write as a single fraction in reduced form:                             If the denominators contain any common factors, the LCD is not simply their product. For example, the LCD for is not . It is true that 216 is a multiple of both 12 and 18, but it is not the smallest one! We can find a smaller common denominator by factoring each denominator. To find a number that both 12 and 18 divide into evenly, we need only enough factors to cover each of them. In this case two 2's and two 3's are sufficient, so the LCD is You can check that both 12 and 18 divide evenly into 36.  In general, we can find the LCD in the following way.  To Find the LCD lowest common denominator finding the   Factor each denominator completely.  Include each different factor in the LCD as many times as it occurs in any one of the given denominators.   Find the LCD for the fractions and  We factor the denominators of each of the given fractions. The factor occurs once in the first denominator, the factor occurs once in the second denominator, and the factor occurs once in each denominator. Therefore we include in our LCD one copy of each of these factors. The LCD is .   In the previous Example , we do not include two factors of in the LCD. We need only one factor of , because occurs only once in each denominator. You can check that each original denominator divides evenly into our LCD, .  Practice 7   Find the LCD for the fractions and  LCD                Adding and Subtracting Unlike Fractions fraction adding or subtracting unlike fractions  After finding the LCD, we build each fraction to an equivalent one with the LCD as its denominator. The new fractions will be like fractions, so we can combine their numerators.  Building a fraction is an application of the fundamental principle of fractions, It is the opposite of reducing a fraction, because we multiply, rather than divide, the numerator and denominator by an appropriate factor. To find the building factor building factor fraction building factor , we compare the factors of the original denominator with those of the desired common denominator.  Add:  Step 1: Find the LCD. We factor each denominator completely. The LCD is .  Step 2: We build each fraction to an equivalent one with the LCD as its denominator. The building factor for is . We multiply the numerator and denominator of the first fraction by : The building factor for is .  Step 3: The fractions are now like fractions, so we add them by combining their numerators.  Step 4: Finally, we reduce the fraction.   Do not reduce the built-up fractions in Step 3 -- you will just get back to the original problem. When adding fractions, we have to make the fractions \"harder\" before we can combine them. Don't reduce until the last step of the problem.  QuickCheck 4   True or False.   We can always find the LCD by multiplying together the denominators of the fractions.   True    False      If each denominator includes one factor of we include two factors of in the LCD.   True    False      We find the building factor for each fraction by comparing its denominator to the LCD.   True    False      When adding fractions, it is best to reduce the fractions at each step.   True    False                             False    False    True    False         Practice 8   Subtract:                              Applications  Recall that the formulas for rational functions are algebraic fractions. It is often useful to simplify the formula for a function before using it.  When estimating their travel time, pilots must take into account the prevailing winds. A tail wind adds to the plane's ground speed, while a head wind decreases the ground speed. Skyhigh Airlines is setting up a shuttle service from Dallas to Phoenix, a distance of 800 miles.  Express the time needed for a one-way trip, without wind, as a function of the speed of the plane.  Suppose there is a prevailing wind of 30 miles per hour blowing from the west. Write expressions for the flying time from Dallas to Phoenix and from Phoenix to Dallas.  Write an expression for the round trip flying time with a 30-mile-per-hour wind from the west, as a function of the plane's speed. Simplify your expression.   Recall that . If we let represent the speed of the plane in still air, then the time required for a one-way trip is  On the trip from Dallas to Phoenix the plane encounters a head wind of 30 miles per hour, so its actual ground speed is . On the return trip the plan enjoys a tail wind of 30 miles per hour, so its actual ground speed is . Therefore, the flying times are  The round-trip flying time from Dallas to Phoenix and back is The LCD for these fractions is . Thus,  Practice 9   A rowing team can maintain a speed of 15 miles per hour in still water. The team s daily training session includes a 5-mile run up the Red Cedar River and the return downstream.   Express the team s time on the upstream leg as a function of the speed of the current.    Write a function for the team s time on the downstream leg.    Write and simplify an expression for the total time for the training run as a function of the current s speed.                                      Problem Set 8.3  Warm Up  In Problems 1 6, we review the operations on arithmetic fractions.                                              Skills Practice  Multiply.        Write each product as a fraction.     For Problems 9 14, multiply.         For Problems 15 24, divide.             For Problems 25 28, add or subtract.       For Problems 29 36, find the lowest common denominator for the fractions, then add or subtract.                 For Problems 43 46, find the lowest common denominator.        Applications  For Problems 47 54, multiply.           Write an algebraic expression for each phrase Problems 55 57, and simplify.    One-half of  divided by one-half  One-half divided by       Two-thirds of  divided by two-thirds  Two-thirds divided by   The reciprocal of  Three-fourths of the reciprocal of  The reciprocal of divided by three-fourths      Simplify.      For Problems 59 64, add or subtract.          For Problems 65 68, write algebraic fractions in simplest form.  The dimensions of a rectangular rug are feet and feet.  Write and sinplify an expression for the area of the rug.  Write and sinplify an expression for the perimeter of the rug.  sq ft   Colonial Airline has a commuter flight between Richmond and Washington, a distance of 100 miles. The plane flies at miles per hour in still air. Today there is a steady wind from the north at 10 miles per hour.  How long will the flight from Richmond to Washington take?  How long will the flight from Washington to Richmond take?  How long will a round trip take?  Evaluate your fractions in parts (a)-(c) for  Two pilots for the Flying Express parcel service receive packages simultaneously. Orville leaves Boston for Chicago at the same time Wilbur leaves Chicago for Boston. Each pilot selects an air speed of 400 miles per hour for the 900-mile trip. The prevailing winds blow from east to west.  Express Orville's flying time as a function of the wind speed.  Write a function for Wilbur's flying time.  Who reaches his destination first? By how much time (in terms of wind speed)?  hr  hr  Orville, by hr  Francine's cocker spaniel eats a large bag of dog food in days, and Delbert's sheep dog takes 5 fewer days to eat the same size bag.  What fraction of a bag of dog food does Francine's cocker spaniel eat in one day?  What fraction of a bag of dog food does Delbert's sheep dog eat in one day?  If Delbert and Francine get married, what fraction of a bag of dog food will their dogs eat in one day?  If , how soon will Delbert and Francine have to buy more dog food?     "
-},
-{
-  "id": "example-202",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#example-202",
-  "type": "Example",
-  "number": "8.3.1",
-  "title": "",
-  "body": "Multiply  First, we factor each numerator and denominator. Then we divide numerator and denominator by any common factors.  "
-},
-{
-  "id": "exercise-1745",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#exercise-1745",
-  "type": "Checkpoint",
-  "number": "8.3.2",
-  "title": "Practice 1.",
-  "body": "Practice 1   Find the product                            "
-},
-{
-  "id": "example-203",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#example-203",
-  "type": "Example",
-  "number": "8.3.3",
-  "title": "",
-  "body": "Divide:  First, we change the operation to multiplication by taking the reciprocal of the divisor. Now we follow the rules for multiplication: First, we factor each numerator and denominator. "
-},
-{
-  "id": "note-25",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#note-25",
-  "type": "Note",
-  "number": "8.3.4",
-  "title": "",
-  "body": "When working with algebraic fractions, we often leave the denominators in factored form. This makes it easier to add and subtract fractions, and to check whether they can be reducecd. "
-},
-{
-  "id": "exercise-1746",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#exercise-1746",
-  "type": "Checkpoint",
-  "number": "8.3.5",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   Fill in the blanks.   The first step in multiplying fractions is to   add together the numerators    factor each numerator and denominator    find the reciprocal of each fraction    remove any exponents   .    It is usually easier to cancel common factors   after    before   multiplying.    To divide two fractions, we multiply the first fraction by the   GCF    LCD    opposite    reciprocal   of the second fraction.    We can write a whole number as a fraction with denominator .                           factor    before    reciprocal    1        "
-},
-{
-  "id": "exercise-1747",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#exercise-1747",
-  "type": "Checkpoint",
-  "number": "8.3.6",
-  "title": "Practice 2.",
-  "body": "Practice 2   Divide:                            "
-},
-{
-  "id": "p-8083",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#p-8083",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "like fractions "
+  "body": "Operations on Algebraic Fractions  Products of Fractions  To multiply two fractions together, we multiply their numerators together and then multiply their denominators together.  Product of Fractions product of fractions  If and , then  If a common factor occurs in a numerator and a denominator of either fraction, we can divide it out either before or after multiplying. For example, or It is usually easier to cancel any common factors before multiplying.  Multiply  First, we factor each numerator and denominator. Then we divide numerator and denominator by any common factors.   Practice 1 Find the product  To multiply a fraction by a whole number, we write the whole number with 1 as denominator. The same applies to the product of an algebraic fraction and any nonfractional expression. For example,  We summarize the procedure for multiplying algebraic fractions as follows.  To multiply algebraic fractions: algebraic fraction multiplying product of fractions fraction multiplying fraction multiplying muliplying algebraic fractions   Factor each numerator and denominator.  If any factor appears in both a numerator and a denominator, divide out that factor.  Multiply the remaining factors of the numerator and the remaining factors of the denominator.  Reduce the product if necessary.   Quotients of Fractions quotient of fractions fraction dividing  To divide one fraction by another, we multiply the first fraction by the reciprocal of the second fraction. For example, We express this rule in symbols as follows.  Quotient of Fractions quotient of fractions fraction dividing  If , then  Thus, to divide two algebraic fractions, we take the reciprocal of the divisor and then follow the rules for multiplying algebraic fractions.  Divide:  First, we change the operation to multiplication by taking the reciprocal of the divisor. Now we follow the rules for multiplication: First, we factor each numerator and denominator.  When working with algebraic fractions, we often leave the denominators in factored form. This makes it easier to add and subtract fractions, and to check whether they can be reducecd.  QuickCheck 1 Fill in the blanks.   The first step in multiplying fractions is to .  It is usually easier to cancel common factors multiplying.  To divide two fractions, we multiply the first fraction by the of the second fraction.  We can write a whole number as a fraction with denominator .   We summarize the procedure for dividing algebraic fractions as follows.  To divide algebraic fractions: algebraic fraction dividing dividing algebraic fractions quotient of fractions fraction dividing   Take the reciprocal of the second fraction and change the operation to multiplication.  Follow the rules for multiplication of fractions.  Practice 2 Divide:   Adding and Subtracting Like Fractions fraction adding or subtracting like fractions adding or subtracting sum or difference of fractions  Fractions with the same denominator are called like fractions like fractions . For example, are like fractions, while are unlike fractions. We can add or subtract like fractions for the same reason that we can add like terms. Just as we can think of the sum as or . The denominators of the terms must be the same because they tell us what kind of quantity we are adding. We can add two quantities if they are the same kind.  When we add like fractions, we add their numerators and keep their denominators the same. For example, The same holds true for all algebraic fractions.  Sum or Difference of Like Fractions sum or difference of fractions fraction adding or subtracting like fractions like fractions adding or subtracting  If , then  Add.     Because these are like fractions, we add their numerators and keep the same denominator.  We combine the numerators over a single denominator.   We summarize our procedure for adding or subtracting like fractions as follows.  To add or subtract like fractions like fractions adding or subtracting fraction adding or subtracting like fractions sum or difference of fractions   Add or subtract the numerators.  Keep the same denominator.  Reduce the sum or difference if necessary.  Practice 3 Add:  We must be careful when subtracting algebraic fractions: A subtraction sign in front of a fraction applies to the entire numerator.  Subtract:  We combine the numerators over a single denominator. We use parentheses around to show that the subtraction applies to the entire numerator. We should always check to see whether the fraction can be reduced. Factor the numerator to find   In the Example above, the subtraction symbol in the numerator applies to both terms of . That is why  QuickCheck 2 True or False.   Like fractions have the same denominator.  To add like fractions, we add their numerators and add their denominators.  A negative sign in front of a fraction changes the sign of both numerator and denominator.  When we subtract fractions, the subtraction symbol applies only to the first term of the numerator.   Practice 4 Subtract:   Unlike Fractions fraction unlike  Let's review the steps for adding or subtracting unlike fractions. For example, to compute the sum we first find the lowest common denominator lowest common denominator LCD lowest common denominator , or LCD, for the two fractions: The smallest number that is a multiple of both 3 and 4 is 12.  Next, we use the fundamental principle of fractions to build each fraction to an equivalent one with denominator 12: There is noting mysterious about the building process; we are breaking up each fraction into smaller pieces of the same size so that we can add them together.  subdivided rectangles  Finally, the new fractions are like fractions, and we can add them by combining their numerators. We add or subtract algebraic fractions with the same three steps.  To add or subtract algebraic fraction algebraic fraction adding or subtracting fraction adding or subtracting algebraic fractions sum or difference of fractions   Find the lowest common denominator (LCD) for the fractions.  Build each fraction to an equivalent one with the same denominator.  Add or subtract the resulting like fractions: Add or subtract their numerators, and keep the same denominator.  Reduce the sum or difference if necessary.    Subtract:  Step 1: We find the LCD: The smallest multiple of both 6 and 15 is 30.  Step 2: We build each fraction to an equivalent one with denominator 30. The building factor for the first fraction is , and for the second fraction the building factor is .  Step 3: We subtract the resulting like fractions to obtain  Step 4: Finally, we reduce the fraction.   Practice 5 Add:  QuickCheck 3  Fill in the blanks.   To add unlike fractions, we must first convert them into fractions.  Building a fraction is an application of the .  The LCD is the smallest . of each denominator.  The last step in adding fractions is to .    Finding the Lowest Common Denominator  The lowest common denominator lowest common denominator fraction lowest common denominator lowest common denominator for two or more algebraic fractions is the simplest algebraic expression that is a multiple of each denominator. If neither denominator can be factored, then their LCD is just the product of the two expressions.  Add:  Step 1: The LCD for these fractions is just the product of their denominators, .  Step 2: We build each fraction to an equivalent one with denominator . The building factor for is and the building factor for is . We multiply numerator and denominator of each fraction by its building factor.  Step 3: We combine the resulting like fractions.  Step 4: The numerator of this fraction cannot be factored, so the sum cannot be reduced.  Practice 6 Write as a single fraction in reduced form:  If the denominators contain any common factors, the LCD is not simply their product. For example, the LCD for is not . It is true that 216 is a multiple of both 12 and 18, but it is not the smallest one! We can find a smaller common denominator by factoring each denominator. To find a number that both 12 and 18 divide into evenly, we need only enough factors to cover each of them. In this case two 2's and two 3's are sufficient, so the LCD is You can check that both 12 and 18 divide evenly into 36.  In general, we can find the LCD in the following way.  To Find the LCD lowest common denominator finding the   Factor each denominator completely.  Include each different factor in the LCD as many times as it occurs in any one of the given denominators.   Find the LCD for the fractions and  We factor the denominators of each of the given fractions. The factor occurs once in the first denominator, the factor occurs once in the second denominator, and the factor occurs once in each denominator. Therefore we include in our LCD one copy of each of these factors. The LCD is .   In the previous Example , we do not include two factors of in the LCD. We need only one factor of , because occurs only once in each denominator. You can check that each original denominator divides evenly into our LCD, .  Practice 7 Find the LCD for the fractions and   Adding and Subtracting Unlike Fractions fraction adding or subtracting unlike fractions  After finding the LCD, we build each fraction to an equivalent one with the LCD as its denominator. The new fractions will be like fractions, so we can combine their numerators.  Building a fraction is an application of the fundamental principle of fractions, It is the opposite of reducing a fraction, because we multiply, rather than divide, the numerator and denominator by an appropriate factor. To find the building factor building factor fraction building factor , we compare the factors of the original denominator with those of the desired common denominator.  Add:  Step 1: Find the LCD. We factor each denominator completely. The LCD is .  Step 2: We build each fraction to an equivalent one with the LCD as its denominator. The building factor for is . We multiply the numerator and denominator of the first fraction by : The building factor for is .  Step 3: The fractions are now like fractions, so we add them by combining their numerators.  Step 4: Finally, we reduce the fraction.   Do not reduce the built-up fractions in Step 3 -- you will just get back to the original problem. When adding fractions, we have to make the fractions \"harder\" before we can combine them. Don't reduce until the last step of the problem.  QuickCheck 4 True or False.   We can always find the LCD by multiplying together the denominators of the fractions.  If each denominator includes one factor of , we include two factors of in the LCD.  We find the building factor for each fraction by comparing its denominator to the LCD.  When adding fractions, it is best to reduce the fractions at each step.   Practice 8 Subtract:   Applications  Recall that the formulas for rational functions are algebraic fractions. It is often useful to simplify the formula for a function before using it.  When estimating their travel time, pilots must take into account the prevailing winds. A tail wind adds to the plane's ground speed, while a head wind decreases the ground speed. Skyhigh Airlines is setting up a shuttle service from Dallas to Phoenix, a distance of 800 miles.  Express the time needed for a one-way trip, without wind, as a function of the speed of the plane.  Suppose there is a prevailing wind of 30 miles per hour blowing from the west. Write expressions for the flying time from Dallas to Phoenix and from Phoenix to Dallas.  Write an expression for the round trip flying time with a 30-mile-per-hour wind from the west, as a function of the plane's speed. Simplify your expression.   Recall that . If we let represent the speed of the plane in still air, then the time required for a one-way trip is  On the trip from Dallas to Phoenix the plane encounters a head wind of 30 miles per hour, so its actual ground speed is . On the return trip the plan enjoys a tail wind of 30 miles per hour, so its actual ground speed is . Therefore, the flying times are  The round-trip flying time from Dallas to Phoenix and back is The LCD for these fractions is . Thus,  Practice 9 A rowing team can maintain a speed of 15 miles per hour in still water. he team's daily training session includes a 5-mile run up the Red Cedar River and the return downstream.   Express the team's time on the upstream leg as a function of the speed of the current.  Write a function for the team's time on the downstream leg.  Write and simplify an expression for the total time for the training run as a function of the current's speed.         Problem Set 8.3  Warm Up  In Problems 1 6, we review the operations on arithmetic fractions.                                              Skills Practice  Multiply.        Write each product as a fraction.     For Problems 9 14, multiply.         For Problems 15 24, divide.             For Problems 25 28, add or subtract.       For Problems 29 36, find the lowest common denominator for the fractions, then add or subtract.                 For Problems 43 46, find the lowest common denominator.        Applications  For Problems 47 54, multiply.           Write an algebraic expression for each phrase Problems 55 57, and simplify.    One-half of  divided by one-half  One-half divided by       Two-thirds of  divided by two-thirds  Two-thirds divided by   The reciprocal of  Three-fourths of the reciprocal of  The reciprocal of divided by three-fourths      Simplify.      For Problems 59 64, add or subtract.          For Problems 65 68, write algebraic fractions in simplest form.  The dimensions of a rectangular rug are feet and feet.  Write and sinplify an expression for the area of the rug.  Write and sinplify an expression for the perimeter of the rug.  sq ft   Colonial Airline has a commuter flight between Richmond and Washington, a distance of 100 miles. The plane flies at miles per hour in still air. Today there is a steady wind from the north at 10 miles per hour.  How long will the flight from Richmond to Washington take?  How long will the flight from Washington to Richmond take?  How long will a round trip take?  Evaluate your fractions in parts (a)-(c) for  Two pilots for the Flying Express parcel service receive packages simultaneously. Orville leaves Boston for Chicago at the same time Wilbur leaves Chicago for Boston. Each pilot selects an air speed of 400 miles per hour for the 900-mile trip. The prevailing winds blow from east to west.  Express Orville's flying time as a function of the wind speed.  Write a function for Wilbur's flying time.  Who reaches his destination first? By how much time (in terms of wind speed)?  hr  hr  Orville, by hr  Francine's cocker spaniel eats a large bag of dog food in days, and Delbert's sheep dog takes 5 fewer days to eat the same size bag.  What fraction of a bag of dog food does Francine's cocker spaniel eat in one day?  What fraction of a bag of dog food does Delbert's sheep dog eat in one day?  If Delbert and Francine get married, what fraction of a bag of dog food will their dogs eat in one day?  If , how soon will Delbert and Francine have to buy more dog food?     "
 },
 {
   "id": "example-204",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#example-204",
   "type": "Example",
-  "number": "8.3.7",
+  "number": "8.3.1",
   "title": "",
-  "body": "Add.     Because these are like fractions, we add their numerators and keep the same denominator.  We combine the numerators over a single denominator.  "
+  "body": "Multiply  First, we factor each numerator and denominator. Then we divide numerator and denominator by any common factors.  "
+},
+{
+  "id": "exercise-1746",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#exercise-1746",
+  "type": "Checkpoint",
+  "number": "8.3.2",
+  "title": "Practice 1.",
+  "body": "Practice 1 Find the product "
+},
+{
+  "id": "example-205",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#example-205",
+  "type": "Example",
+  "number": "8.3.3",
+  "title": "",
+  "body": "Divide:  First, we change the operation to multiplication by taking the reciprocal of the divisor. Now we follow the rules for multiplication: First, we factor each numerator and denominator. "
+},
+{
+  "id": "note-26",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#note-26",
+  "type": "Note",
+  "number": "8.3.4",
+  "title": "",
+  "body": "When working with algebraic fractions, we often leave the denominators in factored form. This makes it easier to add and subtract fractions, and to check whether they can be reducecd. "
+},
+{
+  "id": "exercise-1747",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#exercise-1747",
+  "type": "Checkpoint",
+  "number": "8.3.5",
+  "title": "QuickCheck 1.",
+  "body": "QuickCheck 1 Fill in the blanks.   The first step in multiplying fractions is to .  It is usually easier to cancel common factors multiplying.  To divide two fractions, we multiply the first fraction by the of the second fraction.  We can write a whole number as a fraction with denominator .  "
 },
 {
   "id": "exercise-1748",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1748",
   "type": "Checkpoint",
+  "number": "8.3.6",
+  "title": "Practice 2.",
+  "body": "Practice 2 Divide: "
+},
+{
+  "id": "p-7881",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#p-7881",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "like fractions "
+},
+{
+  "id": "example-206",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#example-206",
+  "type": "Example",
+  "number": "8.3.7",
+  "title": "",
+  "body": "Add.     Because these are like fractions, we add their numerators and keep the same denominator.  We combine the numerators over a single denominator.  "
+},
+{
+  "id": "exercise-1749",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#exercise-1749",
+  "type": "Checkpoint",
   "number": "8.3.8",
   "title": "Practice 3.",
-  "body": "Practice 3   Add:                            "
+  "body": "Practice 3 Add: "
 },
 {
   "id": "example-subtract-linear-fractionals",
@@ -20044,85 +20080,85 @@ var ptx_lunr_docs = [
   "body": "Subtract:  We combine the numerators over a single denominator. We use parentheses around to show that the subtraction applies to the entire numerator. We should always check to see whether the fraction can be reduced. Factor the numerator to find  "
 },
 {
-  "id": "warning-39",
+  "id": "warning-38",
   "level": "2",
-  "url": "OperationsAlgebraicFractions.html#warning-39",
+  "url": "OperationsAlgebraicFractions.html#warning-38",
   "type": "Caution",
   "number": "8.3.10",
   "title": "",
   "body": "In the Example above, the subtraction symbol in the numerator applies to both terms of . That is why "
 },
 {
-  "id": "exercise-1749",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#exercise-1749",
-  "type": "Checkpoint",
-  "number": "8.3.11",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   True or False.   Like fractions have the same denominator.   True    False      To add like fractions, we add their numerators and add their denominators.   True    False      A negative sign in front of a fraction changes the sign of both numerator and denominator.   True    False      When we subtract fractions, the subtraction symbol applies only to the first term of the numerator.   True    False                             True    False    False    False        "
-},
-{
   "id": "exercise-1750",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1750",
   "type": "Checkpoint",
-  "number": "8.3.12",
-  "title": "Practice 4.",
-  "body": "Practice 4   Subtract:                            "
-},
-{
-  "id": "example-206",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#example-206",
-  "type": "Example",
-  "number": "8.3.13",
-  "title": "",
-  "body": " Subtract:  Step 1: We find the LCD: The smallest multiple of both 6 and 15 is 30.  Step 2: We build each fraction to an equivalent one with denominator 30. The building factor for the first fraction is , and for the second fraction the building factor is .  Step 3: We subtract the resulting like fractions to obtain  Step 4: Finally, we reduce the fraction.  "
+  "number": "8.3.11",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 True or False.   Like fractions have the same denominator.  To add like fractions, we add their numerators and add their denominators.  A negative sign in front of a fraction changes the sign of both numerator and denominator.  When we subtract fractions, the subtraction symbol applies only to the first term of the numerator.  "
 },
 {
   "id": "exercise-1751",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1751",
   "type": "Checkpoint",
-  "number": "8.3.14",
-  "title": "Practice 5.",
-  "body": "Practice 5   Add:                            "
+  "number": "8.3.12",
+  "title": "Practice 4.",
+  "body": "Practice 4 Subtract: "
+},
+{
+  "id": "example-208",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#example-208",
+  "type": "Example",
+  "number": "8.3.13",
+  "title": "",
+  "body": " Subtract:  Step 1: We find the LCD: The smallest multiple of both 6 and 15 is 30.  Step 2: We build each fraction to an equivalent one with denominator 30. The building factor for the first fraction is , and for the second fraction the building factor is .  Step 3: We subtract the resulting like fractions to obtain  Step 4: Finally, we reduce the fraction.  "
 },
 {
   "id": "exercise-1752",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1752",
   "type": "Checkpoint",
-  "number": "8.3.15",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   Fill in the blanks.   To add unlike fractions, we must first convert them into   decimal    factored    like    reduced   fractions.    Building a fraction is an application of the   distributive law    fundamental principle of fractions    Pythagorean Theorem    zero factor principle   .    The LCD is the smallest   divisor    factor    multiple   . of each denominator.    The last step in adding fractions is to   check the solution in the equation    factor the numerator    reduce the fraction   .                           like    fundamental principle of fractions    multiple    reduce        "
-},
-{
-  "id": "p-8167",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#p-8167",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "lowest common denominator "
-},
-{
-  "id": "example-207",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#example-207",
-  "type": "Example",
-  "number": "8.3.16",
-  "title": "",
-  "body": "Add:  Step 1: The LCD for these fractions is just the product of their denominators, .  Step 2: We build each fraction to an equivalent one with denominator . The building factor for is and the building factor for is . We multiply numerator and denominator of each fraction by its building factor.  Step 3: We combine the resulting like fractions.  Step 4: The numerator of this fraction cannot be factored, so the sum cannot be reduced. "
+  "number": "8.3.14",
+  "title": "Practice 5.",
+  "body": "Practice 5 Add: "
 },
 {
   "id": "exercise-1753",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1753",
   "type": "Checkpoint",
+  "number": "8.3.15",
+  "title": "QuickCheck 3.",
+  "body": "QuickCheck 3  Fill in the blanks.   To add unlike fractions, we must first convert them into fractions.  Building a fraction is an application of the .  The LCD is the smallest . of each denominator.  The last step in adding fractions is to .  "
+},
+{
+  "id": "p-7921",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#p-7921",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "lowest common denominator "
+},
+{
+  "id": "example-209",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#example-209",
+  "type": "Example",
+  "number": "8.3.16",
+  "title": "",
+  "body": "Add:  Step 1: The LCD for these fractions is just the product of their denominators, .  Step 2: We build each fraction to an equivalent one with denominator . The building factor for is and the building factor for is . We multiply numerator and denominator of each fraction by its building factor.  Step 3: We combine the resulting like fractions.  Step 4: The numerator of this fraction cannot be factored, so the sum cannot be reduced. "
+},
+{
+  "id": "exercise-1754",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#exercise-1754",
+  "type": "Checkpoint",
   "number": "8.3.17",
   "title": "Practice 6.",
-  "body": "Practice 6   Write as a single fraction in reduced form:                            "
+  "body": "Practice 6 Write as a single fraction in reduced form: "
 },
 {
   "id": "Example-find-LCD",
@@ -20134,173 +20170,164 @@ var ptx_lunr_docs = [
   "body": "Find the LCD for the fractions and  We factor the denominators of each of the given fractions. The factor occurs once in the first denominator, the factor occurs once in the second denominator, and the factor occurs once in each denominator. Therefore we include in our LCD one copy of each of these factors. The LCD is .  "
 },
 {
-  "id": "warning-40",
+  "id": "warning-39",
   "level": "2",
-  "url": "OperationsAlgebraicFractions.html#warning-40",
+  "url": "OperationsAlgebraicFractions.html#warning-39",
   "type": "Caution",
   "number": "8.3.19",
   "title": "",
   "body": "In the previous Example , we do not include two factors of in the LCD. We need only one factor of , because occurs only once in each denominator. You can check that each original denominator divides evenly into our LCD, . "
 },
 {
-  "id": "exercise-1754",
+  "id": "exercise-1755",
   "level": "2",
-  "url": "OperationsAlgebraicFractions.html#exercise-1754",
+  "url": "OperationsAlgebraicFractions.html#exercise-1755",
   "type": "Checkpoint",
   "number": "8.3.20",
   "title": "Practice 7.",
-  "body": "Practice 7   Find the LCD for the fractions and  LCD              "
+  "body": "Practice 7 Find the LCD for the fractions and "
 },
 {
-  "id": "p-8188",
+  "id": "p-7938",
   "level": "2",
-  "url": "OperationsAlgebraicFractions.html#p-8188",
+  "url": "OperationsAlgebraicFractions.html#p-7938",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "building factor "
 },
 {
-  "id": "example-209",
+  "id": "example-211",
   "level": "2",
-  "url": "OperationsAlgebraicFractions.html#example-209",
+  "url": "OperationsAlgebraicFractions.html#example-211",
   "type": "Example",
   "number": "8.3.21",
   "title": "",
   "body": "Add:  Step 1: Find the LCD. We factor each denominator completely. The LCD is .  Step 2: We build each fraction to an equivalent one with the LCD as its denominator. The building factor for is . We multiply the numerator and denominator of the first fraction by : The building factor for is .  Step 3: The fractions are now like fractions, so we add them by combining their numerators.  Step 4: Finally, we reduce the fraction.  "
 },
 {
-  "id": "warning-41",
+  "id": "warning-40",
   "level": "2",
-  "url": "OperationsAlgebraicFractions.html#warning-41",
+  "url": "OperationsAlgebraicFractions.html#warning-40",
   "type": "Caution",
   "number": "8.3.22",
   "title": "",
   "body": "Do not reduce the built-up fractions in Step 3 -- you will just get back to the original problem. When adding fractions, we have to make the fractions \"harder\" before we can combine them. Don't reduce until the last step of the problem. "
 },
 {
-  "id": "exercise-1755",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#exercise-1755",
-  "type": "Checkpoint",
-  "number": "8.3.23",
-  "title": "QuickCheck 4.",
-  "body": "QuickCheck 4   True or False.   We can always find the LCD by multiplying together the denominators of the fractions.   True    False      If each denominator includes one factor of we include two factors of in the LCD.   True    False      We find the building factor for each fraction by comparing its denominator to the LCD.   True    False      When adding fractions, it is best to reduce the fractions at each step.   True    False                             False    False    True    False        "
-},
-{
   "id": "exercise-1756",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1756",
   "type": "Checkpoint",
-  "number": "8.3.24",
-  "title": "Practice 8.",
-  "body": "Practice 8   Subtract:                            "
-},
-{
-  "id": "example-210",
-  "level": "2",
-  "url": "OperationsAlgebraicFractions.html#example-210",
-  "type": "Example",
-  "number": "8.3.25",
-  "title": "",
-  "body": "When estimating their travel time, pilots must take into account the prevailing winds. A tail wind adds to the plane's ground speed, while a head wind decreases the ground speed. Skyhigh Airlines is setting up a shuttle service from Dallas to Phoenix, a distance of 800 miles.  Express the time needed for a one-way trip, without wind, as a function of the speed of the plane.  Suppose there is a prevailing wind of 30 miles per hour blowing from the west. Write expressions for the flying time from Dallas to Phoenix and from Phoenix to Dallas.  Write an expression for the round trip flying time with a 30-mile-per-hour wind from the west, as a function of the plane's speed. Simplify your expression.   Recall that . If we let represent the speed of the plane in still air, then the time required for a one-way trip is  On the trip from Dallas to Phoenix the plane encounters a head wind of 30 miles per hour, so its actual ground speed is . On the return trip the plan enjoys a tail wind of 30 miles per hour, so its actual ground speed is . Therefore, the flying times are  The round-trip flying time from Dallas to Phoenix and back is The LCD for these fractions is . Thus, "
+  "number": "8.3.23",
+  "title": "QuickCheck 4.",
+  "body": "QuickCheck 4 True or False.   We can always find the LCD by multiplying together the denominators of the fractions.  If each denominator includes one factor of , we include two factors of in the LCD.  We find the building factor for each fraction by comparing its denominator to the LCD.  When adding fractions, it is best to reduce the fractions at each step.  "
 },
 {
   "id": "exercise-1757",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1757",
   "type": "Checkpoint",
-  "number": "8.3.26",
-  "title": "Practice 9.",
-  "body": "Practice 9   A rowing team can maintain a speed of 15 miles per hour in still water. The team s daily training session includes a 5-mile run up the Red Cedar River and the return downstream.   Express the team s time on the upstream leg as a function of the speed of the current.    Write a function for the team s time on the downstream leg.    Write and simplify an expression for the total time for the training run as a function of the current s speed.                                   "
+  "number": "8.3.24",
+  "title": "Practice 8.",
+  "body": "Practice 8 Subtract: "
+},
+{
+  "id": "example-212",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#example-212",
+  "type": "Example",
+  "number": "8.3.25",
+  "title": "",
+  "body": "When estimating their travel time, pilots must take into account the prevailing winds. A tail wind adds to the plane's ground speed, while a head wind decreases the ground speed. Skyhigh Airlines is setting up a shuttle service from Dallas to Phoenix, a distance of 800 miles.  Express the time needed for a one-way trip, without wind, as a function of the speed of the plane.  Suppose there is a prevailing wind of 30 miles per hour blowing from the west. Write expressions for the flying time from Dallas to Phoenix and from Phoenix to Dallas.  Write an expression for the round trip flying time with a 30-mile-per-hour wind from the west, as a function of the plane's speed. Simplify your expression.   Recall that . If we let represent the speed of the plane in still air, then the time required for a one-way trip is  On the trip from Dallas to Phoenix the plane encounters a head wind of 30 miles per hour, so its actual ground speed is . On the return trip the plan enjoys a tail wind of 30 miles per hour, so its actual ground speed is . Therefore, the flying times are  The round-trip flying time from Dallas to Phoenix and back is The LCD for these fractions is . Thus, "
 },
 {
   "id": "exercise-1758",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1758",
-  "type": "Exercise",
-  "number": "8.3.8.1",
-  "title": "",
-  "body": "       "
+  "type": "Checkpoint",
+  "number": "8.3.26",
+  "title": "Practice 9.",
+  "body": "Practice 9 A rowing team can maintain a speed of 15 miles per hour in still water. he team's daily training session includes a 5-mile run up the Red Cedar River and the return downstream.   Express the team's time on the upstream leg as a function of the speed of the current.  Write a function for the team's time on the downstream leg.  Write and simplify an expression for the total time for the training run as a function of the current's speed.      "
 },
 {
   "id": "exercise-1759",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1759",
   "type": "Exercise",
-  "number": "8.3.8.2",
+  "number": "8.3.8.1",
   "title": "",
-  "body": "     "
+  "body": "       "
 },
 {
   "id": "exercise-1760",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1760",
   "type": "Exercise",
-  "number": "8.3.8.3",
+  "number": "8.3.8.2",
   "title": "",
-  "body": "       "
+  "body": "     "
 },
 {
   "id": "exercise-1761",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1761",
   "type": "Exercise",
-  "number": "8.3.8.4",
+  "number": "8.3.8.3",
   "title": "",
-  "body": "     "
+  "body": "       "
 },
 {
   "id": "exercise-1762",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1762",
   "type": "Exercise",
-  "number": "8.3.8.5",
+  "number": "8.3.8.4",
   "title": "",
-  "body": "       "
+  "body": "     "
 },
 {
   "id": "exercise-1763",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1763",
   "type": "Exercise",
-  "number": "8.3.8.6",
+  "number": "8.3.8.5",
   "title": "",
-  "body": "     "
+  "body": "       "
 },
 {
   "id": "exercise-1764",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1764",
   "type": "Exercise",
-  "number": "8.3.8.7",
+  "number": "8.3.8.6",
   "title": "",
-  "body": "Multiply.       "
+  "body": "     "
 },
 {
   "id": "exercise-1765",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1765",
   "type": "Exercise",
-  "number": "8.3.8.8",
+  "number": "8.3.8.7",
   "title": "",
-  "body": "Write each product as a fraction.    "
+  "body": "Multiply.       "
 },
 {
   "id": "exercise-1766",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1766",
   "type": "Exercise",
-  "number": "8.3.8.9",
+  "number": "8.3.8.8",
   "title": "",
-  "body": ""
+  "body": "Write each product as a fraction.    "
 },
 {
   "id": "exercise-1767",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1767",
   "type": "Exercise",
-  "number": "8.3.8.10",
+  "number": "8.3.8.9",
   "title": "",
   "body": ""
 },
@@ -20309,7 +20336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1768",
   "type": "Exercise",
-  "number": "8.3.8.11",
+  "number": "8.3.8.10",
   "title": "",
   "body": ""
 },
@@ -20318,7 +20345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1769",
   "type": "Exercise",
-  "number": "8.3.8.12",
+  "number": "8.3.8.11",
   "title": "",
   "body": ""
 },
@@ -20327,7 +20354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1770",
   "type": "Exercise",
-  "number": "8.3.8.13",
+  "number": "8.3.8.12",
   "title": "",
   "body": ""
 },
@@ -20336,7 +20363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1771",
   "type": "Exercise",
-  "number": "8.3.8.14",
+  "number": "8.3.8.13",
   "title": "",
   "body": ""
 },
@@ -20345,7 +20372,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1772",
   "type": "Exercise",
-  "number": "8.3.8.15",
+  "number": "8.3.8.14",
   "title": "",
   "body": ""
 },
@@ -20354,7 +20381,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1773",
   "type": "Exercise",
-  "number": "8.3.8.16",
+  "number": "8.3.8.15",
   "title": "",
   "body": ""
 },
@@ -20363,7 +20390,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1774",
   "type": "Exercise",
-  "number": "8.3.8.17",
+  "number": "8.3.8.16",
   "title": "",
   "body": ""
 },
@@ -20372,7 +20399,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1775",
   "type": "Exercise",
-  "number": "8.3.8.18",
+  "number": "8.3.8.17",
   "title": "",
   "body": ""
 },
@@ -20381,7 +20408,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1776",
   "type": "Exercise",
-  "number": "8.3.8.19",
+  "number": "8.3.8.18",
   "title": "",
   "body": ""
 },
@@ -20390,7 +20417,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1777",
   "type": "Exercise",
-  "number": "8.3.8.20",
+  "number": "8.3.8.19",
   "title": "",
   "body": ""
 },
@@ -20399,7 +20426,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1778",
   "type": "Exercise",
-  "number": "8.3.8.21",
+  "number": "8.3.8.20",
   "title": "",
   "body": ""
 },
@@ -20408,7 +20435,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1779",
   "type": "Exercise",
-  "number": "8.3.8.22",
+  "number": "8.3.8.21",
   "title": "",
   "body": ""
 },
@@ -20417,7 +20444,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1780",
   "type": "Exercise",
-  "number": "8.3.8.23",
+  "number": "8.3.8.22",
   "title": "",
   "body": ""
 },
@@ -20426,7 +20453,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1781",
   "type": "Exercise",
-  "number": "8.3.8.24",
+  "number": "8.3.8.23",
   "title": "",
   "body": ""
 },
@@ -20435,7 +20462,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1782",
   "type": "Exercise",
-  "number": "8.3.8.25",
+  "number": "8.3.8.24",
   "title": "",
   "body": ""
 },
@@ -20444,7 +20471,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1783",
   "type": "Exercise",
-  "number": "8.3.8.26",
+  "number": "8.3.8.25",
   "title": "",
   "body": ""
 },
@@ -20453,7 +20480,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1784",
   "type": "Exercise",
-  "number": "8.3.8.27",
+  "number": "8.3.8.26",
   "title": "",
   "body": ""
 },
@@ -20462,7 +20489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1785",
   "type": "Exercise",
-  "number": "8.3.8.28",
+  "number": "8.3.8.27",
   "title": "",
   "body": ""
 },
@@ -20471,7 +20498,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1786",
   "type": "Exercise",
-  "number": "8.3.8.29",
+  "number": "8.3.8.28",
   "title": "",
   "body": ""
 },
@@ -20480,7 +20507,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1787",
   "type": "Exercise",
-  "number": "8.3.8.30",
+  "number": "8.3.8.29",
   "title": "",
   "body": ""
 },
@@ -20489,7 +20516,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1788",
   "type": "Exercise",
-  "number": "8.3.8.31",
+  "number": "8.3.8.30",
   "title": "",
   "body": ""
 },
@@ -20498,7 +20525,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1789",
   "type": "Exercise",
-  "number": "8.3.8.32",
+  "number": "8.3.8.31",
   "title": "",
   "body": ""
 },
@@ -20507,7 +20534,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1790",
   "type": "Exercise",
-  "number": "8.3.8.33",
+  "number": "8.3.8.32",
   "title": "",
   "body": ""
 },
@@ -20516,7 +20543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1791",
   "type": "Exercise",
-  "number": "8.3.8.34",
+  "number": "8.3.8.33",
   "title": "",
   "body": ""
 },
@@ -20525,7 +20552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1792",
   "type": "Exercise",
-  "number": "8.3.8.35",
+  "number": "8.3.8.34",
   "title": "",
   "body": ""
 },
@@ -20534,7 +20561,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1793",
   "type": "Exercise",
-  "number": "8.3.8.36",
+  "number": "8.3.8.35",
   "title": "",
   "body": ""
 },
@@ -20543,7 +20570,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1794",
   "type": "Exercise",
-  "number": "8.3.8.37",
+  "number": "8.3.8.36",
   "title": "",
   "body": ""
 },
@@ -20552,7 +20579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1795",
   "type": "Exercise",
-  "number": "8.3.8.38",
+  "number": "8.3.8.37",
   "title": "",
   "body": ""
 },
@@ -20561,7 +20588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1796",
   "type": "Exercise",
-  "number": "8.3.8.39",
+  "number": "8.3.8.38",
   "title": "",
   "body": ""
 },
@@ -20570,7 +20597,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1797",
   "type": "Exercise",
-  "number": "8.3.8.40",
+  "number": "8.3.8.39",
   "title": "",
   "body": ""
 },
@@ -20579,7 +20606,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1798",
   "type": "Exercise",
-  "number": "8.3.8.41",
+  "number": "8.3.8.40",
   "title": "",
   "body": ""
 },
@@ -20588,7 +20615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1799",
   "type": "Exercise",
-  "number": "8.3.8.42",
+  "number": "8.3.8.41",
   "title": "",
   "body": ""
 },
@@ -20597,7 +20624,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1800",
   "type": "Exercise",
-  "number": "8.3.8.43",
+  "number": "8.3.8.42",
   "title": "",
   "body": ""
 },
@@ -20606,7 +20633,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1801",
   "type": "Exercise",
-  "number": "8.3.8.44",
+  "number": "8.3.8.43",
   "title": "",
   "body": ""
 },
@@ -20615,7 +20642,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1802",
   "type": "Exercise",
-  "number": "8.3.8.45",
+  "number": "8.3.8.44",
   "title": "",
   "body": ""
 },
@@ -20624,7 +20651,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1803",
   "type": "Exercise",
-  "number": "8.3.8.46",
+  "number": "8.3.8.45",
   "title": "",
   "body": ""
 },
@@ -20633,7 +20660,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1804",
   "type": "Exercise",
-  "number": "8.3.8.47",
+  "number": "8.3.8.46",
   "title": "",
   "body": ""
 },
@@ -20642,7 +20669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1805",
   "type": "Exercise",
-  "number": "8.3.8.48",
+  "number": "8.3.8.47",
   "title": "",
   "body": ""
 },
@@ -20651,7 +20678,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1806",
   "type": "Exercise",
-  "number": "8.3.8.49",
+  "number": "8.3.8.48",
   "title": "",
   "body": ""
 },
@@ -20660,7 +20687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1807",
   "type": "Exercise",
-  "number": "8.3.8.50",
+  "number": "8.3.8.49",
   "title": "",
   "body": ""
 },
@@ -20669,7 +20696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1808",
   "type": "Exercise",
-  "number": "8.3.8.51",
+  "number": "8.3.8.50",
   "title": "",
   "body": ""
 },
@@ -20678,7 +20705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1809",
   "type": "Exercise",
-  "number": "8.3.8.52",
+  "number": "8.3.8.51",
   "title": "",
   "body": ""
 },
@@ -20687,7 +20714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1810",
   "type": "Exercise",
-  "number": "8.3.8.53",
+  "number": "8.3.8.52",
   "title": "",
   "body": ""
 },
@@ -20696,7 +20723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1811",
   "type": "Exercise",
-  "number": "8.3.8.54",
+  "number": "8.3.8.53",
   "title": "",
   "body": ""
 },
@@ -20705,52 +20732,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1812",
   "type": "Exercise",
-  "number": "8.3.8.55",
+  "number": "8.3.8.54",
   "title": "",
-  "body": " One-half of  divided by one-half  One-half divided by     "
+  "body": ""
 },
 {
   "id": "exercise-1813",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1813",
   "type": "Exercise",
-  "number": "8.3.8.56",
+  "number": "8.3.8.55",
   "title": "",
-  "body": " Two-thirds of  divided by two-thirds  Two-thirds divided by "
+  "body": " One-half of  divided by one-half  One-half divided by     "
 },
 {
   "id": "exercise-1814",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1814",
   "type": "Exercise",
-  "number": "8.3.8.57",
+  "number": "8.3.8.56",
   "title": "",
-  "body": " The reciprocal of  Three-fourths of the reciprocal of  The reciprocal of divided by three-fourths    "
+  "body": " Two-thirds of  divided by two-thirds  Two-thirds divided by "
 },
 {
   "id": "exercise-1815",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1815",
   "type": "Exercise",
-  "number": "8.3.8.58",
+  "number": "8.3.8.57",
   "title": "",
-  "body": "Simplify.     "
+  "body": " The reciprocal of  Three-fourths of the reciprocal of  The reciprocal of divided by three-fourths    "
 },
 {
   "id": "exercise-1816",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1816",
   "type": "Exercise",
-  "number": "8.3.8.59",
+  "number": "8.3.8.58",
   "title": "",
-  "body": ""
+  "body": "Simplify.     "
 },
 {
   "id": "exercise-1817",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1817",
   "type": "Exercise",
-  "number": "8.3.8.60",
+  "number": "8.3.8.59",
   "title": "",
   "body": ""
 },
@@ -20759,7 +20786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1818",
   "type": "Exercise",
-  "number": "8.3.8.61",
+  "number": "8.3.8.60",
   "title": "",
   "body": ""
 },
@@ -20768,7 +20795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1819",
   "type": "Exercise",
-  "number": "8.3.8.62",
+  "number": "8.3.8.61",
   "title": "",
   "body": ""
 },
@@ -20777,7 +20804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1820",
   "type": "Exercise",
-  "number": "8.3.8.63",
+  "number": "8.3.8.62",
   "title": "",
   "body": ""
 },
@@ -20786,7 +20813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1821",
   "type": "Exercise",
-  "number": "8.3.8.64",
+  "number": "8.3.8.63",
   "title": "",
   "body": ""
 },
@@ -20795,32 +20822,41 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1822",
   "type": "Exercise",
-  "number": "8.3.8.65",
+  "number": "8.3.8.64",
   "title": "",
-  "body": "The dimensions of a rectangular rug are feet and feet.  Write and sinplify an expression for the area of the rug.  Write and sinplify an expression for the perimeter of the rug.  sq ft  "
+  "body": ""
 },
 {
   "id": "exercise-1823",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1823",
   "type": "Exercise",
-  "number": "8.3.8.66",
+  "number": "8.3.8.65",
   "title": "",
-  "body": "Colonial Airline has a commuter flight between Richmond and Washington, a distance of 100 miles. The plane flies at miles per hour in still air. Today there is a steady wind from the north at 10 miles per hour.  How long will the flight from Richmond to Washington take?  How long will the flight from Washington to Richmond take?  How long will a round trip take?  Evaluate your fractions in parts (a)-(c) for "
+  "body": "The dimensions of a rectangular rug are feet and feet.  Write and sinplify an expression for the area of the rug.  Write and sinplify an expression for the perimeter of the rug.  sq ft  "
 },
 {
   "id": "exercise-1824",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1824",
   "type": "Exercise",
-  "number": "8.3.8.67",
+  "number": "8.3.8.66",
   "title": "",
-  "body": "Two pilots for the Flying Express parcel service receive packages simultaneously. Orville leaves Boston for Chicago at the same time Wilbur leaves Chicago for Boston. Each pilot selects an air speed of 400 miles per hour for the 900-mile trip. The prevailing winds blow from east to west.  Express Orville's flying time as a function of the wind speed.  Write a function for Wilbur's flying time.  Who reaches his destination first? By how much time (in terms of wind speed)?  hr  hr  Orville, by hr "
+  "body": "Colonial Airline has a commuter flight between Richmond and Washington, a distance of 100 miles. The plane flies at miles per hour in still air. Today there is a steady wind from the north at 10 miles per hour.  How long will the flight from Richmond to Washington take?  How long will the flight from Washington to Richmond take?  How long will a round trip take?  Evaluate your fractions in parts (a)-(c) for "
 },
 {
   "id": "exercise-1825",
   "level": "2",
   "url": "OperationsAlgebraicFractions.html#exercise-1825",
+  "type": "Exercise",
+  "number": "8.3.8.67",
+  "title": "",
+  "body": "Two pilots for the Flying Express parcel service receive packages simultaneously. Orville leaves Boston for Chicago at the same time Wilbur leaves Chicago for Boston. Each pilot selects an air speed of 400 miles per hour for the 900-mile trip. The prevailing winds blow from east to west.  Express Orville's flying time as a function of the wind speed.  Write a function for Wilbur's flying time.  Who reaches his destination first? By how much time (in terms of wind speed)?  hr  hr  Orville, by hr "
+},
+{
+  "id": "exercise-1826",
+  "level": "2",
+  "url": "OperationsAlgebraicFractions.html#exercise-1826",
   "type": "Exercise",
   "number": "8.3.8.68",
   "title": "",
@@ -20833,52 +20869,52 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.4",
   "title": "More Operations on Fractions",
-  "body": "More Operations on Fractions  Complex Fractions complex fraction fraction complex  A fraction that contains one or more fractions in either its numerator or its denominator or both is called a complex fraction complex fraction . For example, are complex fractions. Like simple fractions, complex fractions represent quotients. For the examples above, and We can always simplify a complex fraction into a standard algebraic fraction. One way to do this is to treat the fraction as a division.  Simplify  First, Write the complex fraction as a quotient. Invert the divisor and multiply.   Practice 1   Simplify                             If the numerator or denominator of the complex fraction contains more than one term, there is an easier way to simplify the fraction that takes advantage of the fundamental principle of fractions.  Simplify  This complex fraction contains the simple fractions and . The LCD of these fractions is . We multiply the numerator and denominator of the complex fraction by . Doing this will not change the value of the fraction, but will clear all the \"smaller\" fractions inside. Then we apply the distributive law, so that we multiply each term of the numerator and each term of the denominator by . Finally, we reduce the result to obtain   We summarize the procedure for multiplying algebraic fractions as follows.  To simplify a complex fraction complex fraction simplify fraction complex fraction simplify simplifying a complex fraction   Find the LCD of all the fractions contained in the complex fraction.  Multiply the numerator and the denominator of the complex fraction by the LCD.  Reduce the resulting simple fraction, if possible.  Practice 2   Simplify                              Negative Exponents negative exponents  Algebraic fractions are sometimes written using negative exponents.  Write each expression as a single algebraic fraction.     We write each power as a fraction, then simplify.  We simplify the expression inside parentheses first. For the last step, remember that a negative exponent indicates the reciprocal of its base.   When working with fractions and exponents,it is important to avoid some tempting but incorrect algebraic operations.  In part (a) of , note that For example, you can check that, for and ,  In part (b) of , note that The fourth law of exponents does not apply to sums and differences; that is,  Practice 3   Simplify                             QuickCheck 1   True or False.      True    False         True    False         True    False         True    False                             True    False    False    False          Applications  Sometimes mathematics can help us solve problems when our intuition fails us or leads us astray.  On a weekday afternoon, when traffic is always horrible, Kathy left her home north of Los Angeles and drove south 120 miles along the San Diego Freeway to San Juan Capistrano. Her average speed was 40 miles per hour. She returned home on Saturday, at an average speed of 60 miles per hour. What was her average speed for the round trip?  If you said that the average speed is 50 miles per hour, you would be wrong! Let's do some calculations. Kathy's average speed for the round trip is given by The total distance she drove is 240 miles, but to find the total time we must compute the time Kathy drove on each part of the trip. We use the formula and solve for .         Driving south      Driving north      The total time for the round trip was hours, so Kathy's average speed was   Why does the average speed turn out to be less than 50 miles per hour? Because Kathy spent more time driving at 40 miles per hour (3 hours) than she did driving at 60 miles per hour (2 hours).  By generalizing the problem above we can find an algebraic formula for the average speed on a two-part trip. Suppose the distance traveled on the two parts of the trip are and , and the corresponding speeds on the two parts are and . We fill in the table to find the time required for each part.     Distance  Rate  Time   First part      Second part      The total distance traveled on the trip is , and the total time required is Thus, the average speed for the entire trip is  Practice 4   Bruce drove for 24 miles in rush-hour traffic at an average speed of 20 miles per hour. Then he drove 126 miles on the highway at an average speed of 70 miles an hour. Use the formula above to find his average speed for the entire trip.    miles    hours    mph    hours\/mile               50 mph        Polynomial Division polynomial division  Consider three improper fractions: and . Can these fractions be simplified?  We can reduce the first fraction:  The second fraction reduces to a whole number:  The third fraction does not reduce, but by dividing the denominator into the numerator, we can write it as a whole number plus a proper fraction:  An algebraic fraction is \"improper\" if the degree of the numerator is greater than the degree of the denominator. If it cannot be reduced, we can simplify the expression by treating it as a division of polynomials. The quotient will be the sum of a polynomial and a simpler algebraic fraction.  If the divisor is a monomial, we can simply divide the monomial into each term of the numerator.  Divide  We divide into each term of the numerator. Note that the quotient is the sum of a polynomial, , and an algebraic fraction, .  Practice 5   Divide:                     If the denominator is not a monomial, we use a method similar to the long division algorithm used in arithmetic.  Divide   We first write the quotient as a division problem: and divide (the first term of the numerator) by (the first term of the denominator) to obtain . (It may be helpful to write down the division: .) We write above the quotient bar as the first term of the quotient, as shown below.  Next, we multiply by to obtain , and subtract this product from : Repeating the process, we divide by to obtain . We write as the second term of the quotient. Then we multiply by to obtain , and subtract: Because the degree of the remainder, 8, is less than the degree of , the division is finished. The quotient is , with a remainder of . We write the remainder as a fraction to obtain   When using polynomial division, it helps to write the polynomials in descending powers of the variable. If the numerator is missing any terms, we can insert terms with zero coefficients so that like powers will be aligned. For example, to perform the division we first write the numerator in descending powers as . We insert between and and set up the quotient as We then proceed as in . You can check that the quotient is  Practice 6   Divide:                     QuickCheck 2   True or False.   The shortcut for simplifying complex fractions applies the fundamental principle of fractions.   True    False      An improper algebraic fraction is one in which the denominator has higher degree than the numerator.   True    False      If the remainder is zero in polynomial division the numerator can be factored.   True    False      If the divisor in polynomial division is a binomial, we use a process like long division.   True    False                             True    False    True    True           Problem Set 8.4  Warm Up   Add  Subtract  Multiply  Divide    Skills Practice  For Problems 5 16, simplify the complex fraction.               For Problems 17 20, divide. Write your answer as the sum of a polynomial and an algebraic fraction.       For Problems 21 24, use polynomial division to write the quotient as the sum of a polynomial and an algebraic fraction.        Applications    On the figure at right, locate the points , , , and . Connect the points with line segments in the order to form a four-sided figure.   rectangle in first quadrant, one corner at origin   Compute the slopes of each side of the figure. and ; and   Suppose and are two positive numbers. Write an expression for their average, and then for the reciprocal of their average.  For the same numbers and , write an expression for the average of their reciprocals.  Are your expressions in parts (a) and (b) the same? Choose values for and and evaluate both expressions.  The focal length of a lens is given by the formula where stands for the focal length, is the distance from the object viewed to the lens, and is the distance from the image to the lens. Suppose you estimate that the distance from your cat (the object viewed) to your camera lens is 60 inches greater than the distance from the lens to the film inside the camera, where the image forms.  Express as a single fraction in terms of .  Write and simplify an expression for as a function of .        Andy drives 300 miles to Lake Tahoe at 70 miles per hour and returns home at 50 miles per hour. What is his average speed for the round trip? (It is not 60 miles per hour!)  Write expressions for the time it takes for each leg of the trip if Andy drives a distance at speed and returns at speed .  Write expressions for the total distance and total time for the trip.  Write an expression for the average speed for the entire trip.  Write your answer to part (c) as a simple fraction.  Use your formula to answer the question stated in the problem.   For Problems 29 36, Write each expression as a single fraction in simplest form.           For Problems 37 42, write each expression as a single fraction in simplest form.         For Problems 43-48, write each complex fraction as a simple fraction in lowest terms, and rationalize the denominator.           "
+  "body": "More Operations on Fractions  Complex Fractions complex fraction fraction complex  A fraction that contains one or more fractions in either its numerator or its denominator or both is called a complex fraction complex fraction . For example, are complex fractions. Like simple fractions, complex fractions represent quotients. For the examples above, and We can always simplify a complex fraction into a standard algebraic fraction. One way to do this is to treat the fraction as a division.  Simplify  First, Write the complex fraction as a quotient. Invert the divisor and multiply.   Practice 1 Simplify  If the numerator or denominator of the complex fraction contains more than one term, there is an easier way to simplify the fraction. This method takes advantage of the fundamental principle of fractions.  Simplify  This complex fraction contains the simple fractions and . The LCD of these fractions is . We multiply the numerator and denominator of the complex fraction by . Doing this will not change the value of the fraction, but will clear all the \"smaller\" fractions inside. Then we apply the distributive law, so that we multiply each term of the numerator and each term of the denominator by . Finally, we reduce the result to obtain   We summarize the procedure for multiplying algebraic fractions as follows.  To simplify a complex fraction complex fraction simplify fraction complex fraction simplify simplifying a complex fraction   Find the LCD of all the fractions contained in the complex fraction.  Multiply the numerator and the denominator of the complex fraction by the LCD.  Reduce the resulting simple fraction, if possible.   Practice 2 Simplify   Negative Exponents negative exponents  Algebraic fractions are sometimes written using negative exponents.  Write each expression as a single algebraic fraction.      We write each power as a fraction, then simplify.  We simplify the expression inside parentheses first. For the last step, remember that a negative exponent indicates the reciprocal of its base.   When working with fractions and exponents,it is important to avoid some tempting but incorrect algebraic operations.  In part (a) of , note that For example, you can check that, for and ,  In part (b) of , note that The fourth law of exponents does not apply to sums and differences; that is,  Practice 3 Simplify  QuickCheck 1 True or False.         Applications  Sometimes mathematics can help us solve problems when our intuition fails us or leads us astray.  On a weekday afternoon, when traffic is always horrible, Kathy left her home north of Los Angeles and drove south 120 miles along the San Diego Freeway to San Juan Capistrano. Her average speed was 40 miles per hour. She returned home on Saturday, at an average speed of 60 miles per hour. What was her average speed for the round trip?  If you said that the average speed is 50 miles per hour, you would be wrong! Let's do some calculations. Kathy's average speed for the round trip is given by The total distance she drove is 240 miles, but to find the total time we must compute the time Kathy drove on each part of the trip. We use the formula and solve for .         Driving south      Driving north      The total time for the round trip was hours, so Kathy's average speed was   Why does the average speed turn out to be less than 50 miles per hour? Because Kathy spent more time driving at 40 miles per hour (3 hours) than she did driving at 60 miles per hour (2 hours).  By generalizing the problem above we can find an algebraic formula for the average speed on a two-part trip. Suppose the distance traveled on the two parts of the trip are and , and the corresponding speeds on the two parts are and . We fill in the table to find the time required for each part.     Distance  Rate  Time   First part      Second part      The total distance traveled on the trip is , and the total time required is Thus, the average speed for the entire trip is  Practice 4 Bruce drove for 24 miles in rush-hour traffic at an average speed of 20 miles per hour. Then he drove 126 miles on the highway at an average speed of 70 miles an hour. Use the formula above to find his average speed for the entire trip. 50 mph   Polynomial Division polynomial division  Consider three improper fractions: and . Can these fractions be simplified?  We can reduce the first fraction:  The second fraction reduces to a whole number:  The third fraction does not reduce, but by dividing the denominator into the numerator, we can write it as a whole number plus a proper fraction:  An algebraic fraction is \"improper\" if the degree of the numerator is greater than the degree of the denominator. If it cannot be reduced, we can simplify the expression by treating it as a division of polynomials. The quotient will be the sum of a polynomial and a simpler algebraic fraction.  If the divisor is a monomial, we can simply divide the monomial into each term of the numerator.  Divide  We divide into each term of the numerator. Note that the quotient is the sum of a polynomial, , and an algebraic fraction, .  Practice 5 Divide:  If the denominator is not a monomial, we use a method similar to the long division algorithm used in arithmetic.  Divide   We first write the quotient as a division problem: and divide (the first term of the numerator) by (the first term of the denominator) to obtain . (It may be helpful to write down the division: .) We write above the quotient bar as the first term of the quotient, as shown below.  Next, we multiply by to obtain , and subtract this product from : Repeating the process, we divide by to obtain . We write as the second term of the quotient. Then we multiply by to obtain , and subtract: Because the degree of the remainder, 8, is less than the degree of , the division is finished. The quotient is , with a remainder of . We write the remainder as a fraction to obtain   When using polynomial division, it helps to write the polynomials in descending powers of the variable. If the numerator is missing any terms, we can insert terms with zero coefficients so that like powers will be aligned. For example, to perform the division we first write the numerator in descending powers as . We insert between and and set up the quotient as We then proceed as in . You can check that the quotient is  Practice 6 Divide:  QuickCheck 2 True or False.   The shortcut for simplifying complex fractions applies the fundamental principle of fractions.  An improper algebraic fraction is one in which the denominator has higher degree than the numerator.  If the remainder is zero in polynomial division , the numerator can be factored.  If the divisor in polynomial division is a binomial, we use a process like long division.     Problem Set 8.4  Warm Up   Add  Subtract  Multiply  Divide    Skills Practice  For Problems 5 16, simplify the complex fraction.               For Problems 17 20, divide. Write your answer as the sum of a polynomial and an algebraic fraction.       For Problems 21 24, use polynomial division to write the quotient as the sum of a polynomial and an algebraic fraction.        Applications    On the figure at right, locate the points , , , and . Connect the points with line segments in the order to form a four-sided figure.   rectangle in first quadrant, one corner at origin   Compute the slopes of each side of the figure. and ; and   Suppose and are two positive numbers. Write an expression for their average, and then for the reciprocal of their average.  For the same numbers and , write an expression for the average of their reciprocals.  Are your expressions in parts (a) and (b) the same? Choose values for and and evaluate both expressions.  The focal length of a lens is given by the formula where stands for the focal length, is the distance from the object viewed to the lens, and is the distance from the image to the lens. Suppose you estimate that the distance from your cat (the object viewed) to your camera lens is 60 inches greater than the distance from the lens to the film inside the camera, where the image forms.  Express as a single fraction in terms of .  Write and simplify an expression for as a function of .        Andy drives 300 miles to Lake Tahoe at 70 miles per hour and returns home at 50 miles per hour. What is his average speed for the round trip? (It is not 60 miles per hour!)  Write expressions for the time it takes for each leg of the trip if Andy drives a distance at speed and returns at speed .  Write expressions for the total distance and total time for the trip.  Write an expression for the average speed for the entire trip.  Write your answer to part (c) as a simple fraction.  Use your formula to answer the question stated in the problem.   For Problems 29 36, Write each expression as a single fraction in simplest form.           For Problems 37 42, write each expression as a single fraction in simplest form.         For Problems 43-48, write each complex fraction as a simple fraction in lowest terms, and rationalize the denominator.           "
 },
 {
-  "id": "p-8368",
+  "id": "p-8095",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#p-8368",
+  "url": "MoreOperationsonFractions.html#p-8095",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "complex fraction "
 },
 {
-  "id": "example-211",
+  "id": "example-213",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#example-211",
+  "url": "MoreOperationsonFractions.html#example-213",
   "type": "Example",
   "number": "8.4.1",
   "title": "",
   "body": "Simplify  First, Write the complex fraction as a quotient. Invert the divisor and multiply.  "
 },
 {
-  "id": "exercise-1826",
+  "id": "exercise-1827",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#exercise-1826",
+  "url": "MoreOperationsonFractions.html#exercise-1827",
   "type": "Checkpoint",
   "number": "8.4.2",
   "title": "Practice 1.",
-  "body": "Practice 1   Simplify                            "
+  "body": "Practice 1 Simplify "
 },
 {
-  "id": "example-212",
+  "id": "example-214",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#example-212",
+  "url": "MoreOperationsonFractions.html#example-214",
   "type": "Example",
   "number": "8.4.3",
   "title": "",
   "body": "Simplify  This complex fraction contains the simple fractions and . The LCD of these fractions is . We multiply the numerator and denominator of the complex fraction by . Doing this will not change the value of the fraction, but will clear all the \"smaller\" fractions inside. Then we apply the distributive law, so that we multiply each term of the numerator and each term of the denominator by . Finally, we reduce the result to obtain  "
 },
 {
-  "id": "exercise-1827",
+  "id": "exercise-1828",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#exercise-1827",
+  "url": "MoreOperationsonFractions.html#exercise-1828",
   "type": "Checkpoint",
   "number": "8.4.4",
   "title": "Practice 2.",
-  "body": "Practice 2   Simplify                            "
+  "body": "Practice 2 Simplify "
 },
 {
   "id": "Example-negarive-exponents-for-algebraic-fractions",
@@ -20887,70 +20923,70 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "8.4.5",
   "title": "",
-  "body": "Write each expression as a single algebraic fraction.     We write each power as a fraction, then simplify.  We simplify the expression inside parentheses first. For the last step, remember that a negative exponent indicates the reciprocal of its base.  "
+  "body": "Write each expression as a single algebraic fraction.      We write each power as a fraction, then simplify.  We simplify the expression inside parentheses first. For the last step, remember that a negative exponent indicates the reciprocal of its base.  "
 },
 {
-  "id": "warning-42",
+  "id": "warning-41",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#warning-42",
+  "url": "MoreOperationsonFractions.html#warning-41",
   "type": "Caution",
   "number": "8.4.6",
   "title": "",
   "body": "When working with fractions and exponents,it is important to avoid some tempting but incorrect algebraic operations.  In part (a) of , note that For example, you can check that, for and ,  In part (b) of , note that The fourth law of exponents does not apply to sums and differences; that is, "
 },
 {
-  "id": "exercise-1828",
-  "level": "2",
-  "url": "MoreOperationsonFractions.html#exercise-1828",
-  "type": "Checkpoint",
-  "number": "8.4.7",
-  "title": "Practice 3.",
-  "body": "Practice 3   Simplify                            "
-},
-{
   "id": "exercise-1829",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1829",
   "type": "Checkpoint",
-  "number": "8.4.8",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   True or False.      True    False         True    False         True    False         True    False                             True    False    False    False        "
-},
-{
-  "id": "example-214",
-  "level": "2",
-  "url": "MoreOperationsonFractions.html#example-214",
-  "type": "Example",
-  "number": "8.4.9",
-  "title": "",
-  "body": "On a weekday afternoon, when traffic is always horrible, Kathy left her home north of Los Angeles and drove south 120 miles along the San Diego Freeway to San Juan Capistrano. Her average speed was 40 miles per hour. She returned home on Saturday, at an average speed of 60 miles per hour. What was her average speed for the round trip?  If you said that the average speed is 50 miles per hour, you would be wrong! Let's do some calculations. Kathy's average speed for the round trip is given by The total distance she drove is 240 miles, but to find the total time we must compute the time Kathy drove on each part of the trip. We use the formula and solve for .         Driving south      Driving north      The total time for the round trip was hours, so Kathy's average speed was  "
+  "number": "8.4.7",
+  "title": "Practice 3.",
+  "body": "Practice 3 Simplify "
 },
 {
   "id": "exercise-1830",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1830",
   "type": "Checkpoint",
-  "number": "8.4.10",
-  "title": "Practice 4.",
-  "body": "Practice 4   Bruce drove for 24 miles in rush-hour traffic at an average speed of 20 miles per hour. Then he drove 126 miles on the highway at an average speed of 70 miles an hour. Use the formula above to find his average speed for the entire trip.    miles    hours    mph    hours\/mile               50 mph      "
+  "number": "8.4.8",
+  "title": "QuickCheck 1.",
+  "body": "QuickCheck 1 True or False.       "
 },
 {
-  "id": "example-215",
+  "id": "example-216",
   "level": "2",
-  "url": "MoreOperationsonFractions.html#example-215",
+  "url": "MoreOperationsonFractions.html#example-216",
   "type": "Example",
-  "number": "8.4.11",
+  "number": "8.4.9",
   "title": "",
-  "body": "Divide  We divide into each term of the numerator. Note that the quotient is the sum of a polynomial, , and an algebraic fraction, . "
+  "body": "On a weekday afternoon, when traffic is always horrible, Kathy left her home north of Los Angeles and drove south 120 miles along the San Diego Freeway to San Juan Capistrano. Her average speed was 40 miles per hour. She returned home on Saturday, at an average speed of 60 miles per hour. What was her average speed for the round trip?  If you said that the average speed is 50 miles per hour, you would be wrong! Let's do some calculations. Kathy's average speed for the round trip is given by The total distance she drove is 240 miles, but to find the total time we must compute the time Kathy drove on each part of the trip. We use the formula and solve for .         Driving south      Driving north      The total time for the round trip was hours, so Kathy's average speed was  "
 },
 {
   "id": "exercise-1831",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1831",
   "type": "Checkpoint",
+  "number": "8.4.10",
+  "title": "Practice 4.",
+  "body": "Practice 4 Bruce drove for 24 miles in rush-hour traffic at an average speed of 20 miles per hour. Then he drove 126 miles on the highway at an average speed of 70 miles an hour. Use the formula above to find his average speed for the entire trip. 50 mph "
+},
+{
+  "id": "example-217",
+  "level": "2",
+  "url": "MoreOperationsonFractions.html#example-217",
+  "type": "Example",
+  "number": "8.4.11",
+  "title": "",
+  "body": "Divide  We divide into each term of the numerator. Note that the quotient is the sum of a polynomial, , and an algebraic fraction, . "
+},
+{
+  "id": "exercise-1832",
+  "level": "2",
+  "url": "MoreOperationsonFractions.html#exercise-1832",
+  "type": "Checkpoint",
   "number": "8.4.12",
   "title": "Practice 5.",
-  "body": "Practice 5   Divide:                    "
+  "body": "Practice 5 Divide: "
 },
 {
   "id": "example-long-division",
@@ -20962,74 +20998,65 @@ var ptx_lunr_docs = [
   "body": "Divide   We first write the quotient as a division problem: and divide (the first term of the numerator) by (the first term of the denominator) to obtain . (It may be helpful to write down the division: .) We write above the quotient bar as the first term of the quotient, as shown below.  Next, we multiply by to obtain , and subtract this product from : Repeating the process, we divide by to obtain . We write as the second term of the quotient. Then we multiply by to obtain , and subtract: Because the degree of the remainder, 8, is less than the degree of , the division is finished. The quotient is , with a remainder of . We write the remainder as a fraction to obtain  "
 },
 {
-  "id": "exercise-1832",
-  "level": "2",
-  "url": "MoreOperationsonFractions.html#exercise-1832",
-  "type": "Checkpoint",
-  "number": "8.4.14",
-  "title": "Practice 6.",
-  "body": "Practice 6   Divide:                    "
-},
-{
   "id": "exercise-1833",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1833",
   "type": "Checkpoint",
-  "number": "8.4.15",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   True or False.   The shortcut for simplifying complex fractions applies the fundamental principle of fractions.   True    False      An improper algebraic fraction is one in which the denominator has higher degree than the numerator.   True    False      If the remainder is zero in polynomial division the numerator can be factored.   True    False      If the divisor in polynomial division is a binomial, we use a process like long division.   True    False                             True    False    True    True        "
+  "number": "8.4.14",
+  "title": "Practice 6.",
+  "body": "Practice 6 Divide: "
 },
 {
   "id": "exercise-1834",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1834",
-  "type": "Exercise",
-  "number": "8.4.5.1",
-  "title": "",
-  "body": "Add "
+  "type": "Checkpoint",
+  "number": "8.4.15",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 True or False.   The shortcut for simplifying complex fractions applies the fundamental principle of fractions.  An improper algebraic fraction is one in which the denominator has higher degree than the numerator.  If the remainder is zero in polynomial division , the numerator can be factored.  If the divisor in polynomial division is a binomial, we use a process like long division.  "
 },
 {
   "id": "exercise-1835",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1835",
   "type": "Exercise",
-  "number": "8.4.5.2",
+  "number": "8.4.5.1",
   "title": "",
-  "body": "Subtract "
+  "body": "Add "
 },
 {
   "id": "exercise-1836",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1836",
   "type": "Exercise",
-  "number": "8.4.5.3",
+  "number": "8.4.5.2",
   "title": "",
-  "body": "Multiply "
+  "body": "Subtract "
 },
 {
   "id": "exercise-1837",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1837",
   "type": "Exercise",
-  "number": "8.4.5.4",
+  "number": "8.4.5.3",
   "title": "",
-  "body": "Divide "
+  "body": "Multiply "
 },
 {
   "id": "exercise-1838",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1838",
   "type": "Exercise",
-  "number": "8.4.5.5",
+  "number": "8.4.5.4",
   "title": "",
-  "body": ""
+  "body": "Divide "
 },
 {
   "id": "exercise-1839",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1839",
   "type": "Exercise",
-  "number": "8.4.5.6",
+  "number": "8.4.5.5",
   "title": "",
   "body": ""
 },
@@ -21038,7 +21065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1840",
   "type": "Exercise",
-  "number": "8.4.5.7",
+  "number": "8.4.5.6",
   "title": "",
   "body": ""
 },
@@ -21047,7 +21074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1841",
   "type": "Exercise",
-  "number": "8.4.5.8",
+  "number": "8.4.5.7",
   "title": "",
   "body": ""
 },
@@ -21056,7 +21083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1842",
   "type": "Exercise",
-  "number": "8.4.5.9",
+  "number": "8.4.5.8",
   "title": "",
   "body": ""
 },
@@ -21065,7 +21092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1843",
   "type": "Exercise",
-  "number": "8.4.5.10",
+  "number": "8.4.5.9",
   "title": "",
   "body": ""
 },
@@ -21074,7 +21101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1844",
   "type": "Exercise",
-  "number": "8.4.5.11",
+  "number": "8.4.5.10",
   "title": "",
   "body": ""
 },
@@ -21083,7 +21110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1845",
   "type": "Exercise",
-  "number": "8.4.5.12",
+  "number": "8.4.5.11",
   "title": "",
   "body": ""
 },
@@ -21092,7 +21119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1846",
   "type": "Exercise",
-  "number": "8.4.5.13",
+  "number": "8.4.5.12",
   "title": "",
   "body": ""
 },
@@ -21101,7 +21128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1847",
   "type": "Exercise",
-  "number": "8.4.5.14",
+  "number": "8.4.5.13",
   "title": "",
   "body": ""
 },
@@ -21110,7 +21137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1848",
   "type": "Exercise",
-  "number": "8.4.5.15",
+  "number": "8.4.5.14",
   "title": "",
   "body": ""
 },
@@ -21119,7 +21146,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1849",
   "type": "Exercise",
-  "number": "8.4.5.16",
+  "number": "8.4.5.15",
   "title": "",
   "body": ""
 },
@@ -21128,7 +21155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1850",
   "type": "Exercise",
-  "number": "8.4.5.17",
+  "number": "8.4.5.16",
   "title": "",
   "body": ""
 },
@@ -21137,7 +21164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1851",
   "type": "Exercise",
-  "number": "8.4.5.18",
+  "number": "8.4.5.17",
   "title": "",
   "body": ""
 },
@@ -21146,7 +21173,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1852",
   "type": "Exercise",
-  "number": "8.4.5.19",
+  "number": "8.4.5.18",
   "title": "",
   "body": ""
 },
@@ -21155,7 +21182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1853",
   "type": "Exercise",
-  "number": "8.4.5.20",
+  "number": "8.4.5.19",
   "title": "",
   "body": ""
 },
@@ -21164,7 +21191,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1854",
   "type": "Exercise",
-  "number": "8.4.5.21",
+  "number": "8.4.5.20",
   "title": "",
   "body": ""
 },
@@ -21173,7 +21200,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1855",
   "type": "Exercise",
-  "number": "8.4.5.22",
+  "number": "8.4.5.21",
   "title": "",
   "body": ""
 },
@@ -21182,7 +21209,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1856",
   "type": "Exercise",
-  "number": "8.4.5.23",
+  "number": "8.4.5.22",
   "title": "",
   "body": ""
 },
@@ -21191,7 +21218,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1857",
   "type": "Exercise",
-  "number": "8.4.5.24",
+  "number": "8.4.5.23",
   "title": "",
   "body": ""
 },
@@ -21200,52 +21227,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1858",
   "type": "Exercise",
-  "number": "8.4.5.25",
+  "number": "8.4.5.24",
   "title": "",
-  "body": "  On the figure at right, locate the points , , , and . Connect the points with line segments in the order to form a four-sided figure.   rectangle in first quadrant, one corner at origin   Compute the slopes of each side of the figure. and ; and "
+  "body": ""
 },
 {
   "id": "exercise-1859",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1859",
   "type": "Exercise",
-  "number": "8.4.5.26",
+  "number": "8.4.5.25",
   "title": "",
-  "body": " Suppose and are two positive numbers. Write an expression for their average, and then for the reciprocal of their average.  For the same numbers and , write an expression for the average of their reciprocals.  Are your expressions in parts (a) and (b) the same? Choose values for and and evaluate both expressions. "
+  "body": "  On the figure at right, locate the points , , , and . Connect the points with line segments in the order to form a four-sided figure.   rectangle in first quadrant, one corner at origin   Compute the slopes of each side of the figure. and ; and "
 },
 {
   "id": "exercise-1860",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1860",
   "type": "Exercise",
-  "number": "8.4.5.27",
+  "number": "8.4.5.26",
   "title": "",
-  "body": "The focal length of a lens is given by the formula where stands for the focal length, is the distance from the object viewed to the lens, and is the distance from the image to the lens. Suppose you estimate that the distance from your cat (the object viewed) to your camera lens is 60 inches greater than the distance from the lens to the film inside the camera, where the image forms.  Express as a single fraction in terms of .  Write and simplify an expression for as a function of .       "
+  "body": " Suppose and are two positive numbers. Write an expression for their average, and then for the reciprocal of their average.  For the same numbers and , write an expression for the average of their reciprocals.  Are your expressions in parts (a) and (b) the same? Choose values for and and evaluate both expressions. "
 },
 {
   "id": "exercise-1861",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1861",
   "type": "Exercise",
-  "number": "8.4.5.28",
+  "number": "8.4.5.27",
   "title": "",
-  "body": "Andy drives 300 miles to Lake Tahoe at 70 miles per hour and returns home at 50 miles per hour. What is his average speed for the round trip? (It is not 60 miles per hour!)  Write expressions for the time it takes for each leg of the trip if Andy drives a distance at speed and returns at speed .  Write expressions for the total distance and total time for the trip.  Write an expression for the average speed for the entire trip.  Write your answer to part (c) as a simple fraction.  Use your formula to answer the question stated in the problem.  "
+  "body": "The focal length of a lens is given by the formula where stands for the focal length, is the distance from the object viewed to the lens, and is the distance from the image to the lens. Suppose you estimate that the distance from your cat (the object viewed) to your camera lens is 60 inches greater than the distance from the lens to the film inside the camera, where the image forms.  Express as a single fraction in terms of .  Write and simplify an expression for as a function of .       "
 },
 {
   "id": "exercise-1862",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1862",
   "type": "Exercise",
-  "number": "8.4.5.29",
+  "number": "8.4.5.28",
   "title": "",
-  "body": ""
+  "body": "Andy drives 300 miles to Lake Tahoe at 70 miles per hour and returns home at 50 miles per hour. What is his average speed for the round trip? (It is not 60 miles per hour!)  Write expressions for the time it takes for each leg of the trip if Andy drives a distance at speed and returns at speed .  Write expressions for the total distance and total time for the trip.  Write an expression for the average speed for the entire trip.  Write your answer to part (c) as a simple fraction.  Use your formula to answer the question stated in the problem.  "
 },
 {
   "id": "exercise-1863",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1863",
   "type": "Exercise",
-  "number": "8.4.5.30",
+  "number": "8.4.5.29",
   "title": "",
   "body": ""
 },
@@ -21254,7 +21281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1864",
   "type": "Exercise",
-  "number": "8.4.5.31",
+  "number": "8.4.5.30",
   "title": "",
   "body": ""
 },
@@ -21263,7 +21290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1865",
   "type": "Exercise",
-  "number": "8.4.5.32",
+  "number": "8.4.5.31",
   "title": "",
   "body": ""
 },
@@ -21272,7 +21299,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1866",
   "type": "Exercise",
-  "number": "8.4.5.33",
+  "number": "8.4.5.32",
   "title": "",
   "body": ""
 },
@@ -21281,7 +21308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1867",
   "type": "Exercise",
-  "number": "8.4.5.34",
+  "number": "8.4.5.33",
   "title": "",
   "body": ""
 },
@@ -21290,7 +21317,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1868",
   "type": "Exercise",
-  "number": "8.4.5.35",
+  "number": "8.4.5.34",
   "title": "",
   "body": ""
 },
@@ -21299,7 +21326,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1869",
   "type": "Exercise",
-  "number": "8.4.5.36",
+  "number": "8.4.5.35",
   "title": "",
   "body": ""
 },
@@ -21308,7 +21335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1870",
   "type": "Exercise",
-  "number": "8.4.5.37",
+  "number": "8.4.5.36",
   "title": "",
   "body": ""
 },
@@ -21317,7 +21344,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1871",
   "type": "Exercise",
-  "number": "8.4.5.38",
+  "number": "8.4.5.37",
   "title": "",
   "body": ""
 },
@@ -21326,7 +21353,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1872",
   "type": "Exercise",
-  "number": "8.4.5.39",
+  "number": "8.4.5.38",
   "title": "",
   "body": ""
 },
@@ -21335,7 +21362,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1873",
   "type": "Exercise",
-  "number": "8.4.5.40",
+  "number": "8.4.5.39",
   "title": "",
   "body": ""
 },
@@ -21344,7 +21371,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1874",
   "type": "Exercise",
-  "number": "8.4.5.41",
+  "number": "8.4.5.40",
   "title": "",
   "body": ""
 },
@@ -21353,7 +21380,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1875",
   "type": "Exercise",
-  "number": "8.4.5.42",
+  "number": "8.4.5.41",
   "title": "",
   "body": ""
 },
@@ -21362,7 +21389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1876",
   "type": "Exercise",
-  "number": "8.4.5.43",
+  "number": "8.4.5.42",
   "title": "",
   "body": ""
 },
@@ -21371,7 +21398,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1877",
   "type": "Exercise",
-  "number": "8.4.5.44",
+  "number": "8.4.5.43",
   "title": "",
   "body": ""
 },
@@ -21380,7 +21407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1878",
   "type": "Exercise",
-  "number": "8.4.5.45",
+  "number": "8.4.5.44",
   "title": "",
   "body": ""
 },
@@ -21389,7 +21416,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1879",
   "type": "Exercise",
-  "number": "8.4.5.46",
+  "number": "8.4.5.45",
   "title": "",
   "body": ""
 },
@@ -21398,7 +21425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1880",
   "type": "Exercise",
-  "number": "8.4.5.47",
+  "number": "8.4.5.46",
   "title": "",
   "body": ""
 },
@@ -21406,6 +21433,15 @@ var ptx_lunr_docs = [
   "id": "exercise-1881",
   "level": "2",
   "url": "MoreOperationsonFractions.html#exercise-1881",
+  "type": "Exercise",
+  "number": "8.4.5.47",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-1882",
+  "level": "2",
+  "url": "MoreOperationsonFractions.html#exercise-1882",
   "type": "Exercise",
   "number": "8.4.5.48",
   "title": "",
@@ -21418,25 +21454,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.5",
   "title": "Equations with Fractions",
-  "body": "Equations with Fractions equation with fractions    graph of rational function for solving equation  In of Section 8.2 Francine planned a 60-mile training run on her cycle-plane. The time required for the training run, in terms of the windspeed, , is given by: If it takes Francine 9 hours to cover 60 miles, what is the speed of the wind? We can answer this question by reading values from the graph of , as shown at left. When , the value of is between 8 and 9, so the windspeed is between 8 and 9 miles per hour.   Solving Algebraically  If we need a more accurate value for the windspeed, we can solve the equation To start, we multiply each side of the equation by the denominator of the fraction. This will clear the fraction and give us an equivalent equation without fractions.  Solve the equation  We multiply both sides of the equation by to obtain From here we can proceed as usual. The windspeed was , or miles per hour.  Practice 1   Solve               If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions. lowest common denominator clearing fractions with  Solve  The LCD for the two fractions in the equation is . We multiply both sides of the equation by the LCD. We proceed as usual to complete the solution. First we use the distributive law to remove parentheses.   We must multiply each term of an equation by the LCD, whether or not the term is a fraction. In the previous Example we multiplied each term by the LCD, including the 8.  Practice 2   Solve  Enter solutions separated by a comma.                Proportions proportion  A proportion proportion is a statement that two ratios are equal. For example, To solve this proportion, we multiply both sides by the LCD, 30, to get  There is a short-cut we can use that avoids calculating an LCD. Observe that we can arrive at the equation by cross-multiplying cross-multiplying proportion proportion cross-multiplying :   cross-multiplying  We then proceed as before to complete the solution.  The cross-multiplying shortcut is a fundamental property of proportions.  Property of Proportions property of proportions proportion cross-multiplying    The scale on a map of Fairfield County says that centimeter represents a distance of 10 kilometers. If Eastlake and Kenwood are 6 centimeters apart on the map, what is the distance between the two towns?  The ratio of the two actual distances is the same as the ratio of the corresponding distances on the map. We let stand for the distance between Eastlake and Kenwood, and write a proportion.  We must be careful to keep the same order in both ratios. We choose to put the distance between towns in the numerators, and the distances on the scale in the denominator. To solve the propotion, we cross-multiply. The two towns are 80 kilometers apart.  Practice 3   On a scale model of Fantasy Valley, inches represents 50 yards. If the distance from the water slide to the bungee jump is 20 inches on the model, what is the distance between the two rides?  yards        yards       Do not try to use \"cross-multiplying\" on equations that are not proportions, or on any other operations involving fractions. The shortcut works only on proportions.  QuickCheck 1     To clear fractions from an equation, we multiply each term by the   LCD    average    reciprocal   of all the fractions.    True or False: When clearing fraction from an equation, we do not multiply terms that are not fractions.   True    False      A proportion is a statement that two   equations    factors    ratios   are equal.    Cross-multiplying works only on   reduced fractions    improper fractions    proportions   .                           LCD    False    ratios    proportions          Extraneous Solutions  An algebraic fraction is undefined for any values of that make its denominator equal zero. These values cannot be solutions to equations involving the fraction. Consider the equation When we multiply both sides by the LCD, , we obtain whose solution is . However, is not a solution of the original equation. Both sides of the equation are undefined at . If you graph the two functions you will find that the graphs never intersect, which means that there is no solution to the original equation.  What went wrong with our method of solution? We multiplied both sides of the equation by , which is zero when , so we really multiplied both sides of the equation by zero. Multiplying by zero does not produce an equivalent equation, and false solutions may be introduced.  An apparent solution that does not satisfy the original equation is called an extraneous solution extraneous solution . Whenever we multiply an equation by an expression containing the variable, we should check that the solution obtained does not cause any of the fractions to be undefined.  Solve the equation .  We multiply both sides by the LCD, . Notice that we multiply each term on the left side by the LCD, to get or We use the distributive law to remove the parentheses and write the result in standard form: This is a quadratic equation that we can solve by factoring. so the solutions are and . Neither of these values causes either denominator to equal zero, so they are not extraneous solutions.  The following \"solution\" for the previous Example is incorrect. Do you see why?  QuickCheck 2     An algebraic fraction is undefined when   the numerator equals zero    the denominator equals zero    it includes decimals    there is a variable in the denominator   .    An apparent solution that does not satisfy the original equation is called   an extraneous    a double    a principal    a multiple   solution.    We may introduce extraneous solutions if we multiply both sides of an equation by   a nonzero integer    an expression containing the variable    any irrational number   .    We must multiply each   term    denominator    fraction only   of the equation by the LCD.                           the denominator equals zero    an extraneous    an expression containing the variable    term         Practice 4   Solve                Solving Graphically  We can use graphs to solve the equation in the following Example.  Solve the equation graphically: .  We graph the two functions in the window as shown in figure (a).  GC images of intersecting rational functions  It appears that the two graphs may intersect in the third quadrant, around . To investigate further, we change the window settings to and obtain the close-up view shown in figure (b). In this window, we can see that the graphs intersect in two distinct points, and by using the Trace we find that their -coordinates are and .  Practice 5   The manager of a new health club kept track of the number of active members over the club s first few months of operation. The number, of active members, in hundreds, months after the club opened is given by the equation     Graph the equation in the window     Use the graph to find out in which months the club had 200 active members.  Months: Enter month numbers separated by a comma.    Verify your answer algebraically by solving an equation.            A graph is below.    1, 4         Graph for (a):  graph    Applications  Application problems may lead to equations with algebraic fractions.  Rani times herself as she kayaks 30 miles down the Derwent River with the help of the current. Returning upstream against the current, she manages only 18 miles in the same amount of time. Rani knows that she can kayak at a rate of 12 miles per hour in still water. What is the speed of the current?  If we let represent the speed of the current, we can use the formula to fill in the following table.     Distance  Rate  Time   Downstream      Upstream      Because Rani paddled for equal amounts of time upstream and downstream, we have the equation The LCD for the fractions in this equation is . We multiply both sides of the equation by the LCD to obtain Solving this equation, we find The speed of the current is 3 miles per hour.  We can solve the equation in graphically by considering two functions, one for each side of the equation. Graph the two functions in the window to obtain the graph shown below.  intersecting rational functions  The function gives the time it takes Rani to paddle 30 miles downstream, and gives the time it takes her to paddle 18 miles upstream. Both of these times depend on the speed of the current, .  We are looking for a value of that makes and equal. This occurs at the intersection point of the two graphs, . Thus, the speed of the current is 3 miles per hour, as we found in . The y-coordinate of the intersection point gives the time Rani paddled on each part of her trip: 2 hours each way.  Practice 6   A cruise boat travels 18 miles downstream and back in hours. If the speed of the current is 3 miles per hour, what is the speed of the boat in still water?   Let represent the speed of the boat in still water, and fill in the table.         Distance  Rate  Time    Downstream       Upstream         Write an equation to model the problem:       Solve your equation, and answer the question in the problem.  : The speed of the boat in still water is mph.                                                                Distance  Rate  Time    Downstream       Upstream            9 mph          Formulas  Algebraic fractions may appear in formulas that relate several variables. If we want to solve for one variable in terms of the others, we may need to clear the fractions.  Solve the formula for .  Because the variable we want appears in the denominator, we must first multiply both sides of the equation by that denominator, . We apply the distributive law on the left side, then collect all terms that involve on one side of the equation. We cannot combine the two terms containing because they are not like terms. However, we can factor out , so that the right side is written as a single term containing the variable . We can then complete the solution.   Practice 7   Solve for                QuickCheck 3   True or False.   To solve an equation graphically, we graph two functions, (each side of the equation.)   True    False      The solutions are the -coordinates of the intersection points of the two graphs.   True    False      To solve a formula that is linear in the desired variable, we must get all terms including that variable on one side of the equation.   True    False      If two or more terms on one side of the equation include the desired variable, we factor it out.   True    False                             True    False    True    True           Problem Set 8.5  Warm Up  For Problems 1 8, solve.            Skills Practice  For Problems 9 16, solve.           What is wrong with the solution to the following addition problem: Solution: We don't multiply by the LCD in addition problems.  Compare the methods in each calculation with fractions. Explain how the LCD is used in each operation.  Add:  Divide:  Solve:  Simplify:  For Problems 19 24, solve the formula for the specified variable.   for  for  for  for  for  for    Applications  Rani went hiking in the Santa Monica mountains last weekend. She drove 10 miles in her car and then walked 4 miles, and arrived at a small lake hours after she left home. If Rani drives 20 times faster than she walks, how fast does she walk? 2 mph  Sam Scholarship and Reginald Privilege each travel the 360 miles to Fort Lauderdale on spring break, but Reginald drives his Porsche while Sam hitches a ride on a vegetable truck. Reginald travels 20 miles per hour faster than Sam and arrives in 3 hours less time. How fast did each travel?  Walt and Irma use a tank of fuel oil for their furnace every 25 days during the winter. Last winter it was so cold that they also lit their space heater 10 days after they filled the fuel oil tank. If the space heater uses a tank of fuel oil every 40 days, how much longer will the fuel last with both heaters running? 24 days  An underground spring fills a small pond in 12 days. Evaporation from the surface of the pond can empty the pond in 28 days. If the pond is completely dry, how long will it take to fill again?   The cost, in thousands of dollars, for immunizing percent of the residents of Emporia against a dangerous new disease is given by the function Write and solve an equation to determine what percent of the population can be immunized for $168,000. ;  A school of bluefin tuna average 36 miles per hour on a 200-mile trip in still water, but this time they encounter a current.  Express the tuna's travel time, , as a function of the current speed, , and graph the function in the window  Write and solve an equation to find the current speed if the school makes its trip in 8 hours. Label the corresponding point on your graph.   During the baseball season so far this year, Pete got hits 44 times out of 164 times at bat.  What is Pete's batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)  If Pete gets hits on every one of his next at-bats, write an expression for his new batting average.  How many consecutive hits does Pete need to raise his batting average to 0.350 ?   0.268   21  The manager of Joe's Burgers discovers that he will sell burgers per day if the price of a burger is dollars. On the other hand, he can afford to make burgers if he charges dollars apiece for them.  Graph the demand function, and the supply function, , in the same window. At what price does the demand for burgers equal the number that Joe can afford to supply? This value for is called the equilibrium price.  Write and solve an equation to verify your equilibrium price.   A chartered sightseeing flight over the Grand Canyon is scheduled to return to its departure point in 3 hours. The pilot would like to cover a distance of 144 miles before turning around, and he hears on the Weather Service that there will be a headwind of 20 miles per hour on the outward journey.  Express the time it takes for the outward journey as a function of the airspeed of the plane.  Express the time it takes for the return journey as a function of the speed of the plane.  Graph the sum of the two functions and find the point on the graph with -coordinate 3. Interpret the coordinates of the point in the context of the problem.  The pilot would like to know what airspeed to maintain in order to complete the tour in 3 hours. Write an equation to describe this situation.  Solve your equation to find the appropriate airspeed.       100 mph   The cost of wire fencing is $7.50 per foot. A rancher wants to enclose a rectangular pasture of 1000 square feet with this fencing.  Express the length of the pasture as a function of its width.  Express the cost of the fence as a function of its width.  Graph your function for the cost and find the coordinates of the lowest point on the graph. Interpret those coordinates in the context of the problem.  The rancher has $1050 to spend on the fence, and she would like to know what the width of the pasture should be. Write an equation to describe this situation.  Solve your equation and find the dimensions of the pasture.   Distances on a map vary directly with actual distances. The scale on a map of Michigan uses inch to represent 10 miles. If Isle Royale is inches long on the map, what is the actual length of the island? miles  The highest point on Earth is Mount Everest in Tibet, with an elevation of 8848 meters. The deepest part of the ocean is the Challenger Deep in the Mariana Trench, near Indonesia, 11,034 meters below sea level.  What is the total height variation in the surface of the Earth?  What percentage of the Earth's radius, 6400 kilometers, is this variation?  If the Earth were shrunk to the size of a basketball, with a radius of 4.75 inches, what would be the corresponding height of Mount Everest?   The rectangle is divided into a square and a smaller rectangle, . The two rectangles and are similar (their corresponding sides are proportional.) A rectangle with this property is called a golden rectangle golden rectangle , and the ratio of its length to its width is called the golden ratio.  The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.  golden rectangle  Let and . What are the lengths of , , and ?  Write a proportion in terms of for the similarity of rectangles and . Be careful to match up the corresponding sides.  Solve your proportion for . Find the golden ratio, .       The figure shows the graphs of two equations, .  line and translated reciprocal   Find the -coordinate of the intersection point of the two graphs.  Compare your answer to the golden ratio you computed in Problem 37.   Find the in the following \"proof\" that : Start by letting . Because and , we have \"proved\" that . Because , dividing by in the fourth step is dividing by .  For Problems 40 42,  Solve the equation graphically by graphing two functions, one for each side of the equation.  Solve the equation algebraically.     two rational functions        "
+  "body": "Equations with Fractions equation with fractions    graph of rational function for solving equation  In of Section 8.2 Francine planned a 60-mile training run on her cycle-plane. The time required for the training run, in terms of the windspeed, , is given by: If it takes Francine 9 hours to cover 60 miles, what is the speed of the wind? We can answer this question by reading values from the graph of , as shown at left. When , the value of is between 8 and 9, so the windspeed is between 8 and 9 miles per hour.   Solving Algebraically  If we need a more accurate value for the windspeed, we can solve the equation To start, we multiply each side of the equation by the denominator of the fraction. This will clear the fraction and give us an equivalent equation without fractions.  Solve the equation  We multiply both sides of the equation by to obtain From here we can proceed as usual. The windspeed was , or miles per hour.  Practice 1 Solve  If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions. lowest common denominator clearing fractions with  Solve  The LCD for the two fractions in the equation is . We multiply both sides of the equation by the LCD. We proceed as usual to complete the solution. First we use the distributive law to remove parentheses.   We must multiply each term of an equation by the LCD, whether or not the term is a fraction. In the previous Example we multiplied each term by the LCD, including the 8.  Practice 2 Solve ,   Proportions proportion  A proportion proportion is a statement that two ratios are equal. For example, To solve this proportion, we multiply both sides by the LCD, 30, to get  There is a short-cut we can use that avoids calculating an LCD. Observe that we can arrive at the equation by cross-multiplying cross-multiplying proportion proportion cross-multiplying :  cross-multiplying  We then proceed as before to complete the solution.  The cross-multiplying shortcut is a fundamental property of proportions.  Property of Proportions property of proportions proportion cross-multiplying    The scale on a map of Fairfield County says that centimeter represents a distance of 10 kilometers. If Eastlake and Kenwood are 6 centimeters apart on the map, what is the distance between the two towns?  The ratio of the two actual distances is the same as the ratio of the corresponding distances on the map. We let stand for the distance between Eastlake and Kenwood, and write a proportion.  We must be careful to keep the same order in both ratios. We choose to put the distance between towns in the numerators, and the distances on the scale in the denominator. To solve the propotion, we cross-multiply. The two towns are 80 kilometers apart.  Practice 3 On a scale model of Fantasy Valley, inches represents 50 yards. If the distance from the water slide to the bungee jump is 20 inches on the model, what is the distance between the two rides? yards  Do not try to use \"cross-multiplying\" on equations that are not proportions, or on any other operations involving fractions. The shortcut works only on proportions.  QuickCheck 1  To clear fractions from an equation, we multiply each term by the of all the fractions.  True or False: When clearing fraction from an equation, we do not multiply terms that are not fractions.  A proportion is a statement that two are equal.  Cross-multiplying works only on .    Extraneous Solutions  An algebraic fraction is undefined for any values of that make its denominator equal zero. These values cannot be solutions to equations involving the fraction. Consider the equation When we multiply both sides by the LCD, , we obtain whose solution is . However, is not a solution of the original equation. Both sides of the equation are undefined at . If you graph the two functions you will find that the graphs never intersect, which means that there is no solution to the original equation.  What went wrong with our method of solution? We multiplied both sides of the equation by , which is zero when , so we really multiplied both sides of the equation by zero. Multiplying by zero does not produce an equivalent equation, and false solutions may be introduced.  An apparent solution that does not satisfy the original equation is called an extraneous solution extraneous solution . Whenever we multiply an equation by an expression containing the variable, we should check that the solution obtained does not cause any of the fractions to be undefined.  Solve the equation .  We multiply both sides by the LCD, . Notice that we multiply each term on the left side by the LCD, to get or We use the distributive law to remove the parentheses and write the result in standard form: This is a quadratic equation that we can solve by factoring. so the solutions are and . Neither of these values causes either denominator to equal zero, so they are not extraneous solutions.  The following \"solution\" for the previous Example is incorrect. Do you see why?  QuickCheck 2  An algebraic fraction is undefined when .  An apparent solution that does not satisfy the original equation is called solution.  We may introduce extraneous solutions if we multiply both sides of an equation by .  We must multiply each of the equation by the LCD.   Practice 4 Solve   Solving Graphically  We can use graphs to solve the equation in the following Example.  Solve the equation graphically: .  We graph the two functions in the window as shown in figure (a).  GC images of intersecting rational functions  It appears that the two graphs may intersect in the third quadrant, around . To investigate further, we change the window settings to and obtain the close-up view shown in figure (b). In this window, we can see that the graphs intersect in two distinct points, and by using the Trace we find that their -coordinates are and .  Practice 5 The manager of a new health club kept track of the number of active members over the club's first few months of operation. The number, of active members, in hundreds, months after the club opened is given by the equation   Graph the equation in the window  Use the graph to find out in which months the club had 200 active members.  Verify your answer algebraically by solving an equation.   graph  1, 4    Applications  Application problems may lead to equations with algebraic fractions.  Rani times herself as she kayaks 30 miles down the Derwent River with the help of the current. Returning upstream against the current, she manages only 18 miles in the same amount of time. Rani knows that she can kayak at a rate of 12 miles per hour in still water. What is the speed of the current?  If we let represent the speed of the current, we can use the formula to fill in the following table.     Distance  Rate  Time   Downstream      Upstream      Because Rani paddled for equal amounts of time upstream and downstream, we have the equation The LCD for the fractions in this equation is . We multiply both sides of the equation by the LCD to obtain Solving this equation, we find The speed of the current is 3 miles per hour.  We can solve the equation in graphically by considering two functions, one for each side of the equation. Graph the two functions in the window to obtain the graph shown below.  intersecting rational functions  The function gives the time it takes Rani to paddle 30 miles downstream, and gives the time it takes her to paddle 18 miles upstream. Both of these times depend on the speed of the current, .  We are looking for a value of that makes and equal. This occurs at the intersection point of the two graphs, . Thus, the speed of the current is 3 miles per hour, as we found in . The y-coordinate of the intersection point gives the time Rani paddled on each part of her trip: 2 hours each way.  Practice 6 A cruise boat travels 18 miles downstream and back in hours. If the speed of the current is 3 miles per hour, what is the speed of the boat in still water?   Let represent the speed of the boat in still water, and fill in the table.     Distance  Rate  Time   Downstream      Upstream      Write an equation to model the problem:   Solve your equation, and answer the question in the problem.      Distance  Rate  Time   Downstream      Upstream       9 mph    Formulas  Algebraic fractions may appear in formulas that relate several variables. If we want to solve for one variable in terms of the others, we may need to clear the fractions.  Solve the formula for .  Because the variable we want appears in the denominator, we must first multiply both sides of the equation by that denominator, . We apply the distributive law on the left side, then collect all terms that involve on one side of the equation. We cannot combine the two terms containing because they are not like terms. However, we can factor out , so that the right side is written as a single term containing the variable . We can then complete the solution.   Practice 7 Solve for :   QuickCheck 3 True or False.  To solve an equation graphically, we graph two functions, (each side of the equation.)  The solutions are the -coordinates of the intersection points of the two graphs.  To solve a formula that is linear in the desired variable, we must get all terms including that variable on one side of the equation.  If two or more terms on one side of the equation include the desired variable, we factor it out.     Problem Set 8.5  Warm Up  For Problems 1 8, solve.            Skills Practice  For Problems 9 16, solve.           What is wrong with the solution to the following addition problem: Solution: We don't multiply by the LCD in addition problems.  Compare the methods in each calculation with fractions. Explain how the LCD is used in each operation.  Add:  Divide:  Solve:  Simplify:  For Problems 19 24, solve the formula for the specified variable.   for  for  for  for  for  for    Applications  Rani went hiking in the Santa Monica mountains last weekend. She drove 10 miles in her car and then walked 4 miles, and arrived at a small lake hours after she left home. If Rani drives 20 times faster than she walks, how fast does she walk? 2 mph  Sam Scholarship and Reginald Privilege each travel the 360 miles to Fort Lauderdale on spring break, but Reginald drives his Porsche while Sam hitches a ride on a vegetable truck. Reginald travels 20 miles per hour faster than Sam and arrives in 3 hours less time. How fast did each travel?  Walt and Irma use a tank of fuel oil for their furnace every 25 days during the winter. Last winter it was so cold that they also lit their space heater 10 days after they filled the fuel oil tank. If the space heater uses a tank of fuel oil every 40 days, how much longer will the fuel last with both heaters running? 24 days  An underground spring fills a small pond in 12 days. Evaporation from the surface of the pond can empty the pond in 28 days. If the pond is completely dry, how long will it take to fill again?   The cost, in thousands of dollars, for immunizing percent of the residents of Emporia against a dangerous new disease is given by the function Write and solve an equation to determine what percent of the population can be immunized for $168,000. ;  A school of bluefin tuna average 36 miles per hour on a 200-mile trip in still water, but this time they encounter a current.  Express the tuna's travel time, , as a function of the current speed, , and graph the function in the window  Write and solve an equation to find the current speed if the school makes its trip in 8 hours. Label the corresponding point on your graph.   During the baseball season so far this year, Pete got hits 44 times out of 164 times at bat.  What is Pete's batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)  If Pete gets hits on every one of his next at-bats, write an expression for his new batting average.  How many consecutive hits does Pete need to raise his batting average to 0.350 ?   0.268   21  The manager of Joe's Burgers discovers that he will sell burgers per day if the price of a burger is dollars. On the other hand, he can afford to make burgers if he charges dollars apiece for them.  Graph the demand function, and the supply function, , in the same window. At what price does the demand for burgers equal the number that Joe can afford to supply? This value for is called the equilibrium price.  Write and solve an equation to verify your equilibrium price.   A chartered sightseeing flight over the Grand Canyon is scheduled to return to its departure point in 3 hours. The pilot would like to cover a distance of 144 miles before turning around, and he hears on the Weather Service that there will be a headwind of 20 miles per hour on the outward journey.  Express the time it takes for the outward journey as a function of the airspeed of the plane.  Express the time it takes for the return journey as a function of the speed of the plane.  Graph the sum of the two functions and find the point on the graph with -coordinate 3. Interpret the coordinates of the point in the context of the problem.  The pilot would like to know what airspeed to maintain in order to complete the tour in 3 hours. Write an equation to describe this situation.  Solve your equation to find the appropriate airspeed.       100 mph   The cost of wire fencing is $7.50 per foot. A rancher wants to enclose a rectangular pasture of 1000 square feet with this fencing.  Express the length of the pasture as a function of its width.  Express the cost of the fence as a function of its width.  Graph your function for the cost and find the coordinates of the lowest point on the graph. Interpret those coordinates in the context of the problem.  The rancher has $1050 to spend on the fence, and she would like to know what the width of the pasture should be. Write an equation to describe this situation.  Solve your equation and find the dimensions of the pasture.   Distances on a map vary directly with actual distances. The scale on a map of Michigan uses inch to represent 10 miles. If Isle Royale is inches long on the map, what is the actual length of the island? miles  The highest point on Earth is Mount Everest in Tibet, with an elevation of 8848 meters. The deepest part of the ocean is the Challenger Deep in the Mariana Trench, near Indonesia, 11,034 meters below sea level.  What is the total height variation in the surface of the Earth?  What percentage of the Earth's radius, 6400 kilometers, is this variation?  If the Earth were shrunk to the size of a basketball, with a radius of 4.75 inches, what would be the corresponding height of Mount Everest?   The rectangle is divided into a square and a smaller rectangle, . The two rectangles and are similar (their corresponding sides are proportional.) A rectangle with this property is called a golden rectangle golden rectangle , and the ratio of its length to its width is called the golden ratio.  The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.  golden rectangle  Let and . What are the lengths of , , and ?  Write a proportion in terms of for the similarity of rectangles and . Be careful to match up the corresponding sides.  Solve your proportion for . Find the golden ratio, .       The figure shows the graphs of two equations, .  line and translated reciprocal   Find the -coordinate of the intersection point of the two graphs.  Compare your answer to the golden ratio you computed in Problem 37.   Find the in the following \"proof\" that : Start by letting . Because and , we have \"proved\" that . Because , dividing by in the fourth step is dividing by .  For Problems 40 42,  Solve the equation graphically by graphing two functions, one for each side of the equation.  Solve the equation algebraically.     two rational functions        "
 },
 {
-  "id": "example-217",
+  "id": "example-219",
   "level": "2",
-  "url": "EquationswithFractions.html#example-217",
+  "url": "EquationswithFractions.html#example-219",
   "type": "Example",
   "number": "8.5.1",
   "title": "",
   "body": "Solve the equation  We multiply both sides of the equation by to obtain From here we can proceed as usual. The windspeed was , or miles per hour. "
 },
 {
-  "id": "exercise-1882",
+  "id": "exercise-1883",
   "level": "2",
-  "url": "EquationswithFractions.html#exercise-1882",
+  "url": "EquationswithFractions.html#exercise-1883",
   "type": "Checkpoint",
   "number": "8.5.2",
   "title": "Practice 1.",
-  "body": "Practice 1   Solve              "
+  "body": "Practice 1 Solve "
 },
 {
   "id": "example-clear-fractions",
@@ -21448,72 +21484,72 @@ var ptx_lunr_docs = [
   "body": "Solve  The LCD for the two fractions in the equation is . We multiply both sides of the equation by the LCD. We proceed as usual to complete the solution. First we use the distributive law to remove parentheses.  "
 },
 {
-  "id": "warning-43",
+  "id": "warning-42",
   "level": "2",
-  "url": "EquationswithFractions.html#warning-43",
+  "url": "EquationswithFractions.html#warning-42",
   "type": "Caution",
   "number": "8.5.4",
   "title": "",
   "body": "We must multiply each term of an equation by the LCD, whether or not the term is a fraction. In the previous Example we multiplied each term by the LCD, including the 8. "
 },
 {
-  "id": "exercise-1883",
+  "id": "exercise-1884",
   "level": "2",
-  "url": "EquationswithFractions.html#exercise-1883",
+  "url": "EquationswithFractions.html#exercise-1884",
   "type": "Checkpoint",
   "number": "8.5.5",
   "title": "Practice 2.",
-  "body": "Practice 2   Solve  Enter solutions separated by a comma.              "
+  "body": "Practice 2 Solve , "
 },
 {
-  "id": "p-8574",
+  "id": "p-8248",
   "level": "2",
-  "url": "EquationswithFractions.html#p-8574",
+  "url": "EquationswithFractions.html#p-8248",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cross-multiplying "
 },
 {
-  "id": "example-219",
+  "id": "example-221",
   "level": "2",
-  "url": "EquationswithFractions.html#example-219",
+  "url": "EquationswithFractions.html#example-221",
   "type": "Example",
   "number": "8.5.6",
   "title": "",
   "body": "The scale on a map of Fairfield County says that centimeter represents a distance of 10 kilometers. If Eastlake and Kenwood are 6 centimeters apart on the map, what is the distance between the two towns?  The ratio of the two actual distances is the same as the ratio of the corresponding distances on the map. We let stand for the distance between Eastlake and Kenwood, and write a proportion.  We must be careful to keep the same order in both ratios. We choose to put the distance between towns in the numerators, and the distances on the scale in the denominator. To solve the propotion, we cross-multiply. The two towns are 80 kilometers apart. "
 },
 {
-  "id": "exercise-1884",
+  "id": "exercise-1885",
   "level": "2",
-  "url": "EquationswithFractions.html#exercise-1884",
+  "url": "EquationswithFractions.html#exercise-1885",
   "type": "Checkpoint",
   "number": "8.5.7",
   "title": "Practice 3.",
-  "body": "Practice 3   On a scale model of Fantasy Valley, inches represents 50 yards. If the distance from the water slide to the bungee jump is 20 inches on the model, what is the distance between the two rides?  yards        yards      "
+  "body": "Practice 3 On a scale model of Fantasy Valley, inches represents 50 yards. If the distance from the water slide to the bungee jump is 20 inches on the model, what is the distance between the two rides? yards "
 },
 {
-  "id": "warning-44",
+  "id": "warning-43",
   "level": "2",
-  "url": "EquationswithFractions.html#warning-44",
+  "url": "EquationswithFractions.html#warning-43",
   "type": "Caution",
   "number": "8.5.8",
   "title": "",
   "body": "Do not try to use \"cross-multiplying\" on equations that are not proportions, or on any other operations involving fractions. The shortcut works only on proportions. "
 },
 {
-  "id": "exercise-1885",
+  "id": "exercise-1886",
   "level": "2",
-  "url": "EquationswithFractions.html#exercise-1885",
+  "url": "EquationswithFractions.html#exercise-1886",
   "type": "Checkpoint",
   "number": "8.5.9",
   "title": "QuickCheck 1.",
-  "body": "QuickCheck 1     To clear fractions from an equation, we multiply each term by the   LCD    average    reciprocal   of all the fractions.    True or False: When clearing fraction from an equation, we do not multiply terms that are not fractions.   True    False      A proportion is a statement that two   equations    factors    ratios   are equal.    Cross-multiplying works only on   reduced fractions    improper fractions    proportions   .                           LCD    False    ratios    proportions        "
+  "body": "QuickCheck 1  To clear fractions from an equation, we multiply each term by the of all the fractions.  True or False: When clearing fraction from an equation, we do not multiply terms that are not fractions.  A proportion is a statement that two are equal.  Cross-multiplying works only on .  "
 },
 {
-  "id": "p-8613",
+  "id": "p-8265",
   "level": "2",
-  "url": "EquationswithFractions.html#p-8613",
+  "url": "EquationswithFractions.html#p-8265",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -21529,49 +21565,49 @@ var ptx_lunr_docs = [
   "body": "Solve the equation .  We multiply both sides by the LCD, . Notice that we multiply each term on the left side by the LCD, to get or We use the distributive law to remove the parentheses and write the result in standard form: This is a quadratic equation that we can solve by factoring. so the solutions are and . Neither of these values causes either denominator to equal zero, so they are not extraneous solutions. "
 },
 {
-  "id": "warning-45",
+  "id": "warning-44",
   "level": "2",
-  "url": "EquationswithFractions.html#warning-45",
+  "url": "EquationswithFractions.html#warning-44",
   "type": "Caution",
   "number": "8.5.11",
   "title": "",
   "body": "The following \"solution\" for the previous Example is incorrect. Do you see why? "
 },
 {
-  "id": "exercise-1886",
-  "level": "2",
-  "url": "EquationswithFractions.html#exercise-1886",
-  "type": "Checkpoint",
-  "number": "8.5.12",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2     An algebraic fraction is undefined when   the numerator equals zero    the denominator equals zero    it includes decimals    there is a variable in the denominator   .    An apparent solution that does not satisfy the original equation is called   an extraneous    a double    a principal    a multiple   solution.    We may introduce extraneous solutions if we multiply both sides of an equation by   a nonzero integer    an expression containing the variable    any irrational number   .    We must multiply each   term    denominator    fraction only   of the equation by the LCD.                           the denominator equals zero    an extraneous    an expression containing the variable    term        "
-},
-{
   "id": "exercise-1887",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1887",
   "type": "Checkpoint",
-  "number": "8.5.13",
-  "title": "Practice 4.",
-  "body": "Practice 4   Solve              "
-},
-{
-  "id": "example-221",
-  "level": "2",
-  "url": "EquationswithFractions.html#example-221",
-  "type": "Example",
-  "number": "8.5.14",
-  "title": "",
-  "body": "Solve the equation graphically: .  We graph the two functions in the window as shown in figure (a).  GC images of intersecting rational functions  It appears that the two graphs may intersect in the third quadrant, around . To investigate further, we change the window settings to and obtain the close-up view shown in figure (b). In this window, we can see that the graphs intersect in two distinct points, and by using the Trace we find that their -coordinates are and . "
+  "number": "8.5.12",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2  An algebraic fraction is undefined when .  An apparent solution that does not satisfy the original equation is called solution.  We may introduce extraneous solutions if we multiply both sides of an equation by .  We must multiply each of the equation by the LCD.  "
 },
 {
   "id": "exercise-1888",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1888",
   "type": "Checkpoint",
+  "number": "8.5.13",
+  "title": "Practice 4.",
+  "body": "Practice 4 Solve "
+},
+{
+  "id": "example-223",
+  "level": "2",
+  "url": "EquationswithFractions.html#example-223",
+  "type": "Example",
+  "number": "8.5.14",
+  "title": "",
+  "body": "Solve the equation graphically: .  We graph the two functions in the window as shown in figure (a).  GC images of intersecting rational functions  It appears that the two graphs may intersect in the third quadrant, around . To investigate further, we change the window settings to and obtain the close-up view shown in figure (b). In this window, we can see that the graphs intersect in two distinct points, and by using the Trace we find that their -coordinates are and . "
+},
+{
+  "id": "exercise-1889",
+  "level": "2",
+  "url": "EquationswithFractions.html#exercise-1889",
+  "type": "Checkpoint",
   "number": "8.5.15",
   "title": "Practice 5.",
-  "body": "Practice 5   The manager of a new health club kept track of the number of active members over the club s first few months of operation. The number, of active members, in hundreds, months after the club opened is given by the equation     Graph the equation in the window     Use the graph to find out in which months the club had 200 active members.  Months: Enter month numbers separated by a comma.    Verify your answer algebraically by solving an equation.            A graph is below.    1, 4         Graph for (a):  graph  "
+  "body": "Practice 5 The manager of a new health club kept track of the number of active members over the club's first few months of operation. The number, of active members, in hundreds, months after the club opened is given by the equation   Graph the equation in the window  Use the graph to find out in which months the club had 200 active members.  Verify your answer algebraically by solving an equation.   graph  1, 4  "
 },
 {
   "id": "example-kayak-current",
@@ -21583,56 +21619,47 @@ var ptx_lunr_docs = [
   "body": "Rani times herself as she kayaks 30 miles down the Derwent River with the help of the current. Returning upstream against the current, she manages only 18 miles in the same amount of time. Rani knows that she can kayak at a rate of 12 miles per hour in still water. What is the speed of the current?  If we let represent the speed of the current, we can use the formula to fill in the following table.     Distance  Rate  Time   Downstream      Upstream      Because Rani paddled for equal amounts of time upstream and downstream, we have the equation The LCD for the fractions in this equation is . We multiply both sides of the equation by the LCD to obtain Solving this equation, we find The speed of the current is 3 miles per hour. "
 },
 {
-  "id": "exercise-1889",
+  "id": "exercise-1890",
   "level": "2",
-  "url": "EquationswithFractions.html#exercise-1889",
+  "url": "EquationswithFractions.html#exercise-1890",
   "type": "Checkpoint",
   "number": "8.5.17",
   "title": "Practice 6.",
-  "body": "Practice 6   A cruise boat travels 18 miles downstream and back in hours. If the speed of the current is 3 miles per hour, what is the speed of the boat in still water?   Let represent the speed of the boat in still water, and fill in the table.         Distance  Rate  Time    Downstream       Upstream         Write an equation to model the problem:       Solve your equation, and answer the question in the problem.  : The speed of the boat in still water is mph.                                                                Distance  Rate  Time    Downstream       Upstream            9 mph        "
+  "body": "Practice 6 A cruise boat travels 18 miles downstream and back in hours. If the speed of the current is 3 miles per hour, what is the speed of the boat in still water?   Let represent the speed of the boat in still water, and fill in the table.     Distance  Rate  Time   Downstream      Upstream      Write an equation to model the problem:   Solve your equation, and answer the question in the problem.      Distance  Rate  Time   Downstream      Upstream       9 mph  "
 },
 {
-  "id": "example-223",
+  "id": "example-225",
   "level": "2",
-  "url": "EquationswithFractions.html#example-223",
+  "url": "EquationswithFractions.html#example-225",
   "type": "Example",
   "number": "8.5.18",
   "title": "",
   "body": "Solve the formula for .  Because the variable we want appears in the denominator, we must first multiply both sides of the equation by that denominator, . We apply the distributive law on the left side, then collect all terms that involve on one side of the equation. We cannot combine the two terms containing because they are not like terms. However, we can factor out , so that the right side is written as a single term containing the variable . We can then complete the solution.  "
 },
 {
-  "id": "exercise-1890",
-  "level": "2",
-  "url": "EquationswithFractions.html#exercise-1890",
-  "type": "Checkpoint",
-  "number": "8.5.19",
-  "title": "Practice 7.",
-  "body": "Practice 7   Solve for               "
-},
-{
   "id": "exercise-1891",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1891",
   "type": "Checkpoint",
-  "number": "8.5.20",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   True or False.   To solve an equation graphically, we graph two functions, (each side of the equation.)   True    False      The solutions are the -coordinates of the intersection points of the two graphs.   True    False      To solve a formula that is linear in the desired variable, we must get all terms including that variable on one side of the equation.   True    False      If two or more terms on one side of the equation include the desired variable, we factor it out.   True    False                             True    False    True    True        "
+  "number": "8.5.19",
+  "title": "Practice 7.",
+  "body": "Practice 7 Solve for :  "
 },
 {
   "id": "exercise-1892",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1892",
-  "type": "Exercise",
-  "number": "8.5.7.1",
-  "title": "",
-  "body": ""
+  "type": "Checkpoint",
+  "number": "8.5.20",
+  "title": "QuickCheck 3.",
+  "body": "QuickCheck 3 True or False.  To solve an equation graphically, we graph two functions, (each side of the equation.)  The solutions are the -coordinates of the intersection points of the two graphs.  To solve a formula that is linear in the desired variable, we must get all terms including that variable on one side of the equation.  If two or more terms on one side of the equation include the desired variable, we factor it out.  "
 },
 {
   "id": "exercise-1893",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1893",
   "type": "Exercise",
-  "number": "8.5.7.2",
+  "number": "8.5.7.1",
   "title": "",
   "body": ""
 },
@@ -21641,7 +21668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1894",
   "type": "Exercise",
-  "number": "8.5.7.3",
+  "number": "8.5.7.2",
   "title": "",
   "body": ""
 },
@@ -21650,7 +21677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1895",
   "type": "Exercise",
-  "number": "8.5.7.4",
+  "number": "8.5.7.3",
   "title": "",
   "body": ""
 },
@@ -21659,7 +21686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1896",
   "type": "Exercise",
-  "number": "8.5.7.5",
+  "number": "8.5.7.4",
   "title": "",
   "body": ""
 },
@@ -21668,7 +21695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1897",
   "type": "Exercise",
-  "number": "8.5.7.6",
+  "number": "8.5.7.5",
   "title": "",
   "body": ""
 },
@@ -21677,7 +21704,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1898",
   "type": "Exercise",
-  "number": "8.5.7.7",
+  "number": "8.5.7.6",
   "title": "",
   "body": ""
 },
@@ -21686,7 +21713,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1899",
   "type": "Exercise",
-  "number": "8.5.7.8",
+  "number": "8.5.7.7",
   "title": "",
   "body": ""
 },
@@ -21695,7 +21722,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1900",
   "type": "Exercise",
-  "number": "8.5.7.9",
+  "number": "8.5.7.8",
   "title": "",
   "body": ""
 },
@@ -21704,7 +21731,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1901",
   "type": "Exercise",
-  "number": "8.5.7.10",
+  "number": "8.5.7.9",
   "title": "",
   "body": ""
 },
@@ -21713,7 +21740,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1902",
   "type": "Exercise",
-  "number": "8.5.7.11",
+  "number": "8.5.7.10",
   "title": "",
   "body": ""
 },
@@ -21722,7 +21749,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1903",
   "type": "Exercise",
-  "number": "8.5.7.12",
+  "number": "8.5.7.11",
   "title": "",
   "body": ""
 },
@@ -21731,7 +21758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1904",
   "type": "Exercise",
-  "number": "8.5.7.13",
+  "number": "8.5.7.12",
   "title": "",
   "body": ""
 },
@@ -21740,7 +21767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1905",
   "type": "Exercise",
-  "number": "8.5.7.14",
+  "number": "8.5.7.13",
   "title": "",
   "body": ""
 },
@@ -21749,7 +21776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1906",
   "type": "Exercise",
-  "number": "8.5.7.15",
+  "number": "8.5.7.14",
   "title": "",
   "body": ""
 },
@@ -21758,7 +21785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1907",
   "type": "Exercise",
-  "number": "8.5.7.16",
+  "number": "8.5.7.15",
   "title": "",
   "body": ""
 },
@@ -21767,34 +21794,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1908",
   "type": "Exercise",
-  "number": "8.5.7.17",
+  "number": "8.5.7.16",
   "title": "",
-  "body": "What is wrong with the solution to the following addition problem: Solution: We don't multiply by the LCD in addition problems. "
+  "body": ""
 },
 {
   "id": "exercise-1909",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1909",
   "type": "Exercise",
-  "number": "8.5.7.18",
+  "number": "8.5.7.17",
   "title": "",
-  "body": "Compare the methods in each calculation with fractions. Explain how the LCD is used in each operation.  Add:  Divide:  Solve:  Simplify: "
+  "body": "What is wrong with the solution to the following addition problem: Solution: We don't multiply by the LCD in addition problems. "
 },
 {
   "id": "exercise-1910",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1910",
   "type": "Exercise",
-  "number": "8.5.7.19",
+  "number": "8.5.7.18",
   "title": "",
-  "body": "for "
+  "body": "Compare the methods in each calculation with fractions. Explain how the LCD is used in each operation.  Add:  Divide:  Solve:  Simplify: "
 },
 {
   "id": "exercise-1911",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1911",
   "type": "Exercise",
-  "number": "8.5.7.20",
+  "number": "8.5.7.19",
   "title": "",
   "body": "for "
 },
@@ -21803,7 +21830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1912",
   "type": "Exercise",
-  "number": "8.5.7.21",
+  "number": "8.5.7.20",
   "title": "",
   "body": "for "
 },
@@ -21812,7 +21839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1913",
   "type": "Exercise",
-  "number": "8.5.7.22",
+  "number": "8.5.7.21",
   "title": "",
   "body": "for "
 },
@@ -21821,7 +21848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1914",
   "type": "Exercise",
-  "number": "8.5.7.23",
+  "number": "8.5.7.22",
   "title": "",
   "body": "for "
 },
@@ -21830,7 +21857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1915",
   "type": "Exercise",
-  "number": "8.5.7.24",
+  "number": "8.5.7.23",
   "title": "",
   "body": "for "
 },
@@ -21839,158 +21866,167 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1916",
   "type": "Exercise",
-  "number": "8.5.7.25",
+  "number": "8.5.7.24",
   "title": "",
-  "body": "Rani went hiking in the Santa Monica mountains last weekend. She drove 10 miles in her car and then walked 4 miles, and arrived at a small lake hours after she left home. If Rani drives 20 times faster than she walks, how fast does she walk? 2 mph "
+  "body": "for "
 },
 {
   "id": "exercise-1917",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1917",
   "type": "Exercise",
-  "number": "8.5.7.26",
+  "number": "8.5.7.25",
   "title": "",
-  "body": "Sam Scholarship and Reginald Privilege each travel the 360 miles to Fort Lauderdale on spring break, but Reginald drives his Porsche while Sam hitches a ride on a vegetable truck. Reginald travels 20 miles per hour faster than Sam and arrives in 3 hours less time. How fast did each travel? "
+  "body": "Rani went hiking in the Santa Monica mountains last weekend. She drove 10 miles in her car and then walked 4 miles, and arrived at a small lake hours after she left home. If Rani drives 20 times faster than she walks, how fast does she walk? 2 mph "
 },
 {
   "id": "exercise-1918",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1918",
   "type": "Exercise",
-  "number": "8.5.7.27",
+  "number": "8.5.7.26",
   "title": "",
-  "body": "Walt and Irma use a tank of fuel oil for their furnace every 25 days during the winter. Last winter it was so cold that they also lit their space heater 10 days after they filled the fuel oil tank. If the space heater uses a tank of fuel oil every 40 days, how much longer will the fuel last with both heaters running? 24 days "
+  "body": "Sam Scholarship and Reginald Privilege each travel the 360 miles to Fort Lauderdale on spring break, but Reginald drives his Porsche while Sam hitches a ride on a vegetable truck. Reginald travels 20 miles per hour faster than Sam and arrives in 3 hours less time. How fast did each travel? "
 },
 {
   "id": "exercise-1919",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1919",
   "type": "Exercise",
-  "number": "8.5.7.28",
+  "number": "8.5.7.27",
   "title": "",
-  "body": "An underground spring fills a small pond in 12 days. Evaporation from the surface of the pond can empty the pond in 28 days. If the pond is completely dry, how long will it take to fill again?  "
+  "body": "Walt and Irma use a tank of fuel oil for their furnace every 25 days during the winter. Last winter it was so cold that they also lit their space heater 10 days after they filled the fuel oil tank. If the space heater uses a tank of fuel oil every 40 days, how much longer will the fuel last with both heaters running? 24 days "
 },
 {
   "id": "exercise-1920",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1920",
   "type": "Exercise",
-  "number": "8.5.7.29",
+  "number": "8.5.7.28",
   "title": "",
-  "body": "The cost, in thousands of dollars, for immunizing percent of the residents of Emporia against a dangerous new disease is given by the function Write and solve an equation to determine what percent of the population can be immunized for $168,000. ; "
+  "body": "An underground spring fills a small pond in 12 days. Evaporation from the surface of the pond can empty the pond in 28 days. If the pond is completely dry, how long will it take to fill again?  "
 },
 {
   "id": "exercise-1921",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1921",
   "type": "Exercise",
-  "number": "8.5.7.30",
+  "number": "8.5.7.29",
   "title": "",
-  "body": "A school of bluefin tuna average 36 miles per hour on a 200-mile trip in still water, but this time they encounter a current.  Express the tuna's travel time, , as a function of the current speed, , and graph the function in the window  Write and solve an equation to find the current speed if the school makes its trip in 8 hours. Label the corresponding point on your graph.  "
+  "body": "The cost, in thousands of dollars, for immunizing percent of the residents of Emporia against a dangerous new disease is given by the function Write and solve an equation to determine what percent of the population can be immunized for $168,000. ; "
 },
 {
   "id": "exercise-1922",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1922",
   "type": "Exercise",
-  "number": "8.5.7.31",
+  "number": "8.5.7.30",
   "title": "",
-  "body": "During the baseball season so far this year, Pete got hits 44 times out of 164 times at bat.  What is Pete's batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)  If Pete gets hits on every one of his next at-bats, write an expression for his new batting average.  How many consecutive hits does Pete need to raise his batting average to 0.350 ?   0.268   21 "
+  "body": "A school of bluefin tuna average 36 miles per hour on a 200-mile trip in still water, but this time they encounter a current.  Express the tuna's travel time, , as a function of the current speed, , and graph the function in the window  Write and solve an equation to find the current speed if the school makes its trip in 8 hours. Label the corresponding point on your graph.  "
 },
 {
   "id": "exercise-1923",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1923",
   "type": "Exercise",
-  "number": "8.5.7.32",
+  "number": "8.5.7.31",
   "title": "",
-  "body": "The manager of Joe's Burgers discovers that he will sell burgers per day if the price of a burger is dollars. On the other hand, he can afford to make burgers if he charges dollars apiece for them.  Graph the demand function, and the supply function, , in the same window. At what price does the demand for burgers equal the number that Joe can afford to supply? This value for is called the equilibrium price.  Write and solve an equation to verify your equilibrium price.  "
+  "body": "During the baseball season so far this year, Pete got hits 44 times out of 164 times at bat.  What is Pete's batting average so far? (Batting average is the fraction of at-bats that resulted in hits.)  If Pete gets hits on every one of his next at-bats, write an expression for his new batting average.  How many consecutive hits does Pete need to raise his batting average to 0.350 ?   0.268   21 "
 },
 {
   "id": "exercise-1924",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1924",
   "type": "Exercise",
-  "number": "8.5.7.33",
+  "number": "8.5.7.32",
   "title": "",
-  "body": "A chartered sightseeing flight over the Grand Canyon is scheduled to return to its departure point in 3 hours. The pilot would like to cover a distance of 144 miles before turning around, and he hears on the Weather Service that there will be a headwind of 20 miles per hour on the outward journey.  Express the time it takes for the outward journey as a function of the airspeed of the plane.  Express the time it takes for the return journey as a function of the speed of the plane.  Graph the sum of the two functions and find the point on the graph with -coordinate 3. Interpret the coordinates of the point in the context of the problem.  The pilot would like to know what airspeed to maintain in order to complete the tour in 3 hours. Write an equation to describe this situation.  Solve your equation to find the appropriate airspeed.       100 mph  "
+  "body": "The manager of Joe's Burgers discovers that he will sell burgers per day if the price of a burger is dollars. On the other hand, he can afford to make burgers if he charges dollars apiece for them.  Graph the demand function, and the supply function, , in the same window. At what price does the demand for burgers equal the number that Joe can afford to supply? This value for is called the equilibrium price.  Write and solve an equation to verify your equilibrium price.  "
 },
 {
   "id": "exercise-1925",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1925",
   "type": "Exercise",
-  "number": "8.5.7.34",
+  "number": "8.5.7.33",
   "title": "",
-  "body": "The cost of wire fencing is $7.50 per foot. A rancher wants to enclose a rectangular pasture of 1000 square feet with this fencing.  Express the length of the pasture as a function of its width.  Express the cost of the fence as a function of its width.  Graph your function for the cost and find the coordinates of the lowest point on the graph. Interpret those coordinates in the context of the problem.  The rancher has $1050 to spend on the fence, and she would like to know what the width of the pasture should be. Write an equation to describe this situation.  Solve your equation and find the dimensions of the pasture.  "
+  "body": "A chartered sightseeing flight over the Grand Canyon is scheduled to return to its departure point in 3 hours. The pilot would like to cover a distance of 144 miles before turning around, and he hears on the Weather Service that there will be a headwind of 20 miles per hour on the outward journey.  Express the time it takes for the outward journey as a function of the airspeed of the plane.  Express the time it takes for the return journey as a function of the speed of the plane.  Graph the sum of the two functions and find the point on the graph with -coordinate 3. Interpret the coordinates of the point in the context of the problem.  The pilot would like to know what airspeed to maintain in order to complete the tour in 3 hours. Write an equation to describe this situation.  Solve your equation to find the appropriate airspeed.       100 mph  "
 },
 {
   "id": "exercise-1926",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1926",
   "type": "Exercise",
-  "number": "8.5.7.35",
+  "number": "8.5.7.34",
   "title": "",
-  "body": "Distances on a map vary directly with actual distances. The scale on a map of Michigan uses inch to represent 10 miles. If Isle Royale is inches long on the map, what is the actual length of the island? miles "
+  "body": "The cost of wire fencing is $7.50 per foot. A rancher wants to enclose a rectangular pasture of 1000 square feet with this fencing.  Express the length of the pasture as a function of its width.  Express the cost of the fence as a function of its width.  Graph your function for the cost and find the coordinates of the lowest point on the graph. Interpret those coordinates in the context of the problem.  The rancher has $1050 to spend on the fence, and she would like to know what the width of the pasture should be. Write an equation to describe this situation.  Solve your equation and find the dimensions of the pasture.  "
 },
 {
   "id": "exercise-1927",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1927",
   "type": "Exercise",
-  "number": "8.5.7.36",
+  "number": "8.5.7.35",
   "title": "",
-  "body": "The highest point on Earth is Mount Everest in Tibet, with an elevation of 8848 meters. The deepest part of the ocean is the Challenger Deep in the Mariana Trench, near Indonesia, 11,034 meters below sea level.  What is the total height variation in the surface of the Earth?  What percentage of the Earth's radius, 6400 kilometers, is this variation?  If the Earth were shrunk to the size of a basketball, with a radius of 4.75 inches, what would be the corresponding height of Mount Everest?  "
+  "body": "Distances on a map vary directly with actual distances. The scale on a map of Michigan uses inch to represent 10 miles. If Isle Royale is inches long on the map, what is the actual length of the island? miles "
 },
 {
   "id": "exercise-1928",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1928",
   "type": "Exercise",
-  "number": "8.5.7.37",
+  "number": "8.5.7.36",
   "title": "",
-  "body": "The rectangle is divided into a square and a smaller rectangle, . The two rectangles and are similar (their corresponding sides are proportional.) A rectangle with this property is called a golden rectangle golden rectangle , and the ratio of its length to its width is called the golden ratio.  The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.  golden rectangle  Let and . What are the lengths of , , and ?  Write a proportion in terms of for the similarity of rectangles and . Be careful to match up the corresponding sides.  Solve your proportion for . Find the golden ratio, .      "
+  "body": "The highest point on Earth is Mount Everest in Tibet, with an elevation of 8848 meters. The deepest part of the ocean is the Challenger Deep in the Mariana Trench, near Indonesia, 11,034 meters below sea level.  What is the total height variation in the surface of the Earth?  What percentage of the Earth's radius, 6400 kilometers, is this variation?  If the Earth were shrunk to the size of a basketball, with a radius of 4.75 inches, what would be the corresponding height of Mount Everest?  "
 },
 {
   "id": "exercise-1929",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1929",
   "type": "Exercise",
-  "number": "8.5.7.38",
+  "number": "8.5.7.37",
   "title": "",
-  "body": "The figure shows the graphs of two equations, .  line and translated reciprocal   Find the -coordinate of the intersection point of the two graphs.  Compare your answer to the golden ratio you computed in Problem 37.  "
+  "body": "The rectangle is divided into a square and a smaller rectangle, . The two rectangles and are similar (their corresponding sides are proportional.) A rectangle with this property is called a golden rectangle golden rectangle , and the ratio of its length to its width is called the golden ratio.  The golden ratio appears frequently in art and nature, and it is considered to give the most pleasing proportions to many figures. We will compute the golden ratio as follows.  golden rectangle  Let and . What are the lengths of , , and ?  Write a proportion in terms of for the similarity of rectangles and . Be careful to match up the corresponding sides.  Solve your proportion for . Find the golden ratio, .      "
 },
 {
   "id": "exercise-1930",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1930",
   "type": "Exercise",
-  "number": "8.5.7.39",
+  "number": "8.5.7.38",
   "title": "",
-  "body": "Find the in the following \"proof\" that : Start by letting . Because and , we have \"proved\" that . Because , dividing by in the fourth step is dividing by . "
+  "body": "The figure shows the graphs of two equations, .  line and translated reciprocal   Find the -coordinate of the intersection point of the two graphs.  Compare your answer to the golden ratio you computed in Problem 37.  "
 },
 {
   "id": "exercise-1931",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1931",
   "type": "Exercise",
-  "number": "8.5.7.40",
+  "number": "8.5.7.39",
   "title": "",
-  "body": ""
+  "body": "Find the in the following \"proof\" that : Start by letting . Because and , we have \"proved\" that . Because , dividing by in the fourth step is dividing by . "
 },
 {
   "id": "exercise-1932",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1932",
   "type": "Exercise",
-  "number": "8.5.7.41",
+  "number": "8.5.7.40",
   "title": "",
-  "body": " two rational functions   "
+  "body": ""
 },
 {
   "id": "exercise-1933",
   "level": "2",
   "url": "EquationswithFractions.html#exercise-1933",
+  "type": "Exercise",
+  "number": "8.5.7.41",
+  "title": "",
+  "body": " two rational functions   "
+},
+{
+  "id": "exercise-1934",
+  "level": "2",
+  "url": "EquationswithFractions.html#exercise-1934",
   "type": "Exercise",
   "number": "8.5.7.42",
   "title": "",
@@ -22006,29 +22042,20 @@ var ptx_lunr_docs = [
   "body": " Chapter 8 Summary and Review  Glossary   polynomial  degree  descending powers  ascending powers  lead coefficient  algebraic fraction  vertical asymptote  horizontal asymptote  rational function  lowest common denominator  building factor  like fractions  common factor  complex fraction  proportion  extraneous solution    Key Concepts   Polynomial Function  A polynomial function has the form where , , , , are constants and . The coefficient of the highest power term is called the lead coefficient lead coefficient .  Degree of a Product  The degree of a product of non-zero polynomials is the sum of the degrees of the factors. That is:  If has degree and has degree , then their product has degree .  Special Products of Binomials   Cube of a Binomial     Factoring the Sum or Difference of Two Cubes      Fundamental Principle of Fractions  We can multiply or divide the numerator and denominator of a fraction by the same nonzero factor, and the new fraction will be equivalent to the old one.  When we cancel common factors, we are dividing . Because division is the inverse or opposite operation for multiplication, we can cancel common factors , but we cannot cancel common terms .  To reduce an algebraic fraction   Factor the numerator and the denominator.  Divide the numerator and denominator by any common factors.  Rational Function  A rational function has the form where and are polynomials. A rational function is undefined at any -values where .  Operations on Fractions  If , then  If , then  If , then   To multiply algebraic fractions:   Factor each numerator and denominator.  If any factor appears in both a numerator and a denominator, divide out that factor.  Multiply the remaining factors of the numerator and the remaining factors of the denominator.  Reduce the product if necessary.  To divide algebraic fractions:   Take the reciprocal of the second fraction and change the operation to multiplication.  Follow the rules for multiplication of fractions.  To add or subtract algebraic fractions   Find the lowest common denominator (LCD) for the fractions.  Build each fraction to an equivalent one with the same denominator.  Add or subtract the resulting like fractions: Add or subtract their numerators, and keep the same denominator.  Reduce the sum or difference if necessary.  To Find the LCD   Factor each denominator completely.  Include each different factor in the LCD as many times as it occurs in any one of the given denominators.  To simplify a complex fraction   Find the LCD of all the fractions contained in the complex fraction.  Multiply the numerator and the denominator of the complex fraction by the LCD.  Reduce the resulting simple fraction, if possible.  An algebraic fractrion is \"improper\" if the degree of the numerator is greater than the degree of the denominator. If it cannot be reduced, we can simplify the expression by treating it as a division of polynomials. The quotient will be the sum of a polynomial and a simpler algebraic fraction.  If an equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions.  Property of Proportions    Whenever we multiply an equation by an expression containing the variable, we should check that the solution obtained does not cause any of the fractions to be undefined.     Chapter 8 Review Problems  For Problems 1 and 2, multiply.     For Problems 3 and 4, factor.     The expression gives the number of different 3-item pizzas that can be created from a list of toppings.  Write the expression as a polynomial.  If Mitch's Pizza offers 12 different toppings, how many different combinations for 3-item pizzas can be made?  Use a table or graph to determine how many different toppings are needed in order to be able to have more than 1000 possible combinations for 3-item pizzas.       The expression gives the number of different triple-scoop ice cream cones that can be created from a list of flavors.  Write the expression as a polynomial.  If Zanner's Ice Cream Parlor offers 21 flavors, how many different triple-scoop ice cream cones can be made?  Use a table or graph to determine how many different flavors are needed in order to be able to have more than 10,000 possible triple-scoop ice cream cones.   The radius, , of a cylindrical can should be one-half its height, .  Express the volume, , of the can as a function of its height.  What is the volume of the can if its height is 2 centimeters? 4 centimeters?  Graph the volume as a function of the height and verify your results of part (b) graphically. What is the approximate height of the can if its volume is 100 cubic centimeters?    ;  cubic   The Twisty-Freez machine dispenses soft ice cream in a cone-shaped peak with a height 3 times the radius of its base. The ice cream comes in a round bowl with base diameter .  Express the volume, , of Twisty-Freez in the bowl as a function of .  How much Twisty-Freez comes in a 3-inch diameter dish? A 4-inch dish?  Graph the volume as a function of the diameter and verify your results of part (b) graphically. What is the approximate diameter of a Twisty-Freez if its volume is 5 cubic inches?   A new health club opened up, and the manager kept track of the number of active members over its first few months of operation. The equation below gives the number, , of active members, in hundreds, months after the club opened.  Use your calculator to graph the function in the window  How many active members did the club have after 8 months?  In which months did the club have 200 active members?  When does the health club have the largest number of active members? What happens to the number of active members as time goes on?    rational function  338  Months 2 and 02  During month 6. The number of members eventually decreases to zero.   A small lake in a state park has become polluted by runoff from a factory upstream. The cost for removing percent of the pollution from the lake is given, in thousands of dollars, by  Use your calculator to graph the function on a suitable domain.  How much will it cost to remove 40% of the pollution?  How much of the pollution can be removed for $100,000 ?  What happens to the cost as the amount of pollution to be removed increases? How much will it cost to remove all the pollution?   The Explorer's Club is planning a canoe trip to travel 90 miles up the Lazy River and return in 4 days. Club members plan to paddle for hours each day, and they know that the current in the Lazy River is 2 miles per hour.  Express the time it will take for the upstream journey as a function of their paddling speed in still water.  Express the time it will take for the downstream journey as a function of their paddling speed in still water.  Graph the sum of the two functions in the window and find the point on the graph with -coordinate 24. Interpret the coordinates of the point in the context of the problem.  The Explorer's Club would like to know what average paddling speed members must maintain in order to complete their trip in 4 days. Write an equation to describe this situation.  Solve your equation to find the required paddling speed.     curve   8 mph   Pam lives on the banks of the Cedar River and makes frequent trips in her outboard motorboat. The boat travels at 20 miles per hour in still water.  Express the time it takes Pam to travel 8 miles upstream to the gas station as a function of the speed of the current.  Express the time it takes Pam to travel 12 miles downstream to Marie's house as a function of the speed of the current.  Graph the two functions in the window and find the coordinates of the intersection point. Interpret those coordinates in the context of the problem.  Pam traveled to the gas station in the same time it took her to travel to Marie's house. Write an equation to describe this situation.  Solve your equation to find the speed of the current in the Cedar River.   For Problems 13 18, reduce the fraction to lowest terms.         For Problems 19 26, write the expression as a single fraction in lowest terms.           For Problems 27 30, divide.       For Problems 31 36, write the expression as a single fraction in lowest terms.         For Problems 37 40, write the complex fraction as a simple fraction in lowest terms.       For Problems 41 44, solve.    No solution    For Problems 45 48, solve for the indicated variable.  , for  , for  , for  , for   For Problems 49 54, write the expression as a single fraction involving positive exponents only.           "
 },
 {
-  "id": "p-8839",
+  "id": "p-8428",
   "level": "2",
-  "url": "chap8-summary.html#p-8839",
+  "url": "chap8-summary.html#p-8428",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "polynomial function lead coefficient rational function "
 },
 {
-  "id": "exercise-1934",
-  "level": "2",
-  "url": "chap8-summary.html#exercise-1934",
-  "type": "Exercise",
-  "number": "8.6.3.1",
-  "title": "",
-  "body": ""
-},
-{
   "id": "exercise-1935",
   "level": "2",
   "url": "chap8-summary.html#exercise-1935",
   "type": "Exercise",
-  "number": "8.6.3.2",
+  "number": "8.6.3.1",
   "title": "",
   "body": ""
 },
@@ -22037,7 +22064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1936",
   "type": "Exercise",
-  "number": "8.6.3.3",
+  "number": "8.6.3.2",
   "title": "",
   "body": ""
 },
@@ -22046,7 +22073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1937",
   "type": "Exercise",
-  "number": "8.6.3.4",
+  "number": "8.6.3.3",
   "title": "",
   "body": ""
 },
@@ -22055,88 +22082,88 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1938",
   "type": "Exercise",
-  "number": "8.6.3.5",
+  "number": "8.6.3.4",
   "title": "",
-  "body": "The expression gives the number of different 3-item pizzas that can be created from a list of toppings.  Write the expression as a polynomial.  If Mitch's Pizza offers 12 different toppings, how many different combinations for 3-item pizzas can be made?  Use a table or graph to determine how many different toppings are needed in order to be able to have more than 1000 possible combinations for 3-item pizzas.      "
+  "body": ""
 },
 {
   "id": "exercise-1939",
   "level": "2",
   "url": "chap8-summary.html#exercise-1939",
   "type": "Exercise",
-  "number": "8.6.3.6",
+  "number": "8.6.3.5",
   "title": "",
-  "body": "The expression gives the number of different triple-scoop ice cream cones that can be created from a list of flavors.  Write the expression as a polynomial.  If Zanner's Ice Cream Parlor offers 21 flavors, how many different triple-scoop ice cream cones can be made?  Use a table or graph to determine how many different flavors are needed in order to be able to have more than 10,000 possible triple-scoop ice cream cones.  "
+  "body": "The expression gives the number of different 3-item pizzas that can be created from a list of toppings.  Write the expression as a polynomial.  If Mitch's Pizza offers 12 different toppings, how many different combinations for 3-item pizzas can be made?  Use a table or graph to determine how many different toppings are needed in order to be able to have more than 1000 possible combinations for 3-item pizzas.      "
 },
 {
   "id": "exercise-1940",
   "level": "2",
   "url": "chap8-summary.html#exercise-1940",
   "type": "Exercise",
-  "number": "8.6.3.7",
+  "number": "8.6.3.6",
   "title": "",
-  "body": "The radius, , of a cylindrical can should be one-half its height, .  Express the volume, , of the can as a function of its height.  What is the volume of the can if its height is 2 centimeters? 4 centimeters?  Graph the volume as a function of the height and verify your results of part (b) graphically. What is the approximate height of the can if its volume is 100 cubic centimeters?    ;  cubic  "
+  "body": "The expression gives the number of different triple-scoop ice cream cones that can be created from a list of flavors.  Write the expression as a polynomial.  If Zanner's Ice Cream Parlor offers 21 flavors, how many different triple-scoop ice cream cones can be made?  Use a table or graph to determine how many different flavors are needed in order to be able to have more than 10,000 possible triple-scoop ice cream cones.  "
 },
 {
   "id": "exercise-1941",
   "level": "2",
   "url": "chap8-summary.html#exercise-1941",
   "type": "Exercise",
-  "number": "8.6.3.8",
+  "number": "8.6.3.7",
   "title": "",
-  "body": "The Twisty-Freez machine dispenses soft ice cream in a cone-shaped peak with a height 3 times the radius of its base. The ice cream comes in a round bowl with base diameter .  Express the volume, , of Twisty-Freez in the bowl as a function of .  How much Twisty-Freez comes in a 3-inch diameter dish? A 4-inch dish?  Graph the volume as a function of the diameter and verify your results of part (b) graphically. What is the approximate diameter of a Twisty-Freez if its volume is 5 cubic inches?  "
+  "body": "The radius, , of a cylindrical can should be one-half its height, .  Express the volume, , of the can as a function of its height.  What is the volume of the can if its height is 2 centimeters? 4 centimeters?  Graph the volume as a function of the height and verify your results of part (b) graphically. What is the approximate height of the can if its volume is 100 cubic centimeters?    ;  cubic  "
 },
 {
   "id": "exercise-1942",
   "level": "2",
   "url": "chap8-summary.html#exercise-1942",
   "type": "Exercise",
-  "number": "8.6.3.9",
+  "number": "8.6.3.8",
   "title": "",
-  "body": "A new health club opened up, and the manager kept track of the number of active members over its first few months of operation. The equation below gives the number, , of active members, in hundreds, months after the club opened.  Use your calculator to graph the function in the window  How many active members did the club have after 8 months?  In which months did the club have 200 active members?  When does the health club have the largest number of active members? What happens to the number of active members as time goes on?    rational function  338  Months 2 and 02  During month 6. The number of members eventually decreases to zero.  "
+  "body": "The Twisty-Freez machine dispenses soft ice cream in a cone-shaped peak with a height 3 times the radius of its base. The ice cream comes in a round bowl with base diameter .  Express the volume, , of Twisty-Freez in the bowl as a function of .  How much Twisty-Freez comes in a 3-inch diameter dish? A 4-inch dish?  Graph the volume as a function of the diameter and verify your results of part (b) graphically. What is the approximate diameter of a Twisty-Freez if its volume is 5 cubic inches?  "
 },
 {
   "id": "exercise-1943",
   "level": "2",
   "url": "chap8-summary.html#exercise-1943",
   "type": "Exercise",
-  "number": "8.6.3.10",
+  "number": "8.6.3.9",
   "title": "",
-  "body": "A small lake in a state park has become polluted by runoff from a factory upstream. The cost for removing percent of the pollution from the lake is given, in thousands of dollars, by  Use your calculator to graph the function on a suitable domain.  How much will it cost to remove 40% of the pollution?  How much of the pollution can be removed for $100,000 ?  What happens to the cost as the amount of pollution to be removed increases? How much will it cost to remove all the pollution?  "
+  "body": "A new health club opened up, and the manager kept track of the number of active members over its first few months of operation. The equation below gives the number, , of active members, in hundreds, months after the club opened.  Use your calculator to graph the function in the window  How many active members did the club have after 8 months?  In which months did the club have 200 active members?  When does the health club have the largest number of active members? What happens to the number of active members as time goes on?    rational function  338  Months 2 and 02  During month 6. The number of members eventually decreases to zero.  "
 },
 {
   "id": "exercise-1944",
   "level": "2",
   "url": "chap8-summary.html#exercise-1944",
   "type": "Exercise",
-  "number": "8.6.3.11",
+  "number": "8.6.3.10",
   "title": "",
-  "body": "The Explorer's Club is planning a canoe trip to travel 90 miles up the Lazy River and return in 4 days. Club members plan to paddle for hours each day, and they know that the current in the Lazy River is 2 miles per hour.  Express the time it will take for the upstream journey as a function of their paddling speed in still water.  Express the time it will take for the downstream journey as a function of their paddling speed in still water.  Graph the sum of the two functions in the window and find the point on the graph with -coordinate 24. Interpret the coordinates of the point in the context of the problem.  The Explorer's Club would like to know what average paddling speed members must maintain in order to complete their trip in 4 days. Write an equation to describe this situation.  Solve your equation to find the required paddling speed.     curve   8 mph  "
+  "body": "A small lake in a state park has become polluted by runoff from a factory upstream. The cost for removing percent of the pollution from the lake is given, in thousands of dollars, by  Use your calculator to graph the function on a suitable domain.  How much will it cost to remove 40% of the pollution?  How much of the pollution can be removed for $100,000 ?  What happens to the cost as the amount of pollution to be removed increases? How much will it cost to remove all the pollution?  "
 },
 {
   "id": "exercise-1945",
   "level": "2",
   "url": "chap8-summary.html#exercise-1945",
   "type": "Exercise",
-  "number": "8.6.3.12",
+  "number": "8.6.3.11",
   "title": "",
-  "body": "Pam lives on the banks of the Cedar River and makes frequent trips in her outboard motorboat. The boat travels at 20 miles per hour in still water.  Express the time it takes Pam to travel 8 miles upstream to the gas station as a function of the speed of the current.  Express the time it takes Pam to travel 12 miles downstream to Marie's house as a function of the speed of the current.  Graph the two functions in the window and find the coordinates of the intersection point. Interpret those coordinates in the context of the problem.  Pam traveled to the gas station in the same time it took her to travel to Marie's house. Write an equation to describe this situation.  Solve your equation to find the speed of the current in the Cedar River.  "
+  "body": "The Explorer's Club is planning a canoe trip to travel 90 miles up the Lazy River and return in 4 days. Club members plan to paddle for hours each day, and they know that the current in the Lazy River is 2 miles per hour.  Express the time it will take for the upstream journey as a function of their paddling speed in still water.  Express the time it will take for the downstream journey as a function of their paddling speed in still water.  Graph the sum of the two functions in the window and find the point on the graph with -coordinate 24. Interpret the coordinates of the point in the context of the problem.  The Explorer's Club would like to know what average paddling speed members must maintain in order to complete their trip in 4 days. Write an equation to describe this situation.  Solve your equation to find the required paddling speed.     curve   8 mph  "
 },
 {
   "id": "exercise-1946",
   "level": "2",
   "url": "chap8-summary.html#exercise-1946",
   "type": "Exercise",
-  "number": "8.6.3.13",
+  "number": "8.6.3.12",
   "title": "",
-  "body": ""
+  "body": "Pam lives on the banks of the Cedar River and makes frequent trips in her outboard motorboat. The boat travels at 20 miles per hour in still water.  Express the time it takes Pam to travel 8 miles upstream to the gas station as a function of the speed of the current.  Express the time it takes Pam to travel 12 miles downstream to Marie's house as a function of the speed of the current.  Graph the two functions in the window and find the coordinates of the intersection point. Interpret those coordinates in the context of the problem.  Pam traveled to the gas station in the same time it took her to travel to Marie's house. Write an equation to describe this situation.  Solve your equation to find the speed of the current in the Cedar River.  "
 },
 {
   "id": "exercise-1947",
   "level": "2",
   "url": "chap8-summary.html#exercise-1947",
   "type": "Exercise",
-  "number": "8.6.3.14",
+  "number": "8.6.3.13",
   "title": "",
   "body": ""
 },
@@ -22145,7 +22172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1948",
   "type": "Exercise",
-  "number": "8.6.3.15",
+  "number": "8.6.3.14",
   "title": "",
   "body": ""
 },
@@ -22154,7 +22181,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1949",
   "type": "Exercise",
-  "number": "8.6.3.16",
+  "number": "8.6.3.15",
   "title": "",
   "body": ""
 },
@@ -22163,7 +22190,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1950",
   "type": "Exercise",
-  "number": "8.6.3.17",
+  "number": "8.6.3.16",
   "title": "",
   "body": ""
 },
@@ -22172,7 +22199,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1951",
   "type": "Exercise",
-  "number": "8.6.3.18",
+  "number": "8.6.3.17",
   "title": "",
   "body": ""
 },
@@ -22181,7 +22208,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1952",
   "type": "Exercise",
-  "number": "8.6.3.19",
+  "number": "8.6.3.18",
   "title": "",
   "body": ""
 },
@@ -22190,7 +22217,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1953",
   "type": "Exercise",
-  "number": "8.6.3.20",
+  "number": "8.6.3.19",
   "title": "",
   "body": ""
 },
@@ -22199,7 +22226,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1954",
   "type": "Exercise",
-  "number": "8.6.3.21",
+  "number": "8.6.3.20",
   "title": "",
   "body": ""
 },
@@ -22208,7 +22235,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1955",
   "type": "Exercise",
-  "number": "8.6.3.22",
+  "number": "8.6.3.21",
   "title": "",
   "body": ""
 },
@@ -22217,7 +22244,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1956",
   "type": "Exercise",
-  "number": "8.6.3.23",
+  "number": "8.6.3.22",
   "title": "",
   "body": ""
 },
@@ -22226,7 +22253,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1957",
   "type": "Exercise",
-  "number": "8.6.3.24",
+  "number": "8.6.3.23",
   "title": "",
   "body": ""
 },
@@ -22235,7 +22262,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1958",
   "type": "Exercise",
-  "number": "8.6.3.25",
+  "number": "8.6.3.24",
   "title": "",
   "body": ""
 },
@@ -22244,7 +22271,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1959",
   "type": "Exercise",
-  "number": "8.6.3.26",
+  "number": "8.6.3.25",
   "title": "",
   "body": ""
 },
@@ -22253,7 +22280,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1960",
   "type": "Exercise",
-  "number": "8.6.3.27",
+  "number": "8.6.3.26",
   "title": "",
   "body": ""
 },
@@ -22262,7 +22289,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1961",
   "type": "Exercise",
-  "number": "8.6.3.28",
+  "number": "8.6.3.27",
   "title": "",
   "body": ""
 },
@@ -22271,7 +22298,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1962",
   "type": "Exercise",
-  "number": "8.6.3.29",
+  "number": "8.6.3.28",
   "title": "",
   "body": ""
 },
@@ -22280,7 +22307,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1963",
   "type": "Exercise",
-  "number": "8.6.3.30",
+  "number": "8.6.3.29",
   "title": "",
   "body": ""
 },
@@ -22289,7 +22316,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1964",
   "type": "Exercise",
-  "number": "8.6.3.31",
+  "number": "8.6.3.30",
   "title": "",
   "body": ""
 },
@@ -22298,7 +22325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1965",
   "type": "Exercise",
-  "number": "8.6.3.32",
+  "number": "8.6.3.31",
   "title": "",
   "body": ""
 },
@@ -22307,7 +22334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1966",
   "type": "Exercise",
-  "number": "8.6.3.33",
+  "number": "8.6.3.32",
   "title": "",
   "body": ""
 },
@@ -22316,7 +22343,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1967",
   "type": "Exercise",
-  "number": "8.6.3.34",
+  "number": "8.6.3.33",
   "title": "",
   "body": ""
 },
@@ -22325,7 +22352,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1968",
   "type": "Exercise",
-  "number": "8.6.3.35",
+  "number": "8.6.3.34",
   "title": "",
   "body": ""
 },
@@ -22334,7 +22361,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1969",
   "type": "Exercise",
-  "number": "8.6.3.36",
+  "number": "8.6.3.35",
   "title": "",
   "body": ""
 },
@@ -22343,7 +22370,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1970",
   "type": "Exercise",
-  "number": "8.6.3.37",
+  "number": "8.6.3.36",
   "title": "",
   "body": ""
 },
@@ -22352,7 +22379,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1971",
   "type": "Exercise",
-  "number": "8.6.3.38",
+  "number": "8.6.3.37",
   "title": "",
   "body": ""
 },
@@ -22361,7 +22388,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1972",
   "type": "Exercise",
-  "number": "8.6.3.39",
+  "number": "8.6.3.38",
   "title": "",
   "body": ""
 },
@@ -22370,7 +22397,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1973",
   "type": "Exercise",
-  "number": "8.6.3.40",
+  "number": "8.6.3.39",
   "title": "",
   "body": ""
 },
@@ -22379,7 +22406,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1974",
   "type": "Exercise",
-  "number": "8.6.3.41",
+  "number": "8.6.3.40",
   "title": "",
   "body": ""
 },
@@ -22388,7 +22415,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1975",
   "type": "Exercise",
-  "number": "8.6.3.42",
+  "number": "8.6.3.41",
   "title": "",
   "body": ""
 },
@@ -22397,34 +22424,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1976",
   "type": "Exercise",
-  "number": "8.6.3.43",
+  "number": "8.6.3.42",
   "title": "",
-  "body": "No solution "
+  "body": ""
 },
 {
   "id": "exercise-1977",
   "level": "2",
   "url": "chap8-summary.html#exercise-1977",
   "type": "Exercise",
-  "number": "8.6.3.44",
+  "number": "8.6.3.43",
   "title": "",
-  "body": ""
+  "body": "No solution "
 },
 {
   "id": "exercise-1978",
   "level": "2",
   "url": "chap8-summary.html#exercise-1978",
   "type": "Exercise",
-  "number": "8.6.3.45",
+  "number": "8.6.3.44",
   "title": "",
-  "body": ", for "
+  "body": ""
 },
 {
   "id": "exercise-1979",
   "level": "2",
   "url": "chap8-summary.html#exercise-1979",
   "type": "Exercise",
-  "number": "8.6.3.46",
+  "number": "8.6.3.45",
   "title": "",
   "body": ", for "
 },
@@ -22433,7 +22460,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1980",
   "type": "Exercise",
-  "number": "8.6.3.47",
+  "number": "8.6.3.46",
   "title": "",
   "body": ", for "
 },
@@ -22442,7 +22469,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1981",
   "type": "Exercise",
-  "number": "8.6.3.48",
+  "number": "8.6.3.47",
   "title": "",
   "body": ", for "
 },
@@ -22451,16 +22478,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1982",
   "type": "Exercise",
-  "number": "8.6.3.49",
+  "number": "8.6.3.48",
   "title": "",
-  "body": ""
+  "body": ", for "
 },
 {
   "id": "exercise-1983",
   "level": "2",
   "url": "chap8-summary.html#exercise-1983",
   "type": "Exercise",
-  "number": "8.6.3.50",
+  "number": "8.6.3.49",
   "title": "",
   "body": ""
 },
@@ -22469,7 +22496,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1984",
   "type": "Exercise",
-  "number": "8.6.3.51",
+  "number": "8.6.3.50",
   "title": "",
   "body": ""
 },
@@ -22478,7 +22505,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1985",
   "type": "Exercise",
-  "number": "8.6.3.52",
+  "number": "8.6.3.51",
   "title": "",
   "body": ""
 },
@@ -22487,7 +22514,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap8-summary.html#exercise-1986",
   "type": "Exercise",
-  "number": "8.6.3.53",
+  "number": "8.6.3.52",
   "title": "",
   "body": ""
 },
@@ -22495,6 +22522,15 @@ var ptx_lunr_docs = [
   "id": "exercise-1987",
   "level": "2",
   "url": "chap8-summary.html#exercise-1987",
+  "type": "Exercise",
+  "number": "8.6.3.53",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-1988",
+  "level": "2",
+  "url": "chap8-summary.html#exercise-1988",
   "type": "Exercise",
   "number": "8.6.3.54",
   "title": "",
@@ -22507,12 +22543,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "Properties of Lines",
-  "body": "Properties of Lines  Horizontal and Vertical Lines  The general form for a linear equation is What happens if ? For example, what does the graph of look like? This equation tells us that every point on the line must have -coordinate 3, but it puts no restrictions on the -coordinates. For example, are all solutions of the equation. These points lie on a horizontal line, as shown below left.   horizontal line  vertical line  On the other hand, if , we have an equation such as This equation tells us that any point with -coordinate lies on the graph. For example, and are solutions. All the solutions lie on the vertical line shown above right.  Note that the horizontal line has -intercept y -intercept  but no -intercept, and the vertical line has -intercept x -intercept  but no -intercept.  Horizontal and Vertical Lines horizontal line vertical line   The equation of the horizontal line horizontal line passing through is  The equation of the vertical line vertical line line vertical passing through is   Give the equation of each line.   horizontal line   horizontal line    This is a horizontal line with -intercept , so its equation is .  This is a vertical line with -intercept , so its equation is .   Now let's compute the slopes of the two lines in the previous Example . Choose two points on the graph of , say and . Use these points to compute the slope. The slope of the horizontal line is zero. In fact, the slope of any horizontal line is zero, because the -coordinates of all the points on the line are equal. Thus  On a vertical line, the -coordinates of all the points are equal. For example, two points on the line are and . Using these points to compute the slope, we find which is undefined. The slope of any vertical line is undefined because the expression equals zero.  Slopes of Horizontal and Vertical Lines horizontal line slope of vertical line slope of slope undefined slope zero  The slope of a horizontal line horizontal line is zero .  The slope of a vertical line vertical line is undefined .   Practice 1     What is the slope of any line parallel to the -axis?   0    Undefined      What is the slope of any line parallel to the -axis?   0    Undefined                   0    undefined         QuickCheck 1   True or False.   A horizontal line has no slope.   True    False      The equation of a vertical line is undefined.   True    False      A vertical line is not the graph of a function.   True    False      The graph of is a point.   True    False                             False    False    True    False          Parallel and Perpendicular Lines   Lines that lie in the same plane but never intersect are called parallel parallel lines line parallel lines. They have the same \"steepness\" or inclination, so it is easy to understand that parallel lines have the same slope. You can verify that the parallel lines in the figure at right both have slope  parallel lines   perpendicular lines  Perpendicular perpendicular lines line perpendicular lines in a plane meet at right angles, or 90°. The relationship between the slopes of perpendicular lines is not so easy to see as the relationship for parallel lines. However, for the perpendicular lines shown at left, you can verify that Note that the product of and is , that is,   This relationship holds for any pair of perpendicular lines. We summarize these results as follows.  Parallel and Perpendicular Lines   Two lines are parallel parallel lines line parallel if their slopes are equal, that is, if or if both lines are vertical.  Two lines are perpendicular perpendicular lines line perpendicular if the product of their slopes is , that is, if or if one of the lines is horizontal and one is vertical.   Another way to state the condition for perpendicular lines is Because of this relationship, we often say that the slope of one perpendicular line is the negative reciprocal negative reciprocal of the other.  Decide whether the lines are parallel, perpendicular, or neither.  We could graph the lines, but we can't be sure from a graph if the lines are exactly parallel or exactly perpendicular. A more accurate way to settle the question is to find the slope of each line. To do this we write each equation in slope-intercept form; that is, we solve for . The slope of the first line is , and the slope of the second line is . The slopes are not equal, so the lines are not parallel. However, the product of the slopes is so the lines are perpendicular.  Practice 2     What is the slope of a line that is parallel to  Answer:    What is the slope of a line that is perpendicular to  Answer:                            QuickCheck 2   True or false.   The best way to test whether two lines are perpendicular is to graph them.   True    False      Two lines are perpendicular if their slopes are reciprocals.   True    False      If two lines are not parallel, they must be perpendicular.   True    False      A vertical line is perpendicular to a horizontal line.   True    False                             False    False    False    True          Applications to Geometry  These relationships for the slopes of parallel and perpendicular lines can help us solve numerous geometric problems.  Show that the triangle with vertices , , and is a right triangle.  We will show that two of the sides of the right triangle are perpendicular. The line segment has slope   and the segment has slope Because  triangle  The sides and perpendicular, and therefore the triangle is a right triangle.  Practice 3   Show that the quadrilateral with vertices   and is a parallelogram.  (Hint: Show that is parallel to and that is parallel to )  The slope of is , and the slope of is . These slopes are   equal    different   , so the sides are   parallel    perpendicular   .  The slope of is , and the slope of is . These slopes are   equal    different   , so the sides are   parallel    perpendicular   .                                                  Find an equation for the line that passes through the point and is perpendicular to the line .   First we find the slope of the desired line, then use the point-slope formula to write its equation. The line we want is perpendicular to the given line, so its slope is the negative reciprocal of , the slope of the given line. Thus  line perpendicular to given line  Now we use the point-slope formula with and . The given line and the perpendicular line are shown in the figure on the above.  Practice 4  altitude of triangle    Find an equation for the altitude of the triangle shown above . (The altitude of a triangle is perpendicular to its base.)  Find the slope of the base.    Find the slope of the altitude.    Use the point-slope formula. Use for the slope, and the vertex of the triangle for   Write your answer in slope-intercept form.                            Problem Set 9.1  Warm Up     Decide whether the slope of each line is positive, negative, zero, or undefined.  A B  C D  List the lines in order of increasing slope.  lines of different slope   negative; negative; positive; zero  , , ,  Find the slope of each line.      In the table below, give the negative reciprocal for each number. Then find the product of each number with its negative reciprocal. What do you notice?    Number  Negative reciprocal  Their product                        Number  Negative reciprocal  Their product                        Find the slope of the line joining the points and .    Skills Practice  For Problems 5 and 6,  sketch a rough graph of the equation,  state the slope and intercept of the line.     verticl line    is undefined;    For Problems 7 10, find an equation for the line described.  A vertical line through the point .  The -axis.  Perpendicular to and intersecting it at .  Parallel to the -axis with intercept at .   The slopes of several lines are given below. Which of the lines are parallel to the graph of , and which are perpendicular to it?         parallel: a, g, h; perpendicular: c, f  In each part, determine whether the two lines are parallel, perpendicular, or neither.  ;  ;  ;  ;   Use your calculator to graph the equations and together in the standard window. Do you think the lines are parallel?  Find the slope of each line in part (a). Are the lines parallel?  Find the -value for each equation when . What do your answers tell you about the two lines?  No  3 and 3.1; no  68. The two lines meet at .   Use your calculator to graph the equations together in the standard window. Do the lines appear to be perpendicular?  Find the slope of each line in part (a). Are the lines perpendicular?   Applications   Sketch the triangle with vertices , , and .  Show that the triangle is a right triangle. (Hint: Find the slope of each side of the triangle.)  b. ;   Sketch the quadrilateral with vertices , , and , and .  Show that the quadrilateral is a parallelogram. (Hint: What should be true about the slopes of the opposite sides of the parallelogram?)   Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is parallel to ?  On your graph for part (a), sketch by hand a line that is parallel to and passes through the point .  Use the point-slope formula to write an equation for the line that is parallel to the graph of and passes through the point .  ; the graph is below.    parallel lines    Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is perpendicular to ?  On your graph for part (a), sketch by hand a line that is perpendicular to and passes through the point .  Use the point-slope formula to write an equation for the line that is perpendicular to the graph of and passes through the point .  Two of the vertices of rectangle are and .  Find an equation for the line that includes side  Find an equation for the line that includes side     Sketch the triangle with vertices , , and .  Find the slope of the side  Find the slope of the altitude from point to side  Find an equation for the line that includes the altitude from point to the side .  The center of a circle is the point , and is a point on the circle. Find the equation of the line tangent to the circle at the point . (Hint: Recall that the tangent line to a circle is perpendicular to the radius at the point of tangency.)   circle and tangent line  Show that the line passing through the points and also passes through the point .    "
+  "body": "Properties of Lines  Horizontal and Vertical Lines  The general form for a linear equation is What happens if ? For example, what does the graph of look like? This equation tells us that every point on the line must have -coordinate 3, but it puts no restrictions on the -coordinates. For example, are all solutions of the equation. These points lie on a horizontal line, as shown below left.   horizontal line  vertical line  On the other hand, if , we have an equation such as This equation tells us that any point with -coordinate lies on the graph. For example, and are solutions. All the solutions lie on the vertical line shown above right.  Note that the horizontal line has -intercept y -intercept  but no -intercept, and the vertical line has -intercept x -intercept  but no -intercept.  Horizontal and Vertical Lines horizontal line vertical line   The equation of the horizontal line horizontal line passing through is  The equation of the vertical line vertical line line vertical passing through is   Give the equation of each line.  horizontal line  horizontal line    This is a horizontal line with -intercept , so its equation is .  This is a vertical line with -intercept , so its equation is .   Now let's compute the slopes of the two lines in the previous Example . Choose two points on the graph of , say and . Use these points to compute the slope. The slope of the horizontal line is zero. In fact, the slope of any horizontal line is zero, because the -coordinates of all the points on the line are equal. Thus  On a vertical line, the -coordinates of all the points are equal. For example, two points on the line are and . Using these points to compute the slope, we find which is undefined. The slope of any vertical line is undefined because the expression equals zero.  Slopes of Horizontal and Vertical Lines horizontal line slope of vertical line slope of slope undefined slope zero  The slope of a horizontal line horizontal line is zero .  The slope of a vertical line vertical line is undefined .   Practice 1  What is the slope of any line parallel to the -axis?  What is the slope of any line parallel to the -axis?   0  undefined   QuickCheck 1 True or False.   A horizontal line has no slope.  The equation of a vertical line is undefined.  A vertical line is not the graph of a function.  The graph of is a point.    Parallel and Perpendicular Lines   Lines that lie in the same plane but never intersect are called parallel parallel lines line parallel lines. They have the same \"steepness\" or inclination, so it is easy to understand that parallel lines have the same slope. You can verify that the parallel lines in the figure at right both have slope  parallel lines   perpendicular lines  Perpendicular perpendicular lines line perpendicular lines in a plane meet at right angles, or 90°. The relationship between the slopes of perpendicular lines is not so easy to see as the relationship for parallel lines. However, for the perpendicular lines shown at left, you can verify that  Note that the product of and is , that is,   This relationship holds for any pair of perpendicular lines. We summarize these results as follows.  Parallel and Perpendicular Lines   Two lines are parallel parallel lines line parallel if their slopes are equal, that is, if or if both lines are vertical.  Two lines are perpendicular perpendicular lines line perpendicular if the product of their slopes is , that is, if or if one of the lines is horizontal and one is vertical.   Another way to state the condition for perpendicular lines is Because of this relationship, we often say that the slope of one perpendicular line is the negative reciprocal negative reciprocal of the other.  Decide whether the lines are parallel, perpendicular, or neither.  We could graph the lines, but we can't be sure from a graph if the lines are exactly parallel or exactly perpendicular. A more accurate way to settle the question is to find the slope of each line. To do this we write each equation in slope-intercept form; that is, we solve for . The slope of the first line is , and the slope of the second line is . The slopes are not equal, so the lines are not parallel. However, the product of the slopes is so the lines are perpendicular.  Practice 2  What is the slope of a line that is parallel to ?  What is the slope of a line that is perpendicular to ?      QuickCheck 2 True or false.   The best way to test whether two lines are perpendicular is to graph them.  Two lines are perpendicular if their slopes are reciprocals.  If two lines are not parallel, they must be perpendicular.  A vertical line is perpendicular to a horizontal line.    Applications to Geometry  These relationships for the slopes of parallel and perpendicular lines can help us solve numerous geometric problems.  Show that the triangle with vertices , , and is a right triangle.  We will show that two of the sides of the right triangle are perpendicular. The line segment has slope   and the segment has slope Because  triangle  The sides and perpendicular, and therefore the triangle is a right triangle.  Practice 3 Show that the quadrilateral with vertices , , , and is a parallelogram.  (Hint: Show that is parallel to , and that is parallel to .) ;   Find an equation for the line that passes through the point and is perpendicular to the line .   First we find the slope of the desired line, then use the point-slope formula to write its equation. The line we want is perpendicular to the given line, so its slope is the negative reciprocal of , the slope of the given line. Thus  line perpendicular to given line  Now we use the point-slope formula with and . The given line and the perpendicular line are shown in the figure on the above.  Practice 4  Follow the steps to find an equation for the altitude of the triangle shown at right. (Recall that the altitude of a triangle is perpendicular to its base.)  Find the slope of the base.   Find the slope of the altitude.   altitude of triangle  Use the point-slope formula. Use for the slope, and the vertex of the triangle for . Write your answer in slope-intercept form.   Problem Set 9.1  Warm Up     Decide whether the slope of each line is positive, negative, zero, or undefined.  A B  C D  List the lines in order of increasing slope.  lines of different slope   negative; negative; positive; zero  , , ,  Find the slope of each line.      In the table below, give the negative reciprocal for each number. Then find the product of each number with its negative reciprocal. What do you notice?    Number  Negative reciprocal  Their product                        Number  Negative reciprocal  Their product                        Find the slope of the line joining the points and .    Skills Practice  For Problems 5 and 6,  sketch a rough graph of the equation,  state the slope and intercept of the line.     verticl line    is undefined;    For Problems 7 10, find an equation for the line described.  A vertical line through the point .  The -axis.  Perpendicular to and intersecting it at .  Parallel to the -axis with intercept at .   The slopes of several lines are given below. Which of the lines are parallel to the graph of , and which are perpendicular to it?         parallel: a, g, h; perpendicular: c, f  In each part, determine whether the two lines are parallel, perpendicular, or neither.  ;  ;  ;  ;   Use your calculator to graph the equations and together in the standard window. Do you think the lines are parallel?  Find the slope of each line in part (a). Are the lines parallel?  Find the -value for each equation when . What do your answers tell you about the two lines?  No  3 and 3.1; no  68. The two lines meet at .   Use your calculator to graph the equations together in the standard window. Do the lines appear to be perpendicular?  Find the slope of each line in part (a). Are the lines perpendicular?   Applications   Sketch the triangle with vertices , , and .  Show that the triangle is a right triangle. (Hint: Find the slope of each side of the triangle.)  b. ;   Sketch the quadrilateral with vertices , , and , and .  Show that the quadrilateral is a parallelogram. (Hint: What should be true about the slopes of the opposite sides of the parallelogram?)   Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is parallel to ?  On your graph for part (a), sketch by hand a line that is parallel to and passes through the point .  Use the point-slope formula to write an equation for the line that is parallel to the graph of and passes through the point .  ; the graph is below.    parallel lines    Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is perpendicular to ?  On your graph for part (a), sketch by hand a line that is perpendicular to and passes through the point .  Use the point-slope formula to write an equation for the line that is perpendicular to the graph of and passes through the point .  Two of the vertices of rectangle are and .  Find an equation for the line that includes side  Find an equation for the line that includes side     Sketch the triangle with vertices , , and .  Find the slope of the side  Find the slope of the altitude from point to side  Find an equation for the line that includes the altitude from point to the side .  The center of a circle is the point , and is a point on the circle. Find the equation of the line tangent to the circle at the point . (Hint: Recall that the tangent line to a circle is perpendicular to the radius at the point of tangency.)   circle and tangent line  Show that the line passing through the points and also passes through the point .    "
 },
 {
-  "id": "p-9002",
+  "id": "p-8591",
   "level": "2",
-  "url": "PropertiesOfLines.html#p-9002",
+  "url": "PropertiesOfLines.html#p-8591",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -22525,336 +22561,336 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "9.1.1",
   "title": "",
-  "body": "Give the equation of each line.   horizontal line   horizontal line    This is a horizontal line with -intercept , so its equation is .  This is a vertical line with -intercept , so its equation is .  "
+  "body": "Give the equation of each line.  horizontal line  horizontal line    This is a horizontal line with -intercept , so its equation is .  This is a vertical line with -intercept , so its equation is .  "
 },
 {
-  "id": "p-9011",
+  "id": "p-8600",
   "level": "2",
-  "url": "PropertiesOfLines.html#p-9011",
+  "url": "PropertiesOfLines.html#p-8600",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "horizontal zero "
 },
 {
-  "id": "p-9012",
+  "id": "p-8601",
   "level": "2",
-  "url": "PropertiesOfLines.html#p-9012",
+  "url": "PropertiesOfLines.html#p-8601",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "vertical undefined "
 },
 {
-  "id": "exercise-1988",
-  "level": "2",
-  "url": "PropertiesOfLines.html#exercise-1988",
-  "type": "Checkpoint",
-  "number": "9.1.2",
-  "title": "Practice 1.",
-  "body": "Practice 1     What is the slope of any line parallel to the -axis?   0    Undefined      What is the slope of any line parallel to the -axis?   0    Undefined                   0    undefined        "
-},
-{
   "id": "exercise-1989",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1989",
   "type": "Checkpoint",
-  "number": "9.1.3",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   True or False.   A horizontal line has no slope.   True    False      The equation of a vertical line is undefined.   True    False      A vertical line is not the graph of a function.   True    False      The graph of is a point.   True    False                             False    False    True    False        "
-},
-{
-  "id": "p-9047",
-  "level": "2",
-  "url": "PropertiesOfLines.html#p-9047",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "parallel "
-},
-{
-  "id": "p-9048",
-  "level": "2",
-  "url": "PropertiesOfLines.html#p-9048",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Perpendicular "
-},
-{
-  "id": "p-9050",
-  "level": "2",
-  "url": "PropertiesOfLines.html#p-9050",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "parallel perpendicular "
-},
-{
-  "id": "p-9053",
-  "level": "2",
-  "url": "PropertiesOfLines.html#p-9053",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "negative reciprocal "
-},
-{
-  "id": "example-225",
-  "level": "2",
-  "url": "PropertiesOfLines.html#example-225",
-  "type": "Example",
-  "number": "9.1.4",
-  "title": "",
-  "body": "Decide whether the lines are parallel, perpendicular, or neither.  We could graph the lines, but we can't be sure from a graph if the lines are exactly parallel or exactly perpendicular. A more accurate way to settle the question is to find the slope of each line. To do this we write each equation in slope-intercept form; that is, we solve for . The slope of the first line is , and the slope of the second line is . The slopes are not equal, so the lines are not parallel. However, the product of the slopes is so the lines are perpendicular. "
+  "number": "9.1.2",
+  "title": "Practice 1.",
+  "body": "Practice 1  What is the slope of any line parallel to the -axis?  What is the slope of any line parallel to the -axis?   0  undefined  "
 },
 {
   "id": "exercise-1990",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1990",
   "type": "Checkpoint",
-  "number": "9.1.5",
-  "title": "Practice 2.",
-  "body": "Practice 2     What is the slope of a line that is parallel to  Answer:    What is the slope of a line that is perpendicular to  Answer:                           "
+  "number": "9.1.3",
+  "title": "QuickCheck 1.",
+  "body": "QuickCheck 1 True or False.   A horizontal line has no slope.  The equation of a vertical line is undefined.  A vertical line is not the graph of a function.  The graph of is a point.  "
 },
 {
-  "id": "exercise-1991",
+  "id": "p-8612",
   "level": "2",
-  "url": "PropertiesOfLines.html#exercise-1991",
-  "type": "Checkpoint",
-  "number": "9.1.6",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   True or false.   The best way to test whether two lines are perpendicular is to graph them.   True    False      Two lines are perpendicular if their slopes are reciprocals.   True    False      If two lines are not parallel, they must be perpendicular.   True    False      A vertical line is perpendicular to a horizontal line.   True    False                             False    False    False    True        "
-},
-{
-  "id": "example-226",
-  "level": "2",
-  "url": "PropertiesOfLines.html#example-226",
-  "type": "Example",
-  "number": "9.1.7",
+  "url": "PropertiesOfLines.html#p-8612",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": "Show that the triangle with vertices , , and is a right triangle.  We will show that two of the sides of the right triangle are perpendicular. The line segment has slope   and the segment has slope Because  triangle  The sides and perpendicular, and therefore the triangle is a right triangle. "
+  "body": "parallel "
 },
 {
-  "id": "exercise-1992",
+  "id": "p-8613",
   "level": "2",
-  "url": "PropertiesOfLines.html#exercise-1992",
-  "type": "Checkpoint",
-  "number": "9.1.8",
-  "title": "Practice 3.",
-  "body": "Practice 3   Show that the quadrilateral with vertices   and is a parallelogram.  (Hint: Show that is parallel to and that is parallel to )  The slope of is , and the slope of is . These slopes are   equal    different   , so the sides are   parallel    perpendicular   .  The slope of is , and the slope of is . These slopes are   equal    different   , so the sides are   parallel    perpendicular   .                                                 "
+  "url": "PropertiesOfLines.html#p-8613",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Perpendicular "
+},
+{
+  "id": "p-8616",
+  "level": "2",
+  "url": "PropertiesOfLines.html#p-8616",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "parallel perpendicular "
+},
+{
+  "id": "p-8619",
+  "level": "2",
+  "url": "PropertiesOfLines.html#p-8619",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "negative reciprocal "
 },
 {
   "id": "example-227",
   "level": "2",
   "url": "PropertiesOfLines.html#example-227",
   "type": "Example",
-  "number": "9.1.9",
+  "number": "9.1.4",
   "title": "",
-  "body": "Find an equation for the line that passes through the point and is perpendicular to the line .   First we find the slope of the desired line, then use the point-slope formula to write its equation. The line we want is perpendicular to the given line, so its slope is the negative reciprocal of , the slope of the given line. Thus  line perpendicular to given line  Now we use the point-slope formula with and . The given line and the perpendicular line are shown in the figure on the above. "
+  "body": "Decide whether the lines are parallel, perpendicular, or neither.  We could graph the lines, but we can't be sure from a graph if the lines are exactly parallel or exactly perpendicular. A more accurate way to settle the question is to find the slope of each line. To do this we write each equation in slope-intercept form; that is, we solve for . The slope of the first line is , and the slope of the second line is . The slopes are not equal, so the lines are not parallel. However, the product of the slopes is so the lines are perpendicular. "
+},
+{
+  "id": "exercise-1991",
+  "level": "2",
+  "url": "PropertiesOfLines.html#exercise-1991",
+  "type": "Checkpoint",
+  "number": "9.1.5",
+  "title": "Practice 2.",
+  "body": "Practice 2  What is the slope of a line that is parallel to ?  What is the slope of a line that is perpendicular to ?     "
+},
+{
+  "id": "exercise-1992",
+  "level": "2",
+  "url": "PropertiesOfLines.html#exercise-1992",
+  "type": "Checkpoint",
+  "number": "9.1.6",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 True or false.   The best way to test whether two lines are perpendicular is to graph them.  Two lines are perpendicular if their slopes are reciprocals.  If two lines are not parallel, they must be perpendicular.  A vertical line is perpendicular to a horizontal line.  "
+},
+{
+  "id": "example-228",
+  "level": "2",
+  "url": "PropertiesOfLines.html#example-228",
+  "type": "Example",
+  "number": "9.1.7",
+  "title": "",
+  "body": "Show that the triangle with vertices , , and is a right triangle.  We will show that two of the sides of the right triangle are perpendicular. The line segment has slope   and the segment has slope Because  triangle  The sides and perpendicular, and therefore the triangle is a right triangle. "
 },
 {
   "id": "exercise-1993",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1993",
   "type": "Checkpoint",
-  "number": "9.1.10",
-  "title": "Practice 4.",
-  "body": "Practice 4  altitude of triangle    Find an equation for the altitude of the triangle shown above . (The altitude of a triangle is perpendicular to its base.)  Find the slope of the base.    Find the slope of the altitude.    Use the point-slope formula. Use for the slope, and the vertex of the triangle for   Write your answer in slope-intercept form.                          "
+  "number": "9.1.8",
+  "title": "Practice 3.",
+  "body": "Practice 3 Show that the quadrilateral with vertices , , , and is a parallelogram.  (Hint: Show that is parallel to , and that is parallel to .) ;  "
+},
+{
+  "id": "example-229",
+  "level": "2",
+  "url": "PropertiesOfLines.html#example-229",
+  "type": "Example",
+  "number": "9.1.9",
+  "title": "",
+  "body": "Find an equation for the line that passes through the point and is perpendicular to the line .   First we find the slope of the desired line, then use the point-slope formula to write its equation. The line we want is perpendicular to the given line, so its slope is the negative reciprocal of , the slope of the given line. Thus  line perpendicular to given line  Now we use the point-slope formula with and . The given line and the perpendicular line are shown in the figure on the above. "
 },
 {
   "id": "exercise-1994",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1994",
-  "type": "Exercise",
-  "number": "9.1.4.1",
-  "title": "",
-  "body": "   Decide whether the slope of each line is positive, negative, zero, or undefined.  A B  C D  List the lines in order of increasing slope.  lines of different slope   negative; negative; positive; zero  , , , "
+  "type": "Checkpoint",
+  "number": "9.1.10",
+  "title": "Practice 4.",
+  "body": "Practice 4  Follow the steps to find an equation for the altitude of the triangle shown at right. (Recall that the altitude of a triangle is perpendicular to its base.)  Find the slope of the base.   Find the slope of the altitude.   altitude of triangle  Use the point-slope formula. Use for the slope, and the vertex of the triangle for . Write your answer in slope-intercept form. "
 },
 {
   "id": "exercise-1995",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1995",
   "type": "Exercise",
-  "number": "9.1.4.2",
+  "number": "9.1.4.1",
   "title": "",
-  "body": "Find the slope of each line.     "
+  "body": "   Decide whether the slope of each line is positive, negative, zero, or undefined.  A B  C D  List the lines in order of increasing slope.  lines of different slope   negative; negative; positive; zero  , , , "
 },
 {
   "id": "exercise-1996",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1996",
   "type": "Exercise",
-  "number": "9.1.4.3",
+  "number": "9.1.4.2",
   "title": "",
-  "body": "In the table below, give the negative reciprocal for each number. Then find the product of each number with its negative reciprocal. What do you notice?    Number  Negative reciprocal  Their product                        Number  Negative reciprocal  Their product                       "
+  "body": "Find the slope of each line.     "
 },
 {
   "id": "exercise-1997",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1997",
   "type": "Exercise",
-  "number": "9.1.4.4",
+  "number": "9.1.4.3",
   "title": "",
-  "body": "Find the slope of the line joining the points and .  "
+  "body": "In the table below, give the negative reciprocal for each number. Then find the product of each number with its negative reciprocal. What do you notice?    Number  Negative reciprocal  Their product                        Number  Negative reciprocal  Their product                       "
 },
 {
   "id": "exercise-1998",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1998",
   "type": "Exercise",
-  "number": "9.1.4.5",
+  "number": "9.1.4.4",
   "title": "",
-  "body": "   verticl line    is undefined; "
+  "body": "Find the slope of the line joining the points and .  "
 },
 {
   "id": "exercise-1999",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-1999",
   "type": "Exercise",
-  "number": "9.1.4.6",
+  "number": "9.1.4.5",
   "title": "",
-  "body": ""
+  "body": "   verticl line    is undefined; "
 },
 {
   "id": "exercise-2000",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2000",
   "type": "Exercise",
-  "number": "9.1.4.7",
+  "number": "9.1.4.6",
   "title": "",
-  "body": "A vertical line through the point . "
+  "body": ""
 },
 {
   "id": "exercise-2001",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2001",
   "type": "Exercise",
-  "number": "9.1.4.8",
+  "number": "9.1.4.7",
   "title": "",
-  "body": "The -axis. "
+  "body": "A vertical line through the point . "
 },
 {
   "id": "exercise-2002",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2002",
   "type": "Exercise",
-  "number": "9.1.4.9",
+  "number": "9.1.4.8",
   "title": "",
-  "body": "Perpendicular to and intersecting it at . "
+  "body": "The -axis. "
 },
 {
   "id": "exercise-2003",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2003",
   "type": "Exercise",
-  "number": "9.1.4.10",
+  "number": "9.1.4.9",
   "title": "",
-  "body": "Parallel to the -axis with intercept at . "
+  "body": "Perpendicular to and intersecting it at . "
 },
 {
   "id": "exercise-2004",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2004",
   "type": "Exercise",
-  "number": "9.1.4.11",
+  "number": "9.1.4.10",
   "title": "",
-  "body": "The slopes of several lines are given below. Which of the lines are parallel to the graph of , and which are perpendicular to it?         parallel: a, g, h; perpendicular: c, f "
+  "body": "Parallel to the -axis with intercept at . "
 },
 {
   "id": "exercise-2005",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2005",
   "type": "Exercise",
-  "number": "9.1.4.12",
+  "number": "9.1.4.11",
   "title": "",
-  "body": "In each part, determine whether the two lines are parallel, perpendicular, or neither.  ;  ;  ;  ; "
+  "body": "The slopes of several lines are given below. Which of the lines are parallel to the graph of , and which are perpendicular to it?         parallel: a, g, h; perpendicular: c, f "
 },
 {
   "id": "exercise-2006",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2006",
   "type": "Exercise",
-  "number": "9.1.4.13",
+  "number": "9.1.4.12",
   "title": "",
-  "body": " Use your calculator to graph the equations and together in the standard window. Do you think the lines are parallel?  Find the slope of each line in part (a). Are the lines parallel?  Find the -value for each equation when . What do your answers tell you about the two lines?  No  3 and 3.1; no  68. The two lines meet at . "
+  "body": "In each part, determine whether the two lines are parallel, perpendicular, or neither.  ;  ;  ;  ; "
 },
 {
   "id": "exercise-2007",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2007",
   "type": "Exercise",
-  "number": "9.1.4.14",
+  "number": "9.1.4.13",
   "title": "",
-  "body": " Use your calculator to graph the equations together in the standard window. Do the lines appear to be perpendicular?  Find the slope of each line in part (a). Are the lines perpendicular? "
+  "body": " Use your calculator to graph the equations and together in the standard window. Do you think the lines are parallel?  Find the slope of each line in part (a). Are the lines parallel?  Find the -value for each equation when . What do your answers tell you about the two lines?  No  3 and 3.1; no  68. The two lines meet at . "
 },
 {
   "id": "exercise-2008",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2008",
   "type": "Exercise",
-  "number": "9.1.4.15",
+  "number": "9.1.4.14",
   "title": "",
-  "body": " Sketch the triangle with vertices , , and .  Show that the triangle is a right triangle. (Hint: Find the slope of each side of the triangle.)  b. ; "
+  "body": " Use your calculator to graph the equations together in the standard window. Do the lines appear to be perpendicular?  Find the slope of each line in part (a). Are the lines perpendicular? "
 },
 {
   "id": "exercise-2009",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2009",
   "type": "Exercise",
-  "number": "9.1.4.16",
+  "number": "9.1.4.15",
   "title": "",
-  "body": " Sketch the quadrilateral with vertices , , and , and .  Show that the quadrilateral is a parallelogram. (Hint: What should be true about the slopes of the opposite sides of the parallelogram?) "
+  "body": " Sketch the triangle with vertices , , and .  Show that the triangle is a right triangle. (Hint: Find the slope of each side of the triangle.)  b. ; "
 },
 {
   "id": "exercise-2010",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2010",
   "type": "Exercise",
-  "number": "9.1.4.17",
+  "number": "9.1.4.16",
   "title": "",
-  "body": " Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is parallel to ?  On your graph for part (a), sketch by hand a line that is parallel to and passes through the point .  Use the point-slope formula to write an equation for the line that is parallel to the graph of and passes through the point .  ; the graph is below.    parallel lines  "
+  "body": " Sketch the quadrilateral with vertices , , and , and .  Show that the quadrilateral is a parallelogram. (Hint: What should be true about the slopes of the opposite sides of the parallelogram?) "
 },
 {
   "id": "exercise-2011",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2011",
   "type": "Exercise",
-  "number": "9.1.4.18",
+  "number": "9.1.4.17",
   "title": "",
-  "body": " Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is perpendicular to ?  On your graph for part (a), sketch by hand a line that is perpendicular to and passes through the point .  Use the point-slope formula to write an equation for the line that is perpendicular to the graph of and passes through the point . "
+  "body": " Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is parallel to ?  On your graph for part (a), sketch by hand a line that is parallel to and passes through the point .  Use the point-slope formula to write an equation for the line that is parallel to the graph of and passes through the point .  ; the graph is below.    parallel lines  "
 },
 {
   "id": "exercise-2012",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2012",
   "type": "Exercise",
-  "number": "9.1.4.19",
+  "number": "9.1.4.18",
   "title": "",
-  "body": "Two of the vertices of rectangle are and .  Find an equation for the line that includes side  Find an equation for the line that includes side   "
+  "body": " Put the equation into slope-intercept form, and graph the equation.  What is the slope of any line that is perpendicular to ?  On your graph for part (a), sketch by hand a line that is perpendicular to and passes through the point .  Use the point-slope formula to write an equation for the line that is perpendicular to the graph of and passes through the point . "
 },
 {
   "id": "exercise-2013",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2013",
   "type": "Exercise",
-  "number": "9.1.4.20",
+  "number": "9.1.4.19",
   "title": "",
-  "body": " Sketch the triangle with vertices , , and .  Find the slope of the side  Find the slope of the altitude from point to side  Find an equation for the line that includes the altitude from point to the side . "
+  "body": "Two of the vertices of rectangle are and .  Find an equation for the line that includes side  Find an equation for the line that includes side   "
 },
 {
   "id": "exercise-2014",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2014",
   "type": "Exercise",
-  "number": "9.1.4.21",
+  "number": "9.1.4.20",
   "title": "",
-  "body": "The center of a circle is the point , and is a point on the circle. Find the equation of the line tangent to the circle at the point . (Hint: Recall that the tangent line to a circle is perpendicular to the radius at the point of tangency.)   circle and tangent line "
+  "body": " Sketch the triangle with vertices , , and .  Find the slope of the side  Find the slope of the altitude from point to side  Find an equation for the line that includes the altitude from point to the side . "
 },
 {
   "id": "exercise-2015",
   "level": "2",
   "url": "PropertiesOfLines.html#exercise-2015",
+  "type": "Exercise",
+  "number": "9.1.4.21",
+  "title": "",
+  "body": "The center of a circle is the point , and is a point on the circle. Find the equation of the line tangent to the circle at the point . (Hint: Recall that the tangent line to a circle is perpendicular to the radius at the point of tangency.)   circle and tangent line "
+},
+{
+  "id": "exercise-2016",
+  "level": "2",
+  "url": "PropertiesOfLines.html#exercise-2016",
   "type": "Exercise",
   "number": "9.1.4.22",
   "title": "",
@@ -22867,34 +22903,34 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "The Distance and Midpoint Formulas",
-  "body": " The Distance and Midpoint Formulas  Distance in a Coordinate Plane  Figure (a) shows a line segment joining the two points and . What is the distance between the two points?   line segment in coordinate plane   line segment as hypotenuse   The distance between two points is the length of the segment joining them.   If we make a right triangle as shown in Figure (b), we can use the Pythagorean theorem to find its length. First, notice that the coordinates at the right angle are . We can find the lengths of the two legs of the triangle, because they are horizontal and vertical segments. The segment we want is the hypotenuse of the right triangle, so we apply the Pythagorean theorem.   The Distance Formula  We can also use the Pythagorean theorem to derive a formula for the distance between any two points, and , in terms of their coordinates. We first label a right triangle, as we did in the discussion above. Draw a horizontal line through and a vertical line through .  These lines meet at a point , as shown in the figure below. The -coordinate of is the same as the -coordinate of , and the -coordinate of is the same as the -coordinate of . Thus, the coordinates of are .   distance between two points in the plane  The distance between and is , and the distance between and is . These two numbers are the lengths of the legs of the right triangle. The length of the hypotenuse is the distance between and , which we'll call . By the Pythagorean theorem, Taking the (positive) square root of each side of this equation gives us the distance formula distance formula .  Distance Formula distance formula  The distance  between points and is   QuickCheck 1   True or false.   The distance formula is a version of the Pythagorean theorem.   True    False         True    False      We can find the length of a horizontal segment by subtracting the -coordinates of its endpoints.   True    False      The distance between two points is always a positive number (or zero).   True    False                             True    True    True    True         Find the distance between and .  Substitute for and for in the distance formula to obtain  It doesn't matter which point we call and which is . We obtain the same answer in the previous Example if we switch the two points and use for and for :  We cannot simplify as . Remember that . You can easily see this by observing that so it cannot be true that equals , or 7. For the same reason, we cannot simplify the distance formula to .  Practice 1     Find the distance between the points and     Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.               A graph is below.        Graph for Practice 1:  distance formula   Finding the Midpoint  The midpoint midpoint of a segment is the point halfway between its endpoints, so that the distance from the midpoint to either endpoint is the same. The -coordinate of the midpoint is halfway between the -coordinates of the endpoints, and likewise for the -coordinate. For the points and shown below, the -coordinate of the midpoint is , which is halfway between and . The -coordinate is halfway between and , or . Thus, the midpoint is .  line segment   The Midpoint Formula  If we know the coordinates of two points, we can calculate the coordinates of the midpoint. Each coordinate of the midpoint is the average of the corresponding coordinates of the two points.  Midpoint Formula  The midpoint midpoint of the line segment joining the points and is the point , where  Find the midpoint of the line segment joining the points and .  We substitute for and for in the midpoint formula to obtain The midpoint of the segment is the point .  Practice 2     Find the midpoint of the line joining the points and     Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.               A figure is below.         Graph for Practice 2: rectangle     Circles  A circle circle is the set of all points in a plane that lie at a given distance, called the radius radius , from a fixed point called the center center of a circle circle center . We can use the distance formula to find an equation for a circle. First consider the circle in Figure (a), whose center is the origin, .   circles  The distance from the origin to any point on the circle is . Therefore, or, squaring both sides, Thus, the equation for a circle of radius centered at the origin is  Now consider the circle in Figure (b), whose center is the point . Every point on the circle lies a distance from , so the equation of the circle is given by the following formula.  Standard Form for a Circle circle equation of circle radius circle center radius radius circle  The equation for a circle of radius centered at the point is   QuickCheck 3     Does the center of a circle lie on the graph of the circle?   Yes    No      What is the radius of the circle     What is the diameter of the circle in part (b)?    Can we simplify the equation in part (b) to    Yes    No                             No    9    18    No         The equation is the standard form for a circle of radius with center at . It is easy to graph a circle if its equation is given in standard form.  Graph the circles.     The graph of is a circle with radius 4 and center at . To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.)  From the center, we move a distance of 4 units (the radius of the circle) in each of four directions: up, down, left, and right. This locates four points that lie on the circle: , , , and . We sketch the circle through these four points.  circles  The graph of is a circle with radius and center at . From the center, we move approximately , or 2.6 units in each of the four coordinate directions to obtain the points , , , and . We sketch the circle through these four points.   Practice 3     State the center and radius of the circle   center: , radius:    Graph the circle.                 center radius 4    A graph is below.         circle   General Form for Circles  The equations of circles often appear in a general quadratic form general quadratic form of a circle circle general quadratic form , rather than the standard form described above. For example, we can expand the squares of binomials in part (a) of the previous Example , to obtain or  This is a quadratic equation in two variables. Such an equation describes a circle if the coefficients of the quadratic, or squared, terms are equal.  Conversely, an equation of the form can be converted to standard form by completing the square completing the square in both variables. Once this is done, the center and radius of the circle can be determined directly from the equation.  Write the equation of the circle in standard form, and graph the equation.  We prepare to complete the square in both variables by writing the equation as We complete the square in by adding 16 to each side of the equation, and complete the square in by adding 1 to each side, to get   from which we obtain the standard form, Thus, the circle has its center at , and its radius is , or approximately 3.3. The graph is shown at right.  circle   QuickCheck 4   Fill in the blanks.   The standard form for a circle is useful because we can see the   area and circumference    center and radius    diameter and arclength   of the circle in the equation.    A quadratic equation in two variables describes a circle if the coefficients of the quadratic terms are   squared    opposites    equal    zero   .    We convert the equation for a circle into standard form by   completing the square    cross-multiplying    factoring   in both variables.                      center and radius    equal    completing the square         Practice 4   Write the equation of the circle in standard form:   , , .                        We can write an equation for any circle if we can find its center and radius.  Find an equation for the circle whose diameter has endpoints and .    The center of the circle is the midpoint of its diameter. We use the midpoint formula to find the center: Thus, the center is the point .  circle with diameter (7,5) to (1,-1)  The radius is the distance from the center to either of the endpoints of the diameter, say the point . We use the distance formula with the points and to find the radius. Finally, we substitute 4 for and 2 for (the coordinates of the center) and for (the radius) into the standard form to obtain  Practice 5   Find an equation for the circle whose diameter has endpoint and               Problem Set 9.2  Warm Up  Choose values for and to decide whether the statements are true.    False  False  Leanne is sailing 3 miles west and 5 miles south of the harbor. She heads directly towards an island that is 8 miles west and 7 miles north of the harbor.  How far is Leanne from the island?  How far will Leanne be from the harbor when she is halfway to the island?  For Problems 3 and 4, complete the table of values, then sketch the graph.                                                    circle of radius 4 centered at origin                        For Problems 5 and 6, solve by completing the square.      Skills Practice  For Problems 7 10, find the distance between each of the given pairs of points, and find the midpoint of the segment joining them.  , distance: ; midpoint:  ,  , distance: ; midpoint:  ,   For Problems 11 14, state the center and radius of the circle.   center: ; radius:   center: ; radius:     Applications  Find the perimeter of the triangle with vertices , , . (Hint: The length of a side is the distance between its endpoints.)  Show that the points , , and are the vertices of an equilateral triangle. (Hint: Use the distance formula to show that the lengths of the three sides are equal.)  The points , , , and are the vertices of a quadrilateral. Show that its diagonals are of equal length.  Two opposite vertices of a square are and .  Find the length of a diagonal of the square.  Find the length of the side of the square.  Find the equation of the perpendicular bisector of the line segment joining and .  Brie took off from Oldfield Airport in a small plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport. Which airport is closer to Brie’s present location?  Use the diagram and the Pythagorean theorem to find the distance from Brie's position to Oldfield Airport.   Brie to Oldfield  Brie to Preston  Use the diagram and the distance formula to find the distance from Brie's position to Preston Airport.  Answer the question in the problem.  Suppose that Brie flies from her present position at towards Preston Airport at .  What are her coordinates when she is halfway to Preston?   Brie halfway to Preston  Show that the distance from Brie's present position to the halfway point is the same as the distance from the halfway point to Preston Airport.   Both distances are 165.8 mi.  For Problems 22-27, graph the equation.    circle center at origin, radius 2    circle center at origin, radius 2    circle center at (0,-4) radius sqrt12   For Problems 28 31, write the equation in standard form. State the center and radius of the circle   ; center: ; radius:   ; center: ; radius:   For Problems 32 35, write an equation for the circle with the given properties.   Center at , radius .  Center at , one point on the circle is .  Endpoints of a diameter at and  Center at , the -axis is tangent to the circle.   Find an equation for the circle that passes through the points , and . (Hint: Find values for , and so that the three points lie on the graph of .)    Investigation  Global Positioning  The Global Positioning System (GPS) is used by hikers, pilots, surveyors, automobiles to determine their location (latitude, longitude, and elevation) anywhere on the surface of the earth. The system depends on a collection of satellites in orbit around the earth. Each GPS satellite transmits its own position and the current time at regular intervals.  A person with a GPS receiver on earth can calculate his or her distance from the satellite by comparing the time of transmission with the time when it receives the signal. Of course, there are many points at the same distance from the satellite—in fact, the set of all points at a certain distance from the satellite lie on a sphere centered at the satellite. That is why there are several satellites: You calculate your position by finding the intersection point of several such spheres centered on different satellites.  We will consider a simplified, two-dimensional model of a GPS system in which the satellites and the receiver all lie in the -plane instead of in three-dimensional space.  In this model we’ll need data from two GPS satellites. The satellites are orbiting along a circle of radius 100 meters centered at the origin. You have a receiver inside that circle and would like to know the coordinates of your position within the circle.   grid     To make the computations simpler, we will also assume that the satellite transmissions travel at 5 meters per second.   A signal from Satellite A arrives 18 seconds after it was transmitted. How far are you from Satellite A?  The signal says that Satellite A was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite A.   Find an equation for the graph you sketched in part (2).  A signal from Satellite B arrives 8.4 seconds after it was transmitted. How far are you from Satellite B?  The signal says that Satellite B was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite B.  Find an equation for the graph you sketched in part (5).  Your position must lie at the intersection point, , of your two graphs. Estimate the coordinates of your position from the graph. (Remember that you are within the orbits of the satellites.)  Later in this chapter you will learn how to find the coordinates of algebraically by solving a system of equations. Verify that the ordered pairs and both satisfy the equations you wrote in part (3) and part (6). What are the coordinates of ?    "
+  "body": " The Distance and Midpoint Formulas  Distance in a Coordinate Plane  Figure (a) shows a line segment joining the two points and . What is the distance between the two points?   line segment in coordinate plane   line segment as hypotenuse   The distance between two points is the length of the segment joining them.   If we make a right triangle as shown in Figure (b), we can use the Pythagorean theorem to find its length. First, notice that the coordinates at the right angle are . We can find the lengths of the two legs of the triangle, because they are horizontal and vertical segments. The segment we want is the hypotenuse of the right triangle, so we apply the Pythagorean theorem.   The Distance Formula  We can also use the Pythagorean theorem to derive a formula for the distance between any two points, and , in terms of their coordinates. We first label a right triangle, as we did in the discussion above. Draw a horizontal line through and a vertical line through .  These lines meet at a point , as shown in the figure below. The -coordinate of is the same as the -coordinate of , and the -coordinate of is the same as the -coordinate of . Thus, the coordinates of are .   distance between two points in the plane  The distance between and is , and the distance between and is . These two numbers are the lengths of the legs of the right triangle. The length of the hypotenuse is the distance between and , which we'll call . By the Pythagorean theorem, Taking the (positive) square root of each side of this equation gives us the distance formula distance formula .  Distance Formula distance formula  The distance  between points and is   QuickCheck 1 True or false.   The distance formula is a version of the Pythagorean theorem.    We can find the length of a horizontal segment by subtracting the -coordinates of its endpoints.  The distance between two points is always a positive number (or zero).   Find the distance between and .  Substitute for and for in the distance formula to obtain  It doesn't matter which point we call and which is . We obtain the same answer in the previous Example if we switch the two points and use for and for :  We cannot simplify as . Remember that . You can easily see this by observing that so it cannot be true that equals , or 7. For the same reason, we cannot simplify the distance formula to .  Practice 1  Find the distance between the points and .  Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.     distance formula    The Midpoint Formula  The midpoint midpoint of a segment is the point halfway between its endpoints, so that the distance from the midpoint to either endpoint is the same.  The -coordinate of the midpoint is halfway between the -coordinates of the endpoints, and likewise for the -coordinate. For the points and shown below, the -coordinate of the midpoint is , which is halfway between and . The -coordinate is halfway between and , or . Thus, the midpoint is .  line segment  If we know the coordinates of two points, we can calculate the coordinates of the midpoint. Each coordinate of the midpoint is the average of the corresponding coordinates of the two points.  Midpoint Formula  The midpoint midpoint of the line segment joining the points and is the point , where  Find the midpoint of the line segment joining the points and .  We substitute for and for in the midpoint formula to obtain The midpoint of the segment is the point .  Practice 2  Find the midpoint of the line joining the points and  Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.    rectangle    Circles  A circle circle is the set of all points in a plane that lie at a given distance, called the radius radius , from a fixed point called the center center of a circle circle center . We can use the distance formula to find an equation for a circle. First consider the circle in Figure (a), whose center is the origin, .  circles  The distance from the origin to any point on the circle is . Therefore, or, squaring both sides, Thus, the equation for a circle of radius centered at the origin is  Now consider the circle in Figure (b), whose center is the point . Every point on the circle lies a distance from , so the equation of the circle is given by the following formula.  Standard Form for a Circle circle equation of circle radius circle center radius radius circle  The equation for a circle of radius centered at the point is   QuickCheck 3  Does the center of a circle lie on the graph of the circle?  What is the radius of the circle ?  What is the diameter of the circle in part (b)?  Can we simplify the equation in part (b) to ?   The equation is the standard form for a circle of radius with center at . It is easy to graph a circle if its equation is given in standard form.  Graph the circles.     The graph of is a circle with radius 4 and center at . To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.)  From the center, we move a distance of 4 units (the radius of the circle) in each of four directions: up, down, left, and right. This locates four points that lie on the circle: , , , and . We sketch the circle through these four points.  circles  The graph of is a circle with radius and center at . From the center, we move approximately , or 2.6 units in each of the four coordinate directions to obtain the points , , , and . We sketch the circle through these four points.   Practice 3  State the center and radius of the circle  Graph the circle.   center , radius 4  circle    General Form for Circles  The equations of circles often appear in a general quadratic form general quadratic form of a circle circle general quadratic form , rather than the standard form described above. For example, we can expand the squares of binomials in part (a) of the previous Example , to obtain or  This is a quadratic equation in two variables. Such an equation describes a circle if the coefficients of the quadratic, or squared, terms are equal.  Conversely, an equation of the form can be converted to standard form by completing the square completing the square in both variables. Once this is done, the center and radius of the circle can be determined directly from the equation.  Write the equation of the circle in standard form, and graph the equation.  We prepare to complete the square in both variables by writing the equation as We complete the square in by adding 16 to each side of the equation, and complete the square in by adding 1 to each side, to get   from which we obtain the standard form, Thus, the circle has its center at , and its radius is , or approximately 3.3. The graph is shown at right.  circle   QuickCheck 4 Fill in the blanks.  The standard form for a circle is useful because we can see the of the circle in the equation.  A quadratic equation in two variables describes a circle if the coefficients of the quadratic terms are .  We convert the equation for a circle into standard form by in both variables.    Finding an Equation for a Circle  We can write an equation for any circle if we can find its center and radius.  Find an equation for the circle whose diameter has endpoints and .    The center of the circle is the midpoint of its diameter. We use the midpoint formula to find the center: Thus, the center is the point .  circle with diameter (7,5) to (1,-1)  The radius is the distance from the center to either of the endpoints of the diameter, say the point . We use the distance formula with the points and to find the radius. Finally, we substitute 4 for and 2 for (the coordinates of the center) and for (the radius) into the standard form to obtain  Practice 5 Find an equation for the circle whose diameter has endpoint and .   Investigation  Global Positioning  The Global Positioning System (GPS) is used by hikers, pilots, surveyors, automobiles to determine their location (latitude, longitude, and elevation) anywhere on the surface of the earth. The system depends on a collection of satellites in orbit around the earth. Each GPS satellite transmits its own position and the current time at regular intervals.  A person with a GPS receiver on earth can calculate his or her distance from the satellite by comparing the time of transmission with the time when it receives the signal. Of course, there are many points at the same distance from the satellite—in fact, the set of all points at a certain distance from the satellite lie on a sphere centered at the satellite. That is why there are several satellites: You calculate your position by finding the intersection point of several such spheres centered on different satellites.  We will consider a simplified, two-dimensional model of a GPS system in which the satellites and the receiver all lie in the -plane instead of in three-dimensional space.  In this model we’ll need data from two GPS satellites. The satellites are orbiting along a circle of radius 100 meters centered at the origin. You have a receiver inside that circle and would like to know the coordinates of your position within the circle.  grid  To make the computations simpler, we will also assume that the satellite transmissions travel at 5 meters per second.   A signal from Satellite A arrives 18 seconds after it was transmitted. How far are you from Satellite A?  The signal says that Satellite A was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite A.   Find an equation for the graph you sketched in part (2).  A signal from Satellite B arrives 8.4 seconds after it was transmitted. How far are you from Satellite B?  The signal says that Satellite B was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite B.  Find an equation for the graph you sketched in part (5).  Your position must lie at the intersection point, , of your two graphs. Estimate the coordinates of your position from the graph. (Remember that you are within the orbits of the satellites.)  Later in this chapter you will learn how to find the coordinates of algebraically by solving a system of equations. Verify that the ordered pairs and both satisfy the equations you wrote in part (3) and part (6). What are the coordinates of ?    Problem Set 9.2  Warm Up  Choose values for and to decide whether the statements are true.    False  False  Leanne is sailing 3 miles west and 5 miles south of the harbor. She heads directly towards an island that is 8 miles west and 7 miles north of the harbor.  How far is Leanne from the island?  How far will Leanne be from the harbor when she is halfway to the island?  For Problems 3 and 4, complete the table of values, then sketch the graph.                                                    circle of radius 4 centered at origin                        For Problems 5 and 6, solve by completing the square.      Skills Practice  For Problems 7 10, find the distance between each of the given pairs of points, and find the midpoint of the segment joining them.  , distance: ; midpoint:  ,  , distance: ; midpoint:  ,   For Problems 11 14, state the center and radius of the circle.   center: ; radius:   center: ; radius:     Applications  Find the perimeter of the triangle with vertices , , . (Hint: The length of a side is the distance between its endpoints.)  Show that the points , , and are the vertices of an equilateral triangle. (Hint: Use the distance formula to show that the lengths of the three sides are equal.)  The points , , , and are the vertices of a quadrilateral. Show that its diagonals are of equal length.  Two opposite vertices of a square are and .  Find the length of a diagonal of the square.  Find the length of the side of the square.  Find the equation of the perpendicular bisector of the line segment joining and .  Brie took off from Oldfield Airport in a small plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport. Which airport is closer to Brie’s present location?  Use the diagram and the Pythagorean theorem to find the distance from Brie's position to Oldfield Airport.   Brie to Oldfield  Brie to Preston  Use the diagram and the distance formula to find the distance from Brie's position to Preston Airport.  Answer the question in the problem.  Suppose that Brie flies from her present position at towards Preston Airport at .  What are her coordinates when she is halfway to Preston?   Brie halfway to Preston  Show that the distance from Brie's present position to the halfway point is the same as the distance from the halfway point to Preston Airport.   Both distances are 165.8 mi.  For Problems 22-27, graph the equation.    circle center at origin, radius 2    circle center at origin, radius 2    circle center at (0,-4) radius sqrt12   For Problems 28 31, write the equation in standard form. State the center and radius of the circle   ; center: ; radius:   ; center: ; radius:   For Problems 32 35, write an equation for the circle with the given properties.   Center at , radius .  Center at , one point on the circle is .  Endpoints of a diameter at and  Center at , the -axis is tangent to the circle.   Find an equation for the circle that passes through the points , and . (Hint: Find values for , and so that the three points lie on the graph of .)    "
 },
 {
-  "id": "p-9220",
+  "id": "p-8740",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9220",
+  "url": "Distance-and-Midpoint.html#p-8740",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "distance formula "
 },
 {
-  "id": "p-9221",
+  "id": "p-8741",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9221",
+  "url": "Distance-and-Midpoint.html#p-8741",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "distance "
 },
 {
-  "id": "exercise-2016",
+  "id": "exercise-2017",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2016",
+  "url": "Distance-and-Midpoint.html#exercise-2017",
   "type": "Checkpoint",
   "number": "9.2.1",
   "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   True or false.   The distance formula is a version of the Pythagorean theorem.   True    False         True    False      We can find the length of a horizontal segment by subtracting the -coordinates of its endpoints.   True    False      The distance between two points is always a positive number (or zero).   True    False                             True    True    True    True        "
+  "body": "QuickCheck 1 True or false.   The distance formula is a version of the Pythagorean theorem.    We can find the length of a horizontal segment by subtracting the -coordinates of its endpoints.  The distance between two points is always a positive number (or zero).  "
 },
 {
   "id": "example-distance-betw-points",
@@ -22906,90 +22942,90 @@ var ptx_lunr_docs = [
   "body": "Find the distance between and .  Substitute for and for in the distance formula to obtain "
 },
 {
-  "id": "warning-46",
+  "id": "warning-45",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#warning-46",
+  "url": "Distance-and-Midpoint.html#warning-45",
   "type": "Caution",
   "number": "9.2.3",
   "title": "",
   "body": "We cannot simplify as . Remember that . You can easily see this by observing that so it cannot be true that equals , or 7. For the same reason, we cannot simplify the distance formula to . "
 },
 {
-  "id": "exercise-2017",
+  "id": "exercise-2018",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2017",
+  "url": "Distance-and-Midpoint.html#exercise-2018",
   "type": "Checkpoint",
   "number": "9.2.4",
   "title": "Practice 1.",
-  "body": "Practice 1     Find the distance between the points and     Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.               A graph is below.        Graph for Practice 1:  distance formula "
+  "body": "Practice 1  Find the distance between the points and .  Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.     distance formula  "
 },
 {
-  "id": "p-9256",
+  "id": "p-8756",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9256",
+  "url": "Distance-and-Midpoint.html#p-8756",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "midpoint "
 },
 {
-  "id": "p-9258",
+  "id": "p-8759",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9258",
+  "url": "Distance-and-Midpoint.html#p-8759",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "midpoint "
 },
 {
-  "id": "example-229",
+  "id": "example-231",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#example-229",
+  "url": "Distance-and-Midpoint.html#example-231",
   "type": "Example",
   "number": "9.2.5",
   "title": "",
   "body": "Find the midpoint of the line segment joining the points and .  We substitute for and for in the midpoint formula to obtain The midpoint of the segment is the point . "
 },
 {
-  "id": "exercise-2018",
+  "id": "exercise-2019",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2018",
+  "url": "Distance-and-Midpoint.html#exercise-2019",
   "type": "Checkpoint",
   "number": "9.2.6",
   "title": "Practice 2.",
-  "body": "Practice 2     Find the midpoint of the line joining the points and     Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.               A figure is below.         Graph for Practice 2: rectangle   "
+  "body": "Practice 2  Find the midpoint of the line joining the points and  Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.    rectangle  "
 },
 {
-  "id": "p-9269",
+  "id": "p-8766",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9269",
+  "url": "Distance-and-Midpoint.html#p-8766",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circle radius center "
 },
 {
-  "id": "p-9272",
+  "id": "p-8769",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9272",
+  "url": "Distance-and-Midpoint.html#p-8769",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "circle "
 },
 {
-  "id": "exercise-2019",
+  "id": "exercise-2020",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2019",
+  "url": "Distance-and-Midpoint.html#exercise-2020",
   "type": "Checkpoint",
   "number": "9.2.7",
   "title": "QuickCheck 3.",
-  "body": "QuickCheck 3     Does the center of a circle lie on the graph of the circle?   Yes    No      What is the radius of the circle     What is the diameter of the circle in part (b)?    Can we simplify the equation in part (b) to    Yes    No                             No    9    18    No        "
+  "body": "QuickCheck 3  Does the center of a circle lie on the graph of the circle?  What is the radius of the circle ?  What is the diameter of the circle in part (b)?  Can we simplify the equation in part (b) to ?  "
 },
 {
-  "id": "p-9291",
+  "id": "p-8775",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9291",
+  "url": "Distance-and-Midpoint.html#p-8775",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -23005,56 +23041,47 @@ var ptx_lunr_docs = [
   "body": "Graph the circles.     The graph of is a circle with radius 4 and center at . To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.)  From the center, we move a distance of 4 units (the radius of the circle) in each of four directions: up, down, left, and right. This locates four points that lie on the circle: , , , and . We sketch the circle through these four points.  circles  The graph of is a circle with radius and center at . From the center, we move approximately , or 2.6 units in each of the four coordinate directions to obtain the points , , , and . We sketch the circle through these four points.  "
 },
 {
-  "id": "exercise-2020",
+  "id": "exercise-2021",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2020",
+  "url": "Distance-and-Midpoint.html#exercise-2021",
   "type": "Checkpoint",
   "number": "9.2.9",
   "title": "Practice 3.",
-  "body": "Practice 3     State the center and radius of the circle   center: , radius:    Graph the circle.                 center radius 4    A graph is below.         circle "
+  "body": "Practice 3  State the center and radius of the circle  Graph the circle.   center , radius 4  circle  "
 },
 {
-  "id": "p-9309",
+  "id": "p-8787",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#p-9309",
+  "url": "Distance-and-Midpoint.html#p-8787",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "general quadratic form "
 },
 {
-  "id": "example-231",
+  "id": "example-233",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#example-231",
+  "url": "Distance-and-Midpoint.html#example-233",
   "type": "Example",
   "number": "9.2.10",
   "title": "",
   "body": "Write the equation of the circle in standard form, and graph the equation.  We prepare to complete the square in both variables by writing the equation as We complete the square in by adding 16 to each side of the equation, and complete the square in by adding 1 to each side, to get   from which we obtain the standard form, Thus, the circle has its center at , and its radius is , or approximately 3.3. The graph is shown at right.  circle  "
 },
 {
-  "id": "exercise-2021",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2021",
-  "type": "Checkpoint",
-  "number": "9.2.11",
-  "title": "QuickCheck 4.",
-  "body": "QuickCheck 4   Fill in the blanks.   The standard form for a circle is useful because we can see the   area and circumference    center and radius    diameter and arclength   of the circle in the equation.    A quadratic equation in two variables describes a circle if the coefficients of the quadratic terms are   squared    opposites    equal    zero   .    We convert the equation for a circle into standard form by   completing the square    cross-multiplying    factoring   in both variables.                      center and radius    equal    completing the square        "
-},
-{
   "id": "exercise-2022",
   "level": "2",
   "url": "Distance-and-Midpoint.html#exercise-2022",
   "type": "Checkpoint",
-  "number": "9.2.12",
-  "title": "Practice 4.",
-  "body": "Practice 4   Write the equation of the circle in standard form:   , , .                       "
+  "number": "9.2.11",
+  "title": "QuickCheck 4.",
+  "body": "QuickCheck 4 Fill in the blanks.  The standard form for a circle is useful because we can see the of the circle in the equation.  A quadratic equation in two variables describes a circle if the coefficients of the quadratic terms are .  We convert the equation for a circle into standard form by in both variables.  "
 },
 {
-  "id": "example-232",
+  "id": "example-234",
   "level": "2",
-  "url": "Distance-and-Midpoint.html#example-232",
+  "url": "Distance-and-Midpoint.html#example-234",
   "type": "Example",
-  "number": "9.2.13",
+  "number": "9.2.12",
   "title": "",
   "body": "Find an equation for the circle whose diameter has endpoints and .    The center of the circle is the midpoint of its diameter. We use the midpoint formula to find the center: Thus, the center is the point .  circle with diameter (7,5) to (1,-1)  The radius is the distance from the center to either of the endpoints of the diameter, say the point . We use the distance formula with the points and to find the radius. Finally, we substitute 4 for and 2 for (the coordinates of the center) and for (the radius) into the standard form to obtain "
 },
@@ -23063,333 +23090,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Distance-and-Midpoint.html#exercise-2023",
   "type": "Checkpoint",
-  "number": "9.2.14",
+  "number": "9.2.13",
   "title": "Practice 5.",
-  "body": "Practice 5   Find an equation for the circle whose diameter has endpoint and             "
-},
-{
-  "id": "exercise-2024",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2024",
-  "type": "Exercise",
-  "number": "9.2.7.1",
-  "title": "",
-  "body": "Choose values for and to decide whether the statements are true.    False  False "
-},
-{
-  "id": "exercise-2025",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2025",
-  "type": "Exercise",
-  "number": "9.2.7.2",
-  "title": "",
-  "body": "Leanne is sailing 3 miles west and 5 miles south of the harbor. She heads directly towards an island that is 8 miles west and 7 miles north of the harbor.  How far is Leanne from the island?  How far will Leanne be from the harbor when she is halfway to the island? "
-},
-{
-  "id": "exercise-2026",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2026",
-  "type": "Exercise",
-  "number": "9.2.7.3",
-  "title": "",
-  "body": "                                                 circle of radius 4 centered at origin "
-},
-{
-  "id": "exercise-2027",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2027",
-  "type": "Exercise",
-  "number": "9.2.7.4",
-  "title": "",
-  "body": "                    "
-},
-{
-  "id": "exercise-2028",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2028",
-  "type": "Exercise",
-  "number": "9.2.7.5",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2029",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2029",
-  "type": "Exercise",
-  "number": "9.2.7.6",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2030",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2030",
-  "type": "Exercise",
-  "number": "9.2.7.7",
-  "title": "",
-  "body": ", distance: ; midpoint: "
-},
-{
-  "id": "exercise-2031",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2031",
-  "type": "Exercise",
-  "number": "9.2.7.8",
-  "title": "",
-  "body": ", "
-},
-{
-  "id": "exercise-2032",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2032",
-  "type": "Exercise",
-  "number": "9.2.7.9",
-  "title": "",
-  "body": ", distance: ; midpoint: "
-},
-{
-  "id": "exercise-2033",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2033",
-  "type": "Exercise",
-  "number": "9.2.7.10",
-  "title": "",
-  "body": ", "
-},
-{
-  "id": "exercise-2034",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2034",
-  "type": "Exercise",
-  "number": "9.2.7.11",
-  "title": "",
-  "body": "center: ; radius: "
-},
-{
-  "id": "exercise-2035",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2035",
-  "type": "Exercise",
-  "number": "9.2.7.12",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2036",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2036",
-  "type": "Exercise",
-  "number": "9.2.7.13",
-  "title": "",
-  "body": "center: ; radius: "
-},
-{
-  "id": "exercise-2037",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2037",
-  "type": "Exercise",
-  "number": "9.2.7.14",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2038",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2038",
-  "type": "Exercise",
-  "number": "9.2.7.15",
-  "title": "",
-  "body": "Find the perimeter of the triangle with vertices , , . (Hint: The length of a side is the distance between its endpoints.) "
-},
-{
-  "id": "exercise-2039",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2039",
-  "type": "Exercise",
-  "number": "9.2.7.16",
-  "title": "",
-  "body": "Show that the points , , and are the vertices of an equilateral triangle. (Hint: Use the distance formula to show that the lengths of the three sides are equal.) "
-},
-{
-  "id": "exercise-2040",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2040",
-  "type": "Exercise",
-  "number": "9.2.7.17",
-  "title": "",
-  "body": "The points , , , and are the vertices of a quadrilateral. Show that its diagonals are of equal length. "
-},
-{
-  "id": "exercise-2041",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2041",
-  "type": "Exercise",
-  "number": "9.2.7.18",
-  "title": "",
-  "body": "Two opposite vertices of a square are and .  Find the length of a diagonal of the square.  Find the length of the side of the square. "
-},
-{
-  "id": "exercise-2042",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2042",
-  "type": "Exercise",
-  "number": "9.2.7.19",
-  "title": "",
-  "body": "Find the equation of the perpendicular bisector of the line segment joining and . "
-},
-{
-  "id": "exercise-2043",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2043",
-  "type": "Exercise",
-  "number": "9.2.7.20",
-  "title": "",
-  "body": "Brie took off from Oldfield Airport in a small plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport. Which airport is closer to Brie’s present location?  Use the diagram and the Pythagorean theorem to find the distance from Brie's position to Oldfield Airport.   Brie to Oldfield  Brie to Preston  Use the diagram and the distance formula to find the distance from Brie's position to Preston Airport.  Answer the question in the problem. "
-},
-{
-  "id": "exercise-2044",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2044",
-  "type": "Exercise",
-  "number": "9.2.7.21",
-  "title": "",
-  "body": "Suppose that Brie flies from her present position at towards Preston Airport at .  What are her coordinates when she is halfway to Preston?   Brie halfway to Preston  Show that the distance from Brie's present position to the halfway point is the same as the distance from the halfway point to Preston Airport.   Both distances are 165.8 mi. "
-},
-{
-  "id": "exercise-2045",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2045",
-  "type": "Exercise",
-  "number": "9.2.7.22",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2046",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2046",
-  "type": "Exercise",
-  "number": "9.2.7.23",
-  "title": "",
-  "body": " circle center at origin, radius 2 "
-},
-{
-  "id": "exercise-2047",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2047",
-  "type": "Exercise",
-  "number": "9.2.7.24",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2048",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2048",
-  "type": "Exercise",
-  "number": "9.2.7.25",
-  "title": "",
-  "body": " circle center at origin, radius 2 "
-},
-{
-  "id": "exercise-2049",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2049",
-  "type": "Exercise",
-  "number": "9.2.7.26",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2050",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2050",
-  "type": "Exercise",
-  "number": "9.2.7.27",
-  "title": "",
-  "body": " circle center at (0,-4) radius sqrt12 "
-},
-{
-  "id": "exercise-2051",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2051",
-  "type": "Exercise",
-  "number": "9.2.7.28",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2052",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2052",
-  "type": "Exercise",
-  "number": "9.2.7.29",
-  "title": "",
-  "body": "; center: ; radius: "
-},
-{
-  "id": "exercise-2053",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2053",
-  "type": "Exercise",
-  "number": "9.2.7.30",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "exercise-2054",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2054",
-  "type": "Exercise",
-  "number": "9.2.7.31",
-  "title": "",
-  "body": "; center: ; radius: "
-},
-{
-  "id": "exercise-2055",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2055",
-  "type": "Exercise",
-  "number": "9.2.7.32",
-  "title": "",
-  "body": "Center at , radius . "
-},
-{
-  "id": "exercise-2056",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2056",
-  "type": "Exercise",
-  "number": "9.2.7.33",
-  "title": "",
-  "body": "Center at , one point on the circle is . "
-},
-{
-  "id": "exercise-2057",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2057",
-  "type": "Exercise",
-  "number": "9.2.7.34",
-  "title": "",
-  "body": "Endpoints of a diameter at and "
-},
-{
-  "id": "exercise-2058",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2058",
-  "type": "Exercise",
-  "number": "9.2.7.35",
-  "title": "",
-  "body": "Center at , the -axis is tangent to the circle. "
-},
-{
-  "id": "exercise-2059",
-  "level": "2",
-  "url": "Distance-and-Midpoint.html#exercise-2059",
-  "type": "Exercise",
-  "number": "9.2.7.36",
-  "title": "",
-  "body": "Find an equation for the circle that passes through the points , and . (Hint: Find values for , and so that the three points lie on the graph of .) "
+  "body": "Practice 5 Find an equation for the circle whose diameter has endpoint and . "
 },
 {
   "id": "investigation-11",
@@ -23398,7 +23101,331 @@ var ptx_lunr_docs = [
   "type": "Investigation",
   "number": "9.2.1",
   "title": "Global Positioning.",
-  "body": "Global Positioning  The Global Positioning System (GPS) is used by hikers, pilots, surveyors, automobiles to determine their location (latitude, longitude, and elevation) anywhere on the surface of the earth. The system depends on a collection of satellites in orbit around the earth. Each GPS satellite transmits its own position and the current time at regular intervals.  A person with a GPS receiver on earth can calculate his or her distance from the satellite by comparing the time of transmission with the time when it receives the signal. Of course, there are many points at the same distance from the satellite—in fact, the set of all points at a certain distance from the satellite lie on a sphere centered at the satellite. That is why there are several satellites: You calculate your position by finding the intersection point of several such spheres centered on different satellites.  We will consider a simplified, two-dimensional model of a GPS system in which the satellites and the receiver all lie in the -plane instead of in three-dimensional space.  In this model we’ll need data from two GPS satellites. The satellites are orbiting along a circle of radius 100 meters centered at the origin. You have a receiver inside that circle and would like to know the coordinates of your position within the circle.   grid     To make the computations simpler, we will also assume that the satellite transmissions travel at 5 meters per second.   A signal from Satellite A arrives 18 seconds after it was transmitted. How far are you from Satellite A?  The signal says that Satellite A was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite A.   Find an equation for the graph you sketched in part (2).  A signal from Satellite B arrives 8.4 seconds after it was transmitted. How far are you from Satellite B?  The signal says that Satellite B was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite B.  Find an equation for the graph you sketched in part (5).  Your position must lie at the intersection point, , of your two graphs. Estimate the coordinates of your position from the graph. (Remember that you are within the orbits of the satellites.)  Later in this chapter you will learn how to find the coordinates of algebraically by solving a system of equations. Verify that the ordered pairs and both satisfy the equations you wrote in part (3) and part (6). What are the coordinates of ?  "
+  "body": "Global Positioning  The Global Positioning System (GPS) is used by hikers, pilots, surveyors, automobiles to determine their location (latitude, longitude, and elevation) anywhere on the surface of the earth. The system depends on a collection of satellites in orbit around the earth. Each GPS satellite transmits its own position and the current time at regular intervals.  A person with a GPS receiver on earth can calculate his or her distance from the satellite by comparing the time of transmission with the time when it receives the signal. Of course, there are many points at the same distance from the satellite—in fact, the set of all points at a certain distance from the satellite lie on a sphere centered at the satellite. That is why there are several satellites: You calculate your position by finding the intersection point of several such spheres centered on different satellites.  We will consider a simplified, two-dimensional model of a GPS system in which the satellites and the receiver all lie in the -plane instead of in three-dimensional space.  In this model we’ll need data from two GPS satellites. The satellites are orbiting along a circle of radius 100 meters centered at the origin. You have a receiver inside that circle and would like to know the coordinates of your position within the circle.  grid  To make the computations simpler, we will also assume that the satellite transmissions travel at 5 meters per second.   A signal from Satellite A arrives 18 seconds after it was transmitted. How far are you from Satellite A?  The signal says that Satellite A was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite A.   Find an equation for the graph you sketched in part (2).  A signal from Satellite B arrives 8.4 seconds after it was transmitted. How far are you from Satellite B?  The signal says that Satellite B was located at at the time of transmission. Use a compass to sketch a graph showing your possible positions relative to Satellite B.  Find an equation for the graph you sketched in part (5).  Your position must lie at the intersection point, , of your two graphs. Estimate the coordinates of your position from the graph. (Remember that you are within the orbits of the satellites.)  Later in this chapter you will learn how to find the coordinates of algebraically by solving a system of equations. Verify that the ordered pairs and both satisfy the equations you wrote in part (3) and part (6). What are the coordinates of ?  "
+},
+{
+  "id": "exercise-2024",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2024",
+  "type": "Exercise",
+  "number": "9.2.8.1",
+  "title": "",
+  "body": "Choose values for and to decide whether the statements are true.    False  False "
+},
+{
+  "id": "exercise-2025",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2025",
+  "type": "Exercise",
+  "number": "9.2.8.2",
+  "title": "",
+  "body": "Leanne is sailing 3 miles west and 5 miles south of the harbor. She heads directly towards an island that is 8 miles west and 7 miles north of the harbor.  How far is Leanne from the island?  How far will Leanne be from the harbor when she is halfway to the island? "
+},
+{
+  "id": "exercise-2026",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2026",
+  "type": "Exercise",
+  "number": "9.2.8.3",
+  "title": "",
+  "body": "                                                 circle of radius 4 centered at origin "
+},
+{
+  "id": "exercise-2027",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2027",
+  "type": "Exercise",
+  "number": "9.2.8.4",
+  "title": "",
+  "body": "                    "
+},
+{
+  "id": "exercise-2028",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2028",
+  "type": "Exercise",
+  "number": "9.2.8.5",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2029",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2029",
+  "type": "Exercise",
+  "number": "9.2.8.6",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2030",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2030",
+  "type": "Exercise",
+  "number": "9.2.8.7",
+  "title": "",
+  "body": ", distance: ; midpoint: "
+},
+{
+  "id": "exercise-2031",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2031",
+  "type": "Exercise",
+  "number": "9.2.8.8",
+  "title": "",
+  "body": ", "
+},
+{
+  "id": "exercise-2032",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2032",
+  "type": "Exercise",
+  "number": "9.2.8.9",
+  "title": "",
+  "body": ", distance: ; midpoint: "
+},
+{
+  "id": "exercise-2033",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2033",
+  "type": "Exercise",
+  "number": "9.2.8.10",
+  "title": "",
+  "body": ", "
+},
+{
+  "id": "exercise-2034",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2034",
+  "type": "Exercise",
+  "number": "9.2.8.11",
+  "title": "",
+  "body": "center: ; radius: "
+},
+{
+  "id": "exercise-2035",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2035",
+  "type": "Exercise",
+  "number": "9.2.8.12",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2036",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2036",
+  "type": "Exercise",
+  "number": "9.2.8.13",
+  "title": "",
+  "body": "center: ; radius: "
+},
+{
+  "id": "exercise-2037",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2037",
+  "type": "Exercise",
+  "number": "9.2.8.14",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2038",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2038",
+  "type": "Exercise",
+  "number": "9.2.8.15",
+  "title": "",
+  "body": "Find the perimeter of the triangle with vertices , , . (Hint: The length of a side is the distance between its endpoints.) "
+},
+{
+  "id": "exercise-2039",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2039",
+  "type": "Exercise",
+  "number": "9.2.8.16",
+  "title": "",
+  "body": "Show that the points , , and are the vertices of an equilateral triangle. (Hint: Use the distance formula to show that the lengths of the three sides are equal.) "
+},
+{
+  "id": "exercise-2040",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2040",
+  "type": "Exercise",
+  "number": "9.2.8.17",
+  "title": "",
+  "body": "The points , , , and are the vertices of a quadrilateral. Show that its diagonals are of equal length. "
+},
+{
+  "id": "exercise-2041",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2041",
+  "type": "Exercise",
+  "number": "9.2.8.18",
+  "title": "",
+  "body": "Two opposite vertices of a square are and .  Find the length of a diagonal of the square.  Find the length of the side of the square. "
+},
+{
+  "id": "exercise-2042",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2042",
+  "type": "Exercise",
+  "number": "9.2.8.19",
+  "title": "",
+  "body": "Find the equation of the perpendicular bisector of the line segment joining and . "
+},
+{
+  "id": "exercise-2043",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2043",
+  "type": "Exercise",
+  "number": "9.2.8.20",
+  "title": "",
+  "body": "Brie took off from Oldfield Airport in a small plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport. Which airport is closer to Brie’s present location?  Use the diagram and the Pythagorean theorem to find the distance from Brie's position to Oldfield Airport.   Brie to Oldfield  Brie to Preston  Use the diagram and the distance formula to find the distance from Brie's position to Preston Airport.  Answer the question in the problem. "
+},
+{
+  "id": "exercise-2044",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2044",
+  "type": "Exercise",
+  "number": "9.2.8.21",
+  "title": "",
+  "body": "Suppose that Brie flies from her present position at towards Preston Airport at .  What are her coordinates when she is halfway to Preston?   Brie halfway to Preston  Show that the distance from Brie's present position to the halfway point is the same as the distance from the halfway point to Preston Airport.   Both distances are 165.8 mi. "
+},
+{
+  "id": "exercise-2045",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2045",
+  "type": "Exercise",
+  "number": "9.2.8.22",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2046",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2046",
+  "type": "Exercise",
+  "number": "9.2.8.23",
+  "title": "",
+  "body": " circle center at origin, radius 2 "
+},
+{
+  "id": "exercise-2047",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2047",
+  "type": "Exercise",
+  "number": "9.2.8.24",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2048",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2048",
+  "type": "Exercise",
+  "number": "9.2.8.25",
+  "title": "",
+  "body": " circle center at origin, radius 2 "
+},
+{
+  "id": "exercise-2049",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2049",
+  "type": "Exercise",
+  "number": "9.2.8.26",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2050",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2050",
+  "type": "Exercise",
+  "number": "9.2.8.27",
+  "title": "",
+  "body": " circle center at (0,-4) radius sqrt12 "
+},
+{
+  "id": "exercise-2051",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2051",
+  "type": "Exercise",
+  "number": "9.2.8.28",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2052",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2052",
+  "type": "Exercise",
+  "number": "9.2.8.29",
+  "title": "",
+  "body": "; center: ; radius: "
+},
+{
+  "id": "exercise-2053",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2053",
+  "type": "Exercise",
+  "number": "9.2.8.30",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2054",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2054",
+  "type": "Exercise",
+  "number": "9.2.8.31",
+  "title": "",
+  "body": "; center: ; radius: "
+},
+{
+  "id": "exercise-2055",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2055",
+  "type": "Exercise",
+  "number": "9.2.8.32",
+  "title": "",
+  "body": "Center at , radius . "
+},
+{
+  "id": "exercise-2056",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2056",
+  "type": "Exercise",
+  "number": "9.2.8.33",
+  "title": "",
+  "body": "Center at , one point on the circle is . "
+},
+{
+  "id": "exercise-2057",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2057",
+  "type": "Exercise",
+  "number": "9.2.8.34",
+  "title": "",
+  "body": "Endpoints of a diameter at and "
+},
+{
+  "id": "exercise-2058",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2058",
+  "type": "Exercise",
+  "number": "9.2.8.35",
+  "title": "",
+  "body": "Center at , the -axis is tangent to the circle. "
+},
+{
+  "id": "exercise-2059",
+  "level": "2",
+  "url": "Distance-and-Midpoint.html#exercise-2059",
+  "type": "Exercise",
+  "number": "9.2.8.36",
+  "title": "",
+  "body": "Find an equation for the circle that passes through the points , and . (Hint: Find values for , and so that the three points lie on the graph of .) "
 },
 {
   "id": "Ellipses",
@@ -23407,70 +23434,70 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.3",
   "title": "Conic Sections: Ellipses",
-  "body": "Conic Sections: Ellipses  The graph of any first-degree equation in two variables, is a line (as long as and are not both 0). A second-degree equation in two variables has the general form where , , and cannot all be zero (because in that case the equation would not be second degree). The graphs of such equations are curves called conic sections conic section because they are formed by the intersection of a plane and a cone, as illustrated below. Except for a few special cases called degenerate conics degenerate conic , the conic sections fall into four categories called circles circle , ellipses ellipse , hyperbolas hyperbola , and parabolas parabola .  conics  Conic sections whose centers (or vertices, in the case of parabolas) are located at the origin are called central conics central conic .   Circles and Ellipses  The circle is the most familiar of the conic sections. Recall that the standard equation for a circle of radius, , centered at the point is: and a circle whose center is the origin has equation If we divide through by , we can also write this equation in the form Notice that the denominators of both the - and -terms are . You can check that the - and -intercepts of this circle are and .  If the denominators of the -squared and -squared terms are not equal, the graph is called an ellipse ellipse . An ellipse is an elongated circle, or oval. Ellipses appear in a variety of applications. The orbits of the planets and of satellites about the earth are ellipses. The arches in some bridges are elliptical in shape, and whispering domes, such as the ceiling of the Mormon Tabernacle in Salt Lake City, are made from ellipses.  Recall that a circle is the set of all points in a plane that lie at a fixed distance from its center. An ellipse also has a geometric definition.  Ellipse ellipse  An ellipse ellipse is the set of points in the plane, the sum of whose distances from two fixed points (the foci ellipse foci focus of an ellipse ) is a constant.   Using the distance formula and the definition above, we can show that the equation of an ellipse centered at the origin has the following standard form.  Central Ellipse ellipse central ellipse ellipse central center of an ellipse  The equation of an ellipse centered at the origin is   By setting equal to zero in the equation above, we find that the -intercepts of this ellipse are and ; by setting equal to zero, we find that the -intercepts are and .  The line segment that passes through the foci (labeled and on the graphs below) and ends on the ellipse is called the major axis axis major ellipse major axis major axis ellipse . If , the major axis is horizontal, as shown in the Figure below left. The -intercepts are the endpoints of the major axis, so its length is . The vertical segment with length is called the minor axis axis minor ellipse minor axis minor axis ellipse . The endpoints of the major axis are the vertices ellipse vertices vertex of ellipse vertices ellipse of the ellipse and the endpoints of the minor axis are the covertices covertices ellipse ellipse covertices .   ellipse with horizontal major axis  ellipse with vertical major axis  If , the major axis is vertical and has length . In this case the endpoints of the major axis are the -intercepts of the ellipse. (See Figure above right.) The minor axis is horizontal and has length .  The standard form of the equation for an ellipse gives us enough information to sketch its graph.  Graph  The graph is an ellipse with major axis on the -axis. Because and , the vertices are located at and , and the covertices lie units to the right and left of the center, or approximately at and .  To sketch the ellipse, we first locate the vertices and covertices. Then we draw a smooth curve through the points. The graph of is shown below.   ellipse with vertical major axis  Practice 1     Find the intercepts of the graph of Separate different intercepts with a comma.    Graph the ellipse.                  A graph is below.          ellipse with horizontal major axis  QuickCheck 1     To sketch an ellipse, we locate   two foci    center and radius    vertices and covertices    slope and intercepts   , then draw a smooth curve through them.    If is the major axis horizontal or vertical?   horizontal    vertical      The -intercepts of a central ellipse lie   a    b   units from the center.    An ellipse is one of the four   conic sections    quadrants    formulas    solutions   .                           vertices and covertices    horizontal       conic sections         The equation of any central ellipse may be written as where , , and the same sign. The features of the graph are easier to identify if we first convert the equation to standard form.  Graph   First we convert the equation to standard form: we divide through by the constant term, 12, to obtain Because and , the vertices are and the covertices are . We plot points at about and , then draw an ellipse through the points, as shown at right.   ellipse with vertical major axis    Practice 2   Graph       Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)            A graph is also shown below.       ellipse   We can find coordinates of other points on an ellipse by substituting a value for one variable and solving for the other variable.   Find the exact coordinates of any points with -coordinate 2 on the ellipse . Plot and label those points on the ellipse.  Solve the equation when . What do the solutions tell you about the graph of the ellipse?    We substitute into the equation and solve for .   ellipse with vertical major axis  There are two points with , namely and  We substitute into the equation and solve for . Because there are no real solutions, there are no points on the ellipse with .   Practice 3   Find the exact coordinates of all points with -coordinate on the ellipse                Translated Ellipses  An ellipse whose center is at the point instead of the origin is said to be shifted or translated to that location.  Ellipse ellipse translated center of an ellipse ellipse standard form ellipse translated  The standard equation for an ellipse centered at is   The horizontal axis of the ellipse has length , and the vertical axis has length , the same as for central ellipses. When , the major axis is horizontal and the ellipse is short and wide. When , the major axis is vertical and the ellipse is tall and narrow, as shown below.   ellipse with horizontal major axis  ellipse with vertical major axis   Graph  Find the exact coordinates of the intercepts of the graph.   The graph is an ellipse with center at . We have and , and the major axis is parallel to the -axis because . We plot the vertices four units to the left and right of the center, at and . The covertices lie units above and below the center, at approximately and . The graph is shown below.  translated ellipse  We set and solve the resulting equation to find the -intercepts.  The -intercepts are or approximately and . We set to find the -intercepts.  The -intercepts are or approximately and   Practice 4     Graph      Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)      Find the coordinates of the vertices and covertices. Separate different points with a comma. Use sqrt(2) to get  vertices:  covertices:                         A graph is also shown below.    vertices:   covertices:          :   translated ellipse   QuickCheck 2     To write the equation in the standard form for ellipses, we divide through by    The -coordinates of all points on a central ellipse lie between and    In the standard form for an ellipse, are the coordinates of the   center    vertex    covertex    intercept   of the ellipse.    The vertical axis of an ellipse has length .                                   and    center             Writing in Standard Form  Second-degree equations in which the coefficients of and have the same sign can be written in one of the standard forms for an ellipse by completing the square completing the square . The equation can be graphed easily from the standard form.   Write the equation in standard form.  Graph the equation.    We first prepare to complete the square in both and . Begin by factoring out the coefficients of and . We complete the square in by adding to , and adding , or , to the right side of the equation. We complete the square in by adding to , and , or , to the right side. We write each term on the left side as a perfect square to get  The graph is an ellipse with center at , and The vertices lie 3 units to the right and left of the center at and ; the covertices lie 2 units above and below the center at and . The graph is shown below.  translated ellipse    When completing the square in the Example above, do not forget the coefficients you factored out in the first step. When we add 4 to complete the square in , it is multiplied by a factor of 4, so we must add or 16 to the right side of the equation. Similarly, we must add or 9 to the right side when we complete the square in .   Practice 5     Write the equation in standard form:  , , ,    Graph the equation.                              A graph is below.         :   translated ellipse    Finding the Equation of an Ellipse ellipse finding the equation of  To write the equation of an ellipse from a description of its properties, we must find the center of the ellipse and the lengths of its axes. We can then substitute this information into the standard form.  Find the equation of the ellipse with vertices at and and covertices at and .   You may find it helpful to plot the given points to help you visualize the ellipse. The center of the ellipse is the midpoint of the major (or minor) axis.   axes of ellipse  Thus, the center is the point . The horizontal axis is shorter, and is the distance between the center and either covertex, say Thus, The value of is the distance from the center to one of the vertices, say : The equation of the ellipse has the form The equation of the ellipse has , , , . Thus the equation is If we clear this equation of fractions and expand the powers, we obtain the general form  Practice 6   Find the equation of the ellipse with vertices at and and a minor axis of length 4.               Problem Set 9.3  Warm Up   Write the standard form for a circle.  Divide both sides of this equation by .  Compare the new equation with the standard form for an ellipse. What do you notice?      Graph the circle  Solve the system  Find all points with -coordinate 1 on the graph of  Find the -intercepts and the vertex of the graph of -intercepts: , , vertex:  Write an equation for the circle with center and radius 8.    Skills Practice  For problems 7 12, graph the circle or ellipse.  circle     central ellipse    central ellipse    For problems 13 and 14  Fiind the equation of the ellipse.  Use your equation to complete the table.   central ellipse                                central ellipse                 For problems 15-18, each equation is a circle or ellipse.  State the radius or the lengths of the axes of the graph.  Give the exact coordinates of all points on the graph with the given - or -coordinate.   Radius 2      None    For problems 19 and 20,  Graph the ellipse.  Give the exact coordinates of any four points on the ellipse.    ellipse  , , , (Others are possible.)    For Problems 21 24:  Write the equation in standard form.  Graph the equation.     ellipse      ellipse    For Problems 25 28, write an equation for the ellipse with the properties given.  Center at , ,  Vertices at and , minor axis of length 6  Covertices at and , major axis of length 10  Vertices at and , covertices at and    Applications  The arch of a bridge forms the top half of an ellipse with a horizontal major axis. The arch is 7 feet high and 20 feet wide.  graph   Find an equation for the ellipse.  How high is the arch at a distance of 8 feet from the peak?   4.2 ft  A doorway is topped by a semi-elliptical arch. The doorway is 230 centimeters high at its highest point and 200 centimeters high at its lowest point. It is 80 centimeters wide.  graph   Find an equation for the ellipse.  How high is the doorway 8 centimeters from the left side?  The wing of a World War II British Spitfire is an ellipse whose major axis is 48 feet. The minor axis is 16 feet, but part of the ellipse is cut off parallel to the major axis. This cut edge is 46 feet long.  graph   Find an equation for the ellipse.  How wide is the wing at its center? Round your answer to two decimal places.   10.29 ft  The centerline of a sailboat from bow to stern along the bottom (its keel) is elliptical in shape, with a major axis of 360 centimeters. The minor axis of the ellipse is 100 centimeters, but the deck of the sailboat (the top of the ellipse) has been cut off parallel to the major axis. The deck of the sailboat is 330 centimeters long.   elliptical keel on sailboat      Find an equation for the ellipse.  What is the maximum distance from the deck to the bottom of the keel? Round your answer to two decimal places.     "
+  "body": "Conic Sections: Ellipses  The graph of any first-degree equation in two variables, is a line (as long as and are not both 0). A second-degree equation in two variables has the general form where , , and cannot all be zero (because in that case the equation would not be second degree). The graphs of such equations are curves called conic sections conic section because they are formed by the intersection of a plane and a cone, as illustrated below. Except for a few special cases called degenerate conics degenerate conic , the conic sections fall into four categories called circles circle , ellipses ellipse , hyperbolas hyperbola , and parabolas parabola .  conics  Conic sections whose centers (or vertices, in the case of parabolas) are located at the origin are called central conics central conic .   Circles and Ellipses  The circle is the most familiar of the conic sections. Recall that the standard equation for a circle of radius, , centered at the point is: and a circle whose center is the origin has equation If we divide through by , we can also write this equation in the form Notice that the denominators of both the - and -terms are . You can check that the - and -intercepts of this circle are and .  If the denominators of the -squared and -squared terms are not equal, the graph is called an ellipse ellipse . An ellipse is an elongated circle, or oval. Ellipses appear in a variety of applications. The orbits of the planets and of satellites about the earth are ellipses. The arches in some bridges are elliptical in shape, and whispering domes, such as the ceiling of the Mormon Tabernacle in Salt Lake City, are made from ellipses.  A circle is defined as the set of all points in a plane that lie at a fixed distance from its center. An ellipse also has a geometric definition.  Ellipse ellipse  An ellipse ellipse is the set of points in the plane, the sum of whose distances from two fixed points (the foci ellipse foci focus of an ellipse ) is a constant.   Using the distance formula and the definition above, we can show that the equation of an ellipse centered at the origin has the following standard form.  Central Ellipse ellipse central ellipse ellipse central center of an ellipse  The equation of an ellipse centered at the origin is   By setting equal to zero in the equation above, we find that the -intercepts of this ellipse are and ; by setting equal to zero, we find that the -intercepts are and .  The line segment that passes through the foci (labeled and on the graphs below) and ends on the ellipse is called the major axis axis major ellipse major axis major axis ellipse . If , the major axis is horizontal, as shown in the Figure below left. The -intercepts are the endpoints of the major axis, so its length is . The vertical segment with length is called the minor axis axis minor ellipse minor axis minor axis ellipse . The endpoints of the major axis are the vertices ellipse vertices vertex of ellipse vertices ellipse of the ellipse and the endpoints of the minor axis are the covertices covertices ellipse ellipse covertices .   ellipse with horizontal major axis  ellipse with vertical major axis  If , the major axis is vertical and has length . In this case the endpoints of the major axis are the -intercepts of the ellipse. (See the Figure above right.) The minor axis is horizontal and has length .  The standard form of the equation for an ellipse gives us enough information to sketch its graph.  Graph  The graph is an ellipse with major axis on the -axis. Because and , the vertices are located at and , and the covertices lie units to the right and left of the center, or approximately at and .  To sketch the ellipse, we first locate the vertices and covertices. Then we draw a smooth curve through the points. The graph of is shown below.  ellipse with vertical major axis  Practice 1  Find the intercepts of the graph of .  Graph the ellipse.   , , ,  ellipse with horizontal major axis   The equation of any central ellipse may be written as where , , and the same sign. The features of the graph are easier to identify if we first convert the equation to standard form.  Graph   First we convert the equation to standard form: we divide through by the constant term, 12, to obtain Because and , the vertices are and the covertices are . We plot points at about and , then draw an ellipse through the points, as shown at right.  ellipse with vertical major axis   Practice 2 Graph ellipse   We can find coordinates of other points on an ellipse by substituting a value for one variable and solving for the other variable.   Find the exact coordinates of any points with -coordinate 2 on the ellipse . Plot and label those points on the ellipse.  Solve the equation when . What do the solutions tell you about the graph of the ellipse?    We substitute into the equation and solve for .  ellipse with vertical major axis  There are two points with , namely and  We substitute into the equation and solve for . Because there are no real solutions, there are no points on the ellipse with .   Practice 3 Find the exact coordinates of all points with -coordinate on the ellipse . ,    Translated Ellipses  An ellipse whose center is at the point instead of the origin is said to be shifted or translated to that location.  Ellipse ellipse translated center of an ellipse ellipse standard form ellipse translated  The standard equation for an ellipse centered at is   The horizontal axis of the ellipse has length , and the vertical axis has length , the same as for central ellipses. When , the major axis is horizontal and the ellipse is short and wide. When , the major axis is vertical and the ellipse is tall and narrow, as shown below.   ellipse with horizontal major axis  ellipse with vertical major axis   Graph  Find the exact coordinates of the intercepts of the graph.   The graph is an ellipse with center at . We have and , and the major axis is parallel to the -axis because . We plot the vertices four units to the left and right of the center, at and . The covertices lie units above and below the center, at approximately and . The graph is shown below.  translated ellipse  We set and solve the resulting equation to find the -intercepts.  The -intercepts are or approximately and . We set to find the -intercepts.  The -intercepts are or approximately and   Practice 4  Graph  Find the coordinates of the vertices and covertices.   translated ellipse  vertices: ,  covertices: ,   QuickCheck 2  To write the equation in the standard form for ellipses, we divide through by  The -coordinates of all points on a central ellipse lie between and  In the standard form for an ellipse, are the coordinates of the of the ellipse.  The vertical axis of an ellipse has length .    Writing in Standard Form  Second-degree equations in which the coefficients of and have the same sign can be written in one of the standard forms for an ellipse by completing the square completing the square . The equation can be graphed easily from the standard form.   Write the equation in standard form.  Graph the equation.    We first prepare to complete the square in both and . Begin by factoring out the coefficients of and . We complete the square in by adding to , and adding , or , to the right side of the equation. We complete the square in by adding to , and , or , to the right side. We write each term on the left side as a perfect square to get  The graph is an ellipse with center at , and The vertices lie 3 units to the right and left of the center at and ; the covertices lie 2 units above and below the center at and . The graph is shown below.  translated ellipse   When completing the square in the Example above, do not forget the coefficients you factored out in the first step. When we add 4 to complete the square in , it is multiplied by a factor of 4, so we must add or 16 to the right side of the equation. Similarly, we must add or 9 to the right side when we complete the square in .    Finding the Equation of an Ellipse ellipse finding the equation of  To write the equation of an ellipse from a description of its properties, we must find the center of the ellipse and the lengths of its axes. We can then substitute this information into the standard form.  Find the equation of the ellipse with vertices at and and covertices at and .   You may find it helpful to plot the given points to help you visualize the ellipse. The center of the ellipse is the midpoint of the major (or minor) axis.   axes of ellipse  Thus, the center is the point . The horizontal axis is shorter, and is the distance between the center and either covertex, say Thus, The value of is the distance from the center to one of the vertices, say : The equation of the ellipse has the form The equation of the ellipse has , , , . Thus the equation is If we clear this equation of fractions and expand the powers, we obtain the general form  Practice 6 Find the equation of the ellipse with vertices at and and a minor axis of length 4.   QuickCheck 2 True or False   To write the equation of a conic section in standard form, we first factor out the coefficients of and .  The last step in obtaining the standard form for an ellipse is to divide through by the constant term.  The center of an ellipse is the intersection of the major and minor axes.  The vertices of an ellipse lie at the ends of the longer axis.    Problem Set 9.3  Warm Up   Write the standard form for a circle.  Divide both sides of this equation by .  Compare the new equation with the standard form for an ellipse. What do you notice?      Graph the circle  Solve the system  Find all points with -coordinate 1 on the graph of  Find the -intercepts and the vertex of the graph of -intercepts: , , vertex:  Write an equation for the circle with center and radius 8.    Skills Practice  For problems 7 12, graph the circle or ellipse.  circle     central ellipse    central ellipse    For problems 13 and 14  Fiind the equation of the ellipse.  Use your equation to complete the table.   central ellipse                                central ellipse                 For problems 15-18, each equation is a circle or ellipse.  State the radius or the lengths of the axes of the graph.  Give the exact coordinates of all points on the graph with the given - or -coordinate.   Radius 2      None    For problems 19 and 20,  Graph the ellipse.  Give the exact coordinates of any four points on the ellipse.    ellipse  , , , (Others are possible.)    For Problems 21 24:  Write the equation in standard form.  Graph the equation.     ellipse      ellipse    For Problems 25 28, write an equation for the ellipse with the properties given.  Center at , ,  Vertices at and , minor axis of length 6  Covertices at and , major axis of length 10  Vertices at and , covertices at and    Applications  The arch of a bridge forms the top half of an ellipse with a horizontal major axis. The arch is 7 feet high and 20 feet wide.  graph   Find an equation for the ellipse.  How high is the arch at a distance of 8 feet from the peak?   4.2 ft  A doorway is topped by a semi-elliptical arch. The doorway is 230 centimeters high at its highest point and 200 centimeters high at its lowest point. It is 80 centimeters wide.  graph   Find an equation for the ellipse.  How high is the doorway 8 centimeters from the left side?  The wing of a World War II British Spitfire is an ellipse whose major axis is 48 feet. The minor axis is 16 feet, but part of the ellipse is cut off parallel to the major axis. This cut edge is 46 feet long.  graph   Find an equation for the ellipse.  How wide is the wing at its center? Round your answer to two decimal places.   10.29 ft  The centerline of a sailboat from bow to stern along the bottom (its keel) is elliptical in shape, with a major axis of 360 centimeters. The minor axis of the ellipse is 100 centimeters, but the deck of the sailboat (the top of the ellipse) has been cut off parallel to the major axis. The deck of the sailboat is 330 centimeters long.   elliptical keel on sailboat      Find an equation for the ellipse.  What is the maximum distance from the deck to the bottom of the keel? Round your answer to two decimal places.     "
 },
 {
-  "id": "p-9428",
+  "id": "p-8881",
   "level": "2",
-  "url": "Ellipses.html#p-9428",
+  "url": "Ellipses.html#p-8881",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "conic sections degenerate conics circles ellipses hyperbolas parabolas "
 },
 {
-  "id": "p-9429",
+  "id": "p-8882",
   "level": "2",
-  "url": "Ellipses.html#p-9429",
+  "url": "Ellipses.html#p-8882",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "central conics "
 },
 {
-  "id": "p-9431",
+  "id": "p-8884",
   "level": "2",
-  "url": "Ellipses.html#p-9431",
+  "url": "Ellipses.html#p-8884",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "ellipse "
 },
 {
-  "id": "definition-20",
+  "id": "definition-21",
   "level": "2",
-  "url": "Ellipses.html#definition-20",
+  "url": "Ellipses.html#definition-21",
   "type": "Definition",
   "number": "9.3.1",
   "title": "Ellipse.",
   "body": "Ellipse ellipse  An ellipse ellipse is the set of points in the plane, the sum of whose distances from two fixed points (the foci ellipse foci focus of an ellipse ) is a constant.  "
 },
 {
-  "id": "p-9435",
+  "id": "p-8888",
   "level": "2",
-  "url": "Ellipses.html#p-9435",
+  "url": "Ellipses.html#p-8888",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "ellipse "
 },
 {
-  "id": "p-9437",
+  "id": "p-8890",
   "level": "2",
-  "url": "Ellipses.html#p-9437",
+  "url": "Ellipses.html#p-8890",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "major axis minor axis vertices covertices "
 },
 {
-  "id": "example-233",
+  "id": "example-235",
   "level": "2",
-  "url": "Ellipses.html#example-233",
+  "url": "Ellipses.html#example-235",
   "type": "Example",
   "number": "9.3.2",
   "title": "",
-  "body": "Graph  The graph is an ellipse with major axis on the -axis. Because and , the vertices are located at and , and the covertices lie units to the right and left of the center, or approximately at and .  To sketch the ellipse, we first locate the vertices and covertices. Then we draw a smooth curve through the points. The graph of is shown below.   ellipse with vertical major axis "
+  "body": "Graph  The graph is an ellipse with major axis on the -axis. Because and , the vertices are located at and , and the covertices lie units to the right and left of the center, or approximately at and .  To sketch the ellipse, we first locate the vertices and covertices. Then we draw a smooth curve through the points. The graph of is shown below.  ellipse with vertical major axis "
 },
 {
   "id": "exercise-2060",
@@ -23479,70 +23506,70 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "9.3.3",
   "title": "Practice 1.",
-  "body": "Practice 1     Find the intercepts of the graph of Separate different intercepts with a comma.    Graph the ellipse.                  A graph is below.          ellipse with horizontal major axis "
-},
-{
-  "id": "exercise-2061",
-  "level": "2",
-  "url": "Ellipses.html#exercise-2061",
-  "type": "Checkpoint",
-  "number": "9.3.4",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1     To sketch an ellipse, we locate   two foci    center and radius    vertices and covertices    slope and intercepts   , then draw a smooth curve through them.    If is the major axis horizontal or vertical?   horizontal    vertical      The -intercepts of a central ellipse lie   a    b   units from the center.    An ellipse is one of the four   conic sections    quadrants    formulas    solutions   .                           vertices and covertices    horizontal       conic sections        "
-},
-{
-  "id": "example-234",
-  "level": "2",
-  "url": "Ellipses.html#example-234",
-  "type": "Example",
-  "number": "9.3.5",
-  "title": "",
-  "body": "Graph   First we convert the equation to standard form: we divide through by the constant term, 12, to obtain Because and , the vertices are and the covertices are . We plot points at about and , then draw an ellipse through the points, as shown at right.   ellipse with vertical major axis   "
-},
-{
-  "id": "exercise-2062",
-  "level": "2",
-  "url": "Ellipses.html#exercise-2062",
-  "type": "Checkpoint",
-  "number": "9.3.6",
-  "title": "Practice 2.",
-  "body": "Practice 2   Graph       Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)            A graph is also shown below.       ellipse  "
-},
-{
-  "id": "example-235",
-  "level": "2",
-  "url": "Ellipses.html#example-235",
-  "type": "Example",
-  "number": "9.3.7",
-  "title": "",
-  "body": " Find the exact coordinates of any points with -coordinate 2 on the ellipse . Plot and label those points on the ellipse.  Solve the equation when . What do the solutions tell you about the graph of the ellipse?    We substitute into the equation and solve for .   ellipse with vertical major axis  There are two points with , namely and  We substitute into the equation and solve for . Because there are no real solutions, there are no points on the ellipse with .  "
-},
-{
-  "id": "exercise-2063",
-  "level": "2",
-  "url": "Ellipses.html#exercise-2063",
-  "type": "Checkpoint",
-  "number": "9.3.8",
-  "title": "Practice 3.",
-  "body": "Practice 3   Find the exact coordinates of all points with -coordinate on the ellipse              "
-},
-{
-  "id": "p-9500",
-  "level": "2",
-  "url": "Ellipses.html#p-9500",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "translated "
+  "body": "Practice 1  Find the intercepts of the graph of .  Graph the ellipse.   , , ,  ellipse with horizontal major axis  "
 },
 {
   "id": "example-236",
   "level": "2",
   "url": "Ellipses.html#example-236",
   "type": "Example",
-  "number": "9.3.9",
+  "number": "9.3.4",
+  "title": "",
+  "body": "Graph   First we convert the equation to standard form: we divide through by the constant term, 12, to obtain Because and , the vertices are and the covertices are . We plot points at about and , then draw an ellipse through the points, as shown at right.  ellipse with vertical major axis  "
+},
+{
+  "id": "exercise-2061",
+  "level": "2",
+  "url": "Ellipses.html#exercise-2061",
+  "type": "Checkpoint",
+  "number": "9.3.5",
+  "title": "Practice 2.",
+  "body": "Practice 2 Graph ellipse  "
+},
+{
+  "id": "example-237",
+  "level": "2",
+  "url": "Ellipses.html#example-237",
+  "type": "Example",
+  "number": "9.3.6",
+  "title": "",
+  "body": " Find the exact coordinates of any points with -coordinate 2 on the ellipse . Plot and label those points on the ellipse.  Solve the equation when . What do the solutions tell you about the graph of the ellipse?    We substitute into the equation and solve for .  ellipse with vertical major axis  There are two points with , namely and  We substitute into the equation and solve for . Because there are no real solutions, there are no points on the ellipse with .  "
+},
+{
+  "id": "exercise-2062",
+  "level": "2",
+  "url": "Ellipses.html#exercise-2062",
+  "type": "Checkpoint",
+  "number": "9.3.7",
+  "title": "Practice 3.",
+  "body": "Practice 3 Find the exact coordinates of all points with -coordinate on the ellipse . ,  "
+},
+{
+  "id": "p-8915",
+  "level": "2",
+  "url": "Ellipses.html#p-8915",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "translated "
+},
+{
+  "id": "example-238",
+  "level": "2",
+  "url": "Ellipses.html#example-238",
+  "type": "Example",
+  "number": "9.3.8",
   "title": "",
   "body": " Graph  Find the exact coordinates of the intercepts of the graph.   The graph is an ellipse with center at . We have and , and the major axis is parallel to the -axis because . We plot the vertices four units to the left and right of the center, at and . The covertices lie units above and below the center, at approximately and . The graph is shown below.  translated ellipse  We set and solve the resulting equation to find the -intercepts.  The -intercepts are or approximately and . We set to find the -intercepts.  The -intercepts are or approximately and  "
+},
+{
+  "id": "exercise-2063",
+  "level": "2",
+  "url": "Ellipses.html#exercise-2063",
+  "type": "Checkpoint",
+  "number": "9.3.9",
+  "title": "Practice 4.",
+  "body": "Practice 4  Graph  Find the coordinates of the vertices and covertices.   translated ellipse  vertices: ,  covertices: ,  "
 },
 {
   "id": "exercise-2064",
@@ -23550,346 +23577,337 @@ var ptx_lunr_docs = [
   "url": "Ellipses.html#exercise-2064",
   "type": "Checkpoint",
   "number": "9.3.10",
-  "title": "Practice 4.",
-  "body": "Practice 4     Graph      Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)      Find the coordinates of the vertices and covertices. Separate different points with a comma. Use sqrt(2) to get  vertices:  covertices:                         A graph is also shown below.    vertices:   covertices:          :   translated ellipse  "
-},
-{
-  "id": "exercise-2065",
-  "level": "2",
-  "url": "Ellipses.html#exercise-2065",
-  "type": "Checkpoint",
-  "number": "9.3.11",
   "title": "QuickCheck 2.",
-  "body": "QuickCheck 2     To write the equation in the standard form for ellipses, we divide through by    The -coordinates of all points on a central ellipse lie between and    In the standard form for an ellipse, are the coordinates of the   center    vertex    covertex    intercept   of the ellipse.    The vertical axis of an ellipse has length .                                   and    center           "
+  "body": "QuickCheck 2  To write the equation in the standard form for ellipses, we divide through by  The -coordinates of all points on a central ellipse lie between and  In the standard form for an ellipse, are the coordinates of the of the ellipse.  The vertical axis of an ellipse has length .  "
 },
 {
   "id": "Example-ellipse-equation-standard-form",
   "level": "2",
   "url": "Ellipses.html#Example-ellipse-equation-standard-form",
   "type": "Example",
-  "number": "9.3.12",
+  "number": "9.3.11",
   "title": "",
-  "body": " Write the equation in standard form.  Graph the equation.    We first prepare to complete the square in both and . Begin by factoring out the coefficients of and . We complete the square in by adding to , and adding , or , to the right side of the equation. We complete the square in by adding to , and , or , to the right side. We write each term on the left side as a perfect square to get  The graph is an ellipse with center at , and The vertices lie 3 units to the right and left of the center at and ; the covertices lie 2 units above and below the center at and . The graph is shown below.  translated ellipse   "
+  "body": " Write the equation in standard form.  Graph the equation.    We first prepare to complete the square in both and . Begin by factoring out the coefficients of and . We complete the square in by adding to , and adding , or , to the right side of the equation. We complete the square in by adding to , and , or , to the right side. We write each term on the left side as a perfect square to get  The graph is an ellipse with center at , and The vertices lie 3 units to the right and left of the center at and ; the covertices lie 2 units above and below the center at and . The graph is shown below.  translated ellipse  "
 },
 {
-  "id": "warning-47",
+  "id": "warning-46",
   "level": "2",
-  "url": "Ellipses.html#warning-47",
+  "url": "Ellipses.html#warning-46",
   "type": "Caution",
-  "number": "9.3.13",
+  "number": "9.3.12",
   "title": "",
   "body": "When completing the square in the Example above, do not forget the coefficients you factored out in the first step. When we add 4 to complete the square in , it is multiplied by a factor of 4, so we must add or 16 to the right side of the equation. Similarly, we must add or 9 to the right side when we complete the square in .  "
+},
+{
+  "id": "example-240",
+  "level": "2",
+  "url": "Ellipses.html#example-240",
+  "type": "Example",
+  "number": "9.3.13",
+  "title": "",
+  "body": "Find the equation of the ellipse with vertices at and and covertices at and .   You may find it helpful to plot the given points to help you visualize the ellipse. The center of the ellipse is the midpoint of the major (or minor) axis.   axes of ellipse  Thus, the center is the point . The horizontal axis is shorter, and is the distance between the center and either covertex, say Thus, The value of is the distance from the center to one of the vertices, say : The equation of the ellipse has the form The equation of the ellipse has , , , . Thus the equation is If we clear this equation of fractions and expand the powers, we obtain the general form "
+},
+{
+  "id": "exercise-2065",
+  "level": "2",
+  "url": "Ellipses.html#exercise-2065",
+  "type": "Checkpoint",
+  "number": "9.3.14",
+  "title": "Practice 6.",
+  "body": "Practice 6 Find the equation of the ellipse with vertices at and and a minor axis of length 4.  "
 },
 {
   "id": "exercise-2066",
   "level": "2",
   "url": "Ellipses.html#exercise-2066",
   "type": "Checkpoint",
-  "number": "9.3.14",
-  "title": "Practice 5.",
-  "body": "Practice 5     Write the equation in standard form:  , , ,    Graph the equation.                              A graph is below.         :   translated ellipse  "
-},
-{
-  "id": "example-238",
-  "level": "2",
-  "url": "Ellipses.html#example-238",
-  "type": "Example",
   "number": "9.3.15",
-  "title": "",
-  "body": "Find the equation of the ellipse with vertices at and and covertices at and .   You may find it helpful to plot the given points to help you visualize the ellipse. The center of the ellipse is the midpoint of the major (or minor) axis.   axes of ellipse  Thus, the center is the point . The horizontal axis is shorter, and is the distance between the center and either covertex, say Thus, The value of is the distance from the center to one of the vertices, say : The equation of the ellipse has the form The equation of the ellipse has , , , . Thus the equation is If we clear this equation of fractions and expand the powers, we obtain the general form "
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 True or False   To write the equation of a conic section in standard form, we first factor out the coefficients of and .  The last step in obtaining the standard form for an ellipse is to divide through by the constant term.  The center of an ellipse is the intersection of the major and minor axes.  The vertices of an ellipse lie at the ends of the longer axis.  "
 },
 {
   "id": "exercise-2067",
   "level": "2",
   "url": "Ellipses.html#exercise-2067",
-  "type": "Checkpoint",
-  "number": "9.3.16",
-  "title": "Practice 6.",
-  "body": "Practice 6   Find the equation of the ellipse with vertices at and and a minor axis of length 4.             "
-},
-{
-  "id": "exercise-2068",
-  "level": "2",
-  "url": "Ellipses.html#exercise-2068",
   "type": "Exercise",
   "number": "9.3.5.1",
   "title": "",
   "body": " Write the standard form for a circle.  Divide both sides of this equation by .  Compare the new equation with the standard form for an ellipse. What do you notice?     "
 },
 {
-  "id": "exercise-2069",
+  "id": "exercise-2068",
   "level": "2",
-  "url": "Ellipses.html#exercise-2069",
+  "url": "Ellipses.html#exercise-2068",
   "type": "Exercise",
   "number": "9.3.5.2",
   "title": "",
   "body": "Graph the circle "
 },
 {
-  "id": "exercise-2070",
+  "id": "exercise-2069",
   "level": "2",
-  "url": "Ellipses.html#exercise-2070",
+  "url": "Ellipses.html#exercise-2069",
   "type": "Exercise",
   "number": "9.3.5.3",
   "title": "",
   "body": "Solve the system "
 },
 {
-  "id": "exercise-2071",
+  "id": "exercise-2070",
   "level": "2",
-  "url": "Ellipses.html#exercise-2071",
+  "url": "Ellipses.html#exercise-2070",
   "type": "Exercise",
   "number": "9.3.5.4",
   "title": "",
   "body": "Find all points with -coordinate 1 on the graph of "
 },
 {
-  "id": "exercise-2072",
+  "id": "exercise-2071",
   "level": "2",
-  "url": "Ellipses.html#exercise-2072",
+  "url": "Ellipses.html#exercise-2071",
   "type": "Exercise",
   "number": "9.3.5.5",
   "title": "",
   "body": "Find the -intercepts and the vertex of the graph of -intercepts: , , vertex: "
 },
 {
-  "id": "exercise-2073",
+  "id": "exercise-2072",
   "level": "2",
-  "url": "Ellipses.html#exercise-2073",
+  "url": "Ellipses.html#exercise-2072",
   "type": "Exercise",
   "number": "9.3.5.6",
   "title": "",
   "body": "Write an equation for the circle with center and radius 8.  "
 },
 {
-  "id": "exercise-2074",
+  "id": "exercise-2073",
   "level": "2",
-  "url": "Ellipses.html#exercise-2074",
+  "url": "Ellipses.html#exercise-2073",
   "type": "Exercise",
   "number": "9.3.5.7",
   "title": "",
   "body": "circle  "
 },
 {
-  "id": "exercise-2075",
+  "id": "exercise-2074",
   "level": "2",
-  "url": "Ellipses.html#exercise-2075",
+  "url": "Ellipses.html#exercise-2074",
   "type": "Exercise",
   "number": "9.3.5.8",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2076",
+  "id": "exercise-2075",
   "level": "2",
-  "url": "Ellipses.html#exercise-2076",
+  "url": "Ellipses.html#exercise-2075",
   "type": "Exercise",
   "number": "9.3.5.9",
   "title": "",
   "body": " central ellipse "
 },
 {
-  "id": "exercise-2077",
+  "id": "exercise-2076",
   "level": "2",
-  "url": "Ellipses.html#exercise-2077",
+  "url": "Ellipses.html#exercise-2076",
   "type": "Exercise",
   "number": "9.3.5.10",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2078",
+  "id": "exercise-2077",
   "level": "2",
-  "url": "Ellipses.html#exercise-2078",
+  "url": "Ellipses.html#exercise-2077",
   "type": "Exercise",
   "number": "9.3.5.11",
   "title": "",
   "body": " central ellipse "
 },
 {
-  "id": "exercise-2079",
+  "id": "exercise-2078",
   "level": "2",
-  "url": "Ellipses.html#exercise-2079",
+  "url": "Ellipses.html#exercise-2078",
   "type": "Exercise",
   "number": "9.3.5.12",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2080",
+  "id": "exercise-2079",
   "level": "2",
-  "url": "Ellipses.html#exercise-2080",
+  "url": "Ellipses.html#exercise-2079",
   "type": "Exercise",
   "number": "9.3.5.13",
   "title": "",
   "body": " central ellipse                              "
 },
 {
-  "id": "exercise-2081",
+  "id": "exercise-2080",
   "level": "2",
-  "url": "Ellipses.html#exercise-2081",
+  "url": "Ellipses.html#exercise-2080",
   "type": "Exercise",
   "number": "9.3.5.14",
   "title": "",
   "body": " central ellipse               "
 },
 {
-  "id": "exercise-2082",
+  "id": "exercise-2081",
   "level": "2",
-  "url": "Ellipses.html#exercise-2082",
+  "url": "Ellipses.html#exercise-2081",
   "type": "Exercise",
   "number": "9.3.5.15",
   "title": "",
   "body": " Radius 2  "
 },
 {
-  "id": "exercise-2083",
+  "id": "exercise-2082",
   "level": "2",
-  "url": "Ellipses.html#exercise-2083",
+  "url": "Ellipses.html#exercise-2082",
   "type": "Exercise",
   "number": "9.3.5.16",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2084",
+  "id": "exercise-2083",
   "level": "2",
-  "url": "Ellipses.html#exercise-2084",
+  "url": "Ellipses.html#exercise-2083",
   "type": "Exercise",
   "number": "9.3.5.17",
   "title": "",
   "body": "  None "
 },
 {
-  "id": "exercise-2085",
+  "id": "exercise-2084",
   "level": "2",
-  "url": "Ellipses.html#exercise-2085",
+  "url": "Ellipses.html#exercise-2084",
   "type": "Exercise",
   "number": "9.3.5.18",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2086",
+  "id": "exercise-2085",
   "level": "2",
-  "url": "Ellipses.html#exercise-2086",
+  "url": "Ellipses.html#exercise-2085",
   "type": "Exercise",
   "number": "9.3.5.19",
   "title": "",
   "body": "  ellipse  , , , (Others are possible.) "
 },
 {
-  "id": "exercise-2087",
+  "id": "exercise-2086",
   "level": "2",
-  "url": "Ellipses.html#exercise-2087",
+  "url": "Ellipses.html#exercise-2086",
   "type": "Exercise",
   "number": "9.3.5.20",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2088",
+  "id": "exercise-2087",
   "level": "2",
-  "url": "Ellipses.html#exercise-2088",
+  "url": "Ellipses.html#exercise-2087",
   "type": "Exercise",
   "number": "9.3.5.21",
   "title": "",
   "body": "   ellipse "
 },
 {
-  "id": "exercise-2089",
+  "id": "exercise-2088",
   "level": "2",
-  "url": "Ellipses.html#exercise-2089",
+  "url": "Ellipses.html#exercise-2088",
   "type": "Exercise",
   "number": "9.3.5.22",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2090",
+  "id": "exercise-2089",
   "level": "2",
-  "url": "Ellipses.html#exercise-2090",
+  "url": "Ellipses.html#exercise-2089",
   "type": "Exercise",
   "number": "9.3.5.23",
   "title": "",
   "body": "   ellipse "
 },
 {
-  "id": "exercise-2091",
+  "id": "exercise-2090",
   "level": "2",
-  "url": "Ellipses.html#exercise-2091",
+  "url": "Ellipses.html#exercise-2090",
   "type": "Exercise",
   "number": "9.3.5.24",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2092",
+  "id": "exercise-2091",
   "level": "2",
-  "url": "Ellipses.html#exercise-2092",
+  "url": "Ellipses.html#exercise-2091",
   "type": "Exercise",
   "number": "9.3.5.25",
   "title": "",
   "body": "Center at , , "
 },
 {
-  "id": "exercise-2093",
+  "id": "exercise-2092",
   "level": "2",
-  "url": "Ellipses.html#exercise-2093",
+  "url": "Ellipses.html#exercise-2092",
   "type": "Exercise",
   "number": "9.3.5.26",
   "title": "",
   "body": "Vertices at and , minor axis of length 6 "
 },
 {
-  "id": "exercise-2094",
+  "id": "exercise-2093",
   "level": "2",
-  "url": "Ellipses.html#exercise-2094",
+  "url": "Ellipses.html#exercise-2093",
   "type": "Exercise",
   "number": "9.3.5.27",
   "title": "",
   "body": "Covertices at and , major axis of length 10 "
 },
 {
-  "id": "exercise-2095",
+  "id": "exercise-2094",
   "level": "2",
-  "url": "Ellipses.html#exercise-2095",
+  "url": "Ellipses.html#exercise-2094",
   "type": "Exercise",
   "number": "9.3.5.28",
   "title": "",
   "body": "Vertices at and , covertices at and "
 },
 {
-  "id": "exercise-2096",
+  "id": "exercise-2095",
   "level": "2",
-  "url": "Ellipses.html#exercise-2096",
+  "url": "Ellipses.html#exercise-2095",
   "type": "Exercise",
   "number": "9.3.5.29",
   "title": "",
   "body": "The arch of a bridge forms the top half of an ellipse with a horizontal major axis. The arch is 7 feet high and 20 feet wide.  graph   Find an equation for the ellipse.  How high is the arch at a distance of 8 feet from the peak?   4.2 ft "
 },
 {
-  "id": "exercise-2097",
+  "id": "exercise-2096",
   "level": "2",
-  "url": "Ellipses.html#exercise-2097",
+  "url": "Ellipses.html#exercise-2096",
   "type": "Exercise",
   "number": "9.3.5.30",
   "title": "",
   "body": "A doorway is topped by a semi-elliptical arch. The doorway is 230 centimeters high at its highest point and 200 centimeters high at its lowest point. It is 80 centimeters wide.  graph   Find an equation for the ellipse.  How high is the doorway 8 centimeters from the left side? "
 },
 {
-  "id": "exercise-2098",
+  "id": "exercise-2097",
   "level": "2",
-  "url": "Ellipses.html#exercise-2098",
+  "url": "Ellipses.html#exercise-2097",
   "type": "Exercise",
   "number": "9.3.5.31",
   "title": "",
   "body": "The wing of a World War II British Spitfire is an ellipse whose major axis is 48 feet. The minor axis is 16 feet, but part of the ellipse is cut off parallel to the major axis. This cut edge is 46 feet long.  graph   Find an equation for the ellipse.  How wide is the wing at its center? Round your answer to two decimal places.   10.29 ft "
 },
 {
-  "id": "exercise-2099",
+  "id": "exercise-2098",
   "level": "2",
-  "url": "Ellipses.html#exercise-2099",
+  "url": "Ellipses.html#exercise-2098",
   "type": "Exercise",
   "number": "9.3.5.32",
   "title": "",
@@ -23902,489 +23920,489 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.4",
   "title": "Conic Sections: Hyperbolas",
-  "body": "Conic Sections: Hyperbolas hyperbola   If a cone is cut by a plane parallel to its axis, the intersection is a hyperbola hyperbola , the only conic section conic section made of two separate pieces, or branches branches hyperbola hyperbola branches . Hyperbolas occur in a number of applied settings. The navigational system called LORAN (long-range navigation) uses radio signals to locate a ship or plane at the intersection of two hyperbolas. Satellites moving with sufficient speed will follow an orbit that is branch of a hyperbola; for example, a rocket sent to the moon must be fitted with retrorockets to reduce its speed in order to achieve an elliptical, rather than hyperbolic, orbit about the moon.  The hyperbola is defined as follows.  Hyperbola hyperbola  A hyperbola hyperbola is the set of points in the plane, the difference of whose distances from two fixed points (the foci focus of a hyperbola ) is a constant.    hyperbola with horizontal transverse axis  hyperbola with vertical transverse axis  If the origin is the center of the hyperbola and the foci (labeled and on the graphs above) lie on the axes, we can use the distance formula to derive its equation.  Central Hyperbola hyperbola central center of hyperbola central hyperbola  The equation of a hyperbola with center at the origin is   In the first case, the two branches of the hyperbola open left and right, so the graph has -intercepts at and but no -intercepts. (See figure above left.) The segment joining the -intercepts is the transverse axis axis transverse hyperbola transverse axis transverse axis hyperbola , and its length is . The endpoints of the transverse axis are the vertices hyperbola vertices vertex of a hyperbola vertices hyperbola of the hyperbola. The segment of length is called the conjugate axis. conjugate axis conjugate axis hyperbola axis conjugate hyperbola conjugate axis  In the second case, the graph has -intercepts at and but no -intercepts the two branches open up and down. (See figure above right.) Here the -intercepts are the vertices, so the transverse axis is vertical and has length . The conjugate axis has length .   Asymptotes of Hyperbolas  The branches of the hyperbola approach two straight lines that intersect at its center. These lines are asymptotes asymptote of hyperbola hyperbola asymptotes of the graph, and they are useful as guidelines for sketching the hyperbola. We first sketch a rectangle (called the central rectangle central rectangle ) whose sides are parallel to the axes and whose dimensions are and . The asymptotes are the diagonals of this rectangle.  Graph  The graph is a hyperbola with center at the origin. The -term is positive, so the branches of the hyperbola open upward and downward. Because and , we have and , and the vertices are and . There are no -intercepts.   We construct the central rectangle with dimensions and , as shown in the figure. Then we draw the asymptotes through the diagonals of the rectangle. The asymptotes have slopes . Finally, we sketch the branches of the hyperbola through the vertices and approaching the asymptotes.  hyperbola opening up and down  Practice 1   Graph       Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)            Another graph is below.       :   hyperbola opening left and right   The equation of a central hyperbola hyperbola central may be written as where and have opposite signs and . As with ellipses, it is best to rewrite the equation in standard form in order to graph it.  Write the equation in standard form and describe the important features of its graph.   We first divide each side by 16 to obtain   The graph is a central hyperbola with -intercepts and , as shown in the figure. The slopes of the asymptotes are given by so the equations of the asymptotes are  hyperbola opening up and down  Practice 2     Write the equation in standard form.     Find the vertices of the graph and the equations of the asymptotes.  Vertices: Separate different vertices with a comma.  Equations of asymptotes: and                                    QuickCheck 1     The hyperbola is the only conic section with two separate   vertices    foci    axes    branches   .    The endpoints of the   conjugate    transverse    vertical    horizontal   axis are the vertices of the hyperbola.    The asymptotes of a hyperbola are the diagonals of the   central rectangle    outer rectangle    regular pentagon    hypotenuse   .    If the term in the standard form is positive, a central hyperbola has no   vertex    asymptotes    x-intercepts    y-intercepts   .                           branches    transverse    central rectangle    x-intercepts         We can find exact coordinates of points on a hyperbola by substituting a value for one variable and solving for the other variable.  Find the exact coordinates of any points with -coordinate on the hyperbola with equation . Plot and label those points on the hyperbola.   We substitute in the given equation. There are two points with , namely and , as shown in the figure.  hyperbola opens up and down   Practice 3   Solve the equation when   What does this tell you about the graph of the hyperbola?    The line is one of the asymptotes.    There are no points on the graph with -coordinate 1.    This is a degenerate conic.    The hyperbola opens left and right.               There are no real solutions when so there are no points on the graph with -coordinate 1.        The Central Conics conic section central central conics  The fourth conic section, conic section after circles, circle ellipses, and hyperbolas, is the parabola. We have already encountered parabolas in our study of quadratic functions. In particular, the graph of has its vertex at the origin and opens up or down, depending on the sign of . The graph of is a parabola that opens to the left or right. There is also a geometric definition of a parabola, but we will not discuss that here.  table summarizing conics   Write each equation in standard form and describe its graph.      The equation is equivalent to The graph is a hyperbola that opens left and right.  The equation is equivalent to The graph is an ellipse with major axis on the -axis because .   Practice 4   Write each equation in standard form and describe its graph.    Standard form:  The graph is   a circle    an ellipse    a hyperbola    a parabola   centered at the point , with vertices . There   are    are not   asymptotes: .     Standard form:  The graph is   a circle    an ellipse    a hyperbola    a parabola   with vertex at the point , opening   left    right    upward    downward   .                                                         A hyperbola centered at the origin with vertices and and asymptotes and    A parabola opening downward with vertex at the origin.          Translated Hyperbolas  The standard form for the equations of hyperbolas centered at the point can be derived using the distance formula and the definition of hyperbola.  Hyperbolas hyperbola translated center of hyperbola  The equation for a hyperbola centered at has one of the two standard forms:   The first equation describes a hyperbola whose transverse axis is parallel to the -axis, so that the branches open left and right, and the second equation describes a hyperbola whose transverse axis is parallel to the -axis, so that the branches open up and down, as shown below.   hyperbola-left-and-right-translated    hyperbola-up-and-down-translated   Graph  Find the equations of the asymptotes.   The graph is a hyperbola with   Because the -term is positive, the branches open left and right. The coordinates of the vertices are thus and , or approximately and . The ends of the conjugate axis are ) and ), or approximately and .  translated hyperbola, left and right   The central rectangle is centered at the point and extends to the vertices in the horizontal direction and to the ends of the conjugate axis in the vertical direction. We draw the asymptotes through the opposite corners of the central rectangle, and sketch the hyperbola through the vertices and approaching the asymptotes to obtain the graph shown above.  Both asymptotes pass through the center of the hyperbola, . Their slopes are We substitute these values into the point-slope formula to find the equations  Practice 5     Graph      Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)      Find the equations of the asymptotes. (Enter sqrt(2) for )  Equations of asymptotes: and                          A graph is also shown below.             :   translated hyperbola opening up and down    Writing in Standard Form  We can write the equation of a hyperbola in standard form by completing the squares completing the square in and .   Write the equation in standard form.  Graph the equation.       We prepare to complete the square by factoring out from the -terms. We complete the square in by adding to each side of the equation. To complete the square in we add 1 to , so we add , or to the right side, to get or Finally, we divide each side by 9 to obtain the standard form      The graph is a hyperbola with center at . Because the -term is positive, the transverse axis is parallel to the -axis, and Thus, and , and the vertices are and . The ends of the conjugate axis are and .   translated hyperbola, open up and down   The central rectangle is centered at , as shown in the figure. We draw the asymptotes through the corners of the rectangle, then sketch the hyperbola by starting at the vertices and approaching the asymptotes.    Practice 6     Write the equation in standard form.     Graph the equation.      Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)                         A graph is also shown below.       :    translated hyperbola opening left and right    QuickCheck 2   True or false.   The graph of a general quadratic is a hyperbola if the coefficients of both the -term and the -term are negative.   True    False      The slopes of the asymptotes of a hyperbola are    True    False      The asymptotes pass through the vertices of the hyperbola.   True    False                        False    True    False    True          General Quadratic Equation in Two Variables  We have considered graphs of second-degree equations in two variables, for which , the coefficient of the -term, is zero. These graphs are conic sections with axes parallel to one or both of the coordinate axes. If does not equal zero, the axes of the conic section are rotated with respect to the coordinate axes. The graphing of such equations is taken up in more advanced courses in analytic geometry.  The graph of a second-degree equation can also be a point, a line, a pair of lines, or no graph at all, depending on the values of the coefficients through . Such graphs are called degenerate conics degenerate conic conic section degenerate .  Given an equation of the form we can determine the nature of the graph from the coefficients of the quadratic terms. If the graph is not a degenerate conic, the following criteria apply.  Conic Sections conic section  The graph of is  a circle if .  a parabola if or (but not both).  an ellipse if and have the same sign.  a hyperbola if and have opposite signs.   Name the graph of each equation, assuming that the graph is not degenerate.       The graph is a circle because the coefficients of and are equal.  The graph is an ellipse because the coefficients of and are both positive.  The graph is a hyperbola because the coefficients of and have opposite signs.  The graph is a parabola because is of first degree and is of second degree.   The standard forms for the conic sections conic section standard form are summarized in the table below. For the parabola, is the vertex of the graph, and for the other conics, is the center. circle ellipse hyperbola parabola  table of conic sections   The coefficients , , and do not figure in determining the type of conic section the equation represents. They do, however, determine the position of the graph relative to the origin. Once we recognize the form of the graph, we can write the equation in standard form in order to discover more information about the graph.  Practice 7   Describe the graph of each equation without graphing.      A circle with center    An ellipse with center    A hyperbola with center    A parabola with vertex   at the point ; vertices: ; asymptotes       A circle with center    An ellipse with center    A hyperbola with center    A parabola with vertex   at the point , opening   left    right    upward    downward         A circle with center    An ellipse with center    A hyperbola with center    A parabola with vertex   at the point with horizontal   major axis    minor axis    transverse axis    conjugate axis   ; , and                                                                   A hyperbola centered at the origin with vertices and and asymptotes and    A parabola that opens upward from the vertex    An ellipse centered at with a horizontal major axis, and         QuickCheck 3     A   degenerate    central    translated   conic can be a point, a line, a pair of lines, or no graph at all.    The coefficients  and determine the   type    position   of the conic.    The graph is a   circle    ellipse    hyperbola    parabola   if one of or is zero.    If (and ), the graph is a   circle    ellipse    hyperbola    parabola   .                           A degenerate conic can be a point, a line, a pair of lines, or no graph at all.    The coefficients  and determine the position of the conic.    The graph is a parabola if one of or is zero.    If (and ), the graph is a circle.          Problem Set 9.4  Warm Up  Use your calculator to graph in the window . First, solve the equation for . (You should get two functions.)   The graph of this equation is a .  The graph has vertices at and .  Now add to your graph the lines and . These are the asymptotes of the hyperbola.  Use the calculator to graph in the window . (Follow the steps above for Problem 1.)  What are the vertices of this hyperbola?  What are the asymptotes?  How does this hyperbola differ from the one in Problem 2?   Skills Practice  For Problems 3 8, graph the hyperbola.   hyperbola, open up and down    hyperbola, open left and right    hyperbola, open left and right    For Problems 9 and 10:  Find the equation for the hyperbola.  Use your equation to complete the table.   hyperbola opening left and right                          undefined       hyperbola opening up and down                  Graph , , and on the same set of axes. What do you observe?  Graph , , and on the same set of axes. What do you observe?   hyperbolas opening left and right   hyperbolas opening left and right   Graph . (Hint: Factor the left side of the equation and use the zero-factor principle to write two equations, then graph them.) Describe your graph.  Graph . Describe your graph.  For problems 13 18:  Graph the hyperbola.  Give the exact coordinates of any four points on the hyperbola    hyperbola opening up and down  ,      hyperbola opening up and down  , ,     hyperbola opening up and down  ,    For Problems 19 22, write an equation for the hyperbola with the properties given.  Center at , , , opening left and right  Center at , , , opening up and down   One vertex at , one end of the vertical conjugate axis at  One vertex at , one end of the horizontal conjugate axis at   For Problems 23 28, name the graph of the equation and descsribe its main features.  Parabola; vertex , opens downward,   Hyperbola; center , transverse axis vertical, ,   Parabola; vertex , opens upward,     Applications  Problems 29 32 deal with the cooling tower at an electricity generating facility. The shape of the tower, called a hyperboloid, is obtained by rotating a portion of the hyperbola around the -axis.  graph   The base of the cooling tower is 360 feet below the center of the hyperbola. What is the diamter of the base? 520 ft  The top of the cooling tower is 200 feet above the center of the hyperbola. What is the diameter of the top?  The diameter of the tower first decreases with height and then increases again. There are two heights at which the tower's diameter is 250 feet. Find the greater of the two heights. 472.5 ft  Find the height at which the tower's diameter is 200 feet.     "
+  "body": "Conic Sections: Hyperbolas hyperbola   If a cone is cut by a plane parallel to its axis, the intersection is a hyperbola hyperbola , the only conic section conic section made of two separate pieces, or branches branches hyperbola hyperbola branches . Hyperbolas occur in a number of applied settings. The navigational system called LORAN (long-range navigation) uses radio signals to locate a ship or plane at the intersection of two hyperbolas. Satellites moving with sufficient speed will follow an orbit that is branch of a hyperbola; for example, a rocket sent to the moon must be fitted with retrorockets to reduce its speed in order to achieve an elliptical, rather than hyperbolic, orbit about the moon.  The hyperbola is defined as follows.  Hyperbola hyperbola  A hyperbola hyperbola is the set of points in the plane, the difference of whose distances from two fixed points (the foci focus of a hyperbola ) is a constant.    hyperbola with horizontal transverse axis  hyperbola with vertical transverse axis  If the origin is the center of the hyperbola and the foci (labeled and on the graphs above) lie on the axes, we can use the distance formula to derive its equation.  Central Hyperbola hyperbola central center of hyperbola central hyperbola  The equation of a hyperbola with center at the origin is   In the first case, the two branches of the hyperbola open left and right, so the graph has -intercepts at and but no -intercepts. (See figure above left.) The segment joining the -intercepts is the transverse axis axis transverse hyperbola transverse axis transverse axis hyperbola , and its length is . The endpoints of the transverse axis are the vertices hyperbola vertices vertex of a hyperbola vertices hyperbola of the hyperbola. The segment of length is called the conjugate axis. conjugate axis conjugate axis hyperbola axis conjugate hyperbola conjugate axis  In the second case, the graph has -intercepts at and but no -intercepts the two branches open up and down. (See figure above right.) Here the -intercepts are the vertices, so the transverse axis is vertical and has length . The conjugate axis has length .   Asymptotes of Hyperbolas  The branches of the hyperbola approach two straight lines that intersect at its center. These lines are asymptotes asymptote of hyperbola hyperbola asymptotes of the graph, and they are useful as guidelines for sketching the hyperbola. We first sketch a rectangle (called the central rectangle central rectangle ) whose sides are parallel to the axes and whose dimensions are and . The asymptotes are the diagonals of this rectangle.  Graph  The graph is a hyperbola with center at the origin. The -term is positive, so the branches of the hyperbola open upward and downward. Because and , we have and , and the vertices are and . There are no -intercepts.   We construct the central rectangle with dimensions and , as shown in the figure. Then we draw the asymptotes through the diagonals of the rectangle. The asymptotes have slopes . Finally, we sketch the branches of the hyperbola through the vertices and approaching the asymptotes.  hyperbola opening up and down  Practice 1 Graph hyperbola opening left and right   The equation of a central hyperbola hyperbola central may be written as where and have opposite signs and . As with ellipses, it is best to rewrite the equation in standard form in order to graph it.  Write the equation in standard form and describe the important features of its graph.  We first divide each side by 16 to obtain   The graph is a central hyperbola with -intercepts and , as shown in the figure. The slopes of the asymptotes are given by so the equations of the asymptotes are  hyperbola opening up and down  Practice 2  Write the equation in standard form.  Find the vertices of the graph and the equations of the asymptotes.    ,  ,    QuickCheck 1  The hyperbola is the only conic section with two separate .  The endpoints of the axis are the vertices of the hyperbola.  The asymptotes of a hyperbola are the diagonals of the .  If the term in the standard form is positive, a central hyperbola has no .   We can find exact coordinates of points on a hyperbola by substituting a value for one variable and solving for the other variable.  Find the exact coordinates of any points with -coordinate on the hyperbola with equation . Plot and label those points on the hyperbola.   We substitute in the given equation. There are two points with , namely and , as shown in the figure.  hyperbola opens up and down   Practice 3 Solve the equation when . There are no real solutions when , so there are no points on the graph with -coordinate 1.   The Central Conics conic section central central conics  The fourth conic section, conic section after circles, circle ellipses, and hyperbolas, is the parabola. We have already encountered parabolas in our study of quadratic functions. In particular, the graph of has its vertex at the origin and opens up or down, depending on the sign of . The graph of is a parabola that opens to the left or right. There is also a geometric definition of a parabola, but we will not discuss that here.  table summarizing conics   Write each equation in standard form and describe its graph.      The equation is equivalent to The graph is a hyperbola that opens left and right.  The equation is equivalent to The graph is an ellipse with major axis on the -axis because .   Practice 4 Write each equation in standard form and describe its graph.      . A hyperbola centered at the origin with vertices and , and asymptotes and .  . A parabola opening downward with vertex at the origin.    Translated Hyperbolas  The standard form for the equations of hyperbolas centered at the point can be derived using the distance formula and the definition of hyperbola.  Hyperbolas hyperbola translated center of hyperbola  The equation for a hyperbola centered at has one of the two standard forms:   The first equation describes a hyperbola whose transverse axis is parallel to the -axis, so that the branches open left and right, and the second equation describes a hyperbola whose transverse axis is parallel to the -axis, so that the branches open up and down, as shown below.   hyperbola-left-and-right-translated    hyperbola-up-and-down-translated   Graph  Find the equations of the asymptotes.    The graph is a hyperbola with   Because the -term is positive, the branches open left and right. The coordinates of the vertices are thus and , or approximately and . The ends of the conjugate axis are ) and ), or approximately and .  translated hyperbola, left and right  The central rectangle is centered at the point and extends to the vertices in the horizontal direction and to the ends of the conjugate axis in the vertical direction. We draw the asymptotes through the opposite corners of the central rectangle, and sketch the hyperbola through the vertices and approaching the asymptotes to obtain the graph shown above.  Both asymptotes pass through the center of the hyperbola, . Their slopes are We substitute these values into the point-slope formula to find the equations  Practice 5  Graph  Find the equations of the asymptotes.    translated hyperbola opening up and down  ,    Writing in Standard Form  We can write the equation of a hyperbola in standard form by completing the squares completing the square in and .   Write the equation in standard form.  Graph the equation.    We prepare to complete the square by factoring out from the -terms. We complete the square in by adding to each side of the equation. To complete the square in we add 1 to , so we add , or to the right side, to get or Finally, we divide each side by 9 to obtain the standard form   The graph is a hyperbola with center at . Because the -term is positive, the transverse axis is parallel to the -axis, and Thus, and , and the vertices are and . The ends of the conjugate axis are and .   translated hyperbola, open up and down  The central rectangle is centered at , as shown in the figure. We draw the asymptotes through the corners of the rectangle, then sketch the hyperbola by starting at the vertices and approaching the asymptotes.   Practice 6  Write the equation in standard form.  Graph the equation.    translated hyperbola opening left and right    QuickCheck 2 True or false.   The graph of a general quadratic is a hyperbola if the coefficients of both the -term and the -term are negative.  The slopes of the asymptotes of a hyperbola are .  The asymptotes pass through the vertices of the hyperbola.  We find the center of the hyperbola by completing the square.    General Quadratic Equation in Two Variables  We have considered graphs of second-degree equations in two variables, for which , the coefficient of the -term, is zero. These graphs are conic sections with axes parallel to one or both of the coordinate axes. If does not equal zero, the axes of the conic section are rotated with respect to the coordinate axes. The graphing of such equations is taken up in more advanced courses in analytic geometry.  The graph of a second-degree equation can also be a point, a line, a pair of lines, or no graph at all, depending on the values of the coefficients through . Such graphs are called degenerate conics degenerate conic conic section degenerate .  Given an equation of the form we can determine the nature of the graph from the coefficients of the quadratic terms. If the graph is not a degenerate conic, the following criteria apply.  Conic Sections conic section  The graph of is  a circle if .  a parabola if or (but not both).  an ellipse if and have the same sign.  a hyperbola if and have opposite signs.   Name the graph of each equation, assuming that the graph is not degenerate.       The graph is a circle because the coefficients of and are equal.  The graph is an ellipse because the coefficients of and are both positive.  The graph is a hyperbola because the coefficients of and have opposite signs.  The graph is a parabola because is of first degree and is of second degree.   The standard forms for the conic sections conic section standard form are summarized in the table below. For the parabola, is the vertex of the graph, and for the other conics, is the center. circle ellipse hyperbola parabola  table of conic sections   The coefficients , , and do not figure in determining the type of conic section the equation represents. They do, however, determine the position of the graph relative to the origin. Once we recognize the form of the graph, we can write the equation in standard form in order to discover more information about the graph.  Practice 7 Describe the graph of each equation without graphing.       A hyperbola centered at the origin with vertices and and asymptotes and .  A parabola that opens upward from the vertex .  An ellipse centered at with a horizontal major axis, and .   QuickCheck 3  A conic can be a point, a line, a pair of lines, or no graph at all.  The coefficients , , and determine the of the conic.  The graph is a if one of or is zero.  If (and ), the graph is a .    Problem Set 9.4  Warm Up  Use your calculator to graph in the window . First, solve the equation for . (You should get two functions.)   The graph of this equation is a .  The graph has vertices at and .  Now add to your graph the lines and . These are the asymptotes of the hyperbola.  Use the calculator to graph in the window . (Follow the steps above for Problem 1.)  What are the vertices of this hyperbola?  What are the asymptotes?  How does this hyperbola differ from the one in Problem 2?   Skills Practice  For Problems 3 8, graph the hyperbola.   hyperbola, open up and down    hyperbola, open left and right    hyperbola, open left and right    For Problems 9 and 10:  Find the equation for the hyperbola.  Use your equation to complete the table.   hyperbola opening left and right                          undefined       hyperbola opening up and down                  Graph , , and on the same set of axes. What do you observe?  Graph , , and on the same set of axes. What do you observe?   hyperbolas opening left and right   hyperbolas opening left and right   Graph . (Hint: Factor the left side of the equation and use the zero-factor principle to write two equations, then graph them.) Describe your graph.  Graph . Describe your graph.  For problems 13 18:  Graph the hyperbola.  Give the exact coordinates of any four points on the hyperbola    hyperbola opening up and down  ,      hyperbola opening up and down  , ,     hyperbola opening up and down  ,    For Problems 19 22, write an equation for the hyperbola with the properties given.  Center at , , , opening left and right  Center at , , , opening up and down   One vertex at , one end of the vertical conjugate axis at  One vertex at , one end of the horizontal conjugate axis at   For Problems 23 28, name the graph of the equation and descsribe its main features.  Parabola; vertex , opens downward,   Hyperbola; center , transverse axis vertical, ,   Parabola; vertex , opens upward,     Applications  Problems 29 32 deal with the cooling tower at an electricity generating facility. The shape of the tower, called a hyperboloid, is obtained by rotating a portion of the hyperbola around the -axis.  graph   The base of the cooling tower is 360 feet below the center of the hyperbola. What is the diamter of the base? 520 ft  The top of the cooling tower is 200 feet above the center of the hyperbola. What is the diameter of the top?  The diameter of the tower first decreases with height and then increases again. There are two heights at which the tower's diameter is 250 feet. Find the greater of the two heights. 472.5 ft  Find the height at which the tower's diameter is 200 feet.     "
 },
 {
-  "id": "p-9645",
+  "id": "p-9025",
   "level": "2",
-  "url": "Hyperbolas.html#p-9645",
+  "url": "Hyperbolas.html#p-9025",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "hyperbola branches "
 },
 {
-  "id": "definition-21",
+  "id": "definition-22",
   "level": "2",
-  "url": "Hyperbolas.html#definition-21",
+  "url": "Hyperbolas.html#definition-22",
   "type": "Definition",
   "number": "9.4.1",
   "title": "Hyperbola.",
   "body": "Hyperbola hyperbola  A hyperbola hyperbola is the set of points in the plane, the difference of whose distances from two fixed points (the foci focus of a hyperbola ) is a constant.  "
 },
 {
-  "id": "p-9650",
+  "id": "p-9030",
   "level": "2",
-  "url": "Hyperbolas.html#p-9650",
+  "url": "Hyperbolas.html#p-9030",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "transverse axis vertices conjugate axis. "
 },
 {
-  "id": "p-9652",
+  "id": "p-9032",
   "level": "2",
-  "url": "Hyperbolas.html#p-9652",
+  "url": "Hyperbolas.html#p-9032",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "asymptotes central rectangle "
 },
 {
-  "id": "example-239",
+  "id": "example-241",
   "level": "2",
-  "url": "Hyperbolas.html#example-239",
+  "url": "Hyperbolas.html#example-241",
   "type": "Example",
   "number": "9.4.2",
   "title": "",
   "body": "Graph  The graph is a hyperbola with center at the origin. The -term is positive, so the branches of the hyperbola open upward and downward. Because and , we have and , and the vertices are and . There are no -intercepts.   We construct the central rectangle with dimensions and , as shown in the figure. Then we draw the asymptotes through the diagonals of the rectangle. The asymptotes have slopes . Finally, we sketch the branches of the hyperbola through the vertices and approaching the asymptotes.  hyperbola opening up and down "
 },
 {
-  "id": "exercise-2100",
+  "id": "exercise-2099",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2100",
+  "url": "Hyperbolas.html#exercise-2099",
   "type": "Checkpoint",
   "number": "9.4.3",
   "title": "Practice 1.",
-  "body": "Practice 1   Graph       Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)            Another graph is below.       :   hyperbola opening left and right  "
-},
-{
-  "id": "example-240",
-  "level": "2",
-  "url": "Hyperbolas.html#example-240",
-  "type": "Example",
-  "number": "9.4.4",
-  "title": "",
-  "body": "Write the equation in standard form and describe the important features of its graph.   We first divide each side by 16 to obtain   The graph is a central hyperbola with -intercepts and , as shown in the figure. The slopes of the asymptotes are given by so the equations of the asymptotes are  hyperbola opening up and down "
-},
-{
-  "id": "exercise-2101",
-  "level": "2",
-  "url": "Hyperbolas.html#exercise-2101",
-  "type": "Checkpoint",
-  "number": "9.4.5",
-  "title": "Practice 2.",
-  "body": "Practice 2     Write the equation in standard form.     Find the vertices of the graph and the equations of the asymptotes.  Vertices: Separate different vertices with a comma.  Equations of asymptotes: and                                   "
-},
-{
-  "id": "exercise-2102",
-  "level": "2",
-  "url": "Hyperbolas.html#exercise-2102",
-  "type": "Checkpoint",
-  "number": "9.4.6",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1     The hyperbola is the only conic section with two separate   vertices    foci    axes    branches   .    The endpoints of the   conjugate    transverse    vertical    horizontal   axis are the vertices of the hyperbola.    The asymptotes of a hyperbola are the diagonals of the   central rectangle    outer rectangle    regular pentagon    hypotenuse   .    If the term in the standard form is positive, a central hyperbola has no   vertex    asymptotes    x-intercepts    y-intercepts   .                           branches    transverse    central rectangle    x-intercepts        "
-},
-{
-  "id": "example-241",
-  "level": "2",
-  "url": "Hyperbolas.html#example-241",
-  "type": "Example",
-  "number": "9.4.7",
-  "title": "",
-  "body": "Find the exact coordinates of any points with -coordinate on the hyperbola with equation . Plot and label those points on the hyperbola.   We substitute in the given equation. There are two points with , namely and , as shown in the figure.  hyperbola opens up and down  "
-},
-{
-  "id": "exercise-2103",
-  "level": "2",
-  "url": "Hyperbolas.html#exercise-2103",
-  "type": "Checkpoint",
-  "number": "9.4.8",
-  "title": "Practice 3.",
-  "body": "Practice 3   Solve the equation when   What does this tell you about the graph of the hyperbola?    The line is one of the asymptotes.    There are no points on the graph with -coordinate 1.    This is a degenerate conic.    The hyperbola opens left and right.               There are no real solutions when so there are no points on the graph with -coordinate 1.      "
+  "body": "Practice 1 Graph hyperbola opening left and right  "
 },
 {
   "id": "example-242",
   "level": "2",
   "url": "Hyperbolas.html#example-242",
   "type": "Example",
-  "number": "9.4.9",
+  "number": "9.4.4",
   "title": "",
-  "body": "Write each equation in standard form and describe its graph.      The equation is equivalent to The graph is a hyperbola that opens left and right.  The equation is equivalent to The graph is an ellipse with major axis on the -axis because .  "
+  "body": "Write the equation in standard form and describe the important features of its graph.  We first divide each side by 16 to obtain   The graph is a central hyperbola with -intercepts and , as shown in the figure. The slopes of the asymptotes are given by so the equations of the asymptotes are  hyperbola opening up and down "
 },
 {
-  "id": "exercise-2104",
+  "id": "exercise-2100",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2104",
+  "url": "Hyperbolas.html#exercise-2100",
   "type": "Checkpoint",
-  "number": "9.4.10",
-  "title": "Practice 4.",
-  "body": "Practice 4   Write each equation in standard form and describe its graph.    Standard form:  The graph is   a circle    an ellipse    a hyperbola    a parabola   centered at the point , with vertices . There   are    are not   asymptotes: .     Standard form:  The graph is   a circle    an ellipse    a hyperbola    a parabola   with vertex at the point , opening   left    right    upward    downward   .                                                         A hyperbola centered at the origin with vertices and and asymptotes and    A parabola opening downward with vertex at the origin.        "
+  "number": "9.4.5",
+  "title": "Practice 2.",
+  "body": "Practice 2  Write the equation in standard form.  Find the vertices of the graph and the equations of the asymptotes.    ,  ,   "
+},
+{
+  "id": "exercise-2101",
+  "level": "2",
+  "url": "Hyperbolas.html#exercise-2101",
+  "type": "Checkpoint",
+  "number": "9.4.6",
+  "title": "QuickCheck 1.",
+  "body": "QuickCheck 1  The hyperbola is the only conic section with two separate .  The endpoints of the axis are the vertices of the hyperbola.  The asymptotes of a hyperbola are the diagonals of the .  If the term in the standard form is positive, a central hyperbola has no .  "
 },
 {
   "id": "example-243",
   "level": "2",
   "url": "Hyperbolas.html#example-243",
   "type": "Example",
-  "number": "9.4.11",
+  "number": "9.4.7",
   "title": "",
-  "body": " Graph  Find the equations of the asymptotes.   The graph is a hyperbola with   Because the -term is positive, the branches open left and right. The coordinates of the vertices are thus and , or approximately and . The ends of the conjugate axis are ) and ), or approximately and .  translated hyperbola, left and right   The central rectangle is centered at the point and extends to the vertices in the horizontal direction and to the ends of the conjugate axis in the vertical direction. We draw the asymptotes through the opposite corners of the central rectangle, and sketch the hyperbola through the vertices and approaching the asymptotes to obtain the graph shown above.  Both asymptotes pass through the center of the hyperbola, . Their slopes are We substitute these values into the point-slope formula to find the equations "
+  "body": "Find the exact coordinates of any points with -coordinate on the hyperbola with equation . Plot and label those points on the hyperbola.   We substitute in the given equation. There are two points with , namely and , as shown in the figure.  hyperbola opens up and down  "
 },
 {
-  "id": "exercise-2105",
+  "id": "exercise-2102",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2105",
+  "url": "Hyperbolas.html#exercise-2102",
   "type": "Checkpoint",
-  "number": "9.4.12",
-  "title": "Practice 5.",
-  "body": "Practice 5     Graph      Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)      Find the equations of the asymptotes. (Enter sqrt(2) for )  Equations of asymptotes: and                          A graph is also shown below.             :   translated hyperbola opening up and down  "
+  "number": "9.4.8",
+  "title": "Practice 3.",
+  "body": "Practice 3 Solve the equation when . There are no real solutions when , so there are no points on the graph with -coordinate 1. "
 },
 {
   "id": "example-244",
   "level": "2",
   "url": "Hyperbolas.html#example-244",
   "type": "Example",
-  "number": "9.4.13",
+  "number": "9.4.9",
   "title": "",
-  "body": " Write the equation in standard form.  Graph the equation.       We prepare to complete the square by factoring out from the -terms. We complete the square in by adding to each side of the equation. To complete the square in we add 1 to , so we add , or to the right side, to get or Finally, we divide each side by 9 to obtain the standard form      The graph is a hyperbola with center at . Because the -term is positive, the transverse axis is parallel to the -axis, and Thus, and , and the vertices are and . The ends of the conjugate axis are and .   translated hyperbola, open up and down   The central rectangle is centered at , as shown in the figure. We draw the asymptotes through the corners of the rectangle, then sketch the hyperbola by starting at the vertices and approaching the asymptotes.   "
+  "body": "Write each equation in standard form and describe its graph.      The equation is equivalent to The graph is a hyperbola that opens left and right.  The equation is equivalent to The graph is an ellipse with major axis on the -axis because .  "
 },
 {
-  "id": "exercise-2106",
+  "id": "exercise-2103",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2106",
+  "url": "Hyperbolas.html#exercise-2103",
   "type": "Checkpoint",
-  "number": "9.4.14",
-  "title": "Practice 6.",
-  "body": "Practice 6     Write the equation in standard form.     Graph the equation.      Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)                         A graph is also shown below.       :    translated hyperbola opening left and right   "
-},
-{
-  "id": "exercise-2107",
-  "level": "2",
-  "url": "Hyperbolas.html#exercise-2107",
-  "type": "Checkpoint",
-  "number": "9.4.15",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   True or false.   The graph of a general quadratic is a hyperbola if the coefficients of both the -term and the -term are negative.   True    False      The slopes of the asymptotes of a hyperbola are    True    False      The asymptotes pass through the vertices of the hyperbola.   True    False                        False    True    False    True        "
-},
-{
-  "id": "p-9838",
-  "level": "2",
-  "url": "Hyperbolas.html#p-9838",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "degenerate conics "
+  "number": "9.4.10",
+  "title": "Practice 4.",
+  "body": "Practice 4 Write each equation in standard form and describe its graph.      . A hyperbola centered at the origin with vertices and , and asymptotes and .  . A parabola opening downward with vertex at the origin.  "
 },
 {
   "id": "example-245",
   "level": "2",
   "url": "Hyperbolas.html#example-245",
   "type": "Example",
+  "number": "9.4.11",
+  "title": "",
+  "body": " Graph  Find the equations of the asymptotes.    The graph is a hyperbola with   Because the -term is positive, the branches open left and right. The coordinates of the vertices are thus and , or approximately and . The ends of the conjugate axis are ) and ), or approximately and .  translated hyperbola, left and right  The central rectangle is centered at the point and extends to the vertices in the horizontal direction and to the ends of the conjugate axis in the vertical direction. We draw the asymptotes through the opposite corners of the central rectangle, and sketch the hyperbola through the vertices and approaching the asymptotes to obtain the graph shown above.  Both asymptotes pass through the center of the hyperbola, . Their slopes are We substitute these values into the point-slope formula to find the equations "
+},
+{
+  "id": "exercise-2104",
+  "level": "2",
+  "url": "Hyperbolas.html#exercise-2104",
+  "type": "Checkpoint",
+  "number": "9.4.12",
+  "title": "Practice 5.",
+  "body": "Practice 5  Graph  Find the equations of the asymptotes.    translated hyperbola opening up and down  ,  "
+},
+{
+  "id": "example-246",
+  "level": "2",
+  "url": "Hyperbolas.html#example-246",
+  "type": "Example",
+  "number": "9.4.13",
+  "title": "",
+  "body": " Write the equation in standard form.  Graph the equation.    We prepare to complete the square by factoring out from the -terms. We complete the square in by adding to each side of the equation. To complete the square in we add 1 to , so we add , or to the right side, to get or Finally, we divide each side by 9 to obtain the standard form   The graph is a hyperbola with center at . Because the -term is positive, the transverse axis is parallel to the -axis, and Thus, and , and the vertices are and . The ends of the conjugate axis are and .   translated hyperbola, open up and down  The central rectangle is centered at , as shown in the figure. We draw the asymptotes through the corners of the rectangle, then sketch the hyperbola by starting at the vertices and approaching the asymptotes.  "
+},
+{
+  "id": "exercise-2105",
+  "level": "2",
+  "url": "Hyperbolas.html#exercise-2105",
+  "type": "Checkpoint",
+  "number": "9.4.14",
+  "title": "Practice 6.",
+  "body": "Practice 6  Write the equation in standard form.  Graph the equation.    translated hyperbola opening left and right   "
+},
+{
+  "id": "exercise-2106",
+  "level": "2",
+  "url": "Hyperbolas.html#exercise-2106",
+  "type": "Checkpoint",
+  "number": "9.4.15",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 True or false.   The graph of a general quadratic is a hyperbola if the coefficients of both the -term and the -term are negative.  The slopes of the asymptotes of a hyperbola are .  The asymptotes pass through the vertices of the hyperbola.  We find the center of the hyperbola by completing the square.  "
+},
+{
+  "id": "p-9107",
+  "level": "2",
+  "url": "Hyperbolas.html#p-9107",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "degenerate conics "
+},
+{
+  "id": "example-247",
+  "level": "2",
+  "url": "Hyperbolas.html#example-247",
+  "type": "Example",
   "number": "9.4.16",
   "title": "",
   "body": "Name the graph of each equation, assuming that the graph is not degenerate.       The graph is a circle because the coefficients of and are equal.  The graph is an ellipse because the coefficients of and are both positive.  The graph is a hyperbola because the coefficients of and have opposite signs.  The graph is a parabola because is of first degree and is of second degree.  "
+},
+{
+  "id": "exercise-2107",
+  "level": "2",
+  "url": "Hyperbolas.html#exercise-2107",
+  "type": "Checkpoint",
+  "number": "9.4.17",
+  "title": "Practice 7.",
+  "body": "Practice 7 Describe the graph of each equation without graphing.       A hyperbola centered at the origin with vertices and and asymptotes and .  A parabola that opens upward from the vertex .  An ellipse centered at with a horizontal major axis, and .  "
 },
 {
   "id": "exercise-2108",
   "level": "2",
   "url": "Hyperbolas.html#exercise-2108",
   "type": "Checkpoint",
-  "number": "9.4.17",
-  "title": "Practice 7.",
-  "body": "Practice 7   Describe the graph of each equation without graphing.      A circle with center    An ellipse with center    A hyperbola with center    A parabola with vertex   at the point ; vertices: ; asymptotes       A circle with center    An ellipse with center    A hyperbola with center    A parabola with vertex   at the point , opening   left    right    upward    downward         A circle with center    An ellipse with center    A hyperbola with center    A parabola with vertex   at the point with horizontal   major axis    minor axis    transverse axis    conjugate axis   ; , and                                                                   A hyperbola centered at the origin with vertices and and asymptotes and    A parabola that opens upward from the vertex    An ellipse centered at with a horizontal major axis, and        "
+  "number": "9.4.18",
+  "title": "QuickCheck 3.",
+  "body": "QuickCheck 3  A conic can be a point, a line, a pair of lines, or no graph at all.  The coefficients , , and determine the of the conic.  The graph is a if one of or is zero.  If (and ), the graph is a .  "
 },
 {
   "id": "exercise-2109",
   "level": "2",
   "url": "Hyperbolas.html#exercise-2109",
-  "type": "Checkpoint",
-  "number": "9.4.18",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3     A   degenerate    central    translated   conic can be a point, a line, a pair of lines, or no graph at all.    The coefficients  and determine the   type    position   of the conic.    The graph is a   circle    ellipse    hyperbola    parabola   if one of or is zero.    If (and ), the graph is a   circle    ellipse    hyperbola    parabola   .                           A degenerate conic can be a point, a line, a pair of lines, or no graph at all.    The coefficients  and determine the position of the conic.    The graph is a parabola if one of or is zero.    If (and ), the graph is a circle.        "
-},
-{
-  "id": "exercise-2110",
-  "level": "2",
-  "url": "Hyperbolas.html#exercise-2110",
   "type": "Exercise",
   "number": "9.4.6.1",
   "title": "",
   "body": "Use your calculator to graph in the window . First, solve the equation for . (You should get two functions.)   The graph of this equation is a .  The graph has vertices at and .  Now add to your graph the lines and . These are the asymptotes of the hyperbola. "
 },
 {
-  "id": "exercise-2111",
+  "id": "exercise-2110",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2111",
+  "url": "Hyperbolas.html#exercise-2110",
   "type": "Exercise",
   "number": "9.4.6.2",
   "title": "",
   "body": "Use the calculator to graph in the window . (Follow the steps above for Problem 1.)  What are the vertices of this hyperbola?  What are the asymptotes?  How does this hyperbola differ from the one in Problem 2? "
 },
 {
-  "id": "exercise-2112",
+  "id": "exercise-2111",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2112",
+  "url": "Hyperbolas.html#exercise-2111",
   "type": "Exercise",
   "number": "9.4.6.3",
   "title": "",
   "body": " hyperbola, open up and down "
 },
 {
-  "id": "exercise-2113",
+  "id": "exercise-2112",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2113",
+  "url": "Hyperbolas.html#exercise-2112",
   "type": "Exercise",
   "number": "9.4.6.4",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2114",
+  "id": "exercise-2113",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2114",
+  "url": "Hyperbolas.html#exercise-2113",
   "type": "Exercise",
   "number": "9.4.6.5",
   "title": "",
   "body": " hyperbola, open left and right "
 },
 {
-  "id": "exercise-2115",
+  "id": "exercise-2114",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2115",
+  "url": "Hyperbolas.html#exercise-2114",
   "type": "Exercise",
   "number": "9.4.6.6",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2116",
+  "id": "exercise-2115",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2116",
+  "url": "Hyperbolas.html#exercise-2115",
   "type": "Exercise",
   "number": "9.4.6.7",
   "title": "",
   "body": " hyperbola, open left and right "
 },
 {
-  "id": "exercise-2117",
+  "id": "exercise-2116",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2117",
+  "url": "Hyperbolas.html#exercise-2116",
   "type": "Exercise",
   "number": "9.4.6.8",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2118",
+  "id": "exercise-2117",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2118",
+  "url": "Hyperbolas.html#exercise-2117",
   "type": "Exercise",
   "number": "9.4.6.9",
   "title": "",
   "body": " hyperbola opening left and right                          undefined     "
 },
 {
-  "id": "exercise-2119",
+  "id": "exercise-2118",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2119",
+  "url": "Hyperbolas.html#exercise-2118",
   "type": "Exercise",
   "number": "9.4.6.10",
   "title": "",
   "body": " hyperbola opening up and down               "
 },
 {
-  "id": "exercise-2120",
+  "id": "exercise-2119",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2120",
+  "url": "Hyperbolas.html#exercise-2119",
   "type": "Exercise",
   "number": "9.4.6.11",
   "title": "",
   "body": " Graph , , and on the same set of axes. What do you observe?  Graph , , and on the same set of axes. What do you observe?   hyperbolas opening left and right   hyperbolas opening left and right "
 },
 {
-  "id": "exercise-2121",
+  "id": "exercise-2120",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2121",
+  "url": "Hyperbolas.html#exercise-2120",
   "type": "Exercise",
   "number": "9.4.6.12",
   "title": "",
   "body": " Graph . (Hint: Factor the left side of the equation and use the zero-factor principle to write two equations, then graph them.) Describe your graph.  Graph . Describe your graph. "
 },
 {
-  "id": "exercise-2122",
+  "id": "exercise-2121",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2122",
+  "url": "Hyperbolas.html#exercise-2121",
   "type": "Exercise",
   "number": "9.4.6.13",
   "title": "",
   "body": "  hyperbola opening up and down  ,  "
 },
 {
-  "id": "exercise-2123",
+  "id": "exercise-2122",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2123",
+  "url": "Hyperbolas.html#exercise-2122",
   "type": "Exercise",
   "number": "9.4.6.14",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2124",
+  "id": "exercise-2123",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2124",
+  "url": "Hyperbolas.html#exercise-2123",
   "type": "Exercise",
   "number": "9.4.6.15",
   "title": "",
   "body": "  hyperbola opening up and down  , , "
 },
 {
-  "id": "exercise-2125",
+  "id": "exercise-2124",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2125",
+  "url": "Hyperbolas.html#exercise-2124",
   "type": "Exercise",
   "number": "9.4.6.16",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2126",
+  "id": "exercise-2125",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2126",
+  "url": "Hyperbolas.html#exercise-2125",
   "type": "Exercise",
   "number": "9.4.6.17",
   "title": "",
   "body": "  hyperbola opening up and down  , "
 },
 {
-  "id": "exercise-2127",
+  "id": "exercise-2126",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2127",
+  "url": "Hyperbolas.html#exercise-2126",
   "type": "Exercise",
   "number": "9.4.6.18",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2128",
+  "id": "exercise-2127",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2128",
+  "url": "Hyperbolas.html#exercise-2127",
   "type": "Exercise",
   "number": "9.4.6.19",
   "title": "",
   "body": "Center at , , , opening left and right "
 },
 {
-  "id": "exercise-2129",
+  "id": "exercise-2128",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2129",
+  "url": "Hyperbolas.html#exercise-2128",
   "type": "Exercise",
   "number": "9.4.6.20",
   "title": "",
   "body": "Center at , , , opening up and down  "
 },
 {
-  "id": "exercise-2130",
+  "id": "exercise-2129",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2130",
+  "url": "Hyperbolas.html#exercise-2129",
   "type": "Exercise",
   "number": "9.4.6.21",
   "title": "",
   "body": "One vertex at , one end of the vertical conjugate axis at "
 },
 {
-  "id": "exercise-2131",
+  "id": "exercise-2130",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2131",
+  "url": "Hyperbolas.html#exercise-2130",
   "type": "Exercise",
   "number": "9.4.6.22",
   "title": "",
   "body": "One vertex at , one end of the horizontal conjugate axis at "
 },
 {
-  "id": "exercise-2132",
+  "id": "exercise-2131",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2132",
+  "url": "Hyperbolas.html#exercise-2131",
   "type": "Exercise",
   "number": "9.4.6.23",
   "title": "",
   "body": "Parabola; vertex , opens downward, "
 },
 {
-  "id": "exercise-2133",
+  "id": "exercise-2132",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2133",
+  "url": "Hyperbolas.html#exercise-2132",
   "type": "Exercise",
   "number": "9.4.6.24",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2134",
+  "id": "exercise-2133",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2134",
+  "url": "Hyperbolas.html#exercise-2133",
   "type": "Exercise",
   "number": "9.4.6.25",
   "title": "",
   "body": "Hyperbola; center , transverse axis vertical, , "
 },
 {
-  "id": "exercise-2135",
+  "id": "exercise-2134",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2135",
+  "url": "Hyperbolas.html#exercise-2134",
   "type": "Exercise",
   "number": "9.4.6.26",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2136",
+  "id": "exercise-2135",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2136",
+  "url": "Hyperbolas.html#exercise-2135",
   "type": "Exercise",
   "number": "9.4.6.27",
   "title": "",
   "body": "Parabola; vertex , opens upward, "
 },
 {
-  "id": "exercise-2137",
+  "id": "exercise-2136",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2137",
+  "url": "Hyperbolas.html#exercise-2136",
   "type": "Exercise",
   "number": "9.4.6.28",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2138",
+  "id": "exercise-2137",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2138",
+  "url": "Hyperbolas.html#exercise-2137",
   "type": "Exercise",
   "number": "9.4.6.29",
   "title": "",
   "body": "The base of the cooling tower is 360 feet below the center of the hyperbola. What is the diamter of the base? 520 ft "
 },
 {
-  "id": "exercise-2139",
+  "id": "exercise-2138",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2139",
+  "url": "Hyperbolas.html#exercise-2138",
   "type": "Exercise",
   "number": "9.4.6.30",
   "title": "",
   "body": "The top of the cooling tower is 200 feet above the center of the hyperbola. What is the diameter of the top? "
 },
 {
-  "id": "exercise-2140",
+  "id": "exercise-2139",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2140",
+  "url": "Hyperbolas.html#exercise-2139",
   "type": "Exercise",
   "number": "9.4.6.31",
   "title": "",
   "body": "The diameter of the tower first decreases with height and then increases again. There are two heights at which the tower's diameter is 250 feet. Find the greater of the two heights. 472.5 ft "
 },
 {
-  "id": "exercise-2141",
+  "id": "exercise-2140",
   "level": "2",
-  "url": "Hyperbolas.html#exercise-2141",
+  "url": "Hyperbolas.html#exercise-2140",
   "type": "Exercise",
   "number": "9.4.6.32",
   "title": "",
@@ -24397,7 +24415,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.5",
   "title": "Nonlinear Systems",
-  "body": "Nonlinear Systems  Systems Involving Quadratic Equations  Recall that the solution to a system of linear equations is the intersection point of the graphs of the equations. This is also true of systems in which one or both of the equations is quadratic. The figure below shows the three cases for systems of one quadratic and one linear equation. graphs of 3 cases for quadratic system  In , we use both graphical and algebraic techniques to solve the system.  The Pizza Connection calculates that the cost, in dollars, of producing pizzas per day is given by The Pizza Connection charges $15 per pizza, so the revenue from selling pizzas is How many pizzas per day must the Pizza Connection sell in order to break even?  To break even means to make zero profit. Because the break-even points occur when revenue equals cost. In mathematical terms, we would like to find any values of for which . If we graph the revenue and cost functions on the same axes, these values correspond to points where the two graphs intersect. Use the WINDOW settings on your calculator to obtain the graph shown below. You can verify that the two intersection points are and .  GC figure for quadratic system  Thus, the Pizza Connection must sell either 15 or 80 pizzas in order to break even. On the graph we see that revenue is greater than cost for -values between 15 and 80, so the Pizza Connection will make a profit if it sells between 15 and 80 pizzas.  We can also solve algebraically for the break-even points. The intersection points of the two graphs correspond to the solutions of the system of equations We equate the two expressions for and solve for :  The solutions are 15 and 80, as we found from the graph.  Practice 1     Solve the system algebraically:   Solution: Note: list solutions as ordered pairs.    Graph both equations, and show the solutions on the graph.               A graph is below.         Graph of system:   parabola and line   What about a system of two quadratic equations ? You can sketch some possible systems to convince yourself that two such graphs can intersect in one point, two points, or no points at all.  Solve the system  We graph these two equations in the standard window and use the intersect feature to locate one of the solutions, as shown in the figure.   You can check that the point is an exact solution to the system by substituting and into each equation of the system. We find the other solution by moving the bug close to the other intersection point and using the intersect feature again. You can verify that the other solution is the point  GC graph showing quadratic system   To solve the system algebraically, we equate the two expressions for . After expanding the left side and collecting like terms, we arrive at a quadratic equation, which we can solve with the quadratic formula, and find two values for , namely and . To find the -value for each of these intersection points, we substitute the -coordinate into either of the two original equations. For example, for ,  Practice 2     Solve the system algebraically:   Solutions: Note: list solutions as ordered pairs, and use a comma to separate different solutions.    Graph both equations, and show the solutions on the graph.               A graph is below.         Graph of system:  two parabolas    Systems Involving Conic Sections conic section systems involving system of equations involving conic sections  A system of two parabolas can have one, two, or no solutions, depending on the graphs of the two equations. Systems involving other conics may have up to four solutions.  Find the intersection points of the graphs of   We will use substitution to solve the system. We solve the easier of the two equations(the second equation) for to obtain . Then we substitute for in the first equation to find  circle and hyperbola  This equation has only one variable, , and we solve it by first clearing fractions. We multiply both sides by , and then subtract to obtain Finally, substitute each of these values into to find the -components of each solution. The intersection points of the two graphs are , , , and . The graph of the system is shown above.  Practice 3   Find the intersection points of the graphs of   Solution: Note: list solutions as ordered pairs, and use a comma to different solutions.                Solving Systems by Elimination elimination method system of equations elimination method  We used substitution in the previous Example to solve the system. If both equations are of the form elimination of variables is more efficient.  Find the solutions to the following system of equations. Verify the solutions on a graph.   We multiply the first equation by 3 and the second by 60 to obtain Adding these two equations, we have  GC ellipse and hyperbola   so . We substitute these values for into either equation and solve for to find the solutions , , and .  The two original equations describe a hyperbola and an ellipse. We can obtain graphs on the calculator by solving each equation for to get Using the window , we obtain the graph shown above. The solutions of the system are the intersection points of the graphs.  Practice 4   Find the intersection points of the graphs of   Solution: Note: list solutions as ordered pairs, and use a comma to different solutions.                 For some quadratic systems, we use a combination of elimination of variable sand substitution.  Find the intersection of the circles given by the equations.    We subtract the second equation from the first equation to obtain Solving for , we have  two circles  Next, we substitute for into either of the original equations. We use the first equation to find Thus, or . From the equation , we find that when , , and when , . Thus the two circles intersect at and , as shown in the figure above.  Practice 5   Find the intersection points of the graphs of   Solution: Note: list solutions as ordered pairs, and use a comma to different solutions.                Problem Set 9.5  Warm Up  Solve the system by substitution.  Solve the system by elimination.  Solve  Solve   Skills Practice   For Problems 5 10, solve the system algebraically. Then use your calculator to graph both equations and verify your solutions.    No solution      For problems 11 20, find the intersection points of the graphs by solving a system of equations. Verify your solutions by graphing  ,   , , ,       ,     Applications  Use a system of equations to solve Problems 21 24.   The area of a rectangle is 216 square feet. If the perimeter is 60 feet, find the dimensions of the rectangle. 12 ft by 18 ft  Leon flies his plane 840 miles in the same time that Marlene drives her automobile 210 miles. Suppose that Leon flies 180 miles per hour faster than Marlene drives. Find the rate of each.  At a constant temperature, the pressure, , and the volume, , of a gas are related by the equation . The product of the pressure (in pounds per square inch) and the volume (in cubic inches) of a certain gas is 30 inch-pounds. If the temperature remains constant as the pressure is increased by 4 pounds per square inch, the volume is decreased by 2 cubic inches. Find the original pressure and volume of the gas.  lb per sq in; cu. in.  Kristen drove 50 miles to her sister's house, traveling 10 miles in heavy traffic to get out of the city and then 40 miles in less congested traffic. Her average speed in the city was 20 miles per hour less than her speed in light traffic. What was each rate if her trip took 1 hour and 30 minutes?   Problems 25 and 26 deal with wildlife management and sustainable yield.  The annual increase, , in the deer population in a national park is given by where , , and is the current population.  Suppose hunters are allowed to kill 1000 deer per year. Sketch the graph of on the same axes with a graph of .   grid  What sizes of deer populations will remain stable from year to year if 1000 deer are hunted annually?  Suppose 1600 deer are killed annually. What sizes of deer populations will remain stable?  What is the largest annual harvest that still allows for a stable population? (This harvest is called the maximum sustainable yield.) What is the stable population?  What eventually happens if the population falls below the stable value but hunting continues at the maximum sustainable yield?   grid  1000 or 5000  2000 or 4000  harvst 1800; stable population 3000  extinction  The annual increase, , in a bear population of size is if the bears are not hunted. The number of bears killed each year by hunters is related to the bear population by the equation . (Note that in this model, hunting limits are adjusted to the size of the bear population.)  Graph and on the same axes for .   grid  When the bear population is 1200, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  When the bear population is 900, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  What sizes of bear population will remain stable after hunting?  What sizes of bear population will increase despite hunting? What sizes will decrease?  Toward what size will the bear population tend over time?  Suppose hunting limits are raised so that . Toward what size will the bear population tend over time?   For Problems 27 28,  Find the break-even points by solving a system of equations.  Graph the equations for revenue and cost in the same window and verify your solutions on the graph.  Use the fact that to find the value of for which profit is maximum.  Writewell, Inc. makes fountain pens. It costs Writewell dollars to manufacture pens, and the company receives dollars in revenue from the sale of the pens. Use the window    parabola and line   A company can produce lawn mowers for a cost of dollars. The sale of the lawn mowers will generate dollars in revenue. Use the window     "
+  "body": "Nonlinear Systems  Systems Involving Quadratic Equations  Recall that the solution to a system of linear equations is the intersection point of the graphs of the equations. This is also true of systems in which one or both of the equations is quadratic. The figure below shows the three cases for systems of one quadratic and one linear equation.  graphs of 3 cases for quadratic system  In , we use both graphical and algebraic techniques to solve the system.  The Pizza Connection calculates that the cost, in dollars, of producing pizzas per day is given by The Pizza Connection charges $15 per pizza, so the revenue from selling pizzas is How many pizzas per day must the Pizza Connection sell in order to break even?  To break even means to make zero profit. Because the break-even points occur when revenue equals cost. In mathematical terms, we would like to find any values of for which . If we graph the revenue and cost functions on the same axes, these values correspond to points where the two graphs intersect. Use the WINDOW settings on your calculator to obtain the graph shown below. You can verify that the two intersection points are and .  GC figure for quadratic system  Thus, the Pizza Connection must sell either 15 or 80 pizzas in order to break even. On the graph we see that revenue is greater than cost for -values between 15 and 80, so the Pizza Connection will make a profit if it sells between 15 and 80 pizzas.  We can also solve algebraically for the break-even points. The intersection points of the two graphs correspond to the solutions of the system of equations We equate the two expressions for and solve for :  The solutions are 15 and 80, as we found from the graph.  Practice 1  Solve the system algebraically:  Graph both equations, and show the solutions on the graph.    parabola and line   What about a system of two quadratic equations ? You can sketch some possible systems to convince yourself that two such graphs can intersect in one point, two points, or no points at all.  Solve the system  We graph these two equations in the standard window and use the intersect feature to locate one of the solutions, as shown in the figure.   You can check that the point is an exact solution to the system by substituting and into each equation of the system. We find the other solution by moving the bug close to the other intersection point and using the intersect feature again. You can verify that the other solution is the point  GC graph showing quadratic system   To solve the system algebraically, we equate the two expressions for . After expanding the left side and collecting like terms, we arrive at a quadratic equation, which we can solve with the quadratic formula, and find two values for , namely and . To find the -value for each of these intersection points, we substitute the -coordinate into either of the two original equations. For example, for ,  Practice 2  Solve the system algebraically:  Graph both equations, and show the solutions on the graph.    two parabolas    Systems Involving Conic Sections conic section systems involving system of equations involving conic sections  A system of two parabolas can have one, two, or no solutions, depending on the graphs of the two equations. Systems involving other conics may have up to four solutions.  Find the intersection points of the graphs of   We will use substitution to solve the system. We solve the easier of the two equations(the second equation) for to obtain . Then we substitute for in the first equation to find  circle and hyperbola  This equation has only one variable, , and we solve it by first clearing fractions. We multiply both sides by , and then subtract to obtain Finally, substitute each of these values into to find the -components of each solution. The intersection points of the two graphs are , , , and . The graph of the system is shown above.  Practice 3 Find the intersection points of the graphs of ,   Solving Systems by Elimination elimination method system of equations elimination method  We used substitution in the previous Example to solve the system. If both equations are of the form elimination of variables is more efficient.  Find the solutions to the following system of equations. Verify the solutions on a graph.   We multiply the first equation by 3 and the second by 60 to obtain Adding these two equations, we have  GC ellipse and hyperbola   so . We substitute these values for into either equation and solve for to find the solutions , , and .  The two original equations describe a hyperbola and an ellipse. We can obtain graphs on the calculator by solving each equation for to get Using the window , we obtain the graph shown above. The solutions of the system are the intersection points of the graphs.  Practice 4 Find the intersection points of the graphs of  , , ,   For some quadratic systems, we use a combination of elimination of variable sand substitution.  Find the intersection of the circles given by the equations.    We subtract the second equation from the first equation to obtain Solving for , we have  two circles  Next, we substitute for into either of the original equations. We use the first equation to find Thus, or . From the equation , we find that when , , and when , . Thus the two circles intersect at and , as shown in the figure above.  Practice 5 Find the intersection points of the graphs of ,    Problem Set 9.5  Warm Up  Solve the system by substitution.  Solve the system by elimination.  Solve  Solve   Skills Practice   For Problems 5 10, solve the system algebraically. Then use your calculator to graph both equations and verify your solutions.    No solution      For problems 11 20, find the intersection points of the graphs by solving a system of equations. Verify your solutions by graphing  ,   , , ,       ,     Applications  Use a system of equations to solve Problems 21 24.   The area of a rectangle is 216 square feet. If the perimeter is 60 feet, find the dimensions of the rectangle. 12 ft by 18 ft  Leon flies his plane 840 miles in the same time that Marlene drives her automobile 210 miles. Suppose that Leon flies 180 miles per hour faster than Marlene drives. Find the rate of each.  At a constant temperature, the pressure, , and the volume, , of a gas are related by the equation . The product of the pressure (in pounds per square inch) and the volume (in cubic inches) of a certain gas is 30 inch-pounds. If the temperature remains constant as the pressure is increased by 4 pounds per square inch, the volume is decreased by 2 cubic inches. Find the original pressure and volume of the gas.  lb per sq in; cu. in.  Kristen drove 50 miles to her sister's house, traveling 10 miles in heavy traffic to get out of the city and then 40 miles in less congested traffic. Her average speed in the city was 20 miles per hour less than her speed in light traffic. What was each rate if her trip took 1 hour and 30 minutes?   Problems 25 and 26 deal with wildlife management and sustainable yield.  The annual increase, , in the deer population in a national park is given by where , , and is the current population.  Suppose hunters are allowed to kill 1000 deer per year. Sketch the graph of on the same axes with a graph of .   grid  What sizes of deer populations will remain stable from year to year if 1000 deer are hunted annually?  Suppose 1600 deer are killed annually. What sizes of deer populations will remain stable?  What is the largest annual harvest that still allows for a stable population? (This harvest is called the maximum sustainable yield.) What is the stable population?  What eventually happens if the population falls below the stable value but hunting continues at the maximum sustainable yield?   grid  1000 or 5000  2000 or 4000  harvst 1800; stable population 3000  extinction  The annual increase, , in a bear population of size is if the bears are not hunted. The number of bears killed each year by hunters is related to the bear population by the equation . (Note that in this model, hunting limits are adjusted to the size of the bear population.)  Graph and on the same axes for .   grid  When the bear population is 1200, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  When the bear population is 900, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  What sizes of bear population will remain stable after hunting?  What sizes of bear population will increase despite hunting? What sizes will decrease?  Toward what size will the bear population tend over time?  Suppose hunting limits are raised so that . Toward what size will the bear population tend over time?   For Problems 27 28,  Find the break-even points by solving a system of equations.  Graph the equations for revenue and cost in the same window and verify your solutions on the graph.  Use the fact that to find the value of for which profit is maximum.  Writewell, Inc. makes fountain pens. It costs Writewell dollars to manufacture pens, and the company receives dollars in revenue from the sale of the pens. Use the window    parabola and line   A company can produce lawn mowers for a cost of dollars. The sale of the lawn mowers will generate dollars in revenue. Use the window     "
 },
 {
   "id": "example-Pizza-system",
@@ -24409,31 +24427,31 @@ var ptx_lunr_docs = [
   "body": "The Pizza Connection calculates that the cost, in dollars, of producing pizzas per day is given by The Pizza Connection charges $15 per pizza, so the revenue from selling pizzas is How many pizzas per day must the Pizza Connection sell in order to break even?  To break even means to make zero profit. Because the break-even points occur when revenue equals cost. In mathematical terms, we would like to find any values of for which . If we graph the revenue and cost functions on the same axes, these values correspond to points where the two graphs intersect. Use the WINDOW settings on your calculator to obtain the graph shown below. You can verify that the two intersection points are and .  GC figure for quadratic system  Thus, the Pizza Connection must sell either 15 or 80 pizzas in order to break even. On the graph we see that revenue is greater than cost for -values between 15 and 80, so the Pizza Connection will make a profit if it sells between 15 and 80 pizzas.  We can also solve algebraically for the break-even points. The intersection points of the two graphs correspond to the solutions of the system of equations We equate the two expressions for and solve for :  The solutions are 15 and 80, as we found from the graph. "
 },
 {
-  "id": "exercise-2142",
+  "id": "exercise-2141",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2142",
+  "url": "NonlinearSystems.html#exercise-2141",
   "type": "Checkpoint",
   "number": "9.5.2",
   "title": "Practice 1.",
-  "body": "Practice 1     Solve the system algebraically:   Solution: Note: list solutions as ordered pairs.    Graph both equations, and show the solutions on the graph.               A graph is below.         Graph of system:   parabola and line  "
+  "body": "Practice 1  Solve the system algebraically:  Graph both equations, and show the solutions on the graph.    parabola and line  "
 },
 {
-  "id": "example-247",
+  "id": "example-249",
   "level": "2",
-  "url": "NonlinearSystems.html#example-247",
+  "url": "NonlinearSystems.html#example-249",
   "type": "Example",
   "number": "9.5.3",
   "title": "",
   "body": "Solve the system  We graph these two equations in the standard window and use the intersect feature to locate one of the solutions, as shown in the figure.   You can check that the point is an exact solution to the system by substituting and into each equation of the system. We find the other solution by moving the bug close to the other intersection point and using the intersect feature again. You can verify that the other solution is the point  GC graph showing quadratic system   To solve the system algebraically, we equate the two expressions for . After expanding the left side and collecting like terms, we arrive at a quadratic equation, which we can solve with the quadratic formula, and find two values for , namely and . To find the -value for each of these intersection points, we substitute the -coordinate into either of the two original equations. For example, for , "
 },
 {
-  "id": "exercise-2143",
+  "id": "exercise-2142",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2143",
+  "url": "NonlinearSystems.html#exercise-2142",
   "type": "Checkpoint",
   "number": "9.5.4",
   "title": "Practice 2.",
-  "body": "Practice 2     Solve the system algebraically:   Solutions: Note: list solutions as ordered pairs, and use a comma to separate different solutions.    Graph both equations, and show the solutions on the graph.               A graph is below.         Graph of system:  two parabolas  "
+  "body": "Practice 2  Solve the system algebraically:  Graph both equations, and show the solutions on the graph.    two parabolas  "
 },
 {
   "id": "Example-intersection-of-conics",
@@ -24445,74 +24463,83 @@ var ptx_lunr_docs = [
   "body": "Find the intersection points of the graphs of   We will use substitution to solve the system. We solve the easier of the two equations(the second equation) for to obtain . Then we substitute for in the first equation to find  circle and hyperbola  This equation has only one variable, , and we solve it by first clearing fractions. We multiply both sides by , and then subtract to obtain Finally, substitute each of these values into to find the -components of each solution. The intersection points of the two graphs are , , , and . The graph of the system is shown above. "
 },
 {
-  "id": "exercise-2144",
+  "id": "exercise-2143",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2144",
+  "url": "NonlinearSystems.html#exercise-2143",
   "type": "Checkpoint",
   "number": "9.5.6",
   "title": "Practice 3.",
-  "body": "Practice 3   Find the intersection points of the graphs of   Solution: Note: list solutions as ordered pairs, and use a comma to different solutions.              "
+  "body": "Practice 3 Find the intersection points of the graphs of , "
 },
 {
-  "id": "example-249",
+  "id": "example-251",
   "level": "2",
-  "url": "NonlinearSystems.html#example-249",
+  "url": "NonlinearSystems.html#example-251",
   "type": "Example",
   "number": "9.5.7",
   "title": "",
   "body": "Find the solutions to the following system of equations. Verify the solutions on a graph.   We multiply the first equation by 3 and the second by 60 to obtain Adding these two equations, we have  GC ellipse and hyperbola   so . We substitute these values for into either equation and solve for to find the solutions , , and .  The two original equations describe a hyperbola and an ellipse. We can obtain graphs on the calculator by solving each equation for to get Using the window , we obtain the graph shown above. The solutions of the system are the intersection points of the graphs. "
 },
 {
-  "id": "exercise-2145",
+  "id": "exercise-2144",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2145",
+  "url": "NonlinearSystems.html#exercise-2144",
   "type": "Checkpoint",
   "number": "9.5.8",
   "title": "Practice 4.",
-  "body": "Practice 4   Find the intersection points of the graphs of   Solution: Note: list solutions as ordered pairs, and use a comma to different solutions.                "
+  "body": "Practice 4 Find the intersection points of the graphs of  , , ,  "
 },
 {
-  "id": "example-250",
+  "id": "example-252",
   "level": "2",
-  "url": "NonlinearSystems.html#example-250",
+  "url": "NonlinearSystems.html#example-252",
   "type": "Example",
   "number": "9.5.9",
   "title": "",
   "body": "Find the intersection of the circles given by the equations.    We subtract the second equation from the first equation to obtain Solving for , we have  two circles  Next, we substitute for into either of the original equations. We use the first equation to find Thus, or . From the equation , we find that when , , and when , . Thus the two circles intersect at and , as shown in the figure above. "
 },
 {
-  "id": "exercise-2146",
+  "id": "exercise-2145",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2146",
+  "url": "NonlinearSystems.html#exercise-2145",
   "type": "Checkpoint",
   "number": "9.5.10",
   "title": "Practice 5.",
-  "body": "Practice 5   Find the intersection points of the graphs of   Solution: Note: list solutions as ordered pairs, and use a comma to different solutions.              "
+  "body": "Practice 5 Find the intersection points of the graphs of ,  "
 },
 {
-  "id": "exercise-2147",
+  "id": "exercise-2146",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2147",
+  "url": "NonlinearSystems.html#exercise-2146",
   "type": "Exercise",
   "number": "9.5.4.1",
   "title": "",
   "body": "Solve the system by substitution. "
 },
 {
-  "id": "exercise-2148",
+  "id": "exercise-2147",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2148",
+  "url": "NonlinearSystems.html#exercise-2147",
   "type": "Exercise",
   "number": "9.5.4.2",
   "title": "",
   "body": "Solve the system by elimination. "
 },
 {
+  "id": "exercise-2148",
+  "level": "2",
+  "url": "NonlinearSystems.html#exercise-2148",
+  "type": "Exercise",
+  "number": "9.5.4.3",
+  "title": "",
+  "body": "Solve "
+},
+{
   "id": "exercise-2149",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2149",
   "type": "Exercise",
-  "number": "9.5.4.3",
+  "number": "9.5.4.4",
   "title": "",
   "body": "Solve "
 },
@@ -24521,16 +24548,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2150",
   "type": "Exercise",
-  "number": "9.5.4.4",
+  "number": "9.5.4.5",
   "title": "",
-  "body": "Solve "
+  "body": ""
 },
 {
   "id": "exercise-2151",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2151",
   "type": "Exercise",
-  "number": "9.5.4.5",
+  "number": "9.5.4.6",
   "title": "",
   "body": ""
 },
@@ -24539,25 +24566,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2152",
   "type": "Exercise",
-  "number": "9.5.4.6",
+  "number": "9.5.4.7",
   "title": "",
-  "body": ""
+  "body": "No solution "
 },
 {
   "id": "exercise-2153",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2153",
   "type": "Exercise",
-  "number": "9.5.4.7",
+  "number": "9.5.4.8",
   "title": "",
-  "body": "No solution "
+  "body": ""
 },
 {
   "id": "exercise-2154",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2154",
   "type": "Exercise",
-  "number": "9.5.4.8",
+  "number": "9.5.4.9",
   "title": "",
   "body": ""
 },
@@ -24566,7 +24593,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2155",
   "type": "Exercise",
-  "number": "9.5.4.9",
+  "number": "9.5.4.10",
   "title": "",
   "body": ""
 },
@@ -24575,43 +24602,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2156",
   "type": "Exercise",
-  "number": "9.5.4.10",
+  "number": "9.5.4.11",
   "title": "",
-  "body": ""
+  "body": ", "
 },
 {
   "id": "exercise-2157",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2157",
   "type": "Exercise",
-  "number": "9.5.4.11",
+  "number": "9.5.4.12",
   "title": "",
-  "body": ", "
+  "body": ""
 },
 {
   "id": "exercise-2158",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2158",
   "type": "Exercise",
-  "number": "9.5.4.12",
+  "number": "9.5.4.13",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-2159",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2159",
   "type": "Exercise",
-  "number": "9.5.4.13",
+  "number": "9.5.4.14",
   "title": "",
-  "body": ", , , "
+  "body": ""
 },
 {
   "id": "exercise-2160",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2160",
   "type": "Exercise",
-  "number": "9.5.4.14",
+  "number": "9.5.4.15",
   "title": "",
   "body": ""
 },
@@ -24620,7 +24647,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2161",
   "type": "Exercise",
-  "number": "9.5.4.15",
+  "number": "9.5.4.16",
   "title": "",
   "body": ""
 },
@@ -24629,7 +24656,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2162",
   "type": "Exercise",
-  "number": "9.5.4.16",
+  "number": "9.5.4.17",
   "title": "",
   "body": ""
 },
@@ -24638,7 +24665,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2163",
   "type": "Exercise",
-  "number": "9.5.4.17",
+  "number": "9.5.4.18",
   "title": "",
   "body": ""
 },
@@ -24647,95 +24674,86 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2164",
   "type": "Exercise",
-  "number": "9.5.4.18",
+  "number": "9.5.4.19",
   "title": "",
-  "body": ""
+  "body": ", "
 },
 {
   "id": "exercise-2165",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2165",
   "type": "Exercise",
-  "number": "9.5.4.19",
+  "number": "9.5.4.20",
   "title": "",
-  "body": ", "
+  "body": ""
 },
 {
   "id": "exercise-2166",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2166",
   "type": "Exercise",
-  "number": "9.5.4.20",
+  "number": "9.5.4.21",
   "title": "",
-  "body": ""
+  "body": "The area of a rectangle is 216 square feet. If the perimeter is 60 feet, find the dimensions of the rectangle. 12 ft by 18 ft "
 },
 {
   "id": "exercise-2167",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2167",
   "type": "Exercise",
-  "number": "9.5.4.21",
+  "number": "9.5.4.22",
   "title": "",
-  "body": "The area of a rectangle is 216 square feet. If the perimeter is 60 feet, find the dimensions of the rectangle. 12 ft by 18 ft "
+  "body": "Leon flies his plane 840 miles in the same time that Marlene drives her automobile 210 miles. Suppose that Leon flies 180 miles per hour faster than Marlene drives. Find the rate of each. "
 },
 {
   "id": "exercise-2168",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2168",
   "type": "Exercise",
-  "number": "9.5.4.22",
+  "number": "9.5.4.23",
   "title": "",
-  "body": "Leon flies his plane 840 miles in the same time that Marlene drives her automobile 210 miles. Suppose that Leon flies 180 miles per hour faster than Marlene drives. Find the rate of each. "
+  "body": "At a constant temperature, the pressure, , and the volume, , of a gas are related by the equation . The product of the pressure (in pounds per square inch) and the volume (in cubic inches) of a certain gas is 30 inch-pounds. If the temperature remains constant as the pressure is increased by 4 pounds per square inch, the volume is decreased by 2 cubic inches. Find the original pressure and volume of the gas.  lb per sq in; cu. in. "
 },
 {
   "id": "exercise-2169",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2169",
   "type": "Exercise",
-  "number": "9.5.4.23",
+  "number": "9.5.4.24",
   "title": "",
-  "body": "At a constant temperature, the pressure, , and the volume, , of a gas are related by the equation . The product of the pressure (in pounds per square inch) and the volume (in cubic inches) of a certain gas is 30 inch-pounds. If the temperature remains constant as the pressure is increased by 4 pounds per square inch, the volume is decreased by 2 cubic inches. Find the original pressure and volume of the gas.  lb per sq in; cu. in. "
+  "body": "Kristen drove 50 miles to her sister's house, traveling 10 miles in heavy traffic to get out of the city and then 40 miles in less congested traffic. Her average speed in the city was 20 miles per hour less than her speed in light traffic. What was each rate if her trip took 1 hour and 30 minutes? "
 },
 {
   "id": "exercise-2170",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2170",
   "type": "Exercise",
-  "number": "9.5.4.24",
+  "number": "9.5.4.25",
   "title": "",
-  "body": "Kristen drove 50 miles to her sister's house, traveling 10 miles in heavy traffic to get out of the city and then 40 miles in less congested traffic. Her average speed in the city was 20 miles per hour less than her speed in light traffic. What was each rate if her trip took 1 hour and 30 minutes? "
+  "body": "The annual increase, , in the deer population in a national park is given by where , , and is the current population.  Suppose hunters are allowed to kill 1000 deer per year. Sketch the graph of on the same axes with a graph of .   grid  What sizes of deer populations will remain stable from year to year if 1000 deer are hunted annually?  Suppose 1600 deer are killed annually. What sizes of deer populations will remain stable?  What is the largest annual harvest that still allows for a stable population? (This harvest is called the maximum sustainable yield.) What is the stable population?  What eventually happens if the population falls below the stable value but hunting continues at the maximum sustainable yield?   grid  1000 or 5000  2000 or 4000  harvst 1800; stable population 3000  extinction "
 },
 {
   "id": "exercise-2171",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2171",
   "type": "Exercise",
-  "number": "9.5.4.25",
+  "number": "9.5.4.26",
   "title": "",
-  "body": "The annual increase, , in the deer population in a national park is given by where , , and is the current population.  Suppose hunters are allowed to kill 1000 deer per year. Sketch the graph of on the same axes with a graph of .   grid  What sizes of deer populations will remain stable from year to year if 1000 deer are hunted annually?  Suppose 1600 deer are killed annually. What sizes of deer populations will remain stable?  What is the largest annual harvest that still allows for a stable population? (This harvest is called the maximum sustainable yield.) What is the stable population?  What eventually happens if the population falls below the stable value but hunting continues at the maximum sustainable yield?   grid  1000 or 5000  2000 or 4000  harvst 1800; stable population 3000  extinction "
+  "body": "The annual increase, , in a bear population of size is if the bears are not hunted. The number of bears killed each year by hunters is related to the bear population by the equation . (Note that in this model, hunting limits are adjusted to the size of the bear population.)  Graph and on the same axes for .   grid  When the bear population is 1200, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  When the bear population is 900, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  What sizes of bear population will remain stable after hunting?  What sizes of bear population will increase despite hunting? What sizes will decrease?  Toward what size will the bear population tend over time?  Suppose hunting limits are raised so that . Toward what size will the bear population tend over time? "
 },
 {
   "id": "exercise-2172",
   "level": "2",
   "url": "NonlinearSystems.html#exercise-2172",
   "type": "Exercise",
-  "number": "9.5.4.26",
-  "title": "",
-  "body": "The annual increase, , in a bear population of size is if the bears are not hunted. The number of bears killed each year by hunters is related to the bear population by the equation . (Note that in this model, hunting limits are adjusted to the size of the bear population.)  Graph and on the same axes for .   grid  When the bear population is 1200, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  When the bear population is 900, which is greater, or ? Will the population increase or decrease in the next year? By how many bears?  What sizes of bear population will remain stable after hunting?  What sizes of bear population will increase despite hunting? What sizes will decrease?  Toward what size will the bear population tend over time?  Suppose hunting limits are raised so that . Toward what size will the bear population tend over time? "
-},
-{
-  "id": "exercise-2173",
-  "level": "2",
-  "url": "NonlinearSystems.html#exercise-2173",
-  "type": "Exercise",
   "number": "9.5.4.27",
   "title": "",
   "body": "Writewell, Inc. makes fountain pens. It costs Writewell dollars to manufacture pens, and the company receives dollars in revenue from the sale of the pens. Use the window    parabola and line  "
 },
 {
-  "id": "exercise-2174",
+  "id": "exercise-2173",
   "level": "2",
-  "url": "NonlinearSystems.html#exercise-2174",
+  "url": "NonlinearSystems.html#exercise-2173",
   "type": "Exercise",
   "number": "9.5.4.28",
   "title": "",
@@ -24751,101 +24769,110 @@ var ptx_lunr_docs = [
   "body": " Chapter 9 Summary and Review  Glossary   horizontal  vertical  parallel  perpendicular  conic section  circle  ellipse  parabola  hyperbola  central conic  major axis  minor axis  vertices  covertices  transverse axis  conjugate axis  asymptote  branch    Key Concepts   Horizontal and Vertical Lines   The equation of the horizontal line passing through is  The equation of the vertical line passing through is   Slopes of Horizontal and Vertical Lines  The slope of a horizontal line is zero .  The slope of a vertical line is undefined .   Parallel and Perpendicular Lines   Two lines are parallel if their slopes are equal, that is, if or if both lines are vertical.  Two lines are perpendicular if the product of their slopes is , that is, if or if one of the lines is horizontal and one is vertical.   The distance between two points is the length of the segment joining them.  Distance Formula  The distance  between points and is   The midpoint of a segment is the point halfway between its endpoints, so that the distance from the midpoint to either endpoint is the same.  Midpoint Formula  The midpoint of the line segment joining the points and is the point where   A circle is the set of all points in a plane that lie at a given distance, called the radius, from a fixed point called the center.  Circle  The equation for a circle of radius centered at the point is   Ellipse  The standard form for an ellipse centered at is   Hyperbola  The equation for a hyperbola centered at the point has one of the two standard forms:    Conic Sections  The graph of is  a circle of .  a parabola if or (but not both).  an ellipse if and have the same sign.  a hyperbola if and have opposite signs.   A system of two quadratic equations may have up to four solutions.    Chapter 9 Review Problems  For Problems 1 and 2, decide whether the lines are parallel, perpendicular, or neither.   ;  parallel   ;  perpendicular   Write an equation for the line that is parallel to the graph of and passes through the point   Write an equation for the line that is perpendicular to the graph of and passes through the point   Two vertices of the rectangle are and . Find an equation for the line that includes side .  One leg of the right triangle has vertices and . Find an equation for the line that includes the leg .  Find the perimeter of the triangle with vertices , , . Is a right triangle? 21.59; yes  Find the midpoint of each side of from the previous problem. Join the midpoints to form a new triangle, and find its perimeter. 10.8  For Problems 9 18, graph the conic section.    circle       ellipse       ellipse       hyperbola       parabola       circle       ellipse       ellipse       hyperbola       parabola       For Problems 19 30  Write the equation of each conic section in standard form.  Identify the conic and describe its main features.       Circle: center , radius 3     Circle: center , radius     Ellipse: center , ,     Ellipse: center , ,     Parabola: vertex , opens upward,     Parabola: vertex , opens left,     Parabola: vertex , opens downward,     Parabola: vertex , opens right,     Hyperbola: center , transverse axis vertical, ,     Hyperbola: center , transverse axis horizontal, ,     Hyperbola: center , transverse axis horizontal, ,     Hyperbola: center , transverse axis vertical, ,    An ellipse centered at the origin has a vertical major axis of length 16 and a horizontal minor axis of length 10.  Find the equation of the ellipse.  What are the values of when ?       An ellipse centered at the origin has a horizontal major axis of length 26 and a vertical minor axis of length 18.  Find the equation of the ellipse.  What are the values of when ?       For Problems 33 38, write an equation for the conic section with the given properties.  Circle: center at , radius   Circle: endpoints of a diameter at and   Ellipse: center at , ,   Ellipse: vertices at and , covertices at and   Hyperbola: center , , , transverse axis horizontal  Hyperbola: one vertex at , one end of the vertical conjugate axis at    For Problems 39 42, graph the system of equations and state the solutions of the system    , , ,   ,   For Problems 43 48, write and solve an equation or a system of equations  Moia drives 180 miles in the same time that Fran drives 200 miles. Find the speed of each if Fran drives 5 miles per hour faster than Moia. Moia: 45 mph, Fran: 50 mph  The perimeter of a rectangle is 26 inches and the area is 12 square inches. Find the dimensions of the rectangle. 12 in by 1 in  The perimeter of a rectangle is 34 centimeters and the area is 70 square centimeters. Find the dimensions of the rectangle. 7 cm by 10 cm  A rectangle has a perimeter of 18 feet. If the length is decreased by 5 feet and the width is increased by 12 feet, the area is doubled. Find the dimensions of the original rectangle. 7 ft by 2 ft  Norm takes a commuter train 10 miles to his job in the city. The evening train returns him home at a rate 10 miles per hour faster than the morning traintakes him to work. If Norm spends a total of 50 minutes per day commuting, what is the rate of each train? Morning train: 20 mph, evening train: 30 mph  Hattie's annual income from an investment is $32. If she had invested $200 more and the rate had been 1\/2% less, her annual income would have been $35. What are the amount and rate of Hattie's investment? Amount: $800, rate: 4%     "
 },
 {
-  "id": "p-10133",
+  "id": "p-9324",
   "level": "2",
-  "url": "chap9-summary.html#p-10133",
+  "url": "chap9-summary.html#p-9324",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "horizontal line vertical line horizontal line vertical line parallel perpendicular distance midpoint "
 },
 {
-  "id": "exercise-2175",
+  "id": "exercise-2174",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2175",
+  "url": "chap9-summary.html#exercise-2174",
   "type": "Exercise",
   "number": "9.6.3.1",
   "title": "",
   "body": " ;  parallel "
 },
 {
-  "id": "exercise-2176",
+  "id": "exercise-2175",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2176",
+  "url": "chap9-summary.html#exercise-2175",
   "type": "Exercise",
   "number": "9.6.3.2",
   "title": "",
   "body": " ;  perpendicular "
 },
 {
-  "id": "exercise-2177",
+  "id": "exercise-2176",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2177",
+  "url": "chap9-summary.html#exercise-2176",
   "type": "Exercise",
   "number": "9.6.3.3",
   "title": "",
   "body": "Write an equation for the line that is parallel to the graph of and passes through the point  "
 },
 {
-  "id": "exercise-2178",
+  "id": "exercise-2177",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2178",
+  "url": "chap9-summary.html#exercise-2177",
   "type": "Exercise",
   "number": "9.6.3.4",
   "title": "",
   "body": "Write an equation for the line that is perpendicular to the graph of and passes through the point  "
 },
 {
-  "id": "exercise-2179",
+  "id": "exercise-2178",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2179",
+  "url": "chap9-summary.html#exercise-2178",
   "type": "Exercise",
   "number": "9.6.3.5",
   "title": "",
   "body": "Two vertices of the rectangle are and . Find an equation for the line that includes side . "
 },
 {
-  "id": "exercise-2180",
+  "id": "exercise-2179",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2180",
+  "url": "chap9-summary.html#exercise-2179",
   "type": "Exercise",
   "number": "9.6.3.6",
   "title": "",
   "body": "One leg of the right triangle has vertices and . Find an equation for the line that includes the leg . "
 },
 {
-  "id": "exercise-2181",
+  "id": "exercise-2180",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2181",
+  "url": "chap9-summary.html#exercise-2180",
   "type": "Exercise",
   "number": "9.6.3.7",
   "title": "",
   "body": "Find the perimeter of the triangle with vertices , , . Is a right triangle? 21.59; yes "
 },
 {
-  "id": "exercise-2182",
+  "id": "exercise-2181",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2182",
+  "url": "chap9-summary.html#exercise-2181",
   "type": "Exercise",
   "number": "9.6.3.8",
   "title": "",
   "body": "Find the midpoint of each side of from the previous problem. Join the midpoints to form a new triangle, and find its perimeter. 10.8 "
 },
 {
-  "id": "exercise-2183",
+  "id": "exercise-2182",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2183",
+  "url": "chap9-summary.html#exercise-2182",
   "type": "Exercise",
   "number": "9.6.3.9",
   "title": "",
   "body": "  circle    "
 },
 {
+  "id": "exercise-2183",
+  "level": "2",
+  "url": "chap9-summary.html#exercise-2183",
+  "type": "Exercise",
+  "number": "9.6.3.10",
+  "title": "",
+  "body": "  ellipse    "
+},
+{
   "id": "exercise-2184",
   "level": "2",
   "url": "chap9-summary.html#exercise-2184",
   "type": "Exercise",
-  "number": "9.6.3.10",
+  "number": "9.6.3.11",
   "title": "",
   "body": "  ellipse    "
 },
@@ -24854,43 +24881,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2185",
   "type": "Exercise",
-  "number": "9.6.3.11",
+  "number": "9.6.3.12",
   "title": "",
-  "body": "  ellipse    "
+  "body": "  hyperbola    "
 },
 {
   "id": "exercise-2186",
   "level": "2",
   "url": "chap9-summary.html#exercise-2186",
   "type": "Exercise",
-  "number": "9.6.3.12",
+  "number": "9.6.3.13",
   "title": "",
-  "body": "  hyperbola    "
+  "body": "  parabola    "
 },
 {
   "id": "exercise-2187",
   "level": "2",
   "url": "chap9-summary.html#exercise-2187",
   "type": "Exercise",
-  "number": "9.6.3.13",
+  "number": "9.6.3.14",
   "title": "",
-  "body": "  parabola    "
+  "body": "  circle    "
 },
 {
   "id": "exercise-2188",
   "level": "2",
   "url": "chap9-summary.html#exercise-2188",
   "type": "Exercise",
-  "number": "9.6.3.14",
+  "number": "9.6.3.15",
   "title": "",
-  "body": "  circle    "
+  "body": "  ellipse    "
 },
 {
   "id": "exercise-2189",
   "level": "2",
   "url": "chap9-summary.html#exercise-2189",
   "type": "Exercise",
-  "number": "9.6.3.15",
+  "number": "9.6.3.16",
   "title": "",
   "body": "  ellipse    "
 },
@@ -24899,52 +24926,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2190",
   "type": "Exercise",
-  "number": "9.6.3.16",
+  "number": "9.6.3.17",
   "title": "",
-  "body": "  ellipse    "
+  "body": "  hyperbola    "
 },
 {
   "id": "exercise-2191",
   "level": "2",
   "url": "chap9-summary.html#exercise-2191",
   "type": "Exercise",
-  "number": "9.6.3.17",
+  "number": "9.6.3.18",
   "title": "",
-  "body": "  hyperbola    "
+  "body": "  parabola    "
 },
 {
   "id": "exercise-2192",
   "level": "2",
   "url": "chap9-summary.html#exercise-2192",
   "type": "Exercise",
-  "number": "9.6.3.18",
+  "number": "9.6.3.19",
   "title": "",
-  "body": "  parabola    "
+  "body": "  Circle: center , radius 3  "
 },
 {
   "id": "exercise-2193",
   "level": "2",
   "url": "chap9-summary.html#exercise-2193",
   "type": "Exercise",
-  "number": "9.6.3.19",
+  "number": "9.6.3.20",
   "title": "",
-  "body": "  Circle: center , radius 3  "
+  "body": "  Circle: center , radius  "
 },
 {
   "id": "exercise-2194",
   "level": "2",
   "url": "chap9-summary.html#exercise-2194",
   "type": "Exercise",
-  "number": "9.6.3.20",
+  "number": "9.6.3.21",
   "title": "",
-  "body": "  Circle: center , radius  "
+  "body": "  Ellipse: center , ,  "
 },
 {
   "id": "exercise-2195",
   "level": "2",
   "url": "chap9-summary.html#exercise-2195",
   "type": "Exercise",
-  "number": "9.6.3.21",
+  "number": "9.6.3.22",
   "title": "",
   "body": "  Ellipse: center , ,  "
 },
@@ -24953,61 +24980,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2196",
   "type": "Exercise",
-  "number": "9.6.3.22",
+  "number": "9.6.3.23",
   "title": "",
-  "body": "  Ellipse: center , ,  "
+  "body": "  Parabola: vertex , opens upward,  "
 },
 {
   "id": "exercise-2197",
   "level": "2",
   "url": "chap9-summary.html#exercise-2197",
   "type": "Exercise",
-  "number": "9.6.3.23",
+  "number": "9.6.3.24",
   "title": "",
-  "body": "  Parabola: vertex , opens upward,  "
+  "body": "  Parabola: vertex , opens left,  "
 },
 {
   "id": "exercise-2198",
   "level": "2",
   "url": "chap9-summary.html#exercise-2198",
   "type": "Exercise",
-  "number": "9.6.3.24",
+  "number": "9.6.3.25",
   "title": "",
-  "body": "  Parabola: vertex , opens left,  "
+  "body": "  Parabola: vertex , opens downward,  "
 },
 {
   "id": "exercise-2199",
   "level": "2",
   "url": "chap9-summary.html#exercise-2199",
   "type": "Exercise",
-  "number": "9.6.3.25",
+  "number": "9.6.3.26",
   "title": "",
-  "body": "  Parabola: vertex , opens downward,  "
+  "body": "  Parabola: vertex , opens right,  "
 },
 {
   "id": "exercise-2200",
   "level": "2",
   "url": "chap9-summary.html#exercise-2200",
   "type": "Exercise",
-  "number": "9.6.3.26",
+  "number": "9.6.3.27",
   "title": "",
-  "body": "  Parabola: vertex , opens right,  "
+  "body": "  Hyperbola: center , transverse axis vertical, ,  "
 },
 {
   "id": "exercise-2201",
   "level": "2",
   "url": "chap9-summary.html#exercise-2201",
   "type": "Exercise",
-  "number": "9.6.3.27",
+  "number": "9.6.3.28",
   "title": "",
-  "body": "  Hyperbola: center , transverse axis vertical, ,  "
+  "body": "  Hyperbola: center , transverse axis horizontal, ,  "
 },
 {
   "id": "exercise-2202",
   "level": "2",
   "url": "chap9-summary.html#exercise-2202",
   "type": "Exercise",
-  "number": "9.6.3.28",
+  "number": "9.6.3.29",
   "title": "",
   "body": "  Hyperbola: center , transverse axis horizontal, ,  "
 },
@@ -25016,97 +25043,97 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2203",
   "type": "Exercise",
-  "number": "9.6.3.29",
+  "number": "9.6.3.30",
   "title": "",
-  "body": "  Hyperbola: center , transverse axis horizontal, ,  "
+  "body": "  Hyperbola: center , transverse axis vertical, ,  "
 },
 {
   "id": "exercise-2204",
   "level": "2",
   "url": "chap9-summary.html#exercise-2204",
   "type": "Exercise",
-  "number": "9.6.3.30",
+  "number": "9.6.3.31",
   "title": "",
-  "body": "  Hyperbola: center , transverse axis vertical, ,  "
+  "body": "An ellipse centered at the origin has a vertical major axis of length 16 and a horizontal minor axis of length 10.  Find the equation of the ellipse.  What are the values of when ?      "
 },
 {
   "id": "exercise-2205",
   "level": "2",
   "url": "chap9-summary.html#exercise-2205",
   "type": "Exercise",
-  "number": "9.6.3.31",
+  "number": "9.6.3.32",
   "title": "",
-  "body": "An ellipse centered at the origin has a vertical major axis of length 16 and a horizontal minor axis of length 10.  Find the equation of the ellipse.  What are the values of when ?      "
+  "body": "An ellipse centered at the origin has a horizontal major axis of length 26 and a vertical minor axis of length 18.  Find the equation of the ellipse.  What are the values of when ?      "
 },
 {
   "id": "exercise-2206",
   "level": "2",
   "url": "chap9-summary.html#exercise-2206",
   "type": "Exercise",
-  "number": "9.6.3.32",
+  "number": "9.6.3.33",
   "title": "",
-  "body": "An ellipse centered at the origin has a horizontal major axis of length 26 and a vertical minor axis of length 18.  Find the equation of the ellipse.  What are the values of when ?      "
+  "body": "Circle: center at , radius  "
 },
 {
   "id": "exercise-2207",
   "level": "2",
   "url": "chap9-summary.html#exercise-2207",
   "type": "Exercise",
-  "number": "9.6.3.33",
+  "number": "9.6.3.34",
   "title": "",
-  "body": "Circle: center at , radius  "
+  "body": "Circle: endpoints of a diameter at and  "
 },
 {
   "id": "exercise-2208",
   "level": "2",
   "url": "chap9-summary.html#exercise-2208",
   "type": "Exercise",
-  "number": "9.6.3.34",
+  "number": "9.6.3.35",
   "title": "",
-  "body": "Circle: endpoints of a diameter at and  "
+  "body": "Ellipse: center at , ,  "
 },
 {
   "id": "exercise-2209",
   "level": "2",
   "url": "chap9-summary.html#exercise-2209",
   "type": "Exercise",
-  "number": "9.6.3.35",
+  "number": "9.6.3.36",
   "title": "",
-  "body": "Ellipse: center at , ,  "
+  "body": "Ellipse: vertices at and , covertices at and  "
 },
 {
   "id": "exercise-2210",
   "level": "2",
   "url": "chap9-summary.html#exercise-2210",
   "type": "Exercise",
-  "number": "9.6.3.36",
+  "number": "9.6.3.37",
   "title": "",
-  "body": "Ellipse: vertices at and , covertices at and  "
+  "body": "Hyperbola: center , , , transverse axis horizontal "
 },
 {
   "id": "exercise-2211",
   "level": "2",
   "url": "chap9-summary.html#exercise-2211",
   "type": "Exercise",
-  "number": "9.6.3.37",
+  "number": "9.6.3.38",
   "title": "",
-  "body": "Hyperbola: center , , , transverse axis horizontal "
+  "body": "Hyperbola: one vertex at , one end of the vertical conjugate axis at  "
 },
 {
   "id": "exercise-2212",
   "level": "2",
   "url": "chap9-summary.html#exercise-2212",
   "type": "Exercise",
-  "number": "9.6.3.38",
+  "number": "9.6.3.39",
   "title": "",
-  "body": "Hyperbola: one vertex at , one end of the vertical conjugate axis at  "
+  "body": ""
 },
 {
   "id": "exercise-2213",
   "level": "2",
   "url": "chap9-summary.html#exercise-2213",
   "type": "Exercise",
-  "number": "9.6.3.39",
+  "number": "9.6.3.40",
   "title": "",
   "body": ""
 },
@@ -25115,77 +25142,68 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap9-summary.html#exercise-2214",
   "type": "Exercise",
-  "number": "9.6.3.40",
+  "number": "9.6.3.41",
   "title": "",
-  "body": ""
+  "body": ", , , "
 },
 {
   "id": "exercise-2215",
   "level": "2",
   "url": "chap9-summary.html#exercise-2215",
   "type": "Exercise",
-  "number": "9.6.3.41",
+  "number": "9.6.3.42",
   "title": "",
-  "body": ", , , "
+  "body": " , "
 },
 {
   "id": "exercise-2216",
   "level": "2",
   "url": "chap9-summary.html#exercise-2216",
   "type": "Exercise",
-  "number": "9.6.3.42",
+  "number": "9.6.3.43",
   "title": "",
-  "body": " , "
+  "body": "Moia drives 180 miles in the same time that Fran drives 200 miles. Find the speed of each if Fran drives 5 miles per hour faster than Moia. Moia: 45 mph, Fran: 50 mph "
 },
 {
   "id": "exercise-2217",
   "level": "2",
   "url": "chap9-summary.html#exercise-2217",
   "type": "Exercise",
-  "number": "9.6.3.43",
+  "number": "9.6.3.44",
   "title": "",
-  "body": "Moia drives 180 miles in the same time that Fran drives 200 miles. Find the speed of each if Fran drives 5 miles per hour faster than Moia. Moia: 45 mph, Fran: 50 mph "
+  "body": "The perimeter of a rectangle is 26 inches and the area is 12 square inches. Find the dimensions of the rectangle. 12 in by 1 in "
 },
 {
   "id": "exercise-2218",
   "level": "2",
   "url": "chap9-summary.html#exercise-2218",
   "type": "Exercise",
-  "number": "9.6.3.44",
+  "number": "9.6.3.45",
   "title": "",
-  "body": "The perimeter of a rectangle is 26 inches and the area is 12 square inches. Find the dimensions of the rectangle. 12 in by 1 in "
+  "body": "The perimeter of a rectangle is 34 centimeters and the area is 70 square centimeters. Find the dimensions of the rectangle. 7 cm by 10 cm "
 },
 {
   "id": "exercise-2219",
   "level": "2",
   "url": "chap9-summary.html#exercise-2219",
   "type": "Exercise",
-  "number": "9.6.3.45",
+  "number": "9.6.3.46",
   "title": "",
-  "body": "The perimeter of a rectangle is 34 centimeters and the area is 70 square centimeters. Find the dimensions of the rectangle. 7 cm by 10 cm "
+  "body": "A rectangle has a perimeter of 18 feet. If the length is decreased by 5 feet and the width is increased by 12 feet, the area is doubled. Find the dimensions of the original rectangle. 7 ft by 2 ft "
 },
 {
   "id": "exercise-2220",
   "level": "2",
   "url": "chap9-summary.html#exercise-2220",
   "type": "Exercise",
-  "number": "9.6.3.46",
-  "title": "",
-  "body": "A rectangle has a perimeter of 18 feet. If the length is decreased by 5 feet and the width is increased by 12 feet, the area is doubled. Find the dimensions of the original rectangle. 7 ft by 2 ft "
-},
-{
-  "id": "exercise-2221",
-  "level": "2",
-  "url": "chap9-summary.html#exercise-2221",
-  "type": "Exercise",
   "number": "9.6.3.47",
   "title": "",
   "body": "Norm takes a commuter train 10 miles to his job in the city. The evening train returns him home at a rate 10 miles per hour faster than the morning traintakes him to work. If Norm spends a total of 50 minutes per day commuting, what is the rate of each train? Morning train: 20 mph, evening train: 30 mph "
 },
 {
-  "id": "exercise-2222",
+  "id": "exercise-2221",
   "level": "2",
-  "url": "chap9-summary.html#exercise-2222",
+  "url": "chap9-summary.html#exercise-2221",
   "type": "Exercise",
   "number": "9.6.3.48",
   "title": "",
@@ -25198,79 +25216,79 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.1",
   "title": "Logarithmic Functions",
-  "body": "Logarithmic Functions  In this section we study logarithmic functions logarithmic function . For example, is a logarithmic function. In order to understand logarithmic functions better, we first investigate how they are related to more familiar functions, the exponential functions.  Inverse of a Function  You know that raising to the th power and taking th roots are inverse operations . For example, if we first cube a number and then take its cube root, we return to the original number. Now consider the functions that describe those operations: The graphs of and are related in an interesting way, as shown below.   cube root and cube funcions     If we place a mirror along the line , each graph is the reflection of the other. We say that the graphs are \"symmetric about the line .\"  The two functions and are called inverse functions . Look at the tables of values for the two functions.                                         By interchanging the rows in the table for , we get the table for . This makes sense when we recall that each function undoes the effect of the other. In fact, we define the cube root function by  In other words, if we interchange the variables in the cubing function, , to get , we have an equivalent formula for the cube root function, .  Quickcheck 1   Simplify each expression without a calculator.                                             Inverse of an Exponential Function  A similar rule relates the operations of raising a base to a power and taking a base logarithm. So the function is the inverse function for . Each function undoes the effect of the other. For example, let and . Start with , apply , and then apply to the result. We return to the original number, 3.  We can write these operations in one expression as (Remember the order of operations: do what's inside of parentheses first.) Because the log and the exponential are inverse functions, this identity holds for any value of and any base . That is We can also apply the two functions in the opposite order, so that (This one is harder to see, but we compute the exponent, , first.) And in general  Practice 1   Simplify each expression.                                                        Graphs of Logarithmic Functions  What does the graph of a log function look like? We can use exponential functions to help us.  Graph  We can make a table of values for by interchanging the columns in a table for .                                                 We plot the points for each function, connecting them with smooth curves, as shown below. You can see that the two graphs are symmetric about the line .   2 to x and log base 2      The same technique works for graphing a log function with any base.  Practice 2   Graph the function and its inverse function on the same axes.       Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)            A graph is also shown below.       and its inverse function :    10 to x and common log    QuickCheck 2   Using a calculator, how could you estimate the value of ?    Find multiples of 5.    Find the fifth root of 378.    Find powers of 5.    Divide 378 by 5.          Find powers of 5.       Did you notice that the graphs of the log functions do not have any points with negative -coordinates? This is because an exponential function has no negative (or zero) output values, so a log function has no negative or zero input values. In other words,  We cannot take the log of a negative number or zero.  In addition, the logarithmic function has the following properties.  Properties of Log Functions  For any base :  The logarithmic function is defined for positive only.  The -intercept x -intercept of its graph is .  The graph has a vertical asymptote at .  The graphs of and are symmetric about the line .   You can also see that while an exponential growth function increases very rapidly for positive input values, its inverse, the logarithmic function, grows extremely slowly.  QuickCheck 3   What is the -intercept of the graph of ?             There is none.          There is none: not defined for (nor for negative values of ).        Using Logarithmic Functions  We can use the LOG key on a calculator to evaluate the function .  Let . Evaluate the following expressions.        , or , is undefined.    Practice 3   Evaluate for where  Answer:                Evaluate the expression for , and .    Follow the order of operations and calculate A calculator keying sequence for the calculation is   LOG     +   )    ENTER     Practice 4   The formula is used by X-ray technicians to calculate the doubling time of a malignant tumor. is the diameter of the tumor when first detected, is its diameter at the next reading, and is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm.  days        33 days       Logarithmic functions are useful for modeling increasing functions increasing function that slow down as the input increases.  In 1900, the average life expectancy at birth in the U.S. was 47.3 years. Since then, life expectancy has increased according to the formula where is the number of years after 1900.  Graph the life expectancy function for the years 1900 to 2010.  The life expectancy in 1950 was 68.2 years. What does the function predict for life expectancy in 1950?  How much did life expectancy increase between 1920 and 1930? How much did it increase between 1990 and 2000?    We can make a table of values and plot points to obtain the graph below.                     average life expectancy   We substitute into the function to find The function predicts a life expectancy of 67.7 years in 1950.  Between 1920 and 1930, life expectancy increased from 56.2 to 61.2, or 5 years. Between 1990 and 2000 it increased from 75.0 to 76.4, or 1.4 years.   Practice 5   The CDC (Centers for Disease Control and Prevention) provides Growth Charts for the average height and weight of children from age 2 to 20. The average height of girl children is given in centimeters by   where is in years.   Graph the height function for    Use the height function to complete the table.                            How much is a girl s height expected to increase between the ages of 5 and 10? cm.  Between the ages of 15 and 20? cm.                                          A graph is below.                     76.774  113.106  140.59  156.667  168.074      27.484 cm, 11.4069 cm        Graph for part (a):   curve     QuickCheck 4   Which function grows most slowly for large values of ?                             Solving Logarithmic Equations  A logarithmic equation logarithmic equation logarithmic equation conversion equations logarithm equation is one in which the variable appears inside of a logarithm. For example, is a log equation.  If there is only one log involved, we can use the conversion formula to write the equation in exponential form.  Solve .  We use the conversion formula to write the equation in exponential form. The solution is 36.  Practice 6   Solve               Remember that we cannot take a logarithm of a negative number or zero, because the output of an exponential function is always positive.  For example suppose that . Then . But this is impossible, because cannot be negative. Thus, the log of a negative number (or zero) is undefined.  Because of this fact, extraneous solutions can arise when we solve logarithmic equations. extraneous solution  If the equation contains more than one log, we must first combine any expressions involving logs into a single logarithm.  Solve .  We use Property (1) of logarithms (see Properties of Logarithms ) to rewrite the left-hand side as a single logarithm: Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as Simplifying the right side gives us a quadratic equation to solve. We find or . But we must check the original equation for extraneous solutions. The number is not a solution of the original equation, because neither nor is defined for . The apparent solution is extraneous, and the solution of the original equation is .  Practice 7   Solve    Hint: Rewrite the left side as a single logarithm.  Rewrite the equation in exponential form.  Solve for  Check for extraneous solutions.              QuickCheck 5     We cannot take a logarithm of   a negative number or zero    a fraction    a variable expression   .    After solving a logarithmic equation, we must check for   extraneous solutions    irrational numbers   .    If an equation contains more than one log, we must first combine them into   a common denominator    a single logarithm   .    If there is only one log involved, we write the equation in   standard    general    exponential    point-slope   form.                           a negative number or zero    extraneous solutions    a single logarithm    exponential form           Problem Set 10.1  Warm Up  For Problems 1 4, convert the logarithmic equation into exponential form.       For Problems 5 8, write the expression as a single log with a coefficient of 1.        Skills Practice  For Problems 9 and 10,  Make a table of values for each function.  Graph both functions on the same set of axes.  ,   grid      3 to x and log base 3      ,   grid      For Problems 11 and 12, . Evaluate the expression, and round the answer to four decimal places.           For Problems 13 and 14, evaluate the expression.  , for and  , for , and   For Problems 15 and 16, . Solve for .           For Problems 17 and 18, solve for the unknown variable.           Let and  Compute  Compute  Compute  Compute  81  4  1.8   Let and  Compute  Compute  Compute  Compute  Each figure shows a portion of the graph of one of the following functions. Match each function with its graph.  six curves         IV  V  I  II  III  VI  Choose the graph for each function described below.  The area, , of a pentagon is a quadratic function of the length , of its side.  The strength, , of a hurricane varies inversely with its speed, .  The price of food has increased 3% every year for a decade.  The magnitude, , of a star is a logarithmic function of its brightness, .  The speed of the train increased at a constant rate.  if you don't practice a foreign language, you lose of the words in your working vocabulary each year.  six curves   How large must be before the graph of reaches a height of 4?  How large must be before the graph of reaches a height of 8?  10,000  100,000,000   How large must be before the graph of reaches a height of 5?  How large must be before the graph of reaches a height of 10?  For Problems 25 28, solve the logarithmic equation.    3     Applications  In a psychology experiment, volunteers were asked to memorize a list of nonsense words, and 24 hours later they were tested to see how many of the words they recalled. On average, the subjects had forgotten 20% of the words. The researchers found that the more lists their volunteers memorized, the larger the fraction of words they were unable to recall. (Source: Underwood, Scientific American , vol. 210, no. 3)    Number of lists,         Percent forgotten,          Plot the data. What sort of function seems to fit the data points?  Psychologists often describe rates of forgetting by logarithmic functions. Graph the function on the same graph with your data. Comment on the fit.  What happens to the values of as grows increasingly large? Does this behavior accurately reflect the situation being modeled?   data points and log curve  The graph resembles a logarithmic function. The function is close to the points but appears too steep at first and not steep enough after . Overall, it is a good fit.  grows (more and more slowly) without bound. will eventually exceed per cent, but no one can forget more than 100% of what is learned.   The water velocity at any point in a stream or river is related to the logarithm of the depth at that point. For the Hoback River near Bondurant, Wyoming, where is the velocity of the water, in feet per second, and is the vertical distance from the stream bed, in feet, at that point. For Pole Creek near Pinedale, Wyoming, Both streams are feet deep at the locations mentioned. (Source: Leopold, Luna, Wolman, and Gordon, 1992)  Complete the table of values for each stream.    Distance from bed (feet)         Velocity, Hoback River, (ft\/sec)         Velocity, Pole Creek (ft\/sec)         If you double the distance from the bed, by how much does the velocity increase in each stream?  Plot both functions on the same graph.  The average velocity of the entire stream can be closely approximated as follows: Measure the velocity at 20% of the total depth of the stream from the surface and at 80% of the total depth, then average these two values. Find the average velocity for the Hoback River and for Pole Creek.   In of this section, we considered a formula for the average life expectancy in the U.S. as a function of years after 1900, According to the formula, in what year was the life expectancy 70 years? 1962  In Practice 5 of this section, we considerd a formula for the average height, in centimeters, of girls between the ages of 2 and 20. According to the formula, at what age should a girl expect to be 152.4 centimeters (5 feet) tall?    "
+  "body": "Logarithmic Functions  In this section we study logarithmic functions logarithmic function . For example, is a logarithmic function. In order to understand logarithmic functions better, we first investigate how they are related to more familiar functions, the exponential functions.  Inverse of a Function  You know that raising to the th power and taking th roots are inverse operations . For example, if we first cube a number and then take its cube root, we return to the original number. Now consider the functions that describe those operations: The graphs of and are related in an interesting way, as shown below.  cube root and cube funcions  If we place a mirror along the line , each graph is the reflection of the other. We say that the graphs are \"symmetric about the line .\"  The two functions and are called inverse functions . Look at the tables of values for the two functions.                                         By interchanging the rows in the table for , we get the table for . This makes sense when we recall that each function undoes the effect of the other. In fact, we define the cube root function by  In other words, if we interchange the variables in the cubing function, , to get , we have an equivalent formula for the cube root function, .  Quickcheck 1 Simplify each expression without a calculator.        Inverse of an Exponential Function  A similar rule relates the operations of raising a base to a power and taking a base logarithm. So the function is the inverse function for . Each function undoes the effect of the other. For example, let and . Start with , apply , and then apply to the result. We return to the original number, 3.  We can write these operations in one expression as (Remember the order of operations: do what's inside of parentheses first.) Because the log and the exponential are inverse functions, this identity holds for any value of and any base . That is We can also apply the two functions in the opposite order, so that (This one is harder to see, but we compute the exponent, , first.) And in general  Practice 1 Simplify each expression.             Graphs of Logarithmic Functions  What does the graph of a log function look like? We can use exponential functions to help us.  Graph  We can make a table of values for by interchanging the columns in a table for .                                                 We plot the points for each function, connecting them with smooth curves, as shown below. You can see that the two graphs are symmetric about the line .  2 to x and log base 2   The same technique works for graphing a log function with any base.  Practice 2 Graph the function and its inverse function on the same axes. 10 to x and common log  QuickCheck 2 Using a calculator, how could you estimate the value of ?   Find multiples of 5.  Find the fifth root of 378.  Find powers of 5.  Divide 378 by 5.   Did you notice that the graphs of the log functions do not have any points with negative -coordinates? This is because an exponential function has no negative (or zero) output values, so a log function has no negative or zero input values. In other words,   In addition, the logarithmic function has the following properties.  Properties of Log Functions  For any base :  The logarithmic function is defined for positive only.  The -intercept x -intercept of its graph is .  The graph has a vertical asymptote at .  The graphs of and are symmetric about the line .   You can also see that while an exponential growth function increases very rapidly for positive input values, its inverse, the logarithmic function, grows extremely slowly.  QuickCheck 3 What is the -intercept of the graph of ?      There is none.    Using Logarithmic Functions  We can use the LOG key on a calculator to evaluate the function .  Let . Evaluate the following expressions.        , or , is undefined.    Practice 3 Evaluate for , where .  Evaluate the expression for , and .  Follow the order of operations and calculate A calculator keying sequence for the calculation is  LOG     +   )    ENTER   Practice 4 The formula is used by X-ray technicians to calculate the doubling time of a malignant tumor. is the diameter of the tumor when first detected, is its diameter at the next reading, and is the time interval between readings, in days.  Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm. 33 days  Logarithmic functions are useful for modeling increasing functions increasing function that slow down as the input increases.  In 1900, the average life expectancy at birth in the U.S. was 47.3 years. Since then, life expectancy has increased according to the formula where is the number of years after 1900.  Graph the life expectancy function for the years 1900 to 2010.  The life expectancy in 1950 was 68.2 years. What does the function predict for life expectancy in 1950?  How much did life expectancy increase between 1920 and 1930? How much did it increase between 1990 and 2000?    We can make a table of values and plot points to obtain the graph below.                    average life expectancy  We substitute into the function to find The function predicts a life expectancy of 67.7 years in 1950.  Between 1920 and 1930, life expectancy increased from 56.2 to 61.2, or 5 years. Between 1990 and 2000 it increased from 75.0 to 76.4, or 1.4 years.   Practice 5 The CDC (Centers for Disease Control and Prevention) provides Growth Charts for the average height and weight of children from age 2 to 20. The average height of girl children is given in centimeters by where is in years.   Graph the height function for .  Use the height function to complete the table.                  How much is a girl's height expected to increase between the ages of 5 and 10?  Between the ages of 15 and 20?   curve            77  113  141  157  168   28 cm, 11 cm   QuickCheck 4 Which function grows most slowly for large values of ?         Solving Logarithmic Equations  A logarithmic equation logarithmic equation logarithmic equation conversion equations logarithm equation is one in which the variable appears inside of a logarithm. For example, is a log equation.  If there is only one log involved, we can use the conversion formula to write the equation in exponential form. (Recall the conversion formula from Section 7.3.)  Logarithms and Exponents: Conversion Equations conversion equations logarithm conversion equations  If , , and ,   Solve .  We use the conversion formula to write the equation in exponential form. The solution is 36.  Practice 6 Solve  Remember that we cannot take a logarithm of a negative number or zero, because the output of an exponential function is always positive.  For example, suppose that . Then . But this is impossible, because cannot be negative. Thus, the log of a negative number (or zero) is undefined.  Because of this fact, extraneous solutions can arise when we solve logarithmic equations. extraneous solution  If the equation contains more than one log, we must first combine any expressions involving logs into a single logarithm.  Solve .  We use Property (1) of logarithms (see Properties of Logarithms ) to rewrite the left-hand side as a single logarithm: Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as Simplifying the right side gives us a quadratic equation to solve. We find or . But we must check the original equation for extraneous solutions. The number is not a solution of the original equation, because neither nor is defined for . The apparent solution is extraneous, and the solution of the original equation is .  Practice 7 Solve  Hint: Rewrite the left side as a single logarithm.  Rewrite the equation in exponential form.  Solve for .  Check for extraneous solutions.  QuickCheck 5  We cannot take a logarithm of .  After solving a logarithmic equation, we must check for .  If an equation contains more than one log, we must first combine them into .  If there is only one log involved, we rewrite the equation in form.     Problem Set 10.1  Warm Up  For Problems 1 4, convert the logarithmic equation into exponential form.       For Problems 5 8, write the expression as a single log with a coefficient of 1.        Skills Practice  For Problems 9 and 10,  Make a table of values for each function.  Graph both functions on the same set of axes.  ,   grid      3 to x and log base 3      ,   grid      For Problems 11 and 12, . Evaluate the expression, and round the answer to four decimal places.           For Problems 13 and 14, evaluate the expression.  , for and  , for , and   For Problems 15 and 16, . Solve for .           For Problems 17 and 18, solve for the unknown variable.           Let and  Compute  Compute  Compute  Compute  81  4  1.8   Let and  Compute  Compute  Compute  Compute  Each figure shows a portion of the graph of one of the following functions. Match each function with its graph.  six curves         IV  V  I  II  III  VI  Choose the graph for each function described below.  The area, , of a pentagon is a quadratic function of the length , of its side.  The strength, , of a hurricane varies inversely with its speed, .  The price of food has increased 3% every year for a decade.  The magnitude, , of a star is a logarithmic function of its brightness, .  The speed of the train increased at a constant rate.  if you don't practice a foreign language, you lose of the words in your working vocabulary each year.  six curves   How large must be before the graph of reaches a height of 4?  How large must be before the graph of reaches a height of 8?  10,000  100,000,000   How large must be before the graph of reaches a height of 5?  How large must be before the graph of reaches a height of 10?  For Problems 25 28, solve the logarithmic equation.    3     Applications  In a psychology experiment, volunteers were asked to memorize a list of nonsense words, and 24 hours later they were tested to see how many of the words they recalled. On average, the subjects had forgotten 20% of the words. The researchers found that the more lists their volunteers memorized, the larger the fraction of words they were unable to recall. (Source: Underwood, Scientific American , vol. 210, no. 3)    Number of lists,         Percent forgotten,          Plot the data. What sort of function seems to fit the data points?  Psychologists often describe rates of forgetting by logarithmic functions. Graph the function on the same graph with your data. Comment on the fit.  What happens to the values of as grows increasingly large? Does this behavior accurately reflect the situation being modeled?   data points and log curve  The graph resembles a logarithmic function. The function is close to the points but appears too steep at first and not steep enough after . Overall, it is a good fit.  grows (more and more slowly) without bound. will eventually exceed per cent, but no one can forget more than 100% of what is learned.   The water velocity at any point in a stream or river is related to the logarithm of the depth at that point. For the Hoback River near Bondurant, Wyoming, where is the velocity of the water, in feet per second, and is the vertical distance from the stream bed, in feet, at that point. For Pole Creek near Pinedale, Wyoming, Both streams are feet deep at the locations mentioned. (Source: Leopold, Luna, Wolman, and Gordon, 1992)  Complete the table of values for each stream.    Distance from bed (feet)         Velocity, Hoback River, (ft\/sec)         Velocity, Pole Creek (ft\/sec)         If you double the distance from the bed, by how much does the velocity increase in each stream?  Plot both functions on the same graph.  The average velocity of the entire stream can be closely approximated as follows: Measure the velocity at 20% of the total depth of the stream from the surface and at 80% of the total depth, then average these two values. Find the average velocity for the Hoback River and for Pole Creek.   In of this section, we considered a formula for the average life expectancy in the U.S. as a function of years after 1900, According to the formula, in what year was the life expectancy 70 years? 1962  In Practice 5 of this section, we considerd a formula for the average height, in centimeters, of girls between the ages of 2 and 20. According to the formula, at what age should a girl expect to be 152.4 centimeters (5 feet) tall?    "
 },
 {
-  "id": "p-10285",
+  "id": "p-9476",
   "level": "2",
-  "url": "LogarithmicFunctions.html#p-10285",
+  "url": "LogarithmicFunctions.html#p-9476",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "logarithmic functions "
 },
 {
-  "id": "p-10288",
+  "id": "p-9479",
   "level": "2",
-  "url": "LogarithmicFunctions.html#p-10288",
+  "url": "LogarithmicFunctions.html#p-9479",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "inverse functions "
 },
 {
+  "id": "exercise-2222",
+  "level": "2",
+  "url": "LogarithmicFunctions.html#exercise-2222",
+  "type": "Checkpoint",
+  "number": "10.1.1",
+  "title": "Quickcheck 1.",
+  "body": "Quickcheck 1 Simplify each expression without a calculator.      "
+},
+{
   "id": "exercise-2223",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2223",
   "type": "Checkpoint",
-  "number": "10.1.1",
-  "title": "Quickcheck 1.",
-  "body": "Quickcheck 1   Simplify each expression without a calculator.                                           "
+  "number": "10.1.2",
+  "title": "Practice 1.",
+  "body": "Practice 1 Simplify each expression.           "
+},
+{
+  "id": "example-253",
+  "level": "2",
+  "url": "LogarithmicFunctions.html#example-253",
+  "type": "Example",
+  "number": "10.1.3",
+  "title": "",
+  "body": "Graph  We can make a table of values for by interchanging the columns in a table for .                                                 We plot the points for each function, connecting them with smooth curves, as shown below. You can see that the two graphs are symmetric about the line .  2 to x and log base 2  "
 },
 {
   "id": "exercise-2224",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2224",
   "type": "Checkpoint",
-  "number": "10.1.2",
-  "title": "Practice 1.",
-  "body": "Practice 1   Simplify each expression.                                                      "
-},
-{
-  "id": "example-251",
-  "level": "2",
-  "url": "LogarithmicFunctions.html#example-251",
-  "type": "Example",
-  "number": "10.1.3",
-  "title": "",
-  "body": "Graph  We can make a table of values for by interchanging the columns in a table for .                                                 We plot the points for each function, connecting them with smooth curves, as shown below. You can see that the two graphs are symmetric about the line .   2 to x and log base 2     "
+  "number": "10.1.4",
+  "title": "Practice 2.",
+  "body": "Practice 2 Graph the function and its inverse function on the same axes. 10 to x and common log "
 },
 {
   "id": "exercise-2225",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2225",
   "type": "Checkpoint",
-  "number": "10.1.4",
-  "title": "Practice 2.",
-  "body": "Practice 2   Graph the function and its inverse function on the same axes.       Which of the above is the best match for the graph?    (A)    (B)    (C)    (D)            A graph is also shown below.       and its inverse function :    10 to x and common log   "
+  "number": "10.1.5",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 Using a calculator, how could you estimate the value of ?   Find multiples of 5.  Find the fifth root of 378.  Find powers of 5.  Divide 378 by 5.  "
 },
 {
   "id": "exercise-2226",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2226",
   "type": "Checkpoint",
-  "number": "10.1.5",
-  "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   Using a calculator, how could you estimate the value of ?    Find multiples of 5.    Find the fifth root of 378.    Find powers of 5.    Divide 378 by 5.          Find powers of 5.      "
-},
-{
-  "id": "exercise-2227",
-  "level": "2",
-  "url": "LogarithmicFunctions.html#exercise-2227",
-  "type": "Checkpoint",
   "number": "10.1.6",
   "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   What is the -intercept of the graph of ?             There is none.          There is none: not defined for (nor for negative values of ).      "
+  "body": "QuickCheck 3 What is the -intercept of the graph of ?      There is none.  "
 },
 {
   "id": "example-GC-evaluate-logs",
@@ -25282,31 +25300,31 @@ var ptx_lunr_docs = [
   "body": "Let . Evaluate the following expressions.        , or , is undefined.   "
 },
 {
+  "id": "exercise-2227",
+  "level": "2",
+  "url": "LogarithmicFunctions.html#exercise-2227",
+  "type": "Checkpoint",
+  "number": "10.1.8",
+  "title": "Practice 3.",
+  "body": "Practice 3 Evaluate for , where . "
+},
+{
+  "id": "example-255",
+  "level": "2",
+  "url": "LogarithmicFunctions.html#example-255",
+  "type": "Example",
+  "number": "10.1.9",
+  "title": "",
+  "body": "Evaluate the expression for , and .  Follow the order of operations and calculate A calculator keying sequence for the calculation is  LOG     +   )    ENTER  "
+},
+{
   "id": "exercise-2228",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2228",
   "type": "Checkpoint",
-  "number": "10.1.8",
-  "title": "Practice 3.",
-  "body": "Practice 3   Evaluate for where  Answer:             "
-},
-{
-  "id": "example-253",
-  "level": "2",
-  "url": "LogarithmicFunctions.html#example-253",
-  "type": "Example",
-  "number": "10.1.9",
-  "title": "",
-  "body": "  Evaluate the expression for , and .    Follow the order of operations and calculate A calculator keying sequence for the calculation is   LOG     +   )    ENTER    "
-},
-{
-  "id": "exercise-2229",
-  "level": "2",
-  "url": "LogarithmicFunctions.html#exercise-2229",
-  "type": "Checkpoint",
   "number": "10.1.10",
   "title": "Practice 4.",
-  "body": "Practice 4   The formula is used by X-ray technicians to calculate the doubling time of a malignant tumor. is the diameter of the tumor when first detected, is its diameter at the next reading, and is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm.  days        33 days      "
+  "body": "Practice 4 The formula is used by X-ray technicians to calculate the doubling time of a malignant tumor. is the diameter of the tumor when first detected, is its diameter at the next reading, and is the time interval between readings, in days.  Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm. 33 days "
 },
 {
   "id": "example-life-expectancy",
@@ -25315,95 +25333,104 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "10.1.11",
   "title": "",
-  "body": "In 1900, the average life expectancy at birth in the U.S. was 47.3 years. Since then, life expectancy has increased according to the formula where is the number of years after 1900.  Graph the life expectancy function for the years 1900 to 2010.  The life expectancy in 1950 was 68.2 years. What does the function predict for life expectancy in 1950?  How much did life expectancy increase between 1920 and 1930? How much did it increase between 1990 and 2000?    We can make a table of values and plot points to obtain the graph below.                     average life expectancy   We substitute into the function to find The function predicts a life expectancy of 67.7 years in 1950.  Between 1920 and 1930, life expectancy increased from 56.2 to 61.2, or 5 years. Between 1990 and 2000 it increased from 75.0 to 76.4, or 1.4 years.  "
+  "body": "In 1900, the average life expectancy at birth in the U.S. was 47.3 years. Since then, life expectancy has increased according to the formula where is the number of years after 1900.  Graph the life expectancy function for the years 1900 to 2010.  The life expectancy in 1950 was 68.2 years. What does the function predict for life expectancy in 1950?  How much did life expectancy increase between 1920 and 1930? How much did it increase between 1990 and 2000?    We can make a table of values and plot points to obtain the graph below.                    average life expectancy  We substitute into the function to find The function predicts a life expectancy of 67.7 years in 1950.  Between 1920 and 1930, life expectancy increased from 56.2 to 61.2, or 5 years. Between 1990 and 2000 it increased from 75.0 to 76.4, or 1.4 years.  "
+},
+{
+  "id": "exercise-2229",
+  "level": "2",
+  "url": "LogarithmicFunctions.html#exercise-2229",
+  "type": "Checkpoint",
+  "number": "10.1.12",
+  "title": "Practice 5.",
+  "body": "Practice 5 The CDC (Centers for Disease Control and Prevention) provides Growth Charts for the average height and weight of children from age 2 to 20. The average height of girl children is given in centimeters by where is in years.   Graph the height function for .  Use the height function to complete the table.                  How much is a girl's height expected to increase between the ages of 5 and 10?  Between the ages of 15 and 20?   curve            77  113  141  157  168   28 cm, 11 cm  "
 },
 {
   "id": "exercise-2230",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2230",
   "type": "Checkpoint",
-  "number": "10.1.12",
-  "title": "Practice 5.",
-  "body": "Practice 5   The CDC (Centers for Disease Control and Prevention) provides Growth Charts for the average height and weight of children from age 2 to 20. The average height of girl children is given in centimeters by   where is in years.   Graph the height function for    Use the height function to complete the table.                            How much is a girl s height expected to increase between the ages of 5 and 10? cm.  Between the ages of 15 and 20? cm.                                          A graph is below.                     76.774  113.106  140.59  156.667  168.074      27.484 cm, 11.4069 cm        Graph for part (a):   curve    "
-},
-{
-  "id": "exercise-2231",
-  "level": "2",
-  "url": "LogarithmicFunctions.html#exercise-2231",
-  "type": "Checkpoint",
   "number": "10.1.13",
   "title": "QuickCheck 4.",
-  "body": "QuickCheck 4   Which function grows most slowly for large values of ?                           "
+  "body": "QuickCheck 4 Which function grows most slowly for large values of ?       "
 },
 {
-  "id": "p-10399",
+  "id": "p-9546",
   "level": "2",
-  "url": "LogarithmicFunctions.html#p-10399",
+  "url": "LogarithmicFunctions.html#p-9546",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "logarithmic equation "
 },
 {
-  "id": "example-255",
+  "id": "example-257",
   "level": "2",
-  "url": "LogarithmicFunctions.html#example-255",
+  "url": "LogarithmicFunctions.html#example-257",
   "type": "Example",
   "number": "10.1.14",
   "title": "",
   "body": "Solve .  We use the conversion formula to write the equation in exponential form. The solution is 36. "
 },
 {
-  "id": "exercise-2232",
+  "id": "exercise-2231",
   "level": "2",
-  "url": "LogarithmicFunctions.html#exercise-2232",
+  "url": "LogarithmicFunctions.html#exercise-2231",
   "type": "Checkpoint",
   "number": "10.1.15",
   "title": "Practice 6.",
-  "body": "Practice 6   Solve              "
+  "body": "Practice 6 Solve "
 },
 {
-  "id": "warning-48",
+  "id": "warning-47",
   "level": "2",
-  "url": "LogarithmicFunctions.html#warning-48",
+  "url": "LogarithmicFunctions.html#warning-47",
   "type": "Caution",
   "number": "10.1.16",
   "title": "",
-  "body": "Remember that we cannot take a logarithm of a negative number or zero, because the output of an exponential function is always positive.  For example suppose that . Then . But this is impossible, because cannot be negative. Thus, the log of a negative number (or zero) is undefined.  Because of this fact, extraneous solutions can arise when we solve logarithmic equations. extraneous solution "
+  "body": "Remember that we cannot take a logarithm of a negative number or zero, because the output of an exponential function is always positive.  For example, suppose that . Then . But this is impossible, because cannot be negative. Thus, the log of a negative number (or zero) is undefined.  Because of this fact, extraneous solutions can arise when we solve logarithmic equations. extraneous solution "
 },
 {
-  "id": "example-256",
+  "id": "example-258",
   "level": "2",
-  "url": "LogarithmicFunctions.html#example-256",
+  "url": "LogarithmicFunctions.html#example-258",
   "type": "Example",
   "number": "10.1.17",
   "title": "",
   "body": "Solve .  We use Property (1) of logarithms (see Properties of Logarithms ) to rewrite the left-hand side as a single logarithm: Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as Simplifying the right side gives us a quadratic equation to solve. We find or . But we must check the original equation for extraneous solutions. The number is not a solution of the original equation, because neither nor is defined for . The apparent solution is extraneous, and the solution of the original equation is . "
 },
 {
+  "id": "exercise-2232",
+  "level": "2",
+  "url": "LogarithmicFunctions.html#exercise-2232",
+  "type": "Checkpoint",
+  "number": "10.1.18",
+  "title": "Practice 7.",
+  "body": "Practice 7 Solve  Hint: Rewrite the left side as a single logarithm.  Rewrite the equation in exponential form.  Solve for .  Check for extraneous solutions. "
+},
+{
   "id": "exercise-2233",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2233",
   "type": "Checkpoint",
-  "number": "10.1.18",
-  "title": "Practice 7.",
-  "body": "Practice 7   Solve    Hint: Rewrite the left side as a single logarithm.  Rewrite the equation in exponential form.  Solve for  Check for extraneous solutions.             "
+  "number": "10.1.19",
+  "title": "QuickCheck 5.",
+  "body": "QuickCheck 5  We cannot take a logarithm of .  After solving a logarithmic equation, we must check for .  If an equation contains more than one log, we must first combine them into .  If there is only one log involved, we rewrite the equation in form.  "
 },
 {
   "id": "exercise-2234",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2234",
-  "type": "Checkpoint",
-  "number": "10.1.19",
-  "title": "QuickCheck 5.",
-  "body": "QuickCheck 5     We cannot take a logarithm of   a negative number or zero    a fraction    a variable expression   .    After solving a logarithmic equation, we must check for   extraneous solutions    irrational numbers   .    If an equation contains more than one log, we must first combine them into   a common denominator    a single logarithm   .    If there is only one log involved, we write the equation in   standard    general    exponential    point-slope   form.                           a negative number or zero    extraneous solutions    a single logarithm    exponential form        "
+  "type": "Exercise",
+  "number": "10.1.6.1",
+  "title": "",
+  "body": ""
 },
 {
   "id": "exercise-2235",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2235",
   "type": "Exercise",
-  "number": "10.1.6.1",
+  "number": "10.1.6.2",
   "title": "",
   "body": ""
 },
@@ -25412,7 +25439,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2236",
   "type": "Exercise",
-  "number": "10.1.6.2",
+  "number": "10.1.6.3",
   "title": "",
   "body": ""
 },
@@ -25421,7 +25448,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2237",
   "type": "Exercise",
-  "number": "10.1.6.3",
+  "number": "10.1.6.4",
   "title": "",
   "body": ""
 },
@@ -25430,7 +25457,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2238",
   "type": "Exercise",
-  "number": "10.1.6.4",
+  "number": "10.1.6.5",
   "title": "",
   "body": ""
 },
@@ -25439,7 +25466,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2239",
   "type": "Exercise",
-  "number": "10.1.6.5",
+  "number": "10.1.6.6",
   "title": "",
   "body": ""
 },
@@ -25448,7 +25475,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2240",
   "type": "Exercise",
-  "number": "10.1.6.6",
+  "number": "10.1.6.7",
   "title": "",
   "body": ""
 },
@@ -25457,7 +25484,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2241",
   "type": "Exercise",
-  "number": "10.1.6.7",
+  "number": "10.1.6.8",
   "title": "",
   "body": ""
 },
@@ -25466,160 +25493,160 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2242",
   "type": "Exercise",
-  "number": "10.1.6.8",
+  "number": "10.1.6.9",
   "title": "",
-  "body": ""
+  "body": ",   grid      3 to x and log base 3     "
 },
 {
   "id": "exercise-2243",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2243",
   "type": "Exercise",
-  "number": "10.1.6.9",
+  "number": "10.1.6.10",
   "title": "",
-  "body": ",   grid      3 to x and log base 3     "
+  "body": ",   grid    "
 },
 {
   "id": "exercise-2244",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2244",
   "type": "Exercise",
-  "number": "10.1.6.10",
+  "number": "10.1.6.11",
   "title": "",
-  "body": ",   grid    "
+  "body": "    "
 },
 {
   "id": "exercise-2245",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2245",
   "type": "Exercise",
-  "number": "10.1.6.11",
+  "number": "10.1.6.12",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-2246",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2246",
   "type": "Exercise",
-  "number": "10.1.6.12",
+  "number": "10.1.6.13",
   "title": "",
-  "body": "  "
+  "body": ", for and "
 },
 {
   "id": "exercise-2247",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2247",
   "type": "Exercise",
-  "number": "10.1.6.13",
+  "number": "10.1.6.14",
   "title": "",
-  "body": ", for and "
+  "body": ", for , and "
 },
 {
   "id": "exercise-2248",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2248",
   "type": "Exercise",
-  "number": "10.1.6.14",
+  "number": "10.1.6.15",
   "title": "",
-  "body": ", for , and "
+  "body": "    "
 },
 {
   "id": "exercise-2249",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2249",
   "type": "Exercise",
-  "number": "10.1.6.15",
+  "number": "10.1.6.16",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-2250",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2250",
   "type": "Exercise",
-  "number": "10.1.6.16",
+  "number": "10.1.6.17",
   "title": "",
-  "body": "  "
+  "body": "    "
 },
 {
   "id": "exercise-2251",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2251",
   "type": "Exercise",
-  "number": "10.1.6.17",
+  "number": "10.1.6.18",
   "title": "",
-  "body": "    "
+  "body": "  "
 },
 {
   "id": "exercise-2252",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2252",
   "type": "Exercise",
-  "number": "10.1.6.18",
+  "number": "10.1.6.19",
   "title": "",
-  "body": "  "
+  "body": "Let and  Compute  Compute  Compute  Compute  81  4  1.8  "
 },
 {
   "id": "exercise-2253",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2253",
   "type": "Exercise",
-  "number": "10.1.6.19",
+  "number": "10.1.6.20",
   "title": "",
-  "body": "Let and  Compute  Compute  Compute  Compute  81  4  1.8  "
+  "body": "Let and  Compute  Compute  Compute  Compute "
 },
 {
   "id": "exercise-2254",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2254",
   "type": "Exercise",
-  "number": "10.1.6.20",
+  "number": "10.1.6.21",
   "title": "",
-  "body": "Let and  Compute  Compute  Compute  Compute "
+  "body": "Each figure shows a portion of the graph of one of the following functions. Match each function with its graph.  six curves         IV  V  I  II  III  VI "
 },
 {
   "id": "exercise-2255",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2255",
   "type": "Exercise",
-  "number": "10.1.6.21",
+  "number": "10.1.6.22",
   "title": "",
-  "body": "Each figure shows a portion of the graph of one of the following functions. Match each function with its graph.  six curves         IV  V  I  II  III  VI "
+  "body": "Choose the graph for each function described below.  The area, , of a pentagon is a quadratic function of the length , of its side.  The strength, , of a hurricane varies inversely with its speed, .  The price of food has increased 3% every year for a decade.  The magnitude, , of a star is a logarithmic function of its brightness, .  The speed of the train increased at a constant rate.  if you don't practice a foreign language, you lose of the words in your working vocabulary each year.  six curves "
 },
 {
   "id": "exercise-2256",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2256",
   "type": "Exercise",
-  "number": "10.1.6.22",
+  "number": "10.1.6.23",
   "title": "",
-  "body": "Choose the graph for each function described below.  The area, , of a pentagon is a quadratic function of the length , of its side.  The strength, , of a hurricane varies inversely with its speed, .  The price of food has increased 3% every year for a decade.  The magnitude, , of a star is a logarithmic function of its brightness, .  The speed of the train increased at a constant rate.  if you don't practice a foreign language, you lose of the words in your working vocabulary each year.  six curves "
+  "body": " How large must be before the graph of reaches a height of 4?  How large must be before the graph of reaches a height of 8?  10,000  100,000,000 "
 },
 {
   "id": "exercise-2257",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2257",
   "type": "Exercise",
-  "number": "10.1.6.23",
+  "number": "10.1.6.24",
   "title": "",
-  "body": " How large must be before the graph of reaches a height of 4?  How large must be before the graph of reaches a height of 8?  10,000  100,000,000 "
+  "body": " How large must be before the graph of reaches a height of 5?  How large must be before the graph of reaches a height of 10? "
 },
 {
   "id": "exercise-2258",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2258",
   "type": "Exercise",
-  "number": "10.1.6.24",
+  "number": "10.1.6.25",
   "title": "",
-  "body": " How large must be before the graph of reaches a height of 5?  How large must be before the graph of reaches a height of 10? "
+  "body": ""
 },
 {
   "id": "exercise-2259",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2259",
   "type": "Exercise",
-  "number": "10.1.6.25",
+  "number": "10.1.6.26",
   "title": "",
   "body": ""
 },
@@ -25628,59 +25655,50 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2260",
   "type": "Exercise",
-  "number": "10.1.6.26",
+  "number": "10.1.6.27",
   "title": "",
-  "body": ""
+  "body": "3 "
 },
 {
   "id": "exercise-2261",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2261",
   "type": "Exercise",
-  "number": "10.1.6.27",
+  "number": "10.1.6.28",
   "title": "",
-  "body": "3 "
+  "body": ""
 },
 {
   "id": "exercise-2262",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2262",
   "type": "Exercise",
-  "number": "10.1.6.28",
+  "number": "10.1.6.29",
   "title": "",
-  "body": ""
+  "body": "In a psychology experiment, volunteers were asked to memorize a list of nonsense words, and 24 hours later they were tested to see how many of the words they recalled. On average, the subjects had forgotten 20% of the words. The researchers found that the more lists their volunteers memorized, the larger the fraction of words they were unable to recall. (Source: Underwood, Scientific American , vol. 210, no. 3)    Number of lists,         Percent forgotten,          Plot the data. What sort of function seems to fit the data points?  Psychologists often describe rates of forgetting by logarithmic functions. Graph the function on the same graph with your data. Comment on the fit.  What happens to the values of as grows increasingly large? Does this behavior accurately reflect the situation being modeled?   data points and log curve  The graph resembles a logarithmic function. The function is close to the points but appears too steep at first and not steep enough after . Overall, it is a good fit.  grows (more and more slowly) without bound. will eventually exceed per cent, but no one can forget more than 100% of what is learned.  "
 },
 {
   "id": "exercise-2263",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2263",
   "type": "Exercise",
-  "number": "10.1.6.29",
+  "number": "10.1.6.30",
   "title": "",
-  "body": "In a psychology experiment, volunteers were asked to memorize a list of nonsense words, and 24 hours later they were tested to see how many of the words they recalled. On average, the subjects had forgotten 20% of the words. The researchers found that the more lists their volunteers memorized, the larger the fraction of words they were unable to recall. (Source: Underwood, Scientific American , vol. 210, no. 3)    Number of lists,         Percent forgotten,          Plot the data. What sort of function seems to fit the data points?  Psychologists often describe rates of forgetting by logarithmic functions. Graph the function on the same graph with your data. Comment on the fit.  What happens to the values of as grows increasingly large? Does this behavior accurately reflect the situation being modeled?   data points and log curve  The graph resembles a logarithmic function. The function is close to the points but appears too steep at first and not steep enough after . Overall, it is a good fit.  grows (more and more slowly) without bound. will eventually exceed per cent, but no one can forget more than 100% of what is learned.  "
+  "body": "The water velocity at any point in a stream or river is related to the logarithm of the depth at that point. For the Hoback River near Bondurant, Wyoming, where is the velocity of the water, in feet per second, and is the vertical distance from the stream bed, in feet, at that point. For Pole Creek near Pinedale, Wyoming, Both streams are feet deep at the locations mentioned. (Source: Leopold, Luna, Wolman, and Gordon, 1992)  Complete the table of values for each stream.    Distance from bed (feet)         Velocity, Hoback River, (ft\/sec)         Velocity, Pole Creek (ft\/sec)         If you double the distance from the bed, by how much does the velocity increase in each stream?  Plot both functions on the same graph.  The average velocity of the entire stream can be closely approximated as follows: Measure the velocity at 20% of the total depth of the stream from the surface and at 80% of the total depth, then average these two values. Find the average velocity for the Hoback River and for Pole Creek.  "
 },
 {
   "id": "exercise-2264",
   "level": "2",
   "url": "LogarithmicFunctions.html#exercise-2264",
   "type": "Exercise",
-  "number": "10.1.6.30",
-  "title": "",
-  "body": "The water velocity at any point in a stream or river is related to the logarithm of the depth at that point. For the Hoback River near Bondurant, Wyoming, where is the velocity of the water, in feet per second, and is the vertical distance from the stream bed, in feet, at that point. For Pole Creek near Pinedale, Wyoming, Both streams are feet deep at the locations mentioned. (Source: Leopold, Luna, Wolman, and Gordon, 1992)  Complete the table of values for each stream.    Distance from bed (feet)         Velocity, Hoback River, (ft\/sec)         Velocity, Pole Creek (ft\/sec)         If you double the distance from the bed, by how much does the velocity increase in each stream?  Plot both functions on the same graph.  The average velocity of the entire stream can be closely approximated as follows: Measure the velocity at 20% of the total depth of the stream from the surface and at 80% of the total depth, then average these two values. Find the average velocity for the Hoback River and for Pole Creek.  "
-},
-{
-  "id": "exercise-2265",
-  "level": "2",
-  "url": "LogarithmicFunctions.html#exercise-2265",
-  "type": "Exercise",
   "number": "10.1.6.31",
   "title": "",
   "body": "In of this section, we considered a formula for the average life expectancy in the U.S. as a function of years after 1900, According to the formula, in what year was the life expectancy 70 years? 1962 "
 },
 {
-  "id": "exercise-2266",
+  "id": "exercise-2265",
   "level": "2",
-  "url": "LogarithmicFunctions.html#exercise-2266",
+  "url": "LogarithmicFunctions.html#exercise-2265",
   "type": "Exercise",
   "number": "10.1.6.32",
   "title": "",
@@ -25693,12 +25711,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.2",
   "title": "Logarithmic Scales",
-  "body": "Logarithmic Scales logarithm scale logarithmic scale logarithm  Making a Log Scale  Because grows very slowly as increases, logarithms are useful for modeling phenomena that take on a very wide range of values. For example, biologists study how metabolic functions such as heart rate are related to an animal’s weight, or mass. The table shows the mass in kilograms of several mammals.    Animal  Shrew  Cat  Wolf  Horse  Elephant  Whale   Mass, kg         Imagine trying to scale the -axis to show all of these values. If we set tick marks at intervals of 10,000 kg, as shown below, we can plot the mass of the whale, and maybe the elephant, but the dots for the smaller animals will be indistinguishable.  number line with masses of mammals  On the other hand, we can plot the mass of the cat if we set tick marks at intervals of 1 kg, but the axis will have to be extremely long to include even the wolf. We cannot show the masses of all these animals on the same scale  number line with masses of mammals  To get around this problem, we can plot the log of the mass, instead of the mass itself. The table below shows the base 10 log of each animal's mass, rounded to 2 decimal places.    Animal  Shrew  Cat  Wolf  Horse  Elephant  Whale   Mass, kg         Log (mass)         The logs of the masses range from -2.40 to 4.85. We can easily plot these values on a single scale, as shown below.  mammal masses plotted on log scale  The scale above is called a logarithmic scale logarithmic scale , or log scale. The tick marks are labeled with powers of 10, because, as you recall, a logarithm is actually an exponent. exponent (logarithm) For example, the mass of the horse is 300 kg, and When we plot 2.48 for the horse, we are really plotting the power of 10 that gives its mass, because kg. The exponents on base 10 are evenly spaced on a log scale, so we plot about halfway between and .  Plot the values on a log scale.             We actually plot the logs of the values, so we first compute the base 10 logarithm of each number.                     Then we plot each logarithm, estimating its position between integer exponents. For example, we plot the first value, , closer to than to . The finished plot is shown below.  points plotted on log scale   Practice 1  points on logscale    Complete the table by estimating the logarithm of each point plotted on the log scale above. Then use a calculator to give a decimal value for each point.                                                                                            QuickCheck 1   Fill in the blanks.   We use   logarithms    imaginary numbers   for graphing variables that take on a very wide range of values.    The tick marks on a log scale are labeled with   variables    powers of 10   .    To plot values on a log scale, we first compute the   reciprocals    logarithms   of the values.    A fraction less than 1 is plotted on a log scale as a power with a   negative    positive   exponent.                           logarithms    powers of 10    logs    negative          Labeling a Log Scale  Log scales allow us to plot a wide range of values, but there is a trade-off. Equal increments on a log scale do not correspond to equal differences in value, as they do on a linear scale. You can see this more clearly if we label the tick marks with their values, as well as powers of 10. The difference between and is , but the difference between and is .  logscale with integer exponents  As we move from left to right on this scale, we multiply the value at the previous tick mark by 10. Moving up by equal increments on a log scale does not add equal amounts to the values plotted; it multiplies the values by equal factors .  If we would like to label the log scale with integers, we get a very different looking scale, one in which the tick marks are not evenly spaced.  Plot the integer values 2 through 9 and 20 through 90 on a log scale.  We compute the logarithm of each integer value.                                              We plot on a log scale, as shown below.  log scale showing integer points   On the log scale in , notice how the integer values are spaced: They get closer together as they approach the next power of . You will often see log scales labeled not with powers of , but with integer values, like this:  log scale showing tic marks at integer points  In fact, log-log graph paper log-log graph paper scales both axes with logarithmic scales.  Practice 2  mouse-to-elephant curve on log-log graph    The opening page of Chapter 6 shows the mouse-to-elephant curve, a graph of the metabolic rate of mammals as a function of their mass. (The elephant does not appear on that graph, because its mass is too big.) The figure above shows the same function, graphed on log-log paper.  Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.         Animal  Mouse  Dog  Sheep    Mass (kg)       Metabolic rate (kcal\/day)            Animal  Cow  Elephant    Mass (kg)      Metabolic rate (kcal\/day)                                                                  Animal  Mouse  Dog  Sheep  Cow  Elephant    Mass (kg)         Metabolic rate (kcal\/day)              QuickCheck 2   True or False.   Equal increments on a log scale correspond to equal differences in value.   True    False      Moving up by equal increments on a log scale multiplies the values by equal factors.   True    False      If we label a log scale with integers, the tick marks are evenly spaced.   True    False      On log-log graph paper, both axes are labeled with logarithmic scales.   True    False                             False    True    False    True          Acidity and the pH Scale  You may have already encountered log scales in some everyday applications. A simple example is the pH scale pH scale acid (pH) scale , used by chemists to measure the acidity of a substance or chemical compound. This scale is based on the concentration of hydrogen ions in the substance, denoted by . The pH value is defined by the formula Values for pH fall between 0 and 14, with 7 indicating a neutral solution. The lower the pH value, the more acidic the substance. Some common substances and their pH values are shown in the table.     Substance  pH    Battery acid     Lemon juice     Vinegar     Milk     Baking soda     Milk of magnesia     Lye     A decrease of 1 on the pH scale corresponds to an increase in acidity by a factor of 10. Thus, lemon juice is 10 times more acidic than vinegar, and battery acid is 100 times more acidic than vinegar.   Calculate the pH of a solution with a hydrogen ion concentration of .  The water in a swimming pool should be maintained at a pH of 7.5. What is the hydrogen ion concentration of the water?    We use a calculator to evaluate the pH formula with .  We solve the equation for . First, we write Then we convert the equation to exponential form to get The hydrogen ion concentration of the water is .   Practice 3   The pH of the water in a tide pool is 8.3. What is the hydrogen ion concentration of the water?  Answer:               Decibels  The decibel scale decibel scale , used to measure the loudness or intensity of a sound, is another example of a logarithmic scale. The perceived loudness of a sound is measured in decibels, , by where is the intensity of its sound waves (in watts per square meter). The table below shows the intensity of some common sounds, measured in watts per square meter.    Sound  Intensity (watts\/m )  Decibels   Whisper     Background music     Loud conversation     Heavy traffic     Jet airplane     Thunder     Consider the ratio of the intensity of thunder to that of a whisper: Thunder is , or one billion times more intense than a whisper. It would be impossible to show such a wide range of values on a graph. When we use a log scale, however, there is a difference of only 90 decibels between a whisper and thunder.   Normal breathing generates about watts per square meter at a distance of 3 feet. Find the number of decibels for a breath 3 feet away.  Normal conversation registers at about 40 decibels. How many times more intense than breathing is normal conversation?    We evaluate the decibel formula with to find The sound of breathing registers at 10 decibels.  We let stand for the sound intensity of breathing, and stand for the intensity of normal conversation. We are looking for the ratio . From part (a), we know that and we can calculate from the decibels formula. Finally, we compute the ratio : Normal conversation is 1000 times more intense than breathing.   Practice 4   The noise of city traffic registers at about decibels.    What is the intensity of traffic noise, in watts per square meter?  Answer: watts\/m    How many times more intense is traffic noise than conversation?  Answer: times                 watts\/m            Both the decibel model and the Richter scale in the next example use expressions of the form . Be careful to follow the order of operations when using these models. We must compute the quotient before taking a logarithm. In particular, it is not true that can be simplified to .   The Richter Scale Richter scale (or magnitude)  One method for measuring the magnitude of an earthquake compares the amplitude of its seismographic trace with the amplitude of the smallest detectable earthquake. The log of their ratio is the Richter Richter scale (or magnitude) magnitude, . Thus,   The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?  How many times more powerful than the Northridge quake was the San Francisco earthquake of 1989, which registered 7.1 on the Richter scale?    We let represent the amplitude of the Northridge quake and represent the amplitude of a quake 100 times more powerful. From the Richter model, we have or, rewriting in exponential form, Now, we want to be 100 times , so Thus, the magnitude of the more powerful quake is  We let stand for the amplitude of the San Francisco earthquake. We are looking for the ratio . First, we use the Richter formula to compute values for and . Rewriting each equation in exponential form, we have or Now we can compute the ratio we want: The San Francisco earthquake was , or approximately 1.58 times as powerful as the Northridge quake.   Practice 5   In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1?  Answer:        3.16       An earthquake 100, or , times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of units on the Richter scale (or any logarithmic scale) corresponds to a factor of units in the intensity of the quake.  On a log scale, the weights of two animals differ by 1.6 units. What is the ratio of their actual weights?  A difference of 1.6 on a log scale corresponds to a factor of in the actual weights. Thus, the heavier animal is , or 39.8 times as heavy as the lighter animal.  Practice 6   Two points, labeled and differ by units on a log scale. What is the ratio of their decimal values?  Answer:        316.2       QuickCheck 3   True or False.   An increase of 1 on the pH scale corresponds to an increase in acidity by a factor of 10.   True    False      A ratio of sound intensities of one billion corresponds to a difference of 90 decibels.   True    False      The second property of logs says that    True    False      A difference of 3 on a log scale corresponds to a ratio of or 1000.   True    False                             False    True    False    True           Problem Set 10.2  Warm Up  For Problems 1 and 2, bound the base 10 log of the number between two integers. Do not use a calculator!       0 and 1  2 and 3  and 0  6 and 7        For Problems 3 and 4, given , find .       3981.1  5.01  0.00079  0.398         Skills Practice   The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.   log scale with exponents shown      The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.   log scale with exponents shown        log scale with exponents shown      log scale with exponents shown        The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.  log scale with exponents shown  The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.  log scale with exponents shown   Plot the values on a log scale.          logscale  Plot the values on a log scale.           Estimate the decimal value of each point on the log scale.  logscale , , ,  Estimate the decimal value of each point on the log scale.  logscale  In Problems 11 18, use the appropriate formulas for logarithmic models.  The hydrogen ion concentration of vinegar is about . Calculate the pH of vinegar.  The hydrogen ion concentration of spinach is about . Calculate the pH of spinach.  The pH of lime juice is 1.9. Calculate its hydrogen ion concentration.  The pH of ammonia is 9.8. Calculate its hydrogen ion concentration.  A lawn mower generates a noise of intensity watts per square meter. Find the decibel level of the sound of a lawn mower.  A jet airplane generates 100 watts per square meter at a distance of 100 feet. Find the decibel level for a jet airplane.  The loudest sound emitted by any living source is made by the blue whale. Its whistles have been measured at 188 decibels and are detectable 500 miles away. Find the intensity of the blue whale's whistle in watts per square meter. 6,309,573 watts per square meter  The noise of a leaf blower was measured at 110 decibels. What was the intensity of the sound waves?    Applications  The log scale shows various temperatures in Kelvins. Estimate the temperatures of the events indicated.  logscale , , , , ,  The log scale shows the size of various objects, in meters. Estimate the sizes of the objects indicated.  logscale  The magnitude of a star is a measure of its brightness. It is given by the formula where is the luminosity of the star, measured in solar units. Calculate the magnitude of the stars whose luminosities are given in the figure.  star magnitudes on log scale Proxima Centauri: ; Barnard: ; Sirius: ; Vega: ; Arcturus: ; Antares: ; Betelgeuse:  Estimate the wavelength, in meters, of the types of electromagnetic radiation shown in the figure.  radiation wavelength on log scale  Plot the values of in the section \"Acidity and the pH Scale\" on a log scale. pH on log scale  Plot the values of sound intensity in the section \"Decibels\" on a log scale.  The distances to two stars are separated by 3.4 units on a log scale. What is the ratio of their distances?  The populations of two cities are separated by 2.8 units on a log scale. What is the ratio of their populations?  The probability of discovering an oil field increases with its diameter, defined to be the square root of its area. Use the graph to estimate the diameter of the oil fields at the labeled points, and their probability of discovery. (Source: Deffeyes, 2001)  probabilty of discovery vs diameter on log-log  A: , ; B: , ; C: , ; D: ,    The order of a stream is a measure of its size. Use the graph to estimate the drainage area, in square miles, for streams of orders 1 through 4. (Source: Leopold, Wolman, and Miller)  stream drainage vs order on semi-log  The pH of normal rain is 5.6. Some areas of Ontario have experienced acid rain with a pH of 4.5. How many times more acidic is acid rain than normal rain? 12.6  The pH of normal hair is about 5, the average pH of shampoo is 8, and 4 for conditioner. Compare the acidity of normal hair, shampoo, and conditioner.  At a concert by The Who in 1976, the sound level 50 meters from the stage registered 120 decibels. How many times more intense was this than a 90-decibel sound (the threshold of pain for the human ear)?  A refrigerator produces 50 decibels of noise, and a vacuum cleaner produces 85 decibels. How much more intense are the sound waves from a vacuum cleaner than those from a refrigerator?  In 1964, an earthquake in Alaska measured 8.4 on the Richter scale. An earthquake measuring 4.0 is consideredsmall and causes little damage. How many times stronger was the Alaska quake than one measuring 4.0?  On April 30, 1986, an earthquake in Mexico City measured 7.0 on the Richter scale. On September 21, a second earthquake occurred, this one measuring 8.1, hit Mexico City. How many times stronger was the September quake than the one in April?    "
+  "body": "Logarithmic Scales logarithm scale logarithmic scale logarithm  Making a Log Scale  Because grows very slowly as increases, logarithms are useful for modeling phenomena that take on a very wide range of values. For example, biologists study how metabolic functions such as heart rate are related to an animal’s weight, or mass. The table shows the mass in kilograms of several mammals.    Animal  Shrew  Cat  Wolf  Horse  Elephant  Whale   Mass, kg         Imagine trying to scale the -axis to show all of these values. If we set tick marks at intervals of 10,000 kg, as shown below, we can plot the mass of the whale, and maybe the elephant, but the dots for the smaller animals will be indistinguishable.  number line with masses of mammals  On the other hand, we can plot the mass of the cat if we set tick marks at intervals of 1 kg, but the axis will have to be extremely long to include even the wolf. We cannot show the masses of all these animals on the same scale  number line with masses of mammals  To get around this problem, we can plot the log of the mass, instead of the mass itself. The table below shows the base 10 log of each animal's mass, rounded to 2 decimal places.    Animal  Shrew  Cat  Wolf  Horse  Elephant  Whale   Mass, kg         Log (mass)         The logs of the masses range from -2.40 to 4.85. We can easily plot these values on a single scale, as shown below.  mammal masses plotted on log scale  The scale above is called a logarithmic scale logarithmic scale , or log scale. The tick marks are labeled with powers of 10, because, as you recall, a logarithm is actually an exponent. exponent (logarithm) For example, the mass of the horse is 300 kg, and When we plot 2.48 for the horse, we are really plotting the power of 10 that gives its mass, because kg. The exponents on base 10 are evenly spaced on a log scale, so we plot about halfway between and .  Plot the values on a log scale.             We actually plot the logs of the values, so we first compute the base 10 logarithm of each number.                     Then we plot each logarithm, estimating its position between integer exponents. For example, we plot the first value, , closer to than to . The finished plot is shown below.  points plotted on log scale   Practice 1 Complete the table by estimating the logarithm of each point plotted on the log scale below. Then use a calculator to give a decimal value for each point.  points on logscale                                Labeling a Log Scale  Log scales allow us to plot a wide range of values, but there is a trade-off. Equal increments on a log scale do not correspond to equal differences in value, as they do on a linear scale. You can see this more clearly if we label the tick marks with their values, as well as powers of 10. The difference between and is , but the difference between and is .  logscale with integer exponents  As we move from left to right on this scale, we multiply the value at the previous tick mark by 10. Moving up by equal increments on a log scale does not add equal amounts to the values plotted; it multiplies the values by equal factors .  If we would like to label the log scale with integers, we get a very different looking scale, one in which the tick marks are not evenly spaced.  Plot the integer values 2 through 9 and 20 through 90 on a log scale.  We compute the logarithm of each integer value.                                              We plot on a log scale, as shown below.  log scale showing integer points   On the log scale in , notice how the integer values are spaced: They get closer together as they approach the next power of . You will often see log scales labeled not with powers of , but with integer values, like this:  log scale showing tick marks at integer points  In fact, log-log graph paper log-log graph paper scales both axes with logarithmic scales.  Practice 2 The opening page of Chapter 6 shows the \"mouse-to-elephant\" curve, a graph of the metabolic rate of mammals as a function of their mass. (The elephant does not appear on that graph, because its mass is too big.) The figure below shows the same function, graphed on log-log paper.  mouse-to-elephant curve on log-log graph  Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.    Animal  Mouse  Dog  Sheep  Cow  Elephant   Mass (kg)        Metabolic rate (kcal\/day)         Animal  Mouse  Dog  Sheep  Cow  Elephant   Mass (kg)        Metabolic rate (kcal\/day)        QuickCheck 2 True or False.  Equal increments on a log scale correspond to equal differences in value.  Moving up by equal increments on a log scale multiplies the values by equal factors.  If we label a log scale with integers, the tick marks are evenly spaced.  On log-log graph paper, both axes are labeled with logarithmic scales.    Acidity and the pH Scale  You may have already encountered log scales in some everyday applications. A simple example is the pH scale pH scale acid (pH) scale , used by chemists to measure the acidity of a substance or chemical compound. This scale is based on the concentration of hydrogen ions in the substance, denoted by . The pH value is defined by the formula Values for pH fall between 0 and 14, with 7 indicating a neutral solution. The lower the pH value, the more acidic the substance. Some common substances and their pH values are shown in the table.     Substance  pH    Battery acid     Lemon juice     Vinegar     Milk     Baking soda     Milk of magnesia     Lye     A decrease of 1 on the pH scale corresponds to an increase in acidity by a factor of 10. Thus, lemon juice is 10 times more acidic than vinegar, and battery acid is 100 times more acidic than vinegar.   Calculate the pH of a solution with a hydrogen ion concentration of .  The water in a swimming pool should be maintained at a pH of 7.5. What is the hydrogen ion concentration of the water?    We use a calculator to evaluate the pH formula with .  We solve the equation for . First, we write Then we convert the equation to exponential form to get The hydrogen ion concentration of the water is .   Practice 3 The pH of the water in a tide pool is 8.3. What is the hydrogen ion concentration of the water?   Decibels  The decibel scale decibel scale , used to measure the loudness or intensity of a sound, is another example of a logarithmic scale. The perceived loudness of a sound is measured in decibels, , by where is the intensity of its sound waves (in watts per square meter). The table below shows the intensity of some common sounds, measured in watts per square meter.    Sound  Intensity (watts\/m )  Decibels   Whisper     Background music     Loud conversation     Heavy traffic     Jet airplane     Thunder     Consider the ratio of the intensity of thunder to that of a whisper: Thunder is , or one billion times more intense than a whisper. It would be impossible to show such a wide range of values on a graph. When we use a log scale, however, there is a difference of only 90 decibels between a whisper and thunder.   Normal breathing generates about watts per square meter at a distance of 3 feet. Find the number of decibels for a breath 3 feet away.  Normal conversation registers at about 40 decibels. How many times more intense than breathing is normal conversation?   We evaluate the decibel formula with to find The sound of breathing registers at 10 decibels.  We let stand for the sound intensity of breathing, and stand for the intensity of normal conversation. We are looking for the ratio . From part (a), we know that and we can calculate from the decibels formula. Finally, we compute the ratio : Normal conversation is 1000 times more intense than breathing.   Practice 4 The noise of city traffic registers at about decibels.   What is the intensity of traffic noise, in watts per square meter?  How many times more intense is traffic noise than conversation?   watts\/m    Both the decibel model and the Richter scale in the next example use expressions of the form . Be careful to follow the order of operations when using these models. We must compute the quotient before taking a logarithm. In particular, keep in mind that can be simplified to .   The Richter Scale Richter scale (or magnitude)  One method for measuring the magnitude of an earthquake compares the amplitude of its seismographic trace with the amplitude of the smallest detectable earthquake. The log of their ratio is the Richter Richter scale (or magnitude) magnitude, . Thus,   The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?  How many times more powerful than the Northridge quake was the San Francisco earthquake of 1989, which registered 7.1 on the Richter scale?    We let represent the amplitude of the Northridge quake and represent the amplitude of a quake 100 times more powerful. From the Richter model, we have or, rewriting in exponential form, Now, we want to be 100 times , so Thus, the magnitude of the more powerful quake is  We let stand for the amplitude of the San Francisco earthquake. We are looking for the ratio . First, we use the Richter formula to compute values for and . Rewriting each equation in exponential form, we have or Now we can compute the ratio we want: The San Francisco earthquake was , or approximately 1.58 times as powerful as the Northridge quake.   Practice 5 In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1? 3.16  An earthquake 100, or , times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of units on the Richter scale (or any logarithmic scale) corresponds to a factor of units in the intensity of the quake.  On a log scale, the weights of two animals differ by 1.6 units. What is the ratio of their actual weights?  A difference of 1.6 on a log scale corresponds to a factor of in the actual weights. Thus, the heavier animal is , or 39.8 times as heavy as the lighter animal.  Practice 6 Two points, labeled and , differ by units on a log scale. What is the ratio of their decimal values? 316.2  QuickCheck 3 True or False.  An increase of 1 on the pH scale corresponds to an increase in acidity by a factor of 10.  A ratio of sound intensities of one billion corresponds to a difference of 90 decibels.  The second property of logs says that .  A difference of 3 on a log scale corresponds to a ratio of , or 1000.     Problem Set 10.2  Warm Up  For Problems 1 and 2, bound the base 10 log of the number between two integers. Do not use a calculator!       0 and 1  2 and 3  and 0  6 and 7        For Problems 3 and 4, given , find .       3981.1  5.01  0.00079  0.398         Skills Practice   The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.   log scale with exponents shown      The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.   log scale with exponents shown        log scale with exponents shown      log scale with exponents shown        The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.  log scale with exponents shown  The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.  log scale with exponents shown   Plot the values on a log scale.          logscale  Plot the values on a log scale.           Estimate the decimal value of each point on the log scale.  logscale , , ,  Estimate the decimal value of each point on the log scale.  logscale  In Problems 11 18, use the appropriate formulas for logarithmic models.  The hydrogen ion concentration of vinegar is about . Calculate the pH of vinegar.  The hydrogen ion concentration of spinach is about . Calculate the pH of spinach.  The pH of lime juice is 1.9. Calculate its hydrogen ion concentration.  The pH of ammonia is 9.8. Calculate its hydrogen ion concentration.  A lawn mower generates a noise of intensity watts per square meter. Find the decibel level of the sound of a lawn mower.  A jet airplane generates 100 watts per square meter at a distance of 100 feet. Find the decibel level for a jet airplane.  The loudest sound emitted by any living source is made by the blue whale. Its whistles have been measured at 188 decibels and are detectable 500 miles away. Find the intensity of the blue whale's whistle in watts per square meter. 6,309,573 watts per square meter  The noise of a leaf blower was measured at 110 decibels. What was the intensity of the sound waves?    Applications  The log scale shows various temperatures in Kelvins. Estimate the temperatures of the events indicated.  logscale , , , , ,  The log scale shows the size of various objects, in meters. Estimate the sizes of the objects indicated.  logscale  The magnitude of a star is a measure of its brightness. It is given by the formula where is the luminosity of the star, measured in solar units. Calculate the magnitude of the stars whose luminosities are given in the figure.  star magnitudes on log scale Proxima Centauri: ; Barnard: ; Sirius: ; Vega: ; Arcturus: ; Antares: ; Betelgeuse:  Estimate the wavelength, in meters, of the types of electromagnetic radiation shown in the figure.  radiation wavelength on log scale  Plot the values of in the section \"Acidity and the pH Scale\" on a log scale. pH on log scale  Plot the values of sound intensity in the section \"Decibels\" on a log scale.  The distances to two stars are separated by 3.4 units on a log scale. What is the ratio of their distances?  The populations of two cities are separated by 2.8 units on a log scale. What is the ratio of their populations?  The probability of discovering an oil field increases with its diameter, defined to be the square root of its area. Use the graph to estimate the diameter of the oil fields at the labeled points, and their probability of discovery. (Source: Deffeyes, 2001)  probabilty of discovery vs diameter on log-log  A: , ; B: , ; C: , ; D: ,    The order of a stream is a measure of its size. Use the graph to estimate the drainage area, in square miles, for streams of orders 1 through 4. (Source: Leopold, Wolman, and Miller)  stream drainage vs order on semi-log  The pH of normal rain is 5.6. Some areas of Ontario have experienced acid rain with a pH of 4.5. How many times more acidic is acid rain than normal rain? 12.6  The pH of normal hair is about 5, the average pH of shampoo is 8, and 4 for conditioner. Compare the acidity of normal hair, shampoo, and conditioner.  At a concert by The Who in 1976, the sound level 50 meters from the stage registered 120 decibels. How many times more intense was this than a 90-decibel sound (the threshold of pain for the human ear)?  A refrigerator produces 50 decibels of noise, and a vacuum cleaner produces 85 decibels. How much more intense are the sound waves from a vacuum cleaner than those from a refrigerator?  In 1964, an earthquake in Alaska measured 8.4 on the Richter scale. An earthquake measuring 4.0 is consideredsmall and causes little damage. How many times stronger was the Alaska quake than one measuring 4.0?  On April 30, 1986, an earthquake in Mexico City measured 7.0 on the Richter scale. On September 21, a second earthquake occurred, this one measuring 8.1, hit Mexico City. How many times stronger was the September quake than the one in April?    "
 },
 {
-  "id": "p-10517",
+  "id": "p-9641",
   "level": "2",
-  "url": "LogarithmicScales.html#p-10517",
+  "url": "LogarithmicScales.html#p-9641",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25714,63 +25732,54 @@ var ptx_lunr_docs = [
   "body": "Plot the values on a log scale.             We actually plot the logs of the values, so we first compute the base 10 logarithm of each number.                     Then we plot each logarithm, estimating its position between integer exponents. For example, we plot the first value, , closer to than to . The finished plot is shown below.  points plotted on log scale  "
 },
 {
-  "id": "exercise-2267",
+  "id": "exercise-2266",
   "level": "2",
-  "url": "LogarithmicScales.html#exercise-2267",
+  "url": "LogarithmicScales.html#exercise-2266",
   "type": "Checkpoint",
   "number": "10.2.2",
   "title": "Practice 1.",
-  "body": "Practice 1  points on logscale    Complete the table by estimating the logarithm of each point plotted on the log scale above. Then use a calculator to give a decimal value for each point.                                                                                           "
-},
-{
-  "id": "exercise-2268",
-  "level": "2",
-  "url": "LogarithmicScales.html#exercise-2268",
-  "type": "Checkpoint",
-  "number": "10.2.3",
-  "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   Fill in the blanks.   We use   logarithms    imaginary numbers   for graphing variables that take on a very wide range of values.    The tick marks on a log scale are labeled with   variables    powers of 10   .    To plot values on a log scale, we first compute the   reciprocals    logarithms   of the values.    A fraction less than 1 is plotted on a log scale as a power with a   negative    positive   exponent.                           logarithms    powers of 10    logs    negative        "
+  "body": "Practice 1 Complete the table by estimating the logarithm of each point plotted on the log scale below. Then use a calculator to give a decimal value for each point.  points on logscale                              "
 },
 {
   "id": "example-logscale-integer-labels",
   "level": "2",
   "url": "LogarithmicScales.html#example-logscale-integer-labels",
   "type": "Example",
-  "number": "10.2.4",
+  "number": "10.2.3",
   "title": "",
   "body": "Plot the integer values 2 through 9 and 20 through 90 on a log scale.  We compute the logarithm of each integer value.                                              We plot on a log scale, as shown below.  log scale showing integer points  "
 },
 {
-  "id": "p-10559",
+  "id": "p-9653",
   "level": "2",
-  "url": "LogarithmicScales.html#p-10559",
+  "url": "LogarithmicScales.html#p-9653",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "log-log graph paper "
 },
 {
-  "id": "exercise-2269",
+  "id": "exercise-2267",
   "level": "2",
-  "url": "LogarithmicScales.html#exercise-2269",
+  "url": "LogarithmicScales.html#exercise-2267",
+  "type": "Checkpoint",
+  "number": "10.2.4",
+  "title": "Practice 2.",
+  "body": "Practice 2 The opening page of Chapter 6 shows the \"mouse-to-elephant\" curve, a graph of the metabolic rate of mammals as a function of their mass. (The elephant does not appear on that graph, because its mass is too big.) The figure below shows the same function, graphed on log-log paper.  mouse-to-elephant curve on log-log graph  Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.    Animal  Mouse  Dog  Sheep  Cow  Elephant   Mass (kg)        Metabolic rate (kcal\/day)         Animal  Mouse  Dog  Sheep  Cow  Elephant   Mass (kg)        Metabolic rate (kcal\/day)       "
+},
+{
+  "id": "exercise-2268",
+  "level": "2",
+  "url": "LogarithmicScales.html#exercise-2268",
   "type": "Checkpoint",
   "number": "10.2.5",
-  "title": "Practice 2.",
-  "body": "Practice 2  mouse-to-elephant curve on log-log graph    The opening page of Chapter 6 shows the mouse-to-elephant curve, a graph of the metabolic rate of mammals as a function of their mass. (The elephant does not appear on that graph, because its mass is too big.) The figure above shows the same function, graphed on log-log paper.  Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.         Animal  Mouse  Dog  Sheep    Mass (kg)       Metabolic rate (kcal\/day)            Animal  Cow  Elephant    Mass (kg)      Metabolic rate (kcal\/day)                                                                  Animal  Mouse  Dog  Sheep  Cow  Elephant    Mass (kg)         Metabolic rate (kcal\/day)             "
-},
-{
-  "id": "exercise-2270",
-  "level": "2",
-  "url": "LogarithmicScales.html#exercise-2270",
-  "type": "Checkpoint",
-  "number": "10.2.6",
   "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   True or False.   Equal increments on a log scale correspond to equal differences in value.   True    False      Moving up by equal increments on a log scale multiplies the values by equal factors.   True    False      If we label a log scale with integers, the tick marks are evenly spaced.   True    False      On log-log graph paper, both axes are labeled with logarithmic scales.   True    False                             False    True    False    True        "
+  "body": "QuickCheck 2 True or False.  Equal increments on a log scale correspond to equal differences in value.  Moving up by equal increments on a log scale multiplies the values by equal factors.  If we label a log scale with integers, the tick marks are evenly spaced.  On log-log graph paper, both axes are labeled with logarithmic scales.  "
 },
 {
-  "id": "p-10594",
+  "id": "p-9661",
   "level": "2",
-  "url": "LogarithmicScales.html#p-10594",
+  "url": "LogarithmicScales.html#p-9661",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25781,23 +25790,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicScales.html#example-pH",
   "type": "Example",
-  "number": "10.2.7",
+  "number": "10.2.6",
   "title": "",
   "body": " Calculate the pH of a solution with a hydrogen ion concentration of .  The water in a swimming pool should be maintained at a pH of 7.5. What is the hydrogen ion concentration of the water?    We use a calculator to evaluate the pH formula with .  We solve the equation for . First, we write Then we convert the equation to exponential form to get The hydrogen ion concentration of the water is .  "
 },
 {
-  "id": "exercise-2271",
+  "id": "exercise-2269",
   "level": "2",
-  "url": "LogarithmicScales.html#exercise-2271",
+  "url": "LogarithmicScales.html#exercise-2269",
   "type": "Checkpoint",
-  "number": "10.2.8",
+  "number": "10.2.7",
   "title": "Practice 3.",
-  "body": "Practice 3   The pH of the water in a tide pool is 8.3. What is the hydrogen ion concentration of the water?  Answer:             "
+  "body": "Practice 3 The pH of the water in a tide pool is 8.3. What is the hydrogen ion concentration of the water? "
 },
 {
-  "id": "p-10603",
+  "id": "p-9668",
   "level": "2",
-  "url": "LogarithmicScales.html#p-10603",
+  "url": "LogarithmicScales.html#p-9668",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -25808,52 +25817,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicScales.html#example-decibels",
   "type": "Example",
-  "number": "10.2.9",
+  "number": "10.2.8",
   "title": "",
-  "body": " Normal breathing generates about watts per square meter at a distance of 3 feet. Find the number of decibels for a breath 3 feet away.  Normal conversation registers at about 40 decibels. How many times more intense than breathing is normal conversation?    We evaluate the decibel formula with to find The sound of breathing registers at 10 decibels.  We let stand for the sound intensity of breathing, and stand for the intensity of normal conversation. We are looking for the ratio . From part (a), we know that and we can calculate from the decibels formula. Finally, we compute the ratio : Normal conversation is 1000 times more intense than breathing.  "
+  "body": " Normal breathing generates about watts per square meter at a distance of 3 feet. Find the number of decibels for a breath 3 feet away.  Normal conversation registers at about 40 decibels. How many times more intense than breathing is normal conversation?   We evaluate the decibel formula with to find The sound of breathing registers at 10 decibels.  We let stand for the sound intensity of breathing, and stand for the intensity of normal conversation. We are looking for the ratio . From part (a), we know that and we can calculate from the decibels formula. Finally, we compute the ratio : Normal conversation is 1000 times more intense than breathing.  "
 },
 {
-  "id": "exercise-2272",
+  "id": "exercise-2270",
   "level": "2",
-  "url": "LogarithmicScales.html#exercise-2272",
+  "url": "LogarithmicScales.html#exercise-2270",
   "type": "Checkpoint",
-  "number": "10.2.10",
+  "number": "10.2.9",
   "title": "Practice 4.",
-  "body": "Practice 4   The noise of city traffic registers at about decibels.    What is the intensity of traffic noise, in watts per square meter?  Answer: watts\/m    How many times more intense is traffic noise than conversation?  Answer: times                 watts\/m           "
+  "body": "Practice 4 The noise of city traffic registers at about decibels.   What is the intensity of traffic noise, in watts per square meter?  How many times more intense is traffic noise than conversation?   watts\/m   "
 },
 {
-  "id": "warning-49",
+  "id": "warning-48",
   "level": "2",
-  "url": "LogarithmicScales.html#warning-49",
+  "url": "LogarithmicScales.html#warning-48",
   "type": "Caution",
-  "number": "10.2.11",
+  "number": "10.2.10",
   "title": "",
-  "body": "Both the decibel model and the Richter scale in the next example use expressions of the form . Be careful to follow the order of operations when using these models. We must compute the quotient before taking a logarithm. In particular, it is not true that can be simplified to . "
+  "body": "Both the decibel model and the Richter scale in the next example use expressions of the form . Be careful to follow the order of operations when using these models. We must compute the quotient before taking a logarithm. In particular, keep in mind that can be simplified to . "
 },
 {
   "id": "example-northridge-earthquake",
   "level": "2",
   "url": "LogarithmicScales.html#example-northridge-earthquake",
   "type": "Example",
-  "number": "10.2.12",
+  "number": "10.2.11",
   "title": "",
   "body": " The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?  How many times more powerful than the Northridge quake was the San Francisco earthquake of 1989, which registered 7.1 on the Richter scale?    We let represent the amplitude of the Northridge quake and represent the amplitude of a quake 100 times more powerful. From the Richter model, we have or, rewriting in exponential form, Now, we want to be 100 times , so Thus, the magnitude of the more powerful quake is  We let stand for the amplitude of the San Francisco earthquake. We are looking for the ratio . First, we use the Richter formula to compute values for and . Rewriting each equation in exponential form, we have or Now we can compute the ratio we want: The San Francisco earthquake was , or approximately 1.58 times as powerful as the Northridge quake.  "
 },
 {
-  "id": "exercise-2273",
+  "id": "exercise-2271",
   "level": "2",
-  "url": "LogarithmicScales.html#exercise-2273",
+  "url": "LogarithmicScales.html#exercise-2271",
   "type": "Checkpoint",
-  "number": "10.2.13",
+  "number": "10.2.12",
   "title": "Practice 5.",
-  "body": "Practice 5   In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1?  Answer:        3.16      "
+  "body": "Practice 5 In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1? 3.16 "
 },
 {
-  "id": "note-26",
+  "id": "note-27",
   "level": "2",
-  "url": "LogarithmicScales.html#note-26",
+  "url": "LogarithmicScales.html#note-27",
   "type": "Note",
-  "number": "10.2.14",
+  "number": "10.2.13",
   "title": "",
   "body": "An earthquake 100, or , times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of units on the Richter scale (or any logarithmic scale) corresponds to a factor of units in the intensity of the quake. "
 },
@@ -25862,43 +25871,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicScales.html#example-compare-logscale",
   "type": "Example",
-  "number": "10.2.15",
+  "number": "10.2.14",
   "title": "",
   "body": "On a log scale, the weights of two animals differ by 1.6 units. What is the ratio of their actual weights?  A difference of 1.6 on a log scale corresponds to a factor of in the actual weights. Thus, the heavier animal is , or 39.8 times as heavy as the lighter animal. "
+},
+{
+  "id": "exercise-2272",
+  "level": "2",
+  "url": "LogarithmicScales.html#exercise-2272",
+  "type": "Checkpoint",
+  "number": "10.2.15",
+  "title": "Practice 6.",
+  "body": "Practice 6 Two points, labeled and , differ by units on a log scale. What is the ratio of their decimal values? 316.2 "
+},
+{
+  "id": "exercise-2273",
+  "level": "2",
+  "url": "LogarithmicScales.html#exercise-2273",
+  "type": "Checkpoint",
+  "number": "10.2.16",
+  "title": "QuickCheck 3.",
+  "body": "QuickCheck 3 True or False.  An increase of 1 on the pH scale corresponds to an increase in acidity by a factor of 10.  A ratio of sound intensities of one billion corresponds to a difference of 90 decibels.  The second property of logs says that .  A difference of 3 on a log scale corresponds to a ratio of , or 1000.  "
 },
 {
   "id": "exercise-2274",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2274",
-  "type": "Checkpoint",
-  "number": "10.2.16",
-  "title": "Practice 6.",
-  "body": "Practice 6   Two points, labeled and differ by units on a log scale. What is the ratio of their decimal values?  Answer:        316.2      "
-},
-{
-  "id": "exercise-2275",
-  "level": "2",
-  "url": "LogarithmicScales.html#exercise-2275",
-  "type": "Checkpoint",
-  "number": "10.2.17",
-  "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   True or False.   An increase of 1 on the pH scale corresponds to an increase in acidity by a factor of 10.   True    False      A ratio of sound intensities of one billion corresponds to a difference of 90 decibels.   True    False      The second property of logs says that    True    False      A difference of 3 on a log scale corresponds to a ratio of or 1000.   True    False                             False    True    False    True        "
-},
-{
-  "id": "exercise-2276",
-  "level": "2",
-  "url": "LogarithmicScales.html#exercise-2276",
   "type": "Exercise",
   "number": "10.2.6.1",
   "title": "",
   "body": "     0 and 1  2 and 3  and 0  6 and 7 "
 },
 {
+  "id": "exercise-2275",
+  "level": "2",
+  "url": "LogarithmicScales.html#exercise-2275",
+  "type": "Exercise",
+  "number": "10.2.6.2",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "exercise-2276",
+  "level": "2",
+  "url": "LogarithmicScales.html#exercise-2276",
+  "type": "Exercise",
+  "number": "10.2.6.3",
+  "title": "",
+  "body": "     3981.1  5.01  0.00079  0.398 "
+},
+{
   "id": "exercise-2277",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2277",
   "type": "Exercise",
-  "number": "10.2.6.2",
+  "number": "10.2.6.4",
   "title": "",
   "body": "    "
 },
@@ -25907,284 +25934,266 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2278",
   "type": "Exercise",
-  "number": "10.2.6.3",
+  "number": "10.2.6.5",
   "title": "",
-  "body": "     3981.1  5.01  0.00079  0.398 "
+  "body": " The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.   log scale with exponents shown      The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.   log scale with exponents shown        log scale with exponents shown      log scale with exponents shown      "
 },
 {
   "id": "exercise-2279",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2279",
   "type": "Exercise",
-  "number": "10.2.6.4",
+  "number": "10.2.6.6",
   "title": "",
-  "body": "    "
+  "body": " The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.  log scale with exponents shown  The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.  log scale with exponents shown  "
 },
 {
   "id": "exercise-2280",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2280",
   "type": "Exercise",
-  "number": "10.2.6.5",
+  "number": "10.2.6.7",
   "title": "",
-  "body": " The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.   log scale with exponents shown      The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.   log scale with exponents shown        log scale with exponents shown      log scale with exponents shown      "
+  "body": "Plot the values on a log scale.          logscale "
 },
 {
   "id": "exercise-2281",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2281",
   "type": "Exercise",
-  "number": "10.2.6.6",
+  "number": "10.2.6.8",
   "title": "",
-  "body": " The log scale is labeled with powers of 10. Finish labeling the tick marks in the figure with their corresponding decimal values.  log scale with exponents shown  The log scale is labeled with integer values. Label the tick marks in the figure with the corresponding powers of 10.  log scale with exponents shown  "
+  "body": "Plot the values on a log scale.          "
 },
 {
   "id": "exercise-2282",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2282",
   "type": "Exercise",
-  "number": "10.2.6.7",
+  "number": "10.2.6.9",
   "title": "",
-  "body": "Plot the values on a log scale.          logscale "
+  "body": "Estimate the decimal value of each point on the log scale.  logscale , , , "
 },
 {
   "id": "exercise-2283",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2283",
   "type": "Exercise",
-  "number": "10.2.6.8",
+  "number": "10.2.6.10",
   "title": "",
-  "body": "Plot the values on a log scale.          "
+  "body": "Estimate the decimal value of each point on the log scale.  logscale "
 },
 {
   "id": "exercise-2284",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2284",
   "type": "Exercise",
-  "number": "10.2.6.9",
+  "number": "10.2.6.11",
   "title": "",
-  "body": "Estimate the decimal value of each point on the log scale.  logscale , , , "
+  "body": "The hydrogen ion concentration of vinegar is about . Calculate the pH of vinegar. "
 },
 {
   "id": "exercise-2285",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2285",
   "type": "Exercise",
-  "number": "10.2.6.10",
+  "number": "10.2.6.12",
   "title": "",
-  "body": "Estimate the decimal value of each point on the log scale.  logscale "
+  "body": "The hydrogen ion concentration of spinach is about . Calculate the pH of spinach. "
 },
 {
   "id": "exercise-2286",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2286",
   "type": "Exercise",
-  "number": "10.2.6.11",
+  "number": "10.2.6.13",
   "title": "",
-  "body": "The hydrogen ion concentration of vinegar is about . Calculate the pH of vinegar. "
+  "body": "The pH of lime juice is 1.9. Calculate its hydrogen ion concentration. "
 },
 {
   "id": "exercise-2287",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2287",
   "type": "Exercise",
-  "number": "10.2.6.12",
+  "number": "10.2.6.14",
   "title": "",
-  "body": "The hydrogen ion concentration of spinach is about . Calculate the pH of spinach. "
+  "body": "The pH of ammonia is 9.8. Calculate its hydrogen ion concentration. "
 },
 {
   "id": "exercise-2288",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2288",
   "type": "Exercise",
-  "number": "10.2.6.13",
+  "number": "10.2.6.15",
   "title": "",
-  "body": "The pH of lime juice is 1.9. Calculate its hydrogen ion concentration. "
+  "body": "A lawn mower generates a noise of intensity watts per square meter. Find the decibel level of the sound of a lawn mower. "
 },
 {
   "id": "exercise-2289",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2289",
   "type": "Exercise",
-  "number": "10.2.6.14",
+  "number": "10.2.6.16",
   "title": "",
-  "body": "The pH of ammonia is 9.8. Calculate its hydrogen ion concentration. "
+  "body": "A jet airplane generates 100 watts per square meter at a distance of 100 feet. Find the decibel level for a jet airplane. "
 },
 {
   "id": "exercise-2290",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2290",
   "type": "Exercise",
-  "number": "10.2.6.15",
+  "number": "10.2.6.17",
   "title": "",
-  "body": "A lawn mower generates a noise of intensity watts per square meter. Find the decibel level of the sound of a lawn mower. "
+  "body": "The loudest sound emitted by any living source is made by the blue whale. Its whistles have been measured at 188 decibels and are detectable 500 miles away. Find the intensity of the blue whale's whistle in watts per square meter. 6,309,573 watts per square meter "
 },
 {
   "id": "exercise-2291",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2291",
   "type": "Exercise",
-  "number": "10.2.6.16",
+  "number": "10.2.6.18",
   "title": "",
-  "body": "A jet airplane generates 100 watts per square meter at a distance of 100 feet. Find the decibel level for a jet airplane. "
+  "body": "The noise of a leaf blower was measured at 110 decibels. What was the intensity of the sound waves? "
 },
 {
   "id": "exercise-2292",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2292",
   "type": "Exercise",
-  "number": "10.2.6.17",
+  "number": "10.2.6.19",
   "title": "",
-  "body": "The loudest sound emitted by any living source is made by the blue whale. Its whistles have been measured at 188 decibels and are detectable 500 miles away. Find the intensity of the blue whale's whistle in watts per square meter. 6,309,573 watts per square meter "
+  "body": "The log scale shows various temperatures in Kelvins. Estimate the temperatures of the events indicated.  logscale , , , , , "
 },
 {
   "id": "exercise-2293",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2293",
   "type": "Exercise",
-  "number": "10.2.6.18",
+  "number": "10.2.6.20",
   "title": "",
-  "body": "The noise of a leaf blower was measured at 110 decibels. What was the intensity of the sound waves? "
+  "body": "The log scale shows the size of various objects, in meters. Estimate the sizes of the objects indicated.  logscale "
 },
 {
   "id": "exercise-2294",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2294",
   "type": "Exercise",
-  "number": "10.2.6.19",
+  "number": "10.2.6.21",
   "title": "",
-  "body": "The log scale shows various temperatures in Kelvins. Estimate the temperatures of the events indicated.  logscale , , , , , "
+  "body": "The magnitude of a star is a measure of its brightness. It is given by the formula where is the luminosity of the star, measured in solar units. Calculate the magnitude of the stars whose luminosities are given in the figure.  star magnitudes on log scale Proxima Centauri: ; Barnard: ; Sirius: ; Vega: ; Arcturus: ; Antares: ; Betelgeuse: "
 },
 {
   "id": "exercise-2295",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2295",
   "type": "Exercise",
-  "number": "10.2.6.20",
+  "number": "10.2.6.22",
   "title": "",
-  "body": "The log scale shows the size of various objects, in meters. Estimate the sizes of the objects indicated.  logscale "
+  "body": "Estimate the wavelength, in meters, of the types of electromagnetic radiation shown in the figure.  radiation wavelength on log scale "
 },
 {
   "id": "exercise-2296",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2296",
   "type": "Exercise",
-  "number": "10.2.6.21",
+  "number": "10.2.6.23",
   "title": "",
-  "body": "The magnitude of a star is a measure of its brightness. It is given by the formula where is the luminosity of the star, measured in solar units. Calculate the magnitude of the stars whose luminosities are given in the figure.  star magnitudes on log scale Proxima Centauri: ; Barnard: ; Sirius: ; Vega: ; Arcturus: ; Antares: ; Betelgeuse: "
+  "body": "Plot the values of in the section \"Acidity and the pH Scale\" on a log scale. pH on log scale "
 },
 {
   "id": "exercise-2297",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2297",
   "type": "Exercise",
-  "number": "10.2.6.22",
+  "number": "10.2.6.24",
   "title": "",
-  "body": "Estimate the wavelength, in meters, of the types of electromagnetic radiation shown in the figure.  radiation wavelength on log scale "
+  "body": "Plot the values of sound intensity in the section \"Decibels\" on a log scale. "
 },
 {
   "id": "exercise-2298",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2298",
   "type": "Exercise",
-  "number": "10.2.6.23",
+  "number": "10.2.6.25",
   "title": "",
-  "body": "Plot the values of in the section \"Acidity and the pH Scale\" on a log scale. pH on log scale "
+  "body": "The distances to two stars are separated by 3.4 units on a log scale. What is the ratio of their distances? "
 },
 {
   "id": "exercise-2299",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2299",
   "type": "Exercise",
-  "number": "10.2.6.24",
+  "number": "10.2.6.26",
   "title": "",
-  "body": "Plot the values of sound intensity in the section \"Decibels\" on a log scale. "
+  "body": "The populations of two cities are separated by 2.8 units on a log scale. What is the ratio of their populations? "
 },
 {
   "id": "exercise-2300",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2300",
   "type": "Exercise",
-  "number": "10.2.6.25",
+  "number": "10.2.6.27",
   "title": "",
-  "body": "The distances to two stars are separated by 3.4 units on a log scale. What is the ratio of their distances? "
+  "body": "The probability of discovering an oil field increases with its diameter, defined to be the square root of its area. Use the graph to estimate the diameter of the oil fields at the labeled points, and their probability of discovery. (Source: Deffeyes, 2001)  probabilty of discovery vs diameter on log-log  A: , ; B: , ; C: , ; D: , "
 },
 {
   "id": "exercise-2301",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2301",
   "type": "Exercise",
-  "number": "10.2.6.26",
+  "number": "10.2.6.28",
   "title": "",
-  "body": "The populations of two cities are separated by 2.8 units on a log scale. What is the ratio of their populations? "
+  "body": "  The order of a stream is a measure of its size. Use the graph to estimate the drainage area, in square miles, for streams of orders 1 through 4. (Source: Leopold, Wolman, and Miller)  stream drainage vs order on semi-log "
 },
 {
   "id": "exercise-2302",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2302",
   "type": "Exercise",
-  "number": "10.2.6.27",
+  "number": "10.2.6.29",
   "title": "",
-  "body": "The probability of discovering an oil field increases with its diameter, defined to be the square root of its area. Use the graph to estimate the diameter of the oil fields at the labeled points, and their probability of discovery. (Source: Deffeyes, 2001)  probabilty of discovery vs diameter on log-log  A: , ; B: , ; C: , ; D: , "
+  "body": "The pH of normal rain is 5.6. Some areas of Ontario have experienced acid rain with a pH of 4.5. How many times more acidic is acid rain than normal rain? 12.6 "
 },
 {
   "id": "exercise-2303",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2303",
   "type": "Exercise",
-  "number": "10.2.6.28",
+  "number": "10.2.6.30",
   "title": "",
-  "body": "  The order of a stream is a measure of its size. Use the graph to estimate the drainage area, in square miles, for streams of orders 1 through 4. (Source: Leopold, Wolman, and Miller)  stream drainage vs order on semi-log "
+  "body": "The pH of normal hair is about 5, the average pH of shampoo is 8, and 4 for conditioner. Compare the acidity of normal hair, shampoo, and conditioner. "
 },
 {
   "id": "exercise-2304",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2304",
   "type": "Exercise",
-  "number": "10.2.6.29",
+  "number": "10.2.6.31",
   "title": "",
-  "body": "The pH of normal rain is 5.6. Some areas of Ontario have experienced acid rain with a pH of 4.5. How many times more acidic is acid rain than normal rain? 12.6 "
+  "body": "At a concert by The Who in 1976, the sound level 50 meters from the stage registered 120 decibels. How many times more intense was this than a 90-decibel sound (the threshold of pain for the human ear)? "
 },
 {
   "id": "exercise-2305",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2305",
   "type": "Exercise",
-  "number": "10.2.6.30",
+  "number": "10.2.6.32",
   "title": "",
-  "body": "The pH of normal hair is about 5, the average pH of shampoo is 8, and 4 for conditioner. Compare the acidity of normal hair, shampoo, and conditioner. "
+  "body": "A refrigerator produces 50 decibels of noise, and a vacuum cleaner produces 85 decibels. How much more intense are the sound waves from a vacuum cleaner than those from a refrigerator? "
 },
 {
   "id": "exercise-2306",
   "level": "2",
   "url": "LogarithmicScales.html#exercise-2306",
   "type": "Exercise",
-  "number": "10.2.6.31",
-  "title": "",
-  "body": "At a concert by The Who in 1976, the sound level 50 meters from the stage registered 120 decibels. How many times more intense was this than a 90-decibel sound (the threshold of pain for the human ear)? "
-},
-{
-  "id": "exercise-2307",
-  "level": "2",
-  "url": "LogarithmicScales.html#exercise-2307",
-  "type": "Exercise",
-  "number": "10.2.6.32",
-  "title": "",
-  "body": "A refrigerator produces 50 decibels of noise, and a vacuum cleaner produces 85 decibels. How much more intense are the sound waves from a vacuum cleaner than those from a refrigerator? "
-},
-{
-  "id": "exercise-2308",
-  "level": "2",
-  "url": "LogarithmicScales.html#exercise-2308",
-  "type": "Exercise",
   "number": "10.2.6.33",
   "title": "",
   "body": "In 1964, an earthquake in Alaska measured 8.4 on the Richter scale. An earthquake measuring 4.0 is consideredsmall and causes little damage. How many times stronger was the Alaska quake than one measuring 4.0? "
 },
 {
-  "id": "exercise-2309",
+  "id": "exercise-2307",
   "level": "2",
-  "url": "LogarithmicScales.html#exercise-2309",
+  "url": "LogarithmicScales.html#exercise-2307",
   "type": "Exercise",
   "number": "10.2.6.34",
   "title": "",
@@ -26197,43 +26206,43 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.3",
   "title": "The Natural Base",
-  "body": " The Natural Base natural base natural base e e  There is another base for logarithms and exponential functions that is often used in applications. This base is an irrational number called , where The number is essential for many advanced topics, and it is often called the natural base . natural base  The Natural Exponential Function  The natural exponential function natural exponential function exponential function exponential function natural function natural exponential e is the function . Values for can be obtained with a calculator using the key ( 2nd  LN on most calculators). For example, you can evaluate by pressing  2nd  LN   to confirm the value of given above.  Practice 1   Use your calculator to evaluate the following powers.                                            Because is a number between 2 and 3, the graph of lies between the graphs of and . Compare the tables of values and the graphs of the three functions below. You can verify the table and graphs on your caclulator.                                             graph of 3 exponential functions   QuickCheck 1   The value of is closest to                      7       Graph each function. How does each graph differ from the graph of ?      translates of exponential     The graph of is shifted units to the left of . The graph of is shifted units up from . The graphs are shown above.   The Natural Logarithmic Function  The base e logarithm of a number , or , is called the natural logarithm natural logarithm of and is denoted by .  The Natural Logarithm natural logarithm  The natural logarithm is the logarithm base .   The natural logarithm of is the exponent to which must be raised to produce . For example, the natural logarithm of , or , is the solution of the equation You can verify on your calculator that In general, natural logs obey the same conversion formulas that work for logs to other bases.  Conversion Formulas for Natural Logs   QuickCheck 2   Which of the following is equivalent to ?                            In particular,  As is the case with exponential and log functions with other bases, the natural log function natural log function , and the natural exponential function, , \"undo\" each other, so they are inverse functions.  Graph and on the same grid.  We can make a table of values for by interchanging the columns in the table for . Plotting the points gives us the graph below.                             graphs of ln and natural exponential  You can see from the graph that the natural log function has only positive numbers as input values. The natural logs of negative numbers and zero are undefined. You can also see that the natural log of a number greater than 1 is positive, while the logs of fractions between 0 and 1 are negative.  Practice 2   Use your calculator to evaluate each logarithm. Round your answers to four decimal places.                                             The three properties of logarithms also apply to base logarithms.  Properties of Natural Logarithms  If , then     If , is undefined.  And because the functions and are inverse functions, the following properties are also true.  The Natural Log and   Simplify each expression.      The natural log is the log base , and hence the inverse of . Therefore,  First, we simplify the exponent using the third property of logs to get Then .   Practice 3   Simplify each expression. Use sqrt(x) to get                                   Solving Equations  We use the natural logarithm to solve exponential equations with base . The techniques we've learned for solving other exponential equations also apply to equations with base . exponential equation exponential equation solving with logarithms  Solve each equation for .      We convert the equation to logarithmic form and evaluate using a calculator.  We convert the equation to exponential form and evaluate.   Practice 4   Solve each equation. Round your answers to four decimal places.                                   QuickCheck 3   Why is the equation easier to solve than ?    8 is larger than 6.5.    is a constant.    There is a button for log base on the calculator, but not a button for log base 8.    Because is an irrational number.          There is a button for log base on the calculator, but not a button for log base 8.       To solve more complicated exponential equations, we isolate the power on one side of the equation before converting to logarithmic form. exponential equation solving  Solve  First, we divide each side by to obtain Then we convert the equation to logarithmic form. Rounded to four decimal places, .  We can also solve the equation in the Example above, by taking the natural logarithm of both sides. This gives us because for any number . We then proceed with the solution as before.  Practice 5   Solve                Solve for .  We multiply both sides of the equation by the denominator, , to get Then we isolate the power, , as follows: Next, we take the natural logarithm of both sides to get and recall that to simplify the left side. Finally, we divide both sides by to solve for .  Practice 6   Solve for                    Exponential Growth and Decay  Recall that functions of the form describe exponential growth when and exponential decay when . Exponential growth and decay can also be modeled by functions of the form where we have substituted for the growth factor , so that We can find the value of by solving the equation for , to get . exponential decay exponential growth  For instance, consider a colony of bacteria that grows according to the formula We can express this function in the form if we set Thus, the growth law for the colony of bacteria can be written By graphing both functions on your calculator, you can verify that are just two ways of writing the same function.  From 1990 to 2000, the population of Clark County, Nevada, grew by per year.  What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was 768,000 in 1990, write a formula for the population years later.  Write a growth formula for Clark County using base .    The growth factor was . The population years later was  We use the formula , where . Solving for , we find so .   Practice 7   From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula where in 1994 and is in millions. (Source: Los Angeles Times, September 6, 1999)    Evaluate . By what percent did the number of Internet users grow in one year?  About %    Express the growth law in the form                                     If is negative, then is a fraction less than . For example, if , Thus, for negative values of , the function describes exponential decay.   Exponential Growth and Decay exponential growth exponential decay  The function describes exponential growth if , and exponential decay if .   QuickCheck 4   The natural log of a fraction between 0 and 1 is    positive.    negative.    undefined.    between and .          negative.       Express the decay law in the form .  For this decay law, and . We would like to find a value for so that , that is, we must solve the equation Replacing with , we find that the decay law is  Practice 8   A scientist isolates grams of krypton-91, which decays according to the formula   where is in seconds.   Complete the table of values showing the amount of krypton-91 left at -second intervals over the first minute.                                           Use the table to choose a suitable window and graph the function    Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay?                None of the above    Answer: seconds     If of the krypton-91 has decayed, of the original grams remains.                                                                                  A graph is below.     seconds         Graph for part (b)  decay    Continuous Compounding  Some savings institutions offer accounts on which the interest is compounded continuously compounded continuously . The amount accumulated in such an account after years at interest rate is given by the function where is the principal invested.  Suppose you invest $500 in an account that pays 8% interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.  Write a formula that gives the value of your account after years.  Make a table of values showing for the first 5 years.  Graph the function .  How much will the account be worth after 10 years?  How long will it be before the account is worth $1000?    We substitute 500 for , and 0.08 for to find  We evaluate the formula for to obtain a table.                          graph of continuous compounded interest  The graph of is shown above.  We evaluate for . The account will be worth $1112.77 after 10 years.  We substitute 1000 for and solve the equation. The account will be worth $1000 after approximately 8.7 years.   Practice 9   Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000?  Answer: about years.        About 15.4 years       Interest Compounded Continuously  We learned in that the amount, (principal plus interest), accumulated in an account with interest compounded times annually is where is the principal invested, is the interest rate, and is the time period, in years.   Suppose you keep in an account that pays 8% interest. How much is the amount after 1 year if the interest is compounded twice a year? Four times a year?  What happens to as we increase , the number of compounding periods per year? Fill in the table showing the amount in the account for different values of .        (annually)    (semiannually)    (quarterly)    (bimonthly)    (monthly)    (daily)          grid  Plot the values in the table from to , and connect them with a smooth curve. Describe the curve: What is happening to the value of ?  In part (2), as you increased the value of , the other parameters in the formula stayed the same. In other words, is a function of , given by . Use your calculator to graph A on successively larger intervals:      Use the Trace feature or the Table feature to evaluate for very large values of . Rounded to the nearest penny, what is the largest value of that you can find?  As increases, the values of approach a limiting value. Although continues to increase, it does so by smaller and smaller increments and will never exceed $1083.29. When the number of compounding periods increases without bound, we call the limiting result continuous compounding continuous compounding .  Is there an easier way to compute under continues compounding? Yes! Compute on your calculator. (Press 2nd  LN to enter .) Compare the value to your answer in part (5) for the limiting value. The number is called the natural base natural base . We'll compute its value shortly.  Repeat your calculations for two other interest rates, 15% and (an extremely unrealistic) 100%, again for an investment of $1000 for 1 year. In each case, compare the limiting value of , and compare to the value of .                                                                 In part (8b), you have computed an approximation for . What is the value of , rounded to 5 decimal places?  Complete the table of values. What does appear to approach as increases?                   Homework 10.3  Skills Practice  For Problems 1-4, use your calculator to complete the table for each function. Then choose a suitable window and graph the function.                                          growth                         decay     For Problems 5 and 6, simplify.                    For Problems 7 10, solve for . Round your answers to two decimal places.                               For Problems 11-14, express each exponential function in the form . Is the function increasing or decreasing? What is its initial value?  ; increasing; initial value   ; decreasing; initial value     Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.                     Each ratio is : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of .    Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.    Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.                       Each difference in -values is approximately : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of . That is, each function value is approximately equal to double the previous one.    Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.   For Problems 19 26, solve. Round your answers to two decimal places.           For Problems 27-32, solve the equation for the specified variable.  for  for  for  for  for  for   Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.                 Each difference in function values is approximately : Multiplying -values by a constant factor of 10 corresponds to adding a constant value of to the -values of the natural log function.   Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.   Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.                 Each quotient equals , where . Because , .   Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.   For Problems 37 42,  Express each growth or decay law in the form .  Check your answer by graphing both forms of the function on the same axes. Do they have the same graph?     growth       decay      growth       Applications  The number of bacteria in a culture grows according to the function where is the number of bacteria present at time and is the time in hours.  Write a growth law for a sample in which 6000 bacteria were present initially.  Make a table of values for in 5-hour intervals over the first 30 hours.  Graph .  How many bacteria were present at hours?  How much time must elapse (to the nearest tenth of an hour) for the original 6000 bacteria to increase to 100,000?                         growth   15,670  70.3 hrs   Hope invests $2000 in a savings account that pays annual interest compounded continuously.  Write a formula that gives the amount of money in Hope’s account after years.  Make a table of values for in 2-year intervals over the first 10 years.  Graph .  How much will Hope's account be worth after 7 years?  How long will it take for the account to grow to $5000?   The intensity, (in lumens), of a light beam after passing through centimeters of a filter having an absorption coefficient of is given by the function   Graph .  What is the intensity (to the nearest tenth of a lumen) of a light beam that has passed through 0.6 centimeter of the filter?  How many centimeters (to the nearest tenth) of the filter will reduce the illumination to 800 lumens?   decay  941.8 lumens  2.2 cm   X-rays can be absorbed by a lead plate so that where is the X-ray count at the source and is the X-ray count behind a lead plate of thickness inches.  Graph .  What percent of an X-ray beam will penetrate a lead plate inch thick?  How thick should the lead plate be in order to screen out 70% of the X-rays?   The population of Citrus Valley was 20,000 in 2000. In 2010, it was 35,000.  What is if in 2000?  Use the population in 2010 to find the growth factor .  Write a growth law of the form for the population of Citrus Valley.  If it continues at the same rate of growth, what will the population be in 2030?   20,000    107,188   A copy of Time magazine cost $1.50 in 1981. In 1988, the cover price had increased to $2.00.  What is if in 1981?  Use the price in 1988 to find the growth factor .  Find a growth law of the form for the price of Time .  In 1999, a copy of Time cost $3.50. Did the price of the magazine continue to grow at the same rate from 1981 to 1999?   Cobalt-60 is a radioactive isotope used in the treatment of cancer. A 500-milligram sample of cobalt-60 decays to 385 milligrams after 2 years.  Using , find the decay factor for cobalt-60.  Write a decay law for cobalt-60.  How much of the original sample will be left after 10 years?     135.3 mg   Weed seeds can survive for a number of years in the soil. An experiment on cultivated land found 155 million weed seeds per acre, and in the following years the experimenters prevented the seeds from coming to maturity and producing new weeds. Four years later, there were 13.6 million seeds per acre. (Source: Burton, 1998)  Find the annual decay factor for the number of weed seeds in the soil.  Write an exponential formula with base for the number of weed seeds that survived after years.   Problems 51 58 are about doubling time and half-life.  Delbert invests $500 in an account that pays 9.5% interest compounded continuously.  Write a formula for that gives the amount of money in Delbert's account after years.  How long will it take Delbert's investment to double to $1000?  How long will it take Delbert's money to double again, to $2000?  Graph and illustrate the doubling time on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the doubling time.    7.3 years  7.3 years d e growth with marked doubling time   The growth of plant populations can be measured by the amount of pollen they produce. The pollen from a population of pine trees that lived more than 9500 years ago in Norfolk, England, was deposited in the layers of sediment in a lake basin and dated with radiocarbon techniques.  The figure shows the rate of pollen accumulation plotted against time, and the fitted curve . (Source: Burton, 1998)  growth   What was the annual rate of growth in pollen accumulation?  Find the doubling time for the pollen accumulation, that is, the time it took for the accumulation rate to double.  By what factor did the pollen accumulation rate increase over a period of 500 years?   Technetium-99m (Tc-99m) is an artificially produced radionuclide used as a tracer for producing images of internal organs such as the heart, liver, and thyroid. A solution of Tc-99m with initial radioactivity of 10,000 becquerels (Bq) decays according to the formula where is in hours.  How long will it take the radioactivity to fall to half its initial value, or 5000 Bq?  How long will it take the radioactivity to be halved again?  Graph and illustrate the half-life on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the half-life.   6 hours  6 hours  decay with marked half-life  All living things contain a certain amount of the isotope carbon-14. When an organism dies, the carbon-14 decays according to the formula where is measured in years. Scientists can estimate the age of an organic object by measuring the amount of carbon-14 remaining.  When the Dead Sea scrolls were discovered in 1947, they had 78.8% of their original carbon-14. How old were the Dead Sea scrolls then?  What is the half-life of carbon-14, that is, how long does it take for half of an object's carbon-14 to decay?   The half-life of iodine-131 is approximately 8 days.  If a sample initially contains grams of iodine-131, how much will it contain after 8 days? How much will it contain after 16 days? After 32 days?  Use your answers to part (a) to sketch a graph of , the amount of iodine-131 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for iodine-131.   , ,  decay    The half-life of hydrogen-3 is 12.5 years.  If a sample initially contains grams of hydrogen-3, how much will it contain after 12.5 years? How much will it contain after 25 years?  Use your answers to part (a) to sketch a graph of , the amount of hydrogen-3 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for hydrogen-3.   A Geiger counter measures the amount of radioactive material present in a substance. The table shows the count rate for a sample of iodine-128 as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of iodine-128.   decay fit on data   28 minutes   The table shows the count rate for sodium-24 registered by a Geiger counter as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of sodium-24.       "
+  "body": " The Natural Base natural base natural base e e  There is another base for logarithms and exponential functions that is often used in applications. This base is an irrational number called , where The number is essential for many advanced topics, and it is often called the natural base . natural base  The Natural Exponential Function  The natural exponential function natural exponential function exponential function exponential function natural function natural exponential e is the function . Values for can be obtained with a calculator using the key ( 2nd  LN on most calculators). For example, you can evaluate by pressing  2nd  LN   to confirm the value of given above.  Practice 1 Use your calculator to evaluate the following powers.          Because is a number between 2 and 3, the graph of lies between the graphs of and . Compare the tables of values and the graphs of the three functions below. You can verify the table and graphs on your caclulator.                                             graph of 3 exponential functions   QuickCheck 1 The value of is closest to        Graph each function. How does each graph differ from the graph of ?     translates of exponential  The graph of is shifted units to the left of . The graph of is shifted units up from . The graphs are shown above.   The Natural Logarithmic Function  The base e logarithm of a number , or , is called the natural logarithm natural logarithm of and is denoted by .  The Natural Logarithm natural logarithm  The natural logarithm is the logarithm base .   The natural logarithm of is the exponent to which must be raised to produce . For example, the natural logarithm of , or , is the solution of the equation You can verify on your calculator that In general, natural logs obey the same conversion formulas that work for logs to other bases.  Conversion Formulas for Natural Logs   QuickCheck 2 Which of the following is equivalent to ?        In particular,  As is the case with exponential and log functions with other bases, the natural log function natural log function , and the natural exponential function, , \"undo\" each other, so they are inverse functions.  Graph and on the same grid.  We can make a table of values for by interchanging the columns in the table for . Plotting the points gives us the graph below.                             graphs of ln and natural exponential  You can see from the graph that the natural log function has only positive numbers as input values. The natural logs of negative numbers and zero are undefined. You can also see that the natural log of a number greater than 1 is positive, while the logs of fractions between 0 and 1 are negative.  Practice 2 Use your calculator to evaluate each logarithm. Round your answers to four decimal places.             Properties of the Natural Logarithm  The three properties of logarithms also apply to base logarithms.  Properties of Natural Logarithms  If , then     If , is undefined.  And because the functions and are inverse functions, the following properties are also true.  The Natural Log and   Simplify each expression.      The natural log is the log base , and hence the inverse of . Therefore,  First, we simplify the exponent using the third property of logs to get Then .   Practice 3 Simplify each expression.          Solving Equations  We use the natural logarithm to solve exponential equations with base . The techniques we've learned for solving other exponential equations also apply to equations with base . exponential equation exponential equation solving with logarithms  Solve each equation for .      We convert the equation to logarithmic form and evaluate using a calculator.  We convert the equation to exponential form and evaluate.   Practice 4 Solve each equation. Round your answers to four decimal places.         QuickCheck 3 Why is the equation easier to solve than ?   8 is larger than 6.5.  is a constant.  There is a button for log base on the calculator, but not a button for log base 8.  Because is an irrational number.    To solve more complicated exponential equations, we isolate the power on one side of the equation before converting to logarithmic form. exponential equation solving  Solve  First, we divide each side by to obtain Then we convert the equation to logarithmic form. Rounded to four decimal places, .  We can also solve the equation in the Example above, by taking the natural logarithm of both sides. This gives us because for any number . We then proceed with the solution as before.  Practice 5 Solve  Solve for .  We multiply both sides of the equation by the denominator, , to get Then we isolate the power, , as follows: Next, we take the natural logarithm of both sides to get and recall that to simplify the left side. Finally, we divide both sides by to solve for .  Practice 6 Solve for .  Hint:      Exponential Growth and Decay  Recall that functions of the form describe exponential growth when and exponential decay when . Exponential growth and decay can also be modeled by functions of the form where we have substituted for the growth factor , so that We can find the value of by solving the equation for , to get . exponential decay exponential growth  For instance, consider a colony of bacteria that grows according to the formula We can express this function in the form if we set Thus, the growth law for the colony of bacteria can be written By graphing both functions on your calculator, you can verify that are just two ways of writing the same function.  From 1990 to 2000, the population of Clark County, Nevada, grew by per year.   What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was 768,000 in 1990, write a formula for the population years later.  Write a growth formula for Clark County using base .    The growth factor was . The population years later was  We use the formula , where . Solving for , we find so .   Practice 7 From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula , where in 1994 and is in millions. (Source: Los Angeles Times, September 6, 1999)   Evaluate . By what percent did the number of Internet users grow in one year?  Express the growth law in the form . (Hint: .)   ,    If is negative, then is a fraction less than . For example, if , Thus, for negative values of , the function describes exponential decay.   Exponential Growth and Decay exponential growth exponential decay  The function describes exponential growth if , and exponential decay if .   QuickCheck 4 The natural log of a fraction between 0 and 1 is   positive.  negative.  undefined.  between and .    Express the decay law in the form .  For this decay law, and . We would like to find a value for so that , that is, we must solve the equation Replacing with , we find that the decay law is  Practice 8 A scientist isolates grams of krypton-91, which decays according to the formula , where is in seconds.   Complete the table of values showing the amount of krypton-91 left at -second intervals over the first minute.                      Use the table to choose a suitable window and graph the function .  Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay?  Hint: If of the krypton-91 has decayed, of the original grams remains.                       decay  ; seconds    Continuous Compounding  Some savings institutions offer accounts on which the interest is compounded continuously compounded continuously . The amount accumulated in such an account after years at interest rate is given by the function where is the principal invested.  Suppose you invest $500 in an account that pays 8% interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.  Write a formula that gives the value of your account after years.  Make a table of values showing for the first 5 years.  Graph the function .  How much will the account be worth after 10 years?  How long will it be before the account is worth $1000?    We substitute 500 for , and 0.08 for to find  We evaluate the formula for to obtain a table.                          graph of continuous compounded interest  The graph of is shown above.  We evaluate for . The account will be worth $1112.77 after 10 years.  We substitute 1000 for and solve the equation. The account will be worth $1000 after approximately 8.7 years.   Practice 9 Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000? About 15.4 years   Compound Interest  Interest Compounded Continuously  We learned in that the amount, (principal plus interest), accumulated in an account with interest compounded times annually is where is the principal invested, is the interest rate, and is the time period, in years.   Suppose you keep in an account that pays 8% interest. How much is the amount after 1 year if the interest is compounded twice a year? Four times a year?  What happens to as we increase , the number of compounding periods per year? Fill in the table showing the amount in the account for different values of .        (annually)    (semiannually)    (quarterly)    (bimonthly)    (monthly)    (daily)          grid  Plot the values in the table from to , and connect them with a smooth curve. Describe the curve: What is happening to the value of ?  In part (2), as you increased the value of , the other parameters in the formula stayed the same. In other words, is a function of , given by . Use your calculator to graph A on successively larger intervals:      Use the Trace feature or the Table feature to evaluate for very large values of . Rounded to the nearest penny, what is the largest value of that you can find?  As increases, the values of approach a limiting value. Although continues to increase, it does so by smaller and smaller increments and will never exceed $1083.29. When the number of compounding periods increases without bound, we call the limiting result continuous compounding continuous compounding .  Is there an easier way to compute under continues compounding? Yes! Compute on your calculator. (Press 2nd  LN to enter .) Compare the value to your answer in part (5) for the limiting value. The number is called the natural base natural base . We'll compute its value shortly.  Repeat your calculations for two other interest rates, 15% and (an extremely unrealistic) 100%, again for an investment of $1000 for 1 year. In each case, compare the limiting value of , and compare to the value of .                                                                 In part (8b), you have computed an approximation for . What is the value of , rounded to 5 decimal places?  Complete the table of values. What does appear to approach as increases?                   Homework 10.3  Skills Practice  For Problems 1-4, use your calculator to complete the table for each function. Then choose a suitable window and graph the function.                                          growth                         decay     For Problems 5 and 6, simplify.                    For Problems 7 10, solve for . Round your answers to two decimal places.                               For Problems 11-14, express each exponential function in the form . Is the function increasing or decreasing? What is its initial value?  ; increasing; initial value   ; decreasing; initial value     Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.                     Each ratio is : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of .    Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.    Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.                       Each difference in -values is approximately : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of . That is, each function value is approximately equal to double the previous one.    Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.   For Problems 19 26, solve. Round your answers to two decimal places.           For Problems 27-32, solve the equation for the specified variable.  for  for  for  for  for  for   Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.                 Each difference in function values is approximately : Multiplying -values by a constant factor of 10 corresponds to adding a constant value of to the -values of the natural log function.   Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.   Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.                 Each quotient equals , where . Because , .   Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.   For Problems 37 42,  Express each growth or decay law in the form .  Check your answer by graphing both forms of the function on the same axes. Do they have the same graph?     growth       decay      growth       Applications  The number of bacteria in a culture grows according to the function where is the number of bacteria present at time and is the time in hours.  Write a growth law for a sample in which 6000 bacteria were present initially.  Make a table of values for in 5-hour intervals over the first 30 hours.  Graph .  How many bacteria were present at hours?  How much time must elapse (to the nearest tenth of an hour) for the original 6000 bacteria to increase to 100,000?                         growth   15,670  70.3 hrs   Hope invests $2000 in a savings account that pays annual interest compounded continuously.  Write a formula that gives the amount of money in Hope’s account after years.  Make a table of values for in 2-year intervals over the first 10 years.  Graph .  How much will Hope's account be worth after 7 years?  How long will it take for the account to grow to $5000?   The intensity, (in lumens), of a light beam after passing through centimeters of a filter having an absorption coefficient of is given by the function   Graph .  What is the intensity (to the nearest tenth of a lumen) of a light beam that has passed through 0.6 centimeter of the filter?  How many centimeters (to the nearest tenth) of the filter will reduce the illumination to 800 lumens?   decay  941.8 lumens  2.2 cm   X-rays can be absorbed by a lead plate so that where is the X-ray count at the source and is the X-ray count behind a lead plate of thickness inches.  Graph .  What percent of an X-ray beam will penetrate a lead plate inch thick?  How thick should the lead plate be in order to screen out 70% of the X-rays?   The population of Citrus Valley was 20,000 in 2000. In 2010, it was 35,000.  What is if in 2000?  Use the population in 2010 to find the growth factor .  Write a growth law of the form for the population of Citrus Valley.  If it continues at the same rate of growth, what will the population be in 2030?   20,000    107,188   A copy of Time magazine cost $1.50 in 1981. In 1988, the cover price had increased to $2.00.  What is if in 1981?  Use the price in 1988 to find the growth factor .  Find a growth law of the form for the price of Time .  In 1999, a copy of Time cost $3.50. Did the price of the magazine continue to grow at the same rate from 1981 to 1999?   Cobalt-60 is a radioactive isotope used in the treatment of cancer. A 500-milligram sample of cobalt-60 decays to 385 milligrams after 2 years.  Using , find the decay factor for cobalt-60.  Write a decay law for cobalt-60.  How much of the original sample will be left after 10 years?     135.3 mg   Weed seeds can survive for a number of years in the soil. An experiment on cultivated land found 155 million weed seeds per acre, and in the following years the experimenters prevented the seeds from coming to maturity and producing new weeds. Four years later, there were 13.6 million seeds per acre. (Source: Burton, 1998)  Find the annual decay factor for the number of weed seeds in the soil.  Write an exponential formula with base for the number of weed seeds that survived after years.   Problems 51 58 are about doubling time and half-life.  Delbert invests $500 in an account that pays 9.5% interest compounded continuously.  Write a formula for that gives the amount of money in Delbert's account after years.  How long will it take Delbert's investment to double to $1000?  How long will it take Delbert's money to double again, to $2000?  Graph and illustrate the doubling time on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the doubling time.    7.3 years  7.3 years d e growth with marked doubling time   The growth of plant populations can be measured by the amount of pollen they produce. The pollen from a population of pine trees that lived more than 9500 years ago in Norfolk, England, was deposited in the layers of sediment in a lake basin and dated with radiocarbon techniques.  The figure shows the rate of pollen accumulation plotted against time, and the fitted curve . (Source: Burton, 1998)  growth   What was the annual rate of growth in pollen accumulation?  Find the doubling time for the pollen accumulation, that is, the time it took for the accumulation rate to double.  By what factor did the pollen accumulation rate increase over a period of 500 years?   Technetium-99m (Tc-99m) is an artificially produced radionuclide used as a tracer for producing images of internal organs such as the heart, liver, and thyroid. A solution of Tc-99m with initial radioactivity of 10,000 becquerels (Bq) decays according to the formula where is in hours.  How long will it take the radioactivity to fall to half its initial value, or 5000 Bq?  How long will it take the radioactivity to be halved again?  Graph and illustrate the half-life on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the half-life.   6 hours  6 hours  decay with marked half-life  All living things contain a certain amount of the isotope carbon-14. When an organism dies, the carbon-14 decays according to the formula where is measured in years. Scientists can estimate the age of an organic object by measuring the amount of carbon-14 remaining.  When the Dead Sea scrolls were discovered in 1947, they had 78.8% of their original carbon-14. How old were the Dead Sea scrolls then?  What is the half-life of carbon-14, that is, how long does it take for half of an object's carbon-14 to decay?   The half-life of iodine-131 is approximately 8 days.  If a sample initially contains grams of iodine-131, how much will it contain after 8 days? How much will it contain after 16 days? After 32 days?  Use your answers to part (a) to sketch a graph of , the amount of iodine-131 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for iodine-131.   , ,  decay    The half-life of hydrogen-3 is 12.5 years.  If a sample initially contains grams of hydrogen-3, how much will it contain after 12.5 years? How much will it contain after 25 years?  Use your answers to part (a) to sketch a graph of , the amount of hydrogen-3 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for hydrogen-3.   A Geiger counter measures the amount of radioactive material present in a substance. The table shows the count rate for a sample of iodine-128 as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of iodine-128.   decay fit on data   28 minutes   The table shows the count rate for sodium-24 registered by a Geiger counter as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of sodium-24.       "
 },
 {
-  "id": "p-10711",
+  "id": "p-9751",
   "level": "2",
-  "url": "The-Natural-Base.html#p-10711",
+  "url": "The-Natural-Base.html#p-9751",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "natural base "
 },
 {
-  "id": "p-10712",
+  "id": "p-9752",
   "level": "2",
-  "url": "The-Natural-Base.html#p-10712",
+  "url": "The-Natural-Base.html#p-9752",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "natural exponential function "
 },
 {
-  "id": "exercise-2310",
+  "id": "exercise-2308",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2310",
+  "url": "The-Natural-Base.html#exercise-2308",
   "type": "Checkpoint",
   "number": "10.3.1",
   "title": "Practice 1.",
-  "body": "Practice 1   Use your calculator to evaluate the following powers.                                           "
+  "body": "Practice 1 Use your calculator to evaluate the following powers.         "
 },
 {
-  "id": "exercise-2311",
+  "id": "exercise-2309",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2311",
+  "url": "The-Natural-Base.html#exercise-2309",
   "type": "Checkpoint",
   "number": "10.3.2",
   "title": "QuickCheck 1.",
-  "body": "QuickCheck 1   The value of is closest to                      7      "
+  "body": "QuickCheck 1 The value of is closest to       "
 },
 {
   "id": "example-translate-exponential",
@@ -26242,30 +26251,30 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "10.3.3",
   "title": "",
-  "body": "Graph each function. How does each graph differ from the graph of ?      translates of exponential     The graph of is shifted units to the left of . The graph of is shifted units up from . The graphs are shown above. "
+  "body": "Graph each function. How does each graph differ from the graph of ?     translates of exponential  The graph of is shifted units to the left of . The graph of is shifted units up from . The graphs are shown above. "
 },
 {
-  "id": "p-10737",
+  "id": "p-9769",
   "level": "2",
-  "url": "The-Natural-Base.html#p-10737",
+  "url": "The-Natural-Base.html#p-9769",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "natural logarithm "
 },
 {
-  "id": "exercise-2312",
+  "id": "exercise-2310",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2312",
+  "url": "The-Natural-Base.html#exercise-2310",
   "type": "Checkpoint",
   "number": "10.3.4",
   "title": "QuickCheck 2.",
-  "body": "QuickCheck 2   Which of the following is equivalent to ?                           "
+  "body": "QuickCheck 2 Which of the following is equivalent to ?       "
 },
 {
-  "id": "p-10750",
+  "id": "p-9776",
   "level": "2",
-  "url": "The-Natural-Base.html#p-10750",
+  "url": "The-Natural-Base.html#p-9776",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -26281,13 +26290,13 @@ var ptx_lunr_docs = [
   "body": "Graph and on the same grid.  We can make a table of values for by interchanging the columns in the table for . Plotting the points gives us the graph below.                             graphs of ln and natural exponential "
 },
 {
-  "id": "exercise-2313",
+  "id": "exercise-2311",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2313",
+  "url": "The-Natural-Base.html#exercise-2311",
   "type": "Checkpoint",
   "number": "10.3.6",
   "title": "Practice 2.",
-  "body": "Practice 2   Use your calculator to evaluate each logarithm. Round your answers to four decimal places.                                            "
+  "body": "Practice 2 Use your calculator to evaluate each logarithm. Round your answers to four decimal places.           "
 },
 {
   "id": "example-simplify-ln-and-exp",
@@ -26299,13 +26308,13 @@ var ptx_lunr_docs = [
   "body": "Simplify each expression.      The natural log is the log base , and hence the inverse of . Therefore,  First, we simplify the exponent using the third property of logs to get Then .  "
 },
 {
-  "id": "exercise-2314",
+  "id": "exercise-2312",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2314",
+  "url": "The-Natural-Base.html#exercise-2312",
   "type": "Checkpoint",
   "number": "10.3.8",
   "title": "Practice 3.",
-  "body": "Practice 3   Simplify each expression. Use sqrt(x) to get                                 "
+  "body": "Practice 3 Simplify each expression.        "
 },
 {
   "id": "example-solve-ln-equation",
@@ -26317,22 +26326,22 @@ var ptx_lunr_docs = [
   "body": "Solve each equation for .      We convert the equation to logarithmic form and evaluate using a calculator.  We convert the equation to exponential form and evaluate.  "
 },
 {
-  "id": "exercise-2315",
+  "id": "exercise-2313",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2315",
+  "url": "The-Natural-Base.html#exercise-2313",
   "type": "Checkpoint",
   "number": "10.3.10",
   "title": "Practice 4.",
-  "body": "Practice 4   Solve each equation. Round your answers to four decimal places.                                  "
+  "body": "Practice 4 Solve each equation. Round your answers to four decimal places.        "
 },
 {
-  "id": "exercise-2316",
+  "id": "exercise-2314",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2316",
+  "url": "The-Natural-Base.html#exercise-2314",
   "type": "Checkpoint",
   "number": "10.3.11",
   "title": "QuickCheck 3.",
-  "body": "QuickCheck 3   Why is the equation easier to solve than ?    8 is larger than 6.5.    is a constant.    There is a button for log base on the calculator, but not a button for log base 8.    Because is an irrational number.          There is a button for log base on the calculator, but not a button for log base 8.      "
+  "body": "QuickCheck 3 Why is the equation easier to solve than ?   8 is larger than 6.5.  is a constant.  There is a button for log base on the calculator, but not a button for log base 8.  Because is an irrational number.   "
 },
 {
   "id": "example-solve-natural-exponential",
@@ -26344,22 +26353,22 @@ var ptx_lunr_docs = [
   "body": "Solve  First, we divide each side by to obtain Then we convert the equation to logarithmic form. Rounded to four decimal places, . "
 },
 {
-  "id": "note-27",
+  "id": "note-28",
   "level": "2",
-  "url": "The-Natural-Base.html#note-27",
+  "url": "The-Natural-Base.html#note-28",
   "type": "Note",
   "number": "10.3.13",
   "title": "",
   "body": "We can also solve the equation in the Example above, by taking the natural logarithm of both sides. This gives us because for any number . We then proceed with the solution as before. "
 },
 {
-  "id": "exercise-2317",
+  "id": "exercise-2315",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2317",
+  "url": "The-Natural-Base.html#exercise-2315",
   "type": "Checkpoint",
   "number": "10.3.14",
   "title": "Practice 5.",
-  "body": "Practice 5   Solve               "
+  "body": "Practice 5 Solve "
 },
 {
   "id": "example-solve-logistic",
@@ -26371,13 +26380,13 @@ var ptx_lunr_docs = [
   "body": "Solve for .  We multiply both sides of the equation by the denominator, , to get Then we isolate the power, , as follows: Next, we take the natural logarithm of both sides to get and recall that to simplify the left side. Finally, we divide both sides by to solve for . "
 },
 {
-  "id": "exercise-2318",
+  "id": "exercise-2316",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2318",
+  "url": "The-Natural-Base.html#exercise-2316",
   "type": "Checkpoint",
   "number": "10.3.16",
   "title": "Practice 6.",
-  "body": "Practice 6   Solve for                  "
+  "body": "Practice 6 Solve for .  Hint:    "
 },
 {
   "id": "example-population-growth-e",
@@ -26386,25 +26395,25 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "10.3.17",
   "title": "",
-  "body": "From 1990 to 2000, the population of Clark County, Nevada, grew by per year.  What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was 768,000 in 1990, write a formula for the population years later.  Write a growth formula for Clark County using base .    The growth factor was . The population years later was  We use the formula , where . Solving for , we find so .  "
+  "body": "From 1990 to 2000, the population of Clark County, Nevada, grew by per year.   What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was 768,000 in 1990, write a formula for the population years later.  Write a growth formula for Clark County using base .    The growth factor was . The population years later was  We use the formula , where . Solving for , we find so .  "
 },
 {
-  "id": "exercise-2319",
+  "id": "exercise-2317",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2319",
+  "url": "The-Natural-Base.html#exercise-2317",
   "type": "Checkpoint",
   "number": "10.3.18",
   "title": "Practice 7.",
-  "body": "Practice 7   From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula where in 1994 and is in millions. (Source: Los Angeles Times, September 6, 1999)    Evaluate . By what percent did the number of Internet users grow in one year?  About %    Express the growth law in the form                                    "
+  "body": "Practice 7 From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula , where in 1994 and is in millions. (Source: Los Angeles Times, September 6, 1999)   Evaluate . By what percent did the number of Internet users grow in one year?  Express the growth law in the form . (Hint: .)   ,   "
 },
 {
-  "id": "exercise-2320",
+  "id": "exercise-2318",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2320",
+  "url": "The-Natural-Base.html#exercise-2318",
   "type": "Checkpoint",
   "number": "10.3.19",
   "title": "QuickCheck 4.",
-  "body": "QuickCheck 4   The natural log of a fraction between 0 and 1 is    positive.    negative.    undefined.    between and .          negative.      "
+  "body": "QuickCheck 4 The natural log of a fraction between 0 and 1 is   positive.  negative.  undefined.  between and .   "
 },
 {
   "id": "example-write-decay-with-e",
@@ -26416,18 +26425,18 @@ var ptx_lunr_docs = [
   "body": "Express the decay law in the form .  For this decay law, and . We would like to find a value for so that , that is, we must solve the equation Replacing with , we find that the decay law is "
 },
 {
-  "id": "exercise-2321",
+  "id": "exercise-2319",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2321",
+  "url": "The-Natural-Base.html#exercise-2319",
   "type": "Checkpoint",
   "number": "10.3.21",
   "title": "Practice 8.",
-  "body": "Practice 8   A scientist isolates grams of krypton-91, which decays according to the formula   where is in seconds.   Complete the table of values showing the amount of krypton-91 left at -second intervals over the first minute.                                           Use the table to choose a suitable window and graph the function    Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay?                None of the above    Answer: seconds     If of the krypton-91 has decayed, of the original grams remains.                                                                                  A graph is below.     seconds         Graph for part (b)  decay  "
+  "body": "Practice 8 A scientist isolates grams of krypton-91, which decays according to the formula , where is in seconds.   Complete the table of values showing the amount of krypton-91 left at -second intervals over the first minute.                      Use the table to choose a suitable window and graph the function .  Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay?  Hint: If of the krypton-91 has decayed, of the original grams remains.                       decay  ; seconds  "
 },
 {
-  "id": "p-10883",
+  "id": "p-9865",
   "level": "2",
-  "url": "The-Natural-Base.html#p-10883",
+  "url": "The-Natural-Base.html#p-9865",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -26443,13 +26452,13 @@ var ptx_lunr_docs = [
   "body": "Suppose you invest $500 in an account that pays 8% interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.  Write a formula that gives the value of your account after years.  Make a table of values showing for the first 5 years.  Graph the function .  How much will the account be worth after 10 years?  How long will it be before the account is worth $1000?    We substitute 500 for , and 0.08 for to find  We evaluate the formula for to obtain a table.                          graph of continuous compounded interest  The graph of is shown above.  We evaluate for . The account will be worth $1112.77 after 10 years.  We substitute 1000 for and solve the equation. The account will be worth $1000 after approximately 8.7 years.  "
 },
 {
-  "id": "exercise-2322",
+  "id": "exercise-2320",
   "level": "2",
-  "url": "The-Natural-Base.html#exercise-2322",
+  "url": "The-Natural-Base.html#exercise-2320",
   "type": "Checkpoint",
   "number": "10.3.23",
   "title": "Practice 9.",
-  "body": "Practice 9   Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000?  Answer: about years.        About 15.4 years      "
+  "body": "Practice 9 Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000? About 15.4 years "
 },
 {
   "id": "investigation-12",
@@ -26461,20 +26470,38 @@ var ptx_lunr_docs = [
   "body": "Interest Compounded Continuously  We learned in that the amount, (principal plus interest), accumulated in an account with interest compounded times annually is where is the principal invested, is the interest rate, and is the time period, in years.   Suppose you keep in an account that pays 8% interest. How much is the amount after 1 year if the interest is compounded twice a year? Four times a year?  What happens to as we increase , the number of compounding periods per year? Fill in the table showing the amount in the account for different values of .        (annually)    (semiannually)    (quarterly)    (bimonthly)    (monthly)    (daily)          grid  Plot the values in the table from to , and connect them with a smooth curve. Describe the curve: What is happening to the value of ?  In part (2), as you increased the value of , the other parameters in the formula stayed the same. In other words, is a function of , given by . Use your calculator to graph A on successively larger intervals:      Use the Trace feature or the Table feature to evaluate for very large values of . Rounded to the nearest penny, what is the largest value of that you can find?  As increases, the values of approach a limiting value. Although continues to increase, it does so by smaller and smaller increments and will never exceed $1083.29. When the number of compounding periods increases without bound, we call the limiting result continuous compounding continuous compounding .  Is there an easier way to compute under continues compounding? Yes! Compute on your calculator. (Press 2nd  LN to enter .) Compare the value to your answer in part (5) for the limiting value. The number is called the natural base natural base . We'll compute its value shortly.  Repeat your calculations for two other interest rates, 15% and (an extremely unrealistic) 100%, again for an investment of $1000 for 1 year. In each case, compare the limiting value of , and compare to the value of .                                                                 In part (8b), you have computed an approximation for . What is the value of , rounded to 5 decimal places?  Complete the table of values. What does appear to approach as increases?                "
 },
 {
+  "id": "exercise-2321",
+  "level": "2",
+  "url": "The-Natural-Base.html#exercise-2321",
+  "type": "Exercise",
+  "number": "10.3.8.1",
+  "title": "",
+  "body": "                    growth  "
+},
+{
+  "id": "exercise-2322",
+  "level": "2",
+  "url": "The-Natural-Base.html#exercise-2322",
+  "type": "Exercise",
+  "number": "10.3.8.2",
+  "title": "",
+  "body": ""
+},
+{
   "id": "exercise-2323",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2323",
   "type": "Exercise",
-  "number": "10.3.6.1",
+  "number": "10.3.8.3",
   "title": "",
-  "body": "                    growth  "
+  "body": "                     decay  "
 },
 {
   "id": "exercise-2324",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2324",
   "type": "Exercise",
-  "number": "10.3.6.2",
+  "number": "10.3.8.4",
   "title": "",
   "body": ""
 },
@@ -26483,43 +26510,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2325",
   "type": "Exercise",
-  "number": "10.3.6.3",
+  "number": "10.3.8.5",
   "title": "",
-  "body": "                     decay  "
+  "body": "          "
 },
 {
   "id": "exercise-2326",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2326",
   "type": "Exercise",
-  "number": "10.3.6.4",
+  "number": "10.3.8.6",
   "title": "",
-  "body": ""
+  "body": "     "
 },
 {
   "id": "exercise-2327",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2327",
   "type": "Exercise",
-  "number": "10.3.6.5",
+  "number": "10.3.8.7",
   "title": "",
-  "body": "          "
+  "body": "        "
 },
 {
   "id": "exercise-2328",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2328",
   "type": "Exercise",
-  "number": "10.3.6.6",
+  "number": "10.3.8.8",
   "title": "",
-  "body": "     "
+  "body": "    "
 },
 {
   "id": "exercise-2329",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2329",
   "type": "Exercise",
-  "number": "10.3.6.7",
+  "number": "10.3.8.9",
   "title": "",
   "body": "        "
 },
@@ -26528,7 +26555,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2330",
   "type": "Exercise",
-  "number": "10.3.6.8",
+  "number": "10.3.8.10",
   "title": "",
   "body": "    "
 },
@@ -26537,34 +26564,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2331",
   "type": "Exercise",
-  "number": "10.3.6.9",
+  "number": "10.3.8.11",
   "title": "",
-  "body": "        "
+  "body": "; increasing; initial value "
 },
 {
   "id": "exercise-2332",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2332",
   "type": "Exercise",
-  "number": "10.3.6.10",
+  "number": "10.3.8.12",
   "title": "",
-  "body": "    "
+  "body": ""
 },
 {
   "id": "exercise-2333",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2333",
   "type": "Exercise",
-  "number": "10.3.6.11",
+  "number": "10.3.8.13",
   "title": "",
-  "body": "; increasing; initial value "
+  "body": "; decreasing; initial value "
 },
 {
   "id": "exercise-2334",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2334",
   "type": "Exercise",
-  "number": "10.3.6.12",
+  "number": "10.3.8.14",
   "title": "",
   "body": ""
 },
@@ -26573,61 +26600,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2335",
   "type": "Exercise",
-  "number": "10.3.6.13",
+  "number": "10.3.8.15",
   "title": "",
-  "body": "; decreasing; initial value "
+  "body": " Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.                     Each ratio is : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of .  "
 },
 {
   "id": "exercise-2336",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2336",
   "type": "Exercise",
-  "number": "10.3.6.14",
+  "number": "10.3.8.16",
   "title": "",
-  "body": ""
+  "body": " Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.  "
 },
 {
   "id": "exercise-2337",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2337",
   "type": "Exercise",
-  "number": "10.3.6.15",
+  "number": "10.3.8.17",
   "title": "",
-  "body": " Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.                     Each ratio is : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of .  "
+  "body": " Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.                       Each difference in -values is approximately : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of . That is, each function value is approximately equal to double the previous one.  "
 },
 {
   "id": "exercise-2338",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2338",
   "type": "Exercise",
-  "number": "10.3.6.16",
+  "number": "10.3.8.18",
   "title": "",
-  "body": " Fill in the table, rounding your answers to four decimal places.                    Compute the ratio of each function value to the previous one. Explain the result.  "
+  "body": " Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.  "
 },
 {
   "id": "exercise-2339",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2339",
   "type": "Exercise",
-  "number": "10.3.6.17",
+  "number": "10.3.8.19",
   "title": "",
-  "body": " Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.                       Each difference in -values is approximately : Increasing -values by a constant corresponds to multiplying the -values of the exponential function by a constant factor of . That is, each function value is approximately equal to double the previous one.  "
+  "body": ""
 },
 {
   "id": "exercise-2340",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2340",
   "type": "Exercise",
-  "number": "10.3.6.18",
+  "number": "10.3.8.20",
   "title": "",
-  "body": " Fill in the table, rounding your answers to the nearest integer.                      Subtract each -value from the next one. Explain the result.  "
+  "body": ""
 },
 {
   "id": "exercise-2341",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2341",
   "type": "Exercise",
-  "number": "10.3.6.19",
+  "number": "10.3.8.21",
   "title": "",
   "body": ""
 },
@@ -26636,7 +26663,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2342",
   "type": "Exercise",
-  "number": "10.3.6.20",
+  "number": "10.3.8.22",
   "title": "",
   "body": ""
 },
@@ -26645,7 +26672,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2343",
   "type": "Exercise",
-  "number": "10.3.6.21",
+  "number": "10.3.8.23",
   "title": "",
   "body": ""
 },
@@ -26654,7 +26681,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2344",
   "type": "Exercise",
-  "number": "10.3.6.22",
+  "number": "10.3.8.24",
   "title": "",
   "body": ""
 },
@@ -26663,7 +26690,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2345",
   "type": "Exercise",
-  "number": "10.3.6.23",
+  "number": "10.3.8.25",
   "title": "",
   "body": ""
 },
@@ -26672,7 +26699,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2346",
   "type": "Exercise",
-  "number": "10.3.6.24",
+  "number": "10.3.8.26",
   "title": "",
   "body": ""
 },
@@ -26681,25 +26708,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2347",
   "type": "Exercise",
-  "number": "10.3.6.25",
+  "number": "10.3.8.27",
   "title": "",
-  "body": ""
+  "body": "for "
 },
 {
   "id": "exercise-2348",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2348",
   "type": "Exercise",
-  "number": "10.3.6.26",
+  "number": "10.3.8.28",
   "title": "",
-  "body": ""
+  "body": "for "
 },
 {
   "id": "exercise-2349",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2349",
   "type": "Exercise",
-  "number": "10.3.6.27",
+  "number": "10.3.8.29",
   "title": "",
   "body": "for "
 },
@@ -26708,7 +26735,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2350",
   "type": "Exercise",
-  "number": "10.3.6.28",
+  "number": "10.3.8.30",
   "title": "",
   "body": "for "
 },
@@ -26717,7 +26744,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2351",
   "type": "Exercise",
-  "number": "10.3.6.29",
+  "number": "10.3.8.31",
   "title": "",
   "body": "for "
 },
@@ -26726,7 +26753,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2352",
   "type": "Exercise",
-  "number": "10.3.6.30",
+  "number": "10.3.8.32",
   "title": "",
   "body": "for "
 },
@@ -26735,70 +26762,70 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2353",
   "type": "Exercise",
-  "number": "10.3.6.31",
+  "number": "10.3.8.33",
   "title": "",
-  "body": "for "
+  "body": "Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.                 Each difference in function values is approximately : Multiplying -values by a constant factor of 10 corresponds to adding a constant value of to the -values of the natural log function.  "
 },
 {
   "id": "exercise-2354",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2354",
   "type": "Exercise",
-  "number": "10.3.6.32",
+  "number": "10.3.8.34",
   "title": "",
-  "body": "for "
+  "body": "Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.  "
 },
 {
   "id": "exercise-2355",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2355",
   "type": "Exercise",
-  "number": "10.3.6.33",
+  "number": "10.3.8.35",
   "title": "",
-  "body": "Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.                 Each difference in function values is approximately : Multiplying -values by a constant factor of 10 corresponds to adding a constant value of to the -values of the natural log function.  "
+  "body": "Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.                 Each quotient equals , where . Because , .  "
 },
 {
   "id": "exercise-2356",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2356",
   "type": "Exercise",
-  "number": "10.3.6.34",
+  "number": "10.3.8.36",
   "title": "",
-  "body": "Fill in the table, rounding your answers to three decimal places.                Subtract each natural logarithm in your table from the next one. (For example, compute .) Explain the result.  "
+  "body": "Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.  "
 },
 {
   "id": "exercise-2357",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2357",
   "type": "Exercise",
-  "number": "10.3.6.35",
+  "number": "10.3.8.37",
   "title": "",
-  "body": "Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.                 Each quotient equals , where . Because , .  "
+  "body": "  growth   "
 },
 {
   "id": "exercise-2358",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2358",
   "type": "Exercise",
-  "number": "10.3.6.36",
+  "number": "10.3.8.38",
   "title": "",
-  "body": "Fill in the table, rounding your answers to three decimal places.                Divide each natural logarithm in your table by . Explain the result.  "
+  "body": ""
 },
 {
   "id": "exercise-2359",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2359",
   "type": "Exercise",
-  "number": "10.3.6.37",
+  "number": "10.3.8.39",
   "title": "",
-  "body": "  growth   "
+  "body": "  decay  "
 },
 {
   "id": "exercise-2360",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2360",
   "type": "Exercise",
-  "number": "10.3.6.38",
+  "number": "10.3.8.40",
   "title": "",
   "body": ""
 },
@@ -26807,16 +26834,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2361",
   "type": "Exercise",
-  "number": "10.3.6.39",
+  "number": "10.3.8.41",
   "title": "",
-  "body": "  decay  "
+  "body": "  growth   "
 },
 {
   "id": "exercise-2362",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2362",
   "type": "Exercise",
-  "number": "10.3.6.40",
+  "number": "10.3.8.42",
   "title": "",
   "body": ""
 },
@@ -26825,160 +26852,142 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2363",
   "type": "Exercise",
-  "number": "10.3.6.41",
+  "number": "10.3.8.43",
   "title": "",
-  "body": "  growth   "
+  "body": "The number of bacteria in a culture grows according to the function where is the number of bacteria present at time and is the time in hours.  Write a growth law for a sample in which 6000 bacteria were present initially.  Make a table of values for in 5-hour intervals over the first 30 hours.  Graph .  How many bacteria were present at hours?  How much time must elapse (to the nearest tenth of an hour) for the original 6000 bacteria to increase to 100,000?                         growth   15,670  70.3 hrs  "
 },
 {
   "id": "exercise-2364",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2364",
   "type": "Exercise",
-  "number": "10.3.6.42",
+  "number": "10.3.8.44",
   "title": "",
-  "body": ""
+  "body": "Hope invests $2000 in a savings account that pays annual interest compounded continuously.  Write a formula that gives the amount of money in Hope’s account after years.  Make a table of values for in 2-year intervals over the first 10 years.  Graph .  How much will Hope's account be worth after 7 years?  How long will it take for the account to grow to $5000?  "
 },
 {
   "id": "exercise-2365",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2365",
   "type": "Exercise",
-  "number": "10.3.6.43",
+  "number": "10.3.8.45",
   "title": "",
-  "body": "The number of bacteria in a culture grows according to the function where is the number of bacteria present at time and is the time in hours.  Write a growth law for a sample in which 6000 bacteria were present initially.  Make a table of values for in 5-hour intervals over the first 30 hours.  Graph .  How many bacteria were present at hours?  How much time must elapse (to the nearest tenth of an hour) for the original 6000 bacteria to increase to 100,000?                         growth   15,670  70.3 hrs  "
+  "body": "The intensity, (in lumens), of a light beam after passing through centimeters of a filter having an absorption coefficient of is given by the function   Graph .  What is the intensity (to the nearest tenth of a lumen) of a light beam that has passed through 0.6 centimeter of the filter?  How many centimeters (to the nearest tenth) of the filter will reduce the illumination to 800 lumens?   decay  941.8 lumens  2.2 cm  "
 },
 {
   "id": "exercise-2366",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2366",
   "type": "Exercise",
-  "number": "10.3.6.44",
+  "number": "10.3.8.46",
   "title": "",
-  "body": "Hope invests $2000 in a savings account that pays annual interest compounded continuously.  Write a formula that gives the amount of money in Hope’s account after years.  Make a table of values for in 2-year intervals over the first 10 years.  Graph .  How much will Hope's account be worth after 7 years?  How long will it take for the account to grow to $5000?  "
+  "body": "X-rays can be absorbed by a lead plate so that where is the X-ray count at the source and is the X-ray count behind a lead plate of thickness inches.  Graph .  What percent of an X-ray beam will penetrate a lead plate inch thick?  How thick should the lead plate be in order to screen out 70% of the X-rays?  "
 },
 {
   "id": "exercise-2367",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2367",
   "type": "Exercise",
-  "number": "10.3.6.45",
+  "number": "10.3.8.47",
   "title": "",
-  "body": "The intensity, (in lumens), of a light beam after passing through centimeters of a filter having an absorption coefficient of is given by the function   Graph .  What is the intensity (to the nearest tenth of a lumen) of a light beam that has passed through 0.6 centimeter of the filter?  How many centimeters (to the nearest tenth) of the filter will reduce the illumination to 800 lumens?   decay  941.8 lumens  2.2 cm  "
+  "body": "The population of Citrus Valley was 20,000 in 2000. In 2010, it was 35,000.  What is if in 2000?  Use the population in 2010 to find the growth factor .  Write a growth law of the form for the population of Citrus Valley.  If it continues at the same rate of growth, what will the population be in 2030?   20,000    107,188  "
 },
 {
   "id": "exercise-2368",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2368",
   "type": "Exercise",
-  "number": "10.3.6.46",
+  "number": "10.3.8.48",
   "title": "",
-  "body": "X-rays can be absorbed by a lead plate so that where is the X-ray count at the source and is the X-ray count behind a lead plate of thickness inches.  Graph .  What percent of an X-ray beam will penetrate a lead plate inch thick?  How thick should the lead plate be in order to screen out 70% of the X-rays?  "
+  "body": "A copy of Time magazine cost $1.50 in 1981. In 1988, the cover price had increased to $2.00.  What is if in 1981?  Use the price in 1988 to find the growth factor .  Find a growth law of the form for the price of Time .  In 1999, a copy of Time cost $3.50. Did the price of the magazine continue to grow at the same rate from 1981 to 1999?  "
 },
 {
   "id": "exercise-2369",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2369",
   "type": "Exercise",
-  "number": "10.3.6.47",
+  "number": "10.3.8.49",
   "title": "",
-  "body": "The population of Citrus Valley was 20,000 in 2000. In 2010, it was 35,000.  What is if in 2000?  Use the population in 2010 to find the growth factor .  Write a growth law of the form for the population of Citrus Valley.  If it continues at the same rate of growth, what will the population be in 2030?   20,000    107,188  "
+  "body": "Cobalt-60 is a radioactive isotope used in the treatment of cancer. A 500-milligram sample of cobalt-60 decays to 385 milligrams after 2 years.  Using , find the decay factor for cobalt-60.  Write a decay law for cobalt-60.  How much of the original sample will be left after 10 years?     135.3 mg  "
 },
 {
   "id": "exercise-2370",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2370",
   "type": "Exercise",
-  "number": "10.3.6.48",
+  "number": "10.3.8.50",
   "title": "",
-  "body": "A copy of Time magazine cost $1.50 in 1981. In 1988, the cover price had increased to $2.00.  What is if in 1981?  Use the price in 1988 to find the growth factor .  Find a growth law of the form for the price of Time .  In 1999, a copy of Time cost $3.50. Did the price of the magazine continue to grow at the same rate from 1981 to 1999?  "
+  "body": "Weed seeds can survive for a number of years in the soil. An experiment on cultivated land found 155 million weed seeds per acre, and in the following years the experimenters prevented the seeds from coming to maturity and producing new weeds. Four years later, there were 13.6 million seeds per acre. (Source: Burton, 1998)  Find the annual decay factor for the number of weed seeds in the soil.  Write an exponential formula with base for the number of weed seeds that survived after years.  "
 },
 {
   "id": "exercise-2371",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2371",
   "type": "Exercise",
-  "number": "10.3.6.49",
+  "number": "10.3.8.51",
   "title": "",
-  "body": "Cobalt-60 is a radioactive isotope used in the treatment of cancer. A 500-milligram sample of cobalt-60 decays to 385 milligrams after 2 years.  Using , find the decay factor for cobalt-60.  Write a decay law for cobalt-60.  How much of the original sample will be left after 10 years?     135.3 mg  "
+  "body": "Delbert invests $500 in an account that pays 9.5% interest compounded continuously.  Write a formula for that gives the amount of money in Delbert's account after years.  How long will it take Delbert's investment to double to $1000?  How long will it take Delbert's money to double again, to $2000?  Graph and illustrate the doubling time on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the doubling time.    7.3 years  7.3 years d e growth with marked doubling time  "
 },
 {
   "id": "exercise-2372",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2372",
   "type": "Exercise",
-  "number": "10.3.6.50",
+  "number": "10.3.8.52",
   "title": "",
-  "body": "Weed seeds can survive for a number of years in the soil. An experiment on cultivated land found 155 million weed seeds per acre, and in the following years the experimenters prevented the seeds from coming to maturity and producing new weeds. Four years later, there were 13.6 million seeds per acre. (Source: Burton, 1998)  Find the annual decay factor for the number of weed seeds in the soil.  Write an exponential formula with base for the number of weed seeds that survived after years.  "
+  "body": "The growth of plant populations can be measured by the amount of pollen they produce. The pollen from a population of pine trees that lived more than 9500 years ago in Norfolk, England, was deposited in the layers of sediment in a lake basin and dated with radiocarbon techniques.  The figure shows the rate of pollen accumulation plotted against time, and the fitted curve . (Source: Burton, 1998)  growth   What was the annual rate of growth in pollen accumulation?  Find the doubling time for the pollen accumulation, that is, the time it took for the accumulation rate to double.  By what factor did the pollen accumulation rate increase over a period of 500 years?  "
 },
 {
   "id": "exercise-2373",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2373",
   "type": "Exercise",
-  "number": "10.3.6.51",
+  "number": "10.3.8.53",
   "title": "",
-  "body": "Delbert invests $500 in an account that pays 9.5% interest compounded continuously.  Write a formula for that gives the amount of money in Delbert's account after years.  How long will it take Delbert's investment to double to $1000?  How long will it take Delbert's money to double again, to $2000?  Graph and illustrate the doubling time on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the doubling time.    7.3 years  7.3 years d e growth with marked doubling time  "
+  "body": "Technetium-99m (Tc-99m) is an artificially produced radionuclide used as a tracer for producing images of internal organs such as the heart, liver, and thyroid. A solution of Tc-99m with initial radioactivity of 10,000 becquerels (Bq) decays according to the formula where is in hours.  How long will it take the radioactivity to fall to half its initial value, or 5000 Bq?  How long will it take the radioactivity to be halved again?  Graph and illustrate the half-life on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the half-life.   6 hours  6 hours  decay with marked half-life "
 },
 {
   "id": "exercise-2374",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2374",
   "type": "Exercise",
-  "number": "10.3.6.52",
+  "number": "10.3.8.54",
   "title": "",
-  "body": "The growth of plant populations can be measured by the amount of pollen they produce. The pollen from a population of pine trees that lived more than 9500 years ago in Norfolk, England, was deposited in the layers of sediment in a lake basin and dated with radiocarbon techniques.  The figure shows the rate of pollen accumulation plotted against time, and the fitted curve . (Source: Burton, 1998)  growth   What was the annual rate of growth in pollen accumulation?  Find the doubling time for the pollen accumulation, that is, the time it took for the accumulation rate to double.  By what factor did the pollen accumulation rate increase over a period of 500 years?  "
+  "body": "All living things contain a certain amount of the isotope carbon-14. When an organism dies, the carbon-14 decays according to the formula where is measured in years. Scientists can estimate the age of an organic object by measuring the amount of carbon-14 remaining.  When the Dead Sea scrolls were discovered in 1947, they had 78.8% of their original carbon-14. How old were the Dead Sea scrolls then?  What is the half-life of carbon-14, that is, how long does it take for half of an object's carbon-14 to decay?  "
 },
 {
   "id": "exercise-2375",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2375",
   "type": "Exercise",
-  "number": "10.3.6.53",
+  "number": "10.3.8.55",
   "title": "",
-  "body": "Technetium-99m (Tc-99m) is an artificially produced radionuclide used as a tracer for producing images of internal organs such as the heart, liver, and thyroid. A solution of Tc-99m with initial radioactivity of 10,000 becquerels (Bq) decays according to the formula where is in hours.  How long will it take the radioactivity to fall to half its initial value, or 5000 Bq?  How long will it take the radioactivity to be halved again?  Graph and illustrate the half-life on your graph.  Choose any point on the graph, then find the point on the graph with vertical coordinate . Verify that the difference in the -coordinates of the two points is the half-life.   6 hours  6 hours  decay with marked half-life "
+  "body": "The half-life of iodine-131 is approximately 8 days.  If a sample initially contains grams of iodine-131, how much will it contain after 8 days? How much will it contain after 16 days? After 32 days?  Use your answers to part (a) to sketch a graph of , the amount of iodine-131 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for iodine-131.   , ,  decay   "
 },
 {
   "id": "exercise-2376",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2376",
   "type": "Exercise",
-  "number": "10.3.6.54",
+  "number": "10.3.8.56",
   "title": "",
-  "body": "All living things contain a certain amount of the isotope carbon-14. When an organism dies, the carbon-14 decays according to the formula where is measured in years. Scientists can estimate the age of an organic object by measuring the amount of carbon-14 remaining.  When the Dead Sea scrolls were discovered in 1947, they had 78.8% of their original carbon-14. How old were the Dead Sea scrolls then?  What is the half-life of carbon-14, that is, how long does it take for half of an object's carbon-14 to decay?  "
+  "body": "The half-life of hydrogen-3 is 12.5 years.  If a sample initially contains grams of hydrogen-3, how much will it contain after 12.5 years? How much will it contain after 25 years?  Use your answers to part (a) to sketch a graph of , the amount of hydrogen-3 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for hydrogen-3.  "
 },
 {
   "id": "exercise-2377",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2377",
   "type": "Exercise",
-  "number": "10.3.6.55",
+  "number": "10.3.8.57",
   "title": "",
-  "body": "The half-life of iodine-131 is approximately 8 days.  If a sample initially contains grams of iodine-131, how much will it contain after 8 days? How much will it contain after 16 days? After 32 days?  Use your answers to part (a) to sketch a graph of , the amount of iodine-131 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for iodine-131.   , ,  decay   "
+  "body": "A Geiger counter measures the amount of radioactive material present in a substance. The table shows the count rate for a sample of iodine-128 as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of iodine-128.   decay fit on data   28 minutes  "
 },
 {
   "id": "exercise-2378",
   "level": "2",
   "url": "The-Natural-Base.html#exercise-2378",
   "type": "Exercise",
-  "number": "10.3.6.56",
-  "title": "",
-  "body": "The half-life of hydrogen-3 is 12.5 years.  If a sample initially contains grams of hydrogen-3, how much will it contain after 12.5 years? How much will it contain after 25 years?  Use your answers to part (a) to sketch a graph of , the amount of hydrogen-3 remaining, versus time. (Choose an arbitrary height for on the vertical axis.)  Calculate , and hence find a decay law of the form , where , for hydrogen-3.  "
-},
-{
-  "id": "exercise-2379",
-  "level": "2",
-  "url": "The-Natural-Base.html#exercise-2379",
-  "type": "Exercise",
-  "number": "10.3.6.57",
-  "title": "",
-  "body": "A Geiger counter measures the amount of radioactive material present in a substance. The table shows the count rate for a sample of iodine-128 as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of iodine-128.   decay fit on data   28 minutes  "
-},
-{
-  "id": "exercise-2380",
-  "level": "2",
-  "url": "The-Natural-Base.html#exercise-2380",
-  "type": "Exercise",
-  "number": "10.3.6.58",
+  "number": "10.3.8.58",
   "title": "",
   "body": "The table shows the count rate for sodium-24 registered by a Geiger counter as a function of time. (Source: Hunt and Sykes, 1984)    Time (min)             Counts\/sec              Graph the data and use your calculator's exponential regression feature to fit a curve to them.  Write your equation in the form .  Calculate the half-life of sodium-24.  "
 },
@@ -26992,56 +27001,74 @@ var ptx_lunr_docs = [
   "body": " Chapter 10 Summary and Review  Glossary   inverse function  logarithmic function  logarithmic equation  compound interest  natural base  natural log function  natural exponential function  continuous compounding  log scale  pH value  decibels  Richter magnitude    Key Concepts   Two functions are called inverse functions if each function undoes the effects of the other.  We can make a table of values for the inverse function by interchanging the columns of a table for .  If we apply the inverse function to the output of , we return to the original input value.  The graphs of and its inverse function are symmetric about the line .  We define the logarithmic function, , which takes the log base of its input values. The log function is the inverse of the exponential function .  Because and are inverse functions for ,   A logarithmic equation is one where the variable appears inside of a logarithm. We can solve logarithmic equations by converting to exponential form.  Steps for Solving Logarithmic Equations   Use the properties of logarithms to combine all logs into one log.  Isolate the log on one side of the equation.  Convert the equation to exponential form.  Solve for the variable.  Check for extraneous solutions.  The natural base is an irrational number called , where  The natural exponential function is the function . The natural log function is the function .  Conversion Formulas for the Natural Base   Properties of Natural Logarithms  If , then    also   We use the natural logarithm to solve exponential equations with base .  Exponential Growth and Decay  The function describes exponential growth if , and exponential decay if .  Continuous compounding : The amount accumulated in an account after years at interest rate compounded continuously is given by where is the principal invested.  A log scale is useful for plotting values that vary greatly in magnitude. We plot the log of the variable, instead of the variable itself.  A log scale is a multiplicative scale : Each increment of equal length on the scale indicates that the value is multiplied by an equal amount.  The pH value of a substance is defined by the formula where denotes the concentration of hydrogen ions in the substance.  The loudness of a sound is measured in decibels, , by where is the intensity of its sound waves (in watts per square meter).  The Richter magnitude, , of an earthquake is given by where is the amplitude of its seismographic trace and is the amplitude of the smallest detectable earthquake.  A difference of units on a logarithmic scale corresponds to a factor of units in the value of the variable.    Chapter 10 Review Problems  For Problems 1 and 2, make a table of values for the function and sketch a graph.     For Problems 3 and 4, simplify.         For Problems 5-12, solve.           For Problems 13-16, solve.       For Problems 17-22, solve.         For Problems 23-26, simplify.       In 1970, the population of New York City was 7,894,862. In 1980, the population had fallen to 7,071,639.  Write an exponential function using base for the population of New York over that decade.  By what percent did the population decline annually?    1.095%   In 1990, the population of New York City was 7,322,564. In 2000, the population was 8,008,278.  Write an exponential function using base for the population of New York over that decade.  By what percent did the population increase annually?   You deposit $1000 in a savings account paying 5% interest compounded continuously.  Find the amount in the account after 7 years.  How long will it take for the original principal to double?  Find a formula for the time required for the amount to reach .   $1419.07  13.9 years    The voltage, , across a capacitor in a certain circuit is given by the function where is the time in seconds.  Make a table of values and graph for to .  Describe the graph. What happens to the voltage in the long run?  How much time must elapse (to the nearest hundredth of a second) for the voltage to reach 75 volts?   Solve for :  Solve for :  Solve for :  Solve for :  Express in the form .  Express in the form .  Express in the form .  Express in the form .  Plot the values on a log scale.        log scale  Plot the values on a log scale.          The graph describes a network of streams near Santa Fe, New Mexico. It shows the number of streams of a given order, which is a measure of their size. Use the graph to estimate the number of streams of orders 3, 4, 8, and 9. (Source: Leopold, Wolman, and Miller)  stream order on semi-log scale  Order 3: 17,000; Order 4: 5000; Order 8: 40; Order 9: 11  Large animals use oxygen more efficiently when running than small animals do. The graph shows the amount of oxygen various animals use, per gram of their body weight, to run 1 kilometer. Estimate the body mass and oxygen use for a kangaroo rat, a dog, and a horse. (Source: Schmidt-Neilsen, 1972)    The loudest sound created in a laboratory registered at 210 decibels. The energy from such a sound is sufficient to bore holes in solid material. Find the intensity of a 210-decibel sound.  The most powerful earthquake ever recorded occurred in Chile on 22 May 1960. The magnitude of the earthquake was approximately 9.5. What was the amplitude of its seismographic trace.  In 2004, a magnitude 9.0 earthquake struck Sumatra in Indonesia. How much more powerful was this quake than the 1906 San Francisco earthquake of magnitude 8.3?  The sound of rainfall registers at 50 decibels. What is the decibel level of a sound twice as loud?    "
 },
 {
-  "id": "p-11148",
+  "id": "p-10128",
   "level": "2",
-  "url": "chap10-summary.html#p-11148",
+  "url": "chap10-summary.html#p-10128",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "symmetric about the line logarithmic equation natural exponential function natural log function Continuous compounding log scale multiplicative scale "
 },
 {
-  "id": "exercise-2381",
+  "id": "exercise-2379",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2381",
+  "url": "chap10-summary.html#exercise-2379",
   "type": "Exercise",
   "number": "10.4.3.1",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2382",
+  "id": "exercise-2380",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2382",
+  "url": "chap10-summary.html#exercise-2380",
   "type": "Exercise",
   "number": "10.4.3.2",
   "title": "",
   "body": ""
 },
 {
-  "id": "exercise-2383",
+  "id": "exercise-2381",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2383",
+  "url": "chap10-summary.html#exercise-2381",
   "type": "Exercise",
   "number": "10.4.3.3",
   "title": "",
   "body": "  "
 },
 {
-  "id": "exercise-2384",
+  "id": "exercise-2382",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2384",
+  "url": "chap10-summary.html#exercise-2382",
   "type": "Exercise",
   "number": "10.4.3.4",
   "title": "",
   "body": "  "
 },
 {
+  "id": "exercise-2383",
+  "level": "2",
+  "url": "chap10-summary.html#exercise-2383",
+  "type": "Exercise",
+  "number": "10.4.3.5",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "exercise-2384",
+  "level": "2",
+  "url": "chap10-summary.html#exercise-2384",
+  "type": "Exercise",
+  "number": "10.4.3.6",
+  "title": "",
+  "body": ""
+},
+{
   "id": "exercise-2385",
   "level": "2",
   "url": "chap10-summary.html#exercise-2385",
   "type": "Exercise",
-  "number": "10.4.3.5",
+  "number": "10.4.3.7",
   "title": "",
   "body": ""
 },
@@ -27050,7 +27077,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2386",
   "type": "Exercise",
-  "number": "10.4.3.6",
+  "number": "10.4.3.8",
   "title": "",
   "body": ""
 },
@@ -27059,7 +27086,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2387",
   "type": "Exercise",
-  "number": "10.4.3.7",
+  "number": "10.4.3.9",
   "title": "",
   "body": ""
 },
@@ -27068,7 +27095,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2388",
   "type": "Exercise",
-  "number": "10.4.3.8",
+  "number": "10.4.3.10",
   "title": "",
   "body": ""
 },
@@ -27077,7 +27104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2389",
   "type": "Exercise",
-  "number": "10.4.3.9",
+  "number": "10.4.3.11",
   "title": "",
   "body": ""
 },
@@ -27086,7 +27113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2390",
   "type": "Exercise",
-  "number": "10.4.3.10",
+  "number": "10.4.3.12",
   "title": "",
   "body": ""
 },
@@ -27095,7 +27122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2391",
   "type": "Exercise",
-  "number": "10.4.3.11",
+  "number": "10.4.3.13",
   "title": "",
   "body": ""
 },
@@ -27104,7 +27131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2392",
   "type": "Exercise",
-  "number": "10.4.3.12",
+  "number": "10.4.3.14",
   "title": "",
   "body": ""
 },
@@ -27113,7 +27140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2393",
   "type": "Exercise",
-  "number": "10.4.3.13",
+  "number": "10.4.3.15",
   "title": "",
   "body": ""
 },
@@ -27122,7 +27149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2394",
   "type": "Exercise",
-  "number": "10.4.3.14",
+  "number": "10.4.3.16",
   "title": "",
   "body": ""
 },
@@ -27131,7 +27158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2395",
   "type": "Exercise",
-  "number": "10.4.3.15",
+  "number": "10.4.3.17",
   "title": "",
   "body": ""
 },
@@ -27140,7 +27167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2396",
   "type": "Exercise",
-  "number": "10.4.3.16",
+  "number": "10.4.3.18",
   "title": "",
   "body": ""
 },
@@ -27149,7 +27176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2397",
   "type": "Exercise",
-  "number": "10.4.3.17",
+  "number": "10.4.3.19",
   "title": "",
   "body": ""
 },
@@ -27158,7 +27185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2398",
   "type": "Exercise",
-  "number": "10.4.3.18",
+  "number": "10.4.3.20",
   "title": "",
   "body": ""
 },
@@ -27167,7 +27194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2399",
   "type": "Exercise",
-  "number": "10.4.3.19",
+  "number": "10.4.3.21",
   "title": "",
   "body": ""
 },
@@ -27176,7 +27203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2400",
   "type": "Exercise",
-  "number": "10.4.3.20",
+  "number": "10.4.3.22",
   "title": "",
   "body": ""
 },
@@ -27185,7 +27212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2401",
   "type": "Exercise",
-  "number": "10.4.3.21",
+  "number": "10.4.3.23",
   "title": "",
   "body": ""
 },
@@ -27194,7 +27221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2402",
   "type": "Exercise",
-  "number": "10.4.3.22",
+  "number": "10.4.3.24",
   "title": "",
   "body": ""
 },
@@ -27203,7 +27230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2403",
   "type": "Exercise",
-  "number": "10.4.3.23",
+  "number": "10.4.3.25",
   "title": "",
   "body": ""
 },
@@ -27212,7 +27239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2404",
   "type": "Exercise",
-  "number": "10.4.3.24",
+  "number": "10.4.3.26",
   "title": "",
   "body": ""
 },
@@ -27221,61 +27248,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2405",
   "type": "Exercise",
-  "number": "10.4.3.25",
+  "number": "10.4.3.27",
   "title": "",
-  "body": ""
+  "body": "In 1970, the population of New York City was 7,894,862. In 1980, the population had fallen to 7,071,639.  Write an exponential function using base for the population of New York over that decade.  By what percent did the population decline annually?    1.095%  "
 },
 {
   "id": "exercise-2406",
   "level": "2",
   "url": "chap10-summary.html#exercise-2406",
   "type": "Exercise",
-  "number": "10.4.3.26",
+  "number": "10.4.3.28",
   "title": "",
-  "body": ""
+  "body": "In 1990, the population of New York City was 7,322,564. In 2000, the population was 8,008,278.  Write an exponential function using base for the population of New York over that decade.  By what percent did the population increase annually?  "
 },
 {
   "id": "exercise-2407",
   "level": "2",
   "url": "chap10-summary.html#exercise-2407",
   "type": "Exercise",
-  "number": "10.4.3.27",
+  "number": "10.4.3.29",
   "title": "",
-  "body": "In 1970, the population of New York City was 7,894,862. In 1980, the population had fallen to 7,071,639.  Write an exponential function using base for the population of New York over that decade.  By what percent did the population decline annually?    1.095%  "
+  "body": "You deposit $1000 in a savings account paying 5% interest compounded continuously.  Find the amount in the account after 7 years.  How long will it take for the original principal to double?  Find a formula for the time required for the amount to reach .   $1419.07  13.9 years   "
 },
 {
   "id": "exercise-2408",
   "level": "2",
   "url": "chap10-summary.html#exercise-2408",
   "type": "Exercise",
-  "number": "10.4.3.28",
+  "number": "10.4.3.30",
   "title": "",
-  "body": "In 1990, the population of New York City was 7,322,564. In 2000, the population was 8,008,278.  Write an exponential function using base for the population of New York over that decade.  By what percent did the population increase annually?  "
+  "body": "The voltage, , across a capacitor in a certain circuit is given by the function where is the time in seconds.  Make a table of values and graph for to .  Describe the graph. What happens to the voltage in the long run?  How much time must elapse (to the nearest hundredth of a second) for the voltage to reach 75 volts?  "
 },
 {
   "id": "exercise-2409",
   "level": "2",
   "url": "chap10-summary.html#exercise-2409",
   "type": "Exercise",
-  "number": "10.4.3.29",
+  "number": "10.4.3.31",
   "title": "",
-  "body": "You deposit $1000 in a savings account paying 5% interest compounded continuously.  Find the amount in the account after 7 years.  How long will it take for the original principal to double?  Find a formula for the time required for the amount to reach .   $1419.07  13.9 years   "
+  "body": "Solve for : "
 },
 {
   "id": "exercise-2410",
   "level": "2",
   "url": "chap10-summary.html#exercise-2410",
   "type": "Exercise",
-  "number": "10.4.3.30",
+  "number": "10.4.3.32",
   "title": "",
-  "body": "The voltage, , across a capacitor in a certain circuit is given by the function where is the time in seconds.  Make a table of values and graph for to .  Describe the graph. What happens to the voltage in the long run?  How much time must elapse (to the nearest hundredth of a second) for the voltage to reach 75 volts?  "
+  "body": "Solve for : "
 },
 {
   "id": "exercise-2411",
   "level": "2",
   "url": "chap10-summary.html#exercise-2411",
   "type": "Exercise",
-  "number": "10.4.3.31",
+  "number": "10.4.3.33",
   "title": "",
   "body": "Solve for : "
 },
@@ -27284,7 +27311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2412",
   "type": "Exercise",
-  "number": "10.4.3.32",
+  "number": "10.4.3.34",
   "title": "",
   "body": "Solve for : "
 },
@@ -27293,25 +27320,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2413",
   "type": "Exercise",
-  "number": "10.4.3.33",
+  "number": "10.4.3.35",
   "title": "",
-  "body": "Solve for : "
+  "body": "Express in the form . "
 },
 {
   "id": "exercise-2414",
   "level": "2",
   "url": "chap10-summary.html#exercise-2414",
   "type": "Exercise",
-  "number": "10.4.3.34",
+  "number": "10.4.3.36",
   "title": "",
-  "body": "Solve for : "
+  "body": "Express in the form . "
 },
 {
   "id": "exercise-2415",
   "level": "2",
   "url": "chap10-summary.html#exercise-2415",
   "type": "Exercise",
-  "number": "10.4.3.35",
+  "number": "10.4.3.37",
   "title": "",
   "body": "Express in the form . "
 },
@@ -27320,7 +27347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2416",
   "type": "Exercise",
-  "number": "10.4.3.36",
+  "number": "10.4.3.38",
   "title": "",
   "body": "Express in the form . "
 },
@@ -27329,86 +27356,68 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chap10-summary.html#exercise-2417",
   "type": "Exercise",
-  "number": "10.4.3.37",
+  "number": "10.4.3.39",
   "title": "",
-  "body": "Express in the form . "
+  "body": "Plot the values on a log scale.        log scale "
 },
 {
   "id": "exercise-2418",
   "level": "2",
   "url": "chap10-summary.html#exercise-2418",
   "type": "Exercise",
-  "number": "10.4.3.38",
+  "number": "10.4.3.40",
   "title": "",
-  "body": "Express in the form . "
+  "body": "Plot the values on a log scale.        "
 },
 {
   "id": "exercise-2419",
   "level": "2",
   "url": "chap10-summary.html#exercise-2419",
   "type": "Exercise",
-  "number": "10.4.3.39",
+  "number": "10.4.3.41",
   "title": "",
-  "body": "Plot the values on a log scale.        log scale "
+  "body": " The graph describes a network of streams near Santa Fe, New Mexico. It shows the number of streams of a given order, which is a measure of their size. Use the graph to estimate the number of streams of orders 3, 4, 8, and 9. (Source: Leopold, Wolman, and Miller)  stream order on semi-log scale  Order 3: 17,000; Order 4: 5000; Order 8: 40; Order 9: 11 "
 },
 {
   "id": "exercise-2420",
   "level": "2",
   "url": "chap10-summary.html#exercise-2420",
   "type": "Exercise",
-  "number": "10.4.3.40",
+  "number": "10.4.3.42",
   "title": "",
-  "body": "Plot the values on a log scale.        "
+  "body": "Large animals use oxygen more efficiently when running than small animals do. The graph shows the amount of oxygen various animals use, per gram of their body weight, to run 1 kilometer. Estimate the body mass and oxygen use for a kangaroo rat, a dog, and a horse. (Source: Schmidt-Neilsen, 1972)   "
 },
 {
   "id": "exercise-2421",
   "level": "2",
   "url": "chap10-summary.html#exercise-2421",
   "type": "Exercise",
-  "number": "10.4.3.41",
+  "number": "10.4.3.43",
   "title": "",
-  "body": " The graph describes a network of streams near Santa Fe, New Mexico. It shows the number of streams of a given order, which is a measure of their size. Use the graph to estimate the number of streams of orders 3, 4, 8, and 9. (Source: Leopold, Wolman, and Miller)  stream order on semi-log scale  Order 3: 17,000; Order 4: 5000; Order 8: 40; Order 9: 11 "
+  "body": "The loudest sound created in a laboratory registered at 210 decibels. The energy from such a sound is sufficient to bore holes in solid material. Find the intensity of a 210-decibel sound. "
 },
 {
   "id": "exercise-2422",
   "level": "2",
   "url": "chap10-summary.html#exercise-2422",
   "type": "Exercise",
-  "number": "10.4.3.42",
+  "number": "10.4.3.44",
   "title": "",
-  "body": "Large animals use oxygen more efficiently when running than small animals do. The graph shows the amount of oxygen various animals use, per gram of their body weight, to run 1 kilometer. Estimate the body mass and oxygen use for a kangaroo rat, a dog, and a horse. (Source: Schmidt-Neilsen, 1972)   "
+  "body": "The most powerful earthquake ever recorded occurred in Chile on 22 May 1960. The magnitude of the earthquake was approximately 9.5. What was the amplitude of its seismographic trace. "
 },
 {
   "id": "exercise-2423",
   "level": "2",
   "url": "chap10-summary.html#exercise-2423",
   "type": "Exercise",
-  "number": "10.4.3.43",
-  "title": "",
-  "body": "The loudest sound created in a laboratory registered at 210 decibels. The energy from such a sound is sufficient to bore holes in solid material. Find the intensity of a 210-decibel sound. "
-},
-{
-  "id": "exercise-2424",
-  "level": "2",
-  "url": "chap10-summary.html#exercise-2424",
-  "type": "Exercise",
-  "number": "10.4.3.44",
-  "title": "",
-  "body": "The most powerful earthquake ever recorded occurred in Chile on 22 May 1960. The magnitude of the earthquake was approximately 9.5. What was the amplitude of its seismographic trace. "
-},
-{
-  "id": "exercise-2425",
-  "level": "2",
-  "url": "chap10-summary.html#exercise-2425",
-  "type": "Exercise",
   "number": "10.4.3.45",
   "title": "",
   "body": "In 2004, a magnitude 9.0 earthquake struck Sumatra in Indonesia. How much more powerful was this quake than the 1906 San Francisco earthquake of magnitude 8.3? "
 },
 {
-  "id": "exercise-2426",
+  "id": "exercise-2424",
   "level": "2",
-  "url": "chap10-summary.html#exercise-2426",
+  "url": "chap10-summary.html#exercise-2424",
   "type": "Exercise",
   "number": "10.4.3.46",
   "title": "",
@@ -27424,27 +27433,27 @@ var ptx_lunr_docs = [
   "body": "Getting Started  On and Off  If you are reading this textbook in a web browser using a computer with sufficiently wide monitor, you should see button labeled \"Calc\" just above the text on the page. Clicking on that button will launch a Geogebra calculator applet in the right margin of the book. If the calculator overlaps the text, click on the \"Contents\" tab above the navigation panel to hide that panel and provide more space for the text. Click again on the \"Calc\" button to close the calculator app. (And clicking again on the \"Contents\" tab will re-open the navigation panel.)   Numbers and Operations   Compute .  Enter   and even before we press , GeoGebra shows the result below the input box.  If we do press , GeoGebra shows     in an output history region above the input box. There is a scroll bar to the right of the output history and the input box.    Compute .  Enter   to see the result    We press to tell the calculator to store the computation. We can use the scroll bar to see the input box or the output history of previous computations.  The calculator has a key for the value of .   Compute .  Enter   or   to get the approximation     Delete and Undo  Press the backspace key (shown in the keyboard image ) to delete the character before the cursor or any highlighted characters.  To remove an item from the output history, tap the kebab menu icon (three vertically stacked dots) to the right of the item, then tap \"Delete\".  To remove the most recent item in the output history, tap the Undo icon in the Graphics View. (The icon looks like an arched arrow pointing left.)   "
 },
 {
-  "id": "example-272",
+  "id": "example-274",
   "level": "2",
-  "url": "GGB-getting-started.html#example-272",
+  "url": "GGB-getting-started.html#example-274",
   "type": "Example",
   "number": "A.1.1",
   "title": "",
   "body": " Compute .  Enter   and even before we press , GeoGebra shows the result below the input box.  If we do press , GeoGebra shows     in an output history region above the input box. There is a scroll bar to the right of the output history and the input box.  "
 },
 {
-  "id": "example-273",
+  "id": "example-275",
   "level": "2",
-  "url": "GGB-getting-started.html#example-273",
+  "url": "GGB-getting-started.html#example-275",
   "type": "Example",
   "number": "A.1.2",
   "title": "",
   "body": " Compute .  Enter   to see the result   "
 },
 {
-  "id": "example-274",
+  "id": "example-276",
   "level": "2",
-  "url": "GGB-getting-started.html#example-274",
+  "url": "GGB-getting-started.html#example-276",
   "type": "Example",
   "number": "A.1.3",
   "title": "",
@@ -27460,45 +27469,45 @@ var ptx_lunr_docs = [
   "body": "Entering Expressions  Parentheses   Order of Operations : The calculator follows the standard order of operations.   Compute .   Enter +       Ans.      Compute .   Enter (   +   )      Ans.      Fractions   Compute .   Enter (   +   )      Ans.      GeoGebra displays \"built-up\" fractions like . Once we enter the numerator and select the key, the cursor is in the denominator and will stay there until we use an arrow key on the keyboard to move the cursor outside the fraction, or until we press . The arrow keys on the virtual keyboard are shown in the keyboard image .    Compute .   Enter        Ans.    In the output history, there is an approximation icon that looks like the \" \" symbol in a blue square. To get a decimal approximation of the fraction, click on that icon.  Ans.     Compute .   Enter         Ans.      Exponents and Powers  The key for exponents and the key for squaring are shown in the keyboard image .   Evaluate .  Enter , then the squaring key, then   OR  Enter , then the exponent key, then    Ans.     Evaluate .   Enter , and then the exponent key, 10   Ans.      GeoGebra nicely displays powers such as , with the exponent raised like a superscript. Once we enter the base and select the exponent key, the cursor is in the exponent and will stay there until we use the arrow keys to move the cursor outside the power, or until we press . The arrow keys on the virtual keyboard are shown in the keyboard image .    Evaluate .  Enter , then the exponent key, then      Ans.     Evaluate .  Enter , then the exponent key, then       Ans.     Square Roots  The key for square roots is shown in the keyboard image .   Evaluate .   Select the square root key, then enter    Ans.      GeoGebra nicely displays square roots such as , with the radicand inside the square root \"house\". Once we select the square root key, the cursor is in under the radical and will stay there until we use the arrow keys to move the cursor outside, or until we press . The arrow keys on the virtual keyboard are shown in the keyboard image .    Evaluate .  Select the square root key, then enter      Ans.     Evaluate .  Select the square root key, then enter       Ans.     Other Roots  If we click on the \"f(x)\" on the keyboard in the Algebra View, we see other built-in keys.   GeoGebra calculator f(x) keyboard   GeoGebra calculator f(x) keyboard     Compute .  Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter      Ans.     Compute .  Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter        Ans.     Absolute Value  GeoGebra nicely displays the vertical bars of the standard absolute value notation, such as in the expression . Once we select the absolute value key, the cursor is in between the vertical bars and will stay there until we use the arrow keys to move the cursor outside, or until we press . The arrow keys on the virtual keyboard are shown in the keyboard image .   Evaluate .  Select the absolute value key, then enter           Ans.     Scientific Notation  The GeoGebra calculator does not display scientific notation by default. The calculator can display scientific notation in the Grahics View by using a ScientificText command.   Compute .   Enter     Ans.    We will enter ScientificText in the input box.   On the computer, typing the first three letters (sci) is enough for the full command to appear as an option.    On a phone app, we tap on the overflow menu (three horizontal dots) on the top right of the virtual keyboard (see keyboard image ), tap in the Search in All Commands field, then start to input ScientificText until the full command appears as an option.   We click on ScientificText, and the cursor is appropriately positioned, ready for us to enter an expression. We can either repeat the calculation we entered above, or, more efficiently, select the last answer key ans and .  The result , appears on the grid in the Graphics View. We can drag the text within the Graphics View, change its color, and\/or delete it.  We could also type in the entire command scientifictext using the ABC keyboard, then use the 123 keyboard to enter the parentheses and numbers.    Editing an Entry  We can edit an expression without starting again. The backspace key will remove the character to the left of the cursor. We can move the cursor within an input line using the arrow keys or by clicking in the appropriate place.  We can recall any previous entry by finding it in the output history (scrolling up if necessary), tapping on the kebab menu icon (three vertical dots), and selecting Duplicate. The command will be copied into the current input box, which we can edit before pressing .  If the menu does not appear  Sometimes when using the GeoGebra app embedded in this textbook, the menu does not appear when we tap on the kebab menu icon. This may occur when we are at a place in the section far from the top of the webpage. Try scrolling within the webpage to the top, and tap on the kebab menu icon again.   If we just want to use the most recent result in the current command, we use the ans key.   Evaluate and then take the square root of the sum.  Enter , then the square key, then  , the square key again, then   Ans.   Now select the square root key, then ans    Ans.     "
 },
 {
-  "id": "p-11273",
+  "id": "p-10253",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#p-11273",
+  "url": "GGB-Entering-Expressions.html#p-10253",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Order of Operations "
 },
 {
-  "id": "example-275",
+  "id": "example-277",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-275",
+  "url": "GGB-Entering-Expressions.html#example-277",
   "type": "Example",
   "number": "A.2.1",
   "title": "",
   "body": " Compute .   Enter +       Ans.    "
 },
 {
-  "id": "example-276",
+  "id": "example-278",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-276",
+  "url": "GGB-Entering-Expressions.html#example-278",
   "type": "Example",
   "number": "A.2.2",
   "title": "",
   "body": " Compute .   Enter (   +   )      Ans.    "
 },
 {
-  "id": "example-277",
+  "id": "example-279",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-277",
+  "url": "GGB-Entering-Expressions.html#example-279",
   "type": "Example",
   "number": "A.2.3",
   "title": "",
   "body": " Compute .   Enter (   +   )      Ans.    "
 },
 {
-  "id": "warning-50",
+  "id": "warning-49",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#warning-50",
+  "url": "GGB-Entering-Expressions.html#warning-49",
   "type": "Caution",
   "number": "A.2.4",
   "title": "",
@@ -27514,90 +27523,90 @@ var ptx_lunr_docs = [
   "body": " Compute .   Enter        Ans.    In the output history, there is an approximation icon that looks like the \" \" symbol in a blue square. To get a decimal approximation of the fraction, click on that icon.  Ans.   "
 },
 {
-  "id": "example-279",
+  "id": "example-281",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-279",
+  "url": "GGB-Entering-Expressions.html#example-281",
   "type": "Example",
   "number": "A.2.6",
   "title": "",
   "body": " Compute .   Enter         Ans.    "
 },
 {
-  "id": "example-280",
+  "id": "example-282",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-280",
+  "url": "GGB-Entering-Expressions.html#example-282",
   "type": "Example",
   "number": "A.2.7",
   "title": "",
   "body": " Evaluate .  Enter , then the squaring key, then   OR  Enter , then the exponent key, then    Ans.   "
 },
 {
-  "id": "example-281",
+  "id": "example-283",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-281",
+  "url": "GGB-Entering-Expressions.html#example-283",
   "type": "Example",
   "number": "A.2.8",
   "title": "",
   "body": " Evaluate .   Enter , and then the exponent key, 10   Ans.    "
 },
 {
-  "id": "warning-51",
+  "id": "warning-50",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#warning-51",
+  "url": "GGB-Entering-Expressions.html#warning-50",
   "type": "Caution",
   "number": "A.2.9",
   "title": "",
   "body": " GeoGebra nicely displays powers such as , with the exponent raised like a superscript. Once we enter the base and select the exponent key, the cursor is in the exponent and will stay there until we use the arrow keys to move the cursor outside the power, or until we press . The arrow keys on the virtual keyboard are shown in the keyboard image .  "
 },
 {
-  "id": "example-282",
+  "id": "example-284",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-282",
+  "url": "GGB-Entering-Expressions.html#example-284",
   "type": "Example",
   "number": "A.2.10",
   "title": "",
   "body": " Evaluate .  Enter , then the exponent key, then      Ans.   "
 },
 {
-  "id": "example-283",
+  "id": "example-285",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-283",
+  "url": "GGB-Entering-Expressions.html#example-285",
   "type": "Example",
   "number": "A.2.11",
   "title": "",
   "body": " Evaluate .  Enter , then the exponent key, then       Ans.   "
 },
 {
-  "id": "example-284",
+  "id": "example-286",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-284",
+  "url": "GGB-Entering-Expressions.html#example-286",
   "type": "Example",
   "number": "A.2.12",
   "title": "",
   "body": " Evaluate .   Select the square root key, then enter    Ans.    "
 },
 {
-  "id": "warning-52",
+  "id": "warning-51",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#warning-52",
+  "url": "GGB-Entering-Expressions.html#warning-51",
   "type": "Caution",
   "number": "A.2.13",
   "title": "",
   "body": " GeoGebra nicely displays square roots such as , with the radicand inside the square root \"house\". Once we select the square root key, the cursor is in under the radical and will stay there until we use the arrow keys to move the cursor outside, or until we press . The arrow keys on the virtual keyboard are shown in the keyboard image .  "
 },
 {
-  "id": "example-285",
+  "id": "example-287",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-285",
+  "url": "GGB-Entering-Expressions.html#example-287",
   "type": "Example",
   "number": "A.2.14",
   "title": "",
   "body": " Evaluate .  Select the square root key, then enter      Ans.   "
 },
 {
-  "id": "example-286",
+  "id": "example-288",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-286",
+  "url": "GGB-Entering-Expressions.html#example-288",
   "type": "Example",
   "number": "A.2.15",
   "title": "",
@@ -27613,36 +27622,36 @@ var ptx_lunr_docs = [
   "body": " GeoGebra calculator f(x) keyboard   GeoGebra calculator f(x) keyboard   "
 },
 {
-  "id": "example-287",
+  "id": "example-289",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-287",
+  "url": "GGB-Entering-Expressions.html#example-289",
   "type": "Example",
   "number": "A.2.17",
   "title": "",
   "body": " Compute .  Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter      Ans.   "
 },
 {
-  "id": "example-288",
+  "id": "example-290",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-288",
+  "url": "GGB-Entering-Expressions.html#example-290",
   "type": "Example",
   "number": "A.2.18",
   "title": "",
   "body": " Compute .  Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter        Ans.   "
 },
 {
-  "id": "example-289",
+  "id": "example-291",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-289",
+  "url": "GGB-Entering-Expressions.html#example-291",
   "type": "Example",
   "number": "A.2.19",
   "title": "",
   "body": " Evaluate .  Select the absolute value key, then enter           Ans.   "
 },
 {
-  "id": "example-290",
+  "id": "example-292",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-290",
+  "url": "GGB-Entering-Expressions.html#example-292",
   "type": "Example",
   "number": "A.2.20",
   "title": "",
@@ -27658,9 +27667,9 @@ var ptx_lunr_docs = [
   "body": "If the menu does not appear  Sometimes when using the GeoGebra app embedded in this textbook, the menu does not appear when we tap on the kebab menu icon. This may occur when we are at a place in the section far from the top of the webpage. Try scrolling within the webpage to the top, and tap on the kebab menu icon again.  "
 },
 {
-  "id": "example-291",
+  "id": "example-293",
   "level": "2",
-  "url": "GGB-Entering-Expressions.html#example-291",
+  "url": "GGB-Entering-Expressions.html#example-293",
   "type": "Example",
   "number": "A.2.22",
   "title": "",
@@ -27685,9 +27694,9 @@ var ptx_lunr_docs = [
   "body": "   Graph the equation .  In the Algebra View, Press    =   .  The output history shows and the Graphics View shows the line passing through the points and . If we click on either of these two points, GeoGebra will show a label and the coordinates.    x+y=2 on Geogebra calculator    "
 },
 {
-  "id": "example-293",
+  "id": "example-295",
   "level": "2",
-  "url": "GGB-Graphing-an-Equation.html#example-293",
+  "url": "GGB-Graphing-an-Equation.html#example-295",
   "type": "Example",
   "number": "A.3.2",
   "title": "",
@@ -27703,9 +27712,9 @@ var ptx_lunr_docs = [
   "body": "Retrieving the Algebra View  To access the Algebra View again, click again on the arrow at the right edge of what had previously been the border between the Graphics View and Algebra View.  "
 },
 {
-  "id": "example-294",
+  "id": "example-296",
   "level": "2",
-  "url": "GGB-Graphing-an-Equation.html#example-294",
+  "url": "GGB-Graphing-an-Equation.html#example-296",
   "type": "Example",
   "number": "A.3.4",
   "title": "",
@@ -27730,9 +27739,9 @@ var ptx_lunr_docs = [
   "body": "   Graph the equation   Clear out the output history of any previous graphs, then enter into the input box   The graph is not visible in the standard window, so we will try the Zoom fit command. Right-click on the Graphics View and choose Zoom to fit.    Graphics menu on Geogebra calculator      Graphics menu Geogebra calculator    But if you use the GeoGebra calculator app on a mobile device, tap the options icon that resembles a gear, located in the upper right corner of the Graphics View, and a slightly different menu apears.  There are icons for both a Standard View and a Zoom to fit.    Once you can see part of the graph, you can further adjust the Graphics View by dragging and\/or zooming.  "
 },
 {
-  "id": "example-296",
+  "id": "example-298",
   "level": "2",
-  "url": "GGB-more-graphing.html#example-296",
+  "url": "GGB-more-graphing.html#example-298",
   "type": "Example",
   "number": "A.4.2",
   "title": "",
@@ -27757,9 +27766,9 @@ var ptx_lunr_docs = [
   "body": " GeoGebra calculator ABC keyboard   GeoGebra calculator ABC keyboard   "
 },
 {
-  "id": "example-297",
+  "id": "example-299",
   "level": "2",
-  "url": "GGB-Regression.html#example-297",
+  "url": "GGB-Regression.html#example-299",
   "type": "Example",
   "number": "A.5.2",
   "title": "",

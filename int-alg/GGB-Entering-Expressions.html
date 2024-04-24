@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,8 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/0.31/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.31</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.31/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.31/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.31/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -616,62 +598,64 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-180" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-181" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Products of Polynomials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Special Products</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Factoring Cubics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Modeling with Polynomials</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Problem Set 8.1</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-182" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Modeling with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-183" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Approximations with Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-184" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Special Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-185" class="internal"><span class="codenumber">8.1.6</span> <span class="title">Factoring Cubics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PolynomialFunctions.html#subsection-186" class="internal"><span class="codenumber">8.1.7</span> <span class="title">An Application of Cubic Splines</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PolynomialFunctions.html#section-8-1-exercises" class="internal"><span class="codenumber">8.1.8</span> <span class="title">Problem Set 8.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="AlgebraicFractions.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-185" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-186" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-187" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-188" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Reducing Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Opposite of a Binomial</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="AlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rational Functions</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="AlgebraicFractions.html#section-8-2-exercises" class="internal"><span class="codenumber">8.2.5</span> <span class="title">Problem Set 8.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="OperationsAlgebraicFractions.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Operations on Algebraic Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-189" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-190" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-191" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Products of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-192" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Quotients of Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-193" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Adding and Subtracting Like Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-194" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-195" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Finding the Lowest Common Denominator</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-196" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Adding and Subtracting Unlike Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#subsection-197" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Applications</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OperationsAlgebraicFractions.html#section-8-3-exercises" class="internal"><span class="codenumber">8.3.8</span> <span class="title">Problem Set 8.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="MoreOperationsonFractions.html" class="internal"><span class="codenumber">8.4</span> <span class="title">More Operations on Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-196" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-197" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-198" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Complex Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-199" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Negative Exponents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-200" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#subsection-201" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Polynomial Division</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="MoreOperationsonFractions.html#section-8-4-exercises" class="internal"><span class="codenumber">8.4.5</span> <span class="title">Problem Set 8.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="EquationswithFractions.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Equations with Fractions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-200" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-201" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-202" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Solving Algebraically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-203" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-204" class="internal"><span class="codenumber">8.5.3</span> <span class="title">Extraneous Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-205" class="internal"><span class="codenumber">8.5.4</span> <span class="title">Solving Graphically</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-206" class="internal"><span class="codenumber">8.5.5</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="EquationswithFractions.html#subsection-207" class="internal"><span class="codenumber">8.5.6</span> <span class="title">Formulas</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="EquationswithFractions.html#section-8-5-exercises" class="internal"><span class="codenumber">8.5.7</span> <span class="title">Problem Set 8.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap8-summary.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Chapter 8 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-206" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-207" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-208" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap8-summary.html#subsection-209" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap8-summary.html#chap8-rev-problems" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Chapter 8 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -683,60 +667,60 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="PropertiesOfLines.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Properties of Lines</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-208" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-209" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-210" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Horizontal and Vertical Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-211" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Parallel and Perpendicular Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PropertiesOfLines.html#subsection-212" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Applications to Geometry</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="PropertiesOfLines.html#section-9-1-exercises" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Problem Set 9.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Distance-and-Midpoint.html" class="internal"><span class="codenumber">9.2</span> <span class="title">The Distance and Midpoint Formulas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-211" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-212" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Finding the Midpoint</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.4</span> <span class="title">The Midpoint Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.5</span> <span class="title">Circles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.6</span> <span class="title">General Form for Circles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Problem Set 9.2</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-213" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Distance in a Coordinate Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-214" class="internal"><span class="codenumber">9.2.2</span> <span class="title">The Distance Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-215" class="internal"><span class="codenumber">9.2.3</span> <span class="title">The Midpoint Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-216" class="internal"><span class="codenumber">9.2.4</span> <span class="title">Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-217" class="internal"><span class="codenumber">9.2.5</span> <span class="title">General Form for Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-218" class="internal"><span class="codenumber">9.2.6</span> <span class="title">Finding an Equation for a Circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#subsection-219" class="internal"><span class="codenumber">9.2.7</span> <span class="title">Investigation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Distance-and-Midpoint.html#section-9-2-exercises" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Problem Set 9.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Ellipses.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Conic Sections: Ellipses</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-218" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-219" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-220" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Circles and Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-221" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Translated Ellipses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-222" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ellipses.html#subsection-223" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Finding the Equation of an Ellipse</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Ellipses.html#section-9-3-exercises" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Problem Set 9.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Hyperbolas.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Conic Sections: Hyperbolas</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-222" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-223" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-224" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Asymptotes of Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-225" class="internal"><span class="codenumber">9.4.2</span> <span class="title">The Central Conics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-226" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Translated Hyperbolas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-227" class="internal"><span class="codenumber">9.4.4</span> <span class="title">Writing in Standard Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Hyperbolas.html#subsection-228" class="internal"><span class="codenumber">9.4.5</span> <span class="title">General Quadratic Equation in Two Variables</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Hyperbolas.html#section-9-4-exercises" class="internal"><span class="codenumber">9.4.6</span> <span class="title">Problem Set 9.4</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="NonlinearSystems.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Nonlinear Systems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-227" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-228" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-229" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Systems Involving Quadratic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-230" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Systems Involving Conic Sections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="NonlinearSystems.html#subsection-231" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Solving Systems by Elimination</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="NonlinearSystems.html#section-9-5-exercises" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Problem Set 9.5</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap9-summary.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Chapter 9 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-230" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-231" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-232" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap9-summary.html#subsection-233" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap9-summary.html#chap9-rev-problems" class="internal"><span class="codenumber">9.6.3</span> <span class="title">Chapter 9 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -748,41 +732,43 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicFunctions.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Logarithmic Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-232" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-233" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-234" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Inverse of a Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-235" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Inverse of an Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-236" class="internal"><span class="codenumber">10.1.3</span> <span class="title">Graphs of Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-237" class="internal"><span class="codenumber">10.1.4</span> <span class="title">Using Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicFunctions.html#subsection-238" class="internal"><span class="codenumber">10.1.5</span> <span class="title">Solving Logarithmic Equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicFunctions.html#section-10-1-exercises" class="internal"><span class="codenumber">10.1.6</span> <span class="title">Problem Set 10.1</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="LogarithmicScales.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Logarithmic Scales</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-237" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-238" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-239" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Making a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-240" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Labeling a Log Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-241" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Acidity and the pH Scale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-242" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Decibels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="LogarithmicScales.html#subsection-243" class="internal"><span class="codenumber">10.2.5</span> <span class="title">The Richter Scale</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="LogarithmicScales.html#section-10-2-exercises" class="internal"><span class="codenumber">10.2.6</span> <span class="title">Problem Set 10.2</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="The-Natural-Base.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Natural Base</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-242" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-243" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Solving Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Continuous Compounding</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Homework 10.3</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-244" class="internal"><span class="codenumber">10.3.1</span> <span class="title">The Natural Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-245" class="internal"><span class="codenumber">10.3.2</span> <span class="title">The Natural Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-246" class="internal"><span class="codenumber">10.3.3</span> <span class="title">Properties of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-247" class="internal"><span class="codenumber">10.3.4</span> <span class="title">Solving Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-248" class="internal"><span class="codenumber">10.3.5</span> <span class="title">Exponential Growth and Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-249" class="internal"><span class="codenumber">10.3.6</span> <span class="title">Continuous Compounding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="The-Natural-Base.html#subsection-250" class="internal"><span class="codenumber">10.3.7</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="The-Natural-Base.html#section-10-3-exercises" class="internal"><span class="codenumber">10.3.8</span> <span class="title">Homework 10.3</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="chap10-summary.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Chapter 10 Summary and Review</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-247" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-248" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-251" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chap10-summary.html#subsection-252" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Key Concepts</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chap10-summary.html#chap10-rev-problems" class="internal"><span class="codenumber">10.4.3</span> <span class="title">Chapter 10 Review Problems</span></a></div></li>
 </ul>
 </li>
@@ -797,37 +783,37 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-getting-started.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Getting Started</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-249" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-250" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-251" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-253" class="internal"><span class="codenumber">A.1.1</span> <span class="title">On and Off</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-254" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Numbers and Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-getting-started.html#subsection-255" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Delete and Undo</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="GGB-Entering-Expressions.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Entering Expressions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-252" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-253" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-254" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-255" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-256" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Parentheses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-257" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-258" class="internal"><span class="codenumber">A.2.3</span> <span class="title">Exponents and Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-259" class="internal"><span class="codenumber">A.2.4</span> <span class="title">Square Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-260" class="internal"><span class="codenumber">A.2.5</span> <span class="title">Other Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-261" class="internal"><span class="codenumber">A.2.6</span> <span class="title">Absolute Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-262" class="internal"><span class="codenumber">A.2.7</span> <span class="title">Scientific Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Entering-Expressions.html#subsection-263" class="internal"><span class="codenumber">A.2.8</span> <span class="title">Editing an Entry</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Graphing an Equation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-260" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-261" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-262" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-264" class="internal"><span class="codenumber">A.3.1</span> <span class="title">A Basic Graph with intercepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-265" class="internal"><span class="codenumber">A.3.2</span> <span class="title">Translate and Zoom</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-Graphing-an-Equation.html#subsection-266" class="internal"><span class="codenumber">A.3.3</span> <span class="title">Graphing a Function, Making a Table, and Zooming One Axis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="GGB-more-graphing.html" class="internal"><span class="codenumber">A.4</span> <span class="title">More graphing</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-263" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-264" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-267" class="internal"><span class="codenumber">A.4.1</span> <span class="title">Finding a Suitable Graphing Window</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="GGB-more-graphing.html#subsection-268" class="internal"><span class="codenumber">A.4.2</span> <span class="title">Multiple Graphs and the Intersect Feature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -846,188 +832,188 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="GGB-Entering-Expressions"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">A.2</span><span class="space"> </span><span class="title">Entering Expressions</span>
 </h2>
-<section class="subsection" id="subsection-252"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-256"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.1</span><span class="space"> </span><span class="title">Parentheses</span>
 </h3>
-<div class="para" id="p-11273">
+<div class="para" id="p-10253">
 <dfn class="terminology">Order of Operations</dfn>: The calculator follows the standard order of operations.</div>
-<article class="example example-like" id="example-275"><h4 class="heading">
+<article class="example example-like" id="example-277"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11274">Compute <span class="process-math">\(2+3\cdot 4\text{.}\)</span>
+<div class="para" id="p-10254">Compute <span class="process-math">\(2+3\cdot 4\text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
-<div class="sbspanel top" style="width:61.5384615384615%;"><div class="para" id="p-11275">Enter <span class="process-math">\(\qquad 2\)</span><kbd class="kbdkey"> + </kbd> <span class="process-math">\(3\)</span>  <kbd class="kbdkey">×</kbd> <span class="process-math">\(4\)</span> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:61.5384615384615%;"><div class="para" id="p-10255">Enter <span class="process-math">\(\qquad 2\)</span><kbd class="kbdkey"> + </kbd> <span class="process-math">\(3\)</span>  <kbd class="kbdkey">×</kbd> <span class="process-math">\(4\)</span> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35.8974358974359%;"><div class="para" id="p-11276">Ans. <span class="process-math">\(14\)</span>
+<div class="sbspanel top" style="width:35.8974358974359%;"><div class="para" id="p-10256">Ans. <span class="process-math">\(14\)</span>
 </div></div>
-</div></div></article><article class="example example-like" id="example-276"><h4 class="heading">
+</div></div></article><article class="example example-like" id="example-278"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11277">Compute <span class="process-math">\((2+3)\cdot4\text{.}\)</span>
+<div class="para" id="p-10257">Compute <span class="process-math">\((2+3)\cdot4\text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-11278">Enter <span class="process-math">\(\qquad \)</span><kbd class="kbdkey"> ( </kbd> <span class="process-math">\(2\)</span> <kbd class="kbdkey"> + </kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey"> ) </kbd>  <kbd class="kbdkey">×</kbd> <span class="process-math">\(4\)</span> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-10258">Enter <span class="process-math">\(\qquad \)</span><kbd class="kbdkey"> ( </kbd> <span class="process-math">\(2\)</span> <kbd class="kbdkey"> + </kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey"> ) </kbd>  <kbd class="kbdkey">×</kbd> <span class="process-math">\(4\)</span> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35%;"><div class="para" id="p-11279">Ans. <span class="process-math">\(20\)</span>
+<div class="sbspanel top" style="width:35%;"><div class="para" id="p-10259">Ans. <span class="process-math">\(20\)</span>
 </div></div>
-</div></div></article></section><section class="subsection" id="subsection-253"><h3 class="heading hide-type">
+</div></div></article></section><section class="subsection" id="subsection-257"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.2</span><span class="space"> </span><span class="title">Fractions</span>
 </h3>
-<article class="example example-like" id="example-277"><h4 class="heading">
+<article class="example example-like" id="example-279"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11280">Compute <span class="process-math">\(\dfrac{1+3}{2}\text{.}\)</span>
+<div class="para" id="p-10260">Compute <span class="process-math">\(\dfrac{1+3}{2}\text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-11281">Enter <span class="process-math">\(\qquad \)</span><kbd class="kbdkey"> ( </kbd> <span class="process-math">\(1  \)</span> <kbd class="kbdkey"> + </kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey"> ) </kbd>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(2\)</span> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-10261">Enter <span class="process-math">\(\qquad \)</span><kbd class="kbdkey"> ( </kbd> <span class="process-math">\(1  \)</span> <kbd class="kbdkey"> + </kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey"> ) </kbd>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(2\)</span> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35%;"><div class="para" id="p-11282">Ans. <span class="process-math">\(2\)</span>
+<div class="sbspanel top" style="width:35%;"><div class="para" id="p-10262">Ans. <span class="process-math">\(2\)</span>
 </div></div>
-</div></div></article><article class="warning remark-like" id="warning-50"><h4 class="heading">
+</div></div></article><article class="warning remark-like" id="warning-49"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">A.2.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11283">GeoGebra displays "built-up" fractions like <span class="process-math">\(\dfrac{1}{2} \text{.}\)</span> Once we enter the numerator and select the <kbd class="kbdkey">÷</kbd> key, the cursor is in the denominator and will stay there until we use an arrow key on the keyboard to move the cursor outside the fraction, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image A.0.1</a>.</div></article><article class="example example-like" id="example-approximate"><h4 class="heading">
+<div class="para" id="p-10263">GeoGebra displays "built-up" fractions like <span class="process-math">\(\dfrac{1}{2} \text{.}\)</span> Once we enter the numerator and select the <kbd class="kbdkey">÷</kbd> key, the cursor is in the denominator and will stay there until we use an arrow key on the keyboard to move the cursor outside the fraction, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image A.0.1</a>.</div></article><article class="example example-like" id="example-approximate"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.5</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11284">Compute <span class="process-math">\(\dfrac{1}{2\cdot 3} \text{.}\)</span>
+<div class="para" id="p-10264">Compute <span class="process-math">\(\dfrac{1}{2\cdot 3} \text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-11285">Enter <span class="process-math">\(\qquad 1 \)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(2\)</span>  <kbd class="kbdkey">×</kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-10265">Enter <span class="process-math">\(\qquad 1 \)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(2\)</span>  <kbd class="kbdkey">×</kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35%;"><div class="para" id="p-11286">Ans. <span class="process-math">\(\dfrac{1}{6} \)</span>
+<div class="sbspanel top" style="width:35%;"><div class="para" id="p-10266">Ans. <span class="process-math">\(\dfrac{1}{6} \)</span>
 </div></div>
-</div></div> <div class="para" id="p-11287">In the output history, there is an approximation icon that looks like the "<span class="process-math">\(\approx\)</span>" symbol in a blue square. To get a decimal approximation of the fraction, click on that icon.</div> <div class="para" id="p-11288">Ans. <span class="process-math">\(0.1666666666667\)</span>
-</div></article><article class="example example-like" id="example-279"><h4 class="heading">
+</div></div> <div class="para" id="p-10267">In the output history, there is an approximation icon that looks like the "<span class="process-math">\(\approx\)</span>" symbol in a blue square. To get a decimal approximation of the fraction, click on that icon.</div> <div class="para" id="p-10268">Ans. <span class="process-math">\(0.1666666666667\)</span>
+</div></article><article class="example example-like" id="example-281"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11289">Compute <span class="process-math">\(\dfrac{1}{2}\cdot 3 \text{.}\)</span>
+<div class="para" id="p-10269">Compute <span class="process-math">\(\dfrac{1}{2}\cdot 3 \text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-11290">Enter <span class="process-math">\(\qquad 1 \)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(2\)</span> <kbd class="kbdkey">→</kbd> <kbd class="kbdkey">×</kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-10270">Enter <span class="process-math">\(\qquad 1 \)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(2\)</span> <kbd class="kbdkey">→</kbd> <kbd class="kbdkey">×</kbd> <span class="process-math">\(3\)</span> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35%;"><div class="para" id="p-11291">Ans. <span class="process-math">\(\dfrac{3}{2} \)</span>
+<div class="sbspanel top" style="width:35%;"><div class="para" id="p-10271">Ans. <span class="process-math">\(\dfrac{3}{2} \)</span>
 </div></div>
-</div></div></article></section><section class="subsection" id="subsection-254"><h3 class="heading hide-type">
+</div></div></article></section><section class="subsection" id="subsection-258"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.3</span><span class="space"> </span><span class="title">Exponents and Powers</span>
 </h3>
-<div class="para" id="p-11292">The key for exponents and the key for squaring are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div>
-<article class="example example-like" id="example-280"><h4 class="heading">
+<div class="para" id="p-10272">The key for exponents and the key for squaring are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div>
+<article class="example example-like" id="example-282"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11293">Evaluate <span class="process-math">\(57^{2}\text{.}\)</span>
-</div> <div class="para" id="p-11294">Enter <span class="process-math">\(\quad 57\text{,}\)</span> then the squaring key, then <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11295">OR</div> <div class="para" id="p-11296">Enter <span class="process-math">\(\quad 57\text{,}\)</span> then the exponent key, then <span class="process-math">\(2~\)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11297">Ans. <span class="process-math">\(3249\)</span>
-</div></article><article class="example example-like" id="example-281"><h4 class="heading">
+<div class="para" id="p-10273">Evaluate <span class="process-math">\(57^{2}\text{.}\)</span>
+</div> <div class="para" id="p-10274">Enter <span class="process-math">\(\quad 57\text{,}\)</span> then the squaring key, then <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10275">OR</div> <div class="para" id="p-10276">Enter <span class="process-math">\(\quad 57\text{,}\)</span> then the exponent key, then <span class="process-math">\(2~\)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10277">Ans. <span class="process-math">\(3249\)</span>
+</div></article><article class="example example-like" id="example-283"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11298">Evaluate <span class="process-math">\(2^{10}\text{.}\)</span>
+<div class="para" id="p-10278">Evaluate <span class="process-math">\(2^{10}\text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-11299">Enter <span class="process-math">\(\quad 2\text{,}\)</span> and then the exponent key, 10 <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-10279">Enter <span class="process-math">\(\quad 2\text{,}\)</span> and then the exponent key, 10 <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35%;"><div class="para" id="p-11300">Ans. <span class="process-math">\(1024\)</span>
+<div class="sbspanel top" style="width:35%;"><div class="para" id="p-10280">Ans. <span class="process-math">\(1024\)</span>
 </div></div>
-</div></div></article><article class="warning remark-like" id="warning-51"><h4 class="heading">
+</div></div></article><article class="warning remark-like" id="warning-50"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">A.2.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11301">GeoGebra nicely displays powers such as <span class="process-math">\(10^7 \text{,}\)</span> with the exponent raised like a superscript. Once we enter the base and select the exponent key, the cursor is in the exponent and will stay there until we use the arrow keys to move the cursor outside the power, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div></article><article class="example example-like" id="example-282"><h4 class="heading">
+<div class="para" id="p-10281">GeoGebra nicely displays powers such as <span class="process-math">\(10^7 \text{,}\)</span> with the exponent raised like a superscript. Once we enter the base and select the exponent key, the cursor is in the exponent and will stay there until we use the arrow keys to move the cursor outside the power, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div></article><article class="example example-like" id="example-284"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11302">Evaluate <span class="process-math">\(8^{2/3}\text{.}\)</span>
-</div> <div class="para" id="p-11303">Enter <span class="process-math">\(\quad 8\text{,}\)</span> then the exponent key, then <span class="process-math">\(2\)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(3 \)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11304">Ans. <span class="process-math">\(4\)</span>
-</div></article><article class="example example-like" id="example-283"><h4 class="heading">
+<div class="para" id="p-10282">Evaluate <span class="process-math">\(8^{2/3}\text{.}\)</span>
+</div> <div class="para" id="p-10283">Enter <span class="process-math">\(\quad 8\text{,}\)</span> then the exponent key, then <span class="process-math">\(2\)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(3 \)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10284">Ans. <span class="process-math">\(4\)</span>
+</div></article><article class="example example-like" id="example-285"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11305">Evaluate <span class="process-math">\(\dfrac{8^2}{3}\text{.}\)</span>
-</div> <div class="para" id="p-11306">Enter <span class="process-math">\(\quad 8\text{,}\)</span> then the exponent key, then <span class="process-math">\(2\)</span>  <kbd class="kbdkey">→</kbd> <kbd class="kbdkey">÷</kbd> <span class="process-math">\(3 \)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11307">Ans. <span class="process-math">\(\dfrac{64}{3} \)</span>
-</div></article></section><section class="subsection" id="subsection-255"><h3 class="heading hide-type">
+<div class="para" id="p-10285">Evaluate <span class="process-math">\(\dfrac{8^2}{3}\text{.}\)</span>
+</div> <div class="para" id="p-10286">Enter <span class="process-math">\(\quad 8\text{,}\)</span> then the exponent key, then <span class="process-math">\(2\)</span>  <kbd class="kbdkey">→</kbd> <kbd class="kbdkey">÷</kbd> <span class="process-math">\(3 \)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10287">Ans. <span class="process-math">\(\dfrac{64}{3} \)</span>
+</div></article></section><section class="subsection" id="subsection-259"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.4</span><span class="space"> </span><span class="title">Square Roots</span>
 </h3>
-<div class="para" id="p-11308">The key for square roots is shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image A.0.1</a>.</div>
-<article class="example example-like" id="example-284"><h4 class="heading">
+<div class="para" id="p-10288">The key for square roots is shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image A.0.1</a>.</div>
+<article class="example example-like" id="example-286"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11309">Evaluate <span class="process-math">\(\sqrt{2} \text{.}\)</span>
+<div class="para" id="p-10289">Evaluate <span class="process-math">\(\sqrt{2} \text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:60%;"><div class="para" id="p-11310">Select the square root key, then enter <span class="process-math">\(~ 2\)</span> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:60%;"><div class="para" id="p-10290">Select the square root key, then enter <span class="process-math">\(~ 2\)</span> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:35%;"><div class="para" id="p-11311">Ans. <span class="process-math">\(1.414213562\)</span>
+<div class="sbspanel top" style="width:35%;"><div class="para" id="p-10291">Ans. <span class="process-math">\(1.414213562\)</span>
 </div></div>
-</div></div></article><article class="warning remark-like" id="warning-52"><h4 class="heading">
+</div></div></article><article class="warning remark-like" id="warning-51"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">A.2.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11312">GeoGebra nicely displays square roots such as <span class="process-math">\(\sqrt{9+16} \text{,}\)</span> with the radicand inside the square root "house". Once we select the square root key, the cursor is in under the radical and will stay there until we use the arrow keys to move the cursor outside, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div></article><article class="example example-like" id="example-285"><h4 class="heading">
+<div class="para" id="p-10292">GeoGebra nicely displays square roots such as <span class="process-math">\(\sqrt{9+16} \text{,}\)</span> with the radicand inside the square root "house". Once we select the square root key, the cursor is in under the radical and will stay there until we use the arrow keys to move the cursor outside, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div></article><article class="example example-like" id="example-287"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.14</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11313">Evaluate <span class="process-math">\(\sqrt{9+16} \text{.}\)</span>
-</div> <div class="para" id="p-11314">Select the square root key, then enter <span class="process-math">\(~9~\)</span> <kbd class="kbdkey">+</kbd> <span class="process-math">\(~16~\)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11315">Ans. <span class="process-math">\(5\)</span>
-</div></article><article class="example example-like" id="example-286"><h4 class="heading">
+<div class="para" id="p-10293">Evaluate <span class="process-math">\(\sqrt{9+16} \text{.}\)</span>
+</div> <div class="para" id="p-10294">Select the square root key, then enter <span class="process-math">\(~9~\)</span> <kbd class="kbdkey">+</kbd> <span class="process-math">\(~16~\)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10295">Ans. <span class="process-math">\(5\)</span>
+</div></article><article class="example example-like" id="example-288"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.15</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11316">Evaluate <span class="process-math">\(\sqrt{9}+16 \text{.}\)</span>
-</div> <div class="para" id="p-11317">Select the square root key, then enter <span class="process-math">\(~9~\)</span> <kbd class="kbdkey">→</kbd> <kbd class="kbdkey">+</kbd> <span class="process-math">\(~16~\)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11318">Ans. <span class="process-math">\(19\)</span>
-</div></article></section><section class="subsection" id="subsection-256"><h3 class="heading hide-type">
+<div class="para" id="p-10296">Evaluate <span class="process-math">\(\sqrt{9}+16 \text{.}\)</span>
+</div> <div class="para" id="p-10297">Select the square root key, then enter <span class="process-math">\(~9~\)</span> <kbd class="kbdkey">→</kbd> <kbd class="kbdkey">+</kbd> <span class="process-math">\(~16~\)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10298">Ans. <span class="process-math">\(19\)</span>
+</div></article></section><section class="subsection" id="subsection-260"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.5</span><span class="space"> </span><span class="title">Other Roots</span>
 </h3>
-<div class="para" id="p-11319">If we click on the "f(x)" on the keyboard in the Algebra View, we see other built-in keys.</div>
+<div class="para" id="p-10299">If we click on the "f(x)" on the keyboard in the Algebra View, we see other built-in keys.</div>
 <figure class="figure figure-like" id="fig-GGB-fx-keyboard"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/GGB-fx-keyboard-annotated.svg" role="img" class="contained" alt="GeoGebra calculator f(x) keyboard"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">A.2.16<span class="period">.</span></span><span class="space"> </span>GeoGebra calculator f(x) keyboard</figcaption></figure><article class="example example-like" id="example-287"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">A.2.16<span class="period">.</span></span><span class="space"> </span>GeoGebra calculator f(x) keyboard</figcaption></figure><article class="example example-like" id="example-289"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.17</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11320">Compute <span class="process-math">\(\sqrt[3]{1728} \text{.}\)</span>
-</div> <div class="para" id="p-11321">Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter <span class="process-math">\(~3~\)</span> <kbd class="kbdkey">→</kbd> <span class="process-math">\(~1728~\)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11322">Ans. <span class="process-math">\(12\)</span>
-</div></article><article class="example example-like" id="example-288"><h4 class="heading">
+<div class="para" id="p-10300">Compute <span class="process-math">\(\sqrt[3]{1728} \text{.}\)</span>
+</div> <div class="para" id="p-10301">Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter <span class="process-math">\(~3~\)</span> <kbd class="kbdkey">→</kbd> <span class="process-math">\(~1728~\)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10302">Ans. <span class="process-math">\(12\)</span>
+</div></article><article class="example example-like" id="example-290"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11323">Compute <span class="process-math">\(\sqrt[10]{2\cdot 512} \text{.}\)</span>
-</div> <div class="para" id="p-11324">Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter <span class="process-math">\(~10~\)</span> <kbd class="kbdkey">→</kbd> <span class="process-math">\(~2~\)</span> <kbd class="kbdkey">×</kbd> <span class="process-math">\(~512~\)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11325">Ans. <span class="process-math">\(2\)</span>
-</div></article></section><section class="subsection" id="subsection-257"><h3 class="heading hide-type">
+<div class="para" id="p-10303">Compute <span class="process-math">\(\sqrt[10]{2\cdot 512} \text{.}\)</span>
+</div> <div class="para" id="p-10304">Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter <span class="process-math">\(~10~\)</span> <kbd class="kbdkey">→</kbd> <span class="process-math">\(~2~\)</span> <kbd class="kbdkey">×</kbd> <span class="process-math">\(~512~\)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10305">Ans. <span class="process-math">\(2\)</span>
+</div></article></section><section class="subsection" id="subsection-261"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.6</span><span class="space"> </span><span class="title">Absolute Value</span>
 </h3>
-<div class="para" id="p-11326">GeoGebra nicely displays the vertical bars of the standard absolute value notation, such as in the expression <span class="process-math">\(\abs{21\cdot 54 - 81} \text{.}\)</span> Once we select the absolute value key, the cursor is in between the vertical bars and will stay there until we use the arrow keys to move the cursor outside, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div>
-<article class="example example-like" id="example-289"><h4 class="heading">
+<div class="para" id="p-10306">GeoGebra nicely displays the vertical bars of the standard absolute value notation, such as in the expression <span class="process-math">\(\abs{21\cdot 54 - 81} \text{.}\)</span> Once we select the absolute value key, the cursor is in between the vertical bars and will stay there until we use the arrow keys to move the cursor outside, or until we press <kbd class="kbdkey">⮠</kbd>. The arrow keys on the virtual keyboard are shown in the <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>.</div>
+<article class="example example-like" id="example-291"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.19</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11327">Evaluate <span class="process-math">\(\dfrac{\abs{21\cdot 54 - 81}}{-9} \text{.}\)</span>
-</div> <div class="para" id="p-11328">Select the absolute value key, then enter <span class="process-math">\(~21~\)</span> <kbd class="kbdkey">×</kbd> <span class="process-math">\(~54~\)</span> <kbd class="kbdkey">-</kbd> <span class="process-math">\(~81~\)</span> <kbd class="kbdkey">→</kbd>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(~{-9}~\)</span> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11329">Ans. <span class="process-math">\(-117\)</span>
-</div></article></section><section class="subsection" id="subsection-258"><h3 class="heading hide-type">
+<div class="para" id="p-10307">Evaluate <span class="process-math">\(\dfrac{\abs{21\cdot 54 - 81}}{-9} \text{.}\)</span>
+</div> <div class="para" id="p-10308">Select the absolute value key, then enter <span class="process-math">\(~21~\)</span> <kbd class="kbdkey">×</kbd> <span class="process-math">\(~54~\)</span> <kbd class="kbdkey">-</kbd> <span class="process-math">\(~81~\)</span> <kbd class="kbdkey">→</kbd>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(~{-9}~\)</span> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10309">Ans. <span class="process-math">\(-117\)</span>
+</div></article></section><section class="subsection" id="subsection-262"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.7</span><span class="space"> </span><span class="title">Scientific Notation</span>
 </h3>
-<div class="para" id="p-11330">The GeoGebra calculator does not display scientific notation by default. The calculator can display scientific notation in the Grahics View by using a ScientificText command.</div>
-<article class="example example-like" id="example-290"><h4 class="heading">
+<div class="para" id="p-10310">The GeoGebra calculator does not display scientific notation by default. The calculator can display scientific notation in the Grahics View by using a ScientificText command.</div>
+<article class="example example-like" id="example-292"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11331">Compute <span class="process-math">\(123,456,789^2 \text{.}\)</span>
+<div class="para" id="p-10311">Compute <span class="process-math">\(123,456,789^2 \text{.}\)</span>
 </div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:45%;"><div class="para" id="p-11332">Enter <span class="process-math">\(123456789 \)</span>  <kbd class="kbdkey">x^2</kbd> <kbd class="kbdkey">⮠</kbd>
+<div class="sbspanel top" style="width:45%;"><div class="para" id="p-10312">Enter <span class="process-math">\(123456789 \)</span>  <kbd class="kbdkey">x^2</kbd> <kbd class="kbdkey">⮠</kbd>
 </div></div>
-<div class="sbspanel top" style="width:40%;"><div class="para" id="p-11333">Ans. <span class="process-math">\(15241578750190522\)</span>
+<div class="sbspanel top" style="width:40%;"><div class="para" id="p-10313">Ans. <span class="process-math">\(15241578750190522\)</span>
 </div></div>
-</div></div> <div class="para logical" id="p-11334">
+</div></div> <div class="para logical" id="p-10314">
 <div class="para">We will enter ScientificText in the input box.</div>
 <ul class="disc">
-<li id="li-7055"><div class="para" id="p-11335">On the computer, typing the first three letters (sci) is enough for the full command to appear as an option.</div></li>
-<li id="li-7056"><div class="para" id="p-11336">On a phone app, we tap on the overflow menu (three horizontal dots) on the top right of the virtual keyboard (see <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>), tap in the Search in All Commands field, then start to input ScientificText until the full command appears as an option.</div></li>
+<li id="li-6558"><div class="para" id="p-10315">On the computer, typing the first three letters (sci) is enough for the full command to appear as an option.</div></li>
+<li id="li-6559"><div class="para" id="p-10316">On a phone app, we tap on the overflow menu (three horizontal dots) on the top right of the virtual keyboard (see <a href="" class="xref" data-knowl="./knowl/fig-GGB-keyboard.html" title="Figure A.0.1">keyboard image</a>), tap in the Search in All Commands field, then start to input ScientificText until the full command appears as an option.</div></li>
 </ul>
 <div class="para">We click on ScientificText, and the cursor is appropriately positioned, ready for us to enter an expression. We can either repeat the calculation we entered above, or, more efficiently, select the last answer key <kbd class="kbdkey">ans</kbd> and <kbd class="kbdkey">⮠</kbd>.</div>
-</div> <div class="para" id="p-11337">The result <span class="process-math">\(1.52415787501905 \times 10^{16}\text{,}\)</span> appears on the grid in the Graphics View. We can drag the text within the Graphics View, change its color, and/or delete it.</div> <div class="para" id="p-11338">We could also type in the entire command scientifictext using the ABC keyboard, then use the 123 keyboard to enter the parentheses and numbers.</div></article></section><section class="subsection" id="subsection-259"><h3 class="heading hide-type">
+</div> <div class="para" id="p-10317">The result <span class="process-math">\(1.52415787501905 \times 10^{16}\text{,}\)</span> appears on the grid in the Graphics View. We can drag the text within the Graphics View, change its color, and/or delete it.</div> <div class="para" id="p-10318">We could also type in the entire command scientifictext using the ABC keyboard, then use the 123 keyboard to enter the parentheses and numbers.</div></article></section><section class="subsection" id="subsection-263"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.2.8</span><span class="space"> </span><span class="title">Editing an Entry</span>
 </h3>
-<div class="para" id="p-11339">We can edit an expression without starting again. The backspace key will remove the character to the left of the cursor. We can move the cursor within an input line using the arrow keys or by clicking in the appropriate place.</div>
-<div class="para" id="p-11340">We can recall any previous entry by finding it in the output history (scrolling up if necessary), tapping on the kebab menu icon (three vertical dots), and selecting Duplicate. The command will be copied into the current input box, which we can edit before pressing <kbd class="kbdkey">⮠</kbd>.</div>
+<div class="para" id="p-10319">We can edit an expression without starting again. The backspace key will remove the character to the left of the cursor. We can move the cursor within an input line using the arrow keys or by clicking in the appropriate place.</div>
+<div class="para" id="p-10320">We can recall any previous entry by finding it in the output history (scrolling up if necessary), tapping on the kebab menu icon (three vertical dots), and selecting Duplicate. The command will be copied into the current input box, which we can edit before pressing <kbd class="kbdkey">⮠</kbd>.</div>
 <article class="note remark-like" id="note-no-menu"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">A.2.21</span><span class="period">.</span><span class="space"> </span><span class="title">If the menu does not appear.</span>
-</h4> <div class="para" id="p-11341">Sometimes when using the GeoGebra app embedded in this textbook, the menu does not appear when we tap on the kebab menu icon. This may occur when we are at a place in the section far from the top of the webpage. Try scrolling within the webpage to the top, and tap on the kebab menu icon again.</div></article><div class="para" id="p-11342">If we just want to use the most recent result in the current command, we use the <kbd class="kbdkey">ans</kbd> key.</div>
-<article class="example example-like" id="example-291"><h4 class="heading">
+</h4> <div class="para" id="p-10321">Sometimes when using the GeoGebra app embedded in this textbook, the menu does not appear when we tap on the kebab menu icon. This may occur when we are at a place in the section far from the top of the webpage. Try scrolling within the webpage to the top, and tap on the kebab menu icon again.</div></article><div class="para" id="p-10322">If we just want to use the most recent result in the current command, we use the <kbd class="kbdkey">ans</kbd> key.</div>
+<article class="example example-like" id="example-293"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.22</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-11343">Evaluate <span class="process-math">\(5^2 + 12^2\)</span> and then take the square root of the sum.</div> <div class="para" id="p-11344">Enter <span class="process-math">\(5\text{,}\)</span> then the square key, then <kbd class="kbdkey">+</kbd> <span class="process-math">\(12\text{,}\)</span> the square key again, then <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11345">Ans. <span class="process-math">\(169\)</span>
-</div> <div class="para" id="p-11346">Now select the square root key, then <kbd class="kbdkey">ans</kbd> <kbd class="kbdkey">⮠</kbd>
-</div> <div class="para" id="p-11347">Ans. <span class="process-math">\(13\)</span>
+<div class="para" id="p-10323">Evaluate <span class="process-math">\(5^2 + 12^2\)</span> and then take the square root of the sum.</div> <div class="para" id="p-10324">Enter <span class="process-math">\(5\text{,}\)</span> then the square key, then <kbd class="kbdkey">+</kbd> <span class="process-math">\(12\text{,}\)</span> the square key again, then <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10325">Ans. <span class="process-math">\(169\)</span>
+</div> <div class="para" id="p-10326">Now select the square root key, then <kbd class="kbdkey">ans</kbd> <kbd class="kbdkey">⮠</kbd>
+</div> <div class="para" id="p-10327">Ans. <span class="process-math">\(13\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="GGB-getting-started.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="GGB-Graphing-an-Equation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
