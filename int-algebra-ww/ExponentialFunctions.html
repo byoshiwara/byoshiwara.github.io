@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ExponentialGrowthandDecay.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Logarithms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1342,23 +1322,9 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 \end{align*}
 </div>
 </div>
-<details id="ExponentialFunctions-2-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="ExponentialFunctions-2-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-278" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="278" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZXhwZm4gPSBSYWRpb0J1dHRvbnMoCiAgWyJcKGYoeCk9M3heNFwpIiwKICAiXChmKHgpPTMoNCleeFwpIiwKICAiXChmKHgpPTJ4XntcZnJhY3szfXs0fX1cKSIsCiAgIlwoZih4KT1cZGZyYWN7NH17eF4zfVwpIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoaWNoIG9mIHRoZSBmb2xsb3dpbmcgaXMgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24/CgpbX117JGV4cGZufXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgZih4KT0zKDQpXnhgXSBpcyBhbiBleHBvbmVudGlhbCBmdW5jdGlvbiwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-278')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-278-1-1-1">Which of the following is an exponential function?</div> <div class="para logical" id="extracted-webwork-278-1-1-2"><ul class="circle" id="extracted-webwork-278-1-1-2-1">
-<li id="extracted-webwork-278-1-1-2-1-1"><div class="para" id="extracted-webwork-278-1-1-2-1-1-1"><span class="process-math">\(\displaystyle f(x)=3x^4\)</span></div></li>
-<li id="extracted-webwork-278-1-1-2-1-2"><div class="para" id="extracted-webwork-278-1-1-2-1-2-1"><span class="process-math">\(\displaystyle f(x)=3(4)^x\)</span></div></li>
-<li id="extracted-webwork-278-1-1-2-1-3"><div class="para" id="extracted-webwork-278-1-1-2-1-3-1"><span class="process-math">\(\displaystyle f(x)=2x^{\frac{3}{4}}\)</span></div></li>
-<li id="extracted-webwork-278-1-1-2-1-4"><div class="para" id="extracted-webwork-278-1-1-2-1-4-1"><span class="process-math">\(\displaystyle f(x)=\dfrac{4}{x^3}\)</span></div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-278-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-278-1-2-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-278-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-278-1-3-1">
-<span class="process-math">\(f(x)=3(4)^x\)</span> is an exponential function,</div></div></details>
-</div>
-</div>
-</div></article></details><article class="note remark-like" id="ExponentialFunctions-2-6"><h4 class="heading">
+</h4></article><article class="note remark-like" id="ExponentialFunctions-2-6"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="ExponentialFunctions-2-6-1"><ul class="disc" id="ExponentialFunctions-2-6-1-1">
@@ -1377,7 +1343,11 @@ g(0) \amp= 2.4(0.3)^0 = 2.4
 <li id="example-flea-population-1-1-1-2"><div class="para" id="example-flea-population-1-1-1-2-1">How many fleas will there be after 1 week (7 days)?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-flea-population-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-flea-population-2-1"><ol class="lower-alpha ol-marker-2" id="example-flea-population-2-1-1">
+<div class="solution solution-like" id="example-flea-population-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-flea-population-2-1"><ol class="lower-alpha ol-marker-2" id="example-flea-population-2-1-1">
 <li id="example-flea-population-2-1-1-1">
 <div class="para" id="example-flea-population-2-1-1-1-1">We let <span class="process-math">\(P\)</span> represent the number of fleas present after <span class="process-math">\(t\)</span> days. The original population of 10 fleas doubles not every day, but every 5 days. A table of values for <span class="process-math">\(P\)</span> would look like this.</div>
 <div class="tabular-box natural-width"><table class="tabular">
@@ -1431,7 +1401,8 @@ P(\alert{7}) = 10 \cdot 2^{\alert{7}/5} \approx 10(2.639)=26.39
 </div>
 <div class="para">After one week there will be 26 fleas.</div>
 </div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="ExponentialFunctions-2-8"><div class="para" id="ExponentialFunctions-2-8-1">
+</ol></div>
+</div></article><aside class="aside aside-like" id="ExponentialFunctions-2-8"><div class="para" id="ExponentialFunctions-2-8-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more practice evaluating exponential functions, see <a href="tkchap7.html#tkEvalExpFncn" class="internal" title="Subsubsection A.7.2.1: Evaluate exponential functions">Section 7.2.1</a> of the Toolkit.</div></aside><article class="note remark-like" id="ExponentialFunctions-2-9"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
 </h4>
@@ -1443,38 +1414,13 @@ P(t)=10 \cdot (2^{1/5})^t
 \end{equation*}
 </div>
 <div class="para">(See Note 7.1.5 for another example of this calculation.) From this form see that the growth factor for this function is <span class="process-math">\(2^{1/5}\text{,}\)</span> or about 1.149. The flea population grows at about 14.9% per day.</div>
-</div></article><details id="ExponentialFunctions-2-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="ExponentialFunctions-2-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-279" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="279" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZCh0PT4iUmVhbCIpOwokTiA9IEZvcm11bGEoIjEwMCAqIDgqKih0LzQpIik7CiRhbnN3ZXIgPSBDb21wdXRlKCIxMiIpOwoKQkVHSU5fUEdNTApEdXJpbmcgYW4gYWR2ZXJ0aXNpbmcgY2FtcGFpZ24gaW4gYSBsYXJnZSBjaXR5LCB0aGUgbWFrZXJzIG9mIENoaXAtTydzIGNvcm4gY2hpcHMgZXN0aW1hdGUgdGhhdCB0aGUgbnVtYmVyIG9mIHBlb3BsZSB3aG8gaGF2ZSBoZWFyZCBvZiBDaGlwLU8ncyBpbmNyZWFzZXMgYnkgYSBmYWN0b3Igb2YgOCBldmVyeSA0IGRheXMuCgphLiAgSWYgMTAwIHBlb3BsZSBhcmUgZ2l2ZW4gdHJpYWwgYmFncyBvZiBDaGlwLU8ncyB0byBzdGFydCB0aGUgY2FtcGFpZ24sIHdyaXRlIGEgZnVuY3Rpb24sIFtgTih0KVx0ZXh0eyx9YF0gZm9yIHRoZSBudW1iZXIgb2YgcGVvcGxlIHdobyBoYXZlIGhlYXJkIG9mIENoaXAtTydzIGFmdGVyIFtgdGBdIGRheXMgb2YgYWR2ZXJ0aXNpbmcuCgogICAgW2BOKHQpPWBdW19deyROfXsxMH0KCgphLiAgVXNlIHlvdXIgY2FsY3VsYXRvciB0byBncmFwaCB0aGUgZnVuY3Rpb24gW2BOKHQpYF0gb24gdGhlIGRvbWFpbiBbYDAgXGxlIHQgXGxlIDE1XHRleHR7Ln1gXQoKCmEuICBIb3cgbWFueSBkYXlzIHNob3VsZCB0aGUgbWFrZXJzIHJ1biB0aGUgY2FtcGFpZ24gaW4gb3JkZXIgZm9yIENoaXAtTydzIHRvIGJlIGZhbWlsaWFyIHRvIDUxLDIwMCBwZW9wbGU/IFVzZSBhbGdlYnJhaWMgbWV0aG9kcyB0byBmaW5kIHlvdXIgYW5zd2VyIGFuZCB2ZXJpZnkgb24geW91ciBncmFwaC4KCiAgICBBbnN3ZXI6IFtfXXskYW5zd2VyfXsyfSBkYXlzCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYE4odCk9MTAwIFxjZG90IDhee3QvNH1gXQoKCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKCmEuICAxMiBkYXlzCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-279')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-279-1-1-1">During an advertising campaign in a large city, the makers of Chip-O’s corn chips estimate that the number of people who have heard of Chip-O’s increases by a factor of 8 every 4 days.</div> <div class="para logical" id="extracted-webwork-279-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-279-1-1-2-1">
-<li id="extracted-webwork-279-1-1-2-1-1">
-<div class="para" id="extracted-webwork-279-1-1-2-1-1-1">If 100 people are given trial bags of Chip-O’s to start the campaign, write a function, <span class="process-math">\(N(t)\text{,}\)</span> for the number of people who have heard of Chip-O’s after <span class="process-math">\(t\)</span> days of advertising.</div>
-<div class="para" id="extracted-webwork-279-1-1-2-1-1-2">
-<span class="process-math">\(N(t)=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-279-1-1-2-1-2"><div class="para" id="extracted-webwork-279-1-1-2-1-2-1">Use your calculator to graph the function <span class="process-math">\(N(t)\)</span> on the domain <span class="process-math">\(0 \le t \le 15\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-279-1-1-2-1-3">
-<div class="para" id="extracted-webwork-279-1-1-2-1-3-1">How many days should the makers run the campaign in order for Chip-O’s to be familiar to 51,200 people? Use algebraic methods to find your answer and verify on your graph.</div>
-<div class="para" id="extracted-webwork-279-1-1-2-1-3-2">Answer: <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> days</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-279-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-279-1-2-1"><span class="process-math">\(100\cdot 8^{\frac{t}{4}}\)</span></div></div></details><details id="extracted-webwork-279-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-279-1-3-1"><span class="process-math">\(12\)</span></div></div></details><details id="extracted-webwork-279-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-279-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-279-1-4-1-1">
-<li id="extracted-webwork-279-1-4-1-1-1"><div class="para" id="extracted-webwork-279-1-4-1-1-1-1"><span class="process-math">\(\displaystyle N(t)=100 \cdot 8^{t/4}\)</span></div></li>
-<li id="extracted-webwork-279-1-4-1-1-2"><div class="para" id="extracted-webwork-279-1-4-1-1-2-1">A graph is below.</div></li>
-<li id="extracted-webwork-279-1-4-1-1-3"><div class="para" id="extracted-webwork-279-1-4-1-1-3-1">12 days</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="ExponentialFunctions-2-10-3">
-<div class="para" id="ExponentialFunctions-2-10-3-1">Graph for part (b):</div>
+</h4>
+<div class="conclusion" id="ExponentialFunctions-2-10-2">
+<div class="para" id="ExponentialFunctions-2-10-2-1">Graph for part (b):</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-ex-7-2-4answ.svg" role="img" class="contained" alt="GC graph"></div>
-</div></article></details></section><section class="subsection" id="ExponentialFunctions-3"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="ExponentialFunctions-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="space"> </span><span class="title">Graphs of Exponential Functions</span>
 </h3>
 <div class="para" id="ExponentialFunctions-3-2">The graphs of exponential functions have two characteristic shapes, depending on whether the base, <span class="process-math">\(b\text{,}\)</span> is greater than <span class="process-math">\(1\)</span> or less than <span class="process-math">\(1\text{.}\)</span> As typical examples, consider the graphs of <span class="process-math">\(f (x) = 2^x\)</span> and <span class="process-math">\(g(x) = \left(\dfrac{1}{2}\right)^x\)</span> shown below. Some values for <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are recorded in the tables.</div>
@@ -1563,29 +1509,18 @@ P(t)=10 \cdot (2^{1/5})^t
 </ol></div></article><div class="para" id="ExponentialFunctions-3-7">In the table for <span class="process-math">\(f(x)\text{,}\)</span> you can see that as the <span class="process-math">\(x\)</span>-values decrease toward negative infinity, the corresponding <span class="process-math">\(y\)</span>-values decrease toward zero. As a result, the graph of <span class="process-math">\(f\)</span> decreases toward the <span class="process-math">\(x\)</span>-axis, but never touches it, as we move to the left.</div>
 <div class="para" id="ExponentialFunctions-3-8">The negative <span class="process-math">\(x\)</span>-axis is a <dfn class="terminology">horizontal asymptote</dfn> for exponential functions with <span class="process-math">\(b \gt 1\text{,}\)</span> as shown in figure (a).</div>
 <div class="para" id="ExponentialFunctions-3-9">For exponential functions with <span class="process-math">\(0 \lt b \lt 1\text{,}\)</span> the positive <span class="process-math">\(x\)</span>-axis is an asymptote, as illustrated in figure (b).</div>
-<details id="ExponentialFunctions-3-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="ExponentialFunctions-3-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-280" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="280" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwicGFyc2VyVmVjdG9yVXRpbHMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR0cnVleHAgPSBSYWRpb0J1dHRvbnMoCiAgWyJBbiBleHBvbmVudGlhbCBmdW5jdGlvbiBpcyBub3QgZGVmaW5lZCBmb3IgbmVnYXRpdmUgaW5wdXRzLiIsCiAgIlRoZSBvdXRwdXRzIG9mIGFuIGV4cG9uZW50aWFsIGZ1bmN0aW9uIGNhbm5vdCBiZSBuZWdhdGl2ZS4iLAogICJUaGUgXCh5XCktaW50ZXJjZXB0IG9mIHRoZSBmdW5jdGlvbiBcKGYoeCk9MigzKV54XCkgaXMgXCgoMCw2KVwpLiIsCiAgIlRoZSBmdW5jdGlvbiBcKGYoeCk9MTYoMC41KV54XCkgZGVjcmVhc2VzIGJ5IDggZWFjaCB0aW1lIHdlIGluY3JlYXNlIFwoeFwpIGJ5IDEuIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCldoaWNoIHN0YXRlbWVudCBpcyB0cnVlPwoKW19deyR0cnVleHB9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIG91dHB1dHMgb2YgYW4gZXhwb25lbnRpYWwgZnVuY3Rpb24gY2Fubm90IGJlIG5lZ2F0aXZlLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-280')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-280-1-1-1">Which statement is true?</div> <div class="para logical" id="extracted-webwork-280-1-1-2"><ul class="circle" id="extracted-webwork-280-1-1-2-1">
-<li id="extracted-webwork-280-1-1-2-1-1"><div class="para" id="extracted-webwork-280-1-1-2-1-1-1">An exponential function is not defined for negative inputs.</div></li>
-<li id="extracted-webwork-280-1-1-2-1-2"><div class="para" id="extracted-webwork-280-1-1-2-1-2-1">The outputs of an exponential function cannot be negative.</div></li>
-<li id="extracted-webwork-280-1-1-2-1-3"><div class="para" id="extracted-webwork-280-1-1-2-1-3-1">The <span class="process-math">\(y\)</span>-intercept of the function <span class="process-math">\(f(x)=2(3)^x\)</span> is <span class="process-math">\((0,6)\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-280-1-1-2-1-4"><div class="para" id="extracted-webwork-280-1-1-2-1-4-1">The function <span class="process-math">\(f(x)=16(0.5)^x\)</span> decreases by 8 each time we increase <span class="process-math">\(x\)</span> by 1.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-280-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-280-1-2-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-280-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-280-1-3-1">The outputs of an exponential function cannot be negative.</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="ExponentialFunctions-3-11">How does the value of <span class="process-math">\(b\)</span> affect the graph? For increasing functions, the larger the value of the base, <span class="process-math">\(b\text{,}\)</span> the faster the function grows. In the Example below, we compare two exponential functions with different bases.</div>
+</h4></article><div class="para" id="ExponentialFunctions-3-11">How does the value of <span class="process-math">\(b\)</span> affect the graph? For increasing functions, the larger the value of the base, <span class="process-math">\(b\text{,}\)</span> the faster the function grows. In the Example below, we compare two exponential functions with different bases.</div>
 <article class="example example-like" id="example-two-exponential-growth"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.8</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-two-exponential-growth-1-1">Compare the graphs of <span class="process-math">\(f(x) = 3^x\)</span> and <span class="process-math">\(g(x) = 4^x\text{.}\)</span>
 </div>
-<div class="solutions"><details id="example-two-exponential-growth-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-two-exponential-growth-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para" id="example-two-exponential-growth-2-1">First, we evaluate each function for several convenient values, as shown in the table.</div>
 <div class="para" id="example-two-exponential-growth-2-2">Then we plot the points for each function and connect them with smooth curves. Note that <span class="process-math">\(a=1\)</span> for both functions, so their graphs have the same <span class="process-math">\(y\)</span>-intercept, <span class="process-math">\((0,1)\text{.}\)</span>
 </div>
@@ -1626,99 +1561,16 @@ P(t)=10 \cdot (2^{1/5})^t
 </table></div>
 <div class="sbspanel middle" style="width:37.5%;"><img src="generated/latex-image/fig-two-exponential-growth.svg" role="img" class="contained" alt="two exponential growth functions"></div>
 </div></div>
-</div></details></div></article><details id="ExponentialFunctions-3-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="ExponentialFunctions-3-13"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="ExponentialFunctions-3-13-2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-two-mystery-exponential-decayw.svg" role="img" class="contained" alt="two exponential decay functions"></div></div>
-<div id="webwork-281" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="281" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRJID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiSSIsIAogICAgIklJIl0sCiAgICAxCik7CiRJSSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIkkiLCAKICAgICJJSSJdLAogICAgMgopOwoKQkVHSU5fUEdNTAphLiAgV2hpY2ggb2YgdGhlIGdyYXBocyBhYm92ZSBpcyBbYHAoeCk9MC44XnhgXSBbX117JElJfXs1fSwgYW5kIHdoaWNoIGlzIFtgcSh4KT0wLjVeeH5gXVtfXXskSX17NX0/CgoKYS4gIFdoaWNoIGdyYXBoIGRlY3JlYXNlcyBtb3JlIHN0ZWVwbHk/W19deyRJfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgR3JhcGggSSBpcyBbYHFcdGV4dHssfWBdIGFuZCBncmFwaCBJSSBpcyBbYHBcdGV4dHsufWBdCgoKYS4gIFtgcWBdIGRlY3JlYXNlcyBtb3JlIHN0ZWVwbHkKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-281')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-281-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-281-1-1-1-1">
-<li id="extracted-webwork-281-1-1-1-1-1"><div class="para logical" id="extracted-webwork-281-1-1-1-1-1-1">
-<div class="para">Which of the graphs above is <span class="process-math">\(p(x)=0.8^x\)</span>
-</div>
-<ul class="square" id="extracted-webwork-281-1-1-1-1-1-1-2">
-<li id="extracted-webwork-281-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-281-1-1-1-1-1-1-2-1-1">I</div></li>
-<li id="extracted-webwork-281-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-281-1-1-1-1-1-1-2-2-1">II</div></li>
-</ul>
-<div class="para">, and which is <span class="process-math">\(q(x)=0.5^x~\)</span>
-</div>
-<ul class="square" id="extracted-webwork-281-1-1-1-1-1-1-4">
-<li id="extracted-webwork-281-1-1-1-1-1-1-4-1"><div class="para" id="extracted-webwork-281-1-1-1-1-1-1-4-1-1">I</div></li>
-<li id="extracted-webwork-281-1-1-1-1-1-1-4-2"><div class="para" id="extracted-webwork-281-1-1-1-1-1-1-4-2-1">II</div></li>
-</ul>
-<div class="para">?</div>
-</div></li>
-<li id="extracted-webwork-281-1-1-1-1-2"><div class="para logical" id="extracted-webwork-281-1-1-1-1-2-1">
-<div class="para">Which graph decreases more steeply?</div>
-<ul class="square" id="extracted-webwork-281-1-1-1-1-2-1-1">
-<li id="extracted-webwork-281-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-281-1-1-1-1-2-1-1-1-1">I</div></li>
-<li id="extracted-webwork-281-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-281-1-1-1-1-2-1-1-2-1">II</div></li>
-</ul>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-281-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-281-1-2-1"><span class="process-math">\(\text{II}\)</span></div></div></details><details id="extracted-webwork-281-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-281-1-3-1"><span class="process-math">\(\text{I}\)</span></div></div></details><details id="extracted-webwork-281-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-281-1-4-1"><span class="process-math">\(\text{I}\)</span></div></div></details><details id="extracted-webwork-281-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-281-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-281-1-5-1-1">
-<li id="extracted-webwork-281-1-5-1-1-1"><div class="para" id="extracted-webwork-281-1-5-1-1-1-1">Graph I is <span class="process-math">\(q\text{,}\)</span> and graph II is <span class="process-math">\(p\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-281-1-5-1-1-2"><div class="para" id="extracted-webwork-281-1-5-1-1-2-1">
-<span class="process-math">\(q\)</span> decreases more steeply</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><article class="note remark-like" id="ExponentialFunctions-3-14"><h4 class="heading">
+</h4>
+<div class="introduction" id="ExponentialFunctions-3-13-2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-two-mystery-exponential-decayw.svg" role="img" class="contained" alt="two exponential decay functions"></div></div></article><article class="note remark-like" id="ExponentialFunctions-3-14"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">7.2.10</span><span class="period">.</span>
 </h4>
 <div class="para" id="ExponentialFunctions-3-14-1">Perhaps you see a similarity in the formula for exponential functions, <span class="process-math">\(y = ab^x\text{,}\)</span> and the formula for linear functions, <span class="process-math">\(y = mx + b\text{.}\)</span> In an exponential function the base <span class="process-math">\(b\)</span> tells us how fast the function increases or decreases, much as the slope <span class="process-math">\(m\)</span> does for linear functions, and the constant <span class="process-math">\(a\)</span> tells us the intial value when <span class="process-math">\(x=0\text{,}\)</span> as does the constant <span class="process-math">\(b\)</span> in the linear formula <span class="process-math">\(y = mx + b\text{.}\)</span>
-</div></article><details id="ExponentialFunctions-3-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="ExponentialFunctions-3-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-282" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="282" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskVHJ1ZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMQopOwokRmFsc2UgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUcnVlIiwgCiAgICAiRmFsc2UiXSwKICAgIDIKKTsKCkJFR0lOX1BHTUwKVHJ1ZSBvciBGYWxzZS4KYS4gIEFuIGV4cG9uZW50aWFsIGZ1bmN0aW9uIFtgZih4KT1iXnhgXSBpcyBhbHdheXMgcG9zaXRpdmUuIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIGZ1bmN0aW9uIFtgZih4KT1hYl54YF0gaGFzIGEgaG9yaXpvbnRhbCBhc3ltcHRvdGUgYXQgW2B5PTBcdGV4dHsufWBdICBbX117JFRydWV9ezV9CgoKYS4gIFRoZSB2YWx1ZSBvZiBbYGJgXSBkZXRlcm1pbmVzIGhvdyByYXBpZGx5IHRoZSBncmFwaCBvZiBbYGYoeCk9YWJeeGBdIGluY3JlYXNlcyBvciBkZWNyZWFzZXMuICBbX117JFRydWV9ezV9CgoKYS4gIFRoZSBncmFwaCBvZiBbYGYoeCk9YWJeeGBdIGlzIGRlY3JlYXNpbmcgaWYgW2BiIFxsdCAwXHRleHR7Ln1gXSAgW19deyRGYWxzZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIFRydWUKYS4gIFRydWUKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-282')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-282-1-1-1">
-<div class="para">True or False.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-282-1-1-1-1">
-<li id="extracted-webwork-282-1-1-1-1-1"><div class="para logical" id="extracted-webwork-282-1-1-1-1-1-1">
-<div class="para">An exponential function <span class="process-math">\(f(x)=b^x\)</span> is always positive.</div>
-<ul class="square" id="extracted-webwork-282-1-1-1-1-1-1-2">
-<li id="extracted-webwork-282-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-282-1-1-1-1-1-1-2-1-1">True</div></li>
-<li id="extracted-webwork-282-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-282-1-1-1-1-1-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-282-1-1-1-1-2"><div class="para logical" id="extracted-webwork-282-1-1-1-1-2-1">
-<div class="para">The function <span class="process-math">\(f(x)=ab^x\)</span> has a horizontal asymptote at <span class="process-math">\(y=0\text{.}\)</span>
-</div>
-<ul class="square" id="extracted-webwork-282-1-1-1-1-2-1-3">
-<li id="extracted-webwork-282-1-1-1-1-2-1-3-1"><div class="para" id="extracted-webwork-282-1-1-1-1-2-1-3-1-1">True</div></li>
-<li id="extracted-webwork-282-1-1-1-1-2-1-3-2"><div class="para" id="extracted-webwork-282-1-1-1-1-2-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-282-1-1-1-1-3"><div class="para logical" id="extracted-webwork-282-1-1-1-1-3-1">
-<div class="para">The value of <span class="process-math">\(b\)</span> determines how rapidly the graph of <span class="process-math">\(f(x)=ab^x\)</span> increases or decreases.</div>
-<ul class="square" id="extracted-webwork-282-1-1-1-1-3-1-3">
-<li id="extracted-webwork-282-1-1-1-1-3-1-3-1"><div class="para" id="extracted-webwork-282-1-1-1-1-3-1-3-1-1">True</div></li>
-<li id="extracted-webwork-282-1-1-1-1-3-1-3-2"><div class="para" id="extracted-webwork-282-1-1-1-1-3-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-282-1-1-1-1-4"><div class="para logical" id="extracted-webwork-282-1-1-1-1-4-1">
-<div class="para">The graph of <span class="process-math">\(f(x)=ab^x\)</span> is decreasing if <span class="process-math">\(b \lt 0\text{.}\)</span>
-</div>
-<ul class="square" id="extracted-webwork-282-1-1-1-1-4-1-3">
-<li id="extracted-webwork-282-1-1-1-1-4-1-3-1"><div class="para" id="extracted-webwork-282-1-1-1-1-4-1-3-1-1">True</div></li>
-<li id="extracted-webwork-282-1-1-1-1-4-1-3-2"><div class="para" id="extracted-webwork-282-1-1-1-1-4-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-282-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-282-1-2-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-282-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-282-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-282-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-282-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-282-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-282-1-5-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-282-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-282-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-282-1-6-1-1">
-<li id="extracted-webwork-282-1-6-1-1-1"><div class="para" id="extracted-webwork-282-1-6-1-1-1-1">True</div></li>
-<li id="extracted-webwork-282-1-6-1-1-2"><div class="para" id="extracted-webwork-282-1-6-1-1-2-1">True</div></li>
-<li id="extracted-webwork-282-1-6-1-1-3"><div class="para" id="extracted-webwork-282-1-6-1-1-3-1">True</div></li>
-<li id="extracted-webwork-282-1-6-1-1-4"><div class="para" id="extracted-webwork-282-1-6-1-1-4-1">False</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="ExponentialFunctions-4"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="ExponentialFunctions-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="space"> </span><span class="title">Comparing Exponential and Power Functions</span>
 </h3>
 <div class="para" id="ExponentialFunctions-4-4">We have studied several families of functions, including linear, quadratic, and power functions. Exponential functions are useful because they model growth or decline by a constant factor.</div>
@@ -1826,8 +1678,13 @@ P(t)=10 \cdot (2^{1/5})^t
 </table></div>
 <div class="sbspanel top" style="width:30%;"><img src="generated/latex-image/fig-cubic-vs-exponential.svg" role="img" class="contained" alt="cubic and exponential functions"></div>
 </div></div>
-<div class="solutions"><details id="example-power-vs-exponential-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="example-power-vs-exponential-2-1">We can tell that <span class="process-math">\(g\)</span> is the exponential function because its values increase by a factor of 3 for each unit increase in <span class="process-math">\(x\text{.}\)</span> The base of the function is <span class="process-math">\(b=3\text{.}\)</span> We also see from the table that <span class="process-math">\(a=g(0)=2\text{,}\)</span> so <span class="process-math">\(g(x)=2(3^x)\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> must be the power function, <span class="process-math">\(f(x)=kx^3\text{.}\)</span> To find <span class="process-math">\(k\text{,}\)</span> we notice that <span class="process-math">\(f(1)=k\text{,}\)</span> so <span class="process-math">\(k=2\text{,}\)</span> and <span class="process-math">\(f(x)=2x^3\text{.}\)</span>
-</div></div></details></div></article><article class="note remark-like" id="ExponentialFunctions-4-9"><h4 class="heading">
+<div class="solution solution-like" id="example-power-vs-exponential-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para" id="example-power-vs-exponential-2-1">We can tell that <span class="process-math">\(g\)</span> is the exponential function because its values increase by a factor of 3 for each unit increase in <span class="process-math">\(x\text{.}\)</span> The base of the function is <span class="process-math">\(b=3\text{.}\)</span> We also see from the table that <span class="process-math">\(a=g(0)=2\text{,}\)</span> so <span class="process-math">\(g(x)=2(3^x)\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> must be the power function, <span class="process-math">\(f(x)=kx^3\text{.}\)</span> To find <span class="process-math">\(k\text{,}\)</span> we notice that <span class="process-math">\(f(1)=k\text{,}\)</span> so <span class="process-math">\(k=2\text{,}\)</span> and <span class="process-math">\(f(x)=2x^3\text{.}\)</span>
+</div>
+</div></article><article class="note remark-like" id="ExponentialFunctions-4-9"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">7.2.14</span><span class="period">.</span>
 </h4>
 <div class="para" id="ExponentialFunctions-4-9-1">As you can see from the figure, the graphs of the two functions in the previous Example are also quite different. In particular, note that the power function passes through the origin, while the exponential function approaches the negative <span class="process-math">\(x\)</span>-axis as a horizontal asymptote.</div>
@@ -1836,100 +1693,11 @@ P(t)=10 \cdot (2^{1/5})^t
 </div></div>
 <div class="sbspanel top" style="width:37%;"><img src="external/images/fig-power-vs-exponential-3.svg" role="img" class="contained" alt="power function vs exponential from 0 to 50"></div>
 </div></div>
-<details id="exercise-identify-power-and-exponential-functionsw" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-identify-power-and-exponential-functionsw"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-283" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="283" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRleHBvbmVudGlhbCA9IFBvcFVwKApbIj8iLCJleHBvbmVudGlhbCIsInBvd2VyIiwibmVpdGhlciJdLAoxLCAKKTsKJHBvd2VyID0gUG9wVXAoClsiPyIsImV4cG9uZW50aWFsIiwicG93ZXIiLCJuZWl0aGVyIl0sCjIsIAopOwokbmVpdGhlciA9IFBvcFVwKApbIj8iLCJleHBvbmVudGlhbCIsInBvd2VyIiwibmVpdGhlciJdLAozLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggb2YgdGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgYXJlIGV4cG9uZW50aWFsIGZ1bmN0aW9ucywgYW5kIHdoaWNoIGFyZSBwb3dlciBmdW5jdGlvbnM/CmEuICBbYEYoeCkgPSAxLjVeeGBdICBbX117JGV4cG9uZW50aWFsfXs1fQoKCmEuICBbYEcoeCkgPSAzeF57MS41fWBdICBbX117JHBvd2VyfXs1fQoKCmEuICBbYEgoeCkgPSAzXnsxLjV4fWBdICBbX117JGV4cG9uZW50aWFsfXs1fQoKCmEuICBbYCBLKHgpID0gKDN4KV57MS41fWBdICBbX117JHBvd2VyfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpFeHBvbmVudGlhbDogIChhKSBhbmQgKGMpOyBwb3dlcjogKGIpIGFuZCAoZCkKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-283')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-283-1-1-1">
-<div class="para">Which of the following functions are exponential functions, and which are power functions?</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-283-1-1-1-1">
-<li id="extracted-webwork-283-1-1-1-1-1"><div class="para logical" id="extracted-webwork-283-1-1-1-1-1-1">
-<div class="para"><span class="process-math">\(F(x) = 1.5^x\)</span></div>
-<ul class="square" id="extracted-webwork-283-1-1-1-1-1-1-2">
-<li id="extracted-webwork-283-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-283-1-1-1-1-1-1-2-1-1">exponential</div></li>
-<li id="extracted-webwork-283-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-283-1-1-1-1-1-1-2-2-1">power</div></li>
-<li id="extracted-webwork-283-1-1-1-1-1-1-2-3"><div class="para" id="extracted-webwork-283-1-1-1-1-1-1-2-3-1">neither</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-283-1-1-1-1-2"><div class="para logical" id="extracted-webwork-283-1-1-1-1-2-1">
-<div class="para"><span class="process-math">\(G(x) = 3x^{1.5}\)</span></div>
-<ul class="square" id="extracted-webwork-283-1-1-1-1-2-1-2">
-<li id="extracted-webwork-283-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-283-1-1-1-1-2-1-2-1-1">exponential</div></li>
-<li id="extracted-webwork-283-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-283-1-1-1-1-2-1-2-2-1">power</div></li>
-<li id="extracted-webwork-283-1-1-1-1-2-1-2-3"><div class="para" id="extracted-webwork-283-1-1-1-1-2-1-2-3-1">neither</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-283-1-1-1-1-3"><div class="para logical" id="extracted-webwork-283-1-1-1-1-3-1">
-<div class="para"><span class="process-math">\(H(x) = 3^{1.5x}\)</span></div>
-<ul class="square" id="extracted-webwork-283-1-1-1-1-3-1-2">
-<li id="extracted-webwork-283-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-283-1-1-1-1-3-1-2-1-1">exponential</div></li>
-<li id="extracted-webwork-283-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-283-1-1-1-1-3-1-2-2-1">power</div></li>
-<li id="extracted-webwork-283-1-1-1-1-3-1-2-3"><div class="para" id="extracted-webwork-283-1-1-1-1-3-1-2-3-1">neither</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-283-1-1-1-1-4"><div class="para logical" id="extracted-webwork-283-1-1-1-1-4-1">
-<div class="para"><span class="process-math">\(K(x) = (3x)^{1.5}\)</span></div>
-<ul class="square" id="extracted-webwork-283-1-1-1-1-4-1-2">
-<li id="extracted-webwork-283-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-283-1-1-1-1-4-1-2-1-1">exponential</div></li>
-<li id="extracted-webwork-283-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-283-1-1-1-1-4-1-2-2-1">power</div></li>
-<li id="extracted-webwork-283-1-1-1-1-4-1-2-3"><div class="para" id="extracted-webwork-283-1-1-1-1-4-1-2-3-1">neither</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-283-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-283-1-2-1"><span class="process-math">\(\text{exponential}\)</span></div></div></details><details id="extracted-webwork-283-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-283-1-3-1"><span class="process-math">\(\text{power}\)</span></div></div></details><details id="extracted-webwork-283-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-283-1-4-1"><span class="process-math">\(\text{exponential}\)</span></div></div></details><details id="extracted-webwork-283-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-283-1-5-1"><span class="process-math">\(\text{power}\)</span></div></div></details><details id="extracted-webwork-283-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-283-1-6-1">Exponential:  (a) and (c); power: (b) and (d)</div></div></details>
-</div>
-</div>
-</div></article></details><details id="ExponentialFunctions-4-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="ExponentialFunctions-4-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-284" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="284" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApEZWNpZGUgd2hldGhlciBlYWNoIHN0YXRlbWVudCBpcyB0cnVlIG9yIGZhbHNlLgphLiAgQSBwb3dlciBmdW5jdGlvbiBldmVudHVhbGx5IGdyb3dzIG1vcmUgcmFwaWRseSB0aGFuIGFuIGV4cG9uZW50aWFsIGZ1bmN0aW9uLiBbX117JEZhbHNlfXs1fQoKCmEuICBUbyBmaW5kIHRoZSBiYXNlIG9mIGFuIGV4cG9uZW50aWFsIGZ1bmN0aW9uLCB3ZSBjYW4gZGl2aWRlIGFueSBmdW5jdGlvbiB2YWx1ZSBvZiBhbiBpbnRlZ2VyIGJ5IHRoZSBwcmV2aW91cyBvbmUuICBbX117JFRydWV9ezV9CgoKYS4gIFBvd2VyIGZ1bmN0aW9ucyBhbmQgZXhwb25lbnRpYWwgZnVuY3Rpb25zIGJvdGggcGFzcyB0aHJvdWdoIHRoZSBvcmlnaW4uICBbX117JEZhbHNlfXs1fQoKCmEuICBFeHBvbmVudGlhbCBmdW5jdGlvbnMgbW9kZWwgZ3Jvd3RoIG9yIGRlY2xpbmUgYnkgYSBjb25zdGFudCBmYWN0b3IuICBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgVHJ1ZQphLiAgRmFsc2UKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-284')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-284-1-1-1">
-<div class="para">Decide whether each statement is true or false.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-284-1-1-1-1">
-<li id="extracted-webwork-284-1-1-1-1-1"><div class="para logical" id="extracted-webwork-284-1-1-1-1-1-1">
-<div class="para">A power function eventually grows more rapidly than an exponential function.</div>
-<ul class="square" id="extracted-webwork-284-1-1-1-1-1-1-1">
-<li id="extracted-webwork-284-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-284-1-1-1-1-1-1-1-1-1">True</div></li>
-<li id="extracted-webwork-284-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-284-1-1-1-1-1-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-284-1-1-1-1-2"><div class="para logical" id="extracted-webwork-284-1-1-1-1-2-1">
-<div class="para">To find the base of an exponential function, we can divide any function value of an integer by the previous one.</div>
-<ul class="square" id="extracted-webwork-284-1-1-1-1-2-1-1">
-<li id="extracted-webwork-284-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-284-1-1-1-1-2-1-1-1-1">True</div></li>
-<li id="extracted-webwork-284-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-284-1-1-1-1-2-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-284-1-1-1-1-3"><div class="para logical" id="extracted-webwork-284-1-1-1-1-3-1">
-<div class="para">Power functions and exponential functions both pass through the origin.</div>
-<ul class="square" id="extracted-webwork-284-1-1-1-1-3-1-1">
-<li id="extracted-webwork-284-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-284-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-284-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-284-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-284-1-1-1-1-4"><div class="para logical" id="extracted-webwork-284-1-1-1-1-4-1">
-<div class="para">Exponential functions model growth or decline by a constant factor.</div>
-<ul class="square" id="extracted-webwork-284-1-1-1-1-4-1-1">
-<li id="extracted-webwork-284-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-284-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-284-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-284-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-284-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-284-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-284-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-284-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-284-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-284-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-284-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-284-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-284-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-284-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-284-1-6-1-1">
-<li id="extracted-webwork-284-1-6-1-1-1"><div class="para" id="extracted-webwork-284-1-6-1-1-1-1">False</div></li>
-<li id="extracted-webwork-284-1-6-1-1-2"><div class="para" id="extracted-webwork-284-1-6-1-1-2-1">True</div></li>
-<li id="extracted-webwork-284-1-6-1-1-3"><div class="para" id="extracted-webwork-284-1-6-1-1-3-1">False</div></li>
-<li id="extracted-webwork-284-1-6-1-1-4"><div class="para" id="extracted-webwork-284-1-6-1-1-4-1">True</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="ExponentialFunctions-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="ExponentialFunctions-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="space"> </span><span class="title">Exponential Equations</span>
 </h3>
 <div class="para logical" id="ExponentialFunctions-5-2">
@@ -1965,7 +1733,11 @@ P(t)=10 \cdot (2^{1/5})^t
 <li id="example-exponential-equations-1-1-2-2"><div class="para" id="p-derived-example-exponential-equations-1-1-2-2"><span class="process-math">\(\displaystyle 27 \cdot 3^{-2x} = 9^{x+1}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-exponential-equations-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-exponential-equations-2-1"><ol class="lower-alpha ol-marker-2" id="example-exponential-equations-2-1-1">
+<div class="solution solution-like" id="example-exponential-equations-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-exponential-equations-2-1"><ol class="lower-alpha ol-marker-2" id="example-exponential-equations-2-1-1">
 <li id="example-exponential-equations-2-1-1-1"><div class="para" id="p-derived-example-exponential-equations-2-1-1-1">Using the fact that <span class="process-math">\(9 = \blert{3^2}\text{,}\)</span> we write each side of the equation as a power of <span class="process-math">\(3\text{:}\)</span><div class="displaymath process-math" id="example-exponential-equations-2-1-1-1-3">
 \begin{align*}
 3^{x-2} \amp = \left(\blert{3^2}\right)^3 \amp \amp \blert{\text{Simplify the right side.}}\\
@@ -1992,45 +1764,22 @@ x - 2 \amp = 6
 \end{align*}
 </div>The solution is <span class="process-math">\(x = \dfrac{1}{4}\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="ExponentialFunctions-5-7"><div class="para" id="ExponentialFunctions-5-7-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of exponential equations, see <a href="tkchap7.html#tkFindExp" class="internal" title="Subsubsection A.7.2.2: Find an unknown exponent">Section 7.2.2</a> of the Toolkit.</div></aside><details id="ExponentialFunctions-5-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="ExponentialFunctions-5-7"><div class="para" id="ExponentialFunctions-5-7-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of exponential equations, see <a href="tkchap7.html#tkFindExp" class="internal" title="Subsubsection A.7.2.2: Find an unknown exponent">Section 7.2.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="ExponentialFunctions-5-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-285" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="285" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskc3RyYXQgPSBSYWRpb0J1dHRvbnMoCiAgWyJEaXZpZGUgYm90aCBzaWRlcyBieSAzLiIsCiAgIkFkZCBcKDNeMlwpIHRvIGJvdGggc2lkZXMuIiwKICAiU2ltcGxpZnkgdGhlIGxlZnQgc2lkZS4iLAogICJXcml0ZSB0aGUgcmlnaHQgc2lkZSBhcyBhIHBvd2VyIG9mIDMuIl0sCiAgMywgCik7CgpCRUdJTl9QR01MCldoaWNoIGlzIGEgZ29vZCBzdHJhdGVneSBmb3Igc29sdmluZyBbYDNee3gtMn09ODFcdGV4dHs/fWBdCgpbX117JHN0cmF0fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCldyaXRlIHRoZSByaWdodCBzaWRlIGFzIGEgcG93ZXIgb2YgMy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-285')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-285-1-1-1">Which is a good strategy for solving <span class="process-math">\(3^{x-2}=81\text{?}\)</span>
-</div> <div class="para logical" id="extracted-webwork-285-1-1-2"><ul class="circle" id="extracted-webwork-285-1-1-2-1">
-<li id="extracted-webwork-285-1-1-2-1-1"><div class="para" id="extracted-webwork-285-1-1-2-1-1-1">Divide both sides by 3.</div></li>
-<li id="extracted-webwork-285-1-1-2-1-2"><div class="para" id="extracted-webwork-285-1-1-2-1-2-1">Add <span class="process-math">\(3^2\)</span> to both sides.</div></li>
-<li id="extracted-webwork-285-1-1-2-1-3"><div class="para" id="extracted-webwork-285-1-1-2-1-3-1">Simplify the left side.</div></li>
-<li id="extracted-webwork-285-1-1-2-1-4"><div class="para" id="extracted-webwork-285-1-1-2-1-4-1">Write the right side as a power of 3.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-285-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-285-1-2-1"><span class="process-math">\(\text{Choice 4}\)</span></div></div></details><details id="extracted-webwork-285-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-285-1-3-1">Write the right side as a power of 3.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="ExponentialFunctions-5-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="ExponentialFunctions-5-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-286" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="286" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYmxlcnR9WzFde1xjb2xvcntibHVlfXsjMX19XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zd2VyPUNvbXB1dGUoIjUiKTsKCkJFR0lOX1BHTUwKU29sdmUgdGhlIGVxdWF0aW9uIFtgMl57eCsyfSA9IDEyOFx0ZXh0ey59YF0KCltgeD1gXVtfXXskYW5zd2VyfXsyfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKW2BcYmxlcnR7XHRleHR7V3JpdGUgZWFjaCBzaWRlIGFzIGEgcG93ZXIgb2YgMi59fWBdCgpbYFxibGVydHtcdGV4dHtFcXVhdGUgZXhwb25lbnRzLn19YF0KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeD01YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-286')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-286-1-1-1">Solve the equation <span class="process-math">\(2^{x+2} = 128\text{.}\)</span>
-</div> <div class="para" id="extracted-webwork-286-1-1-2">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-286-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="extracted-webwork-286-1-2-1"><span class="process-math">\(\blert{\text{Write each side as a power of 2.}}\)</span></div>
-<div class="para" id="extracted-webwork-286-1-2-2"><span class="process-math">\(\blert{\text{Equate exponents.}}\)</span></div>
-</div></details><details id="extracted-webwork-286-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-286-1-3-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-286-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-286-1-4-1"><span class="process-math">\(x=5\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="ExponentialFunctions-5-10">Exponential equations arise frequently in the study of exponential growth.</div>
+</h4></article><div class="para" id="ExponentialFunctions-5-10">Exponential equations arise frequently in the study of exponential growth.</div>
 <article class="example example-like" id="ExponentialFunctions-5-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.20</span><span class="period">.</span>
 </h4>
 <div class="para" id="ExponentialFunctions-5-11-1-1">In <a href="ExponentialFunctions.html#example-flea-population" class="xref" data-knowl="./knowl/xref/example-flea-population.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.2.4">Example 1</a> we wrote a formula for a population of fleas that started with 10 fleas and doubles in number every 5 days. How long will it be before there are 10,240 fleas?</div>
-<div class="solutions"><details id="ExponentialFunctions-5-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ExponentialFunctions-5-11-2-1">
+<div class="solution solution-like" id="ExponentialFunctions-5-11-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ExponentialFunctions-5-11-2-1">
 <div class="para">We set <span class="process-math">\(P = \alert{10,240}\)</span> and solve for <span class="process-math">\(t\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="ExponentialFunctions-5-11-2-1-3">
@@ -2041,45 +1790,10 @@ x - 2 \amp = 6
 \end{align*}
 </div>
 <div class="para">We equate the exponents to get <span class="process-math">\(10 = \dfrac{t}{5}\text{,}\)</span> or <span class="process-math">\(t = 50\text{.}\)</span> The population will grow to 10,240 fleas in 50 days.</div>
-</div></div></details></div></article><details id="ExponentialFunctions-5-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="ExponentialFunctions-5-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.21</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-287" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="287" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJjb2VmZmljaWVudHMiLCAKICAgICJleHBvbmVudHMiXSwKICAgIDIKKTsKJGIgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJhbiBleHBvbmVudCIsIAogICAgImEgYmFzZSIsCiAgICAiYSByYWRpY2FsIl0sCiAgICAxCik7CiRjID0gRm9ybXVsYSgiMngrMiIpOwokZCA9IENvbXB1dGUoIjEvMyIpOwoKQkVHSU5fUEdNTAphLiAgSWYgdHdvIGVxdWl2YWxlbnQgcG93ZXJzIGhhdmUgdGhlIHNhbWUgbm9uemVybyBiYXNlLCBbYGIgXG5vdD0gMWBdIG9yIFtgLTFcdGV4dHssfWBdIHRoZW4gdGhlaXIgW19deyRhfXs1fSBtdXN0IGJlIGVxdWFsIGFsc28uCgoKYS4gIEFuIGV4cG9uZW50aWFsIGVxdWF0aW9uIGlzIG9uZSBpbiB3aGljaCB0aGUgdmFyaWFibGUgaXMgcGFydCBvZiAgW19deyRifXs1fS4KCgphLiAgW2AoM14yKV57eCsxfWBdIHNpbXBsaWZpZXMgdG8gMyByYWlzZWQgdG8gd2hhdCBwb3dlcj8gIFtfXXskY317NX0KCgphLiAgSWYgYSBwb3B1bGF0aW9uIGRvdWJsZXMgZXZlcnkgMyBkYXlzLCBpdHMgZ3Jvd3RoIGZhY3RvciBpcyAyIHJhaXNlZCB0byB3aGF0IHBvd2VyPyBbX117JGR9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBleHBvbmVudHMKYS4gIGFuIGV4cG9uZW50CmEuICBbYDJ4KzJgXQphLiAgW2BcZGZyYWN7MX17M31gXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-287')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-287-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-287-1-1-1-1">
-<li id="extracted-webwork-287-1-1-1-1-1"><div class="para logical" id="extracted-webwork-287-1-1-1-1-1-1">
-<div class="para">If two equivalent powers have the same nonzero base, <span class="process-math">\(b \not= 1\)</span> or <span class="process-math">\(-1\text{,}\)</span> then their</div>
-<ul class="square" id="extracted-webwork-287-1-1-1-1-1-1-3">
-<li id="extracted-webwork-287-1-1-1-1-1-1-3-1"><div class="para" id="extracted-webwork-287-1-1-1-1-1-1-3-1-1">coefficients</div></li>
-<li id="extracted-webwork-287-1-1-1-1-1-1-3-2"><div class="para" id="extracted-webwork-287-1-1-1-1-1-1-3-2-1">exponents</div></li>
-</ul>
-<div class="para">must be equal also.</div>
-</div></li>
-<li id="extracted-webwork-287-1-1-1-1-2"><div class="para logical" id="extracted-webwork-287-1-1-1-1-2-1">
-<div class="para">An exponential equation is one in which the variable is part of</div>
-<ul class="square" id="extracted-webwork-287-1-1-1-1-2-1-1">
-<li id="extracted-webwork-287-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-287-1-1-1-1-2-1-1-1-1">an exponent</div></li>
-<li id="extracted-webwork-287-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-287-1-1-1-1-2-1-1-2-1">a base</div></li>
-<li id="extracted-webwork-287-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-287-1-1-1-1-2-1-1-3-1">a radical</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-287-1-1-1-1-3"><div class="para" id="extracted-webwork-287-1-1-1-1-3-1">
-<span class="process-math">\((3^2)^{x+1}\)</span> simplifies to 3 raised to what power?  <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div></li>
-<li id="extracted-webwork-287-1-1-1-1-4"><div class="para" id="extracted-webwork-287-1-1-1-1-4-1">If a population doubles every 3 days, its growth factor is 2 raised to what power? <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-287-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-287-1-2-1"><span class="process-math">\(\text{exponents}\)</span></div></div></details><details id="extracted-webwork-287-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-287-1-3-1"><span class="process-math">\(\text{an exponent}\)</span></div></div></details><details id="extracted-webwork-287-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-287-1-4-1"><span class="process-math">\(2x+2\)</span></div></div></details><details id="extracted-webwork-287-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-287-1-5-1"><span class="process-math">\(\frac{1}{3}\)</span></div></div></details><details id="extracted-webwork-287-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-287-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-287-1-6-1-1">
-<li id="extracted-webwork-287-1-6-1-1-1"><div class="para" id="extracted-webwork-287-1-6-1-1-1-1">exponents</div></li>
-<li id="extracted-webwork-287-1-6-1-1-2"><div class="para" id="extracted-webwork-287-1-6-1-1-2-1">an exponent</div></li>
-<li id="extracted-webwork-287-1-6-1-1-3"><div class="para" id="extracted-webwork-287-1-6-1-1-3-1"><span class="process-math">\(\displaystyle 2x+2\)</span></div></li>
-<li id="extracted-webwork-287-1-6-1-1-4"><div class="para" id="extracted-webwork-287-1-6-1-1-4-1"><span class="process-math">\(\displaystyle \dfrac{1}{3}\)</span></div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="ExponentialFunctions-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="ExponentialFunctions-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="space"> </span><span class="title">Graphical Solution of Exponential Equations</span>
 </h3>
 <div class="para" id="ExponentialFunctions-6-3">It is not always so easy to express both sides of the equation as powers of the same base. In the following sections, we will develop more general methods for finding exact solutions to exponential equations. But we can use a graphing utility to obtain approximate solutions.</div>
@@ -2088,7 +1802,10 @@ x - 2 \amp = 6
 </h4>
 <div class="para" id="example-gc-exponential-equation-2-1">Use the graph of <span class="process-math">\(y = 2^x\)</span> to find an approximate solution to the equation <span class="process-math">\(2^x = 5\)</span> accurate to the nearest hundredth. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
-<div class="solutions"><details id="example-gc-exponential-equation-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-gc-exponential-equation-3">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para" id="example-gc-exponential-equation-3-1">We enter <span class="process-math">\(Y_1 = 2\)</span> <kbd class="kbdkey">^</kbd> X to obtain the graph shown in figure (a). We are looking for a point on this graph with <span class="process-math">\(y\)</span>-coordinate <span class="process-math">\(5\text{.}\)</span>
 </div>
 <div class="para" id="example-gc-exponential-equation-3-2">Using the TRACE feature, we see that the <span class="process-math">\(y\)</span>-coordinates are too small when <span class="process-math">\(x \lt 2.1\)</span> and too large when <span class="process-math">\(x \gt 2.4\text{.}\)</span> The solution we want lies somewhere between <span class="process-math">\(x = 2.1\)</span> and <span class="process-math">\(x = 2.4\text{,}\)</span> but this approximation is not accurate enough.</div>
@@ -2108,20 +1825,10 @@ x - 2 \amp = 6
 <div class="para">Evaluating <span class="process-math">\(2^{2.32}\)</span> yields <span class="process-math">\(4.993322196\text{.}\)</span> This number is not equal to <span class="process-math">\(5\text{,}\)</span> but it is close, so we believe that <span class="process-math">\(x = 2.32\)</span> is a reasonable approximation to the solution of the equation <span class="process-math">\(2^x = 5\text{.}\)</span>
 </div>
 </div>
-</div></details></div></article><aside class="aside aside-like" id="ExponentialFunctions-6-5"><div class="para" id="ExponentialFunctions-6-5-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review solving with a graph, see <a href="tkchap7.html#tkSolveGraphly" class="internal" title="Subsubsection A.7.2.3: Solve equations graphically">Section 7.2.3</a> of the Toolkit.</div></aside><details id="ExponentialFunctions-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="ExponentialFunctions-6-5"><div class="para" id="ExponentialFunctions-6-5-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review solving with a graph, see <a href="tkchap7.html#tkSolveGraphly" class="internal" title="Subsubsection A.7.2.3: Solve equations graphically">Section 7.2.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="ExponentialFunctions-6-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.2.23</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-288" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="288" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZXhhY3QgPSBsb2coMjg1KS9sb2coNSk7CiRhbnN3ZXIgPSBDb21wdXRlKCIkZXhhY3QiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdhYnNvbHV0ZScsCiAgdG9sZXJhbmNlID0+IC4wMDUsCik7CgpCRUdJTl9QR01MClVzZSB0aGUgZ3JhcGggb2YgW2B5ID0gNV54YF0gdG8gZmluZCBhbiBhcHByb3hpbWF0ZSBzb2x1dGlvbiB0byBbYDVeeCA9IDI4NVx0ZXh0eyx9YF0gYWNjdXJhdGUgdG8gdHdvIGRlY2ltYWwgcGxhY2VzLgoKQW5zd2VyOiBbYHhcYXBwcm94YF1bX117JGFuc3dlcn17M30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgcG9pbnQgb24gdGhlIGdyYXBoIHdoZXJlIFtgeT0yODVgXSBoYXMgW2B4IFxhcHByb3ggMy41MWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-288')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-288-1-1-1">Use the graph of <span class="process-math">\(y = 5^x\)</span> to find an approximate solution to <span class="process-math">\(5^x = 285\text{,}\)</span> accurate to two decimal places.</div> <div class="para" id="extracted-webwork-288-1-1-2">Answer: <span class="process-math">\(x\approx\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-288-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-288-1-2-1"><span class="process-math">\(3.51209\)</span></div></div></details><details id="extracted-webwork-288-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-288-1-3-1">The point on the graph where <span class="process-math">\(y=285\)</span> has <span class="process-math">\(x \approx 3.51\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-7-2-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-7-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="space"> </span><span class="title">Problem Set 7.2</span>
 </h3>
 <article class="subexercises" id="section-7-2-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

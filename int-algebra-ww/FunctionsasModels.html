@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="InverseVariation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap5-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1320,7 +1300,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="example-home-to-school-1-1-1-3"><div class="para" id="example-home-to-school-1-1-1-3-1">Forrest walks at a constant speed until he reaches the bus stop, waits there until the bus arrives, and then the bus drives him to school at a constant speed.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-home-to-school-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-home-to-school-2-1"><ol class="lower-alpha ol-marker-2" id="example-home-to-school-2-1-1">
+<div class="solution solution-like" id="example-home-to-school-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-home-to-school-2-1"><ol class="lower-alpha ol-marker-2" id="example-home-to-school-2-1-1">
 <li id="example-home-to-school-2-1-1-1">
 <div class="para" id="example-home-to-school-2-1-1-1-1">The graph is a straight-line segment, as shown in figure (a). It begins at the origin because at the instant Forrest leaves the house, his distance from home is 0. (In other words, when <span class="process-math">\(t = 0, y = 0\text{.}\)</span>) The graph is a straight line because Forrest has a constant speed. The slope of the line is equal to Forrest’s walking speed.</div>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/fig-home-to-school.svg" role="img" class="contained" alt="distance from home"></div>
@@ -1328,27 +1312,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="example-home-to-school-2-1-1-2"><div class="para" id="example-home-to-school-2-1-1-2-1">The first part of the graph is the same as part (a). But while Forrest waits for the bus, his distance from home remains constant, so the graph at that time is a horizontal line, as shown in figure (b). The line has slope <span class="process-math">\(0\)</span> because while Forrest is waiting for the bus, his speed is <span class="process-math">\(0\text{.}\)</span>
 </div></li>
 <li id="example-home-to-school-2-1-1-3"><div class="para" id="example-home-to-school-2-1-1-3-1">The graph begins like the graph in part (b). The last section of the graph represents the bus ride. It has a constant slope because the bus is moving at a constant speed. Because the bus (probably) moves faster than Forrest walks, the slope of this segment is greater than the slope for the walking section. The graph is shown in figure (c).</div></li>
-</ol></div></div></details></div></article><details id="FunctionsasModels-2-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="FunctionsasModels-2-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-198" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="198" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydCA9IDE7CiRmdW49Rm9ybXVsYSgiMS41LWFicyh4LTExLjUpIik7CiRmYWtlPUZvcm11bGEoIjYqeCIpOwokZmFrZTI9Rm9ybXVsYSgiMTIwLTYqeCIpOwokZmFrZTM9Rm9ybXVsYSgiMTIwLXheMi80Iik7Cgpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiRnclskaV0gPSBpbml0X2dyYXBoKC0uMSwtLjEsMy4xLDMuMSwgYXhlcz0+WzAsMF0sIGdyaWQ9PlsxLDFdLCBzaXplPT5bMjQwLDI0MF0pOwokZ3JbJGldLT5sYigncmVzZXQnKTsKfQoKJGdyWzBdLT5tb3ZlVG8oMCwwKTsKJGdyWzBdLT5saW5lVG8oMSwxLCdyZWQnLDIpOwokZ3JbMF0tPmxpbmVUbygyLDEsJ3JlZCcsMik7CiRnclswXS0+bGluZVRvKDMsMCwncmVkJywyKTsKJGdyWzBdLT5sYiggbmV3IExhYmVsKDEuNSwxLjUsIihCKSIsICRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOwoKJGdyWzFdLT5tb3ZlVG8oMCwwKTsKJGdyWzFdLT5saW5lVG8oMSwxLCdyZWQnLDIpOwokZ3JbMV0tPmxpbmVUbygxLDIsJ3JlZCcsMik7CiRnclsxXS0+bGluZVRvKDAsMywncmVkJywyKTsKJGdyWzFdLT5sYiggbmV3IExhYmVsKDEuNSwxLjUsIihBKSIsJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7IAoKJGdyWzJdLT5tb3ZlVG8oMCwwKTsKJGdyWzJdLT5saW5lVG8oMi41LDIuNSwncmVkJywyKTsKJGdyWzJdLT5saW5lVG8oMi41LDAsJ3JlZCcsMik7CiRnclsyXS0+bGIoIG5ldyBMYWJlbCgxLjIsMS44LCIoRCkiLCAkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsKCiRnclszXS0+bW92ZVRvKDAsMCk7CiRnclszXS0+bGluZVRvKDIuNSwyLjUsJ3JlZCcsMik7CiRnclszXS0+bGluZVRvKDAsMi41LCdyZWQnLDIpOwokZ3JbM10tPmxiKCBuZXcgTGFiZWwoMS44LDEuNSwiKEMpIiwgJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7CgokbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIiwKICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgIDEKICAgICAgICApOwoKQkVHSU5fUEdNTApFcmluIHdhbGtzIGZyb20gaGVyIGhvbWUgdG8gYSBjb252ZW5pZW5jZSBzdG9yZSwgd2hlcmUgc2hlIGJ1eXMgc29tZSBjYXQgZm9vZCwgYW5kIHRoZW4gd2Fsa3MgYmFjayBob21lLiBTa2V0Y2ggYSBwb3NzaWJsZSBncmFwaCBvZiBoZXIgZGlzdGFuY2UgZnJvbSBob21lIGFzIGEgZnVuY3Rpb24gb2YgdGltZS4KCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjEyMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4xMjApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0+MTIwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzJdKSwgd2lkdGg9PjEyMClAXSogIDw8CgpUaGUgZ3JhcGggb2YgRXJpbidzIGRpc3RhbmNlIGZyb20gaG9tZSBpcwoKW19deyRtY317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4xMjApQF0qICA8PAoKQSBncmFwaCBpcyBhbHNvIHNob3duIGJlbG93LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-198')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-198-1-1-1">Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</div>  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-198-image-1.png" class="contained"></div> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-198-image-2.png" class="contained"></div> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-198-image-3.png" class="contained"></div> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-198-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-198-1-1-6">The graph of Erin’s distance from home is</div> <div class="para logical" id="extracted-webwork-198-1-1-7"><ul class="circle" id="extracted-webwork-198-1-1-7-1">
-<li id="extracted-webwork-198-1-1-7-1-1"><div class="para" id="extracted-webwork-198-1-1-7-1-1-1">(A)</div></li>
-<li id="extracted-webwork-198-1-1-7-1-2"><div class="para" id="extracted-webwork-198-1-1-7-1-2-1">(B)</div></li>
-<li id="extracted-webwork-198-1-1-7-1-3"><div class="para" id="extracted-webwork-198-1-1-7-1-3-1">(C)</div></li>
-<li id="extracted-webwork-198-1-1-7-1-4"><div class="para" id="extracted-webwork-198-1-1-7-1-4-1">(D)</div></li>
-<li id="extracted-webwork-198-1-1-7-1-5"><div class="para" id="extracted-webwork-198-1-1-7-1-5-1">none of the above</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-198-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-198-1-2-1"><span class="process-math">\(\text{(B)}\)</span></div></div></details><details id="extracted-webwork-198-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-198-image-2.png" class="contained"></div>
-<div class="para" id="extracted-webwork-198-1-3-2">A graph is also shown below.</div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="FunctionsasModels-2-5-3"><div class="image-box" style="width: 35%; margin-left: 0%; margin-right: 65%;"><img src="external/images/fig-ex-5-6-1answ.svg" role="img" class="contained" alt="piecewise graph"></div></div></article></details><div class="para" id="FunctionsasModels-2-6">The graphs in <a href="FunctionsasModels.html#example-home-to-school" class="xref" data-knowl="./knowl/xref/example-home-to-school.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.1">Example 5.6.1</a> are portions of straight lines. We can also consider graphs that bend upward or downward. The bend is called the <dfn class="terminology">concavity</dfn> of the graph.</div>
+</h4>
+<div class="conclusion" id="FunctionsasModels-2-5-2"><div class="image-box" style="width: 35%; margin-left: 0%; margin-right: 65%;"><img src="external/images/fig-ex-5-6-1answ.svg" role="img" class="contained" alt="piecewise graph"></div></div></article><div class="para" id="FunctionsasModels-2-6">The graphs in <a href="FunctionsasModels.html#example-home-to-school" class="xref" data-knowl="./knowl/xref/example-home-to-school.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.1">Example 5.6.1</a> are portions of straight lines. We can also consider graphs that bend upward or downward. The bend is called the <dfn class="terminology">concavity</dfn> of the graph.</div>
 <article class="example example-like" id="concavity"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="period">.</span>
 </h4>
@@ -1400,7 +1368,11 @@ eBookConfig.enable_chatcodes =  false;
 </table>
 </div>
 </div></div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/fig-concavity.svg" role="img" class="contained" alt="increasing graphs of opposite concavity"></div>
-<div class="solutions"><details id="concavity-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="concavity-2-1"><ol class="lower-alpha ol-marker-2" id="concavity-2-1-1">
+<div class="solution solution-like" id="concavity-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="concavity-2-1"><ol class="lower-alpha ol-marker-2" id="concavity-2-1-1">
 <li id="concavity-2-1-1-1">
 <div class="para logical" id="concavity-2-1-1-1-1">
 <div class="para">The number of flu cases is described by  graph (A) and table (1). The function values in table (1) increase at an increasing rate. We can see this by computing the rate of change over successive time intervals.</div>
@@ -1434,124 +1406,14 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 </div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-concave-down.svg" role="img" class="contained" alt="cocave down graph"></div>
 </li>
-</ol></div></div></details></div></article><div class="para" id="FunctionsasModels-2-8">A graph that bends upward is called <dfn class="terminology">concave up</dfn>, and one that bends down is <dfn class="terminology">concave down</dfn>.</div>
-<details id="FunctionsasModels-2-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="FunctionsasModels-2-9-2"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/images/fig-concavity2w.svg" role="img" class="contained" alt="decreasing graphs of opposite concavity"></div></div>
-<div id="webwork-199" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="199" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhYiA9IFBvcFVwKApbIj8iLCIoYSkiLCIoYikiXSwKMSwgCik7CiRZZXMgPSBQb3BVcCgKICBbIj8iLCJZZXMiLCJObyJdLAogIDEsIAopOyAgICAgICAgCiRObyA9IFBvcFVwKAogIFsiPyIsIlllcyIsIk5vIl0sCiAgMiwgCik7ICAgICAgICAgICAgCiRjb25jYXZpdHkgPSBQb3BVcCgKWyI/IiwiQ29uY2F2ZSB1cCIsIkNvbmNhdmUgZG93biJdLAoxLCAKKTsKCkJFR0lOX1BHTUwKRnJhbmNpbmUgYm91Z2h0IGEgY3VwIG9mIGNvY29hIGF0IHRoZSBjYWZldGVyaWEuIFRoZSBjb2NvYSBjb29sZWQgb2ZmIHJhcGlkbHkgYXQgZmlyc3QsIGFuZCB0aGVuIGdyYWR1YWxseSBhcHByb2FjaGVkIHJvb20gdGVtcGVyYXR1cmUuIFdoaWNoIGdyYXBoIG1vcmUgYWNjdXJhdGVseSByZWZsZWN0cyB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hIGFzIGEgZnVuY3Rpb24gb2YgdGltZT8gW19deyRhYn17NX0KCkV4cGxhaW4gd2h5LiAoU2VsZWN0IGFsbCB0aGF0IGFwcGx5LikKCiogVGhlIGdyYXBoIGhhcyBhIHN0ZWVwIG5lZ2F0aXZlIHNsb3BlIGF0IGZpcnN0LCBjb3JyZXNwb25kaW5nIHRvIGFuIGluaXRpYWwgcmFwaWQgZHJvcCBpbiB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hLiBbX117JFllc317NX0KCgoqIFRoZSBncmFwaCBiZWNvbWVzIGNsb3NlciB0byBhIGhvcml6b250YWwgbGluZSwgY29ycmVzcG9uZGluZyB0byB0aGUgY29jb2EgYXBwcm9hY2hpbmcgcm9vbSB0ZW1wZXJhdHVyZS5bX117JFllc317NX0KCgoqIFRoZSBncmFwaCBoYXMgYSBzbGlnaHQgbmVnYXRpdmUgc2xvcGUgYXQgZmlyc3QsIGNvcnJlc3BvbmRpbmcgdG8gYW4gaW5pdGlhbCByYXBpZCBkcm9wIGluIHRoZSB0ZW1wZXJhdHVyZSBvZiB0aGUgY29jb2EuIFtfXXskTm99ezV9CgoKKiBUaGUgZ3JhcGggYmVjb21lcyBncm93cyBzdGVlcGVyIGFuZCBzdGVlcGVyLCBjb3JyZXNwb25kaW5nIHRvIHRoZSBjb2NvYSBhcHByb2FjaGluZyByb29tIHRlbXBlcmF0dXJlLiBbX117JE5vfXs1fQoKCklzIHRoZSBncmFwaCB5b3UgY2hvc2UgY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24/IFtfXXskY29uY2F2aXR5fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkdyYXBoIChhKTogVGhlIGdyYXBoIGhhcyBhIHN0ZWVwIG5lZ2F0aXZlIHNsb3BlIGF0IGZpcnN0LCBjb3JyZXNwb25kaW5nIHRvIGFuIGluaXRpYWwgcmFwaWQgZHJvcCBpbiB0aGUgdGVtcGVyYXR1cmUgb2YgdGhlIGNvY29hLiBUaGUgZ3JhcGggYmVjb21lcyBjbG9zZXIgdG8gYSBob3Jpem9udGFsIGxpbmUsIGNvcnJlc3BvbmRpbmcgdG8gdGhlIGNvY29hIGFwcHJvYWNoaW5nIHJvb20gdGVtcGVyYXR1cmUuIFRoZSBncmFwaCBpcyBjb25jYXZlIHVwLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-199')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-199-1-1-1">
-<div class="para">Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time?</div>
-<ul class="square" id="extracted-webwork-199-1-1-1-1">
-<li id="extracted-webwork-199-1-1-1-1-1"><div class="para" id="extracted-webwork-199-1-1-1-1-1-1">(a)</div></li>
-<li id="extracted-webwork-199-1-1-1-1-2"><div class="para" id="extracted-webwork-199-1-1-1-1-2-1">(b)</div></li>
-</ul>
-</div> <div class="para" id="extracted-webwork-199-1-1-2">Explain why. (Select all that apply.)</div> <div class="para logical" id="extracted-webwork-199-1-1-3"><ul class="disc" id="extracted-webwork-199-1-1-3-1">
-<li id="extracted-webwork-199-1-1-3-1-1"><div class="para logical" id="extracted-webwork-199-1-1-3-1-1-1">
-<div class="para">The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.</div>
-<ul class="square" id="extracted-webwork-199-1-1-3-1-1-1-1">
-<li id="extracted-webwork-199-1-1-3-1-1-1-1-1"><div class="para" id="extracted-webwork-199-1-1-3-1-1-1-1-1-1">Yes</div></li>
-<li id="extracted-webwork-199-1-1-3-1-1-1-1-2"><div class="para" id="extracted-webwork-199-1-1-3-1-1-1-1-2-1">No</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-199-1-1-3-1-2"><div class="para logical" id="extracted-webwork-199-1-1-3-1-2-1">
-<div class="para">The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.</div>
-<ul class="square" id="extracted-webwork-199-1-1-3-1-2-1-1">
-<li id="extracted-webwork-199-1-1-3-1-2-1-1-1"><div class="para" id="extracted-webwork-199-1-1-3-1-2-1-1-1-1">Yes</div></li>
-<li id="extracted-webwork-199-1-1-3-1-2-1-1-2"><div class="para" id="extracted-webwork-199-1-1-3-1-2-1-1-2-1">No</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-199-1-1-3-1-3"><div class="para logical" id="extracted-webwork-199-1-1-3-1-3-1">
-<div class="para">The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.</div>
-<ul class="square" id="extracted-webwork-199-1-1-3-1-3-1-1">
-<li id="extracted-webwork-199-1-1-3-1-3-1-1-1"><div class="para" id="extracted-webwork-199-1-1-3-1-3-1-1-1-1">Yes</div></li>
-<li id="extracted-webwork-199-1-1-3-1-3-1-1-2"><div class="para" id="extracted-webwork-199-1-1-3-1-3-1-1-2-1">No</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-199-1-1-3-1-4"><div class="para logical" id="extracted-webwork-199-1-1-3-1-4-1">
-<div class="para">The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.</div>
-<ul class="square" id="extracted-webwork-199-1-1-3-1-4-1-1">
-<li id="extracted-webwork-199-1-1-3-1-4-1-1-1"><div class="para" id="extracted-webwork-199-1-1-3-1-4-1-1-1-1">Yes</div></li>
-<li id="extracted-webwork-199-1-1-3-1-4-1-1-2"><div class="para" id="extracted-webwork-199-1-1-3-1-4-1-1-2-1">No</div></li>
-</ul>
-</div></li>
-</ul></div> <div class="para logical" id="extracted-webwork-199-1-1-4">
-<div class="para">Is the graph you chose concave up or concave down?</div>
-<ul class="square" id="extracted-webwork-199-1-1-4-1">
-<li id="extracted-webwork-199-1-1-4-1-1"><div class="para" id="extracted-webwork-199-1-1-4-1-1-1">Concave up</div></li>
-<li id="extracted-webwork-199-1-1-4-1-2"><div class="para" id="extracted-webwork-199-1-1-4-1-2-1">Concave down</div></li>
-</ul>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-199-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-2-1"><span class="process-math">\(\text{(a)}\)</span></div></div></details><details id="extracted-webwork-199-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-3-1"><span class="process-math">\(\text{Yes}\)</span></div></div></details><details id="extracted-webwork-199-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-4-1"><span class="process-math">\(\text{Yes}\)</span></div></div></details><details id="extracted-webwork-199-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-5-1"><span class="process-math">\(\text{No}\)</span></div></div></details><details id="extracted-webwork-199-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-6-1"><span class="process-math">\(\text{No}\)</span></div></div></details><details id="extracted-webwork-199-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-7-1"><span class="process-math">\(\text{Concave up}\)</span></div></div></details><details id="extracted-webwork-199-1-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-199-1-8-1">Graph (a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="FunctionsasModels-2-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-200" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="200" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gUG9wVXAoCiAgWyI/IiwiaSIsICJpaSIsICJpaWkiLCAiaXYiXSwKICA0LCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJpIiwgImlpIiwgImlpaSIsICJpdiJdLAogIDMsIAopOwokYyA9IFBvcFVwKAogIFsiPyIsImkiLCAiaWkiLCAiaWlpIiwgIml2Il0sCiAgMiwgCik7CiRkID0gUG9wVXAoCiAgWyI/IiwiaSIsICJpaSIsICJpaWkiLCAiaXYiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKTWF0Y2ggZWFjaCB0eXBlIG9mIGdyYXBoIHdpdGggaXRzIHByb3BlcnRpZXMuCmEuICBJbmNyZWFzaW5nLCBjb25jYXZlIHVwIFtfXXskYX17NX0KCgphLiAgSW5jcmVhc2luZywgY29uY2F2ZSBkb3duIFtfXXskYn17NX0KCgphLiAgRGVjcmVhc2luZywgY29uY2F2ZSB1cCBbX117JGN9ezV9CgoKYS4gIERlY3JlYXNpbmcsIGNvbmNhdmUgZG93biBbX117JGR9ezV9CgoKaS4gIFtgeWBdLXZhbHVlcyBkZWNyZWFzZSwgc2xvcGVzIGRlY3JlYXNlCmkuICBbYHlgXS12YWx1ZXMgZGVjcmVhc2UsIHNsb3BlcyBpbmNyZWFzZQppLiAgW2B5YF0tdmFsdWVzIGluY3JlYXNlLCBzbG9wZXMgZGVjcmVhc2UKaS4gIFtgeWBdLXZhbHVlcyBpbmNyZWFzZSwgc2xvcGVzIGluY3JlYXNlICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBpdgphLiAgaWlpCmEuICBpaQphLiAgaSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-200')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-200-1-1-1">
-<div class="para">Match each type of graph with its properties.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-200-1-1-1-1">
-<li id="extracted-webwork-200-1-1-1-1-1"><div class="para logical" id="extracted-webwork-200-1-1-1-1-1-1">
-<div class="para">Increasing, concave up</div>
-<ul class="square" id="extracted-webwork-200-1-1-1-1-1-1-1">
-<li id="extracted-webwork-200-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-200-1-1-1-1-1-1-1-1-1">i</div></li>
-<li id="extracted-webwork-200-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-200-1-1-1-1-1-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-200-1-1-1-1-1-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-200-1-1-1-1-1-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-200-1-1-1-1-2"><div class="para logical" id="extracted-webwork-200-1-1-1-1-2-1">
-<div class="para">Increasing, concave down</div>
-<ul class="square" id="extracted-webwork-200-1-1-1-1-2-1-1">
-<li id="extracted-webwork-200-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-200-1-1-1-1-2-1-1-1-1">i</div></li>
-<li id="extracted-webwork-200-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-200-1-1-1-1-2-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-200-1-1-1-1-2-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-200-1-1-1-1-2-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-200-1-1-1-1-3"><div class="para logical" id="extracted-webwork-200-1-1-1-1-3-1">
-<div class="para">Decreasing, concave up</div>
-<ul class="square" id="extracted-webwork-200-1-1-1-1-3-1-1">
-<li id="extracted-webwork-200-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-200-1-1-1-1-3-1-1-1-1">i</div></li>
-<li id="extracted-webwork-200-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-200-1-1-1-1-3-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-200-1-1-1-1-3-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-200-1-1-1-1-3-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-200-1-1-1-1-4"><div class="para logical" id="extracted-webwork-200-1-1-1-1-4-1">
-<div class="para">Decreasing, concave down</div>
-<ul class="square" id="extracted-webwork-200-1-1-1-1-4-1-1">
-<li id="extracted-webwork-200-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-200-1-1-1-1-4-1-1-1-1">i</div></li>
-<li id="extracted-webwork-200-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-200-1-1-1-1-4-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-200-1-1-1-1-4-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-200-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-200-1-1-1-1-4-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-</ol>
-</div> <div class="para logical" id="extracted-webwork-200-1-1-2"><ol class="lower-roman ol-marker-3" id="extracted-webwork-200-1-1-2-1">
-<li id="extracted-webwork-200-1-1-2-1-1"><div class="para" id="extracted-webwork-200-1-1-2-1-1-1">
-<span class="process-math">\(y\)</span>-values decrease, slopes decrease</div></li>
-<li id="extracted-webwork-200-1-1-2-1-2"><div class="para" id="extracted-webwork-200-1-1-2-1-2-1">
-<span class="process-math">\(y\)</span>-values decrease, slopes increase</div></li>
-<li id="extracted-webwork-200-1-1-2-1-3"><div class="para" id="extracted-webwork-200-1-1-2-1-3-1">
-<span class="process-math">\(y\)</span>-values increase, slopes decrease</div></li>
-<li id="extracted-webwork-200-1-1-2-1-4"><div class="para" id="extracted-webwork-200-1-1-2-1-4-1">
-<span class="process-math">\(y\)</span>-values increase, slopes increase</div></li>
 </ol></div>
-<div class="solutions">
-<details id="extracted-webwork-200-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-200-1-2-1"><span class="process-math">\(\text{iv}\)</span></div></div></details><details id="extracted-webwork-200-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-200-1-3-1"><span class="process-math">\(\text{iii}\)</span></div></div></details><details id="extracted-webwork-200-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-200-1-4-1"><span class="process-math">\(\text{ii}\)</span></div></div></details><details id="extracted-webwork-200-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-200-1-5-1"><span class="process-math">\(\text{i}\)</span></div></div></details><details id="extracted-webwork-200-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-200-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-200-1-6-1-1">
-<li id="extracted-webwork-200-1-6-1-1-1"><div class="para" id="extracted-webwork-200-1-6-1-1-1-1">iv</div></li>
-<li id="extracted-webwork-200-1-6-1-1-2"><div class="para" id="extracted-webwork-200-1-6-1-1-2-1">iii</div></li>
-<li id="extracted-webwork-200-1-6-1-1-3"><div class="para" id="extracted-webwork-200-1-6-1-1-3-1">ii</div></li>
-<li id="extracted-webwork-200-1-6-1-1-4"><div class="para" id="extracted-webwork-200-1-6-1-1-4-1">i</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="FunctionsasModels-3"><h3 class="heading hide-type">
+</div></article><div class="para" id="FunctionsasModels-2-8">A graph that bends upward is called <dfn class="terminology">concave up</dfn>, and one that bends down is <dfn class="terminology">concave down</dfn>.</div>
+<article class="exercise exercise-like" id="FunctionsasModels-2-9"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
+</h4>
+<div class="introduction" id="FunctionsasModels-2-9-2"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/images/fig-concavity2w.svg" role="img" class="contained" alt="decreasing graphs of opposite concavity"></div></div></article><article class="exercise exercise-like" id="FunctionsasModels-2-10"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
+</h4></article></section><section class="subsection" id="FunctionsasModels-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="space"> </span><span class="title">Using the Basic Functions as Models</span>
 </h3>
 <div class="para" id="FunctionsasModels-3-2">We have considered situations that can be modeled by linear or quadratic functions.  In this section we’ll look at a few of the other basic functions.</div>
@@ -1568,7 +1430,11 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 <li id="FunctionsasModels-3-3-1-1-2-3"><div class="para" id="p-derived-FunctionsasModels-3-3-1-1-2-3">The loudness, or intensity, <span class="process-math">\(I\text{,}\)</span> of the music at a concert is a function of the <em class="emphasis">reciprocal of the square</em> of your distance, <span class="process-math">\(d\text{,}\)</span> from the speakers.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="FunctionsasModels-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="FunctionsasModels-3-3-2-1"><ol class="lower-alpha ol-marker-2" id="FunctionsasModels-3-3-2-1-1">
+<div class="solution solution-like" id="FunctionsasModels-3-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="FunctionsasModels-3-3-2-1"><ol class="lower-alpha ol-marker-2" id="FunctionsasModels-3-3-2-1-1">
 <li id="FunctionsasModels-3-3-2-1-1-1">
 <div class="para" id="FunctionsasModels-3-3-2-1-1-1-1"><span class="process-math">\(\displaystyle B=kc^3\)</span></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-example-5-6-3a.svg" role="img" class="contained" alt="cubic"></div>
@@ -1581,102 +1447,24 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 <div class="para" id="FunctionsasModels-3-3-2-1-1-3-1"><span class="process-math">\(\displaystyle I=\dfrac{k}{d^2}\)</span></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-example-5-6-3c.svg" role="img" class="contained" alt="inverse square"></div>
 </li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="FunctionsasModels-3-4"><div class="para" id="FunctionsasModels-3-4-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more about the basic functions, see <a href="tkchap5.html#tkBasicProp" class="internal" title="Subsubsection A.5.6.1: Properties of the basic functions">Section 5.6.1</a> of the Toolkit.</div></aside><details id="FunctionsasModels-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-201" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="201" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskY29uZCA9IFJhZGlvQnV0dG9ucygKICBbIlwoeT14XjNcKSIsCiAgIlwoeT1cZGZyYWN7MX17eH1cKSIsCiAgIlwoeT1cc3FydFszXXt4fVwpIiwKICAiXCh5PVxzcXJ0e3h9XCkiXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKV2hpY2ggYmFzaWMgZ3JhcGggaXMgY29uY2F2ZSBkb3duIHdoZXJldmVyIGl0IGlzIGRlZmluZWQ/CgphLiAgW2B5PXheM2BdCgoKYS4gIFtgeT1cZGZyYWN7MX17eH1gXQoKCmEuICBbYHk9XHNxcnRbM117eH1gXQoKCmEuICBbYHk9XHNxcnR7eH1gXQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHk9XHNxcnR7eH1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-201')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-201-1-1-1">Which basic graph is concave down wherever it is defined?</div> <div class="para logical" id="extracted-webwork-201-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-201-1-1-2-1">
-<li id="extracted-webwork-201-1-1-2-1-1"><div class="para" id="extracted-webwork-201-1-1-2-1-1-1"><span class="process-math">\(\displaystyle y=x^3\)</span></div></li>
-<li id="extracted-webwork-201-1-1-2-1-2"><div class="para" id="extracted-webwork-201-1-1-2-1-2-1"><span class="process-math">\(\displaystyle y=\dfrac{1}{x}\)</span></div></li>
-<li id="extracted-webwork-201-1-1-2-1-3"><div class="para" id="extracted-webwork-201-1-1-2-1-3-1"><span class="process-math">\(\displaystyle y=\sqrt[3]{x}\)</span></div></li>
-<li id="extracted-webwork-201-1-1-2-1-4"><div class="para" id="extracted-webwork-201-1-1-2-1-4-1"><span class="process-math">\(\displaystyle y=\sqrt{x}\)</span></div></li>
 </ol></div>
-<div class="solutions"><details id="extracted-webwork-201-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-201-1-2-1"><span class="process-math">\(y=\sqrt{x}\)</span></div></div></details></div>
-</div>
-</div></article></details><details id="FunctionsasModels-3-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="FunctionsasModels-3-4"><div class="para" id="FunctionsasModels-3-4-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more about the basic functions, see <a href="tkchap5.html#tkBasicProp" class="internal" title="Subsubsection A.5.6.1: Properties of the basic functions">Section 5.6.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="FunctionsasModels-3-5"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
+</h4></article><article class="exercise exercise-like" id="FunctionsasModels-3-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="FunctionsasModels-3-6-2">
+</h4>
+<div class="introduction" id="FunctionsasModels-3-6-2">
 <div class="para" id="FunctionsasModels-3-6-2-1">Graphs of the eight basic functions: Eight basic graphs</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-basic-a-c.svg" role="img" class="contained" alt="parabola, cubic, square root"></div></div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-basic-d-f.svg" role="img" class="contained" alt="cube root, reciprocal, inverse square"></div></div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/fig-basic-g-h.svg" role="img" class="contained" alt="line, absolute value"></div></div></div>
 </div>
-<div id="webwork-202" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="202" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gUG9wVXAoCiAgWyI/IiwicXVhZHJhdGljIiwgCiAgImN1YmljIiwKICAic3F1YXJlIHJvb3QiLAogICJjdWJlIHJvb3QiLAogICJyZWNpcHJvY2FsIiwKICAiaW52ZXJzZSBzcXVhcmUiLAogICJsaW5lYXIiLAogICJhYnNvbHV0ZSB2YWx1ZSJdLAogIDEsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsInF1YWRyYXRpYyIsIAogICJjdWJpYyIsCiAgInNxdWFyZSByb290IiwKICAiY3ViZSByb290IiwKICAicmVjaXByb2NhbCIsCiAgImludmVyc2Ugc3F1YXJlIiwKICAibGluZWFyIiwKICAiYWJzb2x1dGUgdmFsdWUiXSwKICA0LCAKKTsKJGMgPSBQb3BVcCgKICBbIj8iLCJxdWFkcmF0aWMiLCAKICAiY3ViaWMiLAogICJzcXVhcmUgcm9vdCIsCiAgImN1YmUgcm9vdCIsCiAgInJlY2lwcm9jYWwiLAogICJpbnZlcnNlIHNxdWFyZSIsCiAgImxpbmVhciIsCiAgImFic29sdXRlIHZhbHVlIl0sCiAgNSwgCik7CgpCRUdJTl9QR01MCkNob29zZSBvbmUgb2YgdGhlIGVpZ2h0IGJhc2ljIGZ1bmN0aW9ucyB0byBtb2RlbCBlYWNoIHNpdHVhdGlvbiwgYW5kIHNrZXRjaCBhIHBvc3NpYmxlIGdyYXBoLgphLiAgVGhlIGNvbnRyYWN0b3IgZm9yIGEgbmV3IGhvdGVsIGlzIGVzdGltYXRpbmcgdGhlIGNvc3Qgb2YgdGhlIG1hcmJsZSB0aWxlIGZvciBhIGNpcmN1bGFyIGxvYmJ5LiBUaGUgY29zdCwgW2BDXHRleHR7LH1gXSBpcyBhIGZ1bmN0aW9uIG9mIHRoZSBzcXVhcmUgb2YgdGhlIGRpYW1ldGVyLCBbYERcdGV4dHssfWBdIG9mIHRoZSBsb2JieS4KCiAgICBCYXNpYyBmdW5jdGlvbjogW19deyRhfXs1fQoKCmEuICBJbnZlc3RvcnMgYXJlIGRlY2lkaW5nIHdoZXRoZXIgdG8gc3VwcG9ydCBhIHdpbmRtaWxsIGZhcm0uIFRoZSB3aW5kIHNwZWVkLCBbYHZcdGV4dHssfWBdIG5lZWRlZCB0byBnZW5lcmF0ZSBhIGdpdmVuIGFtb3VudCBvZiBwb3dlciBpcyBhIGZ1bmN0aW9uIG9mIHRoZSBjdWJlIHJvb3Qgb2YgdGhlIHBvd2VyLCBbYFBcdGV4dHsufWBdCgogICAgQmFzaWMgZnVuY3Rpb246IFtfXXskYn17NX0KCgphLiAgVGhlIGZyZXF1ZW5jeSwgW2BGXHRleHR7LH1gXSBvZiB0aGUgbm90ZSBwcm9kdWNlZCBieSBhIHZpb2xpbiBzdHJpbmcgaXMgYSBmdW5jdGlvbiBvZiB0aGUgcmVjaXByb2NhbCBvZiB0aGUgbGVuZ3RoLCBbYExcdGV4dHssfWBdIG9mIHRoZSBzdHJpbmcuCgogICAgQmFzaWMgZnVuY3Rpb246IFtfXXskY317NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgQz1rRF4yXHRleHR7O31gXSBhIGdyYXBoIGlzIGJlbG93LgoKCmEuICBbYHY9a1xzcXJ0WzNde1B9XHRleHR7O31gXSBhIGdyYXBoIGlzIGJlbG93LgoKCmEuICBbYEY9XGRmcmFje2t9e0x9XHRleHR7O31gXSBhIGdyYXBoIGlzIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-202')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-202-1-1-1">
-<div class="para">Choose one of the eight basic functions to model each situation, and sketch a possible graph.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-202-1-1-1-1">
-<li id="extracted-webwork-202-1-1-1-1-1">
-<div class="para" id="extracted-webwork-202-1-1-1-1-1-1">The contractor for a new hotel is estimating the cost of the marble tile for a circular lobby. The cost, <span class="process-math">\(C\text{,}\)</span> is a function of the square of the diameter, <span class="process-math">\(D\text{,}\)</span> of the lobby.</div>
-<div class="para logical" id="extracted-webwork-202-1-1-1-1-1-2">
-<div class="para">Basic function:</div>
-<ul class="square" id="extracted-webwork-202-1-1-1-1-1-2-1">
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-1"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-1-1">quadratic</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-2"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-2-1">cubic</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-3"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-3-1">square root</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-4"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-4-1">cube root</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-5"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-5-1">reciprocal</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-6"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-6-1">inverse square</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-7"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-7-1">linear</div></li>
-<li id="extracted-webwork-202-1-1-1-1-1-2-1-8"><div class="para" id="extracted-webwork-202-1-1-1-1-1-2-1-8-1">absolute value</div></li>
-</ul>
-</div>
-</li>
-<li id="extracted-webwork-202-1-1-1-1-2">
-<div class="para" id="extracted-webwork-202-1-1-1-1-2-1">Investors are deciding whether to support a windmill farm. The wind speed, <span class="process-math">\(v\text{,}\)</span> needed to generate a given amount of power is a function of the cube root of the power, <span class="process-math">\(P\text{.}\)</span>
-</div>
-<div class="para logical" id="extracted-webwork-202-1-1-1-1-2-2">
-<div class="para">Basic function:</div>
-<ul class="square" id="extracted-webwork-202-1-1-1-1-2-2-1">
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-1"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-1-1">quadratic</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-2"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-2-1">cubic</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-3"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-3-1">square root</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-4"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-4-1">cube root</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-5"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-5-1">reciprocal</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-6"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-6-1">inverse square</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-7"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-7-1">linear</div></li>
-<li id="extracted-webwork-202-1-1-1-1-2-2-1-8"><div class="para" id="extracted-webwork-202-1-1-1-1-2-2-1-8-1">absolute value</div></li>
-</ul>
-</div>
-</li>
-<li id="extracted-webwork-202-1-1-1-1-3">
-<div class="para" id="extracted-webwork-202-1-1-1-1-3-1">The frequency, <span class="process-math">\(F\text{,}\)</span> of the note produced by a violin string is a function of the reciprocal of the length, <span class="process-math">\(L\text{,}\)</span> of the string.</div>
-<div class="para logical" id="extracted-webwork-202-1-1-1-1-3-2">
-<div class="para">Basic function:</div>
-<ul class="square" id="extracted-webwork-202-1-1-1-1-3-2-1">
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-1"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-1-1">quadratic</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-2"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-2-1">cubic</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-3"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-3-1">square root</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-4"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-4-1">cube root</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-5"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-5-1">reciprocal</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-6"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-6-1">inverse square</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-7"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-7-1">linear</div></li>
-<li id="extracted-webwork-202-1-1-1-1-3-2-1-8"><div class="para" id="extracted-webwork-202-1-1-1-1-3-2-1-8-1">absolute value</div></li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-202-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-202-1-2-1"><span class="process-math">\(\text{quadratic}\)</span></div></div></details><details id="extracted-webwork-202-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-202-1-3-1"><span class="process-math">\(\text{cube root}\)</span></div></div></details><details id="extracted-webwork-202-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-202-1-4-1"><span class="process-math">\(\text{reciprocal}\)</span></div></div></details><details id="extracted-webwork-202-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-202-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-202-1-5-1-1">
-<li id="extracted-webwork-202-1-5-1-1-1"><div class="para" id="extracted-webwork-202-1-5-1-1-1-1">
-<span class="process-math">\(C=kD^2\text{;}\)</span> a graph is below.</div></li>
-<li id="extracted-webwork-202-1-5-1-1-2"><div class="para" id="extracted-webwork-202-1-5-1-1-2-1">
-<span class="process-math">\(v=k\sqrt[3]{P}\text{;}\)</span> a graph is below.</div></li>
-<li id="extracted-webwork-202-1-5-1-1-3"><div class="para" id="extracted-webwork-202-1-5-1-1-3-1">
-<span class="process-math">\(F=\dfrac{k}{L}\text{;}\)</span> a graph is below.</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="FunctionsasModels-3-6-4"><div class="para logical" id="FunctionsasModels-3-6-4-1"><ol class="lower-alpha ol-marker-2" id="FunctionsasModels-3-6-4-1-1">
-<li id="FunctionsasModels-3-6-4-1-1-1"><div class="image-box" style="width: 25%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-quadratic-modelw.svg" role="img" class="contained" alt="graph"></div></li>
-<li id="FunctionsasModels-3-6-4-1-1-2"><div class="image-box" style="width: 25%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-cube-root-modelw.svg" role="img" class="contained" alt="graph"></div></li>
-<li id="FunctionsasModels-3-6-4-1-1-3"><div class="image-box" style="width: 25%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-inverse-modelw.svg" role="img" class="contained" alt="graph"></div></li>
-</ol></div></div></article></details><div class="para" id="FunctionsasModels-3-7">The next Example illustrates an application of the function <span class="process-math">\(f(x)=\sqrt{x}\text{.}\)</span>
+<div class="conclusion" id="FunctionsasModels-3-6-3"><div class="para logical" id="FunctionsasModels-3-6-3-1"><ol class="lower-alpha ol-marker-2" id="FunctionsasModels-3-6-3-1-1">
+<li id="FunctionsasModels-3-6-3-1-1-1"><div class="image-box" style="width: 25%; margin-left: 37%; margin-right: 38%;"><img src="external/images/fig-quadratic-modelw.svg" role="img" class="contained" alt="graph"></div></li>
+<li id="FunctionsasModels-3-6-3-1-1-2"><div class="image-box" style="width: 25%; margin-left: 37%; margin-right: 38%;"><img src="external/images/fig-cube-root-modelw.svg" role="img" class="contained" alt="graph"></div></li>
+<li id="FunctionsasModels-3-6-3-1-1-3"><div class="image-box" style="width: 25%; margin-left: 37%; margin-right: 38%;"><img src="external/images/fig-inverse-modelw.svg" role="img" class="contained" alt="graph"></div></li>
+</ol></div></div></article><div class="para" id="FunctionsasModels-3-7">The next Example illustrates an application of the function <span class="process-math">\(f(x)=\sqrt{x}\text{.}\)</span>
 </div>
 <article class="example example-like" id="example-sound"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.9</span><span class="period">.</span>
@@ -1706,7 +1494,11 @@ x = 10 \text{ to } x = 15:~~~~~~~~m =\frac{\Delta y}{\Delta x}=\frac{441 - 419}{
 <li id="example-sound-1-3-1-2"><div class="para" id="p-derived-example-sound-1-3-1-2">Find a value of <span class="process-math">\(k\)</span> so that <span class="process-math">\(s = kf(T)\)</span> fits the data.</div></li>
 <li id="example-sound-1-3-1-3"><div class="para" id="p-derived-example-sound-1-3-1-3">On a summer night when the temperature is <span class="process-math">\(20\degree\)</span> Celsius, you see a flash of lightning, and 6 seconds later you hear the thunderclap. Use your function to estimate your distance from the thunderstorm.</div></li>
 </ol></div>
-<div class="solutions"><details id="example-sound-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-sound-2-1"><ol class="lower-alpha ol-marker-2" id="example-sound-2-1-1">
+<div class="solution solution-like" id="example-sound-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-sound-2-1"><ol class="lower-alpha ol-marker-2" id="example-sound-2-1-1">
 <li id="example-sound-2-1-1-1">
 <div class="para" id="example-sound-2-1-1-1-1">The graph of the data is shown below. The shape of the graph reminds us of the square root function, <span class="process-math">\(y = \sqrt{x}\text{.}\)</span>
 </div>
@@ -1749,93 +1541,13 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 <div class="para">The thunderstorm is 2060 meters, or about 1.3 miles, away.</div>
 </div>
 </li>
-</ol></div></div></details></div></article><details id="FunctionsasModels-3-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-203" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="203" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGJhc2ljID0gUmFkaW9CdXR0b25zKAogICAgICAgIFsiXCh5PSB4XjIgXCkiLAogICAgICAgICJcKHk9IHheMyBcKSIsCiAgICAgICAgIlwoeT0gXHNxcnR7eH0gXCkiLAogICAgICAgICJcKHk9IFxzcXJ0WzNde3h9IFwpIiwKICAgICAgICAiXCh5PSBcZnJhY3sxfXt4fSBcKSIsCiAgICAgICAgIlwoeT0gXGZyYWN7MX17eF4yfSBcKSIsCiAgICAgICAgIlwoeT0geCBcKSIsCiAgICAgICAgIlwoeT0gXGxlZnR8IHhccmlnaHR8XCkiXSwKICAgICAgICA0LAogICAgKTsKJG1vcmUgPSBDb21wdXRlKCI2MCIpOwokbGVzcyA9IENvbXB1dGUoIjMwMCIpOwoKQkVHSU5fUEdNTApUaGUgdWx0cmF2aW9sZXQgaW5kZXggKFVWSSkgaXMgaXNzdWVkIGJ5IHRoZSBOYXRpb25hbCBXZWF0aGVyIFNlcnZpY2UgYXMgYSBmb3JlY2FzdCBvZiB0aGUgYW1vdW50IG9mIHVsdHJhdmlvbGV0IHJhZGlhdGlvbiBleHBlY3RlZCB0byByZWFjaCBFYXJ0aCBhcm91bmQgbm9vbiBvbiBhIGdpdmVuIGRheS4gVGhlIGRhdGEgc2hvdyBob3cgbXVjaCBleHBvc3VyZSB0byB0aGUgc3VuIHBlb3BsZSBjYW4gdGFrZSBiZWZvcmUgcmlza2luZyBzdW5idXJuLgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnVVZJJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AyYF0nKSxQR01MKCdbYDNgXScpLFBHTUwoJ1tgNGBdJyksUEdNTCgnW2A1YF0nKSxQR01MKCdbYDZgXScpLFBHTUwoJ1tgOGBdJyksUEdNTCgnW2AxMGBdJyksUEdNTCgnW2AxMmBdJyksXSxbW1BHTUwoJ01pbnV0ZXMgdG8gYnVybiAgCihtb3JlIHNlbnNpdGl2ZSkgIAonKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDMwYF0nKSxQR01MKCdbYDIwYF0nKSxQR01MKCdbYDE1YF0nKSxQR01MKCdbYDEyYF0nKSxQR01MKCdbYDEwYF0nKSxQR01MKCdbYDcuNWBdJyksUEdNTCgnW2A2YF0nKSxQR01MKCdbYDVgXScpLF0sW1tQR01MKCdNaW51dGVzIHRvIGJ1cm4gIAoobW9yZSBzZW5zaXRpdmUpICAKJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AxNTBgXScpLFBHTUwoJ1tgMTAwYF0nKSxQR01MKCdbYDc1YF0nKSxQR01MKCdbYDYwYF0nKSxQR01MKCdbYDUwYF0nKSxQR01MKCdbYDM3LjVgXScpLFBHTUwoJ1tgMzBgXScpLFBHTUwoJ1tgMjVgXScpLF0sXSxhbGlnbj0+J3wqezl9e2N8fScsdmFsaWduPT4nbWlkZGxlJyx0b3A9PiczJywpO0BdKiA8PAoKYS4gIFBsb3QgW2BtXHRleHR7LH1gXSB0aGUgbWludXRlcyB0byBidXJuLCBhZ2FpbnN0IFtgdVx0ZXh0eyx9YF0gdGhlIFVWSSwgdG8gb2J0YWluIHR3byBncmFwaHMsIG9uZSBmb3IgcGVvcGxlIHdobyBhcmUgbW9yZSBzZW5zaXRpdmUgdG8gc3VuYnVybiwgYW5kIGFub3RoZXIgZm9yIHBlb3BsZSBsZXNzIHNlbnNpdGl2ZSB0byBzdW5idXJuLiBXaGljaCBvZiB0aGUgYmFzaWMgZnVuY3Rpb25zIGRvIHlvdXIgZ3JhcGhzIG1vc3QgcmVzZW1ibGU/CgogICAgW19deyRiYXNpY317NX0KCgphLiAgRm9yIGVhY2ggZ3JhcGgsIGZpbmQgYSB2YWx1ZSBvZiBbYGtgXSBzbyB0aGF0IFtgbSA9IGsgZih1KWBdIGZpdHMgdGhlIGRhdGEuCgogICAgTW9yZSBzZW5zaXRpdmU6IFtgaz1gXVtfXXskbW9yZX17NH0KCiAgICBMZXNzIHNlbnNpdGl2ZTogW2BrPWBdW19deyRsZXNzfXs0fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgVGhlIGdyYXBocyBhcmUgc2hvd24gYmVsb3cuIFRoZXkgcmVzZW1ibGUgW2BmICh4KSA9IFxkZnJhY3sxfXt4fVx0ZXh0ey59YF0KCgphLiAgTW9yZSBzZW5zaXRpdmU6IFtgayA9IDYwXHRleHR7LH1gXSBMZXNzIHNlbnNpdGl2ZTogW2BrID0gMzAwYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-203')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-203-1-1-1">The ultraviolet index (UVI) is issued by the National Weather Service as a forecast of the amount of ultraviolet radiation expected to reach Earth around noon on a given day. The data show how much exposure to the sun people can take before risking sunburn.</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines">UVI</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(12\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Minutes to burn (more sensitive)</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(30\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(20\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(15\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(12\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(7.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Minutes to burn (more sensitive)</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(150\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(100\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(75\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(60\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(50\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(37.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(30\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(25\)</span></td>
-</tr>
-</table></div> <div class="para logical" id="extracted-webwork-203-1-1-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-203-1-1-3-1">
-<li id="extracted-webwork-203-1-1-3-1-1">
-<div class="para" id="extracted-webwork-203-1-1-3-1-1-1">Plot <span class="process-math">\(m\text{,}\)</span> the minutes to burn, against <span class="process-math">\(u\text{,}\)</span> the UVI, to obtain two graphs, one for people who are more sensitive to sunburn, and another for people less sensitive to sunburn. Which of the basic functions do your graphs most resemble?</div>
-<div class="para logical" id="extracted-webwork-203-1-1-3-1-1-2"><ul class="circle" id="extracted-webwork-203-1-1-3-1-1-2-1">
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-1"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-1-1"><span class="process-math">\(\displaystyle y= x^2 \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-2"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-2-1"><span class="process-math">\(\displaystyle y= x^3 \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-3"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-3-1"><span class="process-math">\(\displaystyle y= \sqrt{x} \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-4"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-4-1"><span class="process-math">\(\displaystyle y= \sqrt[3]{x} \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-5"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-5-1"><span class="process-math">\(\displaystyle y= \frac{1}{x} \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-6"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-6-1"><span class="process-math">\(\displaystyle y= \frac{1}{x^2} \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-7"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-7-1"><span class="process-math">\(\displaystyle y= x \)</span></div></li>
-<li id="extracted-webwork-203-1-1-3-1-1-2-1-8"><div class="para" id="extracted-webwork-203-1-1-3-1-1-2-1-8-1"><span class="process-math">\(\displaystyle y= \left| x\right|\)</span></div></li>
-</ul></div>
-</li>
-<li id="extracted-webwork-203-1-1-3-1-2">
-<div class="para" id="extracted-webwork-203-1-1-3-1-2-1">For each graph, find a value of <span class="process-math">\(k\)</span> so that <span class="process-math">\(m = k f(u)\)</span> fits the data.</div>
-<div class="para" id="extracted-webwork-203-1-1-3-1-2-2">More sensitive: <span class="process-math">\(k=\)</span><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>
-</div>
-<div class="para" id="extracted-webwork-203-1-1-3-1-2-3">Less sensitive: <span class="process-math">\(k=\)</span><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>
-</div>
-</li>
 </ol></div>
-<div class="solutions">
-<details id="extracted-webwork-203-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-203-1-2-1"><span class="process-math">\(\text{Choice 5}\)</span></div></div></details><details id="extracted-webwork-203-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-203-1-3-1"><span class="process-math">\(60\)</span></div></div></details><details id="extracted-webwork-203-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-203-1-4-1"><span class="process-math">\(300\)</span></div></div></details><details id="extracted-webwork-203-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-203-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-203-1-5-1-1">
-<li id="extracted-webwork-203-1-5-1-1-1"><div class="para" id="extracted-webwork-203-1-5-1-1-1-1">The graphs are shown below. They resemble <span class="process-math">\(f (x) = \dfrac{1}{x}\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-203-1-5-1-1-2"><div class="para" id="extracted-webwork-203-1-5-1-1-2-1">More sensitive: <span class="process-math">\(k = 60\text{,}\)</span> Less sensitive: <span class="process-math">\(k = 300\)</span>
-</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="FunctionsasModels-3-9-3"><div class="image-box" style="width: 25%; margin-left: 0%; margin-right: 75%;"><img src="external/images/fig-ex-5-6-4answ.svg" role="img" class="contained" alt="two concave up decreasing curves"></div></div></article></details><details id="FunctionsasModels-3-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="FunctionsasModels-3-9"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
+</h4>
+<div class="conclusion" id="FunctionsasModels-3-9-2"><div class="image-box" style="width: 25%; margin-left: 0%; margin-right: 75%;"><img src="external/images/fig-ex-5-6-4answ.svg" role="img" class="contained" alt="two concave up decreasing curves"></div></div></article><article class="exercise exercise-like" id="FunctionsasModels-3-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.11</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-204" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="204" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbW9kZWwgPSBSYWRpb0J1dHRvbnMoCiAgWyJwbG90IHRoZSBkYXRhLiIsCiAgImxvb2sgYXQgdGhlIHZhcmlhYmxlcy4iLAogICJjaG9vc2Ugc2NhbGVzIGZvciB0aGUgYXhlcy4iLAogICJjYWxjdWxhdGUgdGhlIHNsb3BlLiJdLAogIDAsIAopOwoKQkVHSU5fUEdNTApUbyBkZWNpZGUgd2hpY2ggYmFzaWMgZnVuY3Rpb24gbWlnaHQgbW9kZWwgYSBzZXQgb2YgZGF0YSwgd2UgY2FuCgpbX117JG1vZGVsfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCnBsb3QgdGhlIGRhdGEuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-204')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-204-1-1-1">To decide which basic function might model a set of data, we can</div> <div class="para logical" id="extracted-webwork-204-1-1-2"><ul class="circle" id="extracted-webwork-204-1-1-2-1">
-<li id="extracted-webwork-204-1-1-2-1-1"><div class="para" id="extracted-webwork-204-1-1-2-1-1-1">plot the data.</div></li>
-<li id="extracted-webwork-204-1-1-2-1-2"><div class="para" id="extracted-webwork-204-1-1-2-1-2-1">look at the variables.</div></li>
-<li id="extracted-webwork-204-1-1-2-1-3"><div class="para" id="extracted-webwork-204-1-1-2-1-3-1">choose scales for the axes.</div></li>
-<li id="extracted-webwork-204-1-1-2-1-4"><div class="para" id="extracted-webwork-204-1-1-2-1-4-1">calculate the slope.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-204-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-204-1-2-1"><span class="process-math">\(\text{plot the data.}\)</span></div></div></details><details id="extracted-webwork-204-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-204-1-3-1">plot the data.</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="FunctionsasModels-3-11">At this point, a word of caution is in order. There is more to choosing a model than finding a curve that fits the data. A model based purely on the data is called an <dfn class="terminology">empirical model</dfn>. However, many functions have similar shapes over small intervals of their input variables, and there may be several candidates that model the data. Such a model simply describes the general shape of the data set; the parameters  of the model do not necessarily correspond to any actual process.</div>
+</h4></article><div class="para" id="FunctionsasModels-3-11">At this point, a word of caution is in order. There is more to choosing a model than finding a curve that fits the data. A model based purely on the data is called an <dfn class="terminology">empirical model</dfn>. However, many functions have similar shapes over small intervals of their input variables, and there may be several candidates that model the data. Such a model simply describes the general shape of the data set; the parameters  of the model do not necessarily correspond to any actual process.</div>
 <div class="para" id="FunctionsasModels-3-12">In contrast, <dfn class="terminology">mechanistic models</dfn> provide insight into the biological, chemical, or physical process that is thought to govern the phenomenon under study. Parameters derived from mechanistic models are quantitative estimates of real system properties. Here is what GraphPad Software has to say about modeling:</div>
 <div class="para" id="FunctionsasModels-3-13">"Choosing a model is a scientific decision. You should base your choice on your understanding of chemistry or physiology (or genetics, etc.). The choice should not be based solely on the shape of the graph.</div>
 <div class="para" id="FunctionsasModels-3-14">"Some programs . . . automatically fit data to hundreds or thousands of equations and then present you with the equation(s) that fit the data best. Using such a program is appealing because it frees you from the need to choose an equation. The problem is that the program has no understanding of the scientific context of your experiment. The equations that fit the data best are unlikely to correspond to scientifically meaningful models. You will not be able to interpret the best-fit values of the variables, and the results are unlikely to be useful for data analysis."</div>
@@ -1843,22 +1555,9 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="space"> </span><span class="title">The Absolute Value and Distance</span>
 </h3>
 <div class="para" id="FunctionsasModels-4-3">The absolute value function is used to model problems involving distance. Recall that the absolute value of a number gives the distance from the origin to that number on the number line.</div>
-<details id="FunctionsasModels-4-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="FunctionsasModels-4-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.12</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-205" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="205" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYWJzZGlzdCA9IFJhZGlvQnV0dG9ucygKICBbImNoYW5nZSBpdHMgc2lnbi4iLAogICJzdWJ0cmFjdCBpdCBmcm9tIDAuIiwKICAiZmluZCBpdHMgZGlzdGFuY2UgZnJvbSAwLiIsCiAgInNxdWFyZSBpdC4iXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKVG8gZmluZCB0aGUgYWJzb2x1dGUgdmFsdWUgb2YgYSBudW1iZXIsIHdlIGNhbgoKW19deyRhYnNkaXN0fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmZpbmQgaXRzIGRpc3RhbmNlIGZyb20gMC4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-205')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-205-1-1-1">To find the absolute value of a number, we can</div> <div class="para logical" id="extracted-webwork-205-1-1-2"><ul class="circle" id="extracted-webwork-205-1-1-2-1">
-<li id="extracted-webwork-205-1-1-2-1-1"><div class="para" id="extracted-webwork-205-1-1-2-1-1-1">change its sign.</div></li>
-<li id="extracted-webwork-205-1-1-2-1-2"><div class="para" id="extracted-webwork-205-1-1-2-1-2-1">subtract it from 0.</div></li>
-<li id="extracted-webwork-205-1-1-2-1-3"><div class="para" id="extracted-webwork-205-1-1-2-1-3-1">find its distance from 0.</div></li>
-<li id="extracted-webwork-205-1-1-2-1-4"><div class="para" id="extracted-webwork-205-1-1-2-1-4-1">square it.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-205-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-205-1-2-1"><span class="process-math">\(\text{square it.}\)</span></div></div></details><details id="extracted-webwork-205-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-205-1-3-1">find its distance from 0.</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para logical" id="FunctionsasModels-4-5">
+</h4></article><div class="para logical" id="FunctionsasModels-4-5">
 <div class="para">We can find the distance from a number <span class="process-math">\(x\)</span> to some point other than the origin, say <span class="process-math">\(a\text{,}\)</span> by computing <span class="process-math">\(\abs{x - a}\text{.}\)</span> For instance, the distance on the number line from <span class="process-math">\(x=-2\)</span> to <span class="process-math">\(a=5\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1886,7 +1585,11 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-distances-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-distances-2-1">
+<div class="solution solution-like" id="example-distances-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-distances-2-1">
 <div class="para">First, we restate each statement in terms of distance.</div>
 <ol class="lower-alpha ol-marker-2" id="example-distances-2-1-1">
 <li id="example-distances-2-1-1-1">
@@ -1905,66 +1608,16 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/fig-4-units-from-negative-2.svg" role="img" class="contained" alt="4 units from -2"></div>
 </li>
 </ol>
-</div></div></details></div></article><details id="FunctionsasModels-4-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="FunctionsasModels-4-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.14</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-206" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="206" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZGlzdDUgPSBSYWRpb0J1dHRvbnMoCiAgWyJcKHhcKSBpcyAzIHVuaXRzIGJpZ2dlciB0aGFuIDUuIiwKICAidGhlIGRpc3RhbmNlIGJldHdlZW4gXCh4XCkgYW5kIDUgaXMgMyB1bml0cy4iLAogICI1IGFuZCAzIGFyZSBcKHhcKSB1bml0cyBhcGFydC4iLAogICJ0aGUgZGlzdGFuY2UgYmV0d2VlbiBcKHhcKSBhbmQgMyBpcyA1IHVuaXRzLiJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApUaGUgbm90YXRpb24gW2B8eC0zfD01YF0gbWVhbnMKCltfXXskZGlzdDV9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KdGhlIGRpc3RhbmNlIGJldHdlZW4gW2B4YF0gYW5kIDMgaXMgNSB1bml0cy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-206')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-206-1-1-1">The notation <span class="process-math">\(|x-3|=5\)</span> means</div> <div class="para logical" id="extracted-webwork-206-1-1-2"><ul class="circle" id="extracted-webwork-206-1-1-2-1">
-<li id="extracted-webwork-206-1-1-2-1-1"><div class="para" id="extracted-webwork-206-1-1-2-1-1-1">
-<span class="process-math">\(x\)</span> is 3 units bigger than 5.</div></li>
-<li id="extracted-webwork-206-1-1-2-1-2"><div class="para" id="extracted-webwork-206-1-1-2-1-2-1">the distance between <span class="process-math">\(x\)</span> and 5 is 3 units.</div></li>
-<li id="extracted-webwork-206-1-1-2-1-3"><div class="para" id="extracted-webwork-206-1-1-2-1-3-1">5 and 3 are <span class="process-math">\(x\)</span> units apart.</div></li>
-<li id="extracted-webwork-206-1-1-2-1-4"><div class="para" id="extracted-webwork-206-1-1-2-1-4-1">the distance between <span class="process-math">\(x\)</span> and 3 is 5 units.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-206-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-206-1-2-1"><span class="process-math">\(\text{Choice 4}\)</span></div></div></details><details id="extracted-webwork-206-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-206-1-3-1">the distance between <span class="process-math">\(x\)</span> and 3 is 5 units.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="exercise-write-absw" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="exercise-write-absw"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-207" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="207" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmID0gRm9ybXVsYSgiYWJzKHgrMykiKTsKJGEgPSA1OwokZyA9IEZvcm11bGEoImFicyh4LTQpIik7CiRiID0gNjsKCkJFR0lOX1BHTUwKV3JpdGUgZWFjaCBzdGF0ZW1lbnQgdXNpbmcgYWJzb2x1dGUgdmFsdWUgbm90YXRpb247IHRoZW4gaWxsdXN0cmF0ZSB0aGUgc29sdXRpb25zIG9uIGEgbnVtYmVyIGxpbmUuCmEuICBbYHhgXSBpcyBmaXZlIHVuaXRzIGF3YXkgZnJvbSBbYC0zXHRleHR7Ln1gXQoKICAgIFtfXXskZn17MTV9W2A9YF1bX117JGF9ezJ9CgoKYS4gIFtgeGBdIGlzIGF0IGxlYXN0IHNpeCB1bml0cyBhd2F5IGZyb20gW2A0XHRleHR7Ln1gXQoKICAgIFtfXXskZ317MTV9W2BcZ2VgXVtfXXskYn17Mn0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImFicyh4KSIgdG8gZ2V0IFtgfHh8XHRleHR7LH1gXSBldGMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGxlZnR8eCszXHJpZ2h0fD01YF0KCiAgICBBIG51bWJlciBsaW5lIGlzIHNob3duIGJlbG93LgoKCmEuICBbYFxsZWZ0fHgtNFxyaWdodHxcZ2UgNmBdCgogICAgQSBudW1iZXJsaW5lIGlzIHNob3duIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-207')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-207-1-1-1">
-<div class="para">Write each statement using absolute value notation; then illustrate the solutions on a number line.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-207-1-1-1-1">
-<li id="extracted-webwork-207-1-1-1-1-1">
-<div class="para" id="extracted-webwork-207-1-1-1-1-1-1">
-<span class="process-math">\(x\)</span> is five units away from <span class="process-math">\(-3\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-207-1-1-1-1-1-2">
-<span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span><span class="process-math">\(=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-207-1-1-1-1-2">
-<div class="para" id="extracted-webwork-207-1-1-1-1-2-1">
-<span class="process-math">\(x\)</span> is at least six units away from <span class="process-math">\(4\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-207-1-1-1-1-2-2">
-<span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span><span class="process-math">\(\ge\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div>
-</li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-207-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-207-1-2-1"><span class="process-math">\(\left|x+3\right|\)</span></div></div></details><details id="extracted-webwork-207-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-207-1-3-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-207-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-207-1-4-1"><span class="process-math">\(\left|x-4\right|\)</span></div></div></details><details id="extracted-webwork-207-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-207-1-5-1"><span class="process-math">\(6\)</span></div></div></details><details id="extracted-webwork-207-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-207-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-207-1-6-1-1">
-<li id="extracted-webwork-207-1-6-1-1-1">
-<div class="para" id="extracted-webwork-207-1-6-1-1-1-1"><span class="process-math">\(\left|x+3\right|=5\)</span></div>
-<div class="para" id="extracted-webwork-207-1-6-1-1-1-2">A number line is shown below.</div>
-</li>
-<li id="extracted-webwork-207-1-6-1-1-2">
-<div class="para" id="extracted-webwork-207-1-6-1-1-2-1"><span class="process-math">\(\left|x-4\right|\ge 6\)</span></div>
-<div class="para" id="extracted-webwork-207-1-6-1-1-2-2">A numberline is shown below.</div>
-</li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="exercise-write-absw-3"><div class="para logical" id="exercise-write-absw-3-1"><ol class="lower-alpha ol-marker-2" id="exercise-write-absw-3-1-1">
-<li id="exercise-write-absw-3-1-1-1"><div class="image-box" style="width: 55%; margin-left: 0%; margin-right: 45%;"><img src="generated/latex-image/fig-abs-x-minus-3-eq5w.svg" role="img" class="contained" alt="number line"></div></li>
-<li id="exercise-write-absw-3-1-1-2"><div class="image-box" style="width: 55%; margin-left: 0%; margin-right: 45%;"><img src="generated/latex-image/fig-abs-x-minus-4-ge-6w.svg" role="img" class="contained" alt="number line"></div></li>
-</ol></div></div></article></details></section><section class="subsection" id="FunctionsasModels-5"><h3 class="heading hide-type">
+</h4>
+<div class="conclusion" id="exercise-write-absw-2"><div class="para logical" id="exercise-write-absw-2-1"><ol class="lower-alpha ol-marker-2" id="exercise-write-absw-2-1-1">
+<li id="exercise-write-absw-2-1-1-1"><div class="image-box" style="width: 55%; margin-left: 0%; margin-right: 45%;"><img src="generated/latex-image/fig-abs-x-minus-3-eq5w.svg" role="img" class="contained" alt="number line"></div></li>
+<li id="exercise-write-absw-2-1-1-2"><div class="image-box" style="width: 55%; margin-left: 0%; margin-right: 45%;"><img src="generated/latex-image/fig-abs-x-minus-4-ge-6w.svg" role="img" class="contained" alt="number line"></div></li>
+</ol></div></div></article></section><section class="subsection" id="FunctionsasModels-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.6.4</span><span class="space"> </span><span class="title">Absolute Value Equations</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
@@ -1976,24 +1629,9 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 </div>
 <div class="sbspanel middle" style="width:36.8421052631579%;"><img src="external/images/fig-abs-x-is-k.svg" role="img" class="contained" alt="4 units from -2"></div>
 </div></div>
-<details id="FunctionsasModels-5-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="FunctionsasModels-5-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.16</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-208" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="208" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYWJzcSA9IFJhZGlvQnV0dG9ucygKICBbIlRoZSBncmFwaCBvZiBcKHk9fDJ4LTh8XCkgaGFzIG5vIG5lZ2F0aXZlIGlucHV0cy4iLAogICJUaGUgZXF1YXRpb24gXCh8MngtOHw9LTRcKSBoYXMgdHdvIHNvbHV0aW9ucy4iLAogICJEZXBlbmRpbmcgb24gXCh4LH5+fnwyeC04fFwpIGNhbiBlcXVhbCBcKDJ4LThcKSBvciBcKDgtMnhcKS4iLAogICJUaGUgZ3JhcGggb2YgXCh5PXwyeC04fFwpIGlzIGEgc3RyYWlnaHQgbGluZS4iXSwKICAyLCAgICAgICAgICAgCiAgKTsKCkJFR0lOX1BHTUwKV2hpY2ggc3RhdGVtZW50IGlzIHRydWU/CgpbX117JGFic3F9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRGVwZW5kaW5nIG9uIFtgeFx0ZXh0eyx9YF0gW2B8MngtOHxgXSBjYW4gZXF1YWwgW2AyeC04YF0gb3IgW2A4LTJ4XHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-208')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-208-1-1-1">Which statement is true?</div> <div class="para logical" id="extracted-webwork-208-1-1-2"><ul class="circle" id="extracted-webwork-208-1-1-2-1">
-<li id="extracted-webwork-208-1-1-2-1-1"><div class="para" id="extracted-webwork-208-1-1-2-1-1-1">The graph of <span class="process-math">\(y=|2x-8|\)</span> has no negative inputs.</div></li>
-<li id="extracted-webwork-208-1-1-2-1-2"><div class="para" id="extracted-webwork-208-1-1-2-1-2-1">The equation <span class="process-math">\(|2x-8|=-4\)</span> has two solutions.</div></li>
-<li id="extracted-webwork-208-1-1-2-1-3"><div class="para" id="extracted-webwork-208-1-1-2-1-3-1">Depending on <span class="process-math">\(x,~|2x-8|\)</span> can equal <span class="process-math">\(2x-8\)</span> or <span class="process-math">\(8-2x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-208-1-1-2-1-4"><div class="para" id="extracted-webwork-208-1-1-2-1-4-1">The graph of <span class="process-math">\(y=|2x-8|\)</span> is a straight line.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-208-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-208-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-208-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-208-1-3-1">Depending on <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(|2x-8|\)</span> can equal <span class="process-math">\(2x-8\)</span> or <span class="process-math">\(8-2x\text{.}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details><article class="example example-like" id="example-abs-equation"><h4 class="heading">
+</h4></article><article class="example example-like" id="example-abs-equation"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.17</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="example-abs-equation-1-1"><ol class="lower-alpha ol-marker-2" id="example-abs-equation-1-1-1">
@@ -2002,7 +1640,10 @@ f (293) = 20.06\sqrt{293}\approx 343.4
 <li id="example-abs-equation-1-1-1-2"><div class="para" id="example-abs-equation-1-1-1-2-1">Use a graph of <span class="process-math">\(y = \abs{3x - 6}\)</span> to solve the equation <span class="process-math">\(\abs{3x - 6} = -2\text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="example-abs-equation-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-abs-equation-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-abs-3x-6.svg" role="img" class="contained" alt="absolute value of 3x-6"></div>
 <div class="para logical" id="example-abs-equation-2-2"><ol class="lower-alpha ol-marker-2" id="example-abs-equation-2-2-1">
 <li id="example-abs-equation-2-2-1-1"><div class="para logical" id="example-abs-equation-2-2-1-1-1">
@@ -2019,7 +1660,7 @@ x  = \alert{5}\text{: }\amp\\
 </div></li>
 <li id="example-abs-equation-2-2-1-2"><div class="para" id="example-abs-equation-2-2-1-2-1">There are no points on the graph of <span class="process-math">\(y = \abs{3x - 6}\)</span> with <span class="process-math">\(y = -2\text{,}\)</span> so the equation <span class="process-math">\(\abs{3x - 6} = -2\)</span> has no solutions.</div></li>
 </ol></div>
-</div></details></div></article><aside class="aside aside-like" id="FunctionsasModels-5-6"><div class="para" id="FunctionsasModels-5-6-1">
+</div></article><aside class="aside aside-like" id="FunctionsasModels-5-6"><div class="para" id="FunctionsasModels-5-6-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more practice with absolute value functions, see <a href="tkchap5.html#tkSimpAbsVal" class="internal" title="Subsubsection A.5.6.2: Simplify absolute value functions">Section 5.6.2</a> of the Toolkit.</div></aside><article class="technology computation-like" id="FunctionsasModels-5-7"><h4 class="heading">
 <span class="type">Technology</span><span class="space"> </span><span class="codenumber">5.6.18</span><span class="period">.</span><span class="space"> </span><span class="title">Solving Absolute Value Equations.</span>
 </h4>
@@ -2037,53 +1678,19 @@ x  = \alert{5}\text{: }\amp\\
 </div>
 </div></div>
 <div class="sbspanel middle" style="width:36.8421052631579%;"><img src="external/images/fig-GC-abs-3x-6.svg" role="img" class="contained" alt="absolute value of 3x-6"></div>
-</div></div></article><details id="exercise-GC-solve-abs-equationw" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></div></article><article class="exercise exercise-like" id="exercise-GC-solve-abs-equationw"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.19</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-209" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="209" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsIlBDQ21hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydCA9IDE7CiRmdW49Rm9ybXVsYSgiYWJzKDIqeCs3KSIpOwokZmFrZT1Gb3JtdWxhKCJhYnMoMip4LTcpIik7CiRmYWtlMj1Gb3JtdWxhKCJhYnMoMip4KSs3Iik7CiRmYWtlMz1Gb3JtdWxhKCJhYnMoMip4KS03Iik7CmZvcmVhY2ggbXkgJGkgKDAuLjIpIHsKJGdyWyRpXSA9IGluaXRfZ3JhcGgoLTEyLC0yLDgsMTYsYXhlcz0+WzAsMF0sZ3JpZD0+WzEwLDldLHNpemU9PlsyNDAsMjQwXSk7CiRnclskaV0tPmxiKCdyZXNldCcpOwpmb3IgbXkgJGogKC0xMCkgewogICRnclskaV0tPmxiKCBuZXcgTGFiZWwoJGosIDAsICRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOwp9CmZvciBteSAkaiAoMTApIHsKICAkZ3JbJGldLT5sYiggbmV3IExhYmVsKDAsICRqLCAkaiwnYmxhY2snLCdyaWdodCcsJ21pZGRsZScsJ2xhcmdlJykpOwp9Cn0KYWRkX2Z1bmN0aW9ucygkZ3JbMF0sICIkZnVuIGZvciB4IGluIDwtMTIsOD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzBdLT5sYiggbmV3IExhYmVsKC0xMC41LDUsIihBKSIsICdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScsJ2xhcmdlJykpOwoKYWRkX2Z1bmN0aW9ucygkZ3JbMV0sICIkZmFrZSBmb3IgeCBpbiA8LTEyLDg+ICB1c2luZyBjb2xvcjpyZWQgYW5kIHdlaWdodDoyIik7CiRnclsxXS0+bGIoIG5ldyBMYWJlbCgtMTAuNSw1LCIoQikiLCAKJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgphZGRfZnVuY3Rpb25zKCRnclsyXSwgIiRmYWtlMiBmb3IgeCBpbiA8LTEyLDg+ICB1c2luZyBjb2xvcjpyZWQgYW5kIHdlaWdodDoyIik7CiRnclsyXS0+bGIoIG5ldyBMYWJlbCgtMTAuNSw1LCIoQykiLCAKJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgokZ3JbM10gPSBpbml0X2dyYXBoKC0xMiwtMTAsOCw4LGF4ZXM9PlswLDBdLGdyaWQ9PlsxMCw5XSxzaXplPT5bMjQwLDI0MF0pOwokZ3JbM10tPmxiKCdyZXNldCcpOwpmb3IgbXkgJGogKC0xMCkgewogICRnclszXS0+bGIoIG5ldyBMYWJlbCgkaiwgMCwgJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7Cn0KZm9yIG15ICRqICgtNSw1KSB7CiAgJGdyWzNdLT5sYiggbmV3IExhYmVsKDAsICRqLCAkaiwnYmxhY2snLCdyaWdodCcsJ21pZGRsZScsJ2xhcmdlJykpOwp9CgphZGRfZnVuY3Rpb25zKCRnclszXSwgIiRmYWtlMyBmb3IgeCBpbiA8LTEyLDg+ICB1c2luZyBjb2xvcjpyZWQgYW5kIHdlaWdodDoyIik7CiRnclszXS0+bGIoIG5ldyBMYWJlbCgtMTAuNSwtMywiKEQpIiwgCidibGFjaycsJ2NlbnRlcicsJ21pZGRsZScsJ2xhcmdlJykpOwoKJG1jID0gUmFkaW9CdXR0b25zKAogICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSIsCiAgICAgICAgICAgICJub25lIG9mIHRoZSBhYm92ZSJdLAogICAgICAgICAgICAwCiAgICAgICAgKTsKCiRhbnN3ZXJzID0gTGlzdCgiLTksMiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlcnMgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0+IDEsCiBwYXJ0aWFsQ3JlZGl0ID0+IDEsCik7CgpCRUdJTl9QR01MCmEuICBHcmFwaCBbYHkgPSB8MnggKyA3fGBdIGZvciBbYC0xMiBcbGUgeCBcbGUgOFx0ZXh0ey59YF0KCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT42MDApQF0qIAoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjYwMClAXSogCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+NjAwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT42MDApQF0qIAoKICAgIFRoZSBncmFwaCBvZiBbYHk9IHwyeCs3fGBdIGlzCgogICAgW19deyRtY317NX0KCgphLiAgVXNlIHlvdXIgZ3JhcGggdG8gc29sdmUgdGhlIGVxdWF0aW9uIFtgfDJ4ICsgN3wgPSAxMVx0ZXh0ey59YF0KCiAgICBbYHg9YF1bX117JG15X2V2YWx1YXRvcn17OH0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYS4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0+NjAwKUBdKiAKCkEgZ3JhcGggaXMgYWxzbyBzaG93biBiZWxvdyBmb3IgcGFydCAoYikuCgoKYS4gIFtgeD0tOWBdIG9yIFtgeD0yYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-209')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-209-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-209-1-1-1-1">
-<li id="extracted-webwork-209-1-1-1-1-1">
-<div class="para" id="extracted-webwork-209-1-1-1-1-1-1">Graph <span class="process-math">\(y = |2x + 7|\)</span> for <span class="process-math">\(-12 \le x \le 8\text{.}\)</span>
-</div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-209-image-1.png" class="contained"></div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-209-image-2.png" class="contained"></div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-209-image-3.png" class="contained"></div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-209-image-4.png" class="contained"></div>
-<div class="para" id="extracted-webwork-209-1-1-1-1-1-6">The graph of <span class="process-math">\(y= |2x+7|\)</span> is</div>
-<div class="para logical" id="extracted-webwork-209-1-1-1-1-1-7"><ul class="circle" id="extracted-webwork-209-1-1-1-1-1-7-1">
-<li id="extracted-webwork-209-1-1-1-1-1-7-1-1"><div class="para" id="extracted-webwork-209-1-1-1-1-1-7-1-1-1">(A)</div></li>
-<li id="extracted-webwork-209-1-1-1-1-1-7-1-2"><div class="para" id="extracted-webwork-209-1-1-1-1-1-7-1-2-1">(B)</div></li>
-<li id="extracted-webwork-209-1-1-1-1-1-7-1-3"><div class="para" id="extracted-webwork-209-1-1-1-1-1-7-1-3-1">(C)</div></li>
-<li id="extracted-webwork-209-1-1-1-1-1-7-1-4"><div class="para" id="extracted-webwork-209-1-1-1-1-1-7-1-4-1">(D)</div></li>
-<li id="extracted-webwork-209-1-1-1-1-1-7-1-5"><div class="para" id="extracted-webwork-209-1-1-1-1-1-7-1-5-1">none of the above</div></li>
-</ul></div>
-</li>
-<li id="extracted-webwork-209-1-1-1-1-2">
-<div class="para" id="extracted-webwork-209-1-1-1-1-2-1">Use your graph to solve the equation <span class="process-math">\(|2x + 7| = 11\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-209-1-1-1-1-2-2">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-209-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-209-1-2-1"><span class="process-math">\(\text{(A)}\)</span></div></div></details><details id="extracted-webwork-209-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-209-1-3-1"><span class="process-math">\(-9, 2\)</span></div></div></details><details id="extracted-webwork-209-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="extracted-webwork-209-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-209-1-4-1-1"><li id="extracted-webwork-209-1-4-1-1-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-209-image-1.png" class="contained"></div></li></ol></div>
-<div class="para" id="extracted-webwork-209-1-4-2">A graph is also shown below for part (b).</div>
-<div class="para logical" id="extracted-webwork-209-1-4-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-209-1-4-3-1"><li id="extracted-webwork-209-1-4-3-1-1"><div class="para" id="extracted-webwork-209-1-4-3-1-1-1">
-<span class="process-math">\(x=-9\)</span> or <span class="process-math">\(x=2\)</span>
-</div></li></ol></div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="exercise-GC-solve-abs-equationw-3"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/y-eq-abs-2x-plus7.svg" role="img" class="contained" alt="abs(2x+7)"></div></div></div></div></article></details><div class="para" id="FunctionsasModels-5-9">To solve an absolute value equation algebraically, we use the definition of absolute value.</div>
+</h4>
+<div class="conclusion" id="exercise-GC-solve-abs-equationw-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:60%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/y-eq-abs-2x-plus7.svg" role="img" class="contained" alt="abs(2x+7)"></div></div></div></div></article><div class="para" id="FunctionsasModels-5-9">To solve an absolute value equation algebraically, we use the definition of absolute value.</div>
 <article class="example example-like" id="example-abs-algebraic"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.20</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-abs-algebraic-1-1">Solve the equation <span class="process-math">\(\abs{3x - 6} = 9\)</span> algebraically.</div>
-<div class="solutions"><details id="example-abs-algebraic-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-abs-algebraic-2-1">
+<div class="solution solution-like" id="example-abs-algebraic-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-abs-algebraic-2-1">
 <div class="para">We write the piecewise definition of <span class="process-math">\(\abs{3x - 6}\text{.}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-abs-equation.html">
@@ -2109,7 +1716,8 @@ x  = \alert{5}\text{: }\amp\\
 </div>
 <div class="para">Solving these two equations gives us the same solutions we found in <a href="FunctionsasModels.html#example-abs-equation" class="xref" data-knowl="./knowl/xref/example-abs-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.17">Example 5.6.17</a>, namely <span class="process-math">\(x = 5\)</span> and <span class="process-math">\(-1\text{.}\)</span>
 </div>
-</div></div></details></div></article><div class="para" id="FunctionsasModels-5-11">In general, we have the following strategy for solving absolute value equations.</div>
+</div>
+</div></article><div class="para" id="FunctionsasModels-5-11">In general, we have the following strategy for solving absolute value equations.</div>
 <article class="assemblage assemblage-like" id="FunctionsasModels-5-12"><h4 class="heading"><span class="title">Absolute Value Equations.</span></h4>
 <div class="para" id="FunctionsasModels-5-12-3"></div>
 <div class="para logical" id="FunctionsasModels-5-12-4">
@@ -2125,21 +1733,9 @@ x  = \alert{5}\text{: }\amp\\
 \blert{ax + b = c} ~~~~\text{ or }~~~~ \blert{ax + b = -c}
 \end{equation*}
 </div>
-</div></article><details id="FunctionsasModels-5-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="FunctionsasModels-5-13"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.21</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-210" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="210" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zd2VycyA9IExpc3QoIi05LDIiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXJzIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApTb2x2ZSAgW2B8MnggKyA3fCA9IDExYF0gYWxnZWJyYWljYWxseS4KCltgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXs4fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnU2VwYXJhdGUgZGlmZmVyZW50IHZhbHVlcyB3aXRoIGEgY29tbWEuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PS05YF0gb3IgW2B4PTJgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-210')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-210-1-1-1">Solve  <span class="process-math">\(|2x + 7| = 11\)</span> algebraically.</div> <div class="para" id="extracted-webwork-210-1-1-2">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-210-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-210-1-2-1"><span class="process-math">\(-9, 2\)</span></div></div></details><details id="extracted-webwork-210-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-210-1-3-1">
-<span class="process-math">\(x=-9\)</span> or <span class="process-math">\(x=2\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="FunctionsasModels-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="FunctionsasModels-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.6.5</span><span class="space"> </span><span class="title">Absolute Value Inequalities</span>
 </h3>
 <div class="para" id="FunctionsasModels-6-3">We can also use graphs to solve absolute value inequalities. Look again at the graph of <span class="process-math">\(y = \abs{3x - 6}\)</span> in figure (a) below.</div>
@@ -2165,30 +1761,18 @@ x \lt  r ~~\text{ or }~~ x \gt  s
 </div>
 </div></li>
 </ol>
-</div></article><details id="FunctionsasModels-6-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="FunctionsasModels-6-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.22</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 8.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-211" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="211" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcZGVsaW1pdGVyc2hvcnRmYWxsLTFzcFxuZXdjb21tYW5kXGFic1sxXXtcbGVmdHwjMVxyaWdodHx9XG5ld2NvbW1hbmR7XGx0fXs8fVxuZXdjb21tYW5ke1xndH17Pn1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhYnNnciA9IFJhZGlvQnV0dG9ucygKICBbImVpdGhlciBcKHgtMyBcZ3QgNVwpIG9yIFwoeC0zIFxndCAtNVwpLiIsCiAgIlwoNSBcZ3QgeC0zIFxndCAtNVwpLiIsICAgICAgICAgICAKICAiZWl0aGVyIFwoeC0zIFxndCA1XCkgb3IgXCh4LTMgXGx0IC01XCkuIiwKICAiXCgtNSBcZ3QgeC0zIFxsdCA1XCkuIl0sCiAgMiwgCiAgKTsKCkJFR0lOX1BHTUwKSWYgW2B8eC0zfCBcZ3QgNVx0ZXh0eyx9YF0gdGhlbgoKW19deyRhYnNncn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgplaXRoZXIgW2B4LTMgXGd0IDVgXSBvciBbYHgtMyBcbHQgLTVcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-211')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-211-1-1-1">If <span class="process-math">\(|x-3| \gt 5\text{,}\)</span> then</div> <div class="para logical" id="extracted-webwork-211-1-1-2"><ul class="circle" id="extracted-webwork-211-1-1-2-1">
-<li id="extracted-webwork-211-1-1-2-1-1"><div class="para" id="extracted-webwork-211-1-1-2-1-1-1">either <span class="process-math">\(x-3 \gt 5\)</span> or <span class="process-math">\(x-3 \gt -5\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-211-1-1-2-1-2"><div class="para" id="extracted-webwork-211-1-1-2-1-2-1"><span class="process-math">\(5 \gt x-3 \gt -5\text{.}\)</span></div></li>
-<li id="extracted-webwork-211-1-1-2-1-3"><div class="para" id="extracted-webwork-211-1-1-2-1-3-1">either <span class="process-math">\(x-3 \gt 5\)</span> or <span class="process-math">\(x-3 \lt -5\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-211-1-1-2-1-4"><div class="para" id="extracted-webwork-211-1-1-2-1-4-1"><span class="process-math">\(-5 \gt x-3 \lt 5\text{.}\)</span></div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-211-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-211-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-211-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-211-1-3-1">either <span class="process-math">\(x-3 \gt 5\)</span> or <span class="process-math">\(x-3 \lt -5\text{.}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details><article class="example example-like" id="example-abs-inequality"><h4 class="heading">
+</h4></article><article class="example example-like" id="example-abs-inequality"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.23</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-abs-inequality-1-1">Solve <span class="process-math">\(~\abs{4x - 15} \lt 0.01\)</span>
 </div>
-<div class="solutions"><details id="example-abs-inequality-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-abs-inequality-2-1">
+<div class="solution solution-like" id="example-abs-inequality-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-abs-inequality-2-1">
 <div class="para">First, we solve the equation <span class="process-math">\(~\abs{4x - 15} = 0.01\text{.}\)</span> There are two cases:</div>
 <div class="displaymath process-math" id="example-abs-inequality-2-1-2">
 \begin{align*}
@@ -2199,26 +1783,11 @@ x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
 </div>
 <div class="para">Because the inequality symbol is <span class="process-math">\(\lt\text{,}\)</span> the solutions of the inequality are between these two values: <span class="process-math">\(3.7475 \lt x \lt 3.7525\text{.}\)</span> In interval notation, the solutions are <span class="process-math">\((3.7475, 3.7525)\text{.}\)</span>  <span class="process-math">\(~\alert{\text{[TK]}}~~\)</span>
 </div>
-</div></div></details></div></article><aside class="aside aside-like" id="FunctionsasModels-6-11"><div class="para" id="FunctionsasModels-6-11-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review interval notation, see <a href="tkchap5.html#tkIntNot" class="internal" title="Subsubsection A.5.6.3: Use interval notation">Section 5.6.3</a> of the Toolkit.</div></aside><details id="FunctionsasModels-6-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><aside class="aside aside-like" id="FunctionsasModels-6-11"><div class="para" id="FunctionsasModels-6-11-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review interval notation, see <a href="tkchap5.html#tkIntNot" class="internal" title="Subsubsection A.5.6.3: Use interval notation">Section 5.6.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="FunctionsasModels-6-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.6.24</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 8.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-212" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="212" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEluZXF1YWxpdGllcy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0+JycsSFRNTD0+JzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cbmV3Y29tbWFuZHtcZ3R9ez59XCk8L2Rpdj4nKSk7CkNvbnRleHQoIkluZXF1YWxpdGllcyIpOwoKJGFuc3dlcj0gQ29tcHV0ZSgiLTkgPCB4IDwgMiIpOwokYW5zd2VyMj0gQ29tcHV0ZSgieCA8IC05IG9yIHggPiAyIik7CgpCRUdJTl9QR01MCmEuICBTb2x2ZSB0aGUgaW5lcXVhbGl0eSBbYHwyeCArIDd8IFxsdCAxMWBdCgogICAgW19deyRhbnN3ZXJ9ezE1fQoKCmEuICBTb2x2ZSB0aGUgaW5lcXVhbGl0eSBbYHwyeCArIDd8IFxndCAxMWBdCgogICAgW19deyRhbnN3ZXIyfXsxNX0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdZb3UgbWF5IHVzZSBpbmVxdWFsaXR5IHN5bWJvbHMgb3IgZW50ZXIgeW91ciBhbnN3ZXJzIHVzaW5nIGludGVydmFsIG5vdGF0aW9uLiBXaGVuIHVzaW5nIGludGVydmFsIG5vdGF0aW9uLCB1c2UgImluZiIgZm9yIFtgXGluZnR5YF0gYW5kIHVzZSAiVSIgKGFuIHVwcGVyIGNhc2UgbGV0dGVyIHUpIGZvciB0aGUgdW5pb24gc3ltYm9sIFtgXGN1cFx0ZXh0ey59YF0nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2AoLTksMilgXQoKCmEuICBbYCgtXGluZnR5LC05KSBcY3VwICgyLCBcaW5mdHkpYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-212')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-212-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-212-1-1-1-1">
-<li id="extracted-webwork-212-1-1-1-1-1"><div class="para" id="extracted-webwork-212-1-1-1-1-1-1">Solve the inequality <span class="process-math">\(|2x + 7| \lt 11\)</span>
-</div></li>
-<li id="extracted-webwork-212-1-1-1-1-2"><div class="para" id="extracted-webwork-212-1-1-1-1-2-1">Solve the inequality <span class="process-math">\(|2x + 7| \gt 11\)</span>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-212-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-212-1-2-1"><span class="process-math">\(-9 &lt; x &lt; 2\)</span></div></div></details><details id="extracted-webwork-212-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-212-1-3-1"><span class="process-math">\(x &lt; -9\hbox{ or }x &gt; 2\)</span></div></div></details><details id="extracted-webwork-212-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-212-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-212-1-4-1-1">
-<li id="extracted-webwork-212-1-4-1-1-1"><div class="para" id="extracted-webwork-212-1-4-1-1-1-1"><span class="process-math">\(\displaystyle (-9,2)\)</span></div></li>
-<li id="extracted-webwork-212-1-4-1-1-2"><div class="para" id="extracted-webwork-212-1-4-1-1-2-1"><span class="process-math">\(\displaystyle (-\infty,-9) \cup (2, \infty)\)</span></div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-5-6-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-5-6-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">5.6.6</span><span class="space"> </span><span class="title">Problem Set 5.6</span>
 </h3>
 <article class="subexercises" id="section-5-6-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

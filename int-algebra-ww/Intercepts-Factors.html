@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ExtractRoots.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Graphing-Parabolas.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1362,70 +1342,9 @@ h=-16t^2+64t+4
 ab = 0~~~\text{if and only if}~~~a=0~~~\text{or}~~~b=0~~~\text{(or both)}
 \end{equation*}
 </div>
-</div></article><details id="Intercepts-Factors-4-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="Intercepts-Factors-4-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-92" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="92" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRvcHBvc2l0ZXMgPSBQb3BVcCgKICBbIj8iLCJ1bmRlZmluZWQiLCAib3Bwb3NpdGVzIiwgInJlY2lwcm9jYWxzIiwgIm51bWVyYXRvciIsICJ6ZXJvIl0sCiAgMiwgCik7CiRudW1lcmF0b3IgPSBQb3BVcCgKICBbIj8iLCJ1bmRlZmluZWQiLCAib3Bwb3NpdGVzIiwgInJlY2lwcm9jYWxzIiwgIm51bWVyYXRvciIsICJ6ZXJvIl0sCiAgNCwgCik7CiR6ZXJvID0gUG9wVXAoCiAgWyI/IiwidW5kZWZpbmVkIiwgIm9wcG9zaXRlcyIsICJyZWNpcHJvY2FscyIsICJudW1lcmF0b3IiLCAiemVybyJdLAogIDUsIAopOwokdW5kZWZpbmVkID0gUG9wVXAoCiAgWyI/IiwidW5kZWZpbmVkIiwgIm9wcG9zaXRlcyIsICJyZWNpcHJvY2FscyIsICJudW1lcmF0b3IiLCAiemVybyJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApGaWxsIGluIHRoZSBibGFua3MuCmEuICBJZiB0aGUgc3VtIG9mIHR3byBudW1iZXJzIGlzIHplcm8sIHRoZSBudW1iZXJzIG11c3QgYmUgW19deyRvcHBvc2l0ZXN9ezV9LgoKCmEuICBJZiBhIGZyYWN0aW9uIGVxdWFscyB6ZXJvLCB0aGUgW19deyRudW1lcmF0b3J9ezV9IG11c3QgYmUgemVyby4KCgphLiAgSWYgdGhlIHByb2R1Y3Qgb2YgdHdvIG51bWJlcnMgaXMgemVybywgb25lIG9mIHRoZSBudW1iZXJzIG11c3QgYmUgW19deyR6ZXJvfXs1fS4KCgphLiAgSWYgdGhlIGRpdmlzb3IgaW4gYSBxdW90aWVudCBpcyB6ZXJvLCB0aGUgcXVvdGllbnQgaXMgW19deyR1bmRlZmluZWR9ezV9LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgb3Bwb3NpdGVzCgoKYS4gIG51bWVyYXRvcgoKCmEuICB6ZXJvCgoKYS4gIHVuZGVmaW5lZAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-92')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-92-1-1-1">
-<div class="para">Fill in the blanks.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-92-1-1-1-1">
-<li id="extracted-webwork-92-1-1-1-1-1"><div class="para logical" id="extracted-webwork-92-1-1-1-1-1-1">
-<div class="para">If the sum of two numbers is zero, the numbers must be</div>
-<ul class="square" id="extracted-webwork-92-1-1-1-1-1-1-1">
-<li id="extracted-webwork-92-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-92-1-1-1-1-1-1-1-1-1">undefined</div></li>
-<li id="extracted-webwork-92-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-92-1-1-1-1-1-1-1-2-1">opposites</div></li>
-<li id="extracted-webwork-92-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-92-1-1-1-1-1-1-1-3-1">reciprocals</div></li>
-<li id="extracted-webwork-92-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-92-1-1-1-1-1-1-1-4-1">numerator</div></li>
-<li id="extracted-webwork-92-1-1-1-1-1-1-1-5"><div class="para" id="extracted-webwork-92-1-1-1-1-1-1-1-5-1">zero</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-92-1-1-1-1-2"><div class="para logical" id="extracted-webwork-92-1-1-1-1-2-1">
-<div class="para">If a fraction equals zero, the</div>
-<ul class="square" id="extracted-webwork-92-1-1-1-1-2-1-1">
-<li id="extracted-webwork-92-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-92-1-1-1-1-2-1-1-1-1">undefined</div></li>
-<li id="extracted-webwork-92-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-92-1-1-1-1-2-1-1-2-1">opposites</div></li>
-<li id="extracted-webwork-92-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-92-1-1-1-1-2-1-1-3-1">reciprocals</div></li>
-<li id="extracted-webwork-92-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-92-1-1-1-1-2-1-1-4-1">numerator</div></li>
-<li id="extracted-webwork-92-1-1-1-1-2-1-1-5"><div class="para" id="extracted-webwork-92-1-1-1-1-2-1-1-5-1">zero</div></li>
-</ul>
-<div class="para">must be zero.</div>
-</div></li>
-<li id="extracted-webwork-92-1-1-1-1-3"><div class="para logical" id="extracted-webwork-92-1-1-1-1-3-1">
-<div class="para">If the product of two numbers is zero, one of the numbers must be</div>
-<ul class="square" id="extracted-webwork-92-1-1-1-1-3-1-1">
-<li id="extracted-webwork-92-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-92-1-1-1-1-3-1-1-1-1">undefined</div></li>
-<li id="extracted-webwork-92-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-92-1-1-1-1-3-1-1-2-1">opposites</div></li>
-<li id="extracted-webwork-92-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-92-1-1-1-1-3-1-1-3-1">reciprocals</div></li>
-<li id="extracted-webwork-92-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-92-1-1-1-1-3-1-1-4-1">numerator</div></li>
-<li id="extracted-webwork-92-1-1-1-1-3-1-1-5"><div class="para" id="extracted-webwork-92-1-1-1-1-3-1-1-5-1">zero</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-92-1-1-1-1-4"><div class="para logical" id="extracted-webwork-92-1-1-1-1-4-1">
-<div class="para">If the divisor in a quotient is zero, the quotient is</div>
-<ul class="square" id="extracted-webwork-92-1-1-1-1-4-1-1">
-<li id="extracted-webwork-92-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-92-1-1-1-1-4-1-1-1-1">undefined</div></li>
-<li id="extracted-webwork-92-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-92-1-1-1-1-4-1-1-2-1">opposites</div></li>
-<li id="extracted-webwork-92-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-92-1-1-1-1-4-1-1-3-1">reciprocals</div></li>
-<li id="extracted-webwork-92-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-92-1-1-1-1-4-1-1-4-1">numerator</div></li>
-<li id="extracted-webwork-92-1-1-1-1-4-1-1-5"><div class="para" id="extracted-webwork-92-1-1-1-1-4-1-1-5-1">zero</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-92-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-92-1-2-1"><span class="process-math">\(\text{opposites}\)</span></div></div></details><details id="extracted-webwork-92-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-92-1-3-1"><span class="process-math">\(\text{numerator}\)</span></div></div></details><details id="extracted-webwork-92-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-92-1-4-1"><span class="process-math">\(\text{zero}\)</span></div></div></details><details id="extracted-webwork-92-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-92-1-5-1"><span class="process-math">\(\text{undefined}\)</span></div></div></details><details id="extracted-webwork-92-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-92-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-92-1-6-1-1">
-<li id="extracted-webwork-92-1-6-1-1-1"><div class="para" id="extracted-webwork-92-1-6-1-1-1-1">opposites</div></li>
-<li id="extracted-webwork-92-1-6-1-1-2"><div class="para" id="extracted-webwork-92-1-6-1-1-2-1">numerator</div></li>
-<li id="extracted-webwork-92-1-6-1-1-3"><div class="para" id="extracted-webwork-92-1-6-1-1-3-1">zero</div></li>
-<li id="extracted-webwork-92-1-6-1-1-4"><div class="para" id="extracted-webwork-92-1-6-1-1-4-1">undefined</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="Intercepts-Factors-4-7">Here is the simplest possible application of the Zero-Factor Principle (ZFP): For what value(s) of <span class="process-math">\(x\)</span> is the equation <span class="process-math">\(~3x=0~\)</span> true? You could divide both sides by 3, but you can also see that the product <span class="process-math">\(3x\)</span> can equal zero only if one of its factors is zero, so <span class="process-math">\(x\)</span> must be zero!</div>
+</h4></article><div class="para" id="Intercepts-Factors-4-7">Here is the simplest possible application of the Zero-Factor Principle (ZFP): For what value(s) of <span class="process-math">\(x\)</span> is the equation <span class="process-math">\(~3x=0~\)</span> true? You could divide both sides by 3, but you can also see that the product <span class="process-math">\(3x\)</span> can equal zero only if one of its factors is zero, so <span class="process-math">\(x\)</span> must be zero!</div>
 <div class="para logical" id="Intercepts-Factors-4-8">
 <div class="para">The ZFP is true even if the numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are represented by algebraic expressions, such as <span class="process-math">\(x-6\)</span> or <span class="process-math">\(x+2\text{.}\)</span> For example, if</div>
 <div class="displaymath process-math">
@@ -1440,7 +1359,11 @@ ab = 0~~~\text{if and only if}~~~a=0~~~\text{or}~~~b=0~~~\text{(or both)}
 </h4>
 <div class="para" id="Example-solve-quadratic-by-factoring-1-1">Solve the equation <span class="process-math">\(x^2-4x-12=0\)</span>
 </div>
-<div class="solutions"><details id="Example-solve-quadratic-by-factoring-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Example-solve-quadratic-by-factoring-2-1">
+<div class="solution solution-like" id="Example-solve-quadratic-by-factoring-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Example-solve-quadratic-by-factoring-2-1">
 <div class="para">We can factor the expression <span class="process-math">\(x^2-4x-12\text{,}\)</span> and write the equation as  <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1456,22 +1379,11 @@ x=6~~~~ \amp \text{or}~~~~x=-2
 \end{align*}
 </div>
 <div class="para">Once again we see that a quadratic equation has two solutions. You can check that both of these values satisfy the original equation.</div>
-</div></div></details></div></article><aside class="aside aside-like" id="Intercepts-Factors-4-10"><div class="para" id="Intercepts-Factors-4-10-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review factoring quadratic trinaomials, see <a href="tkchap3.html#tkFacQuadTri" class="internal" title="Subsubsection A.3.2.2: Factor quadratic trinomials">Section 3.2.2</a> of the Toolkit.</div></aside><details id="Intercepts-Factors-4-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><aside class="aside aside-like" id="Intercepts-Factors-4-10"><div class="para" id="Intercepts-Factors-4-10-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review factoring quadratic trinaomials, see <a href="tkchap3.html#tkFacQuadTri" class="internal" title="Subsubsection A.3.2.2: Factor quadratic trinomials">Section 3.2.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Intercepts-Factors-4-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-93" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="93" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCIzIik7CiRyMiA9IENvbXB1dGUoIjgiKTsKJGFuc3dlciA9IExpc3QoIiRyMSwgJHIyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApTb2x2ZSB0aGUgZXF1YXRpb24gW2BccXVhZCB4XjItMTF4KzI0PTBgXQoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezZ9IFVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PTNgXSBvciBbYHg9OGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-93')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-93-1-1-1">Solve the equation <span class="process-math">\(\quad x^2-11x+24=0\)</span>
-</div> <div class="para" id="extracted-webwork-93-1-1-2">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span> Use a comma to separate different solutions.</div>
-<div class="solutions">
-<details id="extracted-webwork-93-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-93-1-2-1"><span class="process-math">\(3, 8\)</span></div></div></details><details id="extracted-webwork-93-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-93-1-3-1">
-<span class="process-math">\(x=3\)</span> or <span class="process-math">\(x=8\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="ParabolaX-Ints"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="ParabolaX-Ints"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="space"> </span><span class="title">X-Intercepts of a Parabola</span>
 </h3>
 <div class="para" id="ParabolaX-Ints-2">Recall that the <span class="process-math">\(x\)</span>-intercept  of a line is the point where <span class="process-math">\(y=0\text{,}\)</span> or where the line crosses the <span class="process-math">\(x\)</span>-axis. We find the <span class="process-math">\(x\)</span>-intercept by setting <span class="process-math">\(y=0\)</span> in the equation of the line, and solving for <span class="process-math">\(x\text{.}\)</span> We can find the <span class="process-math">\(x\)</span>-intercepts of a parabola the same way.</div>
@@ -1480,7 +1392,10 @@ x=6~~~~ \amp \text{or}~~~~x=-2
 </h4>
 <div class="para" id="ParabolaX-Ints-3-1-1">Find the <span class="process-math">\(x\)</span>-intercepts of the graph of <span class="process-math">\(~y=x^2-4x-12\)</span>
 </div>
-<div class="solutions"><details id="ParabolaX-Ints-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="ParabolaX-Ints-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="ParabolaX-Ints-3-2-1">
 <div class="para">To find the <span class="process-math">\(x\)</span>-intercepts of the graph, we set <span class="process-math">\(y=\alert{0}\)</span> and solve the equation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Example-solve-quadratic-by-factoring.html">
@@ -1497,7 +1412,7 @@ x^2-4x-12 = (x-6)(x+2)
 <div class="para">The solutions of that equation were <span class="process-math">\(6\)</span> and <span class="process-math">\(-2\text{,}\)</span> so the <span class="process-math">\(x\)</span>-intercepts of the graph are <span class="process-math">\((6,0)\)</span> and <span class="process-math">\((-2,0)\text{.}\)</span> You can see this by graphing the equation on your calculator, as shown in the figure.</div>
 </div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-GC-parab-with-x-intercepts.svg" role="img" class="contained" alt="parabola with x-intercepts"></div>
-</div></details></div></article><div class="para logical" id="ParabolaX-Ints-4">
+</div></article><div class="para logical" id="ParabolaX-Ints-4">
 <div class="para">We can state a general result: The <span class="process-math">\(x\)</span>-intercepts of the graph of</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1514,32 +1429,9 @@ y=ax^2+bx+c
 </div>
 <div class="para" id="ParabolaX-Ints-5">And we can use this relationship the other way round, too: If we know the <span class="process-math">\(x\)</span>-intercepts of the graph of <span class="process-math">\(~y=ax^2+bx+c,~\)</span> we also know the solutions of the equation <span class="process-math">\(ax^2+bx+c=0\text{.}\)</span>
 </div>
-<details id="ParabolaX-Ints-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="ParabolaX-Ints-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-94" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="94" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCIzIik7CiRyMiA9IENvbXB1dGUoIi0zLzIiKTsKJGFuc3dlciA9IENvbXB1dGUoIjMsIC0zLzIiKTsKJG15X2V2YWx1YXRvciA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0+IDEsCiBwYXJ0aWFsQ3JlZGl0ID0+IDEsCik7CgpCRUdJTl9QR01MClVzZSB0ZWNobm9sb2d5IHRvIGdyYXBoIHRoZSBlcXVhdGlvbgoKW2BgYFxiZWdpbntnYXRoZXJlZH0KIHk9KHgtMykoMngrMykgClxlbmR7Z2F0aGVyZWR9CmBgYF0KCmFuZCBmaW5kIHRoZSBbYHhgXS1pbnRlcmNlcHRzIG9mIHRoZSBncmFwaC4gVXNlIHlvdXIgYW5zd2VycyB0byBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGBcYmVnaW57Z2F0aGVyZWR9CiAoeC0zKSgyeCszKT0wIApcZW5ke2dhdGhlcmVkfQpgYGBdCgpDaGVjayB5b3VyIHNvbHV0aW9ucyBieSBhcHBseWluZyB0aGUgWkZQLgoKW2B4PWBdW19deyRteV9ldmFsdWF0b3J9ezZ9IFVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PTNgXSBvciBbYHg9XGRmcmFjey0zfXsyfSBgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-94')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-94-1-1-1">Use technology to graph the equation</div> <div class="para logical" id="extracted-webwork-94-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{gathered}
-y=(x-3)(2x+3) 
-\end{gathered}
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-94-1-1-3">and find the <span class="process-math">\(x\)</span>-intercepts of the graph. Use your answers to solve the equation</div> <div class="para logical" id="extracted-webwork-94-1-1-4"><div class="displaymath process-math">
-\begin{equation*}
-\begin{gathered}
-(x-3)(2x+3)=0 
-\end{gathered}
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-94-1-1-5">Check your solutions by applying the ZFP.</div> <div class="para" id="extracted-webwork-94-1-1-6">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span> Use a comma to separate different solutions.</div>
-<div class="solutions">
-<details id="extracted-webwork-94-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-94-1-2-1"><span class="process-math">\(3, \frac{-3}{2}\)</span></div></div></details><details id="extracted-webwork-94-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-94-1-3-1">
-<span class="process-math">\(x=3\)</span> or <span class="process-math">\(x=\dfrac{-3}{2}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Intercepts-Factors-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Intercepts-Factors-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">Solving Quadratic Equations by Factoring</span>
 </h3>
 <div class="para" id="Intercepts-Factors-6-4">Now we’ll consider some other quadratic equations. Before we apply the ZFP, we must write the equation so that one side is zero.</div>
@@ -1548,7 +1440,11 @@ y=(x-3)(2x+3)
 </h4>
 <div class="para" id="Intercepts-Factors-6-5-1-1">Solve <span class="process-math">\(~3x(x+1)=2x+2\)</span>
 </div>
-<div class="solutions"><details id="Intercepts-Factors-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Intercepts-Factors-6-5-2-1">
+<div class="solution solution-like" id="Intercepts-Factors-6-5-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Intercepts-Factors-6-5-2-1">
 <div class="para">First, we write the equation in standard form.</div>
 <div class="displaymath process-math" id="Intercepts-Factors-6-5-2-1-1">
 \begin{align*}
@@ -1567,7 +1463,8 @@ x=\dfrac{2}{3}~~\text{or} ~~x \amp = -1
 </div>
 <div class="para">The solutions are <span class="process-math">\(\dfrac{2}{3}\)</span> and <span class="process-math">\(-1\text{.}\)</span>
 </div>
-</div></div></details></div></article><article class="warning remark-like" id="Intercepts-Factors-6-6"><h4 class="heading">
+</div>
+</div></article><article class="warning remark-like" id="Intercepts-Factors-6-6"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Intercepts-Factors-6-6-1">
@@ -1586,63 +1483,11 @@ x=\dfrac{2}{3}~~\text{or} ~~x \amp = -1
 <li id="Box-solve-by-factoring-4-1-2"><div class="para" id="p-derived-Box-solve-by-factoring-4-1-2">Factor the left side of the equation.</div></li>
 <li id="Box-solve-by-factoring-4-1-3"><div class="para" id="p-derived-Box-solve-by-factoring-4-1-3">Apply the zero-factor principle:  Set each factor equal to zero.</div></li>
 <li id="Box-solve-by-factoring-4-1-4"><div class="para" id="p-derived-Box-solve-by-factoring-4-1-4">Solve each equation. There are two solutions (which may be equal).</div></li>
-</ol></div></article><details id="Intercepts-Factors-6-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div></article><article class="exercise exercise-like" id="Intercepts-Factors-6-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-95" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="95" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCItMyIpOwokcjIgPSBDb21wdXRlKCI2Iik7CiRhbnN3ZXIgPSBMaXN0KCIkcjEsICRyMiIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKU29sdmUgYnkgZmFjdG9yaW5nOiBbYFxxdWFkICh0LTMpXjI9MyAoOS10KSBgXQoKW2B0PWBdW19deyRteV9ldmFsdWF0b3J9ezZ9IFVzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApCZWdpbiBieSBtdWx0aXBseWluZyBvdXQgZWFjaCBzaWRlIG9mIHRoZSBlcXVhdGlvbi4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgdD0tM2BdIG9yIFtgdD02IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-95')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-95-1-1-1">Solve by factoring: <span class="process-math">\(\quad (t-3)^2=3 (9-t)\)</span>
-</div> <div class="para" id="extracted-webwork-95-1-1-2">
-<span class="process-math">\(t=\)</span><span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span> Use a comma to separate different solutions.</div>
-<div class="solutions">
-<details id="extracted-webwork-95-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="extracted-webwork-95-1-2-1">Begin by multiplying out each side of the equation.</div></div></details><details id="extracted-webwork-95-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-95-1-3-1"><span class="process-math">\(-3, 6\)</span></div></div></details><details id="extracted-webwork-95-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-95-1-4-1">
-<span class="process-math">\(t=-3\)</span> or <span class="process-math">\(t=6\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details><details id="Intercepts-Factors-6-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="Intercepts-Factors-6-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-96" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="96" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRleHRyYWN0ID0gUG9wVXAoCiAgWyI/IiwiZXh0cmFjdGluZyByb290cyIsICJmYWN0b3JpbmciXSwKICAxLCAKKTsKJGZhY3RvciA9IFBvcFVwKAogIFsiPyIsImV4dHJhY3Rpbmcgcm9vdHMiLCAiZmFjdG9yaW5nIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoaWNoIHRlY2huaXF1ZSwgZXh0cmFjdGluZyByb290cyBvciBmYWN0b3JpbmcsIGlzIGJldHRlci1zdWl0ZWQgdG8gZWFjaCBlcXVhdGlvbj8KYS4gIFtgNHheMi0xMng9MGBdIFtfXXskZmFjdG9yfXs1fQoKCmEuICBbYDYoNHgtMSleMj0xOGBdIFtfXXskZXh0cmFjdH17NX0KCgphLiAgW2AoeCs0KV4yPTE2eCBgXSBbX117JGZhY3Rvcn17NX0KCgphLiAgW2A5eF4yLTQyPTBgXSBbX117JGV4dHJhY3R9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkV4dHJhY3Rpbmcgcm9vdHMgYXBwbGllcyB0byAoYikgYW5kIChkKS4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-96')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-96-1-1-1">
-<div class="para">Which technique, extracting roots or factoring, is better-suited to each equation?</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-96-1-1-1-1">
-<li id="extracted-webwork-96-1-1-1-1-1"><div class="para logical" id="extracted-webwork-96-1-1-1-1-1-1">
-<div class="para"><span class="process-math">\(4x^2-12x=0\)</span></div>
-<ul class="square" id="extracted-webwork-96-1-1-1-1-1-1-2">
-<li id="extracted-webwork-96-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-96-1-1-1-1-1-1-2-1-1">extracting roots</div></li>
-<li id="extracted-webwork-96-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-96-1-1-1-1-1-1-2-2-1">factoring</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-96-1-1-1-1-2"><div class="para logical" id="extracted-webwork-96-1-1-1-1-2-1">
-<div class="para"><span class="process-math">\(6(4x-1)^2=18\)</span></div>
-<ul class="square" id="extracted-webwork-96-1-1-1-1-2-1-2">
-<li id="extracted-webwork-96-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-96-1-1-1-1-2-1-2-1-1">extracting roots</div></li>
-<li id="extracted-webwork-96-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-96-1-1-1-1-2-1-2-2-1">factoring</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-96-1-1-1-1-3"><div class="para logical" id="extracted-webwork-96-1-1-1-1-3-1">
-<div class="para"><span class="process-math">\((x+4)^2=16x\)</span></div>
-<ul class="square" id="extracted-webwork-96-1-1-1-1-3-1-2">
-<li id="extracted-webwork-96-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-96-1-1-1-1-3-1-2-1-1">extracting roots</div></li>
-<li id="extracted-webwork-96-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-96-1-1-1-1-3-1-2-2-1">factoring</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-96-1-1-1-1-4"><div class="para logical" id="extracted-webwork-96-1-1-1-1-4-1">
-<div class="para"><span class="process-math">\(9x^2-42=0\)</span></div>
-<ul class="square" id="extracted-webwork-96-1-1-1-1-4-1-2">
-<li id="extracted-webwork-96-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-96-1-1-1-1-4-1-2-1-1">extracting roots</div></li>
-<li id="extracted-webwork-96-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-96-1-1-1-1-4-1-2-2-1">factoring</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-96-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-96-1-2-1"><span class="process-math">\(\text{factoring}\)</span></div></div></details><details id="extracted-webwork-96-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-96-1-3-1"><span class="process-math">\(\text{extracting roots}\)</span></div></div></details><details id="extracted-webwork-96-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-96-1-4-1"><span class="process-math">\(\text{factoring}\)</span></div></div></details><details id="extracted-webwork-96-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-96-1-5-1"><span class="process-math">\(\text{extracting roots}\)</span></div></div></details><details id="extracted-webwork-96-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-96-1-6-1">Extracting roots applies to (b) and (d).</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="Intercepts-Factors-6-11">Now we can use factoring to solve the opening problem in this section.</div>
+</h4></article><div class="para" id="Intercepts-Factors-6-11">Now we can use factoring to solve the opening problem in this section.</div>
 <article class="example example-like" id="Example-baseball-height"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span>
 </h4>
@@ -1655,7 +1500,11 @@ h=-16t^2+64t+4
 </div>
 <div class="para">When will the baseball reach a height of 64 feet?</div>
 </div>
-<div class="solutions"><details id="Example-baseball-height-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Example-baseball-height-2-1">
+<div class="solution solution-like" id="Example-baseball-height-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Example-baseball-height-2-1">
 <div class="para">We substitute <span class="process-math">\(\alert{64}\)</span> for <span class="process-math">\(h\)</span> in the formula, and solve for <span class="process-math">\(t\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="Example-baseball-height-2-1-4">
@@ -1669,7 +1518,8 @@ t=\dfrac{3}{2}~~\text{or} ~~t \amp = \dfrac{5}{2}
 \end{align*}
 </div>
 <div class="para">There are two solutions.  At <span class="process-math">\(t=\dfrac{3}{2}\)</span> seconds, the ball reaches a height of 64 feet on the way up, and at <span class="process-math">\(t=\dfrac{5}{2}\)</span> seconds, the ball is 64 feet high on its way down.</div>
-</div></div></details></div></article><article class="warning remark-like" id="Intercepts-Factors-6-13"><h4 class="heading">
+</div>
+</div></article><article class="warning remark-like" id="Intercepts-Factors-6-13"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Intercepts-Factors-6-13-1">
@@ -1695,51 +1545,11 @@ y_2=4(x^2-4x+3)
 <div class="para">as shown below.</div>
 </div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/fig-GC-scaled-parabola.svg" role="img" class="contained" alt="graph"></div>
-<div class="para" id="Intercepts-Factors-6-13-3">This graph has the same <span class="process-math">\(x\)</span>-values when <span class="process-math">\(y=0\text{.}\)</span> The factor of 4 makes the graph "skinnier," but does not change the location of the <span class="process-math">\(x\)</span>-intercepts.</div></article><details id="Intercepts-Factors-6-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="Intercepts-Factors-6-13-3">This graph has the same <span class="process-math">\(x\)</span>-values when <span class="process-math">\(y=0\text{.}\)</span> The factor of 4 makes the graph "skinnier," but does not change the location of the <span class="process-math">\(x\)</span>-intercepts.</div></article><article class="exercise exercise-like" id="Intercepts-Factors-6-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-97" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="97" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7JHgwID0gQ29tcHV0ZSgiMCIpOwokeDEgPSBDb21wdXRlKCI0Iik7CiRhbnN3ZXIgPSBMaXN0KCIkeDAsJHgxIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOyAKJGFuc3dlcjEgPSBMaXN0KCIkeDAsJHgxIik7CiRteV9ldmFsdWF0b3IxID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsgCiRhbnN3ZXIyID0gTGlzdCgiJHgwLCR4MSIpOwokbXlfZXZhbHVhdG9yMiA9ICRhbnN3ZXIgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0+IDEsCiBwYXJ0aWFsQ3JlZGl0ID0+IDEsCik7CgpCRUdJTl9QR01MCmEuICBTb2x2ZSBieSBmYWN0b3JpbmcgW2A0dC10XjI9MFx0ZXh0ey59YF0KCiAgICBbYHQ9YF1bX117JG15X2V2YWx1YXRvcn17NX0gVXNlIGEgY29tbWEgdG8gc2VwYXJhdGUgc29sdXRpb25zLgoKCmEuICBTb2x2ZSBieSBmYWN0b3JpbmcgW2AyMHQtNXReMj0wXHRleHR7Ln1gXQoKICAgIFtgdD1gXVtfXXskbXlfZXZhbHVhdG9yMX17NX0gVXNlIGEgY29tbWEgdG8gc2VwYXJhdGUgc29sdXRpb25zLgoKCmEuICBHcmFwaCBbYHk9NHQtdF4yYF0gYW5kIFtgeT0yMHQtNXReMmBdIHRvZ2V0aGVyIGluIHRoZSB3aW5kb3cKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICBcdGV4dHtYbWlufVxhbXAgPSAtMlxhbXAgXHRleHR7WW1pbn1cYW1wID0gLTIwXFwKICAgIFx0ZXh0e1htYXh9XGFtcCA9IDZcYW1wIFx0ZXh0e1ltYXh9XGFtcCA9IDI1CiAgICBcZW5ke2FsaWduZWR9CiAgICBgYGBdCgogICAgYW5kIGxvY2F0ZSB0aGUgaG9yaXpvbnRhbCBpbnRlcmNlcHRzIG9uIGVhY2ggZ3JhcGguCgogICAgW2B0PWBdW19deyRteV9ldmFsdWF0b3IyfXs1fSBVc2UgYSBjb21tYSB0byBzZXBhcmF0ZSB2YWx1ZXMuCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgdD0wYF0gYW5kIFtgdD00YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-97')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-97-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-97-1-1-1-1">
-<li id="extracted-webwork-97-1-1-1-1-1">
-<div class="para" id="extracted-webwork-97-1-1-1-1-1-1">Solve by factoring <span class="process-math">\(4t-t^2=0\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-97-1-1-1-1-1-2">
-<span class="process-math">\(t=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> Use a comma to separate solutions.</div>
-</li>
-<li id="extracted-webwork-97-1-1-1-1-2">
-<div class="para" id="extracted-webwork-97-1-1-1-1-2-1">Solve by factoring <span class="process-math">\(20t-5t^2=0\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-97-1-1-1-1-2-2">
-<span class="process-math">\(t=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> Use a comma to separate solutions.</div>
-</li>
-<li id="extracted-webwork-97-1-1-1-1-3">
-<div class="para" id="extracted-webwork-97-1-1-1-1-3-1">Graph <span class="process-math">\(y=4t-t^2\)</span> and <span class="process-math">\(y=20t-5t^2\)</span> together in the window</div>
-<div class="para logical" id="extracted-webwork-97-1-1-1-1-3-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-\text{Xmin}\amp = -2\amp \text{Ymin}\amp = -20\\
-\text{Xmax}\amp = 6\amp \text{Ymax}\amp = 25
-\end{aligned}
-\end{equation*}
-</div></div>
-<div class="para" id="extracted-webwork-97-1-1-1-1-3-3">and locate the horizontal intercepts on each graph.</div>
-<div class="para" id="extracted-webwork-97-1-1-1-1-3-4">
-<span class="process-math">\(t=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> Use a comma to separate values.</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-97-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-97-1-2-1"><span class="process-math">\(0, 4\)</span></div></div></details><details id="extracted-webwork-97-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-97-1-3-1"><span class="process-math">\(0, 4\)</span></div></div></details><details id="extracted-webwork-97-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-97-1-4-1"><span class="process-math">\(0, 4\)</span></div></div></details><details id="extracted-webwork-97-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-97-1-5-1">
-<span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=4\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details><details id="Intercepts-Factors-6-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="Intercepts-Factors-6-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-98" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="98" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-courseID="" data-userID="" data-coursePassword="" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-98')">Activate</button></div>
-<div class="problem-contents"><div class="para" id="extracted-webwork-98-1-1-1">PTX:ERROR: WeBWorK problem webwork-98 with seed 98 is either empty or failed to compile Use -a to halt with full PG and returned content</div></div>
-</div></article></details></section><section class="subsection" id="Intercepts-Factors-7"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Intercepts-Factors-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="space"> </span><span class="title">An Application</span>
 </h3>
 <div class="para" id="Intercepts-Factors-7-2">Here is another example of how quadratic equations arise in applications.</div>
@@ -1747,7 +1557,11 @@ y_2=4(x^2-4x+3)
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.14</span><span class="period">.</span>
 </h4>
 <div class="para" id="Intercepts-Factors-7-3-1-1">The size of a rectangular computer monitor screen is taken to be the length of its diagonal. If the length of the screen should be 3 inches greater than its width, what are the dimensions of a 15-inch monitor?</div>
-<div class="solutions"><details id="Intercepts-Factors-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Intercepts-Factors-7-3-2-1">
+<div class="solution solution-like" id="Intercepts-Factors-7-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Intercepts-Factors-7-3-2-1">
 <div class="para">We express the two dimensions of the screen in terms of a single variable:</div>
 <div class="displaymath process-math" id="Intercepts-Factors-7-3-2-1-1">
 \begin{gather*}
@@ -1774,19 +1588,12 @@ w = 9 ~~~ ~~~ \text{or} ~~~ w \amp = -12
 \end{align*}
 </div>
 <div class="para">Because the width of the screen cannot be a negative number, the width is 9 inches, and the length is <span class="process-math">\(~w+3=12~\)</span> inches.</div>
-</div></div></details></div></article><aside class="aside aside-like" id="Intercepts-Factors-7-4"><div class="para" id="Intercepts-Factors-7-4-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review the Pythagorean theorem, see <a href="tkchap3.html#tkPythTh" class="internal" title="Subsubsection A.3.1.4: Use the Pythagorean theorem">Section 3.1.4</a> of the Toolkit.</div></aside><details id="Intercepts-Factors-7-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><aside class="aside aside-like" id="Intercepts-Factors-7-4"><div class="para" id="Intercepts-Factors-7-4-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review the Pythagorean theorem, see <a href="tkchap3.html#tkPythTh" class="internal" title="Subsubsection A.3.1.4: Use the Pythagorean theorem">Section 3.1.4</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Intercepts-Factors-7-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="Intercepts-Factors-7-5-2"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/fig-gardenw.svg" role="img" class="contained" alt="garden"></div></div>
-<div id="webwork-99" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="99" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IENvbXB1dGUoIjIwIik7CgpCRUdJTl9QR01MCkZyYW5jaW5lIGlzIGRlc2lnbmluZyB0aGUgbGF5b3V0IGZvciBhIGJvdGFuaWNhbCBnYXJkZW4uIFRoZSBwbGFuIGluY2x1ZGVzIGEgc3F1YXJlIGhlcmIgZ2FyZGVuLCB3aXRoIGEgcGF0aCA1IGZlZXQgd2lkZSB0aHJvdWdoIHRoZSBjZW50ZXIgb2YgdGhlIGdhcmRlbiwgYXMgc2hvd24gYWJvdmUuIFRvIGluY2x1ZGUgYWxsIHRoZSBzcGVjaWVzIG9mIGhlcmJzLCB0aGUgcGxhbnRlZCBhcmVhIG11c3QgYmUgMzAwIHNxdWFyZSBmZWV0LiBGaW5kIHRoZSBkaW1lbnNpb25zIG9mIHRoZSBoZXJiIGdhcmRlbi4KCkFuc3dlcjogW19deyRhfXsyfSBmZWV0IGJ5ICBbX117JGF9ezJ9IGZlZXQKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgoyMCBmZWV0IGJ5IDIwIGZlZXQKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-99')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-99-1-1-1">Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path 5 feet wide through the center of the garden, as shown above. To include all the species of herbs, the planted area must be 300 square feet. Find the dimensions of the herb garden.</div> <div class="para" id="extracted-webwork-99-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> feet by  <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> feet</div>
-<div class="solutions">
-<details id="extracted-webwork-99-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-99-1-2-1"><span class="process-math">\(20\)</span></div></div></details><details id="extracted-webwork-99-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-99-1-3-1"><span class="process-math">\(20\)</span></div></div></details><details id="extracted-webwork-99-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-99-1-4-1">20 feet by 20 feet</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Intercepts-Factors-8"><h3 class="heading hide-type">
+</h4>
+<div class="introduction" id="Intercepts-Factors-7-5-2"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/fig-gardenw.svg" role="img" class="contained" alt="garden"></div></div></article></section><section class="subsection" id="Intercepts-Factors-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="space"> </span><span class="title">More About Solutions of Quadratic Equations</span>
 </h3>
 <div class="para logical" id="Intercepts-Factors-8-3">
@@ -1803,7 +1610,11 @@ a(x - r_1)(x - r_2) = 0
 </h4>
 <div class="para" id="Intercepts-Factors-8-4-1-1">Find a quadratic equation whose solutions are <span class="process-math">\(\dfrac{1}{2}\)</span> and <span class="process-math">\(-3\text{.}\)</span>
 </div>
-<div class="solutions"><details id="Intercepts-Factors-8-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Intercepts-Factors-8-4-2-1">
+<div class="solution solution-like" id="Intercepts-Factors-8-4-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Intercepts-Factors-8-4-2-1">
 <div class="para">Each solution corresponds to a factor of the equation, so the equation must look like this:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1837,20 +1648,10 @@ x^2+\dfrac{5}{2}x-\dfrac{3}{2} = 0
 </div>
 <div class="para">From here, you can see that the solutions are indeed <span class="process-math">\(\dfrac{1}{2}\)</span> and <span class="process-math">\(-3\text{.}\)</span>
 </div>
-</div></div></details></div></article><details id="Intercepts-Factors-8-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="Intercepts-Factors-8-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-100" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="100" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJjb250ZXh0TGltaXRlZFBvbHlub21pYWwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiTGltaXRlZFBvbHlub21pYWwiKTsKQ29udGV4dCgpLT5vcGVyYXRvcnMtPnVuZGVmaW5lKCIvIik7ClBhcnNlcjo6TnVtYmVyOjpOb0RlY2ltYWxzKENvbnRleHQoKSk7CiRmID0gQ29tcHV0ZSgiM3heMisxM3gtMTAiKTsKJG15X2V2YWx1YXRvciA9ICRmIC0+IGNtcChjaGVja2VyPT4Kc3ViIHsKICAgIG15ICggJGNvcnJlY3QsICRzdHVkZW50LCAkc2VsZiApID0gQF87CiAgICBteSAkY29udGV4dCA9IENvbnRleHQoKS0+Y29weTsKICAgICRjb250ZXh0LT5mbGFncy0+c2V0KG5vX3BhcmFtZXRlcnM9PjApOwogICAgJGNvbnRleHQtPnZhcmlhYmxlcy0+YWRkKCdDMCc9PidQYXJhbWV0ZXInKTsKICAgIG15ICRjMCA9IEZvcm11bGEoJGNvbnRleHQsJ0MwJyk7CiAgICAkc3R1ZGVudCA9IEZvcm11bGEoJGNvbnRleHQsJHN0dWRlbnQpOwogICAgJGNvcnJlY3QgPSBGb3JtdWxhKCRjb250ZXh0LCIzKnheMiokYzArMTMqeCokYzAtMTAqJGMwIik7CiAgICByZXR1cm4gJGNvcnJlY3QgPT0gJHN0dWRlbnQ7Cn0pOwoKQkVHSU5fUEdNTApGaW5kIGEgcXVhZHJhdGljIGVxdWF0aW9uIHdpdGggaW50ZWdlciBjb2VmZmljaWVudHMgd2hvc2Ugc29sdXRpb25zIGFyZSBbYFxkZnJhY3syfXszfWBdIGFuZCBbYC01XHRleHR7Ln1gXQoKW19deyRteV9ldmFsdWF0b3J9ezEyfVtgPTAgYF0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDN4XjIrMTN4LTEwPTBgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-100')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-100-1-1-1">Find a quadratic equation with integer coefficients whose solutions are <span class="process-math">\(\dfrac{2}{3}\)</span> and <span class="process-math">\(-5\text{.}\)</span>
-</div> <div class="para" id="extracted-webwork-100-1-1-2">
-<span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span><span class="process-math">\(=0\)</span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-100-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-100-1-2-1"><span class="process-math">\(3x^{2}+13x-10\)</span></div></div></details><details id="extracted-webwork-100-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-100-1-3-1"><span class="process-math">\(3x^2+13x-10=0\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para logical" id="Intercepts-Factors-8-6">
+</h4></article><div class="para logical" id="Intercepts-Factors-8-6">
 <div class="para">A quadratic equation in one variable always has two solutions. In some cases, the solutions may be equal. For example, the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1866,54 +1667,9 @@ x-1=0~~~~\text{or}~~~~x-1 \amp = 0
 </div>
 <div class="para">Both of these equations have solution <span class="process-math">\(x=1\text{.}\)</span>  We say that 1 is a solution of <dfn class="terminology">multiplicity two</dfn>, meaning that it occurs twice as a solution of the quadratic equation.</div>
 </div>
-<details id="Intercepts-Factors-8-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="Intercepts-Factors-8-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-101" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="101" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkVEYgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwiRmFsc2UiXSwKICAyLCAKKTsKICRUcnVlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsIkZhbHNlIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgZmFsc2UuCmEuICBXZSBmaW5kIHRoZSBbYHhgXS1pbnRlcmNlcHRzIG9mIGEgZ3JhcGggYnkgc2V0dGluZyBbYHg9MGBdIC4gW19deyRURn17NX0KCgphLiAgSWYgW2B6YF0gaXMgYSBzb2x1dGlvbiBvZiBhIHF1YWRyYXRpYyBlcXVhdGlvbiwgdGhlbiBbYCh4LXopIGBdIGlzIGEgZmFjdG9yIG9mIHRoZSBsZWZ0IHNpZGUgaW4gc3RhbmRhcmQgZm9ybS4gW19deyRUcnVlfXs1fQoKCmEuICBXZSBjYW4gZmFjdG9yIGEgY29uc3RhbnQgZnJvbSBib3RoIHNpZGVzIG9mIGEgcXVhZHJhdGljIGVxdWF0aW9uIHdpdGhvdXQgY2hhbmdpbmcgaXRzIHNvbHV0aW9ucy4gW19deyRUcnVlfXs1fQoKCmEuICBUbyBzb2x2ZSBhIHF1YWRyYXRpYyBlcXVhdGlvbiBieSBmYWN0b3JpbmcsIHdlIHNob3VsZCBmYWN0b3IgZWFjaCBzaWRlIG9mIHRoZSBlcXVhdGlvbi4gW19deyRURn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCgoKYS4gIFRydWUKCgphLiAgVHJ1ZQoKCmEuICBGYWxzZQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-101')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-101-1-1-1">
-<div class="para">True or false.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-101-1-1-1-1">
-<li id="extracted-webwork-101-1-1-1-1-1"><div class="para logical" id="extracted-webwork-101-1-1-1-1-1-1">
-<div class="para">We find the <span class="process-math">\(x\)</span>-intercepts of a graph by setting <span class="process-math">\(x=0\)</span> .</div>
-<ul class="square" id="extracted-webwork-101-1-1-1-1-1-1-3">
-<li id="extracted-webwork-101-1-1-1-1-1-1-3-1"><div class="para" id="extracted-webwork-101-1-1-1-1-1-1-3-1-1">True</div></li>
-<li id="extracted-webwork-101-1-1-1-1-1-1-3-2"><div class="para" id="extracted-webwork-101-1-1-1-1-1-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-101-1-1-1-1-2"><div class="para logical" id="extracted-webwork-101-1-1-1-1-2-1">
-<div class="para">If <span class="process-math">\(z\)</span> is a solution of a quadratic equation, then <span class="process-math">\((x-z)\)</span> is a factor of the left side in standard form.</div>
-<ul class="square" id="extracted-webwork-101-1-1-1-1-2-1-3">
-<li id="extracted-webwork-101-1-1-1-1-2-1-3-1"><div class="para" id="extracted-webwork-101-1-1-1-1-2-1-3-1-1">True</div></li>
-<li id="extracted-webwork-101-1-1-1-1-2-1-3-2"><div class="para" id="extracted-webwork-101-1-1-1-1-2-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-101-1-1-1-1-3"><div class="para logical" id="extracted-webwork-101-1-1-1-1-3-1">
-<div class="para">We can factor a constant from both sides of a quadratic equation without changing its solutions.</div>
-<ul class="square" id="extracted-webwork-101-1-1-1-1-3-1-1">
-<li id="extracted-webwork-101-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-101-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-101-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-101-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-101-1-1-1-1-4"><div class="para logical" id="extracted-webwork-101-1-1-1-1-4-1">
-<div class="para">To solve a quadratic equation by factoring, we should factor each side of the equation.</div>
-<ul class="square" id="extracted-webwork-101-1-1-1-1-4-1-1">
-<li id="extracted-webwork-101-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-101-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-101-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-101-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-101-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-101-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-101-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-101-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-101-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-101-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-101-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-101-1-5-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-101-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-101-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-101-1-6-1-1">
-<li id="extracted-webwork-101-1-6-1-1-1"><div class="para" id="extracted-webwork-101-1-6-1-1-1-1">False</div></li>
-<li id="extracted-webwork-101-1-6-1-1-2"><div class="para" id="extracted-webwork-101-1-6-1-1-2-1">True</div></li>
-<li id="extracted-webwork-101-1-6-1-1-3"><div class="para" id="extracted-webwork-101-1-6-1-1-3-1">True</div></li>
-<li id="extracted-webwork-101-1-6-1-1-4"><div class="para" id="extracted-webwork-101-1-6-1-1-4-1">False</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-3-2-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-3-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="space"> </span><span class="title">Problem Set 3.2</span>
 </h3>
 <article class="subexercises" id="section-3-2-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

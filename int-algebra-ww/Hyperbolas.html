@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Ellipses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="NonlinearSystems.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1335,36 +1315,22 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="Hyperbolas-4-3-1-1">Graph <span class="process-math">\(\dfrac{y^2}{9} - \dfrac{x^2}{4} = 1\)</span>
 </div>
-<div class="solutions"><details id="Hyperbolas-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Hyperbolas-4-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para" id="Hyperbolas-4-3-2-1">The graph is a hyperbola with center at the origin. The <span class="process-math">\(y^2\)</span>-term is positive, so the branches of the hyperbola open upward and downward. Because <span class="process-math">\(a^2=4\)</span> and <span class="process-math">\(b^2=9\text{,}\)</span> we have <span class="process-math">\(a=2\)</span> and <span class="process-math">\(b=3\text{,}\)</span> and the vertices are <span class="process-math">\((0,3)\)</span> and <span class="process-math">\((0,-3)\text{.}\)</span> There are no <span class="process-math">\(x\)</span>-intercepts.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;">
 <div class="sbspanel middle" style="width:52.6315789473684%;"><div class="para" id="Hyperbolas-4-3-2-2-1">We construct the central rectangle with dimensions <span class="process-math">\(2a=4\)</span> and <span class="process-math">\(2b=6\text{,}\)</span> as shown in the figure. Then we draw the asymptotes through the diagonals of the rectangle. The asymptotes have slopes <span class="process-math">\(\pm \dfrac{3}{2}\text{.}\)</span> Finally, we sketch the branches of the hyperbola through the vertices and approaching the asymptotes.</div></div>
 <div class="sbspanel middle" style="width:42.1052631578947%;"><img src="generated/latex-image/fig-example-9-4-1.svg" role="img" class="contained" alt="hyperbola opening up and down"></div>
 </div></div>
-</div></details></div></article><details id="Hyperbolas-4-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="Hyperbolas-4-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-393" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="393" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAgICAgICRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQgPSAxOwokeGZ1bmNbMF0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIDMqY29zaCgkdCk7IH07CiR5ZnVuY1swXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gNCpzaW5oKCR0KTsgfTsKJHhmdW5jWzFdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiA0KmNvc2goJHQpOyB9OwokeWZ1bmNbMV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIDMqc2luaCgkdCk7IH07CiR4ZnVuY1syXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gNCpzaW5oKCR0KTsgfTsKJHlmdW5jWzJdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAzKmNvc2goJHQpOyB9OwokeGZ1bmNbM10gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIDMqc2luaCgkdCk7IH07CiR5ZnVuY1szXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gNCpjb3NoKCR0KTsgfTsKJHhmdW5jWzRdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAtMypjb3NoKCR0KTsgfTsKJHlmdW5jWzRdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiA0KnNpbmgoJHQpOyB9OwokeGZ1bmNbNV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIC00KmNvc2goJHQpOyB9OwokeWZ1bmNbNV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIDMqc2luaCgkdCk7IH07CiR4ZnVuY1s2XSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gNCpzaW5oKCR0KTsgfTsKJHlmdW5jWzZdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAtMypjb3NoKCR0KTsgfTsKJHhmdW5jWzddID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAzKnNpbmgoJHQpOyB9OwokeWZ1bmNbN10gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIC00KmNvc2goJHQpOyB9OwoKIGZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKICAkZ3JbJGldID0gaW5pdF9ncmFwaCgtMTAsLTEwLDEwLDEwLCBheGVzPT5bMCwwXSwgZ3JpZD0+WzIwLDIwXSwgc2l6ZT0+WzI0MCwyNDBdKTsKJGZuWyRpXSA9IG5ldyBGdW4oICR4ZnVuY1skaV0sICR5ZnVuY1skaV0sICRnclskaV0gKTsKJGZuWyRpXS0+ZG9tYWluKC0zLDMpOwokZm5bJGkrNF0gPSBuZXcgRnVuKCAkeGZ1bmNbJGkrNF0sICR5ZnVuY1skaSs0XSwgJGdyWyRpXSApOwokZm5bJGkrNF0tPmRvbWFpbigtMywzKTsKICB9CgogZm9yZWFjaCBteSAkaSAoMC4uMykgewogJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTAuOCw1LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LC01LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtNSwtMC44LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICB9CiAgJGdyWzBdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoQikiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAkZ3JbMV0gLT4gbGIobmV3IExhYmVsICgtOC41LDksIihBKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC04LjUsOSwiKEMpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgJGdyWzNdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKCiAgJG1jID0gUmFkaW9CdXR0b25zKAogICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSJdLAogICAgICAxCiAgKTsKCkJFR0lOX1BHTUwKR3JhcGggW2BcZGZyYWN7eF4yfXs5fSAtIFxkZnJhY3t5XjJ9ezE2fSA9IDFgXQoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCldoaWNoIG9mIHRoZSBhYm92ZSBpcyB0aGUgYmVzdCBtYXRjaCBmb3IgdGhlIGdyYXBoPwoKW19deyRtY317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yNDApQF0qICA8PAoKQW5vdGhlciBncmFwaCBpcyBiZWxvdy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-393')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-393-1-1-1">Graph <span class="process-math">\(\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1\)</span>
-</div>  <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-393-image-1.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-393-image-2.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-393-image-3.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-393-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-393-1-1-6">Which of the above is the best match for the graph?</div> <div class="para logical" id="extracted-webwork-393-1-1-7"><ul class="circle" id="extracted-webwork-393-1-1-7-1">
-<li id="extracted-webwork-393-1-1-7-1-1"><div class="para" id="extracted-webwork-393-1-1-7-1-1-1">(A)</div></li>
-<li id="extracted-webwork-393-1-1-7-1-2"><div class="para" id="extracted-webwork-393-1-1-7-1-2-1">(B)</div></li>
-<li id="extracted-webwork-393-1-1-7-1-3"><div class="para" id="extracted-webwork-393-1-1-7-1-3-1">(C)</div></li>
-<li id="extracted-webwork-393-1-1-7-1-4"><div class="para" id="extracted-webwork-393-1-1-7-1-4-1">(D)</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-393-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-393-1-2-1"><span class="process-math">\(\text{(B)}\)</span></div></div></details><details id="extracted-webwork-393-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-393-image-2.png" class="contained"></div>
-<div class="para" id="extracted-webwork-393-1-3-2">Another graph is below.</div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="Hyperbolas-4-4-3">
-<div class="para" id="Hyperbolas-4-4-3-1"><span class="process-math">\(\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1\text{:}\)</span></div>
+</h4>
+<div class="conclusion" id="Hyperbolas-4-4-2">
+<div class="para" id="Hyperbolas-4-4-2-1"><span class="process-math">\(\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1\text{:}\)</span></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-ex-9-4-1answ.svg" role="img" class="contained" alt="hyperbola opening left and right"></div>
-</div></article></details><div class="para logical" id="Hyperbolas-4-5">
+</div></article><div class="para logical" id="Hyperbolas-4-5">
 <div class="para">The equation of a central hyperbola  may be written as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1378,7 +1344,10 @@ Ax^2 + By^2 = C
 </h4>
 <div class="para" id="Hyperbolas-4-6-1-1">Write the equation <span class="process-math">\(~4y^2-x^2=16~\)</span> in standard form and describe the important features of its graph. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
-<div class="solutions"><details id="Hyperbolas-4-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Hyperbolas-4-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="Hyperbolas-4-6-2-1">
 <div class="para">We first divide each side by 16 to obtain</div>
 <div class="displaymath process-math">
@@ -1404,102 +1373,21 @@ y= \dfrac{1}{2} x\quad \text{ and } y= \frac{-1}{2} x
 </div></div>
 <div class="sbspanel middle" style="width:42.1052631578947%;"><img src="generated/latex-image/fig-example-9-4-2.svg" role="img" class="contained" alt="hyperbola opening up and down"></div>
 </div></div>
-</div></details></div></article><aside class="aside aside-like" id="Hyperbolas-4-7"><div class="para" id="Hyperbolas-4-7-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of writing in standard form, see <a href="tkchap9.html#tkQuadStdForm" class="internal" title="Subsubsection A.9.4.1: Write a quadratic equation in standard form">Section 9.4.1</a> of the Toolkit.</div></aside><details id="Hyperbolas-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="Hyperbolas-4-7"><div class="para" id="Hyperbolas-4-7-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of writing in standard form, see <a href="tkchap9.html#tkQuadStdForm" class="internal" title="Subsubsection A.9.4.1: Write a quadratic equation in standard form">Section 9.4.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Hyperbolas-4-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-394" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="394" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyTXVsdGlBbnN3ZXIucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KFBvaW50KS0+ZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0+IDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0+IDAsICApOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+YWRkKHk9PiJSZWFsIik7CiRmID0gRm9ybXVsYSgieF4yLyg1LzIpXjIgLSB5XjIvNV4yIik7CiR2ZXJ0aWNlcyA9IEZvcm11bGEoIigtNS8yLDApLCAoNS8yLDApIik7CiRteV9ldmFsdWF0b3IgPSAkdmVydGljZXMgLT4gY21wKAogc2hvd0hpbnRzPT4xLAogc2hvd0xlbmd0aEhpbnRzID0+IDEsCgogcGFydGlhbENyZWRpdCA9PiAxLAopOyAKJGwxID0gRm9ybXVsYSgiMngiKTsKJGwyID0gRm9ybXVsYSgiLTJ4Iik7CiAgICAkbXVsdGlhbnMgPSBNdWx0aUFuc3dlcigkbDEsJGwyKS0+d2l0aCgKICAgICAgc2luZ2xlUmVzdWx0ID0+IDEsCiAgICAgIGNoZWNrZXIgPT4gc3ViIHsKICAgICAgICAgIG15ICggJGNvcnJlY3QsICRzdHVkZW50LCAkc2VsZiApID0gQF87CiAgICAgICAgICBteSAoICRmMXN0dSwgJGYyc3R1ICkgPSBAeyRzdHVkZW50fTsKICAgICAgICAgIG15ICggJGYxLCAkZjIgKSA9IEB7JGNvcnJlY3R9OwogICAgICAgICAgcmV0dXJuICggKCRmMSA9PSAkZjFzdHUgJiYgJGYyID09ICRmMnN0dSkgfHwKICAgICAgICAgICAgICAgKCRmMSA9PSAkZjJzdHUgJiYgJGYyID09ICRmMXN0dSkgIAogICAgICAgICAgKTsKICAgICAgfQogICAgKTsKCkJFR0lOX1BHTUwKYS4gIFdyaXRlIHRoZSBlcXVhdGlvbiBbYDR4XjIgPSB5XjIgKyAyNWBdIGluIHN0YW5kYXJkIGZvcm0uCgogICAgW19deyRmfXsyMH1bYD0xYF0KCgphLiAgRmluZCB0aGUgdmVydGljZXMgb2YgdGhlIGdyYXBoIGFuZCB0aGUgZXF1YXRpb25zIG9mIHRoZSBhc3ltcHRvdGVzLgoKICAgIFZlcnRpY2VzOiBbX117JG15X2V2YWx1YXRvcn17MjV9IFNlcGFyYXRlIGRpZmZlcmVudCB2ZXJ0aWNlcyB3aXRoIGEgY29tbWEuCgogICAgRXF1YXRpb25zIG9mIGFzeW1wdG90ZXM6IFtgeT1gXVtfXXskbXVsdGlhbnN9ezJ9IGFuZCBbYHk9YF1bX117JG11bHRpYW5zfXsyfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2BcZGZyYWN7eF4yfXtcbGVmdChcZGZyYWN7NX17Mn1ccmlnaHQpXjJ9IC0gXGRmcmFje3leMn17NV4yfT0xYF0KCgphLiAgW2BcbGVmdChcZGZyYWN7NX17Mn0sIDBccmlnaHQpXHRleHR7LH1gXSBbYFxsZWZ0KFxkZnJhY3stNX17Mn0sIDBccmlnaHQpYF0KCiAgICBbYHk9MnhcdGV4dHssfWBdIFtgeT0tMnhgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-394')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-394-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-394-1-1-1-1">
-<li id="extracted-webwork-394-1-1-1-1-1">
-<div class="para" id="extracted-webwork-394-1-1-1-1-1-1">Write the equation <span class="process-math">\(4x^2 = y^2 + 25\)</span> in standard form.</div>
-<div class="para" id="extracted-webwork-394-1-1-1-1-1-2">
-<span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span><span class="process-math">\(=1\)</span>
-</div>
-</li>
-<li id="extracted-webwork-394-1-1-1-1-2">
-<div class="para" id="extracted-webwork-394-1-1-1-1-2-1">Find the vertices of the graph and the equations of the asymptotes.</div>
-<div class="para" id="extracted-webwork-394-1-1-1-1-2-2">Vertices: <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> Separate different vertices with a comma.</div>
-<div class="para" id="extracted-webwork-394-1-1-1-1-2-3">Equations of asymptotes: <span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> and <span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-394-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-394-1-2-1"><span class="process-math">\(\frac{x^{2}}{\left(\frac{5}{2}\right)^{2}}-\frac{y^{2}}{5^{2}}\)</span></div></div></details><details id="extracted-webwork-394-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-394-1-3-1"><span class="process-math">\(\left(\frac{-5}{2},0\right), \left(\frac{5}{2},0\right)\)</span></div></div></details><details id="extracted-webwork-394-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-394-1-4-1"><span class="process-math">\(2x;\,-2x\)</span></div></div></details><details id="extracted-webwork-394-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-394-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-394-1-5-1-1">
-<li id="extracted-webwork-394-1-5-1-1-1"><div class="para" id="extracted-webwork-394-1-5-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{x^2}{\left(\dfrac{5}{2}\right)^2} - \dfrac{y^2}{5^2}=1\)</span></div></li>
-<li id="extracted-webwork-394-1-5-1-1-2">
-<div class="para" id="extracted-webwork-394-1-5-1-1-2-1">
-<span class="process-math">\(\left(\dfrac{5}{2}, 0\right)\text{,}\)</span> <span class="process-math">\(\left(\dfrac{-5}{2}, 0\right)\)</span>
-</div>
-<div class="para" id="extracted-webwork-394-1-5-1-1-2-2">
-<span class="process-math">\(y=2x\text{,}\)</span> <span class="process-math">\(y=-2x\)</span>
-</div>
-</li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><details id="Hyperbolas-4-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="Hyperbolas-4-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-395" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="395" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRicmFuY2hlcyA9IFBvcFVwKAogIFsiPyIsInZlcnRpY2VzIiwgImZvY2kiLCAiYXhlcyIsICJicmFuY2hlcyJdLAogNCwgCik7CiR0cmFuc3ZlcnNlID0gUG9wVXAoCiAgWyI/IiwgImNvbmp1Z2F0ZSIsICJ0cmFuc3ZlcnNlIiwgInZlcnRpY2FsIiwgImhvcml6b250YWwiXSwKIDIsIAopOwokcmVjdGFuZ2xlID0gUG9wVXAoCiAgWyI/IiwiY2VudHJhbCByZWN0YW5nbGUiLCAib3V0ZXIgcmVjdGFuZ2xlIiwgInJlZ3VsYXIgcGVudGFnb24iLCAiaHlwb3RlbnVzZSJdLAogMSwgCik7CiRpbnRlcmNlcHQgPSBQb3BVcCgKICBbIj8iLCJ2ZXJ0ZXgiLCAiYXN5bXB0b3RlcyIsICJ4LWludGVyY2VwdHMiLCAieS1pbnRlcmNlcHRzIl0sCiAzLCAKKTsKCkJFR0lOX1BHTUwKYS4gIFRoZSBoeXBlcmJvbGEgaXMgdGhlIG9ubHkgY29uaWMgc2VjdGlvbiB3aXRoIHR3byBzZXBhcmF0ZSBbX117JGJyYW5jaGVzfXs1fS4KCgphLiAgVGhlIGVuZHBvaW50cyBvZiB0aGUgW19deyR0cmFuc3ZlcnNlfXs1fSBheGlzIGFyZSB0aGUgdmVydGljZXMgb2YgdGhlIGh5cGVyYm9sYS4KCgphLiAgVGhlIGFzeW1wdG90ZXMgb2YgYSBoeXBlcmJvbGEgYXJlIHRoZSBkaWFnb25hbHMgb2YgdGhlIFtfXXskcmVjdGFuZ2xlfXs1fSAuCgoKYS4gIElmIHRoZSBbYHleMmBdIHRlcm0gaW4gdGhlIHN0YW5kYXJkIGZvcm0gaXMgcG9zaXRpdmUsIGEgY2VudHJhbCBoeXBlcmJvbGEgaGFzIG5vIFtfXXskaW50ZXJjZXB0fXs1fSAuCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbJGJyYW5jaGVzXQoKCmEuICBbJHRyYW5zdmVyc2VdCgoKYS4gIFskcmVjdGFuZ2xlXQoKCmEuICBbJGludGVyY2VwdF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-395')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-395-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-395-1-1-1-1">
-<li id="extracted-webwork-395-1-1-1-1-1"><div class="para logical" id="extracted-webwork-395-1-1-1-1-1-1">
-<div class="para">The hyperbola is the only conic section with two separate</div>
-<ul class="square" id="extracted-webwork-395-1-1-1-1-1-1-1">
-<li id="extracted-webwork-395-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-395-1-1-1-1-1-1-1-1-1">vertices</div></li>
-<li id="extracted-webwork-395-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-395-1-1-1-1-1-1-1-2-1">foci</div></li>
-<li id="extracted-webwork-395-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-395-1-1-1-1-1-1-1-3-1">axes</div></li>
-<li id="extracted-webwork-395-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-395-1-1-1-1-1-1-1-4-1">branches</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-395-1-1-1-1-2"><div class="para logical" id="extracted-webwork-395-1-1-1-1-2-1">
-<div class="para">The endpoints of the</div>
-<ul class="square" id="extracted-webwork-395-1-1-1-1-2-1-1">
-<li id="extracted-webwork-395-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-395-1-1-1-1-2-1-1-1-1">conjugate</div></li>
-<li id="extracted-webwork-395-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-395-1-1-1-1-2-1-1-2-1">transverse</div></li>
-<li id="extracted-webwork-395-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-395-1-1-1-1-2-1-1-3-1">vertical</div></li>
-<li id="extracted-webwork-395-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-395-1-1-1-1-2-1-1-4-1">horizontal</div></li>
-</ul>
-<div class="para">axis are the vertices of the hyperbola.</div>
-</div></li>
-<li id="extracted-webwork-395-1-1-1-1-3"><div class="para logical" id="extracted-webwork-395-1-1-1-1-3-1">
-<div class="para">The asymptotes of a hyperbola are the diagonals of the</div>
-<ul class="square" id="extracted-webwork-395-1-1-1-1-3-1-1">
-<li id="extracted-webwork-395-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-395-1-1-1-1-3-1-1-1-1">central rectangle</div></li>
-<li id="extracted-webwork-395-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-395-1-1-1-1-3-1-1-2-1">outer rectangle</div></li>
-<li id="extracted-webwork-395-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-395-1-1-1-1-3-1-1-3-1">regular pentagon</div></li>
-<li id="extracted-webwork-395-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-395-1-1-1-1-3-1-1-4-1">hypotenuse</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-395-1-1-1-1-4"><div class="para logical" id="extracted-webwork-395-1-1-1-1-4-1">
-<div class="para">If the <span class="process-math">\(y^2\)</span> term in the standard form is positive, a central hyperbola has no</div>
-<ul class="square" id="extracted-webwork-395-1-1-1-1-4-1-2">
-<li id="extracted-webwork-395-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-395-1-1-1-1-4-1-2-1-1">vertex</div></li>
-<li id="extracted-webwork-395-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-395-1-1-1-1-4-1-2-2-1">asymptotes</div></li>
-<li id="extracted-webwork-395-1-1-1-1-4-1-2-3"><div class="para" id="extracted-webwork-395-1-1-1-1-4-1-2-3-1">x-intercepts</div></li>
-<li id="extracted-webwork-395-1-1-1-1-4-1-2-4"><div class="para" id="extracted-webwork-395-1-1-1-1-4-1-2-4-1">y-intercepts</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-395-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-395-1-2-1"><span class="process-math">\(\text{branches}\)</span></div></div></details><details id="extracted-webwork-395-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-395-1-3-1"><span class="process-math">\(\text{transverse}\)</span></div></div></details><details id="extracted-webwork-395-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-395-1-4-1"><span class="process-math">\(\text{central rectangle}\)</span></div></div></details><details id="extracted-webwork-395-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-395-1-5-1"><span class="process-math">\(\text{x-intercepts}\)</span></div></div></details><details id="extracted-webwork-395-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-395-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-395-1-6-1-1">
-<li id="extracted-webwork-395-1-6-1-1-1"><div class="para" id="extracted-webwork-395-1-6-1-1-1-1">branches</div></li>
-<li id="extracted-webwork-395-1-6-1-1-2"><div class="para" id="extracted-webwork-395-1-6-1-1-2-1">transverse</div></li>
-<li id="extracted-webwork-395-1-6-1-1-3"><div class="para" id="extracted-webwork-395-1-6-1-1-3-1">central rectangle</div></li>
-<li id="extracted-webwork-395-1-6-1-1-4"><div class="para" id="extracted-webwork-395-1-6-1-1-4-1">x-intercepts</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="Hyperbolas-4-10">We can find exact coordinates of points on a hyperbola by substituting a value for one variable and solving for the other variable.</div>
+</h4></article><div class="para" id="Hyperbolas-4-10">We can find exact coordinates of points on a hyperbola by substituting a value for one variable and solving for the other variable.</div>
 <article class="example example-like" id="Hyperbolas-4-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.7</span><span class="period">.</span>
 </h4>
 <div class="para" id="Hyperbolas-4-11-1-1">Find the exact coordinates of any points with <span class="process-math">\(x\)</span>-coordinate <span class="process-math">\(x=2\)</span> on the hyperbola with equation <span class="process-math">\(4x^2-y^2=16\text{.}\)</span> Plot and label those points on the hyperbola.</div>
-<div class="solutions"><details id="Hyperbolas-4-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="solution solution-like" id="Hyperbolas-4-11-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel middle" style="width:53%;"><div class="para logical" id="Hyperbolas-4-11-2-1-1">
 <div class="para">We substitute <span class="process-math">\(x=2\)</span> in the given equation.</div>
 <div class="displaymath process-math" id="Hyperbolas-4-11-2-1-1-2">
@@ -1513,25 +1401,10 @@ y \amp = \pm \sqrt{5}
 <div class="para">There are two points with <span class="process-math">\(x=2\text{,}\)</span> namely <span class="process-math">\(\left(2, \sqrt{5}\right)\)</span> and <span class="process-math">\(\left(2, -\sqrt{5}\right)\text{,}\)</span> as shown in the figure.</div>
 </div></div>
 <div class="sbspanel middle" style="width:45%;"><img src="generated/latex-image/fig-example-9-4-3.svg" role="img" class="contained" alt="hyperbola opens up and down"></div>
-</div></div></div></details></div></article><details id="Hyperbolas-4-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></div>
+</div></article><article class="exercise exercise-like" id="Hyperbolas-4-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-396" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="396" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwicGFyc2VyT25lT2YucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpAY2hvaWNlcyA9ICgiPyIsIkRORSIsICJ1bmRlZmluZWQiLCAiZG9lcyBub3QgZXhpc3QiLCAibm9uZSIpOwokcG9wdXAgPSBQb3BVcChbQGNob2ljZXNdLCAkY2hvaWNlc1swXSk7ICAjIEl0IGRvZXNuJ3QgbWF0dGVyIHdoaWNoIGlzIHVzZWQgYXMgdGhlICJjb3JyZWN0IGFuc3dlciIuCkNvbnRleHQoJHBvcHVwLT5jb250ZXh0KTsgCiRhbnN3ZXIgPSBPbmVPZihAY2hvaWNlc1sxLi40XSk7CiRtYyA9IFJhZGlvQnV0dG9ucygKICAgIFsgIlRoZSBsaW5lIFwoeT0xXCkgaXMgb25lIG9mIHRoZSBhc3ltcHRvdGVzLiIsIAogICAgIlRoZXJlIGFyZSBubyBwb2ludHMgb24gdGhlIGdyYXBoIHdpdGggXCh5XCktY29vcmRpbmF0ZSAxLiIsIAogICAgIlRoaXMgaXMgYSBkZWdlbmVyYXRlIGNvbmljLiIsCiAgICAiVGhlIGh5cGVyYm9sYSBvcGVucyBsZWZ0IGFuZCByaWdodC4iXSwKICAgIDEKKTsKCkJFR0lOX1BHTUwKU29sdmUgdGhlIGVxdWF0aW9uIFtgNHleMiAtIHheMiA9IDE2YF0gd2hlbiBbYHkgPSAxXHRleHR7Ln1gXQoKW2B4PWBdW19deyRhbnN3ZXJ9ezh9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdTZXBhcmF0ZSBkaWZmZXJlbnQgdmFsdWVzIHdpdGggYSBjb21tYSwgb3IgZW50ZXIgRE5FIGlmIHRoZXJlIGFyZSBubyByZWFsIHNvbHV0aW9ucy4nKUBdKioKCldoYXQgZG9lcyB0aGlzIHRlbGwgeW91IGFib3V0IHRoZSBncmFwaCBvZiB0aGUgaHlwZXJib2xhPwoKW19deyRtY317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGVyZSBhcmUgbm8gcmVhbCBzb2x1dGlvbnMgd2hlbiBbYHkgPSAxXHRleHR7LH1gXSBzbyB0aGVyZSBhcmUgbm8gcG9pbnRzIG9uIHRoZSBncmFwaCB3aXRoIFtgeWBdLWNvb3JkaW5hdGUgMS4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-396')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-396-1-1-1">Solve the equation <span class="process-math">\(4y^2 - x^2 = 16\)</span> when <span class="process-math">\(y = 1\text{.}\)</span>
-</div> <div class="para" id="extracted-webwork-396-1-1-2">
-<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div> <div class="para" id="extracted-webwork-396-1-1-3">What does this tell you about the graph of the hyperbola?</div> <div class="para logical" id="extracted-webwork-396-1-1-4"><ul class="circle" id="extracted-webwork-396-1-1-4-1">
-<li id="extracted-webwork-396-1-1-4-1-1"><div class="para" id="extracted-webwork-396-1-1-4-1-1-1">The line <span class="process-math">\(y=1\)</span> is one of the asymptotes.</div></li>
-<li id="extracted-webwork-396-1-1-4-1-2"><div class="para" id="extracted-webwork-396-1-1-4-1-2-1">There are no points on the graph with <span class="process-math">\(y\)</span>-coordinate 1.</div></li>
-<li id="extracted-webwork-396-1-1-4-1-3"><div class="para" id="extracted-webwork-396-1-1-4-1-3-1">This is a degenerate conic.</div></li>
-<li id="extracted-webwork-396-1-1-4-1-4"><div class="para" id="extracted-webwork-396-1-1-4-1-4-1">The hyperbola opens left and right.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-396-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-396-1-2-1"><span class="process-math">\(\text{DNE}\hbox{, }\text{undefined}\hbox{, }\text{does not exist}\hbox{, or }\text{none}\)</span></div></div></details><details id="extracted-webwork-396-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-396-1-3-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-396-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-396-1-4-1">There are no real solutions when <span class="process-math">\(y = 1\text{,}\)</span> so there are no points on the graph with <span class="process-math">\(y\)</span>-coordinate 1.</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Hyperbolas-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Hyperbolas-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.4.2</span><span class="space"> </span><span class="title">The Central Conics</span>
 </h3>
 <div class="para" id="Hyperbolas-5-4">The fourth conic section,  after circles,  ellipses, and hyperbolas, is the parabola. We have already encountered parabolas in our study of quadratic functions. In particular, the graph of <span class="process-math">\(y = ax^2\)</span> has its vertex at the origin and opens up or down, depending on the sign of <span class="process-math">\(a\text{.}\)</span> The graph of <span class="process-math">\(x = ay^2\)</span> is a parabola that opens to the left or right. There is also a geometric definition of a parabola, but we will not discuss that here.</div>
@@ -1543,7 +1416,11 @@ y \amp = \pm \sqrt{5}
 <li id="Hyperbolas-5-6-1-2-1-1"><div class="para" id="Hyperbolas-5-6-1-2-1-1-1"><span class="process-math">\(\displaystyle x^2=6y^2+8\)</span></div></li>
 <li id="Hyperbolas-5-6-1-2-1-2"><div class="para" id="Hyperbolas-5-6-1-2-1-2-1"><span class="process-math">\(\displaystyle x^2=\dfrac{4-y^2}{2}\)</span></div></li>
 </ol></div>
-<div class="solutions"><details id="Hyperbolas-5-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Hyperbolas-5-6-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-5-6-2-1-1">
+<div class="solution solution-like" id="Hyperbolas-5-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Hyperbolas-5-6-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-5-6-2-1-1">
 <li id="Hyperbolas-5-6-2-1-1-1"><div class="para logical" id="Hyperbolas-5-6-2-1-1-1-1">
 <div class="para">The equation <span class="process-math">\(x^2=6y^2+8\)</span> is equivalent to</div>
 <div class="displaymath process-math">
@@ -1563,69 +1440,10 @@ x^2-6y^2=8\qquad \text{ or }\qquad \frac{x^2}{\left( \sqrt{8} \right)^2} - \frac
 <div class="para">The graph is an ellipse with major axis on the <span class="process-math">\(y\)</span>-axis because <span class="process-math">\(2\gt\sqrt{2} \text{.}\)</span>
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="Hyperbolas-5-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="Hyperbolas-5-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-397" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="397" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KFBvaW50KS0+ZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0+IDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0+IDAsICApOwokYSA9IEZvcm11bGEoInheMi84IC0geV4yLzIiKTsKJGh5cGVyYm9sYSA9IFBvcFVwKAogIFsiPyIsImEgY2lyY2xlIiwgImFuIGVsbGlwc2UiLCAiYSBoeXBlcmJvbGEiLCAiYSBwYXJhYm9sYSJdLAogMywgCik7CiRvcmlnaW4gPSBQb2ludCgwLDApOwokdmVydGljZXMgPSBGb3JtdWxhKCIoLTIqc3FydCgyKSwwKSwgKDIqc3FydCgyKSwwKSIpOwokbXlfZXZhbHVhdG9yID0gJHZlcnRpY2VzIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOyAKJGFyZSA9IFBvcFVwKAogIFsiPyIsImFyZSIsICJhcmUgbm90Il0sCiAxLCAKKTsKJHNsb3BlID0gRm9ybXVsYSgiMS8yICp4Iik7CgokYiA9IEZvcm11bGEoIi00eF4yIik7CiRwYXJhYm9sYSA9IFBvcFVwKAogIFsiPyIsImEgY2lyY2xlIiwgImFuIGVsbGlwc2UiLCAiYSBoeXBlcmJvbGEiLCAiYSBwYXJhYm9sYSJdLAogNCwgCik7CiRkb3duID0gUG9wVXAoCiAgWyI/IiwibGVmdCIsICJyaWdodCIsICJ1cHdhcmQiLCAiZG93bndhcmQiXSwKIDQsIAopOwoKQkVHSU5fUEdNTApXcml0ZSBlYWNoIGVxdWF0aW9uIGluIHN0YW5kYXJkIGZvcm0gYW5kIGRlc2NyaWJlIGl0cyBncmFwaC4KYS4gIFtgNHleMj14XjItOGBdCgogICAgU3RhbmRhcmQgZm9ybTogW19deyRhfXsxNX1bYD0xYF0KCiAgICBUaGUgZ3JhcGggaXMgW19deyRoeXBlcmJvbGF9ezV9IGNlbnRlcmVkIGF0IHRoZSBwb2ludCBbX117JG9yaWdpbn17NX0sIHdpdGggdmVydGljZXMgW19deyRteV9ldmFsdWF0b3J9ezI1fS4gVGhlcmUgW19deyRhcmV9ezV9IGFzeW1wdG90ZXM6IFtgeT1ccG1gXVtfXXskc2xvcGV9ezN9LgoKCmEuICBbYDR4XjIreT0wYF0KCiAgICBTdGFuZGFyZCBmb3JtOiBbYHk9YF1bX117JGJ9ezE1fQoKICAgIFRoZSBncmFwaCBpcyBbX117JHBhcmFib2xhfXs1fSB3aXRoIHZlcnRleCBhdCB0aGUgcG9pbnQgW19deyRvcmlnaW59ezV9LCBvcGVuaW5nIFtfXXskZG93bn17NX0uCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFxkZnJhY3t4XjJ9ezh9LVxkZnJhY3t5XjJ9ezJ9PTEgXHRleHR7Ln1gXSBBIGh5cGVyYm9sYSBjZW50ZXJlZCBhdCB0aGUgb3JpZ2luIHdpdGggdmVydGljZXMgW2BcbGVmdCgyXHNxcnR7Mn0sMCBccmlnaHQpIGBdIGFuZCBbYFxsZWZ0KC0yXHNxcnR7Mn0sMCBccmlnaHQpIFx0ZXh0eyx9YF0gYW5kIGFzeW1wdG90ZXMgW2B5ID0gXGRmcmFjezF9ezJ9eGBdIGFuZCBbYHkgPSAtXGRmcmFjezF9ezJ9IHhcdGV4dHsufWBdCgoKYS4gIFtgeT0tNHheMlx0ZXh0ey59YF0gQSBwYXJhYm9sYSBvcGVuaW5nIGRvd253YXJkIHdpdGggdmVydGV4IGF0IHRoZSBvcmlnaW4uCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-397')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-397-1-1-1">
-<div class="para">Write each equation in standard form and describe its graph.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-397-1-1-1-1">
-<li id="extracted-webwork-397-1-1-1-1-1">
-<div class="para" id="extracted-webwork-397-1-1-1-1-1-1"><span class="process-math">\(4y^2=x^2-8\)</span></div>
-<div class="para" id="extracted-webwork-397-1-1-1-1-1-2">Standard form: <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span><span class="process-math">\(=1\)</span>
-</div>
-<div class="para logical" id="extracted-webwork-397-1-1-1-1-1-3">
-<div class="para">The graph is</div>
-<ul class="square" id="extracted-webwork-397-1-1-1-1-1-3-1">
-<li id="extracted-webwork-397-1-1-1-1-1-3-1-1"><div class="para" id="extracted-webwork-397-1-1-1-1-1-3-1-1-1">a circle</div></li>
-<li id="extracted-webwork-397-1-1-1-1-1-3-1-2"><div class="para" id="extracted-webwork-397-1-1-1-1-1-3-1-2-1">an ellipse</div></li>
-<li id="extracted-webwork-397-1-1-1-1-1-3-1-3"><div class="para" id="extracted-webwork-397-1-1-1-1-1-3-1-3-1">a hyperbola</div></li>
-<li id="extracted-webwork-397-1-1-1-1-1-3-1-4"><div class="para" id="extracted-webwork-397-1-1-1-1-1-3-1-4-1">a parabola</div></li>
-</ul>
-<div class="para">centered at the point <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, with vertices <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>. There</div>
-<ul class="square" id="extracted-webwork-397-1-1-1-1-1-3-4">
-<li id="extracted-webwork-397-1-1-1-1-1-3-4-1"><div class="para" id="extracted-webwork-397-1-1-1-1-1-3-4-1-1">are</div></li>
-<li id="extracted-webwork-397-1-1-1-1-1-3-4-2"><div class="para" id="extracted-webwork-397-1-1-1-1-1-3-4-2-1">are not</div></li>
-</ul>
-<div class="para">asymptotes: <span class="process-math">\(y=\pm\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>.</div>
-</div>
-</li>
-<li id="extracted-webwork-397-1-1-1-1-2">
-<div class="para" id="extracted-webwork-397-1-1-1-1-2-1"><span class="process-math">\(4x^2+y=0\)</span></div>
-<div class="para" id="extracted-webwork-397-1-1-1-1-2-2">Standard form: <span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
-</div>
-<div class="para logical" id="extracted-webwork-397-1-1-1-1-2-3">
-<div class="para">The graph is</div>
-<ul class="square" id="extracted-webwork-397-1-1-1-1-2-3-1">
-<li id="extracted-webwork-397-1-1-1-1-2-3-1-1"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-1-1-1">a circle</div></li>
-<li id="extracted-webwork-397-1-1-1-1-2-3-1-2"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-1-2-1">an ellipse</div></li>
-<li id="extracted-webwork-397-1-1-1-1-2-3-1-3"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-1-3-1">a hyperbola</div></li>
-<li id="extracted-webwork-397-1-1-1-1-2-3-1-4"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-1-4-1">a parabola</div></li>
-</ul>
-<div class="para">with vertex at the point <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, opening</div>
-<ul class="square" id="extracted-webwork-397-1-1-1-1-2-3-3">
-<li id="extracted-webwork-397-1-1-1-1-2-3-3-1"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-3-1-1">left</div></li>
-<li id="extracted-webwork-397-1-1-1-1-2-3-3-2"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-3-2-1">right</div></li>
-<li id="extracted-webwork-397-1-1-1-1-2-3-3-3"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-3-3-1">upward</div></li>
-<li id="extracted-webwork-397-1-1-1-1-2-3-3-4"><div class="para" id="extracted-webwork-397-1-1-1-1-2-3-3-4-1">downward</div></li>
-</ul>
-<div class="para">.</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-397-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-2-1"><span class="process-math">\(\frac{x^{2}}{8}-\frac{y^{2}}{2}\)</span></div></div></details><details id="extracted-webwork-397-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-3-1"><span class="process-math">\(\text{a hyperbola}\)</span></div></div></details><details id="extracted-webwork-397-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-4-1"><span class="process-math">\(\left(0,0\right)\)</span></div></div></details><details id="extracted-webwork-397-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-5-1"><span class="process-math">\(\left(-2\sqrt{2},0\right), \left(2\sqrt{2},0\right)\)</span></div></div></details><details id="extracted-webwork-397-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-6-1"><span class="process-math">\(\text{are}\)</span></div></div></details><details id="extracted-webwork-397-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-7-1"><span class="process-math">\(\frac{1}{2}x\)</span></div></div></details><details id="extracted-webwork-397-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-8-1"><span class="process-math">\(-4x^{2}\)</span></div></div></details><details id="extracted-webwork-397-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-9-1"><span class="process-math">\(\text{a parabola}\)</span></div></div></details><details id="extracted-webwork-397-1-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-10-1"><span class="process-math">\(\left(0,0\right)\)</span></div></div></details><details id="extracted-webwork-397-1-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-397-1-11-1"><span class="process-math">\(\text{downward}\)</span></div></div></details><details id="extracted-webwork-397-1-12" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-397-1-12-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-397-1-12-1-1">
-<li id="extracted-webwork-397-1-12-1-1-1"><div class="para" id="extracted-webwork-397-1-12-1-1-1-1">
-<span class="process-math">\(\dfrac{x^2}{8}-\dfrac{y^2}{2}=1 \text{.}\)</span> A hyperbola centered at the origin with vertices <span class="process-math">\(\left(2\sqrt{2},0 \right)\)</span> and <span class="process-math">\(\left(-2\sqrt{2},0 \right) \text{,}\)</span> and asymptotes <span class="process-math">\(y = \dfrac{1}{2}x\)</span> and <span class="process-math">\(y = -\dfrac{1}{2} x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-397-1-12-1-1-2"><div class="para" id="extracted-webwork-397-1-12-1-1-2-1">
-<span class="process-math">\(y=-4x^2\text{.}\)</span> A parabola opening downward with vertex at the origin.</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Hyperbolas-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Hyperbolas-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.4.3</span><span class="space"> </span><span class="title">Translated Hyperbolas</span>
 </h3>
 <div class="para" id="Hyperbolas-6-2">The standard form for the equations of hyperbolas centered at the point <span class="process-math">\((h,k)\)</span> can be derived using the distance formula and the definition of hyperbola.</div>
@@ -1652,7 +1470,11 @@ x^2-6y^2=8\qquad \text{ or }\qquad \frac{x^2}{\left( \sqrt{8} \right)^2} - \frac
 <li id="Hyperbolas-6-6-1-1-1-2"><div class="para" id="Hyperbolas-6-6-1-1-1-2-1">Find the equations of the asymptotes. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="Hyperbolas-6-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Hyperbolas-6-6-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-6-6-2-1-1">
+<div class="solution solution-like" id="Hyperbolas-6-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Hyperbolas-6-6-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-6-6-2-1-1">
 <li id="Hyperbolas-6-6-2-1-1-1">
 <div class="para logical" id="Hyperbolas-6-6-2-1-1-1-1">
 <div class="para">The graph is a hyperbola with</div>
@@ -1683,51 +1505,15 @@ y + 2 = \frac{\sqrt{5}}{2}(x-3)\quad \text{ and } \quad y + 2 = \frac{-\sqrt{5}}
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="Hyperbolas-6-7"><div class="para" id="Hyperbolas-6-7-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help finding the equations of the asyptotes, see <a href="tkchap1.html#tkSolveLinIneq" class="internal" title="Subsubsection A.1.1.4: Solve a linear inequality">Section 9.4.3</a> of the Toolkit.</div></aside><details id="Hyperbolas-6-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-398" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="398" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlck11bHRpQW5zd2VyLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0PTE7VEVYVChiZWdpbnByb2JsZW0oKSk7CiRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQgPSAxOwokaCA9IC00OwokayA9IDA7CiRhID0gc3FydCgxMik7CiRiID0gMzsKJHhmdW5jWzBdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGgrJGEqY29zaCgkdCk7IH07CiR5ZnVuY1swXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRrKyRiKnNpbmgoJHQpOyB9OwokeGZ1bmNbMV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkaCskYipjb3NoKCR0KTsgfTsKJHlmdW5jWzFdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGsrJGEqc2luaCgkdCk7IH07CiR4ZnVuY1syXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRoKyRhKnNpbmgoJHQpOyB9OwokeWZ1bmNbMl0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkayArJGIqY29zaCgkdCk7IH07CiR4ZnVuY1szXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRoICsgJGIqc2luaCgkdCk7IH07CiR5ZnVuY1szXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRrKyRhKmNvc2goJHQpOyB9OwokeGZ1bmNbNF0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkaC0kYSpjb3NoKCR0KTsgfTsKJHlmdW5jWzRdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGsrJGIqc2luaCgkdCk7IH07CiR4ZnVuY1s1XSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRoLSRiKmNvc2goJHQpOyB9OwokeWZ1bmNbNV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkayskYSpzaW5oKCR0KTsgfTsKJHhmdW5jWzZdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGgrJGEqc2luaCgkdCk7IH07CiR5ZnVuY1s2XSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRrIC0kYipjb3NoKCR0KTsgfTsKJHhmdW5jWzddID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGggKyAkYipzaW5oKCR0KTsgfTsKJHlmdW5jWzddID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGstJGEqY29zaCgkdCk7IH07Cgpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiRnclskaV0gPSBpbml0X2dyYXBoKC0xNSwtMTAsNSwxMCwgYXhlcz0+WzAsMF0sIGdyaWQ9PlsyMCwyMF0sIHNpemU9PlsyNDAsMjQwXSk7CiRmblskaV0gPSBuZXcgRnVuKCAkeGZ1bmNbJGldLCAkeWZ1bmNbJGldLCAkZ3JbJGldICk7CiRmblskaV0tPmRvbWFpbigtMywzKTsKJGZuWyRpKzRdID0gbmV3IEZ1biggJHhmdW5jWyRpKzRdLCAkeWZ1bmNbJGkrNF0sICRnclskaV0gKTsKJGZuWyRpKzRdLT5kb21haW4oLTMsMyk7Cn0KCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsNSw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsLTUsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwokZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwokZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTUsLTAuOCwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7Cn0KJGdyWzBdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKJGdyWzFdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoQikiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKJGdyWzJdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKJGdyWzNdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKCiRtYyA9IFJhZGlvQnV0dG9ucygKICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSJdLAogICAgICAgIDIKICAgICk7CkNvbnRleHQoUG9pbnQpLT5mbGFncy0+c2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICk7CiR2ZXJ0aWNlcyA9IExpc3QoIig1K3NxcnQoMTUpLC0zKSwgKDUtc3FydCgxNSksLTMpIik7CiRteV9ldmFsdWF0b3IgPSAkdmVydGljZXMgLT4gY21wKApzaG93SGludHM9PjEsCnNob3dMZW5ndGhIaW50cyA9PiAxLApwYXJ0aWFsQ3JlZGl0ID0+IDEsCik7IAokY292ZXJ0aWNlcyA9IExpc3QoIig1LC0zK3NxcnQoOCkpLCAoNSwtMy1zcXJ0KDgpKSIpOwokbXlfZXZhbHVhdG9yMiA9ICRjb3ZlcnRpY2VzIC0+IGNtcCgKc2hvd0hpbnRzPT4xLApzaG93TGVuZ3RoSGludHMgPT4gMSwKcGFydGlhbENyZWRpdCA9PiAxLAopOyAKJGwxID0gRm9ybXVsYSgic3FydCgzKS8yICooeCs0KSIpOwokbDIgPSBGb3JtdWxhKCItc3FydCgzKS8yICooeCs0KSIpOwokbXVsdGlhbnMgPSBNdWx0aUFuc3dlcigkbDEsJGwyKS0+d2l0aCgKICBzaW5nbGVSZXN1bHQgPT4gMCwKICBjaGVja1R5cGVzID0+IDAsCiAgY2hlY2tlciA9PiBzdWIgewogICAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJHNlbGYgKSA9IEBfOwogICAgICBteSAoICRmMXN0dSwgJGYyc3R1ICkgPSBAeyRzdHVkZW50fTsKICAgICAgbXkgKCAkZjEsICRmMiApID0gQHskY29ycmVjdH07CiAgICAgIGlmICggKCRmMSA9PSAkZjFzdHUgJiYgJGYyID09ICRmMnN0dSkgfHwKICAgICAgICAgICAoJGYxID09ICRmMnN0dSAmJiAkZjIgPT0gJGYxc3R1KSAgCiAgICAgICkgewogICAgICByZXR1cm5bMSwxXTsKICAgICAgfSBlbHNpZiAoICgkZjEgPT0gJGYxc3R1ICkgIHx8CiAgICAgICAgICAgICAgICgkZjIgPT0gJGYxc3R1ICkgIAogICAgICAgICAgKSB7CiAgICAgICAgICByZXR1cm4gWzEsMF07CiAgICAgIH0gZWxzaWYgKCAoJGYxID09ICRmMnN0dSkgICB8fAogICAgICAgICAgICAgICAoJGYyID09ICRmMnN0dSApICAKICAgICAgICAgICkgewogICAgICAgICAgcmV0dXJuIFswLDFdOwogICAgfSBlbHNlIHsKICAgICAgICByZXR1cm4gWzAsMF07CiAgICB9CiAgICB9Cik7CgpCRUdJTl9QR01MCmEuICBHcmFwaCBbYFxkZnJhY3t5XjJ9ezl9IC0gXGRmcmFjeyh4KzQpXjJ9ezEyfSA9IDFgXQoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0+MjEwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qIAoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogCgogICAgV2hpY2ggb2YgdGhlIGFib3ZlIGlzIHRoZSBiZXN0IG1hdGNoIGZvciB0aGUgZ3JhcGg/CgogICAgW19deyRtY317NX0KCgphLiAgRmluZCB0aGUgZXF1YXRpb25zIG9mIHRoZSBhc3ltcHRvdGVzLiAoRW50ZXIgInNxcnQoMikiIGZvciBbYFxzcXJ0ezJ9XHRleHR7Ln1gXSkKCiAgICBFcXVhdGlvbnMgb2YgYXN5bXB0b3RlczogW2B5PWBdW19deyRtdWx0aWFuc317MTV9IGFuZAoKICAgIFtgeT1gXVtfXXskbXVsdGlhbnN9ezE1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+MjQwKUBdKiAKCkEgZ3JhcGggaXMgYWxzbyBzaG93biBiZWxvdy4KCgphLiAgW2B5PVxkZnJhY3tcc3FydHszfX17Mn14KzRcdGV4dHssfWBdIFtgeT1cZGZyYWN7LVxzcXJ0ezN9fXsyfXgrNGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-398')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-398-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-398-1-1-1-1">
-<li id="extracted-webwork-398-1-1-1-1-1">
-<div class="para" id="extracted-webwork-398-1-1-1-1-1-1">Graph <span class="process-math">\(\dfrac{y^2}{9} - \dfrac{(x+4)^2}{12} = 1\)</span>
-</div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-398-image-1.png" class="contained"></div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-398-image-2.png" class="contained"></div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-398-image-3.png" class="contained"></div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-398-image-4.png" class="contained"></div>
-<div class="para" id="extracted-webwork-398-1-1-1-1-1-6">Which of the above is the best match for the graph?</div>
-<div class="para logical" id="extracted-webwork-398-1-1-1-1-1-7"><ul class="circle" id="extracted-webwork-398-1-1-1-1-1-7-1">
-<li id="extracted-webwork-398-1-1-1-1-1-7-1-1"><div class="para" id="extracted-webwork-398-1-1-1-1-1-7-1-1-1">(A)</div></li>
-<li id="extracted-webwork-398-1-1-1-1-1-7-1-2"><div class="para" id="extracted-webwork-398-1-1-1-1-1-7-1-2-1">(B)</div></li>
-<li id="extracted-webwork-398-1-1-1-1-1-7-1-3"><div class="para" id="extracted-webwork-398-1-1-1-1-1-7-1-3-1">(C)</div></li>
-<li id="extracted-webwork-398-1-1-1-1-1-7-1-4"><div class="para" id="extracted-webwork-398-1-1-1-1-1-7-1-4-1">(D)</div></li>
-</ul></div>
-</li>
-<li id="extracted-webwork-398-1-1-1-1-2">
-<div class="para" id="extracted-webwork-398-1-1-1-1-2-1">Find the equations of the asymptotes. (Enter “sqrt(2)” for <span class="process-math">\(\sqrt{2}\text{.}\)</span>)</div>
-<div class="para" id="extracted-webwork-398-1-1-1-1-2-2">Equations of asymptotes: <span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span> and</div>
-<div class="para" id="extracted-webwork-398-1-1-1-1-2-3">
-<span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
-</div>
-</li>
 </ol></div>
-<div class="solutions">
-<details id="extracted-webwork-398-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-398-1-2-1"><span class="process-math">\(\text{(C)}\)</span></div></div></details><details id="extracted-webwork-398-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-398-1-3-1"><span class="process-math">\(\frac{\sqrt{3}}{2}\!\left(x+4\right)\)</span></div></div></details><details id="extracted-webwork-398-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-398-1-4-1"><span class="process-math">\(\frac{-\sqrt{3}}{2}\!\left(x+4\right)\)</span></div></div></details><details id="extracted-webwork-398-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="extracted-webwork-398-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-398-1-5-1-1"><li id="extracted-webwork-398-1-5-1-1-1"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-398-image-3.png" class="contained"></div></li></ol></div>
-<div class="para" id="extracted-webwork-398-1-5-2">A graph is also shown below.</div>
-<div class="para logical" id="extracted-webwork-398-1-5-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-398-1-5-3-1"><li id="extracted-webwork-398-1-5-3-1-1"><div class="para" id="extracted-webwork-398-1-5-3-1-1-1">
-<span class="process-math">\(y=\dfrac{\sqrt{3}}{2}x+4\text{,}\)</span> <span class="process-math">\(y=\dfrac{-\sqrt{3}}{2}x+4\)</span>
-</div></li></ol></div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="Hyperbolas-6-8-3">
-<div class="para" id="Hyperbolas-6-8-3-1"><span class="process-math">\(\dfrac{y^2}{9} - \dfrac{(x+4)^2}{12} = 1\text{:}\)</span></div>
+</div></article><aside class="aside aside-like" id="Hyperbolas-6-7"><div class="para" id="Hyperbolas-6-7-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help finding the equations of the asyptotes, see <a href="tkchap1.html#tkSolveLinIneq" class="internal" title="Subsubsection A.1.1.4: Solve a linear inequality">Section 9.4.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Hyperbolas-6-8"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
+</h4>
+<div class="conclusion" id="Hyperbolas-6-8-2">
+<div class="para" id="Hyperbolas-6-8-2-1"><span class="process-math">\(\dfrac{y^2}{9} - \dfrac{(x+4)^2}{12} = 1\text{:}\)</span></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-ex-9-4-5answ.svg" role="img" class="contained" alt="translated hyperbola opening up and down"></div>
-</div></article></details></section><section class="subsection" id="Hyperbolas-7"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="Hyperbolas-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.4.4</span><span class="space"> </span><span class="title">Writing in Standard Form</span>
 </h3>
 <div class="para" id="Hyperbolas-7-2">We can write the equation of a hyperbola in standard form by completing the squares  in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
@@ -1746,7 +1532,11 @@ y^2-4x^2+4y-8x-9=0
 </div></li>
 <li id="Hyperbolas-7-3-1-1-1-2"><div class="para" id="Hyperbolas-7-3-1-1-1-2-1">Graph the equation.</div></li>
 </ol></div>
-<div class="solutions"><details id="Hyperbolas-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Hyperbolas-7-3-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-7-3-2-1-1">
+<div class="solution solution-like" id="Hyperbolas-7-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Hyperbolas-7-3-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-7-3-2-1-1">
 <li id="Hyperbolas-7-3-2-1-1-1"><div class="para logical" id="Hyperbolas-7-3-2-1-1-1-1">
 <div class="para">We prepare to complete the square by factoring out <span class="process-math">\(-4\)</span> from the <span class="process-math">\(x\)</span>-terms.</div>
 <div class="displaymath process-math">
@@ -1789,89 +1579,16 @@ b^2 = 9,\quad a^2 = \frac{9}{4}
 </div></div>
 <div class="para" id="Hyperbolas-7-3-2-1-1-2-2">The central rectangle is centered at <span class="process-math">\((-1,-2)\text{,}\)</span> as shown in the figure. We draw the asymptotes through the corners of the rectangle, then sketch the hyperbola by starting at the vertices and approaching the asymptotes.</div>
 </li>
-</ol></div></div></details></div></article><details id="Hyperbolas-7-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="Hyperbolas-7-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-399" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="399" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwokcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0ID0gMTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZCh5PT4iUmVhbCIpOwokZiA9IEZvcm11bGEoIih4KzIpXjIgLzYgLSAoeSsxKV4yIC80Iik7CiRoID0gLTI7CiRrID0gLTE7CiRhID0gc3FydCg2KTsKJGIgPSAyOwokeGZ1bmNbMF0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkaCskYSpjb3NoKCR0KTsgfTsKJHlmdW5jWzBdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGsrJGIqc2luaCgkdCk7IH07CiR4ZnVuY1sxXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRoKyRiKmNvc2goJHQpOyB9OwokeWZ1bmNbMV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkayskYSpzaW5oKCR0KTsgfTsKJHhmdW5jWzJdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGgrJGEqc2luaCgkdCk7IH07CiR5ZnVuY1syXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRrICskYipjb3NoKCR0KTsgfTsKJHhmdW5jWzNdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGggKyAkYipzaW5oKCR0KTsgfTsKJHlmdW5jWzNdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGsrJGEqY29zaCgkdCk7IH07CiR4ZnVuY1s0XSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRoLSRhKmNvc2goJHQpOyB9OwokeWZ1bmNbNF0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkayskYipzaW5oKCR0KTsgfTsKJHhmdW5jWzVdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGgtJGIqY29zaCgkdCk7IH07CiR5ZnVuY1s1XSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKcmV0dXJuICRrKyRhKnNpbmgoJHQpOyB9OwokeGZ1bmNbNl0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkaCskYSpzaW5oKCR0KTsgfTsKJHlmdW5jWzZdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwpyZXR1cm4gJGsgLSRiKmNvc2goJHQpOyB9OwokeGZ1bmNbN10gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkaCArICRiKnNpbmgoJHQpOyB9OwokeWZ1bmNbN10gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CnJldHVybiAkay0kYSpjb3NoKCR0KTsgfTsKCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSA9IGluaXRfZ3JhcGgoLTExLC0xMSw5LDksIGF4ZXM9PlswLDBdLCBncmlkPT5bMjAsMjBdLCBzaXplPT5bMjQwLDI0MF0pOwokZm5bJGldID0gbmV3IEZ1biggJHhmdW5jWyRpXSwgJHlmdW5jWyRpXSwgJGdyWyRpXSApOwokZm5bJGldLT5kb21haW4oLTMsMyk7CiRmblskaSs0XSA9IG5ldyBGdW4oICR4ZnVuY1skaSs0XSwgJHlmdW5jWyRpKzRdLCAkZ3JbJGldICk7CiRmblskaSs0XS0+ZG9tYWluKC0zLDMpOwp9Cgpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiRnclskaV0gLT4gbGIoJ3Jlc2V0Jyk7CiRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LC01LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKDUsLTAuOCw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwp9CiRnclswXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEEpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiRnclsxXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEMpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiRnclszXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CgokbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiXSwKICAgICAgICAwCiAgICApOwoKQkVHSU5fUEdNTAphLiAgV3JpdGUgdGhlIGVxdWF0aW9uIFtgNHheMiAtIDZ5XjIgKyAxNngtMTJ5LTE0PTBgXSBpbiBzdGFuZGFyZCBmb3JtLgoKICAgIFtfXXskZn17MjV9W2A9MWBdCgoKYS4gIEdyYXBoIHRoZSBlcXVhdGlvbi4KCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qIAoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjIxMClAXSogCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+MjEwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qIAoKICAgIFdoaWNoIG9mIHRoZSBhYm92ZSBpcyB0aGUgYmVzdCBtYXRjaCBmb3IgdGhlIGdyYXBoPwoKICAgIFtfXXskbWN9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFxkZnJhY3soeCsyKV4yfXs2fSAtIFxkZnJhY3soeSsxKV4yfXs0fT0xYF0KYS4gIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjI0MClAXSogCgpBIGdyYXBoIGlzIGFsc28gc2hvd24gYmVsb3cuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-399')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-399-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-399-1-1-1-1">
-<li id="extracted-webwork-399-1-1-1-1-1">
-<div class="para" id="extracted-webwork-399-1-1-1-1-1-1">Write the equation <span class="process-math">\(4x^2 - 6y^2 + 16x-12y-14=0\)</span> in standard form.</div>
-<div class="para" id="extracted-webwork-399-1-1-1-1-1-2">
-<span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span><span class="process-math">\(=1\)</span>
-</div>
-</li>
-<li id="extracted-webwork-399-1-1-1-1-2">
-<div class="para" id="extracted-webwork-399-1-1-1-1-2-1">Graph the equation.</div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-399-image-1.png" class="contained"></div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-399-image-2.png" class="contained"></div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-399-image-3.png" class="contained"></div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-399-image-4.png" class="contained"></div>
-<div class="para" id="extracted-webwork-399-1-1-1-1-2-6">Which of the above is the best match for the graph?</div>
-<div class="para logical" id="extracted-webwork-399-1-1-1-1-2-7"><ul class="circle" id="extracted-webwork-399-1-1-1-1-2-7-1">
-<li id="extracted-webwork-399-1-1-1-1-2-7-1-1"><div class="para" id="extracted-webwork-399-1-1-1-1-2-7-1-1-1">(A)</div></li>
-<li id="extracted-webwork-399-1-1-1-1-2-7-1-2"><div class="para" id="extracted-webwork-399-1-1-1-1-2-7-1-2-1">(B)</div></li>
-<li id="extracted-webwork-399-1-1-1-1-2-7-1-3"><div class="para" id="extracted-webwork-399-1-1-1-1-2-7-1-3-1">(C)</div></li>
-<li id="extracted-webwork-399-1-1-1-1-2-7-1-4"><div class="para" id="extracted-webwork-399-1-1-1-1-2-7-1-4-1">(D)</div></li>
-</ul></div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-399-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-399-1-2-1"><span class="process-math">\(\frac{\left(x+2\right)^{2}}{6}-\frac{\left(y+1\right)^{2}}{4}\)</span></div></div></details><details id="extracted-webwork-399-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-399-1-3-1"><span class="process-math">\(\text{(A)}\)</span></div></div></details><details id="extracted-webwork-399-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="extracted-webwork-399-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-399-1-4-1-1">
-<li id="extracted-webwork-399-1-4-1-1-1"><div class="para" id="extracted-webwork-399-1-4-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{(x+2)^2}{6} - \dfrac{(y+1)^2}{4}=1\)</span></div></li>
-<li id="extracted-webwork-399-1-4-1-1-2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-399-image-1.png" class="contained"></div></li>
-</ol></div>
-<div class="para" id="extracted-webwork-399-1-4-2">A graph is also shown below.</div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="Hyperbolas-7-4-3">
-<div class="para" id="Hyperbolas-7-4-3-1"><span class="process-math">\(4x^2 - 6y^2 + 16x-12y-14=0\text{:}\)</span></div>
+</h4>
+<div class="conclusion" id="Hyperbolas-7-4-2">
+<div class="para" id="Hyperbolas-7-4-2-1"><span class="process-math">\(4x^2 - 6y^2 + 16x-12y-14=0\text{:}\)</span></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-ex-9-4-6answ.svg" role="img" class="contained" alt="translated hyperbola opening left and right"></div>
-</div></article></details><details id="Hyperbolas-7-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="Hyperbolas-7-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-400" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="400" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsICJGYWxzZSJdLAogMSwgCik7CiRGYWxzZSA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIGZhbHNlLgphLiAgVGhlIGdyYXBoIG9mIGEgZ2VuZXJhbCBxdWFkcmF0aWMgaXMgYSBoeXBlcmJvbGEgaWYgdGhlIGNvZWZmaWNpZW50cyBvZiBib3RoIHRoZSBbYHheMmBdLXRlcm0gYW5kIHRoZSBbYHleMmBdLXRlcm0gYXJlIG5lZ2F0aXZlLiBbX117JEZhbHNlfXs1fQoKCmEuICBUaGUgc2xvcGVzIG9mIHRoZSBhc3ltcHRvdGVzIG9mIGEgaHlwZXJib2xhIGFyZSBbYFxwbVxkZnJhY3tifXthfSBcdGV4dHsufWBdIFtfXXskVHJ1ZX17NX0KCgphLiAgVGhlIGFzeW1wdG90ZXMgcGFzcyB0aHJvdWdoIHRoZSB2ZXJ0aWNlcyBvZiB0aGUgaHlwZXJib2xhLiBbX117JEZhbHNlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKCgphLiAgVHJ1ZQoKCmEuICBGYWxzZQoKCmEuICBUcnVlCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-400')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-400-1-1-1">
-<div class="para">True or false.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-400-1-1-1-1">
-<li id="extracted-webwork-400-1-1-1-1-1"><div class="para logical" id="extracted-webwork-400-1-1-1-1-1-1">
-<div class="para">The graph of a general quadratic is a hyperbola if the coefficients of both the <span class="process-math">\(x^2\)</span>-term and the <span class="process-math">\(y^2\)</span>-term are negative.</div>
-<ul class="square" id="extracted-webwork-400-1-1-1-1-1-1-3">
-<li id="extracted-webwork-400-1-1-1-1-1-1-3-1"><div class="para" id="extracted-webwork-400-1-1-1-1-1-1-3-1-1">True</div></li>
-<li id="extracted-webwork-400-1-1-1-1-1-1-3-2"><div class="para" id="extracted-webwork-400-1-1-1-1-1-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-400-1-1-1-1-2"><div class="para logical" id="extracted-webwork-400-1-1-1-1-2-1">
-<div class="para">The slopes of the asymptotes of a hyperbola are <span class="process-math">\(\pm\dfrac{b}{a} \text{.}\)</span>
-</div>
-<ul class="square" id="extracted-webwork-400-1-1-1-1-2-1-2">
-<li id="extracted-webwork-400-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-400-1-1-1-1-2-1-2-1-1">True</div></li>
-<li id="extracted-webwork-400-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-400-1-1-1-1-2-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-400-1-1-1-1-3"><div class="para logical" id="extracted-webwork-400-1-1-1-1-3-1">
-<div class="para">The asymptotes pass through the vertices of the hyperbola.</div>
-<ul class="square" id="extracted-webwork-400-1-1-1-1-3-1-1">
-<li id="extracted-webwork-400-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-400-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-400-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-400-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-400-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-400-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-400-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-400-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-400-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-400-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-400-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-400-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-400-1-5-1-1">
-<li id="extracted-webwork-400-1-5-1-1-1"><div class="para" id="extracted-webwork-400-1-5-1-1-1-1">False</div></li>
-<li id="extracted-webwork-400-1-5-1-1-2"><div class="para" id="extracted-webwork-400-1-5-1-1-2-1">True</div></li>
-<li id="extracted-webwork-400-1-5-1-1-3"><div class="para" id="extracted-webwork-400-1-5-1-1-3-1">False</div></li>
-<li id="extracted-webwork-400-1-5-1-1-4"><div class="para" id="extracted-webwork-400-1-5-1-1-4-1">True</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Hyperbolas-8"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Hyperbolas-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.4.5</span><span class="space"> </span><span class="title">General Quadratic Equation in Two Variables</span>
 </h3>
 <div class="para logical" id="Hyperbolas-8-2">
@@ -1915,140 +1632,24 @@ Ax^2 + Cy^2 + Dx + Ey + F = 0
 <li id="Hyperbolas-8-6-1-1-1-4"><div class="para" id="Hyperbolas-8-6-1-1-1-4-1"><span class="process-math">\(\displaystyle y+x^2-4x+1=0\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="Hyperbolas-8-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Hyperbolas-8-6-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-8-6-2-1-1">
+<div class="solution solution-like" id="Hyperbolas-8-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Hyperbolas-8-6-2-1"><ol class="lower-alpha ol-marker-2" id="Hyperbolas-8-6-2-1-1">
 <li id="Hyperbolas-8-6-2-1-1-1"><div class="para" id="Hyperbolas-8-6-2-1-1-1-1">The graph is a circle because the coefficients of <span class="process-math">\(x^2\)</span> and <span class="process-math">\(y^2\)</span> are equal.</div></li>
 <li id="Hyperbolas-8-6-2-1-1-2"><div class="para" id="Hyperbolas-8-6-2-1-1-2-1">The graph is an ellipse because the coefficients of <span class="process-math">\(x^2\)</span> and <span class="process-math">\(y^2\)</span> are both positive.</div></li>
 <li id="Hyperbolas-8-6-2-1-1-3"><div class="para" id="Hyperbolas-8-6-2-1-1-3-1">The graph is a hyperbola because the coefficients of <span class="process-math">\(x^2\)</span> and <span class="process-math">\(y^2\)</span> have opposite signs.</div></li>
 <li id="Hyperbolas-8-6-2-1-1-4"><div class="para" id="Hyperbolas-8-6-2-1-1-4-1">The graph is a parabola because <span class="process-math">\(y\)</span> is of first degree and <span class="process-math">\(x\)</span> is of second degree.</div></li>
-</ol></div></div></details></div></article><div class="para" id="Hyperbolas-8-7">The standard forms for the conic sections  are summarized in the table below. For the parabola, <span class="process-math">\((h, k)\)</span> is the vertex of the graph, and for the other conics, <span class="process-math">\((h, k)\)</span> is the center.</div>
+</ol></div>
+</div></article><div class="para" id="Hyperbolas-8-7">The standard forms for the conic sections  are summarized in the table below. For the parabola, <span class="process-math">\((h, k)\)</span> is the vertex of the graph, and for the other conics, <span class="process-math">\((h, k)\)</span> is the center.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/conic-summary-2.svg" role="img" class="contained" alt="table of conic sections"></div></div></div>
 <div class="para" id="Hyperbolas-8-9">The coefficients <span class="process-math">\(D\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> and <span class="process-math">\(F\)</span> do not figure in determining the type of conic section the equation represents. They do, however, determine the position of the graph relative to the origin. Once we recognize the form of the graph, we can write the equation in standard form in order to discover more information about the graph.</div>
-<details id="Hyperbolas-8-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="Hyperbolas-8-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-401" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="401" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KFBvaW50KS0+ZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0+IDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0+IDAsICApOwokaHlwZXJib2xhID0gUG9wVXAoCiAgWyI/IiwiQSBjaXJjbGUgd2l0aCBjZW50ZXIiLCAiQW4gZWxsaXBzZSB3aXRoIGNlbnRlciIsICJBIGh5cGVyYm9sYSB3aXRoIGNlbnRlciIsICJBIHBhcmFib2xhIHdpdGggdmVydGV4Il0sCiAzLCAKKTsKJG9yaWdpbiA9IFBvaW50KDAsMCk7CiR2ZXJ0aWNlcyA9IEZvcm11bGEoIigwLC0xKSwgKDAsMSkiKTsKJG15X2V2YWx1YXRvciA9ICR2ZXJ0aWNlcyAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsgCiRmID0gRm9ybXVsYSgiMS8zKngiKTsKJHBhcmFib2xhID0gUG9wVXAoCiAgWyI/IiwiQSBjaXJjbGUgd2l0aCBjZW50ZXIiLCAiQW4gZWxsaXBzZSB3aXRoIGNlbnRlciIsICJBIGh5cGVyYm9sYSB3aXRoIGNlbnRlciIsICJBIHBhcmFib2xhIHdpdGggdmVydGV4Il0sCiA0LCAKKTsKJHYgPSBQb2ludCgxLC01KTsKJHVwID0gUG9wVXAoCiAgWyI/IiwibGVmdCIsICJyaWdodCIsICJ1cHdhcmQiLCAiZG93bndhcmQiXSwKIDMsIAopOwoKJGVsbGlwc2UgPSAgUG9wVXAoCiAgWyI/IiwiQSBjaXJjbGUgd2l0aCBjZW50ZXIiLCAiQW4gZWxsaXBzZSB3aXRoIGNlbnRlciIsICJBIGh5cGVyYm9sYSB3aXRoIGNlbnRlciIsICJBIHBhcmFib2xhIHdpdGggdmVydGV4Il0sCiAyLCAKKTsKJHYyID0gUG9pbnQoLTIsMSk7CiRob3Jpem9udGFsID0gUG9wVXAoCiAgWyI/IiwibWFqb3IgYXhpcyIsICJtaW5vciBheGlzIiwgInRyYW5zdmVyc2UgYXhpcyIsICJjb25qdWdhdGUgYXhpcyJdLAogMSwgCik7CiRhID0gQ29tcHV0ZSgiMiIpOwokYiA9IENvbXB1dGUoIjIvMyIpOwoKQkVHSU5fUEdNTApEZXNjcmliZSB0aGUgZ3JhcGggb2YgZWFjaCBlcXVhdGlvbiB3aXRob3V0IGdyYXBoaW5nLgphLiAgW2B4XjI9OXleMi05YF0KCiAgICBbX117JGh5cGVyYm9sYX17NX0gYXQgdGhlIHBvaW50IFtfXXskb3JpZ2lufXs1fTsgdmVydGljZXM6IFtfXXskdmVydGljZXN9ezEyfTsgYXN5bXB0b3RlcyBbYHk9XHBtYF1bX117JGZ9ezV9CgoKYS4gIFtgeF4yLXk9MngrNGBdCgogICAgW19deyRwYXJhYm9sYX17NX0gYXQgdGhlIHBvaW50IFtfXXskdn17NX0sIG9wZW5pbmcgW19deyR1cH17NX0KCgphLiAgW2B4XjIrOXleMis0eC0xOHkrOT0wYF0KCiAgICBbX117JGVsbGlwc2V9ezV9IGF0IHRoZSBwb2ludCBbX117JHYyfXs1fSB3aXRoIGhvcml6b250YWwgW19deyRob3Jpem9udGFsfXs1fTsgW2BhPWBdW19deyRhfXszfSwgYW5kIFtgYj1gXVtfXXskYn17M30KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEEgaHlwZXJib2xhIGNlbnRlcmVkIGF0IHRoZSBvcmlnaW4gd2l0aCB2ZXJ0aWNlcyBbYCgwLDEpYF0gYW5kIFtgKDAsLTEpYF0gYW5kIGFzeW1wdG90ZXMgW2B5PVxkZnJhY3sxfXszfXhgXSBhbmQgW2B5PVxkZnJhY3stMX17M314XHRleHR7Ln1gXQphLiAgQSBwYXJhYm9sYSB0aGF0IG9wZW5zIHVwd2FyZCBmcm9tIHRoZSB2ZXJ0ZXggW2AoMSwtNSlcdGV4dHsufWBdCmEuICBBbiBlbGxpcHNlIGNlbnRlcmVkIGF0IFtgKC0yLDEpYF0gd2l0aCBhIGhvcml6b250YWwgbWFqb3IgYXhpcywgW2BhPTJgXSBhbmQgW2BiPVxkZnJhY3syfXszfSBcdGV4dHsufWBdICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-401')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-401-1-1-1">
-<div class="para">Describe the graph of each equation without graphing.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-401-1-1-1-1">
-<li id="extracted-webwork-401-1-1-1-1-1">
-<div class="para" id="extracted-webwork-401-1-1-1-1-1-1"><span class="process-math">\(x^2=9y^2-9\)</span></div>
-<div class="para logical" id="extracted-webwork-401-1-1-1-1-1-2">
-<ul class="square" id="extracted-webwork-401-1-1-1-1-1-2-1">
-<li id="extracted-webwork-401-1-1-1-1-1-2-1-1"><div class="para" id="extracted-webwork-401-1-1-1-1-1-2-1-1-1">A circle with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-1-2-1-2"><div class="para" id="extracted-webwork-401-1-1-1-1-1-2-1-2-1">An ellipse with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-1-2-1-3"><div class="para" id="extracted-webwork-401-1-1-1-1-1-2-1-3-1">A hyperbola with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-1-2-1-4"><div class="para" id="extracted-webwork-401-1-1-1-1-1-2-1-4-1">A parabola with vertex</div></li>
-</ul>
-<div class="para">at the point <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>; vertices: <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span>; asymptotes <span class="process-math">\(y=\pm\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div>
-</div>
-</li>
-<li id="extracted-webwork-401-1-1-1-1-2">
-<div class="para" id="extracted-webwork-401-1-1-1-1-2-1"><span class="process-math">\(x^2-y=2x+4\)</span></div>
-<div class="para logical" id="extracted-webwork-401-1-1-1-1-2-2">
-<ul class="square" id="extracted-webwork-401-1-1-1-1-2-2-1">
-<li id="extracted-webwork-401-1-1-1-1-2-2-1-1"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-1-1-1">A circle with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-2-2-1-2"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-1-2-1">An ellipse with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-2-2-1-3"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-1-3-1">A hyperbola with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-2-2-1-4"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-1-4-1">A parabola with vertex</div></li>
-</ul>
-<div class="para">at the point <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, opening</div>
-<ul class="square" id="extracted-webwork-401-1-1-1-1-2-2-3">
-<li id="extracted-webwork-401-1-1-1-1-2-2-3-1"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-3-1-1">left</div></li>
-<li id="extracted-webwork-401-1-1-1-1-2-2-3-2"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-3-2-1">right</div></li>
-<li id="extracted-webwork-401-1-1-1-1-2-2-3-3"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-3-3-1">upward</div></li>
-<li id="extracted-webwork-401-1-1-1-1-2-2-3-4"><div class="para" id="extracted-webwork-401-1-1-1-1-2-2-3-4-1">downward</div></li>
-</ul>
-</div>
-</li>
-<li id="extracted-webwork-401-1-1-1-1-3">
-<div class="para" id="extracted-webwork-401-1-1-1-1-3-1"><span class="process-math">\(x^2+9y^2+4x-18y+9=0\)</span></div>
-<div class="para logical" id="extracted-webwork-401-1-1-1-1-3-2">
-<ul class="square" id="extracted-webwork-401-1-1-1-1-3-2-1">
-<li id="extracted-webwork-401-1-1-1-1-3-2-1-1"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-1-1-1">A circle with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-3-2-1-2"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-1-2-1">An ellipse with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-3-2-1-3"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-1-3-1">A hyperbola with center</div></li>
-<li id="extracted-webwork-401-1-1-1-1-3-2-1-4"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-1-4-1">A parabola with vertex</div></li>
-</ul>
-<div class="para">at the point <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> with horizontal</div>
-<ul class="square" id="extracted-webwork-401-1-1-1-1-3-2-3">
-<li id="extracted-webwork-401-1-1-1-1-3-2-3-1"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-3-1-1">major axis</div></li>
-<li id="extracted-webwork-401-1-1-1-1-3-2-3-2"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-3-2-1">minor axis</div></li>
-<li id="extracted-webwork-401-1-1-1-1-3-2-3-3"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-3-3-1">transverse axis</div></li>
-<li id="extracted-webwork-401-1-1-1-1-3-2-3-4"><div class="para" id="extracted-webwork-401-1-1-1-1-3-2-3-4-1">conjugate axis</div></li>
-</ul>
-<div class="para">; <span class="process-math">\(a=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, and <span class="process-math">\(b=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-401-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-2-1"><span class="process-math">\(\text{A hyperbola with center}\)</span></div></div></details><details id="extracted-webwork-401-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-3-1"><span class="process-math">\(\left(0,0\right)\)</span></div></div></details><details id="extracted-webwork-401-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-4-1"><span class="process-math">\(\left(0,-1\right), \left(0,1\right)\)</span></div></div></details><details id="extracted-webwork-401-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-5-1"><span class="process-math">\(\frac{1}{3}x\)</span></div></div></details><details id="extracted-webwork-401-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-6-1"><span class="process-math">\(\text{A parabola with vertex}\)</span></div></div></details><details id="extracted-webwork-401-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-7-1"><span class="process-math">\(\left(1,-5\right)\)</span></div></div></details><details id="extracted-webwork-401-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-8-1"><span class="process-math">\(\text{upward}\)</span></div></div></details><details id="extracted-webwork-401-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-9-1"><span class="process-math">\(\text{An ellipse with center}\)</span></div></div></details><details id="extracted-webwork-401-1-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-10-1"><span class="process-math">\(\left(-2,1\right)\)</span></div></div></details><details id="extracted-webwork-401-1-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-11-1"><span class="process-math">\(\text{major axis}\)</span></div></div></details><details id="extracted-webwork-401-1-12" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-12-1"><span class="process-math">\(2\)</span></div></div></details><details id="extracted-webwork-401-1-13" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-401-1-13-1"><span class="process-math">\(\frac{2}{3}\)</span></div></div></details><details id="extracted-webwork-401-1-14" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-401-1-14-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-401-1-14-1-1">
-<li id="extracted-webwork-401-1-14-1-1-1"><div class="para" id="extracted-webwork-401-1-14-1-1-1-1">A hyperbola centered at the origin with vertices <span class="process-math">\((0,1)\)</span> and <span class="process-math">\((0,-1)\)</span> and asymptotes <span class="process-math">\(y=\dfrac{1}{3}x\)</span> and <span class="process-math">\(y=\dfrac{-1}{3}x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-401-1-14-1-1-2"><div class="para" id="extracted-webwork-401-1-14-1-1-2-1">A parabola that opens upward from the vertex <span class="process-math">\((1,-5)\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-401-1-14-1-1-3"><div class="para" id="extracted-webwork-401-1-14-1-1-3-1">An ellipse centered at <span class="process-math">\((-2,1)\)</span> with a horizontal major axis, <span class="process-math">\(a=2\)</span> and <span class="process-math">\(b=\dfrac{2}{3} \text{.}\)</span>
-</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><details id="Hyperbolas-8-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="Hyperbolas-8-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.4.18</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-402" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="402" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gUG9wVXAoCiAgWyI/IiwiZGVnZW5lcmF0ZSIsICJjZW50cmFsIiwgInRyYW5zbGF0ZWQiXSwKIDEsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsInR5cGUiLCAicG9zaXRpb24iXSwKIDIsIAopOwokYyA9IFBvcFVwKAogIFsiPyIsImNpcmNsZSIsICJlbGxpcHNlIiwgImh5cGVyYm9sYSIsICJwYXJhYm9sYSJdLAogNCwgCik7CiRkID0gUG9wVXAoCiAgWyI/IiwiY2lyY2xlIiwgImVsbGlwc2UiLCAiaHlwZXJib2xhIiwgInBhcmFib2xhIl0sCiAxLCAKKTsKCkJFR0lOX1BHTUwKYS4gIEEgW19deyRhfXs1fSBjb25pYyBjYW4gYmUgYSBwb2ludCwgYSBsaW5lLCBhIHBhaXIgb2YgbGluZXMsIG9yIG5vIGdyYXBoIGF0IGFsbC4KCgphLiAgVGhlIGNvZWZmaWNpZW50cyBbYERcdGV4dHssfWBdIFtgRVx0ZXh0eyx9YF0gYW5kIFtgRmBdIGRldGVybWluZSB0aGUgW19deyRifXs1fSBvZiB0aGUgY29uaWMuCgoKYS4gIFRoZSBncmFwaCBpcyBhIFtfXXskY317NX0gaWYgb25lIG9mIFtgQWBdIG9yIFtgQ2BdIGlzIHplcm8uCgoKYS4gIElmIFtgQSA9IENgXSAoYW5kIFtgQj0wYF0pLCB0aGUgZ3JhcGggaXMgYSBbX117JGR9ezV9LgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgQSBbJGFdIGNvbmljIGNhbiBiZSBhIHBvaW50LCBhIGxpbmUsIGEgcGFpciBvZiBsaW5lcywgb3Igbm8gZ3JhcGggYXQgYWxsLgoKCmEuICBUaGUgY29lZmZpY2llbnRzIFtgRFx0ZXh0eyx9YF0gW2BFXHRleHR7LH1gXSBhbmQgW2BGYF0gZGV0ZXJtaW5lIHRoZSBbJGJdIG9mIHRoZSBjb25pYy4KCgphLiAgVGhlIGdyYXBoIGlzIGEgWyRjXSBpZiBvbmUgb2YgW2BBYF0gb3IgW2BDYF0gaXMgemVyby4KCgphLiAgSWYgW2BBID0gQ2BdIChhbmQgW2BCPTBgXSksIHRoZSBncmFwaCBpcyBhIFskZF0uCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-402')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-402-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-402-1-1-1-1">
-<li id="extracted-webwork-402-1-1-1-1-1"><div class="para logical" id="extracted-webwork-402-1-1-1-1-1-1">
-<div class="para">A</div>
-<ul class="square" id="extracted-webwork-402-1-1-1-1-1-1-1">
-<li id="extracted-webwork-402-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-402-1-1-1-1-1-1-1-1-1">degenerate</div></li>
-<li id="extracted-webwork-402-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-402-1-1-1-1-1-1-1-2-1">central</div></li>
-<li id="extracted-webwork-402-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-402-1-1-1-1-1-1-1-3-1">translated</div></li>
-</ul>
-<div class="para">conic can be a point, a line, a pair of lines, or no graph at all.</div>
-</div></li>
-<li id="extracted-webwork-402-1-1-1-1-2"><div class="para logical" id="extracted-webwork-402-1-1-1-1-2-1">
-<div class="para">The coefficients <span class="process-math">\(D\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> and <span class="process-math">\(F\)</span> determine the</div>
-<ul class="square" id="extracted-webwork-402-1-1-1-1-2-1-4">
-<li id="extracted-webwork-402-1-1-1-1-2-1-4-1"><div class="para" id="extracted-webwork-402-1-1-1-1-2-1-4-1-1">type</div></li>
-<li id="extracted-webwork-402-1-1-1-1-2-1-4-2"><div class="para" id="extracted-webwork-402-1-1-1-1-2-1-4-2-1">position</div></li>
-</ul>
-<div class="para">of the conic.</div>
-</div></li>
-<li id="extracted-webwork-402-1-1-1-1-3"><div class="para logical" id="extracted-webwork-402-1-1-1-1-3-1">
-<div class="para">The graph is a</div>
-<ul class="square" id="extracted-webwork-402-1-1-1-1-3-1-1">
-<li id="extracted-webwork-402-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-402-1-1-1-1-3-1-1-1-1">circle</div></li>
-<li id="extracted-webwork-402-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-402-1-1-1-1-3-1-1-2-1">ellipse</div></li>
-<li id="extracted-webwork-402-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-402-1-1-1-1-3-1-1-3-1">hyperbola</div></li>
-<li id="extracted-webwork-402-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-402-1-1-1-1-3-1-1-4-1">parabola</div></li>
-</ul>
-<div class="para">if one of <span class="process-math">\(A\)</span> or <span class="process-math">\(C\)</span> is zero.</div>
-</div></li>
-<li id="extracted-webwork-402-1-1-1-1-4"><div class="para logical" id="extracted-webwork-402-1-1-1-1-4-1">
-<div class="para">If <span class="process-math">\(A = C\)</span> (and <span class="process-math">\(B=0\)</span>), the graph is a</div>
-<ul class="square" id="extracted-webwork-402-1-1-1-1-4-1-3">
-<li id="extracted-webwork-402-1-1-1-1-4-1-3-1"><div class="para" id="extracted-webwork-402-1-1-1-1-4-1-3-1-1">circle</div></li>
-<li id="extracted-webwork-402-1-1-1-1-4-1-3-2"><div class="para" id="extracted-webwork-402-1-1-1-1-4-1-3-2-1">ellipse</div></li>
-<li id="extracted-webwork-402-1-1-1-1-4-1-3-3"><div class="para" id="extracted-webwork-402-1-1-1-1-4-1-3-3-1">hyperbola</div></li>
-<li id="extracted-webwork-402-1-1-1-1-4-1-3-4"><div class="para" id="extracted-webwork-402-1-1-1-1-4-1-3-4-1">parabola</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-402-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-402-1-2-1"><span class="process-math">\(\text{degenerate}\)</span></div></div></details><details id="extracted-webwork-402-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-402-1-3-1"><span class="process-math">\(\text{position}\)</span></div></div></details><details id="extracted-webwork-402-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-402-1-4-1"><span class="process-math">\(\text{parabola}\)</span></div></div></details><details id="extracted-webwork-402-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-402-1-5-1"><span class="process-math">\(\text{circle}\)</span></div></div></details><details id="extracted-webwork-402-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-402-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-402-1-6-1-1">
-<li id="extracted-webwork-402-1-6-1-1-1"><div class="para" id="extracted-webwork-402-1-6-1-1-1-1">A degenerate conic can be a point, a line, a pair of lines, or no graph at all.</div></li>
-<li id="extracted-webwork-402-1-6-1-1-2"><div class="para" id="extracted-webwork-402-1-6-1-1-2-1">The coefficients <span class="process-math">\(D\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> and <span class="process-math">\(F\)</span> determine the position of the conic.</div></li>
-<li id="extracted-webwork-402-1-6-1-1-3"><div class="para" id="extracted-webwork-402-1-6-1-1-3-1">The graph is a parabola if one of <span class="process-math">\(A\)</span> or <span class="process-math">\(C\)</span> is zero.</div></li>
-<li id="extracted-webwork-402-1-6-1-1-4"><div class="para" id="extracted-webwork-402-1-6-1-1-4-1">If <span class="process-math">\(A = C\)</span> (and <span class="process-math">\(B=0\)</span>), the graph is a circle.</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-9-4-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-9-4-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">9.4.6</span><span class="space"> </span><span class="title">Problem Set 9.4</span>
 </h3>
 <article class="subexercises" id="section-9-4-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

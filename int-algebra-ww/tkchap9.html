@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="tkchap8.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="toolkit.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="tkchap10.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1316,7 +1296,11 @@ eBookConfig.enable_chatcodes =  false;
 </h5>
 <div class="para" id="tkLineSlope-3-1-1">Find the slope of the line  <span class="process-math">\(~6x-8y = 9\)</span>
 </div>
-<div class="solutions"><details id="tkLineSlope-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkLineSlope-3-2-1">
+<div class="solution solution-like" id="tkLineSlope-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkLineSlope-3-2-1">
 <div class="para">The easiest way to find the slope of this line is to put its equation into slope-intercept form by solving for <span class="process-math">\(y\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="tkLineSlope-3-2-1-2">
@@ -1327,34 +1311,44 @@ y \amp = \dfrac{-6x+9}{-8} = \dfrac{3}{4}x - \dfrac{9}{8}
 </div>
 <div class="para">The slope of the line is <span class="process-math">\(\dfrac{3}{4}\text{.}\)</span>
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkLineSlope-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkLineSlope-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.2</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkLineSlope-4-1-1">Find the slope of the line whose intercepts are <span class="process-math">\((112,0)\)</span> and <span class="process-math">\((0,140)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkLineSlope-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkLineSlope-4-2-1">
+<div class="solution solution-like" id="tkLineSlope-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkLineSlope-4-2-1">
 <div class="para">We use the slope formula.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 m = \dfrac{y_2-y_1}{x_2-x_1} = \dfrac{140-0}{0-112} = \dfrac{140}{-112} = \dfrac{-5}{4}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkLineSlope-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkLineSlope-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.3</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkLineSlope-5-1-1">Find the slope of the line  <span class="process-math">\(~2.8x+3.6y = 1.2\)</span>
+</h5>
+<div class="para" id="tkLineSlope-5-1-1">Find the slope of the line  <span class="process-math">\(~2.8x+3.6y = 1.2\)</span>
 </div>
-<div class="solutions"><details id="tkLineSlope-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-5-2-1"><span class="process-math">\(\dfrac{7}{9}\)</span></div></div></details></div></article></details><details id="tkLineSlope-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkLineSlope-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-5-2-1"><span class="process-math">\(\dfrac{7}{9}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkLineSlope-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.4</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkLineSlope-6-1-1">Find the slope of the line  <span class="process-math">\(~6x=72\)</span>
+</h5>
+<div class="para" id="tkLineSlope-6-1-1">Find the slope of the line  <span class="process-math">\(~6x=72\)</span>
 </div>
-<div class="solutions"><details id="tkLineSlope-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-6-2-1">undefined</div></div></details></div></article></details><details id="tkLineSlope-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkLineSlope-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-6-2-1">undefined</div></div></details></div></article><article class="exercise exercise-like" id="tkLineSlope-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.5</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkLineSlope-7-1-1">Find the slope of the line that passes through <span class="process-math">\((15,-6)\)</span> and <span class="process-math">\((10,-3)\text{.}\)</span>
+</h5>
+<div class="para" id="tkLineSlope-7-1-1">Find the slope of the line that passes through <span class="process-math">\((15,-6)\)</span> and <span class="process-math">\((10,-3)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkLineSlope-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-7-2-1"><span class="process-math">\(\dfrac{-3}{5}\)</span></div></div></details></div></article></details><details id="tkLineSlope-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkLineSlope-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-7-2-1"><span class="process-math">\(\dfrac{-3}{5}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkLineSlope-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.6</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkLineSlope-8-1-1">Find the slope of a line that describes a 35% grade (or incline).</div>
-<div class="solutions"><details id="tkLineSlope-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-8-2-1"><span class="process-math">\(\dfrac{7}{20}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkPtSlopForm"><h4 class="heading hide-type">
+</h5>
+<div class="para" id="tkLineSlope-8-1-1">Find the slope of a line that describes a 35% grade (or incline).</div>
+<div class="solutions"><details id="tkLineSlope-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkLineSlope-8-2-1"><span class="process-math">\(\dfrac{7}{20}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkPtSlopForm"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.1.2</span><span class="space"> </span><span class="title">Use the point-slope formula</span>
 </h4>
 <div class="para logical" id="tkPtSlopForm-2">
@@ -1370,7 +1364,11 @@ y-y_1 = m(x-x_1)
 </h5>
 <div class="para" id="tkPtSlopForm-3-1-1">Find the <span class="process-math">\(y\)</span>-intercept of the line of slope <span class="process-math">\(\dfrac{-2}{3}\)</span> that passes through <span class="process-math">\((-8,9)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkPtSlopForm-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkPtSlopForm-3-2-1">
+<div class="solution solution-like" id="tkPtSlopForm-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkPtSlopForm-3-2-1">
 <div class="para">We first use the point-slope formula to find the equation of the line.</div>
 <div class="displaymath process-math" id="tkPtSlopForm-3-2-1-1">
 \begin{align*}
@@ -1382,12 +1380,17 @@ y \amp = \dfrac{-2}{3}x + \dfrac{11}{3}
 </div>
 <div class="para">The <span class="process-math">\(y\)</span>-intercept of the line is <span class="process-math">\(\left(0, \dfrac{11}{3}\right)\text{.}\)</span>
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkPtSlopForm-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkPtSlopForm-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.8</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkPtSlopForm-4-1-1">Find the equation of the line with <span class="process-math">\(x\)</span>-intercept <span class="process-math">\((2,0)\)</span> that passes through <span class="process-math">\((-3,-3)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkPtSlopForm-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkPtSlopForm-4-2-1">
+<div class="solution solution-like" id="tkPtSlopForm-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkPtSlopForm-4-2-1">
 <div class="para">We first compute the slope, using the two points given.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1402,23 +1405,28 @@ y-0 \amp = \dfrac{3}{5}(x-2) \amp \amp \blert{\text{Multiply by 5 to clear the f
 y \amp = \dfrac{3}{5}x - \dfrac{6}{5}
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkPtSlopForm-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkPtSlopForm-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.9</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkPtSlopForm-5-1-1">Find the equation of the line that has slope <span class="process-math">\(\dfrac{-1}{3}\)</span> and passes through <span class="process-math">\((-4,-6)\text{.}\)</span>
+</h5>
+<div class="para" id="tkPtSlopForm-5-1-1">Find the equation of the line that has slope <span class="process-math">\(\dfrac{-1}{3}\)</span> and passes through <span class="process-math">\((-4,-6)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkPtSlopForm-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-5-2-1"><span class="process-math">\(y = \dfrac{1}{3}x=\dfrac{22}{3}\)</span></div></div></details></div></article></details><details id="tkPtSlopForm-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkPtSlopForm-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-5-2-1"><span class="process-math">\(y = \dfrac{1}{3}x=\dfrac{22}{3}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkPtSlopForm-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.10</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkPtSlopForm-6-1-1">Find the equation of the line that has slope <span class="process-math">\(0\)</span> and passes through <span class="process-math">\((25,64)\text{.}\)</span>
+</h5>
+<div class="para" id="tkPtSlopForm-6-1-1">Find the equation of the line that has slope <span class="process-math">\(0\)</span> and passes through <span class="process-math">\((25,64)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkPtSlopForm-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-6-2-1"><span class="process-math">\(y=64\)</span></div></div></details></div></article></details><details id="tkPtSlopForm-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkPtSlopForm-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-6-2-1"><span class="process-math">\(y=64\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkPtSlopForm-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.11</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkPtSlopForm-7-1-1">Find the <span class="process-math">\(y\)</span>-intercept of the line that passes through <span class="process-math">\((-5,49)\)</span> and has slope <span class="process-math">\(\dfrac{-4}{5}\text{.}\)</span>
+</h5>
+<div class="para" id="tkPtSlopForm-7-1-1">Find the <span class="process-math">\(y\)</span>-intercept of the line that passes through <span class="process-math">\((-5,49)\)</span> and has slope <span class="process-math">\(\dfrac{-4}{5}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkPtSlopForm-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-7-2-1"><span class="process-math">\((0,0)\)</span></div></div></details></div></article></details><details id="tkPtSlopForm-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkPtSlopForm-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-7-2-1"><span class="process-math">\((0,0)\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkPtSlopForm-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.12</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkPtSlopForm-8-1-1">Find the <span class="process-math">\(y\)</span>-intercept of the line that has slope <span class="process-math">\(\dfrac{-7}{3}\)</span> and passes through <span class="process-math">\((-6,0)\text{.}\)</span>
+</h5>
+<div class="para" id="tkPtSlopForm-8-1-1">Find the <span class="process-math">\(y\)</span>-intercept of the line that has slope <span class="process-math">\(\dfrac{-7}{3}\)</span> and passes through <span class="process-math">\((-6,0)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkPtSlopForm-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-8-2-1"><span class="process-math">\((0,-14)\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkGeomProp"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkPtSlopForm-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPtSlopForm-8-2-1"><span class="process-math">\((0,-14)\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkGeomProp"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.1.3</span><span class="space"> </span><span class="title">Use properties of geometric figures</span>
 </h4>
 <div class="para" id="tkGeomProp-2">Analytic geometry uses algebra to help solve geometric problems.</div>
@@ -1439,7 +1447,11 @@ y \amp = \dfrac{3}{5}x - \dfrac{6}{5}
 <li id="tkGeomProp-3-1-2-1-3"><div class="para" id="p-derived-tkGeomProp-3-1-2-1-3">Find the length of the segment <span class="process-math">\(\overline{AP}\text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="tkGeomProp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkGeomProp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkGeomProp-3-2-1-1">
+<div class="solution solution-like" id="tkGeomProp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkGeomProp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkGeomProp-3-2-1-1">
 <li id="tkGeomProp-3-2-1-1-1">
 <div class="para logical" id="tkGeomProp-3-2-1-1-1-1">
 <div class="para">Because <span class="process-math">\(\overline{AP}\)</span> is perpendicular to <span class="process-math">\(\overline{BC}\text{,}\)</span> we can find its slope.  The coordinates of <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are <span class="process-math">\((6,0)\)</span> and <span class="process-math">\((2,-6)\text{,}\)</span> so the slope of <span class="process-math">\(\overline{BC}\)</span> is</div>
@@ -1485,9 +1497,11 @@ y \amp = \dfrac{-6+0}{2} = -3
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkGeomProp-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkGeomProp-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.14</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
+</h5>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel middle" style="width:59.4594594594595%;">
 <div class="para" id="tkGeomProp-4-1-1-1-1">The line <span class="process-math">\(y=-2x+9\)</span> is tangent at point <span class="process-math">\(Q\)</span> to a circle with center <span class="process-math">\(C(-4,2)\text{.}\)</span>  For this problem, use the following property:</div>
 <div class="para" id="tkGeomProp-4-1-1-1-2">The tangent to a circle is perpendicular to the radius through the point of tangency.</div>
@@ -1507,9 +1521,10 @@ y \amp = \dfrac{-6+0}{2} = -3
 <li id="tkGeomProp-4-2-1-1-2"><div class="para" id="p-derived-tkGeomProp-4-2-1-1-2"><span class="process-math">\(\displaystyle (2,5)\)</span></div></li>
 <li id="tkGeomProp-4-2-1-1-3"><div class="para" id="p-derived-tkGeomProp-4-2-1-1-3"><span class="process-math">\(\displaystyle 3\sqrt{5}\)</span></div></li>
 <li id="tkGeomProp-4-2-1-1-4"><div class="para" id="p-derived-tkGeomProp-4-2-1-1-4"><span class="process-math">\(\displaystyle (x+4)^2+(y-2)^2=45\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkGeomProp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkGeomProp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.15</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:5.75%;margin-right:5.75%;">
+</h5>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5.75%;margin-right:5.75%;">
 <div class="sbspanel middle" style="width:62.1468926553672%;">
 <div class="para" id="tkGeomProp-5-1-1-1-1">In the right triangle shown, <span class="process-math">\(\overline{ST}\)</span> is parallel to the shorter leg, and <span class="process-math">\(h=\dfrac{9}{10}r\text{.}\)</span>  For this problem, use the following property:</div>
 <div class="para" id="tkGeomProp-5-1-1-1-2">A line parallel to the base of a triangle cuts off a similar triangle. (Recall that the sides of similar triangles are proportional.)</div>
@@ -1527,9 +1542,10 @@ y \amp = \dfrac{-6+0}{2} = -3
 <li id="tkGeomProp-5-2-1-1-1"><div class="para" id="p-derived-tkGeomProp-5-2-1-1-1"><span class="process-math">\(\displaystyle r=\dfrac{10}{9}h\)</span></div></li>
 <li id="tkGeomProp-5-2-1-1-2"><div class="para" id="p-derived-tkGeomProp-5-2-1-1-2"><span class="process-math">\(\displaystyle b=\dfrac{\sqrt{19}}{9}h\)</span></div></li>
 <li id="tkGeomProp-5-2-1-1-3"><div class="para" id="p-derived-tkGeomProp-5-2-1-1-3"><span class="process-math">\(\displaystyle ST = \dfrac{2\sqrt{19}}{27}h\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkGeomProp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkGeomProp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.16</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkGeomProp-6-1-1">The quadrilateral <span class="process-math">\(ABCD\)</span> has vertices <span class="process-math">\(~A(-4,-1),~B(-2,5),~C(8,5)~\)</span> and <span class="process-math">\(~D(6,-1).\)</span>
+</h5>
+<div class="para" id="tkGeomProp-6-1-1">The quadrilateral <span class="process-math">\(ABCD\)</span> has vertices <span class="process-math">\(~A(-4,-1),~B(-2,5),~C(8,5)~\)</span> and <span class="process-math">\(~D(6,-1).\)</span>
 </div> <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/fig-quadrilateral.svg" role="img" class="contained" alt="triangle cut parallel to base"></div> <div class="para logical" id="tkGeomProp-6-1-3"><ol class="lower-alpha ol-marker-2" id="tkGeomProp-6-1-3-1">
 <li id="tkGeomProp-6-1-3-1-1"><div class="para" id="p-derived-tkGeomProp-6-1-3-1-1">Show that <span class="process-math">\(ABCD\)</span> is a parallelogram (its opposite sides are parallel).</div></li>
 <li id="tkGeomProp-6-1-3-1-2"><div class="para" id="p-derived-tkGeomProp-6-1-3-1-2">Find equations for the lines through the diagonals, <span class="process-math">\(\overline{AC}\)</span> and <span class="process-math">\(\overline{BD}\text{.}\)</span>
@@ -1549,7 +1565,7 @@ y \amp = \dfrac{-6+0}{2} = -3
 <li id="tkGeomProp-6-2-1-1-3"><div class="para" id="p-derived-tkGeomProp-6-2-1-1-3"><span class="process-math">\(\displaystyle (2,2)\)</span></div></li>
 <li id="tkGeomProp-6-2-1-1-4"><div class="para" id="p-derived-tkGeomProp-6-2-1-1-4"><span class="process-math">\(\displaystyle AP=PC=3\sqrt{5}; ~BP=PD=5\)</span></div></li>
 <li id="tkGeomProp-6-2-1-1-5"><div class="para" id="p-derived-tkGeomProp-6-2-1-1-5">bisect</div></li>
-</ol></div></div></details></div></article></details></section></section><section class="subsection" id="tkDistanceMidpoint"><h3 class="heading hide-type">
+</ol></div></div></details></div></article></section></section><section class="subsection" id="tkDistanceMidpoint"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.9.2</span><span class="space"> </span><span class="title">The Distance and Midpoint Formulas</span>
 </h3>
 <section class="subsubsection" id="tkRadDist"><h4 class="heading hide-type">
@@ -1571,7 +1587,11 @@ y \amp = \dfrac{-6+0}{2} = -3
 </div></div>
 <div class="sbspanel top" style="width:26.3157894736842%;"><img src="generated/latex-image/fig-6-8-10-triangle.svg" role="img" class="contained" alt="right triangle"></div>
 </div></div>
-<div class="solutions"><details id="tkRadDist-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadDist-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadDist-3-2-1-1">
+<div class="solution solution-like" id="tkRadDist-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadDist-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadDist-3-2-1-1">
 <li id="tkRadDist-3-2-1-1-1"><div class="para" id="p-derived-tkRadDist-3-2-1-1-1">No, the length of <span class="process-math">\(c\)</span> is shorter than the lengths of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> combined, so <span class="process-math">\(c \lt a+b\text{.}\)</span>
 </div></li>
 <li id="tkRadDist-3-2-1-1-2"><div class="para logical" id="tkRadDist-3-2-1-1-2-1">
@@ -1585,12 +1605,18 @@ c \amp = \sqrt{100} = 10
 </div>
 <div class="para">The hypotenuse is 10 cm long.</div>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkRadDist-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkRadDist-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.18</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkRadDist-4-1-1">Is <span class="process-math">\(\sqrt{a^2+b^2} = a+b\text{?}\)</span>
 </div>
-<div class="solutions"><details id="tkRadDist-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkRadDist-4-2-1">No. In the previous example, <span class="process-math">\(c=\sqrt{a^2+b^2}\text{,}\)</span> and we saw that <span class="process-math">\(c \lt a+b\text{.}\)</span> We cannot simplify  <span class="process-math">\(\sqrt{a^2+b^2}\)</span> by taking the square root of each term.</div></div></details></div></article><article class="example example-like" id="tkRadDist-5"><h5 class="heading">
+<div class="solution solution-like" id="tkRadDist-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkRadDist-4-2-1">No. In the previous example, <span class="process-math">\(c=\sqrt{a^2+b^2}\text{,}\)</span> and we saw that <span class="process-math">\(c \lt a+b\text{.}\)</span> We cannot simplify  <span class="process-math">\(\sqrt{a^2+b^2}\)</span> by taking the square root of each term.</div>
+</div></article><article class="example example-like" id="tkRadDist-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.19</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkRadDist-5-1-1">
@@ -1600,26 +1626,34 @@ c \amp = \sqrt{100} = 10
 <li id="tkRadDist-5-1-1-2-2"><div class="para" id="p-derived-tkRadDist-5-1-1-2-2"><span class="process-math">\(\displaystyle r+r\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRadDist-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadDist-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadDist-5-2-1-1">
+<div class="solution solution-like" id="tkRadDist-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadDist-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadDist-5-2-1-1">
 <li id="tkRadDist-5-2-1-1-1"><div class="para" id="p-derived-tkRadDist-5-2-1-1-1">
 <span class="process-math">\(r \cdot r = \left(\sqrt{14}\right)\left(\sqrt{14}\right) = 14\text{.}\)</span> Or, <span class="process-math">\(r \cdot r = r^2 = \left(\sqrt{14}\right)^2 = 14\text{.}\)</span>
 </div></li>
 <li id="tkRadDist-5-2-1-1-2"><div class="para" id="p-derived-tkRadDist-5-2-1-1-2">
 <span class="process-math">\(r+r = \sqrt{14} + \sqrt{14} = 2\sqrt{14}\text{.}\)</span>  Or, <span class="process-math">\(r+r = 2r = 2\sqrt{14}\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><details id="tkRadDist-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkRadDist-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.20</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRadDist-6-1-1">Simplify if possible:  <span class="process-math">\(~\sqrt{(x-4)^2+(y-2)^2}\)</span>
+</h5>
+<div class="para" id="tkRadDist-6-1-1">Simplify if possible:  <span class="process-math">\(~\sqrt{(x-4)^2+(y-2)^2}\)</span>
 </div>
-<div class="solutions"><details id="tkRadDist-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadDist-6-2-1">cannot be simplified</div></div></details></div></article></details><details id="tkRadDist-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkRadDist-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadDist-6-2-1">cannot be simplified</div></div></details></div></article><article class="exercise exercise-like" id="tkRadDist-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.21</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRadDist-7-1-1">Simplify if possible:  <span class="process-math">\(~\sqrt{7^2+w^2}\)</span>
+</h5>
+<div class="para" id="tkRadDist-7-1-1">Simplify if possible:  <span class="process-math">\(~\sqrt{7^2+w^2}\)</span>
 </div>
-<div class="solutions"><details id="tkRadDist-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadDist-7-2-1"><span class="process-math">\(\sqrt{49+w^2}\)</span></div></div></details></div></article></details><details id="tkRadDist-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkRadDist-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadDist-7-2-1"><span class="process-math">\(\sqrt{49+w^2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkRadDist-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.22</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRadDist-8-1-1">Simplify if possible:  <span class="process-math">\(~\sqrt{7+w} \sqrt{7+w}\)</span>
+</h5>
+<div class="para" id="tkRadDist-8-1-1">Simplify if possible:  <span class="process-math">\(~\sqrt{7+w} \sqrt{7+w}\)</span>
 </div>
-<div class="solutions"><details id="tkRadDist-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadDist-8-2-1"><span class="process-math">\(7+w\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkCircEqn"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkRadDist-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadDist-8-2-1"><span class="process-math">\(7+w\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkCircEqn"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.2.2</span><span class="space"> </span><span class="title">Use the equation for a circle</span>
 </h4>
 <div class="para logical" id="tkCircEqn-2">
@@ -1635,7 +1669,11 @@ c \amp = \sqrt{100} = 10
 </h5>
 <div class="para" id="tkCircEqn-3-1-1">Does <span class="process-math">\((-1,5)\)</span> lie on the circle <span class="process-math">\(~(x-1)^2+(y-3)^2=8~\text{?}\)</span>
 </div>
-<div class="solutions"><details id="tkCircEqn-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkCircEqn-3-2-1">
+<div class="solution solution-like" id="tkCircEqn-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkCircEqn-3-2-1">
 <div class="para">We substitute <span class="process-math">\(x=\alert{-1},~ y=\alert{5}\)</span> into the equation for the circle.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1643,13 +1681,15 @@ c \amp = \sqrt{100} = 10
 \end{equation*}
 </div>
 <div class="para">The point <span class="process-math">\((-1,5)\)</span> satisfies the equation, so it does lie on the circle.</div>
-</div></div></details></div></article><details id="tkCircEqn-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkCircEqn-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.24</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkCircEqn-4-1-1">Find a point with <span class="process-math">\(y\)</span>-coordinate <span class="process-math">\(-2\)</span> that lies on the circle <span class="process-math">\((x-2)^2+(y+1)^2=9\text{.}\)</span>
+</h5>
+<div class="para" id="tkCircEqn-4-1-1">Find a point with <span class="process-math">\(y\)</span>-coordinate <span class="process-math">\(-2\)</span> that lies on the circle <span class="process-math">\((x-2)^2+(y+1)^2=9\text{.}\)</span>
 </div>
 <div class="solutions"><details id="tkCircEqn-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCircEqn-4-2-1">
 <span class="process-math">\((2+\sqrt{8}, -2)\)</span> and <span class="process-math">\((2-\sqrt{8}, -2)\)</span>
-</div></div></details></div></article></details></section><section class="subsubsection" id="tkCompSq"><h4 class="heading hide-type">
+</div></div></details></div></article></section><section class="subsubsection" id="tkCompSq"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.2.3</span><span class="space"> </span><span class="title">Complete the square</span>
 </h4>
 <div class="para" id="tkCompSq-2">To find the center and radius of a circle, we may need to complete the square.</div>
@@ -1658,7 +1698,11 @@ c \amp = \sqrt{100} = 10
 </h5>
 <div class="para" id="tkCompSq-3-1-1">Write an equivalent equation in which the left side is a perfect square: <span class="process-math">\(~x^2-6x=2\)</span>
 </div>
-<div class="solutions"><details id="tkCompSq-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkCompSq-3-2-1">
+<div class="solution solution-like" id="tkCompSq-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkCompSq-3-2-1">
 <div class="para">We want to find a constant <span class="process-math">\(p^2\)</span> so that <span class="process-math">\(x^2\blert{-6x}+p^2\)</span> is a perfect square, namely <span class="process-math">\((x+p)^2\text{.}\)</span>  Now, <span class="process-math">\(~(x+p)^2 = x^2\blert{+2px}+p^2~\text{,}\)</span> so <span class="process-math">\(2p=-6\text{,}\)</span> and <span class="process-math">\(p=-3\text{.}\)</span>  Thus, we add <span class="process-math">\(p^2=\alert{9}\)</span> to both sides of the equation.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1671,12 +1715,17 @@ x^2-6x+\alert{9} = 2+\alert{9}
 (x-3)^2 = 11
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkCompSq-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkCompSq-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.26</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkCompSq-4-1-1">Write an equivalent equation in which the left side is a perfect square: <span class="process-math">\(~y^2+7y=5\)</span>
 </div>
-<div class="solutions"><details id="tkCompSq-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkCompSq-4-2-1">
+<div class="solution solution-like" id="tkCompSq-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkCompSq-4-2-1">
 <div class="para">For this equation, <span class="process-math">\(2p=7\)</span> so <span class="process-math">\(p = \dfrac{7}{2}\text{.}\)</span>  We add <span class="process-math">\(p^2=\left(\dfrac{7}{2}\right)^2=\alert{\dfrac{49}{4}}\)</span> to both sides of the equation.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1689,15 +1738,18 @@ y^2+7y+\alert{\dfrac{49}{4}}=5+\alert{\dfrac{49}{4}}
 \left(x+\dfrac{7}{2}\right)^2=\dfrac{69}{4}~~~~~~~~~~~~\blert{5+\dfrac{49}{4}=\dfrac{20}{4}+\dfrac{49}{4}=\dfrac{69}{4}}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkCompSq-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkCompSq-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.27</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkCompSq-5-1-1">Write an equivalent equation in which the left side is a perfect square: <span class="process-math">\(~x^2+12x=-6\)</span>
+</h5>
+<div class="para" id="tkCompSq-5-1-1">Write an equivalent equation in which the left side is a perfect square: <span class="process-math">\(~x^2+12x=-6\)</span>
 </div>
-<div class="solutions"><details id="tkCompSq-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCompSq-5-2-1"><span class="process-math">\((x+6)^2=30\)</span></div></div></details></div></article></details><details id="tkCompSq-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkCompSq-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCompSq-5-2-1"><span class="process-math">\((x+6)^2=30\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkCompSq-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.28</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkCompSq-6-1-1">Write an equivalent equation in which the left side is a perfect square: <span class="process-math">\(~y^2-5y=3\)</span>
+</h5>
+<div class="para" id="tkCompSq-6-1-1">Write an equivalent equation in which the left side is a perfect square: <span class="process-math">\(~y^2-5y=3\)</span>
 </div>
-<div class="solutions"><details id="tkCompSq-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCompSq-6-2-1"><span class="process-math">\(\left(y-\dfrac{5}{2}\right)^2=\dfrac{37}{4}\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkConicSectionsEllipses"><h3 class="heading hide-type">
+<div class="solutions"><details id="tkCompSq-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCompSq-6-2-1"><span class="process-math">\(\left(y-\dfrac{5}{2}\right)^2=\dfrac{37}{4}\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkConicSectionsEllipses"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.9.3</span><span class="space"> </span><span class="title">Conic Sections: Ellipses</span>
 </h3>
 <section class="subsubsection" id="tkFindPts"><h4 class="heading hide-type">
@@ -1708,7 +1760,11 @@ y^2+7y+\alert{\dfrac{49}{4}}=5+\alert{\dfrac{49}{4}}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.29</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFindPts-3-1-1">Find all points on the graph of <span class="process-math">\(x^2+y^2 = 12\)</span> with <span class="process-math">\(x\)</span>-coordinate 2.</div>
-<div class="solutions"><details id="tkFindPts-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFindPts-3-2-1">
+<div class="solution solution-like" id="tkFindPts-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFindPts-3-2-1">
 <div class="para">We substitute <span class="process-math">\(x=2\)</span> into the equation to obtain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1717,17 +1773,21 @@ y^2+7y+\alert{\dfrac{49}{4}}=5+\alert{\dfrac{49}{4}}
 </div>
 <div class="para">and simplify to <span class="process-math">\(y^2=8\text{.}\)</span> Solving for <span class="process-math">\(y\text{,}\)</span> we find <span class="process-math">\(y=\pm \sqrt{8} = \pm 2\sqrt{2}\text{.}\)</span> Thus, the points on the graph of <span class="process-math">\(x^2+y^2 = 12\)</span> with <span class="process-math">\(x\)</span>-coordinate 2 are <span class="process-math">\((2, 2\sqrt{2})\)</span>  and <span class="process-math">\((2, -2\sqrt{2})\text{.}\)</span>
 </div>
-</div></div></details></div></article><details id="tkFindPts-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.30</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFindPts-4-1-1">Find all points on the graph of <span class="process-math">\(y=2x^2-4x+3\)</span> with <span class="process-math">\(y\)</span>-coordinate 3.</div>
-<div class="solutions"><details id="tkFindPts-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFindPts-4-2-1"><span class="process-math">\((0,3),~(2,3)\)</span></div></div></details></div></article></details><details id="tkFindPts-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.31</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFindPts-5-1-1">Find all points on the graph of <span class="process-math">\((x-4)^2+(y+1)^2=25\)</span> with <span class="process-math">\(y\)</span>-coordinate 3.</div>
-<div class="solutions"><details id="tkFindPts-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFindPts-5-2-1"><span class="process-math">\((1,3)~(7,3)\)</span></div></div></details></div></article></details><details id="tkFindPts-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.32</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFindPts-6-1-1">Find all points on the graph of <span class="process-math">\(\dfrac{(x-2)^2}{16}+\dfrac{(y+1)^2}{9} = 1\)</span> with <span class="process-math">\(x\)</span>-coordinate <span class="process-math">\(-1\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkFindPts-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFindPts-6-2-1"><span class="process-math">\(\left(-1,-1+\dfrac{3\sqrt{7}}{4}\right),~\left(-1,-1-\dfrac{3\sqrt{7}}{4}\right)\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkConCompSq"><h4 class="heading hide-type">
+</div></article><article class="exercise exercise-like" id="tkFindPts-4"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.30</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkFindPts-4-1-1">Find all points on the graph of <span class="process-math">\(y=2x^2-4x+3\)</span> with <span class="process-math">\(y\)</span>-coordinate 3.</div>
+<div class="solutions"><details id="tkFindPts-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFindPts-4-2-1"><span class="process-math">\((0,3),~(2,3)\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFindPts-5"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.31</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkFindPts-5-1-1">Find all points on the graph of <span class="process-math">\((x-4)^2+(y+1)^2=25\)</span> with <span class="process-math">\(y\)</span>-coordinate 3.</div>
+<div class="solutions"><details id="tkFindPts-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFindPts-5-2-1"><span class="process-math">\((1,3)~(7,3)\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFindPts-6"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.32</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkFindPts-6-1-1">Find all points on the graph of <span class="process-math">\(\dfrac{(x-2)^2}{16}+\dfrac{(y+1)^2}{9} = 1\)</span> with <span class="process-math">\(x\)</span>-coordinate <span class="process-math">\(-1\text{.}\)</span>
+</div>
+<div class="solutions"><details id="tkFindPts-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFindPts-6-2-1"><span class="process-math">\(\left(-1,-1+\dfrac{3\sqrt{7}}{4}\right),~\left(-1,-1-\dfrac{3\sqrt{7}}{4}\right)\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkConCompSq"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.3.2</span><span class="space"> </span><span class="title">Complete the square</span>
 </h4>
 <div class="para" id="tkConCompSq-2">To graph a conic subsection, we complete the square in each variable to put the equation in standard form.</div>
@@ -1735,7 +1795,11 @@ y^2+7y+\alert{\dfrac{49}{4}}=5+\alert{\dfrac{49}{4}}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.33</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkConCompSq-3-1-1">Solve  <span class="process-math">\(~2x^2+3 = 8x~\)</span> by completing the square.</div>
-<div class="solutions"><details id="tkConCompSq-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkConCompSq-3-2-1">
+<div class="solution solution-like" id="tkConCompSq-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkConCompSq-3-2-1">
 <div class="para">We begin by isolating the constant term on the right side of the equation.</div>
 <div class="displaymath process-math" id="tkConCompSq-3-2-1-1">
 \begin{align*}
@@ -1748,16 +1812,20 @@ x-2 \amp = \pm \sqrt{\dfrac{5}{2}}   \amp \amp \blert{\text{Sovle for}~x.}\\
 x \amp = 2 \pm  \sqrt{\dfrac{5}{2}}
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkConCompSq-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkConCompSq-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.34</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkConCompSq-4-1-1">Solve  <span class="process-math">\(~x^2-7x=4~\)</span> by completing the square.</div>
-<div class="solutions"><details id="tkConCompSq-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkConCompSq-4-2-1"><span class="process-math">\(\dfrac{7 \pm \sqrt{65}}{2}\)</span></div></div></details></div></article></details><details id="tkConCompSq-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkConCompSq-4-1-1">Solve  <span class="process-math">\(~x^2-7x=4~\)</span> by completing the square.</div>
+<div class="solutions"><details id="tkConCompSq-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkConCompSq-4-2-1"><span class="process-math">\(\dfrac{7 \pm \sqrt{65}}{2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkConCompSq-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.35</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkConCompSq-5-1-1">Solve  <span class="process-math">\(~3x^2+6x-2=0~\)</span> by completing the square.</div>
-<div class="solutions"><details id="tkConCompSq-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkConCompSq-5-2-1"><span class="process-math">\(-1 \pm \sqrt{\dfrac{5}{3}}\)</span></div></div></details></div></article></details><details id="tkConCompSq-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkConCompSq-5-1-1">Solve  <span class="process-math">\(~3x^2+6x-2=0~\)</span> by completing the square.</div>
+<div class="solutions"><details id="tkConCompSq-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkConCompSq-5-2-1"><span class="process-math">\(-1 \pm \sqrt{\dfrac{5}{3}}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkConCompSq-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.36</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkConCompSq-6-1-1">Solve  <span class="process-math">\(~2x^2-8=3x~\)</span> by completing the square.</div>
-<div class="solutions"><details id="tkConCompSq-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkConCompSq-6-2-1"><span class="process-math">\(\dfrac{3 \pm \sqrt{73}}{4}\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkConicSectionsHyperbolas"><h3 class="heading hide-type">
+</h5>
+<div class="para" id="tkConCompSq-6-1-1">Solve  <span class="process-math">\(~2x^2-8=3x~\)</span> by completing the square.</div>
+<div class="solutions"><details id="tkConCompSq-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkConCompSq-6-2-1"><span class="process-math">\(\dfrac{3 \pm \sqrt{73}}{4}\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkConicSectionsHyperbolas"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.9.4</span><span class="space"> </span><span class="title">Conic Sections: Hyperbolas</span>
 </h3>
 <section class="subsubsection" id="tkQuadStdForm"><h4 class="heading hide-type">
@@ -1769,7 +1837,10 @@ x \amp = 2 \pm  \sqrt{\dfrac{5}{2}}
 </h5>
 <div class="para" id="tkQuadStdForm-3-1-1">Write the equation <span class="process-math">\(~4x^2-3y^2=1~\)</span> in the form <span class="process-math">\(~\dfrac{x^2}{A}-\dfrac{y^2}{B} = 1\)</span>
 </div>
-<div class="solutions"><details id="tkQuadStdForm-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkQuadStdForm-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkQuadStdForm-3-2-1">Recall that dividing by a fraction is equivalent to multiplying by its reciprocal. For instance, <span class="process-math">\(~\dfrac{x^2}{\dfrac{1}{2}} = 2x~\text{,}\)</span> and <span class="process-math">\(~\dfrac{a}{\dfrac{3}{4}} = \dfrac{4}{3}a~\)</span>
 </div>
 <div class="para logical" id="tkQuadStdForm-3-2-2">
@@ -1782,21 +1853,25 @@ x \amp = 2 \pm  \sqrt{\dfrac{5}{2}}
 <div class="para">So we can write the equation as  <span class="process-math">\(~\dfrac{x^2}{\dfrac{1}{4}} - \dfrac{y^2}{\dfrac{1}{3}} = 1\text{.}\)</span>
 </div>
 </div>
-</div></details></div></article><div class="para" id="tkQuadStdForm-4">Write each equation in the form  <span class="process-math">\(~\dfrac{(x-h)^2}{a^2} - \dfrac{(y-k)^2}{b^2} = 1\)</span>
+</div></article><div class="para" id="tkQuadStdForm-4">Write each equation in the form  <span class="process-math">\(~\dfrac{(x-h)^2}{a^2} - \dfrac{(y-k)^2}{b^2} = 1\)</span>
 </div>
-<details id="tkQuadStdForm-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<article class="exercise exercise-like" id="tkQuadStdForm-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.38</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkQuadStdForm-5-1-1"><span class="process-math">\(\dfrac{4}{9}(x-2)^2 - \dfrac{1}{5}(y+2)^2 = 1\)</span></div>
-<div class="solutions"><details id="tkQuadStdForm-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-5-2-1"><span class="process-math">\(\dfrac{(x-2)^2}{\dfrac{9}{4}} - \dfrac{(y+2)^2}{5} = 1\)</span></div></div></details></div></article></details><details id="tkQuadStdForm-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkQuadStdForm-5-1-1"><span class="process-math">\(\dfrac{4}{9}(x-2)^2 - \dfrac{1}{5}(y+2)^2 = 1\)</span></div>
+<div class="solutions"><details id="tkQuadStdForm-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-5-2-1"><span class="process-math">\(\dfrac{(x-2)^2}{\dfrac{9}{4}} - \dfrac{(y+2)^2}{5} = 1\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkQuadStdForm-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.39</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkQuadStdForm-6-1-1"><span class="process-math">\((x+3)^2 - \dfrac{1}{5}(y+2)^2 = 1\)</span></div>
-<div class="solutions"><details id="tkQuadStdForm-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-6-2-1"><span class="process-math">\(\dfrac{(x+3)^2}{3} - \dfrac{(y-2)^2}{\dfrac{3}{4}} = 1\)</span></div></div></details></div></article></details><details id="tkQuadStdForm-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkQuadStdForm-6-1-1"><span class="process-math">\((x+3)^2 - \dfrac{1}{5}(y+2)^2 = 1\)</span></div>
+<div class="solutions"><details id="tkQuadStdForm-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-6-2-1"><span class="process-math">\(\dfrac{(x+3)^2}{3} - \dfrac{(y-2)^2}{\dfrac{3}{4}} = 1\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkQuadStdForm-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.40</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkQuadStdForm-7-1-1"><span class="process-math">\(2x^2 - (y-1)^2 = \dfrac{8}{9}\)</span></div>
-<div class="solutions"><details id="tkQuadStdForm-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-7-2-1"><span class="process-math">\(\dfrac{(x^2}{\dfrac{4}{9}} - \dfrac{(y-1)^2}{\dfrac{5}{9}} = 1\)</span></div></div></details></div></article></details><details id="tkQuadStdForm-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkQuadStdForm-7-1-1"><span class="process-math">\(2x^2 - (y-1)^2 = \dfrac{8}{9}\)</span></div>
+<div class="solutions"><details id="tkQuadStdForm-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-7-2-1"><span class="process-math">\(\dfrac{(x^2}{\dfrac{4}{9}} - \dfrac{(y-1)^2}{\dfrac{5}{9}} = 1\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkQuadStdForm-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.41</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkQuadStdForm-8-1-1"><span class="process-math">\(\dfrac{2}{3}(x-5)^2 - \dfrac{5}{3}(y-6)^2 = \dfrac{6}{5}\)</span></div>
-<div class="solutions"><details id="tkQuadStdForm-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-8-2-1"><span class="process-math">\(\dfrac{((x-5)^2}{\dfrac{9}{5}} - \dfrac{(y-6)^2}{\dfrac{18}{25}} = 1\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkFindAsy"><h4 class="heading hide-type">
+</h5>
+<div class="para" id="tkQuadStdForm-8-1-1"><span class="process-math">\(\dfrac{2}{3}(x-5)^2 - \dfrac{5}{3}(y-6)^2 = \dfrac{6}{5}\)</span></div>
+<div class="solutions"><details id="tkQuadStdForm-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkQuadStdForm-8-2-1"><span class="process-math">\(\dfrac{((x-5)^2}{\dfrac{9}{5}} - \dfrac{(y-6)^2}{\dfrac{18}{25}} = 1\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkFindAsy"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.4.2</span><span class="space"> </span><span class="title">Find an asymptote</span>
 </h4>
 <article class="example example-like" id="tkFindAsy-2"><h5 class="heading">
@@ -1809,7 +1884,10 @@ x \amp = 2 \pm  \sqrt{\dfrac{5}{2}}
 <li id="tkFindAsy-2-1-1-3-2"><div class="para" id="p-derived-tkFindAsy-2-1-1-3-2">Find equations for the diagonals of the rectangle.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkFindAsy-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkFindAsy-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
 <div class="sbspanel middle" style="width:61.5384615384615%;"><div class="para logical" id="tkFindAsy-2-2-1-1"><ol class="lower-alpha ol-marker-2" id="tkFindAsy-2-2-1-1-1">
 <li id="tkFindAsy-2-2-1-1-1-1"><div class="para" id="p-derived-tkFindAsy-2-2-1-1-1-1">The easiest way find the diagonals of the rectangle is to sketch it first. From the sketch at right, we can see that the center of the rectangle is <span class="process-math">\((5,3)\text{,}\)</span> and the two upper vertices are <span class="process-math">\((1,10)\)</span> and <span class="process-math">\((9,10)\text{.}\)</span>
@@ -1837,26 +1915,28 @@ y \amp = \dfrac{7}{4}x - \dfrac{23}{4}
 <div class="para">Similarly, you can check that the diagonal that passes through <span class="process-math">\((1,10)\)</span> has slope <span class="process-math">\(\dfrac{-7}{4}\text{,}\)</span> and its equation is  <span class="process-math">\(y = \dfrac{-7}{4}x + \dfrac{47}{4}\)</span>
 </div>
 </div>
-</div></details></div></article><div class="para logical" id="tkFindAsy-3">
+</div></article><div class="para logical" id="tkFindAsy-3">
 <div class="para">The four points given are the midpoints of the four sides of a rectangle.</div>
 <ol class="lower-alpha ol-marker-2" id="tkFindAsy-3-1">
 <li id="tkFindAsy-3-1-1"><div class="para" id="p-derived-tkFindAsy-3-1-1">Sketch the rectangle.</div></li>
 <li id="tkFindAsy-3-1-2"><div class="para" id="p-derived-tkFindAsy-3-1-2">Find equations for the diagonals of the rectangle.</div></li>
 </ol>
 </div>
-<details id="tkFindAsy-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<article class="exercise exercise-like" id="tkFindAsy-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.43</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFindAsy-4-1-1"><span class="process-math">\((-7,-1),~(1,-1),~(-3,-4),~(-3,2)\)</span></div>
+</h5>
+<div class="para" id="tkFindAsy-4-1-1"><span class="process-math">\((-7,-1),~(1,-1),~(-3,-4),~(-3,2)\)</span></div>
 <div class="solutions"><details id="tkFindAsy-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkFindAsy-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindAsy-4-2-1-1">
 <li id="tkFindAsy-4-2-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:52.6315789473684%;"><img src="generated/latex-image/fig-rectangle2.svg" role="img" class="contained" alt="rectangle and diagoals"></div></div></div></li>
 <li id="tkFindAsy-4-2-1-1-2"><div class="para" id="p-derived-tkFindAsy-4-2-1-1-2"><span class="process-math">\(\displaystyle y=\dfrac{3}{4}x+\dfrac{5}{4};~y=\dfrac{-3}{4}x-\dfrac{13}{4}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkFindAsy-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkFindAsy-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.44</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFindAsy-5-1-1"><span class="process-math">\((5,-8),~(9,-8),~(7,-15),~(7,-1)\)</span></div>
+</h5>
+<div class="para" id="tkFindAsy-5-1-1"><span class="process-math">\((5,-8),~(9,-8),~(7,-15),~(7,-1)\)</span></div>
 <div class="solutions"><details id="tkFindAsy-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkFindAsy-5-2-1"><ol class="decimal" id="tkFindAsy-5-2-1-1">
 <li id="tkFindAsy-5-2-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:5%;"><div class="sbspanel top" style="width:52.6315789473684%;"><img src="generated/latex-image/fig-rectangle3.svg" role="img" class="contained" alt="rectangle and diagoals"></div></div></div></li>
 <li id="tkFindAsy-5-2-1-1-2"><div class="para" id="p-derived-tkFindAsy-5-2-1-1-2"><span class="process-math">\(\displaystyle y=\dfrac{7}{2}x-\dfrac{65}{2};~y=\dfrac{-7}{2}x+\dfrac{61}{2}\)</span></div></li>
-</ol></div></div></details></div></article></details></section></section><section class="subsection" id="tkNonlinearSystems"><h3 class="heading hide-type">
+</ol></div></div></details></div></article></section></section><section class="subsection" id="tkNonlinearSystems"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.9.5</span><span class="space"> </span><span class="title">Nonlinear Systems</span>
 </h3>
 <section class="subsubsection" id="tkNonLinSys"><h4 class="heading hide-type">
@@ -1867,7 +1947,11 @@ y \amp = \dfrac{7}{4}x - \dfrac{23}{4}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.45</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkNonLinSys-3-1-1">The area of a rectangle is 874 square millimeters, and its perimeter is 122 millimeters.   Write a system of equations for the dimensions of the rectangle.</div>
-<div class="solutions"><details id="tkNonLinSys-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkNonLinSys-3-2-1">
+<div class="solution solution-like" id="tkNonLinSys-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkNonLinSys-3-2-1">
 <div class="para">We use the formulas for area and perimeter, where <span class="process-math">\(w\)</span> stands for the width of the rectangle, and <span class="process-math">\(l\)</span> stands for its length.</div>
 <div class="displaymath process-math" id="tkNonLinSys-3-2-1-3">
 \begin{align*}
@@ -1875,11 +1959,16 @@ lw \amp = 874\\
 2l+2w \amp = 122
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkNonLinSys-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkNonLinSys-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.46</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkNonLinSys-4-1-1">A small plane flies at a constant speed. In 5 hours, it travels 750 miles with a tailwind, but it travels only 600 miles in 5 hours against the wind. Write a system of equations for the speed of the plane and the speed of the wind.</div>
-<div class="solutions"><details id="tkNonLinSys-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkNonLinSys-4-2-1">
+<div class="solution solution-like" id="tkNonLinSys-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkNonLinSys-4-2-1">
 <div class="para">We let <span class="process-math">\(v\)</span> stand for the speed of the plane, and <span class="process-math">\(w\)</span> stand for the speed of the wind. We use the formula <span class="process-math">\(RT=D\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="tkNonLinSys-4-2-1-4">
@@ -1888,40 +1977,45 @@ lw \amp = 874\\
 (v-w)5 \amp = 600
 \end{align*}
 </div>
-</div></div></details></div></article><div class="para" id="tkNonLinSys-5">Write a system of equations for the problem.</div>
-<details id="tkNonLinSys-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><div class="para" id="tkNonLinSys-5">Write a system of equations for the problem.</div>
+<article class="exercise exercise-like" id="tkNonLinSys-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.47</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkNonLinSys-6-1-1">Darryl plans to mix some 50% solution with some 75% solution to make 20 liters of 60% solution. How much of each should he use?</div>
+</h5>
+<div class="para" id="tkNonLinSys-6-1-1">Darryl plans to mix some 50% solution with some 75% solution to make 20 liters of 60% solution. How much of each should he use?</div>
 <div class="solutions"><details id="tkNonLinSys-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkNonLinSys-6-2-1"><div class="displaymath process-math" id="tkNonLinSys-6-2-1-1">
 \begin{gather*}
 x+y=20\\
 0.5x+0.75y=12
 \end{gather*}
-</div></div></div></details></div></article></details><details id="tkNonLinSys-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></div></details></div></article><article class="exercise exercise-like" id="tkNonLinSys-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.48</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkNonLinSys-7-1-1">The perimeter of a rectangle is 38 inches.  If we triple the width and decrease the length by 8 inches, we increase the area of the rectangle by 40%.  What are the dimensions of the original rectangle?</div>
+</h5>
+<div class="para" id="tkNonLinSys-7-1-1">The perimeter of a rectangle is 38 inches.  If we triple the width and decrease the length by 8 inches, we increase the area of the rectangle by 40%.  What are the dimensions of the original rectangle?</div>
 <div class="solutions"><details id="tkNonLinSys-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkNonLinSys-7-2-1"><div class="displaymath process-math" id="tkNonLinSys-7-2-1-1">
 \begin{gather*}
 2l+2w=38\\
 3w(l-8)=1.4lw
 \end{gather*}
-</div></div></div></details></div></article></details><details id="tkNonLinSys-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></div></details></div></article><article class="exercise exercise-like" id="tkNonLinSys-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.49</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkNonLinSys-8-1-1">The express train travels 15 miles per hour faster than the local.  The local takes 10 minutes longer to travel 30 miles than the express takes.  Find the speed of each.</div>
+</h5>
+<div class="para" id="tkNonLinSys-8-1-1">The express train travels 15 miles per hour faster than the local.  The local takes 10 minutes longer to travel 30 miles than the express takes.  Find the speed of each.</div>
 <div class="solutions"><details id="tkNonLinSys-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkNonLinSys-8-2-1"><div class="displaymath process-math" id="tkNonLinSys-8-2-1-1">
 \begin{gather*}
 v=15+l\\
 \dfrac{30}{l} = \dfrac{30}{v}+\dfrac{1}{6}
 \end{gather*}
-</div></div></div></details></div></article></details><details id="tkNonLinSys-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></div></details></div></article><article class="exercise exercise-like" id="tkNonLinSys-9"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.50</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkNonLinSys-9-1-1">Delbert made $65 interest on his money market account this year.  Francine invested $100 less than Delbert at 0.5% higher interest rate and earned $66.  How much did Delbert invest, and at what interest rate?</div>
+</h5>
+<div class="para" id="tkNonLinSys-9-1-1">Delbert made $65 interest on his money market account this year.  Francine invested $100 less than Delbert at 0.5% higher interest rate and earned $66.  How much did Delbert invest, and at what interest rate?</div>
 <div class="solutions"><details id="tkNonLinSys-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkNonLinSys-9-2-1"><div class="displaymath process-math" id="tkNonLinSys-9-2-1-1">
 \begin{gather*}
 Pr=65\\
 (P-100)(r+0.005) = 66
 \end{gather*}
-</div></div></div></details></div></article></details></section><section class="subsubsection" id="tkSubst"><h4 class="heading hide-type">
+</div></div></div></details></div></article></section><section class="subsubsection" id="tkSubst"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.5.2</span><span class="space"> </span><span class="title">Use substitution</span>
 </h4>
 <div class="para" id="tkSubst-2">We can use substitution to solve some systems of equations.</div>
@@ -1937,7 +2031,11 @@ x+2y \amp = 12
 \end{align*}
 </div>
 </div>
-<div class="solutions"><details id="tkSubst-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSubst-3-2-1">
+<div class="solution solution-like" id="tkSubst-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSubst-3-2-1">
 <div class="para">We solve the second equation for <span class="process-math">\(x\)</span> to get <span class="process-math">\(x = \alert{12-2y}\text{,}\)</span> and then substitute this expression into the first equation.</div>
 <div class="displaymath process-math" id="tkSubst-3-2-1-3">
 \begin{align*}
@@ -1946,40 +2044,45 @@ x+2y \amp = 12
 5y^2-30y+25 \amp = 0
 \end{align*}
 </div>
-</div></div></details></div></article><div class="para" id="tkSubst-4">Use substitution to write an equation in one variable.</div>
-<details id="tkSubst-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><div class="para" id="tkSubst-4">Use substitution to write an equation in one variable.</div>
+<article class="exercise exercise-like" id="tkSubst-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.52</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSubst-5-1-1"><div class="displaymath process-math" id="tkSubst-5-1-1-1">
+</h5>
+<div class="para logical" id="tkSubst-5-1-1"><div class="displaymath process-math" id="tkSubst-5-1-1-1">
 \begin{align*}
 x^2-2x+y^2+4y \amp = 20\\
 y-x \amp = 4
 \end{align*}
 </div></div>
-<div class="solutions"><details id="tkSubst-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-5-2-1"><span class="process-math">\(2x^2+10x+12=0\)</span></div></div></details></div></article></details><details id="tkSubst-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSubst-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-5-2-1"><span class="process-math">\(2x^2+10x+12=0\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSubst-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.53</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSubst-6-1-1"><div class="displaymath process-math" id="tkSubst-6-1-1-1">
+</h5>
+<div class="para logical" id="tkSubst-6-1-1"><div class="displaymath process-math" id="tkSubst-6-1-1-1">
 \begin{align*}
 x^2-y^2 \amp = 16\\
 xy \amp = 6
 \end{align*}
 </div></div>
-<div class="solutions"><details id="tkSubst-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-6-2-1"><span class="process-math">\(x^4-16x^2-36=0\)</span></div></div></details></div></article></details><details id="tkSubst-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSubst-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-6-2-1"><span class="process-math">\(x^4-16x^2-36=0\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSubst-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.54</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSubst-7-1-1"><div class="displaymath process-math" id="tkSubst-7-1-1-1">
+</h5>
+<div class="para logical" id="tkSubst-7-1-1"><div class="displaymath process-math" id="tkSubst-7-1-1-1">
 \begin{align*}
 x^2-12x+y^2+2 \amp = 0\\
 y \amp = 4x-7
 \end{align*}
 </div></div>
-<div class="solutions"><details id="tkSubst-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-7-2-1"><span class="process-math">\(17x^2-68x+51=0\)</span></div></div></details></div></article></details><details id="tkSubst-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSubst-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-7-2-1"><span class="process-math">\(17x^2-68x+51=0\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSubst-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.55</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSubst-8-1-1"><div class="displaymath process-math" id="tkSubst-8-1-1-1">
+</h5>
+<div class="para logical" id="tkSubst-8-1-1"><div class="displaymath process-math" id="tkSubst-8-1-1-1">
 \begin{align*}
 x^2-4x+y^2+2y \amp = 5\\
 x+2y \amp = -5
 \end{align*}
 </div></div>
-<div class="solutions"><details id="tkSubst-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-8-2-1"><span class="process-math">\(5y^2+30y+40=0\)</span></div></div></details></div></article></details><article class="example example-like" id="tkSubst-9"><h5 class="heading">
+<div class="solutions"><details id="tkSubst-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-8-2-1"><span class="process-math">\(5y^2+30y+40=0\)</span></div></div></details></div></article><article class="example example-like" id="tkSubst-9"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.56</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkSubst-9-1-1">
@@ -1991,7 +2094,10 @@ xy \amp = 2
 \end{align*}
 </div>
 </div>
-<div class="solutions"><details id="tkSubst-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkSubst-9-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para logical" id="tkSubst-9-2-1">
 <div class="para">We will use substitution to solve the system. First we solve the "easier" of the two equations (the second equation) for <span class="process-math">\(y\)</span> to obtain</div>
 <div class="displaymath process-math">
@@ -2032,9 +2138,10 @@ x=1,~~ x=-1, ~~ x=2, ~~ \text{or} ~~ x=-2
 <div class="para">Finally, we substitute each of these values into <span class="process-math">\(y=\dfrac{2}{x}\)</span> to find the  <span class="process-math">\(y\)</span>-components of each solution. The intersubsection points of the two graphs are <span class="process-math">\((1,2),~ (-1,-2), ~ (2,1)\)</span> and <span class="process-math">\((-2,-1)\text{.}\)</span> The graph of the system is shown below.</div>
 </div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-10-5-exm1ans.png" class="contained" alt="conics"></div>
-</div></details></div></article><details id="tkSubst-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkSubst-10"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.57</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSubst-10-1-1">
+</h5>
+<div class="para logical" id="tkSubst-10-1-1">
 <div class="para">Find the intersection points of the graphs of</div>
 <div class="displaymath process-math" id="tkSubst-10-1-1-1">
 \begin{align*}
@@ -2043,7 +2150,7 @@ xy \amp = 6
 \end{align*}
 </div>
 </div>
-<div class="solutions"><details id="tkSubst-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-10-2-1"><span class="process-math">\((6,1),~ (-6,-1)\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkElim"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkSubst-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSubst-10-2-1"><span class="process-math">\((6,1),~ (-6,-1)\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkElim"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.9.5.3</span><span class="space"> </span><span class="title">Use elimination</span>
 </h4>
 <article class="example example-like" id="tkElim-2"><h5 class="heading">
@@ -2059,7 +2166,10 @@ x^2-2y^2\amp = 1\\
 </div>
 <div class="para">Verify the solutions on a graph.</div>
 </div>
-<div class="solutions"><details id="tkElim-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkElim-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para logical" id="tkElim-2-2-1">
 <div class="para">We multiply the first equation by 3 and the second by 60 to obtain the new system</div>
 <div class="displaymath process-math" id="tkElim-2-2-1-1">
@@ -2090,9 +2200,10 @@ y \amp = \pm\sqrt{10(1-\dfrac{x^2}{15}}
 <div class="para">We enter these equations to obtain the graph shown below. The solutions of the system are the intersubsection points of the graphs.</div>
 </div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-10-5-exm2ans.png" class="contained" alt="conics"></div>
-</div></details></div></article><details id="tkElim-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkElim-3"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.59</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkElim-3-1-1">
+</h5>
+<div class="para logical" id="tkElim-3-1-1">
 <div class="para">Find the intersection points of the graphs of</div>
 <div class="displaymath process-math" id="tkElim-3-1-1-1">
 \begin{align*}
@@ -2101,7 +2212,7 @@ x^2 + y^2 \amp = 13
 \end{align*}
 </div>
 </div>
-<div class="solutions"><details id="tkElim-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkElim-3-2-1"><span class="process-math">\((2,3),~ (-2,3),~ (2,-3),~ (-2,-3)\)</span></div></div></details></div></article></details><div class="para" id="tkElim-4">For some quadratic systems, we can use a combination of elimination of variables and substitution.</div>
+<div class="solutions"><details id="tkElim-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkElim-3-2-1"><span class="process-math">\((2,3),~ (-2,3),~ (2,-3),~ (-2,-3)\)</span></div></div></details></div></article><div class="para" id="tkElim-4">For some quadratic systems, we can use a combination of elimination of variables and substitution.</div>
 <article class="example example-like" id="tkElim-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.9.60</span><span class="period">.</span>
 </h5>
@@ -2114,7 +2225,10 @@ x^2 - 12x + y^2 + 10y \amp = -12
 \end{align*}
 </div>
 </div>
-<div class="solutions"><details id="tkElim-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkElim-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para logical" id="tkElim-5-2-1">
 <div class="para">We subtract the second equation from the first to obtain</div>
 <div class="displaymath process-math">
@@ -2141,9 +2255,10 @@ y^2+3y-10 \amp = 0\\
 <div class="para">Thus <span class="process-math">\(y=-5\)</span> or <span class="process-math">\(y=2\text{.}\)</span> From our first new equation we find that when <span class="process-math">\(y=-5,~ x=-1\text{,}\)</span> and when <span class="process-math">\(y=2,~ x=6\text{.}\)</span> Thus the two circles intersect at <span class="process-math">\((-1,-5)\)</span> and <span class="process-math">\((6,2)\text{,}\)</span> as shown below.</div>
 </div>
 <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/images/fig-10-5-exm3ans.png" class="contained" alt="conics"></div>
-</div></details></div></article><details id="tkElim-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkElim-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.9.61</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkElim-6-1-1">
+</h5>
+<div class="para logical" id="tkElim-6-1-1">
 <div class="para">Find the intersection points of the graphs of</div>
 <div class="displaymath process-math" id="tkElim-6-1-1-1">
 \begin{align*}
@@ -2152,7 +2267,7 @@ x^2 -12x + y^2 - 6y \amp = -25
 \end{align*}
 </div>
 </div>
-<div class="solutions"><details id="tkElim-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkElim-6-2-1"><span class="process-math">\((2,5),~ (10,1)\)</span></div></div></details></div></article></details></section></section></section></div>
+<div class="solutions"><details id="tkElim-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkElim-6-2-1"><span class="process-math">\((2,5),~ (10,1)\)</span></div></div></details></div></article></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="tkchap8.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="tkchap10.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

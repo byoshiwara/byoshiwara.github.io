@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="chap1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Graph-Equation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1378,22 +1358,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Mathematical Model.</span>
 </h4>
 <div class="para" id="LinMod-4-3-2">A <dfn class="terminology">mathematical model</dfn> is a simplified description of reality that uses mathematics to help us understand a system or process.</div></article><div class="para" id="LinMod-4-4">We can use a model to analyze data, identify trends, and predict the effects of change. The first step in creating a model is to describe relationships between the variables involved.</div>
-<details id="LinMod-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="LinMod-4-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-1" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="1" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskc3RlcDEgPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBTb2x2ZSB0aGUgZXF1YXRpb24uIiwKICAiQikgQW5hbHl6ZSBkYXRhLCBpZGVudGlmeSB0cmVuZHMsIGFuZCBwcmVkaWN0IHRoZSBlZmZlY3RzIG9mIGNoYW5nZS4iLAogICJDKSBEZXNjcmliZSB0aGUgcmVsYXRpb25zaGlwcyBiZXR3ZWVuIHRoZSB2YXJpYWJsZXMgaW52b2x2ZWQuIiwKICAiRCkgTWFrZSBhIHRhYmxlIG9mIHZhbHVlcy4iXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgZmlyc3Qgc3RlcCBpbiBjcmVhdGluZyBhIG1hdGhlbWF0aWNhbCBtb2RlbD8KCltfXXskc3RlcDF9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KRGVzY3JpYmUgdGhlIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB0aGUgdmFyaWFibGVzIGludm9sdmVkLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-1')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-1-1-1-1">What is the first step in creating a mathematical model?</div> <div class="para logical" id="extracted-webwork-1-1-1-2"><ul class="circle" id="extracted-webwork-1-1-1-2-1">
-<li id="extracted-webwork-1-1-1-2-1-1"><div class="para" id="extracted-webwork-1-1-1-2-1-1-1">A) Solve the equation.</div></li>
-<li id="extracted-webwork-1-1-1-2-1-2"><div class="para" id="extracted-webwork-1-1-1-2-1-2-1">B) Analyze data, identify trends, and predict the effects of change.</div></li>
-<li id="extracted-webwork-1-1-1-2-1-3"><div class="para" id="extracted-webwork-1-1-1-2-1-3-1">C) Describe the relationships between the variables involved.</div></li>
-<li id="extracted-webwork-1-1-1-2-1-4"><div class="para" id="extracted-webwork-1-1-1-2-1-4-1">D) Make a table of values.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-1-1-2-1"><span class="process-math">\(\text{C) Describe ... variables involved.}\)</span></div></div></details><details id="extracted-webwork-1-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-1-1-3-1">Describe the relationships between the variables involved.</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para logical" id="LinMod-4-6">
+</h4></article><div class="para logical" id="LinMod-4-6">
 <div class="para">Starting from a description in words, we can represent the relationship by:</div>
 <ul class="disc" id="LinMod-4-6-1">
 <li id="LinMod-4-6-1-1"><div class="para" id="LinMod-4-6-1-1-1">a table of values</div></li>
@@ -1410,22 +1377,9 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 </div>
 <div class="para" id="LinMod-4-8">Look back at the Investigation to see how each of these modeling tools featured in your work.</div>
-<details id="LinMod-4-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="LinMod-4-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskdGhyZWV3YXlzID0gUmFkaW9CdXR0b25zKAogIFsiQSkgQnkgaW5wdXRzLCBvdXRwdXRzLCBvciBldmFsdWF0aW9uIiwKICAiQikgQnkgdGFibGVzLCBlcXVhdGlvbnMsIG9yIGdyYXBocyIsCiAgIkMpIEJ5IHRoZSBpbnRlcmNlcHRzLCB0aGUgc2xvcGUsIG9yIHRoZSB2ZXJ0ZXgiLAogICJEKSBCeSBudW1iZXJzLCBsZXR0ZXJzLCBvciBkaWFncmFtcyJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApOYW1lIHRocmVlIHdheXMgdG8gcmVwcmVzZW50IGEgcmVsYXRpb25zaGlwIGJldHdlZW4gdmFyaWFibGVzLgoKW19deyR0aHJlZXdheXN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KQnkgdGFibGVzLCBlcXVhdGlvbnMsIG9yIGdyYXBocwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-2-1-1-1">Name three ways to represent a relationship between variables.</div> <div class="para logical" id="extracted-webwork-2-1-1-2"><ul class="circle" id="extracted-webwork-2-1-1-2-1">
-<li id="extracted-webwork-2-1-1-2-1-1"><div class="para" id="extracted-webwork-2-1-1-2-1-1-1">A) By inputs, outputs, or evaluation</div></li>
-<li id="extracted-webwork-2-1-1-2-1-2"><div class="para" id="extracted-webwork-2-1-1-2-1-2-1">B) By tables, equations, or graphs</div></li>
-<li id="extracted-webwork-2-1-1-2-1-3"><div class="para" id="extracted-webwork-2-1-1-2-1-3-1">C) By the intercepts, the slope, or the vertex</div></li>
-<li id="extracted-webwork-2-1-1-2-1-4"><div class="para" id="extracted-webwork-2-1-1-2-1-4-1">D) By numbers, letters, or diagrams</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-2-1"><span class="process-math">\(\text{B) By ... , or graphs}\)</span></div></div></details><details id="extracted-webwork-2-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-3-1">By tables, equations, or graphs</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="LinMod-4-10">In the examples that follow, observe the interplay among the three modeling tools and how each contributes to the model.</div>
+</h4></article><div class="para" id="LinMod-4-10">In the examples that follow, observe the interplay among the three modeling tools and how each contributes to the model.</div>
 <article class="example example-like" id="example-bicycle"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
 </h4>
@@ -1437,7 +1391,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="example-bicycle-1-3-1-3"><div class="para" id="example-bicycle-1-3-1-3-1">Write an equation for <span class="process-math">\(C\)</span> in terms of <span class="process-math">\(t\text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="example-bicycle-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-bicycle-2-1"><ol class="lower-alpha ol-marker-2" id="example-bicycle-2-1-1">
+<div class="solution solution-like" id="example-bicycle-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-bicycle-2-1"><ol class="lower-alpha ol-marker-2" id="example-bicycle-2-1-1">
 <li id="example-bicycle-2-1-1-1">
 <div class="para logical" id="example-bicycle-2-1-1-1-1">
 <div class="para">There is an initial fee of $5, and a rental fee of $3 per hour. To find the cost, we multiply the rental time by $3 per hour, and add the result to the $5 subscription fee. For example, the cost of a one-hour bike ride is</div>
@@ -1499,26 +1457,11 @@ C\amp=5+3\cdot t
 \end{align*}
 </div></div>
 </li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="LinMod-4-12"><div class="para" id="LinMod-4-12-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on plotting points, see <a href="tkchap1.html#tkPlotPoints" class="internal" title="Subsubsection A.1.1.2: Plot points and graph a line">Section 1.1.2</a> of the Toolkit.</div></aside><details id="LinMod-4-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="LinMod-4-12"><div class="para" id="LinMod-4-12-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on plotting points, see <a href="tkchap1.html#tkPlotPoints" class="internal" title="Subsubsection A.1.1.2: Plot points and graph a line">Section 1.1.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="LinMod-4-13"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-3" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="3" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskc3Vic2NyaXB0aW9uPUNvbXB1dGUoIjciKTsKJHJhdGUgPSBDb21wdXRlKCIyLjUwIik7CgpCRUdJTl9QR01MCldyaXRlIGFuIGVxdWF0aW9uIGZvciB0aGUgY29zdCBbYENgXSBvZiByZW50aW5nIGEgYmljeWNsZSBmb3IgW2B0YF0gaG91cnMgaWYgdGhlIHN1YnNjcmlwdGlvbiBmZWUgaXMgJDcgYW5kIHRoZSByZW50YWwgZmVlIGlzICQyLjUwIHBlciBob3VyLgoKCgpbYGBgXGJlZ2lue2dhdGhlcmVkfQpcdGV4dHtDb3N0fSA9IChcdGV4dHtzdWJzY3JpcHRpb24gZmVlfSkrKFx0ZXh0e2hvdXJseSByYXRlfSlcY2RvdChcdGV4dHtudW1iZXIgb2YgaG91cnN9KSAKXGVuZHtnYXRoZXJlZH0KYGBgXQoKCgpbYEM9e30gYF1bX117JHN1YnNjcmlwdGlvbn17Mn1bYHt9ICsge31gXSBbX117JHJhdGV9ezN9IFtgXGNkb3QgfiB0YF0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkZpbGwgaW4gdGhlIGNvcnJlY3QgbnVtYmVycy4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgQz03KzIuNTB0IGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-3')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-3-1-1-1">Write an equation for the cost <span class="process-math">\(C\)</span> of renting a bicycle for <span class="process-math">\(t\)</span> hours if the subscription fee is $7 and the rental fee is $2.50 per hour.</div> <div class="para logical" id="extracted-webwork-3-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{gathered}
-\text{Cost} = (\text{subscription fee})+(\text{hourly rate})\cdot(\text{number of hours}) 
-\end{gathered}
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-3-1-1-3">
-<span class="process-math">\(C={}\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span><span class="process-math">\({} + {}\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> <span class="process-math">\(\cdot ~ t\)</span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-3-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-2-1">Fill in the correct numbers.</div></div></details><details id="extracted-webwork-3-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-3-1"><span class="process-math">\(7\)</span></div></div></details><details id="extracted-webwork-3-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-4-1"><span class="process-math">\(2.5\)</span></div></div></details><details id="extracted-webwork-3-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-5-1"><span class="process-math">\(C=7+2.50t\)</span></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="LinMod-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="LinMod-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Equations for Linear Models</span>
 </h3>
 <div class="para" id="LinMod-5-2">The equation we wrote in <a href="LinMod.html#example-bicycle" class="xref" data-knowl="./knowl/xref/example-bicycle.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.4">Example 1.1.4</a>, <span class="process-math">\(~C=5+3t~\text{,}\)</span> is an example of a <dfn class="terminology">linear model</dfn>, which describes a variable that increases or decreases at a constant rate. The cost of renting a bicycle increased at a constant rate of $3 every hour.</div>
@@ -1532,22 +1475,9 @@ C\amp=5+3\cdot t
 \blert{y=(\text{starting value})+(\text{rate})\times t }
 \end{equation*}
 </div>
-</div></article><details id="LinMod-5-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="LinMod-5-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-4" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="4" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskd2hpY2ggPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBJbmNyZWFzaW5nIHZhcmlhYmxlcyIsCiAgIkIpIFZhcmlhYmxlcyB0aGF0IGNoYW5nZSBhdCBhIGNvbnN0YW50IHJhdGUiLAogICJDKSBWYXJpYWJsZXMgdGhhdCBkZXNjcmliZSB0aW1lIiwKICAiRCkgVmFyaWFibGVzIHRoYXQgY2FuIGJlIGdyYXBoZWQiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBzb3J0IG9mIHZhcmlhYmxlcyBjYW4gYmUgZGVzY3JpYmVkIGJ5IGEgbGluZWFyIG1vZGVsPwoKW19deyR3aGljaH17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpWYXJpYWJsZXMgdGhhdCBjaGFuZ2UgYXQgYSBjb25zdGFudCByYXRlCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-4')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-4-1-1-1">What sort of variables can be described by a linear model?</div> <div class="para logical" id="extracted-webwork-4-1-1-2"><ul class="circle" id="extracted-webwork-4-1-1-2-1">
-<li id="extracted-webwork-4-1-1-2-1-1"><div class="para" id="extracted-webwork-4-1-1-2-1-1-1">A) Increasing variables</div></li>
-<li id="extracted-webwork-4-1-1-2-1-2"><div class="para" id="extracted-webwork-4-1-1-2-1-2-1">B) Variables that change at a constant rate</div></li>
-<li id="extracted-webwork-4-1-1-2-1-3"><div class="para" id="extracted-webwork-4-1-1-2-1-3-1">C) Variables that describe time</div></li>
-<li id="extracted-webwork-4-1-1-2-1-4"><div class="para" id="extracted-webwork-4-1-1-2-1-4-1">D) Variables that can be graphed</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-4-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-4-1-2-1"><span class="process-math">\(\text{B) ... constant rate}\)</span></div></div></details><details id="extracted-webwork-4-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-4-1-3-1">Variables that change at a constant rate</div></div></details>
-</div>
-</div>
-</div></article></details><aside class="aside aside-like" id="LinMod-5-5"><div class="para" id="LinMod-5-5-1">
+</h4></article><aside class="aside aside-like" id="LinMod-5-5"><div class="para" id="LinMod-5-5-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on writing a linear model, see <a href="tkchap1.html#tkWriteLinMod" class="internal" title="Subsubsection A.1.1.1: Write a linear model">Section 1.1.1</a> of the Toolkit.</div></aside><div class="para" id="LinMod-5-6">The connections between an equation and its graph can give us useful information about a model. In the next Example we see how to use this idea.</div>
 <article class="example example-like" id="example-6hrbike"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
@@ -1557,7 +1487,11 @@ C\amp=5+3\cdot t
 <li id="example-6hrbike-1-2-1-1"><div class="para" id="example-6hrbike-1-2-1-1-1">How much will it cost to rent a bicycle for 6 hours?</div></li>
 <li id="example-6hrbike-1-2-1-2"><div class="para" id="example-6hrbike-1-2-1-2-1">How long can you bicycle for $18.50?</div></li>
 </ol></div>
-<div class="solutions"><details id="example-6hrbike-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-6hrbike-2-1"><ol class="lower-alpha ol-marker-2" id="example-6hrbike-2-1-1">
+<div class="solution solution-like" id="example-6hrbike-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-6hrbike-2-1"><ol class="lower-alpha ol-marker-2" id="example-6hrbike-2-1-1">
 <li id="example-6hrbike-2-1-1-1"><div class="para logical" id="example-6hrbike-2-1-1-1-1">
 <div class="para">We substitute <span class="process-math">\(t=\alert{6}\)</span> into the equation to find</div>
 <div class="displaymath process-math">
@@ -1582,51 +1516,21 @@ t\amp=4.5
 </div></div>
 <div class="sbspanel middle" style="width:35.8974358974359%;"><img src="external/images/fig1-2.svg" role="img" class="contained" alt="line though points"></div>
 </div></div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="LinMod-5-8"><div class="para" id="LinMod-5-8-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on solving linear equations, see <a href="tkchap1.html#tkSolveLinEq" class="internal" title="Subsubsection A.1.1.3: Solve a linear equation">Section 1.1.3</a> of the Toolkit.</div></aside><details id="LinMod-5-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="LinMod-5-8"><div class="para" id="LinMod-5-8-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on solving linear equations, see <a href="tkchap1.html#tkSolveLinEq" class="internal" title="Subsubsection A.1.1.3: Solve a linear equation">Section 1.1.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="LinMod-5-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-5" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="5" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskdGltZSA9IENvbXB1dGUoIjEuNSIpOwoKQkVHSU5fUEdNTApJbiB0aGUgcHJlY2VkaW5nIEV4YW1wbGUsIGhvdyBsb25nIGNhbiB5b3UgYmljeWNsZSBmb3IgJDkuNTA/CgpBbnN3ZXI6IFtfXXskdGltZX17Mn0gaHIuCgpTaG93IHRoaXMgb24gdGhlIGdyYXBoLgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKU3RhcnQgYnkgZmluZGluZyAkOS41MCBvbiB0aGUgQ29zdCAodmVydGljYWwgYXhpcykuIFRoZW4gZmluZCB0aGUgcG9pbnQgb24gdGhlIGdyYXBoIHdpdGggW2BDYF0tY29vcmRpbmF0ZSAkOS41MC4gRmluYWxseSwgZmluZCB0aGUgW2B0YF0tY29vcmRpbmF0ZSBvZiB0aGF0IHBvaW50LgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KMS41IGhvdXJzCgpBIGZpZ3VyZSBpcyBiZWxvdy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-5')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-5-1-1-1">In the preceding Example, how long can you bicycle for $9.50?</div> <div class="para" id="extracted-webwork-5-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> hr.</div> <div class="para" id="extracted-webwork-5-1-1-3">Show this on the graph.</div>
-<div class="solutions">
-<details id="extracted-webwork-5-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="extracted-webwork-5-1-2-1">Start by finding $9.50 on the Cost (vertical axis). Then find the point on the graph with <span class="process-math">\(C\)</span>-coordinate $9.50. Finally, find the <span class="process-math">\(t\)</span>-coordinate of that point.</div></div></details><details id="extracted-webwork-5-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-5-1-3-1"><span class="process-math">\(1.5\)</span></div></div></details><details id="extracted-webwork-5-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="extracted-webwork-5-1-4-1">1.5 hours</div>
-<div class="para" id="extracted-webwork-5-1-4-2">A figure is below.</div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="LinMod-5-9-3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-ex-1-1-3w.svg" role="img" class="contained" alt="cost of bike rental"></div></div></article></details><div class="para" id="LinMod-5-10">In <a href="LinMod.html#example-6hrbike" class="xref" data-knowl="./knowl/xref/example-6hrbike.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.8">Example 1.1.8</a>, note the different algebraic techniques we used in parts (a) and (b):</div>
+</h4>
+<div class="conclusion" id="LinMod-5-9-2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-ex-1-1-3w.svg" role="img" class="contained" alt="cost of bike rental"></div></div></article><div class="para" id="LinMod-5-10">In <a href="LinMod.html#example-6hrbike" class="xref" data-knowl="./knowl/xref/example-6hrbike.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.8">Example 1.1.8</a>, note the different algebraic techniques we used in parts (a) and (b):</div>
 <div class="para logical" id="LinMod-5-11"><ul class="disc" id="LinMod-5-11-1">
 <li id="LinMod-5-11-1-1"><div class="para" id="LinMod-5-11-1-1-1">In part (a) we were given a value of <span class="process-math">\(t\)</span> and we <dfn class="terminology">evaluated the expression</dfn> <span class="process-math">\(5 + 3t\)</span> to find <span class="process-math">\(C\text{.}\)</span>
 </div></li>
 <li id="LinMod-5-11-1-2"><div class="para" id="LinMod-5-11-1-2-1">In part (b) we were given a value of <span class="process-math">\(C\)</span> and we <dfn class="terminology">solved the equation</dfn> <span class="process-math">\(C = 5 + 3t\)</span> to find <span class="process-math">\(t\text{.}\)</span>
 </div></li>
 </ul></div>
-<details id="LinMod-5-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="LinMod-5-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-6" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="6" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkd2hpY2gxID0gUG9wVXAoCiAgWyI/Iiwic29sdmluZyIsImV2YWx1YXRpbmciXSwKICAyLCAKKTsKICR3aGljaDIgPSBQb3BVcCgKICBbIj8iLCJzb2x2aW5nIiwiZXZhbHVhdGluZyJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApDb25zaWRlciB0aGUgZXhwcmVzc2lvbiBbYEMgPSA1ICsgM3RcdGV4dHsufWBdIEZpbmRpbmcgYSB2YWx1ZSBvZiBbYENgXSB3aGVuIHdlIGtub3cgW2B0YF0gaXMgY2FsbGVkIFtfXXskd2hpY2gxfXs1fSB0aGUgZXhwcmVzc2lvbi4gRmluZGluZyBhIHZhbHVlIG9mIFtgdGBdIHdoZW4gd2Uga25vdyBbYENgXSBpcyBjYWxsZWQgW19deyR3aGljaDJ9ezV9IHRoZSBlcXVhdGlvbi4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpldmFsdWF0aW5nOyBzb2x2aW5nCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-6')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-6-1-1-1">
-<div class="para">Consider the expression <span class="process-math">\(C = 5 + 3t\text{.}\)</span> Finding a value of <span class="process-math">\(C\)</span> when we know <span class="process-math">\(t\)</span> is called</div>
-<ul class="square" id="extracted-webwork-6-1-1-1-4">
-<li id="extracted-webwork-6-1-1-1-4-1"><div class="para" id="extracted-webwork-6-1-1-1-4-1-1">solving</div></li>
-<li id="extracted-webwork-6-1-1-1-4-2"><div class="para" id="extracted-webwork-6-1-1-1-4-2-1">evaluating</div></li>
-</ul>
-<div class="para">the expression. Finding a value of <span class="process-math">\(t\)</span> when we know <span class="process-math">\(C\)</span> is called</div>
-<ul class="square" id="extracted-webwork-6-1-1-1-7">
-<li id="extracted-webwork-6-1-1-1-7-1"><div class="para" id="extracted-webwork-6-1-1-1-7-1-1">solving</div></li>
-<li id="extracted-webwork-6-1-1-1-7-2"><div class="para" id="extracted-webwork-6-1-1-1-7-2-1">evaluating</div></li>
-</ul>
-<div class="para">the equation.</div>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-6-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-6-1-2-1"><span class="process-math">\(\text{evaluating}\)</span></div></div></details><details id="extracted-webwork-6-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-6-1-3-1"><span class="process-math">\(\text{solving}\)</span></div></div></details><details id="extracted-webwork-6-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-6-1-4-1">evaluating; solving</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="LinMod-5-13">In the examples above, the graph is <dfn class="terminology">increasing</dfn> as <span class="process-math">\(t\)</span> increases. In the next Example we consider a <dfn class="terminology">decreasing graph</dfn>.</div>
+</h4></article><div class="para" id="LinMod-5-13">In the examples above, the graph is <dfn class="terminology">increasing</dfn> as <span class="process-math">\(t\)</span> increases. In the next Example we consider a <dfn class="terminology">decreasing graph</dfn>.</div>
 <article class="example example-like" id="Leon-camper"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span>
 </h4>
@@ -1636,7 +1540,10 @@ t\amp=4.5
 <li id="Leon-camper-1-2-1-3"><div class="para" id="Leon-camper-1-2-1-3-1">Graph the equation.</div></li>
 <li id="Leon-camper-1-2-1-4"><div class="para" id="Leon-camper-1-2-1-4-1">If Leon has less than 5 gallons of gas left, how many miles has he driven since his last fill-up? Illustrate on the graph.</div></li>
 </ol></div>
-<div class="solutions"><details id="Leon-camper-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Leon-camper-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="Leon-camper-2-1"><ol class="lower-alpha ol-marker-2" id="Leon-camper-2-1-1">
 <li id="Leon-camper-2-1-1-1"><div class="para logical" id="Leon-camper-2-1-1-1-1">
 <div class="para">We use the form for a linear model,</div>
@@ -1691,28 +1598,15 @@ d \amp\gt 180\amp\amp \begin{array}{l}
 </div></li>
 </ol></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-Leon-gas-miles.svg" role="img" class="contained" alt="gas mileage"></div>
-</div></details></div></article><aside class="aside aside-like" id="LinMod-5-15"><div class="para" id="LinMod-5-15-1">
+</div></article><aside class="aside aside-like" id="LinMod-5-15"><div class="para" id="LinMod-5-15-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on solving linear inequalities, see <a href="tkchap1.html#tkSolveLinIneq" class="internal" title="Subsubsection A.1.1.4: Solve a linear inequality">Section 1.1.4</a> of the Toolkit.</div></aside><article class="note remark-like" id="LinMod-5-16"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="LinMod-5-16-1">In part (d) of the previous Example we used an <dfn class="terminology">inequality</dfn> to answer the question. We use inequalities to model English phrases such as "less than," "more than," "at least," and "at most."</div></article><details id="LinMod-5-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="LinMod-5-16-1">In part (d) of the previous Example we used an <dfn class="terminology">inequality</dfn> to answer the question. We use inequalities to model English phrases such as "less than," "more than," "at least," and "at most."</div></article><article class="exercise exercise-like" id="LinMod-5-17"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="LinMod-5-17-2"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-Leon-mileage-gridw.svg" role="img" class="contained" alt="grid"></div></div>
-<div id="webwork-7" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="7" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZ2FzID0gUmFkaW9CdXR0b25zKAogIFsiQXQgbGVhc3QgNy41IGdhbGxvbnMiLAogICJBdCBtb3N0IDcuNSBnYWxsb25zIiwKICAiQXQgbGVhc3QgMjAgZ2FsbG9ucy4iLAogICJBdCBtb3N0IDI0MCBnYWxsb25zIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCkxlb24gZm9yZ290IHRvIHJlc2V0IGhpcyBvZG9tZXRlciBhZnRlciBoaXMgbGFzdCBmaWxsLXVwLCBidXQgaGUgdGhpbmtzIGhlIGhhcyBkcml2ZW4gYXQgbGVhc3QgMTUwIG1pbGVzLiBIb3cgbXVjaCBnYXMgZG9lcyBoZSBoYXZlIGxlZnQ/CgpbX117JGdhc317NX0KClNob3cgdGhpcyBvbiB0aGUgZ3JhcGguCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApMb2NhdGUgMTUwIG1pbGVzIG9uIHRoZSBcXChkXFwpLWF4aXMuIFdoYXQgcGFydCBvZiB0aGUgYXhpcyByZXByZXNlbnRzICJhdCBsZWFzdCIgMTUwIG1pbGVzPyBGaW5kIHRoZSBwb2ludHMgb24gdGhlIGdyYXBoIHdpdGggXFwoZFxcKS1jb29yZGluYXRlcyBhdCBsZWFzdCAxNTAuIFdoYXQgYXJlIHRoZSBcXChnXFwpLWNvb3JkaW5hdGVzIG9mIHRob3NlIHBvaW50cz8KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCkF0IG1vc3QgNy41IGdhbGxvbgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-7')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-7-1-1-1">Leon forgot to reset his odometer after his last fill-up, but he thinks he has driven at least 150 miles. How much gas does he have left?</div> <div class="para logical" id="extracted-webwork-7-1-1-2"><ul class="circle" id="extracted-webwork-7-1-1-2-1">
-<li id="extracted-webwork-7-1-1-2-1-1"><div class="para" id="extracted-webwork-7-1-1-2-1-1-1">At least 7.5 gallons</div></li>
-<li id="extracted-webwork-7-1-1-2-1-2"><div class="para" id="extracted-webwork-7-1-1-2-1-2-1">At most 7.5 gallons</div></li>
-<li id="extracted-webwork-7-1-1-2-1-3"><div class="para" id="extracted-webwork-7-1-1-2-1-3-1">At least 20 gallons.</div></li>
-<li id="extracted-webwork-7-1-1-2-1-4"><div class="para" id="extracted-webwork-7-1-1-2-1-4-1">At most 240 gallons</div></li>
-</ul></div> <div class="para" id="extracted-webwork-7-1-1-3">Show this on the graph.</div>
-<div class="solutions">
-<details id="extracted-webwork-7-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-2-1">Locate 150 miles on the \(d\)-axis. What part of the axis represents “at least” 150 miles? Find the points on the graph with \(d\)-coordinates at least 150. What are the \(g\)-coordinates of those points?</div></div></details><details id="extracted-webwork-7-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-3-1"><span class="process-math">\(\text{At most 7.5 gallons}\)</span></div></div></details><details id="extracted-webwork-7-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-4-1">At most 7.5 gallon</div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="LinMod-5-17-4"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-Leon-mileagew.svg" role="img" class="contained" alt="line"></div></div></article></details></section><section class="exercises" id="section-1-1-exercises"><h3 class="heading hide-type">
+</h4>
+<div class="introduction" id="LinMod-5-17-2"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-Leon-mileage-gridw.svg" role="img" class="contained" alt="grid"></div></div>
+<div class="conclusion" id="LinMod-5-17-3"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-Leon-mileagew.svg" role="img" class="contained" alt="line"></div></div></article></section><section class="exercises" id="section-1-1-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="space"> </span><span class="title">Problem Set 1.1</span>
 </h3>
 <article class="subexercises" id="section-1-1-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

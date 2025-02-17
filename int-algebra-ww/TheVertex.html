@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="QuadraticFormula.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CurveFitting.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1459,7 +1439,10 @@ y \amp = 2x^2+8x+6
 </h4>
 <div class="para" id="example-parabola-vertex2-1-1">Find the vertex of the graph of <span class="process-math">\(f(x) = -2x^2 + x + 1\text{.}\)</span>
 </div>
-<div class="solutions"><details id="example-parabola-vertex2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-parabola-vertex2-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="example-parabola-vertex2-2-1">
 <div class="para">For this equation, <span class="process-math">\(a = -2\text{,}\)</span> <span class="process-math">\(b = 1\text{,}\)</span> and <span class="process-math">\(c = 1\text{.}\)</span> The <span class="process-math">\(x\)</span>-coordinate of the vertex is given by</div>
 <div class="displaymath process-math">
@@ -1481,31 +1464,18 @@ y_v \amp= -2\left(\alert{\frac{1}{4}}\right)^2+ \alert{\frac{1}{4}}+1\\
 </div>
 <div class="para" id="example-parabola-vertex2-2-3">and press <kbd class="kbdkey">ENTER</kbd>. The calculator returns the <span class="process-math">\(y\)</span>-value <span class="process-math">\(1.125\text{.}\)</span> Thus, the vertex is the point <span class="process-math">\((0.25, 1.125)\text{,}\)</span> which is the decimal equivalent of <span class="process-math">\(\left(\dfrac{1}{4},\dfrac{9}{8}\right)\text{.}\)</span>
 </div>
-</div></details></div></article><details id="TheVertex-3-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="TheVertex-3-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-126" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="126" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKTsKJGFuc3dlcj0gUG9pbnQoIigxLDEpIik7CiRtYXhtaW4gPSBQb3BVcCgKWyI/IiwibWF4aW11bSIsIm1pbmltdW0iXSwKMiwgKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgdmVydGV4IG9mIHRoZSBncmFwaCBvZiBbYHkgPSAzeF4yIC0gNnggKyA0XHRleHR7Ln1gXQoKW19deyRhbnN3ZXJ9ezV9CgpEZWNpZGUgd2hldGhlciB0aGUgdmVydGV4IGlzIGEgbWF4aW11bSBwb2ludCBvciBhIG1pbmltdW0gcG9pbnQgb2YgdGhlIGdyYXBoLltfXXskbWF4bWlufXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgKDEsIDEpXHRleHR7LH1gXSBtaW5pbXVtCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-126')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-126-1-1-1">Find the vertex of the graph of <span class="process-math">\(y = 3x^2 - 6x + 4\text{.}\)</span>
-</div> <div class="para logical" id="extracted-webwork-126-1-1-2">
-<div class="para">Decide whether the vertex is a maximum point or a minimum point of the graph.</div>
-<ul class="square" id="extracted-webwork-126-1-1-2-1">
-<li id="extracted-webwork-126-1-1-2-1-1"><div class="para" id="extracted-webwork-126-1-1-2-1-1-1">maximum</div></li>
-<li id="extracted-webwork-126-1-1-2-1-2"><div class="para" id="extracted-webwork-126-1-1-2-1-2-1">minimum</div></li>
-</ul>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-126-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-126-1-2-1"><span class="process-math">\(\left(1,1\right)\)</span></div></div></details><details id="extracted-webwork-126-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-126-1-3-1"><span class="process-math">\(\text{minimum}\)</span></div></div></details><details id="extracted-webwork-126-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-126-1-4-1">
-<span class="process-math">\((1, 1)\text{,}\)</span> minimum</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="TheVertex-3-9">Once we know the vertex of a parabola, we can make a quick sketch of the graph.</div>
+</h4></article><div class="para" id="TheVertex-3-9">Once we know the vertex of a parabola, we can make a quick sketch of the graph.</div>
 <article class="example example-like" id="TheVertex-3-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="TheVertex-3-10-1-1">Sketch a graph of <span class="process-math">\(~y=x^2+3x+1\)</span>
 </div>
-<div class="solutions"><details id="TheVertex-3-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="TheVertex-3-10-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="TheVertex-3-10-2-1">
 <div class="para">The vertex of the graph is given by</div>
 <div class="displaymath process-math" id="TheVertex-3-10-2-1-1">
@@ -1523,25 +1493,14 @@ y_v \amp = (-1.5)^2+3(-1.5)+1 =-1.25
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-xsqd-plus-3x-plus-1.svg" role="img" class="contained" alt="parabola"></div>
 <div class="para" id="TheVertex-3-10-2-5">If we need more accuracy in our graph, we can find and plot more points, including the <span class="process-math">\(x\)</span>-intercepts. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
-</div></details></div></article><aside class="aside aside-like" id="TheVertex-3-11"><div class="para" id="TheVertex-3-11-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review finding the <span class="process-math">\(x\)</span>-intercepts of a parabola, see <a href="Intercepts-Factors.html#ParabolaX-Ints" class="internal" title="Subsection 3.2.2: X-Intercepts of a Parabola">Section 3.2.2</a>.</div></aside><details id="TheVertex-3-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="TheVertex-3-11"><div class="para" id="TheVertex-3-11-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review finding the <span class="process-math">\(x\)</span>-intercepts of a parabola, see <a href="Intercepts-Factors.html#ParabolaX-Ints" class="internal" title="Subsection 3.2.2: X-Intercepts of a Parabola">Section 3.2.2</a>.</div></aside><article class="exercise exercise-like" id="TheVertex-3-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-127" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="127" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiRhbnN3ZXIgPSBQb2ludCgiKDIuNSwtMy4yNSkiKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgdmVydGV4IGFuZCBza2V0Y2ggYSBncmFwaCBvZiBbYHk9eF4yLTV4KzNgXQoKVmVydGV4OiBbX117JGFuc3dlcn17OH0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCgyLjUsLTMuMjUpXHRleHR7O31gXSBhIGdyYXBoIGlzIGJlbG93LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-127')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-127-1-1-1">Find the vertex and sketch a graph of <span class="process-math">\(y=x^2-5x+3\)</span>
-</div> <div class="para" id="extracted-webwork-127-1-1-2">Vertex: <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-127-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-127-1-2-1"><span class="process-math">\(\left(2.5,-3.25\right)\)</span></div></div></details><details id="extracted-webwork-127-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-127-1-3-1">
-<span class="process-math">\((2.5,-3.25)\text{;}\)</span> a graph is below.</div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="TheVertex-3-12-3">
-<div class="para" id="TheVertex-3-12-3-1"><span class="process-math">\(y=x^2-5x+3\text{:}\)</span></div>
+</h4>
+<div class="conclusion" id="TheVertex-3-12-2">
+<div class="para" id="TheVertex-3-12-2-1"><span class="process-math">\(y=x^2-5x+3\text{:}\)</span></div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-xsqd-minus-5x-plus-3w.svg" role="img" class="contained" alt="parabola"></div>
-</div></article></details></section><section class="subsection" id="TheVertex-4"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="TheVertex-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="space"> </span><span class="title">Maximum or Minimum Values</span>
 </h3>
 <div class="para" id="TheVertex-4-2">Many quadratic models arise as the product of two variables, one of which increases while the other decreases. For example, in <a href="tkchap1.html#tkSolveLinIneq" class="internal" title="Subsubsection A.1.1.4: Solve a linear inequality">the Investigation for Section 3.3</a> we looked at the areas of different rectangles with the same perimeter. The area of a rectangle is the product of its length and its width, or <span class="process-math">\(A=lw\text{.}\)</span>  If we require that the rectangle have a certain perimeter, then as we increase its length, we must also decrease its width.</div>
@@ -1566,7 +1525,11 @@ y_v \amp = (-1.5)^2+3(-1.5)+1 =-1.25
 <li id="example-maximum-revenue-1-1-3-3"><div class="para" id="example-maximum-revenue-1-1-3-3-1">How much should Late Nite Blues charge for a pair of jeans in order to maximize its revenue?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-maximum-revenue-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-maximum-revenue-2-1"><ol class="lower-alpha ol-marker-2" id="example-maximum-revenue-2-1-1">
+<div class="solution solution-like" id="example-maximum-revenue-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-maximum-revenue-2-1"><ol class="lower-alpha ol-marker-2" id="example-maximum-revenue-2-1-1">
 <li id="example-maximum-revenue-2-1-1-1"><div class="para logical" id="example-maximum-revenue-2-1-1-1-1">
 <div class="para">Using the formula for revenue stated above, we find</div>
 <div class="displaymath process-math" id="example-maximum-revenue-2-1-1-1-1-1">
@@ -1591,59 +1554,15 @@ y_v\amp=600(\alert{20}) - 15(\alert{20})^2 = 6000
 </div>
 <div class="para">The revenue takes on its maximum value when <span class="process-math">\(x = 20\text{,}\)</span> and the maximum value is <span class="process-math">\(R = 6000\text{.}\)</span> This means that Late Nite Blues should charge $20 for a pair of jeans in order to maximize revenue at $6000 a week.</div>
 </div></li>
-</ol></div></div></details></div></article><article class="note remark-like" id="TheVertex-4-6"><h4 class="heading">
+</ol></div>
+</div></article><article class="note remark-like" id="TheVertex-4-6"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="TheVertex-4-6-1">If the equation relating two variables is quadratic, then the maximum or minimum value is easy to find: It is the value at the vertex. If the parabola opens downward, as in <a href="TheVertex.html#example-maximum-revenue" class="xref" data-knowl="./knowl/xref/example-maximum-revenue.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.2.5">Example 4.2.5</a>, there is a maximum value at the vertex. If the parabola opens upward, there is a minimum value at the vertex.</div></article><details id="TheVertex-4-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="TheVertex-4-6-1">If the equation relating two variables is quadratic, then the maximum or minimum value is easy to find: It is the value at the vertex. If the parabola opens downward, as in <a href="TheVertex.html#example-maximum-revenue" class="xref" data-knowl="./knowl/xref/example-maximum-revenue.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.2.5">Example 4.2.5</a>, there is a maximum value at the vertex. If the parabola opens upward, there is a minimum value at the vertex.</div></article><article class="exercise exercise-like" id="TheVertex-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-128" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="128" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbGludCA9IFJhZGlvQnV0dG9ucygKICBbIlNldCBcKHk9MFwpIGFuZCBzb2x2ZSBmb3IgXCh4XCkuIiwKICAiRmFjdG9yIHRoZSBleHByZXNzaW9uLiIsCiAgIlVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuIiwKICAiRmluZCB0aGUgdmVydGV4LiJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApUbyBmaW5kIHRoZSBtYXhpbXVtIG9yIG1pbmltdW0gdmFsdWUgb2YgYSBxdWFkcmF0aWMgZXhwcmVzc2lvbiwgd2Ugc2hvdWxkOgoKW19deyRsaW50fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkZpbmQgdGhlIHZlcnRleC4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-128')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-128-1-1-1">To find the maximum or minimum value of a quadratic expression, we should:</div> <div class="para logical" id="extracted-webwork-128-1-1-2"><ul class="circle" id="extracted-webwork-128-1-1-2-1">
-<li id="extracted-webwork-128-1-1-2-1-1"><div class="para" id="extracted-webwork-128-1-1-2-1-1-1">Set <span class="process-math">\(y=0\)</span> and solve for <span class="process-math">\(x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-128-1-1-2-1-2"><div class="para" id="extracted-webwork-128-1-1-2-1-2-1">Factor the expression.</div></li>
-<li id="extracted-webwork-128-1-1-2-1-3"><div class="para" id="extracted-webwork-128-1-1-2-1-3-1">Use the quadratic formula.</div></li>
-<li id="extracted-webwork-128-1-1-2-1-4"><div class="para" id="extracted-webwork-128-1-1-2-1-4-1">Find the vertex.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-128-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-128-1-2-1"><span class="process-math">\(\text{Choice 4}\)</span></div></div></details><details id="extracted-webwork-128-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-128-1-3-1">Find the vertex.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="TheVertex-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="TheVertex-4-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-129" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="129" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRmID0gRm9ybXVsYSgiMTIwMCp4LTgwKngqKjIiKTsKJFIgPSBDb21wdXRlKCI0NTAwIik7CiRwID0gc3ByaW50ZigiJTAuMmYiLCA3LjUwKTsKCkJFR0lOX1BHTUwKVGhlIE1ldHJvIFJhaWwgc2VydmljZSBzZWxscyBbYDEyMDAgLSA4MHhgXSB0aWNrZXRzIGVhY2ggZGF5IHdoZW4gaXQgY2hhcmdlcyBbYHhgXSBkb2xsYXJzIHBlciB0aWNrZXQuCgphLiAgV3JpdGUgYW4gZXF1YXRpb24gZm9yIHRoZSByZXZlbnVlLCBbYFJcdGV4dHssfWBdIGFzIGEgZnVuY3Rpb24gb2YgdGhlIHByaWNlIG9mIGEgdGlja2V0LgoKICAgIFtgUj1gXVtfXXskZn17MTB9CgoKYS4gIFdoYXQgdGlja2V0IHByaWNlIHdpbGwgcmV0dXJuIHRoZSBtYXhpbXVtIHJldmVudWU/CgogICAgJFtfXXskcH17M30KCgphLiAgV2hhdCBpcyB0aGUgbWF4aW11bSByZXZlbnVlPwoKICAgICRbX117JFJ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFIgPSAxMjAweCAtIDgweF4yYF0KCgphLiAgJFtgNy41MCBgXQoKCmEuICAkW2A0NTAwYF0KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-129')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-129-1-1-1">The Metro Rail service sells <span class="process-math">\(1200 - 80x\)</span> tickets each day when it charges <span class="process-math">\(x\)</span> dollars per ticket.</div> <div class="para logical" id="extracted-webwork-129-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-129-1-1-2-1">
-<li id="extracted-webwork-129-1-1-2-1-1">
-<div class="para" id="extracted-webwork-129-1-1-2-1-1-1">Write an equation for the revenue, <span class="process-math">\(R\text{,}\)</span> as a function of the price of a ticket.</div>
-<div class="para" id="extracted-webwork-129-1-1-2-1-1-2">
-<span class="process-math">\(R=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-129-1-1-2-1-2">
-<div class="para" id="extracted-webwork-129-1-1-2-1-2-1">What ticket price will return the maximum revenue?</div>
-<div class="para" id="extracted-webwork-129-1-1-2-1-2-2">$<span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-129-1-1-2-1-3">
-<div class="para" id="extracted-webwork-129-1-1-2-1-3-1">What is the maximum revenue?</div>
-<div class="para" id="extracted-webwork-129-1-1-2-1-3-2">$<span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-129-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-129-1-2-1"><span class="process-math">\(1200x-80x^{2}\)</span></div></div></details><details id="extracted-webwork-129-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-129-1-3-1"><span class="process-math">\(7.5\)</span></div></div></details><details id="extracted-webwork-129-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-129-1-4-1"><span class="process-math">\(4500\)</span></div></div></details><details id="extracted-webwork-129-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-129-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-129-1-5-1-1">
-<li id="extracted-webwork-129-1-5-1-1-1"><div class="para" id="extracted-webwork-129-1-5-1-1-1-1"><span class="process-math">\(\displaystyle R = 1200x - 80x^2\)</span></div></li>
-<li id="extracted-webwork-129-1-5-1-1-2"><div class="para" id="extracted-webwork-129-1-5-1-1-2-1">$<span class="process-math">\(7.50\)</span>
-</div></li>
-<li id="extracted-webwork-129-1-5-1-1-3"><div class="para" id="extracted-webwork-129-1-5-1-1-3-1">$<span class="process-math">\(4500\)</span>
-</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="TheVertex-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="TheVertex-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="space"> </span><span class="title">The Vertex Form for a Parabola</span>
 </h3>
 <div class="para logical" id="TheVertex-5-5">
@@ -1699,7 +1618,12 @@ y = 2(x - \amp \alert{3})^2 ~~ \alert{- 8}\\
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-vertex-form-1-1">Find the vertex of the graph of <span class="process-math">\(y = -3(x - 4)^2 + 6\text{.}\)</span> Is the vertex a maximum or a minimum point of the graph?</div>
-<div class="solutions"><details id="example-vertex-form-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="example-vertex-form-2-1">We compare the equation to the vertex form to see that the coordinates of the vertex are <span class="process-math">\((4, 6)\text{.}\)</span> For this equation, <span class="process-math">\(a = -3 \lt 0\text{,}\)</span> so the parabola opens downward. The vertex is the maximum point of the graph.</div></div></details></div></article><div class="para logical" id="TheVertex-5-11">
+<div class="solution solution-like" id="example-vertex-form-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para" id="example-vertex-form-2-1">We compare the equation to the vertex form to see that the coordinates of the vertex are <span class="process-math">\((4, 6)\text{.}\)</span> For this equation, <span class="process-math">\(a = -3 \lt 0\text{,}\)</span> so the parabola opens downward. The vertex is the maximum point of the graph.</div>
+</div></article><div class="para logical" id="TheVertex-5-11">
 <div class="para">To understand why the vertex form works, substitute <span class="process-math">\(x_v = \alert{4}\)</span> into <span class="process-math">\(y = -3(x - 4)^2 + 6\)</span> from <a href="TheVertex.html#example-vertex-form" class="xref" data-knowl="./knowl/xref/example-vertex-form.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.2.9">Example 4.2.9</a> to find</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-vertex-form.html">
 \begin{equation*}
@@ -1710,55 +1634,21 @@ y = -3(\alert{4} - 4)^2 + 6 = 6
 </div>
 <div class="para" id="TheVertex-5-12">You can also rewrite <span class="process-math">\(y = -3(x - 4)^2 + 6\)</span> in standard form and use the formula <span class="process-math">\(x_v = \dfrac{-b}{2a}\)</span> to confirm that the vertex is the point <span class="process-math">\((4, 6)\text{.}\)</span>
 </div>
-<details id="TheVertex-5-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="TheVertex-5-13"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-130" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="130" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbGludCA9IFJhZGlvQnV0dG9ucygKICBbIlwoeT00KHgtMikrM1wpIiwKICAiXCh5PTQoeC0yKV4yKzNcKSIsCiAgIlwoeT00KHgrMileMiszXCkiLAogICJcKHk9NCh4LTMpXjIrMlwpIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoaWNoIG9mIHRoZSBmb2xsb3dpbmcgaXMgdGhlIHZlcnRleCBmb3JtIGZvciBhIHBhcmFib2xhIHdpdGggdmVydGV4IFtgKC0yLDMpXHRleHR7P31gXQoKW19deyRsaW50fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeT00KHgrMileMiszYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-130')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-130-1-1-1">Which of the following is the vertex form for a parabola with vertex <span class="process-math">\((-2,3)\text{?}\)</span>
-</div> <div class="para logical" id="extracted-webwork-130-1-1-2"><ul class="circle" id="extracted-webwork-130-1-1-2-1">
-<li id="extracted-webwork-130-1-1-2-1-1"><div class="para" id="extracted-webwork-130-1-1-2-1-1-1"><span class="process-math">\(\displaystyle y=4(x-2)+3\)</span></div></li>
-<li id="extracted-webwork-130-1-1-2-1-2"><div class="para" id="extracted-webwork-130-1-1-2-1-2-1"><span class="process-math">\(\displaystyle y=4(x-2)^2+3\)</span></div></li>
-<li id="extracted-webwork-130-1-1-2-1-3"><div class="para" id="extracted-webwork-130-1-1-2-1-3-1"><span class="process-math">\(\displaystyle y=4(x+2)^2+3\)</span></div></li>
-<li id="extracted-webwork-130-1-1-2-1-4"><div class="para" id="extracted-webwork-130-1-1-2-1-4-1"><span class="process-math">\(\displaystyle y=4(x-3)^2+2\)</span></div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-130-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-130-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-130-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-130-1-3-1"><span class="process-math">\(y=4(x+2)^2+3\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><details id="TheVertex-5-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="TheVertex-5-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-131" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="131" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKS0+ZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0+IDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0+IDAsICAgKTsKJHYgPSBQb2ludCgiKC0yLDUpIik7CiRmID0gRm9ybXVsYSgiLTEvMip4KioyLTIqeCszIik7CgpCRUdJTl9QR01MCmEuICBGaW5kIHRoZSB2ZXJ0ZXggb2YgdGhlIGdyYXBoIG9mIFtgeSA9IDUgLSBcZGZyYWN7MX17Mn0oeCArIDIpXjJcdGV4dHsufWBdCgogICAgVmVydGV4OiBbX117JHZ9ezV9CgoKYS4gIFdyaXRlIHRoZSBlcXVhdGlvbiBvZiB0aGUgcGFyYWJvbGEgaW4gc3RhbmRhcmQgZm9ybS4KCiAgICBbYHk9YF1bX117JGZ9ezE1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2AoLTIsNSkgYF0KCgphLiAgW2B5PS1cZnJhY3sxfXsyfXheMi0yeCszIGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-131')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-131-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-131-1-1-1-1">
-<li id="extracted-webwork-131-1-1-1-1-1">
-<div class="para" id="extracted-webwork-131-1-1-1-1-1-1">Find the vertex of the graph of <span class="process-math">\(y = 5 - \dfrac{1}{2}(x + 2)^2\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-131-1-1-1-1-1-2">Vertex: <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-131-1-1-1-1-2">
-<div class="para" id="extracted-webwork-131-1-1-1-1-2-1">Write the equation of the parabola in standard form.</div>
-<div class="para" id="extracted-webwork-131-1-1-1-1-2-2">
-<span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
-</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-131-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-131-1-2-1"><span class="process-math">\(\left(-2,5\right)\)</span></div></div></details><details id="extracted-webwork-131-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-131-1-3-1"><span class="process-math">\(\frac{-1}{2}x^{2}-2x+3\)</span></div></div></details><details id="extracted-webwork-131-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-131-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-131-1-4-1-1">
-<li id="extracted-webwork-131-1-4-1-1-1"><div class="para" id="extracted-webwork-131-1-4-1-1-1-1"><span class="process-math">\(\displaystyle (-2,5)\)</span></div></li>
-<li id="extracted-webwork-131-1-4-1-1-2"><div class="para" id="extracted-webwork-131-1-4-1-1-2-1"><span class="process-math">\(\displaystyle y=-\frac{1}{2}x^2-2x+3\)</span></div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="TheVertex-5-15">Any quadratic equation in vertex form can be written in standard form by expanding, and any quadratic equation in standard form can be put into vertex form by completing the square. <span class="process-math">\(~\alert{\text{[TK]}}\)</span> </div>
+</h4></article><div class="para" id="TheVertex-5-15">Any quadratic equation in vertex form can be written in standard form by expanding, and any quadratic equation in standard form can be put into vertex form by completing the square. <span class="process-math">\(~\alert{\text{[TK]}}\)</span> </div>
 <aside class="aside aside-like" id="TheVertex-5-16"><div class="para" id="TheVertex-5-16-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review completing the square, see <a href="CompletingSquare.html#SolvebyCompletingSquare" class="internal" title="Subsection 3.4.2: Solving Quadratic Equations by Completing the Square">Section 3.4.2</a>.</div></aside><article class="example example-like" id="example-write-in-vertex-form"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-write-in-vertex-form-1-1">Write the equation <span class="process-math">\(y = 3x^2 - 6x - 1\)</span> in vertex form and find the vertex of its graph.</div>
-<div class="solutions"><details id="example-write-in-vertex-form-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-write-in-vertex-form-2-1">
+<div class="solution solution-like" id="example-write-in-vertex-form-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-write-in-vertex-form-2-1">
 <div class="para">We factor the lead coefficient, <span class="process-math">\(3\text{,}\)</span> from the variable terms, leaving a space to complete the square.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1785,31 +1675,10 @@ y = 3(x - 1)^2 - 4
 </div>
 <div class="para">The vertex of the parabola is <span class="process-math">\((1,-4)\text{.}\)</span>
 </div>
-</div></div></details></div></article><details id="TheVertex-5-18" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="TheVertex-5-18"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-132" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="132" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiRhID0gQ29tcHV0ZSgiMiIpOwokaCA9IENvbXB1dGUoIi0zIik7CiRrID0gQ29tcHV0ZSgiLTUiKTsKJHYgPSBQb2ludCgiKC0zLC01KSIpOwoKQkVHSU5fUEdNTApXcml0ZSB0aGUgZXF1YXRpb24gW2B5ID0gMnheMiArIDEyeCArIDEzYF0gaW4gdmVydGV4IGZvcm0sIGFuZCBmaW5kIHRoZSB2ZXJ0ZXggb2YgaXRzIGdyYXBoLgoKVGhlIHZlcnRleCBmb3JtIGlzIFtgeT1hKHgteF92KV4yK3lfdlx0ZXh0eyx9YF0gd2hlcmUKCltgYT1gXVtfXXskYX17Mn0KCltgeF92PWBdW19deyRofXsyfQoKW2B5X3Y9YF1bX117JGt9ezJ9CgpUaGUgdmVydGV4IG9mIHRoZSBncmFwaCBpcyBbX117JHZ9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVAoxLiAgRmFjdG9yIFtgMmBdIGZyb20gdGhlIHZhcmlhYmxlIHRlcm1zLgoKCjEuICBDb21wbGV0ZSB0aGUgc3F1YXJlIGluc2lkZSBwYXJlbnRoZXNlcy4KCgoxLiAgU3VidHJhY3QgW2AycF4yYF0gb3V0c2lkZSBwYXJlbnRoZXNlcy4KCgoxLiAgV3JpdGUgdGhlIHZlcnRleCBmb3JtLgoKCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeSA9IDIoeCArIDMpXjIgLSA1XHRleHR7O31gXSAgIFtgKC0zLC01KWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-132')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-132-1-1-1">Write the equation <span class="process-math">\(y = 2x^2 + 12x + 13\)</span> in vertex form, and find the vertex of its graph.</div> <div class="para" id="extracted-webwork-132-1-1-2">The vertex form is <span class="process-math">\(y=a(x-x_v)^2+y_v\text{,}\)</span> where</div> <div class="para" id="extracted-webwork-132-1-1-3">
-<span class="process-math">\(a=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div> <div class="para" id="extracted-webwork-132-1-1-4">
-<span class="process-math">\(x_v=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div> <div class="para" id="extracted-webwork-132-1-1-5">
-<span class="process-math">\(y_v=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
-</div> <div class="para" id="extracted-webwork-132-1-1-6">The vertex of the graph is <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-132-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para logical" id="extracted-webwork-132-1-2-1"><ol class="decimal ol-marker-1" id="extracted-webwork-132-1-2-1-1">
-<li id="extracted-webwork-132-1-2-1-1-1"><div class="para" id="extracted-webwork-132-1-2-1-1-1-1">Factor <span class="process-math">\(2\)</span> from the variable terms.</div></li>
-<li id="extracted-webwork-132-1-2-1-1-2"><div class="para" id="extracted-webwork-132-1-2-1-1-2-1">Complete the square inside parentheses.</div></li>
-<li id="extracted-webwork-132-1-2-1-1-3"><div class="para" id="extracted-webwork-132-1-2-1-1-3-1">Subtract <span class="process-math">\(2p^2\)</span> outside parentheses.</div></li>
-<li id="extracted-webwork-132-1-2-1-1-4"><div class="para" id="extracted-webwork-132-1-2-1-1-4-1">Write the vertex form.</div></li>
-</ol></div></div></details><details id="extracted-webwork-132-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-132-1-3-1"><span class="process-math">\(2\)</span></div></div></details><details id="extracted-webwork-132-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-132-1-4-1"><span class="process-math">\(-3\)</span></div></div></details><details id="extracted-webwork-132-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-132-1-5-1"><span class="process-math">\(-5\)</span></div></div></details><details id="extracted-webwork-132-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-132-1-6-1"><span class="process-math">\(\left(-3,-5\right)\)</span></div></div></details><details id="extracted-webwork-132-1-7" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-132-1-7-1">
-<span class="process-math">\(y = 2(x + 3)^2 - 5\text{;}\)</span>   <span class="process-math">\((-3,-5)\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="TheVertex-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="TheVertex-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="space"> </span><span class="title">Using the Vertex Form</span>
 </h3>
 <div class="para" id="TheVertex-6-2">We can make a quick sketch of a parabola whose equation is given in vertex form.</div>
@@ -1818,7 +1687,10 @@ y = 3(x - 1)^2 - 4
 </h4>
 <div class="para" id="TheVertex-6-3-1-1">Graph the equation <span class="process-math">\(~y=\dfrac{-1}{2}(x+3)^2-2\)</span>
 </div>
-<div class="solutions"><details id="TheVertex-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="TheVertex-6-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="TheVertex-6-3-2-1">
 <div class="para">The vertex is the point <span class="process-math">\((-3,2)\text{.}\)</span>  We can find the <span class="process-math">\(y\)</span>-intercept by setting <span class="process-math">\(x=0\text{.}\)</span>
 </div>
@@ -1831,7 +1703,7 @@ y = \dfrac{-1}{2}(\alert{0}+3)^2-2 = \dfrac{-9}{2}-2 = -6\dfrac{1}{2}
 </div>
 </div>
 <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/y-eq-neg-half-sq-of-x-plus3-minus2.svg" role="img" class="contained" alt="parabola"></div>
-</div></details></div></article><aside class="aside aside-like" id="TheVertex-6-4"><div class="para" id="TheVertex-6-4-1">
+</div></article><aside class="aside aside-like" id="TheVertex-6-4"><div class="para" id="TheVertex-6-4-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To see more examples of sketching from the vertex form, see <a href="tkchap4.html#tkVertForm" class="internal" title="Subsubsection A.4.2.1: Parabolas in vertex form">Section 4.2.1</a> of the Toolkit.</div></aside><div class="para" id="TheVertex-6-5">If we know the vertex of a parabola and one other point, we can use the vertex form to find its equation. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
 <article class="example example-like" id="TheVertex-6-6"><h4 class="heading">
@@ -1844,7 +1716,11 @@ y = \dfrac{-1}{2}(\alert{0}+3)^2-2 = \dfrac{-9}{2}-2 = -6\dfrac{1}{2}
 <li id="TheVertex-6-6-1-1-1-2"><div class="para" id="p-derived-TheVertex-6-6-1-1-1-2">Do you think Andre’s free-throw would score on a regulation basketball court, where the hoop is 15 feet from the shooter and 10 feet high?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="TheVertex-6-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="TheVertex-6-6-2-1"><ol class="lower-alpha ol-marker-2" id="TheVertex-6-6-2-1-1">
+<div class="solution solution-like" id="TheVertex-6-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="TheVertex-6-6-2-1"><ol class="lower-alpha ol-marker-2" id="TheVertex-6-6-2-1-1">
 <li id="TheVertex-6-6-2-1-1-1">
 <div class="para logical" id="TheVertex-6-6-2-1-1-1-1">
 <div class="para">If Andre’s feet are at the origin, then the vertex of the ball’s trajectory is the point <span class="process-math">\((\alert{10},\alert{11})\text{,}\)</span> and its  <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\((0,7)\text{.}\)</span>  We start with the vertex form for a parabola.</div>
@@ -1878,37 +1754,13 @@ y \amp =-0.04(25)+11 = 10
 </div>
 <div class="para">From our computations, we see that the point <span class="process-math">\((15,10)\)</span> is indeed on the trajectory. However, because Andre’s shot will probably hit the backboard just where the hoop attaches and bounce off, so it is unlikely that his shot will score.</div>
 </div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="TheVertex-6-7"><div class="para" id="TheVertex-6-7-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of finding the vertex form, see <a href="tkchap4.html#tkSolveforParam" class="internal" title="Subsubsection A.4.2.3: Solve for a parameter">Section 4.2.3</a> of the Toolkit.</div></aside><details id="TheVertex-6-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="TheVertex-6-7"><div class="para" id="TheVertex-6-7-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of finding the vertex form, see <a href="tkchap4.html#tkSolveforParam" class="internal" title="Subsubsection A.4.2.3: Solve for a parameter">Section 4.2.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="TheVertex-6-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-133" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="133" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbGludCA9IFJhZGlvQnV0dG9ucygKICBbIldlIG5lZWQgdHdvIHBvaW50cyB0byBmaW5kIHRoZSBlcXVhdGlvbiBvZiBhIGxpbmUuIiwKICAiVG8gZmluZCB0aGUgdmFsdWUgb2YgXChhXCkuIiwKICAiV2UgbXVzdCBrbm93IG9uZSBvZiB0aGUgXCh4XCktaW50ZXJjZXB0cy4iLAogICJXZSBtdXN0IGtub3cgdGhlIFwoeVwpLWludGVyY2VwdC4iXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2h5IGRvIHdlIG5lZWQgdG8ga25vdyBhIHNlY29uZCBwb2ludCBiZXNpZGVzIHRoZSB2ZXJ0ZXggdG8gZmluZCB0aGUgZXF1YXRpb24gb2YgYSBwYXJhYm9sYT8KCltfXXskbGludH17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUbyBmaW5kIHRoZSB2YWx1ZSBvZiBbYGFgXSBmb3IgdGhlIHZlcnRleCBmb3JtIFtgeT1hKHgteF92ICleMiArIHlfdlx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-133')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-133-1-1-1">Why do we need to know a second point besides the vertex to find the equation of a parabola?</div> <div class="para logical" id="extracted-webwork-133-1-1-2"><ul class="circle" id="extracted-webwork-133-1-1-2-1">
-<li id="extracted-webwork-133-1-1-2-1-1"><div class="para" id="extracted-webwork-133-1-1-2-1-1-1">We need two points to find the equation of a line.</div></li>
-<li id="extracted-webwork-133-1-1-2-1-2"><div class="para" id="extracted-webwork-133-1-1-2-1-2-1">To find the value of <span class="process-math">\(a\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-133-1-1-2-1-3"><div class="para" id="extracted-webwork-133-1-1-2-1-3-1">We must know one of the <span class="process-math">\(x\)</span>-intercepts.</div></li>
-<li id="extracted-webwork-133-1-1-2-1-4"><div class="para" id="extracted-webwork-133-1-1-2-1-4-1">We must know the <span class="process-math">\(y\)</span>-intercept.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-133-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-133-1-2-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-133-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-133-1-3-1">To find the value of <span class="process-math">\(a\)</span> for the vertex form <span class="process-math">\(y=a(x-x_v )^2 + y_v\text{.}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details><details id="TheVertex-6-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="TheVertex-6-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-134" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="134" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KCByZWR1Y2VDb25zdGFudHMgPT4gMCwgcmVkdWNlQ29uc3RhbnRGdW5jdGlvbnMgPT4gMCwgICk7CiRmID0gRm9ybXVsYSgiLTUvMzYqKHgtMTYpKioyICs4MCAiKTsKCkJFR0lOX1BHTUwKQSBwYXJhYm9sYSBoYXMgaXRzIHZlcnRleCBhdCBbYCgxNiw4MClgXSBhbmQgb25lIG9mIGl0cyAgW2B4YF0taW50ZXJjZXB0cyBhdCBbYCg0MCwwKVx0ZXh0ey59YF0gRmluZCBhbiBlcXVhdGlvbiBmb3IgdGhlIHBhcmFib2xhLgoKW2B5PWBdW19deyRmfXsxNX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHk9XGRmcmFjey01fXszNn0oeC0xNileMis4MGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-134')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-134-1-1-1">A parabola has its vertex at <span class="process-math">\((16,80)\)</span> and one of its  <span class="process-math">\(x\)</span>-intercepts at <span class="process-math">\((40,0)\text{.}\)</span> Find an equation for the parabola.</div> <div class="para" id="extracted-webwork-134-1-1-2">
-<span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-134-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-134-1-2-1"><span class="process-math">\(\frac{-5}{36}\!\left(x-16\right)^{2}+80\)</span></div></div></details><details id="extracted-webwork-134-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-134-1-3-1"><span class="process-math">\(y=\dfrac{-5}{36}(x-16)^2+80\)</span></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-4-2-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-4-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="space"> </span><span class="title">Problem Set 4.2</span>
 </h3>
 <article class="subexercises" id="section-4-2-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

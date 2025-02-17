@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="tkchap5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="toolkit.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="tkchap7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1337,7 +1317,11 @@ x^{-2} = \dfrac{1}{x^2}
 <li id="tkNegExp-3-1-1-1-2"><div class="para" id="p-derived-tkNegExp-3-1-1-1-2"><span class="process-math">\(\displaystyle \left(\dfrac{x}{4}\right)^{-3}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkNegExp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkNegExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkNegExp-3-2-1-1">
+<div class="solution solution-like" id="tkNegExp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkNegExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkNegExp-3-2-1-1">
 <li id="tkNegExp-3-2-1-1-1"><div class="para" id="p-derived-tkNegExp-3-2-1-1-1">
 <span class="process-math">\(10^{-4} = \dfrac{1}{10^4} = \dfrac{1}{10,000}~\text{,}\)</span> or <span class="process-math">\(~0.0001\text{.}\)</span>
 </div></li>
@@ -1349,7 +1333,8 @@ x^{-2} = \dfrac{1}{x^2}
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkNegExp-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkNegExp-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.2</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkNegExp-4-1-1">
@@ -1359,12 +1344,18 @@ x^{-2} = \dfrac{1}{x^2}
 <li id="tkNegExp-4-1-1-1-2"><div class="para" id="p-derived-tkNegExp-4-1-1-1-2"><span class="process-math">\(\displaystyle \dfrac{8}{x^4}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkNegExp-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkNegExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkNegExp-4-2-1-1">
+<div class="solution solution-like" id="tkNegExp-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkNegExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkNegExp-4-2-1-1">
 <li id="tkNegExp-4-2-1-1-1"><div class="para" id="p-derived-tkNegExp-4-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{1}{3a^4a^2} = 3^{-4}a^{-2}\)</span></div></li>
 <li id="tkNegExp-4-2-1-1-2"><div class="para" id="p-derived-tkNegExp-4-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{8}{x^4} = 8x^{-4}\)</span></div></li>
-</ol></div></div></details></div></article><details id="tkNegExp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkNegExp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.3</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkNegExp-5-1-1">
+</h5>
+<div class="para logical" id="tkNegExp-5-1-1">
 <div class="para">Write each expression using negative exponents and evaluate.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkNegExp-5-1-1-1">
 <li id="tkNegExp-5-1-1-1-1"><div class="para" id="p-derived-tkNegExp-5-1-1-1-1"><span class="process-math">\(\displaystyle (-6)^{-2}\)</span></div></li>
@@ -1374,9 +1365,10 @@ x^{-2} = \dfrac{1}{x^2}
 <div class="solutions"><details id="tkNegExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkNegExp-5-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkNegExp-5-2-1-1">
 <li id="tkNegExp-5-2-1-1-1"><div class="para" id="p-derived-tkNegExp-5-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{1}{6^2} = \dfrac{1}{36}\)</span></div></li>
 <li id="tkNegExp-5-2-1-1-2"><div class="para" id="p-derived-tkNegExp-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{5^2}{3^2} = \dfrac{25}{9}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkNegExp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkNegExp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.4</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkNegExp-6-1-1">
+</h5>
+<div class="para logical" id="tkNegExp-6-1-1">
 <div class="para">Write each expression using negative exponents.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkNegExp-6-1-1-1">
 <li id="tkNegExp-6-1-1-1-1"><div class="para" id="p-derived-tkNegExp-6-1-1-1-1"><span class="process-math">\(\displaystyle 4t^{-2}\)</span></div></li>
@@ -1386,7 +1378,7 @@ x^{-2} = \dfrac{1}{x^2}
 <div class="solutions"><details id="tkNegExp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkNegExp-6-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkNegExp-6-2-1-1">
 <li id="tkNegExp-6-2-1-1-1"><div class="para" id="p-derived-tkNegExp-6-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{4}{t^2}\)</span></div></li>
 <li id="tkNegExp-6-2-1-1-2"><div class="para" id="p-derived-tkNegExp-6-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{1}{16t^2}\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkExplaws"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkExplaws"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.1.2</span><span class="space"> </span><span class="title">Use the laws of exponents</span>
 </h4>
 <div class="para" id="tkExplaws-2">Recall the five Laws of Exponents.</div>
@@ -1405,7 +1397,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 </h5>
 <div class="para" id="tkExplaws-4-1-1">Multiply <span class="process-math">\(~(2x^2y)(5x^4y^3)~\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkExplaws-4-2-1">
+<div class="solution solution-like" id="tkExplaws-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkExplaws-4-2-1">
 <div class="para">Rearrange the factors to group together the numerical coefficients and the powers of each base.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1418,12 +1414,17 @@ a^{m-n} \amp \text{if}~m \gt n\\
 (2)(5)x^2x^4yy^3 = 10x^6y^4 ~~~~~~~~ \blert{\text{Add exponents on each base.}}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkExplaws-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkExplaws-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.6</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkExplaws-5-1-1">Divide <span class="process-math">\(~\dfrac{3x^2y^4}{6x^3y}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkExplaws-5-2-1">
+<div class="solution solution-like" id="tkExplaws-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkExplaws-5-2-1">
 <div class="para">Consider the numerical coefficients and the powers of each base separately.  Use the second law of exponents to simplify each quotient of powers.</div>
 <div class="displaymath process-math" id="tkExplaws-5-2-1-1">
 \begin{align*}
@@ -1432,24 +1433,34 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \amp = \dfrac{1}{2} \cdot \dfrac{1}{x} \cdot \dfrac{y^3}{1} = \dfrac{y^3}{2x} 
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkExplaws-6"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkExplaws-6"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.7</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkExplaws-6-1-1">Simplify <span class="process-math">\(~(5a^3b)^2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkExplaws-6-2-1">
+<div class="solution solution-like" id="tkExplaws-6-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkExplaws-6-2-1">
 <div class="para">Apply the fourth law of exponents and square each factor.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (5a^3b)^2 = 5^2(a^3)^2b^2 = 25a^6b^2 ~~~~~~~~ \blert{\text{Apply the third law:  multiply exponents.}}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkExplaws-7"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkExplaws-7"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.8</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkExplaws-7-1-1">Simplify <span class="process-math">\(~\left(\dfrac{2}{y^3}\right)^3\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkExplaws-7-2-1">
+<div class="solution solution-like" id="tkExplaws-7-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkExplaws-7-2-1">
 <div class="para">Apply the fifth law of exponents.</div>
 <div class="displaymath process-math" id="tkExplaws-7-2-1-1">
 \begin{align*}
@@ -1457,23 +1468,28 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \amp = \dfrac{2^3}{y^{3(3)}} = \dfrac{8}{y^9} \amp\amp \blert{\text{Apply the third law.}} 
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkExplaws-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkExplaws-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.9</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkExplaws-8-1-1">Multiply <span class="process-math">\(~-3a^4b(-4a^3b)\text{.}\)</span>
+</h5>
+<div class="para" id="tkExplaws-8-1-1">Multiply <span class="process-math">\(~-3a^4b(-4a^3b)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-8-2-1"><span class="process-math">\(12a^7b^2\)</span></div></div></details></div></article></details><details id="tkExplaws-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkExplaws-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-8-2-1"><span class="process-math">\(12a^7b^2\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkExplaws-9"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.10</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkExplaws-9-1-1">Divide <span class="process-math">\(~\dfrac{8x^2y}{12x^5y^3}\text{.}\)</span>
+</h5>
+<div class="para" id="tkExplaws-9-1-1">Divide <span class="process-math">\(~\dfrac{8x^2y}{12x^5y^3}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-9-2-1"><span class="process-math">\(\dfrac{2}{3x^3y^2}\)</span></div></div></details></div></article></details><details id="tkExplaws-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkExplaws-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-9-2-1"><span class="process-math">\(\dfrac{2}{3x^3y^2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkExplaws-10"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.11</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkExplaws-10-1-1">Simplify <span class="process-math">\(~(6pq^4)^3\text{.}\)</span>
+</h5>
+<div class="para" id="tkExplaws-10-1-1">Simplify <span class="process-math">\(~(6pq^4)^3\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-10-2-1"><span class="process-math">\(216p^3q^{12}\)</span></div></div></details></div></article></details><details id="tkExplaws-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkExplaws-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-10-2-1"><span class="process-math">\(216p^3q^{12}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkExplaws-11"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.12</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkExplaws-11-1-1">Simplify <span class="process-math">\(~\left(\dfrac{n^3}{k^4}\right)^8\text{.}\)</span>
+</h5>
+<div class="para" id="tkExplaws-11-1-1">Simplify <span class="process-math">\(~\left(\dfrac{n^3}{k^4}\right)^8\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkExplaws-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-11-2-1"><span class="process-math">\(\dfrac{n^{24}}{k^{32}}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkSciNot"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkExplaws-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkExplaws-11-2-1"><span class="process-math">\(\dfrac{n^{24}}{k^{32}}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkSciNot"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.1.3</span><span class="space"> </span><span class="title">Use scientific notation</span>
 </h4>
 <section class="introduction" id="tkSciNot-2"><div class="para" id="tkSciNot-2-1">If we move the decimal point to the left, we are making a number smaller, so we must multiply by a positive power of 10 to compensate.  If we move the decimal point to the right, we must multiply by a negative power of 10.</div></section><article class="example example-like" id="tkSciNot-3"><h5 class="heading">
@@ -1486,7 +1502,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkSciNot-3-1-1-1-2"><div class="para" id="p-derived-tkSciNot-3-1-1-1-2"><span class="process-math">\(\displaystyle 0.000431\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkSciNot-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSciNot-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSciNot-3-2-1-1">
+<div class="solution solution-like" id="tkSciNot-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSciNot-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSciNot-3-2-1-1">
 <li id="tkSciNot-3-2-1-1-1"><div class="para logical" id="tkSciNot-3-2-1-1-1-1">
 <div class="para">First, we position the decimal point so that there is just one nonzero digit to the left of the decimal.</div>
 <div class="displaymath process-math">
@@ -1517,9 +1537,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkSciNot-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkSciNot-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.14</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSciNot-4-1-1">
+</h5>
+<div class="para logical" id="tkSciNot-4-1-1">
 <div class="para">Write each number in scientific notation.</div>
 <ol class="lower-alpha ol-marker-2" id="tkSciNot-4-1-1-1">
 <li id="tkSciNot-4-1-1-1-1"><div class="para" id="tkSciNot-4-1-1-1-1-1">The largest living animal is the blue whale, with an average weight of <span class="process-math">\(~120,000,000~\)</span> grams.</div></li>
@@ -1529,7 +1551,7 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <div class="solutions"><details id="tkSciNot-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkSciNot-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkSciNot-4-2-1-1">
 <li id="tkSciNot-4-2-1-1-1"><div class="para" id="p-derived-tkSciNot-4-2-1-1-1"><span class="process-math">\(\displaystyle 1.2 \times 10^8\)</span></div></li>
 <li id="tkSciNot-4-2-1-1-2"><div class="para" id="p-derived-tkSciNot-4-2-1-1-2"><span class="process-math">\(\displaystyle 5 \times 10^{-6}\)</span></div></li>
-</ol></div></div></details></div></article></details></section></section><section class="subsection" id="tkRootsRadicals"><h3 class="heading hide-type">
+</ol></div></div></details></div></article></section></section><section class="subsection" id="tkRootsRadicals"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.6.2</span><span class="space"> </span><span class="title">Roots and Radicals</span>
 </h3>
 <section class="subsubsection" id="tkDefRoot"><h4 class="heading hide-type">
@@ -1547,14 +1569,19 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkDefRoot-3-1-1-1-2"><div class="para" id="p-derived-tkDefRoot-3-1-1-1-2"><span class="process-math">\(\displaystyle \sqrt{n}(\sqrt{n})\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkDefRoot-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkDefRoot-3-2-1">
+<div class="solution solution-like" id="tkDefRoot-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkDefRoot-3-2-1">
 <div class="para">By the definition of square root, <span class="process-math">\(\sqrt{a}\)</span> is a number whose square is <span class="process-math">\(a\text{.}\)</span>
 </div>
 <ol class="lower-alpha ol-marker-2" id="tkDefRoot-3-2-1-3">
 <li id="tkDefRoot-3-2-1-3-1"><div class="para" id="p-derived-tkDefRoot-3-2-1-3-1"><span class="process-math">\(\displaystyle \left(\sqrt{7}\right)\left(\sqrt{7}\right)=7\)</span></div></li>
 <li id="tkDefRoot-3-2-1-3-2"><div class="para" id="p-derived-tkDefRoot-3-2-1-3-2"><span class="process-math">\(\displaystyle \sqrt{n}(\sqrt{n})=n\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkDefRoot-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkDefRoot-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.16</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkDefRoot-4-1-1">
@@ -1564,14 +1591,19 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkDefRoot-4-1-1-1-2"><div class="para" id="p-derived-tkDefRoot-4-1-1-1-2"><span class="process-math">\(\displaystyle \left(\sqrt[3]{4}\right)\left(\sqrt[3]{4}\right)\left(\sqrt[3]{4}\right)\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkDefRoot-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkDefRoot-4-2-1">
+<div class="solution solution-like" id="tkDefRoot-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkDefRoot-4-2-1">
 <div class="para">By the definition of cube root, <span class="process-math">\(\sqrt[3]{a}\)</span> is a number whose cube is <span class="process-math">\(a\text{.}\)</span>
 </div>
 <ol class="lower-alpha ol-marker-2" id="tkDefRoot-4-2-1-3">
 <li id="tkDefRoot-4-2-1-3-1"><div class="para" id="p-derived-tkDefRoot-4-2-1-3-1"><span class="process-math">\(\displaystyle \left(\sqrt[3]{5}\right)^3=5\)</span></div></li>
 <li id="tkDefRoot-4-2-1-3-2"><div class="para" id="p-derived-tkDefRoot-4-2-1-3-2"><span class="process-math">\(\displaystyle \left(\sqrt[3]{4}\right)\left(\sqrt[3]{4}\right)\left(\sqrt[3]{4}\right)=4\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkDefRoot-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkDefRoot-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.17</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkDefRoot-5-1-1">
@@ -1581,12 +1613,18 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkDefRoot-5-1-1-1-2"><div class="para" id="p-derived-tkDefRoot-5-1-1-1-2"><span class="process-math">\(\displaystyle \dfrac{p}{\sqrt{p}}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkDefRoot-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkDefRoot-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkDefRoot-5-2-1-1">
+<div class="solution solution-like" id="tkDefRoot-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkDefRoot-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkDefRoot-5-2-1-1">
 <li id="tkDefRoot-5-2-1-1-1"><div class="para" id="p-derived-tkDefRoot-5-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{3}{\sqrt{3}} = \dfrac{\sqrt{3}\sqrt{3}}{\sqrt{3}} = \sqrt{3}\)</span></div></li>
 <li id="tkDefRoot-5-2-1-1-2"><div class="para" id="p-derived-tkDefRoot-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{p}{\sqrt{p}} = \dfrac{\sqrt{p}\sqrt{p}}{\sqrt{p}} = \sqrt{p}\)</span></div></li>
-</ol></div></div></details></div></article><details id="tkDefRoot-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkDefRoot-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.18</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkDefRoot-6-1-1">
+</h5>
+<div class="para logical" id="tkDefRoot-6-1-1">
 <div class="para">Simplify. Do not use a calculator!</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkDefRoot-6-1-1-1">
 <li id="tkDefRoot-6-1-1-1-1"><div class="para" id="p-derived-tkDefRoot-6-1-1-1-1"><span class="process-math">\(\displaystyle \sqrt{5}(\sqrt{5})\)</span></div></li>
@@ -1596,9 +1634,10 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <div class="solutions"><details id="tkDefRoot-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkDefRoot-6-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkDefRoot-6-2-1-1">
 <li id="tkDefRoot-6-2-1-1-1"><div class="para" id="p-derived-tkDefRoot-6-2-1-1-1"><span class="process-math">\(\displaystyle 5\)</span></div></li>
 <li id="tkDefRoot-6-2-1-1-2"><div class="para" id="p-derived-tkDefRoot-6-2-1-1-2"><span class="process-math">\(\displaystyle x\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkDefRoot-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkDefRoot-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.19</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkDefRoot-7-1-1">
+</h5>
+<div class="para logical" id="tkDefRoot-7-1-1">
 <div class="para">Simplify. Do not use a calculator!</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkDefRoot-7-1-1-1">
 <li id="tkDefRoot-7-1-1-1-1"><div class="para" id="p-derived-tkDefRoot-7-1-1-1-1"><span class="process-math">\(\displaystyle \left(\sqrt[3]{9}\right)\left(\sqrt[3]{9}\right)\left(\sqrt[3]{9}\right)\)</span></div></li>
@@ -1608,9 +1647,10 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <div class="solutions"><details id="tkDefRoot-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkDefRoot-7-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkDefRoot-7-2-1-1">
 <li id="tkDefRoot-7-2-1-1-1"><div class="para" id="p-derived-tkDefRoot-7-2-1-1-1"><span class="process-math">\(\displaystyle 9\)</span></div></li>
 <li id="tkDefRoot-7-2-1-1-2"><div class="para" id="p-derived-tkDefRoot-7-2-1-1-2"><span class="process-math">\(\displaystyle 20\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkDefRoot-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkDefRoot-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.20</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkDefRoot-8-1-1">
+</h5>
+<div class="para logical" id="tkDefRoot-8-1-1">
 <div class="para">Simplify. Do not use a calculator!</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkDefRoot-8-1-1-1">
 <li id="tkDefRoot-8-1-1-1-1"><div class="para" id="p-derived-tkDefRoot-8-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{10}{\sqrt{10}}\)</span></div></li>
@@ -1620,7 +1660,7 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <div class="solutions"><details id="tkDefRoot-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkDefRoot-8-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkDefRoot-8-2-1-1">
 <li id="tkDefRoot-8-2-1-1-1"><div class="para" id="p-derived-tkDefRoot-8-2-1-1-1"><span class="process-math">\(\displaystyle \sqrt{10}\)</span></div></li>
 <li id="tkDefRoot-8-2-1-1-2"><div class="para" id="p-derived-tkDefRoot-8-2-1-1-2"><span class="process-math">\(\displaystyle \sqrt{H}\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkRatNos"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkRatNos"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.2.2</span><span class="space"> </span><span class="title">Irrational numbers</span>
 </h4>
 <div class="para" id="tkRatNos-2">Rational numbers are the integers and common fractions; we can represent them precisely in decimal form. But the best we can do for an irrational number is to write an approximate decimal form by rounding.</div>
@@ -1636,12 +1676,17 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkRatNos-3-1-1-1-4"><div class="para" id="p-derived-tkRatNos-3-1-1-1-4"><span class="process-math">\(\displaystyle \sqrt{\dfrac{5}{9}}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRatNos-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRatNos-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkRatNos-3-2-1-1">
+<div class="solution solution-like" id="tkRatNos-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRatNos-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkRatNos-3-2-1-1">
 <li id="tkRatNos-3-2-1-1-1"><div class="para" id="p-derived-tkRatNos-3-2-1-1-1">Irrational:  <span class="process-math">\(~\sqrt{6}~\)</span> is not the quotient of two integers.</div></li>
 <li id="tkRatNos-3-2-1-1-2"><div class="para" id="tkRatNos-3-2-1-1-2-1">Rational: <span class="process-math">\(~\dfrac{-5}{3}~\)</span> is the quotient of two integers.</div></li>
 <li id="tkRatNos-3-2-1-1-3"><div class="para" id="p-derived-tkRatNos-3-2-1-1-3">Rational:  <span class="process-math">\(~\sqrt{16} = 4~\)</span> is an integer.</div></li>
 <li id="tkRatNos-3-2-1-1-4"><div class="para" id="tkRatNos-3-2-1-1-4-1">Irrational: <span class="process-math">\(~\sqrt{\dfrac{5}{9}} = \dfrac{\sqrt{5}}{3}~\text{,}\)</span>  but <span class="process-math">\(\sqrt{5}\)</span> is irrational.</div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkRatNos-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkRatNos-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.22</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkRatNos-4-1-1">
@@ -1652,7 +1697,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkRatNos-4-1-1-1-3"><div class="para" id="p-derived-tkRatNos-4-1-1-1-3"><span class="process-math">\(\displaystyle 2+\sqrt[3]{5}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRatNos-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRatNos-4-2-1">
+<div class="solution solution-like" id="tkRatNos-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRatNos-4-2-1">
 <div class="para">Use a calculator to evaluate.</div>
 <ol class="lower-alpha ol-marker-2" id="tkRatNos-4-2-1-1">
 <li id="tkRatNos-4-2-1-1-1"><div class="para" id="p-derived-tkRatNos-4-2-1-1-1">Enter <span class="process-math">\(~5~ \boxed{\sqrt{}}~3\)</span>  <kbd class="kbdkey">ENTER</kbd> and round to three decimal places: <span class="process-math">\(~8.660 \)</span>
@@ -1662,9 +1711,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkRatNos-4-2-1-1-3"><div class="para" id="p-derived-tkRatNos-4-2-1-1-3">Enter <span class="process-math">\(2\)</span> <kbd class="kbdkey">+</kbd> <kbd class="kbdkey">MATH</kbd> <kbd class="kbdkey">4</kbd> <span class="process-math">\(5\)</span> <kbd class="kbdkey">ENTER</kbd> and round to three decimal places: <span class="process-math">\(~3.710\)</span>
 </div></li>
 </ol>
-</div></div></details></div></article><details id="tkRatNos-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkRatNos-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.23</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkRatNos-5-1-1">
+</h5>
+<div class="para logical" id="tkRatNos-5-1-1">
 <div class="para">Identify each number as rational or irrational.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkRatNos-5-1-1-1">
 <li id="tkRatNos-5-1-1-1-1"><div class="para" id="p-derived-tkRatNos-5-1-1-1-1"><span class="process-math">\(\displaystyle \sqrt{250}\)</span></div></li>
@@ -1678,9 +1729,10 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkRatNos-5-2-1-1-2"><div class="para" id="p-derived-tkRatNos-5-2-1-1-2">Irrational</div></li>
 <li id="tkRatNos-5-2-1-1-3"><div class="para" id="p-derived-tkRatNos-5-2-1-1-3">Rational</div></li>
 <li id="tkRatNos-5-2-1-1-4"><div class="para" id="p-derived-tkRatNos-5-2-1-1-4">Irrational</div></li>
-</ol></div></div></details></div></article></details><details id="tkRatNos-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkRatNos-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.24</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkRatNos-6-1-1">
+</h5>
+<div class="para logical" id="tkRatNos-6-1-1">
 <div class="para">Give a decimal approximation rounded to thousandths.</div>
 <ol class="lower-alpha ol-marker-2 cols3" id="tkRatNos-6-1-1-1">
 <li id="tkRatNos-6-1-1-1-1"><div class="para" id="p-derived-tkRatNos-6-1-1-1-1"><span class="process-math">\(\displaystyle -6\sqrt[3]{5}\)</span></div></li>
@@ -1692,7 +1744,7 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <li id="tkRatNos-6-2-1-1-1"><div class="para" id="p-derived-tkRatNos-6-2-1-1-1"><span class="process-math">\(\displaystyle -10.260\)</span></div></li>
 <li id="tkRatNos-6-2-1-1-2"><div class="para" id="p-derived-tkRatNos-6-2-1-1-2"><span class="process-math">\(\displaystyle 5.231\)</span></div></li>
 <li id="tkRatNos-6-2-1-1-3"><div class="para" id="p-derived-tkRatNos-6-2-1-1-3"><span class="process-math">\(\displaystyle 2.641\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkMistakes"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkMistakes"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.2.3</span><span class="space"> </span><span class="title">Using exponents and roots</span>
 </h4>
 <div class="para" id="tkMistakes-2">Be careful to avoid tempting but false operations with exponents and roots.</div>
@@ -1710,7 +1762,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkMistakes-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkMistakes-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkMistakes-3-2-1-1">
+<div class="solution solution-like" id="tkMistakes-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkMistakes-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkMistakes-3-2-1-1">
 <li id="tkMistakes-3-2-1-1-1">
 <div class="para" id="tkMistakes-3-2-1-1-1-1">The first statement is not correct. There is no law that says <span class="process-math">\((a+b)^n\)</span> is equivalent to <span class="process-math">\(a^n+b^n\text{,}\)</span> so <span class="process-math">\((1+r)^4\)</span> is not equivalent to <span class="process-math">\(1^4+r^4\)</span> or <span class="process-math">\(1+r^4\text{.}\)</span>
 </div>
@@ -1734,22 +1790,27 @@ a^{m-n} \amp \text{if}~m \gt n\\
 </div>
 <div class="para" id="tkMistakes-3-2-1-1-2-2">In the second statement, 6.8 is not raised to power <span class="process-math">\(t\text{,}\)</span> so we cannot multiply 6.8 times 10.</div>
 </li>
-</ol></div></div></details></div></article><div class="para" id="tkMistakes-4">Decide whether each equation is a correct application of the laws of exponents. Write a correct statement if possible.</div>
-<details id="tkMistakes-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><div class="para" id="tkMistakes-4">Decide whether each equation is a correct application of the laws of exponents. Write a correct statement if possible.</div>
+<article class="exercise exercise-like" id="tkMistakes-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.26</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-5-1-1"><span class="process-math">\(P(1-r)^6 \rightarrow P-Pr^6\)</span></div>
-<div class="solutions"><details id="tkMistakes-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-5-2-1">Not correct</div></div></details></div></article></details><details id="tkMistakes-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkMistakes-5-1-1"><span class="process-math">\(P(1-r)^6 \rightarrow P-Pr^6\)</span></div>
+<div class="solutions"><details id="tkMistakes-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-5-2-1">Not correct</div></div></details></div></article><article class="exercise exercise-like" id="tkMistakes-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.27</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-6-1-1"><span class="process-math">\(25(2^t) \cdot 4(2^t) \rightarrow 100 \cdot 2^{t^2}\)</span></div>
+</h5>
+<div class="para" id="tkMistakes-6-1-1"><span class="process-math">\(25(2^t) \cdot 4(2^t) \rightarrow 100 \cdot 2^{t^2}\)</span></div>
 <div class="solutions"><details id="tkMistakes-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-6-2-1">Not correct. <span class="process-math">\(~25(2^t) \cdot 4(2^t) = 100(2^{2t})\)</span>
-</div></div></details></div></article></details><details id="tkMistakes-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></details></div></article><article class="exercise exercise-like" id="tkMistakes-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.28</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-7-1-1"><span class="process-math">\(a\left(b^{1/8}\right)^{2t} \rightarrow ab^{t/4}\)</span></div>
-<div class="solutions"><details id="tkMistakes-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-7-2-1">Correct</div></div></details></div></article></details><details id="tkMistakes-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkMistakes-7-1-1"><span class="process-math">\(a\left(b^{1/8}\right)^{2t} \rightarrow ab^{t/4}\)</span></div>
+<div class="solutions"><details id="tkMistakes-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-7-2-1">Correct</div></div></details></div></article><article class="exercise exercise-like" id="tkMistakes-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.29</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-8-1-1"><span class="process-math">\(N(0.94)^{1/8.3} \rightarrow \dfrac{N}{(0.94)^{8.3}}\)</span></div>
+</h5>
+<div class="para" id="tkMistakes-8-1-1"><span class="process-math">\(N(0.94)^{1/8.3} \rightarrow \dfrac{N}{(0.94)^{8.3}}\)</span></div>
 <div class="solutions"><details id="tkMistakes-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-8-2-1">Not correct, but <span class="process-math">\(~N(0.94)^{-8.3} = \dfrac{N}{(0.94)^{8.3}}\)</span>
-</div></div></details></div></article></details><article class="assemblage assemblage-like" id="tkMistakes-9"><h5 class="heading"><span class="title">Properties of Radicals.</span></h5>
+</div></div></details></div></article><article class="assemblage assemblage-like" id="tkMistakes-9"><h5 class="heading"><span class="title">Properties of Radicals.</span></h5>
 <div class="para logical" id="tkMistakes-9-2">
 <div class="para">Product Rule</div>
 <div class="displaymath process-math">
@@ -1781,7 +1842,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkMistakes-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkMistakes-10-2-1"><ol class="lower-alpha ol-marker-2" id="tkMistakes-10-2-1-1">
+<div class="solution solution-like" id="tkMistakes-10-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkMistakes-10-2-1"><ol class="lower-alpha ol-marker-2" id="tkMistakes-10-2-1-1">
 <li id="tkMistakes-10-2-1-1-1">
 <div class="para" id="tkMistakes-10-2-1-1-1-1">The first statement is incorrect. There is no property that says <span class="process-math">\(~\sqrt[n]{a+b} = \sqrt[n]{a} + \sqrt[n]{b}\text{.}\)</span>
 </div>
@@ -1793,21 +1858,26 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <div class="para" id="tkMistakes-10-2-1-1-2-2">The second statement is correct, because <span class="process-math">\(~\sqrt{x+y}~\sqrt{x+y} = x+y\text{.}\)</span>
 </div>
 </li>
-</ol></div></div></details></div></article><div class="para" id="tkMistakes-11">Decide whether each equation is a correct application of the properties of radicals. Write a correct statement if possible.</div>
-<details id="tkMistakes-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><div class="para" id="tkMistakes-11">Decide whether each equation is a correct application of the properties of radicals. Write a correct statement if possible.</div>
+<article class="exercise exercise-like" id="tkMistakes-12"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.31</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-12-1-1"><span class="process-math">\(\sqrt[4]{a^2-a^4} \rightarrow \sqrt[4]{a^2} - a\)</span></div>
-<div class="solutions"><details id="tkMistakes-12-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-12-2-1">Not correct</div></div></details></div></article></details><details id="tkMistakes-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkMistakes-12-1-1"><span class="process-math">\(\sqrt[4]{a^2-a^4} \rightarrow \sqrt[4]{a^2} - a\)</span></div>
+<div class="solutions"><details id="tkMistakes-12-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-12-2-1">Not correct</div></div></details></div></article><article class="exercise exercise-like" id="tkMistakes-13"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.32</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-13-1-1"><span class="process-math">\(\sqrt{b^4-16} \rightarrow \sqrt{b^2-4} \sqrt{b^2+4}\)</span></div>
-<div class="solutions"><details id="tkMistakes-13-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-13-2-1">Correct</div></div></details></div></article></details><details id="tkMistakes-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkMistakes-13-1-1"><span class="process-math">\(\sqrt{b^4-16} \rightarrow \sqrt{b^2-4} \sqrt{b^2+4}\)</span></div>
+<div class="solutions"><details id="tkMistakes-13-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-13-2-1">Correct</div></div></details></div></article><article class="exercise exercise-like" id="tkMistakes-14"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.33</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-14-1-1"><span class="process-math">\(\sqrt[3]{t^4} + \sqrt[3]{t^4} \rightarrow \sqrt[3]{2t^4}\)</span></div>
+</h5>
+<div class="para" id="tkMistakes-14-1-1"><span class="process-math">\(\sqrt[3]{t^4} + \sqrt[3]{t^4} \rightarrow \sqrt[3]{2t^4}\)</span></div>
 <div class="solutions"><details id="tkMistakes-14-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-14-2-1">Not correct.<span class="process-math">\(~\sqrt[3]{t^4} + \sqrt[3]{t^4} = 2\sqrt[3]{t^4}\)</span>
-</div></div></details></div></article></details><details id="tkMistakes-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></details></div></article><article class="exercise exercise-like" id="tkMistakes-15"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.34</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMistakes-15-1-1"><span class="process-math">\(\dfrac{\sqrt{2p}}{\sqrt{4p+8p^2}} \rightarrow \dfrac{1}{\sqrt{2+4p}}\)</span></div>
-<div class="solutions"><details id="tkMistakes-15-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-15-2-1">Correct</div></div></details></div></article></details></section></section><section class="subsection" id="tkRationalExponents"><h3 class="heading hide-type">
+</h5>
+<div class="para" id="tkMistakes-15-1-1"><span class="process-math">\(\dfrac{\sqrt{2p}}{\sqrt{4p+8p^2}} \rightarrow \dfrac{1}{\sqrt{2+4p}}\)</span></div>
+<div class="solutions"><details id="tkMistakes-15-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMistakes-15-2-1">Correct</div></div></details></div></article></section></section><section class="subsection" id="tkRationalExponents"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.6.3</span><span class="space"> </span><span class="title">Rational Exponents</span>
 </h3>
 <section class="subsubsection" id="tkFracOps"><h4 class="heading hide-type">
@@ -1819,7 +1889,11 @@ a^{m-n} \amp \text{if}~m \gt n\\
 </h5>
 <div class="para" id="tkFracOps-3-1-1">Add <span class="process-math">\(~\dfrac{-3}{4}+\left(\dfrac{-5}{8}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkFracOps-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFracOps-3-2-1">
+<div class="solution solution-like" id="tkFracOps-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFracOps-3-2-1">
 <div class="para">The LCD for the fractions is 8, so we build the first fraction:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1832,12 +1906,17 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \dfrac{-6}{8}+\left(\dfrac{-5}{8}\right) = \dfrac{-6+(-5)}{8} = \dfrac{-11}{8}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkFracOps-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkFracOps-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.36</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFracOps-4-1-1">Subtract <span class="process-math">\(~\dfrac{-5}{6}-\left(\dfrac{-3}{4}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkFracOps-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFracOps-4-2-1">
+<div class="solution solution-like" id="tkFracOps-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFracOps-4-2-1">
 <div class="para">The LCD for the fractions is 12, so we build each fraction:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1850,12 +1929,17 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \dfrac{-10}{12}-\left(\dfrac{-9}{12}\right) = \dfrac{-10+9}{12} = \dfrac{-1}{12}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkFracOps-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkFracOps-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.37</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFracOps-5-1-1">Multiply <span class="process-math">\(~\dfrac{-2}{3}\left(\dfrac{5}{4}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkFracOps-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFracOps-5-2-1">
+<div class="solution solution-like" id="tkFracOps-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFracOps-5-2-1">
 <div class="para">We multiply numerators together, and multiply denominators together:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1868,19 +1952,23 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \dfrac{-10}{12} = \dfrac{-5 \cdot \cancel{2}}{6 \cdot \cancel{2}} = \dfrac{-5}{6}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkFracOps-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkFracOps-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.38</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracOps-6-1-1">Add <span class="process-math">\(~\dfrac{-3}{4}+\dfrac{1}{3}\)</span>
+</h5>
+<div class="para" id="tkFracOps-6-1-1">Add <span class="process-math">\(~\dfrac{-3}{4}+\dfrac{1}{3}\)</span>
 </div>
-<div class="solutions"><details id="tkFracOps-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracOps-6-2-1"><span class="process-math">\(\dfrac{-5}{12}\)</span></div></div></details></div></article></details><details id="tkFracOps-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkFracOps-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracOps-6-2-1"><span class="process-math">\(\dfrac{-5}{12}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFracOps-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.39</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracOps-7-1-1">Subtract <span class="process-math">\(~\dfrac{3}{8}-\left(\dfrac{-1}{6}\right)\)</span>
+</h5>
+<div class="para" id="tkFracOps-7-1-1">Subtract <span class="process-math">\(~\dfrac{3}{8}-\left(\dfrac{-1}{6}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkFracOps-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracOps-7-2-1"><span class="process-math">\(\dfrac{13}{24}\)</span></div></div></details></div></article></details><details id="tkFracOps-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkFracOps-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracOps-7-2-1"><span class="process-math">\(\dfrac{13}{24}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFracOps-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.40</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracOps-8-1-1">Multiply <span class="process-math">\(~\dfrac{3}{8} \cdot \left(\dfrac{-1}{6}\right)\)</span>
+</h5>
+<div class="para" id="tkFracOps-8-1-1">Multiply <span class="process-math">\(~\dfrac{3}{8} \cdot \left(\dfrac{-1}{6}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkFracOps-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracOps-8-2-1"><span class="process-math">\(\dfrac{-1}{16}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkFractoDec"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkFracOps-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracOps-8-2-1"><span class="process-math">\(\dfrac{-1}{16}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkFractoDec"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.3.2</span><span class="space"> </span><span class="title">Convert between fractions and decimals</span>
 </h4>
 <div class="para" id="tkFractoDec-2">Rational exponents may also be written in decimal form.</div>
@@ -1888,27 +1976,38 @@ a^{m-n} \amp \text{if}~m \gt n\\
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.41</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFractoDec-3-1-1">Convert <span class="process-math">\(~0.016~\)</span> to a common fraction.</div>
-<div class="solutions"><details id="tkFractoDec-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFractoDec-3-2-1">
+<div class="solution solution-like" id="tkFractoDec-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFractoDec-3-2-1">
 <div class="para">The numerator of the fraction is 016, or 16. The last digit, 6, is in the thousandths place, so the denominator of the fraction is 1000. Thus, <span class="process-math">\(0.016=\dfrac{16}{1000}\text{.}\)</span>  We can reduce this fraction by dividing top and bottom by 8:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 ~ \dfrac{16}{1000} = \dfrac{\cancel{8} \cdot 2}{\cancel{8} \cdot 125} = \dfrac{2}{125}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkFractoDec-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkFractoDec-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.42</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFractoDec-4-1-1">Convert <span class="process-math">\(~\dfrac{5}{16}~\)</span> to a decimal fraction.</div>
-<div class="solutions"><details id="tkFractoDec-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkFractoDec-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkFractoDec-4-2-1">Using a calculator, divide 5 by 16:</div>
 <div class="para" id="tkFractoDec-4-2-2">
 <span class="process-math">\(\qquad\qquad 5\)</span> <kbd class="kbdkey">÷</kbd> <span class="process-math">\(16 = 0.3125\)</span>
 </div>
-</div></details></div></article><article class="example example-like" id="tkFractoDec-5"><h5 class="heading">
+</div></article><article class="example example-like" id="tkFractoDec-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.43</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFractoDec-5-1-1">Convert <span class="process-math">\(~\dfrac{5}{11}~\)</span> to a decimal fraction.</div>
-<div class="solutions"><details id="tkFractoDec-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkFractoDec-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkFractoDec-5-2-1">Using a calculator, divide 5 by 11:</div>
 <div class="para" id="tkFractoDec-5-2-2">
 <span class="process-math">\(\qquad\qquad 5\)</span> <kbd class="kbdkey">÷</kbd> <span class="process-math">\(11= 0.45454545 ... \)</span>
@@ -1921,16 +2020,19 @@ a^{m-n} \amp \text{if}~m \gt n\\
 \end{equation*}
 </div>
 </div>
-</div></details></div></article><details id="tkFractoDec-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkFractoDec-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.44</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFractoDec-6-1-1">Convert <span class="process-math">\(~0.1062~\)</span> to a common fraction.</div>
-<div class="solutions"><details id="tkFractoDec-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFractoDec-6-2-1"><span class="process-math">\(\dfrac{531}{5000}\)</span></div></div></details></div></article></details><details id="tkFractoDec-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkFractoDec-6-1-1">Convert <span class="process-math">\(~0.1062~\)</span> to a common fraction.</div>
+<div class="solutions"><details id="tkFractoDec-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFractoDec-6-2-1"><span class="process-math">\(\dfrac{531}{5000}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFractoDec-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.45</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFractoDec-7-1-1">Convert <span class="process-math">\(~2.08~\)</span> to a common fraction.</div>
-<div class="solutions"><details id="tkFractoDec-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFractoDec-7-2-1"><span class="process-math">\(\dfrac{52}{25}\)</span></div></div></details></div></article></details><details id="tkFractoDec-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkFractoDec-7-1-1">Convert <span class="process-math">\(~2.08~\)</span> to a common fraction.</div>
+<div class="solutions"><details id="tkFractoDec-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFractoDec-7-2-1"><span class="process-math">\(\dfrac{52}{25}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFractoDec-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.46</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFractoDec-8-1-1">Convert <span class="process-math">\(~\dfrac{4}{15}~\)</span> to a decimal fraction.</div>
-<div class="solutions"><details id="tkFractoDec-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFractoDec-8-2-1"><span class="process-math">\(0.2\overline{6}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkFracExpEqn"><h4 class="heading hide-type">
+</h5>
+<div class="para" id="tkFractoDec-8-1-1">Convert <span class="process-math">\(~\dfrac{4}{15}~\)</span> to a decimal fraction.</div>
+<div class="solutions"><details id="tkFractoDec-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFractoDec-8-2-1"><span class="process-math">\(0.2\overline{6}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkFracExpEqn"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.3.3</span><span class="space"> </span><span class="title">Solve equations</span>
 </h4>
 <section class="introduction" id="tkFracExpEqn-2"><div class="para logical" id="tkFracExpEqn-2-1">
@@ -1947,7 +2049,11 @@ x \amp = k^{1/n}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.47</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFracExpEqn-3-1-1">Solve <span class="process-math">\(~0.6x^4 = 578\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkFracExpEqn-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFracExpEqn-3-2-1">
+<div class="solution solution-like" id="tkFracExpEqn-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFracExpEqn-3-2-1">
 <div class="para">First, we isolate the power.</div>
 <div class="displaymath process-math" id="tkFracExpEqn-3-2-1-1">
 \begin{align*}
@@ -1964,12 +2070,17 @@ x \amp = 5.57
 </div>
 <div class="para">To evaluate <span class="process-math">\((963.\overline{3})^{1/4}\text{,}\)</span> enter  <span class="process-math">\(~~\text{ANS}\)</span><kbd class="kbdkey">^</kbd> <span class="process-math">\(.25\)</span> <kbd class="kbdkey">ENTER</kbd>
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkFracExpEqn-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkFracExpEqn-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.48</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFracExpEqn-4-1-1">Solve <span class="process-math">\(~x^{2/3}-4=60\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkFracExpEqn-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFracExpEqn-4-2-1">
+<div class="solution solution-like" id="tkFracExpEqn-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFracExpEqn-4-2-1">
 <div class="para">First, we isolate the power.</div>
 <div class="displaymath process-math" id="tkFracExpEqn-4-2-1-1">
 \begin{align*}
@@ -1986,11 +2097,16 @@ x \amp = 512
 </div>
 <div class="para">Or we can evaluate <span class="process-math">\(~64^{3/2}~\)</span> by entering  <span class="process-math">\(~~64\)</span> <kbd class="kbdkey">^</kbd> <span class="process-math">\(1.5\)</span> <kbd class="kbdkey">ENTER</kbd>
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkFracExpEqn-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkFracExpEqn-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.49</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFracExpEqn-5-1-1">Solve <span class="process-math">\(~18x^{0.24} = 6.5\text{.}\)</span> Round your answer to thousandths.</div>
-<div class="solutions"><details id="tkFracExpEqn-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFracExpEqn-5-2-1">
+<div class="solution solution-like" id="tkFracExpEqn-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFracExpEqn-5-2-1">
 <div class="para">First, we isolate the power.</div>
 <div class="displaymath process-math" id="tkFracExpEqn-5-2-1-1">
 \begin{align*}
@@ -2007,16 +2123,20 @@ x \amp = 0.014
 </div>
 <div class="para">We evaluate <span class="process-math">\((0.36\overline{1})^{1/0.24}\)</span> by entering  <span class="process-math">\(~~\text{ANS}\)</span> <kbd class="kbdkey">^</kbd> <kbd class="kbdkey">(</kbd> <span class="process-math">\(1\)</span>  <kbd class="kbdkey">÷</kbd> <span class="process-math">\(.24\)</span> <kbd class="kbdkey">)</kbd> <kbd class="kbdkey">ENTER</kbd>
 </div>
-</div></div></details></div></article><details id="tkFracExpEqn-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkFracExpEqn-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.50</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracExpEqn-6-1-1">Solve <span class="process-math">\(~4x^5 = 1825~\text{.}\)</span> Round your answer to thousandths.</div>
-<div class="solutions"><details id="tkFracExpEqn-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracExpEqn-6-2-1"><span class="process-math">\(3.403\)</span></div></div></details></div></article></details><details id="tkFracExpEqn-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkFracExpEqn-6-1-1">Solve <span class="process-math">\(~4x^5 = 1825~\text{.}\)</span> Round your answer to thousandths.</div>
+<div class="solutions"><details id="tkFracExpEqn-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracExpEqn-6-2-1"><span class="process-math">\(3.403\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFracExpEqn-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.51</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracExpEqn-7-1-1">Solve <span class="process-math">\(~\dfrac{3}{4}x^{3/4} = 36~\text{.}\)</span> Round your answer to thousandths.</div>
-<div class="solutions"><details id="tkFracExpEqn-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracExpEqn-7-2-1"><span class="process-math">\(174.444\)</span></div></div></details></div></article></details><details id="tkFracExpEqn-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkFracExpEqn-7-1-1">Solve <span class="process-math">\(~\dfrac{3}{4}x^{3/4} = 36~\text{.}\)</span> Round your answer to thousandths.</div>
+<div class="solutions"><details id="tkFracExpEqn-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracExpEqn-7-2-1"><span class="process-math">\(174.444\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFracExpEqn-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.52</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracExpEqn-8-1-1">Solve <span class="process-math">\(~0.2x^{1.4}+1.8=12.3~\text{.}\)</span> Round your answer to thousandths.</div>
-<div class="solutions"><details id="tkFracExpEqn-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracExpEqn-8-2-1"><span class="process-math">\(16.931\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkWorkingwithRadicals"><h3 class="heading hide-type">
+</h5>
+<div class="para" id="tkFracExpEqn-8-1-1">Solve <span class="process-math">\(~0.2x^{1.4}+1.8=12.3~\text{.}\)</span> Round your answer to thousandths.</div>
+<div class="solutions"><details id="tkFracExpEqn-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracExpEqn-8-2-1"><span class="process-math">\(16.931\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkWorkingwithRadicals"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.6.4</span><span class="space"> </span><span class="title">Working with Radicals</span>
 </h3>
 <section class="subsubsection" id="tkPerfSq"><h4 class="heading hide-type">
@@ -2035,12 +2155,17 @@ x \amp = 0.014
 <span class="process-math">\(9x^3 - 3x^9 \cdot~\)</span> ?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkPerfSq-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkPerfSq-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkPerfSq-3-2-1-1">
+<div class="solution solution-like" id="tkPerfSq-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkPerfSq-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkPerfSq-3-2-1-1">
 <li id="tkPerfSq-3-2-1-1-1"><div class="para" id="p-derived-tkPerfSq-3-2-1-1-1">We mentally divide <span class="process-math">\(60x^9\)</span> by <span class="process-math">\(3x^3\)</span> to find <span class="process-math">\(\dfrac{60x^9}{3x^3} = 20x^6\text{.}\)</span> The missing factor is <span class="process-math">\(20x^6\text{.}\)</span>
 </div></li>
 <li id="tkPerfSq-3-2-1-1-2"><div class="para" id="p-derived-tkPerfSq-3-2-1-1-2">We mentally divide each term by <span class="process-math">\(3x^3\)</span> to find <span class="process-math">\(\dfrac{9x^3}{3x^3} = 3\)</span> and <span class="process-math">\(\dfrac{3x^9}{3x^3}=x^6\text{.}\)</span>  The missing factor is <span class="process-math">\(3-x^6\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkPerfSq-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkPerfSq-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.54</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkPerfSq-4-1-1">
@@ -2050,7 +2175,11 @@ x \amp = 0.014
 <li id="tkPerfSq-4-1-1-1-2"><div class="para" id="p-derived-tkPerfSq-4-1-1-1-2"><span class="process-math">\(\displaystyle \dfrac{a^2+4a^4}{8}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkPerfSq-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkPerfSq-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkPerfSq-4-2-1-1">
+<div class="solution solution-like" id="tkPerfSq-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkPerfSq-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkPerfSq-4-2-1-1">
 <li id="tkPerfSq-4-2-1-1-1"><div class="para" id="p-derived-tkPerfSq-4-2-1-1-1">By trial and error, we find that 36 is the largest square that divides 108. From each power, we can factor out the power with the largest possible even exponent, namely <span class="process-math">\(a^4\)</span> and <span class="process-math">\(b^2\text{.}\)</span> Thus, we factor out <span class="process-math">\(36a^4b^2\)</span> to find <span class="process-math">\(108a^5b^2 =36a^4b^2 \cdot 3a\text{.}\)</span>
 </div></li>
 <li id="tkPerfSq-4-2-1-1-2"><div class="para" id="p-derived-tkPerfSq-4-2-1-1-2">The largest even power that divides into both <span class="process-math">\(a^2\)</span> and <span class="process-math">\(a^4\)</span> is <span class="process-math">\(a^2\text{,}\)</span> so we factor <span class="process-math">\(a^2\)</span> from the numerator:<div class="displaymath process-math">
@@ -2063,9 +2192,11 @@ a^2+a^4=a^2(1+4a^2)
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkPerfSq-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkPerfSq-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.55</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkPerfSq-5-1-1">
+</h5>
+<div class="para logical" id="tkPerfSq-5-1-1">
 <div class="para">Find the missiing factor.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkPerfSq-5-1-1-1">
 <li id="tkPerfSq-5-1-1-1-1"><div class="para" id="p-derived-tkPerfSq-5-1-1-1-1">
@@ -2077,9 +2208,10 @@ a^2+a^4=a^2(1+4a^2)
 <div class="solutions"><details id="tkPerfSq-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkPerfSq-5-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkPerfSq-5-2-1-1">
 <li id="tkPerfSq-5-2-1-1-1"><div class="para" id="p-derived-tkPerfSq-5-2-1-1-1"><span class="process-math">\(\displaystyle 4z^{12}+z^2\)</span></div></li>
 <li id="tkPerfSq-5-2-1-1-2"><div class="para" id="p-derived-tkPerfSq-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{5}{7}m\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkPerfSq-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkPerfSq-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.56</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkPerfSq-6-1-1">
+</h5>
+<div class="para logical" id="tkPerfSq-6-1-1">
 <div class="para">Factor out the largest perfect square.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkPerfSq-6-1-1-1">
 <li id="tkPerfSq-6-1-1-1-1"><div class="para" id="p-derived-tkPerfSq-6-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{5k^5}{9n}\)</span></div></li>
@@ -2089,7 +2221,7 @@ a^2+a^4=a^2(1+4a^2)
 <div class="solutions"><details id="tkPerfSq-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkPerfSq-6-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkPerfSq-6-2-1-1">
 <li id="tkPerfSq-6-2-1-1-1"><div class="para" id="p-derived-tkPerfSq-6-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{k^4}{9} \cdot \dfrac{5k}{n}\)</span></div></li>
 <li id="tkPerfSq-6-2-1-1-2"><div class="para" id="p-derived-tkPerfSq-6-2-1-1-2"><span class="process-math">\(\displaystyle 16a^8(2a^2-3a)\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkRadProps"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkRadProps"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.4.2</span><span class="space"> </span><span class="title">Apply properties of radicals</span>
 </h4>
 <div class="para" id="tkRadProps-2">We have a Product Rule and a Quotient Rule for radicals.</div>
@@ -2107,7 +2239,11 @@ a^2+a^4=a^2(1+4a^2)
 <li id="tkRadProps-4-1-1-1-2"><div class="para" id="p-derived-tkRadProps-4-1-1-1-2"><span class="process-math">\(\displaystyle \sqrt{6} = \sqrt{2}+\sqrt{4}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRadProps-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadProps-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadProps-4-2-1-1">
+<div class="solution solution-like" id="tkRadProps-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadProps-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadProps-4-2-1-1">
 <li id="tkRadProps-4-2-1-1-1"><div class="para" id="p-derived-tkRadProps-4-2-1-1-1">Yes:  we can multiply (or divide) radicals together, if they have the same index. You can check that <span class="process-math">\(\sqrt{6} \approx 2.4495\text{,}\)</span> and<div class="displaymath process-math">
 \begin{equation*}
 \sqrt{2}~\sqrt{3} \approx (1.4142)(1.7321) = 2.4495
@@ -2115,7 +2251,8 @@ a^2+a^4=a^2(1+4a^2)
 </div>rounded to four decimal places.</div></li>
 <li id="tkRadProps-4-2-1-1-2"><div class="para" id="p-derived-tkRadProps-4-2-1-1-2">No:  we cannot combine radicals with addition or subtraction. You can check that <span class="process-math">\(\sqrt{6} \approx 2.4495\text{,}\)</span> but <span class="process-math">\(\sqrt{2}+\sqrt{4} \approx 1.4142+2=3.4142\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkRadProps-5"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkRadProps-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.58</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkRadProps-5-1-1">
@@ -2125,7 +2262,11 @@ a^2+a^4=a^2(1+4a^2)
 <li id="tkRadProps-5-1-1-1-2"><div class="para" id="p-derived-tkRadProps-5-1-1-1-2"><span class="process-math">\(\displaystyle \sqrt{3}+\sqrt{3} \rightarrow \sqrt{6}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRadProps-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadProps-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadProps-5-2-1-1">
+<div class="solution solution-like" id="tkRadProps-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadProps-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadProps-5-2-1-1">
 <li id="tkRadProps-5-2-1-1-1"><div class="para logical" id="tkRadProps-5-2-1-1-1-1">
 <div class="para">We cannot split radicals with addition or subtraction; we must follow the order of operations:</div>
 <div class="displaymath process-math">
@@ -2142,9 +2283,11 @@ a^2+a^4=a^2(1+4a^2)
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkRadProps-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkRadProps-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.59</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkRadProps-6-1-1">
+</h5>
+<div class="para logical" id="tkRadProps-6-1-1">
 <div class="para">Decide whether each statement is true or false. Then use a calculator to verify your answer.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkRadProps-6-1-1-1">
 <li id="tkRadProps-6-1-1-1-1"><div class="para" id="p-derived-tkRadProps-6-1-1-1-1"><span class="process-math">\(\displaystyle \sqrt{16} = \sqrt{18} - \sqrt{2}\)</span></div></li>
@@ -2158,9 +2301,10 @@ a^2+a^4=a^2(1+4a^2)
 <li id="tkRadProps-6-2-1-1-2"><div class="para" id="p-derived-tkRadProps-6-2-1-1-2">True</div></li>
 <li id="tkRadProps-6-2-1-1-3"><div class="para" id="p-derived-tkRadProps-6-2-1-1-3">False</div></li>
 <li id="tkRadProps-6-2-1-1-4"><div class="para" id="p-derived-tkRadProps-6-2-1-1-4">True</div></li>
-</ol></div></div></details></div></article></details><details id="tkRadProps-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkRadProps-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.60</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkRadProps-7-1-1">
+</h5>
+<div class="para logical" id="tkRadProps-7-1-1">
 <div class="para">Find and correct the error in each calculation.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkRadProps-7-1-1-1">
 <li id="tkRadProps-7-1-1-1-1"><div class="para" id="p-derived-tkRadProps-7-1-1-1-1"><span class="process-math">\(\displaystyle \sqrt{25+5} \rightarrow 5+\sqrt{5}\)</span></div></li>
@@ -2174,7 +2318,7 @@ a^2+a^4=a^2(1+4a^2)
 <li id="tkRadProps-7-2-1-1-2"><div class="para" id="p-derived-tkRadProps-7-2-1-1-2">cannot be simplified</div></li>
 <li id="tkRadProps-7-2-1-1-3"><div class="para" id="p-derived-tkRadProps-7-2-1-1-3">cannot be simplified</div></li>
 <li id="tkRadProps-7-2-1-1-4"><div class="para" id="p-derived-tkRadProps-7-2-1-1-4">cannot be simplified</div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkSimpRad"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkSimpRad"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.4.3</span><span class="space"> </span><span class="title">Simplify radicals</span>
 </h4>
 <div class="para" id="tkSimpRad-2">We simplify square roots by factoring out any perfect squares.</div>
@@ -2183,7 +2327,11 @@ a^2+a^4=a^2(1+4a^2)
 </h5>
 <div class="para" id="tkSimpRad-3-1-1">Simplify <span class="process-math">\(~\sqrt{45}\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRad-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSimpRad-3-2-1">
+<div class="solution solution-like" id="tkSimpRad-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSimpRad-3-2-1">
 <div class="para">The largest perfect square that divides evenly into 45 is 9, so we factor 45 as <span class="process-math">\(9 \cdot 5\text{.}\)</span> We use the product rule to write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2196,12 +2344,17 @@ a^2+a^4=a^2(1+4a^2)
 \sqrt{45} = \sqrt{9}~\sqrt{5} = 3\sqrt{5}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkSimpRad-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSimpRad-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.62</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSimpRad-4-1-1">Simplify <span class="process-math">\(~\sqrt{20x^2y^3}\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRad-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSimpRad-4-2-1">
+<div class="solution solution-like" id="tkSimpRad-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSimpRad-4-2-1">
 <div class="para">The largest perfect square that divides 20 is 4.  We write the radicand as the product of two factors, one containing the perfect square and the largest possible even powers of the variables.  That is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2220,15 +2373,18 @@ a^2+a^4=a^2(1+4a^2)
 \sqrt{20x^2y^3}=\blert{\sqrt{4x^2y^2}}~\sqrt{5y} = \blert{2xy}~\sqrt{5y}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkSimpRad-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkSimpRad-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.63</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpRad-5-1-1">Simplify <span class="process-math">\(~\sqrt{75}\)</span>
+</h5>
+<div class="para" id="tkSimpRad-5-1-1">Simplify <span class="process-math">\(~\sqrt{75}\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRad-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRad-5-2-1"><span class="process-math">\(3\sqrt{5}\)</span></div></div></details></div></article></details><details id="tkSimpRad-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSimpRad-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRad-5-2-1"><span class="process-math">\(3\sqrt{5}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSimpRad-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.64</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpRad-6-1-1">Simplify <span class="process-math">\(~\sqrt{72u^6v^9}\)</span>
+</h5>
+<div class="para" id="tkSimpRad-6-1-1">Simplify <span class="process-math">\(~\sqrt{72u^6v^9}\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRad-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRad-6-2-1"><span class="process-math">\(6u^3v^4\sqrt{2v}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkRatDenom"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkSimpRad-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRad-6-2-1"><span class="process-math">\(6u^3v^4\sqrt{2v}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkRatDenom"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.4.4</span><span class="space"> </span><span class="title">Rationalize the denominator</span>
 </h4>
 <section class="introduction" id="tkRatDenom-2"><div class="para" id="tkRatDenom-2-1">Rationalizing the denominator of a fraction helps maintain accuracy.</div></section><article class="example example-like" id="tkRatDenom-3"><h5 class="heading">
@@ -2236,7 +2392,11 @@ a^2+a^4=a^2(1+4a^2)
 </h5>
 <div class="para" id="tkRatDenom-3-1-1">Simplify  <span class="process-math">\(~\dfrac{3\sqrt{2}}{\sqrt{3}}\)</span>
 </div>
-<div class="solutions"><details id="tkRatDenom-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRatDenom-3-2-1">
+<div class="solution solution-like" id="tkRatDenom-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRatDenom-3-2-1">
 <div class="para">We can rationalize the denominator by multiplying mumerator and denominator by <span class="process-math">\(\blert{\sqrt{3}}\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -2250,12 +2410,17 @@ a^2+a^4=a^2(1+4a^2)
 \dfrac{\blert{3}\sqrt{2}}{\blert{\sqrt{3}}} = \blert{\sqrt{3}}~\sqrt{2} = \sqrt{6}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkRatDenom-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkRatDenom-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.66</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkRatDenom-4-1-1">Combine <span class="process-math">\(~\dfrac{3}{\sqrt{2}} + \dfrac{5}{2}\)</span>
 </div>
-<div class="solutions"><details id="tkRatDenom-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRatDenom-4-2-1">
+<div class="solution solution-like" id="tkRatDenom-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRatDenom-4-2-1">
 <div class="para">The LCD for the two fractions is 2, and the building factor for the first fraction is <span class="process-math">\(\blert{\sqrt{2}}\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="tkRatDenom-4-2-1-2">
@@ -2264,23 +2429,28 @@ a^2+a^4=a^2(1+4a^2)
 \amp = \dfrac{3\sqrt{2}}{2} + \dfrac{5}{2} = \dfrac{3\sqrt{2}+5}{2}
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkRatDenom-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkRatDenom-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.67</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRatDenom-5-1-1">Simplify  <span class="process-math">\(~\dfrac{8}{2\sqrt{2}}\)</span>
+</h5>
+<div class="para" id="tkRatDenom-5-1-1">Simplify  <span class="process-math">\(~\dfrac{8}{2\sqrt{2}}\)</span>
 </div>
-<div class="solutions"><details id="tkRatDenom-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-5-2-1"><span class="process-math">\(2\sqrt{2}\)</span></div></div></details></div></article></details><details id="tkRatDenom-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkRatDenom-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-5-2-1"><span class="process-math">\(2\sqrt{2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkRatDenom-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.68</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRatDenom-6-1-1">Simplify  <span class="process-math">\(~\sqrt{6} \cdot \dfrac{\sqrt{3}}{2\sqrt{2}}\)</span>
+</h5>
+<div class="para" id="tkRatDenom-6-1-1">Simplify  <span class="process-math">\(~\sqrt{6} \cdot \dfrac{\sqrt{3}}{2\sqrt{2}}\)</span>
 </div>
-<div class="solutions"><details id="tkRatDenom-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-6-2-1"><span class="process-math">\(\dfrac{3}{2}\)</span></div></div></details></div></article></details><details id="tkRatDenom-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkRatDenom-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-6-2-1"><span class="process-math">\(\dfrac{3}{2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkRatDenom-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.69</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRatDenom-7-1-1">Simplify  <span class="process-math">\(~\dfrac{\sqrt{2}}{6} - \dfrac{2}{\sqrt{3}}\)</span>
+</h5>
+<div class="para" id="tkRatDenom-7-1-1">Simplify  <span class="process-math">\(~\dfrac{\sqrt{2}}{6} - \dfrac{2}{\sqrt{3}}\)</span>
 </div>
-<div class="solutions"><details id="tkRatDenom-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-7-2-1"><span class="process-math">\(\dfrac{\sqrt{2}-4\sqrt{3}}{6}\)</span></div></div></details></div></article></details><details id="tkRatDenom-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkRatDenom-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-7-2-1"><span class="process-math">\(\dfrac{\sqrt{2}-4\sqrt{3}}{6}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkRatDenom-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.70</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRatDenom-8-1-1">Simplify  <span class="process-math">\(~\dfrac{1}{\sqrt{6}} + \dfrac{3}{\sqrt{2}}\)</span>
+</h5>
+<div class="para" id="tkRatDenom-8-1-1">Simplify  <span class="process-math">\(~\dfrac{1}{\sqrt{6}} + \dfrac{3}{\sqrt{2}}\)</span>
 </div>
-<div class="solutions"><details id="tkRatDenom-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-8-2-1"><span class="process-math">\(\dfrac{\sqrt{6}+9\sqrt{2}}{6}\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkRadicalEquations"><h3 class="heading hide-type">
+<div class="solutions"><details id="tkRatDenom-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRatDenom-8-2-1"><span class="process-math">\(\dfrac{\sqrt{6}+9\sqrt{2}}{6}\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkRadicalEquations"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.6.5</span><span class="space"> </span><span class="title">Radical Equations</span>
 </h3>
 <section class="subsubsection" id="tkSimpRadEqn"><h4 class="heading hide-type">
@@ -2291,7 +2461,11 @@ a^2+a^4=a^2(1+4a^2)
 </h5>
 <div class="para" id="tkSimpRadEqn-3-1-1">Solve <span class="process-math">\(~\sqrt{x-3} = 4\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRadEqn-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSimpRadEqn-3-2-1">
+<div class="solution solution-like" id="tkSimpRadEqn-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSimpRadEqn-3-2-1">
 <div class="para">We square both sides of the equation to produce an equation without radicals.</div>
 <div class="displaymath process-math" id="tkSimpRadEqn-3-2-1-1">
 \begin{align*}
@@ -2301,12 +2475,16 @@ x \amp = 19
 \end{align*}
 </div>
 <div class="para">You can check that <span class="process-math">\(x=19\)</span> satisfies the original equation.</div>
-</div></div></details></div></article><article class="example example-like" id="tkSimpRadEqn-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSimpRadEqn-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.72</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSimpRadEqn-4-1-1">Solve <span class="process-math">\(~-2\sqrt[3]{x-4} = -6\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRadEqn-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkSimpRadEqn-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para logical" id="tkSimpRadEqn-4-2-1">
 <div class="para">We first isolate the cube root.</div>
 <div class="displaymath process-math" id="tkSimpRadEqn-4-2-1-1">
@@ -2333,15 +2511,17 @@ x-4 \amp = 27
 </div>
 <div class="para">The solutions checks.</div>
 </div>
-</div></details></div></article><details id="tkSimpRadEqn-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkSimpRadEqn-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.73</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpRadEqn-5-1-1">Solve <span class="process-math">\(~\sqrt{x-6} = 2\)</span>
+</h5>
+<div class="para" id="tkSimpRadEqn-5-1-1">Solve <span class="process-math">\(~\sqrt{x-6} = 2\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRadEqn-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRadEqn-5-2-1"><span class="process-math">\(x=10\)</span></div></div></details></div></article></details><details id="tkSimpRadEqn-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSimpRadEqn-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRadEqn-5-2-1"><span class="process-math">\(x=10\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSimpRadEqn-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.74</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpRadEqn-6-1-1">Solve <span class="process-math">\(~3\sqrt[3]{4x-1} = -15\)</span>
+</h5>
+<div class="para" id="tkSimpRadEqn-6-1-1">Solve <span class="process-math">\(~3\sqrt[3]{4x-1} = -15\)</span>
 </div>
-<div class="solutions"><details id="tkSimpRadEqn-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRadEqn-6-2-1"><span class="process-math">\(x=-31\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkSqRadBin"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkSimpRadEqn-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpRadEqn-6-2-1"><span class="process-math">\(x=-31\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkSqRadBin"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.5.2</span><span class="space"> </span><span class="title">Square binomials containing radicals</span>
 </h4>
 <section class="introduction" id="tkSqRadBin-2"><div class="para" id="tkSqRadBin-2-1">We may encounter binomials when squaring both sides of an equation.</div></section><article class="example example-like" id="tkSqRadBin-3"><h5 class="heading">
@@ -2349,7 +2529,11 @@ x-4 \amp = 27
 </h5>
 <div class="para" id="tkSqRadBin-3-1-1">Expand <span class="process-math">\(~(\sqrt{x}-3)^2\)</span>
 </div>
-<div class="solutions"><details id="tkSqRadBin-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSqRadBin-3-2-1">
+<div class="solution solution-like" id="tkSqRadBin-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSqRadBin-3-2-1">
 <div class="para">
 <span class="process-math">\((\sqrt{x}-3)^2 = (\sqrt{x}-3)(\sqrt{x}-3)\text{,}\)</span> so we apply "FOIL" to get</div>
 <div class="displaymath process-math" id="tkSqRadBin-3-2-1-2">
@@ -2358,12 +2542,17 @@ x-4 \amp = 27
 \amp = x-6\sqrt{x}+9
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkSqRadBin-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSqRadBin-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.76</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSqRadBin-4-1-1">Expand <span class="process-math">\(~(8+\sqrt{t-2})^2\)</span>
 </div>
-<div class="solutions"><details id="tkSqRadBin-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSqRadBin-4-2-1">
+<div class="solution solution-like" id="tkSqRadBin-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSqRadBin-4-2-1">
 <div class="para">We multiply <span class="process-math">\(~(8+\sqrt{t-2})(8+\sqrt{t-2})~\)</span> to get</div>
 <div class="displaymath process-math" id="tkSqRadBin-4-2-1-2">
 \begin{align*}
@@ -2372,15 +2561,18 @@ x-4 \amp = 27
 \amp = 66+16\sqrt{t-2}+t
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkSqRadBin-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkSqRadBin-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.77</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSqRadBin-5-1-1">Expand <span class="process-math">\(~\left(6-\sqrt{3a+1}\right)^2\)</span>
+</h5>
+<div class="para" id="tkSqRadBin-5-1-1">Expand <span class="process-math">\(~\left(6-\sqrt{3a+1}\right)^2\)</span>
 </div>
-<div class="solutions"><details id="tkSqRadBin-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqRadBin-5-2-1"><span class="process-math">\(37-12\sqrt{3a+1}+3a\)</span></div></div></details></div></article></details><details id="tkSqRadBin-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSqRadBin-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqRadBin-5-2-1"><span class="process-math">\(37-12\sqrt{3a+1}+3a\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSqRadBin-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.78</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSqRadBin-6-1-1">Expand <span class="process-math">\(~\left(2\sqrt{z+4}-5\right)^2\)</span>
+</h5>
+<div class="para" id="tkSqRadBin-6-1-1">Expand <span class="process-math">\(~\left(2\sqrt{z+4}-5\right)^2\)</span>
 </div>
-<div class="solutions"><details id="tkSqRadBin-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqRadBin-6-2-1"><span class="process-math">\(4z+41-20\sqrt{z+4}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkRadAbsVal"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkSqRadBin-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqRadBin-6-2-1"><span class="process-math">\(4z+41-20\sqrt{z+4}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkRadAbsVal"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.6.5.3</span><span class="space"> </span><span class="title">Use absolute value</span>
 </h4>
 <article class="example example-like" id="tkRadAbsVal-2"><h5 class="heading">
@@ -2388,13 +2580,22 @@ x-4 \amp = 27
 </h5>
 <div class="para" id="tkRadAbsVal-2-1-1">Explain why <span class="process-math">\(\sqrt{x^2}=x\)</span> is not true for all values of <span class="process-math">\(x\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkRadAbsVal-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkRadAbsVal-2-2-1">Recall that the symbol <span class="process-math">\(\sqrt{a}\)</span> means the <em class="emphasis">non-negative</em> square root of <span class="process-math">\(a\text{.}\)</span>  If <span class="process-math">\(x\)</span> is a negative number, for example <span class="process-math">\(x=-6\text{,}\)</span> then <span class="process-math">\(x^2=(-6)^2=36\text{,}\)</span> and not <span class="process-math">\(\sqrt{x^2}=\sqrt{36}=6\text{,}\)</span> not <span class="process-math">\(-6\text{.}\)</span>  So if <span class="process-math">\(x\)</span> is a negative number, <span class="process-math">\(\sqrt{x^2}\not= x\)</span> In fact, <span class="process-math">\(\sqrt{x^2}= \abs{x}\text{.}\)</span>
-</div></div></details></div></article><article class="example example-like" id="tkRadAbsVal-3"><h5 class="heading">
+<div class="solution solution-like" id="tkRadAbsVal-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkRadAbsVal-2-2-1">Recall that the symbol <span class="process-math">\(\sqrt{a}\)</span> means the <em class="emphasis">non-negative</em> square root of <span class="process-math">\(a\text{.}\)</span>  If <span class="process-math">\(x\)</span> is a negative number, for example <span class="process-math">\(x=-6\text{,}\)</span> then <span class="process-math">\(x^2=(-6)^2=36\text{,}\)</span> and not <span class="process-math">\(\sqrt{x^2}=\sqrt{36}=6\text{,}\)</span> not <span class="process-math">\(-6\text{.}\)</span>  So if <span class="process-math">\(x\)</span> is a negative number, <span class="process-math">\(\sqrt{x^2}\not= x\)</span> In fact, <span class="process-math">\(\sqrt{x^2}= \abs{x}\text{.}\)</span>
+</div>
+</div></article><article class="example example-like" id="tkRadAbsVal-3"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.6.80</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkRadAbsVal-3-1-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(~\sqrt{(x-5)^2} = x-5~\text{?}\)</span>
 </div>
-<div class="solutions"><details id="tkRadAbsVal-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadAbsVal-3-2-1">
+<div class="solution solution-like" id="tkRadAbsVal-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadAbsVal-3-2-1">
 <div class="para">
 <span class="process-math">\(~\sqrt{(x-5)^2} = x-5~\)</span> when <span class="process-math">\(x-5\)</span> is positive or zero, that is for <span class="process-math">\(x \ge 5\text{.}\)</span>  If <span class="process-math">\(x \lt 5\text{,}\)</span> then <span class="process-math">\(x-5\)</span> is negative. But the <span class="process-math">\(\sqrt{}\)</span> symbol returns only the positive root, so we use absolute value bars to indicate that the root is positive:</div>
 <div class="displaymath process-math">
@@ -2402,15 +2603,18 @@ x-4 \amp = 27
 \sqrt{(x-5)^2} = \abs{x-5}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkRadAbsVal-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkRadAbsVal-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.81</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRadAbsVal-4-1-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(~\sqrt{(2x+8)^2} = 2x+8~\text{?}\)</span>
+</h5>
+<div class="para" id="tkRadAbsVal-4-1-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(~\sqrt{(2x+8)^2} = 2x+8~\text{?}\)</span>
 </div>
-<div class="solutions"><details id="tkRadAbsVal-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadAbsVal-4-2-1"><span class="process-math">\(x \ge -4\)</span></div></div></details></div></article></details><details id="tkRadAbsVal-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkRadAbsVal-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadAbsVal-4-2-1"><span class="process-math">\(x \ge -4\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkRadAbsVal-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.6.82</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkRadAbsVal-5-1-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(~\sqrt{(x-9)^2} = 9-x~\text{?}\)</span>
+</h5>
+<div class="para" id="tkRadAbsVal-5-1-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(~\sqrt{(x-9)^2} = 9-x~\text{?}\)</span>
 </div>
-<div class="solutions"><details id="tkRadAbsVal-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadAbsVal-5-2-1"><span class="process-math">\(x \le 9\)</span></div></div></details></div></article></details></section></section></section></div>
+<div class="solutions"><details id="tkRadAbsVal-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkRadAbsVal-5-2-1"><span class="process-math">\(x \le 9\)</span></div></div></details></div></article></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="tkchap5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="tkchap7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

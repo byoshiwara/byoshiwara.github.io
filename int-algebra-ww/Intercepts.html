@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Graph-Equation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Slope.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1313,22 +1293,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Intercepts.</span>
 </h4>
 <div class="para" id="Intercepts-2-4-2-1">The points at which a graph crosses the axes are called the <dfn class="terminology">intercepts</dfn> of the graph.</div></article><div class="para" id="Intercepts-2-5">The <span class="process-math">\(x\)</span>-intercept of the graph shown above is <span class="process-math">\((−3, 0)\text{,}\)</span> and its <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\((0, 4)\text{.}\)</span> The intercepts can help us graph a linear equation and can help us interpret the meaning of a linear model.</div>
-<details id="Intercepts-2-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="Intercepts-2-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-21" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="21" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFJhZGlvQnV0dG9ucygKICBbIkEpIFRoZSB2YXJpYWJsZXMgZGlzcGxheWVkIG9uIHRoZSBheGVzIiwKICAiQikgUG9pbnRzIHdoZXJlIHRoZSBncmFwaHMgaW50ZXJzZWN0IiwKICAiQykgVGhlIGhpZ2hlc3QgYW5kIGxvd2VzdCBwb2ludHMiLAogICJEKSBQb2ludHMgd2hlcmUgdGhlIGdyYXBoIGludGVyc2VjdHMgdGhlIGF4ZXMiXSwKICAzLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBhcmUgdGhlIGludGVyY2VwdHMgb2YgYSBncmFwaD8KCltfXXskd2hpY2gxfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClBvaW50cyB3aGVyZSB0aGUgZ3JhcGggaW50ZXJzZWN0cyB0aGUgYXhlcwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-21')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-21-1-1-1">What are the intercepts of a graph?</div> <div class="para logical" id="extracted-webwork-21-1-1-2"><ul class="circle" id="extracted-webwork-21-1-1-2-1">
-<li id="extracted-webwork-21-1-1-2-1-1"><div class="para" id="extracted-webwork-21-1-1-2-1-1-1">A) The variables displayed on the axes</div></li>
-<li id="extracted-webwork-21-1-1-2-1-2"><div class="para" id="extracted-webwork-21-1-1-2-1-2-1">B) Points where the graphs intersect</div></li>
-<li id="extracted-webwork-21-1-1-2-1-3"><div class="para" id="extracted-webwork-21-1-1-2-1-3-1">C) The highest and lowest points</div></li>
-<li id="extracted-webwork-21-1-1-2-1-4"><div class="para" id="extracted-webwork-21-1-1-2-1-4-1">D) Points where the graph intersects the axes</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-21-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-21-1-2-1"><span class="process-math">\(\text{D) Points ... intersects the axes}\)</span></div></div></details><details id="extracted-webwork-21-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-21-1-3-1">Points where the graph intersects the axes</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="Intercepts-2-7">The coordinates of the intercepts are easy to find.</div>
+</h4></article><div class="para" id="Intercepts-2-7">The coordinates of the intercepts are easy to find.</div>
 <article class="assemblage assemblage-like" id="Intercepts-2-8"><h4 class="heading"><span class="title">Intercepts of a Graph.</span></h4>
 <div class="para logical" id="Intercepts-2-8-2"><ol class="decimal ol-marker-1" id="Intercepts-2-8-2-1">
 <li id="Intercepts-2-8-2-1-1"><div class="para" id="Intercepts-2-8-2-1-1-1">To find the <span class="process-math">\(x\)</span>-intercept, we set <span class="process-math">\(y = 0\)</span> and solve for <span class="process-math">\(x\text{.}\)</span>
@@ -1339,7 +1306,10 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="Leon-Camper-intercepts-1-1">In <a href="LinMod.html#Leon-camper" class="xref" data-knowl="./knowl/xref/Leon-camper.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.11">Example 1.1.11</a> of <a href="LinMod.html" class="internal" title="Section 1.1: Creating a Linear Model">Section 1.1</a>, we graphed an equation, <span class="process-math">\(g=20-\frac{1}{12}d \text{,}\)</span> for the amount of gasoline, <span class="process-math">\(g\text{,}\)</span> left in Leon’s tank after he has driven for <span class="process-math">\(d\)</span> miles. Find the intercepts of the graph.</div>
-<div class="solutions"><details id="Leon-Camper-intercepts-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Leon-Camper-intercepts-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para" id="Leon-Camper-intercepts-2-1">To find the <span class="process-math">\(d\)</span>-intercept, we set <span class="process-math">\(g = 0\)</span> and solve for <span class="process-math">\(d\text{.}\)</span>
 </div>
 <div class="para logical" id="Leon-Camper-intercepts-2-2"><div class="displaymath process-math" id="Leon-Camper-intercepts-2-2-1">
@@ -1360,22 +1330,9 @@ g = 20 − \frac{1}{12}(\alert{0}) = 20
 <div class="para">The <span class="process-math">\(g\)</span>-intercept is <span class="process-math">\((0, 20)\text{.}\)</span>
 </div>
 </div>
-</div></details></div></article><details id="Intercepts-2-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="Intercepts-2-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-22" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="22" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiR4MD0tNjsKJHkwPS05OwokeGludCA9IFBvaW50KCR4MCwwKTsKJHlpbnQgPSBQb2ludCgwLCR5MCk7CgpCRUdJTl9QR01MCkZpbmQgdGhlIGludGVyY2VwdHMgb2YgdGhlIGdyYXBoIG9mIFtgeT0tOS1cZGZyYWN7M317Mn14IFx0ZXh0ey59YF0gRW50ZXIgZWFjaCBpbnRlcmNlcHQgYXMgYW4gb3JkZXJlZCBwYWlyLgoKVGhlIFtgeGBdLWludGVyY2VwdCBpcyBbX117JHhpbnR9ezR9LgoKVGhlIFtgeWBdLWludGVyY2VwdCBpcyBbX117JHlpbnR9ezR9LgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBbYHhgXS1pbnRlcmNlcHQgaXMgW2BbJHhpbnRdXHRleHR7Ln1gXQoKVGhlIFtgeWBdLWludGVyY2VwdCBpcyBbYFskeWludF1cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-22')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-22-1-1-1">Find the intercepts of the graph of <span class="process-math">\(y=-9-\dfrac{3}{2}x \text{.}\)</span> Enter each intercept as an ordered pair.</div> <div class="para" id="extracted-webwork-22-1-1-2">The <span class="process-math">\(x\)</span>-intercept is <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>.</div> <div class="para" id="extracted-webwork-22-1-1-3">The <span class="process-math">\(y\)</span>-intercept is <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>.</div>
-<div class="solutions">
-<details id="extracted-webwork-22-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-22-1-2-1"><span class="process-math">\(\left(-6,0\right)\)</span></div></div></details><details id="extracted-webwork-22-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-22-1-3-1"><span class="process-math">\(\left(0,-9\right)\)</span></div></div></details><details id="extracted-webwork-22-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="extracted-webwork-22-1-4-1">The <span class="process-math">\(x\)</span>-intercept is <span class="process-math">\({\left(-6,0\right)}\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-22-1-4-2">The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\({\left(0,-9\right)}\text{.}\)</span>
-</div>
-</div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Intercepts-3"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Intercepts-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="space"> </span><span class="title">Meaning of the Intercepts</span>
 </h3>
 <div class="para" id="Intercepts-3-2">The intercepts of a graph give us information about the situation it models.</div>
@@ -1384,65 +1341,16 @@ g = 20 − \frac{1}{12}(\alert{0}) = 20
 </h4>
 <div class="para" id="Intercepts-3-3-1-1">What do the intercepts of the graph in <a href="Intercepts.html#Leon-Camper-intercepts" class="xref" data-knowl="./knowl/xref/Leon-Camper-intercepts.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.3.3">the Example above</a> tell us about Leon’s camper?  <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
-<div class="solutions"><details id="Intercepts-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Intercepts-3-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para" id="Intercepts-3-3-2-1">The <span class="process-math">\(d\)</span>-intercept tells us that when <span class="process-math">\(d = 240\text{,}\)</span> <span class="process-math">\(g = 0\text{,}\)</span> or that when Leon has traveled 240 miles, he has 0 gallons of gasoline left; the fuel tank is empty.</div>
 <div class="para" id="Intercepts-3-3-2-2">The <span class="process-math">\(g\)</span>-intercept tells us that when <span class="process-math">\(d = 0\text{,}\)</span> <span class="process-math">\(g = 20\text{,}\)</span> or that when Leon has traveled 0 miles, he has 20 gallons of gasoline left. The fuel tank holds 20 gallons when full.</div>
-</div></details></div></article><aside class="aside aside-like" id="Intercepts-3-4"><div class="para" id="Intercepts-3-4-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on interpretineg the intercepts, see <a href="tkchap1.html#tkInterpret" class="internal" title="Subsubsection A.1.3.2: Interpret the intercepts">Section 1.3.2</a> of the Toolkit.</div></aside><details id="Intercepts-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="Intercepts-3-4"><div class="para" id="Intercepts-3-4-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on interpretineg the intercepts, see <a href="tkchap1.html#tkInterpret" class="internal" title="Subsubsection A.1.3.2: Interpret the intercepts">Section 1.3.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Intercepts-3-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-23" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="23" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiUG9pbnQiKTsKJHgwPSA1Mjg7CiR5MD0gMTE7CiR4aW50ID0gUG9pbnQoJHgwLDApOwokeWludCA9IFBvaW50KDAsJHkwKTsKCkNvbnRleHQoIkZyYWN0aW9uIik7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hcmUoZz0+IlJlYWwiLCBkPT4iUmVhbCIpOwpDb250ZXh0KCktPmZsYWdzLT5zZXQoIHJlZHVjZUNvbnN0YW50cyA9PiAwLCByZWR1Y2VDb25zdGFudEZ1bmN0aW9ucyA9PiAwLCAgKTsKJGYgPSBGb3JtdWxhKCIxMS0gKDEvNDgpIGQiKTsKCiR4aSA9IFJhZGlvQnV0dG9ucygKICAgIFsiQSkgbWlsZXMgUm9zYSBjYW4gZHJpdmUgYmVmb3JlIHRoZSB0YW5rIGlzIGVtcHR5IiwKICAgICJCKSBtaWxlcyB0byB0aGUgbmV4dCBnYXMgc3RvcCIsCiAgICAiQykgZ2FsbG9ucyBvZiBnYXNvbGluZSBiZWZvcmUgUm9zYSBiZWdpbnMgZHJpdmluZyIsCiAgICAiRCkgZ2FsbG9ucyBvZiBnYXNvbGluZSBwZXIgbWlsZSBvZiBkcml2aW5nIiwKICAgIF0sCiAgICAwCik7CiR5aSA9IFJhZGlvQnV0dG9ucygKICAgIFsiQSkgbWlsZXMgUm9zYSBjYW4gZHJpdmUgYmVmb3JlIHRoZSB0YW5rIGlzIGVtcHR5IiwKICAgICJCKSBtaWxlcyB0byB0aGUgbmV4dCBnYXMgc3RvcCIsCiAgICAiQykgZ2FsbG9ucyBvZiBnYXNvbGluZSBiZWZvcmUgUm9zYSBiZWdpbnMgZHJpdmluZyIsCiAgICAiRCkgZ2FsbG9ucyBvZiBnYXNvbGluZSBwZXIgbWlsZSBvZiBkcml2aW5nIiwKICAgIF0sCiAgICAyCik7CgpCRUdJTl9QR01MClRoZSBnYXMgdGFuayBpbiBSb3NhJ3MgVG95b3RhIFByaXVzIGhvbGRzIDExIGdhbGxvbnMsIGFuZCBzaGUgZ2V0cyA0OCBtaWxlcyB0byB0aGUgZ2FsbG9uLgoKYS4gIFdyaXRlIGFuIGVxdWF0aW9uIGZvciB0aGUgYW1vdW50IG9mIGdhc29saW5lLCBbYGdcdGV4dHssfWBdIGxlZnQgaW4gdGhlIHRhbmsgYWZ0ZXIgUm9zYSBoYXMgZHJpdmVuIGZvciBbYGRgXSBtaWxlcy4KCiAgICBbYGc9YF1bX117JGZ9ezh9CgoKYS4gIEZpbmQgdGhlIGludGVyY2VwdHMgb2YgdGhlIGdyYXBoLgoKICAgIFRoZSBbYGRgXS1pbnRlcmNlcHQgaXMgW19deyR4aW50fXs1fS4KCiAgICBUaGUgW2BnYF0taW50ZXJjZXB0IGlzIFtfXXskeWludH17NX0uCgogICAgV2hhdCBkbyB0aGV5IHRlbGwgdXMgYWJvdXQgdGhlIHByb2JsZW0gc2l0dWF0aW9uPwoKICAgIFRoZSBbYGRgXS1pbnRlcmNlcHQgZ2l2ZXM6CgogICAgW19deyR4aX17NX0KCiAgICBUaGUgW2BnYF0taW50ZXJjZXB0OiBnaXZlcwoKICAgIFtfXXskeWl9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUmV3cml0ZSB0aGUgc2VudGVuY2Ugd2l0aCBtYXRoZW1hdGljYWwgc3ltYm9sczoKCltgYGBcYmVnaW57Z2F0aGVyZWR9ClxzbWFsbHsoXHRleHR7Z2Fzb2xpbmUgbGVmdH0pID0gKFx0ZXh0e2dhbGxvbnMgaW4gZnVsbCB0YW5rfSkgLSAoXHRleHR7bWlsZWFnZSByYXRlfSkgXHRpbWVzIChcdGV4dHttaWxlcyBkcml2ZW59KX0KXGVuZHtnYXRoZXJlZH0KYGBgXQoKCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2BnID0gMTEtXGRmcmFjezF9ezEyfWQgYF0KCgphLiAgW2AoNTI4LDApXHRleHR7On1gXSBBZnRlciBSb3NhIGRyaXZlcyA1MjggbWlsZXMsIHRoZSB0YW5rIHdpbGwgYmUgZW1wdHkuCgogICAgW2AoMCwxMSlcdGV4dHs6fWBdIFRoZSB0YW5rIGhhcyAxMSBnYWxsb25zIGJlZm9yZSBSb3NhIGJlZ2lucyBkcml2aW5nLgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-23')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-23-1-1-1">The gas tank in Rosa’s Toyota Prius holds 11 gallons, and she gets 48 miles to the gallon.</div> <div class="para logical" id="extracted-webwork-23-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-23-1-1-2-1">
-<li id="extracted-webwork-23-1-1-2-1-1">
-<div class="para" id="extracted-webwork-23-1-1-2-1-1-1">Write an equation for the amount of gasoline, <span class="process-math">\(g\text{,}\)</span> left in the tank after Rosa has driven for <span class="process-math">\(d\)</span> miles.</div>
-<div class="para" id="extracted-webwork-23-1-1-2-1-1-2">
-<span class="process-math">\(g=\)</span><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-23-1-1-2-1-2">
-<div class="para" id="extracted-webwork-23-1-1-2-1-2-1">Find the intercepts of the graph.</div>
-<div class="para" id="extracted-webwork-23-1-1-2-1-2-2">The <span class="process-math">\(d\)</span>-intercept is <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>.</div>
-<div class="para" id="extracted-webwork-23-1-1-2-1-2-3">The <span class="process-math">\(g\)</span>-intercept is <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>.</div>
-<div class="para" id="extracted-webwork-23-1-1-2-1-2-4">What do they tell us about the problem situation?</div>
-<div class="para" id="extracted-webwork-23-1-1-2-1-2-5">The <span class="process-math">\(d\)</span>-intercept gives:</div>
-<div class="para logical" id="extracted-webwork-23-1-1-2-1-2-6"><ul class="circle" id="extracted-webwork-23-1-1-2-1-2-6-1">
-<li id="extracted-webwork-23-1-1-2-1-2-6-1-1"><div class="para" id="extracted-webwork-23-1-1-2-1-2-6-1-1-1">A) miles Rosa can drive before the tank is empty</div></li>
-<li id="extracted-webwork-23-1-1-2-1-2-6-1-2"><div class="para" id="extracted-webwork-23-1-1-2-1-2-6-1-2-1">B) miles to the next gas stop</div></li>
-<li id="extracted-webwork-23-1-1-2-1-2-6-1-3"><div class="para" id="extracted-webwork-23-1-1-2-1-2-6-1-3-1">C) gallons of gasoline before Rosa begins driving</div></li>
-<li id="extracted-webwork-23-1-1-2-1-2-6-1-4"><div class="para" id="extracted-webwork-23-1-1-2-1-2-6-1-4-1">D) gallons of gasoline per mile of driving</div></li>
-</ul></div>
-<div class="para" id="extracted-webwork-23-1-1-2-1-2-7">The <span class="process-math">\(g\)</span>-intercept: gives</div>
-<div class="para logical" id="extracted-webwork-23-1-1-2-1-2-8"><ul class="circle" id="extracted-webwork-23-1-1-2-1-2-8-1">
-<li id="extracted-webwork-23-1-1-2-1-2-8-1-1"><div class="para" id="extracted-webwork-23-1-1-2-1-2-8-1-1-1">A) miles Rosa can drive before the tank is empty</div></li>
-<li id="extracted-webwork-23-1-1-2-1-2-8-1-2"><div class="para" id="extracted-webwork-23-1-1-2-1-2-8-1-2-1">B) miles to the next gas stop</div></li>
-<li id="extracted-webwork-23-1-1-2-1-2-8-1-3"><div class="para" id="extracted-webwork-23-1-1-2-1-2-8-1-3-1">C) gallons of gasoline before Rosa begins driving</div></li>
-<li id="extracted-webwork-23-1-1-2-1-2-8-1-4"><div class="para" id="extracted-webwork-23-1-1-2-1-2-8-1-4-1">D) gallons of gasoline per mile of driving</div></li>
-</ul></div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-23-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="extracted-webwork-23-1-2-1">Rewrite the sentence with mathematical symbols:</div>
-<div class="para logical" id="extracted-webwork-23-1-2-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{gathered}
-\small{(\text{gasoline left}) = (\text{gallons in full tank}) - (\text{mileage rate}) \times (\text{miles driven})}
-\end{gathered}
-\end{equation*}
-</div></div>
-</div></details><details id="extracted-webwork-23-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-23-1-3-1"><span class="process-math">\(11-{\frac{1}{48}}d\)</span></div></div></details><details id="extracted-webwork-23-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-23-1-4-1"><span class="process-math">\(\left(528,0\right)\)</span></div></div></details><details id="extracted-webwork-23-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-23-1-5-1"><span class="process-math">\(\left(0,11\right)\)</span></div></div></details><details id="extracted-webwork-23-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-23-1-6-1"><span class="process-math">\(\text{A) miles ... tank is empty}\)</span></div></div></details><details id="extracted-webwork-23-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-23-1-7-1"><span class="process-math">\(\text{C) ... begins driving}\)</span></div></div></details><details id="extracted-webwork-23-1-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-23-1-8-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-23-1-8-1-1">
-<li id="extracted-webwork-23-1-8-1-1-1"><div class="para" id="extracted-webwork-23-1-8-1-1-1-1"><span class="process-math">\(\displaystyle g = 11-\dfrac{1}{12}d\)</span></div></li>
-<li id="extracted-webwork-23-1-8-1-1-2">
-<div class="para" id="extracted-webwork-23-1-8-1-1-2-1">
-<span class="process-math">\((528,0)\text{:}\)</span> After Rosa drives 528 miles, the tank will be empty.</div>
-<div class="para" id="extracted-webwork-23-1-8-1-1-2-2">
-<span class="process-math">\((0,11)\text{:}\)</span> The tank has 11 gallons before Rosa begins driving.</div>
-</li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Intercepts-4"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Intercepts-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="space"> </span><span class="title">General Form for a Linear Equation</span>
 </h3>
 <div class="para logical" id="Intercepts-4-2">
@@ -1472,24 +1380,9 @@ g=20-\frac{1}{12}d ~~~~~~~~  \text{ can be written  as }  \frac{1}{12}d+g=20
 \end{equation*}
 </div>
 <div class="para">(where <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> cannot both be 0).</div>
-</div></article><details id="Intercepts-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="Intercepts-4-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-24" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="24" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFJhZGlvQnV0dG9ucygKICBbIlwoeT1teCtiXCkiLAogICJcKEF4K0J5PUNcKSIsCiAgIkFueSBlcXVhdGlvbiB3aG9zZSBncmFwaCBpcyBhIHN0cmFpZ2h0IGxpbmUuIiwKICAiU2V0IFwoeD0wXCkgYW5kIHNvbHZlIGZvciBcKHlcKS4iXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKV2hhdCBpcyB0aGUgZ2VuZXJhbCBmb3JtIG9mIGEgbGluZWFyIGVxdWF0aW9uPwoKW19deyR3aGljaDF9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIGdlbmVyYWwgZm9ybSBvZiBhIGxpbmVhciBlcXVhdGlvbiBpcyBbYEF4K0J5PUNcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-24')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-24-1-1-1">What is the general form of a linear equation?</div> <div class="para logical" id="extracted-webwork-24-1-1-2"><ul class="circle" id="extracted-webwork-24-1-1-2-1">
-<li id="extracted-webwork-24-1-1-2-1-1"><div class="para" id="extracted-webwork-24-1-1-2-1-1-1"><span class="process-math">\(\displaystyle y=mx+b\)</span></div></li>
-<li id="extracted-webwork-24-1-1-2-1-2"><div class="para" id="extracted-webwork-24-1-1-2-1-2-1"><span class="process-math">\(\displaystyle Ax+By=C\)</span></div></li>
-<li id="extracted-webwork-24-1-1-2-1-3"><div class="para" id="extracted-webwork-24-1-1-2-1-3-1">Any equation whose graph is a straight line.</div></li>
-<li id="extracted-webwork-24-1-1-2-1-4"><div class="para" id="extracted-webwork-24-1-1-2-1-4-1">Set <span class="process-math">\(x=0\)</span> and solve for <span class="process-math">\(y\text{.}\)</span>
-</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-24-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-24-1-2-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-24-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-24-1-3-1">The general form of a linear equation is <span class="process-math">\(Ax+By=C\text{.}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="Intercepts-4-6">Some linear models are easier to use when they are written in the general form.</div>
+</h4></article><div class="para" id="Intercepts-4-6">Some linear models are easier to use when they are written in the general form.</div>
 <article class="example example-like" id="example-advertising"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span>
 </h4>
@@ -1500,7 +1393,11 @@ g=20-\frac{1}{12}d ~~~~~~~~  \text{ can be written  as }  \frac{1}{12}d+g=20
 </div></li>
 <li id="example-advertising-1-2-1-3"><div class="para" id="example-advertising-1-2-1-3-1">Plot the points from your table, and graph the equation.</div></li>
 </ol></div>
-<div class="solutions"><details id="example-advertising-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-advertising-2-1"><ol class="lower-alpha ol-marker-2" id="example-advertising-2-1-1">
+<div class="solution solution-like" id="example-advertising-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-advertising-2-1"><ol class="lower-alpha ol-marker-2" id="example-advertising-2-1-1">
 <li id="example-advertising-2-1-1-1"><div class="para logical" id="example-advertising-2-1-1-1-1">
 <div class="para">Each television ad costs $150, so <span class="process-math">\(x\)</span> ads will cost $<span class="process-math">\(150x\text{.}\)</span> Similarly, <span class="process-math">\(y\)</span> radio ads will cost $<span class="process-math">\(50y\text{.}\)</span> The manager has $3000 to spend, so the sum of the costs must be $3000.  Thus,</div>
 <div class="displaymath process-math">
@@ -1543,18 +1440,10 @@ y\amp=30
 <div class="sbspanel top" style="width:51.0204081632653%;"><div class="para" id="example-advertising-2-1-1-3-1-1">We plot the points from the table. All the solutions lie on a straight line.</div></div>
 <div class="sbspanel top" style="width:35.7142857142857%;"><img src="external/images/fig-example-advertising.svg" role="img" class="contained" alt="grid"></div>
 </div></div></li>
-</ol></div></div></details></div></article><details id="BreadbasketBakeryw" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="BreadbasketBakeryw"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-25" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="25" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VySW1wbGljaXRQbGFuZS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJJbXBsaWNpdFBsYW5lIik7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQoeT0+IlJlYWwiKTsKJGVxdWF0aW9uID0gSW1wbGljaXRQbGFuZSgiMTV4KzR5PTEyMCIpOwoKQkVHSU5fUEdNTApUaGUgbWFuYWdlciBhdCBCcmVhZGJhc2tldCBCYWtlcnkgaGFzICQxMjAgdG8gc3BlbmQgb24gYWR2ZXJ0aXNpbmcuIEFuIGFkIGluIHRoZSBsb2NhbCBuZXdzcGFwZXIgY29zdHMgJDE1LCBhbmQgcG9zdGVycyBjb3N0ICQ0IGVhY2guIFNoZSBkZWNpZGVzIHRvIGJ1eSBbYHhgXSBhZHMgYW5kIFtgeWBdIHBvc3RlcnMuIFdyaXRlIGFuIGVxdWF0aW9uIHJlbGF0aW5nIFtgeGBdIGFuZCBbYHlcdGV4dHsufWBdCgpbX117JGVxdWF0aW9ufXsxNX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClVzZSB0aGUgZ2VuZXJhbCBmb3JtIGZvciBhIGxpbmVhciBlcXVhdGlvbi4gV2hhdCBpcyB0aGUgdG90YWwgYW1vdW50IG9mIG1vbmV5IHRoZSBtYW5hZ2VyIHdpbGwgc3BlbmQ/CgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDE1eCs0eT0xMjBgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-25')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-25-1-1-1">The manager at Breadbasket Bakery has $120 to spend on advertising. An ad in the local newspaper costs $15, and posters cost $4 each. She decides to buy <span class="process-math">\(x\)</span> ads and <span class="process-math">\(y\)</span> posters. Write an equation relating <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-25-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="extracted-webwork-25-1-2-1">Use the general form for a linear equation. What is the total amount of money the manager will spend?</div></div></details><details id="extracted-webwork-25-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-25-1-3-1"><span class="process-math">\(15x+4y = 120\)</span></div></div></details><details id="extracted-webwork-25-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-25-1-4-1"><span class="process-math">\(15x+4y=120\)</span></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="Intercepts-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="Intercepts-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="space"> </span><span class="title">Intercept Method of Graphing</span>
 </h3>
 <div class="para" id="Intercepts-5-4">Because we really need only two points to graph a linear equation, we might as well find the intercepts and use them to draw the graph.</div>
@@ -1571,7 +1460,11 @@ y\amp=30
 <li id="Intercepts-5-6-1-1-1-2"><div class="para" id="Intercepts-5-6-1-1-1-2-1">Use the intercepts to graph the equation. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="Intercepts-5-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Intercepts-5-6-2-1"><ol class="lower-alpha ol-marker-2" id="Intercepts-5-6-2-1-1">
+<div class="solution solution-like" id="Intercepts-5-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Intercepts-5-6-2-1"><ol class="lower-alpha ol-marker-2" id="Intercepts-5-6-2-1-1">
 <li id="Intercepts-5-6-2-1-1-1">
 <div class="para" id="Intercepts-5-6-2-1-1-1-1">To find the <span class="process-math">\(x\)</span>-intercept, we set <span class="process-math">\(y = \alert{0}\text{.}\)</span>
 </div>
@@ -1598,44 +1491,17 @@ y\amp =60
 <div class="sbspanel middle" style="width:63.1578947368421%;"><div class="para" id="Intercepts-5-6-2-1-1-2-1-1">We scale both axes in intervals of 10 and then plot the two intercepts, <span class="process-math">\((20, 0)\)</span> and <span class="process-math">\((0, 60)\text{.}\)</span> We draw the line through them, as shown.</div></div>
 <div class="sbspanel middle" style="width:21.0526315789474%;"><img src="generated/latex-image/fig-example-1-2-4.svg" role="img" class="contained" alt="line with positive intercepts"></div>
 </div></div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="Intercepts-5-7"><div class="para" id="Intercepts-5-7-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on graphing by the intercept method, see <a href="tkchap1.html#tkIntMeth" class="internal" title="Subsubsection A.1.3.1: Graph a linear equation by the intercept method">Section 1.3.1</a> of the Toolkit.</div></aside><details id="Intercepts-5-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="Intercepts-5-7"><div class="para" id="Intercepts-5-7-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on graphing by the intercept method, see <a href="tkchap1.html#tkIntMeth" class="internal" title="Subsubsection A.1.3.1: Graph a linear equation by the intercept method">Section 1.3.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Intercepts-5-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-26" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="26" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHdoaWNoMSA9IFJhZGlvQnV0dG9ucygKICBbIk1ha2UgYSB0YWJsZSBvZiB2YWx1ZXMgYW5kIHBsb3QgdGhlIHBvaW50cy4iLAogICJFeHRlbmQgdGhlIGxpbmUgdW50aWwgaXQgY3Jvc3NlcyBib3RoIGF4ZXMuIiwKICAiU29sdmUgZm9yIFwoeVwpIGluIHRlcm1zIG9mIFwoeFwpLiIsCiAgIlBsb3QgdGhlIHBvaW50cyB3aGVyZSBcKHg9MFwpIGFuZCB3aGVyZSBcKHk9MFwpLCB0aGVuIGRyYXcgdGhlIGxpbmUgdGhyb3VnaCB0aGVtLiJdLAogIDMsIAopOwoKQkVHSU5fUEdNTApEZXNjcmliZSB0aGUgaW50ZXJjZXB0IG1ldGhvZCBvZiBncmFwaGluZyBhIGxpbmVhciBlcXVhdGlvbi4KCltfXXskd2hpY2gxfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClBsb3QgdGhlIGludGVyY2VwdHMgKHRoYXQgaXMsIHRoZSBwb2ludHMgd2hlcmUgW2B4PTBgXSBhbmQgd2hlcmUgW2B5PTBgXSksIHRoZW4gZHJhdyB0aGUgbGluZSB0aHJvdWdoIHRoZW0uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-26')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-26-1-1-1">Describe the intercept method of graphing a linear equation.</div> <div class="para logical" id="extracted-webwork-26-1-1-2"><ul class="circle" id="extracted-webwork-26-1-1-2-1">
-<li id="extracted-webwork-26-1-1-2-1-1"><div class="para" id="extracted-webwork-26-1-1-2-1-1-1">Make a table of values and plot the points.</div></li>
-<li id="extracted-webwork-26-1-1-2-1-2"><div class="para" id="extracted-webwork-26-1-1-2-1-2-1">Extend the line until it crosses both axes.</div></li>
-<li id="extracted-webwork-26-1-1-2-1-3"><div class="para" id="extracted-webwork-26-1-1-2-1-3-1">Solve for <span class="process-math">\(y\)</span> in terms of <span class="process-math">\(x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-26-1-1-2-1-4"><div class="para" id="extracted-webwork-26-1-1-2-1-4-1">Plot the points where <span class="process-math">\(x=0\)</span> and where <span class="process-math">\(y=0\text{,}\)</span> then draw the line through them.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-26-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-26-1-2-1"><span class="process-math">\(\text{Choice 4}\)</span></div></div></details><details id="extracted-webwork-26-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-26-1-3-1">Plot the intercepts (that is, the points where <span class="process-math">\(x=0\)</span> and where <span class="process-math">\(y=0\)</span>), then draw the line through them.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="Intercepts-5-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="Intercepts-5-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-27" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="27" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiR4MD04OwokeTA9MzA7CiR4aW50ID0gUG9pbnQoJHgwLDApOwokeWludCA9IFBvaW50KDAsJHkwKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgW2B4YF1cLSBhbmQgW2B5YF0taW50ZXJjZXB0cyBvZiB0aGUgZXF1YXRpb24gaW4gUHJhY3RpY2UgMyAoYWJvdXQgQnJlYWRiYXNrZXQgQmFrZXJ5KSwgYW5kIHVzZSB0aGUgaW50ZXJjZXB0cyB0byBncmFwaCB0aGUgZXF1YXRpb24uIEVudGVyIGVhY2ggaW50ZXJjZXB0IGFzIGFuIG9yZGVyZWQgcGFpci4KClRoZSBbYHhgXS1pbnRlcmNlcHQgaXMgW19deyR4aW50fXs0fS4KClRoZSBbYHlgXS1pbnRlcmNlcHQgaXMgW19deyR5aW50fXs0fS4KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkNob29zZSBjb252ZW5pZW50IHNjYWxlcyBmb3IgdGhlIFtgeGBdXC0gYW5kIFtgeWBdLWF4ZXMuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgW2B4YF0taW50ZXJjZXB0IGlzIFtgWyR4aW50XVx0ZXh0ey59YF0KClRoZSBbYHlgXS1pbnRlcmNlcHQgaXMgW2BbJHlpbnRdXHRleHR7Ln1gXQoKQSBncmFwaCBpcyBiZWxvdy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-27')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-27-1-1-1">Find the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-intercepts of the equation in Practice 3 (about Breadbasket Bakery), and use the intercepts to graph the equation. Enter each intercept as an ordered pair.</div> <div class="para" id="extracted-webwork-27-1-1-2">The <span class="process-math">\(x\)</span>-intercept is <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>.</div> <div class="para" id="extracted-webwork-27-1-1-3">The <span class="process-math">\(y\)</span>-intercept is <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>.</div>
-<div class="solutions">
-<details id="extracted-webwork-27-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="extracted-webwork-27-1-2-1">Choose convenient scales for the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-axes.</div></div></details><details id="extracted-webwork-27-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-27-1-3-1"><span class="process-math">\(\left(8,0\right)\)</span></div></div></details><details id="extracted-webwork-27-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-27-1-4-1"><span class="process-math">\(\left(0,30\right)\)</span></div></div></details><details id="extracted-webwork-27-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="extracted-webwork-27-1-5-1">The <span class="process-math">\(x\)</span>-intercept is <span class="process-math">\({\left(8,0\right)}\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-27-1-5-2">The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\({\left(0,30\right)}\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-27-1-5-3">A graph is below.</div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="Intercepts-5-9-3">
-<div class="para" id="Intercepts-5-9-3-1">Graph for Breadbasket Bakery:</div>
+</h4>
+<div class="conclusion" id="Intercepts-5-9-2">
+<div class="para" id="Intercepts-5-9-2-1">Graph for Breadbasket Bakery:</div>
 <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-ex-ans-1-2-4w.svg" role="img" class="contained" alt="line with positive intercepts"></div>
-</div></article></details></section><section class="subsection" id="Intercepts-6"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="Intercepts-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="space"> </span><span class="title">Two Forms for Linear Equations</span>
 </h3>
 <div class="para logical" id="Intercepts-6-2">
@@ -1660,7 +1526,11 @@ y\amp =60
 <li id="Intercepts-6-3-1-1-1-1"><div class="para" id="Intercepts-6-3-1-1-1-1-1">Write the equation <span class="process-math">\(4x-3y=6\)</span> in the form for a linear model.</div></li>
 <li id="Intercepts-6-3-1-1-1-2"><div class="para" id="Intercepts-6-3-1-1-1-2-1">Write the equation <span class="process-math">\(y=-9-\dfrac{3}{2}x\)</span> in general linear form.</div></li>
 </ol></div>
-<div class="solutions"><details id="Intercepts-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Intercepts-6-3-2-1"><ol class="lower-alpha ol-marker-2" id="Intercepts-6-3-2-1-1">
+<div class="solution solution-like" id="Intercepts-6-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Intercepts-6-3-2-1"><ol class="lower-alpha ol-marker-2" id="Intercepts-6-3-2-1-1">
 <li id="Intercepts-6-3-2-1-1-1"><div class="para logical" id="Intercepts-6-3-2-1-1-1-1">
 <div class="para">We would like to solve for <span class="process-math">\(y\)</span> in terms of <span class="process-math">\(x\text{.}\)</span> We first isolate the <span class="process-math">\(y\)</span>-term on one side of the equation.</div>
 <div class="displaymath process-math" id="Intercepts-6-3-2-1-1-1-1-4">
@@ -1690,7 +1560,8 @@ y \amp = -9-\frac{3}{2}x\amp\amp \blert{\text{Add } \frac{3}{2}x \text{ to both 
 \end{align*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="Intercepts-6-4"><div class="para" id="Intercepts-6-4-1">
+</ol></div>
+</div></article><aside class="aside aside-like" id="Intercepts-6-4"><div class="para" id="Intercepts-6-4-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help on solving for <span class="process-math">\(y\text{,}\)</span> see <a href="tkchap1.html#tkSolveforVar" class="internal" title="Subsubsection A.1.3.3: Solve an equation for one of the variables">Section 1.3.3</a> of the Toolkit.</div></aside><article class="warning remark-like" id="Intercepts-6-5"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span>
 </h4>
@@ -1717,30 +1588,9 @@ y = −2
 </div></li>
 </ol>
 </div>
-<div class="para" id="Intercepts-6-5-2">This gives us a <dfn class="terminology">particular point</dfn> on the graph, namely, <span class="process-math">\((0, −2)\text{;}\)</span> the point whose <span class="process-math">\(x\)</span>-coordinate is 0.</div></article><details id="Intercepts-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="Intercepts-6-5-2">This gives us a <dfn class="terminology">particular point</dfn> on the graph, namely, <span class="process-math">\((0, −2)\text{;}\)</span> the point whose <span class="process-math">\(x\)</span>-coordinate is 0.</div></article><article class="exercise exercise-like" id="Intercepts-6-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-28" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="28" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VySW1wbGljaXRQbGFuZS5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICRmdW49Rm9ybXVsYSgiLTN4KzYwIik7CgogICBDb250ZXh0KCJJbXBsaWNpdFBsYW5lIik7CiAgIENvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQoeT0+IlJlYWwiKTsKCiAgICRlcXVhdGlvbiA9IEltcGxpY2l0UGxhbmUoIjN4LTIweT03NiIpOwoKQkVHSU5fUEdNTAphLiAgV3JpdGUgdGhlIGVxdWF0aW9uIFtgMTUweCArIDUweSA9IDMwMDBgXSBpbiB0aGUgZm9ybSBmb3IgYSBsaW5lYXIgbW9kZWwuCgogICAgW2B5PWBdW19deyRmdW59ezE1fQoKCmEuICBXcml0ZSB0aGUgZXF1YXRpb24gW2B5ID0gMC4xNXggLSAzLjhgXSBpbiBnZW5lcmFsIGxpbmVhciBmb3JtIHdpdGggaW50ZWdlciBjb2VmZmljaWVudHMuCgogICAgW19deyRlcXVhdGlvbn17MTV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYHk9LTN4KzYwYF0KCgphLiAgW2AtMTV4KzEwMHk9LTM4MH5gXSBvciBbYH4zeC0yMHk9NzZgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-28')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-28-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-28-1-1-1-1">
-<li id="extracted-webwork-28-1-1-1-1-1">
-<div class="para" id="extracted-webwork-28-1-1-1-1-1-1">Write the equation <span class="process-math">\(150x + 50y = 3000\)</span> in the form for a linear model.</div>
-<div class="para" id="extracted-webwork-28-1-1-1-1-1-2">
-<span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-28-1-1-1-1-2"><div class="para" id="extracted-webwork-28-1-1-1-1-2-1">Write the equation <span class="process-math">\(y = 0.15x - 3.8\)</span> in general linear form with integer coefficients.</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-28-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-28-1-2-1"><span class="process-math">\(-3x+60\)</span></div></div></details><details id="extracted-webwork-28-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-28-1-3-1"><span class="process-math">\(3x-20y = 76\)</span></div></div></details><details id="extracted-webwork-28-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-28-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-28-1-4-1-1">
-<li id="extracted-webwork-28-1-4-1-1-1"><div class="para" id="extracted-webwork-28-1-4-1-1-1-1"><span class="process-math">\(\displaystyle y=-3x+60\)</span></div></li>
-<li id="extracted-webwork-28-1-4-1-1-2"><div class="para" id="extracted-webwork-28-1-4-1-1-2-1">
-<span class="process-math">\(-15x+100y=-380~\)</span> or <span class="process-math">\(~3x-20y=76\)</span>
-</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-1-3-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-1-3-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="space"> </span><span class="title">Problem Set 1.3</span>
 </h3>
 <article class="subexercises" id="section-1-3-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

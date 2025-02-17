@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="tkchap6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="toolkit.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="tkchap8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1315,7 +1295,11 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.1</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkPercInc-3-1-1">A loaf of bread cost $3.00 last month, but this year the price rose by 6%. What should you multiply by to find the new price? What is the new price?</div>
-<div class="solutions"><details id="tkPercInc-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkPercInc-3-2-1">
+<div class="solution solution-like" id="tkPercInc-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkPercInc-3-2-1">
 <div class="para">To get the new price, we multiply by 1.06 to get</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1323,11 +1307,16 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">The new price is $3.18.</div>
-</div></div></details></div></article><article class="example example-like" id="tkPercInc-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkPercInc-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.2</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkPercInc-4-1-1">Priceco is offering a 15% discount off the regular price of $180 for a ceiling fan. What should you multiply by to find the new price? What is the new price.</div>
-<div class="solutions"><details id="tkPercInc-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkPercInc-4-2-1">
+<div class="solution solution-like" id="tkPercInc-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkPercInc-4-2-1">
 <div class="para">To get the new price, we multiply by <span class="process-math">\(1-0.15\text{,}\)</span> or 0.85, to get</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1335,15 +1324,18 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">so the new price is $153.</div>
-</div></div></details></div></article><details id="tkPercInc-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkPercInc-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.3</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkPercInc-5-1-1">Muriel’s rent was increased by 8% from $650 per month. What should you multiply by to find her new rent?  What is her new rent?</div>
+</h5>
+<div class="para" id="tkPercInc-5-1-1">Muriel’s rent was increased by 8% from $650 per month. What should you multiply by to find her new rent?  What is her new rent?</div>
 <div class="solutions"><details id="tkPercInc-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPercInc-5-2-1">
-<span class="process-math">\(1.08\text{,}\)</span> $702</div></div></details></div></article></details><details id="tkPercInc-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="process-math">\(1.08\text{,}\)</span> $702</div></div></details></div></article><article class="exercise exercise-like" id="tkPercInc-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.4</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkPercInc-6-1-1">A brand new SUV loses 18% of its value as soon as you drive it off the lot.  If your SUV cost $35,000, what should you multiply to find its new value?  What is its new value?</div>
+</h5>
+<div class="para" id="tkPercInc-6-1-1">A brand new SUV loses 18% of its value as soon as you drive it off the lot.  If your SUV cost $35,000, what should you multiply to find its new value?  What is its new value?</div>
 <div class="solutions"><details id="tkPercInc-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkPercInc-6-2-1">
-<span class="process-math">\(0.82\text{,}\)</span> $28,700</div></div></details></div></article></details></section><section class="subsubsection" id="tkOrderOpExp"><h4 class="heading hide-type">
+<span class="process-math">\(0.82\text{,}\)</span> $28,700</div></div></details></div></article></section><section class="subsubsection" id="tkOrderOpExp"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.1.2</span><span class="space"> </span><span class="title">Use the order of operations</span>
 </h4>
 <section class="introduction" id="tkOrderOpExp-2"><div class="para" id="tkOrderOpExp-2-1">Recall that evaluating powers comes before multiplication in the order of operations.</div></section><article class="example example-like" id="tkOrderOpExp-3"><h5 class="heading">
@@ -1357,7 +1349,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkOrderOpExp-3-1-1-1-3"><div class="para" id="p-derived-tkOrderOpExp-3-1-1-1-3"><span class="process-math">\(\displaystyle (-4-2)^3\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkOrderOpExp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkOrderOpExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkOrderOpExp-3-2-1-1">
+<div class="solution solution-like" id="tkOrderOpExp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkOrderOpExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkOrderOpExp-3-2-1-1">
 <li id="tkOrderOpExp-3-2-1-1-1"><div class="para" id="p-derived-tkOrderOpExp-3-2-1-1-1">Compute <span class="process-math">\(2^3\)</span> first, then subtract the result from <span class="process-math">\(-4\text{:}\)</span><div class="displaymath process-math">
 \begin{equation*}
 -4-2^3=-4-8=-12
@@ -1376,7 +1372,8 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkOrderOpExp-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkOrderOpExp-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.6</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkOrderOpExp-4-1-1">
@@ -1386,7 +1383,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkOrderOpExp-4-1-1-2-2"><div class="para" id="p-derived-tkOrderOpExp-4-1-1-2-2"><span class="process-math">\(\displaystyle 12(1+x/100)^5\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkOrderOpExp-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkOrderOpExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkOrderOpExp-4-2-1-1">
+<div class="solution solution-like" id="tkOrderOpExp-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkOrderOpExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkOrderOpExp-4-2-1-1">
 <li id="tkOrderOpExp-4-2-1-1-1"><div class="para logical" id="tkOrderOpExp-4-2-1-1-1-1">
 <div class="para">Follow the order of operations. Compute the power first:</div>
 <div class="displaymath process-math">
@@ -1403,9 +1404,11 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkOrderOpExp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkOrderOpExp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.7</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkOrderOpExp-5-1-1">
+</h5>
+<div class="para logical" id="tkOrderOpExp-5-1-1">
 <div class="para">Simplify. Round your answers to the nearest whole number.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkOrderOpExp-5-1-1-1">
 <li id="tkOrderOpExp-5-1-1-1-1"><div class="para" id="p-derived-tkOrderOpExp-5-1-1-1-1"><span class="process-math">\(\displaystyle 450(1-0.12)^4\)</span></div></li>
@@ -1415,9 +1418,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="tkOrderOpExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkOrderOpExp-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkOrderOpExp-5-2-1-1">
 <li id="tkOrderOpExp-5-2-1-1-1"><div class="para" id="p-derived-tkOrderOpExp-5-2-1-1-1"><span class="process-math">\(\displaystyle 270\)</span></div></li>
 <li id="tkOrderOpExp-5-2-1-1-2"><div class="para" id="p-derived-tkOrderOpExp-5-2-1-1-2"><span class="process-math">\(\displaystyle 24\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkOrderOpExp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkOrderOpExp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.8</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkOrderOpExp-6-1-1">
+</h5>
+<div class="para logical" id="tkOrderOpExp-6-1-1">
 <div class="para">Evaluate for <span class="process-math">\(x=-3,~y=-2\text{.}\)</span>
 </div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkOrderOpExp-6-1-1-2">
@@ -1428,7 +1432,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="tkOrderOpExp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkOrderOpExp-6-2-1"><ol class="lower-alpha ol-marker-2" id="tkOrderOpExp-6-2-1-1">
 <li id="tkOrderOpExp-6-2-1-1-1"><div class="para" id="p-derived-tkOrderOpExp-6-2-1-1-1"><span class="process-math">\(\displaystyle -26\)</span></div></li>
 <li id="tkOrderOpExp-6-2-1-1-2"><div class="para" id="p-derived-tkOrderOpExp-6-2-1-1-2"><span class="process-math">\(\displaystyle 28\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkSimpExp"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkSimpExp"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.1.3</span><span class="space"> </span><span class="title">Simplify expressions</span>
 </h4>
 <div class="para" id="tkSimpExp-2">Be careful to avoid tempting but false operations with exponents.</div>
@@ -1446,7 +1450,11 @@ eBookConfig.enable_chatcodes =  false;
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkSimpExp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSimpExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSimpExp-3-2-1-1">
+<div class="solution solution-like" id="tkSimpExp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSimpExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSimpExp-3-2-1-1">
 <li id="tkSimpExp-3-2-1-1-1">
 <div class="para" id="tkSimpExp-3-2-1-1-1-1">The first statement is not correct. There is no law that says <span class="process-math">\((a+b)^n\)</span> is equivalent to <span class="process-math">\(a^n+b^n\text{,}\)</span> so <span class="process-math">\((1+r)^4\)</span> is not equivalent to <span class="process-math">\(1^4+r^4\)</span> or <span class="process-math">\(1+r^4\text{.}\)</span>
 </div>
@@ -1470,22 +1478,27 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="tkSimpExp-3-2-1-1-2-2">In the second statement, 6.8 is not raised to power <span class="process-math">\(t\text{,}\)</span> so we cannot multiply 6.8 times 10.</div>
 </li>
-</ol></div></div></details></div></article><div class="para" id="tkSimpExp-4">Decide whether each simplification is a correct application of the laws of exponents. Write a correct statement if possible.</div>
-<details id="tkSimpExp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><div class="para" id="tkSimpExp-4">Decide whether each simplification is a correct application of the laws of exponents. Write a correct statement if possible.</div>
+<article class="exercise exercise-like" id="tkSimpExp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.10</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpExp-5-1-1"><span class="process-math">\(P(1-r)^6 \rightarrow P-Pr^6\)</span></div>
-<div class="solutions"><details id="tkSimpExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpExp-5-2-1">Not correct</div></div></details></div></article></details><details id="tkSimpExp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkSimpExp-5-1-1"><span class="process-math">\(P(1-r)^6 \rightarrow P-Pr^6\)</span></div>
+<div class="solutions"><details id="tkSimpExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpExp-5-2-1">Not correct</div></div></details></div></article><article class="exercise exercise-like" id="tkSimpExp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.11</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpExp-6-1-1"><span class="process-math">\(25(2^t) \cdot 4(2^t) \rightarrow 100 \cdot 2^{t^2}\)</span></div>
+</h5>
+<div class="para" id="tkSimpExp-6-1-1"><span class="process-math">\(25(2^t) \cdot 4(2^t) \rightarrow 100 \cdot 2^{t^2}\)</span></div>
 <div class="solutions"><details id="tkSimpExp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpExp-6-2-1">Not correct. <span class="process-math">\(~25(2^t) \cdot 4(2^t) = 100(2^{2t})\)</span>
-</div></div></details></div></article></details><details id="tkSimpExp-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></details></div></article><article class="exercise exercise-like" id="tkSimpExp-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.12</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpExp-7-1-1"><span class="process-math">\(a\left(b^{1/8}\right)^{2t} \rightarrow ab^{t/4}\)</span></div>
-<div class="solutions"><details id="tkSimpExp-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpExp-7-2-1">Correct</div></div></details></div></article></details><details id="tkSimpExp-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkSimpExp-7-1-1"><span class="process-math">\(a\left(b^{1/8}\right)^{2t} \rightarrow ab^{t/4}\)</span></div>
+<div class="solutions"><details id="tkSimpExp-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpExp-7-2-1">Correct</div></div></details></div></article><article class="exercise exercise-like" id="tkSimpExp-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.13</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSimpExp-8-1-1"><span class="process-math">\(N(0.94)^{1/8.3} \rightarrow \dfrac{N}{(0.94)^{8.3}}\)</span></div>
+</h5>
+<div class="para" id="tkSimpExp-8-1-1"><span class="process-math">\(N(0.94)^{1/8.3} \rightarrow \dfrac{N}{(0.94)^{8.3}}\)</span></div>
 <div class="solutions"><details id="tkSimpExp-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSimpExp-8-2-1">Not correct, but <span class="process-math">\(~N(0.94)^{-8.3} = \dfrac{N}{(0.94)^{8.3}}\)</span>
-</div></div></details></div></article></details></section></section><section class="subsection" id="tkExponentialFunctions"><h3 class="heading hide-type">
+</div></div></details></div></article></section></section><section class="subsection" id="tkExponentialFunctions"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.7.2</span><span class="space"> </span><span class="title">Exponential Functions</span>
 </h3>
 <section class="subsubsection" id="tkEvalExpFncn"><h4 class="heading hide-type">
@@ -1506,7 +1519,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkEvalExpFncn-3-1-1-2-4"><div class="para" id="p-derived-tkEvalExpFncn-3-1-1-2-4"><span class="process-math">\(\displaystyle f\left(-\frac{1}{2}\right)\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkEvalExpFncn-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkEvalExpFncn-3-2-1">
+<div class="solution solution-like" id="tkEvalExpFncn-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkEvalExpFncn-3-2-1">
 <div class="para">Follow the order of operations:  compute powers before products.</div>
 <ol class="lower-alpha ol-marker-2" id="tkEvalExpFncn-3-2-1-1">
 <li id="tkEvalExpFncn-3-2-1-1-1"><div class="para" id="p-derived-tkEvalExpFncn-3-2-1-1-1"><span class="process-math">\(\displaystyle f(2)=8 \cdot 4^2 = 8\cdot 16 = 128\)</span></div></li>
@@ -1514,7 +1531,8 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkEvalExpFncn-3-2-1-1-3"><div class="para" id="p-derived-tkEvalExpFncn-3-2-1-1-3"><span class="process-math">\(\displaystyle f\left(\frac{1}{2}\right)=8 \cdot 4^{1/2} = 8\cdot 2 = 16\)</span></div></li>
 <li id="tkEvalExpFncn-3-2-1-1-4"><div class="para" id="p-derived-tkEvalExpFncn-3-2-1-1-4"><span class="process-math">\(\displaystyle f\left(-\frac{1}{2}\right)=8 \cdot 4^{-1/2} = 8\cdot \dfrac{1}{2} = 4\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkEvalExpFncn-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkEvalExpFncn-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.15</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkEvalExpFncn-4-1-1">
@@ -1526,7 +1544,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkEvalExpFncn-4-1-1-2-4"><div class="para" id="p-derived-tkEvalExpFncn-4-1-1-2-4"><span class="process-math">\(\displaystyle g(-0.25)\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkEvalExpFncn-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkEvalExpFncn-4-2-1">
+<div class="solution solution-like" id="tkEvalExpFncn-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkEvalExpFncn-4-2-1">
 <div class="para">Follow the order of operations:  use your calculator to compute powers before products. Do not round off at intermediate steps!</div>
 <ol class="lower-alpha ol-marker-2" id="tkEvalExpFncn-4-2-1-1">
 <li id="tkEvalExpFncn-4-2-1-1-1"><div class="para" id="p-derived-tkEvalExpFncn-4-2-1-1-1"><span class="process-math">\(\displaystyle g(2.3) = 120(0.65)^{2.3} = 120(0.37127...) = 44.554\)</span></div></li>
@@ -1534,9 +1556,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkEvalExpFncn-4-2-1-1-3"><div class="para" id="p-derived-tkEvalExpFncn-4-2-1-1-3"><span class="process-math">\(\displaystyle g(0.4) = 120(0.65)^{0.4} = 120(0.84171...) = 101.006\)</span></div></li>
 <li id="tkEvalExpFncn-4-2-1-1-4"><div class="para" id="p-derived-tkEvalExpFncn-4-2-1-1-4"><span class="process-math">\(\displaystyle g(-0.25) = 120(0.65)^{-0.25} = 120(1.11370...) = 133.645\)</span></div></li>
 </ol>
-</div></div></details></div></article><details id="tkEvalExpFncn-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkEvalExpFncn-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.16</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkEvalExpFncn-5-1-1">
+</h5>
+<div class="para logical" id="tkEvalExpFncn-5-1-1">
 <div class="para">Evaluate each function. Give your answers as common fractions.</div>
 <ol class="lower-alpha ol-marker-2" id="tkEvalExpFncn-5-1-1-1">
 <li id="tkEvalExpFncn-5-1-1-1-1"><div class="para" id="p-derived-tkEvalExpFncn-5-1-1-1-1">
@@ -1554,9 +1578,10 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkEvalExpFncn-5-2-1-1-1"><div class="para" id="p-derived-tkEvalExpFncn-5-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{3}{25}\)</span></div></li>
 <li id="tkEvalExpFncn-5-2-1-1-2"><div class="para" id="p-derived-tkEvalExpFncn-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{4}{9}\)</span></div></li>
 <li id="tkEvalExpFncn-5-2-1-1-3"><div class="para" id="p-derived-tkEvalExpFncn-5-2-1-1-3"><span class="process-math">\(\displaystyle \dfrac{1}{4}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkEvalExpFncn-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkEvalExpFncn-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.17</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkEvalExpFncn-6-1-1">
+</h5>
+<div class="para logical" id="tkEvalExpFncn-6-1-1">
 <div class="para">Evaluate each function. Round your answers to hundredths.</div>
 <ol class="lower-alpha ol-marker-2" id="tkEvalExpFncn-6-1-1-1">
 <li id="tkEvalExpFncn-6-1-1-1-1"><div class="para" id="p-derived-tkEvalExpFncn-6-1-1-1-1">
@@ -1574,7 +1599,7 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkEvalExpFncn-6-2-1-1-1"><div class="para" id="p-derived-tkEvalExpFncn-6-2-1-1-1"><span class="process-math">\(\displaystyle 4.44\)</span></div></li>
 <li id="tkEvalExpFncn-6-2-1-1-2"><div class="para" id="p-derived-tkEvalExpFncn-6-2-1-1-2"><span class="process-math">\(\displaystyle 0.745\)</span></div></li>
 <li id="tkEvalExpFncn-6-2-1-1-3"><div class="para" id="p-derived-tkEvalExpFncn-6-2-1-1-3"><span class="process-math">\(\displaystyle 5234.44\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkFindExp"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkFindExp"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.2.2</span><span class="space"> </span><span class="title">Find an unknown exponent</span>
 </h4>
 <section class="introduction" id="tkFindExp-2"><div class="para" id="tkFindExp-2-1">If we can write both sides of an equation as powers with the same base, we can equate the exponents.</div></section><article class="example example-like" id="tkFindExp-3"><h5 class="heading">
@@ -1589,7 +1614,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkFindExp-3-1-1-1-4"><div class="para" id="p-derived-tkFindExp-3-1-1-1-4"><span class="process-math">\(\displaystyle 64^x=16\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkFindExp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFindExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindExp-3-2-1-1">
+<div class="solution solution-like" id="tkFindExp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFindExp-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindExp-3-2-1-1">
 <li id="tkFindExp-3-2-1-1-1"><div class="para logical" id="tkFindExp-3-2-1-1-1-1">
 <div class="para">We can write both sides with base 3.</div>
 <div class="displaymath process-math">
@@ -1626,7 +1655,8 @@ x \amp =\dfrac{2}{3}
 \end{align*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkFindExp-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkFindExp-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.19</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkFindExp-4-1-1">
@@ -1638,7 +1668,11 @@ x \amp =\dfrac{2}{3}
 <li id="tkFindExp-4-1-1-1-4"><div class="para" id="p-derived-tkFindExp-4-1-1-1-4"><span class="process-math">\(\displaystyle 0.5^x = 0.20\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkFindExp-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFindExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindExp-4-2-1-1">
+<div class="solution solution-like" id="tkFindExp-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFindExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindExp-4-2-1-1">
 <li id="tkFindExp-4-2-1-1-1"><div class="para" id="p-derived-tkFindExp-4-2-1-1-1">
 <span class="process-math">\(2^4=16~\text{,}\)</span> so we try a slightly smaller exponent and find that <span class="process-math">\(2^{3.9} = 14.9285~\text{,}\)</span> so <span class="process-math">\(x \approx 3.9\text{.}\)</span>
 </div></li>
@@ -1650,9 +1684,11 @@ x \amp =\dfrac{2}{3}
 <li id="tkFindExp-4-2-1-1-4"><div class="para" id="p-derived-tkFindExp-4-2-1-1-4">
 <span class="process-math">\(0.5^2 = 0.25\text{,}\)</span> and as we increase the exponent on <span class="process-math">\(0.5\text{,}\)</span> the result will be smaller. By trial and error we find that <span class="process-math">\(0.5^{2.3} = 0.2031\text{,}\)</span> so <span class="process-math">\(x \approx 2.3\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><details id="tkFindExp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkFindExp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.20</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkFindExp-5-1-1">
+</h5>
+<div class="para logical" id="tkFindExp-5-1-1">
 <div class="para">Find the value of the exponent.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkFindExp-5-1-1-1">
 <li id="tkFindExp-5-1-1-1-1"><div class="para" id="p-derived-tkFindExp-5-1-1-1-1"><span class="process-math">\(\displaystyle 2^x = \dfrac{1}{1024}\)</span></div></li>
@@ -1662,9 +1698,10 @@ x \amp =\dfrac{2}{3}
 <div class="solutions"><details id="tkFindExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkFindExp-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindExp-5-2-1-1">
 <li id="tkFindExp-5-2-1-1-1"><div class="para" id="p-derived-tkFindExp-5-2-1-1-1"><span class="process-math">\(\displaystyle 10\)</span></div></li>
 <li id="tkFindExp-5-2-1-1-2"><div class="para" id="p-derived-tkFindExp-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{2}{3}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkFindExp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkFindExp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.21</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkFindExp-6-1-1">
+</h5>
+<div class="para logical" id="tkFindExp-6-1-1">
 <div class="para">By using trial and error, estimate the value of the exponent to the nearest tenth.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkFindExp-6-1-1-1">
 <li id="tkFindExp-6-1-1-1-1"><div class="para" id="p-derived-tkFindExp-6-1-1-1-1"><span class="process-math">\(\displaystyle 10^x = 50\)</span></div></li>
@@ -1674,7 +1711,7 @@ x \amp =\dfrac{2}{3}
 <div class="solutions"><details id="tkFindExp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkFindExp-6-2-1"><ol class="lower-alpha ol-marker-2" id="tkFindExp-6-2-1-1">
 <li id="tkFindExp-6-2-1-1-1"><div class="para" id="p-derived-tkFindExp-6-2-1-1-1"><span class="process-math">\(\displaystyle 1.7\)</span></div></li>
 <li id="tkFindExp-6-2-1-1-2"><div class="para" id="p-derived-tkFindExp-6-2-1-1-2"><span class="process-math">\(\displaystyle 5.3\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkSolveGraphly"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkSolveGraphly"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.2.3</span><span class="space"> </span><span class="title">Solve equations graphically</span>
 </h4>
 <div class="para" id="tkSolveGraphly-2">We first solve equations graphically in Section 1.2, so you might want to review that subsection.</div>
@@ -1682,7 +1719,10 @@ x \amp =\dfrac{2}{3}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.22</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSolveGraphly-3-1-1">Here is a graph of <span class="process-math">\(f(x)=x^2+2x-16\text{.}\)</span> Use the graph to solve the equation <span class="process-math">\(x^2+2x-16=8\text{.}\)</span>  Show your work on the graph.</div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/y-eq-xsq-plus-2x-minus16.svg" role="img" class="contained" alt="parabola"></div>
-<div class="solutions"><details id="tkSolveGraphly-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkSolveGraphly-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkSolveGraphly-3-2-1">To solve the equation, we want to find <span class="process-math">\(x\)</span>-values that produce a function value of 8. The vertical coordinate of each point on the graph is given by the function value, <span class="process-math">\(f(x)\text{.}\)</span>  So we look for points on the graph with vertical coordinate <span class="process-math">\(f(x)=8\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/y-eq-xsq-plus-2x-minus16-annotated.svg" role="img" class="contained" alt="parabola with annotations"></div>
@@ -1696,16 +1736,22 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 \end{align*}
 </div>
 </div>
-</div></details></div></article><article class="example example-like" id="tkSolveGraphly-4"><h5 class="heading">
+</div></article><article class="example example-like" id="tkSolveGraphly-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.23</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSolveGraphly-4-1-1">Here is a graph of <span class="process-math">\(G(x)=\dfrac{20}{(x-3)^2}\text{.}\)</span> Use the graph to solve the equation <span class="process-math">\(\dfrac{20}{(x-3)^2} = 5\text{.}\)</span>  Show your work on the graph.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/y-eq-20-over-sq-of-x-minus3.svg" role="img" class="contained" alt="transformed inverse-square"></div>
-<div class="solutions"><details id="tkSolveGraphly-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="solution solution-like" id="tkSolveGraphly-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel middle" style="width:45%;"><div class="para" id="tkSolveGraphly-4-2-1-1">We find any points on the graph with vertical coordinate <span class="process-math">\(G(x)=5\text{.}\)</span> There are two points, <span class="process-math">\((1,5)\)</span> and <span class="process-math">\((5,5\text{.}\)</span>)  The <span class="process-math">\(x\)</span>-coordinates of those points, namely 1 and 5, are the solutions.</div></div>
 <div class="sbspanel middle" style="width:50%;"><img src="generated/latex-image/y-eq-20-over-sq-of-x-minus3-annotated.svg" role="img" class="contained" alt="transformed inverse-square-annotated"></div>
-</div></div></div></details></div></article><details id="tkSolveGraphly-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div>
+</div></article><article class="exercise exercise-like" id="tkSolveGraphly-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.24</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSolveGraphly-5-1-1">Here is a graph of <span class="process-math">\(\displaystyle F(x)=\dfrac{1}{16}x^3+\dfrac{3}{8}x^2-\dfrac{3}{2}-7~\)</span>
+</h5>
+<div class="para" id="tkSolveGraphly-5-1-1">Here is a graph of <span class="process-math">\(\displaystyle F(x)=\dfrac{1}{16}x^3+\dfrac{3}{8}x^2-\dfrac{3}{2}-7~\)</span>
 </div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-cubic-3-zeroes.svg" role="img" class="contained" alt="cubic"></div> <div class="para logical" id="tkSolveGraphly-5-1-3">
 <div class="para">Use the graph to solve the equation</div>
 <div class="displaymath process-math">
@@ -1720,9 +1766,10 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <span class="process-math">\(-8\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> <span class="process-math">\(4\)</span>
 </div></div>
 <div class="sbspanel middle" style="width:57.1428571428571%;"><img src="generated/latex-image/fig-cubic-3-zeroes-annotated.svg" role="img" class="contained" alt="cubic"></div>
-</div></div></div></details></div></article></details><details id="tkSolveGraphly-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></div></details></div></article><article class="exercise exercise-like" id="tkSolveGraphly-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.25</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSolveGraphly-6-1-1">Here is a graph of  <span class="process-math">\(~g(x)=15x^{2/3}~\)</span>
+</h5>
+<div class="para" id="tkSolveGraphly-6-1-1">Here is a graph of  <span class="process-math">\(~g(x)=15x^{2/3}~\)</span>
 </div> <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/y-eq-15-x-to-2over3.svg" role="img" class="contained" alt="y=15 x to 2/3"></div> <div class="para logical" id="tkSolveGraphly-6-1-3">
 <div class="para">Use the graph to solve the equation</div>
 <div class="displaymath process-math">
@@ -1735,7 +1782,7 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <div class="solutions"><details id="tkSolveGraphly-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:40%;">
 <div class="sbspanel middle" style="width:25%;"><div class="para" id="tkSolveGraphly-6-2-1-1"><span class="process-math">\(-8,~8\)</span></div></div>
 <div class="sbspanel middle" style="width:75%;"><img src="generated/latex-image/y-eq-15-x-to-2over3-annotated.svg" role="img" class="contained" alt="y=15 x to 2/3"></div>
-</div></div></div></details></div></article></details></section></section><section class="subsection" id="tkLogarithms"><h3 class="heading hide-type">
+</div></div></div></details></div></article></section></section><section class="subsection" id="tkLogarithms"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.7.3</span><span class="space"> </span><span class="title">Logarithms</span>
 </h3>
 <section class="subsubsection" id="tkRadtoPowr"><h4 class="heading hide-type">
@@ -1754,7 +1801,11 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkRadtoPowr-3-1-1-1-4"><div class="para" id="p-derived-tkRadtoPowr-3-1-1-1-4"><span class="process-math">\(\displaystyle z^{-0.4}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRadtoPowr-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadtoPowr-3-2-1">
+<div class="solution solution-like" id="tkRadtoPowr-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadtoPowr-3-2-1">
 <div class="para">Recall that the numerator of the exponent is the power and the denominator is the root.  A negative exponent indicates a reciprocal.</div>
 <ol class="lower-alpha ol-marker-2" id="tkRadtoPowr-3-2-1-1">
 <li id="tkRadtoPowr-3-2-1-1-1"><div class="para" id="p-derived-tkRadtoPowr-3-2-1-1-1"><span class="process-math">\(\displaystyle x^{2/3} = \sqrt[3]{x^2}\)</span></div></li>
@@ -1762,7 +1813,8 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkRadtoPowr-3-2-1-1-3"><div class="para" id="p-derived-tkRadtoPowr-3-2-1-1-3"><span class="process-math">\(\displaystyle w^{1.25} = w^{5/4} = \sqrt[4]{w^5}\)</span></div></li>
 <li id="tkRadtoPowr-3-2-1-1-4"><div class="para" id="p-derived-tkRadtoPowr-3-2-1-1-4"><span class="process-math">\(\displaystyle z^{-0.4} = \dfrac{1}{z^{4/10}} = \dfrac{1}{z^{2/5}} = \dfrac{1}{\sqrt[5]{z^2}}\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkRadtoPowr-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkRadtoPowr-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.27</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkRadtoPowr-4-1-1">
@@ -1774,14 +1826,20 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkRadtoPowr-4-1-1-1-4"><div class="para" id="p-derived-tkRadtoPowr-4-1-1-1-4"><span class="process-math">\(\displaystyle \dfrac{\sqrt[3]{v}}{\sqrt{v}}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkRadtoPowr-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkRadtoPowr-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadtoPowr-4-2-1-1">
+<div class="solution solution-like" id="tkRadtoPowr-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkRadtoPowr-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkRadtoPowr-4-2-1-1">
 <li id="tkRadtoPowr-4-2-1-1-1"><div class="para" id="p-derived-tkRadtoPowr-4-2-1-1-1"><span class="process-math">\(\displaystyle \sqrt[4]{b^3} = b^{3/4}\)</span></div></li>
 <li id="tkRadtoPowr-4-2-1-1-2"><div class="para" id="p-derived-tkRadtoPowr-4-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{1}{\sqrt[6]{a^3}} = \dfrac{1}{a^{3/6}} = a^{-3/6} = a^{-1/2}\)</span></div></li>
 <li id="tkRadtoPowr-4-2-1-1-3"><div class="para" id="p-derived-tkRadtoPowr-4-2-1-1-3"><span class="process-math">\(\displaystyle x^2\sqrt[4]{x} = x^2x^{1/4} = a^{2+1/4} = a^{9/4}\)</span></div></li>
 <li id="tkRadtoPowr-4-2-1-1-4"><div class="para" id="p-derived-tkRadtoPowr-4-2-1-1-4"><span class="process-math">\(\displaystyle \dfrac{\sqrt[3]{v}}{\sqrt{v}} = \dfrac{v^{1/3}}{v^{1/2}} = v^{1/3-1/2} = v^{-1/6}\)</span></div></li>
-</ol></div></div></details></div></article><details id="tkRadtoPowr-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkRadtoPowr-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.28</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkRadtoPowr-5-1-1">
+</h5>
+<div class="para logical" id="tkRadtoPowr-5-1-1">
 <div class="para">Write each power as a radical.</div>
 <ol class="lower-alpha ol-marker-2 cols3" id="tkRadtoPowr-5-1-1-1">
 <li id="tkRadtoPowr-5-1-1-1-1"><div class="para" id="p-derived-tkRadtoPowr-5-1-1-1-1"><span class="process-math">\(\displaystyle m^{-3/5}\)</span></div></li>
@@ -1793,9 +1851,10 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkRadtoPowr-5-2-1-1-1"><div class="para" id="p-derived-tkRadtoPowr-5-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{1}{\sqrt[5]{m^3}}\)</span></div></li>
 <li id="tkRadtoPowr-5-2-1-1-2"><div class="para" id="p-derived-tkRadtoPowr-5-2-1-1-2"><span class="process-math">\(\displaystyle \sqrt[4]{p^{11}}\)</span></div></li>
 <li id="tkRadtoPowr-5-2-1-1-3"><div class="para" id="p-derived-tkRadtoPowr-5-2-1-1-3"><span class="process-math">\(\displaystyle \sqrt[50]{x^{9}}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkRadtoPowr-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkRadtoPowr-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.29</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkRadtoPowr-6-1-1">
+</h5>
+<div class="para logical" id="tkRadtoPowr-6-1-1">
 <div class="para">Write each radical expression in exponential form and simplify.</div>
 <ol class="lower-alpha ol-marker-2 cols3" id="tkRadtoPowr-6-1-1-1">
 <li id="tkRadtoPowr-6-1-1-1-1"><div class="para" id="p-derived-tkRadtoPowr-6-1-1-1-1"><span class="process-math">\(\displaystyle \sqrt[10]{n^9}\)</span></div></li>
@@ -1807,7 +1866,7 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkRadtoPowr-6-2-1-1-1"><div class="para" id="p-derived-tkRadtoPowr-6-2-1-1-1"><span class="process-math">\(\displaystyle n^{9/10}\)</span></div></li>
 <li id="tkRadtoPowr-6-2-1-1-2"><div class="para" id="p-derived-tkRadtoPowr-6-2-1-1-2"><span class="process-math">\(\displaystyle h^{3/4}\)</span></div></li>
 <li id="tkRadtoPowr-6-2-1-1-3"><div class="para" id="p-derived-tkRadtoPowr-6-2-1-1-3"><span class="process-math">\(\displaystyle t^{8/3}\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkEstLogs"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkEstLogs"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.3.2</span><span class="space"> </span><span class="title">Estimate logs</span>
 </h4>
 <div class="para" id="tkEstLogs-2">It is useful to be able to estimate mentally the value of a log.</div>
@@ -1823,7 +1882,11 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkEstLogs-3-1-1-1-4"><div class="para" id="p-derived-tkEstLogs-3-1-1-1-4"><span class="process-math">\(\displaystyle \log_2 {(0.3)}=x\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkEstLogs-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkEstLogs-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-3-2-1-1">
+<div class="solution solution-like" id="tkEstLogs-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkEstLogs-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-3-2-1-1">
 <li id="tkEstLogs-3-2-1-1-1"><div class="para" id="p-derived-tkEstLogs-3-2-1-1-1">
 <span class="process-math">\(2^x=6.~\)</span> Because <span class="process-math">\(~2^2=4~\)</span> and <span class="process-math">\(~2^3=8\text{,}\)</span> <span class="process-math">\(~2 \lt x \lt 3\text{.}\)</span>
 </div></li>
@@ -1836,7 +1899,8 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkEstLogs-3-2-1-1-4"><div class="para" id="p-derived-tkEstLogs-3-2-1-1-4">
 <span class="process-math">\(2^x=0.3.~\)</span> Because <span class="process-math">\(~2^{-2}=\dfrac{1}{4} = 0.25~\)</span> and <span class="process-math">\(~2^{-1}=\dfrac{1}{2} = 0.5\text{,}\)</span> <span class="process-math">\(~-2 \lt x \lt -1\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkEstLogs-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkEstLogs-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.31</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkEstLogs-4-1-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-4-1-1-1">
@@ -1908,7 +1972,11 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 </table></div>
 </li>
 </ol></div>
-<div class="solutions"><details id="tkEstLogs-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkEstLogs-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-4-2-1-1">
+<div class="solution solution-like" id="tkEstLogs-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkEstLogs-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-4-2-1-1">
 <li id="tkEstLogs-4-2-1-1-1"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t3 lines"><span class="process-math">\(x\)</span></td>
@@ -1969,9 +2037,11 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.0\)</span></td>
 </tr>
 </table></div></li>
-</ol></div></div></details></div></article><details id="tkEstLogs-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkEstLogs-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.32</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkEstLogs-5-1-1">
+</h5>
+<div class="para logical" id="tkEstLogs-5-1-1">
 <div class="para">Write each log equation in exponential form. Then use trial and error to estimate the log, first between two integers, and then to the nearest tenth.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkEstLogs-5-1-1-1">
 <li id="tkEstLogs-5-1-1-1-1"><div class="para" id="p-derived-tkEstLogs-5-1-1-1-1"><span class="process-math">\(\displaystyle \log_3 {(10)}=x\)</span></div></li>
@@ -1993,9 +2063,10 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkEstLogs-5-2-1-1-4"><div class="para" id="p-derived-tkEstLogs-5-2-1-1-4">
 <span class="process-math">\(3^x = 0.5,~\)</span> between <span class="process-math">\(-1\)</span> and 0, <span class="process-math">\(~-0.6\)</span>
 </div></li>
-</ol></div></div></details></div></article></details><details id="tkEstLogs-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkEstLogs-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.33</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkEstLogs-6-1-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-6-1-1-1">
+</h5>
+<div class="para logical" id="tkEstLogs-6-1-1"><ol class="lower-alpha ol-marker-2" id="tkEstLogs-6-1-1-1">
 <li id="tkEstLogs-6-1-1-1-1">
 <div class="para" id="tkEstLogs-6-1-1-1-1-1">Use computing technology to complete the table for <span class="process-math">\(f(x)=4^x~\text{.}\)</span>
 </div>
@@ -2132,7 +2203,7 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 </tr>
 </table></div></li>
 <li id="tkEstLogs-6-2-1-1-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/fig-5-2-2.svg" role="img" class="contained" alt="graph"></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkUseLog"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkUseLog"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.3.3</span><span class="space"> </span><span class="title">Using logs</span>
 </h4>
 <article class="example example-like" id="tkUseLog-2"><h5 class="heading">
@@ -2145,13 +2216,19 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkUseLog-2-1-1-1-2"><div class="para" id="p-derived-tkUseLog-2-1-1-1-2"><span class="process-math">\(\displaystyle 3 \cdot 2^x = 90\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkUseLog-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseLog-2-2-1"><ol class="lower-alpha ol-marker-2" id="tkUseLog-2-2-1-1">
+<div class="solution solution-like" id="tkUseLog-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseLog-2-2-1"><ol class="lower-alpha ol-marker-2" id="tkUseLog-2-2-1-1">
 <li id="tkUseLog-2-2-1-1-1"><div class="para" id="tkUseLog-2-2-1-1-1-1">First isolate the power to get <span class="process-math">\(2^x = 32\text{.}\)</span> Then convert to logarithmic form as <span class="process-math">\(x = \log_2{(32)}\text{.}\)</span> Because <span class="process-math">\(2^5 = 32\text{,}\)</span> we can simplify the answer to <span class="process-math">\(x = 5\text{.}\)</span>
 </div></li>
 <li id="tkUseLog-2-2-1-1-2"><div class="para" id="tkUseLog-2-2-1-1-2-1">First isolate the power to get <span class="process-math">\(2^x = 30\text{.}\)</span> Then convert to logarithmic form as <span class="process-math">\(x = \log_2{(30)}\text{.}\)</span> This log is not easy to evaluate without a calculator.</div></li>
-</ol></div></div></details></div></article><details id="tkUseLog-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkUseLog-3"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.35</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkUseLog-3-1-1">
+</h5>
+<div class="para logical" id="tkUseLog-3-1-1">
 <div class="para">Solve each exponential equation by writing your answer as a logarithm, then evaluate if possible (without a calculator).</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkUseLog-3-1-1-1">
 <li id="tkUseLog-3-1-1-1-1"><div class="para" id="p-derived-tkUseLog-3-1-1-1-1"><span class="process-math">\(\displaystyle 2 \cdot 5^x - 20 = 230\)</span></div></li>
@@ -2171,7 +2248,7 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkUseLog-3-2-1-1-4"><div class="para" id="p-derived-tkUseLog-3-2-1-1-4"><span class="process-math">\(\displaystyle \dfrac{1}{2}[5 + \log_3{(81)}] = \dfrac{9}{2}\)</span></div></li>
 <li id="tkUseLog-3-2-1-1-5"><div class="para" id="p-derived-tkUseLog-3-2-1-1-5"><span class="process-math">\(\displaystyle \dfrac{1}{3}\log_4{(2)} = \dfrac{1}{6}\)</span></div></li>
 <li id="tkUseLog-3-2-1-1-6"><div class="para" id="p-derived-tkUseLog-3-2-1-1-6"><span class="process-math">\(\displaystyle \dfrac{1}{3}\log_4{(3)}\)</span></div></li>
-</ol></div></div></details></div></article></details></section></section><section class="subsection" id="tkPropertiesLogarithms"><h3 class="heading hide-type">
+</ol></div></div></details></div></article></section></section><section class="subsection" id="tkPropertiesLogarithms"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.7.4</span><span class="space"> </span><span class="title">Properties of Logarithms</span>
 </h3>
 <div class="para" id="tkPropertiesLogarithms-2">Let us review some of the algebraic properties we learned earllier as they apply to exponential functions.</div>
@@ -2189,13 +2266,18 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkMoreExpLaws-3-1-1-1-2"><div class="para" id="p-derived-tkMoreExpLaws-3-1-1-1-2"><span class="process-math">\(\displaystyle 0.64^5(0.64^n)\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkMoreExpLaws-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkMoreExpLaws-3-2-1">
+<div class="solution solution-like" id="tkMoreExpLaws-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkMoreExpLaws-3-2-1">
 <div class="para">When multiplying two powers with the same base, we add the exponents. Notice that the base does not change.</div>
 <ol class="lower-alpha ol-marker-2" id="tkMoreExpLaws-3-2-1-1">
 <li id="tkMoreExpLaws-3-2-1-1-1"><div class="para" id="p-derived-tkMoreExpLaws-3-2-1-1-1"><span class="process-math">\(\displaystyle 1.35^6(1.35^4) = 1.35^{6+4}=1.35^{10}\)</span></div></li>
 <li id="tkMoreExpLaws-3-2-1-1-2"><div class="para" id="p-derived-tkMoreExpLaws-3-2-1-1-2"><span class="process-math">\(\displaystyle 0.64^5(0.64^n) = 0.64^{5+n}\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkMoreExpLaws-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkMoreExpLaws-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.37</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkMoreExpLaws-4-1-1">
@@ -2205,13 +2287,18 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkMoreExpLaws-4-1-1-1-2"><div class="para" id="p-derived-tkMoreExpLaws-4-1-1-1-2"><span class="process-math">\(\displaystyle \dfrac{0.32^t}{0.32^x}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkMoreExpLaws-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkMoreExpLaws-4-2-1">
+<div class="solution solution-like" id="tkMoreExpLaws-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkMoreExpLaws-4-2-1">
 <div class="para">When dividing two powers with the same base, we subtract the exponents.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkMoreExpLaws-4-2-1-1">
 <li id="tkMoreExpLaws-4-2-1-1-1"><div class="para" id="p-derived-tkMoreExpLaws-4-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{0.32^8}{0.32^2} = 0.32^{8-2} = 0.32^6\)</span></div></li>
 <li id="tkMoreExpLaws-4-2-1-1-2"><div class="para" id="p-derived-tkMoreExpLaws-4-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{0.32^t}{0.32^x} = 0.32^{t-x}\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkMoreExpLaws-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkMoreExpLaws-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.38</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkMoreExpLaws-5-1-1">
@@ -2221,25 +2308,33 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 <li id="tkMoreExpLaws-5-1-1-1-2"><div class="para" id="p-derived-tkMoreExpLaws-5-1-1-1-2"><span class="process-math">\(\displaystyle \left(1.07^4\right)^p\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkMoreExpLaws-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkMoreExpLaws-5-2-1">
+<div class="solution solution-like" id="tkMoreExpLaws-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkMoreExpLaws-5-2-1">
 <div class="para">When raising a power to a power, we multiply the exponents.</div>
 <ol class="lower-alpha ol-marker-2" id="tkMoreExpLaws-5-2-1-1">
 <li id="tkMoreExpLaws-5-2-1-1-1"><div class="para" id="p-derived-tkMoreExpLaws-5-2-1-1-1"><span class="process-math">\(\displaystyle \left(1.07^5\right)^3 = 1.07^{15}\)</span></div></li>
 <li id="tkMoreExpLaws-5-2-1-1-2"><div class="para" id="p-derived-tkMoreExpLaws-5-2-1-1-2"><span class="process-math">\(\displaystyle \left(1.07^4\right)^p = 1.07^{4p}\)</span></div></li>
 </ol>
-</div></div></details></div></article><details id="tkMoreExpLaws-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkMoreExpLaws-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.39</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMoreExpLaws-6-1-1">Use the laws of exponents to simplify <span class="process-math">\(~2.5^{2t}(2.5^3)\text{.}\)</span>
+</h5>
+<div class="para" id="tkMoreExpLaws-6-1-1">Use the laws of exponents to simplify <span class="process-math">\(~2.5^{2t}(2.5^3)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkMoreExpLaws-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMoreExpLaws-6-2-1"><span class="process-math">\(2.5^{2t+3}\)</span></div></div></details></div></article></details><details id="tkMoreExpLaws-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkMoreExpLaws-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMoreExpLaws-6-2-1"><span class="process-math">\(2.5^{2t+3}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkMoreExpLaws-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.40</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMoreExpLaws-7-1-1">Use the laws of exponents to simplify <span class="process-math">\(~\left(0.94^4\right)^{m-2}\text{.}\)</span>
+</h5>
+<div class="para" id="tkMoreExpLaws-7-1-1">Use the laws of exponents to simplify <span class="process-math">\(~\left(0.94^4\right)^{m-2}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkMoreExpLaws-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMoreExpLaws-7-2-1"><span class="process-math">\(0.94^{4m-8}\)</span></div></div></details></div></article></details><details id="tkMoreExpLaws-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkMoreExpLaws-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMoreExpLaws-7-2-1"><span class="process-math">\(0.94^{4m-8}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkMoreExpLaws-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.41</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMoreExpLaws-8-1-1">Use the laws of exponents to simplify <span class="process-math">\(~\dfrac{1.13^{8x}}{1.13^{5x}}\text{.}\)</span>
+</h5>
+<div class="para" id="tkMoreExpLaws-8-1-1">Use the laws of exponents to simplify <span class="process-math">\(~\dfrac{1.13^{8x}}{1.13^{5x}}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkMoreExpLaws-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMoreExpLaws-8-2-1"><span class="process-math">\(1.13^{3x}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkDistLaw"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkMoreExpLaws-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMoreExpLaws-8-2-1"><span class="process-math">\(1.13^{3x}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkDistLaw"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.4.2</span><span class="space"> </span><span class="title">Apply the distributive law</span>
 </h4>
 <article class="example example-like" id="tkDistLaw-2"><h5 class="heading">
@@ -2256,7 +2351,11 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkDistLaw-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkDistLaw-2-2-1"><ol class="lower-alpha ol-marker-2" id="tkDistLaw-2-2-1-1">
+<div class="solution solution-like" id="tkDistLaw-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkDistLaw-2-2-1"><ol class="lower-alpha ol-marker-2" id="tkDistLaw-2-2-1-1">
 <li id="tkDistLaw-2-2-1-1-1">
 <div class="para logical" id="tkDistLaw-2-2-1-1-1-1">
 <div class="para">The distributive law applies to multiplying a sum or difference, not a product. In the first equation, <span class="process-math">\(5 \cdot 3^x\)</span> is a product, so the distributive law does not apply.  (We can, however, simplfy that expression with the associative law:</div>
@@ -2274,28 +2373,37 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 </div>
 <div class="para" id="tkDistLaw-2-2-1-1-2-2">The second equation is a correct application of the distributive law.</div>
 </li>
-</ol></div></div></details></div></article><div class="para" id="tkDistLaw-3">Decide whether each equation is a correct application of the distributive law. Write a correct statement if possible.</div>
-<details id="tkDistLaw-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><div class="para" id="tkDistLaw-3">Decide whether each equation is a correct application of the distributive law. Write a correct statement if possible.</div>
+<article class="exercise exercise-like" id="tkDistLaw-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.43</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDistLaw-4-1-1"><span class="process-math">\(\dfrac{x+6}{3} \rightarrow \dfrac{x}{3} + \dfrac{6}{3}\)</span></div>
-<div class="solutions"><details id="tkDistLaw-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-4-2-1">Correct</div></div></details></div></article></details><details id="tkDistLaw-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkDistLaw-4-1-1"><span class="process-math">\(\dfrac{x+6}{3} \rightarrow \dfrac{x}{3} + \dfrac{6}{3}\)</span></div>
+<div class="solutions"><details id="tkDistLaw-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-4-2-1">Correct</div></div></details></div></article><article class="exercise exercise-like" id="tkDistLaw-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.44</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDistLaw-5-1-1"><span class="process-math">\(\dfrac{6}{x+3} \rightarrow \dfrac{6}{x} + \dfrac{6}{3}\)</span></div>
-<div class="solutions"><details id="tkDistLaw-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-5-2-1">Not correct</div></div></details></div></article></details><details id="tkDistLaw-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkDistLaw-5-1-1"><span class="process-math">\(\dfrac{6}{x+3} \rightarrow \dfrac{6}{x} + \dfrac{6}{3}\)</span></div>
+<div class="solutions"><details id="tkDistLaw-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-5-2-1">Not correct</div></div></details></div></article><article class="exercise exercise-like" id="tkDistLaw-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.45</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDistLaw-6-1-1"><span class="process-math">\(2(P_0 a^t) \rightarrow 2P_0 +2a^t\)</span></div>
+</h5>
+<div class="para" id="tkDistLaw-6-1-1"><span class="process-math">\(2(P_0 a^t) \rightarrow 2P_0 +2a^t\)</span></div>
 <div class="solutions"><details id="tkDistLaw-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-6-2-1">Not correct. <span class="process-math">\(~~2(P_0 a^t) = 2P_0 a^t\)</span>
-</div></div></details></div></article></details><details id="tkDistLaw-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></div></details></div></article><article class="exercise exercise-like" id="tkDistLaw-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.46</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDistLaw-7-1-1"><span class="process-math">\(25(1+r)^8 \rightarrow (25+25r)^8\)</span></div>
-<div class="solutions"><details id="tkDistLaw-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-7-2-1">Not correct</div></div></details></div></article></details></section><section class="subsubsection" id="tkSolveExpEqn"><h4 class="heading hide-type">
+</h5>
+<div class="para" id="tkDistLaw-7-1-1"><span class="process-math">\(25(1+r)^8 \rightarrow (25+25r)^8\)</span></div>
+<div class="solutions"><details id="tkDistLaw-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDistLaw-7-2-1">Not correct</div></div></details></div></article></section><section class="subsubsection" id="tkSolveExpEqn"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.4.3</span><span class="space"> </span><span class="title">Solve power and exponential equations</span>
 </h4>
 <section class="introduction" id="tkSolveExpEqn-2"><div class="para" id="tkSolveExpEqn-2-1">Compare the procedures for solving power equations and exponential equations.</div></section><article class="example example-like" id="tkSolveExpEqn-3"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.47</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSolveExpEqn-3-1-1">Solve <span class="process-math">\(~3x^{1.05} = 18~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSolveExpEqn-3-2-1">
+<div class="solution solution-like" id="tkSolveExpEqn-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSolveExpEqn-3-2-1">
 <div class="para">This is a power equation. We divide both sides by 3 to isolate the variable, then raise both sides to the reciprocal of the exponent.</div>
 <div class="displaymath process-math" id="tkSolveExpEqn-3-2-1-1">
 \begin{align*}
@@ -2303,11 +2411,16 @@ f(\alert{4})\amp = \alert{4}^2+2(\alert{4})-16 = 16+8-16 = 8
 x \amp = 5.51
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkSolveExpEqn-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSolveExpEqn-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.48</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSolveExpEqn-4-1-1">Solve <span class="process-math">\(~3(1.05)^x = 18~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSolveExpEqn-4-2-1">
+<div class="solution solution-like" id="tkSolveExpEqn-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSolveExpEqn-4-2-1">
 <div class="para">This is an exponential equation. We divide both sides by 3, then take logarithms.</div>
 <div class="displaymath process-math" id="tkSolveExpEqn-4-2-1-1">
 \begin{align*}
@@ -2316,11 +2429,16 @@ x \log 1.05\amp = \log 6\\
 x \amp =\dfrac{\log 6}{\log 1.05} = 36.72
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkSolveExpEqn-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSolveExpEqn-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.49</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSolveExpEqn-5-1-1">Solve <span class="process-math">\(~9x^{3/5} = 36~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSolveExpEqn-5-2-1">
+<div class="solution solution-like" id="tkSolveExpEqn-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSolveExpEqn-5-2-1">
 <div class="para">This is a power equation. We divide both sides by 9 to isolate the variable, then raise both sides to the reciprocal of the exponent.</div>
 <div class="displaymath process-math" id="tkSolveExpEqn-5-2-1-1">
 \begin{align*}
@@ -2328,11 +2446,16 @@ x \amp =\dfrac{\log 6}{\log 1.05} = 36.72
 x \amp = 10.08
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkSolveExpEqn-6"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSolveExpEqn-6"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.50</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSolveExpEqn-6-1-1">Solve <span class="process-math">\(~1.5(3^{x/5}) = 12~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSolveExpEqn-6-2-1">
+<div class="solution solution-like" id="tkSolveExpEqn-6-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSolveExpEqn-6-2-1">
 <div class="para">This is an exponential equation. We divide both sides by 1.5, then take logarithms.</div>
 <div class="displaymath process-math" id="tkSolveExpEqn-6-2-1-1">
 \begin{align*}
@@ -2341,19 +2464,24 @@ x \amp = 10.08
 x \amp =\dfrac{5\log 8}{\log 3} = 9.46
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkSolveExpEqn-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkSolveExpEqn-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.51</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSolveExpEqn-7-1-1">Solve <span class="process-math">\(~6x^{3/4}-8 = 76~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-7-2-1"><span class="process-math">\(33.74\)</span></div></div></details></div></article></details><details id="tkSolveExpEqn-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkSolveExpEqn-7-1-1">Solve <span class="process-math">\(~6x^{3/4}-8 = 76~\text{.}\)</span> Round your answer to hundredths.</div>
+<div class="solutions"><details id="tkSolveExpEqn-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-7-2-1"><span class="process-math">\(33.74\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSolveExpEqn-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.52</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSolveExpEqn-8-1-1">Solve <span class="process-math">\(~6\left(\dfrac{3}{4}\right)^x-8 = 76~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-8-2-1"><span class="process-math">\(-9.17\)</span></div></div></details></div></article></details><details id="tkSolveExpEqn-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkSolveExpEqn-8-1-1">Solve <span class="process-math">\(~6\left(\dfrac{3}{4}\right)^x-8 = 76~\text{.}\)</span> Round your answer to hundredths.</div>
+<div class="solutions"><details id="tkSolveExpEqn-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-8-2-1"><span class="process-math">\(-9.17\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSolveExpEqn-9"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.53</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSolveExpEqn-9-1-1">Solve <span class="process-math">\(~13.2(1.36)^x = 284.8~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-9-2-1"><span class="process-math">\(9.99\)</span></div></div></details></div></article></details><details id="tkSolveExpEqn-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkSolveExpEqn-9-1-1">Solve <span class="process-math">\(~13.2(1.36)^x = 284.8~\text{.}\)</span> Round your answer to hundredths.</div>
+<div class="solutions"><details id="tkSolveExpEqn-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-9-2-1"><span class="process-math">\(9.99\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSolveExpEqn-10"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.54</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSolveExpEqn-10-1-1">Solve <span class="process-math">\(~13.2x^{1.26} = 284.8~\text{.}\)</span> Round your answer to hundredths.</div>
-<div class="solutions"><details id="tkSolveExpEqn-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-10-2-1"><span class="process-math">\(11.45\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkExponentialModels"><h3 class="heading hide-type">
+</h5>
+<div class="para" id="tkSolveExpEqn-10-1-1">Solve <span class="process-math">\(~13.2x^{1.26} = 284.8~\text{.}\)</span> Round your answer to hundredths.</div>
+<div class="solutions"><details id="tkSolveExpEqn-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSolveExpEqn-10-2-1"><span class="process-math">\(11.45\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkExponentialModels"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.7.5</span><span class="space"> </span><span class="title">Exponential Models</span>
 </h3>
 <section class="subsubsection" id="tkIntFncnNot"><h4 class="heading hide-type">
@@ -2370,11 +2498,16 @@ x \amp =\dfrac{5\log 8}{\log 3} = 9.46
 <li id="tkIntFncnNot-3-1-1-3-2"><div class="para" id="p-derived-tkIntFncnNot-3-1-1-3-2">Use function notation to say that the student population was 583 in 2007.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkIntFncnNot-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkIntFncnNot-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkIntFncnNot-3-2-1-1">
+<div class="solution solution-like" id="tkIntFncnNot-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkIntFncnNot-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkIntFncnNot-3-2-1-1">
 <li id="tkIntFncnNot-3-2-1-1-1"><div class="para" id="p-derived-tkIntFncnNot-3-2-1-1-1">In this equation, <span class="process-math">\(t=6\)</span> and <span class="process-math">\(f(6)=793\text{.}\)</span> In 2011 (six years after the school opened), the student population was 793.</div></li>
 <li id="tkIntFncnNot-3-2-1-1-2"><div class="para" id="p-derived-tkIntFncnNot-3-2-1-1-2">In 2007, <span class="process-math">\(t=2\text{,}\)</span> so <span class="process-math">\(f(2)=500(1.08)^2=583\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkIntFncnNot-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkIntFncnNot-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.56</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkIntFncnNot-4-1-1">
@@ -2384,17 +2517,24 @@ x \amp =\dfrac{5\log 8}{\log 3} = 9.46
 <li id="tkIntFncnNot-4-1-1-3-2"><div class="para" id="p-derived-tkIntFncnNot-4-1-1-3-2">What does the equation <span class="process-math">\(~V(12) = 48(0.96)^{12} = 29.41~\)</span> tell us about the stock?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkIntFncnNot-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkIntFncnNot-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkIntFncnNot-4-2-1-1">
+<div class="solution solution-like" id="tkIntFncnNot-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkIntFncnNot-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkIntFncnNot-4-2-1-1">
 <li id="tkIntFncnNot-4-2-1-1-1"><div class="para" id="p-derived-tkIntFncnNot-4-2-1-1-1">We evaluate the function at <span class="process-math">\(w=8\)</span> to get <span class="process-math">\(~V(8) = 48(0.96)^8 = 34.63\text{.}\)</span>
 </div></li>
 <li id="tkIntFncnNot-4-2-1-1-2"><div class="para" id="p-derived-tkIntFncnNot-4-2-1-1-2">In this equation, <span class="process-math">\(w=12\)</span> and <span class="process-math">\(V(12) = 29.41\text{,}\)</span> so 12 weeks after the peak value a share of Digicorp stock was worth $29.41.</div></li>
-</ol></div></div></details></div></article><details id="tkIntFncnNot-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkIntFncnNot-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.57</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkIntFncnNot-5-1-1">The number of internet users in the United States is given by <span class="process-math">\(~I(t) = 95,331,000(1.09)^t~\text{,}\)</span> where <span class="process-math">\(t=0\)</span> in 2000.  Use function notation to say that the number of internet users in 2005 was 146,679,000.</div>
-<div class="solutions"><details id="tkIntFncnNot-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkIntFncnNot-5-2-1"><span class="process-math">\(I(t) = 146,679,000\)</span></div></div></details></div></article></details><details id="tkIntFncnNot-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkIntFncnNot-5-1-1">The number of internet users in the United States is given by <span class="process-math">\(~I(t) = 95,331,000(1.09)^t~\text{,}\)</span> where <span class="process-math">\(t=0\)</span> in 2000.  Use function notation to say that the number of internet users in 2005 was 146,679,000.</div>
+<div class="solutions"><details id="tkIntFncnNot-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkIntFncnNot-5-2-1"><span class="process-math">\(I(t) = 146,679,000\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkIntFncnNot-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.58</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkIntFncnNot-6-1-1">The percent of U.S. households that maintain a landline telephone is decreasing according to the formula <span class="process-math">\(~L(t) = 95(0.96)^t~\text{,}\)</span> where <span class="process-math">\(t=0\)</span> in 2004.  What does the equation <span class="process-math">\(~L(t) = 95(0.96)^{10} = 63~\)</span> tell us about landlines?</div>
-<div class="solutions"><details id="tkIntFncnNot-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkIntFncnNot-6-2-1">In 2014, 63% of households maintained a landline.</div></div></details></div></article></details></section><section class="subsubsection" id="tkDblHalf"><h4 class="heading hide-type">
+</h5>
+<div class="para" id="tkIntFncnNot-6-1-1">The percent of U.S. households that maintain a landline telephone is decreasing according to the formula <span class="process-math">\(~L(t) = 95(0.96)^t~\text{,}\)</span> where <span class="process-math">\(t=0\)</span> in 2004.  What does the equation <span class="process-math">\(~L(t) = 95(0.96)^{10} = 63~\)</span> tell us about landlines?</div>
+<div class="solutions"><details id="tkIntFncnNot-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkIntFncnNot-6-2-1">In 2014, 63% of households maintained a landline.</div></div></details></div></article></section><section class="subsubsection" id="tkDblHalf"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.5.2</span><span class="space"> </span><span class="title">Doubling time and half-life</span>
 </h4>
 <article class="assemblage assemblage-like" id="tkDblHalf-2"><h5 class="heading"><span class="title">Doubling Time and Half-Life.</span></h5>
@@ -2417,7 +2557,11 @@ Q(t)=Q_0 (0.5)^{t/H}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.59</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkDblHalf-3-1-1">The half-life of a cold medication in the body is 6 hours. Find its decay rate.</div>
-<div class="solutions"><details id="tkDblHalf-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkDblHalf-3-2-1">
+<div class="solution solution-like" id="tkDblHalf-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkDblHalf-3-2-1">
 <div class="para">The decay law for the medication is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2431,11 +2575,16 @@ N=N_0(0.5^{1/8})^t
 \end{equation*}
 </div>
 <div class="para">so <span class="process-math">\(b=0.5^{1/8}=0.9170\text{,}\)</span> and <span class="process-math">\(r=1-b=0.083\text{.}\)</span> The decay rate is 8.3%.</div>
-</div></div></details></div></article><article class="example example-like" id="tkDblHalf-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkDblHalf-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.60</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkDblHalf-4-1-1">The growth rate of a population of badgers is 3.8% per year. Find its doubling time.</div>
-<div class="solutions"><details id="tkDblHalf-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkDblHalf-4-2-1">
+<div class="solution solution-like" id="tkDblHalf-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkDblHalf-4-2-1">
 <div class="para">The growth law for the population is <span class="process-math">\(P=P_0(1.038)^t\text{.}\)</span> We set <span class="process-math">\(P=2P_0\)</span> and solve for <span class="process-math">\(t\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="tkDblHalf-4-2-1-4">
@@ -2447,13 +2596,16 @@ t \amp = \dfrac{\log 2}{\log 1.038} = 18.59
 \end{align*}
 </div>
 <div class="para">The doubling time is 18.59 years.</div>
-</div></div></details></div></article><details id="tkDblHalf-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkDblHalf-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.61</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDblHalf-5-1-1">The doubling time for a population is 18 years. Find its annual growth rate.</div>
-<div class="solutions"><details id="tkDblHalf-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDblHalf-5-2-1">3.9%</div></div></details></div></article></details><details id="tkDblHalf-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkDblHalf-5-1-1">The doubling time for a population is 18 years. Find its annual growth rate.</div>
+<div class="solutions"><details id="tkDblHalf-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDblHalf-5-2-1">3.9%</div></div></details></div></article><article class="exercise exercise-like" id="tkDblHalf-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.62</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDblHalf-6-1-1">A radioactive isotope decays by 0.04% per second.  What is its half-life?</div>
-<div class="solutions"><details id="tkDblHalf-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDblHalf-6-2-1">4.81 hrs</div></div></details></div></article></details></section><section class="subsubsection" id="tkAnalyzeExpGraph"><h4 class="heading hide-type">
+</h5>
+<div class="para" id="tkDblHalf-6-1-1">A radioactive isotope decays by 0.04% per second.  What is its half-life?</div>
+<div class="solutions"><details id="tkDblHalf-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDblHalf-6-2-1">4.81 hrs</div></div></details></div></article></section><section class="subsubsection" id="tkAnalyzeExpGraph"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.7.5.3</span><span class="space"> </span><span class="title">Analyze graphs of exponential functions</span>
 </h4>
 <section class="introduction" id="tkAnalyzeExpGraph-2"><div class="para" id="tkAnalyzeExpGraph-2-1">From a graph, we can read the initial value of an exponential function and then its doubling time or half-life.  From there we can calculate the growth or decay law.</div></section><article class="example example-like" id="tkAnalyzeExpGraph-3"><h5 class="heading">
@@ -2467,38 +2619,48 @@ t \amp = \dfrac{\log 2}{\log 1.038} = 18.59
 <li id="tkAnalyzeExpGraph-3-1-1-3-3"><div class="para" id="p-derived-tkAnalyzeExpGraph-3-1-1-3-3">What is the annual growth rate for the population?</div></li>
 </ol>
 </div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-llama-population.svg" role="img" class="contained" alt="exponential growth"></div>
-<div class="solutions"><details id="tkAnalyzeExpGraph-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkAnalyzeExpGraph-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-3-2-1-1">
+<div class="solution solution-like" id="tkAnalyzeExpGraph-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkAnalyzeExpGraph-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-3-2-1-1">
 <li id="tkAnalyzeExpGraph-3-2-1-1-1"><div class="para" id="p-derived-tkAnalyzeExpGraph-3-2-1-1-1">The initial value of the population is given by the <span class="process-math">\(P\)</span>-intercept of the graph, <span class="process-math">\((0,15)\text{.}\)</span> There were 15 llamas in 2000.</div></li>
 <li id="tkAnalyzeExpGraph-3-2-1-1-2"><div class="para" id="p-derived-tkAnalyzeExpGraph-3-2-1-1-2">Look for the time when the initial llama population doubles. When <span class="process-math">\(t=4,~P=30\text{,}\)</span> and when <span class="process-math">\(t=8,~P=60\text{,}\)</span> so the llama population doubles every 4 years.</div></li>
 <li id="tkAnalyzeExpGraph-3-2-1-1-3"><div class="para" id="p-derived-tkAnalyzeExpGraph-3-2-1-1-3">The growth factor for the population is <span class="process-math">\(2^{1/4} = 1.189\text{,}\)</span> so the annual growth rate is 18.9%.</div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkAnalyzeExpGraph-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkAnalyzeExpGraph-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.7.64</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkAnalyzeExpGraph-4-1-1">Write a decay law for the graph shown below, where <span class="process-math">\(t\)</span> is in hours and <span class="process-math">\(N\)</span> is in milligrams.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-exponential-decay.svg" role="img" class="contained" alt="exponential decay"></div>
-<div class="solutions"><details id="tkAnalyzeExpGraph-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkAnalyzeExpGraph-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkAnalyzeExpGraph-4-2-1">The initial value is given by the vertical intercept of the graph, <span class="process-math">\((0,600)\text{,}\)</span> so <span class="process-math">\(N_0 = 600\text{.}\)</span>
 </div>
 <div class="para" id="tkAnalyzeExpGraph-4-2-2">When <span class="process-math">\(t=5,~N=300\text{,}\)</span> so the half-life of the substance is 5 hours. Thus the decay law is <span class="process-math">\(N(t)=600(0.5)^{t/5}\text{,}\)</span> or <span class="process-math">\(N(t)=600(0.87)^t\text{.}\)</span>
 </div>
-</div></details></div></article><details id="tkAnalyzeExpGraph-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkAnalyzeExpGraph-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.65</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkAnalyzeExpGraph-5-1-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-5-1-1-1">
+</h5>
+<div class="para logical" id="tkAnalyzeExpGraph-5-1-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-5-1-1-1">
 <li id="tkAnalyzeExpGraph-5-1-1-1-1"><div class="para" id="p-derived-tkAnalyzeExpGraph-5-1-1-1-1">Write a growth law for the population whose graph is shown, where <span class="process-math">\(t\)</span> is in years.</div></li>
 <li id="tkAnalyzeExpGraph-5-1-1-1-2"><div class="para" id="p-derived-tkAnalyzeExpGraph-5-1-1-1-2">What is the annual growth rate for the population?</div></li>
 </ol></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-population-growth.svg" role="img" class="contained" alt="exponential growth"></div>
 <div class="solutions"><details id="tkAnalyzeExpGraph-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkAnalyzeExpGraph-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-5-2-1-1">
 <li id="tkAnalyzeExpGraph-5-2-1-1-1"><div class="para" id="p-derived-tkAnalyzeExpGraph-5-2-1-1-1"><span class="process-math">\(\displaystyle P(t) = 10(2^{t/2.5})\)</span></div></li>
 <li id="tkAnalyzeExpGraph-5-2-1-1-2"><div class="para" id="p-derived-tkAnalyzeExpGraph-5-2-1-1-2">32.0%</div></li>
-</ol></div></div></details></div></article></details><details id="tkAnalyzeExpGraph-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkAnalyzeExpGraph-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.7.66</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkAnalyzeExpGraph-6-1-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-6-1-1-1">
+</h5>
+<div class="para logical" id="tkAnalyzeExpGraph-6-1-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-6-1-1-1">
 <li id="tkAnalyzeExpGraph-6-1-1-1-1"><div class="para" id="p-derived-tkAnalyzeExpGraph-6-1-1-1-1">Write a decay law for the population whose graph is shown, where <span class="process-math">\(t\)</span> is in days.</div></li>
 <li id="tkAnalyzeExpGraph-6-1-1-1-2"><div class="para" id="p-derived-tkAnalyzeExpGraph-6-1-1-1-2">What is the daily decay rate for the population?</div></li>
 </ol></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-population-decay-exercise.svg" role="img" class="contained" alt="exponential decay"></div>
 <div class="solutions"><details id="tkAnalyzeExpGraph-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkAnalyzeExpGraph-6-2-1"><ol class="lower-alpha ol-marker-2" id="tkAnalyzeExpGraph-6-2-1-1">
 <li id="tkAnalyzeExpGraph-6-2-1-1-1"><div class="para" id="p-derived-tkAnalyzeExpGraph-6-2-1-1-1"><span class="process-math">\(\displaystyle P(t) = 120(0.5^{t/3})\)</span></div></li>
 <li id="tkAnalyzeExpGraph-6-2-1-1-2"><div class="para" id="p-derived-tkAnalyzeExpGraph-6-2-1-1-2">20.6%</div></li>
-</ol></div></div></details></div></article></details></section></section></section></div>
+</ol></div></div></details></div></article></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="tkchap6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="tkchap8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

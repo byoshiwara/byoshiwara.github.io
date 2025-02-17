@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="tkchap7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="toolkit.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="tkchap9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1321,11 +1301,16 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkSumandProd-3-1-1-1-2"><div class="para" id="p-derived-tkSumandProd-3-1-1-1-2"><span class="process-math">\(\displaystyle 3x^2(-5x^3)\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkSumandProd-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSumandProd-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSumandProd-3-2-1-1">
+<div class="solution solution-like" id="tkSumandProd-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSumandProd-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSumandProd-3-2-1-1">
 <li id="tkSumandProd-3-2-1-1-1"><div class="para" id="p-derived-tkSumandProd-3-2-1-1-1">This expression is a difference of terms, but they are not like terms (because the variable has different exponents), so we cannot combine them.</div></li>
 <li id="tkSumandProd-3-2-1-1-2"><div class="para" id="p-derived-tkSumandProd-3-2-1-1-2">This expression is a product, and the powers have the same base, so we can apply the first law of exponents to get <span class="process-math">\(~3x^2(-5x^3)=-15x^5\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkSumandProd-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkSumandProd-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.2</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkSumandProd-4-1-1">
@@ -1335,14 +1320,20 @@ eBookConfig.enable_chatcodes =  false;
 <li id="tkSumandProd-4-1-1-1-2"><div class="para" id="p-derived-tkSumandProd-4-1-1-1-2"><span class="process-math">\(\displaystyle -6t^4(-8t^4)\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkSumandProd-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSumandProd-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkSumandProd-4-2-1-1">
+<div class="solution solution-like" id="tkSumandProd-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSumandProd-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkSumandProd-4-2-1-1">
 <li id="tkSumandProd-4-2-1-1-1"><div class="para" id="p-derived-tkSumandProd-4-2-1-1-1">This expression is a difference of like terms, so we can combine their coefficients to get <span class="process-math">\(~-6t^4-8t^4=-14t^4\)</span>
 </div></li>
 <li id="tkSumandProd-4-2-1-1-2"><div class="para" id="p-derived-tkSumandProd-4-2-1-1-2">This expression is a product, and the powers have the same base, so we can apply the first law of exponents to get <span class="process-math">\(~-6t^4(-8t^4)=48t^8\)</span>
 </div></li>
-</ol></div></div></details></div></article><details id="tkSumandProd-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkSumandProd-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.3</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSumandProd-5-1-1">
+</h5>
+<div class="para logical" id="tkSumandProd-5-1-1">
 <div class="para">Simplify each expression if possible.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkSumandProd-5-1-1-1">
 <li id="tkSumandProd-5-1-1-1-1"><div class="para" id="p-derived-tkSumandProd-5-1-1-1-1"><span class="process-math">\(\displaystyle 2a^2-9a^3+a^2\)</span></div></li>
@@ -1352,9 +1343,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="tkSumandProd-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkSumandProd-5-2-1"><ol class="lower-alpha ol-marker-2" id="tkSumandProd-5-2-1-1">
 <li id="tkSumandProd-5-2-1-1-1"><div class="para" id="p-derived-tkSumandProd-5-2-1-1-1"><span class="process-math">\(\displaystyle 3a^2-9a^3\)</span></div></li>
 <li id="tkSumandProd-5-2-1-1-2"><div class="para" id="p-derived-tkSumandProd-5-2-1-1-2"><span class="process-math">\(\displaystyle -18a^5+2a^4\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkSumandProd-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkSumandProd-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.4</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSumandProd-6-1-1">
+</h5>
+<div class="para logical" id="tkSumandProd-6-1-1">
 <div class="para">Simplify each expression if possible.</div>
 <ol class="decimal cols2" id="tkSumandProd-6-1-1-1">
 <li id="tkSumandProd-6-1-1-1-1"><div class="para" id="p-derived-tkSumandProd-6-1-1-1-1"><span class="process-math">\(\displaystyle 7-4a^3+2a^3\)</span></div></li>
@@ -1364,7 +1356,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="tkSumandProd-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkSumandProd-6-2-1"><ol class="decimal" id="tkSumandProd-6-2-1-1">
 <li id="tkSumandProd-6-2-1-1-1"><div class="para" id="p-derived-tkSumandProd-6-2-1-1-1"><span class="process-math">\(\displaystyle 7-2a^3\)</span></div></li>
 <li id="tkSumandProd-6-2-1-1-2"><div class="para" id="p-derived-tkSumandProd-6-2-1-1-2"><span class="process-math">\(\displaystyle 7-8a^5\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkUseForm"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkUseForm"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.1.2</span><span class="space"> </span><span class="title">Use formulas</span>
 </h4>
 <div class="para" id="tkUseForm-2">There are several useful formulas for simplifying polynomials.</div>
@@ -1373,7 +1365,11 @@ eBookConfig.enable_chatcodes =  false;
 </h5>
 <div class="para" id="tkUseForm-3-1-1">If <span class="process-math">\(~a=5t^4,~\)</span> find <span class="process-math">\(a^3\)</span> and <span class="process-math">\(3a^2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkUseForm-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseForm-3-2-1">
+<div class="solution solution-like" id="tkUseForm-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseForm-3-2-1">
 <div class="para">We substitute <span class="process-math">\(5t^4\)</span> for <span class="process-math">\(a\)</span> to find</div>
 <div class="displaymath process-math" id="tkUseForm-3-2-1-3">
 \begin{align*}
@@ -1381,12 +1377,17 @@ a^3 \amp =(\blert{5t^4})^3 = 5^3(t^4)^3 = 125t^{12} \amp \amp \blert{\text{Apply
 3a^2 \amp = 3(\blert{5t^4})^2 = 3 \cdot 5^2(t^4)^2 = 75t^8
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkUseForm-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkUseForm-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.6</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkUseForm-4-1-1">If <span class="process-math">\(a=2y\)</span> and <span class="process-math">\(b=-3z^2\text{,}\)</span> find <span class="process-math">\(b^3\)</span> and <span class="process-math">\(3a^2b\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkUseForm-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseForm-4-2-1">
+<div class="solution solution-like" id="tkUseForm-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseForm-4-2-1">
 <div class="para">We substitute <span class="process-math">\(2y\)</span> for <span class="process-math">\(a\)</span> and <span class="process-math">\(-3z^2\)</span> for <span class="process-math">\(b\)</span> to find</div>
 <div class="displaymath process-math" id="tkUseForm-4-2-1-5">
 \begin{align*}
@@ -1394,15 +1395,18 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 3a^2b \amp = 3 (\blert{2y})^2(\blert{-3z^2}) = 3(4y^2)(-3z^2)=-36y^2z^2
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkUseForm-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkUseForm-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.7</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkUseForm-5-1-1">If <span class="process-math">\(~a=-4x^3~\)</span> and <span class="process-math">\(~b=3h\text{,}\)</span> find <span class="process-math">\(a^3\)</span> and <span class="process-math">\(ab^2\text{.}\)</span>
+</h5>
+<div class="para" id="tkUseForm-5-1-1">If <span class="process-math">\(~a=-4x^3~\)</span> and <span class="process-math">\(~b=3h\text{,}\)</span> find <span class="process-math">\(a^3\)</span> and <span class="process-math">\(ab^2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkUseForm-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseForm-5-2-1"><span class="process-math">\(-64x^9;~~-36x^3h^2\)</span></div></div></details></div></article></details><details id="tkUseForm-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseForm-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseForm-5-2-1"><span class="process-math">\(-64x^9;~~-36x^3h^2\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseForm-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.8</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkUseForm-6-1-1">If <span class="process-math">\(x=6p^2\)</span> and <span class="process-math">\(y=mq^2\text{,}\)</span> find <span class="process-math">\(y^3\)</span> and <span class="process-math">\(x^2y\text{.}\)</span>
+</h5>
+<div class="para" id="tkUseForm-6-1-1">If <span class="process-math">\(x=6p^2\)</span> and <span class="process-math">\(y=mq^2\text{,}\)</span> find <span class="process-math">\(y^3\)</span> and <span class="process-math">\(x^2y\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkUseForm-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseForm-6-2-1"><span class="process-math">\(m^3q^6;~~-36mp^4q^2\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkSqBin"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkUseForm-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseForm-6-2-1"><span class="process-math">\(m^3q^6;~~-36mp^4q^2\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkSqBin"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.1.3</span><span class="space"> </span><span class="title">Square binomials</span>
 </h4>
 <div class="para" id="tkSqBin-2">Sometimes it is easier to use formulas to square binomials.</div>
@@ -1418,7 +1422,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkSqBin-4-1-1">Use the identity <span class="process-math">\(~(a+b)^2=a^2+2ab+b^2~\)</span> to expand <span class="process-math">\(~(3h^2+4k^3)^2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkSqBin-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSqBin-4-2-1">
+<div class="solution solution-like" id="tkSqBin-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSqBin-4-2-1">
 <div class="para">We substitute <span class="process-math">\(3h^2\)</span> for <span class="process-math">\(a\)</span> and <span class="process-math">\(4k^3\)</span> for <span class="process-math">\(b\)</span> into the identity.</div>
 <div class="displaymath process-math" id="tkSqBin-4-2-1-5">
 \begin{align*}
@@ -1426,12 +1434,17 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \amp = 9h^4+24h^2k^3+16k^6
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkSqBin-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkSqBin-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.10</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkSqBin-5-1-1">Use the identity <span class="process-math">\(~(a-b)^2=a^2-2ab+b^2~\)</span> to expand <span class="process-math">\(~(2xy^2-5)^2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="tkSqBin-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSqBin-5-2-1">
+<div class="solution solution-like" id="tkSqBin-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSqBin-5-2-1">
 <div class="para">We substitute <span class="process-math">\(2xy^2\)</span> for <span class="process-math">\(a\)</span> and <span class="process-math">\(5\)</span> for <span class="process-math">\(b\)</span> into the identity.</div>
 <div class="displaymath process-math" id="tkSqBin-5-2-1-5">
 \begin{align*}
@@ -1439,15 +1452,18 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \amp = 4x^2y^4 - 20xy^2+25
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkSqBin-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkSqBin-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.11</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSqBin-6-1-1">Expand <span class="process-math">\(~(8w^4-3w^3)^2\)</span>
+</h5>
+<div class="para" id="tkSqBin-6-1-1">Expand <span class="process-math">\(~(8w^4-3w^3)^2\)</span>
 </div>
-<div class="solutions"><details id="tkSqBin-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqBin-6-2-1"><span class="process-math">\(64w^8-48w^7+9w^6\)</span></div></div></details></div></article></details><details id="tkSqBin-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkSqBin-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqBin-6-2-1"><span class="process-math">\(64w^8-48w^7+9w^6\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkSqBin-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.12</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkSqBin-7-1-1">Expand <span class="process-math">\(~(a^3b+9ab^3)^2\)</span>
+</h5>
+<div class="para" id="tkSqBin-7-1-1">Expand <span class="process-math">\(~(a^3b+9ab^3)^2\)</span>
 </div>
-<div class="solutions"><details id="tkSqBin-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqBin-7-2-1"><span class="process-math">\(a^6b^2+18a^4b^4+81a^2b^6\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkAlgebraicFractions"><h3 class="heading hide-type">
+<div class="solutions"><details id="tkSqBin-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkSqBin-7-2-1"><span class="process-math">\(a^6b^2+18a^4b^4+81a^2b^6\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkAlgebraicFractions"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.8.2</span><span class="space"> </span><span class="title">Algebraic Fractions</span>
 </h3>
 <section class="subsubsection" id="tkFactPoly"><h4 class="heading hide-type">
@@ -1464,14 +1480,19 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkFactPoly-3-1-1-1-3"><div class="para" id="p-derived-tkFactPoly-3-1-1-1-3"><span class="process-math">\(\displaystyle 4x^2-4x+2\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkFactPoly-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFactPoly-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkFactPoly-3-2-1-1">
+<div class="solution solution-like" id="tkFactPoly-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFactPoly-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkFactPoly-3-2-1-1">
 <li id="tkFactPoly-3-2-1-1-1"><div class="para" id="tkFactPoly-3-2-1-1-1-1">We factor out  a common factor of <span class="process-math">\(4x\)</span> to get <span class="process-math">\(4x(x-1)\text{.}\)</span>
 </div></li>
 <li id="tkFactPoly-3-2-1-1-2"><div class="para" id="tkFactPoly-3-2-1-1-2-1">This is a difference of two squares that factors as <span class="process-math">\((2x-1)(2x+1)\text{.}\)</span>
 </div></li>
 <li id="tkFactPoly-3-2-1-1-3"><div class="para" id="tkFactPoly-3-2-1-1-3-1">This is the square of a binomial, <span class="process-math">\((2x-1)^2\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="example example-like" id="tkFactPoly-4"><h5 class="heading">
+</ol></div>
+</div></article><article class="example example-like" id="tkFactPoly-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.14</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkFactPoly-4-1-1">
@@ -1482,29 +1503,38 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkFactPoly-4-1-1-1-3"><div class="para" id="p-derived-tkFactPoly-4-1-1-1-3"><span class="process-math">\(\displaystyle 81a^3-a\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkFactPoly-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkFactPoly-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkFactPoly-4-2-1-1">
+<div class="solution solution-like" id="tkFactPoly-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkFactPoly-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkFactPoly-4-2-1-1">
 <li id="tkFactPoly-4-2-1-1-1"><div class="para" id="tkFactPoly-4-2-1-1-1-1">We first factor out 3 to find <span class="process-math">\(3(9a^2-1)\text{,}\)</span> then factor the difference of two squares to get <span class="process-math">\(3(3a-1)(3a+1)\text{.}\)</span>
 </div></li>
 <li id="tkFactPoly-4-2-1-1-2"><div class="para" id="tkFactPoly-4-2-1-1-2-1">This is a differece of two cubes, which factors as <span class="process-math">\((3a-1)(9a^2+3a+1)\text{.}\)</span>
 </div></li>
 <li id="tkFactPoly-4-2-1-1-3"><div class="para" id="tkFactPoly-4-2-1-1-3-1">We first factor out <span class="process-math">\(a\)</span> to get <span class="process-math">\(a(81a^2-1)\text{,}\)</span> then factor the difference of two squares to get <span class="process-math">\(a(9a-1)(9a+1)\)</span> .</div></li>
-</ol></div></div></details></div></article><details id="tkFactPoly-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkFactPoly-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.15</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFactPoly-5-1-1">Factor completely  <span class="process-math">\(2x^3+16y^3\)</span>
+</h5>
+<div class="para" id="tkFactPoly-5-1-1">Factor completely  <span class="process-math">\(2x^3+16y^3\)</span>
 </div>
-<div class="solutions"><details id="tkFactPoly-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-5-2-1"><span class="process-math">\(2(x+2y)(x^2-2xy+4y^2)\)</span></div></div></details></div></article></details><details id="tkFactPoly-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkFactPoly-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-5-2-1"><span class="process-math">\(2(x+2y)(x^2-2xy+4y^2)\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFactPoly-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.16</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFactPoly-6-1-1">Factor completely  <span class="process-math">\(4x^2y-36y^3\)</span>
+</h5>
+<div class="para" id="tkFactPoly-6-1-1">Factor completely  <span class="process-math">\(4x^2y-36y^3\)</span>
 </div>
-<div class="solutions"><details id="tkFactPoly-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-6-2-1"><span class="process-math">\(4y(x-3y)(x+3y)\)</span></div></div></details></div></article></details><details id="tkFactPoly-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkFactPoly-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-6-2-1"><span class="process-math">\(4y(x-3y)(x+3y)\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFactPoly-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.17</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFactPoly-7-1-1">Factor completely  <span class="process-math">\(2b^3-6b^2-36b\)</span>
+</h5>
+<div class="para" id="tkFactPoly-7-1-1">Factor completely  <span class="process-math">\(2b^3-6b^2-36b\)</span>
 </div>
-<div class="solutions"><details id="tkFactPoly-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-7-2-1"><span class="process-math">\(2b(b-6)(b+3)\)</span></div></div></details></div></article></details><details id="tkFactPoly-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkFactPoly-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-7-2-1"><span class="process-math">\(2b(b-6)(b+3)\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFactPoly-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.18</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFactPoly-8-1-1">Factor completely  <span class="process-math">\(9b^4+9b^2\)</span>
+</h5>
+<div class="para" id="tkFactPoly-8-1-1">Factor completely  <span class="process-math">\(9b^4+9b^2\)</span>
 </div>
-<div class="solutions"><details id="tkFactPoly-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-8-2-1"><span class="process-math">\(9b^2(b^2+1)\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkOppBin"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkFactPoly-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFactPoly-8-2-1"><span class="process-math">\(9b^2(b^2+1)\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkOppBin"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.2.2</span><span class="space"> </span><span class="title">Find the opposite of a binomial</span>
 </h4>
 <section class="introduction" id="tkOppBin-2"><div class="para" id="tkOppBin-2-1">To find the opposite or negative of a binomial we multiply by <span class="process-math">\(-1\text{.}\)</span>
@@ -1520,8 +1550,13 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkOppBin-3-1-1-2-3"><div class="para" id="p-derived-tkOppBin-3-1-1-2-3"><span class="process-math">\(\displaystyle p-m^2\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkOppBin-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkOppBin-3-2-1">The opposite of <span class="process-math">\(m^2-p\)</span> is <span class="process-math">\(-(m^2-p) = -m^2+p\text{,}\)</span> or <span class="process-math">\(p-m^2\text{.}\)</span>
-</div></div></details></div></article><article class="example example-like" id="tkOppBin-4"><h5 class="heading">
+<div class="solution solution-like" id="tkOppBin-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkOppBin-3-2-1">The opposite of <span class="process-math">\(m^2-p\)</span> is <span class="process-math">\(-(m^2-p) = -m^2+p\text{,}\)</span> or <span class="process-math">\(p-m^2\text{.}\)</span>
+</div>
+</div></article><article class="example example-like" id="tkOppBin-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.20</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkOppBin-4-1-1">
@@ -1538,49 +1573,72 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkOppBin-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkOppBin-4-2-1">The opposite of <span class="process-math">\(5c-3\)</span> is <span class="process-math">\(-(5c-3)=-5c+3\text{,}\)</span> or <span class="process-math">\(3-5c\text{,}\)</span> so (c) is correct.</div></div></details></div></article><details id="tkOppBin-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solution solution-like" id="tkOppBin-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkOppBin-4-2-1">The opposite of <span class="process-math">\(5c-3\)</span> is <span class="process-math">\(-(5c-3)=-5c+3\text{,}\)</span> or <span class="process-math">\(3-5c\text{,}\)</span> so (c) is correct.</div>
+</div></article><article class="exercise exercise-like" id="tkOppBin-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.21</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkOppBin-5-1-1">Find the opposite of the binomial <span class="process-math">\(~2x+1\)</span>
+</h5>
+<div class="para" id="tkOppBin-5-1-1">Find the opposite of the binomial <span class="process-math">\(~2x+1\)</span>
 </div>
-<div class="solutions"><details id="tkOppBin-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-5-2-1"><span class="process-math">\(-2x-1\)</span></div></div></details></div></article></details><details id="tkOppBin-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkOppBin-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-5-2-1"><span class="process-math">\(-2x-1\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkOppBin-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.22</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkOppBin-6-1-1">Find the opposite of the binomial <span class="process-math">\(~b^2-b\)</span>
+</h5>
+<div class="para" id="tkOppBin-6-1-1">Find the opposite of the binomial <span class="process-math">\(~b^2-b\)</span>
 </div>
-<div class="solutions"><details id="tkOppBin-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-6-2-1"><span class="process-math">\(b-b^2\)</span></div></div></details></div></article></details><details id="tkOppBin-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkOppBin-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-6-2-1"><span class="process-math">\(b-b^2\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkOppBin-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.23</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkOppBin-7-1-1">Find the opposite of the binomial <span class="process-math">\(~-4n+8\)</span>
+</h5>
+<div class="para" id="tkOppBin-7-1-1">Find the opposite of the binomial <span class="process-math">\(~-4n+8\)</span>
 </div>
-<div class="solutions"><details id="tkOppBin-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-7-2-1"><span class="process-math">\(4n-8\)</span></div></div></details></div></article></details><details id="tkOppBin-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkOppBin-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-7-2-1"><span class="process-math">\(4n-8\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkOppBin-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.24</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkOppBin-8-1-1">Find the opposite of the binomial <span class="process-math">\(~-3z^2-2\)</span>
+</h5>
+<div class="para" id="tkOppBin-8-1-1">Find the opposite of the binomial <span class="process-math">\(~-3z^2-2\)</span>
 </div>
-<div class="solutions"><details id="tkOppBin-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-8-2-1"><span class="process-math">\(3z^2+2\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkAsymp"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkOppBin-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkOppBin-8-2-1"><span class="process-math">\(3z^2+2\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkAsymp"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.2.3</span><span class="space"> </span><span class="title">Asymptotes</span>
 </h4>
 <section class="introduction" id="tkAsymp-2"><div class="para" id="tkAsymp-2-1">The asymptotes of rational functions are horizontal and vertical lines.</div></section><article class="example example-like" id="tkAsymp-3"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.25</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkAsymp-3-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-x-eq-neg15.svg" role="img" class="contained" alt="vertical line"></div>
-<div class="solutions"><details id="tkAsymp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkAsymp-3-2-1">This line is a vertical line. All the points on the line have <span class="process-math">\(x\)</span>-coordinate <span class="process-math">\(-15\text{,}\)</span> so the equation of the line is <span class="process-math">\(x=-15\text{.}\)</span> Because <span class="process-math">\(\Delta x=0\)</span> between any two points on the line, its slope is undefined.</div></div></details></div></article><article class="example example-like" id="tkAsymp-4"><h5 class="heading">
+<div class="solution solution-like" id="tkAsymp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkAsymp-3-2-1">This line is a vertical line. All the points on the line have <span class="process-math">\(x\)</span>-coordinate <span class="process-math">\(-15\text{,}\)</span> so the equation of the line is <span class="process-math">\(x=-15\text{.}\)</span> Because <span class="process-math">\(\Delta x=0\)</span> between any two points on the line, its slope is undefined.</div>
+</div></article><article class="example example-like" id="tkAsymp-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.26</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkAsymp-4-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-y-eq-40.svg" role="img" class="contained" alt="horizontal line"></div>
-<div class="solutions"><details id="tkAsymp-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkAsymp-4-2-1">This line is a horizontal line. All the points on the line have <span class="process-math">\(y\)</span>-coordinate <span class="process-math">\(04\text{,}\)</span> so the equation of the line is <span class="process-math">\(y=40\text{.}\)</span>  Because <span class="process-math">\(\Delta y=0\)</span> between any two points on the line, its slope is <span class="process-math">\(0\text{.}\)</span>
-</div></div></details></div></article><details id="tkAsymp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solution solution-like" id="tkAsymp-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkAsymp-4-2-1">This line is a horizontal line. All the points on the line have <span class="process-math">\(y\)</span>-coordinate <span class="process-math">\(04\text{,}\)</span> so the equation of the line is <span class="process-math">\(y=40\text{.}\)</span>  Because <span class="process-math">\(\Delta y=0\)</span> between any two points on the line, its slope is <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div></article><article class="exercise exercise-like" id="tkAsymp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.27</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAsymp-5-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-y-eq-neg16.svg" role="img" class="contained" alt="horizontal line"></div>
-<div class="solutions"><details id="tkAsymp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAsymp-5-2-1"><span class="process-math">\(y=-16;~ m=0\)</span></div></div></details></div></article></details><details id="tkAsymp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkAsymp-5-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-y-eq-neg16.svg" role="img" class="contained" alt="horizontal line"></div>
+<div class="solutions"><details id="tkAsymp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAsymp-5-2-1"><span class="process-math">\(y=-16;~ m=0\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkAsymp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.28</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAsymp-6-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-x-eq-30.svg" role="img" class="contained" alt="vertical line"></div>
+</h5>
+<div class="para" id="tkAsymp-6-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-x-eq-30.svg" role="img" class="contained" alt="vertical line"></div>
 <div class="solutions"><details id="tkAsymp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAsymp-6-2-1">
-<span class="process-math">\(x=30\text{;}\)</span> <span class="process-math">\(~ m~\)</span>is undefined</div></div></details></div></article></details><details id="tkAsymp-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="process-math">\(x=30\text{;}\)</span> <span class="process-math">\(~ m~\)</span>is undefined</div></div></details></div></article><article class="exercise exercise-like" id="tkAsymp-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.29</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAsymp-7-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-y-eq-45.svg" role="img" class="contained" alt="horizontal line"></div>
-<div class="solutions"><details id="tkAsymp-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAsymp-7-2-1"><span class="process-math">\(y=45; m=0\)</span></div></div></details></div></article></details><details id="tkAsymp-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>
+<div class="para" id="tkAsymp-7-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-y-eq-45.svg" role="img" class="contained" alt="horizontal line"></div>
+<div class="solutions"><details id="tkAsymp-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAsymp-7-2-1"><span class="process-math">\(y=45; m=0\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkAsymp-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.30</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAsymp-8-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-x-eq-neg24.svg" role="img" class="contained" alt="vertical line"></div>
+</h5>
+<div class="para" id="tkAsymp-8-1-1">Give the equation and slope of the line.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-x-eq-neg24.svg" role="img" class="contained" alt="vertical line"></div>
 <div class="solutions"><details id="tkAsymp-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAsymp-8-2-1">
-<span class="process-math">\(x=-24\text{;}\)</span> <span class="process-math">\(~ m~\)</span>is undefined</div></div></details></div></article></details></section></section><section class="subsection" id="tkOperationsonAlgebraicFractions"><h3 class="heading hide-type">
+<span class="process-math">\(x=-24\text{;}\)</span> <span class="process-math">\(~ m~\)</span>is undefined</div></div></details></div></article></section></section><section class="subsection" id="tkOperationsonAlgebraicFractions"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.8.3</span><span class="space"> </span><span class="title">Operations on Algebraic Fractions</span>
 </h3>
 <section class="subsubsection" id="tkMultAlgFrac"><h4 class="heading hide-type">
@@ -1592,20 +1650,32 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkMultAlgFrac-3-1-1">Multiply  <span class="process-math">\(~\dfrac{1}{2}\left(\dfrac{P}{Q}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkMultAlgFrac-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkMultAlgFrac-3-2-1"><span class="process-math">\(\dfrac{1}{2}\left(\dfrac{P}{Q}\right) = \dfrac{1 \cdot P}{2 \cdot Q} = \dfrac{P}{2Q}\)</span></div></div></details></div></article><article class="example example-like" id="tkMultAlgFrac-4"><h5 class="heading">
+<div class="solution solution-like" id="tkMultAlgFrac-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkMultAlgFrac-3-2-1"><span class="process-math">\(\dfrac{1}{2}\left(\dfrac{P}{Q}\right) = \dfrac{1 \cdot P}{2 \cdot Q} = \dfrac{P}{2Q}\)</span></div>
+</div></article><article class="example example-like" id="tkMultAlgFrac-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.32</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkMultAlgFrac-4-1-1">Multiply <span class="process-math">\(~4 \left(\dfrac{b}{c}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkMultAlgFrac-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkMultAlgFrac-4-2-1"><span class="process-math">\(4 \left(\dfrac{b}{c}\right) = \dfrac{4}{1} \left(\dfrac{b}{c}\right) = \dfrac{4 \cdot b}{1 \cdot c} = \dfrac{4b}{c}\)</span></div></div></details></div></article><details id="tkMultAlgFrac-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solution solution-like" id="tkMultAlgFrac-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkMultAlgFrac-4-2-1"><span class="process-math">\(4 \left(\dfrac{b}{c}\right) = \dfrac{4}{1} \left(\dfrac{b}{c}\right) = \dfrac{4 \cdot b}{1 \cdot c} = \dfrac{4b}{c}\)</span></div>
+</div></article><article class="exercise exercise-like" id="tkMultAlgFrac-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.33</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMultAlgFrac-5-1-1">Multiply  <span class="process-math">\(~\dfrac{3}{2a}\left(\dfrac{a^2}{6}\right)\)</span>
+</h5>
+<div class="para" id="tkMultAlgFrac-5-1-1">Multiply  <span class="process-math">\(~\dfrac{3}{2a}\left(\dfrac{a^2}{6}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkMultAlgFrac-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMultAlgFrac-5-2-1"><span class="process-math">\(\dfrac{a}{9}\)</span></div></div></details></div></article></details><details id="tkMultAlgFrac-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkMultAlgFrac-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMultAlgFrac-5-2-1"><span class="process-math">\(\dfrac{a}{9}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkMultAlgFrac-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.34</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkMultAlgFrac-6-1-1">Multiply  <span class="process-math">\(~8\left(\dfrac{m}{4x^2}\right)\)</span>
+</h5>
+<div class="para" id="tkMultAlgFrac-6-1-1">Multiply  <span class="process-math">\(~8\left(\dfrac{m}{4x^2}\right)\)</span>
 </div>
-<div class="solutions"><details id="tkMultAlgFrac-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMultAlgFrac-6-2-1"><span class="process-math">\(\dfrac{2m}{x^2}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkDivAlgFrac"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkMultAlgFrac-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkMultAlgFrac-6-2-1"><span class="process-math">\(\dfrac{2m}{x^2}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkDivAlgFrac"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.3.2</span><span class="space"> </span><span class="title">Divide fractions</span>
 </h4>
 <div class="para" id="tkDivAlgFrac-2">To divide one fraction by another, we first take the reciprocal of the second fraction, then proceed as in multiplication.</div>
@@ -1614,20 +1684,32 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkDivAlgFrac-3-1-1">Divide  <span class="process-math">\(~\dfrac{t}{w} \div \dfrac{3t^2}{w}\)</span>
 </div>
-<div class="solutions"><details id="tkDivAlgFrac-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkDivAlgFrac-3-2-1"><span class="process-math">\(\dfrac{t}{w} \cdot \dfrac{w}{3t^2} = \dfrac{\cancel{t}}{\cancel{w}} \cdot \dfrac{\cancel{w}}{3t \cdot \cancel{t}} = \dfrac{1}{3t}\)</span></div></div></details></div></article><article class="example example-like" id="tkDivAlgFrac-4"><h5 class="heading">
+<div class="solution solution-like" id="tkDivAlgFrac-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkDivAlgFrac-3-2-1"><span class="process-math">\(\dfrac{t}{w} \cdot \dfrac{w}{3t^2} = \dfrac{\cancel{t}}{\cancel{w}} \cdot \dfrac{\cancel{w}}{3t \cdot \cancel{t}} = \dfrac{1}{3t}\)</span></div>
+</div></article><article class="example example-like" id="tkDivAlgFrac-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.36</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkDivAlgFrac-4-1-1">Divide  <span class="process-math">\(~\dfrac{a}{2} \div \dfrac{b}{1-b}\)</span>
 </div>
-<div class="solutions"><details id="tkDivAlgFrac-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="tkDivAlgFrac-4-2-1"><span class="process-math">\(\dfrac{a}{2} \cdot \dfrac{1-b}{b} = \dfrac{a(1-b)}{2 \cdot b} = \dfrac{a-ab}{2b}\)</span></div></div></details></div></article><details id="tkDivAlgFrac-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solution solution-like" id="tkDivAlgFrac-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para" id="tkDivAlgFrac-4-2-1"><span class="process-math">\(\dfrac{a}{2} \cdot \dfrac{1-b}{b} = \dfrac{a(1-b)}{2 \cdot b} = \dfrac{a-ab}{2b}\)</span></div>
+</div></article><article class="exercise exercise-like" id="tkDivAlgFrac-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.37</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDivAlgFrac-5-1-1">Divide  <span class="process-math">\(~\dfrac{3}{4} \div \dfrac{cw^2}{t^2-2}\)</span>
+</h5>
+<div class="para" id="tkDivAlgFrac-5-1-1">Divide  <span class="process-math">\(~\dfrac{3}{4} \div \dfrac{cw^2}{t^2-2}\)</span>
 </div>
-<div class="solutions"><details id="tkDivAlgFrac-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDivAlgFrac-5-2-1"><span class="process-math">\(\dfrac{3t^2-6}{4cw^2}\)</span></div></div></details></div></article></details><details id="tkDivAlgFrac-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkDivAlgFrac-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDivAlgFrac-5-2-1"><span class="process-math">\(\dfrac{3t^2-6}{4cw^2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkDivAlgFrac-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.38</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkDivAlgFrac-6-1-1">Divide  <span class="process-math">\(~\dfrac{n}{n-1} \div \dfrac{n^2}{p+1}\)</span>
+</h5>
+<div class="para" id="tkDivAlgFrac-6-1-1">Divide  <span class="process-math">\(~\dfrac{n}{n-1} \div \dfrac{n^2}{p+1}\)</span>
 </div>
-<div class="solutions"><details id="tkDivAlgFrac-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDivAlgFrac-6-2-1"><span class="process-math">\(\dfrac{p+1}{n^2-n}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkUseFact"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkDivAlgFrac-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkDivAlgFrac-6-2-1"><span class="process-math">\(\dfrac{p+1}{n^2-n}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkUseFact"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.3.3</span><span class="space"> </span><span class="title">Use factoring</span>
 </h4>
 <article class="example example-like" id="tkUseFact-2"><h5 class="heading">
@@ -1635,7 +1717,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkUseFact-2-1-1">Multiply <span class="process-math">\(~\dfrac{4y^2-1}{4-y^2} \cdot \dfrac{y^2-2y}{4y+2}\)</span>
 </div>
-<div class="solutions"><details id="tkUseFact-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseFact-2-2-1">
+<div class="solution solution-like" id="tkUseFact-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseFact-2-2-1">
 <div class="para">We factor each numerator and denominator, and look for common factors.</div>
 <div class="displaymath process-math" id="tkUseFact-2-2-1-1">
 \begin{align*}
@@ -1644,12 +1730,17 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \amp\qquad = \dfrac{-y(2y-1)}{2(y+2)} \amp \amp \blert{\text{Note:}~~y-2=-(2-y)}
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkUseFact-3"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkUseFact-3"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.40</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkUseFact-3-1-1">Divide <span class="process-math">\(~\dfrac{6ab}{2a+b} \div (4a^2b)\)</span>
 </div>
-<div class="solutions"><details id="tkUseFact-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseFact-3-2-1">
+<div class="solution solution-like" id="tkUseFact-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseFact-3-2-1">
 <div class="para">We multiply the first fraction by the reciprocal of the second fraction.</div>
 <div class="displaymath process-math" id="tkUseFact-3-2-1-1">
 \begin{align*}
@@ -1657,23 +1748,28 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \amp = \dfrac{3}{2a(2a+b)}
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkUseFact-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkUseFact-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.41</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkUseFact-4-1-1">Multiply <span class="process-math">\(~\dfrac{3xy}{4xy-6y^2} \cdot \dfrac{2x-3y}{12x}\)</span>
+</h5>
+<div class="para" id="tkUseFact-4-1-1">Multiply <span class="process-math">\(~\dfrac{3xy}{4xy-6y^2} \cdot \dfrac{2x-3y}{12x}\)</span>
 </div>
-<div class="solutions"><details id="tkUseFact-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-4-2-1"><span class="process-math">\(\dfrac{1}{8}\)</span></div></div></details></div></article></details><details id="tkUseFact-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseFact-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-4-2-1"><span class="process-math">\(\dfrac{1}{8}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseFact-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.42</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkUseFact-5-1-1">Multiply <span class="process-math">\(~\dfrac{9x^2-25}{2x-2} \cdot \dfrac{x^2-1}{6x-10}\)</span>
+</h5>
+<div class="para" id="tkUseFact-5-1-1">Multiply <span class="process-math">\(~\dfrac{9x^2-25}{2x-2} \cdot \dfrac{x^2-1}{6x-10}\)</span>
 </div>
-<div class="solutions"><details id="tkUseFact-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-5-2-1"><span class="process-math">\(\dfrac{(3x+5)(x+1)}{4}\)</span></div></div></details></div></article></details><details id="tkUseFact-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseFact-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-5-2-1"><span class="process-math">\(\dfrac{(3x+5)(x+1)}{4}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseFact-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.43</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkUseFact-6-1-1">Divide <span class="process-math">\(~(x^2-9) \div \dfrac{x^2-6x+9}{3x}\)</span>
+</h5>
+<div class="para" id="tkUseFact-6-1-1">Divide <span class="process-math">\(~(x^2-9) \div \dfrac{x^2-6x+9}{3x}\)</span>
 </div>
-<div class="solutions"><details id="tkUseFact-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-6-2-1"><span class="process-math">\(\dfrac{3x(x+3)}{x-3}\)</span></div></div></details></div></article></details><details id="tkUseFact-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseFact-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-6-2-1"><span class="process-math">\(\dfrac{3x(x+3)}{x-3}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseFact-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.44</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkUseFact-7-1-1">Divide <span class="process-math">\(~\dfrac{x^2-1}{x+3} \div \dfrac{x^2-x-2}{x^2+5x+6}\)</span>
+</h5>
+<div class="para" id="tkUseFact-7-1-1">Divide <span class="process-math">\(~\dfrac{x^2-1}{x+3} \div \dfrac{x^2-x-2}{x^2+5x+6}\)</span>
 </div>
-<div class="solutions"><details id="tkUseFact-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-7-2-1"><span class="process-math">\(\dfrac{(x-1)(x+2)}{x-2}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkLCD"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkUseFact-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseFact-7-2-1"><span class="process-math">\(\dfrac{(x-1)(x+2)}{x-2}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkLCD"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.3.4</span><span class="space"> </span><span class="title">Find an LCD</span>
 </h4>
 <div class="para" id="tkLCD-2">The first step in adding unlike fractions is to find the lowest common denominator, or LCD.</div>
@@ -1682,7 +1778,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkLCD-3-1-1">Find the LCD for the fractions  <span class="process-math">\(~\dfrac{2}{5} + \dfrac{3}{10}\)</span>
 </div>
-<div class="solutions"><details id="tkLCD-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkLCD-3-2-1">
+<div class="solution solution-like" id="tkLCD-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkLCD-3-2-1">
 <div class="para">We factor each denominator and line up any common factors vertically. We use one factor from each column in the LCD.</div>
 <div class="displaymath process-math" id="tkLCD-3-2-1-1">
 \begin{align*}
@@ -1691,12 +1791,17 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{align*}
 </div>
 <div class="para">The LCD is <span class="process-math">\(3 \cdot 5\cdot 2\text{,}\)</span> or 30.</div>
-</div></div></details></div></article><article class="example example-like" id="tkLCD-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkLCD-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.46</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkLCD-4-1-1">Find the LCD for the fractions  <span class="process-math">\(~\dfrac{5}{6a} - \dfrac{2}{9a^2}\)</span>
 </div>
-<div class="solutions"><details id="tkLCD-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkLCD-4-2-1">
+<div class="solution solution-like" id="tkLCD-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkLCD-4-2-1">
 <div class="para">We factor each denominator and line up any common factors vertically. We use one factor from each column in the LCD.</div>
 <div class="displaymath process-math" id="tkLCD-4-2-1-1">
 \begin{align*}
@@ -1706,9 +1811,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </div>
 <div class="para">The LCd is <span class="process-math">\(2 \cdot 3 \cdot 3 \cdot a \cdot a\text{,}\)</span> or <span class="process-math">\(18a^2\text{.}\)</span>
 </div>
-</div></div></details></div></article><details id="tkLCD-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkLCD-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.47</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkLCD-5-1-1">
+</h5>
+<div class="para logical" id="tkLCD-5-1-1">
 <div class="para">Find the LCD for the fractions.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkLCD-5-1-1-1">
 <li id="tkLCD-5-1-1-1-1"><div class="para" id="p-derived-tkLCD-5-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{7}{8} - \dfrac{1}{6}\)</span></div></li>
@@ -1718,9 +1825,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <div class="solutions"><details id="tkLCD-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkLCD-5-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkLCD-5-2-1-1">
 <li id="tkLCD-5-2-1-1-1"><div class="para" id="p-derived-tkLCD-5-2-1-1-1"><span class="process-math">\(\displaystyle 24\)</span></div></li>
 <li id="tkLCD-5-2-1-1-2"><div class="para" id="p-derived-tkLCD-5-2-1-1-2"><span class="process-math">\(\displaystyle 600\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkLCD-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkLCD-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.48</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkLCD-6-1-1">
+</h5>
+<div class="para logical" id="tkLCD-6-1-1">
 <div class="para">Find the LCD for the fractions.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkLCD-6-1-1-1">
 <li id="tkLCD-6-1-1-1-1"><div class="para" id="p-derived-tkLCD-6-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{3}{4a^2b^2} + \dfrac{7}{10ab^3}\)</span></div></li>
@@ -1730,7 +1838,7 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <div class="solutions"><details id="tkLCD-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkLCD-6-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkLCD-6-2-1-1">
 <li id="tkLCD-6-2-1-1-1"><div class="para" id="p-derived-tkLCD-6-2-1-1-1"><span class="process-math">\(\displaystyle 20a^2b^3\)</span></div></li>
 <li id="tkLCD-6-2-1-1-2"><div class="para" id="p-derived-tkLCD-6-2-1-1-2"><span class="process-math">\(\displaystyle 40t^4\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkBuild"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkBuild"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.3.5</span><span class="space"> </span><span class="title">Build fractions</span>
 </h4>
 <div class="para" id="tkBuild-2">Before we can add unlike fractions, we must build each fraction to an equivalent one with the LCD as denominator.</div>
@@ -1745,7 +1853,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkBuild-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkBuild-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkBuild-3-2-1">We first find the building factor for the fraction:  what must we mulitply the old denominator by to get the new denominator?  We factor the new denominator to see what factors are missing.</div>
 <div class="para logical" id="tkBuild-3-2-2">
 <div class="para">The new denominator is <span class="process-math">\(2 \cdot s \cdot 3\text{,}\)</span> so we need to multiply the old denominator by <span class="process-math">\(2s\text{.}\)</span>  This is the building factor.  We multiply top and bottom of the old fraction by the building factor:</div>
@@ -1755,7 +1866,7 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-</div></details></div></article><article class="example example-like" id="tkBuild-4"><h5 class="heading">
+</div></article><article class="example example-like" id="tkBuild-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.50</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkBuild-4-1-1">
@@ -1766,16 +1877,22 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkBuild-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkBuild-4-2-1">
+<div class="solution solution-like" id="tkBuild-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkBuild-4-2-1">
 <div class="para">The new denominator factors as <span class="process-math">\(t(t+1)\text{,}\)</span> so the building factor is <span class="process-math">\(t\text{.}\)</span> We multiply top and bottom of the old fraction by <span class="process-math">\(t\)</span> to obtain:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfrac{2}{t+1} \cdot \blert{\dfrac{t}{t}} = \dfrac{2t}{t^2+t}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkBuild-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkBuild-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.51</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkBuild-5-1-1">
+</h5>
+<div class="para logical" id="tkBuild-5-1-1">
 <div class="para">Write an equivalent fraction with the new denominator.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkBuild-5-1-1-1">
 <li id="tkBuild-5-1-1-1-1"><div class="para" id="p-derived-tkBuild-5-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{1}{n} = \dfrac{?}{n^2-n}\)</span></div></li>
@@ -1785,9 +1902,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <div class="solutions"><details id="tkBuild-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkBuild-5-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkBuild-5-2-1-1">
 <li id="tkBuild-5-2-1-1-1"><div class="para" id="p-derived-tkBuild-5-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{n-1}{n^2-n}\)</span></div></li>
 <li id="tkBuild-5-2-1-1-2"><div class="para" id="p-derived-tkBuild-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{4a+4}{a^2-1}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkBuild-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkBuild-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.52</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkBuild-6-1-1">
+</h5>
+<div class="para logical" id="tkBuild-6-1-1">
 <div class="para">Write an equivalent fraction with the new denominator.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkBuild-6-1-1-1">
 <li id="tkBuild-6-1-1-1-1"><div class="para" id="p-derived-tkBuild-6-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{b}{b-2} = \dfrac{?}{(b+3)(b-2)}\)</span></div></li>
@@ -1797,7 +1915,7 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <div class="solutions"><details id="tkBuild-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkBuild-6-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkBuild-6-2-1-1">
 <li id="tkBuild-6-2-1-1-1"><div class="para" id="p-derived-tkBuild-6-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{b^2+3b}{(b+3)(b-2)}\)</span></div></li>
 <li id="tkBuild-6-2-1-1-2"><div class="para" id="p-derived-tkBuild-6-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{x^2-2x+1}{(x^2-x)(x+2)}\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkAddAlgFrac"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkAddAlgFrac"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.3.6</span><span class="space"> </span><span class="title">Add or subtract fractions</span>
 </h4>
 <article class="assemblage assemblage-like" id="tkAddAlgFrac-2"><h5 class="heading"><span class="title">To add or subtract unlike fractions.</span></h5>
@@ -1810,31 +1928,45 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkAddAlgFrac-3-1-1">Subtract <span class="process-math">\(~\dfrac{2x}{w} - \dfrac{3x}{w}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkAddAlgFrac-3-2-1">
+<div class="solution solution-like" id="tkAddAlgFrac-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkAddAlgFrac-3-2-1">
 <div class="para">These are like fractions, so we need only combine their numerators.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfrac{2x}{w} - \dfrac{3x}{w} = \dfrac{2x-3x}{w} = \dfrac{-x}{w}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkAddAlgFrac-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkAddAlgFrac-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.54</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkAddAlgFrac-4-1-1">Subtract <span class="process-math">\(~\dfrac{3}{a} - \dfrac{a+2}{a}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkAddAlgFrac-4-2-1">
+<div class="solution solution-like" id="tkAddAlgFrac-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkAddAlgFrac-4-2-1">
 <div class="para">These are like fractions, so we need only combine their numerators. Be careful to subtract both terms of the second numerator.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfrac{3}{a} - \dfrac{a+2}{a} = \dfrac{3-(a+2)}{a} = \dfrac{1-a}{a}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkAddAlgFrac-5"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkAddAlgFrac-5"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.55</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkAddAlgFrac-5-1-1">Add <span class="process-math">\(~2 + \dfrac{1}{x}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkAddAlgFrac-5-2-1">
+<div class="solution solution-like" id="tkAddAlgFrac-5-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkAddAlgFrac-5-2-1">
 <div class="para">We write 2 as a fraction, <span class="process-math">\(\dfrac{2}{1}\text{,}\)</span> and build it to the LCD, <span class="process-math">\(x\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1842,12 +1974,17 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \dfrac{2}{1} \cdot \alert{\dfrac{x}{x}} + \dfrac{1}{x} = \dfrac{2x}{x}  + \dfrac{1}{x} = \dfrac{2x+1}{x}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkAddAlgFrac-6"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkAddAlgFrac-6"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.56</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkAddAlgFrac-6-1-1">Subtract <span class="process-math">\(~\dfrac{a}{2b} - \dfrac{3}{b^2}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkAddAlgFrac-6-2-1">
+<div class="solution solution-like" id="tkAddAlgFrac-6-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkAddAlgFrac-6-2-1">
 <div class="para">We build each fraction to the LCD, <span class="process-math">\(2b^2\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="tkAddAlgFrac-6-2-1-2">
@@ -1856,23 +1993,28 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \amp = \dfrac{ab}{2b^2} - \dfrac{6}{2b^2} = \dfrac{ab-6}{2b^2}
 \end{align*}
 </div>
-</div></div></details></div></article><details id="tkAddAlgFrac-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkAddAlgFrac-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.57</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAddAlgFrac-7-1-1">Subtract <span class="process-math">\(~\dfrac{4a}{b^2} - \dfrac{c}{b^2}\)</span>
+</h5>
+<div class="para" id="tkAddAlgFrac-7-1-1">Subtract <span class="process-math">\(~\dfrac{4a}{b^2} - \dfrac{c}{b^2}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-7-2-1"><span class="process-math">\(\dfrac{4a-c}{b^2}\)</span></div></div></details></div></article></details><details id="tkAddAlgFrac-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkAddAlgFrac-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-7-2-1"><span class="process-math">\(\dfrac{4a-c}{b^2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkAddAlgFrac-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.58</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAddAlgFrac-8-1-1">Subtract <span class="process-math">\(~\dfrac{p+2}{2q} - \dfrac{p-1}{2q}\)</span>
+</h5>
+<div class="para" id="tkAddAlgFrac-8-1-1">Subtract <span class="process-math">\(~\dfrac{p+2}{2q} - \dfrac{p-1}{2q}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-8-2-1"><span class="process-math">\(\dfrac{3}{2q}\)</span></div></div></details></div></article></details><details id="tkAddAlgFrac-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkAddAlgFrac-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-8-2-1"><span class="process-math">\(\dfrac{3}{2q}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkAddAlgFrac-9"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.59</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAddAlgFrac-9-1-1">Add <span class="process-math">\(~N + \dfrac{2}{N}\)</span>
+</h5>
+<div class="para" id="tkAddAlgFrac-9-1-1">Add <span class="process-math">\(~N + \dfrac{2}{N}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-9-2-1"><span class="process-math">\(\dfrac{N^2+2}{N}\)</span></div></div></details></div></article></details><details id="tkAddAlgFrac-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkAddAlgFrac-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-9-2-1"><span class="process-math">\(\dfrac{N^2+2}{N}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkAddAlgFrac-10"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.60</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkAddAlgFrac-10-1-1">Add <span class="process-math">\(~\dfrac{2}{xy} - \dfrac{y}{3x}\)</span>
+</h5>
+<div class="para" id="tkAddAlgFrac-10-1-1">Add <span class="process-math">\(~\dfrac{2}{xy} - \dfrac{y}{3x}\)</span>
 </div>
-<div class="solutions"><details id="tkAddAlgFrac-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-10-2-1"><span class="process-math">\(\dfrac{6+y^2}{3xy}\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkMoreOperationsonAlgebraicFractions"><h3 class="heading hide-type">
+<div class="solutions"><details id="tkAddAlgFrac-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkAddAlgFrac-10-2-1"><span class="process-math">\(\dfrac{6+y^2}{3xy}\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkMoreOperationsonAlgebraicFractions"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.8.4</span><span class="space"> </span><span class="title">More Operations on Fractions</span>
 </h3>
 <section class="subsubsection" id="tkUseNegExp"><h4 class="heading hide-type">
@@ -1891,7 +2033,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkUseNegExp-3-1-1-1-4"><div class="para" id="p-derived-tkUseNegExp-3-1-1-1-4"><span class="process-math">\(\displaystyle \dfrac{x}{y^{-2}}+\dfrac{x^{-2}}{y}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkUseNegExp-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseNegExp-3-2-1">
+<div class="solution solution-like" id="tkUseNegExp-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseNegExp-3-2-1">
 <div class="para">We use the fact that  <span class="process-math">\(~a^{-n} = \dfrac{1}{a^n}\text{,}\)</span> and consequently that <span class="process-math">\(~\dfrac{1}{a^{-n}} = a^n\text{.}\)</span>
 </div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkUseNegExp-3-2-1-3">
@@ -1900,7 +2046,8 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkUseNegExp-3-2-1-3-3"><div class="para" id="p-derived-tkUseNegExp-3-2-1-3-3"><span class="process-math">\(\displaystyle \dfrac{2c^2}{ab}\)</span></div></li>
 <li id="tkUseNegExp-3-2-1-3-4"><div class="para" id="p-derived-tkUseNegExp-3-2-1-3-4"><span class="process-math">\(\displaystyle xy^{2}+\dfrac{1}{x^2y}\)</span></div></li>
 </ol>
-</div></div></details></div></article><article class="example example-like" id="tkUseNegExp-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkUseNegExp-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.62</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkUseNegExp-4-1-1">
@@ -1912,7 +2059,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkUseNegExp-4-1-1-1-4"><div class="para" id="p-derived-tkUseNegExp-4-1-1-1-4"><span class="process-math">\(\displaystyle 3x^{-4}-2x^{-3}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkUseNegExp-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkUseNegExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkUseNegExp-4-2-1-1">
+<div class="solution solution-like" id="tkUseNegExp-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkUseNegExp-4-2-1"><ol class="lower-alpha ol-marker-2" id="tkUseNegExp-4-2-1-1">
 <li id="tkUseNegExp-4-2-1-1-1"><div class="para" id="p-derived-tkUseNegExp-4-2-1-1-1">Add the exponents: <span class="process-math">\(~3x^{-3}x^5 = 3x^2\)</span>
 </div></li>
 <li id="tkUseNegExp-4-2-1-1-2"><div class="para" id="p-derived-tkUseNegExp-4-2-1-1-2">Subtract the exponents: <span class="process-math">\(~\dfrac{4a^{-4}}{8a^{-8}} = \dfrac{1}{2}a^{-4-(-8)} = \dfrac{a^4}{2}\)</span>
@@ -1933,9 +2084,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkUseNegExp-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkUseNegExp-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.63</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkUseNegExp-5-1-1">
+</h5>
+<div class="para logical" id="tkUseNegExp-5-1-1">
 <div class="para">Simplify where possible.  Write your answer without negative exponents.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1943,9 +2096,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkUseNegExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-5-2-1"><span class="process-math">\(\dfrac{3x}{2y^2}\)</span></div></div></details></div></article></details><details id="tkUseNegExp-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseNegExp-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-5-2-1"><span class="process-math">\(\dfrac{3x}{2y^2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseNegExp-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.64</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkUseNegExp-6-1-1">
+</h5>
+<div class="para logical" id="tkUseNegExp-6-1-1">
 <div class="para">Simplify where possible.  Write your answer without negative exponents.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1953,9 +2107,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkUseNegExp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-6-2-1"><span class="process-math">\(\dfrac{9a^3}{b}\)</span></div></div></details></div></article></details><details id="tkUseNegExp-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseNegExp-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-6-2-1"><span class="process-math">\(\dfrac{9a^3}{b}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseNegExp-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.65</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkUseNegExp-7-1-1">
+</h5>
+<div class="para logical" id="tkUseNegExp-7-1-1">
 <div class="para">Simplify where possible.  Write your answer without negative exponents.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1963,9 +2118,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkUseNegExp-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-7-2-1"><span class="process-math">\(\dfrac{8x^4-1}{4x^2}\)</span></div></div></details></div></article></details><details id="tkUseNegExp-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkUseNegExp-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-7-2-1"><span class="process-math">\(\dfrac{8x^4-1}{4x^2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkUseNegExp-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.66</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkUseNegExp-8-1-1">
+</h5>
+<div class="para logical" id="tkUseNegExp-8-1-1">
 <div class="para">Simplify where possible.  Write your answer without negative exponents.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1973,7 +2129,7 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkUseNegExp-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-8-2-1"><span class="process-math">\(\dfrac{1}{2}\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkImpFrac"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkUseNegExp-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkUseNegExp-8-2-1"><span class="process-math">\(\dfrac{1}{2}\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkImpFrac"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.4.2</span><span class="space"> </span><span class="title">Improper fractions</span>
 </h4>
 <div class="para" id="tkImpFrac-2">An improper fraction is one in which the numerator is larger than the denominator.</div>
@@ -1982,28 +2138,39 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkImpFrac-3-1-1">Write an improper fraction for the sum  <span class="process-math">\(~2 + \dfrac{3}{8}\)</span>
 </div>
-<div class="solutions"><details id="tkImpFrac-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkImpFrac-3-2-1">
+<div class="solution solution-like" id="tkImpFrac-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkImpFrac-3-2-1">
 <div class="para">We write the whole number with the same denominator as the fraction. Thus,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \blert{2} + \dfrac{3}{8} = \blert{\dfrac{16}{8}}+\dfrac{3}{8} = \dfrac{16+3}{8} = \dfrac{19}{8}
 \end{equation*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="tkImpFrac-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkImpFrac-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.68</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkImpFrac-4-1-1">Write an improper fraction for the difference  <span class="process-math">\(~3 - \dfrac{1}{5}\)</span>
 </div>
-<div class="solutions"><details id="tkImpFrac-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkImpFrac-4-2-1">
+<div class="solution solution-like" id="tkImpFrac-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkImpFrac-4-2-1">
 <div class="para">We write the whole number with the same denominator as the fraction. Thus,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \blert{3} - \dfrac{1}{5} = \blert{\dfrac{15}{5}}-\dfrac{1}{5} = \dfrac{15-1}{5} = \dfrac{14}{5}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkImpFrac-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkImpFrac-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.69</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkImpFrac-5-1-1">
+</h5>
+<div class="para logical" id="tkImpFrac-5-1-1">
 <div class="para">Write an improper fraction for each sum or difference.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkImpFrac-5-1-1-1">
 <li id="tkImpFrac-5-1-1-1-1"><div class="para" id="p-derived-tkImpFrac-5-1-1-1-1"><span class="process-math">\(\displaystyle 1 + \dfrac{3}{4}\)</span></div></li>
@@ -2013,9 +2180,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <div class="solutions"><details id="tkImpFrac-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkImpFrac-5-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkImpFrac-5-2-1-1">
 <li id="tkImpFrac-5-2-1-1-1"><div class="para" id="p-derived-tkImpFrac-5-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{7}{4}\)</span></div></li>
 <li id="tkImpFrac-5-2-1-1-2"><div class="para" id="p-derived-tkImpFrac-5-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{17}{10}\)</span></div></li>
-</ol></div></div></details></div></article></details><details id="tkImpFrac-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div></div></details></div></article><article class="exercise exercise-like" id="tkImpFrac-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.70</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkImpFrac-6-1-1">
+</h5>
+<div class="para logical" id="tkImpFrac-6-1-1">
 <div class="para">Write an improper fraction for each sum or difference.</div>
 <ol class="lower-alpha ol-marker-2 cols2" id="tkImpFrac-6-1-1-1">
 <li id="tkImpFrac-6-1-1-1-1"><div class="para" id="p-derived-tkImpFrac-6-1-1-1-1"><span class="process-math">\(\displaystyle 1 - \dfrac{23}{100}\)</span></div></li>
@@ -2025,7 +2193,7 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <div class="solutions"><details id="tkImpFrac-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="tkImpFrac-6-2-1"><ol class="lower-alpha ol-marker-2 cols2" id="tkImpFrac-6-2-1-1">
 <li id="tkImpFrac-6-2-1-1-1"><div class="para" id="p-derived-tkImpFrac-6-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{77}{100}\)</span></div></li>
 <li id="tkImpFrac-6-2-1-1-2"><div class="para" id="p-derived-tkImpFrac-6-2-1-1-2"><span class="process-math">\(\displaystyle \dfrac{78}{25}\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkCheckDiv"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkCheckDiv"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.4.3</span><span class="space"> </span><span class="title">Check a division</span>
 </h4>
 <div class="para" id="tkCheckDiv-2">Remember that division is the inverse operation for multiplication.</div>
@@ -2034,7 +2202,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 </h5>
 <div class="para" id="tkCheckDiv-3-1-1">Check that the division is correct:  <span class="process-math">\(~536\div 15 = 35\dfrac{11}{15}\)</span>
 </div>
-<div class="solutions"><details id="tkCheckDiv-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkCheckDiv-3-2-1">
+<div class="solution solution-like" id="tkCheckDiv-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkCheckDiv-3-2-1">
 <div class="para">The quotient tells us that 15 divides into 536 thirty-five times, with a remainder of 11. This in turn means that if we multiply 15 by 35, and then add 11, we should get 536 back again.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2042,7 +2214,8 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 <div class="para">Note the pattern:  divisor <span class="process-math">\(\times\)</span> quotient <span class="process-math">\(+\)</span> remainder <span class="process-math">\(=\)</span> starting number</div>
-</div></div></details></div></article><article class="example example-like" id="tkCheckDiv-4"><h5 class="heading">
+</div>
+</div></article><article class="example example-like" id="tkCheckDiv-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.72</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="tkCheckDiv-4-1-1">
@@ -2053,16 +2226,22 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkCheckDiv-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkCheckDiv-4-2-1">
+<div class="solution solution-like" id="tkCheckDiv-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkCheckDiv-4-2-1">
 <div class="para">The answer tells us that <span class="process-math">\(n+2\)</span> divides into <span class="process-math">\(3n^2+n-6\)</span> to give a quotient of <span class="process-math">\(3n-5\text{,}\)</span>  with a remainder of 4.  If we multiply <span class="process-math">\(n+2\)</span> by <span class="process-math">\(3n-5\text{,}\)</span> and then add 4, we should get <span class="process-math">\(3n^2+n-6\)</span> back again.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (n+2)(3n-5)+4 = (3n^2+n-10)+4 = 3n^2-n-6
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="tkCheckDiv-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="tkCheckDiv-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.73</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkCheckDiv-5-1-1">
+</h5>
+<div class="para logical" id="tkCheckDiv-5-1-1">
 <div class="para">Check the division.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2070,9 +2249,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkCheckDiv-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-5-2-1"><span class="process-math">\(4(6)+1=25\)</span></div></div></details></div></article></details><details id="tkCheckDiv-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkCheckDiv-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-5-2-1"><span class="process-math">\(4(6)+1=25\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkCheckDiv-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.74</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkCheckDiv-6-1-1">
+</h5>
+<div class="para logical" id="tkCheckDiv-6-1-1">
 <div class="para">Check the division.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2080,9 +2260,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkCheckDiv-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-6-2-1"><span class="process-math">\(28(47)+15=1331\)</span></div></div></details></div></article></details><details id="tkCheckDiv-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkCheckDiv-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-6-2-1"><span class="process-math">\(28(47)+15=1331\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkCheckDiv-7"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.75</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkCheckDiv-7-1-1">
+</h5>
+<div class="para logical" id="tkCheckDiv-7-1-1">
 <div class="para">Check the division.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2090,9 +2271,10 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkCheckDiv-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-7-2-1"><span class="process-math">\((n+1)(n+2)+4 = n^2+3n+6\)</span></div></div></details></div></article></details><details id="tkCheckDiv-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkCheckDiv-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-7-2-1"><span class="process-math">\((n+1)(n+2)+4 = n^2+3n+6\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkCheckDiv-8"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.76</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkCheckDiv-8-1-1">
+</h5>
+<div class="para logical" id="tkCheckDiv-8-1-1">
 <div class="para">Check the division.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2100,7 +2282,7 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="tkCheckDiv-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-8-2-1"><span class="process-math">\((2x-3)(x^2+5x+12)+40 = 2x^3+7x^2+9x+40\)</span></div></div></details></div></article></details></section></section><section class="subsection" id="tkEquationswithFractions"><h3 class="heading hide-type">
+<div class="solutions"><details id="tkCheckDiv-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkCheckDiv-8-2-1"><span class="process-math">\((2x-3)(x^2+5x+12)+40 = 2x^3+7x^2+9x+40\)</span></div></div></details></div></article></section></section><section class="subsection" id="tkEquationswithFractions"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">A.8.5</span><span class="space"> </span><span class="title">Equations with Fractions</span>
 </h3>
 <section class="subsubsection" id="tkSolveQuadEqn"><h4 class="heading hide-type">
@@ -2118,7 +2300,11 @@ b^3 \amp =(\blert{-3z^2})^3 = (-3)^3(z^2)^3 = -27z^6 \\
 <li id="tkSolveQuadEqn-3-1-1-1-3"><div class="para" id="p-derived-tkSolveQuadEqn-3-1-1-1-3"><span class="process-math">\(\displaystyle 2x^2-x=3\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="tkSolveQuadEqn-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkSolveQuadEqn-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSolveQuadEqn-3-2-1-1">
+<div class="solution solution-like" id="tkSolveQuadEqn-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkSolveQuadEqn-3-2-1"><ol class="lower-alpha ol-marker-2" id="tkSolveQuadEqn-3-2-1-1">
 <li id="tkSolveQuadEqn-3-2-1-1-1"><div class="para logical" id="tkSolveQuadEqn-3-2-1-1-1-1">
 <div class="para">Because <span class="process-math">\(~2x^2-2x-3~\)</span> does not factor, we use the quadratic formula.</div>
 <div class="displaymath process-math">
@@ -2147,9 +2333,11 @@ x = \dfrac{3}{2}~~~~x  \amp = -1
 \end{align*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><details id="tkSolveQuadEqn-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkSolveQuadEqn-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.78</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="tkSolveQuadEqn-4-1-1">
+</h5>
+<div class="para logical" id="tkSolveQuadEqn-4-1-1">
 <div class="para">Solve each equation by the easiest method.</div>
 <ol class="lower-alpha ol-marker-2" id="tkSolveQuadEqn-4-1-1-1">
 <li id="tkSolveQuadEqn-4-1-1-1-1"><div class="para" id="p-derived-tkSolveQuadEqn-4-1-1-1-1"><span class="process-math">\(\displaystyle 3x^2+10x=8\)</span></div></li>
@@ -2163,7 +2351,7 @@ x = \dfrac{3}{2}~~~~x  \amp = -1
 <li id="tkSolveQuadEqn-4-2-1-1-2"><div class="para" id="p-derived-tkSolveQuadEqn-4-2-1-1-2"><span class="process-math">\(\displaystyle x=-2\pm2\sqrt{2}\)</span></div></li>
 <li id="tkSolveQuadEqn-4-2-1-1-3"><div class="para" id="p-derived-tkSolveQuadEqn-4-2-1-1-3"><span class="process-math">\(\displaystyle x=\dfrac{1}{9},~\dfrac{1}{9}\)</span></div></li>
 <li id="tkSolveQuadEqn-4-2-1-1-4"><div class="para" id="p-derived-tkSolveQuadEqn-4-2-1-1-4"><span class="process-math">\(\displaystyle x=-3,~1\)</span></div></li>
-</ol></div></div></details></div></article></details></section><section class="subsubsection" id="tkFracEqnGraphly"><h4 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsubsection" id="tkFracEqnGraphly"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.5.2</span><span class="space"> </span><span class="title">Solve equations graphically</span>
 </h4>
 <div class="para" id="tkFracEqnGraphly-2">If we can’t solve an equation algebraically, we may be able use a graph to find at least an approximation for the solution.</div>
@@ -2172,28 +2360,36 @@ x = \dfrac{3}{2}~~~~x  \amp = -1
 </h5>
 <div class="para" id="tkFracEqnGraphly-3-1-1">Use a graph to solve the equation <span class="process-math">\(~2x^3+9x^2-8x+36=0\)</span>
 </div>
-<div class="solutions"><details id="tkFracEqnGraphly-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkFracEqnGraphly-3-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkFracEqnGraphly-3-2-1">We graph the equation <span class="process-math">\(~y=2x^3+9x^2-8x-36~\)</span> and look for the points where <span class="process-math">\(~y=0~\)</span> (the <span class="process-math">\(x\)</span>-intercepts).</div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/y-eq-2-xcubed-plus-9xsqd-minus8x-plus36.svg" role="img" class="contained" alt="cubic"></div>
 <div class="para" id="tkFracEqnGraphly-3-2-3">From the graph, we estimate the solutions at <span class="process-math">\(~x=-4.5,~x=-2,\)</span> and <span class="process-math">\(~x=2\text{.}\)</span> By substituting each of these values into the original equation, you can verify that they are indeed solutions.</div>
-</div></details></div></article><article class="example example-like" id="tkFracEqnGraphly-4"><h5 class="heading">
+</div></article><article class="example example-like" id="tkFracEqnGraphly-4"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.8.80</span><span class="period">.</span>
 </h5>
 <div class="para" id="tkFracEqnGraphly-4-1-1">Use a graph to solve the equation <span class="process-math">\(~x^2+2x+3 = 15-2x\)</span>
 </div>
-<div class="solutions"><details id="tkFracEqnGraphly-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="tkFracEqnGraphly-4-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
 <div class="para" id="tkFracEqnGraphly-4-2-1">We graph the equations <span class="process-math">\(~y_1=x^2+2x+3~\)</span> and  <span class="process-math">\(~y_2=15-2x~\)</span>  and look for points on the two graphs where the coordinates are equal (intersubsection points).</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-parabola-and-line.svg" role="img" class="contained" alt="parabola and line"></div>
 <div class="para" id="tkFracEqnGraphly-4-2-3">From the graph, we see that the points with <span class="process-math">\(~x=-6~\)</span> and <span class="process-math">\(~x=2~\)</span> have the same <span class="process-math">\(y\)</span>-coordinate on both graphs.  In other words, <span class="process-math">\(~y_1=y_2~\)</span> when <span class="process-math">\(~x=-6~\)</span> or <span class="process-math">\(~x=2~\text{,}\)</span>  so <span class="process-math">\(~x=-6~\)</span> and <span class="process-math">\(~x=2~\)</span> are the solutions.</div>
-</div></details></div></article><details id="tkFracEqnGraphly-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="tkFracEqnGraphly-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.81</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracEqnGraphly-5-1-1">Use a graph to solve the equation <span class="process-math">\(~2x^3+7x^2-7x-12=0\)</span>
+</h5>
+<div class="para" id="tkFracEqnGraphly-5-1-1">Use a graph to solve the equation <span class="process-math">\(~2x^3+7x^2-7x-12=0\)</span>
 </div>
-<div class="solutions"><details id="tkFracEqnGraphly-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracEqnGraphly-5-2-1"><span class="process-math">\(x = -4,~ -1,~ \dfrac{3}{2}\)</span></div></div></details></div></article></details><details id="tkFracEqnGraphly-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkFracEqnGraphly-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracEqnGraphly-5-2-1"><span class="process-math">\(x = -4,~ -1,~ \dfrac{3}{2}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkFracEqnGraphly-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.82</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkFracEqnGraphly-6-1-1">Use a graph to solve the equation <span class="process-math">\(~\dfrac{24}{x+4}=11+2x-x^2\)</span>
+</h5>
+<div class="para" id="tkFracEqnGraphly-6-1-1">Use a graph to solve the equation <span class="process-math">\(~\dfrac{24}{x+4}=11+2x-x^2\)</span>
 </div>
-<div class="solutions"><details id="tkFracEqnGraphly-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracEqnGraphly-6-2-1"><span class="process-math">\(x=-1,~4\)</span></div></div></details></div></article></details></section><section class="subsubsection" id="tkChooseTech"><h4 class="heading hide-type">
+<div class="solutions"><details id="tkFracEqnGraphly-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkFracEqnGraphly-6-2-1"><span class="process-math">\(x=-1,~4\)</span></div></div></details></div></article></section><section class="subsubsection" id="tkChooseTech"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">A.8.5.3</span><span class="space"> </span><span class="title">Choose the correct technique</span>
 </h4>
 <article class="example example-like" id="tkChooseTech-2"><h5 class="heading">
@@ -2217,28 +2413,37 @@ x = \dfrac{3}{2}~~~~x  \amp = -1
 <li id="tkChooseTech-2-1-2-1-4"><div class="para" id="p-derived-tkChooseTech-2-1-2-1-4">Simplify <span class="process-math">\(~\dfrac{\dfrac{8}{x} + 1}{\dfrac{x}{x-3}+\dfrac{2}{x}}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="tkChooseTech-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="tkChooseTech-2-2-1"><ol class="lower-alpha ol-marker-2" id="tkChooseTech-2-2-1-1">
+<div class="solution solution-like" id="tkChooseTech-2-2">
+<h5 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="tkChooseTech-2-2-1"><ol class="lower-alpha ol-marker-2" id="tkChooseTech-2-2-1-1">
 <li id="tkChooseTech-2-2-1-1-1"><div class="para" id="p-derived-tkChooseTech-2-2-1-1-1">To add fractions, we find an LCD and build each fraction, so choice IV is correct.</div></li>
 <li id="tkChooseTech-2-2-1-1-2"><div class="para" id="p-derived-tkChooseTech-2-2-1-1-2">To solve a proportion, we can cross-multiply, so choice I is correct.</div></li>
 <li id="tkChooseTech-2-2-1-1-3"><div class="para" id="p-derived-tkChooseTech-2-2-1-1-3">To clear fractions from an equation, we multiply by the LCD, so choice II is correct.</div></li>
 <li id="tkChooseTech-2-2-1-1-4"><div class="para" id="p-derived-tkChooseTech-2-2-1-1-4">To simplify a complex fraction, we apply the fundamental pricnicple of fractions, so choice III is correct.</div></li>
-</ol></div></div></details></div></article><details id="tkChooseTech-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="tkChooseTech-3"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.84</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkChooseTech-3-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-3-1-2">Solve <span class="process-math">\(~\dfrac{3}{x} + 3 = \dfrac{1}{x+3}\)</span>
+</h5>
+<div class="para" id="tkChooseTech-3-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-3-1-2">Solve <span class="process-math">\(~\dfrac{3}{x} + 3 = \dfrac{1}{x+3}\)</span>
 </div>
-<div class="solutions"><details id="tkChooseTech-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-3-2-1"><span class="process-math">\(3(x+3)+3x(x+3)=x\)</span></div></div></details></div></article></details><details id="tkChooseTech-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkChooseTech-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-3-2-1"><span class="process-math">\(3(x+3)+3x(x+3)=x\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkChooseTech-4"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.85</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkChooseTech-4-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-4-1-2">Combine <span class="process-math">\(~\dfrac{3}{x} + 3 - \dfrac{1}{x+3}\)</span>
+</h5>
+<div class="para" id="tkChooseTech-4-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-4-1-2">Combine <span class="process-math">\(~\dfrac{3}{x} + 3 - \dfrac{1}{x+3}\)</span>
 </div>
-<div class="solutions"><details id="tkChooseTech-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-4-2-1"><span class="process-math">\(\dfrac{3(x+3)}{x(x+3)} + \dfrac{3x(x+3)}{x(x+3)} - \dfrac{x}{x(x+3)}\)</span></div></div></details></div></article></details><details id="tkChooseTech-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkChooseTech-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-4-2-1"><span class="process-math">\(\dfrac{3(x+3)}{x(x+3)} + \dfrac{3x(x+3)}{x(x+3)} - \dfrac{x}{x(x+3)}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkChooseTech-5"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.86</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkChooseTech-5-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-5-1-2">Simplify <span class="process-math">\(~\dfrac{\dfrac{3}{x} + 1} {3- \dfrac{1}{x+3}}\)</span>
+</h5>
+<div class="para" id="tkChooseTech-5-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-5-1-2">Simplify <span class="process-math">\(~\dfrac{\dfrac{3}{x} + 1} {3- \dfrac{1}{x+3}}\)</span>
 </div>
-<div class="solutions"><details id="tkChooseTech-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-5-2-1"><span class="process-math">\(\dfrac{3(x+3)-x(x+3)}{3x(x+3)-x}\)</span></div></div></details></div></article></details><details id="tkChooseTech-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="solutions"><details id="tkChooseTech-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-5-2-1"><span class="process-math">\(\dfrac{3(x+3)-x(x+3)}{3x(x+3)-x}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="tkChooseTech-6"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.8.87</span><span class="period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="tkChooseTech-6-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-6-1-2">Solve <span class="process-math">\(~\dfrac{3}{x} = \dfrac{1}{x+3}\)</span>
+</h5>
+<div class="para" id="tkChooseTech-6-1-1">Write the first step for the problem.</div> <div class="para" id="tkChooseTech-6-1-2">Solve <span class="process-math">\(~\dfrac{3}{x} = \dfrac{1}{x+3}\)</span>
 </div>
-<div class="solutions"><details id="tkChooseTech-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-6-2-1"><span class="process-math">\(3(x+3)=x\)</span></div></div></details></div></article></details></section></section></section></div>
+<div class="solutions"><details id="tkChooseTech-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="tkChooseTech-6-2-1"><span class="process-math">\(3(x+3)=x\)</span></div></div></details></div></article></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="tkchap7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="tkchap9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

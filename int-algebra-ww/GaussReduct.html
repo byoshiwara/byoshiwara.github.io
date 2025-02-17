@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="AlgebraicSolution.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Linear-Inequalities.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1334,68 +1314,9 @@ x + 2y - 3z = -4
 <li id="GaussReduct-3-6-1-3"><div class="para" id="p-derived-GaussReduct-3-6-1-3">If all three planes are the same, or if they intersect in a line, the system is dependent.</div></li>
 </ul></div>
 <div class="para" id="GaussReduct-3-7">It is impractical to solve 3x3 systems by graphing. Even when technology for producing three-dimensional graphs is available, we cannot read coordinates on such graphs with any confidence. Thus, we will restrict our attention to algebraic methods of solving such systems.</div>
-<details id="GaussReduct-3-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="GaussReduct-3-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-68" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="68" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzb2x1dGlvbiA9IFJhZGlvQnV0dG9ucygKICBbIkEpIG9yZGVyZWQgcGFpciB0aGF0IHNhdGlzZmllcyB0aGUgZXF1YXRpb24uIiwKICAiQikgb3JkZXJlZCB0cmlwbGUgdGhhdCBzYXRpc2ZpZXMgdGhlIGVxdWF0aW9uIiwKICAiQykgYXJiaXRyYXJ5IG51bWJlciB0aGF0IHNhdGlzZmllcyB0aGUgZXF1YXRpb24iXSwKICAxLCAKKTsgICAgICAgICAgICAgICAgICAgICAgIAogJGdyYXBoID0gUG9wVXAoCiAgWyI/IiwicG9pbnQiLCAibGluZSIsICJwbGFuZSIsICJwYXJhYm9sYSJdLAogIDMsIAopOwogJHVuaXF1ZSA9IFBvcFVwKAogIFsiPyIsImEgc2luZ2xlIHBvaW50IiwiYSBsaW5lIiwgImEgcGxhbmUiXSwKICAxLCAKKTsKICRsaW5lID0gUG9wVXAoCiAgWyI/IiwiaW4gZXhhY3R5IDIgcG9pbnRzIiwgImluIGV4YWN0bHkgMyBwb2ludHMiLCAiaW4gYSBsaW5lIl0sCiAgMywgCik7CiAkaW5jb25zaXN0ZW50ID0gUG9wVXAoCiAgWyI/IiwiYmUgdGhlIHNhbWUgcGxhbmUiLCAiaW4gYSBwYXJhYm9sYSIsICJpbiBhIGNpcmNsZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTAphLiAgQSBzb2x1dGlvbiB0byBhbiBlcXVhdGlvbiBpbiB0aHJlZSB2YXJpYWJsZXMgaXMgYW4KCiAgICBbX117JHNvbHV0aW9ufXs1fS4KCgphLiAgVGhlIGdyYXBoIG9mIGEgbGluZWFyIGVxdWF0aW9uIGluIHRocmVlIHZhcmlhYmxlcyBpcyBhIFtfXXskZ3JhcGh9ezV9LgoKCmEuICBBIGxpbmVhciAzeDMgc3lzdGVtIGhhcyBhIHVuaXF1ZSBzb2x1dGlvbiBpZiB0aGUgdGhyZWUgcGxhbmVzIGludGVyc2VjdCBpbiBbX117JHVuaXF1ZX17NX0uCgoKYS4gIFRocmVlIHBsYW5lcyBtYXkgYWxzbyBpbnRlcnNlY3QgW19deyRsaW5lfXs1fSBvciBbX117JGluY29uc2lzdGVudH17NX0uCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBvcmRlcmVkIHRyaXBsZSB0aGF0IHNhdGlzZmllcyB0aGUgZXF1YXRpb24KCgphLiAgcGxhbmUKCgphLiAgYSBzaW5nbGUgcG9pbnQKCgphLiAgaW4gYSBsaW5lOyBiZSB0aGUgc2FtZSBwbGFuZQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-68')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-68-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-68-1-1-1-1">
-<li id="extracted-webwork-68-1-1-1-1-1">
-<div class="para" id="extracted-webwork-68-1-1-1-1-1-1">A solution to an equation in three variables is an</div>
-<div class="para logical" id="extracted-webwork-68-1-1-1-1-1-2">
-<ul class="circle" id="extracted-webwork-68-1-1-1-1-1-2-1">
-<li id="extracted-webwork-68-1-1-1-1-1-2-1-1"><div class="para" id="extracted-webwork-68-1-1-1-1-1-2-1-1-1">A) ordered pair that satisfies the equation.</div></li>
-<li id="extracted-webwork-68-1-1-1-1-1-2-1-2"><div class="para" id="extracted-webwork-68-1-1-1-1-1-2-1-2-1">B) ordered triple that satisfies the equation</div></li>
-<li id="extracted-webwork-68-1-1-1-1-1-2-1-3"><div class="para" id="extracted-webwork-68-1-1-1-1-1-2-1-3-1">C) arbitrary number that satisfies the equation</div></li>
-</ul>
-<div class="para">.</div>
-</div>
-</li>
-<li id="extracted-webwork-68-1-1-1-1-2"><div class="para logical" id="extracted-webwork-68-1-1-1-1-2-1">
-<div class="para">The graph of a linear equation in three variables is a</div>
-<ul class="square" id="extracted-webwork-68-1-1-1-1-2-1-1">
-<li id="extracted-webwork-68-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-68-1-1-1-1-2-1-1-1-1">point</div></li>
-<li id="extracted-webwork-68-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-68-1-1-1-1-2-1-1-2-1">line</div></li>
-<li id="extracted-webwork-68-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-68-1-1-1-1-2-1-1-3-1">plane</div></li>
-<li id="extracted-webwork-68-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-68-1-1-1-1-2-1-1-4-1">parabola</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-68-1-1-1-1-3"><div class="para logical" id="extracted-webwork-68-1-1-1-1-3-1">
-<div class="para">A linear 3x3 system has a unique solution if the three planes intersect in</div>
-<ul class="square" id="extracted-webwork-68-1-1-1-1-3-1-1">
-<li id="extracted-webwork-68-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-68-1-1-1-1-3-1-1-1-1">a single point</div></li>
-<li id="extracted-webwork-68-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-68-1-1-1-1-3-1-1-2-1">a line</div></li>
-<li id="extracted-webwork-68-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-68-1-1-1-1-3-1-1-3-1">a plane</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-68-1-1-1-1-4"><div class="para logical" id="extracted-webwork-68-1-1-1-1-4-1">
-<div class="para">Three planes may also intersect</div>
-<ul class="square" id="extracted-webwork-68-1-1-1-1-4-1-1">
-<li id="extracted-webwork-68-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-68-1-1-1-1-4-1-1-1-1">in exacty 2 points</div></li>
-<li id="extracted-webwork-68-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-68-1-1-1-1-4-1-1-2-1">in exactly 3 points</div></li>
-<li id="extracted-webwork-68-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-68-1-1-1-1-4-1-1-3-1">in a line</div></li>
-</ul>
-<div class="para">or</div>
-<ul class="square" id="extracted-webwork-68-1-1-1-1-4-1-2">
-<li id="extracted-webwork-68-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-68-1-1-1-1-4-1-2-1-1">be the same plane</div></li>
-<li id="extracted-webwork-68-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-68-1-1-1-1-4-1-2-2-1">in a parabola</div></li>
-<li id="extracted-webwork-68-1-1-1-1-4-1-2-3"><div class="para" id="extracted-webwork-68-1-1-1-1-4-1-2-3-1">in a circle</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-68-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-68-1-2-1"><span class="process-math">\(\text{B)  ...  the equation}\)</span></div></div></details><details id="extracted-webwork-68-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-68-1-3-1"><span class="process-math">\(\text{plane}\)</span></div></div></details><details id="extracted-webwork-68-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-68-1-4-1"><span class="process-math">\(\text{a single point}\)</span></div></div></details><details id="extracted-webwork-68-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-68-1-5-1"><span class="process-math">\(\text{in a line}\)</span></div></div></details><details id="extracted-webwork-68-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-68-1-6-1"><span class="process-math">\(\text{be the same plane}\)</span></div></div></details><details id="extracted-webwork-68-1-7" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-68-1-7-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-68-1-7-1-1">
-<li id="extracted-webwork-68-1-7-1-1-1"><div class="para" id="extracted-webwork-68-1-7-1-1-1-1">ordered triple that satisfies the equation</div></li>
-<li id="extracted-webwork-68-1-7-1-1-2"><div class="para" id="extracted-webwork-68-1-7-1-1-2-1">plane</div></li>
-<li id="extracted-webwork-68-1-7-1-1-3"><div class="para" id="extracted-webwork-68-1-7-1-1-3-1">a single point</div></li>
-<li id="extracted-webwork-68-1-7-1-1-4"><div class="para" id="extracted-webwork-68-1-7-1-1-4-1">in a line; be the same plane</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="GaussReduct-4"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="GaussReduct-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="space"> </span><span class="title">Back-Substitution</span>
 </h3>
 <div class="para" id="GaussReduct-4-4">The strategy for solving a 3x3 system is the same as the strategy for 2x2 systems: we would like to reduce the system to an equation in a single variable. Once we have found the value for that variable, we substitute its value into the other equations to find the remaining unknowns.</div>
@@ -1413,7 +1334,11 @@ x +{}  2y \amp {}+{} \amp 3z \amp {}={} \amp 2\\
 \end{alignat*}
 </div>
 </div>
-<div class="solutions"><details id="GaussReduct-4-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="GaussReduct-4-6-2-1">
+<div class="solution solution-like" id="GaussReduct-4-6-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="GaussReduct-4-6-2-1">
 <div class="para">We begin by solving the third equation to find <span class="process-math">\(z = -1\text{.}\)</span> Then we substitute <span class="process-math">\(\alert{-1}\)</span> for <span class="process-math">\(z\)</span> in the second equation and solve for <span class="process-math">\(y\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="GaussReduct-4-6-2-1-5">
@@ -1434,80 +1359,16 @@ x\amp=-1
 \end{align*}
 </div>
 <div class="para">The solution is the ordered triple <span class="process-math">\((-1, 3, -1)\text{.}\)</span> You should verify that this triple satisfies all three equations of the system.</div>
-</div></div></details></div></article><details id="GaussReduct-4-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="GaussReduct-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-69" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="69" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCJQb2ludCIpOwokdHJpcGxlID0gUG9pbnQoNSwxLC0yKTsKCkJFR0lOX1BHTUwKVXNlIGJhY2stc3Vic3RpdHV0aW9uIHRvIHNvbHZlIHRoZSBzeXN0ZW0KCltgYGBcYmVnaW57YWxpZ25lZGF0fXszfQoyeCArIDJ5IFxhbXAge30re30gXGFtcCB6IFxhbXAge309e30gXGFtcCAxMFxcCnkgXGFtcCB7fS17fSBcYW1wICA0eiBcYW1wIHt9PXt9IFxhbXAgOVxcClxhbXBcYW1wICAgM3ogXGFtcCB7fT17fSBcYW1wIC02ClxlbmR7YWxpZ25lZGF0fQpgYGBdCgoKCltfXXskdHJpcGxlfXs2fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnR2l2ZSB0aGUgc29sdXRpb24gYXMgYW4gb3JkZXJlZCB0cmlwbGUuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJHRyaXBsZV0gYF0gc2F0aXNmaWVzIGFsbCB0aHJlZSBlcXVhdGlvbnMuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-69')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-69-1-1-1">Use back-substitution to solve the system</div> <div class="para logical" id="extracted-webwork-69-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{alignedat}{3}
-2x + 2y \amp {}+{} \amp z \amp {}={} \amp 10\\
-y \amp {}-{} \amp  4z \amp {}={} \amp 9\\
-\amp\amp   3z \amp {}={} \amp -6
-\end{alignedat}
-\end{equation*}
-</div></div>
-<div class="solutions">
-<details id="extracted-webwork-69-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-69-1-2-1"><span class="process-math">\(\left(5,1,-2\right)\)</span></div></div></details><details id="extracted-webwork-69-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-69-1-3-1">
-<span class="process-math">\({\left(5,1,-2\right)}\)</span> satisfies all three equations.</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="GaussRed"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="GaussRed"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="space"> </span><span class="title">Gaussian Reduction</span>
 </h3>
 <div class="para" id="GaussRed-7">The method for solving a general <span class="process-math">\(3 \times 3\)</span> linear system is called <dfn class="terminology">Gaussian reduction</dfn>, after the German mathematician Carl Gauss. We use linear combinations to reduce the system to triangular form, and then use back-substitution to find the solutions.</div>
-<details id="GaussRed-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="GaussRed-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-70" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="70" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtZXRob2QgPSBQb3BVcCgKICBbIj8iLAogICJjb21wbGV0aW5nIHRoZSBzcXVhcmUuIiwKICAiR2F1c3NpYW4gcmVkdWN0aW9uLiIsCiAgImluZHVjdGlvbiBtZXRob2QuIl0sCiAgMiwgCik7ICAgICAgICAgICAgICAgICAgICAgICAKICRjYXNlID0gUG9wVXAoCiAgWyI/IiwiYmFjay1zdWJzdGl0dXRpb24uIiwgIm5lZ2F0aXZlIHJlY2lwcm9jYWxzLiIsICJsaW5lYXIgcmVncmVzc2lvbi4iLCAicG9pbnQtc2xvcGUuIl0sCiAgMSwgCik7CiAkd29yayA9IFJhZGlvQnV0dG9ucygKICBbIkEpIHdoZW4gb25lIGVxdWF0aW9uIGludm9sdmVzIGV4YWN0bHkgb25lIHZhcmlhYmxlLCBhbmQgYSBzZWNvbmQgZXF1YXRpb24gaW52b2x2ZXMgdGhhdCBzYW1lIHZhcmlhYmxlIGFuZCBqdXN0IG9uZSBvdGhlciB2YXJpYWJsZS4iLAogICJCKSB3aXRoIG1vcmUgZXF1YXRpb25zIHRoYW4gdW5rbm93bnMuIiwgCiAgIkMpIGhhdmluZyBvbmx5IHR3byB1bmtub3ducy4iXSwKICAwLCAKKTsKICRyZWR1Y2UgPSBQb3BVcCgKICBbIj8iLCJndWVzcy1hbmQtY2hlY2suIiwgIiBsaW5lYXIgY29tYmluYXRpb25zLiIsICJ0aGUgZGlzY3JpbWluYW50LiJdLAogIDIsIAopOwoKQkVHSU5fUEdNTAphLiAgVGhlIG1ldGhvZCBmb3Igc29sdmluZyBhIDN4MyBsaW5lYXIgc3lzdGVtIGlzIGNhbGxlZCBbX117JG1ldGhvZH17NX0uCgoKYS4gIEEgc3BlY2lhbCBjYXNlIG9mIHRoaXMgbWV0aG9kIGlzIGNhbGxlZCBbX117JGNhc2V9ezV9CgoKYS4gIFRoZSBzcGVjaWFsIGNhc2Ugd29ya3Mgb24gc3lzdGVtcwoKICAgIFtfXXskd29ya317NX0KCgphLiAgVG8gcmVkdWNlIGEgc3lzdGVtIHRvIHRoZSBzcGVjaWFsIGZvcm0sIHdlIHVzZSBbX117JHJlZHVjZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEdhdXNzaWFuIHJlZHVjdGlvbgoKCmEuICBiYWNrLXN1YnN0aXR1dGlvbgoKCmEuICB3aGVuIG9uZSBlcXVhdGlvbiBpbnZvbHZlcyBleGFjdGx5IG9uZSB2YXJpYWJsZSwgYW5kIGEgc2Vjb25kIGVxdWF0aW9uIGludm9sdmVzIHRoYXQgc2FtZSB2YXJpYWJsZSBhbmQganVzdCBvbmUgb3RoZXIgdmFyaWFibGUKCgphLiAgbGluZWFyIGNvbWJpbmF0aW9ucwoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-70')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-70-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-70-1-1-1-1">
-<li id="extracted-webwork-70-1-1-1-1-1"><div class="para logical" id="extracted-webwork-70-1-1-1-1-1-1">
-<div class="para">The method for solving a 3x3 linear system is called</div>
-<ul class="square" id="extracted-webwork-70-1-1-1-1-1-1-1">
-<li id="extracted-webwork-70-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-70-1-1-1-1-1-1-1-1-1">completing the square.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-70-1-1-1-1-1-1-1-2-1">Gaussian reduction.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-70-1-1-1-1-1-1-1-3-1">induction method.</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-70-1-1-1-1-2"><div class="para logical" id="extracted-webwork-70-1-1-1-1-2-1">
-<div class="para">A special case of this method is called</div>
-<ul class="square" id="extracted-webwork-70-1-1-1-1-2-1-1">
-<li id="extracted-webwork-70-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-70-1-1-1-1-2-1-1-1-1">back-substitution.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-70-1-1-1-1-2-1-1-2-1">negative reciprocals.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-70-1-1-1-1-2-1-1-3-1">linear regression.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-70-1-1-1-1-2-1-1-4-1">point-slope.</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-70-1-1-1-1-3">
-<div class="para" id="extracted-webwork-70-1-1-1-1-3-1">The special case works on systems</div>
-<div class="para logical" id="extracted-webwork-70-1-1-1-1-3-2"><ul class="circle" id="extracted-webwork-70-1-1-1-1-3-2-1">
-<li id="extracted-webwork-70-1-1-1-1-3-2-1-1"><div class="para" id="extracted-webwork-70-1-1-1-1-3-2-1-1-1">A) when one equation involves exactly one variable, and a second equation involves that same variable and just one other variable.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-3-2-1-2"><div class="para" id="extracted-webwork-70-1-1-1-1-3-2-1-2-1">B) with more equations than unknowns.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-3-2-1-3"><div class="para" id="extracted-webwork-70-1-1-1-1-3-2-1-3-1">C) having only two unknowns.</div></li>
-</ul></div>
-</li>
-<li id="extracted-webwork-70-1-1-1-1-4"><div class="para logical" id="extracted-webwork-70-1-1-1-1-4-1">
-<div class="para">To reduce a system to the special form, we use</div>
-<ul class="square" id="extracted-webwork-70-1-1-1-1-4-1-1">
-<li id="extracted-webwork-70-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-70-1-1-1-1-4-1-1-1-1">guess-and-check.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-70-1-1-1-1-4-1-1-2-1">linear combinations.</div></li>
-<li id="extracted-webwork-70-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-70-1-1-1-1-4-1-1-3-1">the discriminant.</div></li>
-</ul>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-70-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-70-1-2-1"><span class="process-math">\(\text{Gaussian reduction.}\)</span></div></div></details><details id="extracted-webwork-70-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-70-1-3-1"><span class="process-math">\(\text{back-substitution.}\)</span></div></div></details><details id="extracted-webwork-70-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-70-1-4-1"><span class="process-math">\(\text{A) when ... other variable.}\)</span></div></div></details><details id="extracted-webwork-70-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-70-1-5-1"><span class="process-math">\(\text{ linear combinations.}\)</span></div></div></details><details id="extracted-webwork-70-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-70-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-70-1-6-1-1">
-<li id="extracted-webwork-70-1-6-1-1-1"><div class="para" id="extracted-webwork-70-1-6-1-1-1-1">Gaussian reduction</div></li>
-<li id="extracted-webwork-70-1-6-1-1-2"><div class="para" id="extracted-webwork-70-1-6-1-1-2-1">back-substitution</div></li>
-<li id="extracted-webwork-70-1-6-1-1-3"><div class="para" id="extracted-webwork-70-1-6-1-1-3-1">when one equation involves exactly one variable, and a second equation involves that same variable and just one other variable</div></li>
-<li id="extracted-webwork-70-1-6-1-1-4"><div class="para" id="extracted-webwork-70-1-6-1-1-4-1">linear combinations</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="GaussRed-9">To obtain the triangular form, we eliminate one of the variables from each of the three equations by considering them in pairs. This results in a <span class="process-math">\(2\times 2\)</span> system that we can solve using elimination. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
+</h4></article><div class="para" id="GaussRed-9">To obtain the triangular form, we eliminate one of the variables from each of the three equations by considering them in pairs. This results in a <span class="process-math">\(2\times 2\)</span> system that we can solve using elimination. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
 <aside class="aside aside-like" id="GaussRed-10"><div class="para" id="GaussRed-10-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review the method of elimination, see <a href="AlgebraicSolution.html#ElimMeth" class="internal" title="Subsection 2.3.2: Elimination Method">Section 2.3</a> of the text.</div></aside><article class="example example-like" id="GaussRed-11"><h4 class="heading">
@@ -1523,7 +1384,10 @@ x \amp {}+{} \amp 2y \amp {}-{} \amp 3z \amp {}={} \amp -4\amp\hphantom{blankbla
 \end{alignat*}
 </div>
 </div>
-<div class="solutions"><details id="GaussRed-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="GaussRed-11-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="GaussRed-11-2-1">
 <div class="para">We can choose any one of the three variables to eliminate first. For this example, we will eliminate <span class="process-math">\(x\text{.}\)</span> Next, we choose two of the equations, say (1) and (2), and use a linear combination: We multiply Equation (1) by <span class="process-math">\(-2\)</span> and add the result to Equation (2) to produce Equation (4).</div>
 <div class="displaymath process-math" id="GaussRed-11-2-1-3">
@@ -1594,7 +1458,7 @@ x \amp= 1
 </div>
 </div>
 <div class="para" id="GaussRed-11-2-8">The solution to the system is the ordered triple <span class="process-math">\((1, 2, 3)\text{.}\)</span> You should verify that this triple satisfies all three of the original equations.</div>
-</div></details></div></article><div class="para" id="GaussRed-12">We summarize the method for solving a 3x3 linear system as follows.</div>
+</div></article><div class="para" id="GaussRed-12">We summarize the method for solving a 3x3 linear system as follows.</div>
 <article class="assemblage assemblage-like" id="GaussRed-13"><h4 class="heading"><span class="title">Steps for Solving a 3x3 Linear System.</span></h4>
 <div class="para logical" id="GaussRed-13-6"><ol class="decimal ol-marker-1" id="GaussRed-13-6-1">
 <li id="GaussRed-13-6-1-1"><div class="para" id="GaussRed-13-6-1-1-1">Clear each equation of fractions and put it in standard form.</div></li>
@@ -1602,50 +1466,11 @@ x \amp= 1
 <li id="GaussRed-13-6-1-3"><div class="para" id="GaussRed-13-6-1-3-1">Choose a different pair of equations and eliminate the <em class="emphasis">same</em> variable.</div></li>
 <li id="GaussRed-13-6-1-4"><div class="para" id="GaussRed-13-6-1-4-1">Form a <span class="process-math">\(2\times 2\)</span> system with the equations found in steps (2) and (3). Eliminate one of the variables from this <span class="process-math">\(2\times 2\)</span> system by using a linear combination.</div></li>
 <li id="GaussRed-13-6-1-5"><div class="para" id="GaussRed-13-6-1-5-1">Form a triangular system by choosing among the previous equations. Use back-substitution to solve the triangular system.</div></li>
-</ol></div></article><details id="GaussRed-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div></article><article class="exercise exercise-like" id="GaussRed-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-71" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="71" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRlbHNtID0gUmFkaW9CdXR0b25zKAogIFsiRm9ybSBhIHRyaWFuZ3VsYXIgc3lzdGVtLiIsCiAgIkVsaW1pbmF0ZSBlaXRoZXIgXCh4XCkgb3IgXCh6XCkuIiwKICAiRWxpbWluYXRlIFwoeVwpIGFnYWluIGZyb20gYSBkaWZmZXJlbnQgcGFpciBvZiBlcXVhdGlvbnMuIiwKICAiU3Vic3RpdHV0ZSB0aGUgdmFsdWUgZm9yIFwoeVwpIGludG8gdGhlIGVxdWF0aW9ucy4iXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKU3VwcG9zZSB5b3UgZWxpbWluYXRlIFtgeWBdIGZyb20gdHdvIGVxdWF0aW9ucyBhcyBTdGVwIDIgb2YgR2F1c3NpYW4gcmVkdWN0aW9uLiBXaGF0IHNob3VsZCB5b3UgZG8gZm9yIFN0ZXAgMz8KCltfXXskZWxzbX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpFbGltaW5hdGUgW2B5YF0gYWdhaW4gZnJvbSBhIGRpZmZlcmVudCBwYWlyIG9mIGVxdWF0aW9ucy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-71')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-71-1-1-1">Suppose you eliminate <span class="process-math">\(y\)</span> from two equations as Step 2 of Gaussian reduction. What should you do for Step 3?</div> <div class="para logical" id="extracted-webwork-71-1-1-2"><ul class="circle" id="extracted-webwork-71-1-1-2-1">
-<li id="extracted-webwork-71-1-1-2-1-1"><div class="para" id="extracted-webwork-71-1-1-2-1-1-1">Form a triangular system.</div></li>
-<li id="extracted-webwork-71-1-1-2-1-2"><div class="para" id="extracted-webwork-71-1-1-2-1-2-1">Eliminate either <span class="process-math">\(x\)</span> or <span class="process-math">\(z\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-71-1-1-2-1-3"><div class="para" id="extracted-webwork-71-1-1-2-1-3-1">Eliminate <span class="process-math">\(y\)</span> again from a different pair of equations.</div></li>
-<li id="extracted-webwork-71-1-1-2-1-4"><div class="para" id="extracted-webwork-71-1-1-2-1-4-1">Substitute the value for <span class="process-math">\(y\)</span> into the equations.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-71-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-71-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-71-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-71-1-3-1">Eliminate <span class="process-math">\(y\)</span> again from a different pair of equations.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="GaussRed-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="GaussRed-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-72" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="72" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCJQb2ludCIpOwokdHJpcGxlID0gUG9pbnQoMiwyLDEpOwoKQkVHSU5fUEdNTApVc2UgR2F1c3NpYW4gcmVkdWN0aW9uIHRvIHNvbHZlIHRoZSBzeXN0ZW0KCltgYGBcYmVnaW57YWxpZ25lZH0KeC0yeSt6IFxhbXA9IC0xXHFxdWFkXHFxdWFkIFxhbXBcYW1wICgxKVxcClxmcmFjezJ9ezN9eCArXGZyYWN7MX17M315IC0geiBcYW1wPSAtMSBcYW1wXGFtcCAoMilcXAozeCszeS0yeiBcYW1wPSAxMCBcYW1wXGFtcCAoMykKXGVuZHthbGlnbmVkfQpgYGBdCgpGb2xsb3cgdGhlIHN0ZXBzOgoqIFN0ZXAgMTogQ2xlYXIgdGhlIGZyYWN0aW9ucyBmcm9tIEVxdWF0aW9uICgyKS4KCgoqIFN0ZXAgMjogRWxpbWluYXRlIFtgemBdIGZyb20gRXF1YXRpb25zICgxKSBhbmQgKDIpLgoKCiogU3RlcCAzOiBFbGltaW5hdGUgW2B6YF0gZnJvbSBFcXVhdGlvbnMgKDEpIGFuZCAoMykuCgoKKiBTdGVwIDQ6IEVsaW1pbmF0ZSBbYHhgXSBmcm9tIHlvdXIgbmV3IFtgMlx0aW1lcyAyYF0gc3lzdGVtLgoKCiogU3RlcCA1OiBGb3JtIGEgdHJpYW5ndWxhciBzeXN0ZW0gYW5kIHNvbHZlIGJ5IGJhY2stc3Vic3RpdHV0aW9uLgoKCltfXXskdHJpcGxlfXs2fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnR2l2ZSB0aGUgc29sdXRpb24gYXMgYW4gb3JkZXJlZCB0cmlwbGUuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJHRyaXBsZV0gYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-72')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-72-1-1-1">Use Gaussian reduction to solve the system</div> <div class="para logical" id="extracted-webwork-72-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-x-2y+z \amp= -1\qquad\qquad \amp\amp (1)\\
-\frac{2}{3}x +\frac{1}{3}y - z \amp= -1 \amp\amp (2)\\
-3x+3y-2z \amp= 10 \amp\amp (3)
-\end{aligned}
-\end{equation*}
-</div></div> <div class="para logical" id="extracted-webwork-72-1-1-3">
-<div class="para">Follow the steps:</div>
-<ul class="disc" id="extracted-webwork-72-1-1-3-1">
-<li id="extracted-webwork-72-1-1-3-1-1"><div class="para" id="extracted-webwork-72-1-1-3-1-1-1">Step 1: Clear the fractions from Equation (2).</div></li>
-<li id="extracted-webwork-72-1-1-3-1-2"><div class="para" id="extracted-webwork-72-1-1-3-1-2-1">Step 2: Eliminate <span class="process-math">\(z\)</span> from Equations (1) and (2).</div></li>
-<li id="extracted-webwork-72-1-1-3-1-3"><div class="para" id="extracted-webwork-72-1-1-3-1-3-1">Step 3: Eliminate <span class="process-math">\(z\)</span> from Equations (1) and (3).</div></li>
-<li id="extracted-webwork-72-1-1-3-1-4"><div class="para" id="extracted-webwork-72-1-1-3-1-4-1">Step 4: Eliminate <span class="process-math">\(x\)</span> from your new <span class="process-math">\(2\times 2\)</span> system.</div></li>
-<li id="extracted-webwork-72-1-1-3-1-5"><div class="para" id="extracted-webwork-72-1-1-3-1-5-1">Step 5: Form a triangular system and solve by back-substitution.</div></li>
-</ul>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-72-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-72-1-2-1"><span class="process-math">\(\left(2,2,1\right)\)</span></div></div></details><details id="extracted-webwork-72-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-72-1-3-1"><span class="process-math">\({\left(2,2,1\right)}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><aside class="aside aside-like" id="GaussRed-16"><div class="para" id="GaussRed-16-1">
+</h4></article><aside class="aside aside-like" id="GaussRed-16"><div class="para" id="GaussRed-16-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For help on clearing fractions, see <a href="tkchap2.html#tkClrFrac" class="internal" title="Subsubsection A.2.4.2: Clear fractions from an equation">Section 2.4.2</a> of the Toolkit.</div></aside></section><section class="subsection" id="GaussReduct-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="space"> </span><span class="title">Inconsistent and Dependent Systems</span>
 </h3>
@@ -1684,7 +1509,11 @@ x-2y+z \amp= -1\qquad\qquad \amp\amp (1)\\
 \end{alignedat} \)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="GaussReduct-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="GaussReduct-6-4-2-1"><ol class="lower-alpha ol-marker-2" id="GaussReduct-6-4-2-1-1">
+<div class="solution solution-like" id="GaussReduct-6-4-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="GaussReduct-6-4-2-1"><ol class="lower-alpha ol-marker-2" id="GaussReduct-6-4-2-1-1">
 <li id="GaussReduct-6-4-2-1-1-1"><div class="para logical" id="GaussReduct-6-4-2-1-1-1-1">
 <div class="para">To eliminate <span class="process-math">\(y\)</span> from Equations (1) and (2), we multiply Equation (1) by <span class="process-math">\(-2\)</span> and add the result to Equation (2).</div>
 <div class="displaymath process-math" id="GaussReduct-6-4-2-1-1-1-1-3">
@@ -1707,76 +1536,12 @@ x-2y+z \amp= -1\qquad\qquad \amp\amp (1)\\
 </div>
 <div class="para">Because the resulting equation vanishes, the system is dependent and has infinitely many solutions.</div>
 </div></li>
-</ol></div></div></details></div></article><details id="GaussReduct-6-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="GaussReduct-6-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-73" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="73" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7JGV4cGxhaW4gPSBSYWRpb0J1dHRvbnMoCiAgWyJJbmNvbnNpc3RlbnQiLAogICJEZXBlbmRlbnQiLAogICJDb25zaXN0ZW50IGFuZCBpbmRlcGVuZGVudCJdLAogIDAsIAopOwoKQkVHSU5fUEdNTApEZWNpZGUgd2hldGhlciB0aGUgc3lzdGVtIGlzIGluY29uc2lzdGVudCwgZGVwZW5kZW50LCBvciBjb25zaXN0ZW50IGFuZCBpbmRlcGVuZGVudC4KCltgYGBcYmVnaW57YWxpZ25lZH0KeCszeS16XGFtcD00XFwKLTJ4LTZ5KzJ6XGFtcD00XFwKeCsyeS16XGFtcD0zClxlbmR7YWxpZ25lZH0KYGBgXQoKCgpbX117JGV4cGxhaW59ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KSW5jb25zaXN0ZW50CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-73')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-73-1-1-1">Decide whether the system is inconsistent, dependent, or consistent and independent.</div> <div class="para logical" id="extracted-webwork-73-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-x+3y-z\amp=4\\
--2x-6y+2z\amp=4\\
-x+2y-z\amp=3
-\end{aligned}
-\end{equation*}
-</div></div> <div class="para logical" id="extracted-webwork-73-1-1-3"><ul class="circle" id="extracted-webwork-73-1-1-3-1">
-<li id="extracted-webwork-73-1-1-3-1-1"><div class="para" id="extracted-webwork-73-1-1-3-1-1-1">Inconsistent</div></li>
-<li id="extracted-webwork-73-1-1-3-1-2"><div class="para" id="extracted-webwork-73-1-1-3-1-2-1">Dependent</div></li>
-<li id="extracted-webwork-73-1-1-3-1-3"><div class="para" id="extracted-webwork-73-1-1-3-1-3-1">Consistent and independent</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-73-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-73-1-2-1"><span class="process-math">\(\text{Inconsistent}\)</span></div></div></details><details id="extracted-webwork-73-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-73-1-3-1">Inconsistent</div></div></details>
-</div>
-</div>
-</div></article></details><details id="GaussReduct-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="GaussReduct-6-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-74" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="74" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkVEYgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwiRmFsc2UiXSwKICAyLCAKKTsKICRUcnVlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsIkZhbHNlIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgZmFsc2UuCmEuICBJZiBhIHN5c3RlbSBpcyBkZXBlbmRlbnQsIGl0IGhhcyBubyBzb2x1dGlvbnMuIFtfXXskVEZ9ezV9CgoKYS4gIFRoZSBlcXVhdGlvbiBbYDB4ICsgMHkgKyAweiA9IDBgXSBoYXMgbm8gc29sdXRpb24uIFtfXXskVEZ9ezV9CgoKYS4gIElmIGEgM3gzIHN5c3RlbSBpcyBkZXBlbmRlbnQsIGFsbCB0aHJlZSBlcXVhdGlvbnMgYXJlIHRoZSBzYW1lLiBbX117JFRGfXs1fQoKCmEuICBHYXVzc2lhbiByZWR1Y3Rpb24gd2lsbCByZXZlYWwgd2hldGhlciBhIHN5c3RlbSBpcyBkZXBlbmRlbnQgb3IgaW5jb25zaXN0ZW50LiBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQoKCmEuICBGYWxzZQoKCmEuICBGYWxzZQoKCmEuICBUcnVlCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-74')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-74-1-1-1">
-<div class="para">True or false.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-74-1-1-1-1">
-<li id="extracted-webwork-74-1-1-1-1-1"><div class="para logical" id="extracted-webwork-74-1-1-1-1-1-1">
-<div class="para">If a system is dependent, it has no solutions.</div>
-<ul class="square" id="extracted-webwork-74-1-1-1-1-1-1-1">
-<li id="extracted-webwork-74-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-74-1-1-1-1-1-1-1-1-1">True</div></li>
-<li id="extracted-webwork-74-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-74-1-1-1-1-1-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-74-1-1-1-1-2"><div class="para logical" id="extracted-webwork-74-1-1-1-1-2-1">
-<div class="para">The equation <span class="process-math">\(0x + 0y + 0z = 0\)</span> has no solution.</div>
-<ul class="square" id="extracted-webwork-74-1-1-1-1-2-1-2">
-<li id="extracted-webwork-74-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-74-1-1-1-1-2-1-2-1-1">True</div></li>
-<li id="extracted-webwork-74-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-74-1-1-1-1-2-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-74-1-1-1-1-3"><div class="para logical" id="extracted-webwork-74-1-1-1-1-3-1">
-<div class="para">If a 3x3 system is dependent, all three equations are the same.</div>
-<ul class="square" id="extracted-webwork-74-1-1-1-1-3-1-1">
-<li id="extracted-webwork-74-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-74-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-74-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-74-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-74-1-1-1-1-4"><div class="para logical" id="extracted-webwork-74-1-1-1-1-4-1">
-<div class="para">Gaussian reduction will reveal whether a system is dependent or inconsistent.</div>
-<ul class="square" id="extracted-webwork-74-1-1-1-1-4-1-1">
-<li id="extracted-webwork-74-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-74-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-74-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-74-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-74-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-74-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-74-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-74-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-74-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-74-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-74-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-74-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-74-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-74-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-74-1-6-1-1">
-<li id="extracted-webwork-74-1-6-1-1-1"><div class="para" id="extracted-webwork-74-1-6-1-1-1-1">False</div></li>
-<li id="extracted-webwork-74-1-6-1-1-2"><div class="para" id="extracted-webwork-74-1-6-1-1-2-1">False</div></li>
-<li id="extracted-webwork-74-1-6-1-1-3"><div class="para" id="extracted-webwork-74-1-6-1-1-3-1">False</div></li>
-<li id="extracted-webwork-74-1-6-1-1-4"><div class="para" id="extracted-webwork-74-1-6-1-1-4-1">True</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="GaussReduct-7"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="GaussReduct-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="space"> </span><span class="title">Applications</span>
 </h3>
 <div class="para" id="GaussReduct-7-2">Here are some problems that can be modeled by a system of three linear equations.</div>
@@ -1784,7 +1549,11 @@ x+2y-z\amp=3
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span>
 </h4>
 <div class="para" id="GaussReduct-7-3-1-1">One angle of a triangle measures <span class="process-math">\(4\degree\)</span> less than twice the second angle, and the third angle is <span class="process-math">\(20\degree\)</span> greater than the sum of the first two. Find the measure of each angle.</div>
-<div class="solutions"><details id="GaussReduct-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="GaussReduct-7-3-2-1"><ul class="disc" id="GaussReduct-7-3-2-1-1">
+<div class="solution solution-like" id="GaussReduct-7-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="GaussReduct-7-3-2-1"><ul class="disc" id="GaussReduct-7-3-2-1-1">
 <li id="GaussReduct-7-3-2-1-1-1">
 <span class="heading"><span class="title">Step 1:.</span></span><div class="para logical" id="GaussReduct-7-3-2-1-1-1-2">
 <div class="para">We represent the measure of each angle by a separate variable.</div>
@@ -1870,30 +1639,11 @@ z\amp=100
 <li id="GaussReduct-7-3-2-1-1-4">
 <span class="heading"><span class="title">Step 4:.</span></span><div class="para" id="GaussReduct-7-3-2-1-1-4-2">The angles measure 52°, 28°, and 100°.</div>
 </li>
-</ul></div></div></details></div></article><aside class="aside aside-like" id="GaussReduct-7-4"><div class="para" id="GaussReduct-7-4-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For help writing an equation in standard form, see <a href="tkchap2.html#tkStdForm" class="internal" title="Subsubsection A.2.4.1: Write an equation in standard form">Section 2.4.1</a> of the Toolkit.</div></aside><details id="GaussReduct-7-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ul></div>
+</div></article><aside class="aside aside-like" id="GaussReduct-7-4"><div class="para" id="GaussReduct-7-4-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For help writing an equation in standard form, see <a href="tkchap2.html#tkStdForm" class="internal" title="Subsubsection A.2.4.1: Write an equation in standard form">Section 2.4.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="GaussReduct-7-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-75" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="75" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7JHcgPSAyNTA7CiRjID0gNjAwOwokcyA9IDQ1MDsKCkJFR0lOX1BHTUwKQSBmYXJtZXIgaGFzIDEzMDAgYWNyZXMgb24gd2hpY2ggdG8gcGxhbnQgd2hlYXQsIGNvcm4sIGFuZCBzb3liZWFucy4gVGhlIHNlZWQgY29zdHMgJDYgZm9yIGFuIGFjcmUgb2Ygd2hlYXQsICQ0IGZvciBhbiBhY3JlIG9mIGNvcm4sIGFuZCAkNSBmb3IgYW4gYWNyZSBvZiBzb3liZWFucy4gQW4gYWNyZSBvZiB3aGVhdCByZXF1aXJlcyA1IGFjcmUtZmVldCBvZiB3YXRlciBkdXJpbmcgdGhlIGdyb3dpbmcgc2Vhc29uLCB3aGlsZSBhbiBhY3JlIG9mIGNvcm4gcmVxdWlyZXMgMiBhY3JlLWZlZXQgYW5kIGFuIGFjcmUgb2Ygc295YmVhbnMgcmVxdWlyZXMgMyBhY3JlLWZlZXQuIElmIHRoZSBmYXJtZXIgaGFzICQ2MTUwIHRvIHNwZW5kIG9uIHNlZWQgYW5kIGNhbiBjb3VudCBvbiAzODAwIGFjcmUtZmVldCBvZiB3YXRlciwgaG93IG1hbnkgYWNyZXMgb2YgZWFjaCBjcm9wIHNob3VsZCBoZSBwbGFudCBpbiBvcmRlciB0byB1c2UgYWxsIGhpcyByZXNvdXJjZXM/CgpXaGVhdDogW19deyR3fXszfSBhY3JlcwoKQ29ybjogW19deyRjfXszfSBhY3JlcwoKU295YmVhbnM6IFtfXXskc317M30gYWNyZXMKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSBzb2x2ZSB0aGUgc3lzdGVtCgpbYGBgXGJlZ2lue2FsaWduZWRhdH17M30Kd1xhbXAge30re30gXGFtcCBjXGFtcCB7fSt7fSBcYW1wIHMgXGFtcD0gMTMwMFxcCjZ3XGFtcCB7fSt7fSBcYW1wIDRjXGFtcCB7fSt7fSBcYW1wIDVzXGFtcD02MTUwXFwKNXdcYW1wIHt9K3t9IFxhbXAgMmNcYW1wIHt9K3t9IFxhbXAgM3NcYW1wID0zODAwClxlbmR7YWxpZ25lZGF0fQpgYGBdCgp0byBmaW5kIHRoYXQgdGhlIGZhcm1lciBzaG91bGQgcGxhbnQgMjUwIGFjcmVzIG9mIHdoZWF0LCA2MDAgYWNyZXMgb2YgY29ybiwgNDUwIGFjcmVzIG9mIHNveWJlYW5zCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-75')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-75-1-1-1">A farmer has 1300 acres on which to plant wheat, corn, and soybeans. The seed costs $6 for an acre of wheat, $4 for an acre of corn, and $5 for an acre of soybeans. An acre of wheat requires 5 acre-feet of water during the growing season, while an acre of corn requires 2 acre-feet and an acre of soybeans requires 3 acre-feet. If the farmer has $6150 to spend on seed and can count on 3800 acre-feet of water, how many acres of each crop should he plant in order to use all his resources?</div> <div class="para" id="extracted-webwork-75-1-1-2">Wheat: <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> acres</div> <div class="para" id="extracted-webwork-75-1-1-3">Corn: <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> acres</div> <div class="para" id="extracted-webwork-75-1-1-4">Soybeans: <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> acres</div>
-<div class="solutions">
-<details id="extracted-webwork-75-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-75-1-2-1"><span class="process-math">\(250\)</span></div></div></details><details id="extracted-webwork-75-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-75-1-3-1"><span class="process-math">\(600\)</span></div></div></details><details id="extracted-webwork-75-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-75-1-4-1"><span class="process-math">\(450\)</span></div></div></details><details id="extracted-webwork-75-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="extracted-webwork-75-1-5-1">We solve the system</div>
-<div class="para logical" id="extracted-webwork-75-1-5-2"><div class="displaymath process-math">
-\begin{equation*}
-\begin{alignedat}{3}
-w\amp {}+{} \amp c\amp {}+{} \amp s \amp= 1300\\
-6w\amp {}+{} \amp 4c\amp {}+{} \amp 5s\amp=6150\\
-5w\amp {}+{} \amp 2c\amp {}+{} \amp 3s\amp =3800
-\end{alignedat}
-\end{equation*}
-</div></div>
-<div class="para" id="extracted-webwork-75-1-5-3">to find that the farmer should plant 250 acres of wheat, 600 acres of corn, 450 acres of soybeans</div>
-</div></details>
-</div>
-</div>
-</div></article></details><aside class="aside aside-like" id="GaussReduct-7-6"><div class="para" id="GaussReduct-7-6-1">
+</h4></article><aside class="aside aside-like" id="GaussReduct-7-6"><div class="para" id="GaussReduct-7-6-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For help writing equations, see <a href="tkchap2.html#tkWriteSys" class="internal" title="Subsubsection A.2.4.3: Write a 3x3 linear system">Section 2.4.3</a> of the Toolkit.</div></aside></section><section class="exercises" id="section-2-4-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="space"> </span><span class="title">Problem Set 2.4</span>
 </h3>

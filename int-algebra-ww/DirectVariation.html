@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="SomeBasicGraphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="InverseVariation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1381,23 +1361,9 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="para" id="DirectVariation-3-6">The ratio <span class="process-math">\(\dfrac{\text{total price}}{\text{number of gallons}}\text{,}\)</span> or price per gallon, is the same for each pair of values in the first table. This agrees with everyday experience: The price per gallon of gasoline is the same no matter how many gallons you buy. Thus, the total price of a gasoline purchase is directly proportional to the number of gallons purchased.</div>
 <div class="para" id="DirectVariation-3-7">The second table shows the population of a small town as a function of the town’s age. The ratio <span class="process-math">\(\dfrac{\text{number of people}}{\text{number of years}}\)</span> gives the average rate of growth of the population in people per year. You can see that this ratio is <em class="emphasis">not</em> constant; in fact, it increases as time goes on. Thus, the population of the town is <em class="emphasis">not</em> proportional to its age.</div>
-<details id="DirectVariation-3-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="DirectVariation-3-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-182" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="182" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZGlydmFyID0gUmFkaW9CdXR0b25zKAogIFsiSWYgaXQgaGFzIGEgY29uc3RhbnQgc2xvcGUiLAogICJJZiBpdCBpbmNsdWRlcyB0aGUgcG9pbnQgXCgoMCwwKVwpIiwKICAiSWYgdGhlIHJhdGlvIG91dHB1dC9pbnB1dCBpcyBjb25zdGFudCIsCiAgIklmIGVhY2ggb3V0cHV0IGlzIGRvdWJsZSB0aGUgcHJldmlvdXMgb25lIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCldoZW4gZG9lcyBhIHRhYmxlIHJlcHJlc2VudCBwcm9wb3J0aW9uYWwgdmFyaWFibGVzPwoKW19deyRkaXJ2YXJ9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KSWYgdGhlIHJhdGlvIG91dHB1dC9pbnB1dCBpcyBjb25zdGFudAoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-182')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-182-1-1-1">When does a table represent proportional variables?</div> <div class="para logical" id="extracted-webwork-182-1-1-2"><ul class="circle" id="extracted-webwork-182-1-1-2-1">
-<li id="extracted-webwork-182-1-1-2-1-1"><div class="para" id="extracted-webwork-182-1-1-2-1-1-1">If it has a constant slope</div></li>
-<li id="extracted-webwork-182-1-1-2-1-2"><div class="para" id="extracted-webwork-182-1-1-2-1-2-1">If it includes the point <span class="process-math">\((0,0)\)</span>
-</div></li>
-<li id="extracted-webwork-182-1-1-2-1-3"><div class="para" id="extracted-webwork-182-1-1-2-1-3-1">If the ratio output/input is constant</div></li>
-<li id="extracted-webwork-182-1-1-2-1-4"><div class="para" id="extracted-webwork-182-1-1-2-1-4-1">If each output is double the previous one</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-182-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-182-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-182-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-182-1-3-1">If the ratio output/input is constant</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="DirectVariation-3-9">The graphs of the two functions described above by tables (the gasoline price and the small town population tables) are shown below.</div>
+</h4></article><div class="para" id="DirectVariation-3-9">The graphs of the two functions described above by tables (the gasoline price and the small town population tables) are shown below.</div>
 <div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/fig-gasoline-and-population-graphs.svg" role="img" class="contained" alt="graphs of gas price and population growth"></div>
 <div class="para logical" id="DirectVariation-3-11">
 <div class="para">We see that the price, <span class="process-math">\(P\text{,}\)</span> of a fill-up is a linear function of the number of gallons, <span class="process-math">\(g\text{,}\)</span> purchased. This should not be surprising if we write an equation relating the variables <span class="process-math">\(g\)</span> and <span class="process-math">\(P\text{.}\)</span> Because the ratio of their values is constant, we can write</div>
@@ -1455,93 +1421,29 @@ y = f(x) = kx
 </div>
 <div class="para">Compareing this equation to the standard form for a linear function, <span class="process-math">\(y = b + mx\text{,}\)</span> we see that the constant term, <span class="process-math">\(b\text{,}\)</span> is zero, so the graph of a direct variation passes through the origin. The positive constant <span class="process-math">\(k\)</span> in the equation <span class="process-math">\(y = kx\)</span> is just the slope of the graph, so it tells us how rapidly the graph increases. </div>
 </div>
-<details id="DirectVariation-3-16" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="DirectVariation-3-16"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="DirectVariation-3-16-2"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/images/fig-three-linesw.svg" role="img" class="contained" alt="graphs of three lines"></div></div>
-<div id="webwork-183" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="183" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZXhwbGFpbiA9IFJhZGlvQnV0dG9ucygKICBbIihhKSBUaGUgZ3JhcGggaXMgYSBzdHJhaWdodCBsaW5lIHRoYXQgaW5jcmVhc2VzLiIsCiAgIihiKSBUaGUgZ3JhcGggaXMgYSBzdHJhaWdodCBsaW5lIHRocm91Z2ggdGhlIG9yaWdpbi4iLAogICIoYykgVGhlIGdyYXBoIGlzIGEgc3RyYWlnaHQgbGluZSB0aGF0IGRlY3JlYXNlcy4iLAogICJOb25lIG9mIHRoZSBhYm92ZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApXaGljaCBvZiB0aGUgZ3JhcGhzIGFib3ZlIGNvdWxkIHJlcHJlc2VudCBkaXJlY3QgdmFyaWF0aW9uPyBFeHBsYWluIHdoeS4KCltfXXskZXhwbGFpbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgooYik6IFRoZSBncmFwaCBpcyBhIHN0cmFpZ2h0IGxpbmUgdGhyb3VnaCB0aGUgb3JpZ2luLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-183')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-183-1-1-1">Which of the graphs above could represent direct variation? Explain why.</div> <div class="para logical" id="extracted-webwork-183-1-1-2"><ul class="circle" id="extracted-webwork-183-1-1-2-1">
-<li id="extracted-webwork-183-1-1-2-1-1"><div class="para" id="extracted-webwork-183-1-1-2-1-1-1">(a) The graph is a straight line that increases.</div></li>
-<li id="extracted-webwork-183-1-1-2-1-2"><div class="para" id="extracted-webwork-183-1-1-2-1-2-1">(b) The graph is a straight line through the origin.</div></li>
-<li id="extracted-webwork-183-1-1-2-1-3"><div class="para" id="extracted-webwork-183-1-1-2-1-3-1">(c) The graph is a straight line that decreases.</div></li>
-<li id="extracted-webwork-183-1-1-2-1-4"><div class="para" id="extracted-webwork-183-1-1-2-1-4-1">None of the above</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-183-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-183-1-2-1"><span class="process-math">\(\text{(b)  ...  the origin.}\)</span></div></div></details><details id="extracted-webwork-183-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-183-1-3-1">(b): The graph is a straight line through the origin.</div></div></details>
-</div>
-</div>
-</div></article></details><details id="DirectVariation-3-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4>
+<div class="introduction" id="DirectVariation-3-16-2"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/images/fig-three-linesw.svg" role="img" class="contained" alt="graphs of three lines"></div></div></article><article class="exercise exercise-like" id="DirectVariation-3-17"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-184" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="184" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+YWRkKGs9PiJSZWFsIiwgeT0+IlJlYWwiKTsKJGEgPSBQb3BVcCgKICBbIj8iLCJsaW5lYXIiLCAiY29uc3RhbnQiLCAiaW5jcmVhc2luZyIsICJwb3NpdGl2ZSJdLAogIDIsIAopOwokYiA9IFBvcFVwKAogIFsiPyIsInN0cmFpZ2h0IGxpbmUgdGhyb3VnaCB0aGUgb3JpZ2luIiwgCiAgImxpbmUgd2l0aCBwb3NpdGl2ZSBzbG9wZSIsIAogICJiYXNpYyBncmFwaCIsIAogICJjb25zdGFudCBvZiB2YXJpYXRpb24iXSwKICAxLCAKKTsKJGMgPSBGb3JtdWxhKCJreCIpOwokZCA9IFBvcFVwKAogIFsiPyIsImdyb3dpbmcgZXhwb25lbnRpYWxseSIsIAogICJjb25zdGFudCIsIAogICJpbmRlcGVuZGVudCIsIAogICJkaXJlY3RseSBwcm9wb3J0aW9uYWwiXSwKICA0LCAKKTsKCkJFR0lOX1BHTUwKYS4gIEEgdGFibGUgZGVzY3JpYmVzIGRpcmVjdCB2YXJpYXRpb24gaWYgdGhlIHJhdGlvIG9mIGNvcnJlc3BvbmRpbmcgZW50cmllcyBpcyBbX117JGF9ezV9LgoKCmEuICBBIGdyYXBoIGRlc2NyaWJlcyBkaXJlY3QgdmFyaWF0aW9uIGlmIGl0IGlzIGEgW19deyRifXs1fS4KCgphLiAgQW4gZXF1YXRpb24gZGVzY3JpYmVzIGRpcmVjdCB2YXJpYXRpb24gaWYgaXQgaGFzIHRoZSBmb3JtIFtgeT1gXVtfXXskY317Nn0uCgoKYS4gIElmIHR3byB2YXJpYWJsZXMgdmFyeSBkaXJlY3RseSwgd2UgbWF5IGFsc28gc2F5IHRoYXQgdGhleSBhcmUgW19deyRkfXs1fS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGNvbnN0YW50CmEuICBzdHJhaWdodCBsaW5lIHRocm91Z2ggdGhlIG9yaWdpbgphLiAgW2B5PWt4YF0KYS4gIGRpcmVjdGx5IHByb3BvcnRpb25hbCAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-184')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-184-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-184-1-1-1-1">
-<li id="extracted-webwork-184-1-1-1-1-1"><div class="para logical" id="extracted-webwork-184-1-1-1-1-1-1">
-<div class="para">A table describes direct variation if the ratio of corresponding entries is</div>
-<ul class="square" id="extracted-webwork-184-1-1-1-1-1-1-1">
-<li id="extracted-webwork-184-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-184-1-1-1-1-1-1-1-1-1">linear</div></li>
-<li id="extracted-webwork-184-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-184-1-1-1-1-1-1-1-2-1">constant</div></li>
-<li id="extracted-webwork-184-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-184-1-1-1-1-1-1-1-3-1">increasing</div></li>
-<li id="extracted-webwork-184-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-184-1-1-1-1-1-1-1-4-1">positive</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-184-1-1-1-1-2"><div class="para logical" id="extracted-webwork-184-1-1-1-1-2-1">
-<div class="para">A graph describes direct variation if it is a</div>
-<ul class="square" id="extracted-webwork-184-1-1-1-1-2-1-1">
-<li id="extracted-webwork-184-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-184-1-1-1-1-2-1-1-1-1">straight line through the origin</div></li>
-<li id="extracted-webwork-184-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-184-1-1-1-1-2-1-1-2-1">line with positive slope</div></li>
-<li id="extracted-webwork-184-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-184-1-1-1-1-2-1-1-3-1">basic graph</div></li>
-<li id="extracted-webwork-184-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-184-1-1-1-1-2-1-1-4-1">constant of variation</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-<li id="extracted-webwork-184-1-1-1-1-3"><div class="para" id="extracted-webwork-184-1-1-1-1-3-1">An equation describes direct variation if it has the form <span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span>.</div></li>
-<li id="extracted-webwork-184-1-1-1-1-4"><div class="para logical" id="extracted-webwork-184-1-1-1-1-4-1">
-<div class="para">If two variables vary directly, we may also say that they are</div>
-<ul class="square" id="extracted-webwork-184-1-1-1-1-4-1-1">
-<li id="extracted-webwork-184-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-184-1-1-1-1-4-1-1-1-1">growing exponentially</div></li>
-<li id="extracted-webwork-184-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-184-1-1-1-1-4-1-1-2-1">constant</div></li>
-<li id="extracted-webwork-184-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-184-1-1-1-1-4-1-1-3-1">independent</div></li>
-<li id="extracted-webwork-184-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-184-1-1-1-1-4-1-1-4-1">directly proportional</div></li>
-</ul>
-<div class="para">.</div>
-</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-184-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-184-1-2-1"><span class="process-math">\(\text{constant}\)</span></div></div></details><details id="extracted-webwork-184-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-184-1-3-1"><span class="process-math">\(\text{straight line through the origin}\)</span></div></div></details><details id="extracted-webwork-184-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-184-1-4-1"><span class="process-math">\(kx\)</span></div></div></details><details id="extracted-webwork-184-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-184-1-5-1"><span class="process-math">\(\text{directly proportional}\)</span></div></div></details><details id="extracted-webwork-184-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-184-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-184-1-6-1-1">
-<li id="extracted-webwork-184-1-6-1-1-1"><div class="para" id="extracted-webwork-184-1-6-1-1-1-1">constant</div></li>
-<li id="extracted-webwork-184-1-6-1-1-2"><div class="para" id="extracted-webwork-184-1-6-1-1-2-1">straight line through the origin</div></li>
-<li id="extracted-webwork-184-1-6-1-1-3"><div class="para" id="extracted-webwork-184-1-6-1-1-3-1"><span class="process-math">\(\displaystyle y=kx\)</span></div></li>
-<li id="extracted-webwork-184-1-6-1-1-4"><div class="para" id="extracted-webwork-184-1-6-1-1-4-1">directly proportional</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="DirectVariation-4"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="DirectVariation-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="space"> </span><span class="title">The Scaling Property of Direct Variation</span>
 </h3>
 <div class="para" id="DirectVariation-4-2">Because the graph of <span class="process-math">\(y=kx\)</span> passes through the origin, direct variation has the following <dfn class="terminology">scaling</dfn> property: if we double the value of <span class="process-math">\(x\text{,}\)</span> then the value of <span class="process-math">\(y\)</span> will double also. In fact, increasing <span class="process-math">\(x\)</span> by any factor causes <span class="process-math">\(y\)</span> to increase by the same factor. Look again at the table for the price of buying gasoline. Doubling the number of gallons of gas purchased, say, from <span class="process-math">\(4\)</span> gallons to <span class="process-math">\(8\)</span> gallons or from <span class="process-math">\(6\)</span> gallons to <span class="process-math">\(12\)</span> gallons, causes the total price to double also.</div>
-<details id="DirectVariation-4-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="DirectVariation-4-3"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-185" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="185" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskUCA9IDgwMDsKJHIgPSAwLjA3OwokaSA9ICRQKiRyOwokYSA9IENvbXB1dGUoIiRpIik7CiRmYWN0b3IgPSBDb21wdXRlKCIxLjYiKTsgICAgICAgIAokaTIgPSAkZmFjdG9yKiRQKiRyOwokYiA9IENvbXB1dGUoIiRpMiIpOwoKQkVHSU5fUEdNTApZb3UgaW52ZXN0ICQ4MDAgZm9yIG9uZSB5ZWFyIGF0IDclIHNpbXBsZSBpbnRlcmVzdC4gIFRoZSBpbnRlcmVzdCBlYXJuZWQgaXMKCltgST0wLjA3KDgwMCk9IGBdW19deyRhfXs1fSBkb2xsYXJzCgpJZiB5b3UgaW5jcmVhc2UgdGhlIGludmVzdG1lbnQgYnkgYSBmYWN0b3Igb2YsIHNheSwgWyRmYWN0b3JdIHRvIDEuNig4MDApIG9yICQxMjgwLCB0aGUgaW50ZXJlc3Qgd2lsbCBiZQoKW2BJPTAuMDcoMTI4MCk9YF1bX117JGJ9ezV9IGRvbGxhcnMKClRoZSBvcmlnaW5hbCBpbnRlcmVzdCBpcyBpbmNyZWFzZWQgYnkgYSBmYWN0b3Igb2YgW19deyRmYWN0b3J9ezV9LgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCiQ1NjsgJDg5LjYwOyAxLjYgKHRoZSBmYWN0b3IgYnkgd2hpY2ggeW91IGluY3JlYXNlZCB0aGUgaW52ZXN0bWVudCkKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-185')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-185-1-1-1">You invest $800 for one year at 7% simple interest.  The interest earned is</div> <div class="para" id="extracted-webwork-185-1-1-2">
-<span class="process-math">\(I=0.07(800)=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> dollars</div> <div class="para" id="extracted-webwork-185-1-1-3">If you increase the investment by a factor of, say, 1.6 to 1.6(800) or $1280, the interest will be</div> <div class="para" id="extracted-webwork-185-1-1-4">
-<span class="process-math">\(I=0.07(1280)=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> dollars</div> <div class="para" id="extracted-webwork-185-1-1-5">The original interest is increased by a factor of <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>.</div>
-<div class="solutions">
-<details id="extracted-webwork-185-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-185-1-2-1"><span class="process-math">\(56\)</span></div></div></details><details id="extracted-webwork-185-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-185-1-3-1"><span class="process-math">\(89.6\)</span></div></div></details><details id="extracted-webwork-185-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-185-1-4-1"><span class="process-math">\(1.6\)</span></div></div></details><details id="extracted-webwork-185-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-185-1-5-1">$56; $89.60; 1.6 (the factor by which you increased the investment)</div></div></details>
-</div>
-</div>
-</div></article></details><article class="example example-like" id="example-two-linear-functions"><h4 class="heading">
+</h4></article><article class="example example-like" id="example-two-linear-functions"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.6</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="example-two-linear-functions-1-1"><ol class="lower-alpha ol-marker-2" id="example-two-linear-functions-1-1-1">
 <li id="example-two-linear-functions-1-1-1-1"><div class="para" id="p-derived-example-two-linear-functions-1-1-1-1">Tuition at Woodrow University is $400 plus $30 per unit. Is the tuition proportional to the number of units you take?</div></li>
 <li id="example-two-linear-functions-1-1-1-2"><div class="para" id="p-derived-example-two-linear-functions-1-1-1-2">Imogen makes a 15% commission on her sales of environmentally friendly products marketed by her co-op. Do her earnings vary directly with her sales?</div></li>
 </ol></div>
-<div class="solutions"><details id="example-two-linear-functions-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-two-linear-functions-2-1"><ol class="lower-alpha ol-marker-2" id="example-two-linear-functions-2-1-1">
+<div class="solution solution-like" id="example-two-linear-functions-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-two-linear-functions-2-1"><ol class="lower-alpha ol-marker-2" id="example-two-linear-functions-2-1-1">
 <li id="example-two-linear-functions-2-1-1-1">
 <div class="para logical" id="example-two-linear-functions-2-1-1-1-1">
 <div class="para">Let <span class="process-math">\(u\)</span> represent the number of units you take, and let <span class="process-math">\(T(u)\)</span> represent your tuition. Then</div>
@@ -1575,68 +1477,10 @@ C(S) = 0.15S
 </div>
 <div class="para">Thus, <span class="process-math">\(C(S)\)</span> is a linear function of <span class="process-math">\(S\)</span> with a <span class="process-math">\(C\)</span>-intercept of zero, so Imogen’s earnings do vary directly with her sales.</div>
 </div></li>
-</ol></div></div></details></div></article><details id="DirectVariation-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="DirectVariation-4-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-186" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="186" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JGV4cGxhaW4gPSBSYWRpb0J1dHRvbnMoCiAgWyIoYSk6IElmIHdlIG11bHRpcGx5IFwoeFwpIGJ5IFwoY1wpLCBcKHlcKSBpcyBhbHNvIG11bHRpcGxpZWQgYnkgXChjXCkuIiwKICAiKGIpOiBJZiB3ZSBpbmNyZWFzZSBcKHhcKSwgd2UgYWxzbyBpbmNyZWFzZSBcKHlcKS4iLAogICJOb25lIG9mIHRoZSBhYm92ZSJdLAogIDAsIAopOwoKQkVHSU5fUEdNTApXaGljaCB0YWJsZSBjb3VsZCByZXByZXNlbnQgZGlyZWN0IHZhcmlhdGlvbj8gRXhwbGFpbiB3aHkuIChIaW50OiBXaGF0IGhhcHBlbnMgdG8gW2B5YF0gaWYgeW91IG11bHRpcGx5IFtgeGBdIGJ5IGEgY29uc3RhbnQ/KQphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnW2B4YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDFgXScpLFBHTUwoJ1tgMmBdJyksUEdNTCgnW2AzYF0nKSxQR01MKCdbYDZgXScpLFBHTUwoJ1tgOGBdJyksUEdNTCgnW2A5YF0nKSxdLFtbUEdNTCgnW2B5YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDIuNWBdJyksUEdNTCgnW2A1YF0nKSxQR01MKCdbYDcuNWBdJyksUEdNTCgnW2AxNWBdJyksUEdNTCgnW2AyMGBdJyksUEdNTCgnW2AyMi41YF0nKSxdLF0sYWxpZ249Pid8Kns3fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSoKCgphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnW2B4YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDJgXScpLFBHTUwoJ1tgM2BdJyksUEdNTCgnW2A0YF0nKSxQR01MKCdbYDZgXScpLFBHTUwoJ1tgOGBdJyksUEdNTCgnW2A5YF0nKSxdLFtbUEdNTCgnW2B5YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDJgXScpLFBHTUwoJ1tgMy41YF0nKSxQR01MKCdbYDVgXScpLFBHTUwoJ1tgN2BdJyksUEdNTCgnW2A4LjVgXScpLFBHTUwoJ1tgMTBgXScpLF0sXSxhbGlnbj0+J3wqezd9e2N8fScsdmFsaWduPT4nbWlkZGxlJyx0b3A9PiczJywpO0BdKgoKCgoKW19deyRleHBsYWlufXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCihhKTogSWYgd2UgbXVsdGlwbHkgW2B4YF0gYnkgW2BjXHRleHR7LH1gXSBbYHlgXSBpcyBhbHNvIG11bHRpcGxpZWQgYnkgW2BjXHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-186')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-186-1-1-1">
-<div class="para">Which table could represent direct variation? Explain why. (Hint: What happens to <span class="process-math">\(y\)</span> if you multiply <span class="process-math">\(x\)</span> by a constant?)</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-186-1-1-1-3">
-<li id="extracted-webwork-186-1-1-1-3-1"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(y\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(7.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(15\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(20\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(22.5\)</span></td>
-</tr>
-</table></div></li>
-<li id="extracted-webwork-186-1-1-1-3-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(y\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(7\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(8.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-</tr>
-</table></div></li>
-</ol>
-</div> <div class="para logical" id="extracted-webwork-186-1-1-2"><ul class="circle" id="extracted-webwork-186-1-1-2-1">
-<li id="extracted-webwork-186-1-1-2-1-1"><div class="para" id="extracted-webwork-186-1-1-2-1-1-1">(a): If we multiply <span class="process-math">\(x\)</span> by <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(y\)</span> is also multiplied by <span class="process-math">\(c\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-186-1-1-2-1-2"><div class="para" id="extracted-webwork-186-1-1-2-1-2-1">(b): If we increase <span class="process-math">\(x\text{,}\)</span> we also increase <span class="process-math">\(y\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-186-1-1-2-1-3"><div class="para" id="extracted-webwork-186-1-1-2-1-3-1">None of the above</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-186-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-186-1-2-1"><span class="process-math">\(\text{Choice 1}\)</span></div></div></details><details id="extracted-webwork-186-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-186-1-3-1">(a): If we multiply <span class="process-math">\(x\)</span> by <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(y\)</span> is also multiplied by <span class="process-math">\(c\text{.}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="DirectVariation-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="DirectVariation-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="space"> </span><span class="title">Finding a Formula for Direct Variation</span>
 </h3>
 <div class="para" id="DirectVariation-5-3">If we know any one pair of values for the variables in a direct variation, we can find the constant of variation. Then we can use the constant to write a formula for one of the variables as a function of the other.</div>
@@ -1653,7 +1497,11 @@ C(S) = 0.15S
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-falling-into-grand-canyon-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-falling-into-grand-canyon-2-1"><ol class="lower-alpha ol-marker-2" id="example-falling-into-grand-canyon-2-1-1">
+<div class="solution solution-like" id="example-falling-into-grand-canyon-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-falling-into-grand-canyon-2-1"><ol class="lower-alpha ol-marker-2" id="example-falling-into-grand-canyon-2-1-1">
 <li id="example-falling-into-grand-canyon-2-1-1-1"><div class="para logical" id="example-falling-into-grand-canyon-2-1-1-1-1">
 <div class="para">Because <span class="process-math">\(v\)</span> varies directly with <span class="process-math">\(t\text{,}\)</span> there is a positive constant <span class="process-math">\(k\)</span> for which</div>
 <div class="displaymath process-math">
@@ -1685,50 +1533,12 @@ v = 9.8(\alert{6}) = 58.8
 <div class="para" id="example-falling-into-grand-canyon-2-1-1-3-1">You can use your calculator to graph the function <span class="process-math">\(v = 9.8t\text{.}\)</span> The graph is shown below.</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-GC-falling-into-grand-canyon.svg" role="img" class="contained" alt="GC graph"></div>
 </li>
-</ol></div></div></details></div></article><details id="DirectVariation-5-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><article class="exercise exercise-like" id="DirectVariation-5-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-187" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="187" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyTXVsdGlBbnN3ZXIucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+YWRkKFY9PiJSZWFsIix3PT4iUmVhbCIpOwokbSA9IDEuNzU7CiRmMSA9IEZvcm11bGEoIlYiKTsKJGYyID0gRm9ybXVsYSgiJG0qdyIpOwokdyA9IDE1OwokViA9ICRmMi0+ZXZhbCh3PT4kdyk7CgokbXVsdGlhbnMgPSBNdWx0aUFuc3dlcigkZjEsJGYyKS0+d2l0aCgKICBzaW5nbGVSZXN1bHQgPT4gMSwKICBjaGVja2VyID0+IHN1YiB7CiAgICAgIG15ICggJGNvcnJlY3QsICRzdHVkZW50LCAkc2VsZiApID0gQF87CiAgICAgIG15ICggJGYxc3R1LCAkZjJzdHUgKSA9IEB7JHN0dWRlbnR9OwogICAgICBteSAoICRmMSwgJGYyICkgPSBAeyRjb3JyZWN0fTsKICAgICAgcmV0dXJuICggKCRmMSA9PSAkZjFzdHUgJiYgJGYyID09ICRmMnN0dSkgfHwKICAgICAgICAgICAoJGYxID09ICRmMnN0dSAmJiAkZjIgPT0gJGYxc3R1KSAgCiAgICAgICk7CiAgfQopOwoKQkVHSU5fUEdNTApUaGUgdm9sdW1lIG9mIGEgYmFnIG9mIHJpY2UsIGluIGN1cHMsIGlzIGRpcmVjdGx5IHByb3BvcnRpb25hbCB0byB0aGUgd2VpZ2h0IG9mIHRoZSBiYWcuIEEgMi1wb3VuZCBiYWcgY29udGFpbnMgMy41IGN1cHMgb2YgcmljZS4KYS4gIEV4cHJlc3MgdGhlIHZvbHVtZSwgW2BWXHRleHR7LH1gXSBvZiBhIGJhZyBvZiByaWNlIGFzIGEgZnVuY3Rpb24gb2YgaXRzIHdlaWdodCwgW2B3XHRleHR7Ln1gXQoKICAgIFtfXXskbXVsdGlhbnN9ezJ9W2A9YF1bX117JG11bHRpYW5zfXs1fQoKCmEuICBIb3cgbWFueSBjdXBzIG9mIHJpY2UgYXJlIGluIGEgW2AxNWBdLXBvdW5kIGJhZz8KCiAgICBbX117JFZ9ezR9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFskZjFdPVskZjJdIGBdCgoKYS4gIFtgMjYuMjVgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-187')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-187-1-1-1">
-<div class="para">The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A 2-pound bag contains 3.5 cups of rice.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-187-1-1-1-1">
-<li id="extracted-webwork-187-1-1-1-1-1">
-<div class="para" id="extracted-webwork-187-1-1-1-1-1-1">Express the volume, <span class="process-math">\(V\text{,}\)</span> of a bag of rice as a function of its weight, <span class="process-math">\(w\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-187-1-1-1-1-1-2">
-<span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span><span class="process-math">\(=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-187-1-1-1-1-2"><div class="para" id="extracted-webwork-187-1-1-1-1-2-1">How many cups of rice are in a <span class="process-math">\(15\)</span>-pound bag?</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-187-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-187-1-2-1"><span class="process-math">\(V;\,1.75w\)</span></div></div></details><details id="extracted-webwork-187-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-187-1-3-1"><span class="process-math">\(26.25\)</span></div></div></details><details id="extracted-webwork-187-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-187-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-187-1-4-1-1">
-<li id="extracted-webwork-187-1-4-1-1-1"><div class="para" id="extracted-webwork-187-1-4-1-1-1-1"><span class="process-math">\(\displaystyle {V}={1.75w}\)</span></div></li>
-<li id="extracted-webwork-187-1-4-1-1-2"><div class="para" id="extracted-webwork-187-1-4-1-1-2-1"><span class="process-math">\(\displaystyle 26.25\)</span></div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><details id="DirectVariation-5-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="DirectVariation-5-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-188" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="188" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZXhkaXIgPSBSYWRpb0J1dHRvbnMoCiAgWyJEb3VibGUgdGhlIHZhbHVlIG9mIFwoeFwpLiIsCiAgIkZpbmQgdGhlIFwoeVwpLWludGVyY2VwdCBvZiB0aGUgZ3JhcGguIiwKICAiU3Vic3RpdHV0ZSBhIHBhaXIgb2YgcmVsYXRlZCB2YWx1ZXMgaW50byBcKHk9a3hcKS4iLAogICJBbGwgb2YgdGhlIGFib3ZlLiJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApIb3cgY2FuIHlvdSBmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgY29uc3RhbnQgb2YgdmFyaWF0aW9uPwoKW19deyRleGRpcn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpTdWJzdGl0dXRlIGEgcGFpciBvZiByZWxhdGVkIHZhbHVlcyBpbnRvIFtgeT1reFx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-188')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-188-1-1-1">How can you find the value of the constant of variation?</div> <div class="para logical" id="extracted-webwork-188-1-1-2"><ul class="circle" id="extracted-webwork-188-1-1-2-1">
-<li id="extracted-webwork-188-1-1-2-1-1"><div class="para" id="extracted-webwork-188-1-1-2-1-1-1">Double the value of <span class="process-math">\(x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-188-1-1-2-1-2"><div class="para" id="extracted-webwork-188-1-1-2-1-2-1">Find the <span class="process-math">\(y\)</span>-intercept of the graph.</div></li>
-<li id="extracted-webwork-188-1-1-2-1-3"><div class="para" id="extracted-webwork-188-1-1-2-1-3-1">Substitute a pair of related values into <span class="process-math">\(y=kx\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-188-1-1-2-1-4"><div class="para" id="extracted-webwork-188-1-1-2-1-4-1">All of the above.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-188-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-188-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-188-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-188-1-3-1">Substitute a pair of related values into <span class="process-math">\(y=kx\text{.}\)</span>
-</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="DirectVariation-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="DirectVariation-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="space"> </span><span class="title">Direct Variation with a Power of <span class="process-math">\(x\)</span></span>
 </h3>
 <div class="para" id="DirectVariation-6-2">In many situations, <span class="process-math">\(y\)</span> is proportional to a power of <span class="process-math">\(x\text{,}\)</span> instead of <span class="process-math">\(x\)</span> itself.</div>
@@ -1755,7 +1565,11 @@ y = kx^n
 <li id="example-sphere-surface-area-1-1-3-3"><div class="para" id="example-sphere-surface-area-1-1-3-3-1">Sketch a graph of the function.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-sphere-surface-area-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-sphere-surface-area-2-1"><ol class="lower-alpha ol-marker-2" id="example-sphere-surface-area-2-1-1">
+<div class="solution solution-like" id="example-sphere-surface-area-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-sphere-surface-area-2-1"><ol class="lower-alpha ol-marker-2" id="example-sphere-surface-area-2-1-1">
 <li id="example-sphere-surface-area-2-1-1-1"><div class="para logical" id="example-sphere-surface-area-2-1-1-1-1">
 <div class="para">If <span class="process-math">\(S\)</span> stands for the surface area of a sphere of radius <span class="process-math">\(r\text{,}\)</span> then</div>
 <div class="displaymath process-math">
@@ -1790,74 +1604,19 @@ S = f(r) = kr^2
 <div class="para" id="example-sphere-surface-area-2-1-1-3-1">The graph has the shape of the basic function <span class="process-math">\(y=x^2\text{,}\)</span> so all we need are a few points to "anchor" the graph. We know that <span class="process-math">\(f(5)=314\text{,}\)</span> and <span class="process-math">\(f(1)= 4\pi \cdot 1^2\)</span> or about <span class="process-math">\(12.6\text{.}\)</span> A graph is shown below.</div>
 <div class="para" id="example-sphere-surface-area-2-1-1-3-2">(Need graph here)</div>
 </li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="DirectVariation-6-5"><div class="para" id="DirectVariation-6-5-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of direct variation, see <a href="tkchap5.html#tkConVar" class="internal" title="Subsubsection A.5.4.1: Find the constant of variation">Section 5.4.1</a> , <a href="tkchap5.html#tkVarGraph" class="internal" title="Subsubsection A.5.4.2: Sketch a variation graph">Section 5.4.2</a>, and <a href="tkchap5.html#tkVarEqn" class="internal" title="Subsubsection A.5.4.3: Solve a variation equation">Section 5.4.3</a>  of the Toolkit.</div></aside><details id="DirectVariation-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="DirectVariation-6-5"><div class="para" id="DirectVariation-6-5-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of direct variation, see <a href="tkchap5.html#tkConVar" class="internal" title="Subsubsection A.5.4.1: Find the constant of variation">Section 5.4.1</a> , <a href="tkchap5.html#tkVarGraph" class="internal" title="Subsubsection A.5.4.2: Sketch a variation graph">Section 5.4.2</a>, and <a href="tkchap5.html#tkVarEqn" class="internal" title="Subsubsection A.5.4.3: Solve a variation equation">Section 5.4.3</a>  of the Toolkit.</div></aside><article class="exercise exercise-like" id="DirectVariation-6-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-189" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="189" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwicGFyc2VyTXVsdGlBbnN3ZXIucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRGcmFjdGlvbi5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJGcmFjdGlvbiIpLT52YXJpYWJsZXMtPmFkZChWPT4iUmVhbCIscj0+IlJlYWwiKTsKJGYxID0gRm9ybXVsYSgiViIpOwokZjIgPSBGb3JtdWxhKCI0LzMgKiBwaSAqIHJeMyIpOwoKJG11bHRpYW5zID0gTXVsdGlBbnN3ZXIoJGYxLCRmMiktPndpdGgoCiAgc2luZ2xlUmVzdWx0ID0+IDEsCiAgY2hlY2tlciA9PiBzdWIgewogICAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJHNlbGYgKSA9IEBfOwogICAgICBteSAoICRmMXN0dSwgJGYyc3R1ICkgPSBAeyRzdHVkZW50fTsKICAgICAgbXkgKCAkZjEsICRmMiApID0gQHskY29ycmVjdH07CiAgICAgIHJldHVybiAoICgkZjEgPT0gJGYxc3R1ICYmICRmMiA9PSAkZjJzdHUpIHx8CiAgICAgICAgICAgKCRmMSA9PSAkZjJzdHUgJiYgJGYyID09ICRmMXN0dSkgIAogICAgICApOwogIH0KKTsKCkJFR0lOX1BHTUwKVGhlIHZvbHVtZSBvZiBhIHNwaGVyZSB2YXJpZXMgZGlyZWN0bHkgd2l0aCB0aGUgX2N1YmVfIG9mIGl0cyByYWRpdXMuIEEgYmFsbG9vbiBvZiByYWRpdXMgNSBjZW50aW1ldGVycyBoYXMgdm9sdW1lIFtgXGRmcmFjezUwMFxwaX17M31gXSBjdWJpYyBjZW50aW1ldGVycywgb3IgYWJvdXQgNTI0IGN1YmljIGNlbnRpbWV0ZXJzLiBGaW5kIGEgZm9ybXVsYSBmb3IgdGhlIHZvbHVtZSwgW2BWXHRleHR7LH1gXSBvZiBhIHNwaGVyZSBhcyBhIGZ1bmN0aW9uIG9mIGl0cyByYWRpdXMsIFtgclx0ZXh0ey59YF0KCltfXXskbXVsdGlhbnN9ezJ9W2A9YF1bX117JG11bHRpYW5zfXsxMH0KCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ1VzZSAicGkiIGZvciBbYFxwaVx0ZXh0ey59YF0nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFY9XGRmcmFjezR9ezN9XHBpIHJeM2BdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-189')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-189-1-1-1">The volume of a sphere varies directly with the <em class="emphasis">cube</em> of its radius. A balloon of radius 5 centimeters has volume <span class="process-math">\(\dfrac{500\pi}{3}\)</span> cubic centimeters, or about 524 cubic centimeters. Find a formula for the volume, <span class="process-math">\(V\text{,}\)</span> of a sphere as a function of its radius, <span class="process-math">\(r\text{.}\)</span>
-</div> <div class="para" id="extracted-webwork-189-1-1-2">
-<span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span><span class="process-math">\(=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-189-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-189-1-2-1"><span class="process-math">\(V;\,{\frac{4}{3}}\pi r^{3}\)</span></div></div></details><details id="extracted-webwork-189-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-189-1-3-1"><span class="process-math">\(V=\dfrac{4}{3}\pi r^3\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="DirectVariation-6-7">In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function,  as we can see when we consider the graphs of some typical direct variations shown below.</div>
+</h4></article><div class="para" id="DirectVariation-6-7">In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function,  as we can see when we consider the graphs of some typical direct variations shown below.</div>
 <div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/images/fig-vary-with-power.svg" role="img" class="contained" alt="graphs of three variation with power"></div>
 <article class="warning remark-like" id="DirectVariation-6-9"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">5.4.13</span><span class="period">.</span>
 </h4>
 <div class="para" id="DirectVariation-6-9-1">The graph of a direct variation always passes through the origin, so when the input is zero, the output is also zero. Thus, the functions <span class="process-math">\(~y = 3x + 2~\)</span> and <span class="process-math">\(~y = 0.4x^2 - 2.3~\text{,}\)</span> for example, are not direct variation, even though they are increasing functions for positive <span class="process-math">\(x\text{.}\)</span>
-</div></article><details id="DirectVariation-6-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="DirectVariation-6-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-190" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="190" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgRmFsc2UuCmEuICBFdmVyeSBpbmNyZWFzaW5nIGZ1bmN0aW9uIGlzIGEgZGlyZWN0IHZhcmlhdGlvbi4gW19deyRGYWxzZX17NX0KCgphLiAgRXZlcnkgZGlyZWN0IHZhcmlhdGlvbiBpcyBhbiBpbmNyZWFzaW5nIGZ1bmN0aW9uLiBbX117JFRydWV9ezV9CgoKYS4gIFRoZSBncmFwaCBvZiBldmVyeSBkaXJlY3QgdmFyaWF0aW9uIGlzIGEgc3RyYWlnaHQgbGluZS4gW19deyRGYWxzZX17NX0KCgphLiAgVGhlIGdyYXBoIG9mIGV2ZXJ5IGRpcmVjdCB2YXJpYXRpb24gcGFzc2VzIHRocm91Z2ggdGhlIG9yaWdpbi4gW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-190')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-190-1-1-1">
-<div class="para">True or False.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-190-1-1-1-1">
-<li id="extracted-webwork-190-1-1-1-1-1"><div class="para logical" id="extracted-webwork-190-1-1-1-1-1-1">
-<div class="para">Every increasing function is a direct variation.</div>
-<ul class="square" id="extracted-webwork-190-1-1-1-1-1-1-1">
-<li id="extracted-webwork-190-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-190-1-1-1-1-1-1-1-1-1">True</div></li>
-<li id="extracted-webwork-190-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-190-1-1-1-1-1-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-190-1-1-1-1-2"><div class="para logical" id="extracted-webwork-190-1-1-1-1-2-1">
-<div class="para">Every direct variation is an increasing function.</div>
-<ul class="square" id="extracted-webwork-190-1-1-1-1-2-1-1">
-<li id="extracted-webwork-190-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-190-1-1-1-1-2-1-1-1-1">True</div></li>
-<li id="extracted-webwork-190-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-190-1-1-1-1-2-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-190-1-1-1-1-3"><div class="para logical" id="extracted-webwork-190-1-1-1-1-3-1">
-<div class="para">The graph of every direct variation is a straight line.</div>
-<ul class="square" id="extracted-webwork-190-1-1-1-1-3-1-1">
-<li id="extracted-webwork-190-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-190-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-190-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-190-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-190-1-1-1-1-4"><div class="para logical" id="extracted-webwork-190-1-1-1-1-4-1">
-<div class="para">The graph of every direct variation passes through the origin.</div>
-<ul class="square" id="extracted-webwork-190-1-1-1-1-4-1-1">
-<li id="extracted-webwork-190-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-190-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-190-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-190-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-190-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-190-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-190-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-190-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-190-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-190-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-190-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-190-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-190-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-190-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-190-1-6-1-1">
-<li id="extracted-webwork-190-1-6-1-1-1"><div class="para" id="extracted-webwork-190-1-6-1-1-1-1">False</div></li>
-<li id="extracted-webwork-190-1-6-1-1-2"><div class="para" id="extracted-webwork-190-1-6-1-1-2-1">True</div></li>
-<li id="extracted-webwork-190-1-6-1-1-3"><div class="para" id="extracted-webwork-190-1-6-1-1-3-1">False</div></li>
-<li id="extracted-webwork-190-1-6-1-1-4"><div class="para" id="extracted-webwork-190-1-6-1-1-4-1">True</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="DirectVariation-6-11">Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If <span class="process-math">\(y\)</span> varies directly with <span class="process-math">\(x^n\text{,}\)</span> then <span class="process-math">\(~y = kx^n~\text{,}\)</span> or, equivalently,<span class="process-math">\(~\dfrac{y}{x^n} = k.~\)</span>
+</h4></article><div class="para" id="DirectVariation-6-11">Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If <span class="process-math">\(y\)</span> varies directly with <span class="process-math">\(x^n\text{,}\)</span> then <span class="process-math">\(~y = kx^n~\text{,}\)</span> or, equivalently,<span class="process-math">\(~\dfrac{y}{x^n} = k.~\)</span>
 </div>
 <article class="assemblage assemblage-like" id="DirectVariation-6-12"><h4 class="heading"><span class="title">Test for Direct Variation.</span></h4>
 <div class="para" id="DirectVariation-6-12-4">If the ratio <span class="process-math">\(~\dfrac{y}{x^n}~\)</span> is constant, then <span class="process-math">\(y\)</span> varies directly with <span class="process-math">\(x^n\text{.}\)</span>
@@ -1882,7 +1641,10 @@ S = f(r) = kr^2
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(76\)</span></td>
 </tr>
 </table></div>
-<div class="solutions"><details id="example-test-variation-with-square-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-test-variation-with-square-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para" id="example-test-variation-with-square-2-1">If <span class="process-math">\(y\)</span> varies directly with <span class="process-math">\(x^2\text{,}\)</span> then <span class="process-math">\(y = kx^2\text{,}\)</span> or <span class="process-math">\(\dfrac{y}{x^2}= k\text{.}\)</span> Delbert should calculate the ratio <span class="process-math">\(\dfrac{y}{x^2}\)</span> for each data point.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -1912,38 +1674,9 @@ S = f(r) = kr^2
 </table></div>
 <div class="para" id="example-test-variation-with-square-2-3">Because the ratio <span class="process-math">\(\dfrac{y}{x^2}\)</span> is not constant, <span class="process-math">\(y\)</span> does not vary directly with <span class="process-math">\(x^2\text{.}\)</span>
 </div>
-</div></details></div></article><details id="DirectVariation-6-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="DirectVariation-6-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.16</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-191" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="191" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JFllc05vID0gIFJhZGlvQnV0dG9ucygKICAgICAgICBbIlllcywgXChcZGZyYWN7Qn17cl4zfVwpIGlzIGNvbnN0YW50LiIsCiAgICAgICAgIk5vLCBcKEJcKSBpcyBub3QgZXF1YWwgdG8gXChyXjNcKS4iXSwKICAgICAgICAwCiAgICApOwoKQkVHSU5fUEdNTApEb2VzIFtgQmBdIHZhcnkgZGlyZWN0bHkgd2l0aCB0aGUgY3ViZSBvZiBbYHJcdGV4dHs/fWBdIEV4cGxhaW4geW91ciBkZWNpc2lvbi4KCj4+IFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgcmBdJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AwLjFgXScpLFBHTUwoJ1tgMC4zYF0nKSxQR01MKCdbYDAuNWBdJyksUEdNTCgnW2AwLjhgXScpLFBHTUwoJ1tgMS4yYF0nKSxdLFtbUEdNTCgnW2BCYF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDAuMDcyYF0nKSxQR01MKCdbYDEuOTQ0YF0nKSxQR01MKCdbYDkuMGBdJyksUEdNTCgnW2AxNi44NjRgXScpLFBHTUwoJ1tgMTI0LjQxNmBdJyksXSxdLGFsaWduPT4nfCp7Nn17Y3x9Jyx2YWxpZ249PidtaWRkbGUnLHRvcD0+JzMnLCk7QF0qIDw8CgpbX117JFllc05vfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClllcywgW2BcZGZyYWN7Qn17cl4zfWBdIGlzIGNvbnN0YW50LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-191')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-191-1-1-1">Does <span class="process-math">\(B\)</span> vary directly with the cube of <span class="process-math">\(r\text{?}\)</span> Explain your decision.</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(r\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.1\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.3\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.8\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.2\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(B\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.072\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.944\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(9.0\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(16.864\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(124.416\)</span></td>
-</tr>
-</table></div> <div class="para logical" id="extracted-webwork-191-1-1-3"><ul class="circle" id="extracted-webwork-191-1-1-3-1">
-<li id="extracted-webwork-191-1-1-3-1-1"><div class="para" id="extracted-webwork-191-1-1-3-1-1-1">Yes, <span class="process-math">\(\dfrac{B}{r^3}\)</span> is constant.</div></li>
-<li id="extracted-webwork-191-1-1-3-1-2"><div class="para" id="extracted-webwork-191-1-1-3-1-2-1">No, <span class="process-math">\(B\)</span> is not equal to <span class="process-math">\(r^3\text{.}\)</span>
-</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-191-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-191-1-2-1"><span class="process-math">\(\text{Choice 1}\)</span></div></div></details><details id="extracted-webwork-191-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-191-1-3-1">Yes, <span class="process-math">\(\dfrac{B}{r^3}\)</span> is constant.</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="DirectVariation-7"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="DirectVariation-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.5</span><span class="space"> </span><span class="title">Scaling</span>
 </h3>
 <div class="para logical" id="DirectVariation-7-4">
@@ -1958,7 +1691,11 @@ S = f(r) = kr^2
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.17</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-scaling-weight-1-1">The Taipei 101 building is 1671 feet tall, and in 2006 it was the tallest skyscraper in the world. Show that doubling the dimensions of a model of the Taipei 101 building produces a model that weighs 8 times as much.</div>
-<div class="solutions"><details id="example-scaling-weight-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-scaling-weight-2-1">
+<div class="solution solution-like" id="example-scaling-weight-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-scaling-weight-2-1">
 <div class="para">The Taipei 101 skyscraper is approximately box shaped, so its volume is given by the product of its linear dimensions, <span class="process-math">\(V = lwh\text{.}\)</span> The weight of an object is proportional to its volume, so the weight, <span class="process-math">\(W\text{,}\)</span> of the model is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1973,27 +1710,10 @@ W_\text{new} \amp = k(2l)(2w)(2h)\\
 \end{align*}
 </div>
 <div class="para">The weight of the new model is <span class="process-math">\(2^3 = 8\)</span> times the weight of the original model.</div>
-</div></div></details></div></article><details id="DirectVariation-7-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="DirectVariation-7-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.18</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-192" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="192" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xhbXB9eyZ9XCk8L2Rpdj4nKSk7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQocj0+IlJlYWwiKTsKJGFyZWEgPSBGb3JtdWxhKCJwaSAqIHJeMiIpOwokdHdvciA9IEZvcm11bGEoIjJyIik7CiRhbmV3ID0gRm9ybXVsYSgicGkgKiAoMnIpXjIiKTsKJGZvdXIgPSBDb21wdXRlKCI0Iik7CgpCRUdJTl9QR01MClVzZSB0aGUgZm9ybXVsYSBmb3IgdGhlIGFyZWEgb2YgYSBjaXJjbGUgdG8gc2hvdyB0aGF0IGRvdWJsaW5nIHRoZSBkaWFtZXRlciBvZiBhIHBpenphIHF1YWRydXBsZXMgaXRzIGFyZWEuCgpUaGUgZm9ybXVsYSBmb3IgdGhlIGFyZWEgb2YgYSBjaXJjbGUgb2YgcmFkaXVzIFtgcmBdIGlzIFtgQT1gXVtfXXskYXJlYX17NX0KCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyICJwaSIgdG8gZ2V0IFtgXHBpXHRleHR7Ln1gXScpQF0qKgoKSWYgd2UgZG91YmxlIHRoZSBkaWFtZXRlciwgdGhlIG5ldyByYWRpdXMgaXMgW19deyR0d29yfXs1fQoKU28gW2BBX1x0ZXh0e25ld31gXSBpcyBbX117JGZvdXJ9ezJ9IHRpbWVzIHRoZSBvcmlnaW5hbCBhcmVhLgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgQT0gXHBpIHJeMmBdCgpEb3VibGluZyB0aGUgZGlhbWV0ZXIgbWVhbnMgZG91YmxpbmcgdGhlIHJhZGl1cy4KCltgCiAgICAgICAgICAgICAgICBcYmVnaW57YWxpZ25lZH1bdF0KICAgICAgICAgICAgICAgICAgICBBX1x0ZXh0e25ld30gXGFtcCA9IFxwaSAoMnIpXjIgXFwKICAgICAgICAgICAgICAgICAgICBcYW1wID0gNFxwaSByXjIgXFwKICAgICAgICAgICAgICAgICAgICBcYW1wPSA0QV9cdGV4dHtvbGR9CiAgICAgICAgICAgICAgICBcZW5ke2FsaWduZWR9CiAgICAgICAgICAgIGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-192')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-192-1-1-1">Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.</div> <div class="para" id="extracted-webwork-192-1-1-2">The formula for the area of a circle of radius <span class="process-math">\(r\)</span> is <span class="process-math">\(A=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div> <div class="para" id="extracted-webwork-192-1-1-3">If we double the diameter, the new radius is <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
-</div> <div class="para" id="extracted-webwork-192-1-1-4">So <span class="process-math">\(A_\text{new}\)</span> is <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> times the original area.</div>
-<div class="solutions">
-<details id="extracted-webwork-192-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-192-1-2-1"><span class="process-math">\(\pi r^{2}\)</span></div></div></details><details id="extracted-webwork-192-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-192-1-3-1"><span class="process-math">\(2r\)</span></div></div></details><details id="extracted-webwork-192-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-192-1-4-1"><span class="process-math">\(4\)</span></div></div></details><details id="extracted-webwork-192-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="extracted-webwork-192-1-5-1"><span class="process-math">\(A= \pi r^2\)</span></div>
-<div class="para" id="extracted-webwork-192-1-5-2">Doubling the diameter means doubling the radius.</div>
-<div class="para" id="extracted-webwork-192-1-5-3"><span class="process-math">\(\begin{aligned}[t]
-A_\text{new} \amp = \pi (2r)^2 \\
-\amp = 4\pi r^2 \\
-\amp= 4A_\text{old}
-\end{aligned}\)</span></div>
-</div></details>
-</div>
-</div>
-</div></article></details><div class="para logical" id="DirectVariation-7-8">
+</h4></article><div class="para logical" id="DirectVariation-7-8">
 <div class="para">In general, if <span class="process-math">\(y\)</span> varies directly with a power of <span class="process-math">\(x\text{,}\)</span> that is, if <span class="process-math">\(y = kx^n\text{,}\)</span> then doubling the value of <span class="process-math">\(x\)</span> causes <span class="process-math">\(y\)</span> to increase by a factor of <span class="process-math">\(2^n\text{.}\)</span> In fact, if we multiply <span class="process-math">\(x\)</span> by any positive number <span class="process-math">\(c\text{,}\)</span> then</div>
 <div class="displaymath process-math" id="DirectVariation-7-8-9">
 \begin{align*}

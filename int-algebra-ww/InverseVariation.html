@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="DirectVariation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="FunctionsasModels.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1419,23 +1399,9 @@ y = \dfrac{k}{x}\text{, }x \ne 0
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(600\)</span></td>
 </tr>
 </table></div>
-<details id="InverseVariation-2-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="InverseVariation-2-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-193" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="193" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskaW52dmFyID0gUmFkaW9CdXR0b25zKAogIFsiQ2hlY2sgd2hldGhlciBcKHh5XCkgaXMgYSBjb25zdGFudC4iLAogICJDaGVjayB3aGV0aGVyIHRoZSBmdW5jdGlvbiBpcyBkZWNyZWFzaW5nLiIsCiAgIkNoZWNrIHdoZXRoZXIgXCh5XCkgaXMgdGhlIHJlY2lwcm9jYWwgb2YgXCh4XCkuIiwKICAiQ2hlY2sgd2hldGhlciBcKHkveFwpIGlzIGEgY29uc3RhbnQuIl0sCiAgMCwgCik7CgpCRUdJTl9QR01MCkhvdyBjYW4geW91IHRlc3Qgd2hldGhlciBhIHRhYmxlIGZvciBbYHk9Zih4KWBdIHJlcHJlc2VudHMgaW52ZXJzZSB2YXJpYXRpb24/CgpbX117JGludnZhcn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpDaGVjayB3aGV0aGVyIFtgeHlgXSBpcyBhIGNvbnN0YW50LgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-193')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-193-1-1-1">How can you test whether a table for <span class="process-math">\(y=f(x)\)</span> represents inverse variation?</div> <div class="para logical" id="extracted-webwork-193-1-1-2"><ul class="circle" id="extracted-webwork-193-1-1-2-1">
-<li id="extracted-webwork-193-1-1-2-1-1"><div class="para" id="extracted-webwork-193-1-1-2-1-1-1">Check whether <span class="process-math">\(xy\)</span> is a constant.</div></li>
-<li id="extracted-webwork-193-1-1-2-1-2"><div class="para" id="extracted-webwork-193-1-1-2-1-2-1">Check whether the function is decreasing.</div></li>
-<li id="extracted-webwork-193-1-1-2-1-3"><div class="para" id="extracted-webwork-193-1-1-2-1-3-1">Check whether <span class="process-math">\(y\)</span> is the reciprocal of <span class="process-math">\(x\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-193-1-1-2-1-4"><div class="para" id="extracted-webwork-193-1-1-2-1-4-1">Check whether <span class="process-math">\(y/x\)</span> is a constant.</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-193-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-193-1-2-1"><span class="process-math">\(\text{Choice 1}\)</span></div></div></details><details id="extracted-webwork-193-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-193-1-3-1">Check whether <span class="process-math">\(xy\)</span> is a constant.</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="InverseVariation-3"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="InverseVariation-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="space"> </span><span class="title">Finding a Formula for Inverse Variation</span>
 </h3>
 <div class="para" id="InverseVariation-3-2">If we know that two variables vary inversely and we can find one pair of corresponding values for the variables, we can determine <span class="process-math">\(k\text{,}\)</span> the constant of variation.</div>
@@ -1470,7 +1436,11 @@ y = \dfrac{k}{x}\text{, }x \ne 0
 <li id="InverseVariation-3-3-1-1-3-4"><div class="para" id="InverseVariation-3-3-1-1-3-4-1">What is the resistance of a toaster that draws 12.5 amps of current?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="InverseVariation-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="InverseVariation-3-3-2-1"><ol class="lower-alpha ol-marker-2" id="InverseVariation-3-3-2-1-1">
+<div class="solution solution-like" id="InverseVariation-3-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="InverseVariation-3-3-2-1"><ol class="lower-alpha ol-marker-2" id="InverseVariation-3-3-2-1-1">
 <li id="InverseVariation-3-3-2-1-1-1"><div class="para" id="p-derived-InverseVariation-3-3-2-1-1-1">Because <span class="process-math">\(I\)</span> varies inversely with <span class="process-math">\(R\text{,}\)</span> we know that <span class="process-math">\(I=\dfrac{k}{R}\text{.}\)</span> To find the constant <span class="process-math">\(k\text{,}\)</span> we substitute <span class="process-math">\(\alert{10}\)</span> for <span class="process-math">\(I\)</span> and <span class="process-math">\(\alert{12}\)</span> for <span class="process-math">\(R\text{.}\)</span><div class="displaymath process-math" id="InverseVariation-3-3-2-1-1-1-9">
 \begin{align*}
 \alert{10} \amp =\dfrac{k}{\alert{12}} \amp \amp \blert{\text{Solve for}~k.}\\
@@ -1510,48 +1480,12 @@ I=\dfrac{120}{\alert{533.3}} = 0.225
 R \amp = \dfrac{120}{12.5} = 9.6
 \end{align*}
 </div>The toaster has a resistance of 9.6 ohms.</div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="InverseVariation-3-4"><div class="para" id="InverseVariation-3-4-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of inverse variation, see <a href="tkchap5.html#tkInvVar" class="internal" title="Subsubsection A.5.5.1: Solve an inverse variation equation">Section 5.5.1</a> and <a href="tkchap5.html#tkFindCon" class="internal" title="Subsubsection A.5.5.3: Find the constant of variation">Section 5.5.3</a> of the Toolkit.</div></aside><details id="InverseVariation-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div>
+</div></article><aside class="aside aside-like" id="InverseVariation-3-4"><div class="para" id="InverseVariation-3-4-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of inverse variation, see <a href="tkchap5.html#tkInvVar" class="internal" title="Subsubsection A.5.5.1: Solve an inverse variation equation">Section 5.5.1</a> and <a href="tkchap5.html#tkFindCon" class="internal" title="Subsubsection A.5.5.3: Find the constant of variation">Section 5.5.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="InverseVariation-3-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-194" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="194" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlck11bHRpQW5zd2VyLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0PTE7VEVYVChiZWdpbnByb2JsZW0oKSk7CiRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQgPSAxOwokZnVuPUZvcm11bGEoIjEyMC94Iik7CiRmYWtlPUZvcm11bGEoIjYqeCIpOwokZmFrZTI9Rm9ybXVsYSgiMTIwLTYqeCIpOwokZmFrZTM9Rm9ybXVsYSgiMTIwLXheMi80Iik7Cgpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiRnclskaV0gPSBpbml0X2dyYXBoKC00LC0xMCwyMiwxMzAsIGF4ZXM9PlswLDBdLCBncmlkPT5bMTMsMTRdLCBzaXplPT5bMjQwLDI0MF0pOwokZ3JbJGldLT5sYigncmVzZXQnKTsKZm9yIG15ICRqICgxMCwyMCkgewogICRnclskaV0tPmxiKCBuZXcgTGFiZWwoJGosIDAsICRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOwp9CmZvciBteSAkaiAoNTAsMTAwKSB7CiAgJGdyWyRpXS0+bGIoIG5ldyBMYWJlbCgwLCAkaiwgJGosJ2JsYWNrJywncmlnaHQnLCdtaWRkbGUnLCdsYXJnZScpKTsKfQp9CmFkZF9mdW5jdGlvbnMoJGdyWzBdLCAiJGZ1biBmb3IgeCBpbiA8LjEsMjA+ICB1c2luZyBjb2xvcjpyZWQgYW5kIHdlaWdodDoyIik7CiRnclswXS0+bGIoIG5ldyBMYWJlbCgyMCwxMjAsIihEKSIsICdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScsJ2xhcmdlJykpOwoKYWRkX2Z1bmN0aW9ucygkZ3JbMV0sICIkZmFrZSBmb3IgeCBpbiA8MCwyMD4gIHVzaW5nIGNvbG9yOnJlZCBhbmQgd2VpZ2h0OjIiKTsKJGdyWzFdLT5sYiggbmV3IExhYmVsKDIwLDEyMCwiKEEpIiwgCidibGFjaycsJ2NlbnRlcicsJ21pZGRsZScsJ2xhcmdlJykpOwoKYWRkX2Z1bmN0aW9ucygkZ3JbMl0sICIkZmFrZTIgZm9yIHggaW4gPDAsMjA+ICB1c2luZyBjb2xvcjpyZWQgYW5kIHdlaWdodDoyIik7CiRnclsyXS0+bGIoIG5ldyBMYWJlbCgyMCwxMjAsIihCKSIsIAonYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnLCdsYXJnZScpKTsKCmFkZF9mdW5jdGlvbnMoJGdyWzNdLCAiJGZha2UzIGZvciB4IGluIDwwLDIwPiAgdXNpbmcgY29sb3I6cmVkIGFuZCB3ZWlnaHQ6MiIpOwokZ3JbM10tPmxiKCBuZXcgTGFiZWwoMjAsMTIwLCIoQykiLCAKJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJywnbGFyZ2UnKSk7CgokbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIiwKICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgIDMKICAgICAgICApOwogICAgQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChDPT4iUmVhbCIscD0+IlJlYWwiKTsKICAgICRmMSA9IEZvcm11bGEoIkMiKTsKICAgICRmMiA9IEZvcm11bGEoIjEyMC9wIik7CgogICAgJG11bHRpYW5zID0gTXVsdGlBbnN3ZXIoJGYxLCRmMiktPndpdGgoCiAgICAgIHNpbmdsZVJlc3VsdCA9PiAxLAogICAgICBjaGVja2VyID0+IHN1YiB7CiAgICAgICAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJHNlbGYgKSA9IEBfOwogICAgICAgICAgbXkgKCAkZjFzdHUsICRmMnN0dSApID0gQHskc3R1ZGVudH07CiAgICAgICAgICBteSAoICRmMSwgJGYyICkgPSBAeyRjb3JyZWN0fTsKICAgICAgICAgIHJldHVybiAoICgkZjEgPT0gJGYxc3R1ICYmICRmMiA9PSAkZjJzdHUpIHx8CiAgICAgICAgICAgICAgICgkZjEgPT0gJGYyc3R1ICYmICRmMiA9PSAkZjFzdHUpICAKICAgICAgICAgICk7CiAgICAgIH0KICAgICk7CgpCRUdJTl9QR01MCkRlbGJlcnQncyBvZmZpY2VtYXRlcyB3YW50IHRvIGJ1eSBhICQxMjAgZ29sZCB3YXRjaCBmb3IgYSBjb2xsZWFndWUgd2hvIGlzIHJldGlyaW5nLiBUaGUgY29zdCBwZXIgcGVyc29uIGlzIGludmVyc2VseSBwcm9wb3J0aW9uYWwgdG8gdGhlIG51bWJlciBvZiBwZW9wbGUgd2hvIGNvbnRyaWJ1dGUuCgphLiAgRXhwcmVzcyB0aGUgY29zdCBwZXIgcGVyc29uLCBbYENcdGV4dHssfWBdIGFzIGEgZnVuY3Rpb24gb2YgdGhlIG51bWJlciBvZiBwZW9wbGUsIFtgcFx0ZXh0eyx9YF0gd2hvIGNvbnRyaWJ1dGUuCgogICAgW19deyRtdWx0aWFuc317Mn1bYD1gXVtfXXskbXVsdGlhbnN9ezEwfQoKCmEuICBTa2V0Y2ggdGhlIGZ1bmN0aW9uIGZvciBbYDAgXGxlIHAgXGxlIDIwXHRleHR7Ln1gXQoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjEyMClAXSogCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+MTIwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4xMjApQF0qIAoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjEyMClAXSogCgogICAgVGhlIGdyYXBoIG9mIGNvc3QgcGVyIHBlcnNvbiBpcwoKICAgIFtfXXskbWN9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYEM9XGRmcmFjezEyMH17cH1gXQoKCmEuICBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4xMjApQF0qIAoKQSBncmFwaCBpcyBhbHNvIHNob3duIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-194')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-194-1-1-1">Delbert’s officemates want to buy a $120 gold watch for a colleague who is retiring. The cost per person is inversely proportional to the number of people who contribute.</div> <div class="para logical" id="extracted-webwork-194-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-194-1-1-2-1">
-<li id="extracted-webwork-194-1-1-2-1-1">
-<div class="para" id="extracted-webwork-194-1-1-2-1-1-1">Express the cost per person, <span class="process-math">\(C\text{,}\)</span> as a function of the number of people, <span class="process-math">\(p\text{,}\)</span> who contribute.</div>
-<div class="para" id="extracted-webwork-194-1-1-2-1-1-2">
-<span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span><span class="process-math">\(=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-194-1-1-2-1-2">
-<div class="para" id="extracted-webwork-194-1-1-2-1-2-1">Sketch the function for <span class="process-math">\(0 \le p \le 20\text{.}\)</span>
-</div>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-194-image-1.png" class="contained"></div>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-194-image-2.png" class="contained"></div>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-194-image-3.png" class="contained"></div>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-194-image-4.png" class="contained"></div>
-<div class="para" id="extracted-webwork-194-1-1-2-1-2-6">The graph of cost per person is</div>
-<div class="para logical" id="extracted-webwork-194-1-1-2-1-2-7"><ul class="circle" id="extracted-webwork-194-1-1-2-1-2-7-1">
-<li id="extracted-webwork-194-1-1-2-1-2-7-1-1"><div class="para" id="extracted-webwork-194-1-1-2-1-2-7-1-1-1">(A)</div></li>
-<li id="extracted-webwork-194-1-1-2-1-2-7-1-2"><div class="para" id="extracted-webwork-194-1-1-2-1-2-7-1-2-1">(B)</div></li>
-<li id="extracted-webwork-194-1-1-2-1-2-7-1-3"><div class="para" id="extracted-webwork-194-1-1-2-1-2-7-1-3-1">(C)</div></li>
-<li id="extracted-webwork-194-1-1-2-1-2-7-1-4"><div class="para" id="extracted-webwork-194-1-1-2-1-2-7-1-4-1">(D)</div></li>
-<li id="extracted-webwork-194-1-1-2-1-2-7-1-5"><div class="para" id="extracted-webwork-194-1-1-2-1-2-7-1-5-1">none of the above</div></li>
-</ul></div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-194-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-194-1-2-1"><span class="process-math">\(C;\,\frac{120}{p}\)</span></div></div></details><details id="extracted-webwork-194-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-194-1-3-1"><span class="process-math">\(\text{(D)}\)</span></div></div></details><details id="extracted-webwork-194-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="extracted-webwork-194-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-194-1-4-1-1">
-<li id="extracted-webwork-194-1-4-1-1-1"><div class="para" id="extracted-webwork-194-1-4-1-1-1-1"><span class="process-math">\(\displaystyle C=\dfrac{120}{p}\)</span></div></li>
-<li id="extracted-webwork-194-1-4-1-1-2"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/webwork/images/webwork-194-image-4.png" class="contained"></div></li>
-</ol></div>
-<div class="para" id="extracted-webwork-194-1-4-2">A graph is also shown below.</div>
-</div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="InverseVariation-3-5-3"><div class="image-box" style="width: 30%; margin-left: 0%; margin-right: 70%;"><img src="external/images/fig-ex-5-4-1ans.svg" role="img" class="contained" alt="reciprocal"></div></div></article></details><aside class="aside aside-like" id="InverseVariation-3-6"><div class="para" id="InverseVariation-3-6-1">
+</h4>
+<div class="conclusion" id="InverseVariation-3-5-2"><div class="image-box" style="width: 30%; margin-left: 0%; margin-right: 70%;"><img src="external/images/fig-ex-5-4-1ans.svg" role="img" class="contained" alt="reciprocal"></div></div></article><aside class="aside aside-like" id="InverseVariation-3-6"><div class="para" id="InverseVariation-3-6-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more graphs of inverse variation, see <a href="tkchap5.html#tkSketchVar" class="internal" title="Subsubsection A.5.5.2: Sketch a variation graph">Section 5.5.2</a>
 </div></aside></section><section class="subsection" id="InverseVariation-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.5.3</span><span class="space"> </span><span class="title">Inverse Variation with a Power</span>
@@ -1588,7 +1522,11 @@ y = \frac{k}{x^n}\text{, }x \ne 0
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="example-EMR-vs-distance-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-EMR-vs-distance-2-1"><ol class="lower-alpha ol-marker-2" id="example-EMR-vs-distance-2-1-1">
+<div class="solution solution-like" id="example-EMR-vs-distance-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-EMR-vs-distance-2-1"><ol class="lower-alpha ol-marker-2" id="example-EMR-vs-distance-2-1-1">
 <li id="example-EMR-vs-distance-2-1-1-1"><div class="para logical" id="example-EMR-vs-distance-2-1-1-1-1">
 <div class="para">Let <span class="process-math">\(I\)</span> stand for the intensity of the signal in watts per square meter, and <span class="process-math">\(d\)</span> for the distance from the station in kilometers. Then <span class="process-math">\(I = \dfrac{k}{d^2}\text{.}\)</span> To find the constant <span class="process-math">\(k\text{,}\)</span> we substitute <span class="process-math">\(\alert{0.016}\)</span> for <span class="process-math">\(I\)</span> and <span class="process-math">\(1\)</span> for <span class="process-math">\(d\text{.}\)</span> Solving for <span class="process-math">\(k\)</span> gives us</div>
 <div class="displaymath process-math" id="example-EMR-vs-distance-2-1-1-1-1-10">
@@ -1614,41 +1552,15 @@ I = \frac{0.016}{\alert{5}^2}= 0.00064
 <div class="para" id="example-EMR-vs-distance-2-1-1-3-1">The graph is shown below.</div>
 <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-example-5-5-2.svg" role="img" class="contained" alt="inverse-square"></div>
 </li>
-</ol></div></div></details></div></article><div class="para" id="InverseVariation-4-6">To summarize, an inverse variation is an example of a decreasing function, but not every decreasing function describes an inverse variation.</div>
+</ol></div>
+</div></article><div class="para" id="InverseVariation-4-6">To summarize, an inverse variation is an example of a decreasing function, but not every decreasing function describes an inverse variation.</div>
 <article class="assemblage assemblage-like" id="InverseVariation-4-7"><h4 class="heading"><span class="title">Test for Inverse Variation.</span></h4>
 <div class="para" id="InverseVariation-4-7-4">If the product <span class="process-math">\(~yx^n~\)</span> is constant and <span class="process-math">\(n\)</span> is positive, then <span class="process-math">\(y\)</span> varies inversely with <span class="process-math">\(x^n\text{.}\)</span>
 </div></article><div class="para" id="InverseVariation-4-8">The graphs of some typical inverse variations are shown below. They are versions of the basic graphs you studied in Section 5.3, but restricted to positive <span class="process-math">\(x\)</span>-values only.</div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/fig-inverse-variation-with-power.svg" role="img" class="contained" alt="inverse variation"></div>
-<details id="InverseVariation-4-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="InverseVariation-4-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-195" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="195" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsInBhcnNlclBvcFVwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskWWVzID0gUG9wVXAoCiAgWyI/IiwiWWVzIiwgIk5vIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MClVzZSB0aGUgdGFibGUgdG8gZGVjaWRlIHdoZXRoZXIgW2BIYF0gY291bGQgdmFyeSBpbnZlcnNlbHkgd2l0aCBbYG1eMlx0ZXh0ey59YF0KCj4+IFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgbWBdJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AwLjA1YF0nKSxQR01MKCdbYDAuMjBgXScpLFBHTUwoJ1tgMC4yNWBdJyksUEdNTCgnW2AwLjRgXScpLF0sW1tQR01MKCdbYEhgXScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tgMjQwYF0nKSxQR01MKCdbYDE1YF0nKSxQR01MKCdbYDkuNmBdJyksUEdNTCgnW2AzLjc1YF0nKSxdLF0sYWxpZ249Pid8Kns1fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSogPDwKCltfXXskWWVzfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClllcywgdGhlIHByb2R1Y3QgW2BIbV4yYF0gaXMgdGhlIGNvbnN0YW50IDAuNiBmb3IgYWxsIHBhaXJzIFtgKG0sSClgXSBpbiB0aGUgdGFibGUuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-195')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-195-1-1-1">Use the table to decide whether <span class="process-math">\(H\)</span> could vary inversely with <span class="process-math">\(m^2\text{.}\)</span>
-</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(m\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.05\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.20\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.25\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.4\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(H\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(240\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(15\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(9.6\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.75\)</span></td>
-</tr>
-</table></div> <div class="para logical" id="extracted-webwork-195-1-1-3"><ul class="square" id="extracted-webwork-195-1-1-3-1">
-<li id="extracted-webwork-195-1-1-3-1-1"><div class="para" id="extracted-webwork-195-1-1-3-1-1-1">Yes</div></li>
-<li id="extracted-webwork-195-1-1-3-1-2"><div class="para" id="extracted-webwork-195-1-1-3-1-2-1">No</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-195-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-195-1-2-1"><span class="process-math">\(\text{Yes}\)</span></div></div></details><details id="extracted-webwork-195-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-195-1-3-1">Yes, the product <span class="process-math">\(Hm^2\)</span> is the constant 0.6 for all pairs <span class="process-math">\((m,H)\)</span> in the table.</div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="InverseVariation-4-11">In Section 5.4, we considered the scaling property of direct variation. If <span class="process-math">\(y=kx\)</span> and you double the value of <span class="process-math">\(x\text{,}\)</span> then the value of <span class="process-math">\(y\)</span> doubles also. If <span class="process-math">\(y=kx^2\)</span> and you double the value of <span class="process-math">\(x\text{,}\)</span> then the value of <span class="process-math">\(y\)</span> is multiplied by a factor of <span class="process-math">\(2^2=4\text{.}\)</span>
+</h4></article><div class="para" id="InverseVariation-4-11">In Section 5.4, we considered the scaling property of direct variation. If <span class="process-math">\(y=kx\)</span> and you double the value of <span class="process-math">\(x\text{,}\)</span> then the value of <span class="process-math">\(y\)</span> doubles also. If <span class="process-math">\(y=kx^2\)</span> and you double the value of <span class="process-math">\(x\text{,}\)</span> then the value of <span class="process-math">\(y\)</span> is multiplied by a factor of <span class="process-math">\(2^2=4\text{.}\)</span>
 </div>
 <div class="para" id="InverseVariation-4-12">What happens when you double the input of an inverse variation?</div>
 <article class="example example-like" id="example-weight-vs-distance-from-earth"><h4 class="heading">
@@ -1663,7 +1575,11 @@ w = \dfrac{k}{d^2}
 </div>
 <div class="para">If you double your distance from the center of the Earth, what happens to your weight? What if you triple the distance?</div>
 </div>
-<div class="solutions"><details id="example-weight-vs-distance-from-earth-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-weight-vs-distance-from-earth-2-1">
+<div class="solution solution-like" id="example-weight-vs-distance-from-earth-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-weight-vs-distance-from-earth-2-1">
 <div class="para">Suppose you weigh <span class="process-math">\(W\)</span> pounds at distance <span class="process-math">\(D\)</span> from the center of the Earth. Then  <span class="process-math">\(W = \dfrac{k}{D^2}\text{.}\)</span> At distance <span class="process-math">\(2D\text{,}\)</span> your weight will be</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1672,86 +1588,12 @@ w = \frac{k}{(2D)^2}= \frac{k}{4D^2}= \frac{1}{4}\cdot\frac{k}{D^2}
 \end{equation*}
 </div>
 <div class="para">Your new weight will be <span class="process-math">\(\dfrac{1}{4}\)</span> of your old weight. By a similar calculation, you can check that by tripling the distance, your weight will be reduced to <span class="process-math">\(\dfrac{1}{9}\)</span> of its original value.</div>
-</div></div></details></div></article><details id="exercise-rusty-boltw" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-rusty-boltw"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-196" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="196" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZXhwbGFpbiA9ICBSYWRpb0J1dHRvbnMoCiAgICAgICAgWyJcKCBGX1x0ZXh0e25ld309XGZyYWN7MX17Mn1GX1x0ZXh0e29sZH0gIFwpIiwKICAgICAgICAiXCggRl9cdGV4dHtuZXd9PTJGX1x0ZXh0e29sZH0gIFwpIiwKICAgICAgICAiXCggRl9cdGV4dHtuZXd9PVxmcmFjezN9ezJ9Rl9cdGV4dHtvbGR9ICBcKSIsCiAgICAgICAgIlwoIEZfXHRleHR7bmV3fT1cZnJhY3syfXszfUZfXHRleHR7b2xkfSAgXCkiCiAgICAgICAgXSwKICAgICAgICAzCiAgICApOwoKQkVHSU5fUEdNTApUaGUgYW1vdW50IG9mIGZvcmNlLCBbYEZcdGV4dHssfWBdIChpbiBwb3VuZHMpIG5lZWRlZCB0byBsb29zZW4gYSBydXN0eSBib2x0IHdpdGggYSB3cmVuY2ggaXMgaW52ZXJzZWx5IHByb3BvcnRpb25hbCB0byB0aGUgbGVuZ3RoLCBbYGxcdGV4dHssfWBdIG9mIHRoZSB3cmVuY2guIFRodXMsCgpbYGBgRiA9IFxmcmFje2t9e2x9YGBgXQoKSWYgeW91IGluY3JlYXNlIHRoZSBsZW5ndGggb2YgdGhlIHdyZW5jaCBieSA1MCUgc28gdGhhdCB0aGUgbmV3IGxlbmd0aCBpcyBbYDEuNWxcdGV4dHssfWBdIHdoYXQgaGFwcGVucyB0byB0aGUgYW1vdW50IG9mIGZvcmNlIHJlcXVpcmVkIHRvIGxvb3NlbiB0aGUgYm9sdD8KCltfXXskZXhwbGFpbn17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYEZfXHRleHR7bmV3fT1cZGZyYWN7Mn17M31GX1x0ZXh0e29sZH0gYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-196')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-196-1-1-1">The amount of force, <span class="process-math">\(F\text{,}\)</span> (in pounds) needed to loosen a rusty bolt with a wrench is inversely proportional to the length, <span class="process-math">\(l\text{,}\)</span> of the wrench. Thus,</div> <div class="para logical" id="extracted-webwork-196-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-F = \frac{k}{l}
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-196-1-1-3">If you increase the length of the wrench by 50% so that the new length is <span class="process-math">\(1.5l\text{,}\)</span> what happens to the amount of force required to loosen the bolt?</div> <div class="para logical" id="extracted-webwork-196-1-1-4"><ul class="circle" id="extracted-webwork-196-1-1-4-1">
-<li id="extracted-webwork-196-1-1-4-1-1"><div class="para" id="extracted-webwork-196-1-1-4-1-1-1"><span class="process-math">\(\displaystyle F_\text{new}=\frac{1}{2}F_\text{old}  \)</span></div></li>
-<li id="extracted-webwork-196-1-1-4-1-2"><div class="para" id="extracted-webwork-196-1-1-4-1-2-1"><span class="process-math">\(\displaystyle F_\text{new}=2F_\text{old}  \)</span></div></li>
-<li id="extracted-webwork-196-1-1-4-1-3"><div class="para" id="extracted-webwork-196-1-1-4-1-3-1"><span class="process-math">\(\displaystyle F_\text{new}=\frac{3}{2}F_\text{old}  \)</span></div></li>
-<li id="extracted-webwork-196-1-1-4-1-4"><div class="para" id="extracted-webwork-196-1-1-4-1-4-1"><span class="process-math">\(\displaystyle F_\text{new}=\frac{2}{3}F_\text{old}  \)</span></div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-196-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-196-1-2-1"><span class="process-math">\(\text{Choice 4}\)</span></div></div></details><details id="extracted-webwork-196-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-196-1-3-1"><span class="process-math">\(F_\text{new}=\dfrac{2}{3}F_\text{old}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><details id="InverseVariation-4-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="InverseVariation-4-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-197" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="197" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gUG9wVXAoCiAgWyI/IiwiaSIsICJpaSIsICJpaWkiLCAiaXYiXSwKICA0LCAKKTsKJGIgPSBQb3BVcCgKICBbIj8iLCJpIiwgImlpIiwgImlpaSIsICJpdiJdLAogIDIsIAopOwokYyA9IFBvcFVwKAogIFsiPyIsImkiLCAiaWkiLCAiaWlpIiwgIml2Il0sCiAgMywgCik7CiRkID0gUG9wVXAoCiAgWyI/IiwiaSIsICJpaSIsICJpaWkiLCAiaXYiXSwKICAxLCAKKTsKCkJFR0lOX1BHTUwKTWF0Y2ggZWFjaCBmb3JtdWxhIHdpdGggaXRzIGRlc2NyaXB0aW9uIGJlbG93LgphLiAgRGlyZWN0IHZhcmlhdGlvbiBbX117JGF9ezV9CgoKYS4gIERpcmVjdCB2YXJpYXRpb24gd2l0aCBhIHBvd2VyIFtfXXskYn17NX0KCgphLiAgSW52ZXJzZSB2YXJpYXRpb24gW19deyRjfXs1fQoKCmEuICBJbnZlcnNlIHZhcmlhdGlvbiB3aXRoIGEgcG93ZXIgW19deyRkfXs1fQoKCmkuICBbYEk9XGRmcmFjezUwfXtkXjJ9YF0KaS4gIFtgUz0xNS4zaF4yYF0KaS4gIFtgTj1cZGZyYWN7MjYwMH17UH1gXQppLiAgW2BDPTg1QWBdCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBpdgphLiAgaWkKYS4gIGlpaQphLiAgaSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-197')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-197-1-1-1">
-<div class="para">Match each formula with its description below.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-197-1-1-1-1">
-<li id="extracted-webwork-197-1-1-1-1-1"><div class="para logical" id="extracted-webwork-197-1-1-1-1-1-1">
-<div class="para">Direct variation</div>
-<ul class="square" id="extracted-webwork-197-1-1-1-1-1-1-1">
-<li id="extracted-webwork-197-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-197-1-1-1-1-1-1-1-1-1">i</div></li>
-<li id="extracted-webwork-197-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-197-1-1-1-1-1-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-197-1-1-1-1-1-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-197-1-1-1-1-1-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-197-1-1-1-1-2"><div class="para logical" id="extracted-webwork-197-1-1-1-1-2-1">
-<div class="para">Direct variation with a power</div>
-<ul class="square" id="extracted-webwork-197-1-1-1-1-2-1-1">
-<li id="extracted-webwork-197-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-197-1-1-1-1-2-1-1-1-1">i</div></li>
-<li id="extracted-webwork-197-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-197-1-1-1-1-2-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-197-1-1-1-1-2-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-197-1-1-1-1-2-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-197-1-1-1-1-3"><div class="para logical" id="extracted-webwork-197-1-1-1-1-3-1">
-<div class="para">Inverse variation</div>
-<ul class="square" id="extracted-webwork-197-1-1-1-1-3-1-1">
-<li id="extracted-webwork-197-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-197-1-1-1-1-3-1-1-1-1">i</div></li>
-<li id="extracted-webwork-197-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-197-1-1-1-1-3-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-197-1-1-1-1-3-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-197-1-1-1-1-3-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-197-1-1-1-1-4"><div class="para logical" id="extracted-webwork-197-1-1-1-1-4-1">
-<div class="para">Inverse variation with a power</div>
-<ul class="square" id="extracted-webwork-197-1-1-1-1-4-1-1">
-<li id="extracted-webwork-197-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-197-1-1-1-1-4-1-1-1-1">i</div></li>
-<li id="extracted-webwork-197-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-197-1-1-1-1-4-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-197-1-1-1-1-4-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-197-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-197-1-1-1-1-4-1-1-4-1">iv</div></li>
-</ul>
-</div></li>
-</ol>
-</div> <div class="para logical" id="extracted-webwork-197-1-1-2"><ol class="lower-roman ol-marker-3" id="extracted-webwork-197-1-1-2-1">
-<li id="extracted-webwork-197-1-1-2-1-1"><div class="para" id="extracted-webwork-197-1-1-2-1-1-1"><span class="process-math">\(\displaystyle I=\dfrac{50}{d^2}\)</span></div></li>
-<li id="extracted-webwork-197-1-1-2-1-2"><div class="para" id="extracted-webwork-197-1-1-2-1-2-1"><span class="process-math">\(\displaystyle S=15.3h^2\)</span></div></li>
-<li id="extracted-webwork-197-1-1-2-1-3"><div class="para" id="extracted-webwork-197-1-1-2-1-3-1"><span class="process-math">\(\displaystyle N=\dfrac{2600}{P}\)</span></div></li>
-<li id="extracted-webwork-197-1-1-2-1-4"><div class="para" id="extracted-webwork-197-1-1-2-1-4-1"><span class="process-math">\(\displaystyle C=85A\)</span></div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-197-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-197-1-2-1"><span class="process-math">\(\text{iv}\)</span></div></div></details><details id="extracted-webwork-197-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-197-1-3-1"><span class="process-math">\(\text{ii}\)</span></div></div></details><details id="extracted-webwork-197-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-197-1-4-1"><span class="process-math">\(\text{iii}\)</span></div></div></details><details id="extracted-webwork-197-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-197-1-5-1"><span class="process-math">\(\text{i}\)</span></div></div></details><details id="extracted-webwork-197-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-197-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-197-1-6-1-1">
-<li id="extracted-webwork-197-1-6-1-1-1"><div class="para" id="extracted-webwork-197-1-6-1-1-1-1">iv</div></li>
-<li id="extracted-webwork-197-1-6-1-1-2"><div class="para" id="extracted-webwork-197-1-6-1-1-2-1">ii</div></li>
-<li id="extracted-webwork-197-1-6-1-1-3"><div class="para" id="extracted-webwork-197-1-6-1-1-3-1">iii</div></li>
-<li id="extracted-webwork-197-1-6-1-1-4"><div class="para" id="extracted-webwork-197-1-6-1-1-4-1">i</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-5-5-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-5-5-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">5.5.4</span><span class="space"> </span><span class="title">Problem Set 5.5</span>
 </h3>
 <article class="subexercises" id="section-5-5-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

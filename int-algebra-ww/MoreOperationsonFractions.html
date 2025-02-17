@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="OperationsAlgebraicFractions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="EquationswithFractions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1333,34 +1313,31 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="MoreOperationsonFractions-3-5-1-1">Simplify  <span class="process-math">\(~~\dfrac{\dfrac{2}{3}}{\dfrac{5}{6}}\)</span>
 </div>
-<div class="solutions"><details id="MoreOperationsonFractions-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="MoreOperationsonFractions-3-5-2-1">
+<div class="solution solution-like" id="MoreOperationsonFractions-3-5-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="MoreOperationsonFractions-3-5-2-1">
 <div class="para">First, Write the complex fraction as a quotient. Invert the divisor and multiply.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfrac{\dfrac{2}{3}}{\dfrac{5}{6}} = \dfrac{2}{3} \div \dfrac{5}{6} = \dfrac{2}{3} \cdot \dfrac{6}{5} = \dfrac{12}{15} = \dfrac{4}{5}
 \end{equation*}
 </div>
-</div></div></details></div></article><details id="MoreOperationsonFractions-3-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="MoreOperationsonFractions-3-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-353" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="353" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBDQ21hY3Jvcy5wbCIsInBhcnNlck11bHRpQW5zd2VyLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQoeT0+IlJlYWwiKTsKJG51bSA9IENvbXB1dGUoIjYiKTsKJGRlbiA9IENvbXB1dGUoInleMiIpOwokbXVsdGlhbnMgPSBNdWx0aUFuc3dlcigkbnVtLCAkZGVuKS0+d2l0aCgKICBzaW5nbGVSZXN1bHQgPT4gMCwKICBhbGxvd0JsYW5rQW5zd2VycyA9PiAxLAogIGNoZWNrZXIgPT4gc3ViIHsKICAgICAgbXkgKCAkY29ycmVjdCwgJHN0dWRlbnQsICRzZWxmICkgPSBAXzsKICAgICAgbXkgKCAkZjFzdHUsICRmMnN0dSApID0gQHskc3R1ZGVudH07CiAgICAgIG15ICggJGYxLCAkZjIgKSA9IEB7JGNvcnJlY3R9OwogCiAgICAgIGlmICggKCAkZjE9PSRmMXN0dSAmICAkZjI9PSRmMnN0dSkgfHwgCiAgICAgICAgICAgKC0kZjE9PSRmMXN0dSAmIC0kZjI9PSRmMnN0dSkgKSB7CiAgICAgICAgICByZXR1cm4gWzEsMV07CiAgICAgIH0gZWxzaWYgKCAkZjE9PSRmMXN0dSB8fCAtJGYxPT0kZjFzdHUpIHsKICAgICAgICAgIHJldHVybiBbMSwwXTsKICAgICAgfSBlbHNpZiAoICRmMj09JGYyc3R1IHx8IC0kZjI9PSRmMnN0dSApIHsKICAgICAgICAgIHJldHVybiBbMCwxXTsKICAgICAgfSBlbHNpZiAoICRmMSokZjJzdHU9PSRmMXN0dSokZjIgKSB7CiAgICAgICAgICAkc2VsZi0+c2V0TWVzc2FnZSgxLCJTaW1wbGlmeSB5b3VyIGFuc3dlciBmdXJ0aGVyIik7CiAgICAgICAgICAkc2VsZi0+c2V0TWVzc2FnZSgyLCJTaW1wbGlmeSB5b3VyIGFuc3dlciBmdXJ0aGVyIik7CiAgICAgICAgICByZXR1cm4gWzAsMF07CiAgICAgIH0gZWxzZSB7CiAgICAgICAgICByZXR1cm4gWzAsMF07CiAgICAgIH0KICB9Cik7CgpCRUdJTl9QR01MClNpbXBsaWZ5ICAgW2BccXVhZFxkZnJhY3tcZGZyYWN7Mnh9e3leM319e1xkZnJhY3t4fXszeX19YF0KCj4+IFtARGF0YVRhYmxlKFtbUEdNTCgnW19deyRtdWx0aWFuc317NH0nKSxdLFtQR01MKCdbX117JG11bHRpYW5zfXs0fScpLF0sXSxhbGlnbj0+Jyp7MX17bH0nLHZhbGlnbj0+J21pZGRsZScsKTtAXSogPDwKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyIG51bWVyYXRvciBhbmQgZGVub21pbmF0b3IgaW4gc2VwYXJhdGUgYm94ZXMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BcZGZyYWN7Nn17eV4yfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-353')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-353-1-1-1">Simplify   <span class="process-math">\(\quad\dfrac{\dfrac{2x}{y^3}}{\dfrac{x}{3y}}\)</span>
-</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td></tr>
-<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td></tr>
-</table></div>
-<div class="solutions">
-<details id="extracted-webwork-353-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-353-1-2-1"><span class="process-math">\(6\)</span></div></div></details><details id="extracted-webwork-353-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-353-1-3-1"><span class="process-math">\(y^{2}\)</span></div></div></details><details id="extracted-webwork-353-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-353-1-4-1"><span class="process-math">\(\dfrac{6}{y^2}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="MoreOperationsonFractions-3-7">If the numerator or denominator of the complex fraction contains more than one term, there is an easier way to simplify the fraction. This method takes advantage of the fundamental principle of fractions.</div>
+</h4></article><div class="para" id="MoreOperationsonFractions-3-7">If the numerator or denominator of the complex fraction contains more than one term, there is an easier way to simplify the fraction. This method takes advantage of the fundamental principle of fractions.</div>
 <article class="example example-like" id="MoreOperationsonFractions-3-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="MoreOperationsonFractions-3-8-1-1">Simplify  <span class="process-math">\(~~\dfrac{\dfrac{1}{2x} - \dfrac{1}{x^2}}{\dfrac{1}{4} - \dfrac{1}{2x}}\)</span>
 </div>
-<div class="solutions"><details id="MoreOperationsonFractions-3-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="MoreOperationsonFractions-3-8-2-1">
+<div class="solution solution-like" id="MoreOperationsonFractions-3-8-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="MoreOperationsonFractions-3-8-2-1">
 <div class="para">This complex fraction contains the simple fractions <span class="process-math">\(\dfrac{1}{2x},~ \dfrac{1}{x^2},~ \dfrac{1}{4}\)</span> and <span class="process-math">\(\dfrac{1}{2x}\text{.}\)</span> The LCD of these fractions is <span class="process-math">\(4x^2\text{.}\)</span>  We multiply the numerator and denominator of the complex fraction by <span class="process-math">\(4x^2\text{.}\)</span>  Doing this will not change the value of the fraction, but will clear all the "smaller" fractions inside.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1381,27 +1358,16 @@ eBookConfig.enable_chatcodes =  false;
 \dfrac{2x-4}{x^2-2x} = \dfrac{2\cancel{(x-2)}}{x\cancel{(x-2)}} = \dfrac{2}{x}
 \end{equation*}
 </div>
-</div></div></details></div></article><div class="para" id="MoreOperationsonFractions-3-9">We summarize the procedure for simplifying complex fractions as follows.</div>
+</div>
+</div></article><div class="para" id="MoreOperationsonFractions-3-9">We summarize the procedure for simplifying complex fractions as follows.</div>
 <article class="assemblage assemblage-like" id="MoreOperationsonFractions-3-10"><h4 class="heading"><span class="title">To simplify a complex fraction.</span></h4>
 <div class="para logical" id="MoreOperationsonFractions-3-10-6"><ol class="decimal ol-marker-1" id="MoreOperationsonFractions-3-10-6-1">
 <li id="MoreOperationsonFractions-3-10-6-1-1"><div class="para" id="p-derived-MoreOperationsonFractions-3-10-6-1-1">Find the LCD of all the fractions contained in the complex fraction.</div></li>
 <li id="MoreOperationsonFractions-3-10-6-1-2"><div class="para" id="p-derived-MoreOperationsonFractions-3-10-6-1-2">Multiply the numerator and the denominator of the complex fraction by the LCD.</div></li>
 <li id="MoreOperationsonFractions-3-10-6-1-3"><div class="para" id="p-derived-MoreOperationsonFractions-3-10-6-1-3">Reduce the resulting simple fraction, if possible.</div></li>
-</ol></div></article><details id="MoreOperationsonFractions-3-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div></article><article class="exercise exercise-like" id="MoreOperationsonFractions-3-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-354" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="354" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBDQ21hY3Jvcy5wbCIsInBhcnNlck11bHRpQW5zd2VyLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQoYT0+IlJlYWwiLCBiPT4iUmVhbCIsIGM9PiJSZWFsIiwgZD0+IlJlYWwiKTsKJG51bSA9IENvbXB1dGUoImEqZCtiKmQiKTsKJGRlbiA9IENvbXB1dGUoImEqZC1iKmMiKTsKJG11bHRpYW5zID0gTXVsdGlBbnN3ZXIoJG51bSwgJGRlbiktPndpdGgoCiAgc2luZ2xlUmVzdWx0ID0+IDAsCiAgYWxsb3dCbGFua0Fuc3dlcnMgPT4gMSwKICBjaGVja2VyID0+IHN1YiB7CiAgICAgIG15ICggJGNvcnJlY3QsICRzdHVkZW50LCAkc2VsZiApID0gQF87CiAgICAgIG15ICggJGYxc3R1LCAkZjJzdHUgKSA9IEB7JHN0dWRlbnR9OwogICAgICBteSAoICRmMSwgJGYyICkgPSBAeyRjb3JyZWN0fTsKIAogICAgICBpZiAoICggJGYxPT0kZjFzdHUgJiAgJGYyPT0kZjJzdHUpIHx8IAogICAgICAgICAgICgtJGYxPT0kZjFzdHUgJiAtJGYyPT0kZjJzdHUpICkgewogICAgICAgICAgcmV0dXJuIFsxLDFdOwogICAgICB9IGVsc2lmICggJGYxPT0kZjFzdHUgfHwgLSRmMT09JGYxc3R1KSB7CiAgICAgICAgICByZXR1cm4gWzEsMF07CiAgICAgIH0gZWxzaWYgKCAkZjI9PSRmMnN0dSB8fCAtJGYyPT0kZjJzdHUgKSB7CiAgICAgICAgICByZXR1cm4gWzAsMV07CiAgICAgIH0gZWxzaWYgKCAkZjEqJGYyc3R1PT0kZjFzdHUqJGYyICkgewogICAgICAgICAgJHNlbGYtPnNldE1lc3NhZ2UoMSwiU2ltcGxpZnkgeW91ciBhbnN3ZXIgZnVydGhlciIpOwogICAgICAgICAgJHNlbGYtPnNldE1lc3NhZ2UoMiwiU2ltcGxpZnkgeW91ciBhbnN3ZXIgZnVydGhlciIpOwogICAgICAgICAgcmV0dXJuIFswLDBdOwogICAgICB9IGVsc2UgewogICAgICAgICAgcmV0dXJuIFswLDBdOwogICAgICB9CiAgfQopOwoKQkVHSU5fUEdNTApTaW1wbGlmeSBbYFxxdWFkIFxkZnJhY3sxK1xkZnJhY3tifXthfX17MS1cZGZyYWN7YmN9e2FkfX1gXQoKPj4gW0BEYXRhVGFibGUoW1tQR01MKCdbX117JG11bHRpYW5zfXs1fScpLF0sW1BHTUwoJ1tfXXskbXVsdGlhbnN9ezV9JyksXSxdLGFsaWduPT4nKnsxfXtsfScsdmFsaWduPT4nbWlkZGxlJywpO0BdKiA8PAoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnRW50ZXIgbnVtZXJhdG9yIGFuZCBkZW5vbWluYXRvciBpbiBzZXBhcmF0ZSBib3hlcy4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFxkZnJhY3thZCtiZH17YWQtYmN9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-354')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-354-1-1-1">Simplify <span class="process-math">\(\quad \dfrac{1+\dfrac{b}{a}}{1-\dfrac{bc}{ad}}\)</span>
-</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td></tr>
-<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td></tr>
-</table></div>
-<div class="solutions">
-<details id="extracted-webwork-354-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-354-1-2-1"><span class="process-math">\(ad+bd\)</span></div></div></details><details id="extracted-webwork-354-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-354-1-3-1"><span class="process-math">\(ad-bc\)</span></div></div></details><details id="extracted-webwork-354-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-354-1-4-1"><span class="process-math">\(\dfrac{ad+bd}{ad-bc}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="MoreOperationsonFractions-4"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="MoreOperationsonFractions-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="space"> </span><span class="title">Negative Exponents</span>
 </h3>
 <div class="para" id="MoreOperationsonFractions-4-3">Algebraic fractions are sometimes written using negative exponents.</div>
@@ -1416,7 +1382,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="Example-negarive-exponents-for-algebraic-fractions-1-1-2-2"><div class="para" id="p-derived-Example-negarive-exponents-for-algebraic-fractions-1-1-2-2"><span class="process-math">\(\displaystyle (x^{-2}+y^{-2})^{-1}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="Example-negarive-exponents-for-algebraic-fractions-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Example-negarive-exponents-for-algebraic-fractions-2-1"><ol class="lower-alpha ol-marker-2" id="Example-negarive-exponents-for-algebraic-fractions-2-1-1">
+<div class="solution solution-like" id="Example-negarive-exponents-for-algebraic-fractions-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Example-negarive-exponents-for-algebraic-fractions-2-1"><ol class="lower-alpha ol-marker-2" id="Example-negarive-exponents-for-algebraic-fractions-2-1-1">
 <li id="Example-negarive-exponents-for-algebraic-fractions-2-1-1-1"><div class="para logical" id="Example-negarive-exponents-for-algebraic-fractions-2-1-1-1-1">
 <div class="para">We write each power as a fraction, then simplify.</div>
 <div class="displaymath process-math" id="Example-negarive-exponents-for-algebraic-fractions-2-1-1-1-1-1">
@@ -1437,7 +1407,8 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 </div>
 <div class="para">For the last step, remember that a negative exponent indicates the reciprocal of its base.</div>
 </div></li>
-</ol></div></div></details></div></article><aside class="aside aside-like" id="MoreOperationsonFractions-4-5"><div class="para" id="MoreOperationsonFractions-4-5-1">
+</ol></div>
+</div></article><aside class="aside aside-like" id="MoreOperationsonFractions-4-5"><div class="para" id="MoreOperationsonFractions-4-5-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review negative exponents, see <a href="tkchap8.html#tkUseNegExp" class="internal" title="Subsubsection A.8.4.1: Use negative exponents">Section 8.4.1</a> of the Toolkit.</div></aside><article class="warning remark-like" id="MoreOperationsonFractions-4-6"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.4.6</span><span class="period">.</span>
 </h4>
@@ -1473,68 +1444,11 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 </div>
 </div></li>
 </ol>
-</div></article><details id="MoreOperationsonFractions-4-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="exercise exercise-like" id="MoreOperationsonFractions-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-355" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="355" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBDQ21hY3Jvcy5wbCIsInBhcnNlck11bHRpQW5zd2VyLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskbnVtID0gQ29tcHV0ZSgieCIpOwokZGVuID0gQ29tcHV0ZSgieCsxIik7CiRtdWx0aWFucyA9IE11bHRpQW5zd2VyKCRudW0sICRkZW4pLT53aXRoKAogIHNpbmdsZVJlc3VsdCA9PiAwLAogIGFsbG93QmxhbmtBbnN3ZXJzID0+IDEsCiAgY2hlY2tlciA9PiBzdWIgewogICAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJHNlbGYgKSA9IEBfOwogICAgICBteSAoICRmMXN0dSwgJGYyc3R1ICkgPSBAeyRzdHVkZW50fTsKICAgICAgbXkgKCAkZjEsICRmMiApID0gQHskY29ycmVjdH07CiAKICAgICAgaWYgKCAoICRmMT09JGYxc3R1ICYgICRmMj09JGYyc3R1KSB8fCAKICAgICAgICAgICAoLSRmMT09JGYxc3R1ICYgLSRmMj09JGYyc3R1KSApIHsKICAgICAgICAgIHJldHVybiBbMSwxXTsKICAgICAgfSBlbHNpZiAoICRmMT09JGYxc3R1IHx8IC0kZjE9PSRmMXN0dSkgewogICAgICAgICAgcmV0dXJuIFsxLDBdOwogICAgICB9IGVsc2lmICggJGYyPT0kZjJzdHUgfHwgLSRmMj09JGYyc3R1ICkgewogICAgICAgICAgcmV0dXJuIFswLDFdOwogICAgICB9IGVsc2lmICggJGYxKiRmMnN0dT09JGYxc3R1KiRmMiApIHsKICAgICAgICAgICRzZWxmLT5zZXRNZXNzYWdlKDEsIlNpbXBsaWZ5IHlvdXIgYW5zd2VyIGZ1cnRoZXIiKTsKICAgICAgICAgICRzZWxmLT5zZXRNZXNzYWdlKDIsIlNpbXBsaWZ5IHlvdXIgYW5zd2VyIGZ1cnRoZXIiKTsKICAgICAgICAgIHJldHVybiBbMCwwXTsKICAgICAgfSBlbHNlIHsKICAgICAgICAgIHJldHVybiBbMCwwXTsKICAgICAgfQogIH0KKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkgW2BccXVhZCgxK3heey0xfSleey0xfWBdCgo+PiBbQERhdGFUYWJsZShbW1BHTUwoJ1tfXXskbXVsdGlhbnN9ezV9JyksXSxbUEdNTCgnW19deyRtdWx0aWFuc317NX0nKSxdLF0sYWxpZ249PicqezF9e2x9Jyx2YWxpZ249PidtaWRkbGUnLCk7QF0qIDw8CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdFbnRlciBudW1lcmF0b3IgYW5kIGRlbm9taW5hdG9yIGluIHNlcGFyYXRlIGJveGVzLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgXGRmcmFje3h9e3grMX1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-355')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-355-1-1-1">Simplify <span class="process-math">\(\quad(1+x^{-1})^{-1}\)</span>
-</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td></tr>
-<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td></tr>
-</table></div>
-<div class="solutions">
-<details id="extracted-webwork-355-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-355-1-2-1"><span class="process-math">\(x\)</span></div></div></details><details id="extracted-webwork-355-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-355-1-3-1"><span class="process-math">\(x+1\)</span></div></div></details><details id="extracted-webwork-355-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-355-1-4-1"><span class="process-math">\(\dfrac{x}{x+1}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><details id="MoreOperationsonFractions-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="MoreOperationsonFractions-4-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-356" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="356" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgW2BcZGZyYWN7MStcZGZyYWN7MX17eH19ezEtXGRmcmFjezF9e3heMn19ID0gXGxlZnQoMStcZGZyYWN7MX17eH1ccmlnaHQpIFxkaXYgXGxlZnQoMS1cZGZyYWN7MX17eF4yfVxyaWdodClgXSBbX117JFRydWV9ezV9CgoKYS4gIFtgXGRmcmFjezErXGRmcmFjezF9e3h9fXsxLVxkZnJhY3sxfXt4XjJ9fSA9IFxkZnJhY3t4KzF9e3heMisxfWBdICBbX117JEZhbHNlfXs1fQoKCmEuICBbYFxsZWZ0KGFeey0xfStiXnstMX1ccmlnaHQpXnstMn0gPSBhXnstMn0gKyBiXnstMn1gXSBbX117JEZhbHNlfXs1fQoKCmEuICBbYFxkZnJhY3tcZGZyYWN7MX17YX0gLSBcZGZyYWN7MX17Yn19e1xkZnJhY3sxfXthfSArIFxkZnJhY3sxfXtifX0gPSBcZGZyYWN7XGRmcmFjezF9e2EtYn19e1xkZnJhY3sxfXthK2J9fWBdIFtfXXskRmFsc2V9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUcnVlCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-356')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-356-1-1-1">
-<div class="para">True or False.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-356-1-1-1-1">
-<li id="extracted-webwork-356-1-1-1-1-1"><div class="para logical" id="extracted-webwork-356-1-1-1-1-1-1">
-<div class="para"><span class="process-math">\(\dfrac{1+\dfrac{1}{x}}{1-\dfrac{1}{x^2}} = \left(1+\dfrac{1}{x}\right) \div \left(1-\dfrac{1}{x^2}\right)\)</span></div>
-<ul class="square" id="extracted-webwork-356-1-1-1-1-1-1-2">
-<li id="extracted-webwork-356-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-356-1-1-1-1-1-1-2-1-1">True</div></li>
-<li id="extracted-webwork-356-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-356-1-1-1-1-1-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-356-1-1-1-1-2"><div class="para logical" id="extracted-webwork-356-1-1-1-1-2-1">
-<div class="para"><span class="process-math">\(\dfrac{1+\dfrac{1}{x}}{1-\dfrac{1}{x^2}} = \dfrac{x+1}{x^2+1}\)</span></div>
-<ul class="square" id="extracted-webwork-356-1-1-1-1-2-1-2">
-<li id="extracted-webwork-356-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-356-1-1-1-1-2-1-2-1-1">True</div></li>
-<li id="extracted-webwork-356-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-356-1-1-1-1-2-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-356-1-1-1-1-3"><div class="para logical" id="extracted-webwork-356-1-1-1-1-3-1">
-<div class="para"><span class="process-math">\(\left(a^{-1}+b^{-1}\right)^{-2} = a^{-2} + b^{-2}\)</span></div>
-<ul class="square" id="extracted-webwork-356-1-1-1-1-3-1-2">
-<li id="extracted-webwork-356-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-356-1-1-1-1-3-1-2-1-1">True</div></li>
-<li id="extracted-webwork-356-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-356-1-1-1-1-3-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-356-1-1-1-1-4"><div class="para logical" id="extracted-webwork-356-1-1-1-1-4-1">
-<div class="para"><span class="process-math">\(\dfrac{\dfrac{1}{a} - \dfrac{1}{b}}{\dfrac{1}{a} + \dfrac{1}{b}} = \dfrac{\dfrac{1}{a-b}}{\dfrac{1}{a+b}}\)</span></div>
-<ul class="square" id="extracted-webwork-356-1-1-1-1-4-1-2">
-<li id="extracted-webwork-356-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-356-1-1-1-1-4-1-2-1-1">True</div></li>
-<li id="extracted-webwork-356-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-356-1-1-1-1-4-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-356-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-356-1-2-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-356-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-356-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-356-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-356-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-356-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-356-1-5-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-356-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-356-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-356-1-6-1-1">
-<li id="extracted-webwork-356-1-6-1-1-1"><div class="para" id="extracted-webwork-356-1-6-1-1-1-1">True</div></li>
-<li id="extracted-webwork-356-1-6-1-1-2"><div class="para" id="extracted-webwork-356-1-6-1-1-2-1">False</div></li>
-<li id="extracted-webwork-356-1-6-1-1-3"><div class="para" id="extracted-webwork-356-1-6-1-1-3-1">False</div></li>
-<li id="extracted-webwork-356-1-6-1-1-4"><div class="para" id="extracted-webwork-356-1-6-1-1-4-1">False</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="MoreOperationsonFractions-5"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="MoreOperationsonFractions-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="space"> </span><span class="title">Applications</span>
 </h3>
 <div class="para" id="MoreOperationsonFractions-5-2">Sometimes mathematics can help us solve problems when our intuition fails us or leads us astray.</div>
@@ -1542,7 +1456,10 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="MoreOperationsonFractions-5-3-1-1">On a weekday afternoon, when traffic is always horrible, Kathy left her home north of Los Angeles and drove south 120 miles along the San Diego Freeway to San Juan Capistrano. Her average speed was 40 miles per hour.  She returned home on Saturday, at an average speed of 60 miles per hour. What was her average speed for the round trip?</div>
-<div class="solutions"><details id="MoreOperationsonFractions-5-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="MoreOperationsonFractions-5-3-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="MoreOperationsonFractions-5-3-2-1">
 <div class="para">If you said that the average speed is 50 miles per hour, you would be wrong! Let’s do some calculations. Kathy’s average speed for the round trip is given by</div>
 <div class="displaymath process-math">
@@ -1581,7 +1498,7 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 \end{equation*}
 </div>
 </div>
-</div></details></div></article><div class="para" id="MoreOperationsonFractions-5-4">Why does the average speed turn out to be less than 50 miles per hour? Because Kathy spent more time driving at 40 miles per hour (3 hours) than she did driving at 60 miles per hour (2 hours).</div>
+</div></article><div class="para" id="MoreOperationsonFractions-5-4">Why does the average speed turn out to be less than 50 miles per hour? Because Kathy spent more time driving at 40 miles per hour (3 hours) than she did driving at 60 miles per hour (2 hours).</div>
 <div class="para" id="MoreOperationsonFractions-5-5">By generalizing the problem above we can find an algebraic formula for the average speed on a two-part trip. Suppose the distance traveled on the two parts of the trip are <span class="process-math">\(d_1\)</span> and <span class="process-math">\(d_2\text{,}\)</span> and the corresponding speeds on the two parts are <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\text{.}\)</span>  We fill in the table to find the time required for each part.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -1617,22 +1534,9 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 \end{equation*}
 </div>
 </div>
-<details id="MoreOperationsonFractions-5-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="MoreOperationsonFractions-5-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-357" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="357" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR2ID0gQ29tcHV0ZSgiNTAiKTsKJG1waCA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIm1pbGVzIiwgCiAgICAiaG91cnMiLAogICAgIm1waCIsCiAgICAiaG91cnMvbWlsZSJdLAogICAgMwopOwoKQkVHSU5fUEdNTApCcnVjZSBkcm92ZSBmb3IgMjQgbWlsZXMgaW4gcnVzaC1ob3VyIHRyYWZmaWMgYXQgYW4gYXZlcmFnZSBzcGVlZCBvZiAyMCBtaWxlcyBwZXIgaG91ci4gVGhlbiBoZSBkcm92ZSAxMjYgbWlsZXMgb24gdGhlIGhpZ2h3YXkgYXQgYW4gYXZlcmFnZSBzcGVlZCBvZiA3MCBtaWxlcyBhbiBob3VyLiBVc2UgdGhlIGZvcm11bGEgYWJvdmUgdG8gZmluZCBoaXMgYXZlcmFnZSBzcGVlZCBmb3IgdGhlIGVudGlyZSB0cmlwLgoKW19deyR2fXsyfVtfXXskbXBofXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCjUwIG1waAoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-357')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-357-1-1-1">Bruce drove for 24 miles in rush-hour traffic at an average speed of 20 miles per hour. Then he drove 126 miles on the highway at an average speed of 70 miles an hour. Use the formula above to find his average speed for the entire trip.</div> <div class="para logical" id="extracted-webwork-357-1-1-2"><ul class="square" id="extracted-webwork-357-1-1-2-2">
-<li id="extracted-webwork-357-1-1-2-2-1"><div class="para" id="extracted-webwork-357-1-1-2-2-1-1">miles</div></li>
-<li id="extracted-webwork-357-1-1-2-2-2"><div class="para" id="extracted-webwork-357-1-1-2-2-2-1">hours</div></li>
-<li id="extracted-webwork-357-1-1-2-2-3"><div class="para" id="extracted-webwork-357-1-1-2-2-3-1">mph</div></li>
-<li id="extracted-webwork-357-1-1-2-2-4"><div class="para" id="extracted-webwork-357-1-1-2-2-4-1">hours/mile</div></li>
-</ul></div>
-<div class="solutions">
-<details id="extracted-webwork-357-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-357-1-2-1"><span class="process-math">\(50\)</span></div></div></details><details id="extracted-webwork-357-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-357-1-3-1"><span class="process-math">\(\text{mph}\)</span></div></div></details><details id="extracted-webwork-357-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-357-1-4-1">50 mph</div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="MoreOperationsonFractions-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="MoreOperationsonFractions-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.4</span><span class="space"> </span><span class="title">Polynomial Division</span>
 </h3>
 <div class="para logical" id="MoreOperationsonFractions-6-3">
@@ -1655,7 +1559,11 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 </h4>
 <div class="para" id="MoreOperationsonFractions-6-7-1-1">Divide <span class="process-math">\(\dfrac{9x^3 - 6x^2 + 4}{3x}\)</span>
 </div>
-<div class="solutions"><details id="MoreOperationsonFractions-6-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="MoreOperationsonFractions-6-7-2-1">
+<div class="solution solution-like" id="MoreOperationsonFractions-6-7-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="MoreOperationsonFractions-6-7-2-1">
 <div class="para">We divide <span class="process-math">\(3x\)</span> into each term of the numerator.</div>
 <div class="displaymath process-math" id="MoreOperationsonFractions-6-7-2-1-2">
 \begin{align*}
@@ -1665,24 +1573,19 @@ x^{-1}-y^{-1} \amp = \dfrac{1}{x} - \dfrac{1}{y} \amp \amp \blert{\text{The LCD 
 </div>
 <div class="para">Note that the quotient is the sum of a polynomial, <span class="process-math">\(3x^2 - 2x\text{,}\)</span> and an algebraic fraction, <span class="process-math">\(\dfrac{4}{3x}\text{.}\)</span>
 </div>
-</div></div></details></div></article><details id="MoreOperationsonFractions-6-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div>
+</div></article><article class="exercise exercise-like" id="MoreOperationsonFractions-6-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-358" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="358" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFyZShhPT4iUmVhbCIpOwokcG9seSA9IEZvcm11bGEoIjNhKzEiKTsKJGZyYWMgPSBGb3JtdWxhKCItMS8oMmEpIik7CgpCRUdJTl9QR01MCkRpdmlkZTogW2B+XGRmcmFjezZhXjMrMmFeMi1hfXsyYV4yfT1gXSBbX117JHBvbHl9ezZ9W2B7fSt7fWBdIFtfXXskZnJhY317Nn0KCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyIHRoZSBhcHByb3ByaWF0ZSBwb2x5bm9taWFsIGluIHRoZSBmaXJzdCBib3gsIGFuZCBlbnRlciB0aGUgYWxnZWJyYWljIGZyYWN0aW9uIGluIHRoZSBzZWNvbmQgYm94LicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgM2EgKyAxIC0gXGRmcmFjezF9ezJhfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-358')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-358-1-1-1">Divide: <span class="process-math">\(~\dfrac{6a^3+2a^2-a}{2a^2}=\)</span> <span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span><span class="process-math">\({}+{}\)</span> <span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-358-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-358-1-2-1"><span class="process-math">\(3a+1\)</span></div></div></details><details id="extracted-webwork-358-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-358-1-3-1"><span class="process-math">\(\frac{-1}{2a}\)</span></div></div></details><details id="extracted-webwork-358-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-358-1-4-1"><span class="process-math">\(3a + 1 - \dfrac{1}{2a}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><div class="para" id="MoreOperationsonFractions-6-9">If the denominator is not a monomial, we use a method similar to the long division algorithm used in arithmetic.</div>
+</h4></article><div class="para" id="MoreOperationsonFractions-6-9">If the denominator is not a monomial, we use a method similar to the long division algorithm used in arithmetic.</div>
 <article class="example example-like" id="example-long-division"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.13</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-long-division-1-1">Divide <span class="process-math">\(~~\dfrac{2x^2+x-7}{x+3}\)</span> <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
-<div class="solutions"><details id="example-long-division-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-long-division-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="example-long-division-2-1">
 <div class="para">We first write the quotient as a division problem:</div>
 <div class="displaymath process-math" id="example-long-division-2-1-1">
@@ -1727,7 +1630,7 @@ x+3 \enclose{longdiv}{2x^2+x-7}\kern-.2ex \phantom{11}&amp;&amp; \\[-3pt]
 \end{equation*}
 </div>
 </div>
-</div></details></div></article><aside class="aside aside-like" id="MoreOperationsonFractions-6-11"><div class="para" id="MoreOperationsonFractions-6-11-1">
+</div></article><aside class="aside aside-like" id="MoreOperationsonFractions-6-11"><div class="para" id="MoreOperationsonFractions-6-11-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To check a polynomial division, see <a href="tkchap8.html#tkCheckDiv" class="internal" title="Subsubsection A.8.4.3: Check a division">Section 8.4.3</a> of the Toolkit.</div></aside><div class="para logical" id="MoreOperationsonFractions-6-12">
 <div class="para">When using polynomial division, it helps to write the polynomials in descending powers of the variable. If the numerator is missing any terms, we can insert terms with zero coefficients so that like powers will be aligned. For example, to perform the division</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-long-division.html">
@@ -1749,65 +1652,11 @@ x+3 \enclose{longdiv}{2x^2+x-7}\kern-.2ex \phantom{11}&amp;&amp; \\[-3pt]
 \end{gather*}
 </div>
 </div>
-<details id="MoreOperationsonFractions-6-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="exercise exercise-like" id="MoreOperationsonFractions-6-13"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-359" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="359" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFyZSh5PT4iUmVhbCIpOwokcG9seSA9IEZvcm11bGEoIi15XjIrM3ktMSIpOwokZnJhYyA9IEZvcm11bGEoIjUvKDN5KzEpIik7CgpCRUdJTl9QR01MCkRpdmlkZTogW2BcZGZyYWN7NCs4eV4yLTN5XjN9ezN5KzF9PWBdIFtfXXskcG9seX17OH1bYHt9K3t9YF0gW19deyRmcmFjfXs2fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnRW50ZXIgdGhlIGFwcHJvcHJpYXRlIHBvbHlub21pYWwgaW4gdGhlIGZpcnN0IGJveCwgYW5kIGVudGVyIHRoZSBhbGdlYnJhaWMgZnJhY3Rpb24gaW4gdGhlIHNlY29uZCBib3guJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2AteV4yKzN5LTErIFxkZnJhY3s1fXszeSsxfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-359')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-359-1-1-1">Divide: <span class="process-math">\(\dfrac{4+8y^2-3y^3}{3y+1}=\)</span> <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span><span class="process-math">\({}+{}\)</span> <span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-359-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-359-1-2-1"><span class="process-math">\(-y^{2}+3y-1\)</span></div></div></details><details id="extracted-webwork-359-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-359-1-3-1"><span class="process-math">\(\frac{5}{3y+1}\)</span></div></div></details><details id="extracted-webwork-359-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-359-1-4-1"><span class="process-math">\(-y^2+3y-1+ \dfrac{5}{3y+1}\)</span></div></div></details>
-</div>
-</div>
-</div></article></details><details id="MoreOperationsonFractions-6-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="MoreOperationsonFractions-6-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-360" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="360" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIHNob3J0Y3V0IGZvciBzaW1wbGlmeWluZyBjb21wbGV4IGZyYWN0aW9ucyBhcHBsaWVzIHRoZSBmdW5kYW1lbnRhbCBwcmluY2lwbGUgb2YgZnJhY3Rpb25zLiBbX117JFRydWV9ezV9CgoKYS4gIEFuIGltcHJvcGVyIGFsZ2VicmFpYyBmcmFjdGlvbiBpcyBvbmUgaW4gd2hpY2ggdGhlIGRlbm9taW5hdG9yIGhhcyBoaWdoZXIgZGVncmVlIHRoYW4gdGhlIG51bWVyYXRvci4gIFtfXXskRmFsc2V9ezV9CgoKYS4gIElmIHRoZSByZW1haW5kZXIgaXMgemVybyBpbiBwb2x5bm9taWFsIGRpdmlzaW9uIFtgXGRmcmFje3AoeCl9e3EoeCl9IFx0ZXh0eyx9YF0gdGhlIG51bWVyYXRvciBbYHAoeClgXSBjYW4gYmUgZmFjdG9yZWQuIFtfXXskVHJ1ZX17NX0KCgphLiAgSWYgdGhlIGRpdmlzb3IgaW4gcG9seW5vbWlhbCBkaXZpc2lvbiBpcyBhIGJpbm9taWFsLCB3ZSB1c2UgYSBwcm9jZXNzIGxpa2UgbG9uZyBkaXZpc2lvbi4gIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-360')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-360-1-1-1">
-<div class="para">True or False.</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-360-1-1-1-1">
-<li id="extracted-webwork-360-1-1-1-1-1"><div class="para logical" id="extracted-webwork-360-1-1-1-1-1-1">
-<div class="para">The shortcut for simplifying complex fractions applies the fundamental principle of fractions.</div>
-<ul class="square" id="extracted-webwork-360-1-1-1-1-1-1-1">
-<li id="extracted-webwork-360-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-360-1-1-1-1-1-1-1-1-1">True</div></li>
-<li id="extracted-webwork-360-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-360-1-1-1-1-1-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-360-1-1-1-1-2"><div class="para logical" id="extracted-webwork-360-1-1-1-1-2-1">
-<div class="para">An improper algebraic fraction is one in which the denominator has higher degree than the numerator.</div>
-<ul class="square" id="extracted-webwork-360-1-1-1-1-2-1-1">
-<li id="extracted-webwork-360-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-360-1-1-1-1-2-1-1-1-1">True</div></li>
-<li id="extracted-webwork-360-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-360-1-1-1-1-2-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-360-1-1-1-1-3"><div class="para logical" id="extracted-webwork-360-1-1-1-1-3-1">
-<div class="para">If the remainder is zero in polynomial division <span class="process-math">\(\dfrac{p(x)}{q(x)} \text{,}\)</span> the numerator <span class="process-math">\(p(x)\)</span> can be factored.</div>
-<ul class="square" id="extracted-webwork-360-1-1-1-1-3-1-3">
-<li id="extracted-webwork-360-1-1-1-1-3-1-3-1"><div class="para" id="extracted-webwork-360-1-1-1-1-3-1-3-1-1">True</div></li>
-<li id="extracted-webwork-360-1-1-1-1-3-1-3-2"><div class="para" id="extracted-webwork-360-1-1-1-1-3-1-3-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-360-1-1-1-1-4"><div class="para logical" id="extracted-webwork-360-1-1-1-1-4-1">
-<div class="para">If the divisor in polynomial division is a binomial, we use a process like long division.</div>
-<ul class="square" id="extracted-webwork-360-1-1-1-1-4-1-1">
-<li id="extracted-webwork-360-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-360-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-360-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-360-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-360-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-360-1-2-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-360-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-360-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-360-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-360-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-360-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-360-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-360-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-360-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-360-1-6-1-1">
-<li id="extracted-webwork-360-1-6-1-1-1"><div class="para" id="extracted-webwork-360-1-6-1-1-1-1">True</div></li>
-<li id="extracted-webwork-360-1-6-1-1-2"><div class="para" id="extracted-webwork-360-1-6-1-1-2-1">False</div></li>
-<li id="extracted-webwork-360-1-6-1-1-3"><div class="para" id="extracted-webwork-360-1-6-1-1-3-1">True</div></li>
-<li id="extracted-webwork-360-1-6-1-1-4"><div class="para" id="extracted-webwork-360-1-6-1-1-4-1">True</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="exercises" id="section-8-4-exercises"><h3 class="heading hide-type">
+</h4></article></section><section class="exercises" id="section-8-4-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">8.4.5</span><span class="space"> </span><span class="title">Problem Set 8.4</span>
 </h3>
 <article class="subexercises" id="section-8-4-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

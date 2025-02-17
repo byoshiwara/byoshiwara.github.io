@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -86,7 +69,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -118,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.5.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -147,20 +130,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="TheVertex.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="QuadraticInequalities.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(       \newcommand\degree[0]{^{\circ}}
-       \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
-       
-       \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
-       \newcommand{\blert}[1]{\color{blue}{#1}}
-       \newcommand{\glert}[1]{\color{green}{#1}} 
-       \delimitershortfall-1sp
-       \newcommand\abs[1]{\left|#1\right|}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\newcommand{\bluetext}[1]{\color{blue}{#1}} 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
@@ -1329,7 +1309,10 @@ y=ax^2+bx+c
 </h4>
 <div class="para" id="Example-parabola-through-3-points-1-1">Find values for <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> so that the points <span class="process-math">\((1, 3)\text{,}\)</span> <span class="process-math">\((3, 5)\text{,}\)</span> and <span class="process-math">\((4, 9)\)</span> lie on the graph of <span class="process-math">\(y = ax^2 + bx + c\text{.}\)</span> <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
-<div class="solutions"><details id="Example-parabola-through-3-points-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Example-parabola-through-3-points-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="Example-parabola-through-3-points-2-1">
 <div class="para">We substitute the coordinates of each of the three points into the equation of the parabola to obtain three equations:</div>
 <div class="displaymath process-math" id="Example-parabola-through-3-points-2-1-1">
@@ -1421,101 +1404,13 @@ y = x^2 - 3x + 5
 <div class="para">The parabola and the three points are shown below.</div>
 </div>
 <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/fig-parabola-through-3-specified-points.svg" role="img" class="contained" alt="parabola through-3 specified points"></div>
-</div></details></div></article><aside class="aside aside-like" id="CurveFitting-4-6"><div class="para" id="CurveFitting-4-6-1">
-<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review Gaussian reduction, see <a href="tkchap4.html#tkSpecSys" class="internal" title="Subsubsection A.4.3.3: Special 3x3 linear system">Section 4.3.3</a>. To see more examples of elimination, see <a href="tkchap4.html#tkSolve2by2" class="internal" title="Subsubsection A.4.3.2: Solve a 2x2 linear system">Section 4.3.2</a> of the Toolkit.</div></aside><details id="CurveFitting-4-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="CurveFitting-4-6"><div class="para" id="CurveFitting-4-6-1">
+<span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review Gaussian reduction, see <a href="tkchap4.html#tkSpecSys" class="internal" title="Subsubsection A.4.3.3: Special 3x3 linear system">Section 4.3.3</a>. To see more examples of elimination, see <a href="tkchap4.html#tkSolve2by2" class="internal" title="Subsubsection A.4.3.2: Solve a 2x2 linear system">Section 4.3.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="CurveFitting-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-135" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="135" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gUG9wVXAoCiAgWyI/IiwiR2F1c3NpYW4gcmVkdWN0aW9uIiwgIngtaW50ZXJjZXB0cyIsICJ2ZXJ0ZXgiLCAidGhyZWUiLCAib25lIl0sCiAgMywgCik7CiRiID0gUG9wVXAoCiAgWyI/IiwiR2F1c3NpYW4gcmVkdWN0aW9uIiwgIngtaW50ZXJjZXB0cyIsICJ2ZXJ0ZXgiLCAidGhyZWUiLCAib25lIl0sCiAgMiwgCik7CiRjID0gUG9wVXAoCiAgWyI/IiwiR2F1c3NpYW4gcmVkdWN0aW9uIiwgIngtaW50ZXJjZXB0cyIsICJ2ZXJ0ZXgiLCAidGhyZWUiLCAib25lIl0sCiAgNCwgCik7CiRkID0gUG9wVXAoCiAgWyI/IiwiR2F1c3NpYW4gcmVkdWN0aW9uIiwgIngtaW50ZXJjZXB0cyIsICJ2ZXJ0ZXgiLCAidGhyZWUiLCAib25lIl0sCiAgMSwgCik7CgpCRUdJTl9QR01MCkZpbGwgaW4gdGhlIGJsYW5rcy4gVG8gZmluZCB0aGUgZXF1YXRpb24gZm9yIGEgcGFyYWJvbGE6CmEuICBXZSBjYW4gdXNlIHRoZSBmb3JtdWxhIFtgfnk9YSh4LXhfdileMit5X3Z+YF0gaWYgd2Uga25vdyB0aGUgW19deyRhfXs1fSBhbmQgb25lIG90aGVyIHBvaW50LgphLiAgV2UgY2FuIHVzZSB0aGUgZm9ybXVsYSBbYH55PWEoeC1yXzEpKHgtcl8yKX5gXSBpZiB3ZSBrbm93IHRoZSBbX117JGJ9ezV9IGFuZCBvbmUgb3RoZXIgcG9pbnQuCmEuICBPdGhlcndpc2UsIHdlIG11c3Qga25vdyBhdCBsZWFzdCBbX117JGN9ezV9IHBvaW50cyBvbiB0aGUgZ3JhcGguCmEuICBJbiB0aGF0IGNhc2UsIHdlIHVzZSBbX117JGR9ezV9IHRvIHNvbHZlIGZvciB0aGUgcGFyYW1ldGVycyBvZiB0aGUgZXF1YXRpb24uICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICB2ZXJ0ZXgKYS4gIFtgeGBdLWludGVyY2VwdHMKYS4gIHRocmVlCmEuICBHYXVzc2lhbiByZWR1Y3Rpb24gICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-135')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-135-1-1-1">
-<div class="para">Fill in the blanks. To find the equation for a parabola:</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-135-1-1-1-1">
-<li id="extracted-webwork-135-1-1-1-1-1"><div class="para logical" id="extracted-webwork-135-1-1-1-1-1-1">
-<div class="para">We can use the formula <span class="process-math">\(~y=a(x-x_v)^2+y_v~\)</span> if we know the</div>
-<ul class="square" id="extracted-webwork-135-1-1-1-1-1-1-2">
-<li id="extracted-webwork-135-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-135-1-1-1-1-1-1-2-1-1">Gaussian reduction</div></li>
-<li id="extracted-webwork-135-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-135-1-1-1-1-1-1-2-2-1">x-intercepts</div></li>
-<li id="extracted-webwork-135-1-1-1-1-1-1-2-3"><div class="para" id="extracted-webwork-135-1-1-1-1-1-1-2-3-1">vertex</div></li>
-<li id="extracted-webwork-135-1-1-1-1-1-1-2-4"><div class="para" id="extracted-webwork-135-1-1-1-1-1-1-2-4-1">three</div></li>
-<li id="extracted-webwork-135-1-1-1-1-1-1-2-5"><div class="para" id="extracted-webwork-135-1-1-1-1-1-1-2-5-1">one</div></li>
-</ul>
-<div class="para">and one other point.</div>
-</div></li>
-<li id="extracted-webwork-135-1-1-1-1-2"><div class="para logical" id="extracted-webwork-135-1-1-1-1-2-1">
-<div class="para">We can use the formula <span class="process-math">\(~y=a(x-r_1)(x-r_2)~\)</span> if we know the</div>
-<ul class="square" id="extracted-webwork-135-1-1-1-1-2-1-2">
-<li id="extracted-webwork-135-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-135-1-1-1-1-2-1-2-1-1">Gaussian reduction</div></li>
-<li id="extracted-webwork-135-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-135-1-1-1-1-2-1-2-2-1">x-intercepts</div></li>
-<li id="extracted-webwork-135-1-1-1-1-2-1-2-3"><div class="para" id="extracted-webwork-135-1-1-1-1-2-1-2-3-1">vertex</div></li>
-<li id="extracted-webwork-135-1-1-1-1-2-1-2-4"><div class="para" id="extracted-webwork-135-1-1-1-1-2-1-2-4-1">three</div></li>
-<li id="extracted-webwork-135-1-1-1-1-2-1-2-5"><div class="para" id="extracted-webwork-135-1-1-1-1-2-1-2-5-1">one</div></li>
-</ul>
-<div class="para">and one other point.</div>
-</div></li>
-<li id="extracted-webwork-135-1-1-1-1-3"><div class="para logical" id="extracted-webwork-135-1-1-1-1-3-1">
-<div class="para">Otherwise, we must know at least</div>
-<ul class="square" id="extracted-webwork-135-1-1-1-1-3-1-1">
-<li id="extracted-webwork-135-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-135-1-1-1-1-3-1-1-1-1">Gaussian reduction</div></li>
-<li id="extracted-webwork-135-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-135-1-1-1-1-3-1-1-2-1">x-intercepts</div></li>
-<li id="extracted-webwork-135-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-135-1-1-1-1-3-1-1-3-1">vertex</div></li>
-<li id="extracted-webwork-135-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-135-1-1-1-1-3-1-1-4-1">three</div></li>
-<li id="extracted-webwork-135-1-1-1-1-3-1-1-5"><div class="para" id="extracted-webwork-135-1-1-1-1-3-1-1-5-1">one</div></li>
-</ul>
-<div class="para">points on the graph.</div>
-</div></li>
-<li id="extracted-webwork-135-1-1-1-1-4"><div class="para logical" id="extracted-webwork-135-1-1-1-1-4-1">
-<div class="para">In that case, we use</div>
-<ul class="square" id="extracted-webwork-135-1-1-1-1-4-1-1">
-<li id="extracted-webwork-135-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-135-1-1-1-1-4-1-1-1-1">Gaussian reduction</div></li>
-<li id="extracted-webwork-135-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-135-1-1-1-1-4-1-1-2-1">x-intercepts</div></li>
-<li id="extracted-webwork-135-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-135-1-1-1-1-4-1-1-3-1">vertex</div></li>
-<li id="extracted-webwork-135-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-135-1-1-1-1-4-1-1-4-1">three</div></li>
-<li id="extracted-webwork-135-1-1-1-1-4-1-1-5"><div class="para" id="extracted-webwork-135-1-1-1-1-4-1-1-5-1">one</div></li>
-</ul>
-<div class="para">to solve for the parameters of the equation.</div>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-135-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-135-1-2-1"><span class="process-math">\(\text{vertex}\)</span></div></div></details><details id="extracted-webwork-135-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-135-1-3-1"><span class="process-math">\(\text{x-intercepts}\)</span></div></div></details><details id="extracted-webwork-135-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-135-1-4-1"><span class="process-math">\(\text{three}\)</span></div></div></details><details id="extracted-webwork-135-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-135-1-5-1"><span class="process-math">\(\text{Gaussian reduction}\)</span></div></div></details><details id="extracted-webwork-135-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-135-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-135-1-6-1-1">
-<li id="extracted-webwork-135-1-6-1-1-1"><div class="para" id="extracted-webwork-135-1-6-1-1-1-1">vertex</div></li>
-<li id="extracted-webwork-135-1-6-1-1-2"><div class="para" id="extracted-webwork-135-1-6-1-1-2-1">
-<span class="process-math">\(x\)</span>-intercepts</div></li>
-<li id="extracted-webwork-135-1-6-1-1-3"><div class="para" id="extracted-webwork-135-1-6-1-1-3-1">three</div></li>
-<li id="extracted-webwork-135-1-6-1-1-4"><div class="para" id="extracted-webwork-135-1-6-1-1-4-1">Gaussian reduction</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><details id="CurveFitting-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="CurveFitting-4-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-136" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="136" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJjb250ZXh0TGltaXRlZFBvbHlub21pYWwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiTGltaXRlZFBvbHlub21pYWwiKS0+ZmxhZ3MtPnNldCggcmVkdWNlQ29uc3RhbnRzID0+IDAsIHJlZHVjZUNvbnN0YW50RnVuY3Rpb25zID0+IDAsICAgKTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KHNpbmdsZVBvd2Vycz0+MSk7CiAkYW5zd2VyPSBGb3JtdWxhKCIgLTEvNSp4XjIrNHgrODAiKTsKCkJFR0lOX1BHTUwKYS4gIEZpbmQgdGhlIGVxdWF0aW9uIG9mIGEgcGFyYWJvbGEKCiAgICBbYGBgeSA9IGF4XjIgKyBieCArIGNgYGBdCgogICAgdGhhdCBwYXNzZXMgdGhyb3VnaCB0aGUgcG9pbnRzIFtgKDAsIDgwKVx0ZXh0eyx9YF0gW2AoMTUsIDk1KVx0ZXh0eyx9YF0gYW5kIFtgKDI1LCA1NSlcdGV4dHsufWBdCgogICAgW2B5PWBdW19deyRhbnN3ZXJ9ezE1fQoKCmEuICBQbG90IHRoZSBkYXRhIHBvaW50cyBhbmQgc2tldGNoIHRoZSBwYXJhYm9sYS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgeSA9IFxmcmFjey0xfXs1fSB4XjIgKyA0eCArIDgwYF0KCgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-136')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-136-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-136-1-1-1-1">
-<li id="extracted-webwork-136-1-1-1-1-1">
-<div class="para" id="extracted-webwork-136-1-1-1-1-1-1">Find the equation of a parabola</div>
-<div class="para logical" id="extracted-webwork-136-1-1-1-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-y = ax^2 + bx + c
-\end{equation*}
-</div></div>
-<div class="para" id="extracted-webwork-136-1-1-1-1-1-3">that passes through the points <span class="process-math">\((0, 80)\text{,}\)</span> <span class="process-math">\((15, 95)\text{,}\)</span> and <span class="process-math">\((25, 55)\text{.}\)</span>
-</div>
-<div class="para" id="extracted-webwork-136-1-1-1-1-1-4">
-<span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-136-1-1-1-1-2"><div class="para" id="extracted-webwork-136-1-1-1-1-2-1">Plot the data points and sketch the parabola.</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-136-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-136-1-2-1"><span class="process-math">\(\frac{-1}{5}x^{2}+4x+80\)</span></div></div></details><details id="extracted-webwork-136-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-136-1-3-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-136-1-3-1-1">
-<li id="extracted-webwork-136-1-3-1-1-1"><div class="para" id="extracted-webwork-136-1-3-1-1-1-1"><span class="process-math">\(\displaystyle y = \frac{-1}{5} x^2 + 4x + 80\)</span></div></li>
-<li id="extracted-webwork-136-1-3-1-1-2"><div class="para" id="extracted-webwork-136-1-3-1-1-2-1">A graph is below.</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="CurveFitting-4-8-3"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/fig-parabola-through-3pointsw.svg" role="img" class="contained" alt="parabola"></div></div></article></details></section><section class="subsection" id="CurveFitting-5"><h3 class="heading hide-type">
+</h4>
+<div class="conclusion" id="CurveFitting-4-8-2"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/fig-parabola-through-3pointsw.svg" role="img" class="contained" alt="parabola"></div></div></article></section><section class="subsection" id="CurveFitting-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="space"> </span><span class="title">Applications</span>
 </h3>
 <div class="para" id="CurveFitting-5-2">The simplest way to fit a parabola to a set of data points is to pick three of the points and find the equation of the parabola that passes through those three points.</div>
@@ -1541,7 +1436,10 @@ y = ax^2 + bx + c
 </tr>
 </table></div> <div class="para" id="example-quadratic-fit-1-3">Find a possible quadratic model, <span class="process-math">\(~C=av^2+bv+c,~\)</span> that expresses <span class="process-math">\(C\)</span> in terms of <span class="process-math">\(v\text{.}\)</span>
 </div>
-<div class="solutions"><details id="example-quadratic-fit-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="example-quadratic-fit-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:3.75%;margin-right:3.75%;">
 <div class="sbspanel top" style="width:64.8648648648649%;">
 <div class="para" id="example-quadratic-fit-2-1-1-1">When we plot the data, it is clear that the relationship between <span class="process-math">\(v\)</span> and <span class="process-math">\(C\)</span> is not linear, but it may be quadratic, as shown at right.</div>
@@ -1588,99 +1486,13 @@ C = 0.006v^2 - 0.5v + 16.2
 </div>
 <div class="sbspanel top" style="width:26.3157894736842%;"><img src="external/images/fig-parabola-fitting-scatterplot.svg" role="img" class="contained" alt="parabola fitting nonlinear scatterplot"></div>
 </div></div>
-</div></details></div></article><div class="para" id="CurveFitting-5-4">As was the case with linear regression, the graph of the regression equation may not pass through all of the data points, but it should be close to most of them.</div>
-<details id="CurveFitting-5-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><div class="para" id="CurveFitting-5-4">As was the case with linear regression, the graph of the regression equation may not pass through all of the data points, but it should be close to most of them.</div>
+<article class="exercise exercise-like" id="CurveFitting-5-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-137" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="137" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQodD0+IlJlYWwiKTsKJGEgPSBDb21wdXRlKCIwLjc1Iik7CiRiID0gQ29tcHV0ZSgiLTEuODUiKTsKJGMgPSBDb21wdXRlKCI1Ni4yIik7CiRwID0gRm9ybXVsYSgiJGEqdCoqMiArICRiICp0ICsgJGMiKTsKJHQgPSA1OwokYW5zd2VyID0gJHAtPmV2YWwodD0+JHQpOwoKQkVHSU5fUEdNTApUaGUgZGF0YSBiZWxvdyBzaG93IEFtZXJpY2FucycgYW5udWFsIHBlciBjYXBpdGEgY29uc3VtcHRpb24gb2YgY2hpY2tlbiBmb3Igc2V2ZXJhbCB5ZWFycyBzaW5jZSAxOTg1LgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnWWVhcicpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJzE5ODYnKSxQR01MKCcxOTg3JyksUEdNTCgnMTk4OCcpLFBHTUwoJzE5ODknKSxQR01MKCcxOTkwJyksXSxbW1BHTUwoJ1BvdW5kcyBvZiBjaGlja2VuJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2A1MS4zYF0nKSxQR01MKCdbYDU1LjVgXScpLFBHTUwoJ1tgNTcuNGBdJyksUEdNTCgnW2A2MC44YF0nKSxQR01MKCdbYDYzLjZgXScpLF0sXSxhbGlnbj0+J3wqezZ9e2N8fScsdmFsaWduPT4nbWlkZGxlJyx0b3A9PiczJywpO0BdKiA8PAoKYS4gIFVzZSB0aGUgdmFsdWVzIGZvciAxOTg3IHRocm91Z2ggMTk4OSB0byBmaXQgYSBxdWFkcmF0aWMgZXF1YXRpb24gdG8gdGhlIGRhdGEsIFtgfkM9YXReMitidCtjLH5gXSB3aGVyZSBbYHRgXSBpcyBtZWFzdXJlZCBpbiB5ZWFycyBzaW5jZSAxOTg1LgoKICAgIFtgQz1gXVtfXXskcH17MTh9CgoKYS4gIFdoYXQgZG9lcyB5b3VyIGVxdWF0aW9uIHByZWRpY3QgZm9yIHBlciBjYXBpdGEgY2hpY2tlbiBjb25zdW1wdGlvbiBpbiAxOTkwPwoKICAgIEFuc3dlcjogW19deyRhbnN3ZXJ9ezN9IGxicwoKCmEuICBTa2V0Y2ggdGhlIGdyYXBoIG9mIHlvdXIgZXF1YXRpb24gYW5kIHRoZSBnaXZlbiBkYXRhLiBEb2VzIHlvdXIgbW9kZWwgcHJvdmlkZSBhIGdvb2QgZml0IGZvciB0aGUgZGF0YT8KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgQz0wLjc1dF4yLTEuODV0KzU2LjJgXQoKCmEuICA2NS43IGxicwoKCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-137')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-137-1-1-1">The data below show Americans’ annual per capita consumption of chicken for several years since 1985.</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Year</td>
-<td class="c m b1 r1 l0 t0 lines">1986</td>
-<td class="c m b1 r1 l0 t0 lines">1987</td>
-<td class="c m b1 r1 l0 t0 lines">1988</td>
-<td class="c m b1 r1 l0 t0 lines">1989</td>
-<td class="c m b1 r1 l0 t0 lines">1990</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Pounds of chicken</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(51.3\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(55.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(57.4\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(60.8\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(63.6\)</span></td>
-</tr>
-</table></div> <div class="para logical" id="extracted-webwork-137-1-1-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-137-1-1-3-1">
-<li id="extracted-webwork-137-1-1-3-1-1">
-<div class="para" id="extracted-webwork-137-1-1-3-1-1-1">Use the values for 1987 through 1989 to fit a quadratic equation to the data, <span class="process-math">\(~C=at^2+bt+c,~\)</span> where <span class="process-math">\(t\)</span> is measured in years since 1985.</div>
-<div class="para" id="extracted-webwork-137-1-1-3-1-1-2">
-<span class="process-math">\(C=\)</span><span class="fillin underline" role="img" aria-label="18-character blank" style="width: 8.181818181818182em;"></span>
-</div>
-</li>
-<li id="extracted-webwork-137-1-1-3-1-2">
-<div class="para" id="extracted-webwork-137-1-1-3-1-2-1">What does your equation predict for per capita chicken consumption in 1990?</div>
-<div class="para" id="extracted-webwork-137-1-1-3-1-2-2">Answer: <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> lbs</div>
-</li>
-<li id="extracted-webwork-137-1-1-3-1-3"><div class="para" id="extracted-webwork-137-1-1-3-1-3-1">Sketch the graph of your equation and the given data. Does your model provide a good fit for the data?</div></li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-137-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-137-1-2-1"><span class="process-math">\(0.75t^{2}+\left(-1.85\right)t+56.2\)</span></div></div></details><details id="extracted-webwork-137-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-137-1-3-1"><span class="process-math">\(65.7\)</span></div></div></details><details id="extracted-webwork-137-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-137-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-137-1-4-1-1">
-<li id="extracted-webwork-137-1-4-1-1-1"><div class="para" id="extracted-webwork-137-1-4-1-1-1-1"><span class="process-math">\(\displaystyle C=0.75t^2-1.85t+56.2\)</span></div></li>
-<li id="extracted-webwork-137-1-4-1-1-2"><div class="para" id="extracted-webwork-137-1-4-1-1-2-1">65.7 lbs</div></li>
-<li id="extracted-webwork-137-1-4-1-1-3"><div class="para" id="extracted-webwork-137-1-4-1-1-3-1">A graph is below.</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="CurveFitting-5-5-3"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/fig-chicken-consumptionw.svg" role="img" class="contained" alt="scatterplot and parabola fit"></div></div></article></details><details id="CurveFitting-5-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4>
+<div class="conclusion" id="CurveFitting-5-5-2"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/fig-chicken-consumptionw.svg" role="img" class="contained" alt="scatterplot and parabola fit"></div></div></article><article class="exercise exercise-like" id="CurveFitting-5-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-138" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="138" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRURiA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAxLCAKKTsKJEZhbHNlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsICJGYWxzZSJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlCmEuICBXZSBjYW4gcGxvdCB0aGUgZGF0YSBwb2ludHMgdG8gc2VlIHdoYXQgdHlwZSBvZiBjdXJ2ZSBpcyBhcHByb3ByaWF0ZSBhcyBhIG1vZGVsLiAgW19deyRURn17NX0KYS4gIFdlIHdyaXRlIGEgc3lzdGVtIG9mIGVxdWF0aW9ucyBpbiB3aGljaCB0aGUgW2B5YF0tY29vcmRpbmF0ZXMgb2YgdGhlIGRhdGEgcG9pbnRzIGFyZSB0aGUgdW5rbm93biB2YWx1ZXMuICBbX117JEZhbHNlfXs1fQphLiAgQSBnb29kIHJlZ3Jlc3Npb24gZXF1YXRpb24gd2lsbCBwYXNzIHRocm91Z2ggYWxsIG9mIHRoZSBkYXRhIHBvaW50cy4gIFtfXXskRmFsc2V9ezV9CmEuICBBY2NvcmRpbmcgdG8gdGhlIG1vZGVsIGluIHRoZSBwcmV2aW91cyBFeGFtcGxlIChpbnZvbHZpbmcgYSBxdWFkcmF0aWMgbW9kZWwgZm9yIHRoZSBjb3N0IG9mIGRyaXZpbmcgYXQgZGlmZmVyZW50IHNwZWVkcyksIGhpZ2hlciBzcGVlZHMgYWx3YXlzIHJlc3VsdCBpbiBoaWdoZXIgZHJpdmluZyBjb3N0cy4gIFtfXXskRmFsc2V9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUcnVlCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIEZhbHNlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-138')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-138-1-1-1">
-<div class="para">True or False</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-138-1-1-1-1">
-<li id="extracted-webwork-138-1-1-1-1-1"><div class="para logical" id="extracted-webwork-138-1-1-1-1-1-1">
-<div class="para">We can plot the data points to see what type of curve is appropriate as a model.</div>
-<ul class="square" id="extracted-webwork-138-1-1-1-1-1-1-1">
-<li id="extracted-webwork-138-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-138-1-1-1-1-1-1-1-1-1">True</div></li>
-<li id="extracted-webwork-138-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-138-1-1-1-1-1-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-138-1-1-1-1-2"><div class="para logical" id="extracted-webwork-138-1-1-1-1-2-1">
-<div class="para">We write a system of equations in which the <span class="process-math">\(y\)</span>-coordinates of the data points are the unknown values.</div>
-<ul class="square" id="extracted-webwork-138-1-1-1-1-2-1-2">
-<li id="extracted-webwork-138-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-138-1-1-1-1-2-1-2-1-1">True</div></li>
-<li id="extracted-webwork-138-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-138-1-1-1-1-2-1-2-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-138-1-1-1-1-3"><div class="para logical" id="extracted-webwork-138-1-1-1-1-3-1">
-<div class="para">A good regression equation will pass through all of the data points.</div>
-<ul class="square" id="extracted-webwork-138-1-1-1-1-3-1-1">
-<li id="extracted-webwork-138-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-138-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-138-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-138-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-138-1-1-1-1-4"><div class="para logical" id="extracted-webwork-138-1-1-1-1-4-1">
-<div class="para">According to the model in the previous Example (involving a quadratic model for the cost of driving at different speeds), higher speeds always result in higher driving costs.</div>
-<ul class="square" id="extracted-webwork-138-1-1-1-1-4-1-1">
-<li id="extracted-webwork-138-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-138-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-138-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-138-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-138-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-138-1-2-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-138-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-138-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-138-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-138-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-138-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-138-1-5-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-138-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-138-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-138-1-6-1-1">
-<li id="extracted-webwork-138-1-6-1-1-1"><div class="para" id="extracted-webwork-138-1-6-1-1-1-1">True</div></li>
-<li id="extracted-webwork-138-1-6-1-1-2"><div class="para" id="extracted-webwork-138-1-6-1-1-2-1">False</div></li>
-<li id="extracted-webwork-138-1-6-1-1-3"><div class="para" id="extracted-webwork-138-1-6-1-1-3-1">False</div></li>
-<li id="extracted-webwork-138-1-6-1-1-4"><div class="para" id="extracted-webwork-138-1-6-1-1-4-1">False</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details></section><section class="subsection" id="CurveFitting-6"><h3 class="heading hide-type">
+</h4></article></section><section class="subsection" id="CurveFitting-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="space"> </span><span class="title">Using a Calculator for Quadratic Regression</span>
 </h3>
 <div class="para" id="CurveFitting-6-2">We can use a graphing calculator or other technology to find an approximate quadratic fit for a set of data. The procedure is similar to the steps for linear regression.</div>
@@ -1691,7 +1503,11 @@ C = 0.006v^2 - 0.5v + 16.2
 <li id="example-GC-quadratic-fit-1-1-1-1"><div class="para" id="example-GC-quadratic-fit-1-1-1-1-1">Use your calculator to find a quadratic fit for the data in <a href="CurveFitting.html#example-quadratic-fit" class="xref" data-knowl="./knowl/xref/example-quadratic-fit.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.4">Example 4</a>.</div></li>
 <li id="example-GC-quadratic-fit-1-1-1-2"><div class="para" id="example-GC-quadratic-fit-1-1-1-2-1">How many of the given data points actually lie on the graph of the quadratic approximation?</div></li>
 </ol></div>
-<div class="solutions"><details id="example-GC-quadratic-fit-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example-GC-quadratic-fit-2-1"><ol class="lower-alpha ol-marker-2" id="example-GC-quadratic-fit-2-1-1">
+<div class="solution solution-like" id="example-GC-quadratic-fit-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-GC-quadratic-fit-2-1"><ol class="lower-alpha ol-marker-2" id="example-GC-quadratic-fit-2-1-1">
 <li id="example-GC-quadratic-fit-2-1-1-1">
 <div class="para" id="example-GC-quadratic-fit-2-1-1-1-1">We press <kbd class="kbdkey">STAT</kbd> <kbd class="kbdkey">ENTER</kbd> and enter the data under columns <span class="process-math">\(L_1\)</span> and <span class="process-math">\(L_2\text{,}\)</span> as shown below. Next, we calculate the quadratic regression equation and store it in <span class="process-math">\(Y_1\)</span> by pressing <kbd class="kbdkey">STAT</kbd> <kbd class="kbdkey">→</kbd>  <span class="process-math">\(5\)</span> <kbd class="kbdkey">VARS</kbd> <kbd class="kbdkey">→</kbd>  <span class="process-math">\(1\)</span> <span class="process-math">\(1\)</span> <kbd class="kbdkey">ENTER</kbd>.</div>
 <div class="para" id="example-GC-quadratic-fit-2-1-1-1-2">The regression equation has the form <span class="process-math">\(y = ax^2 + bx + c\text{,}\)</span> where <span class="process-math">\(a = 0.0057\text{,}\)</span> <span class="process-math">\(b = -0.47\text{,}\)</span> and <span class="process-math">\(c = 15.56\text{.}\)</span> Notice that <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are all close to the values we computed in <a href="CurveFitting.html#example-quadratic-fit" class="xref" data-knowl="./knowl/xref/example-quadratic-fit.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.4">Example 4.3.4</a>.</div>
@@ -1702,59 +1518,14 @@ C = 0.006v^2 - 0.5v + 16.2
 <div class="para" id="example-GC-quadratic-fit-2-1-1-2-2">However, try using either the <em class="emphasis">value</em> feature or a table to find the <span class="process-math">\(y\)</span>-coordinates of points on the regression curve. By comparing these <span class="process-math">\(y\)</span>-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola.</div>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/fig-GC-quadratic-regression2.svg" role="img" class="contained" alt="GC plot and GC table quadratic regression output"></div>
 </li>
-</ol></div></div></details></div></article><details id="CurveFitting-6-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-139" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="139" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsInBhcnNlclBvcFVwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRQb3AgPSBQb3BVcCgKWyI/IiwibGluZWFyIiwicXVhZHJhdGljIl0sCjIsIAopOwokZiA9IEZvcm11bGEoIjMuNjUwMTM3NzQxKjEwKiooLTcpeCoqMi0wLjAwMSp4KzEuMDIiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4wMSwKKTsKCkJFR0lOX1BHTUwKVG8gdGVzdCB0aGUgZWZmZWN0cyBvZiByYWRpYXRpb24sIGEgcmVzZWFyY2hlciBpcnJhZGlhdGVkIG1hbGUgbWljZSB3aXRoIHZhcmlvdXMgZG9zYWdlcyBhbmQgYnJlZCB0aGVtIHdpdGggdW5leHBvc2VkIGZlbWFsZSBtaWNlLiBUaGUgdGFibGUgYmVsb3cgc2hvd3MgdGhlIGZyYWN0aW9uIG9mIGZlcnRpbGl6ZWQgZWdncyB0aGF0IHN1cnZpdmVkLCBhcyBhIGZ1bmN0aW9uIG9mIHRoZSByYWRpYXRpb24gZG9zYWdlLiAoU291cmNlOiBTdHJpY2tiZXJnZXIsIE1vbnJvZSBXLiwgMTk3NikKCj4+IFtARGF0YVRhYmxlKFtbW1BHTUwoJ1JhZGlhdGlvbiAocmVtcyknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDEwMGBdJyksUEdNTCgnW2AzMDBgXScpLFBHTUwoJ1tgNTAwYF0nKSxQR01MKCdbYDcwMGBdJyksUEdNTCgnW2A5MDBgXScpLFBHTUwoJ1tgMTEwMGBdJyksUEdNTCgnW2AxNTAwYF0nKSxdLFtbUEdNTCgnUmVsYXRpdmUgc3Vydml2YWwgIApvZiBlZ2dzICAKJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AwLjk0YF0nKSxQR01MKCdbYDAuNzAwYF0nKSxQR01MKCdbYDAuNTQ0YF0nKSxQR01MKCdbYDAuNDI0YF0nKSxQR01MKCdbYDAuMzY2YF0nKSxQR01MKCdbYDAuMjc3YF0nKSxQR01MKCdbYDAuMTk1YF0nKSxdLF0sYWxpZ249Pid8Kns4fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSogPDwKCmEuICBFbnRlciB0aGUgZGF0YSBpbnRvIHlvdXIgY2FsY3VsYXRvciBhbmQgY3JlYXRlIGEgc2NhdHRlcnBsb3QuIERvZXMgdGhlIGdyYXBoIGFwcGVhciB0byBiZSBsaW5lYXI/IERvZXMgaXQgYXBwZWFyIHRvIGJlIHF1YWRyYXRpYz8gW19deyRQb3B9ezV9CgoKYS4gIEZpdCBhIHF1YWRyYXRpYyByZWdyZXNzaW9uIGVxdWF0aW9uIHRvIHRoZSBkYXRhIGFuZCBncmFwaCB0aGUgZXF1YXRpb24gb24gdGhlIHNjYXR0ZXJwbG90LgoKICAgIFtgeT1gXVtfXXskZn17MjV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUaGUgZ3JhcGggYXBwZWFycyB0byBiZSBxdWFkcmF0aWMuCgoKYS4gIFtgeSA9IDMuNjVcdGltZXMgMTBeey03fXheMiAtIDAuMDAxeCArIDEuMDJgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-139')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-139-1-1-1">To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976)</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Radiation (rems)</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(100\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(300\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(500\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(700\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(900\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1100\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1500\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Relative survival of eggs</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.94\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.700\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.544\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.424\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.366\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.277\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.195\)</span></td>
-</tr>
-</table></div> <div class="para logical" id="extracted-webwork-139-1-1-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-139-1-1-3-1">
-<li id="extracted-webwork-139-1-1-3-1-1"><div class="para logical" id="extracted-webwork-139-1-1-3-1-1-1">
-<div class="para">Enter the data into your calculator and create a scatterplot. Does the graph appear to be linear? Does it appear to be quadratic?</div>
-<ul class="square" id="extracted-webwork-139-1-1-3-1-1-1-1">
-<li id="extracted-webwork-139-1-1-3-1-1-1-1-1"><div class="para" id="extracted-webwork-139-1-1-3-1-1-1-1-1-1">linear</div></li>
-<li id="extracted-webwork-139-1-1-3-1-1-1-1-2"><div class="para" id="extracted-webwork-139-1-1-3-1-1-1-1-2-1">quadratic</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-139-1-1-3-1-2">
-<div class="para" id="extracted-webwork-139-1-1-3-1-2-1">Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</div>
-<div class="para" id="extracted-webwork-139-1-1-3-1-2-2">
-<span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>
-</div>
-</li>
 </ol></div>
-<div class="solutions">
-<details id="extracted-webwork-139-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-139-1-2-1"><span class="process-math">\(\text{quadratic}\)</span></div></div></details><details id="extracted-webwork-139-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-139-1-3-1"><span class="process-math">\(3.65014\times 10^{-7}x^{2}-0.001x+1.02\)</span></div></div></details><details id="extracted-webwork-139-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-139-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-139-1-4-1-1">
-<li id="extracted-webwork-139-1-4-1-1-1"><div class="para" id="extracted-webwork-139-1-4-1-1-1-1">The graph appears to be quadratic.</div></li>
-<li id="extracted-webwork-139-1-4-1-1-2"><div class="para" id="extracted-webwork-139-1-4-1-1-2-1"><span class="process-math">\(\displaystyle y = 3.65\times 10^{-7}x^2 - 0.001x + 1.02\)</span></div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="CurveFitting-6-4-3">
-<div class="para" id="CurveFitting-6-4-3-1">Graph for part (a):</div>
+</div></article><article class="exercise exercise-like" id="CurveFitting-6-4"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
+</h4>
+<div class="conclusion" id="CurveFitting-6-4-2">
+<div class="para" id="CurveFitting-6-4-2-1">Graph for part (a):</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-ex-4-3-5.svg" role="img" class="contained" alt="parabola fit to points"></div>
-</div></article></details></section><section class="subsection" id="CurveFitting-7"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="CurveFitting-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="space"> </span><span class="title">Choosing an Appropriate Model</span>
 </h3>
 <div class="para" id="CurveFitting-7-2">We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph.</div>
@@ -1795,7 +1566,10 @@ C = 0.006v^2 - 0.5v + 16.2
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(7.13\)</span></td>
 </tr>
 </table></div>
-<div class="solutions"><details id="Example-quadratic-fit-of-minute-hand-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solution solution-like" id="Example-quadratic-fit-of-minute-hand-2">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period">.</span>
+</h4>
 <div class="para logical" id="Example-quadratic-fit-of-minute-hand-2-1">
 <div class="para">We enter the time data under <span class="process-math">\(L_1\)</span> and the height data under <span class="process-math">\(L_2\text{.}\)</span> Then we calculate and store the quadratic regression equation in <span class="process-math">\(Y_1\text{,}\)</span> as we did in <a href="CurveFitting.html#example-GC-quadratic-fit" class="xref" data-knowl="./knowl/xref/example-GC-quadratic-fit.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.7">Example 4.3.7</a>. The regression equation is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-GC-quadratic-fit.html">
@@ -1807,7 +1581,7 @@ y = -0.00297x^2 + 0x + 8.834
 </div>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/fig-GC-bad-quadratic-fit.svg" role="img" class="contained" alt="GC screens of graph and tables for quadratic fit"></div>
 <div class="para" id="Example-quadratic-fit-of-minute-hand-2-3">If we scroll down the table, we find that this equation predicts a height of approximately 4.08 feet at time 40 minutes. (See figure (c).) This is a preposterous estimate! The position of the minute hand at 40 minutes after noon should be the same as it was exactly one hour earlier (at 20 minutes before noon), when it was 7.50 feet.</div>
-</div></details></div></article><article class="warning remark-like" id="CurveFitting-7-5"><h4 class="heading">
+</div></article><article class="warning remark-like" id="CurveFitting-7-5"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">4.3.10</span><span class="period">.</span>
 </h4>
 <div class="para" id="CurveFitting-7-5-1">Using the wrong type of function to fit the data is a common error in making predictions. In the <a href="CurveFitting.html#Example-quadratic-fit-of-minute-hand" class="xref" data-knowl="./knowl/xref/Example-quadratic-fit-of-minute-hand.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.9">Example</a> above, we know that the minute hand of a clock repeats its position every 60 minutes. The graph of the height of its tip oscillates up and down, repeating the same pattern over and over. We cannot describe such a graph using either a linear or a quadratic function.</div>
@@ -1815,104 +1589,15 @@ y = -0.00297x^2 + 0x + 8.834
 <div class="sbspanel middle" style="width:46.6321243523316%;"><img src="external/images/fig-quadratic-fit-of-periodic.svg" role="img" class="contained" alt="parabola fit on part of a periodic wave"></div>
 <div class="sbspanel middle" style="width:49.740932642487%;"><div class="para" id="CurveFitting-7-5-2-2">The graph of the height is shown at left, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</div></div>
 </div></div>
-<div class="para" id="CurveFitting-7-5-3">Even though your calculator can always compute a regression equation,that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</div></article><details id="CurveFitting-7-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="CurveFitting-7-5-3">Even though your calculator can always compute a regression equation,that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</div></article><article class="exercise exercise-like" id="CurveFitting-7-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-140" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="140" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRURiA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCAiRmFsc2UiXSwKICAxLCAKKTsKJEZhbHNlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsICJGYWxzZSJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlCmEuICBZb3VyIGNhbGN1bGF0b3IgY2FuIGNob29zZSB0aGUgY29ycmVjdCB0eXBlIG9mIHJlZ3Jlc3Npb24gZXF1YXRpb24gZm9yIGEgZGF0YSBzZXQuICBbX117JEZhbHNlfXs1fQphLiAgSXQgaXMgb25seSBuZWNlc3NhcnkgdG8gdXNlIHRoZSBmaXJzdCBhbmQgbGFzdCBkYXRhIHBvaW50cyB0byBjb21wdXRlIGEgcmVncmVzc2lvbiBlcXVhdGlvbi4gIFtfXXskRmFsc2V9ezV9CmEuICBBIHJlZ3Jlc3Npb24gZXF1YXRpb24gbWF5IGZpdCBzb21lIG9mIHRoZSBkYXRhIGJ1dCBzdGlsbCBiZSBhIHBvb3IgbW9kZWwuICBbX117JFRGfXs1fQphLiAgQSBnb29kIHJlZ3Jlc3Npb24gZXF1YXRpb24gc2hvdWxkIGZpdCBhbGwgdGhlIGRhdGEgcG9pbnRzIGV4YWN0bHkuICBbX117JEZhbHNlfXs1fSAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIEZhbHNlCmEuICBUcnVlCmEuICBGYWxzZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-140')">Activate</button></div>
-<div class="problem-contents">
-<div class="para logical" id="extracted-webwork-140-1-1-1">
-<div class="para">True or False</div>
-<ol class="lower-alpha ol-marker-2" id="extracted-webwork-140-1-1-1-1">
-<li id="extracted-webwork-140-1-1-1-1-1"><div class="para logical" id="extracted-webwork-140-1-1-1-1-1-1">
-<div class="para">Your calculator can choose the correct type of regression equation for a data set.</div>
-<ul class="square" id="extracted-webwork-140-1-1-1-1-1-1-1">
-<li id="extracted-webwork-140-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-140-1-1-1-1-1-1-1-1-1">True</div></li>
-<li id="extracted-webwork-140-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-140-1-1-1-1-1-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-140-1-1-1-1-2"><div class="para logical" id="extracted-webwork-140-1-1-1-1-2-1">
-<div class="para">It is only necessary to use the first and last data points to compute a regression equation.</div>
-<ul class="square" id="extracted-webwork-140-1-1-1-1-2-1-1">
-<li id="extracted-webwork-140-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-140-1-1-1-1-2-1-1-1-1">True</div></li>
-<li id="extracted-webwork-140-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-140-1-1-1-1-2-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-140-1-1-1-1-3"><div class="para logical" id="extracted-webwork-140-1-1-1-1-3-1">
-<div class="para">A regression equation may fit some of the data but still be a poor model.</div>
-<ul class="square" id="extracted-webwork-140-1-1-1-1-3-1-1">
-<li id="extracted-webwork-140-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-140-1-1-1-1-3-1-1-1-1">True</div></li>
-<li id="extracted-webwork-140-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-140-1-1-1-1-3-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-<li id="extracted-webwork-140-1-1-1-1-4"><div class="para logical" id="extracted-webwork-140-1-1-1-1-4-1">
-<div class="para">A good regression equation should fit all the data points exactly.</div>
-<ul class="square" id="extracted-webwork-140-1-1-1-1-4-1-1">
-<li id="extracted-webwork-140-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-140-1-1-1-1-4-1-1-1-1">True</div></li>
-<li id="extracted-webwork-140-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-140-1-1-1-1-4-1-1-2-1">False</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-140-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-140-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-140-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-140-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-140-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-140-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-140-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-140-1-5-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-140-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-140-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-140-1-6-1-1">
-<li id="extracted-webwork-140-1-6-1-1-1"><div class="para" id="extracted-webwork-140-1-6-1-1-1-1">False</div></li>
-<li id="extracted-webwork-140-1-6-1-1-2"><div class="para" id="extracted-webwork-140-1-6-1-1-2-1">False</div></li>
-<li id="extracted-webwork-140-1-6-1-1-3"><div class="para" id="extracted-webwork-140-1-6-1-1-3-1">True</div></li>
-<li id="extracted-webwork-140-1-6-1-1-4"><div class="para" id="extracted-webwork-140-1-6-1-1-4-1">False</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div></article></details><details id="CurveFitting-7-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></article><article class="exercise exercise-like" id="CurveFitting-7-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-141" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="141" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50IiktPnZhcmlhYmxlcy0+c2V0KHg9PntsaW1pdHM9PlsyLDNdfSk7CiRmID0gRm9ybXVsYSgiLTE1KngqKjIrMTA5Ljk1NzE0Mjg1NzE0KngtMC4wNzE0Mjg1NzE0MjkiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4wMiwKKTsKJHYgPSBQb2ludCgiKDMuNjY1MjM4MDk1LDIwMS40MzgxMjU4NSkiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4wMSwKKTsKCkJFR0lOX1BHTUwKQSBzcGVlZGluZyBtb3RvcmlzdCBzbGFtcyBvbiB0aGUgYnJha2VzIHdoZW4gc2hlIHNlZXMgYW4gYWNjaWRlbnQgZGlyZWN0bHkgYWhlYWQgb2YgaGVyLiBUaGUgZGlzdGFuY2Ugc2hlIGhhcyB0cmF2ZWxlZCBbYHRgXSBzZWNvbmRzIGFmdGVyIGJyYWtpbmcgaXMgc2hvd24gaW4gdGhlIHRhYmxlLgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnVGltZSAoc2Vjb25kcyknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDBgXScpLFBHTUwoJ1tgMC41YF0nKSxQR01MKCdbYDEuMGBdJyksUEdNTCgnW2AxLjVgXScpLFBHTUwoJ1tgMi4wYF0nKSxQR01MKCdbYDIuNWBdJyksXSxbW1BHTUwoJ0Rpc3RhbmNlIChmZWV0KScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tgMGBdJyksUEdNTCgnW2A1MWBdJyksUEdNTCgnW2A5NWBdJyksUEdNTCgnW2AxMzFgXScpLFBHTUwoJ1tgMTYwYF0nKSxQR01MKCdbYDE4MWBdJyksXSxdLGFsaWduPT4nfCp7N317Y3x9Jyx2YWxpZ249PidtaWRkbGUnLHRvcD0+JzMnLCk7QF0qIDw8CgphLiAgRW50ZXIgdGhlIGRhdGEgaW50byB5b3VyIGNhbGN1bGF0b3IgYW5kIGNyZWF0ZSBhIHNjYXR0ZXJwbG90LiBGaXQgYSBxdWFkcmF0aWMgcmVncmVzc2lvbiBlcXVhdGlvbiB0byB0aGUgZGF0YSBhbmQgZ3JhcGggdGhlIGVxdWF0aW9uIG9uIHRoZSBzY2F0dGVycGxvdC4KCiAgICBSZWdyZXNzaW9uIGVxdWF0aW9uOiBbYHk9YF1bX117JGZ9ezE1fSAgVXNlIFtgeGBdIGZvciB0aGUgdGltZSBpbiBzZWNvbmRzLgoKCmEuICBVc2UgeW91ciByZWdyZXNzaW9uIGVxdWF0aW9uIHRvIGZpbmQgdGhlIHZlcnRleCBvZiB0aGUgcGFyYWJvbGE6IFtfXXskdn17MTJ9CgogICAgV2hhdCBkbyB0aGUgY29vcmRpbmF0ZXMgcmVwcmVzZW50IGluIHRlcm1zIG9mIHRoZSBwcm9ibGVtPwoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCiAgICBbYHkgPSAtMTV4XjIgKyAxMTB4IC0gMC4wN2BdCgoKYS4gIFtgKDMuNjcsIDIwMSlcdGV4dHs6fWBdIFRoZSBjYXIgY2FtZSB0byBhIHN0b3AgaW4gMy42NyBzZWNvbmRzLCBhZnRlciBzbGlkaW5nIDIwMSBmZWV0LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-141')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-141-1-1-1">A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled <span class="process-math">\(t\)</span> seconds after braking is shown in the table.</div>  <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Time (seconds)</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.0\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2.0\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2.5\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Distance (feet)</td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(51\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(95\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(131\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(160\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(181\)</span></td>
-</tr>
-</table></div> <div class="para logical" id="extracted-webwork-141-1-1-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-141-1-1-3-1">
-<li id="extracted-webwork-141-1-1-3-1-1">
-<div class="para" id="extracted-webwork-141-1-1-3-1-1-1">Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</div>
-<div class="para" id="extracted-webwork-141-1-1-3-1-1-2">Regression equation: <span class="process-math">\(y=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>  Use <span class="process-math">\(x\)</span> for the time in seconds.</div>
-</li>
-<li id="extracted-webwork-141-1-1-3-1-2">
-<div class="para" id="extracted-webwork-141-1-1-3-1-2-1">Use your regression equation to find the vertex of the parabola: <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span>
-</div>
-<div class="para" id="extracted-webwork-141-1-1-3-1-2-2">What do the coordinates represent in terms of the problem?</div>
-</li>
-</ol></div>
-<div class="solutions">
-<details id="extracted-webwork-141-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-141-1-2-1"><span class="process-math">\(-15x^{2}+109.957x-0.0714286\)</span></div></div></details><details id="extracted-webwork-141-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-141-1-3-1"><span class="process-math">\(\left(3.66524,201.438\right)\)</span></div></div></details><details id="extracted-webwork-141-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-141-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-141-1-4-1-1">
-<li id="extracted-webwork-141-1-4-1-1-1">
-<div class="para" id="extracted-webwork-141-1-4-1-1-1-1">A graph is below.</div>
-<div class="para" id="extracted-webwork-141-1-4-1-1-1-2"><span class="process-math">\(y = -15x^2 + 110x - 0.07\)</span></div>
-</li>
-<li id="extracted-webwork-141-1-4-1-1-2"><div class="para" id="extracted-webwork-141-1-4-1-1-2-1">
-<span class="process-math">\((3.67, 201)\text{:}\)</span> The car came to a stop in 3.67 seconds, after sliding 201 feet.</div></li>
-</ol></div></div></details>
-</div>
-</div>
-</div>
-<div class="conclusion" id="CurveFitting-7-7-3">
-<div class="para" id="CurveFitting-7-7-3-1">Graph for part (a):</div>
+</h4>
+<div class="conclusion" id="CurveFitting-7-7-2">
+<div class="para" id="CurveFitting-7-7-2-1">Graph for part (a):</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-ex-4-3-4ans.svg" role="img" class="contained" alt="parabola fit to points"></div>
-</div></article></details></section><section class="exercises" id="section-4-3-exercises"><h3 class="heading hide-type">
+</div></article></section><section class="exercises" id="section-4-3-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="space"> </span><span class="title">Problem Set 4.3</span>
 </h3>
 <article class="subexercises" id="section-4-3-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>
