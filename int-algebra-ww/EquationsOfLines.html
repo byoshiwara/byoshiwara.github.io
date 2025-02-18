@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Equations of Lines</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Slope.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap1-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Slope.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap1-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1327,7 +1340,27 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">where <span class="process-math">\(m\)</span> is the <dfn class="terminology">slope</dfn> of the line, and <span class="process-math">\(b\)</span> is the <dfn class="terminology"><span class="process-math">\(y\)</span>-intercept</dfn>.</div>
 </div></article><article class="exercise exercise-like" id="EquationsOfLines-3-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article><article class="example example-like" id="EquationsOfLines-3-10"><h4 class="heading">
+</h4>
+<div id="webwork-41" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="41" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskd2hpY2ggPSBSYWRpb0J1dHRvbnMoCiAgWyJUaGUgc2xvcGUgaXMgXCg4XCkgYW5kIHRoZSBcKHlcKS1pbnRlcmNlcHQgaXMgXCgtNlwpLiIsCiAgIlRoZSBzbG9wZSBpcyBcKC02XCkgYW5kIHRoZSBcKHlcKS1pbnRlcmNlcHQgaXMgXCg4XCkuIiwKICAiVGhlIHNsb3BlIGlzIFwoLTZ4XCkgYW5kIHRoZSBcKHlcKS1pbnRlcmNlcHQgaXMgXCg4XCkuIiwKICAiVGhlIHNsb3BlIGlzIFwoOFwpIGFuZCB0aGUgXCh5XCktaW50ZXJjZXB0IGlzIFwoNlwpLiJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApDaG9vc2UgdGhlIGNvcnJlY3Qgc3RhdGVtZW50IGFib3V0IHRoZSBlcXVhdGlvbiBbYHkgPSA4IC0gNnhgXQoKW19deyR3aGljaH17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgc2xvcGUgaXMgW2AtNmBdIGFuZCB0aGUgW2B5YF0taW50ZXJjZXB0IGlzIFtgOFx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-41')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-41-1-1-1">Choose the correct statement about the equation <span class="process-math">\(y = 8 - 6x\)</span>
+</div> <div class="para logical" id="extracted-webwork-41-1-1-2"><ul class="circle" id="extracted-webwork-41-1-1-2-1">
+<li id="extracted-webwork-41-1-1-2-1-1"><div class="para" id="extracted-webwork-41-1-1-2-1-1-1">The slope is <span class="process-math">\(8\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(-6\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-41-1-1-2-1-2"><div class="para" id="extracted-webwork-41-1-1-2-1-2-1">The slope is <span class="process-math">\(-6\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(8\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-41-1-1-2-1-3"><div class="para" id="extracted-webwork-41-1-1-2-1-3-1">The slope is <span class="process-math">\(-6x\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(8\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-41-1-1-2-1-4"><div class="para" id="extracted-webwork-41-1-1-2-1-4-1">The slope is <span class="process-math">\(8\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(6\text{.}\)</span>
+</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-41-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-41-1-2-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-41-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-41-1-3-1">The slope is <span class="process-math">\(-6\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(8\text{.}\)</span>
+</div></div></details>
+</div>
+</div>
+</div></article><article class="example example-like" id="EquationsOfLines-3-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
 </h4>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
@@ -1367,6 +1400,56 @@ m=\frac{\Delta G}{\Delta t}=\frac{125\text{ tons}}{10\text{ years}}=12.5 \text{ 
 <div class="introduction" id="EquationsOfLines-3-12-2">
 <div class="para" id="EquationsOfLines-3-12-2-1">Delbert decides to use DSL for his Internet service. Earthlink charges a $99 activation fee and $39.95 per month, DigitalRain charges $50 for activation and $34.95 per month, and FreeAmerica charges $149 for activation and $34.95 per month.</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-dsl-pricew.svg" role="img" class="contained" alt="dsl costs"></div>
+</div>
+<div id="webwork-42" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="42" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JEVhcnRobGluayA9IEZvcm11bGEoIjk5KzM5Ljk1KngiKTsKJERpZ2l0YWxSYWluID0gRm9ybXVsYSgiNTArMzQuOTUqeCIpOwokRnJlZUFtZXJpY2EgPSBGb3JtdWxhKCIxNDkrMzQuOTUqeCIpOwokTGluZTEgPSBQb3BVcCgKICBbIj8iLCJFYXJ0aGxpbmsiLCJEaWdpdGFsUmFpbiIsICJGcmVlQW1lcmljYSJdLAogIDIsICMgaW5kZXggb2YgY29ycmVjdCBhbnN3ZXI7IGNvdWxkIGFsc28ganVzdCBiZSB0aGUgY29ycmVjdCBhbnN3ZXIKKTsKJExpbmUyID0gUG9wVXAoCiAgWyI/IiwiRWFydGhsaW5rIiwiRGlnaXRhbFJhaW4iLCAiRnJlZUFtZXJpY2EiXSwKICAxLCAjIGluZGV4IG9mIGNvcnJlY3QgYW5zd2VyOyBjb3VsZCBhbHNvIGp1c3QgYmUgdGhlIGNvcnJlY3QgYW5zd2VyCik7CiRMaW5lMyA9IFBvcFVwKAogIFsiPyIsIkVhcnRobGluayIsIkRpZ2l0YWxSYWluIiwgIkZyZWVBbWVyaWNhIl0sCiAgMywgIyBpbmRleCBvZiBjb3JyZWN0IGFuc3dlcjsgY291bGQgYWxzbyBqdXN0IGJlIHRoZSBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTAphLiAgV3JpdGUgYSBmb3JtdWxhIGZvciBEZWxiZXJ0J3MgSW50ZXJuZXQgY29zdHMgdW5kZXIgZWFjaCBwbGFuLiBVc2UgW2B4YF0gZm9yIHRoZSB2YXJpYWJsZS4KCiAgICBFYXJ0aGxpbms6IFtgRT1gXVtfXXskRWFydGhsaW5rfXsxMH0KCiAgICBEaWdpdGFsUmFpbjogW2BEPWBdW19deyREaWdpdGFsUmFpbn17MTB9CgogICAgRnJlZUFtZXJpY2E6IFtgRj1gXVtfXXskRnJlZUFtZXJpY2F9ezEwfQoKCmEuICBNYXRjaCBEZWxiZXJ0J3MgSW50ZXJuZXQgY29zdCB1bmRlciBlYWNoIGNvbXBhbnkgd2l0aCBpdHMgZ3JhcGggc2hvd24gYWJvdmUuCgogICAgTGluZSBJOiBbX117JExpbmUxfXs1fQoKICAgIExpbmUgSUk6IFtfXXskTGluZTJ9ezV9CgogICAgTGluZSBJSUk6IFtfXXskTGluZTN9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBFYXJ0aGxpbms6IFtgRT05OSArIDM5Ljk1eFx0ZXh0ezt9YF0gRGlnaXRhbFJhaW46IFtgRD01MCArIDM0Ljk1eFx0ZXh0ezt9YF0gRnJlZUFtZXJpY2E6IFtgRj0xNDkgKyAzNC45NXhgXQoKCmEuICBEaWdpdGFsUmFpbjogSTsgRWFydGhsaW5rOiBJSTsgRnJlZUFtZXJpY2E6IElJSQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-42')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-42-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-42-1-1-1-1">
+<li id="extracted-webwork-42-1-1-1-1-1">
+<div class="para" id="extracted-webwork-42-1-1-1-1-1-1">Write a formula for Delbert’s Internet costs under each plan. Use <span class="process-math">\(x\)</span> for the variable.</div>
+<div class="para" id="extracted-webwork-42-1-1-1-1-1-2">Earthlink: <span class="process-math">\(E=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div>
+<div class="para" id="extracted-webwork-42-1-1-1-1-1-3">DigitalRain: <span class="process-math">\(D=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div>
+<div class="para" id="extracted-webwork-42-1-1-1-1-1-4">FreeAmerica: <span class="process-math">\(F=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-42-1-1-1-1-2">
+<div class="para" id="extracted-webwork-42-1-1-1-1-2-1">Match Delbert’s Internet cost under each company with its graph shown above.</div>
+<div class="para logical" id="extracted-webwork-42-1-1-1-1-2-2">
+<div class="para">Line I:</div>
+<ul class="square" id="extracted-webwork-42-1-1-1-1-2-2-1">
+<li id="extracted-webwork-42-1-1-1-1-2-2-1-1"><div class="para" id="extracted-webwork-42-1-1-1-1-2-2-1-1-1">Earthlink</div></li>
+<li id="extracted-webwork-42-1-1-1-1-2-2-1-2"><div class="para" id="extracted-webwork-42-1-1-1-1-2-2-1-2-1">DigitalRain</div></li>
+<li id="extracted-webwork-42-1-1-1-1-2-2-1-3"><div class="para" id="extracted-webwork-42-1-1-1-1-2-2-1-3-1">FreeAmerica</div></li>
+</ul>
+</div>
+<div class="para logical" id="extracted-webwork-42-1-1-1-1-2-3">
+<div class="para">Line II:</div>
+<ul class="square" id="extracted-webwork-42-1-1-1-1-2-3-1">
+<li id="extracted-webwork-42-1-1-1-1-2-3-1-1"><div class="para" id="extracted-webwork-42-1-1-1-1-2-3-1-1-1">Earthlink</div></li>
+<li id="extracted-webwork-42-1-1-1-1-2-3-1-2"><div class="para" id="extracted-webwork-42-1-1-1-1-2-3-1-2-1">DigitalRain</div></li>
+<li id="extracted-webwork-42-1-1-1-1-2-3-1-3"><div class="para" id="extracted-webwork-42-1-1-1-1-2-3-1-3-1">FreeAmerica</div></li>
+</ul>
+</div>
+<div class="para logical" id="extracted-webwork-42-1-1-1-1-2-4">
+<div class="para">Line III:</div>
+<ul class="square" id="extracted-webwork-42-1-1-1-1-2-4-1">
+<li id="extracted-webwork-42-1-1-1-1-2-4-1-1"><div class="para" id="extracted-webwork-42-1-1-1-1-2-4-1-1-1">Earthlink</div></li>
+<li id="extracted-webwork-42-1-1-1-1-2-4-1-2"><div class="para" id="extracted-webwork-42-1-1-1-1-2-4-1-2-1">DigitalRain</div></li>
+<li id="extracted-webwork-42-1-1-1-1-2-4-1-3"><div class="para" id="extracted-webwork-42-1-1-1-1-2-4-1-3-1">FreeAmerica</div></li>
+</ul>
+</div>
+</li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-42-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-42-1-2-1"><span class="process-math">\(99+39.95x\)</span></div></div></details><details id="extracted-webwork-42-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-42-1-3-1"><span class="process-math">\(50+34.95x\)</span></div></div></details><details id="extracted-webwork-42-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-42-1-4-1"><span class="process-math">\(149+34.95x\)</span></div></div></details><details id="extracted-webwork-42-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-42-1-5-1"><span class="process-math">\(\text{DigitalRain}\)</span></div></div></details><details id="extracted-webwork-42-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-42-1-6-1"><span class="process-math">\(\text{Earthlink}\)</span></div></div></details><details id="extracted-webwork-42-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-42-1-7-1"><span class="process-math">\(\text{FreeAmerica}\)</span></div></div></details><details id="extracted-webwork-42-1-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-42-1-8-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-42-1-8-1-1">
+<li id="extracted-webwork-42-1-8-1-1-1"><div class="para" id="extracted-webwork-42-1-8-1-1-1-1">Earthlink: <span class="process-math">\(E=99 + 39.95x\text{;}\)</span> DigitalRain: <span class="process-math">\(D=50 + 34.95x\text{;}\)</span> FreeAmerica: <span class="process-math">\(F=149 + 34.95x\)</span>
+</div></li>
+<li id="extracted-webwork-42-1-8-1-1-2"><div class="para" id="extracted-webwork-42-1-8-1-1-2-1">DigitalRain: I; Earthlink: II; FreeAmerica: III</div></li>
+</ol></div></div></details>
+</div>
+</div>
 </div></article></section><section class="subsection" id="EquationsOfLines-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="space"> </span><span class="title">Coordinate Formula for Slope</span>
 </h3>
@@ -1424,7 +1507,22 @@ m=\frac{\Delta G}{\Delta t}=\frac{125\text{ tons}}{10\text{ years}}=12.5 \text{ 
 <div class="para" id="EquationsOfLines-4-10-1">Notice that the numerator of the slope formula, <span class="process-math">\(y_2 - y_1\text{,}\)</span> gives the net change in <span class="process-math">\(y\text{,}\)</span> or <span class="process-math">\(\Delta y\text{,}\)</span> and the denominator, <span class="process-math">\(x_2 - x_1\text{,}\)</span> gives the net change in <span class="process-math">\(x\text{,}\)</span> or <span class="process-math">\(\Delta x\text{.}\)</span> The coordinate formula is equivalent to our definition of slope, <span class="process-math">\(m=\dfrac{\Delta y}{\Delta x}\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="EquationsOfLines-4-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article><article class="example example-like" id="EquationsOfLines-4-12"><h4 class="heading">
+</h4>
+<div id="webwork-43" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="43" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskd2hpY2ggPSBSYWRpb0J1dHRvbnMoCiAgWyJBKSBUaGUgc2xvcGUgY2Fubm90IGJlIHplcm8uIiwKICAiQikgVGhlIHR3byBwb2ludHMgY2Fubm90IGJlIHRoZSBzYW1lLiIsCiAgIkMpIFRoZSBkZW5vbWluYXRvciBvZiBhIGZyYWN0aW9uIGNhbm5vdCBiZSB6ZXJvLiIsCiAgIkQpIFRoZSBkZW5vbWluYXRvciBtdXN0IGVxdWFsIDEuIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCkluIHRoZSBjb29yZGluYXRlIGZvcm11bGEgZm9yIHNsb3BlLCB3aHkgZG8gd2UgcmVxdWlyZSB0aGF0IFtgeF8xIFxuZSB4XzJcdGV4dHs/fWBdCgpbX117JHdoaWNofXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBkZW5vbWluYXRvciBvZiBhIGZyYWN0aW9uIGNhbm5vdCBiZSB6ZXJvLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-43')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-43-1-1-1">In the coordinate formula for slope, why do we require that <span class="process-math">\(x_1 \ne x_2\text{?}\)</span>
+</div> <div class="para logical" id="extracted-webwork-43-1-1-2"><ul class="circle" id="extracted-webwork-43-1-1-2-1">
+<li id="extracted-webwork-43-1-1-2-1-1"><div class="para" id="extracted-webwork-43-1-1-2-1-1-1">A) The slope cannot be zero.</div></li>
+<li id="extracted-webwork-43-1-1-2-1-2"><div class="para" id="extracted-webwork-43-1-1-2-1-2-1">B) The two points cannot be the same.</div></li>
+<li id="extracted-webwork-43-1-1-2-1-3"><div class="para" id="extracted-webwork-43-1-1-2-1-3-1">C) The denominator of a fraction cannot be zero.</div></li>
+<li id="extracted-webwork-43-1-1-2-1-4"><div class="para" id="extracted-webwork-43-1-1-2-1-4-1">D) The denominator must equal 1.</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-43-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-43-1-2-1"><span class="process-math">\(\text{C) The  ...  be zero.}\)</span></div></div></details><details id="extracted-webwork-43-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-43-1-3-1">The denominator of a fraction cannot be zero.</div></div></details>
+</div>
+</div>
+</div></article><article class="example example-like" id="EquationsOfLines-4-12"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.7</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="EquationsOfLines-4-12-1-1">
@@ -1477,7 +1575,59 @@ m=\frac{W_2-W_1}{t_2-t_1}=\frac{258.3 - 188.6}{13 - 3} = 6.97
 </div></article><aside class="aside aside-like" id="EquationsOfLines-4-13"><div class="para" id="EquationsOfLines-4-13-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help calculating slope, see <a href="tkchap1.html#tkSlopeForm" class="internal" title="Subsubsection A.1.5.2: Calculate slope using a formula">Section 1.5.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="EquationsOfLines-4-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></article></section><section class="subsection" id="point-slope"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-44" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="44" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclBvcFVwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0PTE7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAkcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0ID0gMTsKICAgIENvbnRleHQoIk51bWVyaWMiKS0+dmFyaWFibGVzLT5hZGQodD0+J1JlYWwnKTsKICAgICR4MSA9IDE7CiAgICAkeTEgPSA2NC42OwogICAgJHgyID0gMTE7CiAgICAkeTIgPSAyOC43OwogICAgJG0gPSAoJHkyLSR5MSkvKCR4Mi0keDEpOwogICAgJGFic20gPSBhYnMoJG0pOwogICAgJGIgPSAkeTEgKyAkbSooMCAtICR4MSk7CiAgICAkZnVuYyA9IEZvcm11bGEoIiRiICsgJG0qdCIpLT5yZWR1Y2U7CiAgICAkdW5pdHMgPSBQb3BVcCgKICAgICAgICBbIj8iLCJidXJnbGFyaWVzIHBlciBkZWNhZGUiLCJidXJnbGFyaWVzIHBlciAxMDAwIGhvdXNlaG9sZHMgcGVyIHllYXIiLCJob3VzZWhvbGRzIHBlciBidXJnbGFyeSBwZXIgeWVhciIsImJ1cmdsYXJpZXMgcGVyIHllYXIiXSwKICAgICAgICAyCiAgICApOwogICAgJHRhbGUgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgWyJUaGUgYnVyZ2xhcnkgcmF0ZSBkZWNsaW5lZCBieSAkYWJzbSBidXJnbGFyaWVzIHBlciBkZWNhZGUiLAogICAgICAgICJUaGUgYnVyZ2xhcnkgcmF0ZSBkZWNsaW5lZCBieSAkYWJzbSBidXJnbGFyaWVzIHBlciAxMDAwIGhvdXNlaG9sZHMgZXZlcnkgeWVhciIsCiAgICAgICAgIlRoZSBidXJnbGFyeSByYXRlIGRlY2xpbmVkIGJ5ICRhYnNtIGJ1cmdsYXJpZXMgcGVyIHllYXIiXSwKICAgICAgICAxCiAgICApOwoKZm9yZWFjaCBteSAkaSAoMC4uMykgewogICAgJGdyWyRpXSA9IGluaXRfZ3JhcGgoLTEsLTUsMTIsNzAsIGF4ZXM9PlswLDBdLCBncmlkPT5bMTMsMTVdLCBzaXplPT5bMjQwLDI0MF0pOwogICAgJGdyWyRpXS0+bGIoJ3Jlc2V0Jyk7CiAgICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoMTEuNSwgMC41LCd0JywnYmx1ZScsJ2xlZnQnLCdib3R0b20nKSk7CiAgICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoIC0uNTAsNjYsJ0InLCdibHVlJywnbGVmdCcsJ2JvdHRvbScpKTsKCiAgICBmb3JlYWNoIG15ICRqICgxLi42KSB7CiAgICAkeHNjYWxlID0yKiRqOwogICAgJHlzY2FsZSA9MTAqJGo7CiAgICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoICR4c2NhbGUqLjk5LC0zLCAkeHNjYWxlLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAgICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtLjMxLCAkeXNjYWxlLCAkeXNjYWxlLCAnYmxhY2snLCAnY2VudGVyJywgJ21pZGRsZScpKTsKICAgIH0KCn0KCiRnclswXS0+bW92ZVRvKDAsNjguMTkpOwokZ3JbMF0tPmxpbmVUbygxMiwyNS4xMSwncmVkJywyKTsKJGdyWzBdLT5sYiggbmV3IExhYmVsKDEwLDYwLCIoQykiLCRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOyAKCiRnclsxXS0+bW92ZVRvKDAsNjQuNik7CiRnclsxXS0+bGluZVRvKDEyLDIxLjUyLCdyZWQnLDIpOwokZ3JbMV0tPmxiKCBuZXcgTGFiZWwoMTAsNjAsIihBKSIsJGosJ2JsYWNrJywnY2VudGVyJywndG9wJywnbGFyZ2UnKSk7IAoKJGdyWzJdLT5tb3ZlVG8oMCw2NC42KTsKJGdyWzJdLT5saW5lVG8oMTIsMjguNywncmVkJywyKTsKJGdyWzJdLT5sYiggbmV3IExhYmVsKDEwLDYwLCIoQikiLCRqLCdibGFjaycsJ2NlbnRlcicsJ3RvcCcsJ2xhcmdlJykpOyAKCiRnclszXS0+bW92ZVRvKDAsMjguNyk7CiRnclszXS0+bGluZVRvKDEyLDY0LjYsJ3JlZCcsMik7CiRnclszXS0+bGIoIG5ldyBMYWJlbCgxMCw0MCwiKEQpIiwkaiwnYmxhY2snLCdjZW50ZXInLCd0b3AnLCdsYXJnZScpKTsgCgokbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIgogICAgICAgICAgICBdLAogICAgICAgICAgICAyCiAgICAgICAgKTsKCkJFR0lOX1BHTUwKSW4gMTk5MSwgdGhlcmUgd2VyZSA2NC42IGJ1cmdsYXJpZXMgcGVyIDEwMDAgaG91c2Vob2xkcyBpbiB0aGUgVW5pdGVkIFN0YXRlcy4gVGhlIG51bWJlciBvZiBidXJnbGFyaWVzIHJlcG9ydGVkIGFubnVhbGx5IGRlY2xpbmVkIGF0IGEgcm91Z2hseSBjb25zdGFudCByYXRlIG92ZXIgdGhlIG5leHQgZGVjYWRlLCBhbmQgaW4gMjAwMSB0aGVyZSB3ZXJlIDI4LjcgYnVyZ2xhcmllcyBwZXIgMTAwMCBob3VzZWhvbGRzLiAoU291cmNlOiBVLlMuIERlcGFydG1lbnQgb2YgSnVzdGljZSkKYS4gIFNrZXRjaCBhIGxpbmUgdGhhdCBnb2VzIHRocm91Z2ggdGhlIHR3byBwb2ludHMgW2AodCwgQilgXSBnaXZlbiBpbiB0aGUgcHJvYmxlbSwgd2hlcmUgW2B0ID0gMGBdIGluIDE5OTAuCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0+MjEwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclsyXSksIHdpZHRoPT4yMTApQF0qIAoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0+MjEwKUBdKiAKCiAgICBDaG9vc2UgdGhlIGNvcnJlY3QgZ3JhcGguCgogICAgW19deyRtY317NX0KCgphLiAgRmluZCB0aGUgc2xvcGUgb2YgdGhlIGxpbmUsIGluY2x1ZGluZyB1bml0cy4KCiAgICBbYG1gXSBpcyBbX117JG19ezN9W19deyR1bml0c317NX0KCiAgICBXaGF0IGRvZXMgdGhlIHNsb3BlIHRlbGwgdXMgYWJvdXQgdGhpcyBwcm9ibGVtPwoKICAgIFtfXXskdGFsZX17NX0KCiAgICAoaW4gdGhlIHllYXJzIDE5OTEgdG8gMjAwMSkuCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBCZWNhdXNlIFtgdD0wYF0gY29ycmVzcG9uZHMgdG8gMTk5MCwgd2UgaGF2ZSB0aGUgdHdvIHBvaW50cyBbYCgxLDY0LjYpYF0gYW5kIFtgKDExLDI4LjcpXHRleHR7Ln1gXSBUaGUgbGluZSBqb2luaW5nIHRob3NlIHR3byBwb2ludHMgY29ycmVzcG9uZHMgdG8gdGhlIGxpbmUgd2l0aCBlcXVhdGlvbiBbYHkgPSBbJGZ1bmNdIGBdCgoKYS4gIFdlIHVzZSB0aGUgdHdvIHBvaW50cyBbYCgxLDY0LjYpYF0gYW5kIFtgKDExLDI4LjcpYF0gdG8gY29tcHV0ZSB0aGUgc2xvcGU6ICBbYC0zLjU5YF0gYnVyZ2xhcmllcyBwZXIgMTAwMCBob3VzZWhvbGRzIHBlciB5ZWFyLiBGcm9tIDE5OTEgdG8gMjAwMSwgdGhlIGJ1cmdsYXJ5IHJhdGUgZGVjbGluZWQgYnkgMy41OSBidXJnbGFyaWVzIHBlciAxMDAwIGhvdXNlaG9sZHMgZXZlcnkgeWVhci4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-44')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-44-1-1-1">
+<div class="para">In 1991, there were 64.6 burglaries per 1000 households in the United States. The number of burglaries reported annually declined at a roughly constant rate over the next decade, and in 2001 there were 28.7 burglaries per 1000 households. (Source: U.S. Department of Justice)</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-44-1-1-1-1">
+<li id="extracted-webwork-44-1-1-1-1-1">
+<div class="para" id="extracted-webwork-44-1-1-1-1-1-1">Sketch a line that goes through the two points <span class="process-math">\((t, B)\)</span> given in the problem, where <span class="process-math">\(t = 0\)</span> in 1990.</div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-44-image-1.png" class="contained"></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-44-image-2.png" class="contained"></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-44-image-3.png" class="contained"></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-44-image-4.png" class="contained"></div>
+<div class="para" id="extracted-webwork-44-1-1-1-1-1-6">Choose the correct graph.</div>
+<div class="para logical" id="extracted-webwork-44-1-1-1-1-1-7"><ul class="circle" id="extracted-webwork-44-1-1-1-1-1-7-1">
+<li id="extracted-webwork-44-1-1-1-1-1-7-1-1"><div class="para" id="extracted-webwork-44-1-1-1-1-1-7-1-1-1">(A)</div></li>
+<li id="extracted-webwork-44-1-1-1-1-1-7-1-2"><div class="para" id="extracted-webwork-44-1-1-1-1-1-7-1-2-1">(B)</div></li>
+<li id="extracted-webwork-44-1-1-1-1-1-7-1-3"><div class="para" id="extracted-webwork-44-1-1-1-1-1-7-1-3-1">(C)</div></li>
+<li id="extracted-webwork-44-1-1-1-1-1-7-1-4"><div class="para" id="extracted-webwork-44-1-1-1-1-1-7-1-4-1">(D)</div></li>
+</ul></div>
+</li>
+<li id="extracted-webwork-44-1-1-1-1-2">
+<div class="para" id="extracted-webwork-44-1-1-1-1-2-1">Find the slope of the line, including units.</div>
+<div class="para logical" id="extracted-webwork-44-1-1-1-1-2-2">
+<div class="para">
+<span class="process-math">\(m\)</span> is <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+<ul class="square" id="extracted-webwork-44-1-1-1-1-2-2-3">
+<li id="extracted-webwork-44-1-1-1-1-2-2-3-1"><div class="para" id="extracted-webwork-44-1-1-1-1-2-2-3-1-1">burglaries per decade</div></li>
+<li id="extracted-webwork-44-1-1-1-1-2-2-3-2"><div class="para" id="extracted-webwork-44-1-1-1-1-2-2-3-2-1">burglaries per 1000 households per year</div></li>
+<li id="extracted-webwork-44-1-1-1-1-2-2-3-3"><div class="para" id="extracted-webwork-44-1-1-1-1-2-2-3-3-1">households per burglary per year</div></li>
+<li id="extracted-webwork-44-1-1-1-1-2-2-3-4"><div class="para" id="extracted-webwork-44-1-1-1-1-2-2-3-4-1">burglaries per year</div></li>
+</ul>
+</div>
+<div class="para" id="extracted-webwork-44-1-1-1-1-2-3">What does the slope tell us about this problem?</div>
+<div class="para logical" id="extracted-webwork-44-1-1-1-1-2-4"><ul class="circle" id="extracted-webwork-44-1-1-1-1-2-4-1">
+<li id="extracted-webwork-44-1-1-1-1-2-4-1-1"><div class="para" id="extracted-webwork-44-1-1-1-1-2-4-1-1-1">The burglary rate declined by 3.59 burglaries per decade</div></li>
+<li id="extracted-webwork-44-1-1-1-1-2-4-1-2"><div class="para" id="extracted-webwork-44-1-1-1-1-2-4-1-2-1">The burglary rate declined by 3.59 burglaries per 1000 households every year</div></li>
+<li id="extracted-webwork-44-1-1-1-1-2-4-1-3"><div class="para" id="extracted-webwork-44-1-1-1-1-2-4-1-3-1">The burglary rate declined by 3.59 burglaries per year</div></li>
+</ul></div>
+<div class="para" id="extracted-webwork-44-1-1-1-1-2-5">(in the years 1991 to 2001).</div>
+</li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-44-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-44-1-2-1"><span class="process-math">\(\text{(C)}\)</span></div></div></details><details id="extracted-webwork-44-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-44-1-3-1"><span class="process-math">\(-3.59\)</span></div></div></details><details id="extracted-webwork-44-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-44-1-4-1"><span class="process-math">\(\text{burglaries per 1000 households per year}\)</span></div></div></details><details id="extracted-webwork-44-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-44-1-5-1"><span class="process-math">\(\text{The burglary ... every year}\)</span></div></div></details><details id="extracted-webwork-44-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-44-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-44-1-6-1-1">
+<li id="extracted-webwork-44-1-6-1-1-1"><div class="para" id="extracted-webwork-44-1-6-1-1-1-1">Because <span class="process-math">\(t=0\)</span> corresponds to 1990, we have the two points <span class="process-math">\((1,64.6)\)</span> and <span class="process-math">\((11,28.7)\text{.}\)</span> The line joining those two points corresponds to the line with equation <span class="process-math">\(y = {68.19-3.59t}\)</span>
+</div></li>
+<li id="extracted-webwork-44-1-6-1-1-2"><div class="para" id="extracted-webwork-44-1-6-1-1-2-1">We use the two points <span class="process-math">\((1,64.6)\)</span> and <span class="process-math">\((11,28.7)\)</span> to compute the slope:  <span class="process-math">\(-3.59\)</span> burglaries per 1000 households per year. From 1991 to 2001, the burglary rate declined by 3.59 burglaries per 1000 households every year.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="point-slope"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="space"> </span><span class="title">Point-Slope Formula</span>
 </h3>
 <div class="para" id="point-slope-4">Now we’ll consider using the slope formula for a different problem. If we know the slope of a line and the coordinates of one point on the line, we can use the coordinate formula for slope to find the <span class="process-math">\(y\)</span>-coordinate of any other point on the line.</div>
@@ -1485,7 +1635,21 @@ m=\frac{W_2-W_1}{t_2-t_1}=\frac{258.3 - 188.6}{13 - 3} = 6.97
 </div>
 <article class="exercise exercise-like" id="point-slope-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></article><div class="para" id="point-slope-7">Remember that the equation for a line is really just a formula that gives the <span class="process-math">\(y\)</span>-coordinate of any point on the line in terms of its <span class="process-math">\(x\)</span>-coordinate. So, if we know the slope of a particular line and one point on the line, we can use the coordinate formula for slope to find its equation.</div>
+</h4>
+<div id="webwork-45" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="45" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskY2hvb3NlID0gUmFkaW9CdXR0b25zKAogIFsiXChcZGZyYWN7LTN9ezR9PVxkZnJhY3sxLTZ9e3krNH0gXCkiLAogICJcKFxkZnJhY3stM317NH09XGRmcmFje3krNH17MS02fSBcKSIsCiAgIlwoXGRmcmFjey0zfXs0fT1cZGZyYWN7eS02fXstNC0xfSBcKSIsCiAgIlwoXGRmcmFjey0zfXs0fT1cZGZyYWN7eSs0fXs2LTF9IFwpIl0sCiAgMywgCik7CgpCRUdJTl9QR01MCkEgbGluZSBoYXMgc2xvcGUgW2BcZGZyYWN7LTN9ezR9IGBdIGFuZCBwYXNzZXMgdGhyb3VnaCB0aGUgcG9pbnQgW2AoMSwtNCkgXHRleHR7Ln1gXSBXaGljaCBlcXVhdGlvbiBjYW4geW91IHVzZSB0byBmaW5kIHRoZSBbYHlgXS1jb29yZGluYXRlIG9mIHRoZSBwb2ludCBvbiB0aGUgbGluZSB3aXRoIFtgeGBdLWNvb3JkaW5hdGUgNj8KCltfXXskY2hvb3NlfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgXGRmcmFjey0zfXs0fT1cZGZyYWN7eSs0fXs2LTF9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-45')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-45-1-1-1">A line has slope <span class="process-math">\(\dfrac{-3}{4}\)</span> and passes through the point <span class="process-math">\((1,-4) \text{.}\)</span> Which equation can you use to find the <span class="process-math">\(y\)</span>-coordinate of the point on the line with <span class="process-math">\(x\)</span>-coordinate 6?</div> <div class="para logical" id="extracted-webwork-45-1-1-2"><ul class="circle" id="extracted-webwork-45-1-1-2-1">
+<li id="extracted-webwork-45-1-1-2-1-1"><div class="para" id="extracted-webwork-45-1-1-2-1-1-1"><span class="process-math">\(\displaystyle \dfrac{-3}{4}=\dfrac{1-6}{y+4} \)</span></div></li>
+<li id="extracted-webwork-45-1-1-2-1-2"><div class="para" id="extracted-webwork-45-1-1-2-1-2-1"><span class="process-math">\(\displaystyle \dfrac{-3}{4}=\dfrac{y+4}{1-6} \)</span></div></li>
+<li id="extracted-webwork-45-1-1-2-1-3"><div class="para" id="extracted-webwork-45-1-1-2-1-3-1"><span class="process-math">\(\displaystyle \dfrac{-3}{4}=\dfrac{y-6}{-4-1} \)</span></div></li>
+<li id="extracted-webwork-45-1-1-2-1-4"><div class="para" id="extracted-webwork-45-1-1-2-1-4-1"><span class="process-math">\(\displaystyle \dfrac{-3}{4}=\dfrac{y+4}{6-1} \)</span></div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-45-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-45-1-2-1"><span class="process-math">\(\text{Choice 4}\)</span></div></div></details><details id="extracted-webwork-45-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-45-1-3-1"><span class="process-math">\(\dfrac{-3}{4}=\dfrac{y+4}{6-1}\)</span></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="point-slope-7">Remember that the equation for a line is really just a formula that gives the <span class="process-math">\(y\)</span>-coordinate of any point on the line in terms of its <span class="process-math">\(x\)</span>-coordinate. So, if we know the slope of a particular line and one point on the line, we can use the coordinate formula for slope to find its equation.</div>
 <article class="example example-like" id="point-slope-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.10</span><span class="period">.</span>
 </h4>
@@ -1569,7 +1733,18 @@ y \amp = y_1 + m(x-x_1)
 </div></article><aside class="aside aside-like" id="point-slope-12"><div class="para" id="point-slope-12-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help using the point-slope form, see <a href="tkchap1.html#tkPtSlope" class="internal" title="Subsubsection A.1.5.3: Point-Slope Form">Section 1.5.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="point-slope-13"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></article></section><section class="subsection" id="TwoPoints"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-46" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="46" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VySW1wbGljaXRQbGFuZS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJJbXBsaWNpdFBsYW5lIik7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQoeT0+IlJlYWwiKTsKJGVxdWF0aW9uID0gSW1wbGljaXRQbGFuZSgieT01LTEuNCh4KzMpIik7CgpCRUdJTl9QR01MClVzZSB0aGUgcG9pbnQtc2xvcGUgZm9ybSB0byBmaW5kIHRoZSBlcXVhdGlvbiBvZiB0aGUgbGluZSB0aGF0IHBhc3NlcyB0aHJvdWdoIHRoZSBwb2ludCBbYCgtMywgNSlgXSBhbmQgaGFzIHNsb3BlIFtgLTEuNFx0ZXh0ey59YF0KCkFuc3dlcjogW19deyRlcXVhdGlvbn17MTB9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B5PTUtMS40KHgrMylgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-46')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-46-1-1-1">Use the point-slope form to find the equation of the line that passes through the point <span class="process-math">\((-3, 5)\)</span> and has slope <span class="process-math">\(-1.4\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-46-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-46-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-46-1-2-1"><span class="process-math">\(1.4x+y = 0.8\)</span></div></div></details><details id="extracted-webwork-46-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-46-1-3-1"><span class="process-math">\(y=5-1.4(x+3)\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="TwoPoints"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="space"> </span><span class="title">Finding a Linear Model</span>
 </h3>
 <div class="para" id="TwoPoints-4">Now we are ready to find the equation promised in the introduction to this section: a formula for the freezing temperature of water in terms of its salinity.</div>
@@ -1648,7 +1823,45 @@ T = -0.056(35)+32 = 30.04
 </ol></div>
 </div></article><article class="exercise exercise-like" id="TwoPoints-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.13</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article></section><section class="subsection" id="EquationsOfLines-7"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-47" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="47" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VySW1wbGljaXRQbGFuZS5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJJbXBsaWNpdFBsYW5lIik7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQoRj0+IlJlYWwiLCBWPT4iUmVhbCIpOwokZXF1YXRpb24gPSBJbXBsaWNpdFBsYW5lKCJGPTMxKzAuMDA2NVYiKTsKJGVzdGltYXRlID0gQ29tcHV0ZSgiMTc0Iik7ICAgCiRzbG9wZSA9IENvbXB1dGUoIjAuMDA2NSIpOwokZXhwbGFpbiA9IFJhZGlvQnV0dG9ucygKICAgICAgWyJ0aGUgc3RlZXBuZXNzIG9mIHRoZSBjYXIncyB2YWx1ZS4iLAogICAgICAidGhlIGZyYWN0aW9uIG9mIHRoZSBjYXIncyB2YWx1ZSB0aGF0IGlzIGFkZGVkIGludG8gdGhlIHJlZ2lzdHJhdGlvbiBmZWUuIiwKICAgICAgInRoZSBpbnRlc3QgcmF0ZSBvZiB0aGUgbG9hbi4iLAogICAgICAiaG93IG11Y2ggdGhlIGNhcidzIHZhbHVlIGRlY3JlYXNlcy4iXSwKICAgICAgMSwgCiAgICApOwoKQkVHSU5fUEdNTApUaGUgZmVlIGZvciByZWdpc3RlcmluZyBhIG5ldyBjYXIgaXMgZ2l2ZW4gYnkgYSBsaW5lYXIgZXF1YXRpb24gdGhhdCBkZXBlbmRzIG9uIHRoZSBjYXIncyB2YWx1ZS4gVGhlIGZlZSBmb3IgYSAkMTUsMDAwIGNhciBpcyAkMTI4LjUwLCBhbmQgdGhlIGZlZSBmb3IgYSAkMjUsMDAwIGNhciBpcyAkMTkzLjUwLgphLiAgRmluZCBhIGxpbmVhciBlcXVhdGlvbiB0aGF0IGdpdmVzIHRoZSByZWdpc3RyYXRpb24gZmVlIFtgRmBdIGZvciBhIG5ldyBjYXIgdGhhdCBjb3N0IFtgVmBdIGRvbGxhcnMuCgogICAgQW5zd2VyOiBbX117JGVxdWF0aW9ufXsxMX0KCgphLiAgVXNlIHlvdXIgZXF1YXRpb24gdG8gZXN0aW1hdGUgdGhlIHJlZ2lzdHJhdGlvbiBmZWUgZm9yIGEgY2FyIHRoYXQgY29zdHMgJDIyLDAwMC4KCiAgICAkW19deyRlc3RpbWF0ZX17M30KCgphLiAgV2hhdCBpcyB0aGUgc2xvcGUgb2YgeW91ciBsaW5lPyBXaGF0IGRvZXMgdGhlIHNsb3BlIG1lYW4gZm9yIHJlZ2lzdHJhdGlvbiBmZWVzPwoKICAgIFRoZSBzbG9wZSBpcyBbX117JHNsb3BlfXs1fSBhbmQgaXQgdGVsbHMKCiAgICBbX117JGV4cGxhaW59ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYEY9MzErMC4wMDY1VmBdCgoKYS4gICQxNzQKCgphLiAgW2AwLjAwNjVcdGV4dHs6fWBdIFRoZSByZWdpc3RyYXRpb24gZmVlIGluY3JlYXNlcyBieSAwLjY1JSBvZiB0aGUgdmFsdWUgb2YgdGhlIGNhci4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-47')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-47-1-1-1">
+<div class="para">The fee for registering a new car is given by a linear equation that depends on the car’s value. The fee for a $15,000 car is $128.50, and the fee for a $25,000 car is $193.50.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-47-1-1-1-2">
+<li id="extracted-webwork-47-1-1-1-2-1">
+<div class="para" id="extracted-webwork-47-1-1-1-2-1-1">Find a linear equation that gives the registration fee <span class="process-math">\(F\)</span> for a new car that cost <span class="process-math">\(V\)</span> dollars.</div>
+<div class="para" id="extracted-webwork-47-1-1-1-2-1-2">Answer: <span class="fillin underline" role="img" aria-label="11-character blank" style="width: 5em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-47-1-1-1-2-2">
+<div class="para" id="extracted-webwork-47-1-1-1-2-2-1">Use your equation to estimate the registration fee for a car that costs $22,000.</div>
+<div class="para" id="extracted-webwork-47-1-1-1-2-2-2">$<span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-47-1-1-1-2-3">
+<div class="para" id="extracted-webwork-47-1-1-1-2-3-1">What is the slope of your line? What does the slope mean for registration fees?</div>
+<div class="para" id="extracted-webwork-47-1-1-1-2-3-2">The slope is <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> and it tells</div>
+<div class="para logical" id="extracted-webwork-47-1-1-1-2-3-3"><ul class="circle" id="extracted-webwork-47-1-1-1-2-3-3-1">
+<li id="extracted-webwork-47-1-1-1-2-3-3-1-1"><div class="para" id="extracted-webwork-47-1-1-1-2-3-3-1-1-1">the steepness of the car’s value.</div></li>
+<li id="extracted-webwork-47-1-1-1-2-3-3-1-2"><div class="para" id="extracted-webwork-47-1-1-1-2-3-3-1-2-1">the fraction of the car’s value that is added into the registration fee.</div></li>
+<li id="extracted-webwork-47-1-1-1-2-3-3-1-3"><div class="para" id="extracted-webwork-47-1-1-1-2-3-3-1-3-1">the intest rate of the loan.</div></li>
+<li id="extracted-webwork-47-1-1-1-2-3-3-1-4"><div class="para" id="extracted-webwork-47-1-1-1-2-3-3-1-4-1">how much the car’s value decreases.</div></li>
+</ul></div>
+</li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-47-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-47-1-2-1"><span class="process-math">\(F-0.0065V = 31\)</span></div></div></details><details id="extracted-webwork-47-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-47-1-3-1"><span class="process-math">\(174\)</span></div></div></details><details id="extracted-webwork-47-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-47-1-4-1"><span class="process-math">\(0.0065\)</span></div></div></details><details id="extracted-webwork-47-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-47-1-5-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-47-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-47-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-47-1-6-1-1">
+<li id="extracted-webwork-47-1-6-1-1-1"><div class="para" id="extracted-webwork-47-1-6-1-1-1-1"><span class="process-math">\(\displaystyle F=31+0.0065V\)</span></div></li>
+<li id="extracted-webwork-47-1-6-1-1-2"><div class="para" id="extracted-webwork-47-1-6-1-1-2-1">$174</div></li>
+<li id="extracted-webwork-47-1-6-1-1-3"><div class="para" id="extracted-webwork-47-1-6-1-1-3-1">
+<span class="process-math">\(0.0065\text{:}\)</span> The registration fee increases by 0.65% of the value of the car.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="EquationsOfLines-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="space"> </span><span class="title">Summary</span>
 </h3>
 <div class="para" id="EquationsOfLines-7-2">In this section, we studied three different formulas associated with linear equations: the slope-intercept formula, the coordinate formula for slope, and the point-slope formula. How are these formulas related, and how are they different?</div>

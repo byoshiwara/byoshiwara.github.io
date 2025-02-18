@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Radical Equations</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="WorkingwithRadicals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap6-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="WorkingwithRadicals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap6-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1336,7 +1349,26 @@ x \amp = 36
 </div></article><aside class="aside aside-like" id="RadicalEquations-4-4"><div class="para" id="RadicalEquations-4-4-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples of solving radical equations, see <a href="tkchap6.html#tkSimpRadEqn" class="internal" title="Subsubsection A.6.5.1: Solve radical equations">Section 6.5.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="RadicalEquations-4-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></article></section><section class="subsection" id="RadicalEquations-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-261" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="261" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zID0gQ29tcHV0ZSgiLTQiKTsKCkJFR0lOX1BHTUwKU29sdmUgW2B+NisyXHNxcnRbNF17MTItdn0gPSAxMGBdCgpbYHY9YF1bX117JGFuc317Mn0KCkhpbnQ6CiogSXNvbGF0ZSB0aGUgcmFkaWNhbC4KKiBSYWlzZSBlYWNoIHNpZGUgdG8gdGhlIGZvdXJ0aCBwb3dlci4KKiBDb21wbGV0ZSB0aGUgc29sdXRpb24uICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgdj0tNGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-261')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-261-1-1-1">Solve <span class="process-math">\(~6+2\sqrt[4]{12-v} = 10\)</span>
+</div> <div class="para" id="extracted-webwork-261-1-1-2">
+<span class="process-math">\(v=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
+</div> <div class="para logical" id="extracted-webwork-261-1-1-3">
+<div class="para">Hint:</div>
+<ul class="disc" id="extracted-webwork-261-1-1-3-1">
+<li id="extracted-webwork-261-1-1-3-1-1"><div class="para" id="extracted-webwork-261-1-1-3-1-1-1">Isolate the radical.</div></li>
+<li id="extracted-webwork-261-1-1-3-1-2"><div class="para" id="extracted-webwork-261-1-1-3-1-2-1">Raise each side to the fourth power.</div></li>
+<li id="extracted-webwork-261-1-1-3-1-3"><div class="para" id="extracted-webwork-261-1-1-3-1-3-1">Complete the solution.</div></li>
+</ul>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-261-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-261-1-2-1"><span class="process-math">\(-4\)</span></div></div></details><details id="extracted-webwork-261-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-261-1-3-1"><span class="process-math">\(v=-4\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="RadicalEquations-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.5.2</span><span class="space"> </span><span class="title">Extraneous Solutions</span>
 </h3>
 <div class="para logical" id="RadicalEquations-5-2">
@@ -1359,7 +1391,28 @@ x\amp = 25
 <div class="para" id="RadicalEquations-5-3">Raising both sides of an equation to an odd power does not introduce extraneous solutions.  However, if we raise both sides to an even power, we should check each solution in the original equation.</div>
 <article class="exercise exercise-like" id="RadicalEquations-5-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article><article class="example example-like" id="example-radical-equations"><h4 class="heading">
+</h4>
+<div id="webwork-262" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="262" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRldmVuID0gUG9wVXAoCiAgWyI/IiwiZXZlbiIsICJvZGQiXSwKICAxLCAKKTsKJGV4dHJhbmVvdXMgPSBQb3BVcCgKICBbIj8iLCJlc3NlbnRpYWwiLCAiZXh0cmFuZW91cyJdLAogIDIsIAopOwoKQkVHSU5fUEdNTApXaGVuIHdlIHJhaXNlIGJvdGggc2lkZXMgb2YgYW4gZXF1YXRpb24gdG8gYW4gW19deyRldmVufXs1fSBwb3dlciwgaXQgaXMgcG9zc2libGUgdG8gaW50cm9kdWNlIFtfXXskZXh0cmFuZW91c317NX0gc29sdXRpb25zLgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmV2ZW47IGV4dHJhbmVvdXMKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-262')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-262-1-1-1">
+<div class="para">When we raise both sides of an equation to an</div>
+<ul class="square" id="extracted-webwork-262-1-1-1-1">
+<li id="extracted-webwork-262-1-1-1-1-1"><div class="para" id="extracted-webwork-262-1-1-1-1-1-1">even</div></li>
+<li id="extracted-webwork-262-1-1-1-1-2"><div class="para" id="extracted-webwork-262-1-1-1-1-2-1">odd</div></li>
+</ul>
+<div class="para">power, it is possible to introduce</div>
+<ul class="square" id="extracted-webwork-262-1-1-1-2">
+<li id="extracted-webwork-262-1-1-1-2-1"><div class="para" id="extracted-webwork-262-1-1-1-2-1-1">essential</div></li>
+<li id="extracted-webwork-262-1-1-1-2-2"><div class="para" id="extracted-webwork-262-1-1-1-2-2-1">extraneous</div></li>
+</ul>
+<div class="para">solutions.</div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-262-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-262-1-2-1"><span class="process-math">\(\text{even}\)</span></div></div></details><details id="extracted-webwork-262-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-262-1-3-1"><span class="process-math">\(\text{extraneous}\)</span></div></div></details><details id="extracted-webwork-262-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-262-1-4-1">even; extraneous</div></div></details>
+</div>
+</div>
+</div></article><article class="example example-like" id="example-radical-equations"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.5.4</span><span class="period">.</span>
 </h4>
 <div class="para" id="example-radical-equations-1-1">Solve the equation  <span class="process-math">\(~\sqrt{x+2}+4 = x\)</span>
@@ -1423,9 +1476,74 @@ y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4
 <div class="para">or we may proceed as shown in <a href="RadicalEquations.html#example-radical-equations" class="xref" data-knowl="./knowl/xref/example-radical-equations.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.5.4">Example 6.5.4</a>.</div>
 </div></article><article class="exercise exercise-like" id="RadicalEquations-5-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></article><article class="exercise exercise-like" id="RadicalEquations-5-8"><h4 class="heading">
+</h4>
+<div id="webwork-263" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="263" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zID0gQ29tcHV0ZSgiNSIpOwoKQkVHSU5fUEdNTApTb2x2ZSBbYH4yeC01ID0gXHNxcnR7NDAtM3h9YF0KCltgeD1gXVtfXXskYW5zfXsyfQoKSGludDoKKiBTcXVhcmUgYm90aCBzaWRlcy4KKiBTb2x2ZSB0aGUgcXVhZHJhdGljIGVxdWF0aW9uLgoqIENoZWNrIGZvciBleHRyYW5lb3VzIHJvb3RzLiAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYHg9NWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-263')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-263-1-1-1">Solve <span class="process-math">\(~2x-5 = \sqrt{40-3x}\)</span>
+</div> <div class="para" id="extracted-webwork-263-1-1-2">
+<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
+</div> <div class="para logical" id="extracted-webwork-263-1-1-3">
+<div class="para">Hint:</div>
+<ul class="disc" id="extracted-webwork-263-1-1-3-1">
+<li id="extracted-webwork-263-1-1-3-1-1"><div class="para" id="extracted-webwork-263-1-1-3-1-1-1">Square both sides.</div></li>
+<li id="extracted-webwork-263-1-1-3-1-2"><div class="para" id="extracted-webwork-263-1-1-3-1-2-1">Solve the quadratic equation.</div></li>
+<li id="extracted-webwork-263-1-1-3-1-3"><div class="para" id="extracted-webwork-263-1-1-3-1-3-1">Check for extraneous roots.</div></li>
+</ul>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-263-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-263-1-2-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-263-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-263-1-3-1"><span class="process-math">\(x=5\)</span></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="RadicalEquations-5-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article></section><section class="subsection" id="RadicalEquations-6"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-264" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="264" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgZmFsc2UuCmEuICBBdCBtb3N0IG9uZSBvZiB0aGUgc29sdXRpb25zIG9mIGEgcmFkaWNhbCBlcXVhdGlvbiBjYW4gYmUgZXh0cmFuZW91cy4gW19deyRGYWxzZX17NX0KCgphLiAgV2UgZG9uJ3QgaGF2ZSB0byBjaGVjayBmb3IgZXh0cmFuZW91cyBzb2x1dGlvbnMgaWYgd2UgY3ViZSBib3RoIHNpZGVzIG9mIGFuIGVxdWF0aW9uLiBbX117JFRydWV9ezV9CgoKYS4gIFdlIGNhbiBzcXVhcmUgZWFjaCB0ZXJtIG9mIGFuIGVxdWF0aW9uIHNlcGFyYXRlbHkgd2l0aG91dCBjaGFuZ2luZyBpdHMgc29sdXRpb25zLiBbX117JEZhbHNlfXs1fQoKCmEuICBJdCBpcyBoZWxwZnVsIHRvIGlzb2xhdGUgdGhlIHJhZGljYWwgYmVmb3JlIHNxdWFyaW5nIGJvdGggc2lkZXMuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBUcnVlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-264')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-264-1-1-1">
+<div class="para">True or false.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-264-1-1-1-1">
+<li id="extracted-webwork-264-1-1-1-1-1"><div class="para logical" id="extracted-webwork-264-1-1-1-1-1-1">
+<div class="para">At most one of the solutions of a radical equation can be extraneous.</div>
+<ul class="square" id="extracted-webwork-264-1-1-1-1-1-1-1">
+<li id="extracted-webwork-264-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-264-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-264-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-264-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-264-1-1-1-1-2"><div class="para logical" id="extracted-webwork-264-1-1-1-1-2-1">
+<div class="para">We don’t have to check for extraneous solutions if we cube both sides of an equation.</div>
+<ul class="square" id="extracted-webwork-264-1-1-1-1-2-1-2">
+<li id="extracted-webwork-264-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-264-1-1-1-1-2-1-2-1-1">True</div></li>
+<li id="extracted-webwork-264-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-264-1-1-1-1-2-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-264-1-1-1-1-3"><div class="para logical" id="extracted-webwork-264-1-1-1-1-3-1">
+<div class="para">We can square each term of an equation separately without changing its solutions.</div>
+<ul class="square" id="extracted-webwork-264-1-1-1-1-3-1-1">
+<li id="extracted-webwork-264-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-264-1-1-1-1-3-1-1-1-1">True</div></li>
+<li id="extracted-webwork-264-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-264-1-1-1-1-3-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-264-1-1-1-1-4"><div class="para logical" id="extracted-webwork-264-1-1-1-1-4-1">
+<div class="para">It is helpful to isolate the radical before squaring both sides.</div>
+<ul class="square" id="extracted-webwork-264-1-1-1-1-4-1-1">
+<li id="extracted-webwork-264-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-264-1-1-1-1-4-1-1-1-1">True</div></li>
+<li id="extracted-webwork-264-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-264-1-1-1-1-4-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-264-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-264-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-264-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-264-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-264-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-264-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-264-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-264-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-264-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-264-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-264-1-6-1-1">
+<li id="extracted-webwork-264-1-6-1-1-1"><div class="para" id="extracted-webwork-264-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-264-1-6-1-1-2"><div class="para" id="extracted-webwork-264-1-6-1-1-2-1">True</div></li>
+<li id="extracted-webwork-264-1-6-1-1-3"><div class="para" id="extracted-webwork-264-1-6-1-1-3-1">False</div></li>
+<li id="extracted-webwork-264-1-6-1-1-4"><div class="para" id="extracted-webwork-264-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="RadicalEquations-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.5.3</span><span class="space"> </span><span class="title">Solving Formulas</span>
 </h3>
 <div class="para" id="RadicalEquations-6-2">We can also solve formulas involving radicals for one variable in terms of the others.</div>
@@ -1450,7 +1568,19 @@ s \amp =\pm \sqrt{t^2-1}
 </div>
 </div></article><article class="exercise exercise-like" id="RadicalEquations-6-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></article></section><section class="subsection" id="RadicalEquations-7"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-265" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="265" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFkZChWPT4iUmVhbCIsIHI9PiJSZWFsIiwgQj0+IlJlYWwiKTsKJGEgPSBGb3JtdWxhKCIoVi0oci0yKV4zKS9CIik7CgpCRUdJTl9QR01MClNvbHZlIHRoZSBmb3JtdWxhIFtgfnItMiA9IFxzcXJ0WzNde1YtQmh9fmBdIGZvciBbYGhcdGV4dHsufWBdCgpbYGg9YF1bX117JGF9ezE1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgaD1cZGZyYWN7Vi0oci0yKV4zfXtCfWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-265')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-265-1-1-1">Solve the formula <span class="process-math">\(~r-2 = \sqrt[3]{V-Bh}~\)</span> for <span class="process-math">\(h\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-265-1-1-2">
+<span class="process-math">\(h=\)</span><span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-265-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-265-1-2-1"><span class="process-math">\(\frac{V-\left(r-2\right)^{3}}{B}\)</span></div></div></details><details id="extracted-webwork-265-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-265-1-3-1"><span class="process-math">\(h=\dfrac{V-(r-2)^3}{B}\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="RadicalEquations-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.5.4</span><span class="space"> </span><span class="title">Equations with More than One Radical</span>
 </h3>
 <div class="para" id="RadicalEquations-7-3">Sometimes we need to square both sides of an equation more than once in order to eliminate all the radicals.</div>
@@ -1513,7 +1643,31 @@ x-7\amp = 49-14\sqrt{x}+x
 <div class="para">We must square the <em class="emphasis">entire expression</em> on each side of the equal sign as one piece.</div>
 </div></article><article class="exercise exercise-like" id="RadicalEquations-7-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article></section><section class="subsection" id="RadicalEquations-8"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-266" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="266" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskcjEgPSBDb21wdXRlKCI1Iik7CiRyMiA9IENvbXB1dGUoIjgiKTsKJGFuc3dlciA9IExpc3QoIiRyMSwgJHIyIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApTb2x2ZSBbYH5cc3FydHszeCsxfSA9IDYgLSBcc3FydHs5LXh9YF0KCltgeD1gXVtfXXskbXlfZXZhbHVhdG9yfXs1fQoKSGludDoKKiBTcXVhcmUgYm90aCBzaWRlcy4KKiBJc29sYXRlIHRoZSByYWRpY2FsIHRlcm0uCiogRGl2aWRlIGJvdGggc2lkZXMgYnkgNC4KKiBTcXVhcmUgYm90aCBzaWRlcyBhZ2Fpbi4KKiBTb2x2ZSB0aGUgcXVhZHJhdGljIGVxdWF0aW9uLgoqIENoZWNrIGZvciBleHRyYW5lb3VzIHJvb3RzLiAgIAoKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ1VzZSBhIGNvbW1hIHRvIHNlcGFyYXRlIGRpZmZlcmVudCBzb2x1dGlvbnMuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2B4PTVcdGV4dHs7fWBdICBbYHg9OGBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-266')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-266-1-1-1">Solve <span class="process-math">\(~\sqrt{3x+1} = 6 - \sqrt{9-x}\)</span>
+</div> <div class="para" id="extracted-webwork-266-1-1-2">
+<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div> <div class="para logical" id="extracted-webwork-266-1-1-3">
+<div class="para">Hint:</div>
+<ul class="disc" id="extracted-webwork-266-1-1-3-1">
+<li id="extracted-webwork-266-1-1-3-1-1"><div class="para" id="extracted-webwork-266-1-1-3-1-1-1">Square both sides.</div></li>
+<li id="extracted-webwork-266-1-1-3-1-2"><div class="para" id="extracted-webwork-266-1-1-3-1-2-1">Isolate the radical term.</div></li>
+<li id="extracted-webwork-266-1-1-3-1-3"><div class="para" id="extracted-webwork-266-1-1-3-1-3-1">Divide both sides by 4.</div></li>
+<li id="extracted-webwork-266-1-1-3-1-4"><div class="para" id="extracted-webwork-266-1-1-3-1-4-1">Square both sides again.</div></li>
+<li id="extracted-webwork-266-1-1-3-1-5"><div class="para" id="extracted-webwork-266-1-1-3-1-5-1">Solve the quadratic equation.</div></li>
+<li id="extracted-webwork-266-1-1-3-1-6"><div class="para" id="extracted-webwork-266-1-1-3-1-6-1">Check for extraneous roots.</div></li>
+</ul>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-266-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-266-1-2-1"><span class="process-math">\(5, 8\)</span></div></div></details><details id="extracted-webwork-266-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-266-1-3-1">
+<span class="process-math">\(x=5\text{;}\)</span>  <span class="process-math">\(x=8\)</span>
+</div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="RadicalEquations-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.5.5</span><span class="space"> </span><span class="title">Simplifying <span class="process-math">\(\sqrt[n]{a^n}\)</span></span>
 </h3>
 <div class="para logical" id="RadicalEquations-8-2">
@@ -1576,9 +1730,78 @@ x-7\amp = 49-14\sqrt{x}+x
 <li id="RadicalEquations-8-8-1-1-1-2"><div class="para" id="p-derived-RadicalEquations-8-8-1-1-1-2"><span class="process-math">\(\displaystyle \sqrt{(x-1)^2} = \abs{x-1}\)</span></div></li>
 </ol></div></article><article class="exercise exercise-like" id="RadicalEquations-8-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></article><article class="exercise exercise-like" id="RadicalEquations-8-10"><h4 class="heading">
+</h4>
+<div id="webwork-267" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="267" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gRm9ybXVsYSgiLTUqeF4yIik7CiRiID0gRm9ybXVsYSgiMiogYWJzKHheMykiKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkuCmEuICBbYFxzcXJ0WzNdey0xMjV4XjZ9PWBdW19deyRhfXs4fQoKCmEuICBbYFxzcXJ0WzRdezE2eF57MTJ9fT1gXVtfXXskYn17OH0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdVc2UgImFicyh4KSIgdG8gZ2V0IFtgfCB4IHxcdGV4dHsufWBdJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgLTV4XjJgXQphLiAgW2AyXGxlZnR8IHt4XjN9IFxyaWdodHxgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-267')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-267-1-1-1">
+<div class="para">Simplify.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-267-1-1-1-1">
+<li id="extracted-webwork-267-1-1-1-1-1"><div class="para" id="extracted-webwork-267-1-1-1-1-1-1">
+<span class="process-math">\(\sqrt[3]{-125x^6}=\)</span><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
+</div></li>
+<li id="extracted-webwork-267-1-1-1-1-2"><div class="para" id="extracted-webwork-267-1-1-1-1-2-1">
+<span class="process-math">\(\sqrt[4]{16x^{12}}=\)</span><span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-267-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-267-1-2-1"><span class="process-math">\(-5x^{2}\)</span></div></div></details><details id="extracted-webwork-267-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-267-1-3-1"><span class="process-math">\(2\!\left|x^{3}\right|\)</span></div></div></details><details id="extracted-webwork-267-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-267-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-267-1-4-1-1">
+<li id="extracted-webwork-267-1-4-1-1-1"><div class="para" id="extracted-webwork-267-1-4-1-1-1-1"><span class="process-math">\(\displaystyle -5x^2\)</span></div></li>
+<li id="extracted-webwork-267-1-4-1-1-2"><div class="para" id="extracted-webwork-267-1-4-1-1-2-1"><span class="process-math">\(\displaystyle 2\left| {x^3} \right|\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="RadicalEquations-8-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5.15</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></article></section><section class="exercises" id="section-6-5-exercises"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-268" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="268" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgWyI/IiwiVHJ1ZSIsICJGYWxzZSJdLAogIDEsIAopOwokRmFsc2UgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwgIkZhbHNlIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MClRydWUgb3IgZmFsc2UuCmEuICBJZiBhbiBlcXVhdGlvbiBjb250YWlucyBtb3JlIHRoYW4gb25lIHJhZGljYWwsIHdlIHNxdWFyZSBlYWNoIHRlcm0gb2YgdGhlIGVxdWF0aW9uLiBbX117JEZhbHNlfXs1fQoKCmEuICBbYCg3LVxzcXJ0e3h9KV4yID0gNDkteGBdIFtfXXskRmFsc2V9ezV9CgoKYS4gIElmIFtgXHNxcnR7eF4yfSBcbm90PSB4XHRleHR7LH1gXSB0aGVuIFtgXHNxcnR7eF4yfSA9IC14XHRleHR7Ln1gXSBbX117JFRydWV9ezV9CgoKYS4gIElmIFtgbmBdIGlzIGV2ZW4gYW5kIFtgYSBcbm90PSAwXHRleHR7LH1gXSB0aGVuIFtgYV5uYF0gaXMgYWx3YXlzIHBvc2l0aXZlLiBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIFRydWUKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-268')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-268-1-1-1">
+<div class="para">True or false.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-268-1-1-1-1">
+<li id="extracted-webwork-268-1-1-1-1-1"><div class="para logical" id="extracted-webwork-268-1-1-1-1-1-1">
+<div class="para">If an equation contains more than one radical, we square each term of the equation.</div>
+<ul class="square" id="extracted-webwork-268-1-1-1-1-1-1-1">
+<li id="extracted-webwork-268-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-268-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-268-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-268-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-268-1-1-1-1-2"><div class="para logical" id="extracted-webwork-268-1-1-1-1-2-1">
+<div class="para"><span class="process-math">\((7-\sqrt{x})^2 = 49-x\)</span></div>
+<ul class="square" id="extracted-webwork-268-1-1-1-1-2-1-2">
+<li id="extracted-webwork-268-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-268-1-1-1-1-2-1-2-1-1">True</div></li>
+<li id="extracted-webwork-268-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-268-1-1-1-1-2-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-268-1-1-1-1-3"><div class="para logical" id="extracted-webwork-268-1-1-1-1-3-1">
+<div class="para">If <span class="process-math">\(\sqrt{x^2} \not= x\text{,}\)</span> then <span class="process-math">\(\sqrt{x^2} = -x\text{.}\)</span>
+</div>
+<ul class="square" id="extracted-webwork-268-1-1-1-1-3-1-3">
+<li id="extracted-webwork-268-1-1-1-1-3-1-3-1"><div class="para" id="extracted-webwork-268-1-1-1-1-3-1-3-1-1">True</div></li>
+<li id="extracted-webwork-268-1-1-1-1-3-1-3-2"><div class="para" id="extracted-webwork-268-1-1-1-1-3-1-3-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-268-1-1-1-1-4"><div class="para logical" id="extracted-webwork-268-1-1-1-1-4-1">
+<div class="para">If <span class="process-math">\(n\)</span> is even and <span class="process-math">\(a \not= 0\text{,}\)</span> then <span class="process-math">\(a^n\)</span> is always positive.</div>
+<ul class="square" id="extracted-webwork-268-1-1-1-1-4-1-4">
+<li id="extracted-webwork-268-1-1-1-1-4-1-4-1"><div class="para" id="extracted-webwork-268-1-1-1-1-4-1-4-1-1">True</div></li>
+<li id="extracted-webwork-268-1-1-1-1-4-1-4-2"><div class="para" id="extracted-webwork-268-1-1-1-1-4-1-4-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-268-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-268-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-268-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-268-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-268-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-268-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-268-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-268-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-268-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-268-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-268-1-6-1-1">
+<li id="extracted-webwork-268-1-6-1-1-1"><div class="para" id="extracted-webwork-268-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-268-1-6-1-1-2"><div class="para" id="extracted-webwork-268-1-6-1-1-2-1">False</div></li>
+<li id="extracted-webwork-268-1-6-1-1-3"><div class="para" id="extracted-webwork-268-1-6-1-1-3-1">True</div></li>
+<li id="extracted-webwork-268-1-6-1-1-4"><div class="para" id="extracted-webwork-268-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="exercises" id="section-6-5-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">6.5.6</span><span class="space"> </span><span class="title">Problem Set 6.5</span>
 </h3>
 <article class="subexercises" id="section-6-5-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

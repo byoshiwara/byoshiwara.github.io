@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Logarithms</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ExponentialFunctions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="PropertiesofLogarithms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ExponentialFunctions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="PropertiesofLogarithms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1357,7 +1370,26 @@ P(\alert{4}) = 50 \cdot 2^{\alert{4}} = 800
 </h4>
 <div class="para" id="LogExp-9-1">So the request to compute a logarithm really says "Find me the exponent!"</div></article><article class="exercise exercise-like" id="LogExp-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></article><div class="para" id="LogExp-11">From the definition of a logarithm and the examples above, we see that the following two statements are equivalent.</div>
+</h4>
+<div id="webwork-289" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="289" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0+ZnVuY3Rpb25zLT5kaXNhYmxlKCJBbGwiKTsKJGEgPSBDb21wdXRlKCI0Iik7CiRiID0gQ29tcHV0ZSgiLTMiKTsKCkJFR0lOX1BHTUwKRmluZCBlYWNoIGxvZ2FyaXRobS4KCmEuICBbYFxsb2dfezN9ezgxfT1gXVtfXXskYX17Mn0KCgphLiAgW2BcbG9nX3sxMH17XGRmcmFjezF9ezEwMDB9fT1gXVtfXXskYn17Mn0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgNGBdCgoKYS4gIFtgLTNgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-289')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-289-1-1-1">Find each logarithm.</div> <div class="para logical" id="extracted-webwork-289-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-289-1-1-2-1">
+<li id="extracted-webwork-289-1-1-2-1-1"><div class="para" id="extracted-webwork-289-1-1-2-1-1-1">
+<span class="process-math">\(\log_{3}{81}=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
+</div></li>
+<li id="extracted-webwork-289-1-1-2-1-2"><div class="para" id="extracted-webwork-289-1-1-2-1-2-1">
+<span class="process-math">\(\log_{10}{\dfrac{1}{1000}}=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
+</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-289-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-289-1-2-1"><span class="process-math">\(4\)</span></div></div></details><details id="extracted-webwork-289-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-289-1-3-1"><span class="process-math">\(-3\)</span></div></div></details><details id="extracted-webwork-289-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-289-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-289-1-4-1-1">
+<li id="extracted-webwork-289-1-4-1-1-1"><div class="para" id="extracted-webwork-289-1-4-1-1-1-1"><span class="process-math">\(\displaystyle 4\)</span></div></li>
+<li id="extracted-webwork-289-1-4-1-1-2"><div class="para" id="extracted-webwork-289-1-4-1-1-2-1"><span class="process-math">\(\displaystyle -3\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="LogExp-11">From the definition of a logarithm and the examples above, we see that the following two statements are equivalent.</div>
 <article class="assemblage assemblage-like" id="LogExp-12"><h4 class="heading"><span class="title">Logarithms and Exponents: Conversion Equations.</span></h4>
 <div class="para logical" id="LogExp-12-4">
 <div class="para">If <span class="process-math">\(b \gt 0\text{,}\)</span> <span class="process-math">\(b\ne 1\text{,}\)</span> and <span class="process-math">\(x \gt 0\text{,}\)</span>
@@ -1400,7 +1432,33 @@ P(\alert{4}) = 50 \cdot 2^{\alert{4}} = 800
 </div></li>
 </ol></div></article><article class="exercise exercise-like" id="LogExp-19"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article></section><section class="subsection" id="Logarithms-4"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-290" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="290" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgpLT5mdW5jdGlvbnMtPnVuZGVmaW5lKCJsbiIsImxvZzEwIiwibG9nIik7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5hZGQodz0+IlJlYWwiLHA9PiJSZWFsIik7CkNvbnRleHQoKS0+dmFyaWFibGVzLT5zZXQoeD0+e2xpbWl0cz0+WzEsMl19KTsKJGEgPSBDb21wdXRlKCIzIik7CiRiID0gQ29tcHV0ZSgiMCIpOwokYyA9IENvbXB1dGUoIjUiKTsKJGQgPSBGb3JtdWxhKCJ3XnAiKTsKCkJFR0lOX1BHTUwKYS4gIFtgXGxvZ182ezIxNn09YF0gW19deyRhfXsyfSBiZWNhdXNlIDZeW19deyRhfXsyfSBbYD0gMjE2YF0KCgphLiAgW2BcbG9nXzh7MX0gPWBdIFtfXXskYn17Mn0gYmVjYXVzZSA4XltfXXskYn17Mn0gW2A9IDFgXQoKCmEuICBbYFxsb2dfOXs5XjV9ID1gXSBbX117JGN9ezJ9CgoKYS4gIElmIFtgXGxvZ193ezg3fSA9IHAsYF0gdGhlbiBbYDg3ID1gXSBbX117JGR9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAzCmEuICAwCmEuICA1CmEuICBbYHdecGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-290')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-290-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-290-1-1-1-1">
+<li id="extracted-webwork-290-1-1-1-1-1"><div class="para" id="extracted-webwork-290-1-1-1-1-1-1">
+<span class="process-math">\(\log_6{216}=\)</span> <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> because 6^<span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> <span class="process-math">\(= 216\)</span>
+</div></li>
+<li id="extracted-webwork-290-1-1-1-1-2"><div class="para" id="extracted-webwork-290-1-1-1-1-2-1">
+<span class="process-math">\(\log_8{1} =\)</span> <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> because 8^<span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> <span class="process-math">\(= 1\)</span>
+</div></li>
+<li id="extracted-webwork-290-1-1-1-1-3"><div class="para" id="extracted-webwork-290-1-1-1-1-3-1">
+<span class="process-math">\(\log_9{9^5} =\)</span> <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
+</div></li>
+<li id="extracted-webwork-290-1-1-1-1-4"><div class="para" id="extracted-webwork-290-1-1-1-1-4-1">If <span class="process-math">\(\log_w{87} = p,\)</span> then <span class="process-math">\(87 =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-290-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-290-1-2-1"><span class="process-math">\(3\)</span></div></div></details><details id="extracted-webwork-290-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-290-1-3-1"><span class="process-math">\(3\)</span></div></div></details><details id="extracted-webwork-290-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-290-1-4-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-290-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-290-1-5-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-290-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-290-1-6-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-290-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-290-1-7-1"><span class="process-math">\(w^{p}\)</span></div></div></details><details id="extracted-webwork-290-1-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-290-1-8-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-290-1-8-1-1">
+<li id="extracted-webwork-290-1-8-1-1-1"><div class="para" id="extracted-webwork-290-1-8-1-1-1-1">3</div></li>
+<li id="extracted-webwork-290-1-8-1-1-2"><div class="para" id="extracted-webwork-290-1-8-1-1-2-1">0</div></li>
+<li id="extracted-webwork-290-1-8-1-1-3"><div class="para" id="extracted-webwork-290-1-8-1-1-3-1">5</div></li>
+<li id="extracted-webwork-290-1-8-1-1-4"><div class="para" id="extracted-webwork-290-1-8-1-1-4-1"><span class="process-math">\(\displaystyle w^p\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Logarithms-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="space"> </span><span class="title">Logs and Exponential Equations</span>
 </h3>
 <div class="para logical" id="Logarithms-4-2">
@@ -1465,7 +1523,44 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{(8)} = 3
 </div>
 </div></article><article class="exercise exercise-like" id="Logarithms-4-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></article><div class="para" id="Logarithms-4-6">We can solve an exponential equation by converting the equation to logarithmic form.</div>
+</h4>
+<div id="webwork-291" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="291" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChGcmFjdGlvbik7CiR5YSA9IENvbXB1dGUoIi0xLzMiKTsKJGJhID0gQ29tcHV0ZSgiOCIpOwokeGEgPSBDb21wdXRlKCIxLzIiKTsKJHliID0gRm9ybXVsYSgieCIpOwokYmIgPSBDb21wdXRlKCI1Iik7CiR4YiA9IENvbXB1dGUoIjQ2Iik7CgpCRUdJTl9QR01MClJld3JpdGUgZWFjaCBlcXVhdGlvbiBpbiBsb2dhcml0aG1pYyBmb3JtLgoKYS4gIFtgOF57LTEvM30gPSBcZGZyYWN7MX17Mn1gXQoKICAgIFRoZSBnaXZlbiBlcXVhdGlvbiBpcyBlcXVpdmFsZW50IHRvIG9uZSBvZiB0aGUgZm9ybSBbYFxsb2dfe2J9bT1uXHRleHR7LH1gXSB3aGVyZQoKICAgIFtgYj1gXVtfXXskYmF9ezN9CgogICAgW2BtPWBdW19deyR4YX17M30sIGFuZAoKICAgIFtgbj1gXVtfXXskeWF9ezN9CgoKYS4gIFtgNV54ID0gNDZgXQoKICAgIFRoZSBnaXZlbiBlcXVhdGlvbiBpcyBlcXVpdmFsZW50IHRvIG9uZSBvZiB0aGUgZm9ybSBbYFxsb2dfe2J9bT1uXHRleHR7LH1gXSB3aGVyZQoKICAgIFtgYj1gXVtfXXskYmJ9ezN9CgogICAgW2BtPWBdW19deyR4Yn17M30sIGFuZAoKICAgIFtgbj1gXVtfXXskeWJ9ezN9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYFxsb2dfOCBcbGVmdChcZGZyYWN7MX17Mn0gXHJpZ2h0KT1cZGZyYWN7LTF9ezN9IGBdCgoKYS4gIFtgXGxvZ197NX0gNDY9eCBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-291')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-291-1-1-1">Rewrite each equation in logarithmic form.</div> <div class="para logical" id="extracted-webwork-291-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-291-1-1-2-1">
+<li id="extracted-webwork-291-1-1-2-1-1">
+<div class="para" id="extracted-webwork-291-1-1-2-1-1-1"><span class="process-math">\(8^{-1/3} = \dfrac{1}{2}\)</span></div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-1-2">The given equation is equivalent to one of the form <span class="process-math">\(\log_{b}m=n\text{,}\)</span> where</div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-1-3">
+<span class="process-math">\(b=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-1-4">
+<span class="process-math">\(m=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, and</div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-1-5">
+<span class="process-math">\(n=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-291-1-1-2-1-2">
+<div class="para" id="extracted-webwork-291-1-1-2-1-2-1"><span class="process-math">\(5^x = 46\)</span></div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-2-2">The given equation is equivalent to one of the form <span class="process-math">\(\log_{b}m=n\text{,}\)</span> where</div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-2-3">
+<span class="process-math">\(b=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-2-4">
+<span class="process-math">\(m=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, and</div>
+<div class="para" id="extracted-webwork-291-1-1-2-1-2-5">
+<span class="process-math">\(n=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+</li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-291-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-291-1-2-1"><span class="process-math">\(8\)</span></div></div></details><details id="extracted-webwork-291-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-291-1-3-1"><span class="process-math">\({\frac{1}{2}}\)</span></div></div></details><details id="extracted-webwork-291-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-291-1-4-1"><span class="process-math">\(-{\frac{1}{3}}\)</span></div></div></details><details id="extracted-webwork-291-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-291-1-5-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-291-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-291-1-6-1"><span class="process-math">\(46\)</span></div></div></details><details id="extracted-webwork-291-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-291-1-7-1"><span class="process-math">\(x\)</span></div></div></details><details id="extracted-webwork-291-1-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-291-1-8-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-291-1-8-1-1">
+<li id="extracted-webwork-291-1-8-1-1-1"><div class="para" id="extracted-webwork-291-1-8-1-1-1-1"><span class="process-math">\(\displaystyle \log_8 \left(\dfrac{1}{2} \right)=\dfrac{-1}{3}\)</span></div></li>
+<li id="extracted-webwork-291-1-8-1-1-2"><div class="para" id="extracted-webwork-291-1-8-1-1-2-1"><span class="process-math">\(\displaystyle \log_{5} 46=x\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="Logarithms-4-6">We can solve an exponential equation by converting the equation to logarithmic form.</div>
 <article class="example example-like" id="Logarithms-4-7"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.9</span><span class="period">.</span>
 </h4>
@@ -1485,7 +1580,59 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{(8)} = 3
 </div></article><aside class="aside aside-like" id="Logarithms-4-8"><div class="para" id="Logarithms-4-8-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help examples of using logs, see <a href="tkchap7.html#tkUseLog" class="internal" title="Subsubsection A.7.3.3: Using logs">Section 7.3.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Logarithms-4-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article></section><section class="subsection" id="Logarithms-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-292" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="292" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRzcXJ0ID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVGFraW5nIGEgbG9nYXJpdGhtLiIsIAogICAgIlRha2luZyBhIHNxdWFyZSByb290LiIsCiAgICAiRGl2aWRpbmcgYnkgdGhlIG51bWJlci4iLAogICAgIlN1YnRyYWN0aW5nIHRoZSBudW1iZXIuIl0sCiAgICAyCik7CiRsb2cgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJUYWtpbmcgYSBsb2dhcml0aG0uIiwgCiAgICAiVGFraW5nIGEgc3F1YXJlIHJvb3QuIiwKICAgICJEaXZpZGluZyBieSB0aGUgbnVtYmVyLiIsCiAgICAiU3VidHJhY3RpbmcgdGhlIG51bWJlci4iXSwKICAgIDEKKTsKJGNvbiA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgInJlY2lwcm9jYWxzIiwgCiAgICAic2xvcGUiLAogICAgImNvbnZlcnNpb24gZXF1YXRpb25zIl0sCiAgICAzCik7CiRleHAgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJxdW90aWVudCIsIAogICAgInByb2R1Y3QiLAogICAgImV4cG9uZW50IiwKICAgICJiYXNlIl0sCiAgICAzCik7CgpCRUdJTl9QR01MCmEuICBXaGF0IGlzIHRoZSBpbnZlcnNlIG9wZXJhdGlvbiBmb3Igc3F1YXJpbmcgYSBudW1iZXI/IFtfXXskc3FydH17NX0KCgphLiAgV2hhdCBpcyB0aGUgaW52ZXJzZSBvcGVyYXRpb24gZm9yIHJhaXNpbmcgdG8gYSBwb3dlcj8gW19deyRsb2d9ezV9CgoKYS4gIEV2ZXJ5IGV4cG9uZW50aWFsIGVxdWF0aW9uIGNhbiBiZSByZXdyaXR0ZW4gaW4gbG9nYXJpdGhtaWMgZm9ybSBieSB1c2luZyB0aGUgW19deyRjb259ezV9LgoKCmEuICBBIGxvZ2FyaXRobSBpcyBhbiB1bmtub3duIFtfXXskZXhwfXs1fS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFRha2luZyBhIHNxdWFyZSByb290CmEuICBUYWtpbmcgYSBsb2dhcml0aG0KYS4gIGNvbnZlcnNpb24gZXF1YXRpb25zCmEuICBleHBvbmVudCAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-292')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-292-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-292-1-1-1-1">
+<li id="extracted-webwork-292-1-1-1-1-1"><div class="para logical" id="extracted-webwork-292-1-1-1-1-1-1">
+<div class="para">What is the inverse operation for squaring a number?</div>
+<ul class="square" id="extracted-webwork-292-1-1-1-1-1-1-1">
+<li id="extracted-webwork-292-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-292-1-1-1-1-1-1-1-1-1">Taking a logarithm.</div></li>
+<li id="extracted-webwork-292-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-292-1-1-1-1-1-1-1-2-1">Taking a square root.</div></li>
+<li id="extracted-webwork-292-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-292-1-1-1-1-1-1-1-3-1">Dividing by the number.</div></li>
+<li id="extracted-webwork-292-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-292-1-1-1-1-1-1-1-4-1">Subtracting the number.</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-292-1-1-1-1-2"><div class="para logical" id="extracted-webwork-292-1-1-1-1-2-1">
+<div class="para">What is the inverse operation for raising to a power?</div>
+<ul class="square" id="extracted-webwork-292-1-1-1-1-2-1-1">
+<li id="extracted-webwork-292-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-292-1-1-1-1-2-1-1-1-1">Taking a logarithm.</div></li>
+<li id="extracted-webwork-292-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-292-1-1-1-1-2-1-1-2-1">Taking a square root.</div></li>
+<li id="extracted-webwork-292-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-292-1-1-1-1-2-1-1-3-1">Dividing by the number.</div></li>
+<li id="extracted-webwork-292-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-292-1-1-1-1-2-1-1-4-1">Subtracting the number.</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-292-1-1-1-1-3"><div class="para logical" id="extracted-webwork-292-1-1-1-1-3-1">
+<div class="para">Every exponential equation can be rewritten in logarithmic form by using the</div>
+<ul class="square" id="extracted-webwork-292-1-1-1-1-3-1-1">
+<li id="extracted-webwork-292-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-292-1-1-1-1-3-1-1-1-1">reciprocals</div></li>
+<li id="extracted-webwork-292-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-292-1-1-1-1-3-1-1-2-1">slope</div></li>
+<li id="extracted-webwork-292-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-292-1-1-1-1-3-1-1-3-1">conversion equations</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-292-1-1-1-1-4"><div class="para logical" id="extracted-webwork-292-1-1-1-1-4-1">
+<div class="para">A logarithm is an unknown</div>
+<ul class="square" id="extracted-webwork-292-1-1-1-1-4-1-1">
+<li id="extracted-webwork-292-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-292-1-1-1-1-4-1-1-1-1">quotient</div></li>
+<li id="extracted-webwork-292-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-292-1-1-1-1-4-1-1-2-1">product</div></li>
+<li id="extracted-webwork-292-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-292-1-1-1-1-4-1-1-3-1">exponent</div></li>
+<li id="extracted-webwork-292-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-292-1-1-1-1-4-1-1-4-1">base</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-292-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-292-1-2-1"><span class="process-math">\(\text{Taking a square root.}\)</span></div></div></details><details id="extracted-webwork-292-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-292-1-3-1"><span class="process-math">\(\text{Taking a logarithm.}\)</span></div></div></details><details id="extracted-webwork-292-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-292-1-4-1"><span class="process-math">\(\text{conversion equations}\)</span></div></div></details><details id="extracted-webwork-292-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-292-1-5-1"><span class="process-math">\(\text{exponent}\)</span></div></div></details><details id="extracted-webwork-292-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-292-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-292-1-6-1-1">
+<li id="extracted-webwork-292-1-6-1-1-1"><div class="para" id="extracted-webwork-292-1-6-1-1-1-1">Taking a square root</div></li>
+<li id="extracted-webwork-292-1-6-1-1-2"><div class="para" id="extracted-webwork-292-1-6-1-1-2-1">Taking a logarithm</div></li>
+<li id="extracted-webwork-292-1-6-1-1-3"><div class="para" id="extracted-webwork-292-1-6-1-1-3-1">conversion equations</div></li>
+<li id="extracted-webwork-292-1-6-1-1-4"><div class="para" id="extracted-webwork-292-1-6-1-1-4-1">exponent</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Logarithms-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="space"> </span><span class="title">Approximating Logarithms</span>
 </h3>
 <div class="para logical" id="Logarithms-5-2">
@@ -1573,7 +1720,38 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{(8)} = 3
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/fig-GC-approx-log.svg" role="img" class="contained" alt="GC intersection of expnential curve and horizontal line"></div>
 </div></article><article class="exercise exercise-like" id="Logarithms-5-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article></section><section class="subsection" id="Logarithms-6"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-293" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="293" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJjb250ZXh0RnJhY3Rpb24ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChGcmFjdGlvbik7CiR5ID0gRm9ybXVsYSgieCIpOwokYiA9IENvbXB1dGUoIjMiKTsKJHggPSBDb21wdXRlKCI5MCIpOwokZXhhY3QgPSBsb2coOTApL2xvZygzKTsKJGFuc3dlciA9IENvbXB1dGUoIiRleGFjdCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwMDUsCik7CgpCRUdJTl9QR01MCmEuICBSZXdyaXRlIHRoZSBlcXVhdGlvbiBbYDNeeCA9IDkwYF0gaW4gbG9nYXJpdGhtaWMgZm9ybS4KCiAgICBUaGUgZ2l2ZW4gZXF1YXRpb24gaXMgZXF1aXZhbGVudCB0byBvbmUgb2YgdGhlIGZvcm0gW2BcbG9nX3tifW09blx0ZXh0eyx9YF0gd2hlcmUKCiAgICBbYGI9YF1bX117JGJ9ezN9CgogICAgW2BtPWBdW19deyR4fXszfSwgYW5kCgogICAgW2BuPWBdW19deyR5fXszfQoKCmEuICBVc2UgYSBncmFwaCB0byBhcHByb3hpbWF0ZSB0aGUgc29sdXRpb24gdG8gdGhlIGVxdWF0aW9uIGluIHBhcnQgKGEpLiBSb3VuZCB5b3VyIGFuc3dlciB0byB0aHJlZSBkZWNpbWFsIHBsYWNlcy4KCiAgICBbYHhcYXBwcm94YF1bX117JGFuc3dlcn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGxvZ184eyg5MCl9PXggYF0KCgphLiAgW2B4XGFwcHJveCA0LjA5NiBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-293')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-293-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-293-1-1-1-1">
+<li id="extracted-webwork-293-1-1-1-1-1">
+<div class="para" id="extracted-webwork-293-1-1-1-1-1-1">Rewrite the equation <span class="process-math">\(3^x = 90\)</span> in logarithmic form.</div>
+<div class="para" id="extracted-webwork-293-1-1-1-1-1-2">The given equation is equivalent to one of the form <span class="process-math">\(\log_{b}m=n\text{,}\)</span> where</div>
+<div class="para" id="extracted-webwork-293-1-1-1-1-1-3">
+<span class="process-math">\(b=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+<div class="para" id="extracted-webwork-293-1-1-1-1-1-4">
+<span class="process-math">\(m=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, and</div>
+<div class="para" id="extracted-webwork-293-1-1-1-1-1-5">
+<span class="process-math">\(n=\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-293-1-1-1-1-2">
+<div class="para" id="extracted-webwork-293-1-1-1-1-2-1">Use a graph to approximate the solution to the equation in part (a). Round your answer to three decimal places.</div>
+<div class="para" id="extracted-webwork-293-1-1-1-1-2-2">
+<span class="process-math">\(x\approx\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div>
+</li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-293-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-293-1-2-1"><span class="process-math">\(3\)</span></div></div></details><details id="extracted-webwork-293-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-293-1-3-1"><span class="process-math">\(90\)</span></div></div></details><details id="extracted-webwork-293-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-293-1-4-1"><span class="process-math">\(x\)</span></div></div></details><details id="extracted-webwork-293-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-293-1-5-1"><span class="process-math">\(4.0959\)</span></div></div></details><details id="extracted-webwork-293-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-293-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-293-1-6-1-1">
+<li id="extracted-webwork-293-1-6-1-1-1"><div class="para" id="extracted-webwork-293-1-6-1-1-1-1"><span class="process-math">\(\displaystyle \log_8{(90)}=x\)</span></div></li>
+<li id="extracted-webwork-293-1-6-1-1-2"><div class="para" id="extracted-webwork-293-1-6-1-1-2-1"><span class="process-math">\(\displaystyle x\approx 4.096\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Logarithms-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="space"> </span><span class="title">Base 10 Logarithms</span>
 </h3>
 <div class="para logical" id="Logarithms-6-2">
@@ -1588,7 +1766,25 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{(8)} = 3
 </div>
 <article class="exercise exercise-like" id="Logarithms-6-3"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></article><div class="para" id="Logarithms-6-4">To evaluate a base 10 logarithm, we use the <kbd class="kbdkey">LOG</kbd> key on a calculator. Many logarithms are irrational numbers, and the calculator gives as many digits as its display allows. We can then round off to the desired accuracy.</div>
+</h4>
+<div id="webwork-294" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="294" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZmluZGV4ID0gUmFkaW9CdXR0b25zKAogIFsiXCh4PTI1XCkiLAogICJcKHhcKSBpcyBiZXR3ZWVuIDIwIGFuZCAzMCIsCiAgIlwoeFwpIGlzIGJldHdlZW4gMTAwIGFuZCAxMDAwIiwKICAiXCh4PVxkZnJhY3sxfXsyLjV9PTAuNFwpIl0sCiAgMiwgCik7CgpCRUdJTl9QR01MCklmIFtgXGxvZyB4ID0gMi41XHRleHR7LH1gXSB3aGF0IGNhbiB5b3Ugc2F5IGFib3V0IFtgeFx0ZXh0ez99YF0KCltfXXskZmluZGV4fXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgeGBdIGlzIGJldHdlZW4gMTAwIGFuZCAxMDAwCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-294')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-294-1-1-1">If <span class="process-math">\(\log x = 2.5\text{,}\)</span> what can you say about <span class="process-math">\(x\text{?}\)</span>
+</div> <div class="para logical" id="extracted-webwork-294-1-1-2"><ul class="circle" id="extracted-webwork-294-1-1-2-1">
+<li id="extracted-webwork-294-1-1-2-1-1"><div class="para" id="extracted-webwork-294-1-1-2-1-1-1"><span class="process-math">\(\displaystyle x=25\)</span></div></li>
+<li id="extracted-webwork-294-1-1-2-1-2"><div class="para" id="extracted-webwork-294-1-1-2-1-2-1">
+<span class="process-math">\(x\)</span> is between 20 and 30</div></li>
+<li id="extracted-webwork-294-1-1-2-1-3"><div class="para" id="extracted-webwork-294-1-1-2-1-3-1">
+<span class="process-math">\(x\)</span> is between 100 and 1000</div></li>
+<li id="extracted-webwork-294-1-1-2-1-4"><div class="para" id="extracted-webwork-294-1-1-2-1-4-1"><span class="process-math">\(\displaystyle x=\dfrac{1}{2.5}=0.4\)</span></div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-294-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-294-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-294-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-294-1-3-1">
+<span class="process-math">\(x\)</span> is between 100 and 1000</div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="Logarithms-6-4">To evaluate a base 10 logarithm, we use the <kbd class="kbdkey">LOG</kbd> key on a calculator. Many logarithms are irrational numbers, and the calculator gives as many digits as its display allows. We can then round off to the desired accuracy.</div>
 <article class="example example-like" id="example-calculator-log"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.14</span><span class="period">.</span>
 </h4>
@@ -1625,9 +1821,79 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{(8)} = 3
 <div class="para" id="Logarithms-6-6-2">For this reason, <em class="emphasis">rounding logarithms to 4 decimal places is customary.</em>
 </div></article><article class="exercise exercise-like" id="Logarithms-6-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></article><article class="exercise exercise-like" id="Logarithms-6-8"><h4 class="heading">
+</h4>
+<div id="webwork-295" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="295" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoKS0+ZnVuY3Rpb25zLT51bmRlZmluZSgibG4iLCJsb2cxMCIsImxvZyIpOwokYSA9IENvbXB1dGUoIi0wLjY5OSIpOwokYiA9IENvbXB1dGUoIjUuOTI3NCIpOwoKQkVHSU5fUEdNTApBcHByb3hpbWF0ZSB0aGUgbG9nYXJpdGhtcyB0byBmb3VyIGRlY2ltYWwgcGxhY2VzLgphLiAgW2BcbG9nIHswLjJ9XGFwcHJveGBdW19deyRhfXs1fQoKCmEuICBbYFxsb2cgezg0NiwwMDB9XGFwcHJveGBdW19deyRifXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2AgLTAuNjk5MGBdCmEuICBbYDUuOTI3NGBdCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-295')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-295-1-1-1">
+<div class="para">Approximate the logarithms to four decimal places.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-295-1-1-1-1">
+<li id="extracted-webwork-295-1-1-1-1-1"><div class="para" id="extracted-webwork-295-1-1-1-1-1-1">
+<span class="process-math">\(\log {0.2}\approx\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+<li id="extracted-webwork-295-1-1-1-1-2"><div class="para" id="extracted-webwork-295-1-1-1-1-2-1">
+<span class="process-math">\(\log {846,000}\approx\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-295-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-295-1-2-1"><span class="process-math">\(-0.699\)</span></div></div></details><details id="extracted-webwork-295-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-295-1-3-1"><span class="process-math">\(5.9274\)</span></div></div></details><details id="extracted-webwork-295-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-295-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-295-1-4-1-1">
+<li id="extracted-webwork-295-1-4-1-1-1"><div class="para" id="extracted-webwork-295-1-4-1-1-1-1"><span class="process-math">\(\displaystyle -0.6990\)</span></div></li>
+<li id="extracted-webwork-295-1-4-1-1-2"><div class="para" id="extracted-webwork-295-1-4-1-1-2-1"><span class="process-math">\(\displaystyle 5.9274\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="Logarithms-6-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 4.</span>
-</h4></article></section><section class="subsection" id="Logarithms-7"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-296" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="296" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIExPRyBrZXkgb24gYSBjYWxjdWxhdG9yIGNvbXB1dGVzIGxvZ2FyaXRobXMgYmFzZSAyLiBbX117JEZhbHNlfXs1fQoKCmEuICBbYFxsb2dfNSB7MTAwfWBdIGlzIGEgbnVtYmVyIGJldHdlZW4gMiBhbmQgMy4gIFtfXXskVHJ1ZX17NX0KCgphLiAgUm91bmRpbmcgYSBsb2dhcml0aG0gdG8gdHdvIGRlY2ltYWwgcGxhY2VzIGdpdmVzIHZlcnkgYWNjdXJhdGUgcmVzdWx0cy4gW19deyRGYWxzZX17NX0KCgphLiAgVGhlIHZhbHVlIG9mIFtgXGxvZ180IHszOTJ9YF0gaXMgYWxzbyB0aGUgc29sdXRpb24gb2YgW2A0XnggPSAzOTJcdGV4dHsufWBdIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBUcnVlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-296')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-296-1-1-1">
+<div class="para">True or False.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-296-1-1-1-1">
+<li id="extracted-webwork-296-1-1-1-1-1"><div class="para logical" id="extracted-webwork-296-1-1-1-1-1-1">
+<div class="para">The LOG key on a calculator computes logarithms base 2.</div>
+<ul class="square" id="extracted-webwork-296-1-1-1-1-1-1-1">
+<li id="extracted-webwork-296-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-296-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-296-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-296-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-296-1-1-1-1-2"><div class="para logical" id="extracted-webwork-296-1-1-1-1-2-1">
+<div class="para">
+<span class="process-math">\(\log_5 {100}\)</span> is a number between 2 and 3.</div>
+<ul class="square" id="extracted-webwork-296-1-1-1-1-2-1-2">
+<li id="extracted-webwork-296-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-296-1-1-1-1-2-1-2-1-1">True</div></li>
+<li id="extracted-webwork-296-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-296-1-1-1-1-2-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-296-1-1-1-1-3"><div class="para logical" id="extracted-webwork-296-1-1-1-1-3-1">
+<div class="para">Rounding a logarithm to two decimal places gives very accurate results.</div>
+<ul class="square" id="extracted-webwork-296-1-1-1-1-3-1-1">
+<li id="extracted-webwork-296-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-296-1-1-1-1-3-1-1-1-1">True</div></li>
+<li id="extracted-webwork-296-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-296-1-1-1-1-3-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-296-1-1-1-1-4"><div class="para logical" id="extracted-webwork-296-1-1-1-1-4-1">
+<div class="para">The value of <span class="process-math">\(\log_4 {392}\)</span> is also the solution of <span class="process-math">\(4^x = 392\text{.}\)</span>
+</div>
+<ul class="square" id="extracted-webwork-296-1-1-1-1-4-1-3">
+<li id="extracted-webwork-296-1-1-1-1-4-1-3-1"><div class="para" id="extracted-webwork-296-1-1-1-1-4-1-3-1-1">True</div></li>
+<li id="extracted-webwork-296-1-1-1-1-4-1-3-2"><div class="para" id="extracted-webwork-296-1-1-1-1-4-1-3-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-296-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-296-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-296-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-296-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-296-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-296-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-296-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-296-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-296-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-296-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-296-1-6-1-1">
+<li id="extracted-webwork-296-1-6-1-1-1"><div class="para" id="extracted-webwork-296-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-296-1-6-1-1-2"><div class="para" id="extracted-webwork-296-1-6-1-1-2-1">True</div></li>
+<li id="extracted-webwork-296-1-6-1-1-3"><div class="para" id="extracted-webwork-296-1-6-1-1-3-1">False</div></li>
+<li id="extracted-webwork-296-1-6-1-1-4"><div class="para" id="extracted-webwork-296-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Logarithms-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="space"> </span><span class="title">Solving Exponential Equations</span>
 </h3>
 <div class="para" id="Logarithms-7-2">We can now solve any exponential equation with base 10.</div>
@@ -1680,9 +1946,39 @@ x = \pm\sqrt{25} = \pm 5 ~~~~ \text{ and } ~~~~ x = \log_{2}{(8)} = 3
 <li id="Logarithms-7-6-4-1-4"><div class="para" id="p-derived-Logarithms-7-6-4-1-4">Solve for the variable.</div></li>
 </ol></div></article><article class="exercise exercise-like" id="Logarithms-7-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.20</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 5.</span>
-</h4></article><article class="exercise exercise-like" id="Logarithms-7-8"><h4 class="heading">
+</h4>
+<div id="webwork-297" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="297" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskc3RlcG9uZSA9IFJhZGlvQnV0dG9ucygKICBbIk11bHRpcGx5IDUgdGltZXMgMTAuIiwKICAiVGFrZSB0aGUgbG9nIG9mIGJvdGggc2lkZXMuIiwKICAiR2V0IHplcm8gb24gb25lIHNpZGUgb2YgdGhlIGVxdWF0aW9uLiIsCiAgIkRpdmlkZSBib3RoIHNpZGVzIGJ5IDUuIl0sCiAgMywgCik7CgpCRUdJTl9QR01MCldoYXQgaXMgdGhlIGZpcnN0IHN0ZXAgaW4gc29sdmluZyB0aGUgZXF1YXRpb24gW2A1KDEwKV54PTEyXHRleHR7P31gXQoKW19deyRzdGVwb25lfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCkRpdmlkZSBib3RoIHNpZGVzIGJ5IDUuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-297')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-297-1-1-1">What is the first step in solving the equation <span class="process-math">\(5(10)^x=12\text{?}\)</span>
+</div> <div class="para logical" id="extracted-webwork-297-1-1-2"><ul class="circle" id="extracted-webwork-297-1-1-2-1">
+<li id="extracted-webwork-297-1-1-2-1-1"><div class="para" id="extracted-webwork-297-1-1-2-1-1-1">Multiply 5 times 10.</div></li>
+<li id="extracted-webwork-297-1-1-2-1-2"><div class="para" id="extracted-webwork-297-1-1-2-1-2-1">Take the log of both sides.</div></li>
+<li id="extracted-webwork-297-1-1-2-1-3"><div class="para" id="extracted-webwork-297-1-1-2-1-3-1">Get zero on one side of the equation.</div></li>
+<li id="extracted-webwork-297-1-1-2-1-4"><div class="para" id="extracted-webwork-297-1-1-2-1-4-1">Divide both sides by 5.</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-297-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-297-1-2-1"><span class="process-math">\(\text{Divide both sides by 5.}\)</span></div></div></details><details id="extracted-webwork-297-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-297-1-3-1">Divide both sides by 5.</div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="Logarithms-7-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.21</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></article></section><section class="subsection" id="Logarithms-8"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-298" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="298" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYmxlcnR9WzFde1xib2xkc3ltYm9se1xjb2xvcntibHVlfXsjMX19fVwpPC9kaXY+JykpOwpDb250ZXh0KCktPmZsYWdzLT5zZXQodXNlQmFzZVRlbkxvZz0+MSk7IAokYSA9IENvbXB1dGUoImxvZygyMjAtMjApIiktPndpdGgoCiAgICAgIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICAgICAgdG9sZXJhbmNlID0+IC4wMDAwNTEsCiAgICApOwoKQkVHSU5fUEdNTApTb2x2ZSB0aGUgZXF1YXRpb24gW2AyMCsxMF54ID0gMjIwXHRleHR7Ln1gXQoKW2B4PWBdW19deyRhfXs2fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKW2BcYmxlcnR7XHRleHR7SXNvbGF0ZSB0aGUgcG93ZXIgb2YgMTAufX1gXQoKW2BcYmxlcnR7XHRleHR7UmV3cml0ZSBpbiBsb2dhcml0aG1pYyBmb3JtLn19YF0KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgMi4zMDEwYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-298')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-298-1-1-1">Solve the equation <span class="process-math">\(20+10^x = 220\text{.}\)</span>
+</div> <div class="para" id="extracted-webwork-298-1-1-2">
+<span class="process-math">\(x=\)</span><span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-298-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="extracted-webwork-298-1-2-1"><span class="process-math">\(\blert{\text{Isolate the power of 10.}}\)</span></div>
+<div class="para" id="extracted-webwork-298-1-2-2"><span class="process-math">\(\blert{\text{Rewrite in logarithmic form.}}\)</span></div>
+</div></details><details id="extracted-webwork-298-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-298-1-3-1"><span class="process-math">\(\log\!\left(220-20\right)\)</span></div></div></details><details id="extracted-webwork-298-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-298-1-4-1"><span class="process-math">\(2.3010\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Logarithms-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="space"> </span><span class="title">Application to Exponential Models</span>
 </h3>
 <div class="para logical" id="Logarithms-8-2">
@@ -1734,9 +2030,100 @@ V(t) = 30,000(10)^{-0.04t}
 <div class="para" id="example-tractor-depreciates-2-3">to find <span class="process-math">\(t \approx 7.525749892\text{.}\)</span> The tractor will be worth $15,000 in approximately <span class="process-math">\(7\frac{1}{2}\)</span> years.</div>
 </div></article><article class="exercise exercise-like" id="Logarithms-8-4"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.23</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 6.</span>
-</h4></article><article class="exercise exercise-like" id="Logarithms-8-5"><h4 class="heading">
+</h4>
+<div id="webwork-299" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="299" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgVGhlIGZpcnN0IHN0ZXAgaW4gc29sdmluZyBhbiBleHBvbmVudGlhbCBlcXVhdGlvbiBpcyB0byBjb252ZXJ0IHRvIGxvZ2FyaXRobWljIGZvcm0uIFtfXXskRmFsc2V9ezV9CgoKYS4gIFRvIHNvbHZlIHRoZSBlcXVhdGlvbiBbYDEwXnggPSAxOVx0ZXh0eyx9YF0gd2UgZGl2aWRlIGJvdGggc2lkZXMgYnkgMTAuICBbX117JEZhbHNlfXs1fQoKCmEuICBbYFxkZnJhY3tcbG9nezE1fX17Nn1gXSBpcyB0aGUgc2FtZSBhcyBbYFxsb2d7XGRmcmFjezE1fXs2fX1cdGV4dHsufWBdIFtfXXskRmFsc2V9ezV9CgoKYS4gIExvZ2FyaXRobXMgYXJlIHVzZWQgaW4gdGhlIHN0dWR5IG9mIGV4cG9uZW50aWFsIGdyb3d0aCBhbmQgZGVjYXkuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBGYWxzZQphLiAgRmFsc2UKYS4gIFRydWUgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-299')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-299-1-1-1">
+<div class="para">True or False.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-299-1-1-1-1">
+<li id="extracted-webwork-299-1-1-1-1-1"><div class="para logical" id="extracted-webwork-299-1-1-1-1-1-1">
+<div class="para">The first step in solving an exponential equation is to convert to logarithmic form.</div>
+<ul class="square" id="extracted-webwork-299-1-1-1-1-1-1-1">
+<li id="extracted-webwork-299-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-299-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-299-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-299-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-299-1-1-1-1-2"><div class="para logical" id="extracted-webwork-299-1-1-1-1-2-1">
+<div class="para">To solve the equation <span class="process-math">\(10^x = 19\text{,}\)</span> we divide both sides by 10.</div>
+<ul class="square" id="extracted-webwork-299-1-1-1-1-2-1-2">
+<li id="extracted-webwork-299-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-299-1-1-1-1-2-1-2-1-1">True</div></li>
+<li id="extracted-webwork-299-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-299-1-1-1-1-2-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-299-1-1-1-1-3"><div class="para logical" id="extracted-webwork-299-1-1-1-1-3-1">
+<div class="para">
+<span class="process-math">\(\dfrac{\log{15}}{6}\)</span> is the same as <span class="process-math">\(\log{\dfrac{15}{6}}\text{.}\)</span>
+</div>
+<ul class="square" id="extracted-webwork-299-1-1-1-1-3-1-3">
+<li id="extracted-webwork-299-1-1-1-1-3-1-3-1"><div class="para" id="extracted-webwork-299-1-1-1-1-3-1-3-1-1">True</div></li>
+<li id="extracted-webwork-299-1-1-1-1-3-1-3-2"><div class="para" id="extracted-webwork-299-1-1-1-1-3-1-3-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-299-1-1-1-1-4"><div class="para logical" id="extracted-webwork-299-1-1-1-1-4-1">
+<div class="para">Logarithms are used in the study of exponential growth and decay.</div>
+<ul class="square" id="extracted-webwork-299-1-1-1-1-4-1-1">
+<li id="extracted-webwork-299-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-299-1-1-1-1-4-1-1-1-1">True</div></li>
+<li id="extracted-webwork-299-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-299-1-1-1-1-4-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-299-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-299-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-299-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-299-1-3-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-299-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-299-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-299-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-299-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-299-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-299-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-299-1-6-1-1">
+<li id="extracted-webwork-299-1-6-1-1-1"><div class="para" id="extracted-webwork-299-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-299-1-6-1-1-2"><div class="para" id="extracted-webwork-299-1-6-1-1-2-1">False</div></li>
+<li id="extracted-webwork-299-1-6-1-1-3"><div class="para" id="extracted-webwork-299-1-6-1-1-3-1">False</div></li>
+<li id="extracted-webwork-299-1-6-1-1-4"><div class="para" id="extracted-webwork-299-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="Logarithms-8-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">7.3.24</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
-</h4></article><div class="para" id="Logarithms-8-6">At this stage, it seems we will only be able to solve exponential equations in which the base is 10. However, we will see in future sections how the properties of logarithms enable us to solve exponential equations with any base.</div></section><section class="exercises" id="section-7-3-exercises"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-300" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="300" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+YWRkKHQ9PiJSZWFsIik7CkNvbnRleHQoKS0+ZmxhZ3MtPnNldCh1c2VCYXNlVGVuTG9nPT4xKTsgCiRwMCA9IENvbXB1dGUoIjI1Ljg1Iik7CiRmID0gRm9ybXVsYSgiJHAwKjEwKiooMC4wNTIqdCkiKTsKJHQgPSBDb21wdXRlKCJsb2coOTAvMjUuODUpLzAuMDUyIiktPndpdGgoCiAgdG9sVHlwZSA9PiAnYWJzb2x1dGUnLAogIHRvbGVyYW5jZSA9PiAuMDUsCik7CgokeWVhciA9IFBvcFVwKApbIj8iLCIyMDA0IiwiMjAwNSJdLAoxLCk7CiRZTiA9IFJhZGlvQnV0dG9ucygKWyJZZXM6IFRoZSBwZXJjZW50YWdlIHdpbGwgY29udGludWUgaW5jcmVhc2luZywgZmFzdGVyIGFuZCBmYXN0ZXIuIiwKIk5vOiB0aGUgcGVyY2VudCBvZiBob21lcyB3aXRoIGNvbXB1dGVycyBjYW5ub3QgZXhjZWVkIDEwMCUuIl0sCjEsKTsKCkJFR0lOX1BHTUwKVGhlIHBlcmNlbnRhZ2Ugb2YgQW1lcmljYW4gaG9tZXMgd2l0aCBjb21wdXRlcnMgZ3JldyBleHBvbmVudGlhbGx5IGZyb20gMTk5NCB0byAxOTk5LiBGb3IgW2B0ID0gMGBdIGluIDE5OTQsIHRoZSBncm93dGggbGF3IHdhcwoKW2BgYFAodCkgPSBbJGZdYGBgXQoKXFtTb3VyY2U6IExvcyBBbmdlbGVzIFRpbWVzLCBBdWd1c3QgMjAsIDE5OTlcXQphLiAgV2hhdCBwZXJjZW50IG9mIEFtZXJpY2FuIGhvbWVzIGhhZCBjb21wdXRlcnMgaW4gMTk5ND8KCiAgICBBbnN3ZXI6IFtfXXskcDB9ezR9JQoKCmEuICBJZiB0aGUgcGVyY2VudGFnZSBvZiBob21lcyB3aXRoIGNvbXB1dGVycyBjb250aW51ZWQgdG8gZ3JvdyBhdCB0aGUgc2FtZSByYXRlLCB3aGVuIGRpZCA5MCUgb2YgQW1lcmljYW4gaG9tZXMgaGF2ZSBhIGNvbXB1dGVyPwoKICAgIEFuc3dlcjogW2B0XGFwcHJveGBdW19deyR0fXszfSwgd2hpY2ggd2FzIHRoZSB5ZWFyIFtfXXskeWVhcn17NX0KCgphLiAgRG8geW91IHRoaW5rIHRoYXQgdGhlIGZ1bmN0aW9uIFtgUCh0KWBdIHdpbGwgY29udGludWUgdG8gbW9kZWwgdGhlIHBlcmNlbnRhZ2Ugb2YgQW1lcmljYW4gaG9tZXMgd2l0aCBjb21wdXRlcnM/IFdoeSBvciB3aHkgbm90PwoKICAgIFtfXXskWU59ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAyNS44NSUKCgphLiAgW2B0XGFwcHJveCAxMC40YF0gKHllYXIgMjAwNCkKCgphLiAgTm8sIHRoZSBwZXJjZW50IG9mIGhvbWVzIHdpdGggY29tcHV0ZXJzIGNhbm5vdCBleGNlZWQgMTAwJS4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-300')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-300-1-1-1">The percentage of American homes with computers grew exponentially from 1994 to 1999. For <span class="process-math">\(t = 0\)</span> in 1994, the growth law was</div> <div class="para logical" id="extracted-webwork-300-1-1-2"><div class="displaymath process-math">
+\begin{equation*}
+P(t) = {25.85\cdot 10^{0.052t}}
+\end{equation*}
+</div></div> <div class="para logical" id="extracted-webwork-300-1-1-3">
+<div class="para">[Source: Los Angeles Times, August 20, 1999]</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-300-1-1-3-1">
+<li id="extracted-webwork-300-1-1-3-1-1">
+<div class="para" id="extracted-webwork-300-1-1-3-1-1-1">What percent of American homes had computers in 1994?</div>
+<div class="para" id="extracted-webwork-300-1-1-3-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>%</div>
+</li>
+<li id="extracted-webwork-300-1-1-3-1-2">
+<div class="para" id="extracted-webwork-300-1-1-3-1-2-1">If the percentage of homes with computers continued to grow at the same rate, when did 90% of American homes have a computer?</div>
+<div class="para logical" id="extracted-webwork-300-1-1-3-1-2-2">
+<div class="para">Answer: <span class="process-math">\(t\approx\)</span><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, which was the year</div>
+<ul class="square" id="extracted-webwork-300-1-1-3-1-2-2-3">
+<li id="extracted-webwork-300-1-1-3-1-2-2-3-1"><div class="para" id="extracted-webwork-300-1-1-3-1-2-2-3-1-1">2004</div></li>
+<li id="extracted-webwork-300-1-1-3-1-2-2-3-2"><div class="para" id="extracted-webwork-300-1-1-3-1-2-2-3-2-1">2005</div></li>
+</ul>
+</div>
+</li>
+<li id="extracted-webwork-300-1-1-3-1-3">
+<div class="para" id="extracted-webwork-300-1-1-3-1-3-1">Do you think that the function <span class="process-math">\(P(t)\)</span> will continue to model the percentage of American homes with computers? Why or why not?</div>
+<div class="para logical" id="extracted-webwork-300-1-1-3-1-3-2"><ul class="circle" id="extracted-webwork-300-1-1-3-1-3-2-1">
+<li id="extracted-webwork-300-1-1-3-1-3-2-1-1"><div class="para" id="extracted-webwork-300-1-1-3-1-3-2-1-1-1">Yes: The percentage will continue increasing, faster and faster.</div></li>
+<li id="extracted-webwork-300-1-1-3-1-3-2-1-2"><div class="para" id="extracted-webwork-300-1-1-3-1-3-2-1-2-1">No: the percent of homes with computers cannot exceed 100%.</div></li>
+</ul></div>
+</li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-300-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-300-1-2-1"><span class="process-math">\(25.85\)</span></div></div></details><details id="extracted-webwork-300-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-300-1-3-1"><span class="process-math">\(\frac{\log\!\left(\frac{90}{25.85}\right)}{0.052}\)</span></div></div></details><details id="extracted-webwork-300-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-300-1-4-1"><span class="process-math">\(\text{2004}\)</span></div></div></details><details id="extracted-webwork-300-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-300-1-5-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-300-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-300-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-300-1-6-1-1">
+<li id="extracted-webwork-300-1-6-1-1-1"><div class="para" id="extracted-webwork-300-1-6-1-1-1-1">25.85%</div></li>
+<li id="extracted-webwork-300-1-6-1-1-2"><div class="para" id="extracted-webwork-300-1-6-1-1-2-1">
+<span class="process-math">\(t\approx 10.4\)</span> (year 2004)</div></li>
+<li id="extracted-webwork-300-1-6-1-1-3"><div class="para" id="extracted-webwork-300-1-6-1-1-3-1">No, the percent of homes with computers cannot exceed 100%.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="Logarithms-8-6">At this stage, it seems we will only be able to solve exponential equations in which the base is 10. However, we will see in future sections how the properties of logarithms enable us to solve exponential equations with any base.</div></section><section class="exercises" id="section-7-3-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="space"> </span><span class="title">Problem Set 7.3</span>
 </h3>
 <article class="subexercises" id="section-7-3-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

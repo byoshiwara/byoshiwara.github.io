@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Algebraic Fractions</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="PolynomialFunctions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="OperationsAlgebraicFractions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="PolynomialFunctions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="OperationsAlgebraicFractions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1356,7 +1369,20 @@ R=\dfrac{ab}{a+b}
 </div>
 </div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></article><article class="warning remark-like" id="AlgebraicFractions-3-7"><h4 class="heading">
+</h4>
+<div id="webwork-330" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="330" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBDQ21hY3Jvcy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+YXJlKGE9PiJSZWFsIiwgYj0+IlJlYWwiKTsKJGFuc3dlciA9IENvbXB1dGUoIigtMTUqYSpiXjQpLygyNSphXjIqYikiKTsKJG51bSA9IENvbXB1dGUoIi0zYl4zIik7CiRkZW4gPSBDb21wdXRlKCI1YSIpOwoKQkVHSU5fUEdNTApSZWR1Y2UgICBbYFxkaXNwbGF5c3R5bGVcZnJhY3stMTVhYl40fXsyNWFeMmJ9YF0KCj4+IFtARGF0YVRhYmxlKFtbUEdNTCgnW19deyRudW19ezR9JyksXSxbUEdNTCgnW19deyRkZW59ezR9JyksXSxdLGFsaWduPT4nKnsxfXtsfScsdmFsaWduPT4nbWlkZGxlJywpO0BdKiA8PAoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnRW50ZXIgbnVtZXJhdG9yIGFuZCBkZW5vbWluYXRvciBpbiBzZXBhcmF0ZSBib3hlcy4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFxkZnJhY3stM2JeM317NWF9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-330')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-330-1-1-1">Reduce   <span class="process-math">\(\displaystyle\frac{-15ab^4}{25a^2b}\)</span>
+</div>  <div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td></tr>
+</table></div>
+<div class="solutions">
+<details id="extracted-webwork-330-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-330-1-2-1"><span class="process-math">\(-3b^{3}\)</span></div></div></details><details id="extracted-webwork-330-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-330-1-3-1"><span class="process-math">\(5a\)</span></div></div></details><details id="extracted-webwork-330-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-330-1-4-1"><span class="process-math">\(\dfrac{-3b^3}{5a}\)</span></div></div></details>
+</div>
+</div>
+</div></article><article class="warning remark-like" id="AlgebraicFractions-3-7"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">8.2.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="AlgebraicFractions-3-7-1">When we cancel common factors, we are <em class="emphasis">dividing</em>. Because division is the inverse or opposite operation for multiplication, we can cancel common <em class="emphasis">factors</em>, but <em class="emphasis">we cannot cancel common terms</em>.</div></article><article class="example example-like" id="AlgebraicFractions-3-8"><h4 class="heading">
@@ -1379,9 +1405,96 @@ R=\dfrac{ab}{a+b}
 </div>
 </div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article><article class="exercise exercise-like" id="AlgebraicFractions-3-10"><h4 class="heading">
+</h4>
+<div id="webwork-331" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="331" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR1bmRlZmluZWQgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJkZW5vbWluYXRvciIsIAogICAgImluZGV4IiwKICAgICJudW1lcmF0b3IiLAogICAgInJhZGljYW5kIgogICAgXSwKICAgIDEKKTsKJHVuZGVmMiA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImV2ZW4iLCAKICAgICJuZWdhdGl2ZSIsCiAgICAicG9zaXRpdmUiLAogICAgInplcm8iCiAgICBdLAogICAgNAopOwokY2FuY2VsID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiYWRkaXRpb24iLCAKICAgICJkaXZpc2lvbiIsCiAgICAic3VidHJhY3Rpb24iLAogICAgInNxdWFyaW5nIgogICAgXSwKICAgIDIKKTsKJHRlcm1zID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiYWRkZWQiLCAKICAgICJleHBvbmVudGlhdGVkIiwKICAgICJtdWx0aXBsaWVkIiwKICAgICJyZWR1Y2VkIgogICAgXSwKICAgIDEKKTsKJHRlcm1zMiA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImRpdmlkZWQiLCAKICAgICJleHBlbmRlZCIsCiAgICAic2ltcGxpZmllZCIsCiAgICAic3VidHJhY3RlZCIKICAgIF0sCiAgICA0Cik7CiRlcXVpdiA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImVxdWl2YWxlbnQiLCAKICAgICJpbnZlcnNlIiwKICAgICJzdXBlcmlvciIsCiAgICAidW5yZWxhdGVkIgogICAgXSwKICAgIDEKKTsKCkJFR0lOX1BHTUwKRmlsbCBpbiB0aGUgYmxhbmtzLgphLiAgQW4gYWxnZWJyYWljIGZyYWN0aW9uIGlzIHVuZGVmaW5lZCB3aGVuIHRoZSBbX117JHVuZGVmaW5lZH17NX0gaXMgW19deyR1bmRlZjJ9ezV9LgphLiAgIkNhbmNlbGluZyIgY29tbW9uIGZhY3RvcnMgdXNlcyB0aGUgb3BlcmF0aW9uIG9mIFtfXXskY2FuY2VsfXs1fS4KYS4gIFRlcm1zIGFyZSBleHByZXNzaW9ucyB0aGF0IGFyZSBbX117JHRlcm1zfXs1fSBvciBbX117JHRlcm1zMn17NX0uCmEuICBXaGVuIHdlIHJlZHVjZSBhIGZyYWN0aW9uLCB0aGUgbmV3IGZyYWN0aW9uIGlzIFtfXXskZXF1aXZ9ezV9IHRvIHRoZSBvbGQgb25lLiAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgZGVub21pbmF0b3IsIHplcm8KYS4gIGRpdmlzaW9uCmEuICBhZGRlZCwgc3VidHJhY3RlZAphLiAgZXF1aXZhbGVudCAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-331')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-331-1-1-1">
+<div class="para">Fill in the blanks.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-331-1-1-1-1">
+<li id="extracted-webwork-331-1-1-1-1-1"><div class="para logical" id="extracted-webwork-331-1-1-1-1-1-1">
+<div class="para">An algebraic fraction is undefined when the</div>
+<ul class="square" id="extracted-webwork-331-1-1-1-1-1-1-1">
+<li id="extracted-webwork-331-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-1-1-1">denominator</div></li>
+<li id="extracted-webwork-331-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-1-2-1">index</div></li>
+<li id="extracted-webwork-331-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-1-3-1">numerator</div></li>
+<li id="extracted-webwork-331-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-1-4-1">radicand</div></li>
+</ul>
+<div class="para">is</div>
+<ul class="square" id="extracted-webwork-331-1-1-1-1-1-1-2">
+<li id="extracted-webwork-331-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-2-1-1">even</div></li>
+<li id="extracted-webwork-331-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-2-2-1">negative</div></li>
+<li id="extracted-webwork-331-1-1-1-1-1-1-2-3"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-2-3-1">positive</div></li>
+<li id="extracted-webwork-331-1-1-1-1-1-1-2-4"><div class="para" id="extracted-webwork-331-1-1-1-1-1-1-2-4-1">zero</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-331-1-1-1-1-2"><div class="para logical" id="extracted-webwork-331-1-1-1-1-2-1">
+<div class="para">“Canceling” common factors uses the operation of</div>
+<ul class="square" id="extracted-webwork-331-1-1-1-1-2-1-3">
+<li id="extracted-webwork-331-1-1-1-1-2-1-3-1"><div class="para" id="extracted-webwork-331-1-1-1-1-2-1-3-1-1">addition</div></li>
+<li id="extracted-webwork-331-1-1-1-1-2-1-3-2"><div class="para" id="extracted-webwork-331-1-1-1-1-2-1-3-2-1">division</div></li>
+<li id="extracted-webwork-331-1-1-1-1-2-1-3-3"><div class="para" id="extracted-webwork-331-1-1-1-1-2-1-3-3-1">subtraction</div></li>
+<li id="extracted-webwork-331-1-1-1-1-2-1-3-4"><div class="para" id="extracted-webwork-331-1-1-1-1-2-1-3-4-1">squaring</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3"><div class="para logical" id="extracted-webwork-331-1-1-1-1-3-1">
+<div class="para">Terms are expressions that are</div>
+<ul class="square" id="extracted-webwork-331-1-1-1-1-3-1-1">
+<li id="extracted-webwork-331-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-1-1-1">added</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-1-2-1">exponentiated</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-1-3-1">multiplied</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-1-4-1">reduced</div></li>
+</ul>
+<div class="para">or</div>
+<ul class="square" id="extracted-webwork-331-1-1-1-1-3-1-2">
+<li id="extracted-webwork-331-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-2-1-1">divided</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-2-2-1">expended</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3-1-2-3"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-2-3-1">simplified</div></li>
+<li id="extracted-webwork-331-1-1-1-1-3-1-2-4"><div class="para" id="extracted-webwork-331-1-1-1-1-3-1-2-4-1">subtracted</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-331-1-1-1-1-4"><div class="para logical" id="extracted-webwork-331-1-1-1-1-4-1">
+<div class="para">When we reduce a fraction, the new fraction is</div>
+<ul class="square" id="extracted-webwork-331-1-1-1-1-4-1-1">
+<li id="extracted-webwork-331-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-331-1-1-1-1-4-1-1-1-1">equivalent</div></li>
+<li id="extracted-webwork-331-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-331-1-1-1-1-4-1-1-2-1">inverse</div></li>
+<li id="extracted-webwork-331-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-331-1-1-1-1-4-1-1-3-1">superior</div></li>
+<li id="extracted-webwork-331-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-331-1-1-1-1-4-1-1-4-1">unrelated</div></li>
+</ul>
+<div class="para">to the old one.</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-331-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-331-1-2-1"><span class="process-math">\(\text{denominator}\)</span></div></div></details><details id="extracted-webwork-331-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-331-1-3-1"><span class="process-math">\(\text{zero}\)</span></div></div></details><details id="extracted-webwork-331-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-331-1-4-1"><span class="process-math">\(\text{division}\)</span></div></div></details><details id="extracted-webwork-331-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-331-1-5-1"><span class="process-math">\(\text{added}\)</span></div></div></details><details id="extracted-webwork-331-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-331-1-6-1"><span class="process-math">\(\text{subtracted}\)</span></div></div></details><details id="extracted-webwork-331-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-331-1-7-1"><span class="process-math">\(\text{equivalent}\)</span></div></div></details><details id="extracted-webwork-331-1-8" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-331-1-8-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-331-1-8-1-1">
+<li id="extracted-webwork-331-1-8-1-1-1"><div class="para" id="extracted-webwork-331-1-8-1-1-1-1">denominator, zero</div></li>
+<li id="extracted-webwork-331-1-8-1-1-2"><div class="para" id="extracted-webwork-331-1-8-1-1-2-1">division</div></li>
+<li id="extracted-webwork-331-1-8-1-1-3"><div class="para" id="extracted-webwork-331-1-8-1-1-3-1">added, subtracted</div></li>
+<li id="extracted-webwork-331-1-8-1-1-4"><div class="para" id="extracted-webwork-331-1-8-1-1-4-1">equivalent</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></article><div class="para" id="AlgebraicFractions-3-11">If the numerator or denominator of the fraction contains more than one term, it is especially important to <em class="emphasis">factor before reducing</em>, so that numerator and denominator are written as products of factors, instead of as sums of terms.</div>
+</h4>
+<div id="webwork-332" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="332" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zID0gUmFkaW9CdXR0b25zKAogICAgWyAiKGEpIFwoXHF1YWQgXGRpc3BsYXlzdHlsZVxmcmFjezV4fXs4eH09XGZyYWN7NX17OH0gXCkkQlIiLCAKICAgICIoYikgXChccXVhZCBcZGlzcGxheXN0eWxlXGZyYWN7eCs1fXt4Kzh9PVxmcmFjezV9ezh9ICBcKSIKICAgIF0sCiAgICAwCik7CgpCRUdJTl9QR01MCldoaWNoIGNhbGN1bGF0aW9uIGlzIGNvcnJlY3Q/IENob29zZSBhIHZhbHVlIGZvciBbYHhgXSBhbmQgdXNlIHlvdXIgY2FsY3VsYXRvciB0byB2ZXJpZnkgeW91ciBhbnN3ZXIuCgpbX117JGFuc317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgooYSkgW2B+XGRmcmFjezV4fXs4eH09XGRmcmFjezV9ezh9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-332')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-332-1-1-1">Which calculation is correct? Choose a value for <span class="process-math">\(x\)</span> and use your calculator to verify your answer.</div> <div class="para logical" id="extracted-webwork-332-1-1-2"><ul class="circle" id="extracted-webwork-332-1-1-2-1">
+<li id="extracted-webwork-332-1-1-2-1-1"><div class="para" id="extracted-webwork-332-1-1-2-1-1-1">(a) <span class="process-math">\(\quad \displaystyle\frac{5x}{8x}=\frac{5}{8} \)</span>
+</div></li>
+<li id="extracted-webwork-332-1-1-2-1-2"><div class="para" id="extracted-webwork-332-1-1-2-1-2-1">(b) <span class="process-math">\(\quad \displaystyle\frac{x+5}{x+8}=\frac{5}{8}  \)</span>
+</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-332-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-332-1-2-1"><span class="process-math">\(\text{Choice 1}\)</span></div></div></details><details id="extracted-webwork-332-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-332-1-3-1">(a) <span class="process-math">\(~\dfrac{5x}{8x}=\dfrac{5}{8}\)</span>
+</div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="AlgebraicFractions-3-11">If the numerator or denominator of the fraction contains more than one term, it is especially important to <em class="emphasis">factor before reducing</em>, so that numerator and denominator are written as products of factors, instead of as sums of terms.</div>
 <article class="example example-like" id="example-reduce"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.9</span><span class="period">.</span>
 </h4>
@@ -1418,7 +1531,37 @@ R=\dfrac{ab}{a+b}
 </div>
 </div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></article><div class="para" id="AlgebraicFractions-3-16">We summarize the procedure for reducing algebraic fractions as follows.</div>
+</h4>
+<div id="webwork-333" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="333" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IFJhZGlvQnV0dG9ucygKICAgIFsgIkEpIDMgaXMgbm90IGEgZmFjdG9yIG9mIG51bWVyYXRvciBvciBkZW5vbWluYXRvci4iLCAKICAgICJCKSBNb3JlIGNhbmNlbGxpbmcgaXMgcmVxdWlyZWQuIgogICAgXSwKICAgIDAKKTsKJGIgPSBSYWRpb0J1dHRvbnMoCiAgICBbICJBKSAyIGlzIG5vdCBhIGZhY3RvciBvZiB0aGUgbnVtZXJhdG9yLiIsIAogICAgIkIpIDIgc2hvdWxkIGJlIHN1YnRyYWN0ZWQgZnJvbSA1LiIKICAgIF0sCiAgICAwCik7CgpCRUdJTl9QR01MCkV4cGxhaW4gd2h5IGVhY2ggY2FsY3VsYXRpb24gaXMgaW5jb3JyZWN0LgphLiAgW2BcZGZyYWN7eC02fXt4LTl9IFxyaWdodGFycm93IFxkZnJhY3t4LTJ9e3gtM31gXQoKICAgIFtfXXskYX17NX0KCgphLiAgW2BcZGZyYWN7MngrNX17Mn0gXHJpZ2h0YXJyb3cgeCs1YF0KCiAgICBbX117JGJ9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICAzIGlzIG5vdCBhIGZhY3RvciBvZiBudW1lcmF0b3Igb3IgZGVub21pbmF0b3IKYS4gIDIgaXMgbm90IGEgZmFjdG9yIG9mIHRoZSBudW1lcmF0b3IgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-333')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-333-1-1-1">
+<div class="para">Explain why each calculation is incorrect.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-333-1-1-1-1">
+<li id="extracted-webwork-333-1-1-1-1-1">
+<div class="para" id="extracted-webwork-333-1-1-1-1-1-1"><span class="process-math">\(\dfrac{x-6}{x-9} \rightarrow \dfrac{x-2}{x-3}\)</span></div>
+<div class="para logical" id="extracted-webwork-333-1-1-1-1-1-2"><ul class="circle" id="extracted-webwork-333-1-1-1-1-1-2-1">
+<li id="extracted-webwork-333-1-1-1-1-1-2-1-1"><div class="para" id="extracted-webwork-333-1-1-1-1-1-2-1-1-1">A) 3 is not a factor of numerator or denominator.</div></li>
+<li id="extracted-webwork-333-1-1-1-1-1-2-1-2"><div class="para" id="extracted-webwork-333-1-1-1-1-1-2-1-2-1">B) More cancelling is required.</div></li>
+</ul></div>
+</li>
+<li id="extracted-webwork-333-1-1-1-1-2">
+<div class="para" id="extracted-webwork-333-1-1-1-1-2-1"><span class="process-math">\(\dfrac{2x+5}{2} \rightarrow x+5\)</span></div>
+<div class="para logical" id="extracted-webwork-333-1-1-1-1-2-2"><ul class="circle" id="extracted-webwork-333-1-1-1-1-2-2-1">
+<li id="extracted-webwork-333-1-1-1-1-2-2-1-1"><div class="para" id="extracted-webwork-333-1-1-1-1-2-2-1-1-1">A) 2 is not a factor of the numerator.</div></li>
+<li id="extracted-webwork-333-1-1-1-1-2-2-1-2"><div class="para" id="extracted-webwork-333-1-1-1-1-2-2-1-2-1">B) 2 should be subtracted from 5.</div></li>
+</ul></div>
+</li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-333-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-333-1-2-1"><span class="process-math">\(\text{A)  ...  denominator.}\)</span></div></div></details><details id="extracted-webwork-333-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-333-1-3-1"><span class="process-math">\(\text{A) 2 ... the numerator.}\)</span></div></div></details><details id="extracted-webwork-333-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-333-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-333-1-4-1-1">
+<li id="extracted-webwork-333-1-4-1-1-1"><div class="para" id="extracted-webwork-333-1-4-1-1-1-1">3 is not a factor of numerator or denominator</div></li>
+<li id="extracted-webwork-333-1-4-1-1-2"><div class="para" id="extracted-webwork-333-1-4-1-1-2-1">2 is not a factor of the numerator</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="AlgebraicFractions-3-16">We summarize the procedure for reducing algebraic fractions as follows.</div>
 <article class="assemblage assemblage-like" id="AlgebraicFractions-3-17"><h4 class="heading"><span class="title">To reduce an algebraic fraction.</span></h4>
 <div class="para logical" id="AlgebraicFractions-3-17-5"><ol class="decimal ol-marker-1" id="AlgebraicFractions-3-17-5-1">
 <li id="AlgebraicFractions-3-17-5-1-1"><div class="para" id="p-derived-AlgebraicFractions-3-17-5-1-1">Factor the numerator and the denominator.</div></li>
@@ -1471,9 +1614,90 @@ R=\dfrac{ab}{a+b}
 </ol></div>
 </div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-19"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article><article class="exercise exercise-like" id="AlgebraicFractions-3-20"><h4 class="heading">
+</h4>
+<div id="webwork-334" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="334" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRjYW5jZWwgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJleHBvbmVudGlhdGUiLCAKICAgICJmYWN0b3IiLAogICAgImludmFsaWRhdGUiLAogICAgInN1YnRyYWN0IgogICAgXSwKICAgIDIKKTsKJGZhY3RvciA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImRpZmZlcmVuY2UiLCAKICAgICJwcm9kdWN0IiwKICAgICJxdW90aWVudCIsCiAgICAic3VtIgogICAgXSwKICAgIDIKKTsKJGNvbW1vbiA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgImNvbW1vbiIsIAogICAgImZhbGxhY2lvdXMiLAogICAgIm1pc3NpbmciLAogICAgInplcm8iCiAgICBdLAogICAgMQopOwokb25lID0gQ29tcHV0ZSgiMSIpOwoKQkVHSU5fUEdNTApGaWxsIGluIHRoZSBibGFua3MuCmEuICBJZiB3ZSB3YW50IHRvIGNhbmNlbCBhbiBleHByZXNzaW9uIGZyb20gYSBmcmFjdGlvbiwgd2UgbXVzdCBiZSBhYmxlIHRvIFtfXXskY2FuY2VsfXs1fSBpdCBmcm9tIG51bWVyYXRvciBhbmQgZGVub21pbmF0b3IuCmEuICBXaGVuIHdlIGZhY3RvciBhbiBleHByZXNzaW9uLCB3ZSB3cml0ZSBpdCBhcyBhIFtfXXskZmFjdG9yfXs1fS4KYS4gIElmIGEgZmFjdG9yIGFwcGVhcnMgaW4gYm90aCBudW1lcmF0b3IgYW5kIGRlbm9taW5hdG9yLCBpdCBpcyBjYWxsZWQgYSBbX117JGNvbW1vbn17NX0gZmFjdG9yLgphLiAgSWYgYWxsIHRoZSBmYWN0b3JzIGluIHRoZSBudW1lcmF0b3Igb3IgZGVub21pbmF0b3IgY2FuY2VsIG91dCwgd2UgcmVwbGFjZSBpdCBieSBbX117JG9uZX17Mn0uICAgCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBmYWN0b3IKYS4gIHByb2R1Y3QKYS4gIGNvbW1vbgphLiAgMSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-334')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-334-1-1-1">
+<div class="para">Fill in the blanks.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-334-1-1-1-1">
+<li id="extracted-webwork-334-1-1-1-1-1"><div class="para logical" id="extracted-webwork-334-1-1-1-1-1-1">
+<div class="para">If we want to cancel an expression from a fraction, we must be able to</div>
+<ul class="square" id="extracted-webwork-334-1-1-1-1-1-1-1">
+<li id="extracted-webwork-334-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-334-1-1-1-1-1-1-1-1-1">exponentiate</div></li>
+<li id="extracted-webwork-334-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-334-1-1-1-1-1-1-1-2-1">factor</div></li>
+<li id="extracted-webwork-334-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-334-1-1-1-1-1-1-1-3-1">invalidate</div></li>
+<li id="extracted-webwork-334-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-334-1-1-1-1-1-1-1-4-1">subtract</div></li>
+</ul>
+<div class="para">it from numerator and denominator.</div>
+</div></li>
+<li id="extracted-webwork-334-1-1-1-1-2"><div class="para logical" id="extracted-webwork-334-1-1-1-1-2-1">
+<div class="para">When we factor an expression, we write it as a</div>
+<ul class="square" id="extracted-webwork-334-1-1-1-1-2-1-1">
+<li id="extracted-webwork-334-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-334-1-1-1-1-2-1-1-1-1">difference</div></li>
+<li id="extracted-webwork-334-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-334-1-1-1-1-2-1-1-2-1">product</div></li>
+<li id="extracted-webwork-334-1-1-1-1-2-1-1-3"><div class="para" id="extracted-webwork-334-1-1-1-1-2-1-1-3-1">quotient</div></li>
+<li id="extracted-webwork-334-1-1-1-1-2-1-1-4"><div class="para" id="extracted-webwork-334-1-1-1-1-2-1-1-4-1">sum</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-334-1-1-1-1-3"><div class="para logical" id="extracted-webwork-334-1-1-1-1-3-1">
+<div class="para">If a factor appears in both numerator and denominator, it is called a</div>
+<ul class="square" id="extracted-webwork-334-1-1-1-1-3-1-1">
+<li id="extracted-webwork-334-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-334-1-1-1-1-3-1-1-1-1">common</div></li>
+<li id="extracted-webwork-334-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-334-1-1-1-1-3-1-1-2-1">fallacious</div></li>
+<li id="extracted-webwork-334-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-334-1-1-1-1-3-1-1-3-1">missing</div></li>
+<li id="extracted-webwork-334-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-334-1-1-1-1-3-1-1-4-1">zero</div></li>
+</ul>
+<div class="para">factor.</div>
+</div></li>
+<li id="extracted-webwork-334-1-1-1-1-4"><div class="para" id="extracted-webwork-334-1-1-1-1-4-1">If all the factors in the numerator or denominator cancel out, we replace it by <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-334-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-334-1-2-1"><span class="process-math">\(\text{factor}\)</span></div></div></details><details id="extracted-webwork-334-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-334-1-3-1"><span class="process-math">\(\text{product}\)</span></div></div></details><details id="extracted-webwork-334-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-334-1-4-1"><span class="process-math">\(\text{common}\)</span></div></div></details><details id="extracted-webwork-334-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-334-1-5-1"><span class="process-math">\(1\)</span></div></div></details><details id="extracted-webwork-334-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-334-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-334-1-6-1-1">
+<li id="extracted-webwork-334-1-6-1-1-1"><div class="para" id="extracted-webwork-334-1-6-1-1-1-1">factor</div></li>
+<li id="extracted-webwork-334-1-6-1-1-2"><div class="para" id="extracted-webwork-334-1-6-1-1-2-1">product</div></li>
+<li id="extracted-webwork-334-1-6-1-1-3"><div class="para" id="extracted-webwork-334-1-6-1-1-3-1">common</div></li>
+<li id="extracted-webwork-334-1-6-1-1-4"><div class="para" id="extracted-webwork-334-1-6-1-1-4-1">1</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-20"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article><div class="para" id="AlgebraicFractions-3-21">Keep in mind that the reduced form is equivalent to the original form of the fraction. If we evaluate the original form and the reduced form at the same value of the variable, the results are equal.</div>
+</h4>
+<div id="webwork-335" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="335" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zID0gUmFkaW9CdXR0b25zKAogICAgWyAiXChccXVhZCBcZGlzcGxheXN0eWxlXGZyYWN7eCs2fXs5fSBcKSRCUiIsIAogICAgIlwoXHF1YWQgXGRpc3BsYXlzdHlsZVxmcmFje3grMn17eCszfSBcKSRCUiIsCiAgICAiXChccXVhZCBcZGlzcGxheXN0eWxlXGZyYWN7eC0yfXt4LTN9IFwpIgogICAgXSwKICAgIDEKKTsKJGFuc2IgPSBSYWRpb0J1dHRvbnMoCiAgICBbICJcKFxxdWFkIDJ0LTEgXCkkQlIiLCAKICAgICJcKFxxdWFkIFxkaXNwbGF5c3R5bGVcZnJhY3t0LTJ9ezJ9IFwpJEJSIiwKICAgICJcKFxxdWFkM3ReMiBcKSIKICAgIF0sCiAgICAwCik7CgpCRUdJTl9QR01MClJlZHVjZSBlYWNoIGZyYWN0aW9uLgphLiAgW2BcZGZyYWN7eF4yLXgtNn17eF4yLTl9YF0KCiAgICBbX117JGFuc317NX0KCgphLiAgW2BcZGZyYWN7MTZ0XjItNH17OHQrNH1gXQoKICAgIFtfXXskYW5zYn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgXGRmcmFje3grMn17eCszfWBdCmEuICBbYDJ0LTFgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-335')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-335-1-1-1">
+<div class="para">Reduce each fraction.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-335-1-1-1-1">
+<li id="extracted-webwork-335-1-1-1-1-1">
+<div class="para" id="extracted-webwork-335-1-1-1-1-1-1"><span class="process-math">\(\dfrac{x^2-x-6}{x^2-9}\)</span></div>
+<div class="para logical" id="extracted-webwork-335-1-1-1-1-1-2"><ul class="circle" id="extracted-webwork-335-1-1-1-1-1-2-1">
+<li id="extracted-webwork-335-1-1-1-1-1-2-1-1"><div class="para" id="extracted-webwork-335-1-1-1-1-1-2-1-1-1"><span class="process-math">\(\displaystyle \quad \displaystyle\frac{x+6}{9} \)</span></div></li>
+<li id="extracted-webwork-335-1-1-1-1-1-2-1-2"><div class="para" id="extracted-webwork-335-1-1-1-1-1-2-1-2-1"><span class="process-math">\(\displaystyle \quad \displaystyle\frac{x+2}{x+3} \)</span></div></li>
+<li id="extracted-webwork-335-1-1-1-1-1-2-1-3"><div class="para" id="extracted-webwork-335-1-1-1-1-1-2-1-3-1"><span class="process-math">\(\displaystyle \quad \displaystyle\frac{x-2}{x-3} \)</span></div></li>
+</ul></div>
+</li>
+<li id="extracted-webwork-335-1-1-1-1-2">
+<div class="para" id="extracted-webwork-335-1-1-1-1-2-1"><span class="process-math">\(\dfrac{16t^2-4}{8t+4}\)</span></div>
+<div class="para logical" id="extracted-webwork-335-1-1-1-1-2-2"><ul class="circle" id="extracted-webwork-335-1-1-1-1-2-2-1">
+<li id="extracted-webwork-335-1-1-1-1-2-2-1-1"><div class="para" id="extracted-webwork-335-1-1-1-1-2-2-1-1-1"><span class="process-math">\(\displaystyle \quad 2t-1 \)</span></div></li>
+<li id="extracted-webwork-335-1-1-1-1-2-2-1-2"><div class="para" id="extracted-webwork-335-1-1-1-1-2-2-1-2-1"><span class="process-math">\(\displaystyle \quad \displaystyle\frac{t-2}{2} \)</span></div></li>
+<li id="extracted-webwork-335-1-1-1-1-2-2-1-3"><div class="para" id="extracted-webwork-335-1-1-1-1-2-2-1-3-1"><span class="process-math">\(\displaystyle \quad3t^2 \)</span></div></li>
+</ul></div>
+</li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-335-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-335-1-2-1"><span class="process-math">\(\text{Choice 2}\)</span></div></div></details><details id="extracted-webwork-335-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-335-1-3-1"><span class="process-math">\(\text{Choice 1}\)</span></div></div></details><details id="extracted-webwork-335-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-335-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-335-1-4-1-1">
+<li id="extracted-webwork-335-1-4-1-1-1"><div class="para" id="extracted-webwork-335-1-4-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{x+2}{x+3}\)</span></div></li>
+<li id="extracted-webwork-335-1-4-1-1-2"><div class="para" id="extracted-webwork-335-1-4-1-1-2-1"><span class="process-math">\(\displaystyle 2t-1\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="AlgebraicFractions-3-21">Keep in mind that the reduced form is equivalent to the original form of the fraction. If we evaluate the original form and the reduced form at the same value of the variable, the results are equal.</div>
 <article class="example example-like" id="AlgebraicFractions-3-22"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.15</span><span class="period">.</span>
 </h4>
@@ -1500,7 +1724,16 @@ R=\dfrac{ab}{a+b}
 </div>
 </div></article><article class="exercise exercise-like" id="AlgebraicFractions-3-23"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></article></section><section class="subsection" id="AlgebraicFractions-4"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-336" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="336" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYW5zd2VyID0gQ29tcHV0ZSgiMS8yIik7CgpCRUdJTl9QR01MCklmIHlvdSBldmFsdWF0ZSBbYH5cZGZyYWN7M3grMTJ9ezZ4KzI0fX5gXSBmb3IgW2B4PTJgXSBhbmQgZm9yIFtgeD0tNVx0ZXh0eyx9YF0gd2hhdCBhbnN3ZXIgZG8geW91IGV4cGVjdCB0byBnZXQ/IChSZWNhbGwgdGhlIHByZXZpb3VzIEV4YW1wbGUgd2l0aCB0aGUgc2FtZSBhbGdlYnJhaWMgZnJhY3Rpb24gaW4gcGFydCBhLikKCltfXXskYW5zd2VyfXszfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgXGRmcmFjezF9ezJ9YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-336')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-336-1-1-1">If you evaluate <span class="process-math">\(~\dfrac{3x+12}{6x+24}~\)</span> for <span class="process-math">\(x=2\)</span> and for <span class="process-math">\(x=-5\text{,}\)</span> what answer do you expect to get? (Recall the previous Example with the same algebraic fraction in part a.)</div>
+<div class="solutions">
+<details id="extracted-webwork-336-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-336-1-2-1"><span class="process-math">\(\frac{1}{2}\)</span></div></div></details><details id="extracted-webwork-336-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-336-1-3-1"><span class="process-math">\(\dfrac{1}{2}\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="AlgebraicFractions-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="space"> </span><span class="title">Opposite of a Binomial</span>
 </h3>
 <div class="para logical" id="AlgebraicFractions-4-4">
@@ -1559,7 +1792,37 @@ R=\dfrac{ab}{a+b}
 </div></article><aside class="aside aside-like" id="AlgebraicFractions-4-6"><div class="para" id="AlgebraicFractions-4-6-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more about the opposite of a binomial, see <a href="tkchap8.html#tkOppBin" class="internal" title="Subsubsection A.8.2.2: Find the opposite of a binomial">Section 8.2.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="AlgebraicFractions-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></article></section><section class="subsection" id="AlgebraicFractions-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-337" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="337" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwicGFyc2VyT25lT2YucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwokYSA9IENvbXB1dGUoIjEiKTsKQGNob2ljZXMgPSAoIj8iLCAiY2Fubm90IGJlIHJlZHVjZWQiLCJjYnIiKTsKJHBvcHVwID0gUG9wVXAoW0BjaG9pY2VzXSwgJGNob2ljZXNbMF0pOyAgIyBJdCBkb2Vzbid0IG1hdHRlciB3aGljaCBpcyB1c2VkIGFzIHRoZSAiY29ycmVjdCBhbnN3ZXIiLgpDb250ZXh0KCRwb3B1cC0+Y29udGV4dCk7IAokYiA9IE9uZU9mKEBjaG9pY2VzWzEuLjJdKTsKJGMgPSBDb21wdXRlKCItMSIpOwoKQkVHSU5fUEdNTApSZWR1Y2UgaWYgcG9zc2libGUuCmEuICBbYFxkZnJhY3steCsxfXsxLXh9YF1bX117JGF9ezV9CgoKYS4gIFtgXGRmcmFjezEreH17MS14fWBdIFtfXXskYn17NX0KCgphLiAgW2BcZGZyYWN7MmEtM2J9ezNiLTJhfWBdIFtfXXskY317NX0KCgphLiAgW2BcZGZyYWN7MmEtM2J9ezJiLTNhfWBdIFtfXXskYn17NX0KCgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdFbnRlciAiY2JyIiBpZiB0aGUgZnJhY3Rpb24gY2Fubm90IGJlIHJlZHVjZWQnKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgMQphLiAgY2Fubm90IGJlIHJlZHVjZWQKYS4gIFtgLTFgXQphLiAgY2Fubm90IGJlIHJlZHVjZWQgICAKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-337')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-337-1-1-1">
+<div class="para">Reduce if possible.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-337-1-1-1-1">
+<li id="extracted-webwork-337-1-1-1-1-1"><div class="para" id="extracted-webwork-337-1-1-1-1-1-1">
+<span class="process-math">\(\dfrac{-x+1}{1-x}\)</span><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+<li id="extracted-webwork-337-1-1-1-1-2"><div class="para" id="extracted-webwork-337-1-1-1-1-2-1">
+<span class="process-math">\(\dfrac{1+x}{1-x}\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+<li id="extracted-webwork-337-1-1-1-1-3"><div class="para" id="extracted-webwork-337-1-1-1-1-3-1">
+<span class="process-math">\(\dfrac{2a-3b}{3b-2a}\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+<li id="extracted-webwork-337-1-1-1-1-4"><div class="para" id="extracted-webwork-337-1-1-1-1-4-1">
+<span class="process-math">\(\dfrac{2a-3b}{2b-3a}\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-337-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-337-1-2-1"><span class="process-math">\(1\)</span></div></div></details><details id="extracted-webwork-337-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-337-1-3-1"><span class="process-math">\(\text{cannot be reduced}\hbox{ or }\text{cbr}\)</span></div></div></details><details id="extracted-webwork-337-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-337-1-4-1"><span class="process-math">\(\text{-1}\)</span></div></div></details><details id="extracted-webwork-337-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-337-1-5-1"><span class="process-math">\(\text{cannot be reduced}\hbox{ or }\text{cbr}\)</span></div></div></details><details id="extracted-webwork-337-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-337-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-337-1-6-1-1">
+<li id="extracted-webwork-337-1-6-1-1-1"><div class="para" id="extracted-webwork-337-1-6-1-1-1-1">1</div></li>
+<li id="extracted-webwork-337-1-6-1-1-2"><div class="para" id="extracted-webwork-337-1-6-1-1-2-1">cannot be reduced</div></li>
+<li id="extracted-webwork-337-1-6-1-1-3"><div class="para" id="extracted-webwork-337-1-6-1-1-3-1"><span class="process-math">\(\displaystyle -1\)</span></div></li>
+<li id="extracted-webwork-337-1-6-1-1-4"><div class="para" id="extracted-webwork-337-1-6-1-1-4-1">cannot be reduced</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="AlgebraicFractions-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="space"> </span><span class="title">Rational Functions</span>
 </h3>
 <article class="definition definition-like" id="AlgebraicFractions-5-4"><h4 class="heading">
@@ -1652,15 +1915,130 @@ t=\frac{60}{15-\alert{5}}=\frac{60}{10}=6
 <article class="exercise exercise-like" id="average-tshirt-costw"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.21</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 7.</span>
 </h4>
-<div class="conclusion" id="average-tshirt-costw-2">
-<div class="para" id="average-tshirt-costw-2-1">Graph for part (c):</div>
+<div id="webwork-338" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="338" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskY29zdCA9IEZvcm11bGEoIigxMDArNSp4KS94Iik7CkB0ID0gKDEsMiw0LDUsMTAsMjApOwpmb3JlYWNoIG15ICRpKDAuLjUpIHsKJENbJGldPSAkY29zdC0+ZXZhbCh4PT4kdFskaV0pOwp9CgpCRUdJTl9QR01MCkVhcnRoQ2FyZSBkZWNpZGVzIHRvIHNlbGwgVC1zaGlydHMgdG8gcmFpc2UgbW9uZXkuIFRoZSBjb21wYW55IG1ha2VzIGFuIGluaXRpYWwgaW52ZXN0bWVudCBvZiAkMTAwIHRvIHBheSBmb3IgdGhlIGRlc2lnbiBvZiB0aGUgVC1zaGlydCBhbmQgdG8gc2V0IHVwIHRoZSBwcmludGluZyBwcm9jZXNzLiBBZnRlciB0aGF0LCB0aGUgVC1zaGlydHMgY29zdCAkNSBlYWNoIGZvciBsYWJvciBhbmQgbWF0ZXJpYWxzLgphLiAgRXhwcmVzcyB0aGUgYXZlcmFnZSBjb3N0LCBbYENcdGV4dHssfWBdIHBlciBULXNoaXJ0IGFzIGEgZnVuY3Rpb24gb2YgdGhlIG51bWJlciBvZiBULXNoaXJ0cyBFYXJ0aENhcmUgcHJvZHVjZXMuCgogICAgW2BDPWBdW19deyRjb3N0fXsxMH0KCgphLiAgTWFrZSBhIHRhYmxlIG9mIHZhbHVlcyBmb3IgdGhlIGZ1bmN0aW9uLgoKICAgIFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgeGBdJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AxYF0nKSxQR01MKCdbYDJgXScpLFBHTUwoJ1tgNGBdJyksUEdNTCgnW2A1YF0nKSxQR01MKCdbYDEwYF0nKSxQR01MKCdbYDIwYF0nKSxdLFtbUEdNTCgnW2BDYF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbX117JENbMF19ezN9JyksUEdNTCgnW19deyRDWzFdfXsyfScpLFBHTUwoJ1tfXXskQ1syXX17Mn0nKSxQR01MKCdbX117JENbM119ezJ9JyksUEdNTCgnW19deyRDWzRdfXsyfScpLFBHTUwoJ1tfXXskQ1s1XX17Mn0nKSxdLF0sYWxpZ249Pid8Kns3fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSoKCgphLiAgR3JhcGggdGhlIGZ1bmN0aW9uIGFuZCBleHBsYWluIHdoYXQgaXQgdGVsbHMgeW91IGFib3V0IHRoZSBjb3N0IG9mIHRoZSBULXNoaXJ0cy4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIFtgQz1nKHgpID0gXGRmcmFjezEwMCs1eH17eH1gXQphLiAgW0BEYXRhVGFibGUoW1tbUEdNTCgnW2B4YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDFgXScpLFBHTUwoJ1tgMmBdJyksUEdNTCgnW2A0YF0nKSxQR01MKCdbYDVgXScpLFBHTUwoJ1tgMTBgXScpLFBHTUwoJ1tgMjBgXScpLF0sW1tQR01MKCdbYENgXScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tgMTA1YF0nKSxQR01MKCdbYDU1YF0nKSxQR01MKCdbYDMwYF0nKSxQR01MKCdbYDI1YF0nKSxQR01MKCdbYDE1YF0nKSxQR01MKCdbYDEwYF0nKSxdLF0sYWxpZ249Pid8Kns3fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSoKCgphLiAgQSBncmFwaCBpcyBiZWxvdy4KCiAgICBBcyB0aGUgbnVtYmVyIG9mIFQtc2hpcnRzIGluY3JlYXNlcywgdGhlIGF2ZXJhZ2UgY29zdCBwZXIgc2hpcnQgZGVjcmVhc2VzLCBidXQgZXZlbnR1YWxseSBsZXZlbHMgb2ZmIGFuZCBhcHByb2FjaGVzICQ1IHBlciBULXNoaXJ0LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-338')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-338-1-1-1">
+<div class="para">EarthCare decides to sell T-shirts to raise money. The company makes an initial investment of $100 to pay for the design of the T-shirt and to set up the printing process. After that, the T-shirts cost $5 each for labor and materials.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-338-1-1-1-1">
+<li id="extracted-webwork-338-1-1-1-1-1">
+<div class="para" id="extracted-webwork-338-1-1-1-1-1-1">Express the average cost, <span class="process-math">\(C\text{,}\)</span> per T-shirt as a function of the number of T-shirts EarthCare produces.</div>
+<div class="para" id="extracted-webwork-338-1-1-1-1-1-2">
+<span class="process-math">\(C=\)</span><span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-338-1-1-1-1-2">
+<div class="para" id="extracted-webwork-338-1-1-1-1-2-1">Make a table of values for the function.</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(C\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+</tr>
+</table></div>
+</li>
+<li id="extracted-webwork-338-1-1-1-1-3"><div class="para" id="extracted-webwork-338-1-1-1-1-3-1">Graph the function and explain what it tells you about the cost of the T-shirts.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-338-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-2-1"><span class="process-math">\(\frac{100+5x}{x}\)</span></div></div></details><details id="extracted-webwork-338-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-3-1"><span class="process-math">\(105\)</span></div></div></details><details id="extracted-webwork-338-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-4-1"><span class="process-math">\(55\)</span></div></div></details><details id="extracted-webwork-338-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-5-1"><span class="process-math">\(30\)</span></div></div></details><details id="extracted-webwork-338-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-6-1"><span class="process-math">\(25\)</span></div></div></details><details id="extracted-webwork-338-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-7-1"><span class="process-math">\(15\)</span></div></div></details><details id="extracted-webwork-338-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-338-1-8-1"><span class="process-math">\(10\)</span></div></div></details><details id="extracted-webwork-338-1-9" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-338-1-9-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-338-1-9-1-1">
+<li id="extracted-webwork-338-1-9-1-1-1"><div class="para" id="extracted-webwork-338-1-9-1-1-1-1"><span class="process-math">\(\displaystyle C=g(x) = \dfrac{100+5x}{x}\)</span></div></li>
+<li id="extracted-webwork-338-1-9-1-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(C\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(105\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(55\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(30\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(25\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+</tr>
+</table></div></li>
+<li id="extracted-webwork-338-1-9-1-1-3">
+<div class="para" id="extracted-webwork-338-1-9-1-1-3-1">A graph is below.</div>
+<div class="para" id="extracted-webwork-338-1-9-1-1-3-2">As the number of T-shirts increases, the average cost per shirt decreases, but eventually levels off and approaches $5 per T-shirt.</div>
+</li>
+</ol></div></div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="average-tshirt-costw-3">
+<div class="para" id="average-tshirt-costw-3-1">Graph for part (c):</div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-average-costw.svg" role="img" class="contained" alt="graph of average cost of production"></div>
 </div></article><div class="para" id="AlgebraicFractions-5-8">In <a href="" class="internal" title="">Practice 7</a>, the horizontal line <span class="process-math">\(C=5\)</span> is a <dfn class="terminology">horizontal asymptote</dfn> for the graph of the function. As <span class="process-math">\(x\)</span> increases, the graph approaches the line <span class="process-math">\(C=5\)</span> but will never actually meet it. The average price per T-shirt will always be slightly more than $5. Horizontal asymptotes are also important in sketching the graphs of rational functions. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
 </div>
 <aside class="aside aside-like" id="AlgebraicFractions-5-9"><div class="para" id="AlgebraicFractions-5-9-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more about asymptotes, see <a href="tkchap8.html#tkAsymp" class="internal" title="Subsubsection A.8.2.3: Asymptotes">Section 8.2.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="AlgebraicFractions-5-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.2.22</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></article></section><section class="exercises" id="section-8-2-exercises"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-339" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="339" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgQSByYXRpb25hbCBmdW5jdGlvbiBpcyBhIHF1b3RpZW50IG9mIHBvbHlub21pYWxzLiBbX117JFRydWV9ezV9CgoKYS4gIEEgdmVydGljYWwgYXN5bXB0b3RlIG9jY3VycyB3aGVyZSBhIHJhdGlvbmFsIGZ1bmN0aW9uIGlzIHVuZGVmaW5lZC4gIFtfXXskVHJ1ZX17NX0KCgphLiAgQSBob3Jpem9udGFsIGFzeW1wdG90ZSBpcyBhIGxpbmUgdGhhdCB0aGUgZ3JhcGggb2YgYSByYXRpb25hbCBmdW5jdGlvbiBhcHByb2FjaGVzIGFzIFtgeGBdIGluY3JlYXNlcy4gW19deyRUcnVlfXs1fQoKCmEuICBUaGUgYWxnZWJyYWljIGZyYWN0aW9uIFtgXGRmcmFjezYwfXt4LTE1fWBdIGlzIG5ldmVyIGVxdWFsIHRvIHplcm8uICBbX117JFRydWV9ezV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBUcnVlCmEuICBUcnVlCmEuICBUcnVlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-339')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-339-1-1-1">
+<div class="para">True or False.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-339-1-1-1-1">
+<li id="extracted-webwork-339-1-1-1-1-1"><div class="para logical" id="extracted-webwork-339-1-1-1-1-1-1">
+<div class="para">A rational function is a quotient of polynomials.</div>
+<ul class="square" id="extracted-webwork-339-1-1-1-1-1-1-1">
+<li id="extracted-webwork-339-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-339-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-339-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-339-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-339-1-1-1-1-2"><div class="para logical" id="extracted-webwork-339-1-1-1-1-2-1">
+<div class="para">A vertical asymptote occurs where a rational function is undefined.</div>
+<ul class="square" id="extracted-webwork-339-1-1-1-1-2-1-1">
+<li id="extracted-webwork-339-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-339-1-1-1-1-2-1-1-1-1">True</div></li>
+<li id="extracted-webwork-339-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-339-1-1-1-1-2-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-339-1-1-1-1-3"><div class="para logical" id="extracted-webwork-339-1-1-1-1-3-1">
+<div class="para">A horizontal asymptote is a line that the graph of a rational function approaches as <span class="process-math">\(x\)</span> increases.</div>
+<ul class="square" id="extracted-webwork-339-1-1-1-1-3-1-2">
+<li id="extracted-webwork-339-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-339-1-1-1-1-3-1-2-1-1">True</div></li>
+<li id="extracted-webwork-339-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-339-1-1-1-1-3-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-339-1-1-1-1-4"><div class="para logical" id="extracted-webwork-339-1-1-1-1-4-1">
+<div class="para">The algebraic fraction <span class="process-math">\(\dfrac{60}{x-15}\)</span> is never equal to zero.</div>
+<ul class="square" id="extracted-webwork-339-1-1-1-1-4-1-2">
+<li id="extracted-webwork-339-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-339-1-1-1-1-4-1-2-1-1">True</div></li>
+<li id="extracted-webwork-339-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-339-1-1-1-1-4-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-339-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-339-1-2-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-339-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-339-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-339-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-339-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-339-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-339-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-339-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-339-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-339-1-6-1-1">
+<li id="extracted-webwork-339-1-6-1-1-1"><div class="para" id="extracted-webwork-339-1-6-1-1-1-1">True</div></li>
+<li id="extracted-webwork-339-1-6-1-1-2"><div class="para" id="extracted-webwork-339-1-6-1-1-2-1">True</div></li>
+<li id="extracted-webwork-339-1-6-1-1-3"><div class="para" id="extracted-webwork-339-1-6-1-1-3-1">True</div></li>
+<li id="extracted-webwork-339-1-6-1-1-4"><div class="para" id="extracted-webwork-339-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="exercises" id="section-8-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">8.2.5</span><span class="space"> </span><span class="title">Problem Set 8.2</span>
 </h3>
 <article class="subexercises" id="section-8-2-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

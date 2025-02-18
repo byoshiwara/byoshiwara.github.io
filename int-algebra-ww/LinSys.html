@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Linear Systems</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="LinReg.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="AlgebraicSolution.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="LinReg.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="AlgebraicSolution.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1377,7 +1390,29 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review writing an expression for a linear model, see <a href="tkchap1.html#tkWriteLinMod" class="internal" title="Subsubsection A.1.1.1: Write a linear model">Section 2.2.1</a> of the Toolkit.</div></aside><div class="para" id="LinSys-4-5">This pair of equations is an example of a <dfn class="terminology">linear system of two equations in two unknowns</dfn> (or a <span class="process-math">\(2\times 2\)</span> linear system, for short). A <dfn class="terminology">solution</dfn> to the system is an ordered pair of numbers, <span class="process-math">\((t, r)\text{,}\)</span> that satisfies both equations in the system.</div>
 <article class="exercise exercise-like" id="LinSys-4-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article></section><section class="subsection" id="LinSys-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-53" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="53" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7JHBpY2sgPSBSYWRpb0J1dHRvbnMoCiAgWyJcKCAoNywxKSBcKSIsCiAgIlwoICgwLDIpIFwpIiwKICAiXCggKDUsLTIpIFwpIiwKICAiXCggKDIsNSkgXCkiXSwKICAyLCAKKTsKCkJFR0lOX1BHTUwKQ2hvb3NlIHRoZSBzb2x1dGlvbiBvZiB0aGUgc3lzdGVtOgoKW2BgYFxiZWdpbnthbGlnbmVkfQozeC0yeSBcYW1wID0gMTlcXAo0eCs1eSBcYW1wID0gMTAKXGVuZHthbGlnbmVkfQpgYGBdCgoKCltfXXskcGlja317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCg1LC0yKWBdIHNhdGlzZmllcyBib3RoIGVxdWF0aW9ucy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-53')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-53-1-1-1">Choose the solution of the system:</div> <div class="para logical" id="extracted-webwork-53-1-1-2"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+3x-2y \amp = 19\\
+4x+5y \amp = 10
+\end{aligned}
+\end{equation*}
+</div></div> <div class="para logical" id="extracted-webwork-53-1-1-3"><ul class="circle" id="extracted-webwork-53-1-1-3-1">
+<li id="extracted-webwork-53-1-1-3-1-1"><div class="para" id="extracted-webwork-53-1-1-3-1-1-1"><span class="process-math">\(\displaystyle (7,1) \)</span></div></li>
+<li id="extracted-webwork-53-1-1-3-1-2"><div class="para" id="extracted-webwork-53-1-1-3-1-2-1"><span class="process-math">\(\displaystyle (0,2) \)</span></div></li>
+<li id="extracted-webwork-53-1-1-3-1-3"><div class="para" id="extracted-webwork-53-1-1-3-1-3-1"><span class="process-math">\(\displaystyle (5,-2) \)</span></div></li>
+<li id="extracted-webwork-53-1-1-3-1-4"><div class="para" id="extracted-webwork-53-1-1-3-1-4-1"><span class="process-math">\(\displaystyle (2,5) \)</span></div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-53-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-53-1-2-1"><span class="process-math">\(\text{Choice 3}\)</span></div></div></details><details id="extracted-webwork-53-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-53-1-3-1">
+<span class="process-math">\((5,-2)\)</span> satisfies both equations.</div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="LinSys-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Solving Systems by Graphing</span>
 </h3>
 <div class="para" id="LinSys-5-3">Recall that every point on the graph of an equation represents a solution to that equation, so a solution to both equations must be a point that lies on both graphs. Therefore, a solution to the system is a point where the two graphs intersect.</div>
@@ -1398,7 +1433,53 @@ eBookConfig.enable_chatcodes =  false;
 <aside class="aside aside-like" id="LinSys-5-6"><div class="para" id="LinSys-5-6-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To review solutions of linear systems, see <a href="tkchap2.html#tkSysSoln" class="internal" title="Subsubsection A.2.2.2: Identify the solution of a system">Section 2.2.2</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="LinSys-5-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article><div class="para" id="LinSys-5-8">We can use a calculator or graphing utility to graph the equations in a system.</div>
+</h4>
+<div id="webwork-54" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="54" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkVEYgPSBQb3BVcCgKICBbIj8iLCJUcnVlIiwiRmFsc2UiXSwKICAyLCAKKTsKICRUcnVlRiA9IFBvcFVwKAogIFsiPyIsIlRydWUiLCJGYWxzZSJdLAogIDEsIAopOwoKQkVHSU5fUEdNTApUcnVlIG9yIGZhbHNlLgphLiAgVGhlIHBvaW50IHdoZXJlIHR3byBsaW5lcyBjcm9zcyBpcyBjYWxsZWQgdGhlIGludGVyY2VwdC4gW19deyRURn17NX0KCgphLiAgVGhlIGludGVyY2VwdHMgb2YgYSBsaW5lIGFyZSB0aGUgcG9pbnRzIHdoZXJlIGl0IGludGVyc2VjdHMgdGhlIGF4ZXMuIFtfXXskVHJ1ZUZ9ezV9CgoKYS4gIFRoZSBzb2x1dGlvbiBvZiBhIHN5c3RlbSBtYXkgb2NjdXIgYXQgYW4gaW50ZXJjZXB0LiBbX117JFRydWVGfXs1fQoKCmEuICBUaGUgd29yZHMgaW50ZXJjZXB0IGFuZCBpbnRlcnNlY3QgbWVhbiB0aGUgc2FtZSB0aGluZy4gW19deyRURn17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCgoKYS4gIFRydWUKCgphLiAgVHJ1ZQoKCmEuICBGYWxzZQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-54')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-54-1-1-1">
+<div class="para">True or false.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-54-1-1-1-1">
+<li id="extracted-webwork-54-1-1-1-1-1"><div class="para logical" id="extracted-webwork-54-1-1-1-1-1-1">
+<div class="para">The point where two lines cross is called the intercept.</div>
+<ul class="square" id="extracted-webwork-54-1-1-1-1-1-1-1">
+<li id="extracted-webwork-54-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-54-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-54-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-54-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-54-1-1-1-1-2"><div class="para logical" id="extracted-webwork-54-1-1-1-1-2-1">
+<div class="para">The intercepts of a line are the points where it intersects the axes.</div>
+<ul class="square" id="extracted-webwork-54-1-1-1-1-2-1-1">
+<li id="extracted-webwork-54-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-54-1-1-1-1-2-1-1-1-1">True</div></li>
+<li id="extracted-webwork-54-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-54-1-1-1-1-2-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-54-1-1-1-1-3"><div class="para logical" id="extracted-webwork-54-1-1-1-1-3-1">
+<div class="para">The solution of a system may occur at an intercept.</div>
+<ul class="square" id="extracted-webwork-54-1-1-1-1-3-1-1">
+<li id="extracted-webwork-54-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-54-1-1-1-1-3-1-1-1-1">True</div></li>
+<li id="extracted-webwork-54-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-54-1-1-1-1-3-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-54-1-1-1-1-4"><div class="para logical" id="extracted-webwork-54-1-1-1-1-4-1">
+<div class="para">The words intercept and intersect mean the same thing.</div>
+<ul class="square" id="extracted-webwork-54-1-1-1-1-4-1-1">
+<li id="extracted-webwork-54-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-54-1-1-1-1-4-1-1-1-1">True</div></li>
+<li id="extracted-webwork-54-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-54-1-1-1-1-4-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-54-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-54-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-54-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-54-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-54-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-54-1-4-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-54-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-54-1-5-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-54-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-54-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-54-1-6-1-1">
+<li id="extracted-webwork-54-1-6-1-1-1"><div class="para" id="extracted-webwork-54-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-54-1-6-1-1-2"><div class="para" id="extracted-webwork-54-1-6-1-1-2-1">True</div></li>
+<li id="extracted-webwork-54-1-6-1-1-3"><div class="para" id="extracted-webwork-54-1-6-1-1-3-1">True</div></li>
+<li id="extracted-webwork-54-1-6-1-1-4"><div class="para" id="extracted-webwork-54-1-6-1-1-4-1">False</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="LinSys-5-8">We can use a calculator or graphing utility to graph the equations in a system.</div>
 <article class="example example-like" id="LinSys-5-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
 </h4>
@@ -1443,7 +1524,52 @@ y \amp= 4.1x + 5.2
 </div>
 <article class="exercise exercise-like" id="LinSys-5-12"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
-</h4></article><div class="para" id="LinSys-5-13">Because the <kbd class="kbdkey">TRACE</kbd> feature does not show every point on a graph, we may not find the exact solution to a system by tracing the graphs.</div>
+</h4>
+<div id="webwork-55" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="55" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCJQb2ludCIpOwokYSA9IENvbXB1dGUoIig3LDIpIik7CgpCRUdJTl9QR01MCmEuICBTb2x2ZSB0aGUgc3lzdGVtIG9mIGVxdWF0aW9ucwoKICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgIHkgXGFtcCA9IC0wLjd4ICsgNi45XFwKICAgIHkgXGFtcCA9MS4yeCAtIDYuNAogICAgXGVuZHthbGlnbmVkfQogICAgYGBgXQoKICAgIGJ5IGdyYXBoaW5nLiBVc2UgdGhlIHdpbmRvdwoKICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgIFx0ZXh0e1htaW59IFxhbXAgPSAtOS40IFxhbXBcYW1wIFx0ZXh0e1htYXh9ID0gOS40XFwKICAgIFx0ZXh0e1ltaW59IFxhbXAgPSAtMTAgXGFtcFxhbXAgXHRleHR7WW1heH0gPSAxMAogICAgXGVuZHthbGlnbmVkfQogICAgYGBgXQoKCgoKYS4gIFZlcmlmeSBhbGdlYnJhaWNhbGx5IHRoYXQgeW91ciBzb2x1dGlvbiBzYXRpc2ZpZXMgYm90aCBlcXVhdGlvbnMuICAgCgoKQW5zd2VyOiBbX117JGF9ezZ9CgpbQEtleWJvYXJkSW5zdHJ1Y3Rpb25zKCdFbnRlciB0aGUgc29sdXRpb24gYXMgYW4gb3JkZXJlZCBwYWlyLicpQF0qKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYCg3LCAyKWBdCgoKYS4gIFskTkJTUF0qCgoKICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgIHt7Mn19XGFtcD0gLTAuNyg3KSsgNi45XGFtcFxhbXAgXHRleHR7WWVzIX1cXAogICAge3syfX1cYW1wID0xLjIoezd9KS02LjRcYW1wXGFtcCBcdGV4dHtZZXMhfQogICAgXGVuZHthbGlnbmVkfQogICAgYGBgXQoKCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-55')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-55-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-55-1-1-1-1">
+<li id="extracted-webwork-55-1-1-1-1-1">
+<div class="para" id="extracted-webwork-55-1-1-1-1-1-1">Solve the system of equations</div>
+<div class="para logical" id="extracted-webwork-55-1-1-1-1-1-2"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+y \amp = -0.7x + 6.9\\
+y \amp =1.2x - 6.4
+\end{aligned}
+\end{equation*}
+</div></div>
+<div class="para" id="extracted-webwork-55-1-1-1-1-1-3">by graphing. Use the window</div>
+<div class="para logical" id="extracted-webwork-55-1-1-1-1-1-4"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 9.4\\
+\text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
+\end{aligned}
+\end{equation*}
+</div></div>
+</li>
+<li id="extracted-webwork-55-1-1-1-1-2"><div class="para" id="extracted-webwork-55-1-1-1-1-2-1">Verify algebraically that your solution satisfies both equations.</div></li>
+</ol></div> <div class="para" id="extracted-webwork-55-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-55-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-55-1-2-1"><span class="process-math">\(\left(7,2\right)\)</span></div></div></details><details id="extracted-webwork-55-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-55-1-3-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-55-1-3-1-1">
+<li id="extracted-webwork-55-1-3-1-1-1"><div class="para" id="extracted-webwork-55-1-3-1-1-1-1"><span class="process-math">\(\displaystyle (7, 2)\)</span></div></li>
+<li id="extracted-webwork-55-1-3-1-1-2">
+<div class="para" id="extracted-webwork-55-1-3-1-1-2-1"> </div>
+<div class="para logical" id="extracted-webwork-55-1-3-1-1-2-2"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+{{2}}\amp= -0.7(7)+ 6.9\amp\amp \text{Yes!}\\
+{{2}}\amp =1.2({7})-6.4\amp\amp \text{Yes!}
+\end{aligned}
+\end{equation*}
+</div></div>
+</li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="LinSys-5-13">Because the <kbd class="kbdkey">TRACE</kbd> feature does not show every point on a graph, we may not find the exact solution to a system by tracing the graphs.</div>
 <article class="example example-like" id="LinSys-5-14"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
 </h4>
@@ -1483,7 +1609,25 @@ Y_2\amp  = (5.3 - 2X)/1.2
 </div>
 </div></article><article class="exercise exercise-like" id="LinSys-5-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></article><div class="para" id="LinSys-5-16">How does the calculator find the exact coordinates of the intersection point? In the next section we’ll learn how to find the solution of a system using algebra.</div></section><section class="subsection" id="LinSys-6"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-56" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="56" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIlBvaW50Iik7CiRhID0gUG9pbnQoIig0MCwtNTApIik7CgpCRUdJTl9QR01MClNvbHZlIHRoZSBzeXN0ZW0gb2YgZXF1YXRpb25zCgpbYGBgXGJlZ2lue2dhdGhlcmVkfQp5ID0gNDd4IC0gMTkzMFxcCnkgKyAxOXggPSA3MTAKXGVuZHtnYXRoZXJlZH0KYGBgXQoKYnkgZ3JhcGhpbmcuIEVzdGltYXRlIHRoZSBpbnRlcmNlcHRzIG9mIGVhY2ggZ3JhcGggdG8gaGVscCB5b3UgY2hvb3NlIGEgc3VpdGFibGUgd2luZG93LCBhbmQgdXNlIHRoZSBpbnRlcnNlY3QgZmVhdHVyZSAgdG8gbG9jYXRlIHRoZSBzb2x1dGlvbi4KCkFuc3dlcjogW19deyRhfXs2fQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnRW50ZXIgdGhlIHNvbHV0aW9uIGFzIGFuIG9yZGVyZWQgcGFpci4nKUBdKioKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYCg0MCwtNTApYF0gaXMgdGhlIGludGVyc2VjdGlvbiBvZiB0aGUgdHdvIGxpbmVzLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-56')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-56-1-1-1">Solve the system of equations</div> <div class="para logical" id="extracted-webwork-56-1-1-2"><div class="displaymath process-math">
+\begin{equation*}
+\begin{gathered}
+y = 47x - 1930\\
+y + 19x = 710
+\end{gathered}
+\end{equation*}
+</div></div> <div class="para" id="extracted-webwork-56-1-1-3">by graphing. Estimate the intercepts of each graph to help you choose a suitable window, and use the intersect feature  to locate the solution.</div> <div class="para" id="extracted-webwork-56-1-1-4">Answer: <span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-56-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-56-1-2-1"><span class="process-math">\(\left(40,-50\right)\)</span></div></div></details><details id="extracted-webwork-56-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-56-1-3-1">
+<span class="process-math">\((40,-50)\)</span> is the intersection of the two lines.</div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="LinSys-5-16">How does the calculator find the exact coordinates of the intersection point? In the next section we’ll learn how to find the solution of a system using algebra.</div></section><section class="subsection" id="LinSys-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Inconsistent and Dependent Systems</span>
 </h3>
 <div class="para" id="LinSys-6-4">Because two straight lines do not always intersect at a single point, a <span class="process-math">\(2\times 2\)</span> system of linear equations does not always have a unique solution. In fact, there are three possibilities, as illustrated below.</div>
@@ -1572,12 +1716,95 @@ y \amp = \frac{3}{2}x - \frac{9}{2}
 </ol></div>
 </div></article><article class="exercise exercise-like" id="LinSys-6-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></article><article class="exercise exercise-like" id="LinSys-6-9"><h4 class="heading">
+</h4>
+<div id="webwork-57" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="57" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR0eXBlSSA9ICBQb3BVcCgKWyI/IiwiZGVwZW5kZW50IiwiaW5jb25zaXN0ZW50IiwgImNvbnNpc3RlbnQgYW5kIGluZGVwZW5kZW50Il0sCjIsIAopOwokdHlwZUQgPSAgUG9wVXAoClsiPyIsImRlcGVuZGVudCIsImluY29uc2lzdGVudCIsICJjb25zaXN0ZW50IGFuZCBpbmRlcGVuZGVudCJdLAoxLCAKKTsKJHR5cGVDID0gIFBvcFVwKApbIj8iLCJkZXBlbmRlbnQiLCJpbmNvbnNpc3RlbnQiLCAiY29uc2lzdGVudCBhbmQgaW5kZXBlbmRlbnQiXSwKMywgCik7CgpCRUdJTl9QR01MCkNvbXBsZXRlIHRoZSBzdGF0ZW1lbnRzLgphLiAgSWYgdHdvIGxpbmVzIGhhdmUgdGhlIHNhbWUgc2xvcGUgYnV0IGRpZmZlcmVudCBbYHlgXS1pbnRlcmNlcHRzLCB0aGUgc3lzdGVtIGlzIFtfXXskdHlwZUl9ezV9CgoKYS4gIElmIHR3byBsaW5lcyBoYXZlIHRoZSBzYW1lIHNsb3BlIGFuZCB0aGUgc2FtZSBbYHlgXS1pbnRlcmNlcHQsIHRoZSBzeXN0ZW0gaXMgW19deyR0eXBlRH17NX0KCgphLiAgSWYgdHdvIGxpbmVzIGhhdmUgdGhlIHNhbWUgW2B5YF0taW50ZXJjZXB0IGJ1dCBkaWZmZXJlbnQgc2xvcGVzLCB0aGUgc3lzdGVtIGlzIFtfXXskdHlwZUN9ezV9CgoKYS4gIElmIGJvdGggbGluZXMgYXJlIGhvcml6b250YWwsIHRoZSBzeXN0ZW0gaXMgW19deyR0eXBlRH17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEluY29uc2lzdGVudAoKCmEuICBEZXBlbmRlbnQKCgphLiAgQ29uc2lzdGVudCBhbmQgaW5kZXBlbmRlbnQKCgphLiAgRGVwZW5kZW50CgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-57')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-57-1-1-1">
+<div class="para">Complete the statements.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-57-1-1-1-1">
+<li id="extracted-webwork-57-1-1-1-1-1"><div class="para logical" id="extracted-webwork-57-1-1-1-1-1-1">
+<div class="para">If two lines have the same slope but different <span class="process-math">\(y\)</span>-intercepts, the system is</div>
+<ul class="square" id="extracted-webwork-57-1-1-1-1-1-1-2">
+<li id="extracted-webwork-57-1-1-1-1-1-1-2-1"><div class="para" id="extracted-webwork-57-1-1-1-1-1-1-2-1-1">dependent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-1-1-2-2"><div class="para" id="extracted-webwork-57-1-1-1-1-1-1-2-2-1">inconsistent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-1-1-2-3"><div class="para" id="extracted-webwork-57-1-1-1-1-1-1-2-3-1">consistent and independent</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-57-1-1-1-1-2"><div class="para logical" id="extracted-webwork-57-1-1-1-1-2-1">
+<div class="para">If two lines have the same slope and the same <span class="process-math">\(y\)</span>-intercept, the system is</div>
+<ul class="square" id="extracted-webwork-57-1-1-1-1-2-1-2">
+<li id="extracted-webwork-57-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-57-1-1-1-1-2-1-2-1-1">dependent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-57-1-1-1-1-2-1-2-2-1">inconsistent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-2-1-2-3"><div class="para" id="extracted-webwork-57-1-1-1-1-2-1-2-3-1">consistent and independent</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-57-1-1-1-1-3"><div class="para logical" id="extracted-webwork-57-1-1-1-1-3-1">
+<div class="para">If two lines have the same <span class="process-math">\(y\)</span>-intercept but different slopes, the system is</div>
+<ul class="square" id="extracted-webwork-57-1-1-1-1-3-1-2">
+<li id="extracted-webwork-57-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-57-1-1-1-1-3-1-2-1-1">dependent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-57-1-1-1-1-3-1-2-2-1">inconsistent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-3-1-2-3"><div class="para" id="extracted-webwork-57-1-1-1-1-3-1-2-3-1">consistent and independent</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-57-1-1-1-1-4"><div class="para logical" id="extracted-webwork-57-1-1-1-1-4-1">
+<div class="para">If both lines are horizontal, the system is</div>
+<ul class="square" id="extracted-webwork-57-1-1-1-1-4-1-1">
+<li id="extracted-webwork-57-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-57-1-1-1-1-4-1-1-1-1">dependent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-57-1-1-1-1-4-1-1-2-1">inconsistent</div></li>
+<li id="extracted-webwork-57-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-57-1-1-1-1-4-1-1-3-1">consistent and independent</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-57-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-57-1-2-1"><span class="process-math">\(\text{inconsistent}\)</span></div></div></details><details id="extracted-webwork-57-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-57-1-3-1"><span class="process-math">\(\text{dependent}\)</span></div></div></details><details id="extracted-webwork-57-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-57-1-4-1"><span class="process-math">\(\text{consistent and independent}\)</span></div></div></details><details id="extracted-webwork-57-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-57-1-5-1"><span class="process-math">\(\text{dependent}\)</span></div></div></details><details id="extracted-webwork-57-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-57-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-57-1-6-1-1">
+<li id="extracted-webwork-57-1-6-1-1-1"><div class="para" id="extracted-webwork-57-1-6-1-1-1-1">Inconsistent</div></li>
+<li id="extracted-webwork-57-1-6-1-1-2"><div class="para" id="extracted-webwork-57-1-6-1-1-2-1">Dependent</div></li>
+<li id="extracted-webwork-57-1-6-1-1-3"><div class="para" id="extracted-webwork-57-1-6-1-1-3-1">Consistent and independent</div></li>
+<li id="extracted-webwork-57-1-6-1-1-4"><div class="para" id="extracted-webwork-57-1-6-1-1-4-1">Dependent</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="LinSys-6-9"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
 </h4>
-<div class="conclusion" id="LinSys-6-9-2">
-<div class="para" id="LinSys-6-9-2-1">Graph for part (a):</div>
-<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-ex-2-2-3answ.svg" role="img" class="contained" alt="parallel lines"></div>
+<div id="webwork-58" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="58" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR0eXBlID0gIFBvcFVwKApbIj8iLCJkZXBlbmRlbnQiLCJpbmNvbnNpc3RlbnQiLCAiY29uc2lzdGVudCBhbmQgaW5kZXBlbmRlbnQiXSwKMiwgCik7CgpCRUdJTl9QR01MCmEuICBHcmFwaCB0aGUgc3lzdGVtCgogICAgW2BgYFxiZWdpbntnYXRoZXJlZH0KICAgIHkgPSAtM3ggKyA2XFwKICAgIDZ4ICsgMnkgPSAxNQogICAgXGVuZHtnYXRoZXJlZH0KICAgIGBgYF0KCiAgICBieSBoYW5kLCB1c2luZyBlaXRoZXIgdGhlIGludGVyY2VwdCBtZXRob2Qgb3IgdGhlIHNsb3BlLWludGVyY2VwdCBtZXRob2QuCgoKYS4gIElkZW50aWZ5IHRoZSBzeXN0ZW0gYXMgZGVwZW5kZW50LCBpbmNvbnNpc3RlbnQsIG9yIGNvbnNpc3RlbnQgYW5kIGluZGVwZW5kZW50LgoKICAgIFtfXXskdHlwZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEEgZ3JhcGggaXMgYmVsb3cuCgoKYS4gIEluY29uc2lzdGVudDogVGhlIGdyYXBoIGlzIHR3byBwYXJhbGxlbCBsaW5lcy4KCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-58')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-58-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-58-1-1-1-1">
+<li id="extracted-webwork-58-1-1-1-1-1">
+<div class="para" id="extracted-webwork-58-1-1-1-1-1-1">Graph the system</div>
+<div class="para logical" id="extracted-webwork-58-1-1-1-1-1-2"><div class="displaymath process-math">
+\begin{equation*}
+\begin{gathered}
+y = -3x + 6\\
+6x + 2y = 15
+\end{gathered}
+\end{equation*}
+</div></div>
+<div class="para" id="extracted-webwork-58-1-1-1-1-1-3">by hand, using either the intercept method or the slope-intercept method.</div>
+</li>
+<li id="extracted-webwork-58-1-1-1-1-2">
+<div class="para" id="extracted-webwork-58-1-1-1-1-2-1">Identify the system as dependent, inconsistent, or consistent and independent.</div>
+<div class="para logical" id="extracted-webwork-58-1-1-1-1-2-2"><ul class="square" id="extracted-webwork-58-1-1-1-1-2-2-1">
+<li id="extracted-webwork-58-1-1-1-1-2-2-1-1"><div class="para" id="extracted-webwork-58-1-1-1-1-2-2-1-1-1">dependent</div></li>
+<li id="extracted-webwork-58-1-1-1-1-2-2-1-2"><div class="para" id="extracted-webwork-58-1-1-1-1-2-2-1-2-1">inconsistent</div></li>
+<li id="extracted-webwork-58-1-1-1-1-2-2-1-3"><div class="para" id="extracted-webwork-58-1-1-1-1-2-2-1-3-1">consistent and independent</div></li>
+</ul></div>
+</li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-58-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-58-1-2-1"><span class="process-math">\(\text{inconsistent}\)</span></div></div></details><details id="extracted-webwork-58-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-58-1-3-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-58-1-3-1-1">
+<li id="extracted-webwork-58-1-3-1-1-1"><div class="para" id="extracted-webwork-58-1-3-1-1-1-1">A graph is below.</div></li>
+<li id="extracted-webwork-58-1-3-1-1-2"><div class="para" id="extracted-webwork-58-1-3-1-1-2-1">Inconsistent: The graph is two parallel lines.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="LinSys-6-9-3">
+<div class="para" id="LinSys-6-9-3-1">Graph for part (a):</div>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-ex-2-2-3ans.svg" role="img" class="contained" alt="parallel lines"></div>
 </div></article></section><section class="subsection" id="LinSys-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="space"> </span><span class="title">Applications</span>
 </h3>
@@ -1595,7 +1822,45 @@ y \amp = \frac{3}{2}x - \frac{9}{2}
 <aside class="aside aside-like" id="LinSys-7-4"><div class="para" id="LinSys-7-4-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>To see more examples of the profit equation, see <a href="tkchap2.html#tkProfit" class="internal" title="Subsubsection A.2.2.3: Use the formula for profit, P=R-C">Section 2.2.3</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="LinSys-7-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article><div class="para" id="LinSys-7-6">Another example involves supply and demand. The owner of a retail business must try to balance the demand for his product from consumers with the supply he can obtain from manufacturers. Supply and demand both vary with the price of the product: consumers usually buy fewer items if the price increases, but manufacturers will be willing to supply more units of the product if its price increases.</div>
+</h4>
+<div id="webwork-59" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="59" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKJEMgPSBGb3JtdWxhKCIyMDArNHgiKTsKJFIgPSBGb3JtdWxhKCIxMngiKTsKQ29udGV4dCgiUG9pbnQiKTsKJGEgPSBQb2ludCgiKDI1LDMwMCkiKTsKJG4gPSBDb21wdXRlKCIyNSIpOwoKQkVHSU5fUEdNTApUaGUgQXF1YXJpdXMgamV3ZWxyeSBjb21wYW55IGRldGVybWluZXMgdGhhdCBlYWNoIHByb2R1Y3Rpb24gcnVuIHRvIG1hbnVmYWN0dXJlIGEgcGVuZGFudCBpbnZvbHZlcyBhbiBpbml0aWFsIHNldHVwIGNvc3Qgb2YgJDIwMCBhbmQgJDQgZm9yIGVhY2ggcGVuZGFudCBwcm9kdWNlZC4gVGhlIHBlbmRhbnRzIHNlbGwgZm9yICQxMiBlYWNoLgphLiAgRXhwcmVzcyB0aGUgY29zdCBbYENgXSBvZiBwcm9kdWN0aW9uIGluIHRlcm1zIG9mIHRoZSBudW1iZXIgW2B4YF0gb2YgcGVuZGFudHMgcHJvZHVjZWQuCgogICAgW2BDPWBdW19deyRDfXs3fQoKCmEuICBFeHByZXNzIHRoZSByZXZlbnVlIFtgUmBdIGluIHRlcm1zIG9mIHRoZSBudW1iZXIgW2B4YF0gb2YgcGVuZGFudHMgc29sZC4KCiAgICBbYFI9YF1bX117JFJ9ezd9CgoKYS4gIEdyYXBoIHRoZSByZXZlbnVlIGFuZCBjb3N0IG9uIHRoZSBzYW1lIHNldCBvZiBheGVzLiAoRmluZCB0aGUgaW50ZXJjZXB0cyBvZiBlYWNoIGVxdWF0aW9uIHRvIGhlbHAgeW91IGNob29zZSBhIHdpbmRvdyBmb3IgdGhlIGdyYXBoLikgU3RhdGUgdGhlIHNvbHV0aW9uIG9mIHRoZSBzeXN0ZW0uCgogICAgU29sdXRpb24gW19deyRhfXs2fSBHaXZlIHRoZSBzb2x1dGlvbiBhcyBhbiBvcmRlcmVkIHBhaXIuCgoKYS4gIEhvdyBtYW55IHBlbmRhbnRzIG11c3QgYmUgc29sZCBmb3IgdGhlIEFxdWFyaXVzIGNvbXBhbnkgdG8gYnJlYWsgZXZlbiBvbiBhIHBhcnRpY3VsYXIgcHJvZHVjdGlvbiBydW4/CgogICAgVGhlIG11c3Qgc2VsbCBbX117JG59ezJ9IHBlbmRhbnRzIHRvIGJyZWFrIGV2ZW4uCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYEM9MjAwKzR4YF0KCgphLiAgW2BSPTEyeGBdCgoKYS4gIFtgKDI1LDMwMClgXQoKCmEuICBUaGV5IG11c3Qgc2VsbCAyNSBwZW5kYW50cyBpbiBvcmRlciB0byBicmVhayBldmVuLgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-59')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-59-1-1-1">
+<div class="para">The Aquarius jewelry company determines that each production run to manufacture a pendant involves an initial setup cost of $200 and $4 for each pendant produced. The pendants sell for $12 each.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-59-1-1-1-1">
+<li id="extracted-webwork-59-1-1-1-1-1">
+<div class="para" id="extracted-webwork-59-1-1-1-1-1-1">Express the cost <span class="process-math">\(C\)</span> of production in terms of the number <span class="process-math">\(x\)</span> of pendants produced.</div>
+<div class="para" id="extracted-webwork-59-1-1-1-1-1-2">
+<span class="process-math">\(C=\)</span><span class="fillin underline" role="img" aria-label="7-character blank" style="width: 3.181818181818182em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-59-1-1-1-1-2">
+<div class="para" id="extracted-webwork-59-1-1-1-1-2-1">Express the revenue <span class="process-math">\(R\)</span> in terms of the number <span class="process-math">\(x\)</span> of pendants sold.</div>
+<div class="para" id="extracted-webwork-59-1-1-1-1-2-2">
+<span class="process-math">\(R=\)</span><span class="fillin underline" role="img" aria-label="7-character blank" style="width: 3.181818181818182em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-59-1-1-1-1-3">
+<div class="para" id="extracted-webwork-59-1-1-1-1-3-1">Graph the revenue and cost on the same set of axes. (Find the intercepts of each equation to help you choose a window for the graph.) State the solution of the system.</div>
+<div class="para" id="extracted-webwork-59-1-1-1-1-3-2">Solution <span class="fillin underline" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span> Give the solution as an ordered pair.</div>
+</li>
+<li id="extracted-webwork-59-1-1-1-1-4">
+<div class="para" id="extracted-webwork-59-1-1-1-1-4-1">How many pendants must be sold for the Aquarius company to break even on a particular production run?</div>
+<div class="para" id="extracted-webwork-59-1-1-1-1-4-2">The must sell <span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span> pendants to break even.</div>
+</li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-59-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-59-1-2-1"><span class="process-math">\(200+4x\)</span></div></div></details><details id="extracted-webwork-59-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-59-1-3-1"><span class="process-math">\(12x\)</span></div></div></details><details id="extracted-webwork-59-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-59-1-4-1"><span class="process-math">\(\left(25,300\right)\)</span></div></div></details><details id="extracted-webwork-59-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-59-1-5-1"><span class="process-math">\(25\)</span></div></div></details><details id="extracted-webwork-59-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-59-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-59-1-6-1-1">
+<li id="extracted-webwork-59-1-6-1-1-1"><div class="para" id="extracted-webwork-59-1-6-1-1-1-1"><span class="process-math">\(\displaystyle C=200+4x\)</span></div></li>
+<li id="extracted-webwork-59-1-6-1-1-2"><div class="para" id="extracted-webwork-59-1-6-1-1-2-1"><span class="process-math">\(\displaystyle R=12x\)</span></div></li>
+<li id="extracted-webwork-59-1-6-1-1-3"><div class="para" id="extracted-webwork-59-1-6-1-1-3-1"><span class="process-math">\(\displaystyle (25,300)\)</span></div></li>
+<li id="extracted-webwork-59-1-6-1-1-4"><div class="para" id="extracted-webwork-59-1-6-1-1-4-1">They must sell 25 pendants in order to break even.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="LinSys-7-6">Another example involves supply and demand. The owner of a retail business must try to balance the demand for his product from consumers with the supply he can obtain from manufacturers. Supply and demand both vary with the price of the product: consumers usually buy fewer items if the price increases, but manufacturers will be willing to supply more units of the product if its price increases.</div>
 <div class="para" id="LinSys-7-7">The <dfn class="terminology">demand equation</dfn> gives the number of units of the product that consumers will buy at a given price. The <dfn class="terminology">supply equation</dfn> gives the number of units that the producer will supply at that price. The price at which the supply and demand are equal is called the <dfn class="terminology">equilibrium price</dfn>. This is the price at which the consumer and the producer agree to do business.</div>
 <article class="example example-like" id="LinSys-7-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>

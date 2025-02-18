@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Logarithmic Scales</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="LogarithmicFunctions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap10.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="The-Natural-Base.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="LogarithmicFunctions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap10.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="The-Natural-Base.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1402,9 +1415,98 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more examples plotting log scales, see <a href="tkchap10.html#tkLogScale" class="internal" title="Subsubsection A.10.2.1: Plot a log scale">Section 10.2.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="LogarithmicScales-4-20"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
 </h4>
-<div class="introduction" id="LogarithmicScales-4-20-2"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-read-logscalew.svg" role="img" class="contained" alt="points on logscale"></div></div></article><article class="exercise exercise-like" id="LogarithmicScales-4-21"><h4 class="heading">
+<div class="introduction" id="LogarithmicScales-4-20-2"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/fig-read-logscale.svg" role="img" class="contained" alt="points on logscale"></div></div>
+<div id="webwork-420" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="420" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CiAgICAgICAgICAgICRsWzBdID0gQ29tcHV0ZSgiLTQiKTsKICAgICAgICAgICAgJGxbMV0gPSBDb21wdXRlKCItMi41Iik7CiAgICAgICAgICAgICRsWzJdID0gQ29tcHV0ZSgiMS41Iik7CiAgICAgICAgICAgICRsWzNdID0gQ29tcHV0ZSgiNC4yNSIpOwogICAgICAgICAgICBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAgICAgICAgICAgICR4WyRpXSA9IEZvcm11bGEoIjEwKiokbFskaV0iKS0+d2l0aCgKICAgICAgICAgICAgICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgICAgICAgICAgICAgdG9sZXJhbmNlID0+IC4wMDEsCiAgICAgICAgICAgICkKOwogICAgICAgICAgICB9CiAgICAgICAgICAgIENvbnRleHQoKS0+b3BlcmF0b3JzLT51bmRlZmluZSgiXiIsIioqIik7CgpCRUdJTl9QR01MCkNvbXBsZXRlIHRoZSB0YWJsZSBieSBlc3RpbWF0aW5nIHRoZSBsb2dhcml0aG0gb2YgZWFjaCBwb2ludCBwbG90dGVkIG9uIHRoZSBsb2cgc2NhbGUgYWJvdmUuIFRoZW4gdXNlIGEgY2FsY3VsYXRvciB0byBnaXZlIGEgZGVjaW1hbCB2YWx1ZSBmb3IgZWFjaCBwb2ludC4KCj4+IFtARGF0YVRhYmxlKFtbW1BHTUwoJ1tgXGxvZyB7KHgpfWBdJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW19deyRsWzBdfXszfScpLFBHTUwoJ1tfXXskbFsxXX17M30nKSxQR01MKCdbX117JGxbMl19ezN9JyksUEdNTCgnW19deyRsWzNdfXszfScpLF0sW1tQR01MKCdbYHhgXScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tfXXskeFswXX17NX0nKSxQR01MKCdbX117JHhbMV19ezV9JyksUEdNTCgnW19deyR4WzJdfXs1fScpLFBHTUwoJ1tfXXskeFszXX17NX0nKSxdLF0sYWxpZ249Pid8Kns1fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSogPDwKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo+PiBbQERhdGFUYWJsZShbW1tQR01MKCdbYFxsb2cgeyh4KX1gXScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tgLTRgXScpLFBHTUwoJ1tgLTIuNWBdJyksUEdNTCgnW2AxLjVgXScpLFBHTUwoJ1tgNC4yNWBdJyksXSxbW1BHTUwoJ1tgeGBdJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW2AwLjAwMDFgXScpLFBHTUwoJ1tgMC4wMDMxNmBdJyksUEdNTCgnW2AzMS42YF0nKSxQR01MKCdbYDE3LDc4Mi44YF0nKSxdLF0sYWxpZ249Pid8Kns1fXtjfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSogPDwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-420')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-420-1-1-1">Complete the table by estimating the logarithm of each point plotted on the log scale above. Then use a calculator to give a decimal value for each point.</div>  <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(\log {(x)}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="extracted-webwork-420-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-2-1"><span class="process-math">\(-4\)</span></div></div></details><details id="extracted-webwork-420-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-3-1"><span class="process-math">\(-2.5\)</span></div></div></details><details id="extracted-webwork-420-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-4-1"><span class="process-math">\(1.5\)</span></div></div></details><details id="extracted-webwork-420-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-5-1"><span class="process-math">\(4.25\)</span></div></div></details><details id="extracted-webwork-420-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-6-1"><span class="process-math">\(0.0001\)</span></div></div></details><details id="extracted-webwork-420-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-7-1"><span class="process-math">\(0.00316228\)</span></div></div></details><details id="extracted-webwork-420-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-8-1"><span class="process-math">\(31.6228\)</span></div></div></details><details id="extracted-webwork-420-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-420-1-9-1"><span class="process-math">\(17782.8\)</span></div></div></details><details id="extracted-webwork-420-1-10" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(\log {(x)}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-2.5\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(4.25\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.0001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.00316\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(31.6\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(17,782.8\)</span></td>
+</tr>
+</table></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="LogarithmicScales-4-21"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article></section><section class="subsection" id="LogarithmicScales-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-421" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="421" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAibG9nYXJpdGhtcyIsIAogICAgImltYWdpbmFyeSBudW1iZXJzIl0sCiAgICAxCik7CiRiID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAidmFyaWFibGVzIiwgCiAgICAicG93ZXJzIG9mIDEwIl0sCiAgICAyCik7CiRjID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAicmVjaXByb2NhbHMiLAogICAgImxvZ2FyaXRobXMiXSwKICAgIDIKKTsKJGQgPSBQb3BVcCgKICAgIFsgIj8iLCAKICAgICJuZWdhdGl2ZSIsIAogICAgInBvc2l0aXZlIl0sCiAgICAxCik7CgpCRUdJTl9QR01MCkZpbGwgaW4gdGhlIGJsYW5rcy4KYS4gIFdlIHVzZSBbX117JGF9ezV9IGZvciBncmFwaGluZyB2YXJpYWJsZXMgdGhhdCB0YWtlIG9uIGEgdmVyeSB3aWRlIHJhbmdlIG9mIHZhbHVlcy4KCgphLiAgVGhlIHRpY2sgbWFya3Mgb24gYSBsb2cgc2NhbGUgYXJlIGxhYmVsZWQgd2l0aCAgW19deyRifXs1fS4KCgphLiAgVG8gcGxvdCB2YWx1ZXMgb24gYSBsb2cgc2NhbGUsIHdlIGZpcnN0IGNvbXB1dGUgdGhlICBbX117JGN9ezV9IG9mIHRoZSB2YWx1ZXMuCgoKYS4gIEEgZnJhY3Rpb24gbGVzcyB0aGFuIDEgaXMgcGxvdHRlZCAgb24gYSBsb2cgc2NhbGUgYXMgYSBwb3dlciB3aXRoIGEgIFtfXXskZH17NX0gZXhwb25lbnQuCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBsb2dhcml0aG1zCmEuICBwb3dlcnMgb2YgMTAKYS4gIGxvZ3MKYS4gIG5lZ2F0aXZlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-421')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-421-1-1-1">
+<div class="para">Fill in the blanks.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-421-1-1-1-1">
+<li id="extracted-webwork-421-1-1-1-1-1"><div class="para logical" id="extracted-webwork-421-1-1-1-1-1-1">
+<div class="para">We use</div>
+<ul class="square" id="extracted-webwork-421-1-1-1-1-1-1-1">
+<li id="extracted-webwork-421-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-421-1-1-1-1-1-1-1-1-1">logarithms</div></li>
+<li id="extracted-webwork-421-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-421-1-1-1-1-1-1-1-2-1">imaginary numbers</div></li>
+</ul>
+<div class="para">for graphing variables that take on a very wide range of values.</div>
+</div></li>
+<li id="extracted-webwork-421-1-1-1-1-2"><div class="para logical" id="extracted-webwork-421-1-1-1-1-2-1">
+<div class="para">The tick marks on a log scale are labeled with</div>
+<ul class="square" id="extracted-webwork-421-1-1-1-1-2-1-1">
+<li id="extracted-webwork-421-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-421-1-1-1-1-2-1-1-1-1">variables</div></li>
+<li id="extracted-webwork-421-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-421-1-1-1-1-2-1-1-2-1">powers of 10</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-421-1-1-1-1-3"><div class="para logical" id="extracted-webwork-421-1-1-1-1-3-1">
+<div class="para">To plot values on a log scale, we first compute the</div>
+<ul class="square" id="extracted-webwork-421-1-1-1-1-3-1-1">
+<li id="extracted-webwork-421-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-421-1-1-1-1-3-1-1-1-1">reciprocals</div></li>
+<li id="extracted-webwork-421-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-421-1-1-1-1-3-1-1-2-1">logarithms</div></li>
+</ul>
+<div class="para">of the values.</div>
+</div></li>
+<li id="extracted-webwork-421-1-1-1-1-4"><div class="para logical" id="extracted-webwork-421-1-1-1-1-4-1">
+<div class="para">A fraction less than 1 is plotted  on a log scale as a power with a</div>
+<ul class="square" id="extracted-webwork-421-1-1-1-1-4-1-1">
+<li id="extracted-webwork-421-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-421-1-1-1-1-4-1-1-1-1">negative</div></li>
+<li id="extracted-webwork-421-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-421-1-1-1-1-4-1-1-2-1">positive</div></li>
+</ul>
+<div class="para">exponent.</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-421-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-421-1-2-1"><span class="process-math">\(\text{logarithms}\)</span></div></div></details><details id="extracted-webwork-421-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-421-1-3-1"><span class="process-math">\(\text{powers of 10}\)</span></div></div></details><details id="extracted-webwork-421-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-421-1-4-1"><span class="process-math">\(\text{logarithms}\)</span></div></div></details><details id="extracted-webwork-421-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-421-1-5-1"><span class="process-math">\(\text{negative}\)</span></div></div></details><details id="extracted-webwork-421-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-421-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-421-1-6-1-1">
+<li id="extracted-webwork-421-1-6-1-1-1"><div class="para" id="extracted-webwork-421-1-6-1-1-1-1">logarithms</div></li>
+<li id="extracted-webwork-421-1-6-1-1-2"><div class="para" id="extracted-webwork-421-1-6-1-1-2-1">powers of 10</div></li>
+<li id="extracted-webwork-421-1-6-1-1-3"><div class="para" id="extracted-webwork-421-1-6-1-1-3-1">logs</div></li>
+<li id="extracted-webwork-421-1-6-1-1-4"><div class="para" id="extracted-webwork-421-1-6-1-1-4-1">negative</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="LogarithmicScales-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.2.2</span><span class="space"> </span><span class="title">Labeling a Log Scale</span>
 </h3>
 <div class="para" id="LogarithmicScales-5-2">Log scales allow us to plot a wide range of values, but there is a trade-off. Equal increments on a log scale do not correspond to equal differences in value, as they do on a linear scale. You can see this more clearly if we label the tick marks with their integer values, as well as powers of 10. The difference between <span class="process-math">\(10^1\)</span> and <span class="process-math">\(10^0\)</span> is <span class="process-math">\(10 - 1 = 9\text{,}\)</span> but the difference between <span class="process-math">\(10^2\)</span> and <span class="process-math">\(10^1\)</span> is <span class="process-math">\(100 - 10 = 90\text{.}\)</span>
@@ -1478,9 +1580,124 @@ eBookConfig.enable_chatcodes =  false;
 <article class="exercise exercise-like" id="LogarithmicScales-5-10"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
 </h4>
-<div class="introduction" id="LogarithmicScales-5-10-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/fig-log-log-graphw.svg" role="img" class="contained" alt="mouse-to-elephant curve on log-log graph"></div></div></article><article class="exercise exercise-like" id="LogarithmicScales-5-11"><h4 class="heading">
+<div class="introduction" id="LogarithmicScales-5-10-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/fig-log-log-graph.svg" role="img" class="contained" alt="mouse-to-elephant curve on log-log graph"></div></div>
+<div id="webwork-422" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="422" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBDQ21hY3Jvcy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JG1vdXNlTWFzcyA9IENvbXB1dGUoIjAuMDIiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4xNSwgKTsKJG1vdXNlTVIgPSBDb21wdXRlKCIzLjUiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4xNSwgKTsKJGRvZ01hc3MgPSBDb21wdXRlKCIxNSIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokZG9nTVIgPSBDb21wdXRlKCI1MDAiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4xNSwgKTsKJHNoZWVwTWFzcyA9IENvbXB1dGUoIjUwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRzaGVlcE1SID0gQ29tcHV0ZSgiMTUwMCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokY293TWFzcyA9IENvbXB1dGUoIjUwMCIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ3JlbGF0aXZlJywKICB0b2xlcmFuY2UgPT4gLjE1LCApOwokY293TVIgPSBDb21wdXRlKCI2MDAwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRlbGVwaGFudE1hc3MgPSBDb21wdXRlKCI0MDAwIiktPndpdGgoCiAgdG9sVHlwZSA9PiAncmVsYXRpdmUnLAogIHRvbGVyYW5jZSA9PiAuMTUsICk7CiRlbGVwaGFudE1SID0gQ29tcHV0ZSgiNTAwMDAiKS0+d2l0aCgKICB0b2xUeXBlID0+ICdyZWxhdGl2ZScsCiAgdG9sZXJhbmNlID0+IC4xNSwgKTsKCkJFR0lOX1BHTUwKVGhlIG9wZW5pbmcgcGFnZSBvZiBDaGFwdGVyIDYgc2hvd3MgdGhlICJtb3VzZS10by1lbGVwaGFudCIgY3VydmUsIGEgZ3JhcGggb2YgdGhlIG1ldGFib2xpYyByYXRlIG9mIG1hbW1hbHMgYXMgYSBmdW5jdGlvbiBvZiB0aGVpciBtYXNzLiBIZXJlIGl0IGlzIGFnYWluLgoKPj4gS2xlaWJlciBtb3VzZS10by1lbGVwaGFudC1jdXJ2ZSA8PAoKKFRoZSBlbGVwaGFudCBkb2VzIG5vdCBhcHBlYXIgb24gdGhhdCBncmFwaCwgYmVjYXVzZSBpdHMgbWFzcyBpcyB0b28gYmlnLikgVGhlIGZpZ3VyZSBiZWxvdyBzaG93cyB0aGUgc2FtZSBmdW5jdGlvbiwgZ3JhcGhlZCBvbiBsb2ctbG9nIHBhcGVyLgoKPj4gbW91c2UtdG8tZWxlcGhhbnQgY3VydmUgb24gbG9nLWxvZyBncmFwaCA8PAoKVXNlIHRoaXMgZ3JhcGggdG8gZXN0aW1hdGUgdGhlIG1hc3MgYW5kIG1ldGFib2xpYyByYXRlIGZvciB0aGUgZm9sbG93aW5nIGFuaW1hbHMsIGxhYmVsZWQgb24gdGhlIGdyYXBoLgoKPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnQW5pbWFsJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnTW91c2UnKSxQR01MKCdEb2cnKSxQR01MKCdTaGVlcCcpLF0sW1tQR01MKCdNYXNzIChrZyknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbX117JG1vdXNlTWFzc317NH0nKSxQR01MKCdbX117JGRvZ01hc3N9ezR9JyksUEdNTCgnW19deyRzaGVlcE1hc3N9ezR9JyksXSxbW1BHTUwoJ01ldGFib2xpYyByYXRlIChrY2FsL2RheSknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbX117JG1vdXNlTVJ9ezR9JyksUEdNTCgnW19deyRkb2dNUn17NH0nKSxQR01MKCdbX117JHNoZWVwTVJ9ezR9JyksXSxdLGFsaWduPT4nfCp7NH17bHx9Jyx2YWxpZ249PidtaWRkbGUnLHRvcD0+JzMnLCk7QF0qIDw8Cgo+PiBbQERhdGFUYWJsZShbW1tQR01MKCdBbmltYWwnKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdDb3cnKSxQR01MKCdFbGVwaGFudCcpLF0sW1tQR01MKCdNYXNzIChrZyknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbX117JGNvd01hc3N9ezR9JyksUEdNTCgnW19deyRlbGVwaGFudE1hc3N9ezR9JyksXSxbW1BHTUwoJ01ldGFib2xpYyByYXRlIChrY2FsL2RheSknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbX117JGNvd01SfXs0fScpLFBHTUwoJ1tfXXskZWxlcGhhbnRNUn17NH0nKSxdLF0sYWxpZ249Pid8KnszfXtsfH0nLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSogPDwKCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0RvIG5vdCB1c2UgY29tbWFzLiBGb3IgZXhhbXBsZSwgdXNlICIxMDAwMCIgcmF0aGVyIHRoYW4gIjEwLDAwMCIuJylAXSoqCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BEYXRhVGFibGUoW1tbUEdNTCgnQW5pbWFsJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnTW91c2UnKSxQR01MKCdEb2cnKSxQR01MKCdTaGVlcCcpLFBHTUwoJ0NvdycpLFBHTUwoJ0VsZXBoYW50JyksXSxbW1BHTUwoJ01hc3MgKGtnKScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tgMC4wMmBdJyksUEdNTCgnW2AxNWBdJyksUEdNTCgnW2A1MGBdJyksUEdNTCgnW2A1MDBgXScpLFBHTUwoJ1tgNDAwMGBdJyksXSxbW1BHTUwoJ01ldGFib2xpYyByYXRlIChrY2FsL2RheSknKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDMuNWBdJyksUEdNTCgnW2A1MDBgXScpLFBHTUwoJ1tgMTUwMGBdJyksUEdNTCgnW2A2MDAwYF0nKSxQR01MKCdbYDUwLDAwMGBdJyksXSxdLGFsaWduPT4nfGx8Jyx2YWxpZ249PidtaWRkbGUnLHRvcD0+JzMnLCk7QF0qIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-422')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-422-1-1-1">The opening page of Chapter 6 shows the “mouse-to-elephant” curve, a graph of the metabolic rate of mammals as a function of their mass. Here it is again.</div>  <div class="para" id="extracted-webwork-422-1-1-2">Kleiber mouse-to-elephant-curve</div> <div class="para" id="extracted-webwork-422-1-1-3">(The elephant does not appear on that graph, because its mass is too big.) The figure below shows the same function, graphed on log-log paper.</div>  <div class="para" id="extracted-webwork-422-1-1-4">mouse-to-elephant curve on log-log graph</div> <div class="para" id="extracted-webwork-422-1-1-5">Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.</div>  <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Animal</td>
+<td class="l m b1 r1 l0 t0 lines">Mouse</td>
+<td class="l m b1 r1 l0 t0 lines">Dog</td>
+<td class="l m b1 r1 l0 t0 lines">Sheep</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Mass (kg)</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Metabolic rate (kcal/day)</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Animal</td>
+<td class="l m b1 r1 l0 t0 lines">Cow</td>
+<td class="l m b1 r1 l0 t0 lines">Elephant</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Mass (kg)</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Metabolic rate (kcal/day)</td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="extracted-webwork-422-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-2-1"><span class="process-math">\(0.02\)</span></div></div></details><details id="extracted-webwork-422-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-3-1"><span class="process-math">\(15\)</span></div></div></details><details id="extracted-webwork-422-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-4-1"><span class="process-math">\(50\)</span></div></div></details><details id="extracted-webwork-422-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-5-1"><span class="process-math">\(3.5\)</span></div></div></details><details id="extracted-webwork-422-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-6-1"><span class="process-math">\(500\)</span></div></div></details><details id="extracted-webwork-422-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-7-1"><span class="process-math">\(1500\)</span></div></div></details><details id="extracted-webwork-422-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-8-1"><span class="process-math">\(500\)</span></div></div></details><details id="extracted-webwork-422-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-9-1"><span class="process-math">\(4000\)</span></div></div></details><details id="extracted-webwork-422-1-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-10-1"><span class="process-math">\(6000\)</span></div></div></details><details id="extracted-webwork-422-1-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-422-1-11-1"><span class="process-math">\(50000\)</span></div></div></details><details id="extracted-webwork-422-1-12" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Animal</td>
+<td class="c m b1 r0 l0 t0 lines">Mouse</td>
+<td class="c m b1 r0 l0 t0 lines">Dog</td>
+<td class="c m b1 r0 l0 t0 lines">Sheep</td>
+<td class="c m b1 r0 l0 t0 lines">Cow</td>
+<td class="c m b1 r0 l0 t0 lines">Elephant</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Mass (kg)</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0.02\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(50\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(500\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(4000\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Metabolic rate (kcal/day)</td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(3.5\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(500\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(1500\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(6000\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(50,000\)</span></td>
+</tr>
+</table></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="LogarithmicScales-5-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article><div class="para" id="LogarithmicScales-5-12">You may have already encountered log scales in some everyday applications. In the examples that follow, don’t worry if you aren’t familiar with the science surrounding the application; we will mainly be concerned with the mathematics of using the scale.</div></section><section class="subsection" id="LogarithmicScales-6"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-423" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="423" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgRXF1YWwgaW5jcmVtZW50cyBvbiBhIGxvZyBzY2FsZSBjb3JyZXNwb25kIHRvIGVxdWFsIGRpZmZlcmVuY2VzIGluIHZhbHVlLiBbX117JEZhbHNlfXs1fQoKCmEuICBNb3ZpbmcgdXAgYnkgZXF1YWwgaW5jcmVtZW50cyBvbiBhIGxvZyBzY2FsZSBtdWx0aXBsaWVzIHRoZSB2YWx1ZXMgYnkgZXF1YWwgZmFjdG9ycy4gIFtfXXskVHJ1ZX17NX0KCgphLiAgSWYgd2UgbGFiZWwgYSBsb2cgc2NhbGUgd2l0aCBpbnRlZ2VycywgdGhlIHRpY2sgbWFya3MgYXJlIGV2ZW5seSBzcGFjZWQuICBbX117JEZhbHNlfXs1fQoKCmEuICBPbiBsb2ctbG9nIGdyYXBoIHBhcGVyLCBib3RoIGF4ZXMgYXJlIGxhYmVsZWQgd2l0aCBsb2dhcml0aG1pYyBzY2FsZXMuIFtfXXskVHJ1ZX17NX0KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIEZhbHNlCmEuICBUcnVlCmEuICBGYWxzZQphLiAgVHJ1ZSAgIAoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-423')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-423-1-1-1">
+<div class="para">True or False.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-423-1-1-1-1">
+<li id="extracted-webwork-423-1-1-1-1-1"><div class="para logical" id="extracted-webwork-423-1-1-1-1-1-1">
+<div class="para">Equal increments on a log scale correspond to equal differences in value.</div>
+<ul class="square" id="extracted-webwork-423-1-1-1-1-1-1-1">
+<li id="extracted-webwork-423-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-423-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-423-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-423-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-423-1-1-1-1-2"><div class="para logical" id="extracted-webwork-423-1-1-1-1-2-1">
+<div class="para">Moving up by equal increments on a log scale multiplies the values by equal factors.</div>
+<ul class="square" id="extracted-webwork-423-1-1-1-1-2-1-1">
+<li id="extracted-webwork-423-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-423-1-1-1-1-2-1-1-1-1">True</div></li>
+<li id="extracted-webwork-423-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-423-1-1-1-1-2-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-423-1-1-1-1-3"><div class="para logical" id="extracted-webwork-423-1-1-1-1-3-1">
+<div class="para">If we label a log scale with integers, the tick marks are evenly spaced.</div>
+<ul class="square" id="extracted-webwork-423-1-1-1-1-3-1-1">
+<li id="extracted-webwork-423-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-423-1-1-1-1-3-1-1-1-1">True</div></li>
+<li id="extracted-webwork-423-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-423-1-1-1-1-3-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-423-1-1-1-1-4"><div class="para logical" id="extracted-webwork-423-1-1-1-1-4-1">
+<div class="para">On log-log graph paper, both axes are labeled with logarithmic scales.</div>
+<ul class="square" id="extracted-webwork-423-1-1-1-1-4-1-1">
+<li id="extracted-webwork-423-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-423-1-1-1-1-4-1-1-1-1">True</div></li>
+<li id="extracted-webwork-423-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-423-1-1-1-1-4-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-423-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-423-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-423-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-423-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-423-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-423-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-423-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-423-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-423-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-423-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-423-1-6-1-1">
+<li id="extracted-webwork-423-1-6-1-1-1"><div class="para" id="extracted-webwork-423-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-423-1-6-1-1-2"><div class="para" id="extracted-webwork-423-1-6-1-1-2-1">True</div></li>
+<li id="extracted-webwork-423-1-6-1-1-3"><div class="para" id="extracted-webwork-423-1-6-1-1-3-1">False</div></li>
+<li id="extracted-webwork-423-1-6-1-1-4"><div class="para" id="extracted-webwork-423-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para" id="LogarithmicScales-5-12">You may have already encountered log scales in some everyday applications. In the examples that follow, don’t worry if you aren’t familiar with the science surrounding the application; we will mainly be concerned with the mathematics of using the scale.</div></section><section class="subsection" id="LogarithmicScales-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.2.3</span><span class="space"> </span><span class="title">Acidity and the pH Scale</span>
 </h3>
 <div class="para" id="LogarithmicScales-6-2">You have probably heard that the pH value of most shampoo is between 7 and 9. The <dfn class="terminology">pH scale</dfn> is a log scale used to measure the acidity of a substance or a chemical compound. Acidity depends on the concentration of hydrogen ions in the substance, denoted by <span class="process-math">\([H^+]\text{,}\)</span> which can take on a wide range of values, from <span class="process-math">\(10^{-1}\)</span> to <span class="process-math">\(10^{-14}\text{.}\)</span>
@@ -1588,7 +1805,17 @@ eBookConfig.enable_chatcodes =  false;
 </ol></div>
 </div></article><article class="exercise exercise-like" id="LogarithmicScales-6-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></article></section><section class="subsection" id="LogarithmicScales-7"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-424" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="424" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IENvbXB1dGUoIjEwKiooLTguMykiKTsKCkJFR0lOX1BHTUwKVGhlIHBIIG9mIHRoZSB3YXRlciBpbiBhIHRpZGUgcG9vbCBpcyA4LjMuIFdoYXQgaXMgdGhlIGh5ZHJvZ2VuIGlvbiBjb25jZW50cmF0aW9uIG9mIHRoZSB3YXRlcj8KCkFuc3dlcjogW19deyRhfXsxMn0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYDUuMDFcdGltZXMgMTBeey05fWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-424')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-424-1-1-1">The pH of the water in a tide pool is 8.3. What is the hydrogen ion concentration of the water?</div> <div class="para" id="extracted-webwork-424-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-424-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-424-1-2-1"><span class="process-math">\(10^{-8.3}\)</span></div></div></details><details id="extracted-webwork-424-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-424-1-3-1"><span class="process-math">\(5.01\times 10^{-9}\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="LogarithmicScales-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.2.4</span><span class="space"> </span><span class="title">Decibels</span>
 </h3>
 <div class="para logical" id="LogarithmicScales-7-2">
@@ -1682,7 +1909,31 @@ I \amp = 10^4(10^{-12}) = 10^{-8}
 </ol></div>
 </div></article><article class="exercise exercise-like" id="LogarithmicScales-7-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article><article class="warning remark-like" id="LogarithmicScales-7-8"><h4 class="heading">
+</h4>
+<div id="webwork-425" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="425" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskRCA9IDcwOwokYSA9IENvbXB1dGUoIjEwKiooJEQvMTAtMTIpIik7CiRjb252ZXJzYXRpb24gPSA0MDsKJGIgPSBDb21wdXRlKCIxMCoqKCAoJEQgLSAkY29udmVyc2F0aW9uKS8xMCkiKTsKCkJFR0lOX1BHTUwKVGhlIG5vaXNlIG9mIGNpdHkgdHJhZmZpYyByZWdpc3RlcnMgYXQgYWJvdXQgW2A3MGBdIGRlY2liZWxzLgoKYS4gIFdoYXQgaXMgdGhlIGludGVuc2l0eSBvZiB0cmFmZmljIG5vaXNlLCBpbiB3YXR0cyBwZXIgc3F1YXJlIG1ldGVyPwoKICAgIEFuc3dlcjogW2BJPWBdW19deyRhfXsxMn0gIHdhdHRzL21bYF4yYF0KCgphLiAgSG93IG1hbnkgdGltZXMgbW9yZSBpbnRlbnNlIGlzIHRyYWZmaWMgbm9pc2UgdGhhbiBjb252ZXJzYXRpb24/CgogICAgQW5zd2VyOiBbX117JGJ9ezN9IHRpbWVzCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbYEkgPSAxMF57LTV9YF0gd2F0dHMvbVtgXjJgXQoKCmEuICBbYDEwMDBgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-425')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-425-1-1-1">The noise of city traffic registers at about <span class="process-math">\(70\)</span> decibels.</div> <div class="para logical" id="extracted-webwork-425-1-1-2"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-425-1-1-2-1">
+<li id="extracted-webwork-425-1-1-2-1-1">
+<div class="para" id="extracted-webwork-425-1-1-2-1-1-1">What is the intensity of traffic noise, in watts per square meter?</div>
+<div class="para" id="extracted-webwork-425-1-1-2-1-1-2">Answer: <span class="process-math">\(I=\)</span><span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span>  watts/m<span class="process-math">\(^2\)</span>
+</div>
+</li>
+<li id="extracted-webwork-425-1-1-2-1-2">
+<div class="para" id="extracted-webwork-425-1-1-2-1-2-1">How many times more intense is traffic noise than conversation?</div>
+<div class="para" id="extracted-webwork-425-1-1-2-1-2-2">Answer: <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span> times</div>
+</li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-425-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-425-1-2-1"><span class="process-math">\(10^{\frac{70}{10}-12}\)</span></div></div></details><details id="extracted-webwork-425-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-425-1-3-1"><span class="process-math">\(10^{\frac{70-40}{10}}\)</span></div></div></details><details id="extracted-webwork-425-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-425-1-4-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-425-1-4-1-1">
+<li id="extracted-webwork-425-1-4-1-1-1"><div class="para" id="extracted-webwork-425-1-4-1-1-1-1">
+<span class="process-math">\(I = 10^{-5}\)</span> watts/m<span class="process-math">\(^2\)</span>
+</div></li>
+<li id="extracted-webwork-425-1-4-1-1-2"><div class="para" id="extracted-webwork-425-1-4-1-1-2-1"><span class="process-math">\(\displaystyle 1000\)</span></div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><article class="warning remark-like" id="LogarithmicScales-7-8"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">10.2.11</span><span class="period">.</span>
 </h4>
 <div class="para" id="LogarithmicScales-7-8-1">Both the decibel model and the Richter scale in the next example use expressions of the form <span class="process-math">\(\log\left(\dfrac{a}{b}\right)\text{.}\)</span> Be careful to follow the order of operations when using these models. We must compute the quotient <span class="process-math">\(\dfrac{a}{b}\)</span> before taking a logarithm. In particular, keep in mind that <span class="process-math">\(\log\left(\dfrac{a}{b}\right)\)</span> can <span class="process-math">\(\blert{\text{not}}\)</span> be simplified to <span class="process-math">\(\dfrac{\log {(a)}}{\log {(b)}}\text{.}\)</span>
@@ -1744,7 +1995,17 @@ A = 10^{7.1}A_0
 </ol></div>
 </div></article><article class="exercise exercise-like" id="LogarithmicScales-8-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
-</h4></article></section><section class="subsection" id="LogarithmicScales-9"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-426" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="426" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskc2YgPSA3LjE7CiRwID0gNy42OwokYSA9IENvbXB1dGUoIjEwKiooJHAtJHNmKSIpLT53aXRoKAogIHRvbFR5cGUgPT4gJ2Fic29sdXRlJywKICB0b2xlcmFuY2UgPT4gLjAwNTEsCik7CgpCRUdJTl9QR01MCkluIE9jdG9iZXIgMjAwNSwgYSBtYWduaXR1ZGUgNy42IGVhcnRocXVha2Ugc3RydWNrIFBha2lzdGFuLiBIb3cgbXVjaCBtb3JlIHBvd2VyZnVsIHdhcyB0aGlzIGVhcnRocXVha2UgdGhhbiB0aGUgMTk4OSBTYW4gRnJhbmNpc2NvIGVhcnRocXVha2Ugb2YgbWFnbml0dWRlIDcuMT8KCkFuc3dlcjogW19deyRhfXszfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCjMuMTYKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-426')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-426-1-1-1">In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1?</div> <div class="para" id="extracted-webwork-426-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-426-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-426-1-2-1"><span class="process-math">\(10^{7.6-7.1}\)</span></div></div></details><details id="extracted-webwork-426-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-426-1-3-1">3.16</div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="LogarithmicScales-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.2.6</span><span class="space"> </span><span class="title">Comparing Quantities on a Log Scale</span>
 </h3>
 <div class="para" id="LogarithmicScales-9-2">An earthquake 100, or <span class="process-math">\(10^2\text{,}\)</span> times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of <span class="process-math">\(K\)</span> units on the Richter scale (or any logarithmic scale) corresponds to a factor of <span class="process-math">\(10^K\)</span> units in the intensity of the quake. <span class="process-math">\(~\alert{\text{[TK]}}\)</span>
@@ -1761,9 +2022,66 @@ A = 10^{7.1}A_0
 <div class="para" id="example-compare-logscale-2-1">A difference of 1.6 on a log scale corresponds to a factor of <span class="process-math">\(10^{1.6}\)</span> in the actual weights. Thus, the heavier animal is <span class="process-math">\(10^{1.6}\text{,}\)</span> or 39.8 times as heavy as the lighter animal.</div>
 </div></article><article class="exercise exercise-like" id="LogarithmicScales-9-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></article><article class="exercise exercise-like" id="LogarithmicScales-9-6"><h4 class="heading">
+</h4>
+<div id="webwork-427" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="427" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IENvbXB1dGUoIiAxMCoqKDIuNSkgIiktPndpdGgoCiAgdG9sVHlwZSA9PiAnYWJzb2x1dGUnLAogIHRvbGVyYW5jZSA9PiAuMDUxLAopOwoKQkVHSU5fUEdNTApUd28gcG9pbnRzLCBsYWJlbGVkIFtgQWBdIGFuZCBbYEJcdGV4dHssfWBdIGRpZmZlciBieSBbYDIuNWBdIHVuaXRzIG9uIGEgbG9nIHNjYWxlLiBXaGF0IGlzIHRoZSByYXRpbyBvZiB0aGVpciBkZWNpbWFsIHZhbHVlcz8KCkFuc3dlcjogW19deyRhfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCjMxNi4yCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-427')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-427-1-1-1">Two points, labeled <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> differ by <span class="process-math">\(2.5\)</span> units on a log scale. What is the ratio of their decimal values?</div> <div class="para" id="extracted-webwork-427-1-1-2">Answer: <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-427-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-427-1-2-1"><span class="process-math">\(10^{2.5}\)</span></div></div></details><details id="extracted-webwork-427-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-427-1-3-1">316.2</div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="LogarithmicScales-9-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">10.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 3.</span>
-</h4></article></section><section class="exercises" id="section-10-2-exercises"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-428" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="428" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRUcnVlID0gUG9wVXAoCiAgICBbICI/IiwgCiAgICAiVHJ1ZSIsIAogICAgIkZhbHNlIl0sCiAgICAxCik7CiRGYWxzZSA9IFBvcFVwKAogICAgWyAiPyIsIAogICAgIlRydWUiLCAKICAgICJGYWxzZSJdLAogICAgMgopOwoKQkVHSU5fUEdNTApUcnVlIG9yIEZhbHNlLgphLiAgQW4gaW5jcmVhc2Ugb2YgMSBvbiB0aGUgcEggc2NhbGUgY29ycmVzcG9uZHMgdG8gYW4gaW5jcmVhc2UgaW4gYWNpZGl0eSBieSBhIGZhY3RvciBvZiAxMC4gW19deyRGYWxzZX17NX0KCgphLiAgQSByYXRpbyBvZiBzb3VuZCBpbnRlbnNpdGllcyBvZiBvbmUgYmlsbGlvbiBjb3JyZXNwb25kcyB0byBhIGRpZmZlcmVuY2Ugb2YgOTAgZGVjaWJlbHMuICBbX117JFRydWV9ezV9CgoKYS4gIFRoZSBzZWNvbmQgcHJvcGVydHkgb2YgbG9ncyBzYXlzIHRoYXQgW2BcbG9nIFxsZWZ0KFxkZnJhY3thfXtifSBccmlnaHQpID0gXGRmcmFje1xsb2cgYX17XGxvZyBifVx0ZXh0ey59YF0gIFtfXXskRmFsc2V9ezV9CgoKYS4gIEEgZGlmZmVyZW5jZSBvZiAzIG9uIGEgbG9nIHNjYWxlIGNvcnJlc3BvbmRzIHRvIGEgcmF0aW8gb2YgW2AxMF4zXHRleHR7LH1gXSBvciAxMDAwLiAgW19deyRUcnVlfXs1fQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgRmFsc2UKYS4gIFRydWUKYS4gIEZhbHNlCmEuICBUcnVlICAgCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-428')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-428-1-1-1">
+<div class="para">True or False.</div>
+<ol class="lower-alpha ol-marker-2" id="extracted-webwork-428-1-1-1-1">
+<li id="extracted-webwork-428-1-1-1-1-1"><div class="para logical" id="extracted-webwork-428-1-1-1-1-1-1">
+<div class="para">An increase of 1 on the pH scale corresponds to an increase in acidity by a factor of 10.</div>
+<ul class="square" id="extracted-webwork-428-1-1-1-1-1-1-1">
+<li id="extracted-webwork-428-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-428-1-1-1-1-1-1-1-1-1">True</div></li>
+<li id="extracted-webwork-428-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-428-1-1-1-1-1-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-428-1-1-1-1-2"><div class="para logical" id="extracted-webwork-428-1-1-1-1-2-1">
+<div class="para">A ratio of sound intensities of one billion corresponds to a difference of 90 decibels.</div>
+<ul class="square" id="extracted-webwork-428-1-1-1-1-2-1-1">
+<li id="extracted-webwork-428-1-1-1-1-2-1-1-1"><div class="para" id="extracted-webwork-428-1-1-1-1-2-1-1-1-1">True</div></li>
+<li id="extracted-webwork-428-1-1-1-1-2-1-1-2"><div class="para" id="extracted-webwork-428-1-1-1-1-2-1-1-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-428-1-1-1-1-3"><div class="para logical" id="extracted-webwork-428-1-1-1-1-3-1">
+<div class="para">The second property of logs says that <span class="process-math">\(\log \left(\dfrac{a}{b} \right) = \dfrac{\log a}{\log b}\text{.}\)</span>
+</div>
+<ul class="square" id="extracted-webwork-428-1-1-1-1-3-1-2">
+<li id="extracted-webwork-428-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-428-1-1-1-1-3-1-2-1-1">True</div></li>
+<li id="extracted-webwork-428-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-428-1-1-1-1-3-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-428-1-1-1-1-4"><div class="para logical" id="extracted-webwork-428-1-1-1-1-4-1">
+<div class="para">A difference of 3 on a log scale corresponds to a ratio of <span class="process-math">\(10^3\text{,}\)</span> or 1000.</div>
+<ul class="square" id="extracted-webwork-428-1-1-1-1-4-1-2">
+<li id="extracted-webwork-428-1-1-1-1-4-1-2-1"><div class="para" id="extracted-webwork-428-1-1-1-1-4-1-2-1-1">True</div></li>
+<li id="extracted-webwork-428-1-1-1-1-4-1-2-2"><div class="para" id="extracted-webwork-428-1-1-1-1-4-1-2-2-1">False</div></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-428-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-428-1-2-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-428-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-428-1-3-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-428-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-428-1-4-1"><span class="process-math">\(\text{False}\)</span></div></div></details><details id="extracted-webwork-428-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-428-1-5-1"><span class="process-math">\(\text{True}\)</span></div></div></details><details id="extracted-webwork-428-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-428-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-428-1-6-1-1">
+<li id="extracted-webwork-428-1-6-1-1-1"><div class="para" id="extracted-webwork-428-1-6-1-1-1-1">False</div></li>
+<li id="extracted-webwork-428-1-6-1-1-2"><div class="para" id="extracted-webwork-428-1-6-1-1-2-1">True</div></li>
+<li id="extracted-webwork-428-1-6-1-1-3"><div class="para" id="extracted-webwork-428-1-6-1-1-3-1">False</div></li>
+<li id="extracted-webwork-428-1-6-1-1-4"><div class="para" id="extracted-webwork-428-1-6-1-1-4-1">True</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="exercises" id="section-10-2-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">10.2.7</span><span class="space"> </span><span class="title">Problem Set 10.2</span>
 </h3>
 <article class="subexercises" id="section-10-2-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

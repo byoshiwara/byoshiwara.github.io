@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Conic Sections: Ellipses</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Distance-and-Midpoint.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Hyperbolas.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Distance-and-Midpoint.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Hyperbolas.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1365,9 +1378,76 @@ x^2 + y^2 = r^2
 </div></article><article class="exercise exercise-like" id="Ellipses-3-14"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
 </h4>
-<div class="conclusion" id="Ellipses-3-14-2"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-ex-9-3-1answ.svg" role="img" class="contained" alt="ellipse with horizontal major axis"></div></div></article><article class="exercise exercise-like" id="Ellipses-3-15"><h4 class="heading">
+<div id="webwork-385" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="385" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoUG9pbnQpOwokYW5zd2VyID0gTGlzdCgiKC0zLDApLCAoMywwKSwgKDAsLTIpLCAoMCwyKSIpOwokbXlfZXZhbHVhdG9yID0gJGFuc3dlciAtPiBjbXAoCiBzaG93SGludHM9PjEsCiBzaG93TGVuZ3RoSGludHMgPT4gMSwKIHBhcnRpYWxDcmVkaXQgPT4gMSwKKTsKCkJFR0lOX1BHTUwKYS4gIEZpbmQgdGhlIGludGVyY2VwdHMgb2YgdGhlIGdyYXBoIG9mIFtgXGRmcmFje3heMn17OX0rXGRmcmFje3leMn17NH09MSBcdGV4dHsufWBdIFNlcGFyYXRlIGRpZmZlcmVudCBpbnRlcmNlcHRzIHdpdGggYSBjb21tYS4KCiAgICBbX117JG15X2V2YWx1YXRvcn17MjB9CgoKYS4gIEdyYXBoIHRoZSBlbGxpcHNlLgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2AoMywwKSBcdGV4dHssfWBdIFtgKC0zLDApIFx0ZXh0eyx9YF0gW2AoMCwyKSBcdGV4dHssfWBdIFtgKDAsLTIpIGBdCgoKYS4gIEEgZ3JhcGggaXMgYmVsb3cuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-385')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-385-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-385-1-1-1-1">
+<li id="extracted-webwork-385-1-1-1-1-1"><div class="para" id="extracted-webwork-385-1-1-1-1-1-1">Find the intercepts of the graph of <span class="process-math">\(\dfrac{x^2}{9}+\dfrac{y^2}{4}=1 \text{.}\)</span> Separate different intercepts with a comma.</div></li>
+<li id="extracted-webwork-385-1-1-1-1-2"><div class="para" id="extracted-webwork-385-1-1-1-1-2-1">Graph the ellipse.</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-385-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-385-1-2-1"><span class="process-math">\(\left(-3,0\right), \left(3,0\right), \left(0,-2\right), \left(0,2\right)\)</span></div></div></details><details id="extracted-webwork-385-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-385-1-3-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-385-1-3-1-1">
+<li id="extracted-webwork-385-1-3-1-1-1"><div class="para" id="extracted-webwork-385-1-3-1-1-1-1">
+<span class="process-math">\((3,0) \text{,}\)</span> <span class="process-math">\((-3,0) \text{,}\)</span> <span class="process-math">\((0,2) \text{,}\)</span> <span class="process-math">\((0,-2)\)</span>
+</div></li>
+<li id="extracted-webwork-385-1-3-1-1-2"><div class="para" id="extracted-webwork-385-1-3-1-1-2-1">A graph is below.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="Ellipses-3-14-3"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-ex-9-3-1answ.svg" role="img" class="contained" alt="ellipse with horizontal major axis"></div></div></article><article class="exercise exercise-like" id="Ellipses-3-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article><div class="para logical" id="Ellipses-3-16">
+</h4>
+<div id="webwork-386" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="386" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xndH17Pn1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyR2ZXJ0aWNlcyA9IFBvcFVwKAogIFsiPyIsICJ0d28gZm9jaSIsICJjZW50ZXIgYW5kIHJhZGl1cyIsInZlcnRpY2VzIGFuZCBjb3ZlcnRpY2VzIiwgInNsb3BlIGFuZCBpbnRlcmNlcHRzIl0sCiAzLCAKKTsKJGhvcml6b250YWwgPSBQb3BVcCgKICBbIj8iLCJob3Jpem9udGFsIiwgInZlcnRpY2FsIl0sCiAgMSwgCik7CiRpbnRlcmNlcHQgPSBQb3BVcCgKICBbIj8iLCJhLiIsICJiIl0sCiAyLCAKKTsKJGNvbmljcyA9IFBvcFVwKAogIFsiPyIsImNvbmljIHNlY3Rpb25zIiwgInF1YWRyYW50cyIsICJmb3JtdWxhcyIsICJzb2x1dGlvbnMiXSwKIDEsIAopOwoKQkVHSU5fUEdNTAphLiAgVG8gc2tldGNoIGFuIGVsbGlwc2UsIHdlIGxvY2F0ZSBbX117JHZlcnRpY2VzfXs1fSwgdGhlbiBkcmF3IGEgc21vb3RoIGN1cnZlIHRocm91Z2ggdGhlbS4KCgphLiAgSWYgW2BhXGd0IGJcdGV4dHssfWBdIGlzIHRoZSBtYWpvciBheGlzIGhvcml6b250YWwgb3IgdmVydGljYWw/IFtfXXskaG9yaXpvbnRhbH17NX0KCgphLiAgVGhlIFtgeWBdLWludGVyY2VwdHMgb2YgYSBjZW50cmFsIGVsbGlwc2UgbGllIFtfXXskaW50ZXJjZXB0fXs1fSB1bml0cyBmcm9tIHRoZSBjZW50ZXIuCgoKYS4gIEFuIGVsbGlwc2UgaXMgb25lIG9mIHRoZSBmb3VyIFtfXXskY29uaWNzfXs1fS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIHZlcnRpY2VzIGFuZCBjb3ZlcnRpY2VzCgoKYS4gIGhvcml6b250YWwKCgphLiAgW2BiYF0KCgphLiAgY29uaWMgc2VjdGlvbnMKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-386')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-386-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-386-1-1-1-1">
+<li id="extracted-webwork-386-1-1-1-1-1"><div class="para logical" id="extracted-webwork-386-1-1-1-1-1-1">
+<div class="para">To sketch an ellipse, we locate</div>
+<ul class="square" id="extracted-webwork-386-1-1-1-1-1-1-1">
+<li id="extracted-webwork-386-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-386-1-1-1-1-1-1-1-1-1">two foci</div></li>
+<li id="extracted-webwork-386-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-386-1-1-1-1-1-1-1-2-1">center and radius</div></li>
+<li id="extracted-webwork-386-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-386-1-1-1-1-1-1-1-3-1">vertices and covertices</div></li>
+<li id="extracted-webwork-386-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-386-1-1-1-1-1-1-1-4-1">slope and intercepts</div></li>
+</ul>
+<div class="para">, then draw a smooth curve through them.</div>
+</div></li>
+<li id="extracted-webwork-386-1-1-1-1-2"><div class="para logical" id="extracted-webwork-386-1-1-1-1-2-1">
+<div class="para">If <span class="process-math">\(a\gt b\text{,}\)</span> is the major axis horizontal or vertical?</div>
+<ul class="square" id="extracted-webwork-386-1-1-1-1-2-1-2">
+<li id="extracted-webwork-386-1-1-1-1-2-1-2-1"><div class="para" id="extracted-webwork-386-1-1-1-1-2-1-2-1-1">horizontal</div></li>
+<li id="extracted-webwork-386-1-1-1-1-2-1-2-2"><div class="para" id="extracted-webwork-386-1-1-1-1-2-1-2-2-1">vertical</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-386-1-1-1-1-3"><div class="para logical" id="extracted-webwork-386-1-1-1-1-3-1">
+<div class="para">The <span class="process-math">\(y\)</span>-intercepts of a central ellipse lie</div>
+<ul class="square" id="extracted-webwork-386-1-1-1-1-3-1-2">
+<li id="extracted-webwork-386-1-1-1-1-3-1-2-1"><div class="para" id="extracted-webwork-386-1-1-1-1-3-1-2-1-1">a.</div></li>
+<li id="extracted-webwork-386-1-1-1-1-3-1-2-2"><div class="para" id="extracted-webwork-386-1-1-1-1-3-1-2-2-1">b</div></li>
+</ul>
+<div class="para">units from the center.</div>
+</div></li>
+<li id="extracted-webwork-386-1-1-1-1-4"><div class="para logical" id="extracted-webwork-386-1-1-1-1-4-1">
+<div class="para">An ellipse is one of the four</div>
+<ul class="square" id="extracted-webwork-386-1-1-1-1-4-1-1">
+<li id="extracted-webwork-386-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-386-1-1-1-1-4-1-1-1-1">conic sections</div></li>
+<li id="extracted-webwork-386-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-386-1-1-1-1-4-1-1-2-1">quadrants</div></li>
+<li id="extracted-webwork-386-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-386-1-1-1-1-4-1-1-3-1">formulas</div></li>
+<li id="extracted-webwork-386-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-386-1-1-1-1-4-1-1-4-1">solutions</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-386-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-386-1-2-1"><span class="process-math">\(\text{vertices and covertices}\)</span></div></div></details><details id="extracted-webwork-386-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-386-1-3-1"><span class="process-math">\(\text{horizontal}\)</span></div></div></details><details id="extracted-webwork-386-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-386-1-4-1"><span class="process-math">\(\text{b}\)</span></div></div></details><details id="extracted-webwork-386-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-386-1-5-1"><span class="process-math">\(\text{conic sections}\)</span></div></div></details><details id="extracted-webwork-386-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-386-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-386-1-6-1-1">
+<li id="extracted-webwork-386-1-6-1-1-1"><div class="para" id="extracted-webwork-386-1-6-1-1-1-1">vertices and covertices</div></li>
+<li id="extracted-webwork-386-1-6-1-1-2"><div class="para" id="extracted-webwork-386-1-6-1-1-2-1">horizontal</div></li>
+<li id="extracted-webwork-386-1-6-1-1-3"><div class="para" id="extracted-webwork-386-1-6-1-1-3-1"><span class="process-math">\(\displaystyle b\)</span></div></li>
+<li id="extracted-webwork-386-1-6-1-1-4"><div class="para" id="extracted-webwork-386-1-6-1-1-4-1">conic sections</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article><div class="para logical" id="Ellipses-3-16">
 <div class="para">The equation of any central ellipse may be written as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1400,8 +1480,26 @@ Ax^2+By^2=C
 </div></article><article class="exercise exercise-like" id="Ellipses-3-18"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
 </h4>
-<div class="conclusion" id="Ellipses-3-18-2">
-<div class="para" id="Ellipses-3-18-2-1"><span class="process-math">\(9x^2+8y^2=16\)</span></div>
+<div id="webwork-387" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="387" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAgJHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydCA9IDE7CiR4ZnVuY1swXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gNC8zKmNvcygkdCk7IH07CiR5ZnVuY1swXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gc3FydCgyKSpzaW4oJHQpOyB9OwokeGZ1bmNbMV0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIHNxcnQoMikqY29zKCR0KTsgfTsKJHlmdW5jWzFdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiA0LzMqc2luKCR0KTsgfTsKJHhmdW5jWzJdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAzKmNvcygkdCk7IH07CiR5ZnVuY1syXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gc3FydCg4KSpzaW4oJHQpOyB9OwokeGZ1bmNbM10gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIDMvNCpjb3MoJHQpOyB9OwokeWZ1bmNbM10gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIHNxcnQoMS8yKSpzaW4oJHQpOyB9OwoKIGZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKICAkZ3JbJGldID0gaW5pdF9ncmFwaCgtMywtMywzLDMsIGF4ZXM9PlswLDBdLCBncmlkPT5bNiw2XSwgc2l6ZT0+WzI0MCwyNDBdKTsKICAgICRmblskaV0gPSBuZXcgRnVuKCAkeGZ1bmNbJGldLCAkeWZ1bmNbJGldLCAkZ3JbJGldICk7CiAgICAkZm5bJGldLT5kb21haW4oMCw2LjI4MzIpOwogIH0KCiBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAkZ3JbJGldIC0+IGxiKCdyZXNldCcpOwogICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC4yLDIsMiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjIsLTIsLTIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogICRnclskaV0gLT4gbGIobmV3IExhYmVsICgyLC0wLjIsMiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0yLC0wLjIsLTIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogIH0KICAkZ3JbMF0gLT4gbGIobmV3IExhYmVsICgtMi41LDIuNSwiKEEpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgJGdyWzFdIC0+IGxiKG5ldyBMYWJlbCAoLTIuNSwyLjUsIihCKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC0yLjUsMi41LCIoQykiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAkZ3JbM10gLT4gbGIobmV3IExhYmVsICgtMi41LDIuNSwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CgogICRtYyA9IFJhZGlvQnV0dG9ucygKICAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSJdLAogICAgICAgICAgICAgIDAKICAgICAgICAgICk7CgpCRUdJTl9QR01MCkdyYXBoIFtgOXheMis4eV4yPTE2YF0KCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogIDw8CgpXaGljaCBvZiB0aGUgYWJvdmUgaXMgdGhlIGJlc3QgbWF0Y2ggZm9yIHRoZSBncmFwaD8KCltfXXskbWN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0+MjQwKUBdKiAgPDwKCkEgZ3JhcGggaXMgYWxzbyBzaG93biBiZWxvdy4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-387')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-387-1-1-1">Graph <span class="process-math">\(9x^2+8y^2=16\)</span>
+</div>  <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-387-image-1.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-387-image-2.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-387-image-3.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-387-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-387-1-1-6">Which of the above is the best match for the graph?</div> <div class="para logical" id="extracted-webwork-387-1-1-7"><ul class="circle" id="extracted-webwork-387-1-1-7-1">
+<li id="extracted-webwork-387-1-1-7-1-1"><div class="para" id="extracted-webwork-387-1-1-7-1-1-1">(A)</div></li>
+<li id="extracted-webwork-387-1-1-7-1-2"><div class="para" id="extracted-webwork-387-1-1-7-1-2-1">(B)</div></li>
+<li id="extracted-webwork-387-1-1-7-1-3"><div class="para" id="extracted-webwork-387-1-1-7-1-3-1">(C)</div></li>
+<li id="extracted-webwork-387-1-1-7-1-4"><div class="para" id="extracted-webwork-387-1-1-7-1-4-1">(D)</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-387-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-387-1-2-1"><span class="process-math">\(\text{(A)}\)</span></div></div></details><details id="extracted-webwork-387-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-387-image-1.png" class="contained"></div>
+<div class="para" id="extracted-webwork-387-1-3-2">A graph is also shown below.</div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="Ellipses-3-18-3">
+<div class="para" id="Ellipses-3-18-3-1"><span class="process-math">\(9x^2+8y^2=16\)</span></div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-ex-9-3-2answ.svg" role="img" class="contained" alt="ellipse"></div>
 </div></article><div class="para" id="Ellipses-3-19">We can find coordinates of other points on an ellipse by substituting a value for one variable and solving for the other variable.</div>
 <article class="example example-like" id="Ellipses-3-20"><h4 class="heading">
@@ -1453,7 +1551,19 @@ x^2\amp = -1
 </div></article><aside class="aside aside-like" id="Ellipses-3-21"><div class="para" id="Ellipses-3-21-1">
 <span class="process-math">\(\alert{\text{[TK]}}~~\)</span>For more help finding points, see <a href="tkchap9.html#tkFindPts" class="internal" title="Subsubsection A.9.3.1: Find points on a graph">Section 9.3.1</a> of the Toolkit.</div></aside><article class="exercise exercise-like" id="Ellipses-3-22"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></article></section><section class="subsection" id="Ellipses-4"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-388" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="388" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUENDbWFjcm9zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dChQb2ludCktPmZsYWdzLT5zZXQoIHJlZHVjZUNvbnN0YW50cyA9PiAwLCByZWR1Y2VDb25zdGFudEZ1bmN0aW9ucyA9PiAwLCAgKTsKJGFuc3dlciA9IEZvcm11bGEoIigyKnNxcnQoMikvMywtMSksICgtMipzcXJ0KDIpLzMsLTEpIik7CiRteV9ldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKIHNob3dIaW50cz0+MSwKIHNob3dMZW5ndGhIaW50cyA9PiAxLAogcGFydGlhbENyZWRpdCA9PiAxLAopOwoKQkVHSU5fUEdNTApGaW5kIHRoZSBleGFjdCBjb29yZGluYXRlcyBvZiBhbGwgcG9pbnRzIHdpdGggW2B5YF0tY29vcmRpbmF0ZSBbYC0xYF0gb24gdGhlIGVsbGlwc2UgW2B+OXheMiArIDh5XjIgPSAxNlx0ZXh0ey59YF0KCltAS2V5Ym9hcmRJbnN0cnVjdGlvbnMoJ0VudGVyICJzcXJ0KDIpIiAgZm9yIFtgXHNxcnR7Mn1cdGV4dHssfWBdIGFuZCBzZXBhcmF0ZSBkaWZmZXJlbnQgcG9pbnRzIHdpdGggYSBjb21tYS4nKUBdKioKCltfXXskbXlfZXZhbHVhdG9yfXsyN30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFxsZWZ0KFxkZnJhY3syXHNxcnR7Mn19ezN9LCAtMSBccmlnaHQpIFx0ZXh0eyx9YF0gW2BcbGVmdChcZGZyYWN7LTJcc3FydHsyfX17M30sIC0xIFxyaWdodCkgYF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-388')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-388-1-1-1">Find the exact coordinates of all points with <span class="process-math">\(y\)</span>-coordinate <span class="process-math">\(-1\)</span> on the ellipse <span class="process-math">\(~9x^2 + 8y^2 = 16\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-388-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-388-1-2-1"><span class="process-math">\(\left(\frac{2\sqrt{2}}{3},-1\right), \left(\frac{-2\sqrt{2}}{3},-1\right)\)</span></div></div></details><details id="extracted-webwork-388-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-388-1-3-1">
+<span class="process-math">\(\left(\dfrac{2\sqrt{2}}{3}, -1 \right) \text{,}\)</span> <span class="process-math">\(\left(\dfrac{-2\sqrt{2}}{3}, -1 \right)\)</span>
+</div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Ellipses-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="space"> </span><span class="title">Translated Ellipses</span>
 </h3>
 <div class="para" id="Ellipses-4-2">An ellipse whose center is at the point <span class="process-math">\((h, k)\)</span> instead of the origin is said to be shifted or <dfn class="terminology">translated</dfn> to that location.</div>
@@ -1519,12 +1629,58 @@ y \amp = 1 \pm \dfrac{\sqrt{15}}{2}
 </div></article><article class="exercise exercise-like" id="Ellipses-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
 </h4>
-<div class="conclusion" id="Ellipses-4-7-2">
-<div class="para" id="Ellipses-4-7-2-1"><span class="process-math">\(\dfrac{(x-5)^2}{15} + \dfrac{(y+3)^2}{8} = 1\text{:}\)</span></div>
+<div id="webwork-389" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="389" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKJHhmdW5jWzBdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiA1KyBzcXJ0KDE1KSpjb3MoJHQpOyB9OwokeWZ1bmNbMF0gPSBzdWIgeyBteSAkdCA9IHNoaWZ0KCk7CiAgcmV0dXJuIC0zK3NxcnQoOCkqc2luKCR0KTsgfTsKJHhmdW5jWzFdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAtMytzcXJ0KDgpKmNvcygkdCk7IH07CiR5ZnVuY1sxXSA9IHN1YiB7IG15ICR0ID0gc2hpZnQoKTsKICByZXR1cm4gNSsgc3FydCgxNSkqc2luKCR0KTsgfTsKJHhmdW5jWzJdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAtNSsgc3FydCgxNSkqY29zKCR0KTsgfTsKJHlmdW5jWzJdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAzK3NxcnQoOCkqc2luKCR0KTsgfTsKJHhmdW5jWzNdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAzK3NxcnQoOCkqY29zKCR0KTsgfTsKJHlmdW5jWzNdID0gc3ViIHsgbXkgJHQgPSBzaGlmdCgpOwogIHJldHVybiAtNSsgc3FydCgxNSkqc2luKCR0KTsgfTsKCiBmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAgJGdyWyRpXSA9IGluaXRfZ3JhcGgoLTEwLC0xMCwxMCwxMCwgYXhlcz0+WzAsMF0sIGdyaWQ9PlsyMCwyMF0sIHNpemU9PlsyNDAsMjQwXSk7CiRmblskaV0gPSBuZXcgRnVuKCAkeGZ1bmNbJGldLCAkeWZ1bmNbJGldLCAkZ3JbJGldICk7CiRmblskaV0tPmRvbWFpbigwLDYuMjgzMik7CiAgfQoKIGZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKICRnclskaV0gLT4gbGIoJ3Jlc2V0Jyk7CiAgJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsNSw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKDUsLTAuOCw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTUsLTAuOCwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgfQogICRnclswXSAtPiBsYihuZXcgTGFiZWwgKC04LjUsOSwiKEMpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAgJGdyWzFdIC0+IGxiKG5ldyBMYWJlbCAoLTguNSw5LCIoQikiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICAkZ3JbMl0gLT4gbGIobmV3IExhYmVsICgtOC41LDksIihBKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogICRnclszXSAtPiBsYihuZXcgTGFiZWwgKC04LjUsOSwiKEQpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CgogICRtYyA9IFJhZGlvQnV0dG9ucygKICAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSJdLAogICAgICAgICAgICAgIDIKICAgICAgICAgICk7CiAgQ29udGV4dChQb2ludCk7CiAgJHZlcnRpY2VzID0gTGlzdCgiKDUrc3FydCgxNSksLTMpLCAoNS1zcXJ0KDE1KSwtMykiKTsKICAkbXlfZXZhbHVhdG9yID0gJHZlcnRpY2VzIC0+IGNtcCgKICAgc2hvd0hpbnRzPT4xLAogICBzaG93TGVuZ3RoSGludHMgPT4gMSwKICAgcGFydGlhbENyZWRpdCA9PiAxLAogICk7IAogICRjb3ZlcnRpY2VzID0gTGlzdCgiKDUsLTMrc3FydCg4KSksICg1LC0zLXNxcnQoOCkpIik7CiAgJG15X2V2YWx1YXRvcjIgPSAkY292ZXJ0aWNlcyAtPiBjbXAoCiAgIHNob3dIaW50cz0+MSwKICAgc2hvd0xlbmd0aEhpbnRzID0+IDEsCiAgIHBhcnRpYWxDcmVkaXQgPT4gMSwKICApOwoKQkVHSU5fUEdNTAphLiAgR3JhcGggW2BcZGZyYWN7KHgtNSleMn17MTV9ICsgXGRmcmFjeyh5KzMpXjJ9ezh9ID0gMWBdCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+MjEwKUBdKiAKCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qIAoKICAgIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogCgogICAgW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0+MjEwKUBdKiAKCiAgICBXaGljaCBvZiB0aGUgYWJvdmUgaXMgdGhlIGJlc3QgbWF0Y2ggZm9yIHRoZSBncmFwaD8KCiAgICBbX117JG1jfXs1fQoKCmEuICBGaW5kIHRoZSBjb29yZGluYXRlcyBvZiB0aGUgdmVydGljZXMgYW5kIGNvdmVydGljZXMuICBTZXBhcmF0ZSBkaWZmZXJlbnQgcG9pbnRzIHdpdGggYSBjb21tYS4gVXNlICJzcXJ0KDIpIiB0byBnZXQgW2Bcc3FydHsyfVx0ZXh0ey59YF0KCiAgICB2ZXJ0aWNlczogW19deyRteV9ldmFsdWF0b3J9ezI1fQoKICAgIGNvdmVydGljZXM6IFtfXXskbXlfZXZhbHVhdG9yMn17MjV9CgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yNDApQF0qIAoKQSBncmFwaCBpcyBhbHNvIHNob3duIGJlbG93LgoKCmEuICB2ZXJ0aWNlczogW2AoNS1cc3FydHsxNX0sIC0zKVx0ZXh0eyx9YF0gW2AoNStcc3FydHsxNX0sIC0zKWBdCgogICAgY292ZXJ0aWNlczogW2AoNSwgLTMrXHNxcnR7OH0pXHRleHR7LH1gXSBbYCg1LCAtMy1cc3FydHs4fSlgXQoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-389')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-389-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-389-1-1-1-1">
+<li id="extracted-webwork-389-1-1-1-1-1">
+<div class="para" id="extracted-webwork-389-1-1-1-1-1-1">Graph <span class="process-math">\(\dfrac{(x-5)^2}{15} + \dfrac{(y+3)^2}{8} = 1\)</span>
+</div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-389-image-1.png" class="contained"></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-389-image-2.png" class="contained"></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-389-image-3.png" class="contained"></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-389-image-4.png" class="contained"></div>
+<div class="para" id="extracted-webwork-389-1-1-1-1-1-6">Which of the above is the best match for the graph?</div>
+<div class="para logical" id="extracted-webwork-389-1-1-1-1-1-7"><ul class="circle" id="extracted-webwork-389-1-1-1-1-1-7-1">
+<li id="extracted-webwork-389-1-1-1-1-1-7-1-1"><div class="para" id="extracted-webwork-389-1-1-1-1-1-7-1-1-1">(A)</div></li>
+<li id="extracted-webwork-389-1-1-1-1-1-7-1-2"><div class="para" id="extracted-webwork-389-1-1-1-1-1-7-1-2-1">(B)</div></li>
+<li id="extracted-webwork-389-1-1-1-1-1-7-1-3"><div class="para" id="extracted-webwork-389-1-1-1-1-1-7-1-3-1">(C)</div></li>
+<li id="extracted-webwork-389-1-1-1-1-1-7-1-4"><div class="para" id="extracted-webwork-389-1-1-1-1-1-7-1-4-1">(D)</div></li>
+</ul></div>
+</li>
+<li id="extracted-webwork-389-1-1-1-1-2">
+<div class="para" id="extracted-webwork-389-1-1-1-1-2-1">Find the coordinates of the vertices and covertices.  Separate different points with a comma. Use “sqrt(2)” to get <span class="process-math">\(\sqrt{2}\text{.}\)</span>
+</div>
+<div class="para" id="extracted-webwork-389-1-1-1-1-2-2">vertices: <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>
+</div>
+<div class="para" id="extracted-webwork-389-1-1-1-1-2-3">covertices: <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>
+</div>
+</li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-389-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-389-1-2-1"><span class="process-math">\(\text{(C)}\)</span></div></div></details><details id="extracted-webwork-389-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-389-1-3-1"><span class="process-math">\(\left(8.87298,-3\right), \left(1.12702,-3\right)\)</span></div></div></details><details id="extracted-webwork-389-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-389-1-4-1"><span class="process-math">\(\left(5,-0.171573\right), \left(5,-5.82843\right)\)</span></div></div></details><details id="extracted-webwork-389-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="extracted-webwork-389-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-389-1-5-1-1"><li id="extracted-webwork-389-1-5-1-1-1"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-389-image-3.png" class="contained"></div></li></ol></div>
+<div class="para" id="extracted-webwork-389-1-5-2">A graph is also shown below.</div>
+<div class="para logical" id="extracted-webwork-389-1-5-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-389-1-5-3-1"><li id="extracted-webwork-389-1-5-3-1-1">
+<div class="para" id="extracted-webwork-389-1-5-3-1-1-1">vertices: <span class="process-math">\((5-\sqrt{15}, -3)\text{,}\)</span> <span class="process-math">\((5+\sqrt{15}, -3)\)</span>
+</div>
+<div class="para" id="extracted-webwork-389-1-5-3-1-1-2">covertices: <span class="process-math">\((5, -3+\sqrt{8})\text{,}\)</span> <span class="process-math">\((5, -3-\sqrt{8})\)</span>
+</div>
+</li></ol></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="Ellipses-4-7-3">
+<div class="para" id="Ellipses-4-7-3-1"><span class="process-math">\(\dfrac{(x-5)^2}{15} + \dfrac{(y+3)^2}{8} = 1\text{:}\)</span></div>
 <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig-ex-9-3-4answ.svg" role="img" class="contained" alt="translated ellipse"></div>
 </div></article><article class="exercise exercise-like" id="Ellipses-4-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 2.</span>
-</h4></article></section><section class="subsection" id="Ellipses-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-390" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="390" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-courseID="" data-userID="" data-coursePassword="" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-390')">Activate</button></div>
+<div class="problem-contents"><div class="para" id="extracted-webwork-390-1-1-1">PTX:ERROR: WeBWorK problem webwork-390 with seed 390 is either empty or failed to compile Use -a to halt with full PG and returned content</div></div>
+</div></article></section><section class="subsection" id="Ellipses-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="space"> </span><span class="title">Writing in Standard Form</span>
 </h3>
 <div class="para" id="Ellipses-5-2">Second-degree equations in which the coefficients of <span class="process-math">\(x^2\)</span> and <span class="process-math">\(y^2\)</span> have the same sign can be written in one of the standard forms for an ellipse by completing the square. The equation can be graphed easily from the standard form.</div>
@@ -1583,8 +1739,29 @@ y \amp = 1 \pm \dfrac{\sqrt{15}}{2}
 </div></article><article class="exercise exercise-like" id="Ellipses-5-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
 </h4>
-<div class="conclusion" id="Ellipses-5-6-2">
-<div class="para" id="Ellipses-5-6-2-1"><span class="process-math">\(x^2 + 4y^2 + 4x - 16y + 4 = 0\text{:}\)</span></div>
+<div id="webwork-391" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="391" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYTIgPSBDb21wdXRlKCIxNiIpOwokYjIgPSBDb21wdXRlKCI0Iik7CiRoID0gQ29tcHV0ZSgiLTIiKTsKJGsgPSBDb21wdXRlKCIyIik7CgpCRUdJTl9QR01MCmEuICBXcml0ZSB0aGUgZXF1YXRpb24gW2B4XjIgKyA0eV4yICsgNHggLSAxNnkgKyA0ID0gMGBdIGluIHN0YW5kYXJkIGZvcm06IFtgXGRmcmFjeyh4LWgpXjJ9e2FeMn0gKyBcZGZyYWN7KHktayleMn17Yl4yfSA9IDFgXQoKICAgIFtgaD1gXVtfXXskaH17Mn0sIFtgaz1gXVtfXXska317Mn0sIFtgYV4yPWBdW19deyRhMn17Mn0sIFtgYl4yPWBdW19deyRiMn17Mn0KCgphLiAgR3JhcGggdGhlIGVxdWF0aW9uLgoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgphLiAgW2BcZGZyYWN7KHgrMileMn17MTZ9ICsgXGRmcmFjeyh5LTIpXjJ9ezR9ID0gMWBdCgoKYS4gIEEgZ3JhcGggaXMgYmVsb3cuCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-391')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-391-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-391-1-1-1-1">
+<li id="extracted-webwork-391-1-1-1-1-1">
+<div class="para" id="extracted-webwork-391-1-1-1-1-1-1">Write the equation <span class="process-math">\(x^2 + 4y^2 + 4x - 16y + 4 = 0\)</span> in standard form: <span class="process-math">\(\dfrac{(x-h)^2}{a^2} + \dfrac{(y-k)^2}{b^2} = 1\)</span>
+</div>
+<div class="para" id="extracted-webwork-391-1-1-1-1-1-2">
+<span class="process-math">\(h=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>, <span class="process-math">\(k=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>, <span class="process-math">\(a^2=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>, <span class="process-math">\(b^2=\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
+</div>
+</li>
+<li id="extracted-webwork-391-1-1-1-1-2"><div class="para" id="extracted-webwork-391-1-1-1-1-2-1">Graph the equation.</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-391-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-391-1-2-1"><span class="process-math">\(-2\)</span></div></div></details><details id="extracted-webwork-391-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-391-1-3-1"><span class="process-math">\(2\)</span></div></div></details><details id="extracted-webwork-391-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-391-1-4-1"><span class="process-math">\(16\)</span></div></div></details><details id="extracted-webwork-391-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-391-1-5-1"><span class="process-math">\(4\)</span></div></div></details><details id="extracted-webwork-391-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-391-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-391-1-6-1-1">
+<li id="extracted-webwork-391-1-6-1-1-1"><div class="para" id="extracted-webwork-391-1-6-1-1-1-1"><span class="process-math">\(\displaystyle \dfrac{(x+2)^2}{16} + \dfrac{(y-2)^2}{4} = 1\)</span></div></li>
+<li id="extracted-webwork-391-1-6-1-1-2"><div class="para" id="extracted-webwork-391-1-6-1-1-2-1">A graph is below.</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="Ellipses-5-6-3">
+<div class="para" id="Ellipses-5-6-3-1"><span class="process-math">\(x^2 + 4y^2 + 4x - 16y + 4 = 0\text{:}\)</span></div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-ex-9-3-5answ.svg" role="img" class="contained" alt="translated ellipse"></div>
 </div></article></section><section class="subsection" id="Ellipses-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="space"> </span><span class="title">Finding the Equation of an Ellipse</span>
@@ -1649,7 +1826,16 @@ b = 3-(-1) = 4
 </div>
 </div></article><article class="exercise exercise-like" id="Ellipses-6-5"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">9.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 6.</span>
-</h4></article></section><section class="exercises" id="section-9-3-exercises"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-392" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="392" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VySW1wbGljaXRFcXVhdGlvbi5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+c2V0KAogIHg9PntsaW1pdHM9PlstNywtMV19LAogIHk9PntsaW1pdHM9PlstMSwzXX0sCik7CiRhID0gMzsKJGIgPSAyOwokaCA9IC00OwokayA9IDE7CiRhbnN3ZXIgPSBJbXBsaWNpdEVxdWF0aW9uKAogICIoeC0kaCleMiAvJGEqKjIgKyAoeS0kayleMiAvJGIqKjI9MSIsCiAgc29sdXRpb25zPT5bIAogICAgIFskaCwkayskYl0sCiAgICAgWyRoLCRrLSRiXSwKICAgICBbJGgrJGEsJGtdLAogICAgIFskaC0kYSwka10sCiAgXQopOwoKQkVHSU5fUEdNTApGaW5kIHRoZSBlcXVhdGlvbiBvZiB0aGUgZWxsaXBzZSB3aXRoIHZlcnRpY2VzIGF0IFtgKC03LDEpYF0gYW5kIFtgKC0xLDEpYF0gYW5kIGEgbWlub3IgYXhpcyBvZiBsZW5ndGggNC4KCltfXXskYW5zd2VyfXszMH0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpbYFxkZnJhY3soeCs0KV4yfXs5fSArIFxkZnJhY3soeS0xKV4yfXs0fSA9IDFgXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-392')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-392-1-1-1">Find the equation of the ellipse with vertices at <span class="process-math">\((-7,1)\)</span> and <span class="process-math">\((-1,1)\)</span> and a minor axis of length 4.</div>
+<div class="solutions">
+<details id="extracted-webwork-392-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-392-1-2-1"><span class="process-math">\(\frac{\left(x-\left(-4\right)\right)^{2}}{9}+\frac{\left(y-1\right)^{2}}{4} = 1\)</span></div></div></details><details id="extracted-webwork-392-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="extracted-webwork-392-1-3-1"><span class="process-math">\(\dfrac{(x+4)^2}{9} + \dfrac{(y-1)^2}{4} = 1\)</span></div></div></details>
+</div>
+</div>
+</div></article></section><section class="exercises" id="section-9-3-exercises"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="space"> </span><span class="title">Problem Set 9.3</span>
 </h3>
 <article class="subexercises" id="section-9-3-exercises-2"><h4 class="heading"><span class="title">Warm Up</span></h4>

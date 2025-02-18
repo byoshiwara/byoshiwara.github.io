@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="default">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Int-Alg Linear Inequalities in Two Variables</title>
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -69,14 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
@@ -101,7 +114,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.8';
+eBookConfig.runestone_version = '7.5.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -129,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="GaussReduct.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap2-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="GaussReduct.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap2-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand\degree[0]{^{\circ}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
@@ -140,10 +153,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\newcommand{\fillinmath}[1]{\mathchoice{\boxed{\displaystyle     \phantom{\,#1\,}}}{\boxed{\textstyle        \phantom{\,#1\,}}}{\boxed{\scriptstyle      \phantom{\,#1\,}}}{\boxed{\scriptscriptstyle\phantom{\,#1\,}}}}
+\newcommand{\fillinmath}[1]{\mathchoice{\underline{\displaystyle     \phantom{\ \,#1\ \,}}}{\underline{\textstyle        \phantom{\ \,#1\ \,}}}{\underline{\scriptstyle      \phantom{\ \,#1\ \,}}}{\underline{\scriptscriptstyle\phantom{\ \,#1\ \,}}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -1349,7 +1362,52 @@ y = -x + 10,000
 <article class="exercise exercise-like" id="Linear-Inequalities-3-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 1.</span>
 </h4>
-<div class="conclusion" id="Linear-Inequalities-3-11-2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-ex-2-5-1w.svg" role="img" class="contained" alt="linear inequality in two variables"></div></div></article></section><section class="subsection" id="Linear-Inequalities-4"><h3 class="heading hide-type">
+<div id="webwork-76" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="76" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0+JycsSFRNTD0+JzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXG5ld2NvbW1hbmRcZGVncmVlWzBde157XGNpcmN9fVxuZXdjb21tYW5kXENjYW5jZWxbMl1bYmxhY2tde1xyZW5ld2NvbW1hbmRcQ2FuY2VsQ29sb3J7XGNvbG9yeyMxfX1cY2FuY2VseyMyfX1cbmV3Y29tbWFuZHtcYWxlcnR9WzFde1xib2xkc3ltYm9se1xjb2xvcnttYWdlbnRhfXsjMX19fVxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTskeDEgPSBDb21wdXRlKCIxIik7CiR5MSA9IENvbXB1dGUoIjUiKTsKCnN1YiBteWNoZWNrZXIgewogICBteSAkeCA9IHNoaWZ0OwogICByZXR1cm4gc3ViIHsKICAgbXkgKCRjb3JyZWN0LCRzdHVkZW50LCRhbnNIYXNoKSA9IEBfOyAgCiAgIHJldHVybiAoJHN0dWRlbnQgPCAoNiszKiR4KSA/IDEgOiAwKTsgIAogfTsKIH0KCiRteV9ldmFsdWF0b3IgPSAkeTEgLT4gY21wKGNoZWNrZXI9PgpteWNoZWNrZXIoJHgxKSApOwoKJHgwID0gQ29tcHV0ZSgiMCIpOwokeTAgPSBDb21wdXRlKCIwIik7CiRteV9ldmFsMiA9ICR5MCAtPiBjbXAoY2hlY2tlcj0+Cm15Y2hlY2tlcigkeDApICk7CgokeG4yID0gQ29tcHV0ZSgiLTIiKTsKJHluMiA9IENvbXB1dGUoIi0zIik7CiRteV9ldmFsMyA9ICR5bjIgLT4gY21wKGNoZWNrZXI9PgpteWNoZWNrZXIoJHhuMikgKTsKCkJFR0lOX1BHTUwKYS4gIEZpbmQgb25lIFtgeWBdLXZhbHVlIHRoYXQgc2F0aXNmaWVzIHRoZSBpbmVxdWFsaXR5IFtgeSAtIDN4IFxsdCA2YF0gZm9yIGVhY2ggb2YgdGhlIFtgeGBdLXZhbHVlcyBpbiB0aGUgdGFibGUuCgogICAgW0BEYXRhVGFibGUoW1tbUEdNTCgnW2B4YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYDFgXScpLFBHTUwoJ1tgMGBdJyksUEdNTCgnW2AtMmBdJyksXSxbW1BHTUwoJ1tgeWBdJyksYm90dG9tPT4nMScsbWlkcnVsZT0+JzEnLF0sUEdNTCgnW19deyRteV9ldmFsdWF0b3J9ezJ9JyksUEdNTCgnW19deyRteV9ldmFsMn17Mn0nKSxQR01MKCdbX117JG15X2V2YWwzfXsyfScpLF0sXSxhbGlnbj0+J3wqezR9e2N8fScsdmFsaWduPT4nbWlkZGxlJyx0b3A9PicxJywpO0BdKgoKCmEuICBHcmFwaCB0aGUgbGluZSBbYHkgLSAzeCA9IDZcdGV4dHsufWBdIFRoZW4gcGxvdCB5b3VyIHNvbHV0aW9ucyBmcm9tIHBhcnQgKGEpIG9uIHRoZSBzYW1lIGdyaWQuCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCmEuICBbQERhdGFUYWJsZShbW1tQR01MKCdbYHhgXScpLGJvdHRvbT0+JzEnLG1pZHJ1bGU9PicxJyxdLFBHTUwoJ1tgMWBdJyksUEdNTCgnW2AwYF0nKSxQR01MKCdbYC0yYF0nKSxdLFtbUEdNTCgnW2B5YF0nKSxib3R0b209PicxJyxtaWRydWxlPT4nMScsXSxQR01MKCdbYFxhbGVydHs1fSBgXScpLFBHTUwoJ1tgXGFsZXJ0ezB9YF0nKSxQR01MKCdbYFxhbGVydHstM31gXScpLF0sXSxhbGlnbj0+J3wqezR9e2N8fScsdmFsaWduPT4nbWlkZGxlJyx0b3A9PicxJywpO0BdKgoKKE1hbnkgYW5zd2VycyBhcmUgcG9zc2libGUuKQoKCmEuICBBIGdyYXBoIGlzIGJlbG93LgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-76')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-76-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-76-1-1-1-1">
+<li id="extracted-webwork-76-1-1-1-1-1">
+<div class="para" id="extracted-webwork-76-1-1-1-1-1-1">Find one <span class="process-math">\(y\)</span>-value that satisfies the inequality <span class="process-math">\(y - 3x \lt 6\)</span> for each of the <span class="process-math">\(x\)</span>-values in the table.</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(y\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span></td>
+</tr>
+</table></div>
+</li>
+<li id="extracted-webwork-76-1-1-1-1-2"><div class="para" id="extracted-webwork-76-1-1-1-1-2-1">Graph the line <span class="process-math">\(y - 3x = 6\text{.}\)</span> Then plot your solutions from part (a) on the same grid.</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-76-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-76-1-2-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-76-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-76-1-3-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-76-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-76-1-4-1"><span class="process-math">\(-3\)</span></div></div></details><details id="extracted-webwork-76-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="extracted-webwork-76-1-5-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-76-1-5-1-1"><li id="extracted-webwork-76-1-5-1-1-1"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(y\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\alert{5}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\alert{0}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\alert{-3}\)</span></td>
+</tr>
+</table></div></li></ol></div>
+<div class="para" id="extracted-webwork-76-1-5-2">(Many answers are possible.)</div>
+<div class="para logical" id="extracted-webwork-76-1-5-3"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-76-1-5-3-1"><li id="extracted-webwork-76-1-5-3-1-1"><div class="para" id="extracted-webwork-76-1-5-3-1-1-1">A graph is below.</div></li></ol></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="Linear-Inequalities-3-11-3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/fig-ex-2-5-1.svg" role="img" class="contained" alt="linear inequality in two variables"></div></div></article></section><section class="subsection" id="Linear-Inequalities-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="space"> </span><span class="title">Finding the Solutions</span>
 </h3>
 <div class="para logical" id="Linear-Inequalities-4-2">
@@ -1434,9 +1492,80 @@ y ~ \alert{\lt} ~ {-3x}+4
 </div></article><div class="para" id="Linear-Inequalities-4-6">An inequality that uses <span class="process-math">\(\gt\)</span> or <span class="process-math">\(\lt\)</span> instead of <span class="process-math">\(\ge\)</span> or <span class="process-math">\(\le\)</span> is called <dfn class="terminology">strict</dfn>. The graph of a strict inequality includes only the half-plane and not the line. In that case we use a dashed line for the graph of the equation <span class="process-math">\(ax + by + c = 0\)</span> to show that it is not part of the solution.</div>
 <article class="exercise exercise-like" id="Linear-Inequalities-4-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 2.</span>
-</h4></article><article class="exercise exercise-like" id="Linear-Inequalities-4-8"><h4 class="heading">
+</h4>
+<div id="webwork-77" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="77" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsImNvbnRleHRGb3JtLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0+JycsSFRNTD0+JzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXGRlbGltaXRlcnNob3J0ZmFsbC0xc3BcbmV3Y29tbWFuZFxhYnNbMV17XGxlZnR8IzFccmlnaHR8fVxuZXdjb21tYW5ke1xsdH17PH1cKTwvZGl2PicpKTsKQ29udGV4dCgnTnVtZXJpYycpOyAkcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0ID0gMTsKICRmWzBdID0gRm9ybXVsYSgiMip4KzQiKTsKICRmWzFdID0gRm9ybXVsYSgiMip4KzQiKTsKICRmWzJdID0gRm9ybXVsYSgiKHgtNCkvMiIpOwogJGZbM10gPSBGb3JtdWxhKCIoeC00KS8yIik7CiAkeG1pbj0tMTA7CiAkeG1heD0xMDsKICR5bWluPS0xMDsKICR5bWF4PTEwOwogZm9yZWFjaCBteSAkaSAoMC4uMykgewogICAkeWxlZnRbJGldID0gJGZbJGldLT5ldmFsKHg9PiR4bWluKTsKICAgJHlyaWdodFskaV0gPSAkZlskaV0tPmV2YWwoeD0+JHhtYXgpOwogICAkZ3JbJGldID0gaW5pdF9ncmFwaCgkeG1pbiwkeW1pbiwkeG1heCwkeW1heCwgYXhlcz0+WzAsMF0sIGdyaWQ9PlsyMCwyMF0sIHNpemU9PlsyNDAsMjQwXSk7CiAkZ3JbJGldLT5uZXdfY29sb3IoImxpZ2h0cmVkIiwgIDI0NSwyMzQsMjI5KTsgCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtyZWQiLCAgIDE1OSwgNjQsIDE2KTsKICRsaWdodCA9ICJsaWdodHJlZCI7CiAkZGFyayA9ICJkYXJrcmVkIjsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeWxlZnRbJGldKTsKICRnclskaV0tPmxpbmVUbygkeG1heCwkeXJpZ2h0WyRpXSwncmVkJywzLCdkYXNoZWQnKTsKICR5PTAuOSokeW1heCooLTEpKiokaTsKIGFkZF9mdW5jdGlvbnMoJGdyWyRpXSwKICIkZlskaV0gIGZvciB4IGluIDwkeG1pbiwkeG1heD4gdXNpbmcgY29sb3I6JGxpZ2h0IGFuZCB3ZWlnaHQ6MSIpOwogJGdyWyRpXS0+ZmlsbFJlZ2lvbihbMCwkeSwkbGlnaHRdCiApOwogfQoKZm9yZWFjaCBteSAkaSAoMC4uMykgewokZ3JbJGldIC0+IGxiKCdyZXNldCcpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsNSw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LC01LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICg1LC0wLjgsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTUsLTAuOCwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiB9CiAkZ3JbMF0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihBKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzFdIC0+IGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQikiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsyXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEMpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbM10gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihEKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJG1jID0gUmFkaW9CdXR0b25zKAogICAgICAgICAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiLAogICAgICAgICAgICAgIm5vbmUgb2YgdGhlIGFib3ZlIl0sCiAgICAgICAgICAgICAwCiAgICAgICAgICk7CgpCRUdJTl9QR01MCkdyYXBoIHRoZSBzb2x1dGlvbnMgb2YgdGhlIGluZXF1YWxpdHkgW2A0eCAtIDJ5IFxsdCAtOFx0ZXh0ey59YF0KCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMl0pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjIxMClAXSogIDw8CgpTZWxlY3QgdGhlIGFwcHJvcHJpYXRlIGdyYXBoLgoKW19deyRtY317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yNDApQF0qICA8PAoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-77')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-77-1-1-1">Graph the solutions of the inequality <span class="process-math">\(4x - 2y \lt -8\text{.}\)</span>
+</div>  <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-77-image-1.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-77-image-2.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-77-image-3.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-77-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-77-1-1-6">Select the appropriate graph.</div> <div class="para logical" id="extracted-webwork-77-1-1-7"><ul class="circle" id="extracted-webwork-77-1-1-7-1">
+<li id="extracted-webwork-77-1-1-7-1-1"><div class="para" id="extracted-webwork-77-1-1-7-1-1-1">(A)</div></li>
+<li id="extracted-webwork-77-1-1-7-1-2"><div class="para" id="extracted-webwork-77-1-1-7-1-2-1">(B)</div></li>
+<li id="extracted-webwork-77-1-1-7-1-3"><div class="para" id="extracted-webwork-77-1-1-7-1-3-1">(C)</div></li>
+<li id="extracted-webwork-77-1-1-7-1-4"><div class="para" id="extracted-webwork-77-1-1-7-1-4-1">(D)</div></li>
+<li id="extracted-webwork-77-1-1-7-1-5"><div class="para" id="extracted-webwork-77-1-1-7-1-5-1">none of the above</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-77-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-77-1-2-1"><span class="process-math">\(\text{(A)}\)</span></div></div></details><details id="extracted-webwork-77-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-77-image-1.png" class="contained"></div></div></details>
+</div>
+</div>
+</div></article><article class="exercise exercise-like" id="Linear-Inequalities-4-8"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">QuickCheck 1.</span>
-</h4></article></section><section class="subsection" id="Linear-Inequalities-5"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-78" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="78" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs+fVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7JGEgPSBQb3BVcCgKICBbIj8iLCJzaW5nbGUgcG9pbnQiLCAicXVhZHJhbnQiLCAic2VtaWNpcmNsZSIsICJoYWxmLXBsYW5lIl0sCiAgNCwgCik7CiRiID0gUG9wVXAoCiAgWyI/Iiwic3RyaWN0IiwgIm5vbi1zdHJpY3QiLCAiY29tcG91bmQiLCAiY29uZGl0aW9uYWwiXSwKICAxLCAKKTsKJGMgPSBQb3BVcCgKICBbIj8iLCJyZXZlcnNlIiwgInNpbXBsaWZ5IiwgImNvcHkiLCAib2JleSJdLAogIDEsIAopOwokZCA9IFBvcFVwKAogIFsiPyIsInBsYW5lcyIsICJzb2x1dGlvbnMiLCAiY29uc3RhbnRzIiwgInNsb3BlcyJdLAogIDIsIAopOwoKQkVHSU5fUEdNTAphLiAgVGhlIHNvbHV0aW9ucyBvZiBhIGxpbmVhciBpbmVxdWFsaXR5IGluIHR3byB2YXJpYWJsZXMgY29uc2lzdCBvZiBhIGJvdW5kYXJ5IGxpbmUgYW5kIGEgW19deyRhfXs1fS4KCgphLiAgQW4gaW5lcXVhbGl0eSB0aGF0IHVzZXMgW2BcZ3RgXSBvciBbYFxsdGBdIGluc3RlYWQgb2YgW2BcZ2VgXSBvciBbYFxsZWBdIGlzIGNhbGxlZCBbX117JGJ9ezV9LgoKCmEuICBJZiB3ZSBtdWx0aXBseSBvciBkaXZpZGUgYW4gaW5lcXVhbGl0eSBieSBhIG5lZ2F0aXZlIG51bWJlciB3ZSBtdXN0IFtfXXskY317NX0gdGhlIGRpcmVjdGlvbiBvZiB0aGUgaW5lcXVhbGl0eSBzeW1ib2wuCgoKYS4gIFRoZSBzaGFkZWQgcmVnaW9uIHNob3dzIGFsbCB0aGUgW19deyRkfXs1fSBvZiB0aGUgaW5lcXVhbGl0eS4KCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KYS4gIGhhbGYtcGxhbmUKCgphLiAgc3RyaWN0CgoKYS4gIHJldmVyc2UKCgphLiAgc29sdXRpb25zCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-78')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-78-1-1-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-78-1-1-1-1">
+<li id="extracted-webwork-78-1-1-1-1-1"><div class="para logical" id="extracted-webwork-78-1-1-1-1-1-1">
+<div class="para">The solutions of a linear inequality in two variables consist of a boundary line and a</div>
+<ul class="square" id="extracted-webwork-78-1-1-1-1-1-1-1">
+<li id="extracted-webwork-78-1-1-1-1-1-1-1-1"><div class="para" id="extracted-webwork-78-1-1-1-1-1-1-1-1-1">single point</div></li>
+<li id="extracted-webwork-78-1-1-1-1-1-1-1-2"><div class="para" id="extracted-webwork-78-1-1-1-1-1-1-1-2-1">quadrant</div></li>
+<li id="extracted-webwork-78-1-1-1-1-1-1-1-3"><div class="para" id="extracted-webwork-78-1-1-1-1-1-1-1-3-1">semicircle</div></li>
+<li id="extracted-webwork-78-1-1-1-1-1-1-1-4"><div class="para" id="extracted-webwork-78-1-1-1-1-1-1-1-4-1">half-plane</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-78-1-1-1-1-2"><div class="para logical" id="extracted-webwork-78-1-1-1-1-2-1">
+<div class="para">An inequality that uses <span class="process-math">\(\gt\)</span> or <span class="process-math">\(\lt\)</span> instead of <span class="process-math">\(\ge\)</span> or <span class="process-math">\(\le\)</span> is called</div>
+<ul class="square" id="extracted-webwork-78-1-1-1-1-2-1-5">
+<li id="extracted-webwork-78-1-1-1-1-2-1-5-1"><div class="para" id="extracted-webwork-78-1-1-1-1-2-1-5-1-1">strict</div></li>
+<li id="extracted-webwork-78-1-1-1-1-2-1-5-2"><div class="para" id="extracted-webwork-78-1-1-1-1-2-1-5-2-1">non-strict</div></li>
+<li id="extracted-webwork-78-1-1-1-1-2-1-5-3"><div class="para" id="extracted-webwork-78-1-1-1-1-2-1-5-3-1">compound</div></li>
+<li id="extracted-webwork-78-1-1-1-1-2-1-5-4"><div class="para" id="extracted-webwork-78-1-1-1-1-2-1-5-4-1">conditional</div></li>
+</ul>
+<div class="para">.</div>
+</div></li>
+<li id="extracted-webwork-78-1-1-1-1-3"><div class="para logical" id="extracted-webwork-78-1-1-1-1-3-1">
+<div class="para">If we multiply or divide an inequality by a negative number we must</div>
+<ul class="square" id="extracted-webwork-78-1-1-1-1-3-1-1">
+<li id="extracted-webwork-78-1-1-1-1-3-1-1-1"><div class="para" id="extracted-webwork-78-1-1-1-1-3-1-1-1-1">reverse</div></li>
+<li id="extracted-webwork-78-1-1-1-1-3-1-1-2"><div class="para" id="extracted-webwork-78-1-1-1-1-3-1-1-2-1">simplify</div></li>
+<li id="extracted-webwork-78-1-1-1-1-3-1-1-3"><div class="para" id="extracted-webwork-78-1-1-1-1-3-1-1-3-1">copy</div></li>
+<li id="extracted-webwork-78-1-1-1-1-3-1-1-4"><div class="para" id="extracted-webwork-78-1-1-1-1-3-1-1-4-1">obey</div></li>
+</ul>
+<div class="para">the direction of the inequality symbol.</div>
+</div></li>
+<li id="extracted-webwork-78-1-1-1-1-4"><div class="para logical" id="extracted-webwork-78-1-1-1-1-4-1">
+<div class="para">The shaded region shows all the</div>
+<ul class="square" id="extracted-webwork-78-1-1-1-1-4-1-1">
+<li id="extracted-webwork-78-1-1-1-1-4-1-1-1"><div class="para" id="extracted-webwork-78-1-1-1-1-4-1-1-1-1">planes</div></li>
+<li id="extracted-webwork-78-1-1-1-1-4-1-1-2"><div class="para" id="extracted-webwork-78-1-1-1-1-4-1-1-2-1">solutions</div></li>
+<li id="extracted-webwork-78-1-1-1-1-4-1-1-3"><div class="para" id="extracted-webwork-78-1-1-1-1-4-1-1-3-1">constants</div></li>
+<li id="extracted-webwork-78-1-1-1-1-4-1-1-4"><div class="para" id="extracted-webwork-78-1-1-1-1-4-1-1-4-1">slopes</div></li>
+</ul>
+<div class="para">of the inequality.</div>
+</div></li>
+</ol></div>
+<div class="solutions">
+<details id="extracted-webwork-78-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-78-1-2-1"><span class="process-math">\(\text{half-plane}\)</span></div></div></details><details id="extracted-webwork-78-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-78-1-3-1"><span class="process-math">\(\text{strict}\)</span></div></div></details><details id="extracted-webwork-78-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-78-1-4-1"><span class="process-math">\(\text{reverse}\)</span></div></div></details><details id="extracted-webwork-78-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-78-1-5-1"><span class="process-math">\(\text{solutions}\)</span></div></div></details><details id="extracted-webwork-78-1-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="extracted-webwork-78-1-6-1"><ol class="lower-alpha ol-marker-2" id="extracted-webwork-78-1-6-1-1">
+<li id="extracted-webwork-78-1-6-1-1-1"><div class="para" id="extracted-webwork-78-1-6-1-1-1-1">half-plane</div></li>
+<li id="extracted-webwork-78-1-6-1-1-2"><div class="para" id="extracted-webwork-78-1-6-1-1-2-1">strict</div></li>
+<li id="extracted-webwork-78-1-6-1-1-3"><div class="para" id="extracted-webwork-78-1-6-1-1-3-1">reverse</div></li>
+<li id="extracted-webwork-78-1-6-1-1-4"><div class="para" id="extracted-webwork-78-1-6-1-1-4-1">solutions</div></li>
+</ol></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Linear-Inequalities-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="space"> </span><span class="title">Using a Test Point</span>
 </h3>
 <div class="para" id="Linear-Inequalities-5-2">A second method for graphing inequalities does not require us to solve for <span class="process-math">\(y\text{.}\)</span> Because all the solutions lie on one side of the boundary line, we only need to find one soution! Once we have graphed the boundary line, we can decide which half-plane to shade by using a <dfn class="terminology">test point</dfn>. The test point can be any point that is not on the boundary line itself.</div>
@@ -1486,7 +1615,43 @@ y ~ \alert{\lt} ~ {-3x}+4
 </div>
 <article class="exercise exercise-like" id="Linear-Inequalities-5-7"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 3.</span>
-</h4></article><article class="warning remark-like" id="Linear-Inequalities-5-8"><h4 class="heading">
+</h4>
+<div id="webwork-79" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="79" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclBvcFVwLnBsIiwicGFyc2VyUmFkaW9CdXR0b25zLnBsIiwiY29udGV4dEZvcm0ucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0PTE7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcZ3R9ez59XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydCA9IDE7CiAkZlswXSA9IEZvcm11bGEoIi0zLzIqeCIpOwogJGZbMV0gPSBGb3JtdWxhKCItMy8yKngiKTsKICRmWzJdID0gRm9ybXVsYSgiLTIvMyp4Iik7CiAkZlszXSA9IEZvcm11bGEoIi0yLzMqeCIpOwogJHhtaW49LTEwOwogJHhtYXg9MTA7CiAkeW1pbj0tMTA7CiAkeW1heD0xMDsKIGZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKICAgJHlsZWZ0WyRpXSA9ICRmWyRpXS0+ZXZhbCh4PT4keG1pbik7CiAgICR5cmlnaHRbJGldID0gJGZbJGldLT5ldmFsKHg9PiR4bWF4KTsKICAgJGdyWyRpXSA9IGluaXRfZ3JhcGgoJHhtaW4sJHltaW4sJHhtYXgsJHltYXgsIGF4ZXM9PlswLDBdLCBncmlkPT5bMjAsMjBdLCBzaXplPT5bMjQwLDI0MF0pOwogJGdyWyRpXS0+bmV3X2NvbG9yKCJsaWdodHJlZCIsICAyNDUsMjM0LDIyOSk7IAogJGdyWyRpXS0+bmV3X2NvbG9yKCJkYXJrcmVkIiwgICAxNTksIDY0LCAxNik7CiAkbGlnaHQgPSAibGlnaHRyZWQiOwogJGRhcmsgPSAiZGFya3JlZCI7CiAkZ3JbJGldLT5tb3ZlVG8oJHhtaW4sJHlsZWZ0WyRpXSk7CiAkZ3JbJGldLT5saW5lVG8oJHhtYXgsJHlyaWdodFskaV0sJ3JlZCcsMywnZGFzaGVkJyk7CiAkeT0wLjkqJHltYXgqKC0xKSoqJGk7CiBhZGRfZnVuY3Rpb25zKCRnclskaV0sCiAiJGZbJGldICBmb3IgeCBpbiA8JHhtaW4sJHhtYXg+IHVzaW5nIGNvbG9yOiRsaWdodCBhbmQgd2VpZ2h0OjEiKTsKICRnclskaV0tPmZpbGxSZWdpb24oWzAsJHksJGxpZ2h0XQogKTsKIH0KCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogfQogJGdyWzBdIC0+IGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsxXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEMpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMl0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihCKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzNdIC0+IGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRtYyA9IFJhZGlvQnV0dG9ucygKICAgICAgICAgICAgIFsgIihBKSIsICIoQikiLCAiKEMpIiwiKEQpIiwKICAgICAgICAgICAgICJub25lIG9mIHRoZSBhYm92ZSJdLAogICAgICAgICAgICAgMwogICAgICAgICApOwoKICR3aGVyZSA9ICBQb3BVcCgKIFsiPyIsIkFib3ZlIHRoZSBsaW5lIiwiQmVsb3cgdGhlIGxpbmUiXSwKIDEsIAogKTsKICR3aGljaCA9ICBQb3BVcCgKIFsiPyIsIkRhc2hlZCIsIlNvbGlkIl0sCiAxLCAKICk7CgpCRUdJTl9QR01MCkdyYXBoIHRoZSBzb2x1dGlvbnMgb2YgdGhlIGluZXF1YWxpdHkgW2AgeSBcZ3QgXGRmcmFjey0zfXsyfXhgXQoxLiAgR3JhcGggdGhlIGxpbmUgW2B5ID0gXGRmcmFjey0zfXsyfXguYF0gKFVzZSB0aGUgc2xvcGUtaW50ZXJjZXB0IG1ldGhvZC4pCgoKMS4gIENob29zZSBhIHRlc3QgcG9pbnQuIChEbyBub3QgY2hvb3NlIFtgKDAsIDApXHRleHR7IX1gXSkKCgoxLiAgRGVjaWRlIHdoaWNoIHNpZGUgb2YgdGhlIGxpbmUgdG8gc2hhZGUuIFtfXXskd2hlcmV9ezV9CgoKMS4gIFNob3VsZCB0aGUgYm91bmRhcnkgbGluZSBiZSBkYXNoZWQgb3Igc29saWQ/IFtfXXskd2hpY2h9ezV9CgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbM10pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzJdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0+MjEwKUBdKiAgPDwKClNlbGVjdCB0aGUgYXBwcm9wcmlhdGUgZ3JhcGguCgpbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjI0MClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-79')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-79-1-1-1">
+<div class="para">Graph the solutions of the inequality <span class="process-math">\(y \gt \dfrac{-3}{2}x\)</span>
+</div>
+<ol class="decimal ol-marker-1" id="extracted-webwork-79-1-1-1-2">
+<li id="extracted-webwork-79-1-1-1-2-1"><div class="para" id="extracted-webwork-79-1-1-1-2-1-1">Graph the line <span class="process-math">\(y = \dfrac{-3}{2}x.\)</span> (Use the slope-intercept method.)</div></li>
+<li id="extracted-webwork-79-1-1-1-2-2"><div class="para" id="extracted-webwork-79-1-1-1-2-2-1">Choose a test point. (Do not choose <span class="process-math">\((0, 0)\text{!}\)</span>)</div></li>
+<li id="extracted-webwork-79-1-1-1-2-3"><div class="para logical" id="extracted-webwork-79-1-1-1-2-3-1">
+<div class="para">Decide which side of the line to shade.</div>
+<ul class="square" id="extracted-webwork-79-1-1-1-2-3-1-1">
+<li id="extracted-webwork-79-1-1-1-2-3-1-1-1"><div class="para" id="extracted-webwork-79-1-1-1-2-3-1-1-1-1">Above the line</div></li>
+<li id="extracted-webwork-79-1-1-1-2-3-1-1-2"><div class="para" id="extracted-webwork-79-1-1-1-2-3-1-1-2-1">Below the line</div></li>
+</ul>
+</div></li>
+<li id="extracted-webwork-79-1-1-1-2-4"><div class="para logical" id="extracted-webwork-79-1-1-1-2-4-1">
+<div class="para">Should the boundary line be dashed or solid?</div>
+<ul class="square" id="extracted-webwork-79-1-1-1-2-4-1-1">
+<li id="extracted-webwork-79-1-1-1-2-4-1-1-1"><div class="para" id="extracted-webwork-79-1-1-1-2-4-1-1-1-1">Dashed</div></li>
+<li id="extracted-webwork-79-1-1-1-2-4-1-1-2"><div class="para" id="extracted-webwork-79-1-1-1-2-4-1-1-2-1">Solid</div></li>
+</ul>
+</div></li>
+</ol>
+</div>  <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-79-image-1.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-79-image-2.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-79-image-3.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-79-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-79-1-1-6">Select the appropriate graph.</div> <div class="para logical" id="extracted-webwork-79-1-1-7"><ul class="circle" id="extracted-webwork-79-1-1-7-1">
+<li id="extracted-webwork-79-1-1-7-1-1"><div class="para" id="extracted-webwork-79-1-1-7-1-1-1">(A)</div></li>
+<li id="extracted-webwork-79-1-1-7-1-2"><div class="para" id="extracted-webwork-79-1-1-7-1-2-1">(B)</div></li>
+<li id="extracted-webwork-79-1-1-7-1-3"><div class="para" id="extracted-webwork-79-1-1-7-1-3-1">(C)</div></li>
+<li id="extracted-webwork-79-1-1-7-1-4"><div class="para" id="extracted-webwork-79-1-1-7-1-4-1">(D)</div></li>
+<li id="extracted-webwork-79-1-1-7-1-5"><div class="para" id="extracted-webwork-79-1-1-7-1-5-1">none of the above</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-79-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-79-1-2-1"><span class="process-math">\(\text{Above the line}\)</span></div></div></details><details id="extracted-webwork-79-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-79-1-3-1"><span class="process-math">\(\text{Dashed}\)</span></div></div></details><details id="extracted-webwork-79-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-79-1-4-1"><span class="process-math">\(\text{(D)}\)</span></div></div></details><details id="extracted-webwork-79-1-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-79-image-4.png" class="contained"></div></div></details>
+</div>
+</div>
+</div></article><article class="warning remark-like" id="Linear-Inequalities-5-8"><h4 class="heading">
 <span class="type">Caution</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span>
 </h4>
 <div class="para" id="Linear-Inequalities-5-8-1">We cannot choose a test point that lies on the boundary line. In Practice 3 above, we cannot use <span class="process-math">\((0, 0)\)</span> as a test point, because it lies on the line <span class="process-math">\(y =\dfrac{-3}{2}x.\)</span> In this case, we should choose some other point, such as <span class="process-math">\((0, 1)\)</span> or <span class="process-math">\((1, 2)\text{.}\)</span>
@@ -1533,7 +1698,22 @@ x+0y\ge k
 </div></div>
 </div></article><article class="exercise exercise-like" id="Linear-Inequalities-5-11"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 4.</span>
-</h4></article></section><section class="subsection" id="Linear-Inequalities-6"><h3 class="heading hide-type">
+</h4>
+<div id="webwork-80" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="80" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxkZWxpbWl0ZXJzaG9ydGZhbGwtMXNwXG5ld2NvbW1hbmRcYWJzWzFde1xsZWZ0fCMxXHJpZ2h0fH1cbmV3Y29tbWFuZHtcbHR9ezx9XCk8L2Rpdj4nKSk7CkNvbnRleHQoJ051bWVyaWMnKTsgJHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydCA9IDE7CiAkeTEgPSA0OwogJHkyID0gLTE7CiAkeG1pbj0tMTA7CiAkeG1heD0xMDsKICR5bWluPS0xMDsKICR5bWF4PTEwOwogZm9yZWFjaCBteSAkaSAoMC4uMykgewogICAgJGdyWyRpXSA9IGluaXRfZ3JhcGgoJHhtaW4sJHltaW4sJHhtYXgsJHltYXgsIGF4ZXM9PlswLDBdLCBncmlkPT5bMjAsMjBdLCBzaXplPT5bMjQwLDI0MF0pOwogJGdyWyRpXS0+bmV3X2NvbG9yKCJsaWdodGJsdWUiLCAyMTQsMjMwLDI0NCk7ICMgUkdCCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtibHVlIiwgIDEwMCwxMDAsMjU1KTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRyZWQiLCAgMjQ1LDIzNCwyMjkpOyAjIGxpZ2h0IHJlZC1wdXJwbGUKICRnclskaV0tPm5ld19jb2xvcigiZGFya3JlZCIsICAgMTU5LCA2NCwgMTYpOyAjIHJlZC1icm93bgogJGdyWyRpXS0+bmV3X2NvbG9yKCJsaWdodGdyZWVuIiwxNTYsMjE1LDE1MSk7IAogJGdyWyRpXS0+bmV3X2NvbG9yKCJkYXJrZ3JlZW4iLCAgIDAsIDg2LCAzNCk7CiAkbGlnaHQgPSAibGlnaHRncmVlbiI7CiAkZGFyayA9ICJkYXJrcmVkIjsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeTEpOwogJGdyWyRpXS0+bGluZVRvKCR4bWF4LCR5MSxyZWQsLjEpOwogJGdyWyRpXS0+bW92ZVRvKCR4bWluLCR5Mik7CiAkZ3JbJGldLT5saW5lVG8oJHhtYXgsJHkyLHJlZCwuMSk7CiB9CiBmb3JlYWNoIG15ICRpICgwLi4xKSB7CiAkZ3JbJGldLT5tb3ZlVG8oJHhtaW4sJHkxKTsKICRnclskaV0tPmFycm93VG8oJHhtYXgsJHkxLCdyZWQnLDIpOwogJGdyWyRpXS0+YXJyb3dUbygkeG1pbiwkeTEsJ3JlZCcsMik7CiAkZ3JbJGldLT5tb3ZlVG8oJHhtYXgsJHkyKTsKICRnclskaV0tPmFycm93VG8oJHhtaW4sJHkyLCdyZWQnLDIsJ2Rhc2hlZCcpOwogJGdyWyRpXS0+bW92ZVRvKCR4bWF4LCR5MiwncmVkJywyLCdkYXNoZWQnKTsKIH0KIGZvcmVhY2ggbXkgJGkgKDIuLjMpIHsKICRnclskaV0tPm1vdmVUbygkeG1pbiwkeTIpOwogJGdyWyRpXS0+YXJyb3dUbygkeG1heCwkeTIsJ3JlZCcsMik7CiAkZ3JbJGldLT5hcnJvd1RvKCR4bWluLCR5MiwncmVkJywyKTsKICRnclskaV0tPm1vdmVUbygkeG1heCwkeTEpOwogJGdyWyRpXS0+YXJyb3dUbygkeG1pbiwkeTEsJ3JlZCcsMiwnZGFzaGVkJyk7CiAkZ3JbJGldLT5hcnJvd1RvKCR4bWF4LCR5MSwncmVkJywyLCdkYXNoZWQnKTsKIH0KCiBmb3JlYWNoIG15ICRpICgwLDIpIHsKICR5PTAuOSokeW1heDsKICAgICAgJGdyWyRpXS0+ZmlsbFJlZ2lvbihbMCwkeSwkbGlnaHRdKTsKICAgICAgJGdyWyRpXS0+ZmlsbFJlZ2lvbihbMCwuOSokeW1pbiwkbGlnaHRdKTsKICAgICAgfQogICAgICAKIGZvcmVhY2ggbXkgJGkgKDEsMykgewogICAgICAkZ3JbJGldLT5maWxsUmVnaW9uKFswLDAsJGxpZ2h0XSk7CiAgICAgIH0KCmZvcmVhY2ggbXkgJGkgKDAuLjMpIHsKJGdyWyRpXSAtPiBsYigncmVzZXQnKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LDUsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTAuOCwtNSwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoNSwtMC44LDUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC01LC0wLjgsLTUsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogfQogJGdyWzBdIC0+IGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoQSkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsxXSAtPiBsYihuZXcgTGFiZWwgKC03LjUsOCwiKEIpIiwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbMl0gLT4gbGIobmV3IExhYmVsICgtNy41LDgsIihDKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzNdIC0+IGxiKG5ldyBMYWJlbCAoLTcuNSw4LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKCiAkbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgICAgICAgICBbICIoQSkiLCAiKEIpIiwgIihDKSIsIihEKSIsCiAgICAgICAgICAgICAibm9uZSBvZiB0aGUgYWJvdmUiXSwKICAgICAgICAgICAgIDEKICAgICAgICAgKTsKCkJFR0lOX1BHTUwKR3JhcGggIFtgLTFcbHQgeSBcbGUgNCBgXSBpbiB0aGUgcGxhbmUuCgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzJdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qICA8PAoKU2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBncmFwaC4KCltfXXskbWN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMF0pLCB3aWR0aD0+MjQwKUBdKiAgPDwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-80')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-80-1-1-1">Graph  <span class="process-math">\(-1\lt y \le 4\)</span> in the plane.</div>  <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-80-image-1.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-80-image-2.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-80-image-3.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-80-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-80-1-1-6">Select the appropriate graph.</div> <div class="para logical" id="extracted-webwork-80-1-1-7"><ul class="circle" id="extracted-webwork-80-1-1-7-1">
+<li id="extracted-webwork-80-1-1-7-1-1"><div class="para" id="extracted-webwork-80-1-1-7-1-1-1">(A)</div></li>
+<li id="extracted-webwork-80-1-1-7-1-2"><div class="para" id="extracted-webwork-80-1-1-7-1-2-1">(B)</div></li>
+<li id="extracted-webwork-80-1-1-7-1-3"><div class="para" id="extracted-webwork-80-1-1-7-1-3-1">(C)</div></li>
+<li id="extracted-webwork-80-1-1-7-1-4"><div class="para" id="extracted-webwork-80-1-1-7-1-4-1">(D)</div></li>
+<li id="extracted-webwork-80-1-1-7-1-5"><div class="para" id="extracted-webwork-80-1-1-7-1-5-1">none of the above</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-80-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-80-1-2-1"><span class="process-math">\(\text{(B)}\)</span></div></div></details><details id="extracted-webwork-80-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-80-image-1.png" class="contained"></div></div></details>
+</div>
+</div>
+</div></article></section><section class="subsection" id="Linear-Inequalities-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="space"> </span><span class="title">Systems of Inequalities</span>
 </h3>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
@@ -1591,7 +1771,41 @@ x \ge 0 ~~~\text{ and }~~~y \ge 0
 </div></article><article class="exercise exercise-like" id="Linear-Inequalities-6-6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Practice 5.</span>
 </h4>
-<div class="conclusion" id="Linear-Inequalities-6-6-2"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="generated/latex-image/fig-ex-2-5-5answ.svg" role="img" class="contained" alt="system of inequalities"></div></div></article><div class="para" id="Linear-Inequalities-6-7">To describe the solutions of a system of inequalities, it is useful to locate the <dfn class="terminology">vertices</dfn>, or corner points, of the boundary.</div>
+<div id="webwork-81" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="81" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9Pic8ZGl2IHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij5cKFxuZXdjb21tYW5ke1xndH17Pn1cbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7ICRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQgPSAxOwpmb3JlYWNoIG15ICRpICgwLi4zKSB7CiAkZ3JbJGldID0gaW5pdF9ncmFwaCgtNCwtNCw5LDksIGF4ZXM9PlswLDBdLCBncmlkPT5bMTMsMTNdLCBzaXplPT5bMjQwLDI0MF0pOwogJGdyWyRpXS0+bmV3X2NvbG9yKCJsaWdodGJsdWUiLCAyMTQsMjMwLDI0NCk7ICMgUkdCCiAkZ3JbJGldLT5uZXdfY29sb3IoImRhcmtibHVlIiwgIDEwMCwxMDAsMjU1KTsKICRnclskaV0tPm5ld19jb2xvcigibGlnaHRyZWQiLCAgMjQ1LDIzNCwyMjkpOyAjIGxpZ2h0IHJlZC1wdXJwbGUKICRnclskaV0tPm5ld19jb2xvcigiZGFya3JlZCIsICAgMTU5LCA2NCwgMTYpOyAjIHJlZC1icm93bgogJGdyWyRpXS0+bmV3X2NvbG9yKCJsaWdodGdyZWVuIiwxNTYsMjE1LDE1MSk7IAogJGdyWyRpXS0+bmV3X2NvbG9yKCJkYXJrZ3JlZW4iLCAgIDAsIDg2LCAzNCk7CiAkbGlnaHQgPSAibGlnaHRncmVlbiI7CiAkZGFyayA9ICJkYXJrZ3JlZW4iOwogJHBpbmsgPSAibGlnaHRyZWQiOwoKICRnclskaV0tPm1vdmVUbygtNCwtMik7CiAkZ3JbJGldLT5hcnJvd1RvKDksMjAvMywncmVkJywyKTsKICRnclskaV0tPmFycm93VG8oLTQsLTIsJ3JlZCcsMiwpOwoKICRnclskaV0tPm1vdmVUbyg5LDgpOwogJGdyWyRpXS0+YXJyb3dUbygtMywtNCwnd2hpdGUnLDEpOwogJGdyWyRpXS0+YXJyb3dUbyg5LDgsJ2JsdWUnLDIsJ2Rhc2hlZCcpOwogJGdyWyRpXS0+YXJyb3dUbygtMywtNCwnYmx1ZScsMiwnZGFzaGVkJyk7CiAkZ3JbJGldIC0+IGxiKCdyZXNldCcpOwogJGdyWyRpXSAtPiBsYihuZXcgTGFiZWwgKC0wLjgsNSw1LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICgtMC44LC01LC01LCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclskaV0gLT4gbGIobmV3IExhYmVsICg1LC0wLjgsNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiAkZ3JbJGldIC0+IGxiKG5ldyBMYWJlbCAoLTUsLTAuOCwtNSwnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiB9CgogJGdyWzBdIC0+IGxiKG5ldyBMYWJlbCAoLTMuLDgsIihBKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzBdLT5maWxsUmVnaW9uKFstMS4xLDUuMSwkbGlnaHRdKTsKICRnclsxXSAtPiBsYihuZXcgTGFiZWwgKC0zLiw4LCIoQikiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclsxXS0+ZmlsbFJlZ2lvbihbLTMuMSwtMy4xLCRsaWdodF0pOwogJGdyWzJdIC0+IGxiKG5ldyBMYWJlbCAoLTMuLDgsIihDKSIsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwogJGdyWzJdLT5maWxsUmVnaW9uKFszLjEsLTMuMSwkbGlnaHRdKTsKICRnclszXSAtPiBsYihuZXcgTGFiZWwgKC0zLiw4LCIoRCkiLCdibGFjaycsJ2NlbnRlcicsJ21pZGRsZScpKTsKICRnclszXS0+ZmlsbFJlZ2lvbihbOC4xLDYuMiwkbGlnaHRdKTsKCiAkbWMgPSBSYWRpb0J1dHRvbnMoCiAgICAgWyAiKEEpIiwgIihCKSIsICIoQykiLCIoRCkiXSwKICAgICAxCiApOwoKQkVHSU5fUEdNTApVc2UgdGhlIGZvbGxvd2luZyBzdGVwcyB0byBncmFwaCB0aGUgc29sdXRpb25zIG9mIHRoZSBzeXN0ZW0KCltgYGBcYmVnaW57YWxpZ25lZH0KM3ktMnggXGFtcFxsZSAyXFwKeSBcYW1wXGd0IHgtMQpcZW5ke2FsaWduZWR9CmBgYF0KCgoxLiAgR3JhcGggdGhlIGJvdW5kYXJ5IGxpbmUgW2AzeS0yeCA9IDJcdGV4dHsufWBdCgoKMS4gIExpZ2h0bHkgc2hhZGUgdGhlIHNvbHV0aW9ucyBvZiB0aGUgaW5lcXVhbGl0eSBbYDN5LTJ4IFxsZSAyXHRleHR7Ln1gXQoKCjEuICBHcmFwaCB0aGUgYm91bmRhcnkgbGluZSBbYHk9eC0xXHRleHR7Ln1gXQoKCjEuICBMaWdodGx5IHNoYWRlIHRoZSBzb2x1dGlvbnMgb2YgW2B5IFxndCB4LTFcdGV4dHsufWBdCgoKMS4gIFNoYWRlIHRoZSBpbnRlcnNlY3Rpb24gb2YgdGhlIHR3byBzb2x1dGlvbnMgc2V0cy4KCgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclswXSksIHdpZHRoPT4yMTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbMV0pLCB3aWR0aD0+MjEwKUBdKiAgPDwKCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzJdKSwgd2lkdGg9PjIxMClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclszXSksIHdpZHRoPT4yMTApQF0qICA8PAoKV2hpY2ggb2YgdGhlIGFib3ZlIGlzIHRoZSBiZXN0IG1hdGNoIGZvciB0aGUgc29sdXRpb24gdG8gdGhlIHN5c3RlbSBvZiBpbmVxdWFsaXRpZXM/CgpbX117JG1jfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzFdKSwgd2lkdGg9PjI0MClAXSogIDw8CgpBIGdyYXBoIGlzIGFsc28gc2hvd24gYmVsb3cuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-81')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-81-1-1-1">Use the following steps to graph the solutions of the system</div> <div class="para logical" id="extracted-webwork-81-1-1-2"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+3y-2x \amp\le 2\\
+y \amp\gt x-1
+\end{aligned}
+\end{equation*}
+</div></div> <div class="para logical" id="extracted-webwork-81-1-1-3"><ol class="decimal ol-marker-1" id="extracted-webwork-81-1-1-3-1">
+<li id="extracted-webwork-81-1-1-3-1-1"><div class="para" id="extracted-webwork-81-1-1-3-1-1-1">Graph the boundary line <span class="process-math">\(3y-2x = 2\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-81-1-1-3-1-2"><div class="para" id="extracted-webwork-81-1-1-3-1-2-1">Lightly shade the solutions of the inequality <span class="process-math">\(3y-2x \le 2\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-81-1-1-3-1-3"><div class="para" id="extracted-webwork-81-1-1-3-1-3-1">Graph the boundary line <span class="process-math">\(y=x-1\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-81-1-1-3-1-4"><div class="para" id="extracted-webwork-81-1-1-3-1-4-1">Lightly shade the solutions of <span class="process-math">\(y \gt x-1\text{.}\)</span>
+</div></li>
+<li id="extracted-webwork-81-1-1-3-1-5"><div class="para" id="extracted-webwork-81-1-1-3-1-5-1">Shade the intersection of the two solutions sets.</div></li>
+</ol></div>  <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-81-image-1.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-81-image-2.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-81-image-3.png" class="contained"></div> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/webwork/images/webwork-81-image-4.png" class="contained"></div> <div class="para" id="extracted-webwork-81-1-1-8">Which of the above is the best match for the solution to the system of inequalities?</div> <div class="para logical" id="extracted-webwork-81-1-1-9"><ul class="circle" id="extracted-webwork-81-1-1-9-1">
+<li id="extracted-webwork-81-1-1-9-1-1"><div class="para" id="extracted-webwork-81-1-1-9-1-1-1">(A)</div></li>
+<li id="extracted-webwork-81-1-1-9-1-2"><div class="para" id="extracted-webwork-81-1-1-9-1-2-1">(B)</div></li>
+<li id="extracted-webwork-81-1-1-9-1-3"><div class="para" id="extracted-webwork-81-1-1-9-1-3-1">(C)</div></li>
+<li id="extracted-webwork-81-1-1-9-1-4"><div class="para" id="extracted-webwork-81-1-1-9-1-4-1">(D)</div></li>
+</ul></div>
+<div class="solutions">
+<details id="extracted-webwork-81-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-81-1-2-1"><span class="process-math">\(\text{(B)}\)</span></div></div></details><details id="extracted-webwork-81-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/webwork/images/webwork-81-image-2.png" class="contained"></div>
+<div class="para" id="extracted-webwork-81-1-3-2">A graph is also shown below.</div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="Linear-Inequalities-6-6-3"><div class="image-box" style="width: 36%; margin-left: 32%; margin-right: 32%;"><img src="generated/latex-image/fig-ex-2-5-5answ.svg" role="img" class="contained" alt="system of inequalities"></div></div></article><div class="para" id="Linear-Inequalities-6-7">To describe the solutions of a system of inequalities, it is useful to locate the <dfn class="terminology">vertices</dfn>, or corner points, of the boundary.</div>
 <article class="example example-like" id="Linear-Inequalities-6-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.15</span><span class="period">.</span>
 </h4>
